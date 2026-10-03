@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="OG BOBBY">
+<meta property="og:description" content="12-track playlist">
+<meta property="og:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.png">
+<link rel="icon" href="cover.png">
+<link rel="apple-touch-icon" href="cover.png">
+<title>OG Bobby</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&display=swap">
+<style>
+/* Layout: one narrow column — cover + now playing on top, controls, then the tracklist. Single dark look by choice. */
+:root {
+  --bg: #0f1a12; --panel: #17251a; --line: #24382a;
+  --fg: #eef3ea; --muted: #9db3a2; --accent: #e3b23c;
+  --display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --body: "Barlow", system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+html, body { background: var(--bg); color: var(--fg); }
+body { font-family: var(--body); font-size: 16px; }
+.wrap { max-width: 520px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 40px; display: grid; gap: 20px; }
+header { display: flex; gap: 16px; align-items: center; }
+header img { width: 96px; height: 96px; border-radius: 12px; flex: none; }
+header .meta { min-width: 0; }
+h1 { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-height: 1; margin: 0; letter-spacing: .02em; }
+.sub { color: var(--muted); font-size: .9rem; margin-top: 6px; }
+.now { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; }
+.now-label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+#nowTitle { font-family: var(--display); font-weight: 400; font-size: 1.6rem; line-height: 1.1; text-wrap: balance; }
+.seek { display: grid; gap: 4px; }
+input[type=range] { width: 100%; accent-color: var(--accent); }
+.times { display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 20px; }
+.controls button { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 50%; width: 56px; height: 56px; display: grid; place-items: center; cursor: pointer; }
+.controls button.play { width: 72px; height: 72px; background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.controls svg { width: 24px; height: 24px; fill: currentColor; }
+.controls button.play svg { width: 30px; height: 30px; }
+button:focus-visible, li button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+ol { list-style: none; margin: 0; padding: 0; display: grid; }
+li button { width: 100%; display: grid; grid-template-columns: 2rem 1fr auto; gap: 10px; align-items: center; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); color: var(--fg); font: inherit; padding: 13px 4px; cursor: pointer; }
+li .n { color: var(--muted); font-variant-numeric: tabular-nums; font-size: .85rem; }
+li .t { min-width: 0; overflow-wrap: anywhere; }
+li .d { color: var(--muted); font-size: .85rem; font-variant-numeric: tabular-nums; }
+li.on button { color: var(--accent); font-weight: 600; }
+li.on .n { color: var(--accent); }
+.section { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: 14px 4px 6px; }
+</style>
+<style>html,body{margin:0}</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header>
+    <img src="cover.png" alt="OG Budz logo">
+    <div class="meta">
+      <h1>OG BOBBY</h1>
+      <div class="sub">12 tracks · <span id="total"></span></div>
+    </div>
+  </header>
+
+  <section class="now" aria-label="Now playing">
+    <div class="now-label">Now playing · <span id="nowNum">1</span> of 12</div>
+    <div id="nowTitle">OG BUDZ</div>
+    <div class="seek">
+      <input type="range" id="seek" min="0" max="100" step="0.1" value="0" aria-label="Seek">
+      <div class="times"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+    </div>
+    <div class="controls">
+      <button id="prev" aria-label="Previous song"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zM9.5 12 18 18V6z"/></svg></button>
+      <button id="play" class="play" aria-label="Play"><svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg></button>
+      <button id="next" aria-label="Next song"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg></button>
+    </div>
+  </section>
+
+  <ol id="list"></ol>
+</div>
+
+<audio id="audio" preload="metadata"></audio>
+
+<script>
+const TRACKS = [
+  { f: "01-og-budz.mp3", t: "OG BUDZ", d: 57 },
+  { f: "02-og-budz-vox.mp3", t: "OG BUDZ (Male)", d: 57 },
+  { f: "03-og-budz-girl.mp3", t: "OG BUDZ (Girl)", d: 51 },
+  { f: "04-og-drill-1.mp3", t: "OG Drill 1", d: 44 },
+  { f: "05-og-drill-2.mp3", t: "OG Drill 2", d: 54 },
+  { f: "06-og-delivery-1.mp3", t: "OG Delivery 1", d: 47 },
+  { f: "07-ogz.mp3", t: "OG'z", d: 137 },
+  { f: "08-og-delivery-2.mp3", t: "OG Delivery 2", d: 50 },
+  { f: "09-off-the-feet.mp3", t: "OFF THE FEET", d: 113 },
+  { f: "10-drexterminator.mp3", t: "DREXTERMINATOR", d: 194 },
+  { f: "11-mint.mp3", t: "Mint", d: 170 },
+  { f: "12-untitled.mp3", t: "Track 12", d: 121 }
+];
+const $ = id => document.getElementById(id);
+const audio = $("audio"), list = $("list");
+const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+let i = 0;
+
+$("total").textContent = Math.round(TRACKS.reduce((a, x) => a + x.d, 0) / 60) + " min";
+
+TRACKS.forEach((tr, k) => {
+  if (k === 0 || k === 8) {
+    const h = document.createElement("li");
+    h.className = "section";
+    h.textContent = k === 0 ? "OG BUDZ" : "More from Bobby";
+    list.appendChild(h);
+  }
+  const li = document.createElement("li");
+  li.dataset.k = k;
+  li.innerHTML = `<button><span class="n">${k + 1}</span><span class="t"></span><span class="d">${fmt(tr.d)}</span></button>`;
+  li.querySelector(".t").textContent = tr.t;
+  li.querySelector("button").onclick = () => load(k, true);
+  list.appendChild(li);
+});
+
+function load(k, play) {
+  i = (k + TRACKS.length) % TRACKS.length;
+  audio.src = "songs/" + TRACKS[i].f;
+  $("nowTitle").textContent = TRACKS[i].t;
+  $("nowNum").textContent = i + 1;
+  $("dur").textContent = fmt(TRACKS[i].d);
+  document.querySelectorAll("li[data-k]").forEach(li => li.classList.toggle("on", +li.dataset.k === i));
+  if ("mediaSession" in navigator) {
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: TRACKS[i].t, artist: "OG Bobby", album: "OG Bobby", artwork: [{ src: "cover.png", sizes: "512x512", type: "image/png" }] });
+    } catch (e) {}
+  }
+  if (play) audio.play().catch(() => {});
+}
+function setIcon(playing) {
+  $("playIcon").innerHTML = playing ? '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>' : '<path d="M8 5v14l11-7z"/>';
+  $("play").setAttribute("aria-label", playing ? "Pause" : "Play");
+}
+$("play").onclick = () => audio.paused ? audio.play().catch(() => {}) : audio.pause();
+$("next").onclick = () => load(i + 1, true);
+$("prev").onclick = () => (audio.currentTime > 3 ? (audio.currentTime = 0) : load(i - 1, true));
+audio.onplay = () => setIcon(true);
+audio.onpause = () => setIcon(false);
+audio.onended = () => load(i + 1, true);
+audio.onloadedmetadata = () => { $("dur").textContent = fmt(audio.duration); };
+audio.ontimeupdate = () => {
+  $("cur").textContent = fmt(audio.currentTime);
+  if (audio.duration) $("seek").value = (audio.currentTime / audio.duration) * 100;
+};
+$("seek").oninput = e => { if (audio.duration) audio.currentTime = (e.target.value / 100) * audio.duration; };
+if ("mediaSession" in navigator) {
+  try {
+    navigator.mediaSession.setActionHandler("nexttrack", () => load(i + 1, true));
+    navigator.mediaSession.setActionHandler("previoustrack", () => load(i - 1, true));
+    navigator.mediaSession.setActionHandler("play", () => audio.play());
+    navigator.mediaSession.setActionHandler("pause", () => audio.pause());
+  } catch (e) {}
+}
+load(0, false);
+</script>
+
+</body>
+</html>
