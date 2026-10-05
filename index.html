@@ -3,12 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta property="og:title" content="OG BOBBY">
-<meta property="og:description" content="12-track playlist">
-<meta property="og:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.png">
+<title>OG Bobby</title>
+<meta name="description" content="OG Bobby - 15 tracks">
+<meta property="og:type" content="music.album">
+<meta property="og:site_name" content="OG Bobby">
+<meta property="og:title" content="OG Bobby">
+<meta property="og:description" content="15 tracks">
+<meta property="og:url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/">
+<meta property="og:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
+<meta property="og:image:secure_url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1376">
+<meta property="og:image:height" content="768">
+<meta property="og:image:alt" content="OG Bobby album artwork">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OG Bobby">
+<meta name="twitter:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
 <link rel="icon" href="cover.png">
 <link rel="apple-touch-icon" href="cover.png">
-<title>OG Bobby</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&display=swap">
 <style>
@@ -23,12 +35,13 @@
 html, body { background: var(--bg); color: var(--fg); }
 body { font-family: var(--body); font-size: 16px; }
 .wrap { max-width: 520px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 40px; display: grid; gap: 20px; }
-header { display: flex; gap: 16px; align-items: center; }
-header img { width: 96px; height: 96px; border-radius: 12px; flex: none; }
+header { display: grid; gap: 14px; }
+header img { width: 100%; max-width: 100%; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 12px; display: block; }
 header .meta { min-width: 0; }
 h1 { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-height: 1; margin: 0; letter-spacing: .02em; }
 .sub { color: var(--muted); font-size: .9rem; margin-top: 6px; }
 .now { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; }
+.now-art { width: 100%; max-width: 100%; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 10px; display: block; }
 .now-label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 #nowTitle { font-family: var(--display); font-weight: 400; font-size: 1.6rem; line-height: 1.1; text-wrap: balance; }
 .seek { display: grid; gap: 4px; }
@@ -49,22 +62,20 @@ li.on button { color: var(--accent); font-weight: 600; }
 li.on .n { color: var(--accent); }
 .section { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: 14px 4px 6px; }
 </style>
-<style>html,body{margin:0}</style>
+
 </head>
 <body>
-
-
 <div class="wrap">
   <header>
-    <img src="cover.png" alt="OG Budz logo">
+    <img src="cover.jpg" alt="OG Bobby on a Bay Ridge street at night, Verrazzano Bridge and full moon behind him">
     <div class="meta">
       <h1>OG BOBBY</h1>
-      <div class="sub">12 tracks · <span id="total"></span></div>
+      <div class="sub"><span id="count"></span> tracks · <span id="total"></span></div>
     </div>
   </header>
 
   <section class="now" aria-label="Now playing">
-    <div class="now-label">Now playing · <span id="nowNum">1</span> of 12</div>
+    <div class="now-label">Now playing · <span id="nowNum">1</span> of <span id="ofN"></span></div>
     <div id="nowTitle">OG BUDZ</div>
     <div class="seek">
       <input type="range" id="seek" min="0" max="100" step="0.1" value="0" aria-label="Seek">
@@ -96,13 +107,18 @@ const TRACKS = [
   { f: "09-off-the-feet.mp3", t: "OFF THE FEET", d: 113 },
   { f: "10-drexterminator.mp3", t: "DREXTERMINATOR", d: 194 },
   { f: "11-mint.mp3", t: "Mint", d: 170 },
-  { f: "12-untitled.mp3", t: "Track 12", d: 121 }
+  { f: "12-untitled.mp3", t: "Track 12", d: 121 },
+  { f: "13-pioneer-v2.mp3", t: "Pioneer", d: 216 },
+  { f: "14-whatever-it-takes-v2.mp3", t: "Whatever It Takes", d: 168 },
+  { f: "15-the-get-back.mp3", t: "The Get Back", d: 190 }
 ];
 const $ = id => document.getElementById(id);
 const audio = $("audio"), list = $("list");
 const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
 let i = 0;
 
+$("count").textContent = TRACKS.length;
+$("ofN").textContent = TRACKS.length;
 $("total").textContent = Math.round(TRACKS.reduce((a, x) => a + x.d, 0) / 60) + " min";
 
 TRACKS.forEach((tr, k) => {
@@ -122,14 +138,16 @@ TRACKS.forEach((tr, k) => {
 
 function load(k, play) {
   i = (k + TRACKS.length) % TRACKS.length;
-  audio.src = "songs/" + TRACKS[i].f;
-  $("nowTitle").textContent = TRACKS[i].t;
+  const tr = TRACKS[i];
+  audio.src = "songs/" + tr.f;
+  $("nowTitle").textContent = tr.t;
   $("nowNum").textContent = i + 1;
-  $("dur").textContent = fmt(TRACKS[i].d);
+  $("dur").textContent = fmt(tr.d);
   document.querySelectorAll("li[data-k]").forEach(li => li.classList.toggle("on", +li.dataset.k === i));
   if ("mediaSession" in navigator) {
     try {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: TRACKS[i].t, artist: "OG Bobby", album: "OG Bobby", artwork: [{ src: "cover.png", sizes: "512x512", type: "image/png" }] });
+      const art = { src: "cover.jpg", sizes: "1376x768", type: "image/jpeg" };
+      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.t, artist: "OG Bobby", album: "OG Bobby", artwork: [art] });
     } catch (e) {}
   }
   if (play) audio.play().catch(() => {});
@@ -161,5 +179,4 @@ if ("mediaSession" in navigator) {
 load(0, false);
 </script>
 
-</body>
-</html>
+</body></html>
