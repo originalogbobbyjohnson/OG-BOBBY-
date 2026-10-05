@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OG Made</title>
-<meta name="description" content="OG Made - 10 tracks">
+<meta name="description" content="OG Made - 9 tracks">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="OG Bobby">
 <meta property="og:title" content="OG Made">
-<meta property="og:description" content="10 tracks">
+<meta property="og:description" content="9 tracks">
 <meta property="og:url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/og-made/">
 <meta property="og:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
 <meta property="og:image:secure_url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
@@ -76,7 +76,7 @@ li.on .n { color: var(--accent); }
 
   <section class="now" aria-label="Now playing">
     <div class="now-label">Now playing · <span id="nowNum">1</span> of <span id="ofN"></span></div>
-    <div id="nowTitle">OG Drill 1</div>
+    <div id="nowTitle">Whatever It Takes</div>
     <div class="seek">
       <input type="range" id="seek" min="0" max="100" step="0.1" value="0" aria-label="Seek">
       <div class="times"><span id="cur">0:00</span><span id="dur">0:00</span></div>
@@ -95,16 +95,15 @@ li.on .n { color: var(--accent); }
 
 <script>
 const TRACKS = [
+  { f: "14-whatever-it-takes-v2.mp3", t: "Whatever It Takes", d: 168 },
+  { f: "12-untitled.mp3", t: "Track 12", d: 121 },
   { f: "04-og-drill-1.mp3", t: "OG Drill 1", d: 44 },
-  { f: "05-og-drill-2.mp3", t: "OG Drill 2", d: 54 },
+  { f: "15-the-get-back.mp3", t: "The Get Back", d: 190 },
   { f: "07-ogz.mp3", t: "OG'z", d: 137 },
   { f: "09-off-the-feet.mp3", t: "OFF THE FEET", d: 113 },
   { f: "10-drexterminator.mp3", t: "DREXTERMINATOR", d: 194 },
-  { f: "11-mint.mp3", t: "Mint", d: 170 },
-  { f: "12-untitled.mp3", t: "Track 12", d: 121 },
   { f: "13-pioneer-v2.mp3", t: "Pioneer", d: 216 },
-  { f: "14-whatever-it-takes-v2.mp3", t: "Whatever It Takes", d: 168 },
-  { f: "15-the-get-back.mp3", t: "The Get Back", d: 190 }
+  { f: "05-og-drill-2.mp3", t: "OG Drill 2", d: 54 }
 ];
 const $ = id => document.getElementById(id);
 const audio = $("audio"), list = $("list");
