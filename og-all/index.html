@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>OG MADE</title>
-<meta name="description" content="OG MADE · 9 tracks">
+<title>OG ALL</title>
+<meta name="description" content="OG ALL · 19 tracks">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="OG Bobby">
-<meta property="og:title" content="OG MADE">
-<meta property="og:description" content="9 tracks">
-<meta property="og:url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/og-made/">
+<meta property="og:title" content="OG ALL">
+<meta property="og:description" content="19 tracks">
+<meta property="og:url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/og-all/">
 <meta property="og:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
 <meta property="og:image:secure_url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="768">
 <meta property="og:image:alt" content="OG Bobby album artwork">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OG MADE">
+<meta name="twitter:title" content="OG ALL">
 <meta name="twitter:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
 <link rel="icon" href="../cover.png">
 <link rel="apple-touch-icon" href="../cover.png">
@@ -69,7 +69,7 @@ li.on .n { color: var(--accent); }
   <header>
     <img src="../cover.jpg" alt="OG Bobby on a Bay Ridge street at night, Verrazzano Bridge and full moon behind him">
     <div class="meta">
-      <h1>OG MADE</h1>
+      <h1>OG ALL</h1>
       <div class="sub"><span id="count"></span> tracks · <span id="total"></span></div>
     </div>
   </header>
@@ -95,6 +95,16 @@ li.on .n { color: var(--accent); }
 
 <script>
 const TRACKS = [
+  { f: "01-og-budz.mp3", t: "OG BUDZ", d: 57 },
+  { f: "02-og-budz-vox.mp3", t: "OG BUDZ (Male)", d: 57 },
+  { f: "03-og-budz-girl.mp3", t: "OG BUDZ (Girl)", d: 51 },
+  { f: "04-og-drill-1.mp3", t: "OG Drill 1", d: 44 },
+  { f: "05-og-drill-2.mp3", t: "OG Drill 2", d: 54 },
+  { f: "06-og-delivery-1.mp3", t: "OG Delivery 1", d: 47 },
+  { f: "08-og-delivery-2.mp3", t: "OG Delivery 2", d: 50 },
+  { f: "07-ogz.mp3", t: "OG'z", d: 137 },
+  { f: "08-private-vault.mp3", t: "Private Vault", d: 63 },
+  { f: "11-mint.mp3", t: "Mint", d: 170 },
   { f: "09-off-the-feet.mp3", t: "OFF THE FEET", d: 113 },
   { f: "10-drexterminator.mp3", t: "DREXTERMINATOR", d: 194 },
   { f: "12-untitled.mp3", t: "It's Mint", d: 121 },
@@ -134,7 +144,7 @@ function load(k, play) {
   if ("mediaSession" in navigator) {
     try {
       const art = { src: "../cover.jpg", sizes: "1376x768", type: "image/jpeg" };
-      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.t, artist: "OG Bobby", album: "OG MADE", artwork: [art] });
+      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.t, artist: "OG Bobby", album: "OG ALL", artwork: [art] });
     } catch (e) {}
   }
   if (play) audio.play().catch(() => {});
