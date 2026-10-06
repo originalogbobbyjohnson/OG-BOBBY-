@@ -47,7 +47,9 @@ h1 { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-heig
 .seek { display: grid; gap: 4px; }
 input[type=range] { width: 100%; accent-color: var(--accent); }
 .times { display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
-.controls { display: flex; justify-content: center; align-items: center; gap: 20px; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 6px; }
+.controls button:not(.play) { width: 48px; height: 48px; box-sizing: border-box; flex: none; }
+.controls button.skip { font: 600 .78rem var(--body); }
 .controls button { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 50%; width: 56px; height: 56px; display: grid; place-items: center; cursor: pointer; }
 .controls button.play { width: 72px; height: 72px; background: var(--accent); border-color: var(--accent); color: var(--bg); }
 .controls svg { width: 24px; height: 24px; fill: currentColor; }
@@ -83,7 +85,9 @@ li.on .n { color: var(--accent); }
     </div>
     <div class="controls">
       <button id="prev" aria-label="Previous song"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zM9.5 12 18 18V6z"/></svg></button>
+      <button id="back15" class="skip" aria-label="Back 15 seconds">−15</button>
       <button id="play" class="play" aria-label="Play"><svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg></button>
+      <button id="fwd15" class="skip" aria-label="Forward 15 seconds">+15</button>
       <button id="next" aria-label="Next song"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg></button>
     </div>
   </section>
@@ -145,6 +149,9 @@ function setIcon(playing) {
 }
 $("play").onclick = () => audio.paused ? audio.play().catch(() => {}) : audio.pause();
 $("next").onclick = () => load(i + 1, true);
+const jump = sec => { if (audio.duration) audio.currentTime = Math.min(Math.max(0, audio.currentTime + sec), audio.duration - 0.5); };
+$("back15").onclick = () => jump(-15);
+$("fwd15").onclick = () => jump(15);
 $("prev").onclick = () => (audio.currentTime > 3 ? (audio.currentTime = 0) : load(i - 1, true));
 audio.onplay = () => setIcon(true);
 audio.onpause = () => setIcon(false);
@@ -161,6 +168,9 @@ if ("mediaSession" in navigator) {
     navigator.mediaSession.setActionHandler("previoustrack", () => load(i - 1, true));
     navigator.mediaSession.setActionHandler("play", () => audio.play());
     navigator.mediaSession.setActionHandler("pause", () => audio.pause());
+    navigator.mediaSession.setActionHandler("seekbackward", d => jump(-((d && d.seekOffset) || 15)));
+    navigator.mediaSession.setActionHandler("seekforward", d => jump((d && d.seekOffset) || 15));
+    navigator.mediaSession.setActionHandler("seekto", d => { if (d && d.seekTime != null) audio.currentTime = d.seekTime; });
   } catch (e) {}
 }
 load(0, false);
