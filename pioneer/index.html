@@ -8,7 +8,7 @@
 <meta property="og:type" content="music.song">
 <meta property="og:site_name" content="OG Bobby">
 <meta property="og:title" content="Pioneer">
-<meta property="og:description" content="OG Bobby · single">
+<meta property="og:description" content="OG Bobby · OG Made">
 <meta property="og:url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/pioneer/">
 <meta property="og:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
 <meta property="og:image:secure_url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
@@ -69,7 +69,7 @@ li.on .n { color: var(--accent); }
   <header>
     <img src="../cover.jpg" alt="OG Bobby on a Bay Ridge street at night, Verrazzano Bridge and full moon behind him">
     <div class="meta">
-      <h1>POSITIVITY SPREADS</h1>
+      <h1>OG MADE</h1>
       <div class="sub">OG Bobby · <span id="total"></span><span id="count" hidden></span></div>
     </div>
   </header>
@@ -126,7 +126,7 @@ function load(k, play) {
   if ("mediaSession" in navigator) {
     try {
       const art = { src: "../cover.jpg", sizes: "1376x768", type: "image/jpeg" };
-      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.t, artist: "OG Bobby", album: "Pioneer", artwork: [art] });
+      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.t, artist: "OG Bobby", album: "OG Made", artwork: [art] });
     } catch (e) {}
   }
   if (play) audio.play().catch(() => {});
