@@ -130,10 +130,27 @@ TRACKS.forEach((tr, k) => {
   list.appendChild(li);
 });
 
+// Fast skip: quietly download the next song while this one plays, so Next starts right away
+const SONGS = "../songs/", READY = {}, LOADING = {};
+function warm(k) {
+  const f = TRACKS[(k + TRACKS.length) % TRACKS.length].f;
+  if (READY[f] || LOADING[f] || !window.fetch || !window.URL) return;
+  LOADING[f] = true;
+  fetch(SONGS + f).then(r => r.ok ? r.blob() : Promise.reject())
+    .then(b => { READY[f] = URL.createObjectURL(b); })
+    .catch(() => {}).then(() => { delete LOADING[f]; });
+}
+function tidy() {
+  const keep = new Set([TRACKS[i].f, TRACKS[(i + 1) % TRACKS.length].f]);
+  Object.keys(READY).forEach(f => { if (!keep.has(f)) { URL.revokeObjectURL(READY[f]); delete READY[f]; } });
+}
+audio.preload = "auto";
+audio.addEventListener("playing", () => { tidy(); setTimeout(() => warm(i + 1), 1500); });
+
 function load(k, play) {
   i = (k + TRACKS.length) % TRACKS.length;
   const tr = TRACKS[i];
-  audio.src = "../songs/" + tr.f;
+  audio.src = READY[tr.f] || (SONGS + tr.f);
   $("nowTitle").textContent = tr.t;
   $("nowNum").textContent = i + 1;
   $("dur").textContent = fmt(tr.d);
