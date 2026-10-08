@@ -107,7 +107,7 @@ const TRACKS = [
   { f: "09-off-the-feet.mp3", t: "OFF THE FEET", d: 113 },
   { f: "10-drexterminator.mp3", t: "DREXTERMINATOR", d: 194 },
   { f: "11-mint.mp3", t: "Mint", d: 170 },
-  { f: "12-untitled.mp3", t: "Track 12", d: 121 },
+  { f: "12-untitled.mp3", t: "It's Mint", d: 121 },
   { f: "16-bars-and-clubs.mp3", t: "Bars & Clubs", d: 179 },
   { f: "21-pioneer-slow-raw.mp3", t: "Pioneer", d: 208 },
   { f: "14-whatever-it-takes-v2.mp3", t: "Whatever It Takes", d: 168 },
@@ -163,6 +163,18 @@ $("play").onclick = () => audio.paused ? audio.play().catch(() => {}) : audio.pa
 $("next").onclick = () => load(i + 1, true);
 $("prev").onclick = () => (audio.currentTime > 3 ? (audio.currentTime = 0) : load(i - 1, true));
 audio.onplay = () => setIcon(true);
+// Car radios / lock screens: re-send the song name once it actually starts playing, so the display never falls back to the file or page name
+audio.addEventListener("playing", () => {
+  try {
+    const m = navigator.mediaSession && navigator.mediaSession.metadata;
+    if (m) {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: m.title, artist: m.artist, album: m.album, artwork: [...m.artwork] });
+      navigator.mediaSession.playbackState = "playing";
+      document.title = m.title + " · " + m.artist;
+    }
+  } catch (e) {}
+});
+audio.addEventListener("pause", () => { try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} });
 audio.onpause = () => setIcon(false);
 audio.onended = () => load(i + 1, true);
 audio.onloadedmetadata = () => { $("dur").textContent = fmt(audio.duration); };

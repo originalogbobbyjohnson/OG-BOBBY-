@@ -156,6 +156,18 @@ $("back15").onclick = () => jump(-15);
 $("fwd15").onclick = () => jump(15);
 $("prev").onclick = () => (audio.currentTime > 3 ? (audio.currentTime = 0) : load(i - 1, true));
 audio.onplay = () => setIcon(true);
+// Car radios / lock screens: re-send the song name once it actually starts playing, so the display never falls back to the file or page name
+audio.addEventListener("playing", () => {
+  try {
+    const m = navigator.mediaSession && navigator.mediaSession.metadata;
+    if (m) {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: m.title, artist: m.artist, album: m.album, artwork: [...m.artwork] });
+      navigator.mediaSession.playbackState = "playing";
+      document.title = m.title + " · " + m.artist;
+    }
+  } catch (e) {}
+});
+audio.addEventListener("pause", () => { try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} });
 audio.onpause = () => setIcon(false);
 audio.onended = () => load(i + 1, true);
 audio.onloadedmetadata = () => { $("dur").textContent = fmt(audio.duration); };

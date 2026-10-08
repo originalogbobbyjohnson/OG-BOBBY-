@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>OG Made - 8</title>
-<meta name="description" content="OG Made - 8 · 8 tracks">
+<title>OG Made - 9</title>
+<meta name="description" content="OG Made - 9 · 9 tracks">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="OG Bobby">
-<meta property="og:title" content="OG Made - 8">
-<meta property="og:description" content="8 tracks">
+<meta property="og:title" content="OG Made - 9">
+<meta property="og:description" content="9 tracks">
 <meta property="og:url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/og-made-7/">
 <meta property="og:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
 <meta property="og:image:secure_url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="768">
 <meta property="og:image:alt" content="OG Bobby album artwork">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OG Made - 8">
+<meta name="twitter:title" content="OG Made - 9">
 <meta name="twitter:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
 <link rel="icon" href="../cover.png">
 <link rel="apple-touch-icon" href="../cover.png">
@@ -71,7 +71,7 @@ li.on .n { color: var(--accent); }
   <header>
     <img src="../cover.jpg" alt="OG Bobby on a Bay Ridge street at night, Verrazzano Bridge and full moon behind him">
     <div class="meta">
-      <h1>OG Made - 8</h1>
+      <h1>OG Made - 9</h1>
       <div class="sub"><span id="count"></span> tracks · <span id="total"></span></div>
     </div>
   </header>
@@ -106,7 +106,8 @@ const TRACKS = [
   { f: "20-ridge-brothers.mp3", t: "Ridge Brothers", d: 224 },
   { f: "16-bars-and-clubs.mp3", t: "Bars & Clubs", d: 179 },
   { f: "22-bay-ridge-is-mine-slow-raw.mp3", t: "Bay Ridge Is Mine", d: 283 },
-  { f: "18-positivity-spreads.mp3", t: "Positivity Spreads", d: 287 }
+  { f: "18-positivity-spreads.mp3", t: "Positivity Spreads", d: 287 },
+  { f: "23-black-rob.mp3", t: "Black Rob", d: 215 }
 ];
 const $ = id => document.getElementById(id);
 const audio = $("audio"), list = $("list");
@@ -137,7 +138,7 @@ function load(k, play) {
   if ("mediaSession" in navigator) {
     try {
       const art = { src: "../cover.jpg", sizes: "1376x768", type: "image/jpeg" };
-      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.t, artist: "OG Bobby", album: "OG Made - 8", artwork: [art] });
+      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.t, artist: "OG Bobby", album: "OG Made - 9", artwork: [art] });
     } catch (e) {}
   }
   if (play) audio.play().catch(() => {});
@@ -153,6 +154,18 @@ $("back15").onclick = () => jump(-15);
 $("fwd15").onclick = () => jump(15);
 $("prev").onclick = () => (audio.currentTime > 3 ? (audio.currentTime = 0) : load(i - 1, true));
 audio.onplay = () => setIcon(true);
+// Car radios / lock screens: re-send the song name once it actually starts playing, so the display never falls back to the file or page name
+audio.addEventListener("playing", () => {
+  try {
+    const m = navigator.mediaSession && navigator.mediaSession.metadata;
+    if (m) {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: m.title, artist: m.artist, album: m.album, artwork: [...m.artwork] });
+      navigator.mediaSession.playbackState = "playing";
+      document.title = m.title + " · " + m.artist;
+    }
+  } catch (e) {}
+});
+audio.addEventListener("pause", () => { try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} });
 audio.onpause = () => setIcon(false);
 audio.onended = () => load(i + 1, true);
 audio.onloadedmetadata = () => { $("dur").textContent = fmt(audio.duration); };
