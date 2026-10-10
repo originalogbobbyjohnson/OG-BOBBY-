@@ -98,18 +98,18 @@ li.on .n { color: var(--accent); }
 <audio id="audio" preload="metadata"></audio>
 
 <script>
-// One continuous mix: songs blend into each other with scratches between. Each song is a starting point inside the mix.
-const MIX = "../songs/25-og-made-9-fade-clean.mp3", LEN = 1899.9;
+// One continuous mix: songs blend into each other with smooth crossfades. Each song is a starting point inside the mix.
+const MIX = "../songs/25-og-made-9-fade-clean.mp3?v=2", LEN = 1899.5;
 const TRACKS = [
   { t: "Whatever It Takes", s: 0.0 },
-  { t: "Bay Ridge Nights", s: 164.75 },
-  { t: "The Get Back", s: 362.55 },
-  { t: "Pioneer", s: 545.7 },
-  { t: "Ridge Brothers", s: 745.3 },
-  { t: "Bars & Clubs", s: 962.6 },
-  { t: "Bay Ridge Is Mine", s: 1134.85 },
-  { t: "Positivity Spreads", s: 1410.05 },
-  { t: "Black Rob", s: 1688.65 }
+  { t: "Bay Ridge Nights", s: 161.05 },
+  { t: "The Get Back", s: 359.44 },
+  { t: "Pioneer", s: 539.06 },
+  { t: "Ridge Brothers", s: 739.49 },
+  { t: "Bars & Clubs", s: 956.89 },
+  { t: "Bay Ridge Is Mine", s: 1129.07 },
+  { t: "Positivity Spreads", s: 1404.83 },
+  { t: "Black Rob", s: 1684.16 }
 ];
 const $ = id => document.getElementById(id);
 const audio = $("audio"), list = $("list");
