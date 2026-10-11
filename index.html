@@ -56,7 +56,23 @@ h1 img { display: block; width: min(100%, 380px); height: auto; filter: drop-sha
 .how b { color: var(--gold); }
 .label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
-/* Score + rewards */
+/* Street cred meter */
+.cred { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 14px; }
+.cred-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.cred-name { font-family: var(--graffiti); font-size: 1.35rem; color: var(--gold); line-height: 1; }
+.cred-hint { font-size: .85rem; color: var(--muted); }
+.cred-track { position: relative; padding-top: 30px; padding-bottom: 22px; margin-right: 22px; }
+.cred-bar { height: 16px; background: #0b130d; border: 1px solid var(--line); border-radius: 99px; overflow: hidden; }
+.cred-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #8a6d24, #e3b23c 70%, #ffe08a); box-shadow: 0 0 12px rgba(227,178,60,.8); transition: width .6s ease; }
+.flag { position: absolute; top: 0; transform: translateX(-4px); display: grid; justify-items: start; color: #4f6b57; }
+.flag.last { transform: translateX(-4px); }
+.flag svg { width: 22px; height: 26px; fill: currentColor; }
+.flag span { position: absolute; top: 48px; left: 4px; transform: translateX(-50%); font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; color: var(--muted); }
+.flag.last span { transform: translateX(-85%); }
+.flag.won { color: var(--gold); filter: drop-shadow(0 0 6px rgba(227,178,60,.8)); }
+.flag.won span { color: var(--gold); }
+
+/* Rewards */
 .score { display: grid; gap: 10px; }
 .score .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
 .score .count { font-family: var(--display); font-size: 1.4rem; color: var(--gold); white-space: nowrap; }
@@ -160,21 +176,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
     </div>
   </header>
 
-  <div class="how">
-    <div>Every song stops at a turning point. <b>Answer the question to keep the story going.</b></div>
-    <div>Episodes 1–3 stop once. 4–6 stop twice. 7–9 stop after every verse.</div>
-    <div>Miss one? Play that verse again and try again. Miss twice and the joke answer gets crossed out.</div>
-  </div>
-
-  <section class="score" aria-label="Your score">
-    <div class="row"><span class="label">Right on the first try</span><span class="count" id="count">0 / 18</span></div>
-    <div class="bar"><i id="barFill"></i><span class="tick" style="left:33.33%"></span><span class="tick" style="left:66.66%"></span></div>
-    <div class="ladder">
-      <div class="tier" id="t1"><span class="need">6</span><span class="what">Pick 1 song for your own playlist</span></div>
-      <div class="tier" id="t2"><span class="need">12</span><span class="what">Pick 3 songs for your playlist</span></div>
-      <div class="tier" id="t3"><span class="need">18</span><span class="what">The whole album + OG Certified</span></div>
-    </div>
-  </section>
+  <div class="how">Every song stops at a turning point. <b>Answer right to keep the story going.</b></div>
 
   <section class="reward" id="reward" aria-live="polite">
     <h3 id="rTitle">YOU EARNED A PLAYLIST</h3>
@@ -198,6 +200,15 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
       <button class="btn-round" id="back" type="button" aria-label="Back 10 seconds"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></button>
       <button class="btn-round play" id="play" type="button" aria-label="Play"><svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
       <button class="btn-round" id="restart" type="button" aria-label="Start the song over"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
+    </div>
+    <div class="cred" aria-label="Street cred meter">
+      <div class="cred-head"><span class="cred-name">STREET CRED</span><span class="cred-hint" id="credHint"></span></div>
+      <div class="cred-track">
+        <div class="cred-bar"><i id="barFill"></i></div>
+        <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>1 song</span></div>
+        <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>3 songs</span></div>
+        <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>The album</span></div>
+      </div>
     </div>
     <div class="quiz" id="quiz">
       <div class="label" id="qLabel">Question 1</div>
@@ -301,9 +312,12 @@ function renderList() {
     li.appendChild(b); ol.appendChild(li);
   });
   const sc = score();
-  $("count").textContent = sc + " / " + TOTAL_Q;
   $("barFill").style.width = (sc / TOTAL_Q * 100) + "%";
-  TIERS.forEach((t, k) => $("t" + (k + 1)).classList.toggle("won", sc >= t.need));
+  TIERS.forEach((t, k) => $("f" + (k + 1)).classList.toggle("won", sc >= t.need));
+  const next = TIERS.find(t => sc < t.need);
+  $("credHint").textContent = next
+    ? (next.need - sc) + " more to " + (next.picks === 1 ? "earn a song" : next.picks === 3 ? "earn 3 songs" : "earn the album")
+    : "OG Certified";
   renderReward();
 }
 
