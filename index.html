@@ -21,68 +21,92 @@
 <link rel="icon" href="cover.png">
 <link rel="apple-touch-icon" href="cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap">
 <style>
+/* Layout: one narrow column. Cover, how-it-works, score + reward ladder, the player with its question, then the episode list. */
 :root {
   --bg: #0f1a12; --panel: #17251a; --panel2: #1d2f21; --line: #2a4231;
   --fg: #eef3ea; --muted: #9db3a2; --gold: #e3b23c; --gold-dim: #8a6d24;
   --bad: #e26d5a; --good: #7fcf8c;
   --display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --graffiti: "Sedgwick Ave Display", "Permanent Marker", "Marker Felt", cursive;
   --body: "Barlow", system-ui, -apple-system, sans-serif;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { margin: 0; background: var(--bg); color: var(--fg); }
 body { font-family: var(--body); font-size: 16px; line-height: 1.4; -webkit-tap-highlight-color: transparent; }
 .wrap { max-width: 540px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 22px; }
 header { display: grid; gap: 14px; }
 .cover { position: relative; }
-.budz-chip { position: absolute; top: 10px; right: 10px; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: #000; border: 2px solid var(--gold); color: var(--gold); text-decoration: none; font-family: var(--display); font-size: .72rem; line-height: .95; text-align: center; letter-spacing: .04em; box-shadow: 0 2px 8px rgba(0,0,0,.5); }
-.quiz .lab { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
-header img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid var(--gold-dim); }
-h1 { font-family: var(--display); font-weight: 400; font-size: 3rem; line-height: .95; margin: 0; letter-spacing: .02em; color: var(--gold); }
+.cover img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid var(--gold-dim); }
+.budz-chip { position: absolute; top: 10px; right: 10px; display: block; width: 48px; height: 48px; border-radius: 11px; box-shadow: 0 2px 8px rgba(0,0,0,.6); }
+.budz-chip img { width: 100%; height: 100%; display: block; border-radius: 11px; }
+h1 { font-family: var(--graffiti); font-weight: 400; font-size: 3.6rem; line-height: 1; margin: 0; color: var(--gold); text-shadow: 3px 3px 0 #000, -1px -1px 0 #000; }
 .tag { color: var(--muted); margin: 6px 0 0; }
-.how { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; font-size: .95rem; }
+.how { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; font-size: .95rem; display: grid; gap: 6px; }
 .how b { color: var(--gold); }
-.progress { display: grid; gap: 8px; }
-.progress .row { display: flex; justify-content: space-between; align-items: baseline; }
-.progress .label { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-.progress .count { font-family: var(--display); font-size: 1.4rem; color: var(--gold); }
-.bar { height: 8px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
+.label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+/* Score + rewards */
+.score { display: grid; gap: 10px; }
+.score .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.score .count { font-family: var(--display); font-size: 1.4rem; color: var(--gold); white-space: nowrap; }
+.bar { position: relative; height: 10px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
 .bar i { display: block; height: 100%; width: 0; background: var(--gold); transition: width .4s; }
-.certified { display: none; text-align: center; font-family: var(--display); font-size: 1.6rem; color: var(--bg); background: var(--gold); border-radius: 12px; padding: 12px; letter-spacing: .04em; }
-.certified.on { display: block; }
+.bar .tick { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--bg); }
+.ladder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.tier { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px; display: grid; gap: 2px; align-content: start; min-width: 0; }
+.tier .need { font-family: var(--display); font-size: 1.25rem; color: var(--muted); }
+.tier .what { font-size: .82rem; color: var(--muted); }
+.tier.won { border-color: var(--gold); }
+.tier.won .need, .tier.won .what { color: var(--gold); }
+.reward { display: none; background: #000; border: 2px solid var(--gold); border-radius: 14px; padding: 16px; gap: 12px; }
+.reward.on { display: grid; }
+.reward h3 { margin: 0; font-family: var(--graffiti); font-weight: 400; font-size: 1.7rem; color: var(--gold); }
+.reward p { margin: 0; color: var(--muted); font-size: .92rem; }
+.picks { display: grid; gap: 6px; }
+.picks label { display: flex; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+.picks input { accent-color: var(--gold); width: 18px; height: 18px; }
+.btn { display: block; width: 100%; text-align: center; text-decoration: none; font: inherit; font-weight: 700; color: var(--bg); background: var(--gold); border: 0; border-radius: 12px; padding: 14px; cursor: pointer; }
+.btn:disabled { opacity: .4; cursor: default; }
+.btn.ghost { background: none; color: var(--gold); border: 1px solid var(--gold); }
 
 /* Player */
-.player { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: none; gap: 14px; }
-.player.on { display: grid; }
-.ep-label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.player { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 14px; }
 #pTitle { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.05; margin: 2px 0 0; }
 .part { font-size: .85rem; color: var(--gold); font-weight: 600; }
 .seek { display: grid; gap: 4px; }
-.track { position: relative; height: 6px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
+.track { position: relative; height: 8px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
 .track i { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--gold); }
 .track .lock { position: absolute; top: 0; bottom: 0; right: 0; background: repeating-linear-gradient(45deg, #2a4231 0 4px, #1d2f21 4px 8px); }
+.track .stop { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--bg); }
 .times { display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
 .controls { display: flex; justify-content: center; align-items: center; gap: 18px; }
 .btn-round { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 50%; width: 52px; height: 52px; display: grid; place-items: center; cursor: pointer; }
 .btn-round.play { width: 70px; height: 70px; background: var(--gold); border-color: var(--gold); color: var(--bg); }
 .btn-round svg { width: 22px; height: 22px; fill: currentColor; }
 .btn-round.play svg { width: 30px; height: 30px; }
-button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+button:focus-visible, a:focus-visible, label:focus-within { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-/* Quiz */
+/* Question */
 .quiz { display: none; gap: 10px; border-top: 1px solid var(--line); padding-top: 14px; }
 .quiz.on { display: grid; }
-.quiz h3 { margin: 0; font-size: 1.1rem; }
+.quiz .label { color: var(--gold); }
+.quiz h3 { margin: 0; font-size: 1.15rem; text-wrap: balance; }
 .quiz .hint { color: var(--muted); font-size: .9rem; margin: 0; }
 .opt { width: 100%; text-align: left; font: inherit; font-weight: 600; color: var(--fg); background: var(--panel2); border: 1px solid var(--line); border-radius: 12px; padding: 14px; cursor: pointer; }
 .opt:disabled { opacity: .45; cursor: default; }
-.opt.right { border-color: var(--good); color: var(--good); }
-.opt.wrong { border-color: var(--bad); color: var(--bad); }
+.opt.right { border-color: var(--good); color: var(--good); opacity: 1; }
+.opt.wrong { border-color: var(--bad); color: var(--bad); opacity: 1; }
+.opt.out { text-decoration: line-through; opacity: .3; }
 .msg { font-weight: 600; min-height: 1.3em; margin: 0; }
 .msg.bad { color: var(--bad); } .msg.good { color: var(--good); }
-.early { background: none; border: 0; color: var(--muted); text-decoration: underline; font: inherit; font-size: .85rem; cursor: pointer; justify-self: start; padding: 0; }
+.again { display: none; background: none; border: 1px solid var(--line); color: var(--fg); font: inherit; border-radius: 10px; padding: 10px; cursor: pointer; }
+.again.on { display: block; }
+.done-note { display: none; color: var(--good); font-weight: 600; border-top: 1px solid var(--line); padding-top: 12px; }
+.done-note.on { display: block; }
 
 /* Episodes */
 h2 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; margin: 0 0 6px; letter-spacing: .03em; }
@@ -91,15 +115,15 @@ ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .ep.current { border-color: var(--gold); }
 .ep .n { font-family: var(--display); color: var(--gold); font-size: 1.2rem; }
 .ep .t { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
-.ep .s { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.ep .s { font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 .ep .s.open { color: var(--good); }
-.ep:disabled { cursor: default; opacity: .55; }
 
 /* OG Budz */
 .budz { display: block; text-align: center; text-decoration: none; background: #000; border: 2px solid var(--gold); border-radius: 14px; padding: 16px; color: var(--gold); }
-.budz .big { font-family: var(--display); font-size: 2rem; letter-spacing: .06em; display: block; line-height: 1; }
+.budz img { display: block; width: min(240px, 70%); height: auto; margin: 0 auto 8px; }
 .budz .small { color: var(--muted); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
 footer { color: var(--muted); font-size: .8rem; text-align: center; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 </style>
 </head>
 <body>
@@ -107,7 +131,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
   <header>
     <div class="cover">
       <img src="cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
-      <a class="budz-chip" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" aria-label="OG Budz">OG<br>BUDZ</a>
+      <a class="budz-chip" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" aria-label="OG Budz"><img src="brand/og-budz-icon.png" alt="" width="48" height="48"></a>
     </div>
     <div>
       <h1>OG BOBBY</h1>
@@ -115,36 +139,54 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
     </div>
   </header>
 
-  <div class="how">Every song stops right before it hits. <b>Listen to Part 1, answer one question</b>, and the rest of the story is yours. Get it wrong? Run it back and listen again.</div>
-
-  <div class="progress">
-    <div class="row"><span class="label">Your progress</span><span class="count" id="count">0 / 9</span></div>
-    <div class="bar"><i id="barFill"></i></div>
+  <div class="how">
+    <div>Every song stops at a turning point. <b>Answer the question to keep the story going.</b></div>
+    <div>Episodes 1–3 stop once. 4–6 stop twice. 7–9 stop after every verse.</div>
+    <div>Miss one? Play that verse again and try again. Miss twice and the joke answer gets crossed out.</div>
   </div>
-  <div class="certified" id="cert">OG CERTIFIED</div>
+
+  <section class="score" aria-label="Your score">
+    <div class="row"><span class="label">Right on the first try</span><span class="count" id="count">0 / 18</span></div>
+    <div class="bar"><i id="barFill"></i><span class="tick" style="left:33.33%"></span><span class="tick" style="left:66.66%"></span></div>
+    <div class="ladder">
+      <div class="tier" id="t1"><span class="need">6</span><span class="what">Pick 1 song for your own playlist</span></div>
+      <div class="tier" id="t2"><span class="need">12</span><span class="what">Pick 3 songs for your playlist</span></div>
+      <div class="tier" id="t3"><span class="need">18</span><span class="what">The whole album + OG Certified</span></div>
+    </div>
+  </section>
+
+  <section class="reward" id="reward" aria-live="polite">
+    <h3 id="rTitle">YOU EARNED A PLAYLIST</h3>
+    <p id="rText"></p>
+    <div class="picks" id="picks"></div>
+    <button class="btn" id="makeList" type="button">Make my playlist</button>
+    <a class="btn ghost" id="openList" href="#" hidden>Open my playlist</a>
+  </section>
 
   <section class="player" id="player" aria-live="polite">
     <div>
-      <div class="ep-label" id="pEp">Episode 1</div>
+      <div class="label" id="pEp">Episode 1</div>
       <div id="pTitle">Whatever It Takes</div>
       <div class="part" id="pPart">Part 1</div>
     </div>
     <div class="seek">
-      <div class="track"><i id="fill"></i><span class="lock" id="lockZone"></span></div>
+      <div class="track" id="track"><i id="fill"></i><span class="lock" id="lockZone"></span></div>
       <div class="times"><span id="cur">0:00</span><span id="tot">0:00</span></div>
     </div>
     <div class="controls">
-      <button class="btn-round" id="back" aria-label="Back 10 seconds"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></button>
-      <button class="btn-round play" id="play" aria-label="Play"><svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
-      <button class="btn-round" id="restart" aria-label="Start over"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
+      <button class="btn-round" id="back" type="button" aria-label="Back 10 seconds"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></button>
+      <button class="btn-round play" id="play" type="button" aria-label="Play"><svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      <button class="btn-round" id="restart" type="button" aria-label="Start the song over"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
     </div>
     <div class="quiz" id="quiz">
-      <div class="lab">Your question</div>
+      <div class="label" id="qLabel">Question 1</div>
       <h3 id="qText"></h3>
-      <p class="hint">Listen to Part 1. The answer's in there.</p>
+      <p class="hint" id="qHint"></p>
       <div id="opts" style="display:grid;gap:8px"></div>
       <p class="msg" id="msg"></p>
+      <button class="again" id="again" type="button">Play that verse again</button>
     </div>
+    <div class="done-note" id="doneNote">Fully unlocked. This one plays straight through now.</div>
   </section>
 
   <section>
@@ -153,7 +195,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
   </section>
 
   <a class="budz" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">
-    <span class="big">OG BUDZ</span>
+    <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
     <span class="small">Step inside · 21+</span>
   </a>
 
@@ -163,26 +205,10 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
 <audio id="audio" preload="metadata"></audio>
 
 <script>
-const EPISODES = [
-  { slug: "whatever-it-takes", title: "Whatever It Takes", a: "976f909f2d71", cut: 93.6, dur: 168.2,
-    q: "What year does OG's story start?", opts: ["1979", "1983", "1990"] },
-  { slug: "ridge-brothers", title: "Ridge Brothers", a: "2818b56dc09e", cut: 144.6, dur: 224.4,
-    q: "Who connected OG to the Jorgenson brothers?", opts: ["Mike", "Jimmy Kush", "Andrew"] },
-  { slug: "bay-ridge-nights", title: "Bay Ridge Nights", a: "18943ab2a2f9", cut: 130.8, dur: 206.4,
-    q: "Which Bay Ridge spot was “for the squares”?", opts: ["Gino's", "Pizza Wagon", "Hobnail"] },
-  { slug: "the-get-back", title: "The Get Back", a: "891ee2171861", cut: 117.7, dur: 186.7,
-    q: "What year did OG walk away from Wall Street?", opts: ["1995", "1999", "2001"] },
-  { slug: "pioneer", title: "Pioneer", a: "16aa4a30992f", cut: 120.2, dur: 216.4,
-    q: "What did the partner secretly do with the shared money?", opts: ["Lost it gambling", "Used it for his own moves", "Hid it overseas"] },
-  { slug: "bars-and-clubs", title: "Bars & Clubs", a: "cb526872284b", cut: 113.7, dur: 179.4,
-    q: "Which Manhattan club gets a shout-out?", opts: ["Limelight", "The Tunnel", "Club USA"] },
-  { slug: "bay-ridge-is-mine", title: "Bay Ridge Is Mine", a: "e29667e963d2", cut: 152.2, dur: 264.6,
-    q: "How much money went missing?", opts: ["$2,000", "$7,000", "$10,000"] },
-  { slug: "black-rob", title: "Black Rob", a: "92e6b951fd61", cut: 125.7, dur: 227.5,
-    q: "What was Rob to OG in the boxing gym?", opts: ["His coach", "His first student", "His sparring rival"] },
-  { slug: "positivity-spreads", title: "Positivity Spreads", a: "6da48c29d311", cut: 199.1, dur: 286.8,
-    q: "Which Brooklyn park does OG train in?", opts: ["Prospect Park", "Owl's Head", "McCarren Park"] },
-];
+const EPISODES = [{"slug": "whatever-it-takes", "title": "Whatever It Takes", "a": "8975b859f01a", "cuts": [98.4], "dur": 168.2, "qs": [{"q": "What year does OG's story start?", "opts": ["1987", "1983", "3000"], "gx": 2}]}, {"slug": "ridge-brothers", "title": "Ridge Brothers", "a": "21eb83b7a142", "cuts": [144.7], "dur": 224.4, "qs": [{"q": "Who connected OG to the Jorgenson brothers?", "opts": ["Big brother Mike", "Jimmy Kush", "Santa Claus"], "gx": 2}]}, {"slug": "bay-ridge-nights", "title": "Bay Ridge Nights", "a": "eeb252303138", "cuts": [130.9], "dur": 206.4, "qs": [{"q": "Which Bay Ridge spot was for the squares?", "opts": ["The White House", "Gino's", "Pizza Wagon"], "gx": 0}]}, {"slug": "the-get-back", "title": "The Get Back", "a": "274ed1bf7495", "cuts": [62.0, 119.6], "dur": 186.7, "qs": [{"q": "How old was OG's baby girl in '99?", "opts": ["Thirty-five", "Three", "One"], "gx": 0}, {"q": "When did the brother say \"he don't sell\"?", "opts": ["On the moon", "New Year's Eve", "Christmas Eve"], "gx": 0}]}, {"slug": "pioneer", "title": "Pioneer", "a": "a0f91383e8e4", "cuts": [77.7, 144.6], "dur": 216.4, "qs": [{"q": "Where did the hustle start?", "opts": ["Staten Island", "South Brooklyn", "Disney World"], "gx": 2}, {"q": "What did the partner do with the shared money?", "opts": ["Used it for his own moves", "Hid it overseas", "Gave it to the zoo"], "gx": 2}]}, {"slug": "bars-and-clubs", "title": "Bars & Clubs", "a": "408ea49cb67a", "cuts": [66.6, 113.9], "dur": 179.4, "qs": [{"q": "Which Bay Ridge bar gets named?", "opts": ["Times Square Olive Garden", "Three Jolly Pigeons", "The Kettle Black"], "gx": 0}, {"q": "Which Manhattan club gets a shout-out?", "opts": ["Limelight", "The Tunnel", "Chuck E. Cheese"], "gx": 2}]}, {"slug": "bay-ridge-is-mine", "title": "Bay Ridge Is Mine", "a": "818079f3e2c4", "cuts": [85.0, 136.4, 187.1], "dur": 264.6, "qs": [{"q": "What holiday was coming when it went down?", "opts": ["Valentine's Day", "Thanksgiving", "Christmas"], "gx": 0}, {"q": "How much money went missing?", "opts": ["$7,000", "One dollar", "$70,000"], "gx": 1}, {"q": "What's the hook?", "opts": ["The OG's back", "The grit came back", "Who let the dogs out"], "gx": 2}]}, {"slug": "black-rob", "title": "Black Rob", "a": "1b1c2375cfe8", "cuts": [56.3, 117.4, 152.7], "dur": 215.5, "qs": [{"q": "How long have OG and Rob been friends?", "opts": ["270 years", "27 years", "17 years"], "gx": 0}, {"q": "What was Rob to OG in the boxing gym?", "opts": ["His landlord", "His first student", "His coach"], "gx": 0}, {"q": "Rob is like OG's...", "opts": ["Pet goldfish", "Cousin", "Little brother"], "gx": 0}]}, {"slug": "positivity-spreads", "title": "Positivity Spreads", "a": "f5b178c99f99", "cuts": [75.3, 147.8, 219.2], "dur": 286.8, "qs": [{"q": "Which Brooklyn park does OG train in?", "opts": ["Owl's Head", "Prospect Park", "The Central Park Zoo"], "gx": 2}, {"q": "Who did OG earn his black belt under?", "opts": ["Ricardo Almeida", "Rocky Balboa", "Frankie Edgar"], "gx": 1}, {"q": "What spreads?", "opts": ["Rumors", "Positivity", "Butter"], "gx": 2}]}];
+const VIP = "vip-0609a49912/";
+const TOTAL_Q = EPISODES.reduce((n, e) => n + e.qs.length, 0);
+const TIERS = [{ need: 6, picks: 1 }, { need: 12, picks: 3 }, { need: 18, picks: 9 }];
 
 /* Small SHA-256 so unlocking works on any connection. */
 function sha256(s) {
@@ -209,113 +235,189 @@ function sha256(s) {
   }
   return h.map(v => (v >>> 0).toString(16).padStart(8, "0")).join("");
 }
-const keyFor = (slug, ans) => sha256("og|" + slug + "|" + ans.trim().toLowerCase()).slice(0, 24);
+const keyFor = (slug, g, ans) => sha256("og|" + slug + "|" + g + "|" + ans.trim().toLowerCase()).slice(0, 24);
 
 /* Progress lives in this browser only. */
 const store = {
-  get() { try { return JSON.parse(localStorage.getItem("ogb") || "{}"); } catch (e) { return {}; } },
-  set(v) { try { localStorage.setItem("ogb", JSON.stringify(v)); } catch (e) {} }
+  get() { try { return JSON.parse(localStorage.getItem("ogb2") || "{}"); } catch (e) { return {}; } },
+  set(v) { try { localStorage.setItem("ogb2", JSON.stringify(v)); } catch (e) {} }
 };
-let state = Object.assign({ unlocked: {}, heard: {}, replay: {} }, store.get());
+let state = Object.assign({ keys: {}, tries: {}, first: {}, replay: {}, picks: [] }, store.get());
 const save = () => store.set(state);
 
 const $ = id => document.getElementById(id);
 const audio = $("audio");
-let idx = -1, part = 1;
+let idx = -1, sec = 0;
 const fmt = t => { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
-const live = EPISODES.filter(e => !e.soon);
+const keysOf = e => state.keys[e.slug] || [];
+const gateOf = e => keysOf(e).length;                 // next question to answer
+const isOpen = e => gateOf(e) >= e.qs.length;
+const starts = e => [0, ...e.cuts];
+const score = () => Object.values(state.first).filter(Boolean).length;
 
 function renderList() {
   const ol = $("list"); ol.innerHTML = "";
   EPISODES.forEach((e, i) => {
     const li = document.createElement("li"), b = document.createElement("button");
+    b.type = "button";
     b.className = "ep" + (i === idx ? " current" : "");
-    const open = !!state.unlocked[e.slug];
-    b.innerHTML = `<span class="n">${i + 1}</span><span class="t"></span><span class="s ${open ? "open" : ""}">${e.soon ? "Coming soon" : open ? "Unlocked" : "Part 1 free"}</span>`;
+    const open = isOpen(e), g = gateOf(e), n = e.qs.length;
+    const status = open ? "Unlocked" : (g === 0 ? (n === 1 ? "1 stop" : n + " stops") : g + " of " + n + " cleared");
+    b.innerHTML = `<span class="n">${i + 1}</span><span class="t"></span><span class="s ${open ? "open" : ""}">${status}</span>`;
     b.querySelector(".t").textContent = e.title;
-    if (e.soon) b.disabled = true; else b.onclick = () => load(i, true);
+    b.onclick = () => load(i, true);
     li.appendChild(b); ol.appendChild(li);
   });
-  const done = live.filter(e => state.unlocked[e.slug]).length;
-  $("count").textContent = done + " / " + live.length;
-  $("barFill").style.width = (done / live.length * 100) + "%";
-  $("cert").classList.toggle("on", done === live.length);
+  const sc = score();
+  $("count").textContent = sc + " / " + TOTAL_Q;
+  $("barFill").style.width = (sc / TOTAL_Q * 100) + "%";
+  TIERS.forEach((t, k) => $("t" + (k + 1)).classList.toggle("won", sc >= t.need));
+  renderReward();
 }
+
+function earnedPicks() { let p = 0; TIERS.forEach(t => { if (score() >= t.need) p = t.picks; }); return p; }
+
+function renderReward() {
+  const p = earnedPicks();
+  $("reward").classList.toggle("on", p > 0);
+  if (!p) return;
+  const all = p >= EPISODES.length;
+  $("rTitle").textContent = all ? "OG CERTIFIED" : "YOU EARNED A PLAYLIST";
+  $("rText").textContent = all ? "You got every question right on the first try. The whole album is yours to stream."
+    : "Pick " + (p === 1 ? "1 song" : p + " songs") + " for your own playlist. Keep answering to unlock more.";
+  const box = $("picks"); box.innerHTML = "";
+  if (all) { state.picks = EPISODES.map((_, i) => i + 1); save(); }
+  else EPISODES.forEach((e, i) => {
+    const lab = document.createElement("label"), cb = document.createElement("input");
+    cb.type = "checkbox"; cb.id = "pick" + i; cb.checked = state.picks.includes(i + 1);
+    cb.onchange = () => {
+      let sel = [...box.querySelectorAll("input:checked")].map(x => +x.id.slice(4) + 1);
+      if (sel.length > p) { cb.checked = false; sel = sel.filter(x => x !== i + 1); }
+      $("makeList").disabled = sel.length === 0;
+    };
+    lab.appendChild(cb); lab.appendChild(document.createTextNode(e.title)); box.appendChild(lab);
+  });
+  $("makeList").hidden = all;
+  $("makeList").disabled = !all && state.picks.length === 0;
+  updateOpenLink();
+}
+function updateOpenLink() {
+  const a = $("openList");
+  const picks = state.picks.slice(0, earnedPicks());
+  a.hidden = picks.length === 0;
+  a.href = VIP + "#" + picks.join(",");
+}
+$("makeList").onclick = () => {
+  state.picks = [...$("picks").querySelectorAll("input:checked")].map(x => +x.id.slice(4) + 1).slice(0, earnedPicks());
+  save(); updateOpenLink();
+  $("openList").focus();
+};
 
 function setPlayIcon() {
   $("playIcon").innerHTML = audio.paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
   $("play").setAttribute("aria-label", audio.paused ? "Play" : "Pause");
 }
 
-function load(i, autoplay) {
-  idx = i; part = 1;
-  const e = EPISODES[i];
-  $("player").classList.add("on");
-  $("pEp").textContent = "Episode " + (i + 1);
-  $("pTitle").textContent = e.title;
-  audio.src = "a/" + e.a + ".mp3";
-  const open = state.unlocked[e.slug];
-  $("pPart").textContent = open ? "Full story" : "Part 1";
-  $("lockZone").style.width = open ? "0" : ((1 - e.cut / e.dur) * 100) + "%";
-  $("tot").textContent = fmt(e.dur);
-  hideQuiz();
-  if (!open) showQuiz(false);
-  renderList();
+function drawTrack(e) {
+  const tr = $("track");
+  tr.querySelectorAll(".stop").forEach(x => x.remove());
+  e.cuts.forEach(c => { const s = document.createElement("span"); s.className = "stop"; s.style.left = (c / e.dur * 100) + "%"; tr.appendChild(s); });
+  const g = gateOf(e);
+  $("lockZone").style.width = isOpen(e) ? "0" : ((1 - e.cuts[g] / e.dur) * 100) + "%";
+}
+
+function srcFor(e, s) { return s === 0 ? "a/" + e.a + ".mp3" : "b/" + keysOf(e)[s - 1] + ".mp3"; }
+
+function playSection(s, autoplay) {
+  const e = EPISODES[idx];
+  sec = s;
+  audio.src = srcFor(e, s);
+  const n = e.qs.length + 1;
+  $("pPart").textContent = isOpen(e) ? "Full story" : "Part " + (s + 1) + " of " + n;
   if (autoplay) audio.play().catch(() => {});
   setPlayIcon();
-  $("player").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function hideQuiz() { $("quiz").classList.remove("on"); $("msg").textContent = ""; $("msg").className = "msg"; }
+function load(i, autoplay) {
+  idx = i;
+  const e = EPISODES[i];
+  $("pEp").textContent = "Episode " + (i + 1);
+  $("pTitle").textContent = e.title;
+  $("tot").textContent = fmt(e.dur);
+  drawTrack(e);
+  playSection(0, autoplay);
+  renderQuiz();
+  renderList();
+  if (autoplay) $("player").scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
-function showQuiz(scroll) {
+function renderQuiz() {
   const e = EPISODES[idx];
-  const locked = !!state.replay[e.slug];
-  $("qText").textContent = e.q;
+  const open = isOpen(e);
+  $("quiz").classList.toggle("on", !open);
+  $("doneNote").classList.toggle("on", open);
+  if (open) $("pPart").textContent = "Full story";
+  $("again").classList.remove("on");
+  $("msg").textContent = ""; $("msg").className = "msg";
+  if (open) return;
+  const g = gateOf(e), q = e.qs[g], id = e.slug + "|" + g;
+  const tries = state.tries[id] || 0, locked = !!state.replay[id];
+  $("qLabel").textContent = e.qs.length === 1 ? "Your question" : "Question " + (g + 1) + " of " + e.qs.length;
+  $("qText").textContent = q.q;
+  $("qHint").textContent = g === 0 ? "Listen to Part 1. The answer's in there." : "The answer's in Part " + (g + 1) + ".";
   const box = $("opts"); box.innerHTML = "";
-  e.opts.forEach(o => {
+  q.opts.forEach((o, k) => {
     const b = document.createElement("button");
-    b.className = "opt"; b.textContent = o;
+    b.type = "button"; b.className = "opt"; b.textContent = o;
+    const out = tries >= 2 && k === q.gx;
+    if (out) b.classList.add("out");
+    b.disabled = locked || out;
     b.onclick = () => answer(o, b);
-    b.disabled = locked;
     box.appendChild(b);
   });
-  $("quiz").classList.add("on");
-  if (locked) { $("msg").className = "msg bad"; $("msg").textContent = "Play Part 1 again all the way through, then answer."; }
-  if (scroll) $("quiz").scrollIntoView({ behavior: "smooth", block: "nearest" });
-}
-
-async function answer(o, btn) {
-  const e = EPISODES[idx];
-  document.querySelectorAll(".opt").forEach(b => b.disabled = true);
-  const k = keyFor(e.slug, o);
-  let ok = false;
-  try { ok = (await fetch("b/" + k + ".mp3", { method: "HEAD", cache: "no-store" })).ok; } catch (err) {}
-  if (ok) {
-    btn.classList.add("right");
-    $("msg").className = "msg good"; $("msg").textContent = "That's right. Here's the rest of the story.";
-    state.unlocked[e.slug] = k; delete state.replay[e.slug]; save();
-    $("lockZone").style.width = "0"; $("pPart").textContent = "Full story";
-    renderList();
-    setTimeout(() => { playPart2(); }, 900);
-  } else {
-    btn.classList.add("wrong");
-    $("msg").className = "msg bad"; $("msg").textContent = "Not quite. Play Part 1 again and listen close. You can answer again when it ends.";
-    state.replay[e.slug] = true; save();
+  if (locked) {
+    $("msg").className = "msg bad";
+    $("msg").textContent = "Play Part " + (g + 1) + " again all the way through, then answer.";
+    $("again").classList.add("on");
   }
 }
 
-function playPart2() {
-  const e = EPISODES[idx];
-  part = 2; hideQuiz();
-  audio.src = "b/" + state.unlocked[e.slug] + ".mp3";
-  audio.play().catch(() => {}); setPlayIcon();
+async function answer(o, btn) {
+  const e = EPISODES[idx], g = gateOf(e), id = e.slug + "|" + g;
+  document.querySelectorAll(".opt").forEach(b => b.disabled = true);
+  const k = keyFor(e.slug, g, o);
+  let ok = false;
+  try { ok = (await fetch("b/" + k + ".mp3", { method: "HEAD", cache: "no-store" })).ok; } catch (err) {}
+  if (!(id in state.first)) state.first[id] = ok;
+  if (ok) {
+    btn.classList.add("right");
+    state.keys[e.slug] = [...keysOf(e), k];
+    delete state.replay[id]; save();
+    $("msg").className = "msg good";
+    $("msg").textContent = isOpen(e) ? "That's right. Here's how it ends." : "That's right. Keep going.";
+    drawTrack(e); renderList();
+    // If that part already finished, roll straight into the next one; if it's still playing, the next part follows when it ends.
+    const finished = sec === g && (audio.ended || audio.currentTime > (audio.duration || Infinity) - 1);
+    setTimeout(() => { renderQuiz(); if (finished) playSection(g + 1, true); }, 1000);
+  } else {
+    btn.classList.add("wrong");
+    state.tries[id] = (state.tries[id] || 0) + 1;
+    state.replay[id] = true; save();
+    $("msg").className = "msg bad";
+    $("msg").textContent = state.tries[id] >= 2
+      ? "Not quite. Play Part " + (g + 1) + " again. The joke answer is crossed out now."
+      : "Not quite. Play Part " + (g + 1) + " again and listen close.";
+    $("again").classList.add("on");
+    renderList();
+  }
 }
+
+$("again").onclick = () => { playSection(gateOf(EPISODES[idx]), true); };
 
 audio.addEventListener("timeupdate", () => {
   if (idx < 0) return;
   const e = EPISODES[idx];
-  const t = (part === 2 ? e.cut : 0) + audio.currentTime;
+  const t = starts(e)[sec] + audio.currentTime;
   $("cur").textContent = fmt(t);
   $("fill").style.width = Math.min(100, t / e.dur * 100) + "%";
 });
@@ -323,26 +425,24 @@ audio.addEventListener("play", setPlayIcon);
 audio.addEventListener("pause", setPlayIcon);
 audio.addEventListener("ended", () => {
   const e = EPISODES[idx];
-  if (part === 1) {
-    state.heard[e.slug] = true; delete state.replay[e.slug]; save();
-    if (state.unlocked[e.slug]) playPart2();
-    else { showQuiz(true); $("msg").className = "msg"; $("msg").textContent = "Part 1's done. Answer to hear the rest."; }
-  } else {
-    // story's over: move on to the next episode
-    let n = idx + 1;
-    while (n < EPISODES.length && EPISODES[n].soon) n++;
-    if (n < EPISODES.length) load(n, true);
-  }
+  const id = e.slug + "|" + sec;
+  if (state.replay[id]) { delete state.replay[id]; save(); }
+  if (sec < e.qs.length) {
+    if (keysOf(e)[sec]) playSection(sec + 1, true);
+    else { renderQuiz(); $("msg").className = "msg"; $("msg").textContent = "Answer to hear what happens next."; $("quiz").scrollIntoView({ behavior: "smooth", block: "nearest" }); }
+  } else if (idx + 1 < EPISODES.length) load(idx + 1, true);
   setPlayIcon();
 });
 
-$("play").onclick = () => { if (idx < 0) load(0, true); else audio.paused ? audio.play() : audio.pause(); };
-$("back").onclick = () => { audio.currentTime = Math.max(0, audio.currentTime - 10); };
-$("restart").onclick = () => { if (idx >= 0) load(idx, true); };
+$("play").onclick = () => { audio.paused ? audio.play().catch(() => {}) : audio.pause(); };
+$("back").onclick = () => {
+  if (audio.currentTime > 10 || sec === 0) audio.currentTime = Math.max(0, audio.currentTime - 10);
+  else playSection(sec - 1, true);
+};
+$("restart").onclick = () => { playSection(0, true); };
 
-renderList();
-/* Open on the first episode not yet unlocked. */
-const first = EPISODES.findIndex(e => !e.soon && !state.unlocked[e.slug]);
+/* Open on the first episode that still has a question waiting. */
+const first = EPISODES.findIndex(e => !isOpen(e));
 load(first < 0 ? 0 : first, false);
 window.scrollTo(0, 0);
 </script>
