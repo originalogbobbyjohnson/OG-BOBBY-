@@ -127,7 +127,8 @@ ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 
 /* OG Budz */
 .budz { display: block; text-align: center; text-decoration: none; background: radial-gradient(ellipse at center, #2f5338 0%, #26432d 60%, #1f3826 100%); border: 3px solid var(--gold); border-radius: 14px; padding: 16px; color: var(--gold); animation: glowBtn 1.8s ease-in-out infinite; }
-.budz .small { color: #d8e6dc; font-size: .72rem; letter-spacing: .05em; white-space: nowrap; }
+.budz .small { display: block; color: #d8e6dc; font-size: .8rem; letter-spacing: .08em; }
+.wrap > * { min-width: 0; }
 @keyframes glowBtn {
   0%, 100% { transform: scale(1); box-shadow: 0 0 6px 1px rgba(227,178,60,.45); }
   50% { transform: scale(1.03); box-shadow: 0 0 26px 8px rgba(227,178,60,.85); }
@@ -216,7 +217,8 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
 
   <a class="budz" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">
     <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
-    <span class="small">Brooklyn · Staten Island · Manhattan · 21+</span>
+    <span class="small">Brooklyn · Staten Island</span>
+    <span class="small">Manhattan · 21+</span>
   </a>
 
   <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
