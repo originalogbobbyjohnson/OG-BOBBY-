@@ -372,6 +372,15 @@ body.practice { overflow: hidden; }
 @media (max-height: 760px) { .practice .wrap { padding-bottom: 84px; grid-template-rows: minmax(70px, 1fr) auto auto auto; } }
 .practice .cred.stuck .cred-track, .practice .cred-track { padding-bottom: 23px; }
 @media (max-height: 760px) { .practice .wrap { grid-template-rows: minmax(120px, 1fr) auto minmax(0, auto) auto; } .practice .cred.stuck .cred-track, .practice .cred-track { padding-bottom: 23px; } }
+
+/* ---------- Compact how-to-play card ---------- */
+.practice .slide-intro { padding: 12px 14px; gap: 8px; }
+.practice .intro-title { font-size: 1.45rem; }
+.practice .rules { gap: 5px; font-size: .86rem; line-height: 1.3; }
+.practice .start { font-size: 1.25rem; padding: 7px 36px; }
+.practice .wrap { grid-template-rows: minmax(90px, 1fr) auto minmax(0, auto) auto; }
+@media (max-height: 760px) { .practice .wrap { grid-template-rows: minmax(76px, 1fr) auto minmax(0, auto) auto; } }
+.practice .wrap { align-content: space-evenly; }
 </style>
 </head>
 <body class="practice">
@@ -772,6 +781,7 @@ window.scrollTo(0, 0);
     prev.disabled = v === 0; next.disabled = v === REWARD;
     stage.scrollTop = 0;
     paintDots();
+    requestAnimationFrame(fitDock);
   }
   function go(nv) {
     nv = Math.max(0, Math.min(REWARD, nv));
@@ -819,6 +829,31 @@ window.scrollTo(0, 0);
     if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(v + (dx < 0 ? 1 : -1));
     sx = null;
   }, { passive: true });
+
+  // keep everything above the bottom bar, whatever size the phone makes it (home-bar strip included)
+  const dock = document.querySelector(".dock");
+  function fitDock() {
+    wrap.style.paddingBottom = Math.ceil(dock.getBoundingClientRect().height + 10) + "px";
+    // picture gets whatever height the card leaves free, up to its full size, never cropped
+    const cs = getComputedStyle(wrap);
+    const w = wrap.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    const inner = wrap.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+    const gap = parseFloat(cs.rowGap) || 0;
+    const h = el => el ? el.getBoundingClientRect().height : 0;
+    const nameRow = document.querySelector(".name-row");
+    const listSec = $("list").closest("section");
+    const natural = Math.round(w * 768 / 1376) + 4;
+    const floor = innerHeight < 760 ? 76 : 90;
+    const free = inner - 3 * gap - 6 - h(nameRow) - h($("cred")) - stage.scrollHeight - h(listSec) - 2;
+    const pic = Math.max(floor, Math.min(natural, Math.floor(free)));
+    wrap.style.gridTemplateRows = Math.ceil(pic + 6 + h(nameRow)) + "px auto minmax(0, auto) auto";
+  }
+  fitDock();
+  try { new ResizeObserver(fitDock).observe(dock, { box: "border-box" }); } catch (e) {}
+  addEventListener("load", fitDock);
+  setTimeout(fitDock, 600);
+  addEventListener("resize", fitDock);
+  addEventListener("orientationchange", () => setTimeout(fitDock, 300));
 
   // first visit opens on the intro card; returning players open where they left off
   const started = Object.keys(state.keys).length || Object.keys(state.first).length;
