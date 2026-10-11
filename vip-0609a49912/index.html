@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OG Bobby VIP</title>
 <meta name="robots" content="noindex">
+<meta name="apple-mobile-web-app-title" content="OG Bobby VIP">
 <meta name="description" content="OG Bobby · Your playlist">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="OG Bobby">
@@ -104,7 +105,6 @@ function mark(i) {
   btns.forEach(b => b.removeAttribute("aria-current"));
   btns[i].setAttribute("aria-current", "true");
   $("nowTitle").textContent = T[i].t;
-  document.title = T[i].t + " · OG Bobby";
   if ("mediaSession" in navigator) {
     try {
       navigator.mediaSession.metadata = new MediaMetadata({ title: T[i].t, artist: "OG Bobby", album: "OG Made",
