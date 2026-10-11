@@ -37,7 +37,7 @@
 [hidden] { display: none !important; }
 html, body { margin: 0; background: var(--bg); color: var(--fg); }
 body { font-family: var(--body); font-size: 16px; line-height: 1.4; -webkit-tap-highlight-color: transparent; }
-.wrap { max-width: 540px; margin: 0 auto; padding: 20px 16px 130px; display: grid; gap: 18px; }
+.wrap { max-width: 540px; margin: 0 auto; padding: 10px 16px 130px; display: grid; gap: 18px; }
 header { display: grid; gap: 14px; }
 .cover { position: relative; }
 .cover img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid var(--gold-dim); }
@@ -57,14 +57,13 @@ h1 img { display: block; width: min(100%, 380px); height: auto; filter: drop-sha
 .label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
 /* Street cred meter */
-.cred { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 14px); z-index: 5; display: grid; gap: 4px; background: rgba(23,37,26,.97); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 10px 14px 4px; box-shadow: 0 6px 18px rgba(0,0,0,.55); backdrop-filter: blur(6px); }
-#credSentinel { height: 1px; margin-bottom: -19px; }
-.mini-brand { display: none; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 2px; }
+.cred { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 10px); z-index: 5; display: grid; gap: 4px; background: rgba(23,37,26,.97); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 10px 14px 4px; box-shadow: 0 6px 18px rgba(0,0,0,.55); backdrop-filter: blur(6px); }
+.mini-brand { display: none; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 2px; }
 .cred.stuck .mini-brand { display: grid; }
 .mini-cover { width: 76px; height: 43px; object-fit: cover; border-radius: 8px; border: 1px solid var(--gold-dim); display: block; }
-.mini-word { width: 100%; max-width: 170px; height: auto; display: block; filter: drop-shadow(2px 2px 0 #000); }
-.budz-chip.mini { width: 42px; height: 42px; border-radius: 10px; }
-.budz-chip.mini img { border-radius: 10px; }
+.mini-word { width: 100%; max-width: 250px; height: auto; display: block; filter: drop-shadow(2px 2px 0 #000); }
+.budz-chip.mini { width: 52px; height: 52px; border-radius: 12px; }
+.budz-chip.mini img { border-radius: 12px; }
 .cred.stuck .cred-track { padding-top: 26px; padding-bottom: 20px; }
 .cred.stuck .flag span { top: 44px; }
 .cred-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
@@ -183,27 +182,10 @@ footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; 
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div class="cover">
-      <img src="cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
-    </div>
-    <div class="title-row">
-    <div>
-      <h1><img src="brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"></h1>
-      <p class="tag">Bay Ridge, Brooklyn. The story, one episode at a time.</p>
-    </div>
-    <a class="budz-chip" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" aria-label="OG Budz"><img src="brand/og-budz-icon.png" alt="" width="64" height="64"></a>
-    </div>
-  </header>
-
-  <div class="how">Every song stops at a turning point. <b>Answer right to keep the story going.</b></div>
-
-  <div id="credSentinel" aria-hidden="true"></div>
-  <section class="cred" id="cred" aria-label="Street cred meter">
-    <div class="mini-brand" aria-hidden="true">
-      <img class="mini-cover" src="cover.jpg" alt="" width="96" height="54">
-      <img class="mini-word" src="brand/og-bobby-wordmark.png" alt="" width="932" height="220">
-      <a class="budz-chip mini" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" tabindex="-1"><img src="brand/og-budz-icon.png" alt="" width="40" height="40"></a>
+  <section class="cred stuck" id="cred" aria-label="Street cred meter">
+    <div class="mini-brand">
+      <h1><img class="mini-word" src="brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"></h1>
+      <a class="budz-chip mini" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" aria-label="OG Budz"><img src="brand/og-budz-icon.png" alt="" width="52" height="52"></a>
     </div>
     <div class="cred-head"><span class="cred-name">STREET CRED</span><span class="cred-hint" id="credHint"></span></div>
     <div class="cred-track">
@@ -213,6 +195,15 @@ footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; 
       <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>The album</span></div>
     </div>
   </section>
+  <header>
+    <div class="cover">
+      <img src="cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
+    </div>
+    <p class="tag">Bay Ridge, Brooklyn. The story, one episode at a time.</p>
+  </header>
+
+  <div class="how">Every song stops at a turning point. <b>Answer right to keep the story going.</b></div>
+
 
   <section class="reward" id="reward" aria-live="polite">
     <h3 id="rTitle">YOU EARNED A PLAYLIST</h3>
@@ -516,13 +507,6 @@ $("back").onclick = () => {
   else playSection(sec - 1, true);
 };
 $("restart").onclick = () => { playSection(0, true); };
-
-/* When the meter pins to the top, show the slim OG Bobby row with it. */
-try {
-  new IntersectionObserver(([en]) => {
-    $("cred").classList.toggle("stuck", !en.isIntersecting && en.boundingClientRect.top < 0);
-  }, { threshold: 0 }).observe($("credSentinel"));
-} catch (e) {}
 
 /* OG Budz is local-only: ask every time before leaving the music page. */
 document.querySelectorAll('a.budz, a.budz-chip').forEach(a => a.addEventListener("click", ev => {
