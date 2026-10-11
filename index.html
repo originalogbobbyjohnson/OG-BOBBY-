@@ -57,7 +57,7 @@ h1 img { display: block; width: min(100%, 380px); height: auto; filter: drop-sha
 .label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
 /* Street cred meter */
-.cred { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; display: grid; gap: 4px; background: rgba(23,37,26,.97); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 10px 14px 4px; box-shadow: 0 6px 18px rgba(0,0,0,.55); backdrop-filter: blur(6px); }
+.cred { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 14px); z-index: 5; display: grid; gap: 4px; background: rgba(23,37,26,.97); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 10px 14px 4px; box-shadow: 0 6px 18px rgba(0,0,0,.55); backdrop-filter: blur(6px); }
 .cred-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .cred-name { font-family: var(--graffiti); font-size: 1.35rem; color: var(--gold); line-height: 1; }
 .cred-hint { font-size: .85rem; color: var(--muted); }
