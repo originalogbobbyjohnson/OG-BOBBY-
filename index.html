@@ -393,6 +393,7 @@ body.practice { overflow: hidden; }
 .practice .btn-round { width: 38px; height: 38px; }
 .practice .btn-round.play { width: 46px; height: 46px; }
 </style>
+<script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body class="practice">
 <div class="wrap">
@@ -524,6 +525,12 @@ let state = Object.assign({ keys: {}, tries: {}, first: {}, replay: {}, picks: [
 const save = () => store.set(state);
 
 const $ = id => document.getElementById(id);
+
+/* Visitor counts (GoatCounter): private, no cookies, nothing shown on the page. */
+function track(path, title) {
+  try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: path, title: title || path, event: true }); } catch (e) {}
+}
+const playedThisVisit = {};
 const audio = $("audio");
 let idx = -1, sec = 0;
 const fmt = t => { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
@@ -669,11 +676,19 @@ async function answer(o, btn) {
   const k = keyFor(e.slug, g, o);
   let ok = false;
   try { ok = (await fetch("b/" + k + ".mp3", { method: "HEAD", cache: "no-store" })).ok; } catch (err) {}
+  const scoreBefore = score();
   if (!(id in state.first)) state.first[id] = ok;
+  track((ok ? "right/" : "wrong/") + e.slug + "/q" + (g + 1), (ok ? "Right: " : "Wrong: ") + e.title + " Q" + (g + 1));
+  const scoreAfter = score();
+  TIERS.forEach(t => {
+    if (scoreBefore < t.need && scoreAfter >= t.need)
+      track(t.picks >= EPISODES.length ? "og-certified" : "street-cred/" + t.need, t.picks >= EPISODES.length ? "OG Certified" : "Street Cred " + t.need + " (earned " + t.picks + (t.picks === 1 ? " song)" : " songs)"));
+  });
   if (ok) {
     btn.classList.add("right");
     state.keys[e.slug] = [...keysOf(e), k];
     delete state.replay[id]; save();
+    if (isOpen(e)) track("level-unlocked/" + e.slug, "Level unlocked: " + e.title);
     $("msg").className = "msg good";
     $("msg").textContent = isOpen(e) ? "That's right. Here's how it ends." : "That's right. Keep going.";
     drawTrack(e); renderList();
@@ -702,7 +717,11 @@ audio.addEventListener("timeupdate", () => {
   $("cur").textContent = fmt(t);
   $("fill").style.width = Math.min(100, t / e.dur * 100) + "%";
 });
-audio.addEventListener("play", setPlayIcon);
+audio.addEventListener("play", () => {
+  setPlayIcon();
+  const e = EPISODES[idx];
+  if (e && !playedThisVisit[e.slug]) { playedThisVisit[e.slug] = true; track("play/" + e.slug, "Played: " + e.title); }
+});
 audio.addEventListener("pause", setPlayIcon);
 audio.addEventListener("ended", () => {
   const e = EPISODES[idx];
@@ -727,6 +746,7 @@ document.querySelectorAll('a.budz, a.budz-chip').forEach(a => a.addEventListener
   ev.preventDefault();
   $("localSheet").hidden = false; $("localYes").focus();
 }));
+$("localYes").addEventListener("click", () => track("friends-of-og", "Went to Friends of OG"));
 $("localNo").onclick = () => { $("localSheet").hidden = true; };
 $("localSheet").addEventListener("click", ev => { if (ev.target.id === "localSheet") $("localSheet").hidden = true; });
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") $("localSheet").hidden = true; });
