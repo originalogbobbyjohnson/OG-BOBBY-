@@ -301,6 +301,25 @@ body.practice { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .practice .start { animation: none; } }
 
 .practice .quiz > .label { display: none; }
+
+/* ---------- Neat-up: labels inside the meter, dots right under the card, clear gap above the dock ---------- */
+.practice .wrap { grid-template-rows: auto auto minmax(0, auto) auto; align-content: start; gap: 10px; padding-bottom: 118px; }
+.practice .cred.stuck .cred-track, .practice .cred-track { padding-top: 12px; padding-bottom: 26px; }
+.practice .cred.stuck .flag span, .practice .flag span { top: 30px; }
+.practice .stage { max-height: 100%; }
+.practice section:has(#list) { padding-top: 2px; }
+@media (max-height: 760px) {
+  .practice .wrap { padding-bottom: 96px; gap: 8px; }
+  .practice .cred.stuck .cred-track, .practice .cred-track { padding-top: 10px; padding-bottom: 22px; }
+  .practice .cred.stuck .flag span, .practice .flag span { top: 26px; }
+}
+.practice .cover > img { height: clamp(98px, 16vh, 160px); }
+.practice .player { gap: 8px; padding: 12px 12px 10px; }
+.practice .opt { padding: 10px 12px; }
+@media (max-height: 760px) { .practice .cover > img { height: 92px; } .practice .player { gap: 6px; padding: 10px; } .practice .opt { padding: 8px 12px; } }
+.practice .wrap { gap: 8px; }
+@media (max-height: 820px) { .practice .wrap { padding-bottom: 104px; } }
+@media (max-height: 760px) { .practice #pPart { display: none; } .practice .player { gap: 5px; } .practice .wrap { padding-bottom: 92px; } }
 </style>
 </head>
 <body class="practice">
