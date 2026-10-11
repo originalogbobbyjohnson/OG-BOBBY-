@@ -23,7 +23,7 @@
 <link rel="icon" href="../cover.png">
 <link rel="apple-touch-icon" href="../cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&family=Sedgwick+Ave+Display&display=swap">
 <style>
 :root {
   --bg: #0f1a12; --panel: #17251a; --line: #2a4231;
@@ -36,8 +36,14 @@
 html, body { margin: 0; background: var(--bg); color: var(--fg); }
 body { font-family: var(--body); font-size: 16px; -webkit-tap-highlight-color: transparent; }
 .wrap { max-width: 540px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 18px; }
-header img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid #8a6d24; }
-h1 { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-height: 1; margin: 14px 0 0; color: var(--gold); letter-spacing: .02em; }
+header > img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid #8a6d24; }
+.title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; }
+.title-row > div { min-width: 0; }
+h1 { margin: 0; line-height: 0; }
+h1 img { display: block; width: min(100%, 300px); height: auto; filter: drop-shadow(3px 3px 0 #000); }
+.list-tag { display: block; margin-top: 6px; font-family: "Sedgwick Ave Display", "Permanent Marker", cursive; font-size: 1.6rem; line-height: 1; color: var(--gold); text-shadow: 2px 2px 0 #000; }
+.og-badge { flex: none; }
+.og-badge img { display: block; width: 64px; height: 64px; border-radius: 14px; box-shadow: 0 0 18px 4px rgba(227,178,60,.6); }
 .sub { color: var(--muted); margin-top: 6px; font-size: .95rem; }
 .now { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 12px; }
 .lab { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
@@ -64,8 +70,14 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
 <div class="wrap">
   <header>
     <img src="../cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
-    <h1>OG MADE – 9</h1>
-    <div class="sub">OG Bobby · 9 songs · 32:28</div>
+    <div class="title-row">
+      <div>
+        <h1><img src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"></h1>
+        <span class="list-tag">OG MADE – 9</span>
+      </div>
+      <div class="og-badge" aria-hidden="true"><img src="../brand/og-budz-icon.png" alt="" width="64" height="64"></div>
+    </div>
+    <div class="sub">9 songs · 32:28</div>
   </header>
   <section class="now">
     <div class="lab">Now playing</div>
