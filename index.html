@@ -4,211 +4,338 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OG Bobby</title>
-<meta name="description" content="OG Bobby - 18 tracks">
+<meta name="description" content="OG Bobby. Brooklyn. The story, one episode at a time.">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="OG Bobby">
 <meta property="og:title" content="OG Bobby">
-<meta property="og:description" content="18 tracks">
-<meta property="og:url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/">
-<meta property="og:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
-<meta property="og:image:secure_url" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
+<meta property="og:description" content="Brooklyn. The story, one episode at a time.">
+<meta property="og:url" content="https://ogbobbybrooklyn.com/">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/cover.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1376">
 <meta property="og:image:height" content="768">
-<meta property="og:image:alt" content="OG Bobby album artwork">
+<meta property="og:image:alt" content="OG Bobby artwork">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OG Bobby">
-<meta name="twitter:image" content="https://originalogbobbyjohnson.github.io/OG-BOBBY-/cover.jpg">
+<meta name="twitter:image" content="https://ogbobbybrooklyn.com/cover.jpg">
 <link rel="icon" href="cover.png">
 <link rel="apple-touch-icon" href="cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&display=swap">
 <style>
-/* Layout: one narrow column — cover + now playing on top, controls, then the tracklist. Single dark look by choice. */
 :root {
-  --bg: #0f1a12; --panel: #17251a; --line: #24382a;
-  --fg: #eef3ea; --muted: #9db3a2; --accent: #e3b23c;
+  --bg: #0f1a12; --panel: #17251a; --panel2: #1d2f21; --line: #2a4231;
+  --fg: #eef3ea; --muted: #9db3a2; --gold: #e3b23c; --gold-dim: #8a6d24;
+  --bad: #e26d5a; --good: #7fcf8c;
   --display: "Anton", Impact, "Arial Narrow", sans-serif;
   --body: "Barlow", system-ui, -apple-system, sans-serif;
   color-scheme: dark;
 }
-html, body { background: var(--bg); color: var(--fg); }
-body { font-family: var(--body); font-size: 16px; }
-.wrap { max-width: 520px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 40px; display: grid; gap: 20px; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--fg); }
+body { font-family: var(--body); font-size: 16px; line-height: 1.4; -webkit-tap-highlight-color: transparent; }
+.wrap { max-width: 540px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 22px; }
 header { display: grid; gap: 14px; }
-header img { width: 100%; max-width: 100%; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 12px; display: block; }
-header .meta { min-width: 0; }
-h1 { font-family: var(--display); font-weight: 400; font-size: 2.6rem; line-height: 1; margin: 0; letter-spacing: .02em; }
-.sub { color: var(--muted); font-size: .9rem; margin-top: 6px; }
-.now { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; }
-.now-art { width: 100%; max-width: 100%; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 10px; display: block; }
-.now-label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-#nowTitle { font-family: var(--display); font-weight: 400; font-size: 1.6rem; line-height: 1.1; text-wrap: balance; }
-.seek { display: grid; gap: 4px; }
-input[type=range] { width: 100%; accent-color: var(--accent); }
-.times { display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
-.controls { display: flex; justify-content: center; align-items: center; gap: 20px; }
-.controls button { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 50%; width: 56px; height: 56px; display: grid; place-items: center; cursor: pointer; }
-.controls button.play { width: 72px; height: 72px; background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.controls svg { width: 24px; height: 24px; fill: currentColor; }
-.controls button.play svg { width: 30px; height: 30px; }
-button:focus-visible, li button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-ol { list-style: none; margin: 0; padding: 0; display: grid; }
-li button { width: 100%; display: grid; grid-template-columns: 2rem 1fr auto; gap: 10px; align-items: center; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); color: var(--fg); font: inherit; padding: 13px 4px; cursor: pointer; }
-li .n { color: var(--muted); font-variant-numeric: tabular-nums; font-size: .85rem; }
-li .t { min-width: 0; overflow-wrap: anywhere; }
-li .d { color: var(--muted); font-size: .85rem; font-variant-numeric: tabular-nums; }
-li.on button { color: var(--accent); font-weight: 600; }
-li.on .n { color: var(--accent); }
-.section { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: 14px 4px 6px; }
-</style>
+header img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid var(--gold-dim); }
+h1 { font-family: var(--display); font-weight: 400; font-size: 3rem; line-height: .95; margin: 0; letter-spacing: .02em; color: var(--gold); }
+.tag { color: var(--muted); margin: 6px 0 0; }
+.how { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; font-size: .95rem; }
+.how b { color: var(--gold); }
+.progress { display: grid; gap: 8px; }
+.progress .row { display: flex; justify-content: space-between; align-items: baseline; }
+.progress .label { font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.progress .count { font-family: var(--display); font-size: 1.4rem; color: var(--gold); }
+.bar { height: 8px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--gold); transition: width .4s; }
+.certified { display: none; text-align: center; font-family: var(--display); font-size: 1.6rem; color: var(--bg); background: var(--gold); border-radius: 12px; padding: 12px; letter-spacing: .04em; }
+.certified.on { display: block; }
 
+/* Player */
+.player { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: none; gap: 14px; }
+.player.on { display: grid; }
+.ep-label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+#pTitle { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.05; margin: 2px 0 0; }
+.part { font-size: .85rem; color: var(--gold); font-weight: 600; }
+.seek { display: grid; gap: 4px; }
+.track { position: relative; height: 6px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
+.track i { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--gold); }
+.track .lock { position: absolute; top: 0; bottom: 0; right: 0; background: repeating-linear-gradient(45deg, #2a4231 0 4px, #1d2f21 4px 8px); }
+.times { display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 18px; }
+.btn-round { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 50%; width: 52px; height: 52px; display: grid; place-items: center; cursor: pointer; }
+.btn-round.play { width: 70px; height: 70px; background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.btn-round svg { width: 22px; height: 22px; fill: currentColor; }
+.btn-round.play svg { width: 30px; height: 30px; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* Quiz */
+.quiz { display: none; gap: 10px; border-top: 1px solid var(--line); padding-top: 14px; }
+.quiz.on { display: grid; }
+.quiz h3 { margin: 0; font-size: 1.1rem; }
+.quiz .hint { color: var(--muted); font-size: .9rem; margin: 0; }
+.opt { width: 100%; text-align: left; font: inherit; font-weight: 600; color: var(--fg); background: var(--panel2); border: 1px solid var(--line); border-radius: 12px; padding: 14px; cursor: pointer; }
+.opt:disabled { opacity: .45; cursor: default; }
+.opt.right { border-color: var(--good); color: var(--good); }
+.opt.wrong { border-color: var(--bad); color: var(--bad); }
+.msg { font-weight: 600; min-height: 1.3em; margin: 0; }
+.msg.bad { color: var(--bad); } .msg.good { color: var(--good); }
+.early { background: none; border: 0; color: var(--muted); text-decoration: underline; font: inherit; font-size: .85rem; cursor: pointer; justify-self: start; padding: 0; }
+
+/* Episodes */
+h2 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; margin: 0 0 6px; letter-spacing: .03em; }
+ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.ep { width: 100%; display: grid; grid-template-columns: 2.2rem 1fr auto; gap: 10px; align-items: center; text-align: left; background: var(--panel); border: 1px solid var(--line); color: var(--fg); font: inherit; padding: 13px 14px; border-radius: 12px; cursor: pointer; }
+.ep.current { border-color: var(--gold); }
+.ep .n { font-family: var(--display); color: var(--gold); font-size: 1.2rem; }
+.ep .t { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
+.ep .s { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.ep .s.open { color: var(--good); }
+.ep:disabled { cursor: default; opacity: .55; }
+
+/* OG Budz */
+.budz { display: block; text-align: center; text-decoration: none; background: #000; border: 2px solid var(--gold); border-radius: 14px; padding: 16px; color: var(--gold); }
+.budz .big { font-family: var(--display); font-size: 2rem; letter-spacing: .06em; display: block; line-height: 1; }
+.budz .small { color: var(--muted); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
+footer { color: var(--muted); font-size: .8rem; text-align: center; }
+</style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <img src="cover.jpg" alt="OG Bobby on a Bay Ridge street at night, Verrazzano Bridge and full moon behind him">
-    <div class="meta">
+    <img src="cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
+    <div>
       <h1>OG BOBBY</h1>
-      <div class="sub"><span id="count"></span> tracks · <span id="total"></span></div>
+      <p class="tag">Bay Ridge, Brooklyn. The story, one episode at a time.</p>
     </div>
   </header>
 
-  <section class="now" aria-label="Now playing">
-    <div class="now-label">Now playing · <span id="nowNum">1</span> of <span id="ofN"></span></div>
-    <div id="nowTitle">OG BUDZ</div>
+  <div class="how">Every song stops right before it hits. <b>Listen to Part 1, answer one question</b>, and the rest of the story is yours. Get it wrong? Run it back and listen again.</div>
+
+  <div class="progress">
+    <div class="row"><span class="label">Your progress</span><span class="count" id="count">0 / 9</span></div>
+    <div class="bar"><i id="barFill"></i></div>
+  </div>
+  <div class="certified" id="cert">OG CERTIFIED</div>
+
+  <section class="player" id="player" aria-live="polite">
+    <div>
+      <div class="ep-label" id="pEp">Episode 1</div>
+      <div id="pTitle">Whatever It Takes</div>
+      <div class="part" id="pPart">Part 1</div>
+    </div>
     <div class="seek">
-      <input type="range" id="seek" min="0" max="100" step="0.1" value="0" aria-label="Seek">
-      <div class="times"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      <div class="track"><i id="fill"></i><span class="lock" id="lockZone"></span></div>
+      <div class="times"><span id="cur">0:00</span><span id="tot">0:00</span></div>
     </div>
     <div class="controls">
-      <button id="prev" aria-label="Previous song"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zM9.5 12 18 18V6z"/></svg></button>
-      <button id="play" class="play" aria-label="Play"><svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg></button>
-      <button id="next" aria-label="Next song"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg></button>
+      <button class="btn-round" id="back" aria-label="Back 10 seconds"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></button>
+      <button class="btn-round play" id="play" aria-label="Play"><svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      <button class="btn-round" id="restart" aria-label="Start over"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
     </div>
+    <div class="quiz" id="quiz">
+      <h3 id="qText"></h3>
+      <div id="opts" style="display:grid;gap:8px"></div>
+      <p class="msg" id="msg"></p>
+    </div>
+    <button class="early" id="early">Already heard Part 1? Answer now</button>
   </section>
 
-  <ol id="list"></ol>
+  <section>
+    <h2>THE EPISODES</h2>
+    <ol id="list"></ol>
+  </section>
+
+  <a class="budz" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" target="_blank" rel="noopener">
+    <span class="big">OG BUDZ</span>
+    <span class="small">Step inside · 21+</span>
+  </a>
+
+  <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
 </div>
 
 <audio id="audio" preload="metadata"></audio>
 
 <script>
-// OG Delivery 2 (songs/08-og-delivery-2.mp3) is kept in the songs folder but off the list.
-const TRACKS = [
-  { f: "01-og-budz.mp3", t: "OG BUDZ", d: 57 },
-  { f: "02-og-budz-vox.mp3", t: "OG BUDZ (Male)", d: 57 },
-  { f: "03-og-budz-girl.mp3", t: "OG BUDZ (Girl)", d: 51 },
-  { f: "04-og-drill-1.mp3", t: "OG Drill 1", d: 44 },
-  { f: "05-og-drill-2.mp3", t: "OG Drill 2", d: 54 },
-  { f: "06-og-delivery-1.mp3", t: "OG Delivery 1", d: 47 },
-  { f: "07-ogz.mp3", t: "OG'z", d: 137 },
-  { f: "08-private-vault.mp3", t: "Private Vault", d: 63 },
-  { f: "09-off-the-feet.mp3", t: "OFF THE FEET", d: 113 },
-  { f: "10-drexterminator.mp3", t: "DREXTERMINATOR", d: 194 },
-  { f: "11-mint.mp3", t: "Mint", d: 170 },
-  { f: "12-untitled.mp3", t: "It's Mint", d: 121 },
-  { f: "16-bars-and-clubs.mp3", t: "Bars & Clubs", d: 179 },
-  { f: "21-pioneer-slow-raw.mp3", t: "Pioneer", d: 208 },
-  { f: "14-whatever-it-takes-v2.mp3", t: "Whatever It Takes", d: 168 },
-  { f: "17-bay-ridge-nights.mp3", t: "Bay Ridge Nights", d: 206 },
-  { f: "15-the-get-back.mp3", t: "The Get Back", d: 187 },
-  { f: "18-positivity-spreads.mp3", t: "Positivity Spreads", d: 287 }
+const EPISODES = [
+  { slug: "whatever-it-takes", title: "Whatever It Takes", a: "976f909f2d71", cut: 93.6, dur: 168.2,
+    q: "What year does OG's story start?", opts: ["1979", "1983", "1990"] },
+  { slug: "bay-ridge-nights", title: "Bay Ridge Nights", a: "18943ab2a2f9", cut: 130.8, dur: 206.4,
+    q: "Which Bay Ridge spot was “for the squares”?", opts: ["Gino's", "Pizza Wagon", "Hobnail"] },
+  { slug: "bars-and-clubs", title: "Bars & Clubs", a: "cb526872284b", cut: 113.7, dur: 179.4,
+    q: "Which Manhattan club gets a shout-out?", opts: ["Limelight", "The Tunnel", "Club USA"] },
+  { slug: "ridge-brothers", title: "Ridge Brothers", a: "2818b56dc09e", cut: 144.6, dur: 224.4,
+    q: "Who connected OG to the Jorgenson brothers?", opts: ["Mike", "Jimmy Kush", "Andrew"] },
+  { slug: "black-rob", title: "Black Rob", a: "92e6b951fd61", cut: 125.7, dur: 227.5,
+    q: "What was Rob to OG in the boxing gym?", opts: ["His coach", "His first student", "His sparring rival"] },
+  { slug: "the-get-back", title: "The Get Back", a: "891ee2171861", cut: 117.7, dur: 186.7,
+    q: "What year did OG walk away from Wall Street?", opts: ["1995", "1999", "2001"] },
+  { slug: "pioneer", title: "Pioneer", a: "16aa4a30992f", cut: 120.2, dur: 216.4,
+    q: "What did the partner secretly do with the shared money?", opts: ["Lost it gambling", "Used it for his own moves", "Hid it overseas"] },
+  { slug: "bay-ridge-is-mine", title: "Bay Ridge Is Mine", a: "e29667e963d2", cut: 152.2, dur: 264.6,
+    q: "How much money went missing?", opts: ["$2,000", "$7,000", "$10,000"] },
+  { slug: "positivity-spreads", title: "Positivity Spreads", a: "6da48c29d311", cut: 199.1, dur: 286.8,
+    q: "Which Brooklyn park does OG train in?", opts: ["Prospect Park", "Owl's Head", "McCarren Park"] },
 ];
-const $ = id => document.getElementById(id);
-const audio = $("audio"), list = $("list");
-const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
-let i = 0;
 
-$("count").textContent = TRACKS.length;
-$("ofN").textContent = TRACKS.length;
-$("total").textContent = Math.round(TRACKS.reduce((a, x) => a + x.d, 0) / 60) + " min";
-
-TRACKS.forEach((tr, k) => {
-  if (k === 0 || k === 8) {
-    const h = document.createElement("li");
-    h.className = "section";
-    h.textContent = k === 0 ? "OG BUDZ" : "More from Bobby";
-    list.appendChild(h);
-  }
-  const li = document.createElement("li");
-  li.dataset.k = k;
-  li.innerHTML = `<button><span class="n">${k + 1}</span><span class="t"></span><span class="d">${fmt(tr.d)}</span></button>`;
-  li.querySelector(".t").textContent = tr.t;
-  li.querySelector("button").onclick = () => load(k, true);
-  list.appendChild(li);
-});
-
-// Fast skip: quietly download the next song while this one plays, so Next starts right away
-const SONGS = "songs/", READY = {}, LOADING = {};
-function warm(k) {
-  const f = TRACKS[(k + TRACKS.length) % TRACKS.length].f;
-  if (READY[f] || LOADING[f] || !window.fetch || !window.URL) return;
-  LOADING[f] = true;
-  fetch(SONGS + f).then(r => r.ok ? r.blob() : Promise.reject())
-    .then(b => { READY[f] = URL.createObjectURL(b); })
-    .catch(() => {}).then(() => { delete LOADING[f]; });
-}
-function tidy() {
-  const keep = new Set([TRACKS[i].f, TRACKS[(i + 1) % TRACKS.length].f]);
-  Object.keys(READY).forEach(f => { if (!keep.has(f)) { URL.revokeObjectURL(READY[f]); delete READY[f]; } });
-}
-audio.preload = "auto";
-audio.addEventListener("playing", () => { tidy(); setTimeout(() => warm(i + 1), 1500); });
-
-function load(k, play) {
-  i = (k + TRACKS.length) % TRACKS.length;
-  const tr = TRACKS[i];
-  audio.src = READY[tr.f] || (SONGS + tr.f);
-  $("nowTitle").textContent = tr.t;
-  $("nowNum").textContent = i + 1;
-  $("dur").textContent = fmt(tr.d);
-  document.querySelectorAll("li[data-k]").forEach(li => li.classList.toggle("on", +li.dataset.k === i));
-  if ("mediaSession" in navigator) {
-    try {
-      const art = { src: "cover.jpg", sizes: "1376x768", type: "image/jpeg" };
-      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.t, artist: "OG Bobby", album: "OG Bobby", artwork: [art] });
-    } catch (e) {}
-  }
-  if (play) audio.play().catch(() => {});
-}
-function setIcon(playing) {
-  $("playIcon").innerHTML = playing ? '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>' : '<path d="M8 5v14l11-7z"/>';
-  $("play").setAttribute("aria-label", playing ? "Pause" : "Play");
-}
-$("play").onclick = () => audio.paused ? audio.play().catch(() => {}) : audio.pause();
-$("next").onclick = () => load(i + 1, true);
-$("prev").onclick = () => (audio.currentTime > 3 ? (audio.currentTime = 0) : load(i - 1, true));
-audio.onplay = () => setIcon(true);
-// Car radios / lock screens: re-send the song name once it actually starts playing, so the display never falls back to the file or page name
-audio.addEventListener("playing", () => {
-  try {
-    const m = navigator.mediaSession && navigator.mediaSession.metadata;
-    if (m) {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: m.title, artist: m.artist, album: m.album, artwork: [...m.artwork] });
-      navigator.mediaSession.playbackState = "playing";
-      document.title = m.title + " · " + m.artist;
+/* Small SHA-256 so unlocking works on any connection. */
+function sha256(s) {
+  const K = [0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  const bytes = new TextEncoder().encode(s);
+  const l = bytes.length, n = ((l + 9 + 63) >> 6) << 6, m = new Uint8Array(n);
+  m.set(bytes); m[l] = 0x80;
+  const dv = new DataView(m.buffer); dv.setUint32(n - 4, l * 8);
+  let h = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  const w = new Uint32Array(64), r = (x, k) => (x >>> k) | (x << (32 - k));
+  for (let o = 0; o < n; o += 64) {
+    for (let i = 0; i < 16; i++) w[i] = dv.getUint32(o + i * 4);
+    for (let i = 16; i < 64; i++) {
+      const s0 = r(w[i-15],7) ^ r(w[i-15],18) ^ (w[i-15] >>> 3), s1 = r(w[i-2],17) ^ r(w[i-2],19) ^ (w[i-2] >>> 10);
+      w[i] = (w[i-16] + s0 + w[i-7] + s1) | 0;
     }
-  } catch (e) {}
-});
-audio.addEventListener("pause", () => { try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} });
-audio.onpause = () => setIcon(false);
-audio.onended = () => load(i + 1, true);
-audio.onloadedmetadata = () => { $("dur").textContent = fmt(audio.duration); };
-audio.ontimeupdate = () => {
-  $("cur").textContent = fmt(audio.currentTime);
-  if (audio.duration) $("seek").value = (audio.currentTime / audio.duration) * 100;
-};
-$("seek").oninput = e => { if (audio.duration) audio.currentTime = (e.target.value / 100) * audio.duration; };
-if ("mediaSession" in navigator) {
-  try {
-    navigator.mediaSession.setActionHandler("nexttrack", () => load(i + 1, true));
-    navigator.mediaSession.setActionHandler("previoustrack", () => load(i - 1, true));
-    navigator.mediaSession.setActionHandler("play", () => audio.play());
-    navigator.mediaSession.setActionHandler("pause", () => audio.pause());
-  } catch (e) {}
+    let [a,b,c,d,e,f,g,hh] = h;
+    for (let i = 0; i < 64; i++) {
+      const t1 = (hh + (r(e,6) ^ r(e,11) ^ r(e,25)) + ((e & f) ^ (~e & g)) + K[i] + w[i]) | 0;
+      const t2 = ((r(a,2) ^ r(a,13) ^ r(a,22)) + ((a & b) ^ (a & c) ^ (b & c))) | 0;
+      hh = g; g = f; f = e; e = (d + t1) | 0; d = c; c = b; b = a; a = (t1 + t2) | 0;
+    }
+    h = h.map((v, i) => (v + [a,b,c,d,e,f,g,hh][i]) | 0);
+  }
+  return h.map(v => (v >>> 0).toString(16).padStart(8, "0")).join("");
 }
-load(0, false);
-</script>
+const keyFor = (slug, ans) => sha256("og|" + slug + "|" + ans.trim().toLowerCase()).slice(0, 24);
 
-</body></html>
+/* Progress lives in this browser only. */
+const store = {
+  get() { try { return JSON.parse(localStorage.getItem("ogb") || "{}"); } catch (e) { return {}; } },
+  set(v) { try { localStorage.setItem("ogb", JSON.stringify(v)); } catch (e) {} }
+};
+let state = Object.assign({ unlocked: {}, heard: {}, replay: {} }, store.get());
+const save = () => store.set(state);
+
+const $ = id => document.getElementById(id);
+const audio = $("audio");
+let idx = -1, part = 1;
+const fmt = t => { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
+const live = EPISODES.filter(e => !e.soon);
+
+function renderList() {
+  const ol = $("list"); ol.innerHTML = "";
+  EPISODES.forEach((e, i) => {
+    const li = document.createElement("li"), b = document.createElement("button");
+    b.className = "ep" + (i === idx ? " current" : "");
+    const open = !!state.unlocked[e.slug];
+    b.innerHTML = `<span class="n">${i + 1}</span><span class="t"></span><span class="s ${open ? "open" : ""}">${e.soon ? "Coming soon" : open ? "Unlocked" : "Part 1 free"}</span>`;
+    b.querySelector(".t").textContent = e.title;
+    if (e.soon) b.disabled = true; else b.onclick = () => load(i, true);
+    li.appendChild(b); ol.appendChild(li);
+  });
+  const done = live.filter(e => state.unlocked[e.slug]).length;
+  $("count").textContent = done + " / " + live.length;
+  $("barFill").style.width = (done / live.length * 100) + "%";
+  $("cert").classList.toggle("on", done === live.length);
+}
+
+function setPlayIcon() {
+  $("playIcon").innerHTML = audio.paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
+  $("play").setAttribute("aria-label", audio.paused ? "Play" : "Pause");
+}
+
+function load(i, autoplay) {
+  idx = i; part = 1;
+  const e = EPISODES[i];
+  $("player").classList.add("on");
+  $("pEp").textContent = "Episode " + (i + 1);
+  $("pTitle").textContent = e.title;
+  audio.src = "a/" + e.a + ".mp3";
+  const open = state.unlocked[e.slug];
+  $("pPart").textContent = open ? "Full story" : "Part 1";
+  $("lockZone").style.width = open ? "0" : ((1 - e.cut / e.dur) * 100) + "%";
+  $("tot").textContent = fmt(e.dur);
+  hideQuiz();
+  $("early").style.display = (!open && state.heard[e.slug] && !state.replay[e.slug]) ? "block" : "none";
+  renderList();
+  if (autoplay) audio.play().catch(() => {});
+  setPlayIcon();
+  $("player").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function hideQuiz() { $("quiz").classList.remove("on"); $("msg").textContent = ""; $("msg").className = "msg"; }
+
+function showQuiz() {
+  const e = EPISODES[idx];
+  $("early").style.display = "none";
+  $("qText").textContent = e.q;
+  const box = $("opts"); box.innerHTML = "";
+  e.opts.forEach(o => {
+    const b = document.createElement("button");
+    b.className = "opt"; b.textContent = o;
+    b.onclick = () => answer(o, b);
+    box.appendChild(b);
+  });
+  $("quiz").classList.add("on");
+  $("quiz").scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+async function answer(o, btn) {
+  const e = EPISODES[idx];
+  document.querySelectorAll(".opt").forEach(b => b.disabled = true);
+  const k = keyFor(e.slug, o);
+  let ok = false;
+  try { ok = (await fetch("b/" + k + ".mp3", { method: "HEAD", cache: "no-store" })).ok; } catch (err) {}
+  if (ok) {
+    btn.classList.add("right");
+    $("msg").className = "msg good"; $("msg").textContent = "That's right. Here's the rest of the story.";
+    state.unlocked[e.slug] = k; delete state.replay[e.slug]; save();
+    $("lockZone").style.width = "0"; $("pPart").textContent = "Full story";
+    renderList();
+    setTimeout(() => { playPart2(); }, 900);
+  } else {
+    btn.classList.add("wrong");
+    $("msg").className = "msg bad"; $("msg").textContent = "Not quite. Run Part 1 back and listen close. The answer's in there.";
+    state.replay[e.slug] = true; save();
+  }
+}
+
+function playPart2() {
+  const e = EPISODES[idx];
+  part = 2; hideQuiz();
+  audio.src = "b/" + state.unlocked[e.slug] + ".mp3";
+  audio.play().catch(() => {}); setPlayIcon();
+}
+
+audio.addEventListener("timeupdate", () => {
+  if (idx < 0) return;
+  const e = EPISODES[idx];
+  const t = (part === 2 ? e.cut : 0) + audio.currentTime;
+  $("cur").textContent = fmt(t);
+  $("fill").style.width = Math.min(100, t / e.dur * 100) + "%";
+});
+audio.addEventListener("play", setPlayIcon);
+audio.addEventListener("pause", setPlayIcon);
+audio.addEventListener("ended", () => {
+  const e = EPISODES[idx];
+  if (part === 1) {
+    state.heard[e.slug] = true; delete state.replay[e.slug]; save();
+    if (state.unlocked[e.slug]) playPart2(); else showQuiz();
+  } else {
+    // story's over: move on to the next episode
+    let n = idx + 1;
+    while (n < EPISODES.length && EPISODES[n].soon) n++;
+    if (n < EPISODES.length) load(n, true);
+  }
+  setPlayIcon();
+});
+
+$("play").onclick = () => { if (idx < 0) load(0, true); else audio.paused ? audio.play() : audio.pause(); };
+$("back").onclick = () => { audio.currentTime = Math.max(0, audio.currentTime - 10); };
+$("restart").onclick = () => { if (idx >= 0) load(idx, true); };
+$("early").onclick = () => showQuiz();
+
+renderList();
+/* Open on the first episode not yet unlocked. */
+const first = EPISODES.findIndex(e => !e.soon && !state.unlocked[e.slug]);
+load(first < 0 ? 0 : first, false);
+window.scrollTo(0, 0);
+</script>
+</body>
+</html>
