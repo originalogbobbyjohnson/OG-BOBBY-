@@ -37,7 +37,7 @@
 [hidden] { display: none !important; }
 html, body { margin: 0; background: var(--bg); color: var(--fg); }
 body { font-family: var(--body); font-size: 16px; line-height: 1.4; -webkit-tap-highlight-color: transparent; }
-.wrap { max-width: 540px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 18px; }
+.wrap { max-width: 540px; margin: 0 auto; padding: 20px 16px 130px; display: grid; gap: 18px; }
 header { display: grid; gap: 14px; }
 .cover { position: relative; }
 .cover img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid var(--gold-dim); }
@@ -151,16 +151,19 @@ ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .ep .s.open { color: var(--good); }
 
 /* OG Budz */
-.budz { display: block; text-align: center; text-decoration: none; background: radial-gradient(ellipse at center, #2f5338 0%, #26432d 60%, #1f3826 100%); border: 3px solid var(--gold); border-radius: 14px; padding: 16px; color: var(--gold); animation: glowBtn 1.8s ease-in-out infinite; }
-.budz .small { display: block; color: #d8e6dc; font-size: .8rem; letter-spacing: .08em; }
+.budz { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px; text-align: left; text-decoration: none; background: radial-gradient(ellipse at center, #2f5338 0%, #26432d 60%, #1f3826 100%); border: 3px solid var(--gold); border-radius: 14px; padding: 8px 14px; color: var(--gold); animation: glowBtn 1.8s ease-in-out infinite; }
+.budz .small { display: block; color: #d8e6dc; font-size: clamp(.56rem, 2.6vw, .76rem); letter-spacing: .03em; white-space: nowrap; }
 .wrap > * { min-width: 0; }
 @keyframes glowBtn {
   0%, 100% { transform: scale(1); box-shadow: 0 0 6px 1px rgba(227,178,60,.45); }
-  50% { transform: scale(1.03); box-shadow: 0 0 26px 8px rgba(227,178,60,.85); }
+  50% { transform: scale(1.015); box-shadow: 0 0 20px 6px rgba(227,178,60,.85); }
 }
-.budz img { display: block; width: min(240px, 70%); height: auto; margin: 0 auto 8px; }
-.budz .small { color: var(--muted); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
-footer { color: var(--muted); font-size: .8rem; text-align: center; }
+.budz img { display: block; width: clamp(80px, 24vw, 130px); height: auto; margin: 0; }
+.budz .where { display: grid; gap: 1px; justify-items: end; text-align: right; min-width: 0; }
+.budz .small { text-transform: uppercase; }
+.dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; padding: 14px 16px calc(6px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, rgba(15,26,18,.98) 72%, rgba(15,26,18,0)); }
+.dock-in { max-width: 508px; margin: 0 auto; display: grid; gap: 4px; }
+footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; }
 .sheet { position: fixed; inset: 0; z-index: 10; display: grid; place-items: end center; background: rgba(0,0,0,.6); padding: 16px 16px calc(16px + env(safe-area-inset-bottom, 0px)); }
 .sheet[hidden] { display: none !important; }
 .sheet .box { width: 100%; max-width: 480px; background: var(--panel); border: 2px solid var(--gold); border-radius: 16px; padding: 18px; display: grid; gap: 12px; }
@@ -173,6 +176,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
   html { background: var(--bg); }
   body { background: transparent; }
   .wrap { max-width: 560px; }
+  .dock-in { max-width: 528px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } .budz-chip { animation: none; box-shadow: 0 0 16px 4px rgba(227,178,60,.7); } .budz { animation: none; box-shadow: 0 0 16px 4px rgba(227,178,60,.7); } }
 </style>
@@ -249,13 +253,6 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
     <ol id="list"></ol>
   </section>
 
-  <a class="budz" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">
-    <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
-    <span class="small">Brooklyn · Staten Island</span>
-    <span class="small">Manhattan · 21+</span>
-  </a>
-
-  <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
 </div>
 
 <div class="sheet" id="localSheet" hidden role="dialog" aria-modal="true" aria-labelledby="localTitle">
@@ -265,6 +262,16 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
     <p>OG Budz serves Brooklyn, Staten Island and Manhattan, 21 and over. Are you in the area?</p>
     <a class="btn" id="localYes" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Yes, I'm local</a>
     <button class="btn ghost" id="localNo" type="button">Not local, keep listening</button>
+  </div>
+</div>
+
+<div class="dock">
+  <div class="dock-in">
+    <a class="budz" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">
+      <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
+      <span class="where"><span class="small">Brooklyn · Staten Island</span><span class="small">Manhattan · 21+</span></span>
+    </a>
+    <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
   </div>
 </div>
 
