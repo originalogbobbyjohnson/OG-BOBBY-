@@ -57,7 +57,7 @@ h1 img { display: block; width: min(100%, 380px); height: auto; filter: drop-sha
 .label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
 /* Street cred meter */
-.cred { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 14px; }
+.cred { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; display: grid; gap: 4px; background: rgba(23,37,26,.97); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 10px 14px 4px; box-shadow: 0 6px 18px rgba(0,0,0,.55); backdrop-filter: blur(6px); }
 .cred-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .cred-name { font-family: var(--graffiti); font-size: 1.35rem; color: var(--gold); line-height: 1; }
 .cred-hint { font-size: .85rem; color: var(--muted); }
@@ -178,6 +178,16 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
 
   <div class="how">Every song stops at a turning point. <b>Answer right to keep the story going.</b></div>
 
+  <section class="cred" aria-label="Street cred meter">
+    <div class="cred-head"><span class="cred-name">STREET CRED</span><span class="cred-hint" id="credHint"></span></div>
+    <div class="cred-track">
+      <div class="cred-bar"><i id="barFill"></i></div>
+      <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>1 song</span></div>
+      <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>3 songs</span></div>
+      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>The album</span></div>
+    </div>
+  </section>
+
   <section class="reward" id="reward" aria-live="polite">
     <h3 id="rTitle">YOU EARNED A PLAYLIST</h3>
     <p id="rText"></p>
@@ -200,15 +210,6 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
       <button class="btn-round" id="back" type="button" aria-label="Back 10 seconds"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></button>
       <button class="btn-round play" id="play" type="button" aria-label="Play"><svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
       <button class="btn-round" id="restart" type="button" aria-label="Start the song over"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
-    </div>
-    <div class="cred" aria-label="Street cred meter">
-      <div class="cred-head"><span class="cred-name">STREET CRED</span><span class="cred-hint" id="credHint"></span></div>
-      <div class="cred-track">
-        <div class="cred-bar"><i id="barFill"></i></div>
-        <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>1 song</span></div>
-        <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>3 songs</span></div>
-        <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>The album</span></div>
-      </div>
     </div>
     <div class="quiz" id="quiz">
       <div class="label" id="qLabel">Question 1</div>
