@@ -487,13 +487,11 @@ $("back").onclick = () => {
 };
 $("restart").onclick = () => { playSection(0, true); };
 
-/* OG Budz is local-only: ask once before leaving the music page. */
+/* OG Budz is local-only: ask every time before leaving the music page. */
 document.querySelectorAll('a.budz, a.budz-chip').forEach(a => a.addEventListener("click", ev => {
-  if (state.local) return;
   ev.preventDefault();
   $("localSheet").hidden = false; $("localYes").focus();
 }));
-$("localYes").addEventListener("click", () => { state.local = true; save(); });
 $("localNo").onclick = () => { $("localSheet").hidden = true; };
 $("localSheet").addEventListener("click", ev => { if (ev.target.id === "localSheet") $("localSheet").hidden = true; });
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") $("localSheet").hidden = true; });
