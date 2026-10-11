@@ -40,7 +40,7 @@ body { font-family: var(--body); font-size: 16px; line-height: 1.4; -webkit-tap-
 .wrap { max-width: 540px; margin: 0 auto; padding: 10px 16px 130px; display: grid; gap: 18px; }
 header { display: grid; gap: 14px; }
 .cover { position: relative; }
-.cover img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid var(--gold-dim); }
+.cover > img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid var(--gold-dim); }
 .title-row { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; }
 .title-row > div { min-width: 0; }
 .budz-chip { display: block; width: 64px; height: 64px; border-radius: 14px; animation: glow 1.8s ease-in-out infinite; }
@@ -160,6 +160,7 @@ ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .budz img { display: block; width: clamp(80px, 24vw, 130px); height: auto; margin: 0; }
 .budz .where { display: grid; gap: 1px; justify-items: end; text-align: right; min-width: 0; }
 .budz .small { text-transform: uppercase; }
+.budz .small.friends { color: var(--gold); font-weight: 700; }
 .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; padding: 14px 16px calc(6px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, rgba(15,26,18,.98) 72%, rgba(15,26,18,0)); }
 .dock-in { max-width: 508px; margin: 0 auto; display: grid; gap: 4px; }
 footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; }
@@ -178,9 +179,129 @@ footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; 
   .dock-in { max-width: 528px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } .budz-chip { animation: none; box-shadow: 0 0 16px 4px rgba(227,178,60,.7); } .budz { animation: none; box-shadow: 0 0 16px 4px rgba(227,178,60,.7); } }
+
+/* ---------- Practice layout: one card at a time, arrows on the sides, no page scrolling ---------- */
+body.practice { overflow: hidden; }
+.practice .wrap { height: 100dvh; padding: 10px 16px 104px; grid-template-rows: auto 1fr auto; gap: 8px; }
+.practice .stage-wrap { position: relative; min-height: 0; display: grid; }
+.practice .stage { min-height: 0; overflow-y: auto; padding: 2px 40px; display: grid; align-content: start; gap: 12px; scrollbar-width: none; }
+.practice .stage::-webkit-scrollbar { display: none; }
+.practice .stage:not([data-v="intro"]) > .slide-intro,
+.practice .stage:not([data-v="ep"]) > #player,
+.practice .stage:not([data-v="reward"]) > #reward { display: none !important; }
+.practice .slide-intro { display: grid; gap: 12px; }
+.practice .slide-empty { display: grid; gap: 8px; text-align: center; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 22px 16px; }
+.practice .slide-empty h3 { margin: 0; font-family: var(--graffiti); font-weight: 400; color: var(--gold); font-size: 1.6rem; }
+.practice .slide-empty p { margin: 0; color: var(--muted); }
+.practice .start { justify-self: center; width: auto; padding: 12px 28px; }
+
+/* side arrows */
+.practice .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 34px; height: 64px; display: grid; place-items: center; background: var(--panel); border: 1px solid var(--gold-dim); border-radius: 12px; color: var(--gold); cursor: pointer; padding: 0; }
+.practice .nav-btn svg { width: 20px; height: 20px; fill: currentColor; }
+.practice .nav-btn.prev { left: 0; }
+.practice .nav-btn.next { right: 0; }
+.practice .nav-btn:disabled { opacity: .25; cursor: default; }
+.practice .nav-btn:not(:disabled):active { transform: translateY(-50%) scale(.94); }
+
+/* a tighter player so a whole card fits on one screen */
+.practice .player { padding: 12px; gap: 10px; }
+.practice #pTitle { font-size: 1.5rem; }
+.practice .btn-round { width: 44px; height: 44px; }
+.practice .btn-round.play { width: 56px; height: 56px; }
+.practice .btn-round.play svg { width: 24px; height: 24px; }
+.practice .quiz { padding-top: 10px; gap: 7px; }
+.practice .quiz h3 { font-size: 1.02rem; }
+.practice .quiz .hint { display: none; }
+.practice .opt { padding: 11px 12px; }
+.practice .how { font-size: .9rem; }
+
+/* episode list becomes a row of numbered dots under the card */
+.practice section:has(#list) h2 { display: none; }
+.practice #list { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; }
+.practice #list li { display: block; }
+.practice .ep { width: 30px; height: 30px; padding: 0; grid-template-columns: 1fr; place-items: center; border-radius: 50%; }
+.practice .ep .t, .practice .ep .s { display: none; }
+.practice .ep .n { font-size: .95rem; }
+.practice .ep:has(.s.open) { background: var(--gold-dim); border-color: var(--gold); }
+.practice .ep:has(.s.open) .n { color: #fff; }
+.practice .ep.current { border-color: var(--gold); box-shadow: 0 0 0 2px var(--gold); }
+.practice .dot-gift { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); background: var(--panel); color: var(--muted); cursor: pointer; padding: 0; }
+.practice .dot-gift svg { width: 16px; height: 16px; fill: currentColor; }
+.practice .dot-gift.on { color: var(--gold); border-color: var(--gold); }
+.practice .dot-gift.current { box-shadow: 0 0 0 2px var(--gold); }
+@media (min-width: 700px) { .practice .stage { padding: 2px 52px; } .practice .nav-btn { width: 42px; } }
+/* short phones: squeeze the bars and the card so it still fits */
+@media (max-height: 760px) {
+  .practice .wrap { padding-bottom: 86px; gap: 6px; }
+  .practice .mini-word { max-width: 190px; }
+  .practice .budz-chip.mini { width: 40px; height: 40px; }
+  .practice .cred { padding: 8px 12px 2px; }
+  .practice .cred-name { font-size: 1.1rem; }
+  .practice .cred-hint { font-size: .78rem; }
+  .practice .cred.stuck .cred-track { padding-top: 20px; padding-bottom: 16px; }
+  .practice .flag svg { width: 16px; height: 19px; }
+  .practice .cred.stuck .flag span { top: 34px; font-size: .64rem; }
+  .practice .cred-bar { height: 12px; }
+  .practice footer { display: none; }
+  .practice .budz { padding: 6px 12px; }
+  .practice .player { padding: 10px; gap: 6px; }
+  .practice #pTitle { font-size: 1.25rem; }
+  .practice .label { font-size: .64rem; }
+  .practice .btn-round { width: 38px; height: 38px; }
+  .practice .btn-round.play { width: 46px; height: 46px; }
+  .practice .controls { gap: 14px; }
+  .practice .quiz { padding-top: 6px; gap: 5px; }
+  .practice .quiz .label { display: none; }
+  .practice .quiz h3 { font-size: .95rem; }
+  .practice .opt { padding: 8px 12px; border-radius: 10px; }
+  .practice .msg { min-height: 0; font-size: .85rem; }
+  .practice .ep, .practice .dot-gift { width: 26px; height: 26px; }
+}
+
+/* ---------- Game layout: banner on top, thin meter right above the card ---------- */
+.practice .wrap { grid-template-rows: auto auto 1fr auto; }
+.practice header { display: block; }
+.practice header .tag { display: none; }
+.practice .cover { position: relative; }
+.practice .cover > img { width: 100%; height: clamp(110px, 18vh, 170px); aspect-ratio: auto; object-fit: cover; object-position: 50% 58%; border-radius: 14px; }
+.practice .cover-shade { position: absolute; inset: 0; border-radius: 14px; background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0) 55%); pointer-events: none; }
+.practice .cover h1 { position: absolute; left: 12px; bottom: 8px; margin: 0; line-height: 0; width: min(62%, 300px); }
+.practice .cover h1 img, .practice .cover .mini-word { width: 100%; max-width: none; height: auto; filter: drop-shadow(2px 3px 0 #000); }
+.practice .chip-box { position: absolute; right: 10px; bottom: 8px; display: grid; justify-items: center; gap: 3px; }
+.practice .chip-box .budz-chip { width: 48px; height: 48px; border-radius: 12px; }
+.practice .chip-box .budz-chip img { border-radius: 12px; }
+.practice .friends-tag { font-size: .56rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); background: rgba(0,0,0,.7); padding: 2px 6px; border-radius: 99px; white-space: nowrap; }
+
+/* thin Street Cred meter */
+.practice .cred { position: static; padding: 6px 12px 0; gap: 0; box-shadow: none; border-radius: 12px; }
+.practice .cred-head { align-items: center; }
+.practice .cred-name { font-size: 1rem; }
+.practice .cred-hint { font-size: .74rem; }
+.practice .cred.stuck .cred-track, .practice .cred-track { padding-top: 10px; padding-bottom: 14px; margin-right: 14px; }
+.practice .cred-bar { height: 8px; }
+.practice .flag { top: 2px; }
+.practice .flag svg { width: 12px; height: 14px; }
+.practice .cred.stuck .flag span, .practice .flag span { top: 26px; font-size: .56rem; letter-spacing: .04em; }
+
+/* how-to-play card */
+.practice .slide-intro { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+.practice .intro-title { margin: 0; font-family: var(--graffiti); font-weight: 400; font-size: 1.7rem; color: var(--gold); text-align: center; }
+.practice .rules { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; color: var(--fg); font-size: .95rem; }
+.practice .rules b { color: var(--gold); }
+.practice .start { font-family: var(--display); font-size: 1.5rem; letter-spacing: .1em; padding: 10px 44px; animation: glowBtn 1.8s ease-in-out infinite; }
+@media (max-height: 760px) {
+  .practice .cover > img { height: 98px; }
+  .practice .chip-box .budz-chip { width: 40px; height: 40px; }
+  .practice .cred.stuck .cred-track, .practice .cred-track { padding-top: 8px; padding-bottom: 12px; }
+  .practice .flag svg { width: 10px; height: 12px; }
+  .practice .cred.stuck .flag span, .practice .flag span { top: 22px; font-size: .52rem; }
+}
+@media (prefers-reduced-motion: reduce) { .practice .start { animation: none; } }
+
+.practice .quiz > .label { display: none; }
 </style>
 </head>
-<body>
+<body class="practice">
 <div class="wrap">
   <section class="cred stuck" id="cred" aria-label="Street cred meter">
     <div class="mini-brand">
@@ -215,7 +336,7 @@ footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; 
 
   <section class="player" id="player" aria-live="polite">
     <div>
-      <div class="label" id="pEp">Episode 1</div>
+      <div class="label" id="pEp">Level 1</div>
       <div id="pTitle">Whatever It Takes</div>
       <div class="part" id="pPart">Part 1</div>
     </div>
@@ -240,7 +361,7 @@ footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; 
   </section>
 
   <section>
-    <h2>THE EPISODES</h2>
+    <h2>THE LEVELS</h2>
     <ol id="list"></ol>
   </section>
 
@@ -249,8 +370,8 @@ footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; 
 <div class="sheet" id="localSheet" hidden role="dialog" aria-modal="true" aria-labelledby="localTitle">
   <div class="box">
     <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
-    <h3 id="localTitle">Local delivery only</h3>
-    <p>OG Budz serves Brooklyn, Staten Island and Manhattan, 21 and over. Are you in the area?</p>
+    <h3 id="localTitle">Friends of OG · Local delivery only</h3>
+    <p>You're leaving the OG Bobby game for OG Budz, a separate site with its own rules. It serves Brooklyn, Staten Island and Manhattan, 21 and over. Are you in the area?</p>
     <a class="btn" id="localYes" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Yes, I'm local</a>
     <button class="btn ghost" id="localNo" type="button">Not local, keep listening</button>
   </div>
@@ -260,7 +381,7 @@ footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; 
   <div class="dock-in">
     <a class="budz" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">
       <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
-      <span class="where"><span class="small">Brooklyn · Staten Island</span><span class="small">Manhattan · 21+</span></span>
+      <span class="where"><span class="small friends">Friends of OG</span><span class="small">Brooklyn · Staten Island</span><span class="small">Manhattan · 21+</span></span>
     </a>
     <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
   </div>
@@ -408,7 +529,7 @@ function playSection(s, autoplay) {
 function load(i, autoplay) {
   idx = i;
   const e = EPISODES[i];
-  $("pEp").textContent = "Episode " + (i + 1);
+  $("pEp").textContent = "Level " + (i + 1);
   $("pTitle").textContent = e.title;
   $("tot").textContent = fmt(e.dur);
   drawTrack(e);
@@ -521,6 +642,115 @@ document.addEventListener("keydown", ev => { if (ev.key === "Escape") $("localSh
 const first = EPISODES.findIndex(e => !isOpen(e));
 load(first < 0 ? 0 : first, false);
 window.scrollTo(0, 0);
+
+/* ---------- Practice layout: card by card with side arrows ---------- */
+(function () {
+  const wrap = document.querySelector(".wrap");
+  const stageWrap = document.createElement("div"); stageWrap.className = "stage-wrap";
+  const stage = document.createElement("div"); stage.className = "stage";
+  // Banner on top: Bay Ridge picture with OG BOBBY across it and the glowing OG Budz icon
+  const header = document.querySelector("header");
+  const cover = header.querySelector(".cover");
+  const brand = document.querySelector(".mini-brand");
+  const h1 = brand.querySelector("h1"), chip = brand.querySelector(".budz-chip");
+  const shade = document.createElement("div"); shade.className = "cover-shade";
+  const friends = document.createElement("span"); friends.className = "friends-tag"; friends.textContent = "Friends of OG";
+  const chipBox = document.createElement("div"); chipBox.className = "chip-box"; chipBox.append(chip, friends);
+  cover.append(shade, h1, chipBox);
+  brand.remove();
+  const cred = $("cred");
+  wrap.insertBefore(header, wrap.firstChild);
+  wrap.insertBefore(cred, header.nextSibling);
+
+  // Opening card: how to play
+  const intro = document.createElement("div"); intro.className = "slide-intro";
+  intro.innerHTML = '<h3 class="intro-title">How to play</h3>' +
+    '<ol class="rules"><li><b>Hit play.</b> Every song is a level from OG Bobby\'s story.</li>' +
+    '<li><b>Every level stops</b> at a turning point.</li>' +
+    '<li><b>Answer right</b> to unlock the next verse.</li>' +
+    '<li><b>Fill your Street Cred</b> on the first try to win songs for your own playlist.</li></ol>';
+  document.querySelector(".how").remove();
+  const startBtn = document.createElement("button");
+  startBtn.type = "button"; startBtn.className = "btn start"; startBtn.textContent = "PLAY";
+  intro.append(startBtn);
+  const empty = document.createElement("div"); empty.className = "slide-empty"; empty.hidden = true;
+  empty.innerHTML = "<h3>Rewards</h3><p>Get 6 right on the first try to earn your first song. Keep going for 3 songs, then the whole album.</p>";
+  stage.append(intro, $("player"), $("reward"), empty);
+  const arrow = (cls, label, path) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "nav-btn " + cls; b.setAttribute("aria-label", label);
+    b.innerHTML = '<svg viewBox="0 0 24 24"><path d="' + path + '"/></svg>';
+    return b;
+  };
+  const prev = arrow("prev", "Back", "M15.4 4.6 8 12l7.4 7.4-1.8 1.8L4.4 12l9.2-9.2z");
+  const next = arrow("next", "Next", "M8.6 19.4 16 12 8.6 4.6l1.8-1.8 9.2 9.2-9.2 9.2z");
+  stageWrap.append(stage, prev, next);
+  const listSec = $("list").closest("section");
+  wrap.insertBefore(stageWrap, listSec);
+
+  const N = EPISODES.length, REWARD = N + 1;
+  let v = 0;
+
+  function show(nv) {
+    v = Math.max(0, Math.min(REWARD, nv));
+    stage.dataset.v = v === 0 ? "intro" : v === REWARD ? "reward" : "ep";
+    empty.hidden = !(v === REWARD && earnedPicks() === 0);
+    prev.disabled = v === 0; next.disabled = v === REWARD;
+    stage.scrollTop = 0;
+    paintDots();
+  }
+  function go(nv) {
+    nv = Math.max(0, Math.min(REWARD, nv));
+    if (nv >= 1 && nv <= N && nv - 1 !== idx) load(nv - 1, true);
+    else show(nv);
+  }
+
+  // every episode change (arrows, dots, auto-advance) lands on that episode's card
+  const baseLoad = load;
+  load = function (i, autoplay) { baseLoad(i, autoplay); show(i + 1); };
+
+  // keep a gift dot for the rewards card at the end of the number row
+  const baseRender = renderList;
+  renderList = function () { baseRender(); paintDots(); };
+  function paintDots() {
+    const ol = $("list"); if (!ol) return;
+    let gift = ol.querySelector(".dot-gift");
+    if (!gift) {
+      const li = document.createElement("li");
+      gift = document.createElement("button");
+      gift.type = "button"; gift.className = "dot-gift"; gift.setAttribute("aria-label", "Rewards");
+      gift.innerHTML = '<svg viewBox="0 0 24 24"><path d="M20 7h-2.2A3 3 0 0 0 12 4.4 3 3 0 0 0 6.2 7H4a1 1 0 0 0-1 1v3h18V8a1 1 0 0 0-1-1zM9 7a1 1 0 1 1 1-1v1zm6 0h-1V6a1 1 0 1 1 1 1zM4 13v7a1 1 0 0 0 1 1h6v-8zm9 8h6a1 1 0 0 0 1-1v-7h-7z"/></svg>';
+      gift.onclick = () => go(REWARD);
+      li.append(gift); ol.append(li);
+    }
+    gift.classList.toggle("on", earnedPicks() > 0);
+    gift.classList.toggle("current", v === REWARD);
+    ol.querySelectorAll(".ep").forEach((b, k) => b.classList.toggle("current", v === k + 1));
+  }
+
+  prev.onclick = () => go(v - 1);
+  next.onclick = () => go(v + 1);
+  startBtn.onclick = () => go((idx < 0 ? 0 : idx) + 1);
+  document.addEventListener("keydown", e => {
+    if ($("localSheet") && !$("localSheet").hidden) return;
+    if (e.key === "ArrowRight") go(v + 1);
+    if (e.key === "ArrowLeft") go(v - 1);
+  });
+  // swipe left / right on the card
+  let sx = null, sy = null;
+  stage.addEventListener("touchstart", e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  stage.addEventListener("touchend", e => {
+    if (sx === null) return;
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(v + (dx < 0 ? 1 : -1));
+    sx = null;
+  }, { passive: true });
+
+  // first visit opens on the intro card; returning players open where they left off
+  const started = Object.keys(state.keys).length || Object.keys(state.first).length;
+  renderList();
+  show(started ? idx + 1 : 0);
+})();
 </script>
 </body>
 </html>
