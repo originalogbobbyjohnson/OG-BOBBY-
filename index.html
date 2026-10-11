@@ -158,6 +158,13 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
 .sheet img { width: 160px; height: auto; display: block; }
 .sheet h3 { margin: 0; font-size: 1.15rem; }
 .sheet p { margin: 0; color: var(--muted); }
+/* Wide screens: the Bay Ridge cover art fills the sides as a dark backdrop */
+@media (min-width: 700px) {
+  body::before { content: ""; position: fixed; inset: -40px; z-index: -1; background: url("cover.jpg") center / cover no-repeat; filter: blur(14px) brightness(.32) saturate(1.1); }
+  html { background: var(--bg); }
+  body { background: transparent; }
+  .wrap { max-width: 560px; }
+}
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } .budz-chip { animation: none; box-shadow: 0 0 16px 4px rgba(227,178,60,.7); } .budz { animation: none; box-shadow: 0 0 16px 4px rgba(227,178,60,.7); } }
 </style>
 </head>
