@@ -36,6 +36,9 @@ html, body { margin: 0; background: var(--bg); color: var(--fg); }
 body { font-family: var(--body); font-size: 16px; line-height: 1.4; -webkit-tap-highlight-color: transparent; }
 .wrap { max-width: 540px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 22px; }
 header { display: grid; gap: 14px; }
+.cover { position: relative; }
+.budz-chip { position: absolute; top: 10px; right: 10px; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: #000; border: 2px solid var(--gold); color: var(--gold); text-decoration: none; font-family: var(--display); font-size: .72rem; line-height: .95; text-align: center; letter-spacing: .04em; box-shadow: 0 2px 8px rgba(0,0,0,.5); }
+.quiz .lab { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 header img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid var(--gold-dim); }
 h1 { font-family: var(--display); font-weight: 400; font-size: 3rem; line-height: .95; margin: 0; letter-spacing: .02em; color: var(--gold); }
 .tag { color: var(--muted); margin: 6px 0 0; }
@@ -102,7 +105,10 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
 <body>
 <div class="wrap">
   <header>
-    <img src="cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
+    <div class="cover">
+      <img src="cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
+      <a class="budz-chip" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" aria-label="OG Budz">OG<br>BUDZ</a>
+    </div>
     <div>
       <h1>OG BOBBY</h1>
       <p class="tag">Bay Ridge, Brooklyn. The story, one episode at a time.</p>
@@ -133,11 +139,12 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
       <button class="btn-round" id="restart" aria-label="Start over"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
     </div>
     <div class="quiz" id="quiz">
+      <div class="lab">Your question</div>
       <h3 id="qText"></h3>
+      <p class="hint">Listen to Part 1. The answer's in there.</p>
       <div id="opts" style="display:grid;gap:8px"></div>
       <p class="msg" id="msg"></p>
     </div>
-    <button class="early" id="early">Already heard Part 1? Answer now</button>
   </section>
 
   <section>
@@ -145,7 +152,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
     <ol id="list"></ol>
   </section>
 
-  <a class="budz" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" target="_blank" rel="noopener">
+  <a class="budz" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">
     <span class="big">OG BUDZ</span>
     <span class="small">Step inside · 21+</span>
   </a>
@@ -159,20 +166,20 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
 const EPISODES = [
   { slug: "whatever-it-takes", title: "Whatever It Takes", a: "976f909f2d71", cut: 93.6, dur: 168.2,
     q: "What year does OG's story start?", opts: ["1979", "1983", "1990"] },
-  { slug: "bay-ridge-nights", title: "Bay Ridge Nights", a: "18943ab2a2f9", cut: 130.8, dur: 206.4,
-    q: "Which Bay Ridge spot was “for the squares”?", opts: ["Gino's", "Pizza Wagon", "Hobnail"] },
-  { slug: "bars-and-clubs", title: "Bars & Clubs", a: "cb526872284b", cut: 113.7, dur: 179.4,
-    q: "Which Manhattan club gets a shout-out?", opts: ["Limelight", "The Tunnel", "Club USA"] },
   { slug: "ridge-brothers", title: "Ridge Brothers", a: "2818b56dc09e", cut: 144.6, dur: 224.4,
     q: "Who connected OG to the Jorgenson brothers?", opts: ["Mike", "Jimmy Kush", "Andrew"] },
-  { slug: "black-rob", title: "Black Rob", a: "92e6b951fd61", cut: 125.7, dur: 227.5,
-    q: "What was Rob to OG in the boxing gym?", opts: ["His coach", "His first student", "His sparring rival"] },
+  { slug: "bay-ridge-nights", title: "Bay Ridge Nights", a: "18943ab2a2f9", cut: 130.8, dur: 206.4,
+    q: "Which Bay Ridge spot was “for the squares”?", opts: ["Gino's", "Pizza Wagon", "Hobnail"] },
   { slug: "the-get-back", title: "The Get Back", a: "891ee2171861", cut: 117.7, dur: 186.7,
     q: "What year did OG walk away from Wall Street?", opts: ["1995", "1999", "2001"] },
   { slug: "pioneer", title: "Pioneer", a: "16aa4a30992f", cut: 120.2, dur: 216.4,
     q: "What did the partner secretly do with the shared money?", opts: ["Lost it gambling", "Used it for his own moves", "Hid it overseas"] },
+  { slug: "bars-and-clubs", title: "Bars & Clubs", a: "cb526872284b", cut: 113.7, dur: 179.4,
+    q: "Which Manhattan club gets a shout-out?", opts: ["Limelight", "The Tunnel", "Club USA"] },
   { slug: "bay-ridge-is-mine", title: "Bay Ridge Is Mine", a: "e29667e963d2", cut: 152.2, dur: 264.6,
     q: "How much money went missing?", opts: ["$2,000", "$7,000", "$10,000"] },
+  { slug: "black-rob", title: "Black Rob", a: "92e6b951fd61", cut: 125.7, dur: 227.5,
+    q: "What was Rob to OG in the boxing gym?", opts: ["His coach", "His first student", "His sparring rival"] },
   { slug: "positivity-spreads", title: "Positivity Spreads", a: "6da48c29d311", cut: 199.1, dur: 286.8,
     q: "Which Brooklyn park does OG train in?", opts: ["Prospect Park", "Owl's Head", "McCarren Park"] },
 ];
@@ -252,7 +259,7 @@ function load(i, autoplay) {
   $("lockZone").style.width = open ? "0" : ((1 - e.cut / e.dur) * 100) + "%";
   $("tot").textContent = fmt(e.dur);
   hideQuiz();
-  $("early").style.display = (!open && state.heard[e.slug] && !state.replay[e.slug]) ? "block" : "none";
+  if (!open) showQuiz(false);
   renderList();
   if (autoplay) audio.play().catch(() => {});
   setPlayIcon();
@@ -261,19 +268,21 @@ function load(i, autoplay) {
 
 function hideQuiz() { $("quiz").classList.remove("on"); $("msg").textContent = ""; $("msg").className = "msg"; }
 
-function showQuiz() {
+function showQuiz(scroll) {
   const e = EPISODES[idx];
-  $("early").style.display = "none";
+  const locked = !!state.replay[e.slug];
   $("qText").textContent = e.q;
   const box = $("opts"); box.innerHTML = "";
   e.opts.forEach(o => {
     const b = document.createElement("button");
     b.className = "opt"; b.textContent = o;
     b.onclick = () => answer(o, b);
+    b.disabled = locked;
     box.appendChild(b);
   });
   $("quiz").classList.add("on");
-  $("quiz").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  if (locked) { $("msg").className = "msg bad"; $("msg").textContent = "Play Part 1 again all the way through, then answer."; }
+  if (scroll) $("quiz").scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 async function answer(o, btn) {
@@ -291,7 +300,7 @@ async function answer(o, btn) {
     setTimeout(() => { playPart2(); }, 900);
   } else {
     btn.classList.add("wrong");
-    $("msg").className = "msg bad"; $("msg").textContent = "Not quite. Run Part 1 back and listen close. The answer's in there.";
+    $("msg").className = "msg bad"; $("msg").textContent = "Not quite. Play Part 1 again and listen close. You can answer again when it ends.";
     state.replay[e.slug] = true; save();
   }
 }
@@ -316,7 +325,8 @@ audio.addEventListener("ended", () => {
   const e = EPISODES[idx];
   if (part === 1) {
     state.heard[e.slug] = true; delete state.replay[e.slug]; save();
-    if (state.unlocked[e.slug]) playPart2(); else showQuiz();
+    if (state.unlocked[e.slug]) playPart2();
+    else { showQuiz(true); $("msg").className = "msg"; $("msg").textContent = "Part 1's done. Answer to hear the rest."; }
   } else {
     // story's over: move on to the next episode
     let n = idx + 1;
@@ -329,7 +339,6 @@ audio.addEventListener("ended", () => {
 $("play").onclick = () => { if (idx < 0) load(0, true); else audio.paused ? audio.play() : audio.pause(); };
 $("back").onclick = () => { audio.currentTime = Math.max(0, audio.currentTime - 10); };
 $("restart").onclick = () => { if (idx >= 0) load(idx, true); };
-$("early").onclick = () => showQuiz();
 
 renderList();
 /* Open on the first episode not yet unlocked. */
