@@ -381,6 +381,19 @@ body.practice { overflow: hidden; }
 .practice .wrap { grid-template-rows: minmax(90px, 1fr) auto minmax(0, auto) auto; }
 @media (max-height: 760px) { .practice .wrap { grid-template-rows: minmax(76px, 1fr) auto minmax(0, auto) auto; } }
 .practice .wrap { align-content: space-evenly; }
+
+/* ---------- Fit to the real screen: height and bottom-bar room are measured on the phone itself ---------- */
+.practice .wrap { height: var(--appH, 100dvh); padding-bottom: calc(var(--dockH, 96px) + 14px); }
+.practice .slide-intro { padding: 12px 14px; gap: 8px; }
+.practice .intro-title { font-size: 1.35rem; }
+.practice .rules { font-size: .84rem; gap: 5px; }
+.practice .start { font-size: 1.2rem; padding: 7px 34px; }
+.practice .player { padding: 9px 11px; gap: 5px; }
+.practice #pTitle { font-size: 1.2rem; }
+.practice .quiz h3 { font-size: .92rem; }
+.practice .opt { padding: 8px 11px; font-size: .92rem; }
+.practice .btn-round { width: 38px; height: 38px; }
+.practice .btn-round.play { width: 46px; height: 46px; }
 </style>
 </head>
 <body class="practice">
@@ -854,6 +867,19 @@ window.scrollTo(0, 0);
   setTimeout(fitDock, 600);
   addEventListener("resize", fitDock);
   addEventListener("orientationchange", () => setTimeout(fitDock, 300));
+
+  // size the page to the phone's actual visible screen and leave exact room for the bottom bar
+  const fit = () => {
+    const vv = window.visualViewport;
+    document.documentElement.style.setProperty("--appH", Math.round(vv ? vv.height : innerHeight) + "px");
+    const dock = document.querySelector(".dock");
+    if (dock) document.documentElement.style.setProperty("--dockH", Math.ceil(dock.getBoundingClientRect().height) + "px");
+  };
+  fit();
+  addEventListener("resize", fit);
+  if (window.visualViewport) visualViewport.addEventListener("resize", fit);
+  try { new ResizeObserver(fit).observe(document.querySelector(".dock")); } catch (e) {}
+  addEventListener("load", fit);
 
   // first visit opens on the intro card; returning players open where they left off
   const started = Object.keys(state.keys).length || Object.keys(state.first).length;
