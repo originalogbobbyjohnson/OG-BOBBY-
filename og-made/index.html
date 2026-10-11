@@ -63,7 +63,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
   <header>
     <img src="../cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
     <h1>OG MADE</h1>
-    <div class="sub">OG Bobby · 9 songs · 32:41</div>
+    <div class="sub">OG Bobby · 9 songs · 32:28</div>
   </header>
   <section class="now">
     <div class="lab">Now playing</div>
@@ -81,7 +81,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
 </div>
 <audio id="audio" preload="metadata"></audio>
 <script>
-const CFG = {"mode": "tracks", "mix": "ea3f34f58098.mp3", "tracks": [{"t": "Whatever It Takes", "f": "62fb21fcfcbb.mp3", "d": 168.23, "s": 0}, {"t": "Ridge Brothers", "f": "a1fe8390ba3c.mp3", "d": 224.42, "s": 163.23}, {"t": "Bay Ridge Nights", "f": "9a7481d5a858.mp3", "d": 206.37, "s": 382.65}, {"t": "The Get Back", "f": "ff56621d65ee.mp3", "d": 186.72, "s": 584.02}, {"t": "Pioneer", "f": "9fd3b781d63f.mp3", "d": 216.4, "s": 765.74}, {"t": "Bars & Clubs", "f": "6abe6700735e.mp3", "d": 179.44, "s": 977.14}, {"t": "Bay Ridge Is Mine", "f": "58bcbfeecf36.mp3", "d": 264.65, "s": 1151.58}, {"t": "Black Rob", "f": "1d7cc73f4cdb.mp3", "d": 227.52, "s": 1411.23}, {"t": "Positivity Spreads", "f": "85cfe59cf72c.mp3", "d": 286.8, "s": 1633.75}]};
+const CFG = {"mode": "tracks", "mix": "d5c1d6483a7d.mp3", "tracks": [{"t": "Whatever It Takes", "f": "62fb21fcfcbb.mp3", "d": 168.23, "s": 0}, {"t": "Ridge Brothers", "f": "a1fe8390ba3c.mp3", "d": 224.42, "s": 163.23}, {"t": "Bay Ridge Nights", "f": "9a7481d5a858.mp3", "d": 206.37, "s": 382.65}, {"t": "The Get Back", "f": "ff56621d65ee.mp3", "d": 186.72, "s": 584.02}, {"t": "Pioneer", "f": "9fd3b781d63f.mp3", "d": 216.4, "s": 765.74}, {"t": "Bars & Clubs", "f": "6abe6700735e.mp3", "d": 179.44, "s": 977.14}, {"t": "Bay Ridge Is Mine", "f": "58bcbfeecf36.mp3", "d": 264.65, "s": 1151.58}, {"t": "Black Rob", "f": "814f5a9e2c7b.mp3", "d": 215.47, "s": 1411.23}, {"t": "Positivity Spreads", "f": "85cfe59cf72c.mp3", "d": 286.8, "s": 1621.7}]};
 const T = CFG.tracks, FADE = CFG.mode === "fade";
 const audio = document.getElementById("audio");
 const $ = id => document.getElementById(id);
@@ -167,7 +167,7 @@ if ("mediaSession" in navigator) {
   } catch (e) {}
 }
 mark(0);
-$("tot").textContent = fmt(FADE ? 1920.34 : T[0].d);
+$("tot").textContent = fmt(FADE ? 1908.3 : T[0].d);
 </script>
 </body>
 </html>
