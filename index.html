@@ -318,6 +318,58 @@ body.practice { overflow: hidden; }
 .practice .wrap { gap: 8px; }
 @media (max-height: 820px) { .practice .wrap { padding-bottom: 104px; } }
 @media (max-height: 760px) { .practice #pPart { display: none; } .practice .player { gap: 5px; } .practice .wrap { padding-bottom: 92px; } }
+
+/* ---------- Full picture on top (nothing covering it), name row under it; the picture takes any spare height ---------- */
+.practice .wrap { grid-template-rows: minmax(150px, 1fr) auto minmax(0, auto) auto; align-content: stretch; }
+.practice header { display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 6px; min-height: 0; }
+.practice .cover { min-height: 0; display: grid; place-items: center; }
+.practice .cover > img, .practice .cover > img[width] {
+  width: auto; max-width: 100%; height: 100%; max-height: 100%;
+  aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; border: 2px solid var(--gold-dim);
+}
+.practice .name-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.practice .name-row h1 { position: static; width: min(64%, 300px); margin: 0; line-height: 0; }
+.practice .chip-box { position: static; display: flex; align-items: center; gap: 8px; }
+.practice .chip-box .budz-chip { width: 46px; height: 46px; }
+.practice .friends-tag { order: -1; background: none; padding: 0; font-size: .62rem; text-align: right; line-height: 1.15; white-space: normal; max-width: 4.6em; }
+@media (max-height: 760px) {
+  .practice .wrap { grid-template-rows: minmax(110px, 1fr) auto minmax(0, auto) auto; }
+  .practice .name-row h1 { width: min(56%, 230px); }
+  .practice .chip-box .budz-chip { width: 38px; height: 38px; }
+}
+.practice .wrap { grid-template-rows: minmax(90px, 1fr) auto auto auto; }
+@media (max-height: 760px) { .practice .wrap { grid-template-rows: minmax(80px, 1fr) auto auto auto; } }
+/* the picture fits whatever room its slot has, whole and uncropped */
+.practice .cover { container-type: size; height: 100%; min-height: 0; display: grid; place-items: center; }
+.practice .cover > img, .practice .cover > img[width] { width: min(100cqw, calc(100cqh * 1376 / 768)); height: auto; max-height: none; aspect-ratio: 1376 / 768; object-fit: cover; }
+@media (min-width: 700px) and (max-height: 820px) { .practice .wrap { padding-bottom: 122px; } }
+
+/* ---------- Make room for the picture: slimmer name row, meter, card and bottom bar ---------- */
+.practice .wrap { padding-top: 8px; padding-bottom: 90px; gap: 7px; grid-template-rows: minmax(90px, 1fr) auto auto auto; }
+.practice .name-row h1 { width: min(52%, 260px); }
+.practice .chip-box .budz-chip { width: 40px; height: 40px; border-radius: 10px; }
+.practice .chip-box .budz-chip img { border-radius: 10px; }
+.practice .cred { padding: 5px 12px 0; }
+.practice .cred-name { font-size: .95rem; }
+.practice .cred.stuck .cred-track, .practice .cred-track { padding-top: 9px; padding-bottom: 20px; }
+.practice .cred.stuck .flag span, .practice .flag span { top: 24px; font-size: .54rem; }
+.practice .player { gap: 6px; padding: 10px 12px; }
+.practice .label { font-size: .66rem; }
+.practice #pTitle { font-size: 1.35rem; }
+.practice .btn-round { width: 40px; height: 40px; }
+.practice .btn-round.play { width: 50px; height: 50px; }
+.practice .quiz { padding-top: 6px; gap: 6px; }
+.practice .opt { padding: 9px 12px; }
+.practice .dock { padding: 6px 16px calc(4px + env(safe-area-inset-bottom, 0px)); }
+.practice .dock-in { gap: 2px; }
+.practice .budz { padding: 5px 12px; gap: 10px; }
+.practice .budz img { width: clamp(76px, 22vw, 110px); }
+.practice .budz .small { font-size: clamp(.52rem, 2.4vw, .68rem); line-height: 1.25; }
+.practice footer { display: block; font-size: .62rem; }
+@media (min-width: 700px) { .practice .wrap { padding-bottom: 98px; } }
+@media (max-height: 760px) { .practice .wrap { padding-bottom: 84px; grid-template-rows: minmax(70px, 1fr) auto auto auto; } }
+.practice .cred.stuck .cred-track, .practice .cred-track { padding-bottom: 23px; }
+@media (max-height: 760px) { .practice .wrap { grid-template-rows: minmax(120px, 1fr) auto minmax(0, auto) auto; } .practice .cred.stuck .cred-track, .practice .cred-track { padding-bottom: 23px; } }
 </style>
 </head>
 <body class="practice">
@@ -672,10 +724,10 @@ window.scrollTo(0, 0);
   const cover = header.querySelector(".cover");
   const brand = document.querySelector(".mini-brand");
   const h1 = brand.querySelector("h1"), chip = brand.querySelector(".budz-chip");
-  const shade = document.createElement("div"); shade.className = "cover-shade";
   const friends = document.createElement("span"); friends.className = "friends-tag"; friends.textContent = "Friends of OG";
   const chipBox = document.createElement("div"); chipBox.className = "chip-box"; chipBox.append(chip, friends);
-  cover.append(shade, h1, chipBox);
+  const nameRow = document.createElement("div"); nameRow.className = "name-row"; nameRow.append(h1, chipBox);
+  cover.after(nameRow);
   brand.remove();
   const cred = $("cred");
   wrap.insertBefore(header, wrap.firstChild);
