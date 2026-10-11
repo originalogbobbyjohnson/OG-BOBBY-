@@ -693,6 +693,7 @@ window.scrollTo(0, 0);
 
   function show(nv) {
     v = Math.max(0, Math.min(REWARD, nv));
+    if (v === 0) audio.pause();   // the how-to-play card is always quiet
     stage.dataset.v = v === 0 ? "intro" : v === REWARD ? "reward" : "ep";
     empty.hidden = !(v === REWARD && earnedPicks() === 0);
     prev.disabled = v === 0; next.disabled = v === REWARD;
@@ -705,9 +706,9 @@ window.scrollTo(0, 0);
     else show(nv);
   }
 
-  // every episode change (arrows, dots, auto-advance) lands on that episode's card
+  // every level change (arrows, dots, end of a song) lands on that level's card, waiting for PLAY
   const baseLoad = load;
-  load = function (i, autoplay) { baseLoad(i, autoplay); show(i + 1); };
+  load = function (i) { baseLoad(i, false); show(i + 1); };
 
   // keep a gift dot for the rewards card at the end of the number row
   const baseRender = renderList;
