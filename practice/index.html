@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<base href="../">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OG Bobby · Practice</title>
+<meta name="description" content="OG Bobby. Brooklyn. The story, one episode at a time.">
+<meta property="og:type" content="music.album">
+<meta property="og:site_name" content="OG Bobby">
+<meta property="og:title" content="OG Bobby">
+<meta property="og:description" content="Brooklyn. The story, one episode at a time.">
+<meta property="og:url" content="https://ogbobbybrooklyn.com/practice/">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/cover.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1376">
+<meta property="og:image:height" content="768">
+<meta property="og:image:alt" content="OG Bobby artwork">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OG Bobby">
+<meta name="twitter:image" content="https://ogbobbybrooklyn.com/cover.jpg">
+<link rel="icon" href="cover.png">
+<link rel="apple-touch-icon" href="cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap">
+<style>
+/* Layout: one narrow column. Cover, how-it-works, score + reward ladder, the player with its question, then the episode list. */
+:root {
+  --bg: #0f1a12; --panel: #17251a; --panel2: #1d2f21; --line: #2a4231;
+  --fg: #eef3ea; --muted: #9db3a2; --gold: #e3b23c; --gold-dim: #8a6d24;
+  --bad: #e26d5a; --good: #7fcf8c;
+  --display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --graffiti: "Sedgwick Ave Display", "Permanent Marker", "Marker Felt", cursive;
+  --body: "Barlow", system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; background: var(--bg); color: var(--fg); }
+body { font-family: var(--body); font-size: 16px; line-height: 1.4; -webkit-tap-highlight-color: transparent; }
+.wrap { max-width: 540px; margin: 0 auto; padding: 10px 16px 130px; display: grid; gap: 18px; }
+header { display: grid; gap: 14px; }
+.cover { position: relative; }
+.cover img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid var(--gold-dim); }
+.title-row { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; }
+.title-row > div { min-width: 0; }
+.budz-chip { display: block; width: 64px; height: 64px; border-radius: 14px; animation: glow 1.8s ease-in-out infinite; }
+.budz-chip img { width: 100%; height: 100%; display: block; border-radius: 14px; }
+@keyframes glow {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 6px 1px rgba(227,178,60,.45); }
+  50% { transform: scale(1.08); box-shadow: 0 0 22px 8px rgba(227,178,60,.85); }
+}
+h1 { margin: 0; line-height: 0; }
+h1 img { display: block; width: min(100%, 380px); height: auto; filter: drop-shadow(3px 3px 0 #000); }
+.tag { color: var(--muted); margin: 6px 0 0; }
+.how { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; font-size: .95rem; display: grid; gap: 6px; }
+.how b { color: var(--gold); }
+.label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+/* Street cred meter */
+.cred { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 10px); z-index: 5; display: grid; gap: 4px; background: rgba(23,37,26,.97); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 10px 14px 4px; box-shadow: 0 6px 18px rgba(0,0,0,.55); backdrop-filter: blur(6px); }
+.mini-brand { display: none; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 2px; }
+.cred.stuck .mini-brand { display: grid; }
+.mini-cover { width: 76px; height: 43px; object-fit: cover; border-radius: 8px; border: 1px solid var(--gold-dim); display: block; }
+.mini-word { width: 100%; max-width: 250px; height: auto; display: block; filter: drop-shadow(2px 2px 0 #000); }
+.budz-chip.mini { width: 52px; height: 52px; border-radius: 12px; }
+.budz-chip.mini img { border-radius: 12px; }
+.cred.stuck .cred-track { padding-top: 26px; padding-bottom: 20px; }
+.cred.stuck .flag span { top: 44px; }
+.cred-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.cred-name { font-family: var(--graffiti); font-size: 1.35rem; color: var(--gold); line-height: 1; }
+.cred-hint { font-size: .85rem; color: var(--muted); }
+.cred-track { position: relative; padding-top: 30px; padding-bottom: 22px; margin-right: 22px; }
+.cred-bar { height: 16px; background: #0b130d; border: 1px solid var(--line); border-radius: 99px; overflow: hidden; }
+.cred-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #8a6d24, #e3b23c 70%, #ffe08a); box-shadow: 0 0 12px rgba(227,178,60,.8); transition: width .6s ease; }
+.flag { position: absolute; top: 0; transform: translateX(-4px); display: grid; justify-items: start; color: #4f6b57; }
+.flag.last { transform: translateX(-4px); }
+.flag svg { width: 22px; height: 26px; fill: currentColor; }
+.flag span { position: absolute; top: 48px; left: 4px; transform: translateX(-50%); font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; color: var(--muted); }
+.flag.last span { transform: translateX(-85%); }
+.flag.won { color: var(--gold); filter: drop-shadow(0 0 6px rgba(227,178,60,.8)); }
+.flag.won span { color: var(--gold); }
+
+/* Rewards */
+.score { display: grid; gap: 10px; }
+.score .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.score .count { font-family: var(--display); font-size: 1.4rem; color: var(--gold); white-space: nowrap; }
+.bar { position: relative; height: 10px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--gold); transition: width .4s; }
+.bar .tick { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--bg); }
+.ladder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.tier { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px; display: grid; gap: 2px; align-content: start; min-width: 0; }
+.tier .need { font-family: var(--display); font-size: 1.25rem; color: var(--muted); }
+.tier .what { font-size: .82rem; color: var(--muted); }
+.tier.won { border-color: var(--gold); }
+.tier.won .need, .tier.won .what { color: var(--gold); }
+.reward { display: none; background: #000; border: 2px solid var(--gold); border-radius: 14px; padding: 16px; gap: 12px; }
+.reward.on { display: grid; }
+.reward h3 { margin: 0; font-family: var(--graffiti); font-weight: 400; font-size: 1.7rem; color: var(--gold); }
+.reward p { margin: 0; color: var(--muted); font-size: .92rem; }
+.picks { display: grid; gap: 6px; }
+.picks label { display: flex; gap: 10px; align-items: center; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+.picks input { accent-color: var(--gold); width: 18px; height: 18px; }
+.btn { display: block; width: 100%; text-align: center; text-decoration: none; font: inherit; font-weight: 700; color: var(--bg); background: var(--gold); border: 0; border-radius: 12px; padding: 14px; cursor: pointer; }
+.btn:disabled { opacity: .4; cursor: default; }
+.btn.ghost { background: none; color: var(--gold); border: 1px solid var(--gold); }
+
+/* Player */
+.player { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 14px; }
+#pTitle { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.05; margin: 2px 0 0; }
+.part { font-size: .85rem; color: var(--gold); font-weight: 600; }
+.seek { display: grid; gap: 4px; }
+.track { position: relative; height: 8px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
+.track i { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--gold); }
+.track .lock { position: absolute; top: 0; bottom: 0; right: 0; background: repeating-linear-gradient(45deg, #2a4231 0 4px, #1d2f21 4px 8px); }
+.track .stop { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--bg); }
+.times { display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 18px; }
+.btn-round { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 50%; width: 52px; height: 52px; display: grid; place-items: center; cursor: pointer; }
+.btn-round.play { width: 70px; height: 70px; background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.btn-round svg { width: 22px; height: 22px; fill: currentColor; }
+.btn-round.play svg { width: 30px; height: 30px; }
+button:focus-visible, a:focus-visible, label:focus-within { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+/* Question */
+.quiz { display: none; gap: 10px; border-top: 1px solid var(--line); padding-top: 14px; }
+.quiz.on { display: grid; }
+.quiz .label { color: var(--gold); }
+.quiz h3 { margin: 0; font-size: 1.15rem; text-wrap: balance; }
+.quiz .hint { color: var(--muted); font-size: .9rem; margin: 0; }
+.opt { width: 100%; text-align: left; font: inherit; font-weight: 600; color: var(--fg); background: var(--panel2); border: 1px solid var(--line); border-radius: 12px; padding: 14px; cursor: pointer; }
+.opt:disabled { opacity: .45; cursor: default; }
+.opt.right { border-color: var(--good); color: var(--good); opacity: 1; }
+.opt.wrong { border-color: var(--bad); color: var(--bad); opacity: 1; }
+.opt.out { text-decoration: line-through; opacity: .3; }
+.msg { font-weight: 600; min-height: 1.3em; margin: 0; }
+.msg.bad { color: var(--bad); } .msg.good { color: var(--good); }
+.again { display: none; background: none; border: 1px solid var(--line); color: var(--fg); font: inherit; border-radius: 10px; padding: 10px; cursor: pointer; }
+.again.on { display: block; }
+.done-note { display: none; color: var(--good); font-weight: 600; border-top: 1px solid var(--line); padding-top: 12px; }
+.done-note.on { display: block; }
+
+/* Episodes */
+h2 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; margin: 0 0 6px; letter-spacing: .03em; }
+ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.ep { width: 100%; display: grid; grid-template-columns: 2.2rem 1fr auto; gap: 10px; align-items: center; text-align: left; background: var(--panel); border: 1px solid var(--line); color: var(--fg); font: inherit; padding: 13px 14px; border-radius: 12px; cursor: pointer; }
+.ep.current { border-color: var(--gold); }
+.ep .n { font-family: var(--display); color: var(--gold); font-size: 1.2rem; }
+.ep .t { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
+.ep .s { font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.ep .s.open { color: var(--good); }
+
+/* OG Budz */
+.budz { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px; text-align: left; text-decoration: none; background: radial-gradient(ellipse at center, #2f5338 0%, #26432d 60%, #1f3826 100%); border: 3px solid var(--gold); border-radius: 14px; padding: 8px 14px; color: var(--gold); animation: glowBtn 1.8s ease-in-out infinite; }
+.budz .small { display: block; color: #d8e6dc; font-size: clamp(.56rem, 2.6vw, .76rem); letter-spacing: .03em; white-space: nowrap; }
+.wrap > * { min-width: 0; }
+@keyframes glowBtn {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 6px 1px rgba(227,178,60,.45); }
+  50% { transform: scale(1.015); box-shadow: 0 0 20px 6px rgba(227,178,60,.85); }
+}
+.budz img { display: block; width: clamp(80px, 24vw, 130px); height: auto; margin: 0; }
+.budz .where { display: grid; gap: 1px; justify-items: end; text-align: right; min-width: 0; }
+.budz .small { text-transform: uppercase; }
+.dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; padding: 14px 16px calc(6px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, rgba(15,26,18,.98) 72%, rgba(15,26,18,0)); }
+.dock-in { max-width: 508px; margin: 0 auto; display: grid; gap: 4px; }
+footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; }
+.sheet { position: fixed; inset: 0; z-index: 10; display: grid; place-items: end center; background: rgba(0,0,0,.6); padding: 16px 16px calc(16px + env(safe-area-inset-bottom, 0px)); }
+.sheet[hidden] { display: none !important; }
+.sheet .box { width: 100%; max-width: 480px; background: var(--panel); border: 2px solid var(--gold); border-radius: 16px; padding: 18px; display: grid; gap: 12px; }
+.sheet img { width: 160px; height: auto; display: block; }
+.sheet h3 { margin: 0; font-size: 1.15rem; }
+.sheet p { margin: 0; color: var(--muted); }
+/* Wide screens: the Bay Ridge cover art fills the sides as a dark backdrop */
+@media (min-width: 700px) {
+  body::before { content: ""; position: fixed; inset: -40px; z-index: -1; background: url("cover.jpg") center / cover no-repeat; filter: blur(14px) brightness(.32) saturate(1.1); }
+  html { background: var(--bg); }
+  body { background: transparent; }
+  .wrap { max-width: 560px; }
+  .dock-in { max-width: 528px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } .budz-chip { animation: none; box-shadow: 0 0 16px 4px rgba(227,178,60,.7); } .budz { animation: none; box-shadow: 0 0 16px 4px rgba(227,178,60,.7); } }
+
+/* ---------- Practice layout: one card at a time, arrows on the sides, no page scrolling ---------- */
+body.practice { overflow: hidden; }
+.practice .wrap { height: 100dvh; padding: 10px 16px 104px; grid-template-rows: auto 1fr auto; gap: 8px; }
+.practice .stage-wrap { position: relative; min-height: 0; display: grid; }
+.practice .stage { min-height: 0; overflow-y: auto; padding: 2px 40px; display: grid; align-content: start; gap: 12px; scrollbar-width: none; }
+.practice .stage::-webkit-scrollbar { display: none; }
+.practice .stage:not([data-v="intro"]) > .slide-intro,
+.practice .stage:not([data-v="ep"]) > #player,
+.practice .stage:not([data-v="reward"]) > #reward { display: none !important; }
+.practice .slide-intro { display: grid; gap: 12px; }
+.practice .slide-empty { display: grid; gap: 8px; text-align: center; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 22px 16px; }
+.practice .slide-empty h3 { margin: 0; font-family: var(--graffiti); font-weight: 400; color: var(--gold); font-size: 1.6rem; }
+.practice .slide-empty p { margin: 0; color: var(--muted); }
+.practice .start { justify-self: center; width: auto; padding: 12px 28px; }
+
+/* side arrows */
+.practice .nav-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 34px; height: 64px; display: grid; place-items: center; background: var(--panel); border: 1px solid var(--gold-dim); border-radius: 12px; color: var(--gold); cursor: pointer; padding: 0; }
+.practice .nav-btn svg { width: 20px; height: 20px; fill: currentColor; }
+.practice .nav-btn.prev { left: 0; }
+.practice .nav-btn.next { right: 0; }
+.practice .nav-btn:disabled { opacity: .25; cursor: default; }
+.practice .nav-btn:not(:disabled):active { transform: translateY(-50%) scale(.94); }
+
+/* a tighter player so a whole card fits on one screen */
+.practice .player { padding: 12px; gap: 10px; }
+.practice #pTitle { font-size: 1.5rem; }
+.practice .btn-round { width: 44px; height: 44px; }
+.practice .btn-round.play { width: 56px; height: 56px; }
+.practice .btn-round.play svg { width: 24px; height: 24px; }
+.practice .quiz { padding-top: 10px; gap: 7px; }
+.practice .quiz h3 { font-size: 1.02rem; }
+.practice .quiz .hint { display: none; }
+.practice .opt { padding: 11px 12px; }
+.practice .how { font-size: .9rem; }
+
+/* episode list becomes a row of numbered dots under the card */
+.practice section:has(#list) h2 { display: none; }
+.practice #list { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; }
+.practice #list li { display: block; }
+.practice .ep { width: 30px; height: 30px; padding: 0; grid-template-columns: 1fr; place-items: center; border-radius: 50%; }
+.practice .ep .t, .practice .ep .s { display: none; }
+.practice .ep .n { font-size: .95rem; }
+.practice .ep:has(.s.open) { background: var(--gold-dim); border-color: var(--gold); }
+.practice .ep:has(.s.open) .n { color: #fff; }
+.practice .ep.current { border-color: var(--gold); box-shadow: 0 0 0 2px var(--gold); }
+.practice .dot-gift { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line); background: var(--panel); color: var(--muted); cursor: pointer; padding: 0; }
+.practice .dot-gift svg { width: 16px; height: 16px; fill: currentColor; }
+.practice .dot-gift.on { color: var(--gold); border-color: var(--gold); }
+.practice .dot-gift.current { box-shadow: 0 0 0 2px var(--gold); }
+@media (min-width: 700px) { .practice .stage { padding: 2px 52px; } .practice .nav-btn { width: 42px; } }
+/* short phones: squeeze the bars and the card so it still fits */
+@media (max-height: 760px) {
+  .practice .wrap { padding-bottom: 86px; gap: 6px; }
+  .practice .mini-word { max-width: 190px; }
+  .practice .budz-chip.mini { width: 40px; height: 40px; }
+  .practice .cred { padding: 8px 12px 2px; }
+  .practice .cred-name { font-size: 1.1rem; }
+  .practice .cred-hint { font-size: .78rem; }
+  .practice .cred.stuck .cred-track { padding-top: 20px; padding-bottom: 16px; }
+  .practice .flag svg { width: 16px; height: 19px; }
+  .practice .cred.stuck .flag span { top: 34px; font-size: .64rem; }
+  .practice .cred-bar { height: 12px; }
+  .practice footer { display: none; }
+  .practice .budz { padding: 6px 12px; }
+  .practice .player { padding: 10px; gap: 6px; }
+  .practice #pTitle { font-size: 1.25rem; }
+  .practice .label { font-size: .64rem; }
+  .practice .btn-round { width: 38px; height: 38px; }
+  .practice .btn-round.play { width: 46px; height: 46px; }
+  .practice .controls { gap: 14px; }
+  .practice .quiz { padding-top: 6px; gap: 5px; }
+  .practice .quiz .label { display: none; }
+  .practice .quiz h3 { font-size: .95rem; }
+  .practice .opt { padding: 8px 12px; border-radius: 10px; }
+  .practice .msg { min-height: 0; font-size: .85rem; }
+  .practice .ep, .practice .dot-gift { width: 26px; height: 26px; }
+}
+</style>
+</head>
+<body class="practice">
+<div class="wrap">
+  <section class="cred stuck" id="cred" aria-label="Street cred meter">
+    <div class="mini-brand">
+      <h1><img class="mini-word" src="brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"></h1>
+      <a class="budz-chip mini" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" aria-label="OG Budz"><img src="brand/og-budz-icon.png" alt="" width="52" height="52"></a>
+    </div>
+    <div class="cred-head"><span class="cred-name">STREET CRED</span><span class="cred-hint" id="credHint"></span></div>
+    <div class="cred-track">
+      <div class="cred-bar"><i id="barFill"></i></div>
+      <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>1 song</span></div>
+      <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>3 songs</span></div>
+      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>The album</span></div>
+    </div>
+  </section>
+  <header>
+    <div class="cover">
+      <img src="cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
+    </div>
+    <p class="tag">Bay Ridge, Brooklyn. The story, one episode at a time.</p>
+  </header>
+
+  <div class="how">Every song stops at a turning point. <b>Answer right to keep the story going.</b></div>
+
+
+  <section class="reward" id="reward" aria-live="polite">
+    <h3 id="rTitle">YOU EARNED A PLAYLIST</h3>
+    <p id="rText"></p>
+    <div class="picks" id="picks"></div>
+    <button class="btn" id="makeList" type="button">Make my playlist</button>
+    <a class="btn ghost" id="openList" href="#" hidden>Open my playlist</a>
+  </section>
+
+  <section class="player" id="player" aria-live="polite">
+    <div>
+      <div class="label" id="pEp">Episode 1</div>
+      <div id="pTitle">Whatever It Takes</div>
+      <div class="part" id="pPart">Part 1</div>
+    </div>
+    <div class="seek">
+      <div class="track" id="track"><i id="fill"></i><span class="lock" id="lockZone"></span></div>
+      <div class="times"><span id="cur">0:00</span><span id="tot">0:00</span></div>
+    </div>
+    <div class="controls">
+      <button class="btn-round" id="back" type="button" aria-label="Back 10 seconds"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></button>
+      <button class="btn-round play" id="play" type="button" aria-label="Play"><svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      <button class="btn-round" id="restart" type="button" aria-label="Start the song over"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
+    </div>
+    <div class="quiz" id="quiz">
+      <div class="label" id="qLabel">Question 1</div>
+      <h3 id="qText"></h3>
+      <p class="hint" id="qHint"></p>
+      <div id="opts" style="display:grid;gap:8px"></div>
+      <p class="msg" id="msg"></p>
+      <button class="again" id="again" type="button">Play that verse again</button>
+    </div>
+    <div class="done-note" id="doneNote">Fully unlocked. This one plays straight through now.</div>
+  </section>
+
+  <section>
+    <h2>THE EPISODES</h2>
+    <ol id="list"></ol>
+  </section>
+
+</div>
+
+<div class="sheet" id="localSheet" hidden role="dialog" aria-modal="true" aria-labelledby="localTitle">
+  <div class="box">
+    <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
+    <h3 id="localTitle">Local delivery only</h3>
+    <p>OG Budz serves Brooklyn, Staten Island and Manhattan, 21 and over. Are you in the area?</p>
+    <a class="btn" id="localYes" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Yes, I'm local</a>
+    <button class="btn ghost" id="localNo" type="button">Not local, keep listening</button>
+  </div>
+</div>
+
+<div class="dock">
+  <div class="dock-in">
+    <a class="budz" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">
+      <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
+      <span class="where"><span class="small">Brooklyn · Staten Island</span><span class="small">Manhattan · 21+</span></span>
+    </a>
+    <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
+  </div>
+</div>
+
+<audio id="audio" preload="metadata"></audio>
+
+<script>
+const EPISODES = [{"slug": "whatever-it-takes", "title": "Whatever It Takes", "a": "8975b859f01a", "cuts": [98.4], "dur": 168.2, "qs": [{"q": "What year does OG's story start?", "opts": ["1987", "1983", "3000"], "gx": 2}]}, {"slug": "ridge-brothers", "title": "Ridge Brothers", "a": "21eb83b7a142", "cuts": [144.7], "dur": 224.4, "qs": [{"q": "Who connected OG to the Jorgenson brothers?", "opts": ["Big brother Mike", "Jimmy Kush", "Santa Claus"], "gx": 2}]}, {"slug": "bay-ridge-nights", "title": "Bay Ridge Nights", "a": "eeb252303138", "cuts": [130.9], "dur": 206.4, "qs": [{"q": "Which Bay Ridge spot was for the squares?", "opts": ["The White House", "Gino's", "Pizza Wagon"], "gx": 0}]}, {"slug": "the-get-back", "title": "The Get Back", "a": "274ed1bf7495", "cuts": [62.0, 119.6], "dur": 186.7, "qs": [{"q": "How old was OG's baby girl in '99?", "opts": ["Thirty-five", "Three", "One"], "gx": 0}, {"q": "When did the brother say \"he don't sell\"?", "opts": ["On the moon", "New Year's Eve", "Christmas Eve"], "gx": 0}]}, {"slug": "pioneer", "title": "Pioneer", "a": "a0f91383e8e4", "cuts": [77.7, 144.6], "dur": 216.4, "qs": [{"q": "Where did the hustle start?", "opts": ["Staten Island", "South Brooklyn", "Disney World"], "gx": 2}, {"q": "What did the partner do with the shared money?", "opts": ["Used it for his own moves", "Hid it overseas", "Gave it to the zoo"], "gx": 2}]}, {"slug": "bars-and-clubs", "title": "Bars & Clubs", "a": "408ea49cb67a", "cuts": [66.6, 113.9], "dur": 179.4, "qs": [{"q": "Which Bay Ridge bar gets named?", "opts": ["Times Square Olive Garden", "Three Jolly Pigeons", "The Kettle Black"], "gx": 0}, {"q": "Which Manhattan club gets a shout-out?", "opts": ["Limelight", "The Tunnel", "Chuck E. Cheese"], "gx": 2}]}, {"slug": "bay-ridge-is-mine", "title": "Bay Ridge Is Mine", "a": "818079f3e2c4", "cuts": [85.0, 136.4, 187.1], "dur": 264.6, "qs": [{"q": "What holiday was coming when it went down?", "opts": ["Valentine's Day", "Thanksgiving", "Christmas"], "gx": 0}, {"q": "How much money went missing?", "opts": ["$7,000", "One dollar", "$70,000"], "gx": 1}, {"q": "What's the hook?", "opts": ["The OG's back", "The grit came back", "Who let the dogs out"], "gx": 2}]}, {"slug": "black-rob", "title": "Black Rob", "a": "1b1c2375cfe8", "cuts": [56.3, 117.4, 152.7], "dur": 215.5, "qs": [{"q": "How long have OG and Rob been friends?", "opts": ["270 years", "27 years", "17 years"], "gx": 0}, {"q": "What was Rob to OG in the boxing gym?", "opts": ["His landlord", "His first student", "His coach"], "gx": 0}, {"q": "Rob is like OG's...", "opts": ["Pet goldfish", "Cousin", "Little brother"], "gx": 0}]}, {"slug": "positivity-spreads", "title": "Positivity Spreads", "a": "f5b178c99f99", "cuts": [75.3, 147.8, 219.2], "dur": 286.8, "qs": [{"q": "Which Brooklyn park does OG train in?", "opts": ["Owl's Head", "Prospect Park", "The Central Park Zoo"], "gx": 2}, {"q": "Who did OG earn his black belt under?", "opts": ["Ricardo Almeida", "Rocky Balboa", "Frankie Edgar"], "gx": 1}, {"q": "What spreads?", "opts": ["Rumors", "Positivity", "Butter"], "gx": 2}]}];
+const VIP = "vip-0609a49912/";
+const TOTAL_Q = EPISODES.reduce((n, e) => n + e.qs.length, 0);
+const TIERS = [{ need: 6, picks: 1 }, { need: 12, picks: 3 }, { need: 18, picks: 9 }];
+
+/* Small SHA-256 so unlocking works on any connection. */
+function sha256(s) {
+  const K = [0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  const bytes = new TextEncoder().encode(s);
+  const l = bytes.length, n = ((l + 9 + 63) >> 6) << 6, m = new Uint8Array(n);
+  m.set(bytes); m[l] = 0x80;
+  const dv = new DataView(m.buffer); dv.setUint32(n - 4, l * 8);
+  let h = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  const w = new Uint32Array(64), r = (x, k) => (x >>> k) | (x << (32 - k));
+  for (let o = 0; o < n; o += 64) {
+    for (let i = 0; i < 16; i++) w[i] = dv.getUint32(o + i * 4);
+    for (let i = 16; i < 64; i++) {
+      const s0 = r(w[i-15],7) ^ r(w[i-15],18) ^ (w[i-15] >>> 3), s1 = r(w[i-2],17) ^ r(w[i-2],19) ^ (w[i-2] >>> 10);
+      w[i] = (w[i-16] + s0 + w[i-7] + s1) | 0;
+    }
+    let [a,b,c,d,e,f,g,hh] = h;
+    for (let i = 0; i < 64; i++) {
+      const t1 = (hh + (r(e,6) ^ r(e,11) ^ r(e,25)) + ((e & f) ^ (~e & g)) + K[i] + w[i]) | 0;
+      const t2 = ((r(a,2) ^ r(a,13) ^ r(a,22)) + ((a & b) ^ (a & c) ^ (b & c))) | 0;
+      hh = g; g = f; f = e; e = (d + t1) | 0; d = c; c = b; b = a; a = (t1 + t2) | 0;
+    }
+    h = h.map((v, i) => (v + [a,b,c,d,e,f,g,hh][i]) | 0);
+  }
+  return h.map(v => (v >>> 0).toString(16).padStart(8, "0")).join("");
+}
+const keyFor = (slug, g, ans) => sha256("og|" + slug + "|" + g + "|" + ans.trim().toLowerCase()).slice(0, 24);
+
+/* Progress lives in this browser only. */
+const store = {
+  get() { try { return JSON.parse(localStorage.getItem("ogb2p") || "{}"); } catch (e) { return {}; } },
+  set(v) { try { localStorage.setItem("ogb2p", JSON.stringify(v)); } catch (e) {} }
+};
+let state = Object.assign({ keys: {}, tries: {}, first: {}, replay: {}, picks: [] }, store.get());
+const save = () => store.set(state);
+
+const $ = id => document.getElementById(id);
+const audio = $("audio");
+let idx = -1, sec = 0;
+const fmt = t => { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
+const keysOf = e => state.keys[e.slug] || [];
+const gateOf = e => keysOf(e).length;                 // next question to answer
+const isOpen = e => gateOf(e) >= e.qs.length;
+const starts = e => [0, ...e.cuts];
+const score = () => Object.values(state.first).filter(Boolean).length;
+
+function renderList() {
+  const ol = $("list"); ol.innerHTML = "";
+  EPISODES.forEach((e, i) => {
+    const li = document.createElement("li"), b = document.createElement("button");
+    b.type = "button";
+    b.className = "ep" + (i === idx ? " current" : "");
+    const open = isOpen(e), g = gateOf(e), n = e.qs.length;
+    const status = open ? "Unlocked" : (g === 0 ? (n === 1 ? "1 stop" : n + " stops") : g + " of " + n + " cleared");
+    b.innerHTML = `<span class="n">${i + 1}</span><span class="t"></span><span class="s ${open ? "open" : ""}">${status}</span>`;
+    b.querySelector(".t").textContent = e.title;
+    b.onclick = () => load(i, true);
+    li.appendChild(b); ol.appendChild(li);
+  });
+  const sc = score();
+  $("barFill").style.width = (sc / TOTAL_Q * 100) + "%";
+  TIERS.forEach((t, k) => $("f" + (k + 1)).classList.toggle("won", sc >= t.need));
+  const next = TIERS.find(t => sc < t.need);
+  $("credHint").textContent = next
+    ? (next.need - sc) + " more to " + (next.picks === 1 ? "earn a song" : next.picks === 3 ? "earn 3 songs" : "earn the album")
+    : "OG Certified";
+  renderReward();
+}
+
+function earnedPicks() { let p = 0; TIERS.forEach(t => { if (score() >= t.need) p = t.picks; }); return p; }
+
+function renderReward() {
+  const p = earnedPicks();
+  $("reward").classList.toggle("on", p > 0);
+  if (!p) return;
+  const all = p >= EPISODES.length;
+  $("rTitle").textContent = all ? "OG CERTIFIED" : "YOU EARNED A PLAYLIST";
+  $("rText").textContent = all ? "You got every question right on the first try. The whole album is yours to stream."
+    : "Pick " + (p === 1 ? "1 song" : p + " songs") + " for your own playlist. Keep answering to unlock more.";
+  const box = $("picks"); box.innerHTML = "";
+  if (all) { state.picks = EPISODES.map((_, i) => i + 1); save(); }
+  else EPISODES.forEach((e, i) => {
+    const lab = document.createElement("label"), cb = document.createElement("input");
+    cb.type = "checkbox"; cb.id = "pick" + i; cb.checked = state.picks.includes(i + 1);
+    cb.onchange = () => {
+      let sel = [...box.querySelectorAll("input:checked")].map(x => +x.id.slice(4) + 1);
+      if (sel.length > p) { cb.checked = false; sel = sel.filter(x => x !== i + 1); }
+      $("makeList").disabled = sel.length === 0;
+    };
+    lab.appendChild(cb); lab.appendChild(document.createTextNode(e.title)); box.appendChild(lab);
+  });
+  $("makeList").hidden = all;
+  $("makeList").disabled = !all && state.picks.length === 0;
+  updateOpenLink();
+}
+function updateOpenLink() {
+  const a = $("openList");
+  const picks = state.picks.slice(0, earnedPicks());
+  a.hidden = picks.length === 0;
+  a.href = VIP + "#" + picks.join(",");
+}
+$("makeList").onclick = () => {
+  state.picks = [...$("picks").querySelectorAll("input:checked")].map(x => +x.id.slice(4) + 1).slice(0, earnedPicks());
+  save(); updateOpenLink();
+  $("openList").focus();
+};
+
+function setPlayIcon() {
+  $("playIcon").innerHTML = audio.paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
+  $("play").setAttribute("aria-label", audio.paused ? "Play" : "Pause");
+}
+
+function drawTrack(e) {
+  const tr = $("track");
+  tr.querySelectorAll(".stop").forEach(x => x.remove());
+  e.cuts.forEach(c => { const s = document.createElement("span"); s.className = "stop"; s.style.left = (c / e.dur * 100) + "%"; tr.appendChild(s); });
+  const g = gateOf(e);
+  $("lockZone").style.width = isOpen(e) ? "0" : ((1 - e.cuts[g] / e.dur) * 100) + "%";
+}
+
+function srcFor(e, s) { return s === 0 ? "a/" + e.a + ".mp3" : "b/" + keysOf(e)[s - 1] + ".mp3"; }
+
+function playSection(s, autoplay) {
+  const e = EPISODES[idx];
+  sec = s;
+  audio.src = srcFor(e, s);
+  const n = e.qs.length + 1;
+  $("pPart").textContent = isOpen(e) ? "Full story" : "Part " + (s + 1) + " of " + n;
+  if (autoplay) audio.play().catch(() => {});
+  setPlayIcon();
+}
+
+function load(i, autoplay) {
+  idx = i;
+  const e = EPISODES[i];
+  $("pEp").textContent = "Episode " + (i + 1);
+  $("pTitle").textContent = e.title;
+  $("tot").textContent = fmt(e.dur);
+  drawTrack(e);
+  playSection(0, autoplay);
+  renderQuiz();
+  renderList();
+  if (autoplay) $("player").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderQuiz() {
+  const e = EPISODES[idx];
+  const open = isOpen(e);
+  $("quiz").classList.toggle("on", !open);
+  $("doneNote").classList.toggle("on", open);
+  if (open) $("pPart").textContent = "Full story";
+  $("again").classList.remove("on");
+  $("msg").textContent = ""; $("msg").className = "msg";
+  if (open) return;
+  const g = gateOf(e), q = e.qs[g], id = e.slug + "|" + g;
+  const tries = state.tries[id] || 0, locked = !!state.replay[id];
+  $("qLabel").textContent = e.qs.length === 1 ? "Your question" : "Question " + (g + 1) + " of " + e.qs.length;
+  $("qText").textContent = q.q;
+  $("qHint").textContent = g === 0 ? "Listen to Part 1. The answer's in there." : "The answer's in Part " + (g + 1) + ".";
+  const box = $("opts"); box.innerHTML = "";
+  q.opts.forEach((o, k) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "opt"; b.textContent = o;
+    const out = tries >= 2 && k === q.gx;
+    if (out) b.classList.add("out");
+    b.disabled = locked || out;
+    b.onclick = () => answer(o, b);
+    box.appendChild(b);
+  });
+  if (locked) {
+    $("msg").className = "msg bad";
+    $("msg").textContent = "Play Part " + (g + 1) + " again all the way through, then answer.";
+    $("again").classList.add("on");
+  }
+}
+
+async function answer(o, btn) {
+  const e = EPISODES[idx], g = gateOf(e), id = e.slug + "|" + g;
+  document.querySelectorAll(".opt").forEach(b => b.disabled = true);
+  const k = keyFor(e.slug, g, o);
+  let ok = false;
+  try { ok = (await fetch("b/" + k + ".mp3", { method: "HEAD", cache: "no-store" })).ok; } catch (err) {}
+  if (!(id in state.first)) state.first[id] = ok;
+  if (ok) {
+    btn.classList.add("right");
+    state.keys[e.slug] = [...keysOf(e), k];
+    delete state.replay[id]; save();
+    $("msg").className = "msg good";
+    $("msg").textContent = isOpen(e) ? "That's right. Here's how it ends." : "That's right. Keep going.";
+    drawTrack(e); renderList();
+    // If that part already finished, roll straight into the next one; if it's still playing, the next part follows when it ends.
+    const finished = sec === g && (audio.ended || audio.currentTime > (audio.duration || Infinity) - 1);
+    setTimeout(() => { renderQuiz(); if (finished) playSection(g + 1, true); }, 1000);
+  } else {
+    btn.classList.add("wrong");
+    state.tries[id] = (state.tries[id] || 0) + 1;
+    state.replay[id] = true; save();
+    $("msg").className = "msg bad";
+    $("msg").textContent = state.tries[id] >= 2
+      ? "Not quite. Play Part " + (g + 1) + " again. The joke answer is crossed out now."
+      : "Not quite. Play Part " + (g + 1) + " again and listen close.";
+    $("again").classList.add("on");
+    renderList();
+  }
+}
+
+$("again").onclick = () => { playSection(gateOf(EPISODES[idx]), true); };
+
+audio.addEventListener("timeupdate", () => {
+  if (idx < 0) return;
+  const e = EPISODES[idx];
+  const t = starts(e)[sec] + audio.currentTime;
+  $("cur").textContent = fmt(t);
+  $("fill").style.width = Math.min(100, t / e.dur * 100) + "%";
+});
+audio.addEventListener("play", setPlayIcon);
+audio.addEventListener("pause", setPlayIcon);
+audio.addEventListener("ended", () => {
+  const e = EPISODES[idx];
+  const id = e.slug + "|" + sec;
+  if (state.replay[id]) { delete state.replay[id]; save(); }
+  if (sec < e.qs.length) {
+    if (keysOf(e)[sec]) playSection(sec + 1, true);
+    else { renderQuiz(); $("msg").className = "msg"; $("msg").textContent = "Answer to hear what happens next."; $("quiz").scrollIntoView({ behavior: "smooth", block: "nearest" }); }
+  } else if (idx + 1 < EPISODES.length) load(idx + 1, true);
+  setPlayIcon();
+});
+
+$("play").onclick = () => { audio.paused ? audio.play().catch(() => {}) : audio.pause(); };
+$("back").onclick = () => {
+  if (audio.currentTime > 10 || sec === 0) audio.currentTime = Math.max(0, audio.currentTime - 10);
+  else playSection(sec - 1, true);
+};
+$("restart").onclick = () => { playSection(0, true); };
+
+/* OG Budz is local-only: ask every time before leaving the music page. */
+document.querySelectorAll('a.budz, a.budz-chip').forEach(a => a.addEventListener("click", ev => {
+  ev.preventDefault();
+  $("localSheet").hidden = false; $("localYes").focus();
+}));
+$("localNo").onclick = () => { $("localSheet").hidden = true; };
+$("localSheet").addEventListener("click", ev => { if (ev.target.id === "localSheet") $("localSheet").hidden = true; });
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") $("localSheet").hidden = true; });
+
+/* Open on the first episode that still has a question waiting. */
+const first = EPISODES.findIndex(e => !isOpen(e));
+load(first < 0 ? 0 : first, false);
+window.scrollTo(0, 0);
+
+/* ---------- Practice layout: card by card with side arrows ---------- */
+(function () {
+  const wrap = document.querySelector(".wrap");
+  const stageWrap = document.createElement("div"); stageWrap.className = "stage-wrap";
+  const stage = document.createElement("div"); stage.className = "stage";
+  const intro = document.createElement("div"); intro.className = "slide-intro";
+  intro.append(document.querySelector("header"), document.querySelector(".how"));
+  const startBtn = document.createElement("button");
+  startBtn.type = "button"; startBtn.className = "btn start"; startBtn.textContent = "Start the story";
+  intro.append(startBtn);
+  const empty = document.createElement("div"); empty.className = "slide-empty"; empty.hidden = true;
+  empty.innerHTML = "<h3>Rewards</h3><p>Get 6 right on the first try to earn your first song. Keep going for 3 songs, then the whole album.</p>";
+  stage.append(intro, $("player"), $("reward"), empty);
+  const arrow = (cls, label, path) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "nav-btn " + cls; b.setAttribute("aria-label", label);
+    b.innerHTML = '<svg viewBox="0 0 24 24"><path d="' + path + '"/></svg>';
+    return b;
+  };
+  const prev = arrow("prev", "Back", "M15.4 4.6 8 12l7.4 7.4-1.8 1.8L4.4 12l9.2-9.2z");
+  const next = arrow("next", "Next", "M8.6 19.4 16 12 8.6 4.6l1.8-1.8 9.2 9.2-9.2 9.2z");
+  stageWrap.append(stage, prev, next);
+  const listSec = $("list").closest("section");
+  wrap.insertBefore(stageWrap, listSec);
+
+  const N = EPISODES.length, REWARD = N + 1;
+  let v = 0;
+
+  function show(nv) {
+    v = Math.max(0, Math.min(REWARD, nv));
+    stage.dataset.v = v === 0 ? "intro" : v === REWARD ? "reward" : "ep";
+    empty.hidden = !(v === REWARD && earnedPicks() === 0);
+    prev.disabled = v === 0; next.disabled = v === REWARD;
+    stage.scrollTop = 0;
+    paintDots();
+  }
+  function go(nv) {
+    nv = Math.max(0, Math.min(REWARD, nv));
+    if (nv >= 1 && nv <= N && nv - 1 !== idx) load(nv - 1, true);
+    else show(nv);
+  }
+
+  // every episode change (arrows, dots, auto-advance) lands on that episode's card
+  const baseLoad = load;
+  load = function (i, autoplay) { baseLoad(i, autoplay); show(i + 1); };
+
+  // keep a gift dot for the rewards card at the end of the number row
+  const baseRender = renderList;
+  renderList = function () { baseRender(); paintDots(); };
+  function paintDots() {
+    const ol = $("list"); if (!ol) return;
+    let gift = ol.querySelector(".dot-gift");
+    if (!gift) {
+      const li = document.createElement("li");
+      gift = document.createElement("button");
+      gift.type = "button"; gift.className = "dot-gift"; gift.setAttribute("aria-label", "Rewards");
+      gift.innerHTML = '<svg viewBox="0 0 24 24"><path d="M20 7h-2.2A3 3 0 0 0 12 4.4 3 3 0 0 0 6.2 7H4a1 1 0 0 0-1 1v3h18V8a1 1 0 0 0-1-1zM9 7a1 1 0 1 1 1-1v1zm6 0h-1V6a1 1 0 1 1 1 1zM4 13v7a1 1 0 0 0 1 1h6v-8zm9 8h6a1 1 0 0 0 1-1v-7h-7z"/></svg>';
+      gift.onclick = () => go(REWARD);
+      li.append(gift); ol.append(li);
+    }
+    gift.classList.toggle("on", earnedPicks() > 0);
+    gift.classList.toggle("current", v === REWARD);
+    ol.querySelectorAll(".ep").forEach((b, k) => b.classList.toggle("current", v === k + 1));
+  }
+
+  prev.onclick = () => go(v - 1);
+  next.onclick = () => go(v + 1);
+  startBtn.onclick = () => go((idx < 0 ? 0 : idx) + 1);
+  document.addEventListener("keydown", e => {
+    if ($("localSheet") && !$("localSheet").hidden) return;
+    if (e.key === "ArrowRight") go(v + 1);
+    if (e.key === "ArrowLeft") go(v - 1);
+  });
+  // swipe left / right on the card
+  let sx = null, sy = null;
+  stage.addEventListener("touchstart", e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  stage.addEventListener("touchend", e => {
+    if (sx === null) return;
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(v + (dx < 0 ? 1 : -1));
+    sx = null;
+  }, { passive: true });
+
+  // first visit opens on the intro card; returning players open where they left off
+  const started = Object.keys(state.keys).length || Object.keys(state.first).length;
+  renderList();
+  show(started ? idx + 1 : 0);
+})();
+</script>
+</body>
+</html>
