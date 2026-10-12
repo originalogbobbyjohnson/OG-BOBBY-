@@ -399,6 +399,12 @@ body.practice { overflow: hidden; }
 .budz-chip.dock-chip, .practice .budz-chip.dock-chip { width: 40px; height: 40px; border-radius: 10px; flex: none; }
 .budz-chip.dock-chip img { border-radius: 10px; }
 .practice .dock { padding: 6px 16px calc(6px + env(safe-area-inset-bottom, 0px)); }
+.friends-link { flex: none; color: var(--gold); font-weight: 700; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; padding: 8px 0 8px 8px; animation: textGlow 1.8s ease-in-out infinite; }
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 2px rgba(227,178,60,.35); }
+  50% { text-shadow: 0 0 8px rgba(227,178,60,.95), 0 0 16px rgba(227,178,60,.6); }
+}
+@media (prefers-reduced-motion: reduce) { .friends-link { animation: none; text-shadow: 0 0 8px rgba(227,178,60,.8); } }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -482,7 +488,7 @@ body.practice { overflow: hidden; }
   <div class="dock-in">
     <div class="dock-row">
       <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
-      <a class="budz-chip dock-chip" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" aria-label="OG Budz"><img src="brand/og-budz-icon.png" alt="" width="40" height="40"></a>
+      <a class="friends-link" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Friends of OG</a>
     </div>
   </div>
 </div>
@@ -748,7 +754,7 @@ $("back").onclick = () => {
 $("restart").onclick = () => { playSection(0, true); };
 
 /* OG Budz is local-only: ask every time before leaving the music page. */
-document.querySelectorAll('a.budz, a.budz-chip').forEach(a => a.addEventListener("click", ev => {
+document.querySelectorAll('a.budz, a.budz-chip, a.friends-link').forEach(a => a.addEventListener("click", ev => {
   ev.preventDefault();
   $("localSheet").hidden = false; $("localYes").focus();
 }));
