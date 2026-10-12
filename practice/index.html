@@ -407,6 +407,13 @@ body.practice { overflow: hidden; }
   50% { text-shadow: 0 0 8px rgba(227,178,60,.95), 0 0 16px rgba(227,178,60,.6); }
 }
 @media (prefers-reduced-motion: reduce) { .friends-link { animation: none; text-shadow: 0 0 8px rgba(227,178,60,.8); } }
+.menu-btn { flex: none; width: 34px; height: 34px; display: grid; place-items: center; padding: 0; background: none; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); cursor: pointer; }
+.menu-btn svg { width: 18px; height: 18px; fill: currentColor; }
+.menu-box { gap: 4px; }
+.menu-item { display: block; padding: 13px 4px; color: var(--fg); text-decoration: none; font-size: .95rem; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.menu-item.friends-link { font-size: .9rem; padding: 13px 4px; border-bottom: 0; }
+.menu-item .leave { display: block; margin-top: 2px; font-size: .7rem; font-weight: 400; letter-spacing: .02em; text-transform: none; color: var(--muted); animation: none; text-shadow: none; }
+.menu-box .btn { margin-top: 8px; }
 </style>
 </head>
 <body class="practice">
@@ -414,7 +421,6 @@ body.practice { overflow: hidden; }
   <section class="cred stuck" id="cred" aria-label="Street cred meter">
     <div class="mini-brand">
       <h1><img class="mini-word" src="brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"></h1>
-      <a class="budz-chip mini" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" aria-label="OG Budz"><img src="brand/og-budz-icon.png" alt="" width="52" height="52"></a>
     </div>
     <div class="cred-head"><span class="cred-name">STREET CRED</span><span class="cred-hint" id="credHint"></span></div>
     <div class="cred-track">
@@ -485,11 +491,22 @@ body.practice { overflow: hidden; }
   </div>
 </div>
 
+<div class="sheet" id="menuSheet" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="box menu-box">
+    <a class="menu-item" id="mHow" href="#">How to play</a>
+    <a class="menu-item" id="mShare" href="#">Share the game</a>
+    <a class="menu-item" href="https://www.instagram.com/ogbobbybrooklyn/" target="_blank" rel="noopener">Instagram · @ogbobbybrooklyn</a>
+    <a class="menu-item" href="mailto:ogbobbybrooklyn@gmail.com">Contact · ogbobbybrooklyn@gmail.com</a>
+    <a class="menu-item friends-link" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Friends of OG <span class="leave">Leaves the music site</span></a>
+    <button class="btn ghost" id="menuClose" type="button">Close</button>
+  </div>
+</div>
+
 <div class="dock">
   <div class="dock-in">
     <div class="dock-row">
       <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
-      <a class="friends-link" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Friends of OG</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
     </div>
   </div>
 </div>
@@ -741,6 +758,20 @@ document.querySelectorAll('a.budz, a.budz-chip, a.friends-link').forEach(a => a.
   ev.preventDefault();
   $("localSheet").hidden = false; $("localYes").focus();
 }));
+/* bottom menu */
+const closeMenu = () => { $("menuSheet").hidden = true; };
+$("menuBtn").onclick = () => { $("menuSheet").hidden = false; track("menu", "Opened menu"); };
+$("menuClose").onclick = closeMenu;
+$("menuSheet").addEventListener("click", ev => { if (ev.target.id === "menuSheet") closeMenu(); });
+document.addEventListener("keydown", ev => { if (ev.key === "Escape") closeMenu(); });
+document.querySelector("#menuSheet .friends-link").addEventListener("click", closeMenu);
+$("mHow").onclick = ev => { ev.preventDefault(); closeMenu(); if (window.ogGoHome) window.ogGoHome(); };
+$("mShare").onclick = async ev => {
+  ev.preventDefault();
+  const url = "https://ogbobbybrooklyn.com";
+  try { if (navigator.share) { await navigator.share({ title: "OG Bobby", text: "Play the OG Bobby game. Bay Ridge, Brooklyn.", url }); return; } } catch (e) { return; }
+  try { await navigator.clipboard.writeText(url); ev.target.textContent = "Link copied"; setTimeout(() => { ev.target.textContent = "Share the game"; }, 1800); } catch (e) {}
+};
 $("localNo").onclick = () => { $("localSheet").hidden = true; };
 $("localSheet").addEventListener("click", ev => { if (ev.target.id === "localSheet") $("localSheet").hidden = true; });
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") $("localSheet").hidden = true; });
@@ -759,10 +790,8 @@ window.scrollTo(0, 0);
   const header = document.querySelector("header");
   const cover = header.querySelector(".cover");
   const brand = document.querySelector(".mini-brand");
-  const h1 = brand.querySelector("h1"), chip = brand.querySelector(".budz-chip");
-  const friends = document.createElement("span"); friends.className = "friends-tag"; friends.textContent = "Friends of OG";
-  const chipBox = document.createElement("div"); chipBox.className = "chip-box"; chipBox.append(chip, friends);
-  const nameRow = document.createElement("div"); nameRow.className = "name-row"; nameRow.append(h1, chipBox);
+  const h1 = brand.querySelector("h1");
+  const nameRow = document.createElement("div"); nameRow.className = "name-row"; nameRow.append(h1);
   cover.after(nameRow);
   brand.remove();
   const cred = $("cred");
@@ -808,6 +837,7 @@ window.scrollTo(0, 0);
     paintDots();
     requestAnimationFrame(fitDock);
   }
+  window.ogGoHome = () => go(0);
   function go(nv) {
     nv = Math.max(0, Math.min(REWARD, nv));
     if (nv >= 1 && nv <= N && nv - 1 !== idx) load(nv - 1, true);
