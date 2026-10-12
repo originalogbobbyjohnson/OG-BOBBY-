@@ -392,6 +392,13 @@ body.practice { overflow: hidden; }
 .practice .opt { padding: 8px 11px; font-size: .92rem; }
 .practice .btn-round { width: 38px; height: 38px; }
 .practice .btn-round.play { width: 46px; height: 46px; }
+/* bottom: just the small glowing OG icon, same as the one up top */
+.dock-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.dock-row footer { text-align: left; }
+.practice .dock-row footer { display: block; }
+.budz-chip.dock-chip, .practice .budz-chip.dock-chip { width: 40px; height: 40px; border-radius: 10px; flex: none; }
+.budz-chip.dock-chip img { border-radius: 10px; }
+.practice .dock { padding: 6px 16px calc(6px + env(safe-area-inset-bottom, 0px)); }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -473,11 +480,10 @@ body.practice { overflow: hidden; }
 
 <div class="dock">
   <div class="dock-in">
-    <a class="budz" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">
-      <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
-      <span class="where"><span class="small friends">Friends of OG</span><span class="small">Brooklyn · Staten Island</span><span class="small">Manhattan · 21+</span></span>
-    </a>
-    <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
+    <div class="dock-row">
+      <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
+      <a class="budz-chip dock-chip" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app" aria-label="OG Budz"><img src="brand/og-budz-icon.png" alt="" width="40" height="40"></a>
+    </div>
   </div>
 </div>
 
