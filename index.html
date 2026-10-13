@@ -405,13 +405,7 @@ body.practice { overflow: hidden; }
   50% { text-shadow: 0 0 8px rgba(227,178,60,.95), 0 0 16px rgba(227,178,60,.6); }
 }
 @media (prefers-reduced-motion: reduce) { .friends-link { animation: none; text-shadow: 0 0 8px rgba(227,178,60,.8); } }
-.single { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; display: grid; gap: 8px; }
-.single .top { display: flex; align-items: center; gap: 10px; }
-.single img { width: 44px; height: 44px; border-radius: 6px; flex: none; }
-.single .lab { color: var(--gold); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; }
-.single .name { font-family: var(--display); font-size: 1.05rem; letter-spacing: .02em; line-height: 1.1; }
-.single .sc-link { margin-left: auto; color: var(--muted); font-size: .72rem; text-decoration: none; white-space: nowrap; }
-.single iframe { display: block; width: 100%; height: 20px; border: 0; }
+.single-link { color: var(--gold); text-decoration: none; font-weight: 600; }
 .menu-btn { flex: none; width: 34px; height: 34px; display: grid; place-items: center; padding: 0; background: none; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); cursor: pointer; }
 .menu-btn svg { width: 18px; height: 18px; fill: currentColor; }
 .menu-box { gap: 4px; }
@@ -485,14 +479,6 @@ body.practice { overflow: hidden; }
     <ol id="list"></ol>
   </section>
 
-  <section class="single" aria-label="The single">
-    <div class="top">
-      <img src="brand/ridge-brothers-cover.jpg" alt="Ridge Brothers cover" width="44" height="44">
-      <div><div class="lab">The single · out now</div><div class="name">Ridge Brothers</div></div>
-      <a class="sc-link" href="https://soundcloud.com/ogbobbybrooklyn/ridge-brothers" target="_blank" rel="noopener">SoundCloud →</a>
-    </div>
-    <iframe title="Ridge Brothers by OG Bobby" loading="lazy" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/ogbobbybrooklyn/ridge-brothers&color=%23e3b23c&inverse=true&auto_play=false&show_user=false"></iframe>
-  </section>
 
 </div>
 
@@ -521,7 +507,7 @@ body.practice { overflow: hidden; }
 <div class="dock">
   <div class="dock-in">
     <div class="dock-row">
-      <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
+      <footer><a class="single-link" href="https://soundcloud.com/ogbobbybrooklyn/ridge-brothers" target="_blank" rel="noopener">▶ New single: Ridge Brothers</a> · © OG Bobby · Bay Ridge, Brooklyn</footer>
       <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
     </div>
   </div>
