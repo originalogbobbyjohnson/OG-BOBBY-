@@ -405,9 +405,9 @@ body.practice { overflow: hidden; }
   50% { text-shadow: 0 0 8px rgba(227,178,60,.95), 0 0 16px rgba(227,178,60,.6); }
 }
 @media (prefers-reduced-motion: reduce) { .friends-link { animation: none; text-shadow: 0 0 8px rgba(227,178,60,.8); } }
-.single-link { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; margin-right: 8px; border: 1px solid var(--gold); border-radius: 99px; background: rgba(227,178,60,.12); color: var(--gold); text-decoration: none; font-weight: 700; font-size: .72rem; letter-spacing: .03em; white-space: nowrap; vertical-align: middle; }
-.single-link:hover, .single-link:active { background: var(--gold); color: #111; }
-.single-link svg { width: 10px; height: 10px; fill: currentColor; }
+.single-link { display: inline-flex; align-items: center; gap: 6px; padding: 3px 12px 4px; margin-right: 8px; border: 1px solid rgba(255,255,255,.55); border-radius: 99px; background: rgba(0,0,0,.35); color: #fff; text-decoration: none; font-family: var(--graffiti); font-weight: 400; font-size: .95rem; letter-spacing: .04em; line-height: 1.1; text-shadow: 2px 2px 0 #000; white-space: nowrap; vertical-align: middle; }
+.single-link:hover, .single-link:active { border-color: #fff; background: rgba(255,255,255,.12); }
+.single-link svg { width: 10px; height: 10px; fill: currentColor; filter: drop-shadow(1px 1px 0 #000); }
 .menu-btn { flex: none; width: 34px; height: 34px; display: grid; place-items: center; padding: 0; background: none; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); cursor: pointer; }
 .menu-btn svg { width: 18px; height: 18px; fill: currentColor; }
 .menu-box { gap: 4px; }
