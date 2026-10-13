@@ -231,7 +231,7 @@ body.practice { overflow: hidden; }
 .practice .dot-gift.current { box-shadow: 0 0 0 2px var(--gold); }
 @media (min-width: 700px) { .practice .stage { padding: 2px 52px; } .practice .nav-btn { width: 42px; } }
 /* short phones: squeeze the bars and the card so it still fits */
-@media (max-height: 760px) {
+@media (max-height: 1px) {
   .practice .wrap { padding-bottom: 86px; gap: 6px; }
   .practice .mini-word { max-width: 190px; }
   .practice .budz-chip.mini { width: 40px; height: 40px; }
@@ -289,7 +289,7 @@ body.practice { overflow: hidden; }
 .practice .rules { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; color: var(--fg); font-size: .95rem; }
 .practice .rules b { color: var(--gold); }
 .practice .start { font-family: var(--display); font-size: 1.5rem; letter-spacing: .1em; padding: 10px 44px; animation: glowBtn 1.8s ease-in-out infinite; }
-@media (max-height: 760px) {
+@media (max-height: 1px) {
   .practice .cover > img { height: 98px; }
   .practice .chip-box .budz-chip { width: 40px; height: 40px; }
   .practice .cred.stuck .cred-track, .practice .cred-track { padding-top: 8px; padding-bottom: 12px; }
@@ -306,7 +306,7 @@ body.practice { overflow: hidden; }
 .practice .cred.stuck .flag span, .practice .flag span { top: 30px; }
 .practice .stage { max-height: 100%; }
 .practice section:has(#list) { padding-top: 2px; }
-@media (max-height: 760px) {
+@media (max-height: 1px) {
   .practice .wrap { padding-bottom: 96px; gap: 8px; }
   .practice .cred.stuck .cred-track, .practice .cred-track { padding-top: 10px; padding-bottom: 22px; }
   .practice .cred.stuck .flag span, .practice .flag span { top: 26px; }
@@ -314,10 +314,10 @@ body.practice { overflow: hidden; }
 .practice .cover > img { height: clamp(98px, 16vh, 160px); }
 .practice .player { gap: 8px; padding: 12px 12px 10px; }
 .practice .opt { padding: 10px 12px; }
-@media (max-height: 760px) { .practice .cover > img { height: 92px; } .practice .player { gap: 6px; padding: 10px; } .practice .opt { padding: 8px 12px; } }
+@media (max-height: 1px) { .practice .cover > img { height: 92px; } .practice .player { gap: 6px; padding: 10px; } .practice .opt { padding: 8px 12px; } }
 .practice .wrap { gap: 8px; }
-@media (max-height: 820px) { .practice .wrap { padding-bottom: 104px; } }
-@media (max-height: 760px) { .practice #pPart { display: none; } .practice .player { gap: 5px; } .practice .wrap { padding-bottom: 92px; } }
+@media (max-height: 1px) { .practice .wrap { padding-bottom: 104px; } }
+@media (max-height: 1px) { .practice #pPart { display: none; } .practice .player { gap: 5px; } .practice .wrap { padding-bottom: 92px; } }
 
 /* ---------- Full picture on top (nothing covering it), name row under it; the picture takes any spare height ---------- */
 .practice .wrap { grid-template-rows: minmax(150px, 1fr) auto minmax(0, auto) auto; align-content: stretch; }
@@ -332,17 +332,17 @@ body.practice { overflow: hidden; }
 .practice .chip-box { position: static; display: flex; align-items: center; gap: 8px; }
 .practice .chip-box .budz-chip { width: 46px; height: 46px; }
 .practice .friends-tag { order: -1; background: none; padding: 0; font-size: .62rem; text-align: right; line-height: 1.15; white-space: normal; max-width: 4.6em; }
-@media (max-height: 760px) {
+@media (max-height: 1px) {
   .practice .wrap { grid-template-rows: minmax(110px, 1fr) auto minmax(0, auto) auto; }
   .practice .name-row h1 { width: min(56%, 230px); }
   .practice .chip-box .budz-chip { width: 38px; height: 38px; }
 }
 .practice .wrap { grid-template-rows: minmax(90px, 1fr) auto auto auto; }
-@media (max-height: 760px) { .practice .wrap { grid-template-rows: minmax(80px, 1fr) auto auto auto; } }
+@media (max-height: 1px) { .practice .wrap { grid-template-rows: minmax(80px, 1fr) auto auto auto; } }
 /* the picture fits whatever room its slot has, whole and uncropped */
 .practice .cover { container-type: size; height: 100%; min-height: 0; display: grid; place-items: center; }
 .practice .cover > img, .practice .cover > img[width] { width: min(100cqw, calc(100cqh * 1376 / 768)); height: auto; max-height: none; aspect-ratio: 1376 / 768; object-fit: cover; }
-@media (min-width: 700px) and (max-height: 820px) { .practice .wrap { padding-bottom: 122px; } }
+@media (min-width: 700px) and (max-height: 1px) { .practice .wrap { padding-bottom: 122px; } }
 
 /* ---------- Make room for the picture: slimmer name row, meter, card and bottom bar ---------- */
 .practice .wrap { padding-top: 8px; padding-bottom: 90px; gap: 7px; grid-template-rows: minmax(90px, 1fr) auto auto auto; }
@@ -367,9 +367,9 @@ body.practice { overflow: hidden; }
 .practice .budz .small { font-size: clamp(.52rem, 2.4vw, .68rem); line-height: 1.25; }
 .practice footer { display: block; font-size: .62rem; }
 @media (min-width: 700px) { .practice .wrap { padding-bottom: 98px; } }
-@media (max-height: 760px) { .practice .wrap { padding-bottom: 84px; grid-template-rows: minmax(70px, 1fr) auto auto auto; } }
+@media (max-height: 1px) { .practice .wrap { padding-bottom: 84px; grid-template-rows: minmax(70px, 1fr) auto auto auto; } }
 .practice .cred.stuck .cred-track, .practice .cred-track { padding-bottom: 23px; }
-@media (max-height: 760px) { .practice .wrap { grid-template-rows: minmax(120px, 1fr) auto minmax(0, auto) auto; } .practice .cred.stuck .cred-track, .practice .cred-track { padding-bottom: 23px; } }
+@media (max-height: 1px) { .practice .wrap { grid-template-rows: minmax(120px, 1fr) auto minmax(0, auto) auto; } .practice .cred.stuck .cred-track, .practice .cred-track { padding-bottom: 23px; } }
 
 /* ---------- Compact how-to-play card ---------- */
 .practice .slide-intro { padding: 12px 14px; gap: 8px; }
@@ -377,7 +377,7 @@ body.practice { overflow: hidden; }
 .practice .rules { gap: 5px; font-size: .86rem; line-height: 1.3; }
 .practice .start { font-size: 1.25rem; padding: 7px 36px; }
 .practice .wrap { grid-template-rows: minmax(90px, 1fr) auto minmax(0, auto) auto; }
-@media (max-height: 760px) { .practice .wrap { grid-template-rows: minmax(76px, 1fr) auto minmax(0, auto) auto; } }
+@media (max-height: 1px) { .practice .wrap { grid-template-rows: minmax(76px, 1fr) auto minmax(0, auto) auto; } }
 .practice .wrap { align-content: space-evenly; }
 
 /* ---------- Fit to the real screen: height and bottom-bar room are measured on the phone itself ---------- */
@@ -413,6 +413,9 @@ body.practice { overflow: hidden; }
 .menu-item.friends-link { font-size: .9rem; padding: 13px 4px; border-bottom: 0; }
 .menu-item .leave { display: block; margin-top: 2px; font-size: .7rem; font-weight: 400; letter-spacing: .02em; text-transform: none; color: var(--muted); animation: none; text-shadow: none; }
 .menu-box .btn { margin-top: 8px; }
+
+/* ---------- Shrink the whole page evenly on smaller windows: same layout, just smaller ---------- */
+.practice .wrap, .practice .dock { zoom: var(--z, 1); }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -906,20 +909,22 @@ window.scrollTo(0, 0);
     sx = null;
   }, { passive: true });
 
+  const DESIGN_H = 880, DESIGN_W = 340;
   // keep everything above the bottom bar, whatever size the phone makes it (home-bar strip included)
   const dock = document.querySelector(".dock");
   function fitDock() {
-    wrap.style.paddingBottom = Math.ceil(dock.getBoundingClientRect().height + 10) + "px";
+    const Z = window.__z || 1;
+    wrap.style.paddingBottom = Math.ceil(dock.getBoundingClientRect().height / Z + 10) + "px";
     // picture gets whatever height the card leaves free, up to its full size, never cropped
     const cs = getComputedStyle(wrap);
     const w = wrap.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
     const inner = wrap.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
     const gap = parseFloat(cs.rowGap) || 0;
-    const h = el => el ? el.getBoundingClientRect().height : 0;
+    const h = el => el ? el.getBoundingClientRect().height / Z : 0;
     const nameRow = document.querySelector(".name-row");
     const listSec = $("list").closest("section");
     const natural = Math.round(w * 768 / 1376) + 4;
-    const floor = innerHeight < 760 ? 76 : 90;
+    const floor = 90;
     const free = inner - 3 * gap - 6 - h(nameRow) - h($("cred")) - stage.scrollHeight - h(listSec) - 2;
     const pic = Math.max(floor, Math.min(natural, Math.floor(free)));
     wrap.style.gridTemplateRows = Math.ceil(pic + 6 + h(nameRow)) + "px auto minmax(0, auto) auto";
@@ -934,9 +939,14 @@ window.scrollTo(0, 0);
   // size the page to the phone's actual visible screen and leave exact room for the bottom bar
   const fit = () => {
     const vv = window.visualViewport;
-    document.documentElement.style.setProperty("--appH", Math.round(vv ? vv.height : innerHeight) + "px");
+    const vh = vv ? vv.height : innerHeight, vw = vv ? vv.width : innerWidth;
+    const z = Math.min(1, vh / DESIGN_H, vw / DESIGN_W);
+    window.__z = z;
+    document.documentElement.style.setProperty("--z", z);
+    document.documentElement.style.setProperty("--appH", Math.floor(vh / z) + "px");
     const dock = document.querySelector(".dock");
-    if (dock) document.documentElement.style.setProperty("--dockH", Math.ceil(dock.getBoundingClientRect().height) + "px");
+    if (dock) document.documentElement.style.setProperty("--dockH", Math.ceil(dock.getBoundingClientRect().height / z) + "px");
+    fitDock();
   };
   fit();
   addEventListener("resize", fit);
