@@ -405,6 +405,10 @@ body.practice { overflow: hidden; }
   50% { text-shadow: 0 0 8px rgba(227,178,60,.95), 0 0 16px rgba(227,178,60,.6); }
 }
 @media (prefers-reduced-motion: reduce) { .friends-link { animation: none; text-shadow: 0 0 8px rgba(227,178,60,.8); } }
+.single { margin-top: 22px; }
+.single .sub { color: var(--muted); font-size: .85rem; margin: 0 0 10px; }
+.single iframe { display: block; width: 100%; height: 166px; border: 0; border-radius: 10px; background: var(--panel); }
+.single .sc-link { display: inline-block; margin-top: 8px; color: var(--gold); font-size: .85rem; text-decoration: none; }
 .menu-btn { flex: none; width: 34px; height: 34px; display: grid; place-items: center; padding: 0; background: none; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); cursor: pointer; }
 .menu-btn svg { width: 18px; height: 18px; fill: currentColor; }
 .menu-box { gap: 4px; }
@@ -478,6 +482,13 @@ body.practice { overflow: hidden; }
     <ol id="list"></ol>
   </section>
 
+  <section class="single" aria-label="The single">
+    <h2>THE SINGLE · RIDGE BROTHERS</h2>
+    <p class="sub">Out now. Play it straight through, no questions asked.</p>
+    <iframe title="Ridge Brothers by OG Bobby" loading="lazy" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/ogbobbybrooklyn/ridge-brothers&color=%23e3b23c&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+    <a class="sc-link" href="https://soundcloud.com/ogbobbybrooklyn/ridge-brothers" target="_blank" rel="noopener">Follow OG Bobby on SoundCloud →</a>
+  </section>
+
 </div>
 
 <div class="sheet" id="localSheet" hidden role="dialog" aria-modal="true" aria-labelledby="localTitle">
@@ -494,6 +505,7 @@ body.practice { overflow: hidden; }
   <div class="box menu-box">
     <a class="menu-item" id="mHow" href="#">How to play</a>
     <a class="menu-item" id="mShare" href="#">Share the game</a>
+    <a class="menu-item" href="https://soundcloud.com/ogbobbybrooklyn/ridge-brothers" target="_blank" rel="noopener">SoundCloud · Ridge Brothers</a>
     <a class="menu-item" href="https://www.instagram.com/ogbobbybrooklyn/" target="_blank" rel="noopener">Instagram · @ogbobbybrooklyn</a>
     <a class="menu-item" href="mailto:ogbobbybrooklyn@gmail.com">Contact · ogbobbybrooklyn@gmail.com</a>
     <a class="menu-item friends-link" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Friends of OG <span class="leave">Leaves the music site</span></a>
