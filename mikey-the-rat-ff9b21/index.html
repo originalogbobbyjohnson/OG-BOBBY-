@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mikey the Rat · OG Bobby</title>
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="music.song">
+<meta property="og:site_name" content="OG Bobby">
+<meta property="og:title" content="Mikey the Rat · OG Bobby">
+<meta property="og:description" content="Bay Ridge, Brooklyn.">
+<meta property="og:url" content="https://ogbobbybrooklyn.com/mikey-the-rat-ff9b21/">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/mikey-the-rat-ff9b21/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ogbobbybrooklyn.com/mikey-the-rat-ff9b21/share.jpg">
+<link rel="icon" href="../cover.png">
+<link rel="apple-touch-icon" href="../cover.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&display=swap">
+<style>
+:root { --bg:#0f1a12; --panel:#17251a; --line:#2a4231; --fg:#eef3ea; --muted:#9db3a2; --gold:#e3b23c; --gold-dim:#8a6d24; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); font-family: "Barlow", system-ui, sans-serif; }
+body { display: grid; place-items: center; padding: 16px; }
+.card { width: 100%; max-width: 420px; height: min(100dvh - 32px, 880px); display: grid; grid-template-rows: minmax(0,1fr) auto; gap: 12px; }
+.art { min-height: 0; height: 100%; display: flex; justify-content: center; }
+.art img { height: 100%; width: auto; max-width: 100%; object-fit: cover; border-radius: 14px; border: 2px solid var(--gold-dim); display: block; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; display: grid; gap: 8px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.wm { width: 140px; height: auto; filter: drop-shadow(2px 2px 0 #000); }
+h1 { margin: 0; font-family: "Anton", Impact, sans-serif; font-weight: 400; font-size: 1.45rem; letter-spacing: .04em; color: #fff; white-space: nowrap; }
+.bar { position: relative; height: 8px; background: #1d2f21; border-radius: 99px; overflow: hidden; cursor: pointer; }
+.bar i { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--gold); }
+.times { display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 18px; }
+button { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 50%; width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; }
+button svg { width: 20px; height: 20px; fill: currentColor; }
+#play { width: 60px; height: 60px; background: var(--gold); border-color: var(--gold); color: var(--bg); }
+#play svg { width: 28px; height: 28px; }
+.foot { text-align: center; font-size: .72rem; color: var(--muted); }
+.foot a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="art"><img src="art.jpg" alt="OG Bobby on a Bay Ridge street" width="768" height="1376"></div>
+  <div class="panel">
+    <div class="top"><img class="wm" src="wordmark.png" alt="OG Bobby" width="932" height="220"><h1>MIKEY THE RAT</h1></div>
+    <div class="bar" id="bar"><i id="fill"></i></div>
+    <div class="times"><span id="cur">0:00</span><span id="tot">4:23</span></div>
+    <div class="controls">
+      <button id="back" type="button" aria-label="Back 15 seconds"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></button>
+      <button id="play" type="button" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      <button id="fwd" type="button" aria-label="Forward 15 seconds"><svg viewBox="0 0 24 24"><path d="M12 5V1l5 5-5 5V7a6 6 0 1 0 6 6h2a8 8 0 1 1-8-8z"/></svg></button>
+    </div>
+    <div class="foot">© OG Bobby · Bay Ridge, BK · <a href="https://ogbobbybrooklyn.com">Play the game</a></div>
+  </div>
+</main>
+<audio id="a" src="mikey-the-rat.mp3" preload="metadata"></audio>
+<script>
+const a = document.getElementById("a"), el = id => document.getElementById(id);
+const fmt = t => { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
+const paint = () => {
+  el("play").innerHTML = a.paused ? '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>' : '<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>';
+  el("play").setAttribute("aria-label", a.paused ? "Play" : "Pause");
+  el("cur").textContent = fmt(a.currentTime);
+  if (a.duration) { el("tot").textContent = fmt(a.duration); el("fill").style.width = (a.currentTime / a.duration * 100) + "%"; }
+};
+["play", "pause", "timeupdate", "loadedmetadata", "ended"].forEach(ev => a.addEventListener(ev, paint));
+el("play").onclick = () => a.paused ? a.play().catch(() => {}) : a.pause();
+el("back").onclick = () => { a.currentTime = Math.max(0, a.currentTime - 15); };
+el("fwd").onclick = () => { a.currentTime = Math.min(a.duration || 0, a.currentTime + 15); };
+el("bar").onclick = e => { const b = el("bar").getBoundingClientRect(); if (a.duration) a.currentTime = (e.clientX - b.left) / b.width * a.duration; };
+</script>
+</body>
+</html>
