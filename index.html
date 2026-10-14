@@ -447,6 +447,24 @@ body.practice { overflow: hidden; }
 .raw-play .times { width: 100%; }
 @media (prefers-reduced-motion: reduce) { .raw-pill { animation: none; } }
 
+.practice .stage:not([data-v="v2"]) > #v2 { display: none !important; }
+.pill-row { display: flex; justify-content: center; gap: 8px; margin-top: 8px; }
+.pill-row .raw-pill { margin: 0; }
+.big-nine { font-family: var(--graffiti); font-size: 3.4rem; line-height: .9; color: #fff; text-shadow: 3px 3px 0 #000, 0 0 14px rgba(227,178,60,.45); }
+.v2-head { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.v2-head .raw-kick { justify-self: start; display: inline-block; }
+.v2-sub { color: var(--muted); font-size: .84rem; margin-top: 4px; text-align: left; }
+.v2-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.v2-tile { position: relative; display: grid; align-content: center; justify-items: center; gap: 2px; min-height: 62px; padding: 6px 4px; border: 1px solid var(--gold-dim); border-radius: 10px; background: var(--panel); }
+.v2-tile.unknown { border-style: dashed; opacity: .55; }
+.v2-n { font-family: var(--display); color: var(--gold); font-size: .95rem; line-height: 1; }
+.v2-t { font-size: .74rem; font-weight: 700; line-height: 1.15; color: var(--fg); }
+.v2-lock { position: absolute; top: 4px; right: 5px; color: var(--gold-dim); }
+.v2-lock svg { width: 11px; height: 11px; fill: currentColor; }
+.vol-badge { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.vol-badge .big-nine { font-size: 2.6rem; }
+.vol-badge .raw-kick { display: inline-block; }
+
 /* ---------- Shrink the whole page evenly on smaller windows: same layout, just smaller ---------- */
 .practice .wrap, .practice .dock { zoom: var(--z, 1); }
 </style>
@@ -871,7 +889,7 @@ window.scrollTo(0, 0);
 
   // Opening card: how to play
   const intro = document.createElement("div"); intro.className = "slide-intro";
-  intro.innerHTML = '<h3 class="intro-title">How to play</h3>' +
+  intro.innerHTML = '<div class="vol-badge"><span class="big-nine">9</span><span class="raw-kick">VOLUME 1</span></div><h3 class="intro-title">How to play</h3>' +
     '<ol class="rules"><li><b>Hit play.</b> Every song is a level from OG Bobby\'s story.</li>' +
     '<li><b>Every level stops</b> at a turning point.</li>' +
     '<li><b>Answer right</b> to unlock the next verse.</li>' +
@@ -1013,41 +1031,65 @@ window.scrollTo(0, 0);
   if (!state.raw) state.raw = {};
   if (!state.rawTries) state.rawTries = {};
   const rawAudio = new Audio(); rawAudio.preload = "metadata";
-  let rawMode = false, rv = 0;
+  let mode = "", rv = 0;   // "" = the story, "raw" = Raw Cuts, "v2" = Volume 2 coming next
   const rawCard = document.createElement("section");
   rawCard.className = "raw-card"; rawCard.id = "raw"; rawCard.setAttribute("aria-live", "polite");
-  stage.append(rawCard);
+  const v2Card = document.createElement("section");
+  v2Card.className = "raw-card v2-card"; v2Card.id = "v2";
+  stage.append(rawCard, v2Card);
   const lockSvg = '<svg viewBox="0 0 24 24"><path d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-7-2a2 2 0 1 1 4 0v2h-4z"/></svg>';
-  const pill = document.createElement("button");
-  pill.type = "button"; pill.className = "raw-pill";
-  listSec.append(pill);
+  const fwd = '<svg viewBox="0 0 24 24"><path d="M8.6 19.4 16 12 8.6 4.6l1.8-1.8 9.2 9.2-9.2 9.2z"/></svg>';
+  const bk = '<svg viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4-1.8 1.8L4.4 12l9.2-9.2z"/></svg>';
+  const pills = document.createElement("div"); pills.className = "pill-row";
+  listSec.append(pills);
+  const mkPill = (html, label, fn) => { const b = document.createElement("button"); b.type = "button"; b.className = "raw-pill"; b.innerHTML = html; b.setAttribute("aria-label", label); b.onclick = fn; return b; };
   const paintPill = () => {
-    pill.innerHTML = rawMode
-      ? '<svg viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4-1.8 1.8L4.4 12l9.2-9.2z"/></svg>BACK TO THE STORY'
-      : 'RAW CUTS<svg viewBox="0 0 24 24"><path d="M8.6 19.4 16 12 8.6 4.6l1.8-1.8 9.2 9.2-9.2 9.2z"/></svg>';
-    pill.setAttribute("aria-label", rawMode ? "Back to the story" : "Open Raw Cuts");
+    pills.innerHTML = "";
+    if (mode) pills.append(mkPill(bk + "BACK TO THE STORY", "Back to the story", exitMode));
+    else pills.append(mkPill("RAW CUTS" + fwd, "Open Raw Cuts", enterRaw), mkPill("VOL. 2" + fwd, "See Volume 2, coming next", enterV2));
   };
-  pill.onclick = () => rawMode ? exitRaw() : enterRaw();
   paintPill();
 
   const rawEp = r => EPISODES.findIndex(e => e.slug === r.of);
   const rawQ = r => { const p = [r.q, ...(r.q.alt || [])]; return p[(state.rawTries[r.slug] || 0) % p.length]; };
 
   function enterRaw() {
-    rawMode = true; audio.pause();
+    mode = "raw"; audio.pause();
     document.querySelector(".wrap").classList.add("raw-on");
     track("raw-cuts", "Opened Raw Cuts");
     paintPill(); showRaw(rv);
   }
-  function exitRaw() {
-    rawMode = false; rawAudio.pause();
+  function enterV2() {
+    mode = "v2"; audio.pause(); rawAudio.pause();
+    document.querySelector(".wrap").classList.add("raw-on");
+    track("vol-2", "Opened Vol. 2 coming next");
+    paintPill(); renderV2();
+    stage.dataset.v = "v2"; stage.scrollTop = 0;
+    prev.disabled = false; next.disabled = true;
+    requestAnimationFrame(fitDock);
+  }
+  function exitMode() {
+    mode = ""; rawAudio.pause();
     document.querySelector(".wrap").classList.remove("raw-on");
     paintPill(); show(v);
   }
+  const exitRaw = exitMode;
   function step(d) {
-    if (!rawMode) return go(v + d);
-    if (rv + d < 0) return exitRaw();
+    if (!mode) return go(v + d);
+    if (mode === "v2") return d < 0 ? exitMode() : null;
+    if (rv + d < 0) return exitMode();
     showRaw(Math.min(RAW.length - 1, rv + d));
+  }
+  /* Volume 2: titles only, everything locked, nothing plays. Add a title here when a song is ready to tease. */
+  const VOL2 = ["Mikey the Rat", "After Hours"];
+  function renderV2() {
+    let tiles = "";
+    for (let i = 0; i < 9; i++) {
+      const t = VOL2[i];
+      tiles += '<div class="v2-tile' + (t ? "" : " unknown") + '"><span class="v2-n">' + (i + 1) + '</span><span class="v2-t"></span><span class="v2-lock">' + lockSvg + '</span></div>';
+    }
+    v2Card.innerHTML = '<div class="v2-head"><span class="big-nine">9</span><div><div class="raw-kick">VOLUME 2</div><div class="v2-sub">Coming next. Unlocking soon.</div></div></div><div class="v2-grid">' + tiles + '</div>';
+    v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] || "???"; });
   }
   function showRaw(i) {
     if (i !== rv) rawAudio.pause();
@@ -1123,12 +1165,12 @@ window.scrollTo(0, 0);
       btn.classList.add("right");
       state.raw[r.slug] = real; save();
       $("rMsg").className = "msg good"; $("rMsg").textContent = "That's right. The raw cut is yours.";
-      setTimeout(() => { if (rawMode) renderRaw(); requestAnimationFrame(fitDock); }, 1000);
+      setTimeout(() => { if (mode === "raw") renderRaw(); requestAnimationFrame(fitDock); }, 1000);
     } else {
       btn.classList.add("wrong");
       state.rawTries[r.slug] = (state.rawTries[r.slug] || 0) + 1; save();
       $("rMsg").className = "msg bad"; $("rMsg").textContent = "Not quite. Here comes a new question.";
-      setTimeout(() => { if (rawMode) renderRaw(); }, 1300);
+      setTimeout(() => { if (mode === "raw") renderRaw(); }, 1300);
     }
   }
   // story audio and raw audio never play over each other
