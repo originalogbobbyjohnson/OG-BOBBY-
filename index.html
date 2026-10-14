@@ -149,7 +149,7 @@ ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .ep .s { font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 .ep .s.open { color: var(--good); }
 
-/* OG Budz */
+/* old chip styles (unused) */
 .budz { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px; text-align: left; text-decoration: none; background: radial-gradient(ellipse at center, #2f5338 0%, #26432d 60%, #1f3826 100%); border: 3px solid var(--gold); border-radius: 14px; padding: 8px 14px; color: var(--gold); animation: glowBtn 1.8s ease-in-out infinite; }
 .budz .small { display: block; color: #d8e6dc; font-size: clamp(.56rem, 2.6vw, .76rem); letter-spacing: .03em; white-space: nowrap; }
 .wrap > * { min-width: 0; }
@@ -486,6 +486,12 @@ body.practice { overflow: hidden; }
 .switchboard .sb-tile.on { background: var(--gold); border-color: var(--gold); color: var(--bg); }
 .menu-foot { color: var(--muted); font-size: .7rem; text-align: center; margin: 6px 0 0; }
 
+.promo { position: fixed; left: 50%; top: 38%; z-index: 20; transform: translate(-50%, -50%) scale(.8); opacity: 0; transition: opacity .3s, transform .3s; background: #000; border: 2px solid var(--gold); border-radius: 16px; padding: 16px 26px; text-align: center; box-shadow: 0 0 30px rgba(227,178,60,.55); pointer-events: none; }
+.promo.on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.promo-kick { font-family: var(--display); font-size: .75rem; letter-spacing: .24em; color: var(--gold); }
+.promo-name { font-family: var(--graffiti); font-size: 2.1rem; line-height: 1.15; color: #fff; text-shadow: 2px 2px 0 #000; white-space: nowrap; }
+.promo-sub { font-size: .7rem; color: var(--muted); letter-spacing: .08em; }
+
 /* ---------- Shrink the whole page evenly on smaller windows: same layout, just smaller ---------- */
 .practice .wrap, .practice .dock { zoom: var(--z, 1); }
 </style>
@@ -557,15 +563,6 @@ body.practice { overflow: hidden; }
 
 </div>
 
-<div class="sheet" id="localSheet" hidden role="dialog" aria-modal="true" aria-labelledby="localTitle">
-  <div class="box">
-    <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
-    <h3 id="localTitle">Friends of OG · Local delivery only</h3>
-    <p>You're leaving the OG Bobby game for OG Budz, a separate site with its own rules. It serves Brooklyn, Staten Island and Manhattan, 21 and over. Are you in the area?</p>
-    <a class="btn" id="localYes" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Yes, I'm local</a>
-    <button class="btn ghost" id="localNo" type="button">Not local, keep listening</button>
-  </div>
-</div>
 
 <div class="sheet" id="menuSheet" hidden role="dialog" aria-modal="true" aria-label="Menu">
   <div class="box menu-box">
@@ -574,7 +571,6 @@ body.practice { overflow: hidden; }
     <a class="menu-item" href="https://soundcloud.com/ogbobbybrooklyn/ridge-brothers" target="_blank" rel="noopener">SoundCloud · Ridge Brothers</a>
     <a class="menu-item" href="https://www.instagram.com/ogbobbybrooklyn/" target="_blank" rel="noopener">Instagram · @ogbobbybrooklyn</a>
     <a class="menu-item" href="mailto:ogbobbybrooklyn@gmail.com">Contact · ogbobbybrooklyn@gmail.com</a>
-    <a class="menu-item friends-link" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Friends of OG <span class="leave">Leaves the music site</span></a>
     <button class="btn ghost" id="menuClose" type="button">Close</button>
   </div>
 </div>
@@ -599,6 +595,9 @@ const EPISODES = [{"slug": "whatever-it-takes", "title": "Whatever It Takes", "a
 const VIP = "vip-0609a49912/";
 const TOTAL_Q = EPISODES.reduce((n, e) => n + e.qs.length, 0);
 const TIERS = [{ need: 6, picks: 1 }, { need: 12, picks: 3 }, { need: 18, picks: 9 }];
+/* Bay Ridge ranks: one promotion per Street Cred milestone. The last two (Right Hand, OG '99) come with Volume 2. */
+const RANKS = ["New Face", "Corner Kid", "OG Soldier", "Made OG"];
+const rankOf = sc => TIERS.filter(t => sc >= t.need).length;
 
 /* Graffiti "9": round loop and a straight leaning stem, no hook at the bottom.
    fill = 1 draws it solid white; 0..1 fills it with gold from the bottom up (Volume 2 progress). */
@@ -616,6 +615,17 @@ function nineSvg(fill, cls) {
         '<clipPath id="' + id + '"><rect x="-4" y="' + (96 - 100 * fill) + '" width="72" height="' + (100 * fill + 4) + '"/></clipPath>' +
         '<g clip-path="url(#' + id + ')">' + shape("#e3b23c", 0, 0) + '</g>') +
     '</svg>';
+}
+
+/* Promotion badge: pops up over the page when a player moves up a rank */
+function promote(name) {
+  const d = document.createElement("div");
+  d.className = "promo"; d.setAttribute("role", "status");
+  d.innerHTML = '<div class="promo-kick">PROMOTED</div><div class="promo-name"></div><div class="promo-sub">Bay Ridge, Brooklyn</div>';
+  d.querySelector(".promo-name").textContent = name;
+  document.body.append(d);
+  requestAnimationFrame(() => d.classList.add("on"));
+  setTimeout(() => { d.classList.remove("on"); setTimeout(() => d.remove(), 400); }, 2600);
 }
 
 /* Small SHA-256 so unlocking works on any connection. */
@@ -690,9 +700,10 @@ function renderList() {
   $("barFill").style.width = (sc / TOTAL_Q * 100) + "%";
   TIERS.forEach((t, k) => $("f" + (k + 1)).classList.toggle("won", sc >= t.need));
   const next = TIERS.find(t => sc < t.need);
+  const rk = rankOf(sc);
   $("credHint").textContent = next
-    ? (next.need - sc) + " more to " + (next.picks === 1 ? "earn a song" : next.picks === 3 ? "earn 3 songs" : "earn the album")
-    : "OG Certified";
+    ? RANKS[rk] + " · " + (next.need - sc) + " more to " + RANKS[rk + 1]
+    : "Made OG";
   renderReward();
 }
 
@@ -703,7 +714,7 @@ function renderReward() {
   $("reward").classList.toggle("on", p > 0);
   if (!p) return;
   const all = p >= EPISODES.length;
-  $("rTitle").textContent = all ? "OG CERTIFIED" : "YOU EARNED A PLAYLIST";
+  $("rTitle").textContent = all ? "MADE OG" : "YOU EARNED A PLAYLIST";
   $("rText").textContent = all ? "You got every question right on the first try. The whole album is yours to stream."
     : "Pick " + (p === 1 ? "1 song" : p + " songs") + " for your own playlist. Keep answering to unlock more.";
   const box = $("picks"); box.innerHTML = "";
@@ -822,7 +833,7 @@ async function answer(o, btn) {
   const scoreAfter = score();
   TIERS.forEach(t => {
     if (scoreBefore < t.need && scoreAfter >= t.need)
-      track(t.picks >= EPISODES.length ? "og-certified" : "street-cred/" + t.need, t.picks >= EPISODES.length ? "OG Certified" : "Street Cred " + t.need + " (earned " + t.picks + (t.picks === 1 ? " song)" : " songs)"));
+      { track("rank/" + RANKS[rankOf(t.need)].toLowerCase().replace(/ /g, "-"), "Promoted: " + RANKS[rankOf(t.need)]); promote(RANKS[rankOf(t.need)]); }
   });
   if (ok) {
     btn.classList.add("right");
@@ -880,19 +891,12 @@ $("back").onclick = () => {
 };
 $("restart").onclick = () => { playSection(0, true); };
 
-/* OG Budz is local-only: ask every time before leaving the music page. */
-document.querySelectorAll('a.budz, a.budz-chip, a.friends-link').forEach(a => a.addEventListener("click", ev => {
-  ev.preventDefault();
-  $("localSheet").hidden = false; $("localYes").focus();
-}));
-$("localYes").addEventListener("click", () => track("friends-of-og", "Went to Friends of OG"));
 /* bottom menu */
 const closeMenu = () => { $("menuSheet").hidden = true; };
 $("menuBtn").onclick = () => { $("menuSheet").hidden = false; track("menu", "Opened menu"); };
 $("menuClose").onclick = closeMenu;
 $("menuSheet").addEventListener("click", ev => { if (ev.target.id === "menuSheet") closeMenu(); });
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") closeMenu(); });
-document.querySelector("#menuSheet .friends-link").addEventListener("click", closeMenu);
 $("mHow").onclick = ev => { ev.preventDefault(); closeMenu(); if (window.ogGoHome) window.ogGoHome(); };
 $("mShare").onclick = async ev => {
   ev.preventDefault();
@@ -900,9 +904,6 @@ $("mShare").onclick = async ev => {
   try { if (navigator.share) { await navigator.share({ title: "OG Bobby", text: "Play the OG Bobby game. Bay Ridge, Brooklyn.", url }); return; } } catch (e) { return; }
   try { await navigator.clipboard.writeText(url); ev.target.textContent = "Link copied"; setTimeout(() => { ev.target.textContent = "Share the game"; }, 1800); } catch (e) {}
 };
-$("localNo").onclick = () => { $("localSheet").hidden = true; };
-$("localSheet").addEventListener("click", ev => { if (ev.target.id === "localSheet") $("localSheet").hidden = true; });
-document.addEventListener("keydown", ev => { if (ev.key === "Escape") $("localSheet").hidden = true; });
 
 /* Open on the first episode that still has a question waiting. */
 const first = EPISODES.findIndex(e => !isOpen(e));
@@ -914,7 +915,7 @@ window.scrollTo(0, 0);
   const wrap = document.querySelector(".wrap");
   const stageWrap = document.createElement("div"); stageWrap.className = "stage-wrap";
   const stage = document.createElement("div"); stage.className = "stage";
-  // Banner on top: Bay Ridge picture with OG BOBBY across it and the glowing OG Budz icon
+  // Banner on top: Bay Ridge picture with OG BOBBY across it
   const header = document.querySelector("header");
   const cover = header.querySelector(".cover");
   const brand = document.querySelector(".mini-brand");
@@ -999,7 +1000,6 @@ window.scrollTo(0, 0);
   next.onclick = () => step(1);
   startBtn.onclick = () => go((idx < 0 ? 0 : idx) + 1);
   document.addEventListener("keydown", e => {
-    if ($("localSheet") && !$("localSheet").hidden) return;
     if ($("menuSheet") && !$("menuSheet").hidden) return;
     if (e.key === "ArrowRight") step(1);
     if (e.key === "ArrowLeft") step(-1);
