@@ -425,6 +425,28 @@ body.practice { overflow: hidden; }
 .menu-item .leave { display: block; margin-top: 2px; font-size: .7rem; font-weight: 400; letter-spacing: .02em; text-transform: none; color: var(--muted); animation: none; text-shadow: none; }
 .menu-box .btn { margin-top: 8px; }
 
+/* ---------- Raw Cuts: their own window, reached by the pill under the level dots ---------- */
+.practice .stage:not([data-v="raw"]) > #raw { display: none !important; }
+.raw-pill { display: flex; align-items: center; gap: 8px; margin: 8px auto 0; font-family: var(--display); font-size: .85rem; letter-spacing: .14em; color: var(--gold); background: rgba(0,0,0,.45); border: 1px solid var(--gold); border-radius: 99px; padding: 6px 18px; cursor: pointer; animation: textGlow 1.8s ease-in-out infinite; }
+.raw-pill svg { width: 14px; height: 14px; fill: currentColor; }
+.raw-pill:active { transform: scale(.96); }
+.raw-on #list { display: none !important; }
+.raw-card { display: grid; gap: 8px; background: #000; border: 2px solid var(--gold); border-radius: 16px; padding: 14px; text-align: center; }
+.raw-kick { justify-self: center; font-family: var(--display); font-size: .72rem; letter-spacing: .22em; color: #000; background: var(--gold); border-radius: 4px; padding: 2px 10px; }
+.raw-title { font-family: var(--graffiti); font-size: 1.7rem; line-height: 1.1; color: #fff; text-shadow: 2px 2px 0 #000; }
+.raw-sub { color: var(--muted); font-size: .86rem; margin: 0; }
+.raw-lock { display: grid; place-items: center; width: 54px; height: 54px; margin: 2px auto; border-radius: 50%; border: 1px solid var(--gold-dim); color: var(--gold); }
+.raw-lock svg { width: 24px; height: 24px; fill: currentColor; }
+.raw-card h3 { margin: 4px 0 0; font-size: .98rem; }
+.raw-card .opts { display: grid; gap: 7px; text-align: left; }
+.raw-card .msg { min-height: 1.2em; margin: 0; font-size: .88rem; }
+.raw-card .msg.good { color: var(--good); }
+.raw-card .msg.bad { color: var(--bad); }
+.raw-play { display: grid; gap: 8px; justify-items: center; }
+.raw-play .track { width: 100%; cursor: pointer; }
+.raw-play .times { width: 100%; }
+@media (prefers-reduced-motion: reduce) { .raw-pill { animation: none; } }
+
 /* ---------- Shrink the whole page evenly on smaller windows: same layout, just smaller ---------- */
 .practice .wrap, .practice .dock { zoom: var(--z, 1); }
 </style>
@@ -916,13 +938,14 @@ window.scrollTo(0, 0);
     ol.querySelectorAll(".ep").forEach((b, k) => b.classList.toggle("current", v === k + 1));
   }
 
-  prev.onclick = () => go(v - 1);
-  next.onclick = () => go(v + 1);
+  prev.onclick = () => step(-1);
+  next.onclick = () => step(1);
   startBtn.onclick = () => go((idx < 0 ? 0 : idx) + 1);
   document.addEventListener("keydown", e => {
     if ($("localSheet") && !$("localSheet").hidden) return;
-    if (e.key === "ArrowRight") go(v + 1);
-    if (e.key === "ArrowLeft") go(v - 1);
+    if ($("menuSheet") && !$("menuSheet").hidden) return;
+    if (e.key === "ArrowRight") step(1);
+    if (e.key === "ArrowLeft") step(-1);
   });
   // swipe left / right on the card
   let sx = null, sy = null;
@@ -930,7 +953,7 @@ window.scrollTo(0, 0);
   stage.addEventListener("touchend", e => {
     if (sx === null) return;
     const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
-    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) go(v + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
     sx = null;
   }, { passive: true });
 
@@ -978,6 +1001,138 @@ window.scrollTo(0, 0);
   if (window.visualViewport) visualViewport.addEventListener("resize", fit);
   try { new ResizeObserver(fit).observe(document.querySelector(".dock")); } catch (e) {}
   addEventListener("load", fit);
+
+
+  /* ---------- Raw Cuts: a separate window. Clear the full song first, then one question opens the raw version ---------- */
+  const RAW = [{
+    slug: "pioneer-raw", of: "pioneer", title: "Pioneer", dur: 201.6,
+    q: { q: "How many years was OG legit on Wall Street?", opts: ["Two years", "Five years", "Five hundred years"], gx: 2,
+      alt: [{ q: "What was the partner, according to OG?", opts: ["The brains", "A circus clown", "Just a runner"], gx: 1 },
+            { q: "How much of every dollar did OG hand the partner?", opts: ["Half", "A quarter", "A gold bar"], gx: 2 }] }
+  }];
+  if (!state.raw) state.raw = {};
+  if (!state.rawTries) state.rawTries = {};
+  const rawAudio = new Audio(); rawAudio.preload = "metadata";
+  let rawMode = false, rv = 0;
+  const rawCard = document.createElement("section");
+  rawCard.className = "raw-card"; rawCard.id = "raw"; rawCard.setAttribute("aria-live", "polite");
+  stage.append(rawCard);
+  const lockSvg = '<svg viewBox="0 0 24 24"><path d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-7-2a2 2 0 1 1 4 0v2h-4z"/></svg>';
+  const pill = document.createElement("button");
+  pill.type = "button"; pill.className = "raw-pill";
+  listSec.append(pill);
+  const paintPill = () => {
+    pill.innerHTML = rawMode
+      ? '<svg viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4-1.8 1.8L4.4 12l9.2-9.2z"/></svg>BACK TO THE STORY'
+      : 'RAW CUTS<svg viewBox="0 0 24 24"><path d="M8.6 19.4 16 12 8.6 4.6l1.8-1.8 9.2 9.2-9.2 9.2z"/></svg>';
+    pill.setAttribute("aria-label", rawMode ? "Back to the story" : "Open Raw Cuts");
+  };
+  pill.onclick = () => rawMode ? exitRaw() : enterRaw();
+  paintPill();
+
+  const rawEp = r => EPISODES.findIndex(e => e.slug === r.of);
+  const rawQ = r => { const p = [r.q, ...(r.q.alt || [])]; return p[(state.rawTries[r.slug] || 0) % p.length]; };
+
+  function enterRaw() {
+    rawMode = true; audio.pause();
+    document.querySelector(".wrap").classList.add("raw-on");
+    track("raw-cuts", "Opened Raw Cuts");
+    paintPill(); showRaw(rv);
+  }
+  function exitRaw() {
+    rawMode = false; rawAudio.pause();
+    document.querySelector(".wrap").classList.remove("raw-on");
+    paintPill(); show(v);
+  }
+  function step(d) {
+    if (!rawMode) return go(v + d);
+    if (rv + d < 0) return exitRaw();
+    showRaw(Math.min(RAW.length - 1, rv + d));
+  }
+  function showRaw(i) {
+    if (i !== rv) rawAudio.pause();
+    rv = i; stage.dataset.v = "raw"; stage.scrollTop = 0;
+    prev.disabled = false; next.disabled = rv >= RAW.length - 1;
+    renderRaw();
+    requestAnimationFrame(fitDock);
+  }
+  function renderRaw() {
+    const r = RAW[rv], ei = rawEp(r), e = EPISODES[ei];
+    const head = '<div class="raw-kick">RAW CUT</div><div class="raw-title"></div>';
+    if (state.raw[r.slug]) {
+      rawCard.innerHTML = head + '<p class="raw-sub">Same story. Raw.</p>' +
+        '<div class="raw-play"><div class="track" id="rTrack"><i id="rFill"></i></div>' +
+        '<div class="times"><span id="rCur">0:00</span><span>' + fmt(r.dur) + '</span></div>' +
+        '<button class="btn-round play" id="rPlay" type="button" aria-label="Play"><svg viewBox="0 0 24 24"></svg></button></div>';
+      rawCard.querySelector(".raw-title").textContent = r.title;
+      const src = "r/" + state.raw[r.slug] + ".mp3";
+      if (!rawAudio.src.endsWith(src)) rawAudio.src = src;
+      const paint = () => {
+        $("rPlay").querySelector("svg").innerHTML = rawAudio.paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
+        $("rPlay").setAttribute("aria-label", rawAudio.paused ? "Play" : "Pause");
+        $("rCur").textContent = fmt(rawAudio.currentTime);
+        $("rFill").style.width = Math.min(100, rawAudio.currentTime / r.dur * 100) + "%";
+      };
+      rawAudio.onplay = rawAudio.onpause = rawAudio.ontimeupdate = rawAudio.onended = () => { if ($("rPlay")) paint(); };
+      $("rPlay").onclick = () => {
+        if (rawAudio.paused) { audio.pause(); rawAudio.play().catch(() => {}); track("play/" + r.slug, "Played: " + r.title + " (Raw Cut)"); }
+        else rawAudio.pause();
+      };
+      $("rTrack").onclick = ev => {
+        const b = $("rTrack").getBoundingClientRect();
+        rawAudio.currentTime = Math.max(0, Math.min(1, (ev.clientX - b.left) / b.width)) * r.dur;
+      };
+      paint();
+    } else if (!isOpen(e)) {
+      rawCard.innerHTML = head + '<div class="raw-lock">' + lockSvg + '</div>' +
+        '<p class="raw-sub">Finish Level ' + (ei + 1) + ' to open this one. Then one more question unlocks the raw version.</p>' +
+        '<button class="btn ghost" id="rGo" type="button">Go to Level ' + (ei + 1) + '</button>';
+      rawCard.querySelector(".raw-title").textContent = r.title;
+      $("rGo").onclick = () => { exitRaw(); go(ei + 1); };
+    } else {
+      const q = rawQ(r), tries = state.rawTries[r.slug] || 0;
+      rawCard.innerHTML = head + '<p class="raw-sub">One more question opens the raw version.</p>' +
+        '<h3></h3><div class="opts"></div><p class="msg" id="rMsg"></p>';
+      rawCard.querySelector(".raw-title").textContent = r.title;
+      rawCard.querySelector("h3").textContent = q.q;
+      const box = rawCard.querySelector(".opts");
+      q.opts.forEach((o, k) => {
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "opt"; b.textContent = o;
+        if (tries >= 2 && k === q.gx) { b.classList.add("out"); b.disabled = true; }
+        b.onclick = () => rawAnswer(r, o, b);
+        box.append(b);
+      });
+      if (tries > 0) $("rMsg").textContent = "New question. Same song.";
+    }
+  }
+  async function rawAnswer(r, o, btn) {
+    rawCard.querySelectorAll(".opt").forEach(b => b.disabled = true);
+    const k = keyFor(r.slug, 0, o);
+    let ok = false, real = k;
+    try { ok = (await fetch("r/" + k + ".mp3", { method: "HEAD", cache: "no-store" })).ok; } catch (err) {}
+    if (!ok) {
+      try {
+        const res = await fetch("r/" + k + ".txt", { cache: "no-store" });
+        const t = res.ok ? (await res.text()).trim() : "";
+        if (/^[0-9a-f]{24}$/.test(t)) { ok = true; real = t; }
+      } catch (err) {}
+    }
+    track((ok ? "right/" : "wrong/") + r.slug, (ok ? "Right: " : "Wrong: ") + r.title + " Raw Cut");
+    if (ok) {
+      btn.classList.add("right");
+      state.raw[r.slug] = real; save();
+      $("rMsg").className = "msg good"; $("rMsg").textContent = "That's right. The raw cut is yours.";
+      setTimeout(() => { if (rawMode) renderRaw(); requestAnimationFrame(fitDock); }, 1000);
+    } else {
+      btn.classList.add("wrong");
+      state.rawTries[r.slug] = (state.rawTries[r.slug] || 0) + 1; save();
+      $("rMsg").className = "msg bad"; $("rMsg").textContent = "Not quite. Here comes a new question.";
+      setTimeout(() => { if (rawMode) renderRaw(); }, 1300);
+    }
+  }
+  // story audio and raw audio never play over each other
+  audio.addEventListener("play", () => rawAudio.pause());
 
   // first visit opens on the intro card; returning players open where they left off
   const started = Object.keys(state.keys).length || Object.keys(state.first).length;
