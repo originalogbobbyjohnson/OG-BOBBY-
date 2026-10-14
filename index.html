@@ -492,6 +492,11 @@ body.practice { overflow: hidden; }
 .promo-name { font-family: var(--graffiti); font-size: 2.1rem; line-height: 1.15; color: #fff; text-shadow: 2px 2px 0 #000; white-space: nowrap; }
 .promo-sub { font-size: .7rem; color: var(--muted); letter-spacing: .08em; }
 
+.vol-tag { display: inline-flex; align-items: center; gap: 4px; margin-right: 8px; padding: 1px 7px 1px 5px; border: 1px solid var(--gold-dim); border-radius: 5px; color: var(--gold); font-family: var(--display); letter-spacing: .12em; }
+.vol-tag .nine { width: 8px; }
+.ninety-nine .tick { color: #3a3320; text-shadow: 2px 2px 0 #000; }
+.ninety-nine .tick.lit { color: var(--gold); text-shadow: 2px 2px 0 #000, 0 0 12px rgba(227,178,60,.8); }
+
 /* ---------- Shrink the whole page evenly on smaller windows: same layout, just smaller ---------- */
 .practice .wrap, .practice .dock { zoom: var(--z, 1); }
 </style>
@@ -773,7 +778,7 @@ function playSection(s, autoplay) {
 function load(i, autoplay) {
   idx = i;
   const e = EPISODES[i];
-  $("pEp").textContent = "Level " + (i + 1);
+  $("pEp").innerHTML = '<span class="vol-tag">' + nineSvg(1) + 'VOL. 1</span>Level ' + (i + 1);
   $("pTitle").textContent = e.title;
   $("tot").textContent = fmt(e.dur);
   drawTrack(e);
@@ -1044,6 +1049,7 @@ window.scrollTo(0, 0);
   // size the page to the phone's actual visible screen and leave exact room for the bottom bar
   const fit = () => {
     const vv = window.visualViewport;
+    if (vv && vv.scale > 1.01) return;   // pinch-zoomed: don't re-lay out, just let the phone magnify
     const vh = vv ? vv.height : innerHeight, vw = vv ? vv.width : innerWidth;
     const z = Math.min(1, vh / DESIGN_H, vw / DESIGN_W);
     window.__z = z;
@@ -1153,7 +1159,7 @@ window.scrollTo(0, 0);
     v2Card.innerHTML =
       '<div class="raw-kick">VOLUME 2 · COMING NEXT</div>' +
       '<div class="ninety-nine" aria-label="Volume 1 plus Volume 2 makes 99">' +
-        '<span class="tick">’</span>' +
+        '<span class="tick' + (have >= 9 ? ' lit' : '') + '">\u2019</span>' +
         '<figure>' + nineSvg(1) + '<figcaption>VOL. 1</figcaption></figure>' +
         '<figure>' + nineSvg(Math.max(.06, have / 9), "filling") + '<figcaption>VOL. 2</figcaption></figure>' +
       '</div>' +
