@@ -448,8 +448,9 @@ body.practice { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .raw-pill { animation: none; } }
 
 .practice .stage:not([data-v="v2"]) > #v2 { display: none !important; }
-.pill-row { display: flex; justify-content: center; gap: 8px; margin-top: 8px; }
-.pill-row .raw-pill { margin: 0; }
+.practice section:has(#list) { display: grid; justify-content: center; }
+.pill-row { display: flex; justify-content: flex-start; gap: 8px; margin-top: 16px; }
+.pill-row .raw-pill { margin: 0; border-radius: 6px; padding: 7px 14px; }
 .big-nine { font-family: var(--graffiti); font-size: 3.4rem; line-height: .9; color: #fff; text-shadow: 3px 3px 0 #000, 0 0 14px rgba(227,178,60,.45); }
 .v2-head { display: flex; align-items: center; justify-content: center; gap: 12px; }
 .v2-head .raw-kick { justify-self: start; display: inline-block; }
