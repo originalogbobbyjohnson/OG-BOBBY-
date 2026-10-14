@@ -472,6 +472,20 @@ body.practice { overflow: hidden; }
 .vol-badge { display: flex; align-items: center; justify-content: center; gap: 10px; }
 .vol-badge .raw-kick { display: inline-block; }
 
+/* ---------- Bottom switchboard: four matching tiles ---------- */
+.switchboard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.switchboard .sb-tile { all: unset; box-sizing: border-box; height: 52px; display: grid; grid-template-rows: auto auto; place-items: center; align-content: center; gap: 4px; border: 1px solid var(--gold-dim); border-radius: 10px; background: rgba(0,0,0,.45); color: var(--gold); cursor: pointer; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.switchboard .sb-tile:active { transform: scale(.96); }
+.switchboard .sb-tile:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.switchboard .sb-ic { display: grid; place-items: center; width: 22px; height: 22px; }
+.switchboard .sb-ic svg { width: 18px; height: 18px; fill: currentColor; }
+.switchboard .sb-ic .nine { width: 13px; height: auto; }
+.switchboard .sb-ic.sc { background: #ff5500; border-radius: 6px; color: #fff; }
+.switchboard .sb-ic.sc svg { width: 16px; height: 16px; }
+.switchboard .sb-lab { font-family: var(--display); font-size: .6rem; letter-spacing: .12em; line-height: 1; white-space: nowrap; }
+.switchboard .sb-tile.on { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.menu-foot { color: var(--muted); font-size: .7rem; text-align: center; margin: 6px 0 0; }
+
 /* ---------- Shrink the whole page evenly on smaller windows: same layout, just smaller ---------- */
 .practice .wrap, .practice .dock { zoom: var(--z, 1); }
 </style>
@@ -1065,13 +1079,35 @@ window.scrollTo(0, 0);
   const lockSvg = '<svg viewBox="0 0 24 24"><path d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-7-2a2 2 0 1 1 4 0v2h-4z"/></svg>';
   const fwd = '<svg viewBox="0 0 24 24"><path d="M8.6 19.4 16 12 8.6 4.6l1.8-1.8 9.2 9.2-9.2 9.2z"/></svg>';
   const bk = '<svg viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4-1.8 1.8L4.4 12l9.2-9.2z"/></svg>';
-  const pills = document.createElement("div"); pills.className = "pill-row";
-  listSec.append(pills);
-  const mkPill = (html, label, fn) => { const b = document.createElement("button"); b.type = "button"; b.className = "raw-pill"; b.innerHTML = html; b.setAttribute("aria-label", label); b.onclick = fn; return b; };
+  /* Bottom switchboard: four matching tiles — Raw Cuts, Vol. 2, the single, Menu */
+  const dockRow = document.querySelector(".dock-row");
+  const board = document.createElement("div"); board.className = "switchboard";
+  const cutSvg = '<svg viewBox="0 0 24 24"><path d="M9.6 8.1A3.5 3.5 0 1 0 8 9.6L10.6 12 8 14.4a3.5 3.5 0 1 0 1.6 1.5l2.4-2.5 7 7H22L9.6 8.1zM6.5 8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM19 3l-6 6 2 2 7-7V3z"/></svg>';
+  const scSvg = '<svg viewBox="0 0 24 24"><path d="M10.2 8.3c.5-.2 1-.3 1.6-.3 2.2 0 4 1.6 4.3 3.7.3-.1.7-.2 1-.2 1.6 0 2.9 1.3 2.9 2.9S18.7 17.3 17.1 17.3h-6.9zM8.8 9.2h.9v8.1h-.9zm-1.7.6H8v7.5h-.9zm-1.7.9h.9v6.6h-.9zm-1.7 1h.9v5.6h-.9zM2 12.8h.9v4.4H2z"/></svg>';
+  const menuSvg = '<svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>';
+  const mkTile = (label) => { const b = document.createElement("button"); b.type = "button"; b.className = "sb-tile"; b.dataset.label = label; return b; };
+  const rawT = mkTile("RAW CUTS"), v2T = mkTile("VOL. 2");
+  rawT.onclick = () => mode === "raw" ? exitMode() : enterRaw();
+  v2T.onclick = () => mode === "v2" ? exitMode() : enterV2();
+  const single = dockRow.querySelector(".single-link");
+  single.className = "sb-tile sb-single";
+  single.innerHTML = '<span class="sb-ic sc">' + scSvg + '</span><span class="sb-lab">RIDGE BROS</span>';
+  const menuB = $("menuBtn");
+  menuB.className = "sb-tile";
+  menuB.innerHTML = '<span class="sb-ic">' + menuSvg + '</span><span class="sb-lab">MENU</span>';
+  const foot = dockRow.querySelector("footer");
+  foot.className = "menu-foot";
+  document.querySelector("#menuSheet .menu-box").insertBefore(foot, $("menuClose"));
+  board.append(rawT, v2T, single, menuB);
+  dockRow.replaceWith(board);
   const paintPill = () => {
-    pills.innerHTML = "";
-    if (mode) pills.append(mkPill(bk + "BACK TO THE STORY", "Back to the story", exitMode));
-    else pills.append(mkPill("RAW CUTS" + fwd, "Open Raw Cuts", enterRaw), mkPill("VOL. 2" + fwd, "See Volume 2, coming next", enterV2));
+    const face = (t, on, icon) => {
+      t.classList.toggle("on", on);
+      t.innerHTML = '<span class="sb-ic">' + (on ? bk : icon) + '</span><span class="sb-lab">' + (on ? "STORY" : t.dataset.label) + '</span>';
+      t.setAttribute("aria-label", on ? "Back to the story" : t.dataset.label);
+    };
+    face(rawT, mode === "raw", cutSvg);
+    face(v2T, mode === "v2", nineSvg(1, "sb-nine"));
   };
   paintPill();
 
