@@ -525,7 +525,7 @@ body.practice { overflow: hidden; }
       <div class="flag rank0 won" id="f0" style="left:0"><span><b>New Face</b><small>Start</small></span></div>
       <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span><b>Corner Kid</b><small>1 song</small></span></div>
       <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span><b>OG Soldier</b><small>3 songs</small></span></div>
-      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span><b>OG Made</b><small>The album</small></span></div>
+      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span><b>The album</b><small>OG Protégé</small></span></div>
     </div>
   </section>
   <header>
@@ -623,8 +623,8 @@ const EPISODES = [{"slug": "whatever-it-takes", "title": "Whatever It Takes", "a
 const VIP = "vip-0609a49912/";
 const TOTAL_Q = EPISODES.reduce((n, e) => n + e.qs.length, 0);
 const TIERS = [{ need: 6, picks: 1 }, { need: 12, picks: 3 }, { need: 18, picks: 9 }];
-/* Bay Ridge ranks: one promotion per Street Cred milestone. The last two (Right Hand, OG '99) come with Volume 2. */
-const RANKS = ["New Face", "Corner Kid", "OG Soldier", "OG Made"];
+/* Bay Ridge ranks: one promotion per Street Cred milestone. Volume 2 adds Right Hand, OG '99, and OG Certified as the final rank. */
+const RANKS = ["New Face", "Corner Kid", "OG Soldier", "OG Protégé"];
 const rankOf = sc => TIERS.filter(t => sc >= t.need).length;
 
 /* Graffiti "9": round loop and a straight leaning stem, no hook at the bottom.
@@ -731,7 +731,7 @@ function renderList() {
   const rk = rankOf(sc);
   $("credHint").textContent = next
     ? RANKS[rk] + " · " + (next.need - sc) + " more to " + RANKS[rk + 1]
-    : "OG Made";
+    : "";
   renderReward();
 }
 
@@ -742,7 +742,7 @@ function renderReward() {
   $("reward").classList.toggle("on", p > 0);
   if (!p) return;
   const all = p >= EPISODES.length;
-  $("rTitle").textContent = all ? "OG MADE" : "YOU EARNED A PLAYLIST";
+  $("rTitle").textContent = all ? "OG PROTÉGÉ" : "YOU EARNED A PLAYLIST";
   $("rText").textContent = all ? "You got every question right on the first try. The whole album is yours to stream."
     : "Pick " + (p === 1 ? "1 song" : p + " songs") + " for your own playlist. Keep answering to unlock more.";
   const box = $("picks"); box.innerHTML = "";
