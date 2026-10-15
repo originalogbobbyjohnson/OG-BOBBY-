@@ -508,8 +508,10 @@ body.practice { overflow: hidden; }
 .flag.won span b { color: var(--gold); }
 .flag.rank0 span { transform: none; left: 0; }
 .flag.rank0, .flag.rank0.won { filter: none; }
-.cred.stuck .cred-track, .cred-track { padding-bottom: 36px; }
-.practice .cred.stuck .cred-track, .practice .cred-track { padding-bottom: 30px; }
+.flag em { position: absolute; top: 0; right: 100%; margin-right: 1px; font-style: normal; font-size: .62rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; line-height: 1.1; color: var(--muted); }
+.flag.won em { color: var(--gold); }
+.flag.rank0 em { right: auto; left: 0; margin: 0; }
+.practice .flag em { font-size: .52rem; }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -522,10 +524,10 @@ body.practice { overflow: hidden; }
     <div class="cred-head"><span class="cred-name">STREET CRED</span><span class="cred-hint" id="credHint"></span></div>
     <div class="cred-track">
       <div class="cred-bar"><i id="barFill"></i></div>
-      <div class="flag rank0 won" id="f0" style="left:0"><span><b>New Face</b><small>Start</small></span></div>
-      <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span><b>Corner Kid</b><small>1 song</small></span></div>
-      <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span><b>OG Soldier</b><small>3 songs</small></span></div>
-      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span><b>The album</b><small>OG Protégé</small></span></div>
+      <div class="flag rank0 won" id="f0" style="left:0"><em>Start</em><span><b>New Face</b></span></div>
+      <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>1 song</em><span><b>Corner Kid</b></span></div>
+      <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>3 songs</em><span><b>OG Soldier</b></span></div>
+      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>The album</em><span><b>OG Protégé</b></span></div>
     </div>
   </section>
   <header>
