@@ -501,6 +501,15 @@ body.practice { overflow: hidden; }
 
 /* ---------- Shrink the whole page evenly on smaller windows: same layout, just smaller ---------- */
 .practice .wrap, .practice .dock { zoom: var(--z, 1); }
+/* Bay Ridge rank names on the Street Cred meter */
+.flag span b { display: block; font-weight: 800; }
+.flag span small { display: block; font-size: .82em; font-weight: 600; opacity: .8; margin-top: 1px; }
+.flag:not(.won) span b { color: #9fb3a5; }
+.flag.won span b { color: var(--gold); }
+.flag.rank0 span { transform: none; left: 0; }
+.flag.rank0, .flag.rank0.won { filter: none; }
+.cred.stuck .cred-track, .cred-track { padding-bottom: 36px; }
+.practice .cred.stuck .cred-track, .practice .cred-track { padding-bottom: 30px; }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -513,9 +522,10 @@ body.practice { overflow: hidden; }
     <div class="cred-head"><span class="cred-name">STREET CRED</span><span class="cred-hint" id="credHint"></span></div>
     <div class="cred-track">
       <div class="cred-bar"><i id="barFill"></i></div>
-      <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>1 song</span></div>
-      <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>3 songs</span></div>
-      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span>The album</span></div>
+      <div class="flag rank0 won" id="f0" style="left:0"><span><b>New Face</b><small>Start</small></span></div>
+      <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span><b>Corner Kid</b><small>1 song</small></span></div>
+      <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span><b>OG Soldier</b><small>3 songs</small></span></div>
+      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><span><b>OG Made</b><small>The album</small></span></div>
     </div>
   </section>
   <header>
@@ -614,7 +624,7 @@ const VIP = "vip-0609a49912/";
 const TOTAL_Q = EPISODES.reduce((n, e) => n + e.qs.length, 0);
 const TIERS = [{ need: 6, picks: 1 }, { need: 12, picks: 3 }, { need: 18, picks: 9 }];
 /* Bay Ridge ranks: one promotion per Street Cred milestone. The last two (Right Hand, OG '99) come with Volume 2. */
-const RANKS = ["New Face", "Corner Kid", "OG Soldier", "Made OG"];
+const RANKS = ["New Face", "Corner Kid", "OG Soldier", "OG Made"];
 const rankOf = sc => TIERS.filter(t => sc >= t.need).length;
 
 /* Graffiti "9": round loop and a straight leaning stem, no hook at the bottom.
@@ -721,7 +731,7 @@ function renderList() {
   const rk = rankOf(sc);
   $("credHint").textContent = next
     ? RANKS[rk] + " · " + (next.need - sc) + " more to " + RANKS[rk + 1]
-    : "Made OG";
+    : "OG Made";
   renderReward();
 }
 
@@ -732,7 +742,7 @@ function renderReward() {
   $("reward").classList.toggle("on", p > 0);
   if (!p) return;
   const all = p >= EPISODES.length;
-  $("rTitle").textContent = all ? "MADE OG" : "YOU EARNED A PLAYLIST";
+  $("rTitle").textContent = all ? "OG MADE" : "YOU EARNED A PLAYLIST";
   $("rText").textContent = all ? "You got every question right on the first try. The whole album is yours to stream."
     : "Pick " + (p === 1 ? "1 song" : p + " songs") + " for your own playlist. Keep answering to unlock more.";
   const box = $("picks"); box.innerHTML = "";
