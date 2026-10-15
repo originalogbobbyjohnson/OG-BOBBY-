@@ -25,8 +25,8 @@
 <style>
 /* Layout: one narrow column. Cover, how-it-works, score + reward ladder, the player with its question, then the episode list. */
 :root {
-  --bg: #0f1a12; --panel: #17251a; --panel2: #1d2f21; --line: #2a4231;
-  --fg: #eef3ea; --muted: #9db3a2; --gold: #e3b23c; --gold-dim: #8a6d24;
+  --bg: #111215; --panel: #191a1e; --panel2: #212328; --line: #30333a;
+  --fg: #f3efe6; --muted: #9a9ea6; --gold: #e3b23c; --gold-dim: #6e5a2a;
   --bad: #e26d5a; --good: #7fcf8c;
   --display: "Anton", Impact, "Arial Narrow", sans-serif;
   --graffiti: "Sedgwick Ave Display", "Permanent Marker", "Marker Felt", cursive;
@@ -57,7 +57,7 @@ h1 img { display: block; width: min(100%, 380px); height: auto; filter: drop-sha
 .label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
 /* Street cred meter */
-.cred { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 10px); z-index: 5; display: grid; gap: 4px; background: rgba(23,37,26,.97); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 10px 14px 4px; box-shadow: 0 6px 18px rgba(0,0,0,.55); backdrop-filter: blur(6px); }
+.cred { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 10px); z-index: 5; display: grid; gap: 4px; background: rgba(25,26,30,.97); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 10px 14px 4px; box-shadow: 0 6px 18px rgba(0,0,0,.55); backdrop-filter: blur(6px); }
 .mini-brand { display: none; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 2px; }
 .cred.stuck .mini-brand { display: grid; }
 .mini-cover { width: 76px; height: 43px; object-fit: cover; border-radius: 8px; border: 1px solid var(--gold-dim); display: block; }
@@ -70,9 +70,9 @@ h1 img { display: block; width: min(100%, 380px); height: auto; filter: drop-sha
 .cred-name { font-family: var(--graffiti); font-size: 1.35rem; color: var(--gold); line-height: 1; }
 .cred-hint { font-size: .85rem; color: var(--muted); }
 .cred-track { position: relative; padding-top: 30px; padding-bottom: 22px; margin-right: 22px; }
-.cred-bar { height: 16px; background: #0b130d; border: 1px solid var(--line); border-radius: 99px; overflow: hidden; }
+.cred-bar { height: 16px; background: #0a0b0d; border: 1px solid var(--line); border-radius: 99px; overflow: hidden; }
 .cred-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #8a6d24, #e3b23c 70%, #ffe08a); box-shadow: 0 0 12px rgba(227,178,60,.8); transition: width .6s ease; }
-.flag { position: absolute; top: 0; transform: translateX(-4px); display: grid; justify-items: start; color: #4f6b57; }
+.flag { position: absolute; top: 0; transform: translateX(-4px); display: grid; justify-items: start; color: #4a4d55; }
 .flag.last { transform: translateX(-4px); }
 .flag svg { width: 22px; height: 26px; fill: currentColor; }
 .flag span { position: absolute; top: 48px; left: 4px; transform: translateX(-50%); font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; color: var(--muted); }
@@ -151,7 +151,7 @@ ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 
 /* old chip styles (unused) */
 .budz { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px; text-align: left; text-decoration: none; background: radial-gradient(ellipse at center, #2f5338 0%, #26432d 60%, #1f3826 100%); border: 3px solid var(--gold); border-radius: 14px; padding: 8px 14px; color: var(--gold); animation: glowBtn 1.8s ease-in-out infinite; }
-.budz .small { display: block; color: #d8e6dc; font-size: clamp(.56rem, 2.6vw, .76rem); letter-spacing: .03em; white-space: nowrap; }
+.budz .small { display: block; color: #dcdad4; font-size: clamp(.56rem, 2.6vw, .76rem); letter-spacing: .03em; white-space: nowrap; }
 .wrap > * { min-width: 0; }
 @keyframes glowBtn {
   0%, 100% { transform: scale(1); box-shadow: 0 0 6px 1px rgba(227,178,60,.45); }
@@ -161,7 +161,7 @@ ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .budz .where { display: grid; gap: 1px; justify-items: end; text-align: right; min-width: 0; }
 .budz .small { text-transform: uppercase; }
 .budz .small.friends { color: var(--gold); font-weight: 700; }
-.dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; padding: 14px 16px calc(6px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, rgba(15,26,18,.98) 72%, rgba(15,26,18,0)); }
+.dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; padding: 14px 16px calc(6px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, rgba(17,18,21,.98) 72%, rgba(17,18,21,0)); }
 .dock-in { max-width: 508px; margin: 0 auto; display: grid; gap: 4px; }
 footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; }
 .sheet { position: fixed; inset: 0; z-index: 10; display: grid; place-items: end center; background: rgba(0,0,0,.6); padding: 16px 16px calc(16px + env(safe-area-inset-bottom, 0px)); }
@@ -512,6 +512,23 @@ body.practice { overflow: hidden; }
 .flag.won em { color: var(--gold); }
 .flag.rank0 em { right: auto; left: 0; margin: 0; }
 .practice .flag em { font-size: .52rem; }
+/* Street Cred meter, cleaned up: rewards on top in plain white, ranks below in gray until earned (then gold). No glow. */
+.flag em { color: #6f737b; font-weight: 600; letter-spacing: .08em; }
+.flag.won em { color: var(--fg); }
+.flag span b { color: #6f737b !important; font-weight: 700; }
+.flag.won span b { color: var(--gold) !important; }
+.flag.won { filter: none; color: var(--gold); }
+.flag.won span { color: var(--gold); }
+.cred { border-color: var(--line); box-shadow: 0 6px 18px rgba(0,0,0,.6); }
+.cred-bar { border-color: #26282d; }
+#credHint { display: none; }
+/* Level card header, quieter: one gray line (VOL. 1 · LEVEL 3), the title, then the part in small gray */
+#pEp .vol-tag { border: 0; padding: 0; margin-right: 0; color: var(--muted); font-family: inherit; letter-spacing: inherit; }
+#pEp .vol-tag .v1nine { display: none; }
+#pEp .vol-tag::after { content: "\00B7"; margin: 0 6px; }
+#pPart { color: var(--muted); font-weight: 600; font-size: .78rem; }
+.track .lock { background: repeating-linear-gradient(45deg, #2c2e33 0 4px, #1c1d21 4px 8px); }
+.cred-bar i { box-shadow: none; background: linear-gradient(90deg, #a07a22, #e3b23c); }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -527,7 +544,7 @@ body.practice { overflow: hidden; }
       <div class="flag rank0 won" id="f0" style="left:0"><em>Start</em><span><b>New Face</b></span></div>
       <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>1 song</em><span><b>Corner Kid</b></span></div>
       <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>3 songs</em><span><b>OG Soldier</b></span></div>
-      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>The album</em><span><b>OG Protégé</b></span></div>
+      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em><i>The album</i>9 songs</em><span><b>OG Protégé</b></span></div>
     </div>
   </section>
   <header>
@@ -1293,6 +1310,171 @@ window.scrollTo(0, 0);
   const started = Object.keys(state.keys).length || Object.keys(state.first).length;
   renderList();
   show(started ? idx + 1 : 0);
+})();
+</script>
+<style>
+/* Player buttons: back 10s, start over, PLAY, then a forward arrow that only shows once the next part is unlocked */
+#fwd { visibility: hidden; }
+
+/* ---------- Less busy: gold only for Play, earned ranks and where you are ---------- */
+/* picture: thin quiet frame */
+.practice .cover > img, .practice .cover > img[width] { border: 1px solid #2a2c31; }
+/* meter: no box, just the bar and its labels */
+.practice .cred { background: none; border: 0; box-shadow: none; padding-left: 2px; padding-right: 2px; }
+/* side arrows: plain chevrons, no boxes */
+.practice .nav-btn { background: none; border: 0; color: #8a8e96; width: 30px; }
+.practice .nav-btn:disabled { opacity: .15; }
+/* level dots: small, gray; finished = filled gray; current = gold ring */
+.practice .ep, .practice .dot-gift { width: 26px; height: 26px; background: none; border: 1px solid #34363c; }
+.practice .ep .n { color: #8a8e96; font-size: .82rem; }
+.practice .ep:has(.s.open) { background: #2a2c31; border-color: #2a2c31; }
+.practice .ep:has(.s.open) .n { color: var(--fg); }
+.practice .ep.current, .practice .dot-gift.current { border-color: var(--gold); box-shadow: none; }
+.practice .ep.current .n { color: var(--gold); }
+.practice .dot-gift { color: #8a8e96; }
+.practice .dot-gift.on { color: var(--gold); border-color: #34363c; }
+.practice #list { gap: 8px; }
+/* bottom buttons: no outlines, quiet gray, one style */
+.switchboard { gap: 2px; border-top: 1px solid #24262b; padding-top: 6px; }
+.switchboard .sb-tile { border: 0; background: none; color: #8a8e96; height: 46px; }
+.switchboard .sb-tile.on { background: none; color: var(--gold); }
+.switchboard .sb-ic.sc { background: none; color: inherit; }
+.switchboard .sb-ic.sc svg { width: 20px; height: 20px; }
+.switchboard .sb-ic .nine path, .switchboard .sb-ic .nine ellipse { stroke: currentColor; }
+.practice .dock { background: var(--bg); }
+#fwd.on { visibility: visible; }
+/* No gray lettering: meter labels and bottom buttons in white, earned ranks and the open tile stay gold */
+.flag em, .flag span, .practice .flag span { color: #fff !important; opacity: 1; }
+.flag span b, .flag:not(.won) span b { color: #fff !important; }
+.flag.won span b, .flag.won em { color: var(--gold) !important; }
+.switchboard .sb-tile { color: #fff; }
+.switchboard .sb-tile.on { color: var(--gold); }
+
+/* ---------- One connected page: meter, card and level dots sit in a single panel; one heading font; one frame style ---------- */
+.practice .wrap { gap: 8px; }
+.practice .cred { background: var(--panel); border: 1px solid var(--line); border-bottom: 0; border-radius: 16px 16px 0 0; padding: 10px 14px 0; margin-bottom: -8px; }
+.practice .stage-wrap { background: var(--panel); border-left: 1px solid var(--line); border-right: 1px solid var(--line); margin-bottom: -8px; padding: 2px 0; }
+.practice section:has(#list) { background: var(--panel); border: 1px solid var(--line); border-top: 0; border-radius: 0 0 16px 16px; padding: 10px 8px 12px; justify-content: stretch; }
+.practice #list { justify-content: center; }
+/* the cards inside the panel lose their own boxes so it reads as one piece */
+.practice .slide-intro, .practice .player, .practice .reward, .practice .raw-card, .practice .slide-empty { background: none; border: 0; box-shadow: none; padding-left: 4px; padding-right: 4px; }
+/* one heading font everywhere (the OG BOBBY wordmark stays as is) */
+.cred-name, .intro-title, .practice .intro-title, .raw-title, .reward h3, .slide-empty h3, .promo-name, .rank-toast .rk, .sw2-name { font-family: var(--display) !important; font-weight: 400; letter-spacing: .06em; }
+.practice .cred-name { font-size: 1rem; color: var(--gold); }
+.practice .intro-title { font-size: 1.5rem; }
+/* picture and name read as one header */
+.practice .cover > img, .practice .cover > img[width] { border: 1px solid var(--line); }
+.practice header { gap: 4px; }
+/* bottom bar joins the page instead of floating */
+.switchboard { border-top: 0; }
+.practice .dock { background: var(--bg); }
+/* no seams: the panel pieces butt together, the picture keeps a little air below it */
+.practice .wrap { gap: 0 !important; align-content: start !important; }
+.practice header { margin-bottom: 10px; }
+.practice .cred, .practice .stage-wrap { margin-bottom: 0; }
+.practice .stage-wrap { padding: 0; }
+.practice .quiz, .practice .done-note { border-top-color: var(--line); }
+/* leftover gray lettering goes white */
+.practice #pEp, .practice #pEp .vol-tag, .practice #pPart, .practice .times, .practice .ep .n, .practice .dot-gift, .practice .nav-btn, .practice .msg { color: #fff; }
+.practice .ep.current .n { color: var(--gold); }
+.practice .ep, .practice .dot-gift { border-color: #5a5d64; }
+
+/* ---------- Cleaner meter: STREET CRED centered on top; each marker is a dot on the bar with its song count right above it and its rank right below it ---------- */
+.practice .cred-head { justify-content: center; }
+.practice .cred-name { font-size: 1.05rem; letter-spacing: .14em; }
+.practice .cred.stuck .cred-track, .practice .cred-track { padding-top: 22px; padding-bottom: 28px; margin: 6px 12px 0; }
+.practice .cred-bar { height: 6px; }
+.practice .flag, .practice .flag.last { top: 0; transform: none; width: 0; height: 0; filter: none; }
+.practice .flag svg { display: none; }
+.practice .flag::before { content: ""; position: absolute; top: 19px; left: -6px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid #fff; box-sizing: border-box; }
+.practice .flag.won::before { background: var(--gold); border-color: var(--gold); }
+.practice .flag em { top: 0; left: 0; right: auto; margin: 0; transform: translateX(-50%); font-size: .6rem; letter-spacing: .08em; }
+.practice .flag span, .practice .cred.stuck .flag span { top: 36px; left: 0; transform: translateX(-50%); font-size: .62rem; }
+/* ends: Start has no label on top; the last marker's words line up to its right edge */
+.practice .flag.rank0 em { display: none; }
+.practice .flag.rank0::before { left: -2px; }
+.practice .flag.rank0 span { transform: translateX(-8px); }
+.practice .flag.last::before { left: -10px; }
+.practice .flag.last em, .practice .flag.last span, .practice .cred.stuck .flag.last span { transform: translateX(-100%); left: 4px; }
+.practice .cred.stuck .flag.rank0 span { transform: none; left: -4px; }
+.practice .cred { box-shadow: none !important; }
+/* OG BOBBY wordmark: centered between the picture and the panel, a bit smaller */
+.practice .name-row { justify-content: center; padding: 2px 0; }
+.practice .name-row h1 { width: min(46%, 200px) !important; }
+/* last marker: 9 SONGS on the leg, THE ALBUM stacked right above it */
+.flag em i { position: absolute; right: 0; bottom: 100%; margin-bottom: 3px; font-style: normal; white-space: nowrap; }
+.flag.won em i { color: var(--gold); }
+/* Level line reads: '9 · VOL. 1 · LEVEL 5 */
+#pEp .vol-tag { display: inline-flex; align-items: center; }
+#pEp .vol-tag .v1nine { display: inline-flex !important; align-items: flex-start; }
+#pEp .vol-tag .v1nine .tick { color: #fff; font-size: 1.35rem; line-height: .8; margin-right: 1px; text-shadow: none; }
+#pEp .vol-tag .v1nine .nine { width: 13px; }
+#pEp .vol-tag .v1nine::after { content: "\00B7"; margin: 0 8px 0 10px; align-self: center; }
+
+/* ---------- Song card: just VOL. 1 · LEVEL 5, then the song name big and centered ---------- */
+.practice .player > div:first-child { text-align: center; }
+.practice #pPart, .practice .lvl-count { display: none !important; }
+.practice #pEp { font-size: .78rem; letter-spacing: .16em; }
+.practice #pTitle { font-family: var(--display); font-size: 2.5rem; line-height: 1.05; letter-spacing: .03em; color: #fff; margin: 4px 0 6px; text-wrap: balance; }
+</style>
+<script>
+(function () {
+  const ctr = document.querySelector(".controls");
+  ctr.insertBefore($("restart"), $("play"));
+  const f = document.createElement("button");
+  f.type = "button"; f.className = "btn-round"; f.id = "fwd"; f.setAttribute("aria-label", "Skip to the next part");
+  f.innerHTML = '<svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg>';
+  ctr.append(f);
+  const nextOk = () => { if (idx < 0) return false; const e = EPISODES[idx]; return sec < e.qs.length && !!keysOf(e)[sec]; };
+  const upd = () => f.classList.toggle("on", nextOk());
+  f.onclick = () => { if (nextOk()) { playSection(sec + 1, true); upd(); } };
+  ["loadstart", "play", "pause", "ended"].forEach(ev => audio.addEventListener(ev, upd));
+  const baseRL2 = renderList;
+  renderList = function () { baseRL2.apply(this, arguments); upd(); };
+  upd();
+})();
+</script>
+<style>
+/* ---------- Top of page: MUSIC GAME title, OG BOBBY sits on the picture, picture sits right on the panel, whole stack centered top to bottom ---------- */
+.practice .wrap { align-content: center !important; padding-top: 30px; }
+.practice header { margin-bottom: 6px !important; }
+.practice header { grid-template-rows: auto minmax(0, 1fr) !important; }
+.practice .name-row { grid-row: 1; justify-content: center !important; padding: 0 0 6px !important; }
+.practice header .cover { grid-row: 2; }
+.game-title { font-family: var(--display); font-size: 1.05rem; letter-spacing: .2em; color: var(--gold); text-align: center; line-height: 1.2; }
+.practice .cover { position: relative; }
+.practice .cover h1.on-pic { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); width: min(38%, 180px) !important; margin: 0; line-height: 0; z-index: 2; }
+.practice .cover h1.on-pic img { width: 100%; height: auto; filter: drop-shadow(0 2px 3px rgba(0,0,0,.95)) drop-shadow(0 0 10px rgba(0,0,0,.7)); }
+
+/* ---------- Song card: just LEVEL 6 over the song name; the big '9 with VOL. 1 sits in the empty space on the left ---------- */
+#pEp .vol-tag { display: none !important; }
+.practice .player > div:first-child { position: relative; padding: 0 60px; min-height: 64px; display: grid; align-content: center; }
+.vol-big { position: absolute; left: 0; top: 50%; transform: translateY(-50%); display: grid; justify-items: center; gap: 5px; }
+.vol-big.right { left: auto; right: 0; }
+.vol-big .v1nine { display: inline-flex; align-items: flex-start; }
+.vol-big .v1nine .tick { font-family: var(--display); font-size: 2.6rem; line-height: .8; color: #fff; text-shadow: 2px 2px 0 #000; margin-right: 1px; }
+.vol-big .nine { width: 30px; }
+.vol-big .lab { font: 700 .62rem/1 var(--body); letter-spacing: .16em; color: #fff; white-space: nowrap; }
+</style>
+<script>
+(function () {
+  // OG BOBBY moves onto the bottom of the picture; MUSIC GAME takes its old spot above the picture
+  const nr = document.querySelector(".name-row"), cover = document.querySelector(".practice .cover");
+  if (nr && cover) {
+    const h1 = nr.querySelector("h1");
+    if (h1) { h1.classList.add("on-pic"); cover.append(h1); }
+    const t = document.createElement("div"); t.className = "game-title"; t.textContent = "MUSIC GAME";
+    nr.append(t);
+  }
+  // big '9 + VOL. 1 on the left of every level card (Volume 2 levels will put it on the right with .right)
+  const head = document.querySelector("#player > div:first-child");
+  if (head) {
+    const b = document.createElement("div"); b.className = "vol-big"; b.setAttribute("aria-label", "Volume 1");
+    b.innerHTML = '<span class="v1nine"><span class="tick">’</span>' + nineSvg(1) + '</span><span class="lab">VOL. 1</span>';
+    head.append(b);
+  }
+  window.dispatchEvent(new Event("resize"));
+  setTimeout(() => window.dispatchEvent(new Event("resize")), 300);
 })();
 </script>
 </body>
