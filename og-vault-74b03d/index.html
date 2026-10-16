@@ -12,30 +12,96 @@
 :root { --bg:#0f1a12; --panel:#17251a; --line:#2a4231; --gold:#e3b23c; color-scheme: dark; }
 * { box-sizing: border-box; }
 html, body { margin: 0; background: var(--bg); color: #fff; font-family: "Barlow", system-ui, sans-serif; }
-main { max-width: 520px; margin: 0 auto; padding: 24px 16px 48px; display: grid; gap: 16px; }
+main { max-width: 540px; margin: 0 auto; padding: 22px 16px 150px; display: grid; gap: 14px; }
 .top { display: flex; align-items: center; gap: 12px; }
 .wm { width: 150px; height: auto; filter: drop-shadow(2px 2px 0 #000); }
-h1 { margin: 0; font-family: "Anton", Impact, sans-serif; font-weight: 400; font-size: 1.7rem; letter-spacing: .06em; color: var(--gold); }
-.song { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; display: grid; gap: 8px; }
-.song h2 { margin: 0; font-family: "Anton", Impact, sans-serif; font-weight: 400; font-size: 1.15rem; letter-spacing: .04em; }
-.song p { margin: 0; font-size: .85rem; color: #fff; }
-audio { width: 100%; }
+h1 { margin: 0; font-family: "Anton", Impact, sans-serif; font-weight: 400; font-size: 1.8rem; letter-spacing: .06em; color: var(--gold); }
+details { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; font-family: "Anton", Impact, sans-serif; font-size: 1.15rem; letter-spacing: .06em; color: var(--gold); }
+summary::-webkit-details-marker { display: none; }
+summary .n { font-family: "Barlow", sans-serif; font-weight: 700; font-size: .8rem; color: #fff; }
+summary::after { content: "+"; margin-left: 10px; color: var(--gold); font-family: "Barlow", sans-serif; font-size: 1.3rem; }
+details[open] summary::after { content: "–"; }
+ol { margin: 0; padding: 0 8px 8px; list-style: none; }
+li button { width: 100%; display: grid; grid-template-columns: 34px 1fr auto; align-items: center; gap: 10px; background: none; border: 0; border-top: 1px solid var(--line); color: #fff; text-align: left; padding: 11px 8px; font: inherit; cursor: pointer; }
+li button .i { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--gold); display: grid; place-items: center; color: var(--gold); }
+li button .i svg { width: 13px; height: 13px; fill: currentColor; }
+li button b { display: block; font-weight: 700; font-size: .98rem; }
+li button small { display: block; font-size: .78rem; color: #fff; opacity: .85; margin-top: 2px; }
+li button .d { font-size: .82rem; font-variant-numeric: tabular-nums; }
+li button.on { background: rgba(227,178,60,.12); }
+li button.on .i { background: var(--gold); color: #000; }
+.player { position: fixed; left: 0; right: 0; bottom: 0; background: #0b130d; border-top: 1px solid var(--gold); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
+.player .in { max-width: 540px; margin: 0 auto; display: grid; gap: 6px; }
+.player .t { font-family: "Anton", Impact, sans-serif; letter-spacing: .05em; font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.player audio { width: 100%; height: 40px; }
 </style>
 </head>
 <body>
 <main>
   <div class="top"><img class="wm" src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"><h1>OG VAULT</h1></div>
-  <!-- VAULT: newest first -->
-  <section class="song">
-    <h2>THE GET BACK · V1</h2>
-    <p>Original version · retired Oct 16, 2026</p>
-    <audio controls preload="none" src="the-get-back-v1.mp3"></audio>
-  </section>
-  <section class="song">
-    <h2>WHATEVER IT TAKES · V1</h2>
-    <p>Original version · retired Oct 16, 2026</p>
-    <audio controls preload="none" src="whatever-it-takes-v1.mp3"></audio>
-  </section>
+  <div id="vault"></div>
 </main>
+<div class="player"><div class="in"><div class="t" id="now">Tap a song to play</div><audio id="a" controls preload="none"></audio></div></div>
+<script>
+// Every song, grouped. Newest retired versions go at the top of "Old Versions".
+const VAULT = [
+  { name: "Volume 1 · Now Playing", open: true, songs: [
+    ["Whatever It Takes", "Current version", "../m/d3ab12f57f9a.mp3", 160],
+    ["Ridge Brothers", "Current version", "../m/a1fe8390ba3c.mp3", 224],
+    ["Bay Ridge Nights", "Current version", "../m/852a39797d0e.mp3", 204],
+    ["The Get Back", "Current version · raw cut", "../m/25ecbcfe1e48.mp3", 210],
+    ["Pioneer", "Current version", "../m/94b1e9bbeb9e.mp3", 208],
+    ["Bars & Clubs", "Current version", "../m/6abe6700735e.mp3", 179],
+    ["Bay Ridge Is Mine", "Current version", "../m/e9f4ac8096a8.mp3", 281],
+    ["Black Rob", "Current version", "../m/814f5a9e2c7b.mp3", 215],
+    ["Positivity Spreads", "Current version", "../m/85cfe59cf72c.mp3", 287] ]},
+  { name: "Volume 2 · '99", songs: [
+    ["After Hours", "Current version", "../after-hours-9fac51/after-hours-7.mp3", 277],
+    ["Mikey the Rat", "Current version", "../mikey-the-rat-ff9b21/mikey-the-rat.mp3", 263] ]},
+  { name: "Raw Cuts", songs: [
+    ["Pioneer · Raw Cut", "Unlocks after Level 5", "../pioneer-raw-f97707/pioneer-raw.mp3", 202] ]},
+  { name: "Old Versions", songs: [
+    ["Whatever It Takes · V1", "Retired Oct 16, 2026", "whatever-it-takes-v1.mp3", 168],
+    ["The Get Back · V2", "Retired Oct 16, 2026", "the-get-back-v2.mp3", 187],
+    ["The Get Back · V1", "Oct 8, 2026", "the-get-back-v1.mp3", 190],
+    ["Bay Ridge Nights · V1", "Before the outro edit", "bay-ridge-nights-v1.mp3", 206],
+    ["After Hours · V1", "Before the word edits", "after-hours-v1.mp3", 277],
+    ["Black Rob · Alt Take", "Oct 11, 2026", "black-rob-alt.mp3", 228],
+    ["Bay Ridge Is Mine · V1", "Original version", "bay-ridge-is-mine-v1.mp3", 265],
+    ["Pioneer · V1", "Original version", "pioneer-v1.mp3", 216] ]},
+  { name: "OG Budz Era", songs: [
+    ["OG Budz", "", "og-budz.mp3", 57],
+    ["OG Budz · Male", "", "og-budz-male.mp3", 57],
+    ["OG Budz · Girl", "", "og-budz-girl.mp3", 51],
+    ["OG Drill 1", "", "og-drill-1.mp3", 44],
+    ["OG Drill 2", "", "og-drill-2.mp3", 54],
+    ["OG Delivery 1", "", "og-delivery-1.mp3", 47],
+    ["OG Delivery 2", "", "og-delivery-2.mp3", 50],
+    ["OG'z", "", "ogz.mp3", 137],
+    ["Private Vault", "", "private-vault.mp3", 63],
+    ["Off The Feet", "", "off-the-feet.mp3", 113],
+    ["Drexterminator", "", "drexterminator.mp3", 194],
+    ["Mint", "", "mint.mp3", 170],
+    ["It's Mint", "", "its-mint.mp3", 121] ]},
+  { name: "Mixes", songs: [
+    ["OG Made · Nonstop Mix", "All 9 Volume 1 songs blended", "../m/133ed2d14295.mp3", 1928] ]}
+];
+const play = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+const fmt = s => Math.floor(s / 60) + ":" + String(Math.round(s % 60)).padStart(2, "0");
+const a = document.getElementById("a"), now = document.getElementById("now");
+let cur = null;
+document.getElementById("vault").innerHTML = VAULT.map(sec =>
+  `<details${sec.open ? " open" : ""}><summary><span>${sec.name.toUpperCase()}</span><span class="n" style="margin-left:auto">${sec.songs.length}</span></summary><ol>` +
+  sec.songs.map(([t, sub, src, d]) => `<li><button data-src="${src}" data-t="${t}"><span class="i">${play}</span><span><b>${t}</b>${sub ? `<small>${sub}</small>` : ""}</span><span class="d">${fmt(d)}</span></button></li>`).join("") +
+  `</ol></details>`).join("");
+document.querySelectorAll("li button").forEach(b => b.onclick = () => {
+  if (cur === b) { a.paused ? a.play() : a.pause(); return; }
+  if (cur) cur.classList.remove("on");
+  cur = b; b.classList.add("on");
+  a.src = b.dataset.src; now.textContent = b.dataset.t; a.play().catch(() => {});
+});
+document.querySelector(".player").style.display = "block";
+</script>
 </body>
 </html>
