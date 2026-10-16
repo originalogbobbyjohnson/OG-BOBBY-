@@ -305,6 +305,10 @@ body.practice { overflow: hidden; }
 .howpage .hp-dots { display: flex; gap: 10px; }
 .howpage .hp-dots button { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%; background: #555; cursor: pointer; }
 .howpage .hp-dots button.on { background: #fff; }
+.slide-intro.welcome .hp-count, .slide-intro.welcome .hp-dots { visibility: hidden; }
+.slide-intro .wb-how { justify-self: center; background: none; border: 0; color: #fff; font: inherit; font-size: .9rem; text-decoration: underline; text-underline-offset: 3px; padding: 4px 8px; cursor: pointer; }
+.slide-intro .wb-how[hidden] { display: none; }
+.slide-intro.welcome .btn.start { white-space: nowrap; width: auto !important; max-width: none !important; letter-spacing: .08em !important; padding-left: 24px !important; padding-right: 24px !important; font-size: 1.15rem !important; }
 .practice .start { font-family: var(--display); font-size: 1.5rem; letter-spacing: .1em; padding: 10px 44px; animation: glowBtn 1.8s ease-in-out infinite; }
 @media (max-height: 1px) {
   .practice .cover > img { height: 98px; }
@@ -1055,6 +1059,29 @@ window.scrollTo(0, 0);
     if (navReady && v === 0) prev.disabled = hp === 0;
   }
   let navReady = false;
+  // returning players: one welcome-back window instead of the 5 pages
+  let welcome = false;
+  const howTitle = intro.querySelector(".intro-title");
+  const wbLink = document.createElement("button");
+  wbLink.type = "button"; wbLink.className = "wb-how"; wbLink.textContent = "See how to play";
+  wbLink.hidden = true;
+  wbLink.onclick = () => setWelcome(false);
+  function setWelcome(on) {
+    welcome = on;
+    intro.classList.toggle("welcome", on);
+    wbLink.hidden = !on;
+    if (on) {
+      const done = score(), left = EPISODES.length - done;
+      howTitle.textContent = "Welcome back";
+      hpHead.textContent = "Your game is right where you left it.";
+      hpBody.textContent = RANKS[rankOf(blocksDone())] + " \u00b7 " + done + " of " + EPISODES.length + " songs done" + (left ? "" : " \u00b7 Volume 1 earned");
+      startBtn.textContent = "RETURN TO YOUR GAME";
+      if (navReady) prev.disabled = true;
+    } else {
+      howTitle.textContent = "How to play";
+      howPage(0);
+    }
+  }
   howPage(0);
   const empty = document.createElement("div"); empty.className = "slide-empty"; empty.hidden = true;
   empty.innerHTML = "<h3>Rewards</h3><p>Finish songs 1-2-3, 4-5-6 or 7-8-9 to earn that block's playlist. All 9 earns all of Volume 1.</p>";
@@ -1077,7 +1104,7 @@ window.scrollTo(0, 0);
   function show(nv) {
     const was = v;
     v = Math.max(0, Math.min(REWARD, nv));
-    if (v === 0 && was !== 0) howPage(0);
+    if (v === 0 && was !== 0) { if (welcome) setWelcome(false); else howPage(0); }
     if (v === 0) audio.pause();   // the how-to-play card is always quiet
     stage.dataset.v = v === 0 ? "intro" : v === REWARD ? "reward" : "ep";
     empty.hidden = !(v === REWARD && earnedPicks() === 0);
@@ -1119,7 +1146,11 @@ window.scrollTo(0, 0);
   prev.onclick = () => step(-1);
   next.onclick = () => step(1);
   navReady = true;
-  startBtn.onclick = () => hp < HOW.length - 1 ? howPage(hp + 1) : go((idx < 0 ? 0 : idx) + 1);
+  startBtn.onclick = () => {
+    if (welcome) { setWelcome(false); go((idx < 0 ? 0 : idx) + 1); return; }
+    hp < HOW.length - 1 ? howPage(hp + 1) : go((idx < 0 ? 0 : idx) + 1);
+  };
+  intro.append(wbLink);
   document.addEventListener("keydown", e => {
     if ($("localSheet") && !$("localSheet").hidden) return;
     if ($("menuSheet") && !$("menuSheet").hidden) return;
@@ -1275,6 +1306,7 @@ window.scrollTo(0, 0);
   }
   const exitRaw = exitMode;
   function step(d) {
+    if (!mode && v === 0 && welcome) { if (d > 0) startBtn.click(); return; }
     if (!mode && v === 0 && hp + d >= 0 && hp + d < HOW.length) return howPage(hp + d);
     if (!mode) return go(v + d);
     if (mode === "v2") return d < 0 ? exitMode() : null;
@@ -1386,10 +1418,11 @@ window.scrollTo(0, 0);
   // story audio and raw audio never play over each other
   audio.addEventListener("play", () => rawAudio.pause());
 
-  // first visit opens on the intro card; returning players open where they left off
+  // every visit opens on the intro card: new players get the 5 pages, returning players get one welcome-back window
   const started = Object.keys(state.keys).length || Object.keys(state.first).length;
   renderList();
-  show(started ? idx + 1 : 0);
+  show(0);
+  if (started) setWelcome(true);
 })();
 </script>
 <style>
