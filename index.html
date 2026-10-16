@@ -1550,7 +1550,7 @@ window.scrollTo(0, 0);
   if (head && typeof nineSvg === "function" && !head.querySelector(".vol-big.ghost")) {
     const g = document.createElement("div"); g.className = "vol-big right ghost"; g.setAttribute("aria-label", "Volume 2, coming next");
     g.innerHTML = '<span class="v1nine">' + nineSvg(1) + '</span><span class="lab">VOL. 2</span>';
-    const rel = document.createElement("div"); rel.className = "album-release"; rel.textContent = "\u201999 ALBUM RELEASE";
+    const rel = document.createElement("div"); rel.className = "album-release"; rel.textContent = "\u201999 \u2013 THE ALBUM";
     head.prepend(rel);
     head.append(g);
   }
@@ -1633,6 +1633,7 @@ html, body, body.practice { background: #fff !important; }
 .practice .cred .flag.ranked span, .practice .cred .flag.ranked span b, .practice .cred .flag.rank0 span, .practice .cred .flag.rank0 span b { color: #1a8a3a !important; }
 .practice .cred #f3.won em i { color: #c81e1e !important; }
 .practice .cred #f3.ranked em i { color: #1a8a3a !important; }
+.album-release { white-space: nowrap; padding: 8px 28px !important; margin-top: 10px !important; }
 </style>
 </body>
 </html>
