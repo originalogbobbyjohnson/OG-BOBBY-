@@ -1423,6 +1423,25 @@ window.scrollTo(0, 0);
   renderList();
   show(0);
   if (started) setWelcome(true);
+
+  // coming back to the game (switching apps, swiping back in, reopening a saved tab) always lands on the
+  // entrance window again — unless music is playing, so nobody's song gets cut off
+  function entrance() {
+    const playing = (!audio.paused && !audio.ended) || (!rawAudio.paused && !rawAudio.ended);
+    if (playing) return;
+    document.querySelectorAll(".sheet").forEach(sh => { sh.hidden = true; });
+    if (mode) exitMode();
+    const back = Object.keys(state.keys).length || Object.keys(state.first).length;
+    show(0);
+    if (back) setWelcome(true); else { setWelcome(false); }
+    window.scrollTo(0, 0);
+  }
+  let hiddenAt = 0;
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") hiddenAt = Date.now();
+    else if (hiddenAt && Date.now() - hiddenAt > 3000) entrance();
+  });
+  window.addEventListener("pageshow", e => { if (e.persisted) entrance(); });
 })();
 </script>
 <style>
