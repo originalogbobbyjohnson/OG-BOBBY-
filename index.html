@@ -538,13 +538,13 @@ body.practice { overflow: hidden; }
     <div class="mini-brand">
       <h1><img class="mini-word" src="brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"></h1>
     </div>
-    <div class="cred-head"><span class="cred-name">STREET CRED</span><span class="cred-hint" id="credHint"></span></div>
+    <div class="cred-head"><span class="cred-name">STREET CRED METER</span><span class="cred-hint" id="credHint"></span></div>
     <div class="cred-track">
       <div class="cred-bar"><i id="barFill"></i></div>
       <div class="flag rank0 won" id="f0" style="left:0"><em>Start</em><span><b>New Face</b></span></div>
       <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>1 song</em><span><b>Corner Kid</b></span></div>
       <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>3 songs</em><span><b>OG Soldier</b></span></div>
-      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em><i>The album</i>9 songs</em><span><b>OG Protégé</b></span></div>
+      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em><i>Album</i>9 songs</em><span><b>OG Protégé</b></span></div>
     </div>
   </section>
   <header>
@@ -1477,5 +1477,19 @@ window.scrollTo(0, 0);
   setTimeout(() => window.dispatchEvent(new Event("resize")), 300);
 })();
 </script>
+<style>
+/* ---------- Picture runs edge to edge (no card frame); same height, wider view ---------- */
+.practice header .cover { margin-left: -16px; margin-right: -16px; }
+.practice .cover > img, .practice .cover > img[width] { width: 100% !important; height: 100% !important; max-height: none; aspect-ratio: auto; object-fit: cover; border: 0 !important; border-radius: 0 !important; }
+/* ---------- Street Cred Meter reads as a gauge, not a slider: straight bar, hairline dividers edge to edge, tick marks instead of round knobs ---------- */
+.practice .cred { border-left: 0 !important; border-right: 0 !important; border-top: 1px solid #34363c !important; border-bottom: 1px solid #34363c !important; border-radius: 0 !important; margin-left: -16px; margin-right: -16px; padding: 8px 16px 0 !important; pointer-events: none; user-select: none; }
+.practice .cred-bar { height: 8px; border-radius: 0 !important; border: 0; background: repeating-linear-gradient(90deg, #1b1d21 0 calc(11.111% - 2px), #0e0f12 calc(11.111% - 2px) 11.111%); }
+.practice .cred-bar i { border-radius: 0 !important; }
+.practice .flag::before { width: 2px !important; height: 18px !important; left: -1px !important; top: 16px !important; border: 0 !important; border-radius: 0 !important; background: #fff !important; }
+.practice .flag.won::before { background: var(--gold) !important; }
+.practice .flag.rank0::before { left: 0 !important; }
+.practice .flag.last::before { left: -2px !important; }
+.practice .cred-name { letter-spacing: .1em; }
+</style>
 </body>
 </html>
