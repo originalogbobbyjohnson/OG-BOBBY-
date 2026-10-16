@@ -1093,6 +1093,16 @@ window.scrollTo(0, 0);
     const free = inner - 3 * gap - 6 - h(nameRow) - h($("cred")) - stage.scrollHeight - h(listSec) - 2;
     const pic = Math.max(floor, Math.min(natural, Math.floor(free)));
     wrap.style.gridTemplateRows = Math.ceil(pic + 6 + h(nameRow)) + "px auto minmax(0, auto) auto";
+    // second pass: any space still left over on screen goes to the picture
+    const kids = [...wrap.children].filter(el => el.getClientRects().length && getComputedStyle(el).position !== "fixed");
+    if (kids.length) {
+      const used = (kids[kids.length - 1].getBoundingClientRect().bottom - kids[0].getBoundingClientRect().top) / Z;
+      const extra = Math.floor(inner - used - 4);
+      if (extra > 2 && pic < natural) {
+        const pic2 = Math.min(natural, pic + extra);
+        wrap.style.gridTemplateRows = Math.ceil(pic2 + 6 + h(nameRow)) + "px auto minmax(0, auto) auto";
+      }
+    }
   }
   fitDock();
   try { new ResizeObserver(fitDock).observe(dock, { box: "border-box" }); } catch (e) {}
@@ -1537,7 +1547,9 @@ window.scrollTo(0, 0);
   const head = document.querySelector("#player > div:first-child");
   if (head && typeof nineSvg === "function" && !head.querySelector(".vol-big.ghost")) {
     const g = document.createElement("div"); g.className = "vol-big right ghost"; g.setAttribute("aria-label", "Volume 2, coming next");
-    g.innerHTML = '<span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span><span class="lab">VOL. 2</span><span class="lab next">NEXT</span>';
+    g.innerHTML = '<span class="v1nine">' + nineSvg(1) + '</span><span class="lab">VOL. 2</span>';
+    const rel = document.createElement("div"); rel.className = "album-release"; rel.textContent = "\u201999 ALBUM RELEASE";
+    head.prepend(rel);
     head.append(g);
   }
   window.dispatchEvent(new Event("resize"));
@@ -1546,6 +1558,12 @@ window.scrollTo(0, 0);
 <style>
 .vol-big.ghost { opacity: .28; pointer-events: none; }
 .vol-big.ghost .lab.next { font-size: .55rem; letter-spacing: .2em; margin-top: -2px; }
+/* reward markers sit right over the block that earns them: 1 song over block 3, 3 songs over block 6 */
+.practice #f1 { left: 27.78% !important; }
+.practice #f2 { left: 61.11% !important; }
+.album-release { text-align: center; font: 700 .62rem/1 var(--body); letter-spacing: .2em; color: var(--gold); margin-bottom: 6px; }
+/* the board sits lower and the picture up top grows into the spare space */
+.practice .wrap { padding-top: 14px !important; }
 </style>
 <style>
 /* White game board: the page behind everything is white; meter, song card and bottom bar stay dark panels with white text */
