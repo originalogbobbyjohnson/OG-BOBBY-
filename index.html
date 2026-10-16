@@ -1578,6 +1578,15 @@ window.scrollTo(0, 0);
 /* reward markers sit right over the block that earns them: 1 song over block 3, 3 songs over block 6 */
 .practice #f1 { left: 27.78% !important; }
 .practice #f2 { left: 61.11% !important; }
+/* Street Cred meter panel is white; dark blocks with white numbers pop on it; labels use deeper yellow/green so they read on white */
+.practice .cred { background: #fff !important; border-color: #e3e3e3 !important; }
+.practice .cred .cred-name { color: #b8860b !important; }
+.practice .cred .flag em, .practice .cred .flag em i, .practice .cred .flag span b { color: #b8860b !important; }
+.practice .cred .flag.won em, .practice .cred .flag.won em i, .practice .cred .flag.won span b { color: #1a8a3a !important; }
+.practice #list.on-meter .ep { background: #17181c !important; border-color: #17181c !important; }
+.practice #list.on-meter .ep:has(.s.open) { background: #1f8a3c !important; border-color: #1f8a3c !important; }
+.practice #list.on-meter .ep.current { border-color: #e3b23c !important; box-shadow: 0 0 0 2px #e3b23c !important; }
+.practice #list.on-meter .dot-gift { color: #b8860b !important; }
 #ff10 { display: none; }
 #ff10.on { display: grid; border-color: #2fbf57 !important; color: #2fbf57 !important; }
 #ff10.on svg { fill: #2fbf57; }
