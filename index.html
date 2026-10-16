@@ -1840,6 +1840,11 @@ html, body, body.practice { background: #fff !important; }
 /* '99 the album: big graffiti '99 centered, THE ALBUM underneath, all inside the starred double frame */
 .album-release.big { display: flex !important; flex-direction: column; align-items: center; gap: 6px; padding: 10px 24px 9px !important; margin: 6px auto 10px !important; width: max-content; max-width: 100%; box-sizing: border-box; }
 .album-release.big::before, .album-release.big::after { content: none !important; }
+/* apostrophe closer to the 9 on every '9 and '99 (gap cut about in half, still not touching) */
+.album-release.big .ar-num .tick { margin-right: -3px !important; }
+.vol-big .v1nine .tick, .vol-badge .v1nine .tick { margin-right: -2.25px !important; }
+.ninety-nine .v1nine .tick, .ninety-nine .tick { margin-right: -3.9px !important; }
+#pEp .vol-tag .v1nine .tick { margin-right: -1px !important; }
 .album-release.big .ar-num { display: inline-flex; align-items: flex-start; gap: 0; }
 .album-release.big .ar-num .tick { font-family: var(--display); font-size: 2.1rem; line-height: .8; color: #fff; text-shadow: 2px 2px 0 #000; margin-right: 2px; }
 .album-release.big .ar-num svg.nine { width: 31px; height: 44px; }
