@@ -1839,5 +1839,37 @@ html, body, body.practice { background: #fff !important; }
 .pl-song:active { border-color: #1f8a3c; }
 #rText { color: #fff !important; }
 </style>
+<script>
+/* Auto-update: everyone gets the newest game without swiping out. Checks when the page opens, when the player comes
+   back to it, and every few minutes. Never reloads while music is playing or a window is open; progress is saved. */
+(function () {
+  const sig = d => { let t = ""; d.querySelectorAll("script:not([src]), style").forEach(n => { t += n.textContent; }); let h = 0; for (let i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) | 0; return h + ":" + t.length; };
+  let mine = null, pending = false, checking = false;
+  const busy = () => [...document.querySelectorAll("audio, video")].some(a => !a.paused && !a.ended) || [...document.querySelectorAll(".sheet")].some(s => !s.hidden);
+  const go = () => { if (!pending) return; if (busy()) return; location.reload(); };
+  async function check() {
+    if (checking || pending) return; checking = true;
+    try {
+      const r = await fetch(location.pathname + "?u=" + Date.now(), { cache: "no-store" });
+      if (r.ok) {
+        const d = new DOMParser().parseFromString(await r.text(), "text/html");
+        if (mine === null) mine = sig(document);
+        const theirs = sig(d);
+        if (d.getElementById("menuSheet") && theirs !== mine) {
+          let tried = null; try { tried = sessionStorage.getItem("ogUpd"); sessionStorage.setItem("ogUpd", theirs); } catch (e) {}
+          if (tried !== theirs) { pending = true; go(); }
+        }
+      }
+    } catch (e) {}
+    checking = false;
+  }
+  window.addEventListener("load", () => { mine = sig(document); setTimeout(check, 3000); });
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") { if (pending) go(); else check(); } });
+  window.addEventListener("pageshow", e => { if (e.persisted) check(); });
+  setInterval(() => { if (pending) go(); else if (document.visibilityState === "visible") check(); }, 4 * 60 * 1000);
+  document.addEventListener("pause", go, true); document.addEventListener("ended", go, true);
+  document.addEventListener("click", () => setTimeout(go, 400), true);
+})();
+</script>
 </body>
 </html>
