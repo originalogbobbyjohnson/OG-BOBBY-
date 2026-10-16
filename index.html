@@ -1604,6 +1604,86 @@ window.scrollTo(0, 0);
   window.dispatchEvent(new Event("resize"));
 })();
 
+/* rank names: centered under each block of 3; New Face sits left of song 1 */
+(function () {
+  const btn = n => document.querySelectorAll("#list .ep")[n];
+  function placeRanks() {
+    const b0 = btn(0); if (!b0 || !b0.offsetWidth) return;
+    [["f1", 1], ["f2", 4], ["f3", 7]].forEach(([id, mid]) => {
+      const f = document.getElementById(id), sp = f && f.querySelector("span"), m = btn(mid); if (!sp || !m) return;
+      const fr = f.getBoundingClientRect(), mr = m.getBoundingClientRect();
+      sp.style.transform = "none"; sp.style.right = "auto";
+      sp.style.left = (mr.left + mr.width / 2 - fr.left - sp.offsetWidth / 2) + "px";
+    });
+    const f0 = document.getElementById("f0"), s0 = f0 && f0.querySelector("span"); if (!s0) return;
+    s0.classList.add("nf-side");
+    const fr = f0.getBoundingClientRect(), br = b0.getBoundingClientRect();
+    s0.style.transform = "none"; s0.style.right = "auto";
+    s0.style.left = (br.left - 6 - s0.offsetWidth - fr.left) + "px";
+    s0.style.setProperty("top", (br.top + br.height / 2 - s0.offsetHeight / 2 - fr.top) + "px", "important");
+  }
+  window.addEventListener("resize", () => requestAnimationFrame(placeRanks));
+  window.addEventListener("load", placeRanks);
+  setTimeout(placeRanks, 50); setTimeout(placeRanks, 600);
+  window.ogPlaceRanks = placeRanks;
+})();
+
+/* OG's voice: welcome, one-song-away nudges, rank-ups, and quick answer reactions. Never plays over the music. */
+(function () {
+  const VO = {
+    hi: "vo/v01.mp3",
+    tease: ["vo/v02.mp3", "vo/v04.mp3", "vo/v06.mp3"],
+    rank: { "Corner Kid": "vo/v03.mp3", "OG Soldier": "vo/v05.mp3", "OG Prot\u00e9g\u00e9": "vo/v07.mp3" },
+    right: ["vo/v08.mp3", "vo/v09.mp3", "vo/v10.mp3", "vo/v11.mp3"],
+    wrong: ["vo/v12.mp3", "vo/v13.mp3", "vo/v14.mp3", "vo/v15.mp3"]
+  };
+  const v = new Audio(); v.preload = "auto";
+  let busy = false, rot = { right: 0, wrong: 0 };
+  function say(src, done) {
+    try { v.pause(); } catch (e) {}
+    v.src = src; busy = true;
+    const fin = () => { busy = false; v.onended = v.onerror = null; if (done) done(); };
+    v.onended = fin; v.onerror = fin;
+    v.play().catch(fin);
+  }
+  const pickFrom = k => { const a = VO[k], s = a[rot[k] % a.length]; rot[k]++; return s; };
+  // first time someone hits PLAY on the how-to card
+  document.addEventListener("click", e => {
+    const b = e.target.closest && e.target.closest(".slide-intro .btn.start");
+    if (!b || b.textContent.trim() !== "PLAY") return;
+    let seen = false; try { seen = localStorage.getItem("ogVoHi") === "1"; localStorage.setItem("ogVoHi", "1"); } catch (err) {}
+    if (!seen) say(VO.hi);
+  }, true);
+  // right / wrong reactions
+  const baseAnswer = answer;
+  answer = async function (o, btn) {
+    await baseAnswer(o, btn);
+    if (btn.classList.contains("right")) { if (!promoting) say(pickFrom("right")); }
+    else if (btn.classList.contains("wrong")) say(pickFrom("wrong"));
+  };
+  // rank-ups
+  let promoting = false;
+  const basePromote = promote;
+  promote = function (name) {
+    basePromote(name);
+    const src = VO.rank[name]; if (!src) return;
+    promoting = true; audio.pause();
+    say(src, () => { promoting = false; });
+  };
+  // one song away from the next rank: OG says his piece first, then the song starts
+  const teased = {};
+  audio.addEventListener("play", () => {
+    if (busy || idx < 0) return;
+    const e = EPISODES[idx]; if (!e || isOpen(e) || teased[e.slug] || sec !== 0 || audio.currentTime > 1) return;
+    const k = BLOCKS.findIndex(b => b.includes(idx)); if (k < 0) return;
+    const others = BLOCKS[k].filter(i => i !== idx);
+    if (!others.every(i => isOpen(EPISODES[i]))) return;
+    teased[e.slug] = true;
+    audio.pause();
+    say(VO.tease[k], () => audio.play().catch(() => {}));
+  });
+})();
+
 document.addEventListener("contextmenu", e => { if (e.target.closest && e.target.closest("audio, #player, .reward")) e.preventDefault(); });
 </script>
 <style>
@@ -1683,6 +1763,10 @@ html, body, body.practice { background: #fff !important; }
 .practice .cred #f3.won em i { color: #c81e1e !important; }
 .practice .cred #f3.ranked em i { color: #1a8a3a !important; }
 .album-release { white-space: nowrap; padding: 8px 28px !important; margin-top: 10px !important; }
+/* room on the left of the meter for New Face, stacked next to song 1 */
+.practice #list.on-meter { margin-left: 34px !important; }
+.practice #list.on-meter + .grp-row, .practice .cred .grp-row { left: 34px !important; }
+.practice .cred #f0 span.nf-side { white-space: normal !important; text-align: right; line-height: 1.05; width: 34px; font-size: .58rem; }
 /* '99 the album: big graffiti '99 centered, THE ALBUM underneath, all inside the starred double frame */
 .album-release.big { display: flex !important; flex-direction: column; align-items: center; gap: 6px; padding: 10px 24px 9px !important; margin: 6px auto 10px !important; width: max-content; max-width: 100%; box-sizing: border-box; }
 .album-release.big::before, .album-release.big::after { content: none !important; }
