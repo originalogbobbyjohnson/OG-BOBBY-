@@ -10,7 +10,7 @@
 <meta property="og:title" content="The Brooklyn Music Game">
 <meta property="og:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
 <meta property="og:url" content="https://ogbobbybrooklyn.com/">
-<meta property="og:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=2">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=3">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1376">
 <meta property="og:image:height" content="768">
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Brooklyn Music Game">
 <meta name="twitter:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
-<meta name="twitter:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=2">
+<meta name="twitter:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=3">
 <link rel="icon" href="cover.png">
 <link rel="apple-touch-icon" href="cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -621,16 +621,6 @@ body.practice { overflow: hidden; }
 </div>
 
 
-<div class="sheet" id="localSheet" hidden role="dialog" aria-modal="true" aria-labelledby="localTitle">
-  <div class="box">
-    <img src="brand/og-budz-wordmark.png" alt="OG Budz" width="685" height="220">
-    <h3 id="localTitle">Friends of OG · Local delivery only</h3>
-    <p>You're leaving the OG Bobby game for OG Budz, a separate site with its own rules. It serves Brooklyn, Staten Island and Manhattan, 21 and over. Are you in the area?</p>
-    <a class="btn" id="localYes" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Yes, I'm local</a>
-    <button class="btn ghost" id="localNo" type="button">Not local, keep listening</button>
-  </div>
-</div>
-
 <div class="sheet" id="aboutSheet" hidden role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
   <div class="box about-box">
     <p class="ab-kick">ABOUT THE GAME</p>
@@ -657,7 +647,6 @@ body.practice { overflow: hidden; }
     <a class="menu-item" href="https://soundcloud.com/ogbobbybrooklyn/ridge-brothers" target="_blank" rel="noopener">SoundCloud · Ridge Brothers</a>
     <a class="menu-item" href="https://www.instagram.com/ogbobbybrooklyn/" target="_blank" rel="noopener">Instagram · @ogbobbybrooklyn</a>
     <a class="menu-item" href="mailto:ogbobbybrooklyn@gmail.com">Contact · ogbobbybrooklyn@gmail.com</a>
-    <a class="menu-item friends-link" href="https://updated-og-budz-private-club-vault-1063978157175.us-west1.run.app">Friends of OG <span class="leave">Leaves the music site</span></a>
     <button class="btn ghost" id="menuClose" type="button">Close</button>
   </div>
 </div>
@@ -974,18 +963,11 @@ $("back").onclick = () => {
 };
 $("restart").onclick = () => { playSection(0, true); };
 
-/* OG Budz is local-only: ask every time before leaving the music page. */
-document.querySelectorAll('a.friends-link').forEach(a => a.addEventListener("click", ev => {
-  ev.preventDefault();
-  $("localSheet").hidden = false; $("localYes").focus();
-}));
-$("localYes").addEventListener("click", () => track("friends-of-og", "Went to Friends of OG"));
 /* bottom menu */
 const closeMenu = () => { $("menuSheet").hidden = true; };
 $("menuBtn").onclick = () => { $("menuSheet").hidden = false; track("menu", "Opened menu"); };
 $("menuClose").onclick = closeMenu;
 $("menuSheet").addEventListener("click", ev => { if (ev.target.id === "menuSheet") closeMenu(); });
-document.querySelector("#menuSheet .friends-link").addEventListener("click", closeMenu);
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") closeMenu(); });
 $("mHow").onclick = ev => { ev.preventDefault(); closeMenu(); if (window.ogGoHome) window.ogGoHome(); };
 $("mAbout").onclick = ev => { ev.preventDefault(); closeMenu(); $("aboutSheet").hidden = false; $("aboutSheet").querySelector(".box").scrollTop = 0; track("about", "Opened About the game"); };
@@ -999,9 +981,6 @@ $("mShare").onclick = async ev => {
   try { await navigator.clipboard.writeText(url); ev.target.textContent = "Link copied"; setTimeout(() => { ev.target.textContent = "Share the game"; }, 1800); } catch (e) {}
 };
 
-$("localNo").onclick = () => { $("localSheet").hidden = true; };
-$("localSheet").addEventListener("click", ev => { if (ev.target.id === "localSheet") $("localSheet").hidden = true; });
-document.addEventListener("keydown", ev => { if (ev.key === "Escape") $("localSheet").hidden = true; });
 
 /* Open on the first episode that still has a question waiting. */
 const first = EPISODES.findIndex(e => !isOpen(e));
