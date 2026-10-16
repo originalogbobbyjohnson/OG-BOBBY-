@@ -99,7 +99,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
 </div>
 <audio id="audio" preload="metadata"></audio>
 <script>
-const CFG = {"mode": "tracks", "mix": "783b05b07423.mp3", "tracks": [{"t": "Whatever It Takes", "f": "62fb21fcfcbb.mp3", "d": 168.23, "s": 0}, {"t": "Ridge Brothers", "f": "a1fe8390ba3c.mp3", "d": 224.42, "s": 163.23}, {"t": "Bay Ridge Nights", "f": "852a39797d0e.mp3", "d": 203.96, "s": 382.65}, {"t": "The Get Back", "f": "ff56621d65ee.mp3", "d": 186.72, "s": 581.61}, {"t": "Pioneer", "f": "94b1e9bbeb9e.mp3", "d": 207.65, "s": 763.33}, {"t": "Bars & Clubs", "f": "6abe6700735e.mp3", "d": 179.44, "s": 965.98}, {"t": "Bay Ridge Is Mine", "f": "e9f4ac8096a8.mp3", "d": 280.79, "s": 1140.42}, {"t": "Black Rob", "f": "814f5a9e2c7b.mp3", "d": 215.47, "s": 1416.21}, {"t": "Positivity Spreads", "f": "85cfe59cf72c.mp3", "d": 286.8, "s": 1626.68}]};
+const CFG = {"mode": "tracks", "mix": "f1b645bfb5e6.mp3", "tracks": [{"t": "Whatever It Takes", "f": "d3ab12f57f9a.mp3", "d": 160.03, "s": 0}, {"t": "Ridge Brothers", "f": "a1fe8390ba3c.mp3", "d": 224.42, "s": 155.03}, {"t": "Bay Ridge Nights", "f": "852a39797d0e.mp3", "d": 203.96, "s": 374.45}, {"t": "The Get Back", "f": "ff56621d65ee.mp3", "d": 186.72, "s": 573.41}, {"t": "Pioneer", "f": "94b1e9bbeb9e.mp3", "d": 207.65, "s": 755.13}, {"t": "Bars & Clubs", "f": "6abe6700735e.mp3", "d": 179.44, "s": 957.78}, {"t": "Bay Ridge Is Mine", "f": "e9f4ac8096a8.mp3", "d": 280.79, "s": 1132.22}, {"t": "Black Rob", "f": "814f5a9e2c7b.mp3", "d": 215.47, "s": 1408.01}, {"t": "Positivity Spreads", "f": "85cfe59cf72c.mp3", "d": 286.8, "s": 1618.48}]};
 const T = CFG.tracks, FADE = CFG.mode === "fade";
 const audio = document.getElementById("audio");
 const $ = id => document.getElementById(id);
@@ -184,7 +184,7 @@ if ("mediaSession" in navigator) {
   } catch (e) {}
 }
 mark(0);
-$("tot").textContent = fmt(FADE ? 1908.3 : T[0].d);
+$("tot").textContent = fmt(FADE ? 1905.1 : T[0].d);
 </script>
 </body>
 </html>
