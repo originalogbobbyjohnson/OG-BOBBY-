@@ -1501,5 +1501,51 @@ window.scrollTo(0, 0);
 /* OG BOBBY wordmark sits in the top-left corner of the picture, over the buildings, clear of OG and the bridge */
 .practice .cover h1.on-pic { left: 12px !important; top: 10px !important; bottom: auto !important; transform: none !important; width: min(34%, 170px) !important; }
 </style>
+<style>
+/* Street Cred meter = the 9 levels: one numbered block per song, green once that song is finished. Tap a block to go to that level. */
+.practice .cred-bar { height: 24px !important; position: relative; overflow: visible; background: none !important; border: 0 !important; }
+.practice .cred-bar > i { display: none !important; }
+.practice #list.on-meter { position: absolute; inset: 0; display: grid !important; grid-template-columns: repeat(9, 1fr); gap: 3px !important; margin: 0; padding: 0; list-style: none; }
+.practice #list.on-meter li { display: block; min-width: 0; }
+.practice #list.on-meter .ep { width: 100%; height: 24px; padding: 0; display: grid; place-items: center; border: 1px solid #34363c !important; background: #0e0f12 !important; border-radius: 4px; box-shadow: none !important; }
+.practice #list.on-meter .ep .n { color: #fff !important; font-size: .82rem; }
+.practice #list.on-meter .ep:has(.s.open) { background: #1f8a3c !important; border-color: #2fbf57 !important; }
+.practice #list.on-meter .ep.current { border-color: var(--gold) !important; box-shadow: 0 0 0 1px var(--gold) !important; }
+.practice #list.on-meter li:has(.dot-gift) { position: absolute; right: -22px; top: 1px; }
+.practice #list.on-meter .dot-gift { width: 20px; height: 22px; border: 0; background: none; padding: 0; }
+.practice #list.on-meter .dot-gift.current { box-shadow: none; }
+.practice #list.on-meter .dot-gift.current svg { filter: drop-shadow(0 0 3px var(--gold)); }
+/* the flag ticks and rank names move down to clear the taller blocks */
+.practice .flag::before { display: none !important; }
+.practice .cred.stuck .flag span, .practice .flag span { top: 50px !important; }
+.practice .cred.stuck .cred-track, .practice .cred-track { padding-bottom: 36px !important; }
+.practice section.levels-moved { display: none !important; }
+.practice .stage-wrap.ends { border-bottom: 1px solid var(--line); border-radius: 0 0 16px 16px; margin-bottom: 0; padding-bottom: 10px; }
+.raw-on #list.on-meter { display: grid !important; }
+</style>
+<script>
+(function () {
+  const ol = document.getElementById("list"), bar = document.querySelector(".cred-bar");
+  if (!ol || !bar) return;
+  const sec = ol.closest("section");
+  bar.append(ol); ol.classList.add("on-meter");
+  if (sec && !sec.querySelector("#player, #reward")) {
+    sec.classList.add("levels-moved");
+    const sw = document.querySelector(".stage-wrap"); if (sw) sw.classList.add("ends");
+  }
+  // faded Volume 2 marker on the right of every level card: the next 9 are coming, not live yet
+  const head = document.querySelector("#player > div:first-child");
+  if (head && typeof nineSvg === "function" && !head.querySelector(".vol-big.ghost")) {
+    const g = document.createElement("div"); g.className = "vol-big right ghost"; g.setAttribute("aria-label", "Volume 2, coming next");
+    g.innerHTML = '<span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span><span class="lab">VOL. 2</span><span class="lab next">NEXT</span>';
+    head.append(g);
+  }
+  window.dispatchEvent(new Event("resize"));
+})();
+</script>
+<style>
+.vol-big.ghost { opacity: .28; pointer-events: none; }
+.vol-big.ghost .lab.next { font-size: .55rem; letter-spacing: .2em; margin-top: -2px; }
+</style>
 </body>
 </html>
