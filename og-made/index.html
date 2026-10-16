@@ -45,6 +45,8 @@ h1 img { display: block; width: min(100%, 300px); height: auto; filter: drop-sha
 .og-badge { flex: none; }
 .nine-badge { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 14px; background: #000; border: 2px solid #e3b23c; box-shadow: 0 0 18px 4px rgba(227,178,60,.6); }
 .nine-badge svg { width: 26px; height: auto; overflow: visible; }
+.nine-badge { display: flex; align-items: flex-start; justify-content: center; padding-top: 12px; gap: 1px; }
+.nine-badge .tick { font-family: var(--display); font-size: 1.6rem; line-height: .8; color: #fff; text-shadow: 2px 2px 0 #000; }
 
 .og-badge img { display: block; width: 64px; height: 64px; border-radius: 14px; box-shadow: 0 0 18px 4px rgba(227,178,60,.6); }
 .sub { color: var(--muted); margin-top: 6px; font-size: .95rem; }
@@ -79,7 +81,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
         <h1><img src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"></h1>
         <span class="list-tag">OG MADE – 9</span>
       </div>
-      <div class="og-badge" aria-hidden="true"><span class="nine-badge"><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
+      <div class="og-badge" aria-hidden="true"><span class="nine-badge"><span class="tick">’</span><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
     </div>
     <div class="sub">9 songs · 32:56</div>
   </header>
