@@ -1596,7 +1596,8 @@ window.scrollTo(0, 0);
   if (head && typeof nineSvg === "function" && !head.querySelector(".vol-big.ghost")) {
     const g = document.createElement("div"); g.className = "vol-big right ghost"; g.setAttribute("aria-label", "Volume 2, coming next");
     g.innerHTML = '<span class="v1nine">' + nineSvg(1) + '</span><span class="lab">VOL. 2</span>';
-    const rel = document.createElement("div"); rel.className = "album-release"; rel.textContent = "\u201999 \u2013 THE ALBUM";
+    const rel = document.createElement("div"); rel.className = "album-release big"; rel.setAttribute("aria-label", "\u201999, the album");
+    rel.innerHTML = '<span class="ar-num"><span class="tick">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="ar-sub">THE ALBUM</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
     head.prepend(rel);
     head.append(g);
   }
@@ -1682,6 +1683,17 @@ html, body, body.practice { background: #fff !important; }
 .practice .cred #f3.won em i { color: #c81e1e !important; }
 .practice .cred #f3.ranked em i { color: #1a8a3a !important; }
 .album-release { white-space: nowrap; padding: 8px 28px !important; margin-top: 10px !important; }
+/* '99 the album: big graffiti '99 centered, THE ALBUM underneath, all inside the starred double frame */
+.album-release.big { display: flex !important; flex-direction: column; align-items: center; gap: 6px; padding: 10px 24px 9px !important; margin: 6px auto 10px !important; width: max-content; max-width: 100%; box-sizing: border-box; }
+.album-release.big::before, .album-release.big::after { content: none !important; }
+.album-release.big .ar-num { display: inline-flex; align-items: flex-start; gap: 0; }
+.album-release.big .ar-num .tick { font-family: var(--display); font-size: 2.1rem; line-height: .8; color: #fff; text-shadow: 2px 2px 0 #000; margin-right: 2px; }
+.album-release.big .ar-num svg.nine { width: 31px; height: 44px; }
+.album-release.big .ar-sub { font: 800 .66rem/1 var(--body); letter-spacing: .2em; color: #fff; }
+.album-release.big .ar-c { position: absolute; font-style: normal; font-size: .62rem; color: #fff; line-height: 1; }
+.album-release.big .ar-c.tl { top: 6px; left: 8px; } .album-release.big .ar-c.tr { top: 6px; right: 8px; }
+.album-release.big .ar-c.bl { bottom: 6px; left: 8px; } .album-release.big .ar-c.br { bottom: 6px; right: 8px; }
+.practice #pTitle { font-size: 1.45rem !important; letter-spacing: .04em; margin: 2px 0 4px !important; }
 /* intro badge: '9 on its own on the left, VOLUME 1 dead center, matching empty slot on the right for the Vol. 2 nine */
 .vol-badge { display: grid !important; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0 !important; width: 100%; }
 .vol-badge .v1nine { justify-self: start; padding-left: 4px; }
