@@ -1915,6 +1915,12 @@ html, body, body.practice { background: #fff !important; }
 .pl-song:active { border-color: #1f8a3c; }
 #rText { color: #fff !important; }
 </style>
+<style>
+/* CERTIFIED OG at the end of the meter: bigger gold OG with CERTIFIED stacked above it; the 9 blocks give up a little room on the right so it fits every phone */
+.practice #list.on-meter { margin-right: 46px !important; }
+.practice #list.on-meter .dot-gift::after, .practice #list.on-meter .dot-gift.on::after { font-size: 1.4rem !important; letter-spacing: .02em; left: calc(100% + 4px) !important; top: 58% !important; }
+.practice #list.on-meter .dot-gift::before { content: "CERTIFIED"; position: absolute; left: calc(100% + 21px); bottom: calc(50% + 12px); transform: translateX(-50%); font: 900 .5rem/1 var(--body); letter-spacing: .05em; white-space: nowrap; color: #e0a800; background: linear-gradient(180deg, #ffe680 0%, #f5c518 45%, #c98a00 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; -webkit-text-stroke: .3px #6b4a00; filter: drop-shadow(0 1px 0 #5a3d00); }
+</style>
 <script>
 /* Auto-update: everyone gets the newest game without swiping out. Checks when the page opens, when the player comes
    back to it, and every few minutes. Never reloads while music is playing or a window is open; progress is saved. */
