@@ -634,6 +634,7 @@ body.practice { overflow: hidden; }
       <li><b>Unlock.</b> Get a song right and it's yours to play in full.</li>
       <li><b>Earn Street Cred.</b> First-try answers fill your meter. Climb from New Face to Corner Kid, OG Soldier and OG Protégé.</li>
       <li><b>Collect.</b> Finish any block of 3 songs to earn that block's playlist. Finish all 9 to earn Volume 1.</li>
+      <li><b>Run it back.</b> Earned a rank? Replay your unlocked songs with new questions, just for fun. No rewards, just bragging rights.</li>
       <li><b>Raw Cuts.</b> Stripped-down versions of the songs, in their own room.</li>
       <li><b>Road to '99.</b> Volume 2 comes next. Both volumes make the '99 album, and the climb goes on to OG Certified.</li>
     </ul>
@@ -723,7 +724,7 @@ function promote(name) {
   d.querySelector(".promo-name").textContent = name;
   document.body.append(d);
   requestAnimationFrame(() => d.classList.add("on"));
-  setTimeout(() => { d.classList.remove("on"); setTimeout(() => d.remove(), 400); }, 2600);
+  setTimeout(() => { d.classList.remove("on"); setTimeout(() => d.remove(), 400); }, 4200);
 }
 
 /* Small SHA-256 so unlocking works on any connection. */
@@ -1726,13 +1727,17 @@ window.scrollTo(0, 0);
     wrong: ["vo/v12.mp3", "vo/v18.mp3", "vo/v13.mp3", "vo/v14.mp3", "vo/v19.mp3", "vo/v15.mp3"]
   };
   const v = new Audio(); v.preload = "auto";
-  let busy = false, rot = { right: 0, wrong: 0 };
+  let busy = false, rot = { right: 0, wrong: 0 }, curFin = null;
   function say(src, done) {
+    if (curFin) curFin(true);
     try { v.pause(); } catch (e) {}
     v.src = src; busy = true;
-    const fin = () => { busy = false; v.onended = v.onerror = null; if (done) done(); };
-    v.onended = fin; v.onerror = fin;
-    v.play().catch(fin);
+    const S = window.ogSound; if (S) S.duck(true);   // the song dips while OG talks
+    let over = false;
+    const fin = skip => { if (over) return; over = true; curFin = null; busy = false; v.onended = v.onerror = null; if (S) S.duck(false); if (!skip && done) done(); };
+    curFin = fin;
+    v.onended = () => fin(); v.onerror = () => fin();
+    v.play().catch(() => fin());
   }
   const pickFrom = k => { const a = VO[k], s = a[rot[k] % a.length]; rot[k]++; return s; };
   // first time someone hits PLAY on the how-to card
@@ -1742,21 +1747,30 @@ window.scrollTo(0, 0);
     let seen = false; try { seen = localStorage.getItem("ogVoHi") === "1"; localStorage.setItem("ogVoHi", "1"); } catch (err) {}
     if (!seen) say(VO.hi);
   }, true);
-  // right / wrong reactions
+  // right / wrong: a quick game sound, then OG's reaction over a lowered song
+  window.ogReact = function (ok, unlocked) {
+    const S = window.ogSound;
+    if (S) S.sfx(ok ? (unlocked ? "unlock" : "right") : "wrong");
+    setTimeout(() => say(pickFrom(ok ? "right" : "wrong")), ok && unlocked ? 650 : 280);
+  };
   const baseAnswer = answer;
   answer = async function (o, btn) {
+    const e = EPISODES[idx], wasOpen = !!e && isOpen(e);
     await baseAnswer(o, btn);
-    if (btn.classList.contains("right")) { if (!promoting) say(pickFrom("right")); }
-    else if (btn.classList.contains("wrong")) say(pickFrom("wrong"));
+    if (btn.classList.contains("right")) { if (!promoting) window.ogReact(true, !wasOpen && isOpen(e)); }
+    else if (btn.classList.contains("wrong")) window.ogReact(false);
   };
-  // rank-ups
-  let promoting = false;
+  // rank-ups: the song cuts out, scratch-and-beat jingle, OG's congrats, then the song comes back
+  let promoting = false, resume = false;
+  audio.addEventListener("play", () => { if (promoting) { resume = true; audio.pause(); } });
   const basePromote = promote;
   promote = function (name) {
     basePromote(name);
-    const src = VO.rank[name]; if (!src) return;
-    promoting = true; audio.pause();
-    say(src, () => { promoting = false; });
+    promoting = true; resume = !audio.paused; audio.pause();
+    const src = VO.rank[name], S = window.ogSound;
+    const finish = () => { promoting = false; if (resume) { resume = false; audio.play().catch(() => {}); } };
+    const talk = () => { if (src) say(src, finish); else finish(); };
+    if (S) S.jingle(talk); else talk();
   };
   // one song away from the next rank: OG says his piece first, then the song starts
   const teased = {};
@@ -1986,5 +2000,279 @@ html, body, body.practice { background: #fff !important; }
   if (window.ogPlaceRanks) { window.ogPlaceRanks(); setTimeout(window.ogPlaceRanks, 300); }
 })();
 </script>
+<style>
+/* ---------- Fun Run: replay with new questions, no rewards ---------- */
+.fun-bar { display: flex !important; align-items: center; gap: 10px; background: #0c0d10; border: 1.5px solid #2fbf57; border-radius: 10px; padding: 5px 8px 5px 12px; }
+.fun-bar[hidden] { display: none; }
+.fun-bar .fb-k { font-family: var(--display); letter-spacing: .14em; font-size: .95rem; color: #2fbf57; white-space: nowrap; }
+.fun-bar .fb-s { flex: 1; color: #fff; font-size: .82rem; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fun-bar .fb-x { flex: none; background: none; border: 1px solid #fff; color: #fff; font: inherit; font-size: .8rem; font-weight: 700; border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+.btn.fun-btn { background: #1f8a3c !important; color: #fff !important; border: 0 !important; letter-spacing: .06em; }
+.fun-wrap { display: grid; gap: 6px; justify-items: center; text-align: center; }
+.fun-wrap[hidden] { display: none; }
+.fun-wrap .fun-line { color: #fff; font-size: .85rem; margin: 0; }
+.slide-intro .fun-wrap .btn.fun-btn { width: auto; padding: 10px 22px; font-size: .95rem; }
+.done-note .fun-link { display: block; margin-top: 8px; background: none; border: 0; padding: 0; color: #fff; font: inherit; font-size: .9rem; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.done-note .fun-link[hidden] { display: none; }
+.fun-actions { display: grid; gap: 8px; }
+.fun-actions .btn { padding: 12px; }
+.fun-actions .btn.ghost { color: #fff !important; border-color: #fff !important; }
+</style>
+<script>
+/* Game sounds: little taps, right/wrong hits, an unlock sting, and a scratch-and-beat jingle on every promotion.
+   The song dips under OG's voice so you can hear him, then comes back up. */
+(function () {
+  const FILES = { tap: "sfx/tap.mp3", right: "sfx/right.mp3", wrong: "sfx/wrong.mp3", unlock: "sfx/unlock.mp3", jingle: "sfx/jingle.mp3" };
+  let on = true; try { on = localStorage.getItem("ogSfx") !== "0"; } catch (e) {}
+  let ctx = null, gain = null, routed = false;
+  const bufs = {};
+  // how to lower the song under OG's voice: volume where the phone allows it, a mixer on newer iPhones, a short pause on old ones
+  const volWorks = (() => { try { const a = document.createElement("audio"); a.volume = 0.5; return Math.abs(a.volume - 0.5) < 0.01; } catch (e) { return false; } })();
+  const mode = volWorks ? "volume" : (navigator.audioSession ? "gain" : "pause");
+  function boot() {
+    if (ctx) { if (ctx.state !== "running") { try { ctx.resume(); } catch (e) {} } return; }
+    const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
+    try { if (navigator.audioSession) navigator.audioSession.type = "playback"; } catch (e) {}
+    try { ctx = new AC(); } catch (e) { ctx = null; return; }
+    Object.keys(FILES).forEach(k => {
+      fetch(FILES[k]).then(r => r.arrayBuffer())
+        .then(a => new Promise((res, rej) => ctx.decodeAudioData(a, res, rej)))
+        .then(b => { bufs[k] = b; }).catch(() => {});
+    });
+  }
+  ["pointerdown", "touchend", "keydown"].forEach(ev => document.addEventListener(ev, boot, true));
+  document.addEventListener("visibilitychange", () => { if (ctx && document.visibilityState === "visible" && ctx.state !== "running") { try { ctx.resume(); } catch (e) {} } });
+  audio.addEventListener("play", () => { if (routed && ctx && ctx.state !== "running") { try { ctx.resume(); } catch (e) {} } });
+
+  function play(k, vol, done) {
+    const b = bufs[k];
+    if (!on || !ctx || ctx.state !== "running" || !b) {
+      if (on && k === "jingle") {   // not decoded yet: fall back to a plain player so the jingle still lands
+        const a = new Audio(FILES[k]); let fired = false;
+        const fin = () => { if (fired) return; fired = true; if (done) done(); };
+        a.onended = fin; a.onerror = fin; a.play().catch(fin); setTimeout(fin, 6000);
+        return;
+      }
+      if (done) done(); return;
+    }
+    const s = ctx.createBufferSource(), g = ctx.createGain();
+    s.buffer = b; g.gain.value = vol == null ? 1 : vol;
+    s.connect(g); g.connect(ctx.destination);
+    if (done) s.onended = done;
+    s.start();
+  }
+
+  let duckN = 0, pausedByDuck = false, rampT = null;
+  function route() {
+    if (routed || !ctx || ctx.state !== "running") return;
+    try { const s = ctx.createMediaElementSource(audio); gain = ctx.createGain(); s.connect(gain); gain.connect(ctx.destination); routed = true; } catch (e) {}
+  }
+  function apply() {
+    const low = duckN > 0, target = low ? 0.22 : 1;
+    if (mode === "volume") {
+      clearInterval(rampT);
+      rampT = setInterval(() => {
+        const v = audio.volume, step = low ? 0.12 : 0.06;
+        const nv = v > target ? Math.max(target, v - step) : Math.min(target, v + step);
+        try { audio.volume = nv; } catch (e) {}
+        if (nv === target) clearInterval(rampT);
+      }, 25);
+    } else if (mode === "gain") {
+      boot(); route();
+      if (gain) { const t = ctx.currentTime; gain.gain.cancelScheduledValues(t); gain.gain.setTargetAtTime(target, t, low ? 0.05 : 0.18); }
+    } else {
+      if (low && !audio.paused) { pausedByDuck = true; audio.pause(); }
+      else if (!low && pausedByDuck) { pausedByDuck = false; audio.play().catch(() => {}); }
+    }
+  }
+  function duck(down) { duckN = Math.max(0, duckN + (down ? 1 : -1)); apply(); }
+
+  window.ogSound = {
+    sfx: (k, vol) => play(k, vol == null ? 0.85 : vol),
+    jingle: done => play("jingle", 1, done),
+    duck: duck,
+    on: () => on
+  };
+
+  // soft tap on buttons (answers get their own right/wrong sound)
+  document.addEventListener("click", e => {
+    const b = e.target.closest && e.target.closest("button, .menu-item, .dot-gift");
+    if (!b || b.classList.contains("opt") || b.disabled) return;
+    play("tap", 0.55);
+  }, true);
+
+  // sound switch in the bottom menu
+  const close = document.getElementById("menuClose");
+  if (close) {
+    const m = document.createElement("a");
+    m.className = "menu-item"; m.id = "mSfx"; m.href = "#";
+    const label = () => { m.textContent = "Game sounds: " + (on ? "On" : "Off"); };
+    label();
+    const items = close.parentElement.querySelectorAll(".menu-item");
+    m.onclick = ev => { ev.preventDefault(); on = !on; try { localStorage.setItem("ogSfx", on ? "1" : "0"); } catch (e) {} label(); if (on) { boot(); play("tap", 0.55); } };
+    if (items.length) items[items.length - 1].after(m); else close.before(m);
+  }
+})();
+
+/* Fun Run: once you've earned a rank, play your unlocked songs again with new questions. No rewards, no Street Cred, just bragging rights. */
+(function () {
+  const FK = "ogFun";
+  const fun = { on: false, run: 0, gate: {}, res: {}, right: 0, asked: 0 };
+  try { const s = JSON.parse(localStorage.getItem(FK) || "{}"); if (s && s.run) fun.run = s.run; } catch (e) {}
+  const fsave = () => { try { localStorage.setItem(FK, JSON.stringify({ run: fun.run })); } catch (e) {} };
+  const canFun = () => blocksDone() >= 1;
+  const openIdx = () => EPISODES.map((e, i) => (isOpen(e) ? i : -1)).filter(i => i >= 0);
+  const doneSong = e => (fun.gate[e.slug] || 0) >= e.qs.length;
+  // a question from the same verse, never the one you already answered to unlock it
+  function funQ(e, g) {
+    const p = poolOf(e.qs[g]), used = (state.qv[e.slug + "|" + g] || 0) % p.length;
+    if (p.length < 2) return p[0];
+    return p[(used + 1 + ((fun.run - 1) % (p.length - 1))) % p.length];
+  }
+  async function check(slug, g, o) {
+    const k = keyFor(slug, g, o);
+    try { if ((await fetch("b/" + k + ".mp3", { method: "HEAD", cache: "no-store" })).ok) return true; } catch (e) {}
+    try {
+      const r = await fetch("b/" + k + ".txt", { cache: "no-store" });
+      if (r.ok && /^[0-9a-f]{24}$/.test((await r.text()).trim())) return true;
+    } catch (e) {}
+    return false;
+  }
+  const goLevel = i => { const b = document.querySelectorAll("#list .ep")[i]; if (b) b.click(); else load(i, true); };
+
+  // FUN RUN strip on top of the song card
+  const bar = document.createElement("div");
+  bar.className = "fun-bar"; bar.hidden = true;
+  bar.innerHTML = '<span class="fb-k">FUN RUN</span><span class="fb-s"></span><button class="fb-x" type="button">Exit</button>';
+  const head = document.querySelector("#player > div:first-child");   // the song header must stay first in the card
+  head.after(bar);
+  const paintBar = () => {
+    bar.hidden = !fun.on;
+    bar.querySelector(".fb-s").textContent = fun.right + " of " + fun.asked + " right · no rewards";
+  };
+  bar.querySelector(".fb-x").onclick = () => exitFun();
+
+  function startFun() {
+    if (!canFun()) return;
+    fun.on = true; fun.run += 1; fun.gate = {}; fun.res = {}; fun.right = 0; fun.asked = 0; fsave();
+    track("fun/start", "Fun run started");
+    const list = openIdx();
+    goLevel(list.length ? list[0] : 0);
+    renderQuiz();
+  }
+  function exitFun() {
+    fun.on = false;
+    renderQuiz(); syncEntry();
+  }
+  window.ogFunStart = startFun;
+
+  const grade = (r, t) => {
+    const p = t ? r / t : 0;
+    if (p === 1) return "Perfect. You really know the story.";
+    if (p >= 0.8) return "You know the story. Run it back for a perfect score.";
+    if (p >= 0.5) return "Not bad. Give the songs another listen and run it back.";
+    return "Run it back. The answers are all in the songs.";
+  };
+  function actions(btns) {
+    const box = $("opts"); box.innerHTML = "";
+    const wrap = document.createElement("div"); wrap.className = "fun-actions";
+    btns.forEach(([t, cls, fn]) => { const b = document.createElement("button"); b.type = "button"; b.className = "btn " + cls; b.textContent = t; b.onclick = fn; wrap.append(b); });
+    box.append(wrap);
+  }
+  function songDone(e) {
+    const res = fun.res[e.slug] || [], r = res.filter(Boolean).length;
+    const left = openIdx().filter(i => !doneSong(EPISODES[i]));
+    $("qLabel").textContent = "FUN RUN";
+    if (left.length) {
+      $("qText").textContent = "You got " + r + " of " + e.qs.length + " on " + e.title + ".";
+      $("msg").className = "msg"; $("msg").textContent = left.length + (left.length === 1 ? " song" : " songs") + " left in this run.";
+      const nx = left.find(i => i > idx);
+      actions([["Next song", "fun-btn", () => goLevel(nx == null ? left[0] : nx)], ["Exit fun run", "ghost", exitFun]]);
+    } else {
+      $("qText").textContent = "Fun run done: " + fun.right + " of " + fun.asked + " right.";
+      $("msg").className = "msg good"; $("msg").textContent = grade(fun.right, fun.asked);
+      actions([["Run it again", "fun-btn", startFun], ["Back to the game", "ghost", exitFun]]);
+      if (!fun.told) { fun.told = true; track("fun/done", "Fun run done: " + fun.right + "/" + fun.asked); }
+    }
+  }
+
+  const baseRQ = renderQuiz;
+  renderQuiz = function () {
+    baseRQ();
+    paintBar(); syncEntry();
+    if (!fun.on || idx < 0) return;
+    const e = EPISODES[idx];
+    if (!isOpen(e)) return;            // a song still locked plays the regular game
+    $("doneNote").classList.remove("on");
+    $("quiz").classList.add("on");
+    $("again").classList.remove("on");
+    $("pPart").textContent = "Full story · Fun run";
+    $("msg").textContent = ""; $("msg").className = "msg";
+    const g = fun.gate[e.slug] || 0;
+    if (g >= e.qs.length) return songDone(e);
+    const q = funQ(e, g);
+    $("qLabel").textContent = e.qs.length === 1 ? "Fun question" : "Fun question " + (g + 1) + " of " + e.qs.length;
+    $("qText").textContent = q.q;
+    $("qHint").textContent = "New question. The answer's in the song.";
+    const box = $("opts"); box.innerHTML = "";
+    q.opts.forEach(o => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "opt"; b.textContent = o;
+      b.onclick = () => answer(o, b);
+      box.appendChild(b);
+    });
+  };
+
+  const baseAns = answer;
+  answer = async function (o, btn) {
+    const e = EPISODES[idx];
+    if (!fun.on || !e || !isOpen(e)) return baseAns(o, btn);
+    const g = fun.gate[e.slug] || 0;
+    document.querySelectorAll("#opts .opt").forEach(b => { b.disabled = true; });
+    const ok = await check(e.slug, g, o);
+    btn.classList.add(ok ? "right" : "wrong");
+    fun.asked += 1; if (ok) fun.right += 1;
+    (fun.res[e.slug] = fun.res[e.slug] || [])[g] = ok;
+    fun.gate[e.slug] = g + 1;
+    track("fun/" + (ok ? "right/" : "wrong/") + e.slug, "Fun run " + (ok ? "right: " : "wrong: ") + e.title);
+    $("msg").className = "msg " + (ok ? "good" : "bad");
+    $("msg").textContent = ok ? "That's right." : "Not quite. That one's in the song.";
+    paintBar();
+    if (window.ogReact) window.ogReact(ok);
+    setTimeout(() => { if (fun.on && EPISODES[idx] === e) renderQuiz(); }, 1500);
+  };
+
+  // ways in: the welcome-back window, the rewards card, and any song you've already unlocked
+  const PROMPT = "Know the story? Run it back with new questions. Just for fun, no rewards.";
+  const mkEntry = () => {
+    const w = document.createElement("div"); w.className = "fun-wrap"; w.hidden = true;
+    w.innerHTML = '<p class="fun-line"></p><button class="btn fun-btn" type="button">PLAY AGAIN FOR FUN</button>';
+    w.querySelector(".fun-line").textContent = PROMPT;
+    w.querySelector("button").onclick = startFun;
+    return w;
+  };
+  const intro = document.querySelector(".slide-intro");
+  const introEntry = mkEntry();
+  if (intro) { const how = intro.querySelector(".wb-how"); if (how) how.before(introEntry); else intro.append(introEntry); }
+  const rewEntry = mkEntry();
+  const ml = $("makeList"); if (ml) ml.after(rewEntry);
+  const noteLink = document.createElement("button");
+  noteLink.type = "button"; noteLink.className = "fun-link"; noteLink.textContent = "Quiz me again, just for fun"; noteLink.hidden = true;
+  noteLink.onclick = startFun;
+  $("doneNote").append(noteLink);
+
+  function syncEntry() {
+    const ok = canFun(), was = introEntry.hidden;
+    introEntry.hidden = !(ok && intro && intro.classList.contains("welcome"));
+    rewEntry.hidden = !ok || fun.on;
+    noteLink.hidden = !ok || fun.on;
+    if (was !== introEntry.hidden) requestAnimationFrame(() => window.dispatchEvent(new Event("resize")));
+  }
+  if (intro) new MutationObserver(syncEntry).observe(intro, { attributes: true, attributeFilter: ["class"] });
+  syncEntry(); paintBar();
+  window.addEventListener("load", () => { syncEntry(); window.dispatchEvent(new Event("resize")); });
+})();
+</script>
+
 </body>
 </html>
