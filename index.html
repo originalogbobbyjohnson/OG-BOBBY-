@@ -971,7 +971,7 @@ window.scrollTo(0, 0);
 
   // Opening card: how to play
   const intro = document.createElement("div"); intro.className = "slide-intro";
-  intro.innerHTML = '<div class="vol-badge"><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span><span class="raw-kick">VOLUME 1</span></div><h3 class="intro-title">How to play</h3>' +
+  intro.innerHTML = '<div class="vol-badge"><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span><span class="raw-kick">VOLUME 1</span><span class="v2-slot" aria-hidden="true"></span></div><h3 class="intro-title">How to play</h3>' +
     '<ol class="rules"><li><b>Hit play.</b> Every song is a level from OG Bobby\'s story.</li>' +
     '<li><b>Every level stops</b> at a turning point.</li>' +
     '<li><b>Answer right</b> to unlock the next verse.</li>' +
@@ -1634,6 +1634,13 @@ html, body, body.practice { background: #fff !important; }
 .practice .cred #f3.won em i { color: #c81e1e !important; }
 .practice .cred #f3.ranked em i { color: #1a8a3a !important; }
 .album-release { white-space: nowrap; padding: 8px 28px !important; margin-top: 10px !important; }
+/* intro badge: '9 on its own on the left, VOLUME 1 dead center, matching empty slot on the right for the Vol. 2 nine */
+.vol-badge { display: grid !important; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0 !important; width: 100%; }
+.vol-badge .v1nine { justify-self: start; padding-left: 4px; }
+.vol-badge .raw-kick { justify-self: center; }
+.vol-badge .v2-slot { justify-self: end; width: 40px; }
+.vol-badge .v1nine { display: inline-flex; align-items: flex-start; }
+.vol-badge .v1nine .tick { font-family: var(--display); font-size: 2.6rem; line-height: .8; color: #fff; text-shadow: 2px 2px 0 #000; margin-right: 1px; }
 </style>
 </body>
 </html>
