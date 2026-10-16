@@ -10,17 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pip install -q faster-whisper
-      - run: |
-          python3 - <<'PY'
-          from faster_whisper import WhisperModel
-          m=WhisperModel('small.en',device='cpu',compute_type='int8')
-          out=[]
-          for vad in (False,):
-            segs,_=m.transcribe('asr/tail.mp3',word_timestamps=True,vad_filter=vad,condition_on_previous_text=False)
-            for s in segs:
-              for w in s.words: out.append(f"{w.start+150:.2f} {w.end+150:.2f} {w.word}")
-          open('asr/words.txt','w').write("\n".join(out))
-          PY
+      - run: python3 asr/run.py
       - run: |
           git config user.name "OG Bobby"; git config user.email originalogbobbyjohnson@gmail.com
-          git add asr/words.txt && git commit -m "asr result" && git push
+          git add -f asr/words.txt && git commit -m "asr result" && git push
