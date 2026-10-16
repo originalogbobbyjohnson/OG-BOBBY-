@@ -1587,6 +1587,12 @@ window.scrollTo(0, 0);
 .practice #list.on-meter .ep:has(.s.open) { background: #1f8a3c !important; border-color: #1f8a3c !important; }
 .practice #list.on-meter .ep.current { border-color: #e3b23c !important; box-shadow: 0 0 0 2px #e3b23c !important; }
 .practice #list.on-meter .dot-gift { color: #b8860b !important; }
+/* deeper subway-style yellow gold for every word on the meter so it stands out on white */
+.practice .cred .cred-name, .practice .cred .cred-hint, .practice .cred .flag span, .practice .cred .flag span small, .practice .cred .flag em, .practice .cred .flag em i, .practice .cred .flag span b { color: #d29200 !important; opacity: 1 !important; text-shadow: 0 0 .5px #a86f00; }
+.practice .cred .cred-name { font-weight: 800; }
+.practice .cred .flag span, .practice .cred .cred-hint { font-weight: 800; }
+.practice .cred .flag.won em, .practice .cred .flag.won em i, .practice .cred .flag.won span b { color: #1a8a3a !important; text-shadow: none; }
+.practice #list.on-meter .dot-gift { color: #d29200 !important; }
 #ff10 { display: none; }
 #ff10.on { display: grid; border-color: #2fbf57 !important; color: #2fbf57 !important; }
 #ff10.on svg { fill: #2fbf57; }
