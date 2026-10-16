@@ -544,7 +544,7 @@ body.practice { overflow: hidden; }
       <div class="flag rank0 won" id="f0" style="left:0"><em>Start</em><span><b>New Face</b></span></div>
       <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>1 song</em><span><b>Corner Kid</b></span></div>
       <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>3 songs</em><span><b>OG Soldier</b></span></div>
-      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em><i>Album</i>9 songs</em><span><b>OG Protégé</b></span></div>
+      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em><i>Vol. 1</i>9 songs</em><span><b>OG Protégé</b></span></div>
     </div>
   </section>
   <header>
@@ -762,7 +762,7 @@ function renderReward() {
   if (!p) return;
   const all = p >= EPISODES.length;
   $("rTitle").textContent = all ? "OG PROTÉGÉ" : "YOU EARNED A PLAYLIST";
-  $("rText").textContent = all ? "You got every question right on the first try. The whole album is yours to stream."
+  $("rText").textContent = all ? "You got every question right on the first try. All of Volume 1 is yours to stream. Volume 2 is next, with a new set of questions. Finish both for the full ’99 album."
     : "Pick " + (p === 1 ? "1 song" : p + " songs") + " for your own playlist. Keep answering to unlock more.";
   const box = $("picks"); box.innerHTML = "";
   if (all) { state.picks = EPISODES.map((_, i) => i + 1); save(); }
@@ -991,13 +991,14 @@ window.scrollTo(0, 0);
     '<ol class="rules"><li><b>Hit play.</b> Every song is a level from OG Bobby\'s story.</li>' +
     '<li><b>Every level stops</b> at a turning point.</li>' +
     '<li><b>Answer right</b> to unlock the next verse.</li>' +
-    '<li><b>Fill your Street Cred</b> on the first try to win songs for your own playlist.</li></ol>';
+    '<li><b>Fill your Street Cred</b> on the first try to win songs for your own playlist.</li>' +
+    '<li><b>Finish Volume 1</b> and Volume 2 opens with new questions. Every new album adds another volume.</li></ol>';
   document.querySelector(".how").remove();
   const startBtn = document.createElement("button");
   startBtn.type = "button"; startBtn.className = "btn start"; startBtn.textContent = "PLAY";
   intro.append(startBtn);
   const empty = document.createElement("div"); empty.className = "slide-empty"; empty.hidden = true;
-  empty.innerHTML = "<h3>Rewards</h3><p>Get 6 right on the first try to earn your first song. Keep going for 3 songs, then the whole album.</p>";
+  empty.innerHTML = "<h3>Rewards</h3><p>Get 6 right on the first try to earn your first song. Keep going for 3 songs, then all 9 songs of Volume 1.</p>";
   stage.append(intro, $("player"), $("reward"), empty);
   const arrow = (cls, label, path) => {
     const b = document.createElement("button");
@@ -1216,9 +1217,9 @@ window.scrollTo(0, 0);
         '<figure><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span><figcaption>VOL. 1</figcaption></figure>' +
         '<figure>' + nineSvg(Math.max(.06, have / 9), "filling") + '<figcaption>VOL. 2</figcaption></figure>' +
       '</div>' +
-      '<p class="v2-story">1999 changed everything for OG. Volume 1 gave you nine. Volume 2 is nine more. Fill them both and they read <b>’99</b>.</p>' +
+      '<p class="v2-story">1999 changed everything for OG. Volume 1 gave you nine. Volume 2 is nine more, with new questions. Fill them both and they read <b>’99</b>, the full album.</p>' +
       '<div class="v2-grid">' + tiles + '</div>' +
-      '<p class="v2-count"><b>' + have + ' of 9</b> revealed · unlocking soon</p>';
+      '<p class="v2-count"><b>' + have + ' of 9</b> revealed · opens after Volume 1</p>';
     v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] || "???"; });
   }
   function showRaw(i) {
