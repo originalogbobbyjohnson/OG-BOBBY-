@@ -26,7 +26,7 @@
 /* Layout: one narrow column. Cover, how-it-works, score + reward ladder, the player with its question, then the episode list. */
 :root {
   --bg: #111215; --panel: #191a1e; --panel2: #212328; --line: #30333a;
-  --fg: #f3efe6; --muted: #9a9ea6; --gold: #e3b23c; --gold-dim: #6e5a2a;
+  --fg: #f3efe6; --muted: #9a9ea6; --gold: #d62828; --gold-dim: #7a1f1f;
   --bad: #e26d5a; --good: #7fcf8c;
   --display: "Anton", Impact, "Arial Narrow", sans-serif;
   --graffiti: "Sedgwick Ave Display", "Permanent Marker", "Marker Felt", cursive;
@@ -46,8 +46,8 @@ header { display: grid; gap: 14px; }
 .budz-chip { display: block; width: 64px; height: 64px; border-radius: 14px; animation: glow 1.8s ease-in-out infinite; }
 .budz-chip img { width: 100%; height: 100%; display: block; border-radius: 14px; }
 @keyframes glow {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 6px 1px rgba(227,178,60,.45); }
-  50% { transform: scale(1.08); box-shadow: 0 0 22px 8px rgba(227,178,60,.85); }
+  0%, 100% { transform: scale(1); box-shadow: 0 0 6px 1px rgba(214,40,40,.45); }
+  50% { transform: scale(1.08); box-shadow: 0 0 22px 8px rgba(214,40,40,.85); }
 }
 h1 { margin: 0; line-height: 0; }
 h1 img { display: block; width: min(100%, 380px); height: auto; filter: drop-shadow(3px 3px 0 #000); }
@@ -71,13 +71,13 @@ h1 img { display: block; width: min(100%, 380px); height: auto; filter: drop-sha
 .cred-hint { font-size: .85rem; color: var(--muted); }
 .cred-track { position: relative; padding-top: 30px; padding-bottom: 22px; margin-right: 22px; }
 .cred-bar { height: 16px; background: #0a0b0d; border: 1px solid var(--line); border-radius: 99px; overflow: hidden; }
-.cred-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #8a6d24, #e3b23c 70%, #ffe08a); box-shadow: 0 0 12px rgba(227,178,60,.8); transition: width .6s ease; }
+.cred-bar i { display: block; height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #7a1f1f, #d62828 70%, #ff6b6b); box-shadow: 0 0 12px rgba(214,40,40,.8); transition: width .6s ease; }
 .flag { position: absolute; top: 0; transform: translateX(-4px); display: grid; justify-items: start; color: #4a4d55; }
 .flag.last { transform: translateX(-4px); }
 .flag svg { width: 22px; height: 26px; fill: currentColor; }
 .flag span { position: absolute; top: 48px; left: 4px; transform: translateX(-50%); font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; color: var(--muted); }
 .flag.last span { transform: translateX(-85%); }
-.flag.won { color: var(--gold); filter: drop-shadow(0 0 6px rgba(227,178,60,.8)); }
+.flag.won { color: var(--gold); filter: drop-shadow(0 0 6px rgba(214,40,40,.8)); }
 .flag.won span { color: var(--gold); }
 
 /* Rewards */
@@ -154,8 +154,8 @@ ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .budz .small { display: block; color: #dcdad4; font-size: clamp(.56rem, 2.6vw, .76rem); letter-spacing: .03em; white-space: nowrap; }
 .wrap > * { min-width: 0; }
 @keyframes glowBtn {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 6px 1px rgba(227,178,60,.45); }
-  50% { transform: scale(1.015); box-shadow: 0 0 20px 6px rgba(227,178,60,.85); }
+  0%, 100% { transform: scale(1); box-shadow: 0 0 6px 1px rgba(214,40,40,.45); }
+  50% { transform: scale(1.015); box-shadow: 0 0 20px 6px rgba(214,40,40,.85); }
 }
 .budz img { display: block; width: clamp(80px, 24vw, 130px); height: auto; margin: 0; }
 .budz .where { display: grid; gap: 1px; justify-items: end; text-align: right; min-width: 0; }
@@ -178,7 +178,7 @@ footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; 
   .wrap { max-width: 560px; }
   .dock-in { max-width: 528px; }
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } .budz-chip { animation: none; box-shadow: 0 0 16px 4px rgba(227,178,60,.7); } .budz { animation: none; box-shadow: 0 0 16px 4px rgba(227,178,60,.7); } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } .budz-chip { animation: none; box-shadow: 0 0 16px 4px rgba(214,40,40,.7); } .budz { animation: none; box-shadow: 0 0 16px 4px rgba(214,40,40,.7); } }
 
 /* ---------- Practice layout: one card at a time, arrows on the sides, no page scrolling ---------- */
 body.practice { overflow: hidden; }
@@ -401,14 +401,14 @@ body.practice { overflow: hidden; }
 .practice .dock { padding: 6px 16px calc(6px + env(safe-area-inset-bottom, 0px)); }
 .friends-link { flex: none; color: var(--gold); font-weight: 700; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; padding: 8px 0 8px 8px; animation: textGlow 1.8s ease-in-out infinite; }
 @keyframes textGlow {
-  0%, 100% { text-shadow: 0 0 2px rgba(227,178,60,.35); }
-  50% { text-shadow: 0 0 8px rgba(227,178,60,.95), 0 0 16px rgba(227,178,60,.6); }
+  0%, 100% { text-shadow: 0 0 2px rgba(214,40,40,.35); }
+  50% { text-shadow: 0 0 8px rgba(214,40,40,.95), 0 0 16px rgba(214,40,40,.6); }
 }
-@media (prefers-reduced-motion: reduce) { .friends-link { animation: none; text-shadow: 0 0 8px rgba(227,178,60,.8); } }
+@media (prefers-reduced-motion: reduce) { .friends-link { animation: none; text-shadow: 0 0 8px rgba(214,40,40,.8); } }
 /* bottom bar: SoundCloud single | copyright | menu — same height, same frame */
 .dock-row { gap: 10px; }
 .single-link { flex: none; display: inline-flex; align-items: center; gap: 9px; height: 50px; padding: 0 14px 0 10px; border: 1px solid var(--gold-dim); border-radius: 12px; background: rgba(0,0,0,.4); color: #fff; text-decoration: none; transition: border-color .15s, background .15s; }
-.single-link:hover, .single-link:active { border-color: var(--gold); background: rgba(227,178,60,.1); }
+.single-link:hover, .single-link:active { border-color: var(--gold); background: rgba(214,40,40,.1); }
 .single-link .sc { width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; background: #ff5500; flex: none; }
 .single-link .sc svg { width: 20px; height: 20px; fill: #fff; }
 .single-link .txt { display: grid; gap: 4px; line-height: 1; }
@@ -486,7 +486,7 @@ body.practice { overflow: hidden; }
 .switchboard .sb-tile.on { background: var(--gold); border-color: var(--gold); color: var(--bg); }
 .menu-foot { color: var(--muted); font-size: .7rem; text-align: center; margin: 6px 0 0; }
 
-.promo { position: fixed; left: 50%; top: 38%; z-index: 20; transform: translate(-50%, -50%) scale(.8); opacity: 0; transition: opacity .3s, transform .3s; background: #000; border: 2px solid var(--gold); border-radius: 16px; padding: 16px 26px; text-align: center; box-shadow: 0 0 30px rgba(227,178,60,.55); pointer-events: none; }
+.promo { position: fixed; left: 50%; top: 38%; z-index: 20; transform: translate(-50%, -50%) scale(.8); opacity: 0; transition: opacity .3s, transform .3s; background: #000; border: 2px solid var(--gold); border-radius: 16px; padding: 16px 26px; text-align: center; box-shadow: 0 0 30px rgba(214,40,40,.55); pointer-events: none; }
 .promo.on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 .promo-kick { font-family: var(--display); font-size: .75rem; letter-spacing: .24em; color: var(--gold); }
 .promo-name { font-family: var(--graffiti); font-size: 2.1rem; line-height: 1.15; color: #fff; text-shadow: 2px 2px 0 #000; white-space: nowrap; }
@@ -528,7 +528,7 @@ body.practice { overflow: hidden; }
 #pEp .vol-tag::after { content: "\00B7"; margin: 0 6px; }
 #pPart { color: var(--muted); font-weight: 600; font-size: .78rem; }
 .track .lock { background: repeating-linear-gradient(45deg, #2c2e33 0 4px, #1c1d21 4px 8px); }
-.cred-bar i { box-shadow: none; background: linear-gradient(90deg, #a07a22, #e3b23c); }
+.cred-bar i { box-shadow: none; background: linear-gradient(90deg, #7a1f1f, #d62828); }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -658,9 +658,9 @@ function nineSvg(fill, cls) {
   return '<svg class="nine ' + (cls || "") + '" viewBox="-4 -4 72 100" aria-hidden="true">' +
     shape("#000", 4, 4) +
     (solid ? shape("#fff", 0, 0)
-      : shape("#3a3320", 0, 0) +
+      : shape("#3a2020", 0, 0) +
         '<clipPath id="' + id + '"><rect x="-4" y="' + (96 - 100 * fill) + '" width="72" height="' + (100 * fill + 4) + '"/></clipPath>' +
-        '<g clip-path="url(#' + id + ')">' + shape("#e3b23c", 0, 0) + '</g>') +
+        '<g clip-path="url(#' + id + ')">' + shape("#d62828", 0, 0) + '</g>') +
     '</svg>';
 }
 
@@ -1580,24 +1580,24 @@ window.scrollTo(0, 0);
 .practice #f2 { left: 61.11% !important; }
 /* Street Cred meter panel is white; dark blocks with white numbers pop on it; labels use deeper yellow/green so they read on white */
 .practice .cred { background: #fff !important; border-color: #e3e3e3 !important; }
-.practice .cred .cred-name { color: #b8860b !important; }
-.practice .cred .flag em, .practice .cred .flag em i, .practice .cred .flag span b { color: #b8860b !important; }
+.practice .cred .cred-name { color: #c81e1e !important; }
+.practice .cred .flag em, .practice .cred .flag em i, .practice .cred .flag span b { color: #c81e1e !important; }
 .practice .cred .flag.won em, .practice .cred .flag.won em i, .practice .cred .flag.won span b { color: #1a8a3a !important; }
 .practice #list.on-meter .ep { background: #17181c !important; border-color: #17181c !important; }
 .practice #list.on-meter .ep:has(.s.open) { background: #1f8a3c !important; border-color: #1f8a3c !important; }
-.practice #list.on-meter .ep.current { border-color: #e3b23c !important; box-shadow: 0 0 0 2px #e3b23c !important; }
-.practice #list.on-meter .dot-gift { color: #b8860b !important; }
+.practice #list.on-meter .ep.current { border-color: #d62828 !important; box-shadow: 0 0 0 2px #d62828 !important; }
+.practice #list.on-meter .dot-gift { color: #c81e1e !important; }
 /* deeper subway-style yellow gold for every word on the meter so it stands out on white */
-.practice .cred .cred-name, .practice .cred .cred-hint, .practice .cred .flag span, .practice .cred .flag span small, .practice .cred .flag em, .practice .cred .flag em i, .practice .cred .flag span b { color: #9a6800 !important; opacity: 1 !important; text-shadow: none; }
+.practice .cred .cred-name, .practice .cred .cred-hint, .practice .cred .flag span, .practice .cred .flag span small, .practice .cred .flag em, .practice .cred .flag em i, .practice .cred .flag span b { color: #c81e1e !important; opacity: 1 !important; text-shadow: none; }
 .practice .cred .cred-name { font-weight: 800; }
 .practice .cred .flag span, .practice .cred .cred-hint { font-weight: 800; }
 .practice .cred .flag.won em, .practice .cred .flag.won em i, .practice .cred .flag.won span b { color: #1a8a3a !important; text-shadow: none; }
-.practice #list.on-meter .dot-gift { color: #9a6800 !important; }
+.practice #list.on-meter .dot-gift { color: #c81e1e !important; }
 #ff10 { display: none; }
 #ff10.on { display: grid; border-color: #2fbf57 !important; color: #2fbf57 !important; }
 #ff10.on svg { fill: #2fbf57; }
-.album-release { position: relative; display: table; margin: 2px auto 10px; padding: 8px 30px; text-align: center; font: 800 .72rem/1 var(--body); letter-spacing: .26em; color: #fff !important; text-shadow: 0 0 8px rgba(255,255,255,.45); border: 1px solid #c9a24a; outline: 1px solid #c9a24a; outline-offset: 3px; background: linear-gradient(180deg, rgba(201,162,74,.14), rgba(201,162,74,0)); }
-.album-release::before, .album-release::after { content: "\2605"; position: absolute; top: 50%; transform: translateY(-50%); font-size: .7rem; letter-spacing: 0; color: #e3b23c; text-shadow: none; }
+.album-release { position: relative; display: table; margin: 2px auto 10px; padding: 8px 30px; text-align: center; font: 800 .72rem/1 var(--body); letter-spacing: .26em; color: #fff !important; text-shadow: 0 0 8px rgba(255,255,255,.45); border: 1px solid #ffffff; outline: 1px solid #ffffff; outline-offset: 3px; background: linear-gradient(180deg, rgba(201,162,74,.14), rgba(201,162,74,0)); }
+.album-release::before, .album-release::after { content: "\2605"; position: absolute; top: 50%; transform: translateY(-50%); font-size: .7rem; letter-spacing: 0; color: #d62828; text-shadow: none; }
 .album-release::before { left: 10px; }
 .album-release::after { right: 10px; }
 /* the board sits lower and the picture up top grows into the spare space */
@@ -1617,6 +1617,33 @@ html, body, body.practice { background: #fff !important; }
 /* Milestones: yellow until reached, green once reached */
 .practice .flag em, .practice .flag em i, .practice .flag span b { color: var(--gold) !important; }
 .practice .flag.won em, .practice .flag.won em i, .practice .flag.won span b { color: #2fbf57 !important; }
+
+/* COLOR RULE: no yellow anywhere. Prompts/buttons are red until done, green once achieved. Plain wording is white on dark, black on white. */
+:root { --gold: #d62828 !important; --gold-dim: #7a1f1f !important; --red: #d62828; --green: #1f8a3c; }
+/* plain wording, not prompts: white on the dark panels */
+.how b, .practice .rules b, .practice .intro-title, .practice .slide-empty h3, .reward h3, .part, .v2-story b, .v2-count b, .promo-kick, .quiz .label, .ep .n, .practice .ep.current .n, .v2-n, .vol-tag .v1nine .tick, .score .count { color: #fff !important; }
+.cover > img, .mini-cover, .practice .cover img { border-color: #34363c !important; }
+.practice .game-title { color: #111215 !important; }
+/* progress fills = green (achieved) */
+.cred-bar i, .bar i, .track i { background: var(--green) !important; box-shadow: none !important; }
+.practice .ep:has(.s.open) { background: var(--green) !important; border-color: var(--green) !important; }
+/* Street Cred meter on white: title and hint black; milestones and ranks red until reached, green once reached */
+.practice .cred .cred-name, .practice .cred .cred-hint { color: #000 !important; }
+.practice .cred .flag em, .practice .cred .flag em i, .practice .cred .flag span, .practice .cred .flag span b, .practice .cred .flag span small { color: #c81e1e !important; text-shadow: none; }
+.practice .cred .flag.won em, .practice .cred .flag.won em i, .practice .cred .flag.won span, .practice .cred .flag.won span b, .practice .cred .flag.won span small { color: #1a8a3a !important; }
+.practice .flag::before { background: #c81e1e !important; border-color: #c81e1e !important; }
+.practice .flag.won::before { background: #1a8a3a !important; border-color: #1a8a3a !important; }
+.practice #list.on-meter .ep.current { border-color: #c81e1e !important; box-shadow: 0 0 0 2px #c81e1e !important; }
+.practice #list.on-meter .dot-gift { color: #c81e1e !important; }
+.practice #list.on-meter .dot-gift.on { color: #1a8a3a !important; }
+.practice #list.on-meter .dot-gift.current svg { filter: none; }
+/* '99 Album Release: bright white in a white double frame */
+.album-release { border-color: #fff !important; outline-color: #fff !important; background: linear-gradient(180deg, rgba(255,255,255,.1), rgba(255,255,255,0)) !important; }
+.album-release::before, .album-release::after { color: #fff !important; }
+.single-link:hover, .single-link:active { background: rgba(214,40,40,.1) !important; }
+/* labels (VOLUME 1, RAW CUT) are wording, not buttons: white tag, black text */
+.raw-kick { background: #fff !important; color: #000 !important; }
+.btn:not(.ghost), .btn-round.play { color: #fff !important; }
 </style>
 </body>
 </html>
