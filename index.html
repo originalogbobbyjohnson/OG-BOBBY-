@@ -1441,13 +1441,30 @@ window.scrollTo(0, 0);
   f.type = "button"; f.className = "btn-round"; f.id = "fwd"; f.setAttribute("aria-label", "Skip to the next part");
   f.innerHTML = '<svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg>';
   ctr.append(f);
+  // green forward-10 button: only on songs the player has fully unlocked
+  const ff = document.createElement("button");
+  ff.type = "button"; ff.className = "btn-round"; ff.id = "ff10"; ff.setAttribute("aria-label", "Forward 10 seconds");
+  ff.innerHTML = '<svg viewBox="0 0 24 24" style="transform:scaleX(-1)"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg>';
+  ctr.append(ff);
+  const updFF = () => { const e = idx >= 0 ? EPISODES[idx] : null; ff.classList.toggle("on", !!e && isOpen(e)); };
+  ff.onclick = () => {
+    const e = EPISODES[idx]; if (!e || !isOpen(e)) return;
+    const d = audio.duration || 0, t = audio.currentTime + 10;
+    if (t < d - 0.5) { audio.currentTime = t; return; }
+    if (sec < e.qs.length) {
+      const over = Math.max(0, t - d);
+      playSection(sec + 1, true);
+      audio.addEventListener("loadedmetadata", () => { audio.currentTime = Math.min(over, (audio.duration || 1) - 0.5); }, { once: true });
+    } else audio.currentTime = Math.max(0, d - 0.5);
+  };
+  ["loadstart", "play", "pause", "ended"].forEach(ev => audio.addEventListener(ev, updFF));
   const nextOk = () => { if (idx < 0) return false; const e = EPISODES[idx]; return sec < e.qs.length && !!keysOf(e)[sec]; };
   const upd = () => f.classList.toggle("on", nextOk());
   f.onclick = () => { if (nextOk()) { playSection(sec + 1, true); upd(); } };
   ["loadstart", "play", "pause", "ended"].forEach(ev => audio.addEventListener(ev, upd));
   const baseRL2 = renderList;
-  renderList = function () { baseRL2.apply(this, arguments); upd(); };
-  upd();
+  renderList = function () { baseRL2.apply(this, arguments); upd(); updFF(); };
+  upd(); updFF();
 })();
 </script>
 <style>
@@ -1561,6 +1578,9 @@ window.scrollTo(0, 0);
 /* reward markers sit right over the block that earns them: 1 song over block 3, 3 songs over block 6 */
 .practice #f1 { left: 27.78% !important; }
 .practice #f2 { left: 61.11% !important; }
+#ff10 { display: none; }
+#ff10.on { display: grid; border-color: #2fbf57 !important; color: #2fbf57 !important; }
+#ff10.on svg { fill: #2fbf57; }
 .album-release { text-align: center; font: 700 .62rem/1 var(--body); letter-spacing: .2em; color: var(--gold); margin-bottom: 6px; }
 /* the board sits lower and the picture up top grows into the spare space */
 .practice .wrap { padding-top: 14px !important; }
