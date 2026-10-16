@@ -1833,6 +1833,8 @@ html, body, body.practice { background: #fff !important; }
 .practice #list.on-meter .dot-gift { position: relative; overflow: visible; }
 .practice #list.on-meter .dot-gift::after { content: "OG"; position: absolute; left: calc(100% + 3px); top: 50%; transform: translateY(-50%); font: 900 .78rem/1 var(--body); letter-spacing: .04em; color: #c81e1e; }
 .practice #list.on-meter .dot-gift.on::after { color: #1a8a3a; }
+/* OG at the end of the meter: rich metallic gold with a dark edge so it pops on the white */
+.practice #list.on-meter .dot-gift::after, .practice #list.on-meter .dot-gift.on::after { font-size: .95rem; color: #e0a800; background: linear-gradient(180deg, #ffe680 0%, #f5c518 45%, #c98a00 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; -webkit-text-stroke: .6px #6b4a00; filter: drop-shadow(0 1px 0 #5a3d00) drop-shadow(0 0 4px rgba(245,197,24,.55)); }
 .practice #list.on-meter + .grp-row, .practice .cred .grp-row { left: 34px !important; right: 30px !important; }
 .practice .cred #f0 span.nf-side { white-space: normal !important; text-align: right; line-height: 1.05; width: 34px; font-size: .58rem; }
 /* '99 the album: big graffiti '99 centered, THE ALBUM underneath, all inside the starred double frame */
