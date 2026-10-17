@@ -1722,7 +1722,7 @@ window.scrollTo(0, 0);
   const VO = {
     hi: "vo/v01.mp3",
     tease: ["vo/v02.mp3", "vo/v04.mp3", "vo/v06.mp3"],
-    rank: { "Corner Kid": "vo/v03.mp3", "OG Soldier": "vo/v05.mp3", "OG Prot\u00e9g\u00e9": "vo/v07.mp3" },
+    rank: { "Corner Kid": "vo/v05.mp3", "OG Soldier": "vo/v03.mp3", "OG Prot\u00e9g\u00e9": "vo/v07.mp3" },
     right: ["vo/v08.mp3", "vo/v16.mp3", "vo/v09.mp3", "vo/v10.mp3", "vo/v17.mp3", "vo/v11.mp3"],
     wrong: ["vo/v12.mp3", "vo/v18.mp3", "vo/v13.mp3", "vo/v14.mp3", "vo/v19.mp3", "vo/v15.mp3"]
   };
@@ -2277,6 +2277,36 @@ html, body, body.practice { background: #fff !important; }
   if (intro) new MutationObserver(syncEntry).observe(intro, { attributes: true, attributeFilter: ["class"] });
   syncEntry(); paintBar();
   window.addEventListener("load", () => { syncEntry(); window.dispatchEvent(new Event("resize")); });
+})();
+</script>
+<script>
+/* '9 / VOL. 1 and 9 / VOL. 2: each 9 sits dead center in its black corner space —
+   side to side between the board edge and the '99 box, up and down between the top edge and its VOL. label (label stays put). */
+(function () {
+  function placeNines() {
+    const head = document.querySelector("#player > div:first-child"),
+          panel = head && head.closest(".stage-wrap"),
+          box = head && head.querySelector(".album-release.big");
+    if (!head || !panel || !box || !head.offsetWidth) return;
+    const hr = head.getBoundingClientRect(), pr = panel.getBoundingClientRect(), br = box.getBoundingClientRect();
+    head.querySelectorAll(".vol-big").forEach(g => {
+      const nine = g.querySelector(".v1nine"), lab = g.querySelector(".lab"); if (!nine || !lab) return;
+      const nH = nine.offsetHeight, lH = lab.offsetHeight, gW = g.offsetWidth;
+      const labTop = hr.top + head.offsetHeight / 2 - (nH + 5 + lH) / 2 + nH + 5;   // where VOL. sits today
+      const nineTop = (pr.top + labTop) / 2 - nH / 2;                               // halfway between top edge and VOL.
+      const cx = g.classList.contains("right") ? (br.right + pr.right) / 2 : (pr.left + br.left) / 2;
+      g.style.setProperty("transform", "none", "important");
+      g.style.setProperty("right", "auto", "important");
+      g.style.setProperty("left", (cx - gW / 2 - hr.left) + "px", "important");
+      g.style.setProperty("top", (nineTop - hr.top) + "px", "important");
+      g.style.setProperty("gap", Math.max(4, labTop - nineTop - nH) + "px", "important");
+    });
+  }
+  window.addEventListener("resize", () => requestAnimationFrame(placeNines));
+  window.addEventListener("load", placeNines);
+  if (typeof load === "function") { const baseLoad = load; load = function () { const r = baseLoad.apply(this, arguments); requestAnimationFrame(placeNines); return r; }; }
+  setTimeout(placeNines, 50); setTimeout(placeNines, 600); setTimeout(placeNines, 1500);
+  window.ogPlaceNines = placeNines;
 })();
 </script>
 
