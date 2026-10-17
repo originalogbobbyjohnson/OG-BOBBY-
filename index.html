@@ -3079,5 +3079,37 @@ html, body, body.practice { background: #fff !important; }
 @media (min-width: 600px) { .v2-drop b { font-size: .95rem !important; } }
 </style>
 <script>setTimeout(() => window.dispatchEvent(new Event("resize")), 50); window.addEventListener("load", () => window.dispatchEvent(new Event("resize")));</script>
+<style>
+/* ---------- Restart game: steady on the board, top-right beside MUSIC GAME ---------- */
+.practice .name-row { position: relative; }
+.board-reset { all: unset; box-sizing: border-box; position: absolute; right: 0; top: 50%; transform: translateY(calc(-50% - 3px)); display: grid; justify-items: center; gap: 3px; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.board-reset .ic { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; border: 2px solid #d62828; color: #d62828; background: #fff; }
+.board-reset .ic svg { width: 17px; height: 17px; fill: currentColor; }
+.board-reset .lb { font: 800 .5rem/1 var(--body); letter-spacing: .1em; color: #d62828; white-space: nowrap; }
+.board-reset:active { transform: translateY(calc(-50% - 3px)) scale(.94); }
+.board-reset:focus-visible .ic { outline: 2px solid #d62828; outline-offset: 2px; }
+/* ---------- STREET CRED METER title in the graffiti font (same family as the OG BOBBY wordmark), kept black ---------- */
+.practice .cred .cred-name, .cred-name { font-family: "Sedgwick Ave Display", "Permanent Marker", "Marker Felt", cursive !important; font-weight: 400 !important; font-size: 1.45rem !important; letter-spacing: .06em !important; line-height: 1.1 !important; text-transform: none !important; }
+@media (max-width: 380px) { .practice .cred .cred-name, .cred-name { font-size: 1.25rem !important; } }
+/* FUN RUN strip only shows during a Fun Run (it was forced visible for everyone) */
+.fun-bar[hidden], .practice .fun-bar[hidden] { display: none !important; }
+/* ---------- Bigger play / pause buttons ---------- */
+.practice .controls { height: 36px !important; align-items: center !important; }
+.practice .controls .btn-round.play { width: 50px !important; height: 50px !important; flex: none; }
+.practice .controls > .btn-round { transform: translateY(-7px); }
+.practice .controls .btn-round.play svg { width: 28px !important; height: 28px !important; }
+.raw-play .btn-round.play, #rPlay { width: 64px !important; height: 64px !important; }
+.raw-play .btn-round.play svg, #rPlay svg { width: 32px !important; height: 32px !important; }
+</style>
+<script>
+(function () {
+  const row = document.querySelector(".name-row"), sheet = document.getElementById("resetSheet");
+  if (!row || !sheet || document.getElementById("boardReset")) return;
+  const b = document.createElement("button"); b.type = "button"; b.className = "board-reset"; b.id = "boardReset"; b.setAttribute("aria-label", "Restart the game");
+  b.innerHTML = '<span class="ic"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></span><span class="lb">RESTART</span>';
+  b.onclick = () => { sheet.hidden = false; };
+  row.append(b);
+})();
+</script>
 </body>
 </html>
