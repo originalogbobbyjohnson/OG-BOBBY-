@@ -2971,6 +2971,15 @@ html, body, body.practice { background: #fff !important; }
   const place = () => { const items = [...close.parentElement.querySelectorAll(".menu-item")].filter(x => x !== m); if (items.length) items[items.length - 1].after(m); else close.before(m); };
   place(); window.addEventListener("load", place);
   m.onclick = ev => { ev.preventDefault(); document.getElementById("menuSheet").hidden = true; sheet.hidden = false; };
+  /* same restart on the bottom bar, so it sits in the exact same spot on every page */
+  const board = document.querySelector(".switchboard"), menuT = document.getElementById("menuBtn");
+  if (board && menuT && !document.getElementById("sbReset")) {
+    const t = document.createElement("button"); t.type = "button"; t.className = "sb-tile"; t.id = "sbReset"; t.setAttribute("aria-label", "Restart the game");
+    t.innerHTML = '<span class="sb-ic"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></span><span class="sb-lab">RESTART</span>';
+    t.onclick = () => { sheet.hidden = false; };
+    menuT.before(t);
+    board.style.gridTemplateColumns = "repeat(" + board.children.length + ", 1fr)";
+  }
   document.getElementById("resetKeep").onclick = () => { sheet.hidden = true; };
   sheet.addEventListener("click", ev => { if (ev.target === sheet) sheet.hidden = true; });
   document.getElementById("resetGo").onclick = () => {
