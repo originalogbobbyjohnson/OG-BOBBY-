@@ -2665,7 +2665,8 @@ html, body, body.practice { background: #fff !important; }
     const boardBottom = Math.max(...[...document.querySelectorAll(".m9 .mv-body")].map(b => b.getBoundingClientRect().bottom));
     const fr = (bar.querySelector(':scope > span') || bar).getBoundingClientRect(), lineY = fr.top - 5, vr = v2.getBoundingClientRect();
     const mid = boardBottom + (lineY - boardBottom) * 0.62;
-    d.style.setProperty("top", (mid - d.offsetHeight / 2 - vr.top) + "px", "important");
+    const k = (vr.height && v2.offsetHeight) ? vr.height / v2.offsetHeight : 1;   // the meter is scaled down on small phones
+    d.style.setProperty("top", ((mid - vr.top) / k - d.offsetHeight / 2) + "px", "important");
     d.style.setProperty("bottom", "auto", "important");
   }
   window.addEventListener("resize", () => requestAnimationFrame(placeDrop)); window.addEventListener("load", placeDrop);

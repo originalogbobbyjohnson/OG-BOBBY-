@@ -2667,7 +2667,8 @@ html, body, body.practice { background: #fff !important; }
     const boardBottom = Math.max(...[...document.querySelectorAll(".m9 .mv-body")].map(b => b.getBoundingClientRect().bottom));
     const fr = (bar.querySelector(':scope > span') || bar).getBoundingClientRect(), lineY = fr.top - 5, vr = v2.getBoundingClientRect();
     const mid = boardBottom + (lineY - boardBottom) * 0.62;
-    d.style.setProperty("top", (mid - d.offsetHeight / 2 - vr.top) + "px", "important");
+    const k = (vr.height && v2.offsetHeight) ? vr.height / v2.offsetHeight : 1;   // the meter is scaled down on small phones
+    d.style.setProperty("top", ((mid - vr.top) / k - d.offsetHeight / 2) + "px", "important");
     d.style.setProperty("bottom", "auto", "important");
   }
   window.addEventListener("resize", () => requestAnimationFrame(placeDrop)); window.addEventListener("load", placeDrop);
@@ -2855,6 +2856,26 @@ html, body, body.practice { background: #fff !important; }
 .practice .v2-tile { background: rgba(9,26,70,.4) !important; }
 .practice .slide-intro .hp-dots button { background: rgba(255,255,255,.35); }
 .practice .slide-intro .hp-dots button.on { background: #fff; }
+</style>
+<style>
+/* ---------- Welcome back, reordered: rank badge + name at top (bigger, blue), songs-done line under it,
+   then "Welcome back" and both buttons grouped in the middle, "See how to play" at the bottom ---------- */
+.practice .stage:has(.slide-intro.welcome:not([hidden])) { align-content: stretch !important; grid-template-rows: 1fr !important; }
+.practice .slide-intro.welcome { height: 100% !important; min-height: 0 !important; justify-content: flex-start !important; gap: 0 !important; padding: 14px 0 10px !important; box-sizing: border-box; }
+.practice .slide-intro.welcome .howpage { order: 1; }
+.practice .slide-intro.welcome .intro-title { order: 2; margin-top: auto !important; margin-bottom: 14px !important; }
+.practice .slide-intro.welcome .btn.start { order: 3; margin-bottom: 10px !important; }
+.practice .slide-intro.welcome .fun-wrap { order: 4; margin-bottom: auto !important; }
+.practice .slide-intro.welcome .wb-how { order: 5; margin-top: 12px !important; }
+.practice .slide-intro.welcome .hp-body { gap: 8px !important; }
+.practice .slide-intro.welcome .wb-rank { gap: 10px !important; }
+.practice .slide-intro.welcome .wb-emb { width: 46px !important; height: 55px !important; filter: drop-shadow(0 3px 8px rgba(0,0,0,.35)) !important; }
+.practice .slide-intro.welcome .wb-emb .emb .bg { fill: #1546b8 !important; stroke: #fff !important; stroke-width: 2.4 !important; }
+.practice .slide-intro.welcome .wb-emb .emb .ring { stroke: #cfe0ff !important; }
+.practice .slide-intro.welcome .wb-emb .emb .mk { stroke: #fff !important; }
+.practice .slide-intro.welcome .wb-emb .emb .mk-f { fill: #fff !important; }
+.practice .slide-intro.welcome .wb-name { font-size: 1.25rem !important; padding: 6px 14px !important; background: #1546b8 !important; border: 2px solid #fff !important; border-radius: 6px !important; box-shadow: 0 3px 8px rgba(0,0,0,.3) !important; }
+.practice .slide-intro.welcome .wb-done { font-size: .95rem !important; font-weight: 700 !important; }
 </style>
 </body>
 </html>
