@@ -2927,5 +2927,26 @@ html, body, body.practice { background: #fff !important; }
 .practice .slide-intro.welcome .wb-links .fun-wrap .btn.fun-btn, .practice .slide-intro.welcome .wb-links > .wb-how {
   font: 600 .82rem/1 var(--body) !important; letter-spacing: .02em !important; padding: 6px 4px !important; width: auto !important; background: none !important; box-shadow: none !important; }
 </style>
+<style>
+/* Rank pill: badge + rank name together in one banner, centered */
+.practice .slide-intro.welcome .wb-rank { display: inline-flex !important; flex-direction: row !important; align-items: center !important; justify-content: center !important; gap: 10px !important;
+  background: #fff !important; border-radius: 999px !important; padding: 7px 22px 7px 10px !important; box-shadow: 0 4px 0 #0d2f80, 0 8px 18px rgba(0,0,0,.22) !important; }
+.practice .slide-intro.welcome .wb-emb { width: 34px !important; height: 41px !important; filter: none !important; flex: none; }
+.practice .slide-intro.welcome .wb-emb svg.emb.r0 { transform: translateY(3px) !important; }
+.practice .slide-intro.welcome .wb-emb .emb .bg { fill: #1546b8 !important; stroke: #1546b8 !important; }
+.practice .slide-intro.welcome .wb-emb .emb .ring { stroke: #cfe0ff !important; }
+.practice .slide-intro.welcome .wb-name { font-size: 1.45rem !important; color: #1546b8 !important; letter-spacing: .05em !important; white-space: nowrap !important; }
+.practice .slide-intro.welcome .hp-body { gap: 14px !important; }
+</style>
+<style>
+.practice .slide-intro.welcome .btn.start { background: #d62828 !important; color: #fff !important; box-shadow: 0 4px 0 #8f1212, 0 8px 18px rgba(0,0,0,.25) !important; }
+.practice .slide-intro.welcome .howpage { margin-bottom: 18px !important; }
+</style>
+<style>
+.practice .slide-intro.welcome:has(.fun-wrap[hidden]) .btn.start, .practice .slide-intro.welcome .btn.start { margin-bottom: 16px !important; }
+.practice .slide-intro.welcome .wb-links { min-height: 26px; }
+.practice .stage:has(.slide-intro.welcome:not([hidden])) { align-content: center !important; }
+.practice .slide-intro.welcome { margin: auto 0 !important; }
+</style>
 </body>
 </html>
