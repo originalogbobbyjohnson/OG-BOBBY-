@@ -3035,5 +3035,17 @@ html, body, body.practice { background: #fff !important; }
   HTMLMediaElement.prototype.play = function () { try { hook(this); } catch (e) {} return play0.apply(this, arguments); };
 })();
 </script>
+<style>
+/* ---------- OG BOBBY on the top picture: full graffiti, shadow baked into the image (iPhone Safari was clipping the CSS shadow and cutting off the O) ---------- */
+.practice .cover h1.on-pic { overflow: visible !important; }
+.og-bar .og-rec.flipper .face.b .lbl img { filter: none !important; -webkit-filter: none !important; width: calc(60% * 1052 / 932) !important; max-width: none !important; height: auto !important; margin: calc(-60% * 60 / 932) !important; }
+.practice .cover h1.on-pic img { filter: none !important; -webkit-filter: none !important; width: calc(100% * 1052 / 932) !important; max-width: none !important; height: auto !important; margin: calc(-100% * 60 / 932) 0 0 calc(-100% * 60 / 932) !important; }
+</style>
+<script>
+(function () {
+  const i = document.querySelector(".cover h1.on-pic img"); if (i) { i.src = "brand/og-bobby-wordmark-top.png"; i.width = 1052; i.height = 340; }
+  const r = document.querySelector(".og-rec .face.b .lbl img"); if (r) r.src = "brand/og-bobby-wordmark-top.png";
+})();
+</script>
 </body>
 </html>
