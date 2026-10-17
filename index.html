@@ -2946,5 +2946,41 @@ html, body, body.practice { background: #fff !important; }
 .practice .stage:has(.slide-intro.welcome:not([hidden])) { align-content: center !important; }
 .practice .slide-intro.welcome { margin: auto 0 !important; }
 </style>
+<div class="sheet" id="resetSheet" hidden role="dialog" aria-modal="true" aria-labelledby="resetTitle">
+  <div class="box reset-box">
+    <h3 id="resetTitle">Start the game over?</h3>
+    <p>This wipes your Street Cred, your rank, your unlocked songs and your earned playlists on this phone. You start back as a New Face. It can't be undone.</p>
+    <button class="btn reset-go" id="resetGo" type="button">Erase &amp; start over</button>
+    <button class="btn ghost reset-keep" id="resetKeep" type="button">Keep my game</button>
+  </div>
+</div>
+<style>
+.reset-box { text-align: center; }
+.reset-box h3 { color: #fff !important; font-size: 1.2rem !important; }
+.reset-box p { color: #fff !important; line-height: 1.45; }
+.reset-box .reset-go { background: #d62828 !important; color: #fff !important; }
+.reset-box .reset-keep { background: none !important; color: #fff !important; border: 1px solid #fff !important; }
+</style>
+<script>
+/* Restart the game: bottom menu item. Erases this phone's progress (Street Cred, rank, unlocks, playlists, Fun Run) and starts fresh as a New Face. Sound on/off setting is kept. */
+(function () {
+  const close = document.getElementById("menuClose"), sheet = document.getElementById("resetSheet");
+  if (!close || !sheet) return;
+  const m = document.createElement("a");
+  m.className = "menu-item"; m.id = "mReset"; m.href = "#"; m.textContent = "Restart the game";
+  const place = () => { const items = [...close.parentElement.querySelectorAll(".menu-item")].filter(x => x !== m); if (items.length) items[items.length - 1].after(m); else close.before(m); };
+  place(); window.addEventListener("load", place);
+  m.onclick = ev => { ev.preventDefault(); document.getElementById("menuSheet").hidden = true; sheet.hidden = false; };
+  document.getElementById("resetKeep").onclick = () => { sheet.hidden = true; };
+  sheet.addEventListener("click", ev => { if (ev.target === sheet) sheet.hidden = true; });
+  document.getElementById("resetGo").onclick = () => {
+    try { ["ogb2", "ogFun", "ogVoHi"].forEach(k => localStorage.removeItem(k)); } catch (e) {}
+    try { sessionStorage.clear(); } catch (e) {}
+    try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "restart", title: "Restarted the game", event: true }); } catch (e) {}
+    try { document.querySelectorAll("audio, video").forEach(a => a.pause()); } catch (e) {}
+    location.replace(location.pathname + "?fresh=" + Date.now());
+  };
+})();
+</script>
 </body>
 </html>
