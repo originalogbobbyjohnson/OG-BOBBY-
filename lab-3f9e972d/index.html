@@ -2666,7 +2666,7 @@ html, body, body.practice { background: #fff !important; }
     const eps = document.querySelectorAll(".mv.v2 .v2-ep"); if (!d || !v2 || !bar || !eps.length) return;
     const boardBottom = Math.max(...[...document.querySelectorAll(".m9 .mv-body")].map(b => b.getBoundingClientRect().bottom));
     const fr = (bar.querySelector(':scope > span') || bar).getBoundingClientRect(), lineY = fr.top - 5, vr = v2.getBoundingClientRect();
-    const mid = (boardBottom + lineY) / 2;
+    const mid = boardBottom + (lineY - boardBottom) * 0.62;
     d.style.setProperty("top", (mid - d.offsetHeight / 2 - vr.top) + "px", "important");
     d.style.setProperty("bottom", "auto", "important");
   }
@@ -2675,5 +2675,9 @@ html, body, body.practice { background: #fff !important; }
   try { new ResizeObserver(() => requestAnimationFrame(placeDrop)).observe(document.querySelector(".m9")); } catch (e) {}
 })();
 </script>
+<style>
+.v2-drop b { font-size: .54rem !important; }
+.v2-drop i { font-size: .42rem !important; }
+</style>
 </body>
 </html>
