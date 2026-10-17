@@ -2582,5 +2582,23 @@ html, body, body.practice { background: #fff !important; }
 /* the welcome window's fun button reads the same as the main one */
 (function () { const b = document.querySelector(".slide-intro .fun-btn"); if (b) b.textContent = "PLAY AGAIN FOR FUN"; })();
 </script>
+<style>
+/* Vol. 2 board: "Dropping Nov. 1 · one single a week" stamped across it until it goes live */
+.mv.v2 { position: relative; }
+.mv.v2 .mv-body { opacity: .45; }
+.v2-drop { position: absolute; left: 50%; top: calc(50% + 15px); transform: translate(-50%, -50%) rotate(-8deg); z-index: 3; pointer-events: none;
+  display: grid; justify-items: center; gap: 3px; padding: 7px 14px 6px; background: #c81e1e; border: 2px solid #fff; outline: 2px solid #c81e1e; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,.3); white-space: nowrap; }
+.v2-drop b { font: 400 1.15rem/1 var(--display); letter-spacing: .08em; color: #fff; }
+.v2-drop i { font: 800 .56rem/1 var(--body); font-style: normal; letter-spacing: .12em; color: #fff; }
+@media (max-width: 420px) { .v2-drop { padding: 6px 10px 5px; } .v2-drop b { font-size: .95rem; } .v2-drop i { font-size: .48rem; letter-spacing: .08em; } }
+</style>
+<script>
+(function () {
+  const v2 = document.querySelector(".mv.v2"); if (!v2 || v2.querySelector(".v2-drop")) return;
+  const d = document.createElement("div"); d.className = "v2-drop"; d.setAttribute("aria-label", "Volume 2 dropping November 1st, one single a week");
+  d.innerHTML = "<b>DROPPING NOV. 1</b><i>ONE SINGLE A WEEK</i>";
+  v2.append(d);
+})();
+</script>
 </body>
 </html>
