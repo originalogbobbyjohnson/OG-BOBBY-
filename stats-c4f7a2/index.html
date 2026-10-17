@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>OG Game Stats</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700;800&display=swap">
+<style>
+:root { --bg: #123a99; --card: rgba(255,255,255,.08); --line: rgba(255,255,255,.18); --red: #d62828; --green: #2fbf57; }
+* { box-sizing: border-box; }
+html { background: #123a99; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(120% 60% at 50% 0%, #2f6cf0 0%, #1a4fc9 45%, #123a99 100%) no-repeat, #123a99; color: #fff; font: 400 15px/1.4 "Barlow", system-ui, -apple-system, sans-serif; }
+.wrap { max-width: 560px; margin: 0 auto; padding: 22px 16px 40px; display: grid; gap: 16px; }
+#app { display: grid; gap: 14px; }
+.top { text-align: center; display: grid; gap: 6px; }
+.top img { width: 170px; height: auto; margin: 0 auto; display: block; filter: drop-shadow(0 2px 3px rgba(0,0,0,.6)); }
+h1 { font: 400 1.5rem/1 "Anton", Impact, sans-serif; letter-spacing: .12em; margin: 0; }
+.k { font: 800 .62rem/1 "Barlow", sans-serif; letter-spacing: .2em; }
+.seg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.seg button { all: unset; cursor: pointer; text-align: center; padding: 9px 4px; border-radius: 10px; border: 1px solid var(--line); font: 800 .66rem/1 "Barlow", sans-serif; letter-spacing: .12em; }
+.seg button.on { background: #fff; color: #123a99; border-color: #fff; }
+.big { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.big div { background: var(--card); border-radius: 12px; padding: 12px 4px; text-align: center; display: grid; gap: 6px; }
+.big b { font: 400 1.7rem/1 "Anton", Impact, sans-serif; letter-spacing: .03em; }
+.big i { font: 800 .55rem/1.15 "Barlow", sans-serif; font-style: normal; letter-spacing: .12em; }
+section { background: var(--card); border-radius: 14px; padding: 14px; display: grid; gap: 10px; }
+section h2 { margin: 0; font: 800 .7rem/1 "Barlow", sans-serif; letter-spacing: .2em; }
+table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+th { text-align: right; font: 800 .55rem/1 "Barlow", sans-serif; letter-spacing: .12em; padding: 0 0 6px; }
+th:first-child, td:first-child { text-align: left; }
+td { text-align: right; padding: 7px 0; border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+td:first-child { padding-right: 8px; }
+.bar { height: 6px; border-radius: 3px; background: rgba(255,255,255,.15); overflow: hidden; margin-top: 5px; }
+.bar i { display: block; height: 100%; background: var(--red); }
+.q { display: grid; gap: 2px; padding: 8px 0; border-top: 1px solid var(--line); }
+.q:first-of-type { border-top: 0; }
+.q .s { font: 800 .55rem/1 "Barlow", sans-serif; letter-spacing: .12em; }
+.q .t { font-size: .9rem; }
+.q .p { font-size: .8rem; }
+.list { display: grid; grid-template-columns: 1fr auto; gap: 7px 10px; font-size: .9rem; }
+.list span:nth-child(even) { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+.key { display: grid; gap: 10px; }
+.key input { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--line); background: rgba(0,0,0,.2); color: #fff; font: 600 .9rem "Barlow", sans-serif; }
+.btn { all: unset; cursor: pointer; text-align: center; padding: 12px; border-radius: 12px; background: var(--red); font: 800 .8rem/1 "Barlow", sans-serif; letter-spacing: .14em; }
+.btn.ghost { background: none; border: 1px solid #fff; }
+.note { font-size: .82rem; }
+.note a { color: #fff; }
+.err { background: rgba(214,40,40,.25); border: 1px solid var(--red); border-radius: 10px; padding: 10px 12px; font-size: .85rem; }
+.empty { font-size: .85rem; }
+.foot { text-align: center; font-size: .75rem; }
+.foot button { all: unset; cursor: pointer; text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><img src="../brand/og-bobby-wordmark-top.png" alt="OG Bobby"><h1>GAME STATS</h1><div class="k">PRIVATE · ONLY YOU HAVE THIS LINK</div></div>
+  <div id="app"></div>
+</div>
+<script>
+const SONGS = [{"slug": "whatever-it-takes", "t": "Whatever It Takes", "q": ["What year does OG's story start?"]}, {"slug": "ridge-brothers", "t": "Ridge Brothers", "q": ["Who connected OG to the Jorgenson brothers?"]}, {"slug": "bay-ridge-nights", "t": "Bay Ridge Nights", "q": ["Which Bay Ridge spot was for the squares?"]}, {"slug": "the-get-back", "t": "The Get Back", "q": ["How old was OG's baby girl in '99?", "When did the brother say \"he don't sell\"?"]}, {"slug": "pioneer", "t": "Pioneer", "q": ["Where did the hustle start?", "What did the partner do with the shared money?"]}, {"slug": "bars-and-clubs", "t": "Bars & Clubs", "q": ["Which Bay Ridge bar gets named?", "Which Manhattan club gets a shout-out?"]}, {"slug": "bay-ridge-is-mine", "t": "Bay Ridge Is Mine", "q": ["What holiday was coming when it went down?", "How much money went missing?", "What's the hook?"]}, {"slug": "black-rob", "t": "Black Rob", "q": ["Which gym did Rob start in?", "What was Rob to OG in the boxing gym?", "Rob is like OG's..."]}, {"slug": "positivity-spreads", "t": "Positivity Spreads", "q": ["Which Brooklyn park does OG train in?", "What spreads?", "Who did OG earn his black belt under?"]}];
+const SITE = "https://ogbobbybrooklyn.goatcounter.com";
+const LAUNCH = "2026-10-11";
+const KEY = "ogStatsKey";
+const $ = s => document.querySelector(s);
+const app = $("#app");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const day = d => d.toISOString().slice(0, 10);
+let range = "30";
+
+function keyForm(msg) {
+  app.innerHTML = '<section class="key"><h2>ONE-TIME SETUP</h2>' + (msg ? '<div class="err">' + esc(msg) + '</div>' : "") +
+    '<p class="note">This page reads your numbers from GoatCounter. It needs a read-only key from your account, one time on each phone or computer you use:</p>' +
+    '<p class="note">1. Open <a href="' + SITE + '/user/api" target="_blank" rel="noopener">GoatCounter → Settings → API</a> (sign in with your ogbobbybrooklyn Gmail).<br>2. Tap <b>New token</b>, name it "stats", tick <b>Read statistics</b> only, and save.<br>3. Copy the token and paste it here.</p>' +
+    '<input id="k" type="password" autocomplete="off" placeholder="Paste your GoatCounter token">' +
+    '<button class="btn" id="go">Show my stats</button></section>';
+  $("#go").onclick = () => { const v = $("#k").value.trim(); if (!v) return; try { localStorage.setItem(KEY, v); } catch (e) {} load(); };
+}
+
+async function api(path, key) {
+  const r = await fetch(SITE + "/api/v0" + path, { headers: { "Authorization": "Bearer " + key, "Content-Type": "application/json" } });
+  if (r.status === 401 || r.status === 403) throw new Error("key");
+  if (!r.ok) throw new Error("http " + r.status);
+  return r.json();
+}
+async function allHits(key, start, end) {
+  const out = []; let excl = [];
+  for (let page = 0; page < 30; page++) {
+    const q = "/stats/hits?start=" + start + "&end=" + end + "&limit=100" + (excl.length ? "&exclude_paths=" + excl.join(",") : "");
+    const j = await api(q, key);
+    (j.hits || []).forEach(h => { out.push(h); excl.push(h.path_id); });
+    if (!j.more || !(j.hits || []).length) break;
+  }
+  return out;
+}
+
+async function load() {
+  let key = ""; try { key = localStorage.getItem(KEY) || ""; } catch (e) {}
+  if (!key) return keyForm();
+  app.innerHTML = '<p class="k" style="text-align:center">LOADING…</p>';
+  const end = new Date(); const start = new Date(range === "all" ? LAUNCH + "T00:00:00" : Date.now() - (range === "1" ? 0 : (+range - 1)) * 864e5);
+  let hits;
+  try { hits = await allHits(key, day(start), day(end)); }
+  catch (e) {
+    if (e.message === "key") { try { localStorage.removeItem(KEY); } catch (x) {} return keyForm("That key didn't work. Make a new one with Read statistics ticked and paste it again."); }
+    app.innerHTML = '<div class="err">Couldn\'t reach GoatCounter from this page (' + esc(e.message) + '). Your numbers are still in your <a style="color:#fff" href="' + SITE + '" target="_blank" rel="noopener">GoatCounter dashboard</a>.</div>' + footer();
+    bindFoot(); return;
+  }
+  render(hits);
+}
+
+function render(hits) {
+  const c = {}; hits.forEach(h => { const p = String(h.path || "").replace(/^\//, ""); c[p] = (c[p] || 0) + (h.count || h.count_unique || 0); });
+  const get = p => c[p] || 0;
+  const sum = pre => Object.keys(c).filter(p => p.startsWith(pre)).reduce((a, p) => a + c[p], 0);
+  const visitors = get("") + get("index.html");
+  const played = SONGS.reduce((a, s) => a + get("play/" + s.slug), 0);
+  const finished = sum("level-unlocked/");
+  const ranks = sum("rank/");
+  let h = '<div class="seg">' + [["1", "TODAY"], ["7", "7 DAYS"], ["30", "30 DAYS"], ["all", "ALL TIME"]].map(([v, l]) => '<button data-r="' + v + '" class="' + (range === v ? "on" : "") + '">' + l + '</button>').join("") + '</div>';
+  h += '<div class="big"><div><b>' + visitors + '</b><i>VISITORS</i></div><div><b>' + played + '</b><i>SONG<br>PLAYS</i></div><div><b>' + finished + '</b><i>SONGS<br>FINISHED</i></div><div><b>' + ranks + '</b><i>RANK-UPS</i></div></div>';
+  // songs
+  h += '<section><h2>EACH SONG</h2><table><tr><th>SONG</th><th>PLAYED</th><th>FINISHED</th><th>RATE</th></tr>' + SONGS.map((s, i) => {
+    const p = get("play/" + s.slug), f = get("level-unlocked/" + s.slug);
+    return '<tr><td>' + (i + 1) + '. ' + esc(s.t) + '</td><td>' + p + '</td><td>' + f + '</td><td>' + (p ? Math.round(f / p * 100) + "%" : "–") + '</td></tr>';
+  }).join("") + '</table></section>';
+  // hardest questions
+  const qs = []; SONGS.forEach(s => s.q.forEach((t, g) => { const r = get("right/" + s.slug + "/q" + (g + 1)), w = get("wrong/" + s.slug + "/q" + (g + 1)); if (r + w) qs.push({ s: s.t, t, r, w, miss: w / (r + w) }); }));
+  qs.sort((a, b) => b.miss - a.miss || (b.w - a.w));
+  h += '<section><h2>HARDEST QUESTIONS</h2>' + (qs.length ? qs.slice(0, 8).map(q => '<div class="q"><span class="s">' + esc(q.s.toUpperCase()) + '</span><span class="t">' + esc(q.t) + '</span><span class="p">' + Math.round(q.miss * 100) + '% missed · ' + q.w + ' wrong, ' + q.r + ' right</span><div class="bar"><i style="width:' + Math.round(q.miss * 100) + '%"></i></div></div>').join("") : '<p class="empty">No answers yet in this period.</p>') + '</section>';
+  // ranks
+  const R = [["corner-kid", "Corner Kid"], ["og-soldier", "OG Soldier"], ["og-protégé", "OG Protégé"]];
+  h += '<section><h2>RANKS REACHED</h2><div class="list">' + R.map(([k, l]) => '<span>' + l + '</span><span>' + (get("rank/" + k) + (encodeURIComponent(k) !== k ? get("rank/" + encodeURIComponent(k)) : 0)) + '</span>').join("") + '</div></section>';
+  // extras
+  const X = [["Lightning rounds played", get("lightning/start")], ["Hot streaks (3 in a row)", sum("streak/")], ["Ranks shared", get("share/rank")], ["Lightning scores shared", get("share/lightning")], ["Vol. 2 reminders added", get("remind/vol2")], ["Secret spots found", sum("secret/")], ["Trophy case opened", get("trophy-case")], ["Fun runs", get("fun/start")], ["Game restarts", get("restart")]];
+  h += '<section><h2>EXTRAS</h2><div class="list">' + X.map(([l, n]) => '<span>' + l + '</span><span>' + n + '</span>').join("") + '</div></section>';
+  h += footer();
+  app.innerHTML = h;
+  app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { range = b.dataset.r; load(); });
+  bindFoot();
+}
+function footer() { return '<p class="foot">Numbers come from your GoatCounter account. <button id="forget">Remove key from this phone</button></p>'; }
+function bindFoot() { const f = $("#forget"); if (f) f.onclick = () => { try { localStorage.removeItem(KEY); } catch (e) {} keyForm(); }; }
+load();
+</script>
+</body>
+</html>
