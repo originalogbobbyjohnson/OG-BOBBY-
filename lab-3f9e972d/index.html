@@ -2399,23 +2399,21 @@ html, body, body.practice { background: #fff !important; }
   const m = document.createElement("div"); m.className = "m9";
   m.innerHTML =
     '<div class="mv v1"><div class="mv-head"><span class="t">VOL. 1</span>' +
-      '<span class="t"><span class="nf"><i class="m-emb x">' + rankEmblem(0).replace('class="emb', 'class="emb on') + '</i>NEW FACE</span><button type="button" class="mv-gift g1" aria-label="Volume 1 rewards">' + giftSvg + '</button></span></div>' +
+      '<span class="mv-rk won nf-rk"><i class="m-emb x">' + rankEmblem(0).replace('class="emb', 'class="emb on') + '</i><b>NEW FACE</b></span></div>' +
       '<div class="mv-body"><div class="slot"></div><div class="mv-rks">' + R1.map((r, k) => rk(r, rankEmblem(k + 1))).join("") + '</div></div></div>' +
-    '<div class="mv v2"><div class="mv-head"><span class="t">VOL. 2</span>' +
-      '<span class="t"><button type="button" class="mv-gift" disabled aria-label="Volume 2 rewards, locked">' + giftSvg + '</button></span></div>' +
+    '<div class="mv v2"><div class="mv-head"><span class="t">VOL. 2</span><span></span></div>' +
       '<div class="mv-body"><div class="v2-eps">' + [1,2,3,4,5,6,7,8,9].map(n => '<span class="v2-ep">' + n + '</span>').join("") + '</div>' +
       '<div class="mv-rks">' + R2.map((r, k) => rk(r, rankEmblem(k + 4))).join("") + '</div></div></div>' +
-    '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="o">OG</span><span class="c">CERTIFIED</span></span></div>';
+    '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="o">OG</span><span class="c">CERTIFIED</span></span></div>' +
+    '<div class="m99" style="grid-column: 1 / -1"><span class="n99"><span class="tk">\u2019</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="m99t"><b>THE ALBUM</b><i>ALL 18 SONGS \u00b7 VOL. 1 + VOL. 2</i></span></div>';
   const track = cred.querySelector(".cred-track"); (track || cred).after(m);
   m.querySelector(".slot").replaceWith(list);
   cred.classList.add("g9");
-  m.querySelector(".g1").onclick = () => { const g = list.querySelector(".dot-gift"); if (g) g.click(); };
   function sync() {
-    const items = [...m.querySelectorAll(".v1 .mv-rk")]; let held = -1;
+    const items = [...m.querySelectorAll(".v1 .mv-rks .mv-rk")]; let held = -1;
     items.forEach((it, k) => { const won = !!(document.getElementById("f" + (k + 1)) || {}).classList?.contains("ranked"); it.classList.toggle("won", won);
       const svg = it.querySelector(".emb"); if (svg) svg.classList.toggle("on", won); if (won) held = k; });
     items.forEach((it, k) => it.classList.toggle("cur", k === held));
-    const g = list.querySelector(".dot-gift"); m.querySelector(".g1").classList.toggle("on", !!(g && g.classList.contains("on")));
   }
   sync();
   new MutationObserver(sync).observe(track || cred, { subtree: true, attributes: true, attributeFilter: ["class"] });
@@ -2473,6 +2471,118 @@ html, body, body.practice { background: #fff !important; }
   }
   size(); window.addEventListener("resize", size);
 })();
+</script>
+<style>
+/* ---------- Uniform boards: header uses the same two columns as the board (blocks | ranks), so NEW FACE lines up over CORNER KID at the same size.
+   No gift boxes. Bigger meter, smaller player. ---------- */
+.m9 { column-gap: 12px !important; }
+.mv-head { display: grid !important; grid-template-columns: var(--bw) 1fr; column-gap: var(--cg); align-items: center; height: auto !important; padding-bottom: 6px; margin-bottom: 8px !important; }
+.mv-body { grid-template-columns: var(--bw) 1fr !important; column-gap: var(--cg) !important; }
+.mv-head .t { font-size: .8rem !important; }
+.m9 { --bs: 34px; --bh: 32px; --bg: 4px; --cg: 7px; --bw: calc(var(--bs) * 3 + var(--bg) * 2); }
+.practice #cred.g9 #list.on-meter, .v2-eps { grid-template-columns: repeat(3, var(--bs)) !important; grid-auto-rows: var(--bh) !important; gap: var(--bg) !important; }
+.practice #cred.g9 #list.on-meter .ep, .v2-ep { height: var(--bh) !important; }
+.practice #cred.g9 #list.on-meter .ep .n, .v2-ep { font-size: .95rem !important; }
+.mv-rks { grid-auto-rows: var(--bh) !important; row-gap: var(--bg) !important; }
+.mv-rk { gap: 5px !important; }
+.mv-rk .m-emb { width: 20px !important; height: 24px !important; }
+.mv-rk b { font-size: .7rem !important; letter-spacing: .03em !important; }
+.og-bar { margin: 12px 0 8px !important; }
+.og-bar .o { font-size: 2.8rem !important; }
+.og-bar .c { font-size: .9rem !important; }
+@media (max-width: 420px) {
+  .m9 { --bs: 27px; --bh: 30px; --bg: 3px; --cg: 5px; column-gap: 8px !important; }
+  .practice #cred.g9 #list.on-meter .ep .n, .v2-ep { font-size: .85rem !important; }
+  .mv-rk { gap: 3px !important; }
+  .mv-rk .m-emb { width: 16px !important; height: 19px !important; }
+  .mv-rk b { font-size: .56rem !important; letter-spacing: .01em !important; }
+  .mv-rk.cur b { padding: 3px 3px !important; }
+  .mv-head .t { font-size: .7rem !important; }
+  .og-bar .o { font-size: 2.4rem !important; }
+}
+/* smaller player card */
+.practice .stage-wrap { height: var(--card-h2, 340px) !important; }
+.practice .album-release.big { padding: 4px 14px 4px !important; }
+.practice .album-release.big .ar-num svg.nine { width: 17px !important; height: 24px !important; }
+.practice .album-release.big .ar-num .tick { font-size: 1.15rem !important; }
+.practice .album-release.big .ar-sub { font-size: .46rem !important; }
+.practice .vol-big .nine { width: 18px !important; }
+.practice .vol-big .v1nine .tick { font-size: 1.55rem !important; }
+.practice .vol-big .lab { font-size: .5rem !important; }
+.practice #pEp { font-size: .64rem !important; }
+.practice #pTitle { font-size: 1.05rem !important; }
+.practice .fun-bar { font-size: .78rem !important; }
+.practice .controls { height: 34px !important; }
+.practice .controls .btn-round { width: 30px !important; height: 30px !important; }
+.practice .controls .btn-round svg { width: 18px !important; height: 18px !important; }
+.practice .controls .btn-round.play { width: 36px !important; height: 36px !important; }
+.practice #qText { font-size: .82rem !important; }
+.practice #opts .opt { font-size: .8rem !important; padding: 5px 11px !important; }
+.practice .player { gap: 5px !important; }
+.practice .stage { gap: 6px !important; }
+.mv-head { height: 30px !important; padding-bottom: 0 !important; }
+.practice #opts { gap: 4px !important; }
+.practice #opts .opt { padding: 4px 11px !important; }
+.practice .player > div:first-child { padding-top: 9px !important; }
+@media (max-width: 420px) {
+  .m9 { --bs: 26px; --cg: 4px; column-gap: 7px !important; }
+  .mv-rk b { white-space: nowrap !important; font-size: .52rem !important; letter-spacing: 0 !important; }
+  .m9 { --bs: 25px; --cg: 4px; column-gap: 6px !important; }
+  .mv-rk { gap: 2px !important; }
+  .mv-head .mv-rk b { white-space: nowrap !important; }
+}
+</style>
+<script>
+(function () {
+  function size() {
+    const h = window.innerHeight || 844, w = window.innerWidth || 390;
+    const want = w < 600 ? 348 : 368;
+    document.documentElement.style.setProperty("--card-h2", Math.max(330, Math.min(want, h - 470)) + "px");
+  }
+  size(); window.addEventListener("resize", size);
+})();
+</script>
+<style>
+/* '99 THE ALBUM in the meter: the prize for all 18 songs (Vol. 1 + Vol. 2) */
+.m99 { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 2px 0 8px; }
+.m99 .n99 { display: inline-flex; align-items: flex-start; }
+.m99 .n99 .tk { font-family: var(--display); font-size: 1.5rem; line-height: .8; color: #111; margin-right: -1px; }
+.m99 .n99 svg.nine { width: 17px; height: 24px; }
+.m99 .n99 svg.nine g + g { stroke: #111; }
+.m99 .n99 svg.nine g:first-child { stroke: #c9c9c9; }
+.m99t { display: grid; gap: 3px; text-align: left; }
+.m99t b { font: 900 .78rem/1 var(--body); letter-spacing: .18em; color: #111; }
+.m99t i { font: 800 .56rem/1 var(--body); font-style: normal; letter-spacing: .1em; color: #c81e1e; }
+.m99.won .m99t i { color: #1a8a3a; }
+.og-bar { margin-bottom: 6px !important; }
+</style>
+<style>
+/* ---------- Welcome back: clean and short. Title, your rank in green, one status line, two matching buttons, small how-to link. ---------- */
+.practice .slide-intro.welcome { display: flex !important; flex-direction: column; align-items: center; justify-content: center; gap: 10px; height: 100%; min-height: 100%; padding: 0 !important; text-align: center; }
+.practice .slide-intro.welcome .vol-badge { display: none !important; }
+.practice .slide-intro.welcome .intro-title { margin: 0 !important; font-size: 1.5rem !important; }
+.practice .slide-intro.welcome .hp-count, .practice .slide-intro.welcome .hp-head, .practice .slide-intro.welcome .hp-dots, .practice .slide-intro.welcome .fun-line { display: none !important; }
+.practice .slide-intro.welcome .howpage { margin: 0 !important; padding: 0 !important; min-height: 0 !important; height: auto !important; }
+.practice .slide-intro.welcome .hp-body { margin: 0 !important; display: grid; gap: 8px; justify-items: center; }
+.practice .slide-intro.welcome .wb-rank { margin: 0 !important; gap: 8px !important; }
+.practice .slide-intro.welcome .wb-emb { width: 34px !important; height: 41px !important; filter: drop-shadow(0 2px 6px rgba(26,138,58,.55)) !important; }
+.practice .slide-intro.welcome .wb-emb .emb .bg { fill: #1a8a3a !important; stroke: #12632a !important; }
+.practice .slide-intro.welcome .wb-emb .emb .ring { stroke: #d8f3df !important; }
+.practice .slide-intro.welcome .wb-emb .emb .mk { stroke: #fff !important; }
+.practice .slide-intro.welcome .wb-emb .emb .mk-f { fill: #fff !important; }
+.practice .slide-intro.welcome .wb-name { font-size: .95rem !important; padding: 4px 10px !important; border: 0 !important; background: #1a8a3a !important; border-radius: 5px !important; }
+.practice .slide-intro.welcome .wb-done { font-size: .82rem !important; color: #fff !important; }
+.practice .slide-intro.welcome .btn.start, .practice .slide-intro.welcome .fun-wrap .btn.fun-btn { width: 230px !important; max-width: 80%; padding: 10px 0 !important; font-size: .9rem !important; letter-spacing: .08em !important; margin: 0 !important; box-shadow: none !important; }
+.practice .slide-intro.welcome .fun-wrap { margin: 0 !important; padding: 0 !important; display: grid; justify-items: center; }
+.practice .slide-intro.welcome .wb-how { font-size: .78rem !important; padding: 2px 8px !important; margin: 0 !important; }
+.practice .stage:has(.slide-intro.welcome:not([hidden])) { align-content: center !important; }
+.practice .slide-intro.welcome { height: auto !important; min-height: 0 !important; gap: 12px !important; }
+.practice .slide-intro.welcome .fun-wrap { width: 100% !important; }
+.practice .slide-intro.welcome .btn.start, .practice .slide-intro.welcome .fun-wrap .btn.fun-btn { width: 230px !important; max-width: 100% !important; }
+</style>
+<script>
+/* the welcome window's fun button reads the same as the main one */
+(function () { const b = document.querySelector(".slide-intro .fun-btn"); if (b) b.textContent = "PLAY AGAIN FOR FUN"; })();
 </script>
 </body>
 </html>

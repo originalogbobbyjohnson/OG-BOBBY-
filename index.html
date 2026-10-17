@@ -699,20 +699,20 @@ function nineSvg(fill, cls) {
 
 /* Rank emblems: a coin for New Face, then a shield that gains a chevron (and stars) with every promotion */
 function rankEmblem(i) {
+  /* New Face = coin with a star. Every rank after: one more stripe up to 3, then one more dot up to 3.
+     Corner Kid 1 stripe, OG Soldier 2, OG Protégé 3, OG Right Hand 3 + 1 dot, OG Shot Caller 3 + 2 dots, OG Certified 3 + 3 dots */
   const shield = "M20 2.5 37 8.5V23.5C37 34.5 29.5 41.5 20 45.5 10.5 41.5 3 34.5 3 23.5V8.5Z";
   const inner = "M20 6.3 33.6 11.1V23.6C33.6 32.3 27.6 38.2 20 41.6 12.4 38.2 6.4 32.3 6.4 23.6V11.1Z";
-  const star = (x, y, r) => { let d = ""; for (let k = 0; k < 10; k++) { const a = Math.PI / 5 * k - Math.PI / 2, rr = k % 2 ? r * .45 : r; d += (k ? "L" : "M") + (x + rr * Math.cos(a)).toFixed(2) + " " + (y + rr * Math.sin(a)).toFixed(2); } return '<path class="mk-f" d="' + d + 'Z"/>'; };
-  const chev = y => '<polyline class="mk" points="10.5,' + (y + 5.5) + ' 20,' + y + ' 29.5,' + (y + 5.5) + '"/>';
-  let body;
   if (i <= 0) {
-    body = '<circle class="bg" cx="20" cy="24" r="18"/><circle class="ring" cx="20" cy="24" r="14.6"/>' + star(20, 24.5, 8);
-  } else {
-    body = '<path class="bg" d="' + shield + '"/><path class="ring" d="' + inner + '"/>';
-    const top = i === 1 ? 23 : i === 2 ? 20 : 17.5;
-    for (let c = 0; c < i; c++) body += chev(top + c * 6.2);
-    if (i === 2) body += star(20, 13.2, 3.6);
-    if (i >= 3) body += star(13.6, 12.6, 2.6) + star(20, 11.2, 3.2) + star(26.4, 12.6, 2.6);
+    let d = ""; for (let k = 0; k < 10; k++) { const a = Math.PI / 5 * k - Math.PI / 2, rr = k % 2 ? 3.6 : 8; d += (k ? "L" : "M") + (20 + rr * Math.cos(a)).toFixed(2) + " " + (24.5 + rr * Math.sin(a)).toFixed(2); }
+    return '<svg class="emb r0" viewBox="0 0 40 48" aria-hidden="true"><circle class="bg" cx="20" cy="24" r="18"/><circle class="ring" cx="20" cy="24" r="14.6"/><path class="mk-f" d="' + d + 'Z"/></svg>';
   }
+  const stripes = Math.min(i, 3), dots = Math.max(0, i - 3);
+  let body = '<path class="bg" d="' + shield + '"/><path class="ring" d="' + inner + '"/>';
+  const top = 25 - (stripes - 1) * 3.2 + (dots ? 3 : 0);
+  for (let c = 0; c < stripes; c++) { const y = top + c * 6.4; body += '<polyline class="mk" points="11,' + (y + 5) + ' 20,' + y + ' 29,' + (y + 5) + '"/>'; }
+  const dx = [[], [20], [15.5, 24.5], [12.5, 20, 27.5]][dots];
+  dx.forEach(x => body += '<circle class="mk-f" cx="' + x + '" cy="13.5" r="2.9"/>');
   return '<svg class="emb r' + i + '" viewBox="0 0 40 48" aria-hidden="true">' + body + '</svg>';
 }
 
@@ -2312,8 +2312,275 @@ html, body, body.practice { background: #fff !important; }
   if (typeof load === "function") { const baseLoad = load; load = function () { const r = baseLoad.apply(this, arguments); requestAnimationFrame(placeNines); return r; }; }
   setTimeout(placeNines, 50); setTimeout(placeNines, 600); setTimeout(placeNines, 1500);
   window.ogPlaceNines = placeNines;
+  try { const h = document.querySelector("#player > div:first-child"); if (h && window.ResizeObserver) new ResizeObserver(() => requestAnimationFrame(placeNines)).observe(h); } catch (e) {}
 })();
 </script>
 
+<style>
+/* ---------- Street Cred Meter as two 3x3 boards side by side: Vol. 1 | Vol. 2. Each row of 3 = one rank, its name right beside it.
+   CERTIFIED OG runs across the bottom of both boards. ---------- */
+.practice #cred.g9 .cred-track { display: none !important; }
+.m9 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 14px; padding: 2px 0 0; }
+.mv { min-width: 0; }
+.mv-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; height: 22px; margin-bottom: 5px; border-bottom: 2px solid #111; }
+.mv-head .t { display: flex; align-items: center; gap: 5px; font: 900 .72rem/1 var(--body); letter-spacing: .14em; color: #111; white-space: nowrap; }
+.mv-head .t .nine { width: 10px; height: auto; }
+.mv-head .nf { display: flex; align-items: center; gap: 4px; font: 800 .58rem/1 var(--body); letter-spacing: .06em; color: #1a8a3a; white-space: nowrap; }
+.mv-head .nf .m-emb { width: 15px; height: 15px; display: inline-block; }
+.mv-head .nf .m-emb svg { width: 100%; height: 100%; display: block; }
+.mv-body { display: grid; grid-template-columns: auto 1fr; column-gap: 7px; align-items: start; }
+.practice #cred.g9 #list.on-meter { position: static !important; inset: auto; display: grid !important; grid-template-columns: repeat(3, 30px) !important; grid-auto-rows: 26px; gap: 4px !important; margin: 0 !important; }
+.practice #cred.g9 #list.on-meter .ep { height: 26px !important; }
+.practice #cred.g9 #list.on-meter li { grid-column: auto !important; }
+.practice #cred.g9 #list.on-meter li:has(.dot-gift) { display: none !important; }
+.v2-ep { height: 26px; display: grid; place-items: center; border-radius: 4px; background: #17181c; border: 1px solid #17181c; font: 400 .82rem/1 var(--display); color: #fff; }
+.v2-eps { display: grid; grid-template-columns: repeat(3, 30px); grid-auto-rows: 26px; gap: 4px; }
+.mv-rks { display: grid; grid-auto-rows: 26px; row-gap: 4px; min-width: 0; }
+.mv-rk { display: flex; align-items: center; gap: 4px; min-width: 0; }
+.mv-rk .m-emb { flex: none; display: inline-block; width: 17px; height: 21px; filter: drop-shadow(0 1px 1px rgba(0,0,0,.25)); }
+.mv-rk .m-emb svg { display: block; width: 100%; height: 100%; }
+.mv-rk b { font: 800 .62rem/1 var(--body); letter-spacing: .03em; text-transform: uppercase; color: #c81e1e; white-space: nowrap; }
+.mv-rk.won b { color: #1a8a3a; }
+.mv-rk.cur b { color: #fff; background: #1a8a3a; padding: 3px 5px; border-radius: 4px; box-shadow: 0 1px 4px rgba(26,138,58,.5); }
+/* earned = green everywhere on the boards: New Face, every rank you've reached, its badge */
+.m9 .emb.on .bg { fill: #1a8a3a !important; stroke: #12632a !important; }
+.m9 .emb.on .ring { stroke: #d8f3df !important; }
+.m9 .emb.on .mk { stroke: #fff !important; }
+.m9 .emb.on .mk-f { fill: #fff !important; }
+.mv-gift { width: 22px; height: 20px; padding: 0; border: 0; background: none; color: #c81e1e; display: grid; place-items: center; cursor: pointer; }
+.mv-gift.on { color: #1a8a3a; } .mv-gift[disabled] { cursor: default; }
+.mv-gift svg { width: 16px; height: 16px; fill: currentColor; }
+.og-bar { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 8px 0 6px; }
+.og-bar::before, .og-bar::after { content: ""; flex: 1; height: 2px; background: linear-gradient(90deg, transparent, #f5c518); }
+.og-bar::after { background: linear-gradient(90deg, #f5c518, transparent); }
+.og-bar > span { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.og-bar .o, .og-bar .c { display: block; text-align: center; }
+.og-bar .c { padding-left: .14em; }
+.og-bar .c, .og-bar .o { color: #e0a800; background: linear-gradient(180deg, #ffe680 0%, #f5c518 45%, #c98a00 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.og-bar .c { font: 900 .8rem/1 var(--body); letter-spacing: .14em; -webkit-text-stroke: .4px #6b4a00; filter: drop-shadow(0 1px 0 #5a3d00); }
+.og-bar .o { font: 900 2.3rem/.9 var(--body); letter-spacing: .02em; -webkit-text-stroke: 1px #6b4a00; filter: drop-shadow(0 2px 0 #5a3d00) drop-shadow(0 0 7px rgba(245,197,24,.6)); }
+@media (max-width: 420px) {
+  .m9 { column-gap: 10px; }
+  .practice #cred.g9 #list.on-meter, .v2-eps { grid-template-columns: repeat(3, 23px) !important; grid-auto-rows: 24px; gap: 3px !important; }
+  .practice #cred.g9 #list.on-meter .ep, .v2-ep { height: 24px !important; }
+  .practice #cred.g9 #list.on-meter .ep .n, .v2-ep { font-size: .74rem !important; }
+  .mv-rks { grid-auto-rows: 24px; row-gap: 3px; }
+  .mv-body { column-gap: 4px; }
+  .mv-rk { gap: 3px; }
+  .mv-rk .m-emb { width: 13px; height: 16px; }
+  .mv-rk b { font-size: .5rem; letter-spacing: 0; }
+  .mv-rk.cur b { padding: 3px 3px; }
+  .mv-head .t { font-size: .64rem; letter-spacing: .1em; }
+  .og-bar .o { font-size: 1.9rem; }
+}
+</style>
+<script>
+/* Two boards: Vol. 1 (live) and Vol. 2 (locked). Vol. 2 ranks: OG Right Hand, OG Shot Caller, OG Certified. */
+(function () {
+  const cred = document.getElementById("cred"), list = document.getElementById("list");
+  if (!cred || !list || cred.querySelector(".m9")) return;
+  const shield = "M20 2.5 37 8.5V23.5C37 34.5 29.5 41.5 20 45.5 10.5 41.5 3 34.5 3 23.5V8.5Z",
+        inner = "M20 6.3 33.6 11.1V23.6C33.6 32.3 27.6 38.2 20 41.6 12.4 38.2 6.4 32.3 6.4 23.6V11.1Z";
+  const star = (x, y, r) => { let d = ""; for (let k = 0; k < 10; k++) { const a = Math.PI / 5 * k - Math.PI / 2, rr = k % 2 ? r * .45 : r; d += (k ? "L" : "M") + (x + rr * Math.cos(a)).toFixed(2) + " " + (y + rr * Math.sin(a)).toFixed(2); } return '<path class="mk-f" d="' + d + 'Z"/>'; };
+  const chev = y => '<polyline class="mk" points="10.5,' + (y + 5.5) + ' 20,' + y + ' 29.5,' + (y + 5.5) + '"/>';
+  const rocker = y => '<path class="mk" d="M10.5 ' + y + ' Q20 ' + (y + 5) + ' 29.5 ' + y + '"/>';
+  function emb2(k) {
+    let b = '<path class="bg" d="' + shield + '"/><path class="ring" d="' + inner + '"/>';
+    if (k === 0) b += star(13.6, 12.6, 2.6) + star(20, 11.2, 3.2) + star(26.4, 12.6, 2.6) + chev(17.5) + chev(23.7) + chev(29.9) + rocker(36);
+    if (k === 1) b += '<path class="mk-f" d="M13 15.5V9.2l3.5 3.2L20 7.6l3.5 4.8L27 9.2v6.3Z"/>' + chev(19.5) + chev(25.7) + rocker(32.5) + rocker(37);
+    if (k === 2) b += star(20, 11.5, 3.6) + '<text class="mk-f" x="20" y="33" text-anchor="middle" style="font: 900 14px/1 Anton, Impact, sans-serif">OG</text>';
+    return '<svg class="emb" viewBox="0 0 40 48" aria-hidden="true">' + b + '</svg>';
+  }
+  const giftSvg = '<svg viewBox="0 0 24 24"><path d="M20 7h-2.2A3 3 0 0 0 12 4.4 3 3 0 0 0 6.2 7H4a1 1 0 0 0-1 1v3h18V8a1 1 0 0 0-1-1zM9 7a1 1 0 1 1 1-1v1zm6 0h-1V6a1 1 0 1 1 1 1zM4 13v7a1 1 0 0 0 1 1h6v-8zm9 8h6a1 1 0 0 0 1-1v-7h-7z"/></svg>';
+  const R1 = ["Corner Kid", "OG Soldier", "OG Protégé"], R2 = ["OG Right Hand", "OG Shot Caller", "OG Certified"];
+  const rk = (name, svg) => '<span class="mv-rk"><i class="m-emb x">' + svg + '</i><b>' + name + '</b></span>';
+  const m = document.createElement("div"); m.className = "m9";
+  m.innerHTML =
+    '<div class="mv v1"><div class="mv-head"><span class="t">VOL. 1</span>' +
+      '<span class="mv-rk won nf-rk"><i class="m-emb x">' + rankEmblem(0).replace('class="emb', 'class="emb on') + '</i><b>NEW FACE</b></span></div>' +
+      '<div class="mv-body"><div class="slot"></div><div class="mv-rks">' + R1.map((r, k) => rk(r, rankEmblem(k + 1))).join("") + '</div></div></div>' +
+    '<div class="mv v2"><div class="mv-head"><span class="t">VOL. 2</span><span></span></div>' +
+      '<div class="mv-body"><div class="v2-eps">' + [1,2,3,4,5,6,7,8,9].map(n => '<span class="v2-ep">' + n + '</span>').join("") + '</div>' +
+      '<div class="mv-rks">' + R2.map((r, k) => rk(r, rankEmblem(k + 4))).join("") + '</div></div></div>' +
+    '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="o">OG</span><span class="c">CERTIFIED</span></span></div>' +
+    '<div class="m99" style="grid-column: 1 / -1"><span class="n99"><span class="tk">\u2019</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="m99t"><b>THE ALBUM</b><i>ALL 18 SONGS \u00b7 VOL. 1 + VOL. 2</i></span></div>';
+  const track = cred.querySelector(".cred-track"); (track || cred).after(m);
+  m.querySelector(".slot").replaceWith(list);
+  cred.classList.add("g9");
+  function sync() {
+    const items = [...m.querySelectorAll(".v1 .mv-rks .mv-rk")]; let held = -1;
+    items.forEach((it, k) => { const won = !!(document.getElementById("f" + (k + 1)) || {}).classList?.contains("ranked"); it.classList.toggle("won", won);
+      const svg = it.querySelector(".emb"); if (svg) svg.classList.toggle("on", won); if (won) held = k; });
+    items.forEach((it, k) => it.classList.toggle("cur", k === held));
+  }
+  sync();
+  new MutationObserver(sync).observe(track || cred, { subtree: true, attributes: true, attributeFilter: ["class"] });
+  new MutationObserver(sync).observe(list, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
+})();
+</script>
+<style>
+/* ---------- Compact card: How to play and the music player are the same fixed size, shorter than before, to make room for both boards ---------- */
+.practice .stage-wrap { height: var(--card-h, 392px) !important; min-height: 0 !important; max-height: none !important; }
+.practice .stage { max-height: 100% !important; gap: 8px !important; }
+.practice .player { gap: 6px !important; }
+.practice .album-release.big { padding: 6px 18px 6px !important; gap: 3px !important; margin: 2px auto 4px !important; }
+.practice .album-release.big .ar-num svg.nine { width: 21px !important; height: 30px !important; }
+.practice .album-release.big .ar-num .tick { font-size: 1.45rem !important; }
+.practice .album-release.big .ar-sub { font-size: .52rem !important; }
+.practice .album-release.big .ar-c { font-size: .5rem !important; }
+.practice .album-release.big .ar-c.tl, .practice .album-release.big .ar-c.tr { top: 4px !important; }
+.practice .album-release.big .ar-c.bl, .practice .album-release.big .ar-c.br { bottom: 4px !important; }
+.practice .vol-big .nine { width: 22px !important; }
+.practice .vol-big .v1nine .tick { font-size: 1.9rem !important; }
+.practice .vol-big .lab { font-size: .55rem !important; }
+.practice #pEp { font-size: .72rem !important; line-height: 1.1 !important; }
+.practice #pTitle { font-size: 1.3rem !important; line-height: 1.15 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.practice .fun-bar { padding-top: 4px !important; padding-bottom: 4px !important; min-height: 0 !important; }
+.practice .fun-bar .fb-x { height: 24px !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+.practice .controls { gap: 12px !important; }
+.practice .controls .btn-round { width: 34px !important; height: 34px !important; }
+.practice .controls .btn-round.play { width: 42px !important; height: 42px !important; }
+.practice #qText { font-size: .95rem !important; margin: 0 !important; }
+.practice #opts { gap: 5px !important; }
+.practice #opts .opt { min-height: 0 !important; padding-top: 7px !important; padding-bottom: 7px !important; }
+.practice .quiz { gap: 5px !important; padding-top: 6px !important; }
+.practice #opts .opt { font-size: .86rem !important; padding: 6px 12px !important; border-radius: 9px !important; }
+.practice #qText { font-size: .9rem !important; line-height: 1.2 !important; }
+.practice #msg { min-height: 0 !important; margin: 0 !important; font-size: .82rem !important; line-height: 1.2 !important; }
+.practice .fun-bar { font-size: .85rem !important; padding: 2px 6px 2px 10px !important; }
+.practice .fun-bar .fb-x { height: 22px !important; font-size: .8rem !important; }
+.practice .seek .times { font-size: .72rem !important; line-height: 1 !important; margin-top: 3px !important; }
+.practice .seek { gap: 0 !important; }
+.practice .controls { height: 40px !important; }
+.practice .player { padding-top: 6px !important; padding-bottom: 4px !important; }
+.practice .player > div:first-child { min-height: 0 !important; }
+.practice #pTitle { font-size: 1.2rem !important; }
+.practice .player > div:first-child { padding-top: 8px !important; }
+.practice .album-release.big { margin-top: 0 !important; }
+</style>
+<script>
+/* card height: one size for How to play and the player; on short phones it gives up some height so nothing gets pushed off the screen */
+(function () {
+  function size() {
+    const h = window.innerHeight || 844, w = window.innerWidth || 390;
+    const want = w < 600 ? 392 : 410;
+    const fit = Math.max(360, Math.min(want, h - 452));
+    document.documentElement.style.setProperty("--card-h", fit + "px");
+  }
+  size(); window.addEventListener("resize", size);
+})();
+</script>
+<style>
+/* ---------- Uniform boards: header uses the same two columns as the board (blocks | ranks), so NEW FACE lines up over CORNER KID at the same size.
+   No gift boxes. Bigger meter, smaller player. ---------- */
+.m9 { column-gap: 12px !important; }
+.mv-head { display: grid !important; grid-template-columns: var(--bw) 1fr; column-gap: var(--cg); align-items: center; height: auto !important; padding-bottom: 6px; margin-bottom: 8px !important; }
+.mv-body { grid-template-columns: var(--bw) 1fr !important; column-gap: var(--cg) !important; }
+.mv-head .t { font-size: .8rem !important; }
+.m9 { --bs: 34px; --bh: 32px; --bg: 4px; --cg: 7px; --bw: calc(var(--bs) * 3 + var(--bg) * 2); }
+.practice #cred.g9 #list.on-meter, .v2-eps { grid-template-columns: repeat(3, var(--bs)) !important; grid-auto-rows: var(--bh) !important; gap: var(--bg) !important; }
+.practice #cred.g9 #list.on-meter .ep, .v2-ep { height: var(--bh) !important; }
+.practice #cred.g9 #list.on-meter .ep .n, .v2-ep { font-size: .95rem !important; }
+.mv-rks { grid-auto-rows: var(--bh) !important; row-gap: var(--bg) !important; }
+.mv-rk { gap: 5px !important; }
+.mv-rk .m-emb { width: 20px !important; height: 24px !important; }
+.mv-rk b { font-size: .7rem !important; letter-spacing: .03em !important; }
+.og-bar { margin: 12px 0 8px !important; }
+.og-bar .o { font-size: 2.8rem !important; }
+.og-bar .c { font-size: .9rem !important; }
+@media (max-width: 420px) {
+  .m9 { --bs: 27px; --bh: 30px; --bg: 3px; --cg: 5px; column-gap: 8px !important; }
+  .practice #cred.g9 #list.on-meter .ep .n, .v2-ep { font-size: .85rem !important; }
+  .mv-rk { gap: 3px !important; }
+  .mv-rk .m-emb { width: 16px !important; height: 19px !important; }
+  .mv-rk b { font-size: .56rem !important; letter-spacing: .01em !important; }
+  .mv-rk.cur b { padding: 3px 3px !important; }
+  .mv-head .t { font-size: .7rem !important; }
+  .og-bar .o { font-size: 2.4rem !important; }
+}
+/* smaller player card */
+.practice .stage-wrap { height: var(--card-h2, 340px) !important; }
+.practice .album-release.big { padding: 4px 14px 4px !important; }
+.practice .album-release.big .ar-num svg.nine { width: 17px !important; height: 24px !important; }
+.practice .album-release.big .ar-num .tick { font-size: 1.15rem !important; }
+.practice .album-release.big .ar-sub { font-size: .46rem !important; }
+.practice .vol-big .nine { width: 18px !important; }
+.practice .vol-big .v1nine .tick { font-size: 1.55rem !important; }
+.practice .vol-big .lab { font-size: .5rem !important; }
+.practice #pEp { font-size: .64rem !important; }
+.practice #pTitle { font-size: 1.05rem !important; }
+.practice .fun-bar { font-size: .78rem !important; }
+.practice .controls { height: 34px !important; }
+.practice .controls .btn-round { width: 30px !important; height: 30px !important; }
+.practice .controls .btn-round svg { width: 18px !important; height: 18px !important; }
+.practice .controls .btn-round.play { width: 36px !important; height: 36px !important; }
+.practice #qText { font-size: .82rem !important; }
+.practice #opts .opt { font-size: .8rem !important; padding: 5px 11px !important; }
+.practice .player { gap: 5px !important; }
+.practice .stage { gap: 6px !important; }
+.mv-head { height: 30px !important; padding-bottom: 0 !important; }
+.practice #opts { gap: 4px !important; }
+.practice #opts .opt { padding: 4px 11px !important; }
+.practice .player > div:first-child { padding-top: 9px !important; }
+@media (max-width: 420px) {
+  .m9 { --bs: 26px; --cg: 4px; column-gap: 7px !important; }
+  .mv-rk b { white-space: nowrap !important; font-size: .52rem !important; letter-spacing: 0 !important; }
+  .m9 { --bs: 25px; --cg: 4px; column-gap: 6px !important; }
+  .mv-rk { gap: 2px !important; }
+  .mv-head .mv-rk b { white-space: nowrap !important; }
+}
+</style>
+<script>
+(function () {
+  function size() {
+    const h = window.innerHeight || 844, w = window.innerWidth || 390;
+    const want = w < 600 ? 348 : 368;
+    document.documentElement.style.setProperty("--card-h2", Math.max(330, Math.min(want, h - 470)) + "px");
+  }
+  size(); window.addEventListener("resize", size);
+})();
+</script>
+<style>
+/* '99 THE ALBUM in the meter: the prize for all 18 songs (Vol. 1 + Vol. 2) */
+.m99 { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 2px 0 8px; }
+.m99 .n99 { display: inline-flex; align-items: flex-start; }
+.m99 .n99 .tk { font-family: var(--display); font-size: 1.5rem; line-height: .8; color: #111; margin-right: -1px; }
+.m99 .n99 svg.nine { width: 17px; height: 24px; }
+.m99 .n99 svg.nine g + g { stroke: #111; }
+.m99 .n99 svg.nine g:first-child { stroke: #c9c9c9; }
+.m99t { display: grid; gap: 3px; text-align: left; }
+.m99t b { font: 900 .78rem/1 var(--body); letter-spacing: .18em; color: #111; }
+.m99t i { font: 800 .56rem/1 var(--body); font-style: normal; letter-spacing: .1em; color: #c81e1e; }
+.m99.won .m99t i { color: #1a8a3a; }
+.og-bar { margin-bottom: 6px !important; }
+</style>
+<style>
+/* ---------- Welcome back: clean and short. Title, your rank in green, one status line, two matching buttons, small how-to link. ---------- */
+.practice .slide-intro.welcome { display: flex !important; flex-direction: column; align-items: center; justify-content: center; gap: 10px; height: 100%; min-height: 100%; padding: 0 !important; text-align: center; }
+.practice .slide-intro.welcome .vol-badge { display: none !important; }
+.practice .slide-intro.welcome .intro-title { margin: 0 !important; font-size: 1.5rem !important; }
+.practice .slide-intro.welcome .hp-count, .practice .slide-intro.welcome .hp-head, .practice .slide-intro.welcome .hp-dots, .practice .slide-intro.welcome .fun-line { display: none !important; }
+.practice .slide-intro.welcome .howpage { margin: 0 !important; padding: 0 !important; min-height: 0 !important; height: auto !important; }
+.practice .slide-intro.welcome .hp-body { margin: 0 !important; display: grid; gap: 8px; justify-items: center; }
+.practice .slide-intro.welcome .wb-rank { margin: 0 !important; gap: 8px !important; }
+.practice .slide-intro.welcome .wb-emb { width: 34px !important; height: 41px !important; filter: drop-shadow(0 2px 6px rgba(26,138,58,.55)) !important; }
+.practice .slide-intro.welcome .wb-emb .emb .bg { fill: #1a8a3a !important; stroke: #12632a !important; }
+.practice .slide-intro.welcome .wb-emb .emb .ring { stroke: #d8f3df !important; }
+.practice .slide-intro.welcome .wb-emb .emb .mk { stroke: #fff !important; }
+.practice .slide-intro.welcome .wb-emb .emb .mk-f { fill: #fff !important; }
+.practice .slide-intro.welcome .wb-name { font-size: .95rem !important; padding: 4px 10px !important; border: 0 !important; background: #1a8a3a !important; border-radius: 5px !important; }
+.practice .slide-intro.welcome .wb-done { font-size: .82rem !important; color: #fff !important; }
+.practice .slide-intro.welcome .btn.start, .practice .slide-intro.welcome .fun-wrap .btn.fun-btn { width: 230px !important; max-width: 80%; padding: 10px 0 !important; font-size: .9rem !important; letter-spacing: .08em !important; margin: 0 !important; box-shadow: none !important; }
+.practice .slide-intro.welcome .fun-wrap { margin: 0 !important; padding: 0 !important; display: grid; justify-items: center; }
+.practice .slide-intro.welcome .wb-how { font-size: .78rem !important; padding: 2px 8px !important; margin: 0 !important; }
+.practice .stage:has(.slide-intro.welcome:not([hidden])) { align-content: center !important; }
+.practice .slide-intro.welcome { height: auto !important; min-height: 0 !important; gap: 12px !important; }
+.practice .slide-intro.welcome .fun-wrap { width: 100% !important; }
+.practice .slide-intro.welcome .btn.start, .practice .slide-intro.welcome .fun-wrap .btn.fun-btn { width: 230px !important; max-width: 100% !important; }
+</style>
+<script>
+/* the welcome window's fun button reads the same as the main one */
+(function () { const b = document.querySelector(".slide-intro .fun-btn"); if (b) b.textContent = "PLAY AGAIN FOR FUN"; })();
+</script>
 </body>
 </html>
