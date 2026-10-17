@@ -1917,6 +1917,12 @@ html, body, body.practice { background: #fff !important; }
 .pl-song:active { border-color: #1f8a3c; }
 #rText { color: #fff !important; }
 </style>
+<style>
+/* CERTIFIED OG at the end of the meter: bigger gold OG with CERTIFIED stacked above it; the 9 blocks give up a little room on the right so it fits every phone */
+.practice #list.on-meter { margin-right: 46px !important; }
+.practice #list.on-meter .dot-gift::after, .practice #list.on-meter .dot-gift.on::after { font-size: 1.4rem !important; letter-spacing: .02em; left: calc(100% + 4px) !important; top: 58% !important; }
+.practice #list.on-meter .dot-gift::before { content: "CERTIFIED"; position: absolute; left: calc(100% + 21px); bottom: calc(50% + 12px); transform: translateX(-50%); font: 900 .5rem/1 var(--body); letter-spacing: .05em; white-space: nowrap; color: #e0a800; background: linear-gradient(180deg, #ffe680 0%, #f5c518 45%, #c98a00 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; -webkit-text-stroke: .3px #6b4a00; filter: drop-shadow(0 1px 0 #5a3d00); }
+</style>
 <script>
 /* Auto-update: everyone gets the newest game without swiping out. Checks when the page opens, when the player comes
    back to it, and every few minutes. Never reloads while music is playing or a window is open; progress is saved. */
@@ -2275,6 +2281,191 @@ html, body, body.practice { background: #fff !important; }
   window.addEventListener("load", () => { syncEntry(); window.dispatchEvent(new Event("resize")); });
 })();
 </script>
+<script>
+/* '9 / VOL. 1 and 9 / VOL. 2: each 9 sits dead center in its black corner space —
+   side to side between the board edge and the '99 box, up and down between the top edge and its VOL. label (label stays put). */
+(function () {
+  function placeNines() {
+    const head = document.querySelector("#player > div:first-child"),
+          panel = head && head.closest(".stage-wrap"),
+          box = head && head.querySelector(".album-release.big");
+    if (!head || !panel || !box || !head.offsetWidth) return;
+    const hr = head.getBoundingClientRect(), pr = panel.getBoundingClientRect(), br = box.getBoundingClientRect();
+    head.querySelectorAll(".vol-big").forEach(g => {
+      const nine = g.querySelector(".v1nine"), lab = g.querySelector(".lab"); if (!nine || !lab) return;
+      const nH = nine.offsetHeight, lH = lab.offsetHeight, gW = g.offsetWidth;
+      const labTop = hr.top + head.offsetHeight / 2 - (nH + 5 + lH) / 2 + nH + 5;   // where VOL. sits today
+      const nineTop = (pr.top + labTop) / 2 - nH / 2;                               // halfway between top edge and VOL.
+      const cx = g.classList.contains("right") ? (br.right + pr.right) / 2 : (pr.left + br.left) / 2;
+      g.style.setProperty("transform", "none", "important");
+      g.style.setProperty("right", "auto", "important");
+      g.style.setProperty("left", (cx - gW / 2 - hr.left) + "px", "important");
+      g.style.setProperty("top", (nineTop - hr.top) + "px", "important");
+      g.style.setProperty("gap", Math.max(4, labTop - nineTop - nH) + "px", "important");
+      // correct for any offset in the layout so the 9 lands exactly where it should
+      const gr = g.getBoundingClientRect(), nr = nine.getBoundingClientRect();
+      const dx = (cx - gW / 2) - gr.left, dy = nineTop - nr.top;
+      if (Math.abs(dx) > .5) g.style.setProperty("left", (parseFloat(g.style.left) + dx) + "px", "important");
+      if (Math.abs(dy) > .5) g.style.setProperty("top", (parseFloat(g.style.top) + dy) + "px", "important");
+    });
+  }
+  window.addEventListener("resize", () => requestAnimationFrame(placeNines));
+  window.addEventListener("load", placeNines);
+  if (typeof load === "function") { const baseLoad = load; load = function () { const r = baseLoad.apply(this, arguments); requestAnimationFrame(placeNines); return r; }; }
+  setTimeout(placeNines, 50); setTimeout(placeNines, 600); setTimeout(placeNines, 1500);
+  window.ogPlaceNines = placeNines;
+  try { const h = document.querySelector("#player > div:first-child"); if (h && window.ResizeObserver) new ResizeObserver(() => requestAnimationFrame(placeNines)).observe(h); } catch (e) {}
+})();
+</script>
 
+<style>
+/* ---------- Street Cred Meter as two 3x3 boards side by side: Vol. 1 | Vol. 2. Each row of 3 = one rank, its name right beside it.
+   CERTIFIED OG runs across the bottom of both boards. ---------- */
+.practice #cred.g9 .cred-track { display: none !important; }
+.m9 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 14px; padding: 2px 0 0; }
+.mv { min-width: 0; }
+.mv-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; height: 22px; margin-bottom: 5px; border-bottom: 2px solid #111; }
+.mv-head .t { display: flex; align-items: center; gap: 5px; font: 900 .72rem/1 var(--body); letter-spacing: .14em; color: #111; white-space: nowrap; }
+.mv-head .t .nine { width: 10px; height: auto; }
+.mv-head .nf { display: flex; align-items: center; gap: 4px; font: 800 .58rem/1 var(--body); letter-spacing: .06em; color: #1a8a3a; white-space: nowrap; }
+.mv-head .nf .m-emb { width: 15px; height: 15px; display: inline-block; }
+.mv-head .nf .m-emb svg { width: 100%; height: 100%; display: block; }
+.mv-body { display: grid; grid-template-columns: auto 1fr; column-gap: 7px; align-items: start; }
+.practice #cred.g9 #list.on-meter { position: static !important; inset: auto; display: grid !important; grid-template-columns: repeat(3, 30px) !important; grid-auto-rows: 26px; gap: 4px !important; margin: 0 !important; }
+.practice #cred.g9 #list.on-meter .ep { height: 26px !important; }
+.practice #cred.g9 #list.on-meter li { grid-column: auto !important; }
+.practice #cred.g9 #list.on-meter li:has(.dot-gift) { display: none !important; }
+.v2-ep { height: 26px; display: grid; place-items: center; border-radius: 4px; background: #17181c; border: 1px solid #17181c; font: 400 .82rem/1 var(--display); color: #fff; }
+.v2-eps { display: grid; grid-template-columns: repeat(3, 30px); grid-auto-rows: 26px; gap: 4px; }
+.mv-rks { display: grid; grid-auto-rows: 26px; row-gap: 4px; min-width: 0; }
+.mv-rk { display: flex; align-items: center; gap: 4px; min-width: 0; }
+.mv-rk .m-emb { flex: none; display: inline-block; width: 17px; height: 21px; filter: drop-shadow(0 1px 1px rgba(0,0,0,.25)); }
+.mv-rk .m-emb svg { display: block; width: 100%; height: 100%; }
+.mv-rk b { font: 800 .62rem/1 var(--body); letter-spacing: .03em; text-transform: uppercase; color: #c81e1e; white-space: nowrap; }
+.mv-rk.won b { color: #1a8a3a; }
+.mv-rk.cur b { color: #fff; background: #1546b8; padding: 3px 5px; border-radius: 4px; box-shadow: 0 1px 4px rgba(21,70,184,.5); }
+.mv-gift { width: 22px; height: 20px; padding: 0; border: 0; background: none; color: #c81e1e; display: grid; place-items: center; cursor: pointer; }
+.mv-gift.on { color: #1a8a3a; } .mv-gift[disabled] { cursor: default; }
+.mv-gift svg { width: 16px; height: 16px; fill: currentColor; }
+.og-bar { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 8px 0 6px; }
+.og-bar::before, .og-bar::after { content: ""; flex: 1; height: 2px; background: linear-gradient(90deg, transparent, #f5c518); }
+.og-bar::after { background: linear-gradient(90deg, #f5c518, transparent); }
+.og-bar span { display: flex; align-items: baseline; gap: 8px; }
+.og-bar .c, .og-bar .o { color: #e0a800; background: linear-gradient(180deg, #ffe680 0%, #f5c518 45%, #c98a00 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.og-bar .c { font: 900 .8rem/1 var(--body); letter-spacing: .14em; -webkit-text-stroke: .4px #6b4a00; filter: drop-shadow(0 1px 0 #5a3d00); }
+.og-bar .o { font: 900 2.3rem/.9 var(--body); letter-spacing: .02em; -webkit-text-stroke: 1px #6b4a00; filter: drop-shadow(0 2px 0 #5a3d00) drop-shadow(0 0 7px rgba(245,197,24,.6)); }
+@media (max-width: 420px) {
+  .m9 { column-gap: 10px; }
+  .practice #cred.g9 #list.on-meter, .v2-eps { grid-template-columns: repeat(3, 23px) !important; grid-auto-rows: 24px; gap: 3px !important; }
+  .practice #cred.g9 #list.on-meter .ep, .v2-ep { height: 24px !important; }
+  .practice #cred.g9 #list.on-meter .ep .n, .v2-ep { font-size: .74rem !important; }
+  .mv-rks { grid-auto-rows: 24px; row-gap: 3px; }
+  .mv-body { column-gap: 4px; }
+  .mv-rk { gap: 3px; }
+  .mv-rk .m-emb { width: 13px; height: 16px; }
+  .mv-rk b { font-size: .5rem; letter-spacing: 0; }
+  .mv-rk.cur b { padding: 3px 3px; }
+  .mv-head .t { font-size: .64rem; letter-spacing: .1em; }
+  .og-bar .o { font-size: 1.9rem; }
+}
+</style>
+<script>
+/* Two boards: Vol. 1 (live) and Vol. 2 (locked). Vol. 2 ranks: OG Right Hand, OG Shot Caller, OG Certified. */
+(function () {
+  const cred = document.getElementById("cred"), list = document.getElementById("list");
+  if (!cred || !list || cred.querySelector(".m9")) return;
+  const shield = "M20 2.5 37 8.5V23.5C37 34.5 29.5 41.5 20 45.5 10.5 41.5 3 34.5 3 23.5V8.5Z",
+        inner = "M20 6.3 33.6 11.1V23.6C33.6 32.3 27.6 38.2 20 41.6 12.4 38.2 6.4 32.3 6.4 23.6V11.1Z";
+  const star = (x, y, r) => { let d = ""; for (let k = 0; k < 10; k++) { const a = Math.PI / 5 * k - Math.PI / 2, rr = k % 2 ? r * .45 : r; d += (k ? "L" : "M") + (x + rr * Math.cos(a)).toFixed(2) + " " + (y + rr * Math.sin(a)).toFixed(2); } return '<path class="mk-f" d="' + d + 'Z"/>'; };
+  const chev = y => '<polyline class="mk" points="10.5,' + (y + 5.5) + ' 20,' + y + ' 29.5,' + (y + 5.5) + '"/>';
+  const rocker = y => '<path class="mk" d="M10.5 ' + y + ' Q20 ' + (y + 5) + ' 29.5 ' + y + '"/>';
+  function emb2(k) {
+    let b = '<path class="bg" d="' + shield + '"/><path class="ring" d="' + inner + '"/>';
+    if (k === 0) b += star(13.6, 12.6, 2.6) + star(20, 11.2, 3.2) + star(26.4, 12.6, 2.6) + chev(17.5) + chev(23.7) + chev(29.9) + rocker(36);
+    if (k === 1) b += '<path class="mk-f" d="M13 15.5V9.2l3.5 3.2L20 7.6l3.5 4.8L27 9.2v6.3Z"/>' + chev(19.5) + chev(25.7) + rocker(32.5) + rocker(37);
+    if (k === 2) b += star(20, 11.5, 3.6) + '<text class="mk-f" x="20" y="33" text-anchor="middle" style="font: 900 14px/1 Anton, Impact, sans-serif">OG</text>';
+    return '<svg class="emb" viewBox="0 0 40 48" aria-hidden="true">' + b + '</svg>';
+  }
+  const giftSvg = '<svg viewBox="0 0 24 24"><path d="M20 7h-2.2A3 3 0 0 0 12 4.4 3 3 0 0 0 6.2 7H4a1 1 0 0 0-1 1v3h18V8a1 1 0 0 0-1-1zM9 7a1 1 0 1 1 1-1v1zm6 0h-1V6a1 1 0 1 1 1 1zM4 13v7a1 1 0 0 0 1 1h6v-8zm9 8h6a1 1 0 0 0 1-1v-7h-7z"/></svg>';
+  const R1 = ["Corner Kid", "OG Soldier", "OG Protégé"], R2 = ["OG Right Hand", "OG Shot Caller", "OG Certified"];
+  const rk = (name, svg) => '<span class="mv-rk"><i class="m-emb x">' + svg + '</i><b>' + name + '</b></span>';
+  const m = document.createElement("div"); m.className = "m9";
+  m.innerHTML =
+    '<div class="mv v1"><div class="mv-head"><span class="t">VOL. 1</span>' +
+      '<span class="t"><span class="nf"><i class="m-emb x">' + rankEmblem(0).replace('class="emb', 'class="emb on') + '</i>NEW FACE</span><button type="button" class="mv-gift g1" aria-label="Volume 1 rewards">' + giftSvg + '</button></span></div>' +
+      '<div class="mv-body"><div class="slot"></div><div class="mv-rks">' + R1.map((r, k) => rk(r, rankEmblem(k + 1))).join("") + '</div></div></div>' +
+    '<div class="mv v2"><div class="mv-head"><span class="t">VOL. 2</span>' +
+      '<span class="t"><button type="button" class="mv-gift" disabled aria-label="Volume 2 rewards, locked">' + giftSvg + '</button></span></div>' +
+      '<div class="mv-body"><div class="v2-eps">' + [1,2,3,4,5,6,7,8,9].map(n => '<span class="v2-ep">' + n + '</span>').join("") + '</div>' +
+      '<div class="mv-rks">' + R2.map((r, k) => rk(r, emb2(k))).join("") + '</div></div></div>' +
+    '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="c">CERTIFIED</span><span class="o">OG</span></span></div>';
+  const track = cred.querySelector(".cred-track"); (track || cred).after(m);
+  m.querySelector(".slot").replaceWith(list);
+  cred.classList.add("g9");
+  m.querySelector(".g1").onclick = () => { const g = list.querySelector(".dot-gift"); if (g) g.click(); };
+  function sync() {
+    const items = [...m.querySelectorAll(".v1 .mv-rk")]; let held = -1;
+    items.forEach((it, k) => { const won = !!(document.getElementById("f" + (k + 1)) || {}).classList?.contains("ranked"); it.classList.toggle("won", won);
+      const svg = it.querySelector(".emb"); if (svg) svg.classList.toggle("on", won); if (won) held = k; });
+    items.forEach((it, k) => it.classList.toggle("cur", k === held));
+    const g = list.querySelector(".dot-gift"); m.querySelector(".g1").classList.toggle("on", !!(g && g.classList.contains("on")));
+  }
+  sync();
+  new MutationObserver(sync).observe(track || cred, { subtree: true, attributes: true, attributeFilter: ["class"] });
+  new MutationObserver(sync).observe(list, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
+})();
+</script>
+<style>
+/* ---------- Compact card: How to play and the music player are the same fixed size, shorter than before, to make room for both boards ---------- */
+.practice .stage-wrap { height: var(--card-h, 392px) !important; min-height: 0 !important; max-height: none !important; }
+.practice .stage { max-height: 100% !important; gap: 8px !important; }
+.practice .player { gap: 6px !important; }
+.practice .album-release.big { padding: 6px 18px 6px !important; gap: 3px !important; margin: 2px auto 4px !important; }
+.practice .album-release.big .ar-num svg.nine { width: 21px !important; height: 30px !important; }
+.practice .album-release.big .ar-num .tick { font-size: 1.45rem !important; }
+.practice .album-release.big .ar-sub { font-size: .52rem !important; }
+.practice .album-release.big .ar-c { font-size: .5rem !important; }
+.practice .album-release.big .ar-c.tl, .practice .album-release.big .ar-c.tr { top: 4px !important; }
+.practice .album-release.big .ar-c.bl, .practice .album-release.big .ar-c.br { bottom: 4px !important; }
+.practice .vol-big .nine { width: 22px !important; }
+.practice .vol-big .v1nine .tick { font-size: 1.9rem !important; }
+.practice .vol-big .lab { font-size: .55rem !important; }
+.practice #pEp { font-size: .72rem !important; line-height: 1.1 !important; }
+.practice #pTitle { font-size: 1.3rem !important; line-height: 1.15 !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.practice .fun-bar { padding-top: 4px !important; padding-bottom: 4px !important; min-height: 0 !important; }
+.practice .fun-bar .fb-x { height: 24px !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+.practice .controls { gap: 12px !important; }
+.practice .controls .btn-round { width: 34px !important; height: 34px !important; }
+.practice .controls .btn-round.play { width: 42px !important; height: 42px !important; }
+.practice #qText { font-size: .95rem !important; margin: 0 !important; }
+.practice #opts { gap: 5px !important; }
+.practice #opts .opt { min-height: 0 !important; padding-top: 7px !important; padding-bottom: 7px !important; }
+.practice .quiz { gap: 5px !important; padding-top: 6px !important; }
+.practice #opts .opt { font-size: .86rem !important; padding: 6px 12px !important; border-radius: 9px !important; }
+.practice #qText { font-size: .9rem !important; line-height: 1.2 !important; }
+.practice #msg { min-height: 0 !important; margin: 0 !important; font-size: .82rem !important; line-height: 1.2 !important; }
+.practice .fun-bar { font-size: .85rem !important; padding: 2px 6px 2px 10px !important; }
+.practice .fun-bar .fb-x { height: 22px !important; font-size: .8rem !important; }
+.practice .seek .times { font-size: .72rem !important; line-height: 1 !important; margin-top: 3px !important; }
+.practice .seek { gap: 0 !important; }
+.practice .controls { height: 40px !important; }
+.practice .player { padding-top: 6px !important; padding-bottom: 4px !important; }
+.practice .player > div:first-child { min-height: 0 !important; }
+.practice #pTitle { font-size: 1.2rem !important; }
+.practice .player > div:first-child { padding-top: 8px !important; }
+.practice .album-release.big { margin-top: 0 !important; }
+</style>
+<script>
+/* card height: one size for How to play and the player; on short phones it gives up some height so nothing gets pushed off the screen */
+(function () {
+  function size() {
+    const h = window.innerHeight || 844, w = window.innerWidth || 390;
+    const want = w < 600 ? 392 : 410;
+    const fit = Math.max(360, Math.min(want, h - 452));
+    document.documentElement.style.setProperty("--card-h", fit + "px");
+  }
+  size(); window.addEventListener("resize", size);
+})();
+</script>
 </body>
 </html>

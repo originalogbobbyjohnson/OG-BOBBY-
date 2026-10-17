@@ -2300,6 +2300,11 @@ html, body, body.practice { background: #fff !important; }
       g.style.setProperty("left", (cx - gW / 2 - hr.left) + "px", "important");
       g.style.setProperty("top", (nineTop - hr.top) + "px", "important");
       g.style.setProperty("gap", Math.max(4, labTop - nineTop - nH) + "px", "important");
+      // correct for any offset in the layout so the 9 lands exactly where it should
+      const gr = g.getBoundingClientRect(), nr = nine.getBoundingClientRect();
+      const dx = (cx - gW / 2) - gr.left, dy = nineTop - nr.top;
+      if (Math.abs(dx) > .5) g.style.setProperty("left", (parseFloat(g.style.left) + dx) + "px", "important");
+      if (Math.abs(dy) > .5) g.style.setProperty("top", (parseFloat(g.style.top) + dy) + "px", "important");
     });
   }
   window.addEventListener("resize", () => requestAnimationFrame(placeNines));
