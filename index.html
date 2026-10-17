@@ -2634,5 +2634,84 @@ html, body, body.practice { background: #fff !important; }
   m.append(a, sub);
 })();
 </script>
+<style>
+/* Brighter game tiles: not done yet = white tile, red outline, red number; done = solid green; the song you're on = solid red */
+.practice #cred.g9 #list.on-meter .ep { background: #fff !important; border: 2px solid #c81e1e !important; border-radius: 7px !important; box-shadow: 0 2px 0 #c81e1e !important; }
+.practice #cred.g9 #list.on-meter .ep .n { color: #c81e1e !important; font-weight: 800 !important; }
+.practice #cred.g9 #list.on-meter .ep:has(.s.open) { background: linear-gradient(180deg, #2fb457, #1a8a3a) !important; border-color: #12632a !important; box-shadow: 0 2px 0 #12632a !important; }
+.practice #cred.g9 #list.on-meter .ep:has(.s.open) .n { color: #fff !important; }
+.practice #cred.g9 #list.on-meter .ep.current { background: linear-gradient(180deg, #e8402f, #c81e1e) !important; border-color: #8f1212 !important; box-shadow: 0 2px 0 #8f1212, 0 0 0 3px rgba(200,30,30,.18) !important; }
+.practice #cred.g9 #list.on-meter .ep.current .n { color: #fff !important; }
+.practice #cred.g9 #list.on-meter .ep.current:has(.s.open) { background: linear-gradient(180deg, #2fb457, #1a8a3a) !important; border-color: #12632a !important; box-shadow: 0 2px 0 #12632a, 0 0 0 3px rgba(26,138,58,.25) !important; }
+.mv.v2 .v2-ep { background: #fff !important; border: 2px solid #d4d6da !important; border-radius: 7px !important; box-shadow: 0 2px 0 #d4d6da !important; color: #b0b3b9 !important; font-weight: 800; }
+</style>
+<style>
+/* OG CERTIFIED inside an official stamp frame */
+.og-bar > span { position: relative; padding: 10px 26px 9px; border: 2px solid #c98a00; outline: 2px solid #c98a00; outline-offset: 3px; border-radius: 4px;
+  background: linear-gradient(180deg, rgba(255,230,128,.22), rgba(245,197,24,.06)); box-shadow: 0 0 14px rgba(245,197,24,.35); }
+.og-bar > span::before, .og-bar > span::after { content: "\2605"; position: absolute; top: 50%; transform: translateY(-50%); font-size: .7rem; line-height: 1; color: #c98a00; }
+.og-bar > span::before { left: 8px; } .og-bar > span::after { right: 8px; }
+.og-bar { margin: 46px 0 12px !important; }
+/* ALL 18 SONGS line at half size */
+.m99 .m99s { font-size: .3rem !important; letter-spacing: .14em !important; }
+/* drop date: centered up and down in the space between the Vol. 2 board and the gold line */
+.mv.v2 { padding-bottom: 0 !important; }
+</style>
+<script>
+(function () {
+  function placeDrop() {
+    const d = document.querySelector(".v2-drop"), v2 = document.querySelector(".mv.v2"), bar = document.querySelector(".og-bar");
+    const eps = document.querySelectorAll(".mv.v2 .v2-ep"); if (!d || !v2 || !bar || !eps.length) return;
+    const boardBottom = Math.max(...[...document.querySelectorAll(".m9 .mv-body")].map(b => b.getBoundingClientRect().bottom));
+    const fr = (bar.querySelector(':scope > span') || bar).getBoundingClientRect(), lineY = fr.top - 5, vr = v2.getBoundingClientRect();
+    const mid = boardBottom + (lineY - boardBottom) * 0.62;
+    d.style.setProperty("top", (mid - d.offsetHeight / 2 - vr.top) + "px", "important");
+    d.style.setProperty("bottom", "auto", "important");
+  }
+  window.addEventListener("resize", () => requestAnimationFrame(placeDrop)); window.addEventListener("load", placeDrop);
+  setTimeout(placeDrop, 60); setTimeout(placeDrop, 700); setTimeout(placeDrop, 1600);
+  try { new ResizeObserver(() => requestAnimationFrame(placeDrop)).observe(document.querySelector(".m9")); } catch (e) {}
+})();
+</script>
+<style>
+.v2-drop b { font-size: .54rem !important; }
+.v2-drop i { font-size: .42rem !important; }
+</style>
+<style>
+/* '99 on the left; THE ALBUM and ALL 18 SONGS stacked beside it at exactly the same width */
+.m99 { flex-direction: row !important; align-items: center !important; gap: 12px !important; }
+.m99 .m99col { display: grid; gap: 5px; justify-items: start; }
+.m99 .m99col > b { font: 900 .9rem/1 var(--body) !important; letter-spacing: .2em !important; color: #111 !important; }
+.m99 .m99col b, .m99 .m99col .m99s { display: block; white-space: nowrap; line-height: 1 !important; text-align: left; }
+.m99 .m99s { letter-spacing: .1em !important; }
+.v2-drop b, .v2-drop i { display: block; white-space: nowrap; line-height: 1 !important; }
+</style>
+<script>
+/* stretch the smaller line so it runs exactly as wide as the line above it */
+(function () {
+  function fit(el, target) {
+    if (!el || !target) return;
+    el.style.letterSpacing = ".1em";
+    let fs = parseFloat(getComputedStyle(el).fontSize);
+    for (let k = 0; k < 4; k++) { const w = el.getBoundingClientRect().width; if (!w) return; fs = fs * target / w; el.style.setProperty("font-size", fs + "px", "important"); }
+    // the last letter's spacing hangs past the end: trim it so the ends line up exactly
+    const ls = parseFloat(getComputedStyle(el).letterSpacing) || 0; el.style.marginRight = (-ls) + "px";
+    const w = el.getBoundingClientRect().width - ls; if (w) el.style.setProperty("font-size", (fs * target / w) + "px", "important");
+  }
+  function run() {
+    const m = document.querySelector(".m99");
+    if (m && !m.querySelector(".m99col")) {
+      const a = m.querySelector(".m99a"), b = a && a.querySelector("b"), sub = m.querySelector(".m99s"), n = m.querySelector(".n99");
+      if (a && b && sub && n) { const col = document.createElement("div"); col.className = "m99col"; col.append(b, sub); m.innerHTML = ""; m.append(n, col); }
+    }
+    const al = document.querySelector(".m99col b"), sub = document.querySelector(".m99col .m99s");
+    if (al && sub) { const ls = parseFloat(getComputedStyle(al).letterSpacing) || 0; al.style.marginRight = (-ls) + "px"; fit(sub, al.getBoundingClientRect().width - ls); }
+    const db = document.querySelector(".v2-drop b"), di = document.querySelector(".v2-drop i");
+    if (db && di) { const ls = parseFloat(getComputedStyle(db).letterSpacing) || 0; db.style.marginRight = (-ls) + "px"; fit(di, db.getBoundingClientRect().width - ls); }
+  }
+  run(); window.addEventListener("load", run); setTimeout(run, 400); setTimeout(run, 1500);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(run);
+})();
+</script>
 </body>
 </html>
