@@ -2602,5 +2602,39 @@ html, body, body.practice { background: #fff !important; }
   v2.append(d);
 })();
 </script>
+<style>
+/* Vol. 2 inactive look: whole board light gray, everything still readable, drop date small in the bottom-right corner (replaces the stamp) */
+.mv.v2 .mv-body { opacity: 1 !important; }
+.mv.v2 .v2-ep { background: #e4e5e8 !important; border-color: #e4e5e8 !important; color: #a3a6ad !important; }
+.mv.v2 .mv-rk b { color: #b0b3b9 !important; }
+.mv.v2 .emb .bg { fill: #fff !important; stroke: #c3c6cc !important; }
+.mv.v2 .emb .ring { stroke: #c3c6cc !important; }
+.mv.v2 .emb .mk { stroke: #c3c6cc !important; }
+.mv.v2 .emb .mk-f { fill: #c3c6cc !important; }
+.mv.v2 .mv-head .t { color: #b0b3b9 !important; }
+.mv.v2 .mv-head { border-bottom-color: #d4d6da !important; }
+.mv.v2 { padding-bottom: 26px; }
+.v2-drop { position: absolute !important; left: auto !important; top: auto !important; right: 0 !important; bottom: 0 !important; transform: none !important;
+  background: none !important; border: 0 !important; outline: 0 !important; box-shadow: none !important; padding: 0 !important; border-radius: 0 !important;
+  display: grid !important; justify-items: end !important; gap: 2px !important; }
+.v2-drop b { font: 900 .68rem/1 var(--body) !important; letter-spacing: .1em !important; color: #c81e1e !important; }
+.v2-drop i { font: 800 .52rem/1 var(--body) !important; letter-spacing: .1em !important; color: #c81e1e !important; }
+/* '99 THE ALBUM on its own line, ALL 18 SONGS on its own line, both centered */
+.m99 { flex-direction: column !important; gap: 6px !important; margin: 4px 0 10px !important; }
+.m99 .m99a { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.m99 .m99a b { font: 900 .9rem/1 var(--body); letter-spacing: .2em; color: #111; }
+.m99 .m99s { font: 800 .6rem/1 var(--body); letter-spacing: .14em; color: #c81e1e; text-align: center; }
+</style>
+<script>
+(function () {
+  const m = document.querySelector(".m99"); if (!m || m.querySelector(".m99a")) return;
+  const n = m.querySelector(".n99");
+  m.innerHTML = "";
+  const a = document.createElement("div"); a.className = "m99a"; a.append(n);
+  const t = document.createElement("b"); t.textContent = "THE ALBUM"; a.append(t);
+  const sub = document.createElement("div"); sub.className = "m99s"; sub.textContent = "ALL 18 SONGS \u00b7 VOL. 1 + VOL. 2";
+  m.append(a, sub);
+})();
+</script>
 </body>
 </html>
