@@ -3015,7 +3015,8 @@ html, body, body.practice { background: #fff !important; }
   const spin = document.createElement("div"); spin.className = "spin"; spin.setAttribute("aria-hidden", "true");
   spin.innerHTML = '<div class="lbl"><span class="st"></span><span class="hole"></span><span class="by">OG BOBBY</span></div>';
   rec.append(spin);
-  const st = spin.querySelector(".st");
+  const st = spin.querySelector(".st"), by = spin.querySelector(".by");
+  const setName = t => { const raw = / \(Raw Cut\)$/.test(t); st.textContent = raw ? t.replace(/ \(Raw Cut\)$/, "") : t; by.textContent = raw ? "RAW CUT \u00b7 OG BOBBY" : "OG BOBBY"; };
   const isSong = a => { const s = a.currentSrc || a.src || ""; return s && !/\/(vo|sfx)\//.test(s); };
   const titleFor = a => {
     try { if (a === document.getElementById("audio") && typeof EPISODES !== "undefined" && EPISODES[idx]) return EPISODES[idx].title; } catch (e) {}
@@ -3027,7 +3028,7 @@ html, body, body.practice { background: #fff !important; }
   const refresh = () => { rec.classList.toggle("playing", playing.size > 0); };
   const hook = a => {
     if (a.__ogRec) return; a.__ogRec = true;
-    a.addEventListener("playing", () => { if (!isSong(a)) return; st.textContent = titleFor(a); playing.add(a); refresh(); });
+    a.addEventListener("playing", () => { if (!isSong(a)) return; setName(titleFor(a)); playing.add(a); refresh(); });
     ["pause", "ended", "emptied", "abort"].forEach(ev => a.addEventListener(ev, () => { playing.delete(a); refresh(); }));
   };
   const main = document.getElementById("audio"); if (main) hook(main);
@@ -3066,5 +3067,11 @@ html, body, body.practice { background: #fff !important; }
   if (h && i && b) l.append(i, h, b);
 })();
 </script>
+<style>
+/* spinning label: song name sits right down on the hole, away from the rim */
+.og-bar .og-rec .spin .lbl { padding: 0 6% !important; }
+.og-bar .og-rec .spin .lbl > .st { margin-bottom: 1px !important; line-height: 1.05 !important; }
+.og-bar .og-rec .spin .lbl > .by { margin-top: 3px !important; }
+</style>
 </body>
 </html>
