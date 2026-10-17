@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <script>(function(){try{var S=Storage.prototype,g=S.getItem,s=S.setItem,r=S.removeItem,P="lab:";S.getItem=function(k){return g.call(this,P+k)};S.setItem=function(k,v){return s.call(this,P+k,v)};S.removeItem=function(k){return r.call(this,P+k)};}catch(e){}})();</script>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
 <title>OG Bobby · The Brooklyn Music Game</title>
 <meta name="description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
 <meta property="og:type" content="music.album">
@@ -3593,6 +3593,37 @@ html, body, body.practice { background: #fff !important; }
 })();
 </script>
 
+<style>
+/* no zoom when tapping quickly: taps are taps, never "double-tap to zoom" */
+html, body, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulation; }
+/* the game card never scrolls, not even a little */
+.practice .stage { overflow: hidden !important; }
+</style>
+<script>
+/* Song card always fits its frame: if a long question or a small phone needs more room, the card's contents shrink a touch instead of scrolling. */
+(function () {
+  const st = document.querySelector(".stage"), pl = document.getElementById("player"); if (!st || !pl) return;
+  let z = 1, busy = false;
+  function fit() {
+    if (busy || !pl.offsetParent) return; busy = true;
+    try {
+      st.scrollTop = 0;
+      const btn = document.getElementById("cardReset");
+      const pr = pl.getBoundingClientRect(), sr = st.getBoundingClientRect();
+      const limit = (btn && !btn.hidden && btn.offsetParent) ? btn.getBoundingClientRect().top - 8 : sr.bottom - 4;
+      const natural = pr.height / z, avail = limit - pr.top;
+      const nz = Math.max(.75, Math.min(1, avail / natural));
+      if (Math.abs(nz - z) > .01) { z = nz; pl.style.zoom = z < 1 ? String(z) : ""; }
+    } finally { busy = false; }
+  }
+  const later = () => requestAnimationFrame(() => requestAnimationFrame(fit));
+  window.addEventListener("resize", later); window.addEventListener("load", later);
+  try { new MutationObserver(later).observe(pl, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ["class", "hidden"] }); } catch (e) {}
+  try { new ResizeObserver(later).observe(st); } catch (e) {}
+  st.addEventListener("scroll", () => { if (st.scrollTop) st.scrollTop = 0; });
+  setInterval(fit, 700); later();
+})();
+</script>
 
 <div class="lab-tag">PRACTICE BOARD · NOT LIVE</div><style>.lab-tag{position:fixed;top:6px;left:50%;transform:translateX(-50%);z-index:50;background:#d62828;color:#fff;font:800 .55rem/1 Barlow,system-ui,sans-serif;letter-spacing:.12em;padding:4px 8px;border-radius:999px;pointer-events:none}</style>
 </body>
