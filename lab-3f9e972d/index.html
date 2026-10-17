@@ -2679,5 +2679,41 @@ html, body, body.practice { background: #fff !important; }
 .v2-drop b { font-size: .54rem !important; }
 .v2-drop i { font-size: .42rem !important; }
 </style>
+<style>
+/* '99 on the left; THE ALBUM and ALL 18 SONGS stacked beside it at exactly the same width */
+.m99 { flex-direction: row !important; align-items: center !important; gap: 12px !important; }
+.m99 .m99col { display: grid; gap: 5px; justify-items: start; }
+.m99 .m99col > b { font: 900 .9rem/1 var(--body) !important; letter-spacing: .2em !important; color: #111 !important; }
+.m99 .m99col b, .m99 .m99col .m99s { display: block; white-space: nowrap; line-height: 1 !important; text-align: left; }
+.m99 .m99s { letter-spacing: .1em !important; }
+.v2-drop b, .v2-drop i { display: block; white-space: nowrap; line-height: 1 !important; }
+</style>
+<script>
+/* stretch the smaller line so it runs exactly as wide as the line above it */
+(function () {
+  function fit(el, target) {
+    if (!el || !target) return;
+    el.style.letterSpacing = ".1em";
+    let fs = parseFloat(getComputedStyle(el).fontSize);
+    for (let k = 0; k < 4; k++) { const w = el.getBoundingClientRect().width; if (!w) return; fs = fs * target / w; el.style.setProperty("font-size", fs + "px", "important"); }
+    // the last letter's spacing hangs past the end: trim it so the ends line up exactly
+    const ls = parseFloat(getComputedStyle(el).letterSpacing) || 0; el.style.marginRight = (-ls) + "px";
+    const w = el.getBoundingClientRect().width - ls; if (w) el.style.setProperty("font-size", (fs * target / w) + "px", "important");
+  }
+  function run() {
+    const m = document.querySelector(".m99");
+    if (m && !m.querySelector(".m99col")) {
+      const a = m.querySelector(".m99a"), b = a && a.querySelector("b"), sub = m.querySelector(".m99s"), n = m.querySelector(".n99");
+      if (a && b && sub && n) { const col = document.createElement("div"); col.className = "m99col"; col.append(b, sub); m.innerHTML = ""; m.append(n, col); }
+    }
+    const al = document.querySelector(".m99col b"), sub = document.querySelector(".m99col .m99s");
+    if (al && sub) { const ls = parseFloat(getComputedStyle(al).letterSpacing) || 0; al.style.marginRight = (-ls) + "px"; fit(sub, al.getBoundingClientRect().width - ls); }
+    const db = document.querySelector(".v2-drop b"), di = document.querySelector(".v2-drop i");
+    if (db && di) { const ls = parseFloat(getComputedStyle(db).letterSpacing) || 0; db.style.marginRight = (-ls) + "px"; fit(di, db.getBoundingClientRect().width - ls); }
+  }
+  run(); window.addEventListener("load", run); setTimeout(run, 400); setTimeout(run, 1500);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(run);
+})();
+</script>
 </body>
 </html>
