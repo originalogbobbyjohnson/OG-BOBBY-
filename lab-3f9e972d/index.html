@@ -2350,7 +2350,9 @@ html, body, body.practice { background: #fff !important; }
 .og-bar { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 8px 0 6px; }
 .og-bar::before, .og-bar::after { content: ""; flex: 1; height: 2px; background: linear-gradient(90deg, transparent, #f5c518); }
 .og-bar::after { background: linear-gradient(90deg, #f5c518, transparent); }
-.og-bar span { display: flex; align-items: baseline; gap: 8px; }
+.og-bar > span { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.og-bar .o, .og-bar .c { display: block; text-align: center; }
+.og-bar .c { padding-left: .14em; }
 .og-bar .c, .og-bar .o { color: #e0a800; background: linear-gradient(180deg, #ffe680 0%, #f5c518 45%, #c98a00 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .og-bar .c { font: 900 .8rem/1 var(--body); letter-spacing: .14em; -webkit-text-stroke: .4px #6b4a00; filter: drop-shadow(0 1px 0 #5a3d00); }
 .og-bar .o { font: 900 2.3rem/.9 var(--body); letter-spacing: .02em; -webkit-text-stroke: 1px #6b4a00; filter: drop-shadow(0 2px 0 #5a3d00) drop-shadow(0 0 7px rgba(245,197,24,.6)); }
@@ -2398,7 +2400,7 @@ html, body, body.practice { background: #fff !important; }
       '<span class="t"><button type="button" class="mv-gift" disabled aria-label="Volume 2 rewards, locked">' + giftSvg + '</button></span></div>' +
       '<div class="mv-body"><div class="v2-eps">' + [1,2,3,4,5,6,7,8,9].map(n => '<span class="v2-ep">' + n + '</span>').join("") + '</div>' +
       '<div class="mv-rks">' + R2.map((r, k) => rk(r, emb2(k))).join("") + '</div></div></div>' +
-    '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="c">CERTIFIED</span><span class="o">OG</span></span></div>';
+    '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="o">OG</span><span class="c">CERTIFIED</span></span></div>';
   const track = cred.querySelector(".cred-track"); (track || cred).after(m);
   m.querySelector(".slot").replaceWith(list);
   cred.classList.add("g9");
