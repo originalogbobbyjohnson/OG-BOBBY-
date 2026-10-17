@@ -3104,6 +3104,8 @@ html, body, body.practice { background: #fff !important; }
 .card-reset.pinned { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); z-index: 3; margin: 0; }
 .card-reset.pinned:active { transform: translateX(-50%) scale(.95); }
 .card-reset[hidden] { display: none !important; }
+/* the blue card gets its own strip at the bottom for RESTART GAME, so no window's buttons ever sit under it */
+.practice .stage-wrap:has(> #cardReset) { height: calc(var(--card-h2, 340px) + 26px) !important; padding-bottom: 26px !important; box-sizing: border-box !important; }
 @media (max-height: 700px) { .practice #opts { gap: 4px !important; } .practice #opts .opt { padding-top: 3px !important; padding-bottom: 3px !important; min-height: 0 !important; } .card-reset { padding: 1px 9px !important; font-size: .56rem !important; } .card-reset svg { width: 10px !important; height: 10px !important; } }
 </style>
 <script>
@@ -3113,11 +3115,9 @@ html, body, body.practice { background: #fff !important; }
   const b = document.createElement("button"); b.type = "button"; b.className = "card-reset"; b.id = "cardReset"; b.setAttribute("aria-label", "Restart the game");
   b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg>RESTART GAME';
   b.onclick = () => { sheet.hidden = false; };
-  // pinned to the bottom edge of the blue song card, centered; only shows on the song card
+  // pinned to the bottom of the blue card, centered, in the exact same spot on every window
   const wrap = document.querySelector(".stage-wrap") || player;
-  wrap.append(b); b.classList.add("pinned");
-  const sync = () => { const on = !!player.offsetParent && player.getBoundingClientRect().height > 0 && !document.querySelector(".wrap.raw-on"); if (b.hidden === on) b.hidden = !on; };
-  sync(); setInterval(sync, 250);
+  wrap.append(b); b.classList.add("pinned"); b.hidden = false;
 })();
 </script>
 <style>
