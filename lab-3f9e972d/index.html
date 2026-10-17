@@ -3101,6 +3101,9 @@ html, body, body.practice { background: #fff !important; }
 .practice #msg:empty { display: none !important; }
 .card-reset svg { width: 12px; height: 12px; fill: currentColor; }
 .card-reset:active { transform: scale(.95); }
+.card-reset.pinned { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); z-index: 3; margin: 0; }
+.card-reset.pinned:active { transform: translateX(-50%) scale(.95); }
+.card-reset[hidden] { display: none !important; }
 @media (max-height: 700px) { .practice #opts { gap: 4px !important; } .practice #opts .opt { padding-top: 3px !important; padding-bottom: 3px !important; min-height: 0 !important; } .card-reset { padding: 1px 9px !important; font-size: .56rem !important; } .card-reset svg { width: 10px !important; height: 10px !important; } }
 </style>
 <script>
@@ -3110,7 +3113,11 @@ html, body, body.practice { background: #fff !important; }
   const b = document.createElement("button"); b.type = "button"; b.className = "card-reset"; b.id = "cardReset"; b.setAttribute("aria-label", "Restart the game");
   b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg>RESTART GAME';
   b.onclick = () => { sheet.hidden = false; };
-  player.append(b);   // sits right under the answers (or the "fully unlocked" note)
+  // pinned to the bottom edge of the blue song card, centered; only shows on the song card
+  const wrap = document.querySelector(".stage-wrap") || player;
+  wrap.append(b); b.classList.add("pinned");
+  const sync = () => { const on = !!player.offsetParent && player.getBoundingClientRect().height > 0 && !document.querySelector(".wrap.raw-on"); if (b.hidden === on) b.hidden = !on; };
+  sync(); setInterval(sync, 250);
 })();
 </script>
 <style>
@@ -3585,6 +3592,7 @@ html, body, body.practice { background: #fff !important; }
   }
 })();
 </script>
+
 
 <div class="lab-tag">PRACTICE BOARD · NOT LIVE</div><style>.lab-tag{position:fixed;top:6px;left:50%;transform:translateX(-50%);z-index:50;background:#d62828;color:#fff;font:800 .55rem/1 Barlow,system-ui,sans-serif;letter-spacing:.12em;padding:4px 8px;border-radius:999px;pointer-events:none}</style>
 </body>

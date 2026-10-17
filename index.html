@@ -2983,7 +2983,7 @@ html, body, body.practice { background: #fff !important; }
   document.getElementById("resetKeep").onclick = () => { sheet.hidden = true; };
   sheet.addEventListener("click", ev => { if (ev.target === sheet) sheet.hidden = true; });
   document.getElementById("resetGo").onclick = () => {
-    try { ["ogb2", "ogFun", "ogVoHi"].forEach(k => localStorage.removeItem(k)); } catch (e) {}
+    try { ["ogb2", "ogFun", "ogVoHi", "ogX"].forEach(k => localStorage.removeItem(k)); } catch (e) {}
     try { sessionStorage.clear(); } catch (e) {}
     try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "restart", title: "Restarted the game", event: true }); } catch (e) {}
     try { document.querySelectorAll("audio, video").forEach(a => a.pause()); } catch (e) {}
@@ -3099,6 +3099,9 @@ html, body, body.practice { background: #fff !important; }
 .practice #msg:empty { display: none !important; }
 .card-reset svg { width: 12px; height: 12px; fill: currentColor; }
 .card-reset:active { transform: scale(.95); }
+.card-reset.pinned { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); z-index: 3; margin: 0; }
+.card-reset.pinned:active { transform: translateX(-50%) scale(.95); }
+.card-reset[hidden] { display: none !important; }
 @media (max-height: 700px) { .practice #opts { gap: 4px !important; } .practice #opts .opt { padding-top: 3px !important; padding-bottom: 3px !important; min-height: 0 !important; } .card-reset { padding: 1px 9px !important; font-size: .56rem !important; } .card-reset svg { width: 10px !important; height: 10px !important; } }
 </style>
 <script>
@@ -3108,7 +3111,11 @@ html, body, body.practice { background: #fff !important; }
   const b = document.createElement("button"); b.type = "button"; b.className = "card-reset"; b.id = "cardReset"; b.setAttribute("aria-label", "Restart the game");
   b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg>RESTART GAME';
   b.onclick = () => { sheet.hidden = false; };
-  player.append(b);   // sits right under the answers (or the "fully unlocked" note)
+  // pinned to the bottom edge of the blue song card, centered; only shows on the song card
+  const wrap = document.querySelector(".stage-wrap") || player;
+  wrap.append(b); b.classList.add("pinned");
+  const sync = () => { const on = !!player.offsetParent && player.getBoundingClientRect().height > 0 && !document.querySelector(".wrap.raw-on"); if (b.hidden === on) b.hidden = !on; };
+  sync(); setInterval(sync, 250);
 })();
 </script>
 <style>
@@ -3157,5 +3164,432 @@ html, body, body.practice { background: #fff !important; }
   }
 })();
 </script>
+<!-- ===================== Game extras: share card, Vol. 2 countdown + reminder, hot streak, trophy case, secret spots, lightning round, faster loading, stats events ===================== -->
+<style>
+/* shared window look (same as the restart window) */
+.xs .box { text-align: center; max-height: calc(100vh - 40px); overflow: auto; }
+.xs h3 { color: #fff !important; font-size: 1.2rem !important; margin: 0; }
+.xs p { color: #fff !important; margin: 0; line-height: 1.4; }
+.xs .k { font: 800 .62rem/1 var(--body); letter-spacing: .2em; color: #fff; }
+.xs .btn.x-go { background: #d62828 !important; color: #fff !important; }
+.xs .btn.x-close { background: none !important; color: #fff !important; border: 1px solid #fff !important; }
+.xs .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+/* ---- 1. share card ---- */
+.x-share-img { width: 100%; max-width: 220px; margin: 0 auto; display: block; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,.4); }
+.promo .x-promo-share { all: unset; box-sizing: border-box; margin-top: 10px; pointer-events: auto; cursor: pointer; display: inline-block; padding: 8px 16px; border-radius: 999px; background: #d62828; color: #fff; font: 800 .7rem/1 var(--body); letter-spacing: .14em; }
+.promo:has(.x-promo-share) { pointer-events: auto; }
+
+/* ---- 2 + 3. Vol. 2 countdown and reminder: one compact row that takes the place of the "4 of 9 revealed" line ---- */
+#v2 { gap: 6px !important; }
+#v2 .v2-count { display: none !important; }
+#v2 .ninety-nine .nine { width: 34px !important; }
+#v2 .ninety-nine .tick, #v2 .ninety-nine .v1nine .tick { font-size: 2.2rem !important; }
+#v2 .ninety-nine { margin: 0 !important; }
+#v2 .v2-top { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px; }
+#v2 .v2-top .v2-story { text-align: left; }
+#v2 .v2-story { font-size: .74rem !important; line-height: 1.3 !important; }
+#v2 .v2-grid { gap: 5px !important; }
+#v2 .v2-tile { min-height: 0 !important; padding: 5px 4px !important; gap: 1px !important; }
+#v2 .v2-tile .v2-n { font-size: .7rem !important; line-height: 1 !important; }
+#v2 .v2-tile .v2-t { font-size: .74rem !important; line-height: 1.1 !important; }
+.v2-cd { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 8px 6px 12px; border-radius: 10px; background: rgba(0,0,0,.18); border: 1px solid rgba(255,255,255,.25); }
+.v2-cd .cd-txt { display: grid; gap: 4px; text-align: left; min-width: 0; }
+.v2-cd .cd-k { font: 800 .55rem/1 var(--body); letter-spacing: .16em; color: #fff; white-space: nowrap; }
+.v2-cd .cd-n { font-family: var(--display); font-size: 1.15rem; line-height: 1; letter-spacing: .05em; color: #fff; white-space: nowrap; }
+.v2-cd .cd-r { all: unset; box-sizing: border-box; flex: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #d62828; color: #fff; font: 800 .62rem/1 var(--body); letter-spacing: .12em; text-decoration: none; white-space: nowrap; }
+.v2-cd .cd-r svg { width: 13px; height: 13px; fill: currentColor; }
+/* ---- 6. hot streak ---- */
+.x-streak { position: fixed; left: 50%; top: 18%; transform: translate(-50%, -10px) scale(.9); opacity: 0; z-index: 40; pointer-events: none; display: flex; align-items: center; gap: 8px; padding: 9px 16px 9px 12px; border-radius: 999px; background: #111; color: #fff; border: 2px solid #ff7a1a; box-shadow: 0 0 18px rgba(255,122,26,.55); transition: opacity .25s, transform .25s; font: 900 .78rem/1 var(--body); letter-spacing: .14em; white-space: nowrap; }
+.x-streak.on { opacity: 1; transform: translate(-50%, 0) scale(1); }
+.x-streak svg { width: 20px; height: 24px; }
+
+/* ---- 7. trophy case ---- */
+.x-tc-top { display: grid; justify-items: center; gap: 4px; }
+.x-tc-emb { width: 64px; height: 76px; }
+.x-tc-emb .emb .bg { fill: #1546b8; stroke: #fff; stroke-width: 2.4; }
+.x-tc-emb .emb .ring { stroke: #cfe0ff; stroke-width: 1.8; opacity: 1; }
+.x-tc-emb .emb .mk { stroke: #fff; }
+.x-tc-emb .emb .mk-f { fill: #fff; }
+.x-tc-rank { font-family: var(--display); font-size: 1.5rem; letter-spacing: .06em; color: #fff; line-height: 1; }
+.x-tc-sub { font: 700 .72rem/1 var(--body); color: #fff; letter-spacing: .06em; }
+.x-tc-songs { display: grid; grid-template-columns: repeat(9, 1fr); gap: 4px; }
+.x-tc-songs span { aspect-ratio: 1; display: grid; place-items: center; border-radius: 6px; border: 1.5px solid rgba(255,255,255,.4); color: rgba(255,255,255,.55); font: 800 .78rem/1 var(--body); }
+.x-tc-songs span.on { background: #1f8a3c; border-color: #2fbf57; color: #fff; }
+.x-tc-pl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.x-tc-pl span { padding: 7px 4px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,.4); color: rgba(255,255,255,.55); font: 800 .6rem/1.2 var(--body); letter-spacing: .08em; }
+.x-tc-pl span.on { background: #1f8a3c; border-color: #2fbf57; color: #fff; }
+.x-tc-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.x-tc-stats div { display: grid; gap: 4px; padding: 8px 2px; border-radius: 8px; background: rgba(255,255,255,.06); }
+.x-tc-stats b { font-family: var(--display); font-size: 1.25rem; color: #fff; line-height: 1; font-weight: 400; }
+.x-tc-stats i { font: 800 .52rem/1.15 var(--body); font-style: normal; letter-spacing: .1em; color: #fff; }
+.mv.v1 .mv-head .mv-rk, .mv.v1 .mv-head .nf { cursor: pointer; pointer-events: auto !important; }
+
+/* ---- 8. secret spots on the street picture (invisible until found) ---- */
+.x-eggs { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.x-egg { all: unset; position: absolute; pointer-events: auto; cursor: pointer; -webkit-tap-highlight-color: transparent; border-radius: 10px; }
+.x-egg:focus-visible { outline: 2px solid #fff; }
+.x-egg.pop { animation: xEggPop .6s ease-out; }
+@keyframes xEggPop { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,.9); } 100% { box-shadow: 0 0 0 18px rgba(255,255,255,0); } }
+.x-q { display: grid; gap: 8px; text-align: left; }
+.x-q .x-qt { font: 700 .95rem/1.3 var(--body); color: #fff; }
+.x-q .x-opt { all: unset; box-sizing: border-box; cursor: pointer; padding: 11px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,.35); background: rgba(255,255,255,.1); color: #fff; font: 700 .92rem/1.2 var(--body); }
+.x-q .x-opt.right { background: #1a8a3a; border-color: #2fbf57; }
+.x-q .x-opt.wrong { background: #c81e1e; border-color: #ff6b6b; }
+.x-q .x-opt[disabled] { cursor: default; }
+
+/* ---- 10. lightning round ---- */
+.x-lr-bar { height: 6px; border-radius: 3px; background: rgba(255,255,255,.15); overflow: hidden; }
+.x-lr-bar i { display: block; height: 100%; width: 100%; background: #ff7a1a; transform-origin: left; }
+.x-lr-meta { display: flex; justify-content: space-between; font: 800 .66rem/1 var(--body); letter-spacing: .14em; color: #fff; }
+.x-lr-score { font-family: var(--display); font-size: 3rem; line-height: 1; color: #fff; }
+</style>
+
+<script>
+(function () {
+  if (typeof EPISODES === "undefined" || window.ogExtras) return;
+  window.ogExtras = true;
+
+  /* ---------- small helpers ---------- */
+  const X = (() => { try { return JSON.parse(localStorage.getItem("ogX") || "{}") || {}; } catch (e) { return {}; } })();
+  X.eggs = X.eggs || {};
+  const xsave = () => { try { localStorage.setItem("ogX", JSON.stringify(X)); } catch (e) {} };
+  const rIdx = () => rankOf(blocksDone());
+  const rName = () => RANKS[rIdx()];
+  const songsDone = () => EPISODES.filter(isOpen).length;
+  const SITE = "https://ogbobbybrooklyn.com";
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const tr = (p, t) => { try { track(p, t); } catch (e) {} };
+
+  // one window maker, same look as the restart window
+  function sheet(html, onClose) {
+    const s = document.createElement("div");
+    s.className = "sheet xs"; s.setAttribute("role", "dialog"); s.setAttribute("aria-modal", "true");
+    s.innerHTML = '<div class="box">' + html + '</div>';
+    const close = () => { s.remove(); if (onClose) onClose(); };
+    s.addEventListener("click", ev => { if (ev.target === s) close(); });
+    s.querySelectorAll("[data-close]").forEach(b => b.onclick = close);
+    document.body.append(s);
+    s.close = close;
+    return s;
+  }
+
+  // checks an answer the same way the game does (no answers are stored in the page)
+  async function check(slug, g, o) {
+    const k = keyFor(slug, g, o);
+    try { if ((await fetch("b/" + k + ".mp3", { method: "HEAD", cache: "no-store" })).ok) return true; } catch (e) {}
+    try { const r = await fetch("b/" + k + ".txt", { cache: "no-store" }); if (r.ok && /^[0-9a-f]{24}$/.test((await r.text()).trim())) return true; } catch (e) {}
+    return false;
+  }
+  // questions from parts of songs the player has already heard and answered
+  function heardPool() {
+    const pool = [];
+    EPISODES.forEach(e => {
+      const n = keysOf(e).length;
+      for (let g = 0; g < Math.min(n, e.qs.length); g++) poolOf(e.qs[g]).forEach(q => pool.push({ e, g, q }));
+    });
+    return pool;
+  }
+  const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+  /* ===================== 1. SHARE MY RANK CARD ===================== */
+  function emblemImg(i) {
+    const css = '<style>.bg{fill:#1546b8;stroke:#fff;stroke-width:2.4}.ring{fill:none;stroke:#cfe0ff;stroke-width:1.8}.mk{fill:none;stroke:#fff;stroke-width:3.6;stroke-linecap:round;stroke-linejoin:round}.mk-f{fill:#fff}</style>';
+    const svg = rankEmblem(i).replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="480" ').replace('aria-hidden="true">', 'aria-hidden="true">' + css);
+    return loadImg("data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg));
+  }
+  function loadImg(src) { return new Promise(res => { const im = new Image(); im.onload = () => res(im); im.onerror = () => res(null); im.src = src; }); }
+  async function makeCard(kind, big, small) {
+    const W = 1080, H = 1920, c = document.createElement("canvas"); c.width = W; c.height = H;
+    const x = c.getContext("2d");
+    try { if (document.fonts) await Promise.race([document.fonts.load('120px "Anton"'), new Promise(r => setTimeout(r, 1200))]); } catch (e) {}
+    const disp = '"Anton", Impact, "Arial Narrow", sans-serif', body = '"Barlow", system-ui, -apple-system, sans-serif';
+    const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#2f6cf0"); g.addColorStop(.5, "#1a4fc9"); g.addColorStop(1, "#0f2f80");
+    x.fillStyle = g; x.fillRect(0, 0, W, H);
+    const [cover, word, emb] = await Promise.all([loadImg("cover.jpg"), loadImg("brand/og-bobby-wordmark-top.png"), kind === "rank" ? emblemImg(rIdx()) : Promise.resolve(null)]);
+    if (cover) { const ch = W * cover.height / cover.width; x.drawImage(cover, 0, 0, W, ch); const fade = x.createLinearGradient(0, ch - 220, 0, ch); fade.addColorStop(0, "rgba(26,79,201,0)"); fade.addColorStop(1, "#1d52cc"); x.fillStyle = fade; x.fillRect(0, ch - 220, W, 220); }
+    if (word) { const ww = 560, wh = ww * word.height / word.width; x.drawImage(word, 40, 34, ww, wh); }
+    x.textAlign = "center"; x.fillStyle = "#fff";
+    x.font = "800 40px " + body; x.letterSpacing = "10px";
+    x.fillText("THE BROOKLYN MUSIC GAME", W / 2, 720);
+    x.letterSpacing = "0px";
+    let y = 790;
+    if (emb) { x.drawImage(emb, W / 2 - 170, y, 340, 408); y += 470; }
+    else { y += 120; }
+    x.font = "800 44px " + body; x.letterSpacing = "12px"; x.fillText(small, W / 2, y); x.letterSpacing = "0px";
+    let fs = 150; x.font = fs + "px " + disp; while (x.measureText(big).width > W - 120 && fs > 60) { fs -= 6; x.font = fs + "px " + disp; }
+    x.fillText(big, W / 2, y + 30 + fs * .9);
+    // '99 frame
+    const fy = H - 430;
+    x.strokeStyle = "#fff"; x.lineWidth = 4; x.strokeRect(W / 2 - 230, fy, 460, 190); x.lineWidth = 2; x.strokeRect(W / 2 - 216, fy + 14, 432, 162);
+    // '99 drawn with the site's own straight graffiti 9 (never a font 9)
+    const nsv = nineSvg(1).replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" width="72" height="100" ');
+    const nine = await loadImg("data:image/svg+xml;charset=utf-8," + encodeURIComponent(nsv));
+    if (nine) {
+      const nh = 112, nw = nh * .72, gap = 4, tw = 30, total = tw + nw * 2 + gap, sx = W / 2 - total / 2, ny = fy + 16;
+      x.font = "110px " + disp; x.textAlign = "left"; x.fillText("’", sx - 2, ny + 84); x.textAlign = "center";
+      x.drawImage(nine, sx + tw, ny, nw, nh); x.drawImage(nine, sx + tw + nw + gap, ny, nw, nh);
+    }
+    x.font = "800 30px " + body; x.letterSpacing = "10px"; x.fillText("THE ALBUM", W / 2, fy + 165); x.letterSpacing = "0px";
+    x.font = "800 40px " + body; x.fillText("Play at ogbobbybrooklyn.com", W / 2, H - 120);
+    return new Promise(res => c.toBlob(b => res(b), "image/png"));
+  }
+  async function share(kind, big, small, text) {
+    const wait = sheet('<p class="k">MAKING YOUR CARD…</p>');
+    let blob = null; try { blob = await makeCard(kind, big, small); } catch (e) {}
+    wait.close();
+    if (!blob) return;
+    tr("share/" + kind, "Shared: " + kind);
+    const file = new File([blob], "og-bobby-" + kind + ".png", { type: "image/png" });
+    try { if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], text: text + " " + SITE }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+    const url = URL.createObjectURL(blob);
+    sheet('<p class="k">YOUR CARD</p><img class="x-share-img" alt="Your OG Bobby card" src="' + url + '"><p>Press and hold the picture to save it, then post it to your story.</p>' +
+      '<a class="btn x-go" href="' + url + '" download="og-bobby-' + kind + '.png">Save picture</a><button class="btn x-close" type="button" data-close>Close</button>', () => URL.revokeObjectURL(url));
+  }
+  const shareRank = () => share("rank", rName().toUpperCase(), "MY RANK", "I'm " + rName() + " on OG Bobby's Brooklyn Music Game.");
+  window.ogShareRank = shareRank;
+
+  // rank-up pop-up gets a SHARE MY RANK button and stays up a little longer
+  if (typeof promote === "function") {
+    const basePromote = promote;
+    promote = function (name) {
+      basePromote(name);
+      const p = [...document.querySelectorAll(".promo")].pop(); if (!p) return;
+      const b = document.createElement("button"); b.type = "button"; b.className = "x-promo-share"; b.textContent = "SHARE MY RANK";
+      b.onclick = () => { p.remove(); shareRank(); };
+      p.append(b);
+      // keep it on screen 4 more seconds
+      const keep = setInterval(() => { if (!p.isConnected) return clearInterval(keep); p.classList.add("on"); }, 200);
+      setTimeout(() => { clearInterval(keep); p.classList.remove("on"); setTimeout(() => p.remove(), 400); }, 8200);
+    };
+  }
+
+  /* ===================== 2 + 3. VOL. 2 COUNTDOWN + REMIND ME ===================== */
+  // first single Sunday Nov 1, 2026 (midnight New York time), then one a week for 9 weeks
+  const DROP0 = Date.parse("2026-11-01T00:00:00-04:00"), WEEK = 7 * 864e5;
+  function nextDrop(now) {
+    for (let k = 0; k < 9; k++) { const t = DROP0 + k * WEEK; if (t > now) return { t, k }; }
+    return null;
+  }
+  function cdText() {
+    const now = Date.now(), nd = nextDrop(now);
+    if (!nd) return { k: "VOLUME 2", n: "ALL 9 SINGLES ARE OUT" };
+    let s = Math.max(0, Math.floor((nd.t - now) / 1000));
+    const d = Math.floor(s / 86400); s -= d * 86400; const h = Math.floor(s / 3600); s -= h * 3600; const m = Math.floor(s / 60);
+    const n = d > 0 ? d + (d === 1 ? " DAY " : " DAYS ") + h + " HRS" : h > 0 ? h + " HRS " + m + " MIN" : m + " MIN";
+    return { k: nd.k === 0 ? "FIRST SINGLE DROPS IN" : "SINGLE #" + (nd.k + 1) + " DROPS IN", n };
+  }
+  const bell = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-6V11a7 7 0 0 0-5.5-6.84V3a1.5 1.5 0 0 0-3 0v1.16A7 7 0 0 0 5 11v5l-2 2v1h18v-1z"/></svg>';
+  function addCountdown() {
+    const card = document.getElementById("v2"); if (!card) return;
+    const cnt = card.querySelector(".v2-count"); if (!cnt || card.querySelector(".v2-cd")) return;
+    const w = document.createElement("div"); w.className = "v2-cd";
+    w.innerHTML = '<span class="cd-txt"><span class="cd-k"></span><span class="cd-n"></span></span><a class="cd-r" href="vol2.ics" download="og-bobby-vol2.ics">' + bell + 'REMIND ME</a>';
+    w.querySelector(".cd-r").addEventListener("click", () => tr("remind/vol2", "Added Vol. 2 reminder"));
+    cnt.before(w); paint();
+    // the '9 9 sits beside the 1999 story instead of above it
+    const nn = card.querySelector(".ninety-nine"), st = card.querySelector(".v2-story");
+    if (nn && st && !card.querySelector(".v2-top")) { const top = document.createElement("div"); top.className = "v2-top"; nn.before(top); top.append(nn, st); }
+  }
+  function paint() {
+    const t = cdText();
+    document.querySelectorAll(".v2-cd").forEach(w => { w.querySelector(".cd-k").textContent = t.k; w.querySelector(".cd-n").textContent = t.n; });
+  }
+  const v2 = document.getElementById("v2");
+  if (v2) new MutationObserver(addCountdown).observe(v2, { childList: true });
+  addCountdown(); setInterval(paint, 30000);
+
+  /* ===================== 6. HOT STREAK ===================== */
+  let streak = 0;
+  const flame = '<svg viewBox="0 0 20 24" aria-hidden="true"><path fill="#ff7a1a" d="M10 0c1 4 6 6 6 13a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-4 1-7 1-10z"/><path fill="#ffd166" d="M10 11c.6 2 3 3 3 6a3 3 0 0 1-6 0c0-1.5 1-2.5 1.5-3 .2 1 .7 1.4 1.2 1.4 0-1.6.3-3 .3-4.4z"/></svg>';
+  function streakToast(n) {
+    const t = document.createElement("div"); t.className = "x-streak"; t.setAttribute("role", "status");
+    t.innerHTML = flame + "HOT STREAK · " + n + " IN A ROW";
+    document.body.append(t);
+    requestAnimationFrame(() => t.classList.add("on"));
+    setTimeout(() => { t.classList.remove("on"); setTimeout(() => t.remove(), 300); }, 2000);
+    try { if (window.ogSound && !document.querySelector(".promo")) setTimeout(() => window.ogSound.sfx("unlock", .45), 150); } catch (e) {}
+  }
+  if (typeof answer === "function") {
+    const baseAnswer = answer;
+    answer = async function (o, btn) {
+      const e = EPISODES[idx], g = e ? gateOf(e) : 0, id = e ? e.slug + "|" + g : "", firstTry = e && !(id in state.first);
+      await baseAnswer(o, btn);
+      if (btn.classList.contains("right")) {
+        if (firstTry) {
+          streak++; if (streak > (X.bestStreak || 0)) { X.bestStreak = streak; xsave(); }
+          if (streak % 3 === 0) { if (!document.querySelector(".promo")) streakToast(streak); tr("streak/" + streak, "Hot streak: " + streak); }   // a promotion is the bigger moment: no second pop-up on top of it
+        } else streak = 0;
+        // 11. load the next part of the song right away so it starts without a wait
+        if (e && keysOf(e)[g]) warm(srcFor(e, g + 1));
+      } else if (btn.classList.contains("wrong")) streak = 0;
+    };
+  }
+
+  /* ===================== 11. FASTER LOADING ===================== */
+  const warmed = {};
+  function warm(url) { if (!url || warmed[url]) return; warmed[url] = 1; try { fetch(url, { cache: "force-cache" }).catch(() => {}); } catch (e) {} }
+  // while a part plays, quietly load the part after it (and the next level's opening)
+  audio.addEventListener("playing", () => {
+    const e = EPISODES[idx]; if (!e) return;
+    if (keysOf(e)[sec]) warm(srcFor(e, sec + 1));
+    const nx = EPISODES[idx + 1]; if (nx && audio.currentTime > 5) warm(srcFor(nx, 0));
+  });
+  audio.addEventListener("timeupdate", () => { const nx = EPISODES[idx + 1]; if (nx && audio.currentTime > 20) warm(srcFor(nx, 0)); });
+
+  /* ===================== 7. TROPHY CASE ===================== */
+  function trophyCase() {
+    tr("trophy-case", "Opened trophy case");
+    const songs = EPISODES.map((e, i) => '<span class="' + (isOpen(e) ? "on" : "") + '">' + (i + 1) + '</span>').join("");
+    const pl = BLOCKS.map((b, k) => '<span class="' + (blockDone(b) ? "on" : "") + '">SONGS<br>' + (b[0] + 1) + "–" + (b[b.length - 1] + 1) + '</span>').join("");
+    const eggs = Object.keys(X.eggs).length;
+    sheet(
+      '<p class="k">TROPHY CASE</p>' +
+      '<div class="x-tc-top"><div class="x-tc-emb">' + rankEmblem(rIdx()) + '</div><div class="x-tc-rank">' + esc(rName().toUpperCase()) + '</div><div class="x-tc-sub">' + songsDone() + ' of 9 songs finished</div></div>' +
+      '<p class="k">SONGS</p><div class="x-tc-songs">' + songs + '</div>' +
+      '<p class="k">PLAYLISTS</p><div class="x-tc-pl">' + pl + '</div>' +
+      '<div class="x-tc-stats"><div><b>' + (X.bestStreak || 0) + '</b><i>BEST<br>STREAK</i></div><div><b>' + (X.lrBest != null ? X.lrBest + "/10" : "–") + '</b><i>LIGHTNING<br>BEST</i></div><div><b>' + eggs + '/' + EGGS.length + '</b><i>SECRET<br>SPOTS</i></div></div>' +
+      '<div class="row2"><button class="btn x-go" type="button" data-share>Share my rank</button><button class="btn x-close" type="button" data-close>Close</button></div>'
+    ).querySelector("[data-share]").onclick = function () { this.closest(".sheet").remove(); shareRank(); };
+  }
+  window.ogTrophies = trophyCase;
+
+  /* ===================== 8. SECRET SPOTS ON THE STREET PICTURE ===================== */
+  // spots on the original 1376 x 768 picture
+  const EGGS = [
+    { k: "store", name: "THE CORNER STORE", x: 748, y: 182, w: 96, h: 76 },
+    { k: "moon", name: "THE FULL MOON", x: 642, y: 22, w: 106, h: 84 },
+    { k: "bridge", name: "THE VERRAZZANO", x: 596, y: 110, w: 100, h: 150 },
+    { k: "caddy", name: "THE CADDY", x: 236, y: 380, w: 370, h: 215 }
+  ];
+  function eggSpots() {
+    const cover = document.querySelector(".cover"), img = cover && cover.querySelector(":scope > img"); if (!img) return;
+    let box = cover.querySelector(".x-eggs");
+    if (!box) {
+      box = document.createElement("div"); box.className = "x-eggs";
+      EGGS.forEach(eg => { const b = document.createElement("button"); b.type = "button"; b.className = "x-egg"; b.dataset.k = eg.k; b.setAttribute("aria-label", "Secret spot"); b.onclick = () => findEgg(eg, b); box.append(b); });
+      cover.append(box);
+    }
+    const ir = img.getBoundingClientRect(), cr = cover.getBoundingClientRect(); if (!ir.width) return;
+    const cs = getComputedStyle(img), fit = cs.objectFit, pos = (cs.objectPosition || "50% 50%").split(" ").map(p => parseFloat(p) / 100);
+    const nw = img.naturalWidth || 1376, nh = img.naturalHeight || 768;
+    const s = fit === "cover" ? Math.max(ir.width / nw, ir.height / nh) : Math.min(ir.width / nw, ir.height / nh);
+    const ox = (ir.width - nw * s) * (isNaN(pos[0]) ? .5 : pos[0]), oy = (ir.height - nh * s) * (isNaN(pos[1]) ? .5 : pos[1]);
+    const word = cover.querySelector("h1 img"), wr = word && word.getBoundingClientRect();
+    box.querySelectorAll(".x-egg").forEach(b => {
+      const eg = EGGS.find(q => q.k === b.dataset.k);
+      let L = ir.left - cr.left + ox + eg.x * s, T = ir.top - cr.top + oy + eg.y * s, W = eg.w * s, H = eg.h * s;
+      // clip to the visible picture
+      const R = Math.min(L + W, ir.right - cr.left), B = Math.min(T + H, ir.bottom - cr.top); L = Math.max(L, ir.left - cr.left); T = Math.max(T, ir.top - cr.top);
+      const vis = R - L > 14 && B - T > 14 && !(wr && wr.width && (L < wr.right - cr.left && R > wr.left - cr.left && T < wr.bottom - cr.top && B > wr.top - cr.top));
+      b.hidden = !vis; b.style.cssText = "left:" + L + "px;top:" + T + "px;width:" + (R - L) + "px;height:" + (B - T) + "px";
+    });
+  }
+  function findEgg(eg, btn) {
+    btn.classList.remove("pop"); void btn.offsetWidth; btn.classList.add("pop");
+    const fresh = !X.eggs[eg.k];
+    if (fresh) { X.eggs[eg.k] = 1; xsave(); tr("secret/" + eg.k, "Secret spot: " + eg.name); }
+    const found = Object.keys(X.eggs).length;
+    const pool = heardPool(), item = pool.length ? pool[Math.floor(Math.random() * pool.length)] : null;
+    const head = '<p class="k">' + (fresh ? "SECRET SPOT FOUND" : "SECRET SPOT") + '</p><h3>' + eg.name + '</h3><p>' + found + ' of ' + EGGS.length + ' secret spots found</p>';
+    if (!item) { sheet(head + '<p>Unlock part of a song to get the secret question here.</p><button class="btn x-close" type="button" data-close>Close</button>'); return; }
+    const s = sheet(head + '<div class="x-q"><p class="k">SECRET QUESTION · ' + esc(item.e.title.toUpperCase()) + '</p><div class="x-qt"></div></div><button class="btn x-close" type="button" data-close>Close</button>');
+    askInto(s.querySelector(".x-q"), item, ok => { tr("secret-q/" + (ok ? "right" : "wrong"), "Secret question " + (ok ? "right" : "wrong")); });
+  }
+  // draws one question with its choices; calls done(ok) after a pick
+  function askInto(box, item, done) {
+    box.querySelector(".x-qt").textContent = item.q.q;
+    shuffle(item.q.opts.slice()).forEach(o => {
+      const b = document.createElement("button"); b.type = "button"; b.className = "x-opt"; b.textContent = o;
+      b.onclick = async () => {
+        box.querySelectorAll(".x-opt").forEach(z => z.disabled = true);
+        const ok = await check(item.e.slug, item.g, o);
+        b.classList.add(ok ? "right" : "wrong");
+        done(ok, b);
+      };
+      box.append(b);
+    });
+  }
+  eggSpots();
+  window.addEventListener("resize", () => requestAnimationFrame(eggSpots));
+  window.addEventListener("load", eggSpots); setTimeout(eggSpots, 600); setTimeout(eggSpots, 1600);
+  try { new ResizeObserver(() => requestAnimationFrame(eggSpots)).observe(document.querySelector(".cover")); } catch (e) {}
+
+  /* ===================== 10. LIGHTNING ROUND ===================== */
+  const LR_N = 10, LR_SEC = 8;
+  function lightning() {
+    const pool = heardPool();
+    if (pool.length < 3) {
+      sheet('<p class="k">LIGHTNING ROUND</p><h3>Not yet</h3><p>Answer a few questions in the story first. The lightning round only asks about parts of songs you\'ve heard.</p><button class="btn x-close" type="button" data-close>Got it</button>');
+      return;
+    }
+    try { audio.pause(); } catch (e) {}
+    const s = sheet('<p class="k">LIGHTNING ROUND</p><h3>10 questions. 8 seconds each.</h3><p>Only songs you\'ve heard. No rewards, just a score to beat.' + (X.lrBest != null ? " Your best: " + X.lrBest + "/10." : "") + '</p><div class="row2"><button class="btn x-go" type="button" data-go>Start</button><button class="btn x-close" type="button" data-close>Not now</button></div>');
+    s.querySelector("[data-go]").onclick = () => { s.close(); run(pool); };
+  }
+  function run(pool) {
+    tr("lightning/start", "Lightning round started");
+    // spread across songs: shuffle, prefer different questions
+    const picks = []; const bag = shuffle(pool.slice()); const seen = {};
+    for (const it of bag) { const key = it.e.slug + "|" + it.g + "|" + it.q.q; if (!seen[key]) { seen[key] = 1; picks.push(it); } if (picks.length >= LR_N) break; }
+    while (picks.length < LR_N) picks.push(bag[picks.length % bag.length]);
+    let i = 0, score = 0, timer = 0, ended = false;
+    const s = sheet('<div class="x-lr-meta"><span class="lr-n"></span><span class="lr-s"></span></div><div class="x-lr-bar"><i></i></div><div class="x-q"><div class="x-qt"></div></div><button class="btn x-close" type="button" data-close>Quit</button>', () => { ended = true; clearTimeout(timer); });
+    const bar = s.querySelector(".x-lr-bar i"), q = s.querySelector(".x-q");
+    function next() {
+      if (ended) return;
+      if (i >= LR_N) return finish();
+      q.querySelectorAll(".x-opt").forEach(b => b.remove());
+      s.querySelector(".lr-n").textContent = "QUESTION " + (i + 1) + " OF " + LR_N;
+      s.querySelector(".lr-s").textContent = "SCORE " + score;
+      const it = picks[i];
+      let answered = false;
+      askInto(q, it, (ok) => {
+        if (answered || ended) return; answered = true; clearTimeout(timer);
+        if (ok) { score++; try { window.ogSound && window.ogSound.sfx("right", .6); } catch (e) {} } else { try { window.ogSound && window.ogSound.sfx("wrong", .6); } catch (e) {} }
+        bar.style.transition = "none"; i++; setTimeout(next, 650);
+      });
+      bar.style.transition = "none"; bar.style.transform = "scaleX(1)"; void bar.offsetWidth;
+      bar.style.transition = "transform " + LR_SEC + "s linear"; bar.style.transform = "scaleX(0)";
+      clearTimeout(timer);
+      timer = setTimeout(() => { if (answered || ended) return; answered = true; q.querySelectorAll(".x-opt").forEach(z => z.disabled = true); try { window.ogSound && window.ogSound.sfx("wrong", .6); } catch (e) {} i++; setTimeout(next, 500); }, LR_SEC * 1000);
+    }
+    function finish() {
+      ended = true; s.remove();
+      const best = X.lrBest == null || score > X.lrBest; if (best) { X.lrBest = score; xsave(); }
+      tr("lightning/score-" + score, "Lightning score: " + score + "/10");
+      const r = sheet('<p class="k">LIGHTNING ROUND</p><div class="x-lr-score">' + score + '/10</div><p>' + (best ? "New personal best." : "Your best: " + X.lrBest + "/10.") + '</p>' +
+        '<button class="btn x-go" type="button" data-share>Share my score</button><div class="row2"><button class="btn x-close" type="button" data-again>Run it again</button><button class="btn x-close" type="button" data-close>Done</button></div>');
+      r.querySelector("[data-share]").onclick = () => { r.close(); share("lightning", score + "/10", "LIGHTNING ROUND", "I got " + score + "/10 in the OG Bobby lightning round."); };
+      r.querySelector("[data-again]").onclick = () => { r.close(); run(heardPool()); };
+    }
+    next();
+  }
+  window.ogLightning = lightning;
+
+  /* ---------- menu entries (no new buttons on the board) ---------- */
+  const how = document.getElementById("mHow");
+  if (how) {
+    const mk = (id, label, fn) => { const a = document.createElement("a"); a.className = "menu-item"; a.id = id; a.href = "#"; a.textContent = label; a.onclick = ev => { ev.preventDefault(); document.getElementById("menuSheet").hidden = true; fn(); }; return a; };
+    how.after(mk("mTrophy", "Trophy case", trophyCase), mk("mLightning", "Lightning round", lightning));
+  }
+  // tapping your rank on the meter opens the trophy case too
+  document.addEventListener("click", ev => { const nf = ev.target.closest && ev.target.closest(".mv.v1 .mv-head .mv-rk, .mv.v1 .mv-head .nf"); if (nf) { ev.preventDefault(); trophyCase(); } });
+
+  /* ---------- 12. stats: song finished + first-try score, for the private stats page ---------- */
+  if (typeof answer === "function") {
+    const base2 = answer;
+    answer = async function (o, btn) {
+      const e = EPISODES[idx], was = e && isOpen(e);
+      await base2(o, btn);
+      if (e && !was && isOpen(e)) {
+        const first = e.qs.map((_, g) => state.first[e.slug + "|" + g]).filter(v => v === true).length;
+        tr("finished/" + e.slug + "/first-try-" + first + "-of-" + e.qs.length, "Finished " + e.title + " (" + first + "/" + e.qs.length + " first try)");
+      }
+    };
+  }
+})();
+</script>
+
 </body>
 </html>
