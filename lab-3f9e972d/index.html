@@ -701,20 +701,20 @@ function nineSvg(fill, cls) {
 
 /* Rank emblems: a coin for New Face, then a shield that gains a chevron (and stars) with every promotion */
 function rankEmblem(i) {
+  /* New Face = coin with a star. Every rank after: one more stripe up to 3, then one more dot up to 3.
+     Corner Kid 1 stripe, OG Soldier 2, OG Protégé 3, OG Right Hand 3 + 1 dot, OG Shot Caller 3 + 2 dots, OG Certified 3 + 3 dots */
   const shield = "M20 2.5 37 8.5V23.5C37 34.5 29.5 41.5 20 45.5 10.5 41.5 3 34.5 3 23.5V8.5Z";
   const inner = "M20 6.3 33.6 11.1V23.6C33.6 32.3 27.6 38.2 20 41.6 12.4 38.2 6.4 32.3 6.4 23.6V11.1Z";
-  const star = (x, y, r) => { let d = ""; for (let k = 0; k < 10; k++) { const a = Math.PI / 5 * k - Math.PI / 2, rr = k % 2 ? r * .45 : r; d += (k ? "L" : "M") + (x + rr * Math.cos(a)).toFixed(2) + " " + (y + rr * Math.sin(a)).toFixed(2); } return '<path class="mk-f" d="' + d + 'Z"/>'; };
-  const chev = y => '<polyline class="mk" points="10.5,' + (y + 5.5) + ' 20,' + y + ' 29.5,' + (y + 5.5) + '"/>';
-  let body;
   if (i <= 0) {
-    body = '<circle class="bg" cx="20" cy="24" r="18"/><circle class="ring" cx="20" cy="24" r="14.6"/>' + star(20, 24.5, 8);
-  } else {
-    body = '<path class="bg" d="' + shield + '"/><path class="ring" d="' + inner + '"/>';
-    const top = i === 1 ? 23 : i === 2 ? 20 : 17.5;
-    for (let c = 0; c < i; c++) body += chev(top + c * 6.2);
-    if (i === 2) body += star(20, 13.2, 3.6);
-    if (i >= 3) body += star(13.6, 12.6, 2.6) + star(20, 11.2, 3.2) + star(26.4, 12.6, 2.6);
+    let d = ""; for (let k = 0; k < 10; k++) { const a = Math.PI / 5 * k - Math.PI / 2, rr = k % 2 ? 3.6 : 8; d += (k ? "L" : "M") + (20 + rr * Math.cos(a)).toFixed(2) + " " + (24.5 + rr * Math.sin(a)).toFixed(2); }
+    return '<svg class="emb r0" viewBox="0 0 40 48" aria-hidden="true"><circle class="bg" cx="20" cy="24" r="18"/><circle class="ring" cx="20" cy="24" r="14.6"/><path class="mk-f" d="' + d + 'Z"/></svg>';
   }
+  const stripes = Math.min(i, 3), dots = Math.max(0, i - 3);
+  let body = '<path class="bg" d="' + shield + '"/><path class="ring" d="' + inner + '"/>';
+  const top = 25 - (stripes - 1) * 3.2 + (dots ? 3 : 0);
+  for (let c = 0; c < stripes; c++) { const y = top + c * 6.4; body += '<polyline class="mk" points="11,' + (y + 5) + ' 20,' + y + ' 29,' + (y + 5) + '"/>'; }
+  const dx = [[], [20], [15.5, 24.5], [12.5, 20, 27.5]][dots];
+  dx.forEach(x => body += '<circle class="mk-f" cx="' + x + '" cy="13.5" r="2.9"/>');
   return '<svg class="emb r' + i + '" viewBox="0 0 40 48" aria-hidden="true">' + body + '</svg>';
 }
 
@@ -2343,7 +2343,12 @@ html, body, body.practice { background: #fff !important; }
 .mv-rk .m-emb svg { display: block; width: 100%; height: 100%; }
 .mv-rk b { font: 800 .62rem/1 var(--body); letter-spacing: .03em; text-transform: uppercase; color: #c81e1e; white-space: nowrap; }
 .mv-rk.won b { color: #1a8a3a; }
-.mv-rk.cur b { color: #fff; background: #1546b8; padding: 3px 5px; border-radius: 4px; box-shadow: 0 1px 4px rgba(21,70,184,.5); }
+.mv-rk.cur b { color: #fff; background: #1a8a3a; padding: 3px 5px; border-radius: 4px; box-shadow: 0 1px 4px rgba(26,138,58,.5); }
+/* earned = green everywhere on the boards: New Face, every rank you've reached, its badge */
+.m9 .emb.on .bg { fill: #1a8a3a !important; stroke: #12632a !important; }
+.m9 .emb.on .ring { stroke: #d8f3df !important; }
+.m9 .emb.on .mk { stroke: #fff !important; }
+.m9 .emb.on .mk-f { fill: #fff !important; }
 .mv-gift { width: 22px; height: 20px; padding: 0; border: 0; background: none; color: #c81e1e; display: grid; place-items: center; cursor: pointer; }
 .mv-gift.on { color: #1a8a3a; } .mv-gift[disabled] { cursor: default; }
 .mv-gift svg { width: 16px; height: 16px; fill: currentColor; }
@@ -2399,7 +2404,7 @@ html, body, body.practice { background: #fff !important; }
     '<div class="mv v2"><div class="mv-head"><span class="t">VOL. 2</span>' +
       '<span class="t"><button type="button" class="mv-gift" disabled aria-label="Volume 2 rewards, locked">' + giftSvg + '</button></span></div>' +
       '<div class="mv-body"><div class="v2-eps">' + [1,2,3,4,5,6,7,8,9].map(n => '<span class="v2-ep">' + n + '</span>').join("") + '</div>' +
-      '<div class="mv-rks">' + R2.map((r, k) => rk(r, emb2(k))).join("") + '</div></div></div>' +
+      '<div class="mv-rks">' + R2.map((r, k) => rk(r, rankEmblem(k + 4))).join("") + '</div></div></div>' +
     '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="o">OG</span><span class="c">CERTIFIED</span></span></div>';
   const track = cred.querySelector(".cred-track"); (track || cred).after(m);
   m.querySelector(".slot").replaceWith(list);
