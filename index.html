@@ -2982,5 +2982,49 @@ html, body, body.practice { background: #fff !important; }
   };
 })();
 </script>
+<style>
+/* ---------- Record spins while a song plays, song name on the label; the flip comes back when the music stops ---------- */
+.og-rec.flipper .spin { position: absolute; inset: 0; border-radius: 50%; opacity: 0; pointer-events: none; transition: opacity .35s ease;
+  background:
+    conic-gradient(from 30deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,.14) 25deg, rgba(255,255,255,0) 60deg, rgba(255,255,255,0) 180deg, rgba(255,255,255,.1) 205deg, rgba(255,255,255,0) 240deg),
+    repeating-radial-gradient(circle at 50% 50%, #0d0d0f 0 1.6px, #1b1c20 1.6px 3px);
+  box-shadow: 0 0 0 2px #0a0a0b, 0 0 18px rgba(200,205,215,.6); animation: ogSpin 2.4s linear infinite; animation-play-state: paused; }
+.og-rec.flipper .flip { transition: opacity .35s ease; }
+.og-rec.flipper.playing .spin { opacity: 1; animation-play-state: running; }
+.og-rec.flipper.playing .flip { opacity: 0; animation-play-state: paused; }
+.og-bar .og-rec .spin .lbl { gap: 3px !important; padding: 0 10%; }
+.og-bar .og-rec .spin .lbl .st { font: 900 .5rem/1.1 var(--body); letter-spacing: .04em; color: #1546b8; text-transform: uppercase; text-wrap: balance; max-width: 100%; overflow-wrap: break-word; }
+.og-bar .og-rec .spin .lbl .by { font: 800 .3rem/1 var(--body); letter-spacing: .14em; color: #1c1f24; white-space: nowrap; margin-right: -.14em; }
+@keyframes ogSpin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .og-rec.flipper .spin { animation: none; } }
+@media (min-width: 600px) { .og-bar .og-rec .spin .lbl .st { font-size: .62rem; } .og-bar .og-rec .spin .lbl .by { font-size: .36rem; } }
+@media (max-width: 599px) { .og-bar .og-rec .spin .lbl .st { font-size: .4rem !important; } .og-bar .og-rec .spin .lbl .by { font-size: .24rem !important; } }
+</style>
+<script>
+(function () {
+  const rec = document.querySelector(".og-bar .og-rec.flipper"); if (!rec) return;
+  const spin = document.createElement("div"); spin.className = "spin"; spin.setAttribute("aria-hidden", "true");
+  spin.innerHTML = '<div class="lbl"><span class="st"></span><span class="hole"></span><span class="by">OG BOBBY</span></div>';
+  rec.append(spin);
+  const st = spin.querySelector(".st");
+  const isSong = a => { const s = a.currentSrc || a.src || ""; return s && !/\/(vo|sfx)\//.test(s); };
+  const titleFor = a => {
+    try { if (a === document.getElementById("audio") && typeof EPISODES !== "undefined" && EPISODES[idx]) return EPISODES[idx].title; } catch (e) {}
+    const raw = document.querySelector(".raw-title");
+    if (raw && raw.textContent.trim() && raw.offsetParent !== null) return raw.textContent.trim() + " (Raw Cut)";
+    return "OG Bobby";
+  };
+  const playing = new Set();
+  const refresh = () => { rec.classList.toggle("playing", playing.size > 0); };
+  const hook = a => {
+    if (a.__ogRec) return; a.__ogRec = true;
+    a.addEventListener("playing", () => { if (!isSong(a)) return; st.textContent = titleFor(a); playing.add(a); refresh(); });
+    ["pause", "ended", "emptied", "abort"].forEach(ev => a.addEventListener(ev, () => { playing.delete(a); refresh(); }));
+  };
+  const main = document.getElementById("audio"); if (main) hook(main);
+  const play0 = HTMLMediaElement.prototype.play;
+  HTMLMediaElement.prototype.play = function () { try { hook(this); } catch (e) {} return play0.apply(this, arguments); };
+})();
+</script>
 </body>
 </html>
