@@ -2877,5 +2877,9 @@ html, body, body.practice { background: #fff !important; }
 .practice .slide-intro.welcome .wb-name { font-size: 1.25rem !important; padding: 6px 14px !important; background: #1546b8 !important; border: 2px solid #fff !important; border-radius: 6px !important; box-shadow: 0 3px 8px rgba(0,0,0,.3) !important; }
 .practice .slide-intro.welcome .wb-done { font-size: .95rem !important; font-weight: 700 !important; }
 </style>
+<style>
+/* Welcome back with no fun button yet: keep "Welcome back" + RETURN centered */
+.practice .slide-intro.welcome:has(.fun-wrap[hidden]) .btn.start { margin-bottom: auto !important; }
+</style>
 </body>
 </html>
