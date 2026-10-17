@@ -3047,5 +3047,24 @@ html, body, body.practice { background: #fff !important; }
   const r = document.querySelector(".og-rec .face.b .lbl img"); if (r) r.src = "brand/og-bobby-wordmark-top.png";
 })();
 </script>
+<style>
+/* ---------- Every record label: hole dead center, name above it, small line below it ---------- */
+.og-bar .og-rec .lbl { display: grid !important; grid-template-rows: 1fr auto 1fr !important; align-content: stretch !important; justify-items: center !important; gap: 0 !important; padding: 0 10% !important; }
+.og-bar .og-rec .lbl > :first-child { align-self: end !important; margin-bottom: 5px !important; }
+.og-bar .og-rec .lbl { grid-template-columns: minmax(0, 1fr) !important; grid-template-rows: 1fr 6px 1fr !important; }
+.og-bar .og-rec .lbl > :first-child { grid-row: 1 !important; justify-self: center !important; }
+.og-bar .og-rec .lbl > :last-child { grid-row: 3 !important; justify-self: center !important; }
+.og-bar .og-rec .lbl > .hole { position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; margin: 0 !important; order: 0 !important; }
+.og-bar .og-rec .lbl > :last-child { align-self: start !important; margin-top: 5px !important; }
+.og-bar .og-rec.flipper .face.b .lbl img { align-self: end !important; width: calc(84% * 1052 / 932) !important; margin: 0 calc(-84% * 60 / 932) calc(3px - 84% * 60 / 932) !important; }
+</style>
+<script>
+(function () {
+  // back of the record: OG BOBBY above the hole, BAY RIDGE, BROOKLYN under it
+  const l = document.querySelector(".og-rec .face.b .lbl"); if (!l) return;
+  const h = l.querySelector(".hole"), i = l.querySelector("img"), b = l.querySelector(".bk");
+  if (h && i && b) l.append(i, h, b);
+})();
+</script>
 </body>
 </html>
