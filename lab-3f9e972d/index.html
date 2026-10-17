@@ -2647,5 +2647,33 @@ html, body, body.practice { background: #fff !important; }
 .practice #cred.g9 #list.on-meter .ep.current:has(.s.open) { background: linear-gradient(180deg, #2fb457, #1a8a3a) !important; border-color: #12632a !important; box-shadow: 0 2px 0 #12632a, 0 0 0 3px rgba(26,138,58,.25) !important; }
 .mv.v2 .v2-ep { background: #fff !important; border: 2px solid #d4d6da !important; border-radius: 7px !important; box-shadow: 0 2px 0 #d4d6da !important; color: #b0b3b9 !important; font-weight: 800; }
 </style>
+<style>
+/* OG CERTIFIED inside an official stamp frame */
+.og-bar > span { position: relative; padding: 10px 26px 9px; border: 2px solid #c98a00; outline: 2px solid #c98a00; outline-offset: 3px; border-radius: 4px;
+  background: linear-gradient(180deg, rgba(255,230,128,.22), rgba(245,197,24,.06)); box-shadow: 0 0 14px rgba(245,197,24,.35); }
+.og-bar > span::before, .og-bar > span::after { content: "\2605"; position: absolute; top: 50%; transform: translateY(-50%); font-size: .7rem; line-height: 1; color: #c98a00; }
+.og-bar > span::before { left: 8px; } .og-bar > span::after { right: 8px; }
+.og-bar { margin: 46px 0 12px !important; }
+/* ALL 18 SONGS line at half size */
+.m99 .m99s { font-size: .3rem !important; letter-spacing: .14em !important; }
+/* drop date: centered up and down in the space between the Vol. 2 board and the gold line */
+.mv.v2 { padding-bottom: 0 !important; }
+</style>
+<script>
+(function () {
+  function placeDrop() {
+    const d = document.querySelector(".v2-drop"), v2 = document.querySelector(".mv.v2"), bar = document.querySelector(".og-bar");
+    const eps = document.querySelectorAll(".mv.v2 .v2-ep"); if (!d || !v2 || !bar || !eps.length) return;
+    const boardBottom = Math.max(...[...document.querySelectorAll(".m9 .mv-body")].map(b => b.getBoundingClientRect().bottom));
+    const fr = (bar.querySelector(':scope > span') || bar).getBoundingClientRect(), lineY = fr.top - 5, vr = v2.getBoundingClientRect();
+    const mid = (boardBottom + lineY) / 2;
+    d.style.setProperty("top", (mid - d.offsetHeight / 2 - vr.top) + "px", "important");
+    d.style.setProperty("bottom", "auto", "important");
+  }
+  window.addEventListener("resize", () => requestAnimationFrame(placeDrop)); window.addEventListener("load", placeDrop);
+  setTimeout(placeDrop, 60); setTimeout(placeDrop, 700); setTimeout(placeDrop, 1600);
+  try { new ResizeObserver(() => requestAnimationFrame(placeDrop)).observe(document.querySelector(".m9")); } catch (e) {}
+})();
+</script>
 </body>
 </html>
