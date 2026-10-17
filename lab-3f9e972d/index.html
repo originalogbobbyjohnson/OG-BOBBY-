@@ -2757,8 +2757,8 @@ html, body, body.practice { background: #fff !important; }
   const stamp = bar.querySelector(":scope > span"); if (!stamp) return;
   stamp.classList.add("og-st");
   const right = stamp.cloneNode(true);
-  const rec = document.createElement("div"); rec.className = "og-rec"; rec.setAttribute("aria-label", "'99 the album, all 18 songs, Volume 1 plus Volume 2");
-  rec.innerHTML = '<div class="lbl"><span class="r99"><span class="tk">’</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="hole"></span><b>THE ALBUM</b><i>ALL 18 SONGS<br>VOL. 1 + VOL. 2</i></div>';
+  const rec = document.createElement("div"); rec.className = "og-rec"; rec.setAttribute("aria-label", "'99 the album");
+  rec.innerHTML = '<div class="lbl"><span class="r99"><span class="tk">’</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="hole"></span><b>THE ALBUM</b></div>';
   stamp.after(rec); rec.after(right);
   window.dispatchEvent(new Event("resize"));
 })();

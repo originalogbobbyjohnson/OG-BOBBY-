@@ -2725,5 +2725,72 @@ html, body, body.practice { background: #fff !important; }
 .mv-head { height: 26px !important; margin-bottom: 6px !important; }
 @media (max-width: 420px) { .m9 { --bh: 27px; } .og-bar .o { font-size: 1.85rem !important; } }
 </style>
+<style>
+/* ---------- Center piece: a record with '99 THE ALBUM on the label, a small OG CERTIFIED stamp on each side ---------- */
+.m99 { display: none !important; }
+.og-bar { gap: 12px !important; margin: 26px 0 10px !important; }
+.og-bar > span.og-st { padding: 5px 10px 4px !important; outline-offset: 2px !important; gap: 1px !important; }
+.og-bar > span.og-st::before, .og-bar > span.og-st::after { content: none !important; }
+.og-bar > span.og-st .o { font-size: 1.35rem !important; }
+.og-bar > span.og-st .c { font-size: .46rem !important; letter-spacing: .1em !important; }
+.og-rec { position: relative; flex: none; width: 150px; height: 150px; border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, transparent 0 34%, rgba(255,255,255,.05) 34.5% 35%, transparent 35.5%),
+    conic-gradient(from 30deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,.14) 25deg, rgba(255,255,255,0) 60deg, rgba(255,255,255,0) 180deg, rgba(255,255,255,.1) 205deg, rgba(255,255,255,0) 240deg),
+    repeating-radial-gradient(circle at 50% 50%, #0d0d0f 0 1.6px, #1b1c20 1.6px 3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.35), 0 0 0 2px #0a0a0b; }
+.og-rec .lbl { position: absolute; inset: 22%; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #e8402f, #c81e1e 60%, #9e1616);
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.85), inset 0 0 0 4px #c81e1e; display: grid; align-content: center; justify-items: center; gap: 3px; text-align: center; }
+.og-rec .lbl .r99 { display: inline-flex; align-items: flex-start; }
+.og-rec .lbl .r99 .tk { font-family: var(--display); font-size: 1.15rem; line-height: .8; color: #fff; text-shadow: 1px 1px 0 #000; margin-right: -1px; }
+.og-rec .lbl .r99 svg.nine { width: 14px; height: 20px; }
+.og-rec .lbl .hole { width: 6px; height: 6px; border-radius: 50%; background: #fff; box-shadow: inset 0 1px 2px rgba(0,0,0,.6); margin: 1px 0; }
+.og-rec .lbl b { font: 900 .5rem/1 var(--body); letter-spacing: .14em; color: #fff; white-space: nowrap; margin-right: -.14em; }
+.og-rec .lbl i { font: 800 .27rem/1.15 var(--body); font-style: normal; letter-spacing: .08em; color: #fff; white-space: nowrap; }
+@media (min-width: 600px) { .og-rec { width: 176px; height: 176px; } .og-rec .lbl .r99 svg.nine { width: 17px; height: 24px; } .og-rec .lbl .r99 .tk { font-size: 1.35rem; } .og-rec .lbl b { font-size: .6rem; } .og-rec .lbl i { font-size: .32rem; } }
+</style>
+<script>
+(function () {
+  const bar = document.querySelector(".og-bar"); if (!bar || bar.querySelector(".og-rec")) return;
+  const stamp = bar.querySelector(":scope > span"); if (!stamp) return;
+  stamp.classList.add("og-st");
+  const right = stamp.cloneNode(true);
+  const rec = document.createElement("div"); rec.className = "og-rec"; rec.setAttribute("aria-label", "'99 the album");
+  rec.innerHTML = '<div class="lbl"><span class="r99"><span class="tk">’</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="hole"></span><b>THE ALBUM</b></div>';
+  stamp.after(rec); rec.after(right);
+  window.dispatchEvent(new Event("resize"));
+})();
+</script>
+<style>
+@media (max-width: 599px) {
+  .og-bar { margin: 12px 0 4px !important; gap: 10px !important; }
+  .og-rec { width: 116px !important; height: 116px !important; }
+  .og-rec .lbl { inset: 20% !important; gap: 2px !important; }
+  .og-rec .lbl .r99 svg.nine { width: 12px !important; height: 17px !important; }
+  .og-rec .lbl .r99 .tk { font-size: .95rem !important; }
+  .og-rec .lbl .hole { width: 5px !important; height: 5px !important; margin: 0 !important; }
+  .og-rec .lbl b { font-size: .42rem !important; }
+  .og-rec .lbl i { font-size: .24rem !important; }
+}
+</style>
+<style>
+/* record label in blue */
+.og-rec .lbl { background: radial-gradient(circle at 40% 35%, #3f7cf0, #1546b8 60%, #0d2f80) !important; box-shadow: inset 0 0 0 2px rgba(255,255,255,.85), inset 0 0 0 4px #1546b8 !important; }
+</style>
+<style>
+/* ---------- Platinum row: record label, both OG CERTIFIED stamps and the side lines all in platinum ---------- */
+.og-bar .og-rec .lbl { background: radial-gradient(circle at 38% 32%, #ffffff, #e6e8ec 35%, #b9bec7 70%, #8a9099) !important; box-shadow: inset 0 0 0 2px rgba(255,255,255,.95), inset 0 0 0 4px #9aa0a9 !important; }
+.og-bar .og-rec .lbl b, .og-bar .og-rec .lbl i { color: #1c1f24 !important; }
+.og-bar .og-rec .lbl .r99 .tk { color: #1c1f24 !important; text-shadow: none !important; }
+.og-bar .og-rec .lbl .r99 svg.nine g:last-child { stroke: #1c1f24 !important; }
+.og-bar .og-rec .lbl .r99 svg.nine g:first-child { stroke: #ffffff !important; }
+.og-bar .og-rec { box-shadow: 0 6px 16px rgba(0,0,0,.35), 0 0 0 2px #0a0a0b, 0 0 18px rgba(200,205,215,.6) !important; }
+.og-bar > span.og-st { border-color: #9aa0a9 !important; outline-color: #9aa0a9 !important; background: linear-gradient(180deg, #ffffff, #eceef1 55%, #dfe2e7) !important; box-shadow: 0 0 14px rgba(170,178,190,.55) !important; }
+.og-bar > span.og-st .o, .og-bar > span.og-st .c { color: #9aa0a9 !important; background: linear-gradient(180deg, #ffffff 0%, #c9ced6 40%, #8a9099 75%, #5d636c 100%) !important; -webkit-background-clip: text !important; background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+.og-bar > span.og-st .o { -webkit-text-stroke: 1px #3d4249 !important; filter: drop-shadow(0 2px 0 #3d4249) drop-shadow(0 0 6px rgba(190,198,210,.7)) !important; }
+.og-bar > span.og-st .c { -webkit-text-stroke: .3px #3d4249 !important; filter: drop-shadow(0 1px 0 #3d4249) !important; }
+.og-bar::before { background: linear-gradient(90deg, transparent, #aab0b9) !important; }
+.og-bar::after { background: linear-gradient(90deg, #aab0b9, transparent) !important; }
+</style>
 </body>
 </html>
