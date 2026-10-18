@@ -13,17 +13,19 @@
 <meta property="og:title" content="OG Made – Fade 9">
 <meta property="og:description" content="OG Bobby · 9 songs, one continuous mix">
 <meta property="og:url" content="https://ogbobbybrooklyn.com/og-made-fade/">
-<meta property="og:image" content="https://ogbobbybrooklyn.com/cover.jpg">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/cover.jpg?v=2">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1376">
 <meta property="og:image:height" content="768">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OG Made – Fade 9">
-<meta name="twitter:image" content="https://ogbobbybrooklyn.com/cover.jpg">
+<meta name="twitter:image" content="https://ogbobbybrooklyn.com/cover.jpg?v=2">
 <link rel="icon" href="../cover.png">
 <link rel="apple-touch-icon" href="../cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&family=Sedgwick+Ave+Display&display=swap">
+<style>/* the graffiti 9 with a straight tail instead of the hook (only the 9 comes from this file) */
+@font-face { font-family: "Sedgwick Nine"; src: url("../brand/sedgwick-nine.woff") format("woff"); unicode-range: U+0039; font-display: swap; }</style>
 <style>
 :root {
   --bg: #0f1a12; --panel: #17251a; --line: #2a4231;
@@ -41,10 +43,12 @@ header > img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: 
 .title-row > div { min-width: 0; }
 h1 { margin: 0; line-height: 0; }
 h1 img { display: block; width: min(100%, 300px); height: auto; filter: drop-shadow(3px 3px 0 #000); }
-.list-tag { display: block; margin-top: 6px; font-family: "Sedgwick Ave Display", "Permanent Marker", cursive; font-size: 1.6rem; line-height: 1; color: var(--gold); text-shadow: 2px 2px 0 #000; }
+.list-tag { display: block; margin-top: 6px; font-family: "Sedgwick Nine", "Sedgwick Ave Display", "Permanent Marker", cursive; font-size: 1.6rem; line-height: 1; color: var(--gold); text-shadow: 2px 2px 0 #000; }
 .og-badge { flex: none; }
 .nine-badge { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 14px; background: #000; border: 2px solid #e3b23c; box-shadow: 0 0 18px 4px rgba(227,178,60,.6); }
 .nine-badge svg { width: 26px; height: auto; overflow: visible; }
+.nine-badge { display: flex; align-items: flex-start; justify-content: center; padding-top: 12px; gap: 1px; }
+.nine-badge .tick { font-family: var(--display); font-size: 1.6rem; line-height: .8; color: #fff; text-shadow: 2px 2px 0 #000; }
 
 .og-badge img { display: block; width: 64px; height: 64px; border-radius: 14px; box-shadow: 0 0 18px 4px rgba(227,178,60,.6); }
 .sub { color: var(--muted); margin-top: 6px; font-size: .95rem; }
@@ -79,9 +83,9 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
         <h1><img src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"></h1>
         <span class="list-tag">OG MADE – FADE 9</span>
       </div>
-      <div class="og-badge" aria-hidden="true"><span class="nine-badge"><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
+      <div class="og-badge" aria-hidden="true"><span class="nine-badge"><span class="tick">’</span><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
     </div>
-    <div class="sub">9 songs, one continuous mix · 31:55</div>
+    <div class="sub">9 songs, one continuous mix · 31:47</div>
   </header>
   <section class="now">
     <div class="lab">Now playing</div>
@@ -99,7 +103,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
 </div>
 <audio id="audio" preload="metadata"></audio>
 <script>
-const CFG = {"mode": "fade", "mix": "487a9ef207ff.mp3", "tracks": [{"t": "Whatever It Takes", "f": "62fb21fcfcbb.mp3", "d": 168.23, "s": 0}, {"t": "Ridge Brothers", "f": "a1fe8390ba3c.mp3", "d": 224.42, "s": 163.23}, {"t": "Bay Ridge Nights", "f": "9a7481d5a858.mp3", "d": 206.37, "s": 382.65}, {"t": "The Get Back", "f": "ff56621d65ee.mp3", "d": 186.72, "s": 584.02}, {"t": "Pioneer", "f": "94b1e9bbeb9e.mp3", "d": 207.65, "s": 765.74}, {"t": "Bars & Clubs", "f": "6abe6700735e.mp3", "d": 179.44, "s": 968.39}, {"t": "Bay Ridge Is Mine", "f": "e9f4ac8096a8.mp3", "d": 280.79, "s": 1142.83}, {"t": "Black Rob", "f": "814f5a9e2c7b.mp3", "d": 215.47, "s": 1418.62}, {"t": "Positivity Spreads", "f": "85cfe59cf72c.mp3", "d": 286.8, "s": 1629.09}]};
+const CFG = {"mode": "fade", "mix": "6a72e78ee9fd.mp3", "tracks": [{"t": "Whatever It Takes", "f": "d3ab12f57f9a.mp3", "d": 160.03, "s": 0}, {"t": "Ridge Brothers", "f": "a1fe8390ba3c.mp3", "d": 224.42, "s": 155.03}, {"t": "Bay Ridge Nights", "f": "852a39797d0e.mp3", "d": 203.96, "s": 374.45}, {"t": "The Get Back (Raw Cut)", "f": "25ecbcfe1e48.mp3", "d": 210.02, "s": 573.41}, {"t": "Pioneer", "f": "389ed3dd6bb8.mp3", "d": 204.98, "s": 778.43}, {"t": "Bars & Clubs", "f": "e3f3994d13d2.mp3", "d": 160.99, "s": 978.41}, {"t": "Bay Ridge Is Mine", "f": "e9f4ac8096a8.mp3", "d": 280.79, "s": 1134.4}, {"t": "Black Rob", "f": "814f5a9e2c7b.mp3", "d": 215.47, "s": 1410.19}, {"t": "Positivity Spreads", "f": "85cfe59cf72c.mp3", "d": 286.8, "s": 1620.66}]};
 const T = CFG.tracks, FADE = CFG.mode === "fade";
 const audio = document.getElementById("audio");
 const $ = id => document.getElementById(id);
@@ -184,7 +188,7 @@ if ("mediaSession" in navigator) {
   } catch (e) {}
 }
 mark(0);
-$("tot").textContent = fmt(FADE ? 1908.3 : T[0].d);
+$("tot").textContent = fmt(FADE ? 1928.4 : T[0].d);
 </script>
 </body>
 </html>

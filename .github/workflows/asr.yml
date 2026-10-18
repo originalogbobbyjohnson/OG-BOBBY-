@@ -1,0 +1,24 @@
+name: asr
+on:
+  push:
+    branches: [asr-tmp]
+permissions:
+  contents: write
+jobs:
+  asr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: asr-tmp
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install faster-whisper numpy
+      - run: python3 asr/run.py
+      - run: |
+          git config user.name "OG Bobby"
+          git config user.email "originalogbobbyjohnson@users.noreply.github.com"
+          git add -f asr/words.txt
+          git commit -m "words"
+          git push
