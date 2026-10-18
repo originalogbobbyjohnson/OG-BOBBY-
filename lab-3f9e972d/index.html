@@ -1738,10 +1738,17 @@ window.scrollTo(0, 0);
 
 /* OG's voice: welcome, one-song-away nudges, rank-ups, and quick answer reactions. Never plays over the music. */
 (function () {
+  /* Checked by transcribing the clips themselves (do not go by recording order):
+     v02 "I could use a new kid on the corner" -> nudge before Corner Kid
+     v03 "I need a soldier out here" -> nudge before OG Soldier
+     v04 "I am looking for a protege" -> nudge before OG Protege
+     v05 "You are a corner kid now" -> Corner Kid rank-up
+     v06 "OG Soldier, now you are standing right with me" -> OG Soldier rank-up
+     v07 "OG Protege, you earned it" -> OG Protege rank-up */
   const VO = {
     hi: "vo/v01.mp3",
-    tease: ["vo/v02.mp3", "vo/v04.mp3", "vo/v06.mp3"],
-    rank: { "Corner Kid": "vo/v05.mp3", "OG Soldier": "vo/v03.mp3", "OG Prot\u00e9g\u00e9": "vo/v07.mp3" },
+    tease: ["vo/v02.mp3", "vo/v03.mp3", "vo/v04.mp3"],
+    rank: { "Corner Kid": "vo/v05.mp3", "OG Soldier": "vo/v06.mp3", "OG Prot\u00e9g\u00e9": "vo/v07.mp3" },
     right: ["vo/v08.mp3", "vo/v16.mp3", "vo/v09.mp3", "vo/v10.mp3", "vo/v17.mp3", "vo/v11.mp3"],
     wrong: ["vo/v12.mp3", "vo/v18.mp3", "vo/v13.mp3", "vo/v14.mp3", "vo/v19.mp3", "vo/v15.mp3"]
   };
