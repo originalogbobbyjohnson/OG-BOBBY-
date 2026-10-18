@@ -724,7 +724,7 @@ function promote(name) {
   d.querySelector(".promo-name").textContent = name;
   document.body.append(d);
   requestAnimationFrame(() => d.classList.add("on"));
-  setTimeout(() => { d.classList.remove("on"); setTimeout(() => d.remove(), 400); }, 4200);
+  d._t = setTimeout(() => { d.classList.remove("on"); setTimeout(() => d.remove(), 400); }, 4200);
 }
 
 /* Small SHA-256 so unlocking works on any connection. */
@@ -1757,7 +1757,7 @@ window.scrollTo(0, 0);
   const VO = {
     hi: "vo/v01.mp3",
     tease: ["vo/v02.mp3", "vo/v04.mp3", "vo/v06.mp3"],
-    rank: { "Corner Kid": "vo/v05.mp3", "OG Soldier": "vo/v03.mp3", "OG Prot\u00e9g\u00e9": "vo/v07.mp3" },
+    rank: { "Corner Kid": "vo/v03.mp3", "OG Soldier": "vo/v05.mp3", "OG Prot\u00e9g\u00e9": "vo/v07.mp3" },
     right: ["vo/v08.mp3", "vo/v16.mp3", "vo/v09.mp3", "vo/v10.mp3", "vo/v17.mp3", "vo/v11.mp3"],
     wrong: ["vo/v12.mp3", "vo/v18.mp3", "vo/v13.mp3", "vo/v14.mp3", "vo/v19.mp3", "vo/v15.mp3"]
   };
@@ -1822,7 +1822,7 @@ window.scrollTo(0, 0);
     const box = document.querySelector(".hdr3 > .album-release.big:not(.vol-box)");
     if (box) { box.classList.remove("og-flicker"); void box.offsetWidth; box.classList.add("og-flicker"); }
     if (window.ogSound) window.ogSound.sfx("flicker", 0.7);
-    setTimeout(() => say(VO.tease[k], () => audio.play().catch(() => {})), 1000);
+    setTimeout(() => say(VO.tease[Math.min(blocksDone(), VO.tease.length - 1)], () => audio.play().catch(() => {})), 1000);   // the nudge names the rank they are about to earn, whichever block they finish
   });
 })();
 
@@ -3398,9 +3398,12 @@ html, body, body.practice { background: #fff !important; }
       const b = document.createElement("button"); b.type = "button"; b.className = "x-promo-share"; b.textContent = "SHARE MY RANK";
       b.onclick = () => { p.remove(); shareRank(); };
       p.append(b);
-      // keep it on screen 4 more seconds
+      // stays up about 14 seconds (past the jingle and OG's voice); tap it to close sooner
+      clearTimeout(p._t);   // cancel the short 4-second exit so the longer one below wins
       const keep = setInterval(() => { if (!p.isConnected) return clearInterval(keep); p.classList.add("on"); }, 200);
-      setTimeout(() => { clearInterval(keep); p.classList.remove("on"); setTimeout(() => p.remove(), 400); }, 8200);
+      const close = () => { clearInterval(keep); p.classList.remove("on"); setTimeout(() => p.remove(), 400); };
+      setTimeout(close, 14000);
+      p.addEventListener("click", ev => { if (!ev.target.closest(".x-promo-share")) close(); });
     };
   }
 
