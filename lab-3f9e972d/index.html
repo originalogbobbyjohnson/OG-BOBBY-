@@ -3744,6 +3744,14 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
 .slide-intro:not(.welcome) .hp-head, .slide-intro:not(.welcome) .hp-body { text-wrap: balance; }
 @keyframes roomIn { from { opacity: 0; transform: translateX(26px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .slide-intro.walk .room-sign, .slide-intro.walk .howpage { animation: none; } }
+
+/* signs hang off to the side: faded, angled, with depth — the middle stays clean */
+.slide-intro:not(.welcome) { position: relative; }
+.slide-intro:not(.welcome) .room-sign { position: absolute; top: 74px; left: -30px; margin: 0; z-index: 0; pointer-events: none; opacity: .38; filter: blur(.4px);
+  transform-origin: left center; transform: perspective(260px) rotateY(52deg) rotateZ(-9deg) scale(.82); box-shadow: 8px 10px 14px rgba(0,0,0,.35); }
+.slide-intro[data-room="2"]:not(.welcome) .room-sign, .slide-intro[data-room="4"]:not(.welcome) .room-sign { left: auto; right: -30px; transform-origin: right center; transform: perspective(260px) rotateY(-52deg) rotateZ(9deg) scale(.82); box-shadow: -8px 10px 14px rgba(0,0,0,.35); }
+.slide-intro.walk .room-sign { animation: signIn .5s ease-out; }
+@keyframes signIn { from { opacity: 0; } to { opacity: .38; } }
 </style>
 
 <div class="lab-tag">PRACTICE BOARD · NOT LIVE</div><style>.lab-tag{position:fixed;top:6px;left:50%;transform:translateX(-50%);z-index:50;background:#d62828;color:#fff;font:800 .55rem/1 Barlow,system-ui,sans-serif;letter-spacing:.12em;padding:4px 8px;border-radius:999px;pointer-events:none}</style>
