@@ -47,14 +47,14 @@ li button.on .i { background: var(--gold); color: #000; }
 // Every song, grouped. Newest retired versions go at the top of "Old Versions".
 const VAULT = [
   { name: "Volume 1 · Now Playing", open: true, songs: [
-    ["Whatever It Takes", "Current version", "../m/d3ab12f57f9a.mp3", 160],
-    ["Ridge Brothers", "Current version", "../m/a1fe8390ba3c.mp3", 224],
-    ["Bay Ridge Nights", "Current version", "../m/852a39797d0e.mp3", 204],
-    ["The Get Back", "Current version · raw cut", "../m/25ecbcfe1e48.mp3", 210],
-    ["Pioneer", "Current version", "../m/389ed3dd6bb8.mp3", 205],
+    ["Whatever It Takes", "Current version", "../m/36205c960b63.mp3", 158],
+    ["Ridge Brothers", "Current version", "../m/59371541676c.mp3", 206],
+    ["Bay Ridge Nights", "Current version", "../m/0cffe671ed63.mp3", 187],
+    ["The Get Back", "Current version · raw cut", "../m/628661269f01.mp3", 202],
+    ["Pioneer", "Current version", "../m/2fcf00af916f.mp3", 202],
     ["Bars & Clubs", "Current version", "../m/e3f3994d13d2.mp3", 161],
-    ["Bay Ridge Is Mine", "Current version", "../m/e9f4ac8096a8.mp3", 281],
-    ["Black Rob", "Current version", "../m/814f5a9e2c7b.mp3", 215],
+    ["Bay Ridge Is Mine", "Current version", "../m/07e0acbb50a5.mp3", 270],
+    ["Black Rob", "Current version", "../m/2ddaa23c04ec.mp3", 214],
     ["Positivity Spreads", "Current version", "../m/85cfe59cf72c.mp3", 287] ]},
   { name: "Volume 2 · '99", songs: [
     ["After Hours", "Current version", "../after-hours-9fac51/after-hours-7.mp3", 277],
@@ -62,6 +62,13 @@ const VAULT = [
   { name: "Raw Cuts", songs: [
     ["Pioneer · Raw Cut", "Unlocks after Level 5", "../pioneer-raw-f97707/pioneer-raw.mp3", 202] ]},
   { name: "Old Versions", songs: [
+    ["Whatever It Takes · V2", "With \"OG Bobby\" in the intro · retired Oct 18, 2026", "whatever-it-takes-v2.mp3", 160],
+    ["Ridge Brothers · V1", "With the Mike intro and outro · retired Oct 18, 2026", "ridge-brothers-v1.mp3", 224],
+    ["Bay Ridge Nights · V2", "With the full intro and outro · retired Oct 18, 2026", "bay-ridge-nights-v2.mp3", 204],
+    ["The Get Back · V3", "With \"I came back bigger\" · retired Oct 18, 2026", "the-get-back-v3.mp3", 210],
+    ["Pioneer · V3", "With \"Dead weight's gone\" · retired Oct 18, 2026", "pioneer-v3.mp3", 205],
+    ["Bay Ridge Is Mine · V2", "With the full intro and outro · retired Oct 18, 2026", "bay-ridge-is-mine-v2.mp3", 281],
+    ["Black Rob · V1", "With \"Black Rob\" in the outro · retired Oct 18, 2026", "black-rob-v1.mp3", 215],
     ["Bars & Clubs · V1", "With the outro · retired Oct 16, 2026", "bars-and-clubs-v1.mp3", 179],
     ["Pioneer · V2", "With \"Dead weight's gone\" · retired Oct 16, 2026", "pioneer-v2.mp3", 208],
     ["Whatever It Takes · V1", "Retired Oct 16, 2026", "whatever-it-takes-v1.mp3", 168],
@@ -88,7 +95,8 @@ const VAULT = [
     ["Mint", "", "mint.mp3", 170],
     ["It's Mint", "", "its-mint.mp3", 121] ]},
   { name: "Mixes", songs: [
-    ["OG Made · Nonstop Mix", "All 9 Volume 1 songs blended", "../m/6a72e78ee9fd.mp3", 1907] ]}
+    ["OG Made · Nonstop Mix", "All 9 Volume 1 songs blended", "../m/3d3603103770.mp3", 1848],
+    ["OG Made · Nonstop Mix · V1", "Before the intro/outro edits · retired Oct 18, 2026", "og-made-mix-v1.mp3", 1907] ]}
 ];
 const play = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
 const fmt = s => Math.floor(s / 60) + ":" + String(Math.round(s % 60)).padStart(2, "0");
