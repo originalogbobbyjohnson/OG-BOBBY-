@@ -121,14 +121,14 @@ footer { color: var(--soft); font-size: .8rem; text-align: center; }
     </div>
   </section>
   <section class="songs">
-    <div class="sub">Volume 2 · 7 of 9 songs</div>
+    <div class="sub">Volume 2 · 8 of 9 songs</div>
     <ol id="list"></ol>
   </section>
   <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
 </div>
 <audio id="audio" preload="metadata"></audio>
 <script>
-const CFG = {"mode": "tracks", "mix": "", "tracks": [{"t": "After Hours", "f": "f999844d0224.mp3", "d": 277.37, "s": 0.0, "n": 1}, {"t": "Mikey the Rat", "f": "cc5d301f8062.mp3", "d": 245.94, "s": 0.0, "n": 2}, {"t": "The Ridge to The Beach", "f": "7da0390d9b18.mp3", "d": 121.75, "s": 0.0, "n": 3}, {"t": "Fort Hamilton Parkway", "f": "3e21ffaaa1e1.mp3", "d": 262.44, "s": 0.0, "n": 4}, {"t": "Green Machine to the Wall Street Machine", "f": "78a96d218928.mp3", "d": 186.02, "s": 0.0, "n": 5}, {"t": "Ridge Reels", "f": "daec866bb022.mp3", "d": 114.43, "s": 0.0, "n": 6}, {"t": "Bridgeview to Vegas", "f": "b54a71f1b2ed.mp3", "d": 244.82, "s": 0.0, "n": 7}]};
+const CFG = {"mode": "tracks", "mix": "", "tracks": [{"t": "After Hours", "f": "f999844d0224.mp3", "d": 277.37, "s": 0.0, "n": 1}, {"t": "Mikey the Rat", "f": "cc5d301f8062.mp3", "d": 245.94, "s": 0.0, "n": 2}, {"t": "The Ridge to The Beach", "f": "7da0390d9b18.mp3", "d": 121.75, "s": 0.0, "n": 3}, {"t": "Fort Hamilton Parkway", "f": "3e21ffaaa1e1.mp3", "d": 262.44, "s": 0.0, "n": 4}, {"t": "Green Machine to the Wall Street Machine", "f": "78a96d218928.mp3", "d": 186.02, "s": 0.0, "n": 5}, {"t": "Ridge Reels", "f": "daec866bb022.mp3", "d": 114.43, "s": 0.0, "n": 6}, {"t": "Bridgeview to Vegas", "f": "b54a71f1b2ed.mp3", "d": 244.82, "s": 0.0, "n": 7}, {"t": "Wall Street Machine – Episode 2", "f": "256b761215fd.mp3", "d": 172.22, "s": 0.0, "n": 8}]};
 const T = CFG.tracks, FADE = CFG.mode === "fade";
 const audio = document.getElementById("audio");
 const $ = id => document.getElementById(id);
