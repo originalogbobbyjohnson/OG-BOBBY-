@@ -1318,14 +1318,15 @@ window.scrollTo(0, 0);
     showRaw(Math.min(RAW.length - 1, rv + d));
   }
   /* Volume 2: titles only, everything locked, nothing plays. Add a title here when a song is ready to tease. */
-  const VOL2 = ["After Hours", "Mikey the Rat", "The Ridge to the Beach", "Fort Hamilton Parkway"];
+  const VOL2 = ["After Hours", "Mikey the Rat", "The Ridge to the Beach", "Fort Hamilton Parkway", "Wall Street Machine \u2013 Episode 1", null, null, "Wall Street Machine \u2013 Episode 2"];
   function renderV2() {
     let tiles = "";
     for (let i = 0; i < 9; i++) {
       const t = VOL2[i];
-      tiles += '<div class="v2-tile' + (t ? "" : " unknown") + '"><span class="v2-n">' + (i + 1) + '</span><span class="v2-t"></span><span class="v2-lock">' + lockSvg + '</span></div>';
+      const ep = t && t.match(/ \u2013 Episode (\d+)$/);
+      tiles += '<div class="v2-tile' + (t ? "" : " unknown") + '"' + (t ? ' aria-label="' + (i + 1) + '. ' + t + '"' : "") + '><span class="v2-n">' + (i + 1) + (ep ? " \u00b7 EP. " + ep[1] : "") + '</span><span class="v2-t"></span><span class="v2-lock">' + lockSvg + '</span></div>';
     }
-    const have = VOL2.length;
+    const have = VOL2.filter(Boolean).length;
     v2Card.innerHTML =
       '<div class="raw-kick">VOLUME 2 · COMING NEXT</div>' +
       '<div class="ninety-nine" aria-label="Volume 1 plus Volume 2 makes 99">' +
@@ -1335,7 +1336,7 @@ window.scrollTo(0, 0);
       '<p class="v2-story">1999 changed everything for OG. Volume 1 gave you nine. Volume 2 is nine more, with new questions. Fill them both and they read <b>’99</b>, the full album.</p>' +
       '<div class="v2-grid">' + tiles + '</div>' +
       '<p class="v2-count"><b>' + have + ' of 9</b> revealed · opens after Volume 1</p>';
-    v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] || "???"; });
+    v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] ? VOL2[i].replace(/ \u2013 Episode \d+$/, "") : "???"; });
   }
   function showRaw(i) {
     if (i !== rv) rawAudio.pause();
@@ -3190,7 +3191,7 @@ html, body, body.practice { background: #fff !important; }
 #v2 .v2-top .v2-story { text-align: left; }
 #v2 .v2-story { font-size: .74rem !important; line-height: 1.3 !important; }
 #v2 .v2-grid { gap: 5px !important; }
-#v2 .v2-tile { min-height: 0 !important; padding: 5px 4px !important; gap: 1px !important; }
+#v2 .v2-tile { min-height: 0 !important; padding: 3px 4px !important; gap: 1px !important; }
 #v2 .v2-tile .v2-n { font-size: .7rem !important; line-height: 1 !important; }
 #v2 .v2-tile .v2-t { font-size: .74rem !important; line-height: 1.1 !important; }
 .v2-cd { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 8px 6px 12px; border-radius: 10px; background: rgba(0,0,0,.18); border: 1px solid rgba(255,255,255,.25); }
