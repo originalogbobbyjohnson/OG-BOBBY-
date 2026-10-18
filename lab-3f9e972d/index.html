@@ -1165,7 +1165,7 @@ window.scrollTo(0, 0);
   navReady = true;
   startBtn.onclick = () => {
     if (welcome) { setWelcome(false); go((idx < 0 ? 0 : idx) + 1); return; }
-    hp < HOW.length - 1 ? howPage(hp + 1) : go((idx < 0 ? 0 : idx) + 1);
+    if (hp < HOW.length - 1) howPage(hp + 1); else { try { localStorage.setItem("ogHowDone", "1"); } catch (e) {} go((idx < 0 ? 0 : idx) + 1); }
   };
   intro.append(wbLink);
   document.addEventListener("keydown", e => {
@@ -1441,8 +1441,10 @@ window.scrollTo(0, 0);
   // every visit opens on the intro card: new players get the 5 pages, returning players get one welcome-back window
   const started = Object.keys(state.keys).length || Object.keys(state.first).length;
   renderList();
+  const howDone = (() => { try { return localStorage.getItem("ogHowDone") === "1"; } catch (e) { return false; } })();
   show(0);
   if (started) setWelcome(true);
+  else if (howDone) go(1);   // already walked through the rooms once: straight into the game
 
   // coming back to the game (switching apps, swiping back in, reopening a saved tab) always lands on the
   // entrance window again — unless music is playing, so nobody's song gets cut off
@@ -1452,6 +1454,7 @@ window.scrollTo(0, 0);
     document.querySelectorAll(".sheet").forEach(sh => { sh.hidden = true; });
     if (mode) exitMode();
     const back = Object.keys(state.keys).length || Object.keys(state.first).length;
+    if (!back && localStorage.getItem("ogHowDone") === "1") return;   // finished the rooms already: never walk them twice
     show(0);
     if (back) setWelcome(true); else { setWelcome(false); }
     window.scrollTo(0, 0);
