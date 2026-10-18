@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OG Bobby · The Brooklyn Music Game</title>
-<meta name="description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
+<meta name="description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="OG Bobby">
 <meta property="og:title" content="The Brooklyn Music Game">
-<meta property="og:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
+<meta property="og:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
 <meta property="og:url" content="https://ogbobbybrooklyn.com/">
 <meta property="og:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=3">
 <meta property="og:image:type" content="image/jpeg">
@@ -17,7 +17,7 @@
 <meta property="og:image:alt" content="OG Bobby on a Bay Ridge block at night — the Brooklyn music game">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Brooklyn Music Game">
-<meta name="twitter:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
+<meta name="twitter:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
 <meta name="twitter:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=3">
 <link rel="icon" href="icon-game.png?v=2">
 <link rel="apple-touch-icon" href="icon-game.png?v=2">
@@ -590,7 +590,7 @@ body.practice { overflow: hidden; }
 
   <section class="player" id="player" aria-live="polite">
     <div>
-      <div class="label" id="pEp">Level 1</div>
+      <div class="label" id="pEp">Episode 1</div>
       <div id="pTitle">Whatever It Takes</div>
       <div class="part" id="pPart">Part 1</div>
     </div>
@@ -615,7 +615,7 @@ body.practice { overflow: hidden; }
   </section>
 
   <section>
-    <h2>THE LEVELS</h2>
+    <h2>THE EPISODES</h2>
     <ol id="list"></ol>
   </section>
 
@@ -629,14 +629,14 @@ body.practice { overflow: hidden; }
     <h3 id="aboutTitle">The Brooklyn Music Game</h3>
     <p>A true Bay Ridge story told in songs. Every song is a level, and the story only moves when you prove you were listening.</p>
     <ul>
-      <li><b>Listen.</b> Each level is a chapter: the block, the fights, Wall Street, the comeback.</li>
+      <li><b>Listen.</b> Each episode is a chapter: the block, the fights, Wall Street, the comeback.</li>
       <li><b>Answer.</b> The song stops and asks what you just heard. Miss it and you get a new question, not a do-over.</li>
       <li><b>Unlock.</b> Get a song right and it's yours to play in full.</li>
       <li><b>Earn Street Cred.</b> First-try answers fill your meter. Climb from New Face to Corner Kid, OG Soldier and OG Protégé.</li>
       <li><b>Collect.</b> Finish any block of 3 songs to earn that block's playlist. Finish all 9 to earn Season 1.</li>
       <li><b>Run it back.</b> Earned a rank? Replay your unlocked songs with new questions, just for fun. No rewards, just bragging rights.</li>
       <li><b>Raw Cuts.</b> Stripped-down versions of the songs, in their own room.</li>
-      <li><b>Road to '99.</b> Season 2 comes next. Both seasons make the '99 album, and the climb goes on to OG Certified.</li>
+      <li><b>Road to '99.</b> OG Made is the album: Season 1 ('9) and Season 2 (9), nine episodes each. Put them together and you get '99. The climb goes on to OG Certified.</li>
     </ul>
     <button class="btn" id="aboutPlay" type="button">Let's play</button>
   </div>
@@ -867,7 +867,7 @@ function playSection(s, autoplay) {
 function load(i, autoplay) {
   idx = i;
   const e = EPISODES[i];
-  $("pEp").innerHTML = '<span class="vol-tag"><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span>SEASON 1</span>Level ' + (i + 1);
+  $("pEp").innerHTML = '<span class="vol-tag"><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span>SEASON 1</span>Episode ' + (i + 1);
   $("pTitle").textContent = e.title;
   $("tot").textContent = fmt(e.dur);
   drawTrack(e);
@@ -1033,8 +1033,8 @@ window.scrollTo(0, 0);
   document.querySelector(".how").remove();
   // how-to-play reads one page at a time; text box, dots and button never move
   const HOW = [
-    ["Hit play.", "Every song is a level of OG Bobby's story.", "street", "84 ST", "4 AV"],
-    ["Every level stops.", "Answer right to unlock the next verse.", "store", "CORNER STORE", "BAY RIDGE"],
+    ["Hit play.", "Every song is an episode of OG Bobby's story.", "street", "84 ST", "4 AV"],
+    ["Every episode stops.", "Answer right to unlock the next verse.", "store", "CORNER STORE", "BAY RIDGE"],
     ["Unlock a song.", "It plays in full.", "subway", "BAY RIDGE AV", "R"],
     ["Finish a block of 3.", "Earn that block's playlist.", "park", "OWL'S HEAD PARK", "NYC PARKS"],
     ["Finish all 9.", "Earn Season 1. Season 2 opens next.", "street", "SHORE RD", "VERRAZZANO"]
@@ -1405,8 +1405,8 @@ window.scrollTo(0, 0);
       paint();
     } else if (!isOpen(e)) {
       rawCard.innerHTML = head + '<div class="raw-lock">' + lockSvg + '</div>' +
-        '<p class="raw-sub">Finish Level ' + (ei + 1) + ' to open this one. Then one more question unlocks the raw version.</p>' +
-        '<button class="btn ghost" id="rGo" type="button">Go to Level ' + (ei + 1) + '</button>';
+        '<p class="raw-sub">Finish Episode ' + (ei + 1) + ' to open this one. Then one more question unlocks the raw version.</p>' +
+        '<button class="btn ghost" id="rGo" type="button">Go to Episode ' + (ei + 1) + '</button>';
       rawCard.querySelector(".raw-title").textContent = r.title;
       $("rGo").onclick = () => { exitRaw(); go(ei + 1); };
     } else {
@@ -1720,8 +1720,8 @@ window.scrollTo(0, 0);
   if (head && typeof nineSvg === "function" && !head.querySelector(".vol-big.ghost")) {
     const g = document.createElement("div"); g.className = "vol-big right ghost"; g.setAttribute("aria-label", "Season 2, coming next");
     g.innerHTML = '<span class="v1nine">' + nineSvg(1) + '</span><span class="lab">SEASON 2</span>';
-    const rel = document.createElement("div"); rel.className = "album-release big"; rel.setAttribute("aria-label", "\u201999, the album");
-    rel.innerHTML = '<span class="ar-num"><span class="tick">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="ar-sub">THE ALBUM</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
+    const rel = document.createElement("div"); rel.className = "album-release big"; rel.setAttribute("aria-label", "OG Made, \u201999");
+    rel.innerHTML = '<span class="ar-num"><span class="tick">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="ar-sub">OG MADE</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
     head.prepend(rel);
     head.append(g);
   }
@@ -2450,7 +2450,7 @@ html, body, body.practice { background: #fff !important; }
       '<div class="mv-body"><div class="v2-eps">' + [1,2,3,4,5,6,7,8,9].map(n => '<span class="v2-ep">' + n + '</span>').join("") + '</div>' +
       '<div class="mv-rks">' + R2.map((r, k) => rk(r, rankEmblem(k + 4))).join("") + '</div></div></div>' +
     '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="o">OG</span><span class="c">CERTIFIED</span></span></div>' +
-    '<div class="m99" style="grid-column: 1 / -1"><span class="n99"><span class="tk">\u2019</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="m99t"><b>THE ALBUM</b><i>ALL 18 SONGS \u00b7 SEASON 1 + SEASON 2</i></span></div>';
+    '<div class="m99" style="grid-column: 1 / -1"><span class="n99"><span class="tk">\u2019</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="m99t"><b>OG MADE</b><i>ALL 18 EPISODES \u00b7 SEASON 1 + SEASON 2</i></span></div>';
   const track = cred.querySelector(".cred-track"); (track || cred).after(m);
   m.querySelector(".slot").replaceWith(list);
   cred.classList.add("g9");
@@ -2676,8 +2676,8 @@ html, body, body.practice { background: #fff !important; }
   const n = m.querySelector(".n99");
   m.innerHTML = "";
   const a = document.createElement("div"); a.className = "m99a"; a.append(n);
-  const t = document.createElement("b"); t.textContent = "THE ALBUM"; a.append(t);
-  const sub = document.createElement("div"); sub.className = "m99s"; sub.textContent = "ALL 18 SONGS \u00b7 SEASON 1 + SEASON 2";
+  const t = document.createElement("b"); t.textContent = "OG MADE"; a.append(t);
+  const sub = document.createElement("div"); sub.className = "m99s"; sub.textContent = "ALL 18 EPISODES \u00b7 SEASON 1 + SEASON 2";
   m.append(a, sub);
 })();
 </script>
@@ -2803,8 +2803,8 @@ html, body, body.practice { background: #fff !important; }
   const stamp = bar.querySelector(":scope > span"); if (!stamp) return;
   stamp.classList.add("og-st");
   const right = stamp.cloneNode(true);
-  const rec = document.createElement("div"); rec.className = "og-rec"; rec.setAttribute("aria-label", "'99 the album");
-  rec.innerHTML = '<div class="lbl"><span class="r99"><span class="tk">’</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="hole"></span><b>THE ALBUM</b></div>';
+  const rec = document.createElement("div"); rec.className = "og-rec"; rec.setAttribute("aria-label", "OG Made, '99");
+  rec.innerHTML = '<div class="lbl"><span class="r99"><span class="tk">’</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="hole"></span><b>OG MADE</b></div>';
   stamp.after(rec); rec.after(right);
   window.dispatchEvent(new Event("resize"));
 })();
@@ -3194,7 +3194,7 @@ html, body, body.practice { background: #fff !important; }
   const head = document.querySelector("#player > div:first-child"); if (!head || head.classList.contains("hdr3")) return;
   const alb = head.querySelector(".album-release.big"); if (!alb) return;
   const vb = document.createElement("div"); vb.className = "album-release big vol-box"; vb.setAttribute("aria-label", "Season 1");
-  vb.innerHTML = '<span class="vb-num">SEASON 1</span><span class="ar-sub">9 SONGS</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
+  vb.innerHTML = '<span class="vb-num">SEASON 1</span><span class="ar-sub">9 EPISODES</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
   head.append(vb); head.classList.add("hdr3");
   // both boxes exactly the same size
   const even = () => { vb.style.width = ""; alb.style.width = ""; const w = Math.max(alb.offsetWidth, vb.offsetWidth), h = Math.max(alb.offsetHeight, vb.offsetHeight); if (!w) return; alb.style.setProperty("width", w + "px", "important"); vb.style.setProperty("width", w + "px", "important"); vb.style.setProperty("height", h + "px", "important"); alb.style.setProperty("height", h + "px", "important"); };
@@ -3377,7 +3377,7 @@ html, body, body.practice { background: #fff !important; }
       x.font = "110px " + disp; x.textAlign = "left"; x.fillText("’", sx - 2, ny + 84); x.textAlign = "center";
       x.drawImage(nine, sx + tw, ny, nw, nh); x.drawImage(nine, sx + tw + nw + gap, ny, nw, nh);
     }
-    x.font = "800 30px " + body; x.letterSpacing = "10px"; x.fillText("THE ALBUM", W / 2, fy + 165); x.letterSpacing = "0px";
+    x.font = "800 30px " + body; x.letterSpacing = "10px"; x.fillText("OG MADE", W / 2, fy + 165); x.letterSpacing = "0px";
     x.font = "800 40px " + body; x.fillText("Play at ogbobbybrooklyn.com", W / 2, H - 120);
     return new Promise(res => c.toBlob(b => res(b), "image/png"));
   }
@@ -3811,6 +3811,10 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
 .promo .promo-name.og-stamp { animation: ogStamp .7s cubic-bezier(.2,1.6,.4,1) 1 both; color: #f2b705 !important; text-shadow: 0 0 18px rgba(242,183,5,.75); }
 @keyframes ogStamp { 0% { transform: scale(2.2); opacity: 0; } 60% { transform: scale(.94); opacity: 1; } 100% { transform: scale(1); } }
 @media (prefers-reduced-motion: reduce) { .og-paint, .og-flicker, .promo .promo-name.og-stamp { animation: none; } }
+
+/* OG MADE is the album name: biggest word on the record label */
+.og-bar .og-rec .lbl b, .og-rec .lbl b { font-size: .66rem !important; letter-spacing: .04em !important; margin-right: -.04em !important; font-weight: 900 !important; }
+@media (min-width: 600px) { .og-bar .og-rec .lbl b, .og-rec .lbl b { font-size: .8rem !important; } }
 </style>
 <script>
 /* Street sounds: R train when you move on to the next block of 3 after finishing one, a distant siren when a hot streak (3+) breaks */
