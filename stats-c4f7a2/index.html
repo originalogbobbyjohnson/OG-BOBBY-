@@ -148,7 +148,7 @@ function render(get) {
   qs.sort((a, b) => b.miss - a.miss || (b.w - a.w));
   h += '<section><h2>HARDEST QUESTIONS · FIRST TRY</h2>' + (qs.length ? qs.slice(0, 8).map(q => '<div class="q"><span class="s">' + esc(q.s.toUpperCase()) + '</span><span class="t">' + esc(q.t) + '</span><span class="p">' + Math.round(q.miss * 100) + '% missed · ' + q.w + ' wrong, ' + q.r + ' right</span><div class="bar"><i style="width:' + Math.round(q.miss * 100) + '%"></i></div></div>').join("") : '<p class="empty">No answers yet.</p>') + '</section>';
   const secrets = ["store", "moon", "bridge", "caddy"].reduce((a, k) => a + get("secret-" + k), 0);
-  const X = [["Lightning rounds played", get("lightning")], ["Hot streaks (3 in a row)", get("streaks")], ["Ranks shared", get("share-rank")], ["Lightning scores shared", get("share-lightning")], ["Vol. 2 reminders added", get("remind-vol2")], ["Secret spots found", secrets], ["Opened the trophy case", get("trophy-case")], ["Fun runs", get("fun-runs")], ["Game restarts", get("restarts")]];
+  const X = [["Lightning rounds played", get("lightning")], ["Hot streaks (3 in a row)", get("streaks")], ["Ranks shared", get("share-rank")], ["Lightning scores shared", get("share-lightning")], ["Season 2 reminders added", get("remind-vol2")], ["Secret spots found", secrets], ["Opened the trophy case", get("trophy-case")], ["Fun runs", get("fun-runs")], ["Game restarts", get("restarts")]];
   h += '<section><h2>EXTRAS</h2><div class="list">' + X.map(([l, n]) => '<span>' + l + '</span><span>' + n + '</span>').join("") + '</div></section>';
   h += '<p class="foot">Counting started October 17, 2026. <button id="re">Refresh</button></p>';
   app.innerHTML = h;

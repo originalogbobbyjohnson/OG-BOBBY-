@@ -545,7 +545,7 @@ body.practice { overflow: hidden; }
 .cred { border-color: var(--line); box-shadow: 0 6px 18px rgba(0,0,0,.6); }
 .cred-bar { border-color: #26282d; }
 #credHint { display: none; }
-/* Level card header, quieter: one gray line (VOL. 1 · LEVEL 3), the title, then the part in small gray */
+/* Level card header, quieter: one gray line (SEASON 1 · LEVEL 3), the title, then the part in small gray */
 #pEp .vol-tag { border: 0; padding: 0; margin-right: 0; color: var(--muted); font-family: inherit; letter-spacing: inherit; }
 #pEp .vol-tag .v1nine { display: none; }
 #pEp .vol-tag::after { content: "\00B7"; margin: 0 6px; }
@@ -567,7 +567,7 @@ body.practice { overflow: hidden; }
       <div class="flag rank0 won" id="f0" style="left:0"><em>Start</em><span><i class="m-emb" data-r="0"></i><b>New Face</b></span></div>
       <div class="flag" id="f1" style="left:33.33%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>Songs 1-3</em><span><i class="m-emb" data-r="1"></i><b>Corner Kid</b></span></div>
       <div class="flag" id="f2" style="left:66.66%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em>Songs 4-6</em><span><i class="m-emb" data-r="2"></i><b>OG Soldier</b></span></div>
-      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em><i>Vol. 1</i>Songs 7-9</em><span><i class="m-emb" data-r="3"></i><b>OG Protégé</b></span></div>
+      <div class="flag last" id="f3" style="left:100%"><svg viewBox="0 0 24 28" aria-hidden="true"><rect x="3" y="2" width="2.4" height="25" rx="1"/><path d="M5.4 3h15l-4 5 4 5h-15z"/></svg><em><i>Season 1</i>Songs 7-9</em><span><i class="m-emb" data-r="3"></i><b>OG Protégé</b></span></div>
     </div>
   </section>
   <header>
@@ -633,10 +633,10 @@ body.practice { overflow: hidden; }
       <li><b>Answer.</b> The song stops and asks what you just heard. Miss it and you get a new question, not a do-over.</li>
       <li><b>Unlock.</b> Get a song right and it's yours to play in full.</li>
       <li><b>Earn Street Cred.</b> First-try answers fill your meter. Climb from New Face to Corner Kid, OG Soldier and OG Protégé.</li>
-      <li><b>Collect.</b> Finish any block of 3 songs to earn that block's playlist. Finish all 9 to earn Volume 1.</li>
+      <li><b>Collect.</b> Finish any block of 3 songs to earn that block's playlist. Finish all 9 to earn Season 1.</li>
       <li><b>Run it back.</b> Earned a rank? Replay your unlocked songs with new questions, just for fun. No rewards, just bragging rights.</li>
       <li><b>Raw Cuts.</b> Stripped-down versions of the songs, in their own room.</li>
-      <li><b>Road to '99.</b> Volume 2 comes next. Both volumes make the '99 album, and the climb goes on to OG Certified.</li>
+      <li><b>Road to '99.</b> Season 2 comes next. Both seasons make the '99 album, and the climb goes on to OG Certified.</li>
     </ul>
     <button class="btn" id="aboutPlay" type="button">Let's play</button>
   </div>
@@ -675,12 +675,12 @@ const VIP = "vip-0609a49912/";
 const TOTAL_Q = EPISODES.reduce((n, e) => n + e.qs.length, 0);
 const BLOCKS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]];   // finish all 3 songs in a block, any order, any time, to earn that block's playlist
 const TIERS = BLOCKS.map((b, k) => ({ need: k + 1, block: b }));
-/* Bay Ridge ranks: one promotion per Street Cred milestone. Volume 2 adds Right Hand, OG '99, and OG Certified as the final rank. */
+/* Bay Ridge ranks: one promotion per Street Cred milestone. Season 2 adds Right Hand, OG '99, and OG Certified as the final rank. */
 const RANKS = ["New Face", "Corner Kid", "OG Soldier", "OG Protégé"];
 const rankOf = n => Math.min(n, RANKS.length - 1);   // one promotion per finished block
 
 /* Graffiti "9": round loop and a straight leaning stem, no hook at the bottom.
-   fill = 1 draws it solid white; 0..1 fills it with gold from the bottom up (Volume 2 progress). */
+   fill = 1 draws it solid white; 0..1 fills it with gold from the bottom up (Season 2 progress). */
 let nineN = 0;
 function nineSvg(fill, cls) {
   const id = "n9c" + (nineN++);
@@ -815,7 +815,7 @@ function renderReward() {
   if (!p) return;
   const all = p >= EPISODES.length;
   $("rTitle").textContent = all ? "OG PROTÉGÉ" : "YOU EARNED A PLAYLIST";
-  $("rText").textContent = all ? "You finished all 9 songs. All of Volume 1 is yours to stream. Volume 2 is next, with a new set of questions. Finish both for the full ’99 album."
+  $("rText").textContent = all ? "You finished all 9 songs. All of Season 1 is yours to stream. Season 2 is next, with a new set of questions. Finish both for the full ’99 album."
     : "Plays right here in the game. Finish another block of 3 to add it.";
   const box = $("picks"); box.innerHTML = "";
   songs.forEach(n => {
@@ -867,7 +867,7 @@ function playSection(s, autoplay) {
 function load(i, autoplay) {
   idx = i;
   const e = EPISODES[i];
-  $("pEp").innerHTML = '<span class="vol-tag"><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span>VOL. 1</span>Level ' + (i + 1);
+  $("pEp").innerHTML = '<span class="vol-tag"><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span>SEASON 1</span>Level ' + (i + 1);
   $("pTitle").textContent = e.title;
   $("tot").textContent = fmt(e.dur);
   drawTrack(e);
@@ -1028,7 +1028,7 @@ window.scrollTo(0, 0);
 
   // Opening card: how to play
   const intro = document.createElement("div"); intro.className = "slide-intro";
-  intro.innerHTML = '<div class="vol-badge"><span class="raw-kick">VOLUME 1</span></div><div class="room-sign" aria-hidden="true"></div><h3 class="intro-title">How to play</h3>' +
+  intro.innerHTML = '<div class="vol-badge"><span class="raw-kick">SEASON 1</span></div><div class="room-sign" aria-hidden="true"></div><h3 class="intro-title">How to play</h3>' +
     '<div class="howpage"><div class="hp-count"></div><div class="hp-box"><div class="hp-head"></div><div class="hp-body"></div></div><div class="hp-dots"></div></div>';
   document.querySelector(".how").remove();
   // how-to-play reads one page at a time; text box, dots and button never move
@@ -1037,7 +1037,7 @@ window.scrollTo(0, 0);
     ["Every level stops.", "Answer right to unlock the next verse.", "store", "CORNER STORE", "BAY RIDGE"],
     ["Unlock a song.", "It plays in full.", "subway", "BAY RIDGE AV", "R"],
     ["Finish a block of 3.", "Earn that block's playlist.", "park", "OWL'S HEAD PARK", "NYC PARKS"],
-    ["Finish all 9.", "Earn Volume 1. Volume 2 opens next.", "street", "SHORE RD", "VERRAZZANO"]
+    ["Finish all 9.", "Earn Season 1. Season 2 opens next.", "street", "SHORE RD", "VERRAZZANO"]
   ];
   const roomSign = intro.querySelector(".room-sign");
   function paintRoom(k) {
@@ -1089,7 +1089,7 @@ window.scrollTo(0, 0);
       const rk = rankOf(blocksDone());
       hpBody.innerHTML = '<span class="wb-rank"><span class="wb-emb">' + rankEmblem(rk) + '</span><span class="wb-name"></span></span><span class="wb-done"></span>';
       hpBody.querySelector(".wb-name").textContent = RANKS[rk];
-      hpBody.querySelector(".wb-done").textContent = done + " of " + EPISODES.length + " songs done" + (left ? "" : " \u00b7 Volume 1 earned");
+      hpBody.querySelector(".wb-done").textContent = done + " of " + EPISODES.length + " songs done" + (left ? "" : " \u00b7 Season 1 earned");
       startBtn.textContent = "RETURN TO YOUR GAME";
       if (navReady) prev.disabled = true;
     } else {
@@ -1099,7 +1099,7 @@ window.scrollTo(0, 0);
   }
   howPage(0);
   const empty = document.createElement("div"); empty.className = "slide-empty"; empty.hidden = true;
-  empty.innerHTML = "<h3>Rewards</h3><p>Finish songs 1-2-3, 4-5-6 or 7-8-9 to earn that block's playlist. All 9 earns all of Volume 1.</p>";
+  empty.innerHTML = "<h3>Rewards</h3><p>Finish songs 1-2-3, 4-5-6 or 7-8-9 to earn that block's playlist. All 9 earns all of Season 1.</p>";
   stage.append(intro, $("player"), $("reward"), empty);
   const arrow = (cls, label, path) => {
     const b = document.createElement("button");
@@ -1275,7 +1275,7 @@ window.scrollTo(0, 0);
   if (!state.raw) state.raw = {};
   if (!state.rawTries) state.rawTries = {};
   const rawAudio = new Audio(); rawAudio.preload = "metadata";
-  let mode = "", rv = 0;   // "" = the story, "raw" = Raw Cuts, "v2" = Volume 2 coming next
+  let mode = "", rv = 0;   // "" = the story, "raw" = Raw Cuts, "v2" = Season 2 coming next
   const rawCard = document.createElement("section");
   rawCard.className = "raw-card"; rawCard.id = "raw"; rawCard.setAttribute("aria-live", "polite");
   const v2Card = document.createElement("section");
@@ -1284,14 +1284,14 @@ window.scrollTo(0, 0);
   const lockSvg = '<svg viewBox="0 0 24 24"><path d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-7-2a2 2 0 1 1 4 0v2h-4z"/></svg>';
   const fwd = '<svg viewBox="0 0 24 24"><path d="M8.6 19.4 16 12 8.6 4.6l1.8-1.8 9.2 9.2-9.2 9.2z"/></svg>';
   const bk = '<svg viewBox="0 0 24 24"><path d="M15.4 4.6 8 12l7.4 7.4-1.8 1.8L4.4 12l9.2-9.2z"/></svg>';
-  /* Bottom switchboard: four matching tiles — Raw Cuts, Vol. 2, the single, Menu */
+  /* Bottom switchboard: four matching tiles — Raw Cuts, Season 2, the single, Menu */
   const dockRow = document.querySelector(".dock-row");
   const board = document.createElement("div"); board.className = "switchboard";
   const cutSvg = '<svg viewBox="0 0 24 24"><path d="M9.6 8.1A3.5 3.5 0 1 0 8 9.6L10.6 12 8 14.4a3.5 3.5 0 1 0 1.6 1.5l2.4-2.5 7 7H22L9.6 8.1zM6.5 8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM19 3l-6 6 2 2 7-7V3z"/></svg>';
   const scSvg = '<svg viewBox="0 0 24 24"><path d="M10.2 8.3c.5-.2 1-.3 1.6-.3 2.2 0 4 1.6 4.3 3.7.3-.1.7-.2 1-.2 1.6 0 2.9 1.3 2.9 2.9S18.7 17.3 17.1 17.3h-6.9zM8.8 9.2h.9v8.1h-.9zm-1.7.6H8v7.5h-.9zm-1.7.9h.9v6.6h-.9zm-1.7 1h.9v5.6h-.9zM2 12.8h.9v4.4H2z"/></svg>';
   const menuSvg = '<svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>';
   const mkTile = (label) => { const b = document.createElement("button"); b.type = "button"; b.className = "sb-tile"; b.dataset.label = label; return b; };
-  const rawT = mkTile("RAW CUTS"), v2T = mkTile("VOL. 2");
+  const rawT = mkTile("RAW CUTS"), v2T = mkTile("SEASON 2");
   rawT.onclick = () => mode === "raw" ? exitMode() : enterRaw();
   v2T.onclick = () => mode === "v2" ? exitMode() : enterV2();
   const single = dockRow.querySelector(".single-link");
@@ -1328,7 +1328,7 @@ window.scrollTo(0, 0);
   function enterV2() {
     mode = "v2"; audio.pause(); rawAudio.pause();
     document.querySelector(".wrap").classList.add("raw-on");
-    track("vol-2", "Opened Vol. 2 coming next");
+    track("vol-2", "Opened Season 2 coming next");
     paintPill(); renderV2();
     stage.dataset.v = "v2"; stage.scrollTop = 0;
     prev.disabled = false; next.disabled = true;
@@ -1348,7 +1348,7 @@ window.scrollTo(0, 0);
     if (rv + d < 0) return exitMode();
     showRaw(Math.min(RAW.length - 1, rv + d));
   }
-  /* Volume 2: titles only, everything locked, nothing plays. Add a title here when a song is ready to tease. */
+  /* Season 2: titles only, everything locked, nothing plays. Add a title here when a song is ready to tease. */
   const VOL2 = ["After Hours", "Mikey the Rat", "The Ridge to the Beach", "Fort Hamilton Parkway", "Wall Street Machine \u2013 Episode 1", "Ridge Reels", "Bridgeview to Vegas", "Wall Street Machine \u2013 Episode 2", "Everybody\u2019s Bay Ridge"];
   function renderV2() {
     let tiles = "";
@@ -1359,14 +1359,14 @@ window.scrollTo(0, 0);
     }
     const have = VOL2.filter(Boolean).length;
     v2Card.innerHTML =
-      '<div class="raw-kick">VOLUME 2 · COMING NEXT</div>' +
-      '<div class="ninety-nine" aria-label="Volume 1 plus Volume 2 makes 99">' +
-        '<figure><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span><figcaption>VOL. 1</figcaption></figure>' +
-        '<figure>' + nineSvg(Math.max(.06, have / 9), "filling") + '<figcaption>VOL. 2</figcaption></figure>' +
+      '<div class="raw-kick">SEASON 2 · COMING NEXT</div>' +
+      '<div class="ninety-nine" aria-label="Season 1 plus Season 2 makes 99">' +
+        '<figure><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span><figcaption>SEASON 1</figcaption></figure>' +
+        '<figure>' + nineSvg(Math.max(.06, have / 9), "filling") + '<figcaption>SEASON 2</figcaption></figure>' +
       '</div>' +
-      '<p class="v2-story">1999 changed everything for OG. Volume 1 gave you nine. Volume 2 is nine more, with new questions. Fill them both and they read <b>’99</b>, the full album.</p>' +
+      '<p class="v2-story">1999 changed everything for OG. Season 1 gave you nine. Season 2 is nine more, with new questions. Fill them both and they read <b>’99</b>, the full album.</p>' +
       '<div class="v2-grid">' + tiles + '</div>' +
-      '<p class="v2-count"><b>' + have + ' of 9</b> revealed · opens after Volume 1</p>';
+      '<p class="v2-count"><b>' + have + ' of 9</b> revealed · opens after Season 1</p>';
     v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] ? VOL2[i].replace(/ \u2013 Episode \d+$/, "") : "???"; });
   }
   function showRaw(i) {
@@ -1575,14 +1575,14 @@ window.scrollTo(0, 0);
 /* last marker: 9 SONGS on the leg, THE ALBUM stacked right above it */
 .flag em i { position: absolute; right: 0; bottom: 100%; margin-bottom: 3px; font-style: normal; white-space: nowrap; }
 .flag.won em i { color: var(--gold); }
-/* Level line reads: '9 · VOL. 1 · LEVEL 5 */
+/* Level line reads: '9 · SEASON 1 · LEVEL 5 */
 #pEp .vol-tag { display: inline-flex; align-items: center; }
 #pEp .vol-tag .v1nine { display: inline-flex !important; align-items: flex-start; }
 #pEp .vol-tag .v1nine .tick { color: #fff; font-size: 1.35rem; line-height: .8; margin-right: 1px; text-shadow: none; }
 #pEp .vol-tag .v1nine .nine { width: 13px; }
 #pEp .vol-tag .v1nine::after { content: "\00B7"; margin: 0 8px 0 10px; align-self: center; }
 
-/* ---------- Song card: just VOL. 1 · LEVEL 5, then the song name big and centered ---------- */
+/* ---------- Song card: just SEASON 1 · LEVEL 5, then the song name big and centered ---------- */
 .practice .player > div:first-child { text-align: center; }
 .practice #pPart, .practice .lvl-count { display: none !important; }
 .practice #pEp { font-size: .78rem; letter-spacing: .16em; }
@@ -1634,7 +1634,7 @@ window.scrollTo(0, 0);
 .practice .cover h1.on-pic { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); width: min(38%, 180px) !important; margin: 0; line-height: 0; z-index: 2; }
 .practice .cover h1.on-pic img { width: 100%; height: auto; filter: drop-shadow(0 2px 3px rgba(0,0,0,.95)) drop-shadow(0 0 10px rgba(0,0,0,.7)); }
 
-/* ---------- Song card: just LEVEL 6 over the song name; the big '9 with VOL. 1 sits in the empty space on the left ---------- */
+/* ---------- Song card: just LEVEL 6 over the song name; the big '9 with SEASON 1 sits in the empty space on the left ---------- */
 #pEp .vol-tag { display: none !important; }
 .practice .player > div:first-child { position: relative; padding: 0 60px; min-height: 64px; display: grid; align-content: center; }
 .vol-big { position: absolute; left: 0; top: 50%; transform: translateY(-50%); display: grid; justify-items: center; gap: 5px; }
@@ -1654,11 +1654,11 @@ window.scrollTo(0, 0);
     const t = document.createElement("div"); t.className = "game-title"; t.textContent = "MUSIC GAME";
     nr.append(t);
   }
-  // big '9 + VOL. 1 on the left of every level card (Volume 2 levels will put it on the right with .right)
+  // big '9 + SEASON 1 on the left of every level card (Season 2 levels will put it on the right with .right)
   const head = document.querySelector("#player > div:first-child");
   if (head) {
-    const b = document.createElement("div"); b.className = "vol-big"; b.setAttribute("aria-label", "Volume 1");
-    b.innerHTML = '<span class="v1nine"><span class="tick">’</span>' + nineSvg(1) + '</span><span class="lab">VOL. 1</span>';
+    const b = document.createElement("div"); b.className = "vol-big"; b.setAttribute("aria-label", "Season 1");
+    b.innerHTML = '<span class="v1nine"><span class="tick">’</span>' + nineSvg(1) + '</span><span class="lab">SEASON 1</span>';
     head.append(b);
   }
   window.dispatchEvent(new Event("resize"));
@@ -1715,11 +1715,11 @@ window.scrollTo(0, 0);
     sec.classList.add("levels-moved");
     const sw = document.querySelector(".stage-wrap"); if (sw) sw.classList.add("ends");
   }
-  // faded Volume 2 marker on the right of every level card: the next 9 are coming, not live yet
+  // faded Season 2 marker on the right of every level card: the next 9 are coming, not live yet
   const head = document.querySelector("#player > div:first-child");
   if (head && typeof nineSvg === "function" && !head.querySelector(".vol-big.ghost")) {
-    const g = document.createElement("div"); g.className = "vol-big right ghost"; g.setAttribute("aria-label", "Volume 2, coming next");
-    g.innerHTML = '<span class="v1nine">' + nineSvg(1) + '</span><span class="lab">VOL. 2</span>';
+    const g = document.createElement("div"); g.className = "vol-big right ghost"; g.setAttribute("aria-label", "Season 2, coming next");
+    g.innerHTML = '<span class="v1nine">' + nineSvg(1) + '</span><span class="lab">SEASON 2</span>';
     const rel = document.createElement("div"); rel.className = "album-release big"; rel.setAttribute("aria-label", "\u201999, the album");
     rel.innerHTML = '<span class="ar-num"><span class="tick">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="ar-sub">THE ALBUM</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
     head.prepend(rel);
@@ -1897,7 +1897,7 @@ html, body, body.practice { background: #fff !important; }
 .album-release { border-color: #fff !important; outline-color: #fff !important; background: linear-gradient(180deg, rgba(255,255,255,.1), rgba(255,255,255,0)) !important; }
 .album-release::before, .album-release::after { color: #fff !important; }
 .single-link:hover, .single-link:active { background: rgba(214,40,40,.1) !important; }
-/* labels (VOLUME 1, RAW CUT) are wording, not buttons: white tag, black text */
+/* labels (SEASON 1, RAW CUT) are wording, not buttons: white tag, black text */
 .raw-kick { background: #fff !important; color: #000 !important; }
 .btn:not(.ghost), .btn-round.play { color: #fff !important; }
 .practice .cred .flag.won span, .practice .cred .flag.won span b { color: #c81e1e !important; }
@@ -1931,7 +1931,7 @@ html, body, body.practice { background: #fff !important; }
 .album-release.big .ar-c.tl { top: 6px; left: 8px; } .album-release.big .ar-c.tr { top: 6px; right: 8px; }
 .album-release.big .ar-c.bl { bottom: 6px; left: 8px; } .album-release.big .ar-c.br { bottom: 6px; right: 8px; }
 .practice #pTitle { font-size: 1.45rem !important; letter-spacing: .04em; margin: 2px 0 4px !important; }
-/* intro badge: '9 on its own on the left, VOLUME 1 dead center, matching empty slot on the right for the Vol. 2 nine */
+/* intro badge: '9 on its own on the left, SEASON 1 dead center, matching empty slot on the right for the Season 2 nine */
 .vol-badge { display: grid !important; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0 !important; width: 100%; }
 .vol-badge .v1nine { justify-self: start; padding-left: 4px; }
 .vol-badge .raw-kick { justify-self: center; }
@@ -2320,7 +2320,7 @@ html, body, body.practice { background: #fff !important; }
 })();
 </script>
 <script>
-/* '9 / VOL. 1 and 9 / VOL. 2: each 9 sits dead center in its black corner space —
+/* '9 / SEASON 1 and 9 / SEASON 2: each 9 sits dead center in its black corner space —
    side to side between the board edge and the '99 box, up and down between the top edge and its VOL. label (label stays put). */
 (function () {
   function placeNines() {
@@ -2357,7 +2357,7 @@ html, body, body.practice { background: #fff !important; }
 </script>
 
 <style>
-/* ---------- Street Cred Meter as two 3x3 boards side by side: Vol. 1 | Vol. 2. Each row of 3 = one rank, its name right beside it.
+/* ---------- Street Cred Meter as two 3x3 boards side by side: Season 1 | Season 2. Each row of 3 = one rank, its name right beside it.
    CERTIFIED OG runs across the bottom of both boards. ---------- */
 .practice #cred.g9 .cred-track { display: none !important; }
 .m9 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 14px; padding: 2px 0 0; }
@@ -2415,7 +2415,7 @@ html, body, body.practice { background: #fff !important; }
 }
 </style>
 <script>
-/* Two boards: Vol. 1 (live) and Vol. 2 (locked). Vol. 2 ranks: OG Right Hand, OG Shot Caller, OG Certified. */
+/* Two boards: Season 1 (live) and Season 2 (locked). Season 2 ranks: OG Right Hand, OG Shot Caller, OG Certified. */
 (function () {
   const cred = document.getElementById("cred"), list = document.getElementById("list");
   if (!cred || !list || cred.querySelector(".m9")) return;
@@ -2436,14 +2436,14 @@ html, body, body.practice { background: #fff !important; }
   const rk = (name, svg) => '<span class="mv-rk"><i class="m-emb x">' + svg + '</i><b>' + name + '</b></span>';
   const m = document.createElement("div"); m.className = "m9";
   m.innerHTML =
-    '<div class="mv v1"><div class="mv-head"><span class="t">VOL. 1</span>' +
+    '<div class="mv v1"><div class="mv-head"><span class="t">SEASON 1</span>' +
       '<span class="mv-rk won nf-rk"><i class="m-emb x">' + rankEmblem(0).replace('class="emb', 'class="emb on') + '</i><b>NEW FACE</b></span></div>' +
       '<div class="mv-body"><div class="slot"></div><div class="mv-rks">' + R1.map((r, k) => rk(r, rankEmblem(k + 1))).join("") + '</div></div></div>' +
-    '<div class="mv v2"><div class="mv-head"><span class="t">VOL. 2</span><span></span></div>' +
+    '<div class="mv v2"><div class="mv-head"><span class="t">SEASON 2</span><span></span></div>' +
       '<div class="mv-body"><div class="v2-eps">' + [1,2,3,4,5,6,7,8,9].map(n => '<span class="v2-ep">' + n + '</span>').join("") + '</div>' +
       '<div class="mv-rks">' + R2.map((r, k) => rk(r, rankEmblem(k + 4))).join("") + '</div></div></div>' +
     '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="o">OG</span><span class="c">CERTIFIED</span></span></div>' +
-    '<div class="m99" style="grid-column: 1 / -1"><span class="n99"><span class="tk">\u2019</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="m99t"><b>THE ALBUM</b><i>ALL 18 SONGS \u00b7 VOL. 1 + VOL. 2</i></span></div>';
+    '<div class="m99" style="grid-column: 1 / -1"><span class="n99"><span class="tk">\u2019</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="m99t"><b>THE ALBUM</b><i>ALL 18 SONGS \u00b7 SEASON 1 + SEASON 2</i></span></div>';
   const track = cred.querySelector(".cred-track"); (track || cred).after(m);
   m.querySelector(".slot").replaceWith(list);
   cred.classList.add("g9");
@@ -2581,7 +2581,7 @@ html, body, body.practice { background: #fff !important; }
 })();
 </script>
 <style>
-/* '99 THE ALBUM in the meter: the prize for all 18 songs (Vol. 1 + Vol. 2) */
+/* '99 THE ALBUM in the meter: the prize for all 18 songs (Season 1 + Season 2) */
 .m99 { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 2px 0 8px; }
 .m99 .n99 { display: inline-flex; align-items: flex-start; }
 .m99 .n99 .tk { font-family: var(--display); font-size: 1.5rem; line-height: .8; color: #111; margin-right: -1px; }
@@ -2623,7 +2623,7 @@ html, body, body.practice { background: #fff !important; }
 (function () { const b = document.querySelector(".slide-intro .fun-btn"); if (b) b.textContent = "PLAY AGAIN FOR FUN"; })();
 </script>
 <style>
-/* Vol. 2 board: "Dropping Nov. 1 · one single a week" stamped across it until it goes live */
+/* Season 2 board: "Dropping Nov. 1 · one single a week" stamped across it until it goes live */
 .mv.v2 { position: relative; }
 .mv.v2 .mv-body { opacity: .45; }
 .v2-drop { position: absolute; left: 50%; top: calc(50% + 15px); transform: translate(-50%, -50%) rotate(-8deg); z-index: 3; pointer-events: none;
@@ -2635,13 +2635,13 @@ html, body, body.practice { background: #fff !important; }
 <script>
 (function () {
   const v2 = document.querySelector(".mv.v2"); if (!v2 || v2.querySelector(".v2-drop")) return;
-  const d = document.createElement("div"); d.className = "v2-drop"; d.setAttribute("aria-label", "Volume 2 dropping November 1st, one single a week");
+  const d = document.createElement("div"); d.className = "v2-drop"; d.setAttribute("aria-label", "Season 2 dropping November 1st, one single a week");
   d.innerHTML = "<b>DROPPING NOV. 1</b><i>ONE SINGLE A WEEK</i>";
   v2.append(d);
 })();
 </script>
 <style>
-/* Vol. 2 inactive look: whole board light gray, everything still readable, drop date small in the bottom-right corner (replaces the stamp) */
+/* Season 2 inactive look: whole board light gray, everything still readable, drop date small in the bottom-right corner (replaces the stamp) */
 .mv.v2 .mv-body { opacity: 1 !important; }
 .mv.v2 .v2-ep { background: #e4e5e8 !important; border-color: #e4e5e8 !important; color: #a3a6ad !important; }
 .mv.v2 .mv-rk b { color: #b0b3b9 !important; }
@@ -2670,7 +2670,7 @@ html, body, body.practice { background: #fff !important; }
   m.innerHTML = "";
   const a = document.createElement("div"); a.className = "m99a"; a.append(n);
   const t = document.createElement("b"); t.textContent = "THE ALBUM"; a.append(t);
-  const sub = document.createElement("div"); sub.className = "m99s"; sub.textContent = "ALL 18 SONGS \u00b7 VOL. 1 + VOL. 2";
+  const sub = document.createElement("div"); sub.className = "m99s"; sub.textContent = "ALL 18 SONGS \u00b7 SEASON 1 + SEASON 2";
   m.append(a, sub);
 })();
 </script>
@@ -2694,7 +2694,7 @@ html, body, body.practice { background: #fff !important; }
 .og-bar { margin: 46px 0 12px !important; }
 /* ALL 18 SONGS line at half size */
 .m99 .m99s { font-size: .3rem !important; letter-spacing: .14em !important; }
-/* drop date: centered up and down in the space between the Vol. 2 board and the gold line */
+/* drop date: centered up and down in the space between the Season 2 board and the gold line */
 .mv.v2 { padding-bottom: 0 !important; }
 </style>
 <script>
@@ -2877,7 +2877,7 @@ html, body, body.practice { background: #fff !important; }
 .og-bar .og-rec .face.f .lbl .r99 svg.nine g:last-child { stroke: #1546b8 !important; }
 </style>
 <style>
-/* ---------- Brighter game board: royal blue instead of black (How to play, Welcome back, player, Raw Cuts, Vol. 2) ---------- */
+/* ---------- Brighter game board: royal blue instead of black (How to play, Welcome back, player, Raw Cuts, Season 2) ---------- */
 .practice .stage-wrap { background: radial-gradient(120% 80% at 50% 0%, #2f6cf0 0%, #1a4fc9 45%, #123a99 100%) !important; border-color: #0e2f7d !important; box-shadow: 0 6px 18px rgba(18,58,153,.35), inset 0 0 0 2px rgba(255,255,255,.12) !important; }
 .practice #opts .opt { background: rgba(255,255,255,.12) !important; border-color: rgba(255,255,255,.35) !important; color: #fff !important; }
 .practice #opts .opt:not(:disabled):hover { background: rgba(255,255,255,.2) !important; }
@@ -3159,7 +3159,7 @@ html, body, body.practice { background: #fff !important; }
 })();
 </script>
 <style>
-/* ---------- Song card header: '99 THE ALBUM left · LEVEL + song name centered · VOL. 1 right ---------- */
+/* ---------- Song card header: '99 THE ALBUM left · LEVEL + song name centered · SEASON 1 right ---------- */
 .practice #player > div:first-child.hdr3 { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr) !important; grid-template-rows: auto auto !important; align-items: center !important; column-gap: 8px !important; row-gap: 2px !important; padding: 2px 0 6px !important; min-height: 0 !important; position: relative; margin: 10px -28px 0 !important; }
 .practice #player > div:first-child.hdr3 > .vol-big { display: none !important; }
 .practice .hdr3 > .album-release.big { grid-column: 1; grid-row: 1 / 3; justify-self: start; align-self: center !important; margin: 0 0 0 4px !important; }
@@ -3167,11 +3167,11 @@ html, body, body.practice { background: #fff !important; }
 .practice .hdr3 > #pEp { grid-column: 2; grid-row: 1; align-self: end; text-align: center; margin: 0 !important; }
 .practice .hdr3 > #pTitle { grid-column: 2; grid-row: 2; align-self: start; text-align: center; white-space: normal !important; overflow: visible !important; text-overflow: clip !important; text-wrap: balance; font-size: 1.2rem !important; line-height: 1.08 !important; margin: 0 !important; }
 .practice .hdr3 > #pPart, .practice .hdr3 > .part { grid-column: 2; }
-/* VOL. 1 box: same starred frame and same size as the album box, mirrored on the right */
-.album-release.big.vol-box .vb-num { font-family: var(--display); font-size: .95rem; margin-top: 3px; padding: 0 8px; line-height: 1; color: #fff; letter-spacing: .06em; white-space: nowrap; text-shadow: 2px 2px 0 #000; }
+/* SEASON 1 box: same starred frame and same size as the album box, mirrored on the right */
+.album-release.big.vol-box .vb-num { font-family: var(--display); font-size: .74rem; margin-top: 3px; padding: 0 2px; line-height: 1; color: #fff; letter-spacing: .04em; white-space: nowrap; text-shadow: 2px 2px 0 #000; }
 .album-release.big.vol-box { justify-content: center; }
 .practice .hdr3 > .album-release.big { box-sizing: border-box !important; max-width: none !important; }
-/* ---------- '9 (Vol. 1) and 9 (Vol. 2) sit at the two open ends of the record row, under their own side of the meter ---------- */
+/* ---------- '9 (Season 1) and 9 (Season 2) sit at the two open ends of the record row, under their own side of the meter ---------- */
 .og-bar { position: relative; }
 .og-bar::before, .og-bar::after { visibility: hidden !important; }
 .mv-nine { position: absolute; top: 50%; transform: translateY(-50%); z-index: 5; display: inline-flex; align-items: flex-start; pointer-events: none; }
@@ -3186,8 +3186,8 @@ html, body, body.practice { background: #fff !important; }
 (function () {
   const head = document.querySelector("#player > div:first-child"); if (!head || head.classList.contains("hdr3")) return;
   const alb = head.querySelector(".album-release.big"); if (!alb) return;
-  const vb = document.createElement("div"); vb.className = "album-release big vol-box"; vb.setAttribute("aria-label", "Volume 1");
-  vb.innerHTML = '<span class="vb-num">VOL. 1</span><span class="ar-sub">9 SONGS</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
+  const vb = document.createElement("div"); vb.className = "album-release big vol-box"; vb.setAttribute("aria-label", "Season 1");
+  vb.innerHTML = '<span class="vb-num">SEASON 1</span><span class="ar-sub">9 SONGS</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
   head.append(vb); head.classList.add("hdr3");
   // both boxes exactly the same size
   const even = () => { vb.style.width = ""; alb.style.width = ""; const w = Math.max(alb.offsetWidth, vb.offsetWidth), h = Math.max(alb.offsetHeight, vb.offsetHeight); if (!w) return; alb.style.setProperty("width", w + "px", "important"); vb.style.setProperty("width", w + "px", "important"); vb.style.setProperty("height", h + "px", "important"); alb.style.setProperty("height", h + "px", "important"); };
@@ -3196,15 +3196,15 @@ html, body, body.practice { background: #fff !important; }
   // the nines go at the two ends of the record row
   const bar = document.querySelector(".og-bar");
   if (bar && typeof nineSvg === "function" && !bar.querySelector(".mv-nine")) {
-    const l = document.createElement("div"); l.className = "mv-nine l"; l.setAttribute("aria-label", "Volume 1");
+    const l = document.createElement("div"); l.className = "mv-nine l"; l.setAttribute("aria-label", "Season 1");
     l.innerHTML = '<span class="tick">\u2019</span>' + nineSvg(1);
-    const r = document.createElement("div"); r.className = "mv-nine r"; r.setAttribute("aria-label", "Volume 2");
+    const r = document.createElement("div"); r.className = "mv-nine r"; r.setAttribute("aria-label", "Season 2");
     r.innerHTML = nineSvg(1);
     bar.append(l, r);
   }
 })();
 </script>
-<!-- ===================== Game extras: share card, Vol. 2 countdown + reminder, hot streak, trophy case, secret spots, lightning round, faster loading, stats events ===================== -->
+<!-- ===================== Game extras: share card, Season 2 countdown + reminder, hot streak, trophy case, secret spots, lightning round, faster loading, stats events ===================== -->
 <style>
 /* shared window look (same as the restart window) */
 .xs .box { text-align: center; max-height: calc(100vh - 40px); overflow: auto; }
@@ -3220,7 +3220,7 @@ html, body, body.practice { background: #fff !important; }
 .promo .x-promo-share { all: unset; box-sizing: border-box; margin-top: 10px; pointer-events: auto; cursor: pointer; display: inline-block; padding: 8px 16px; border-radius: 999px; background: #d62828; color: #fff; font: 800 .7rem/1 var(--body); letter-spacing: .14em; }
 .promo:has(.x-promo-share) { pointer-events: auto; }
 
-/* ---- 2 + 3. Vol. 2 countdown and reminder: one compact row that takes the place of the "4 of 9 revealed" line ---- */
+/* ---- 2 + 3. Season 2 countdown and reminder: one compact row that takes the place of the "4 of 9 revealed" line ---- */
 #v2 { gap: 6px !important; }
 #v2 .v2-count { display: none !important; }
 #v2 .ninety-nine .nine { width: 34px !important; }
@@ -3407,7 +3407,7 @@ html, body, body.practice { background: #fff !important; }
     };
   }
 
-  /* ===================== 2 + 3. VOL. 2 COUNTDOWN + REMIND ME ===================== */
+  /* ===================== 2 + 3. SEASON 2 COUNTDOWN + REMIND ME ===================== */
   // first single Sunday Nov 1, 2026 (9 AM New York time), then one a week for 9 weeks
   const DROP0 = Date.parse("2026-11-01T09:00:00-05:00"), WEEK = 7 * 864e5;
   function nextDrop(now) {
@@ -3416,7 +3416,7 @@ html, body, body.practice { background: #fff !important; }
   }
   function cdText() {
     const now = Date.now(), nd = nextDrop(now);
-    if (!nd) return { k: "VOLUME 2", n: "ALL 9 SINGLES ARE OUT" };
+    if (!nd) return { k: "SEASON 2", n: "ALL 9 SINGLES ARE OUT" };
     let s = Math.max(0, Math.floor((nd.t - now) / 1000));
     const d = Math.floor(s / 86400); s -= d * 86400; const h = Math.floor(s / 3600); s -= h * 3600; const m = Math.floor(s / 60);
     const n = d > 0 ? d + (d === 1 ? " DAY " : " DAYS ") + h + " HRS" : h > 0 ? h + " HRS " + m + " MIN" : m + " MIN";
@@ -3428,7 +3428,7 @@ html, body, body.practice { background: #fff !important; }
     const cnt = card.querySelector(".v2-count"); if (!cnt || card.querySelector(".v2-cd")) return;
     const w = document.createElement("div"); w.className = "v2-cd";
     w.innerHTML = '<span class="cd-txt"><span class="cd-k"></span><span class="cd-n"></span></span><a class="cd-r" href="vol2.ics" download="og-bobby-vol2.ics">' + bell + 'REMIND ME</a>';
-    w.querySelector(".cd-r").addEventListener("click", () => tr("remind/vol2", "Added Vol. 2 reminder"));
+    w.querySelector(".cd-r").addEventListener("click", () => tr("remind/vol2", "Added Season 2 reminder"));
     cnt.before(w); paint();
     // the '9 9 sits beside the 1999 story instead of above it
     const nn = card.querySelector(".ninety-nine"), st = card.querySelector(".v2-story");
