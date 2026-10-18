@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, nofollow">
 <script>window.ogNoCount=true;(function(){try{var S=Storage.prototype,g=S.getItem,s=S.setItem,r=S.removeItem,P="lab:";S.getItem=function(k){return g.call(this,P+k)};S.setItem=function(k,v){return s.call(this,P+k,v)};S.removeItem=function(k){return r.call(this,P+k)};}catch(e){}})();</script>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OG Bobby · The Brooklyn Music Game</title>
 <meta name="description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
 <meta property="og:type" content="music.album">
@@ -1030,17 +1030,26 @@ window.scrollTo(0, 0);
 
   // Opening card: how to play
   const intro = document.createElement("div"); intro.className = "slide-intro";
-  intro.innerHTML = '<div class="vol-badge"><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span><span class="raw-kick">VOLUME 1</span><span class="v2-slot" aria-hidden="true"></span></div><h3 class="intro-title">How to play</h3>' +
+  intro.innerHTML = '<div class="vol-badge"><span class="raw-kick">VOLUME 1</span></div><div class="room-sign" aria-hidden="true"></div><h3 class="intro-title">How to play</h3>' +
     '<div class="howpage"><div class="hp-count"></div><div class="hp-box"><div class="hp-head"></div><div class="hp-body"></div></div><div class="hp-dots"></div></div>';
   document.querySelector(".how").remove();
   // how-to-play reads one page at a time; text box, dots and button never move
   const HOW = [
-    ["Hit play.", "Every song is a level of OG Bobby's story."],
-    ["Every level stops.", "Answer right to unlock the next verse."],
-    ["Unlock a song.", "It plays in full."],
-    ["Finish a block of 3.", "Earn that block's playlist."],
-    ["Finish all 9.", "Earn Volume 1. Volume 2 opens next."]
+    ["Hit play.", "Every song is a level of OG Bobby's story.", "street", "84 ST", "4 AV"],
+    ["Every level stops.", "Answer right to unlock the next verse.", "store", "CORNER STORE", "BAY RIDGE"],
+    ["Unlock a song.", "It plays in full.", "subway", "BAY RIDGE AV", "R"],
+    ["Finish a block of 3.", "Earn that block's playlist.", "park", "OWL'S HEAD PARK", "NYC PARKS"],
+    ["Finish all 9.", "Earn Volume 1. Volume 2 opens next.", "street", "SHORE RD", "VERRAZZANO"]
   ];
+  const roomSign = intro.querySelector(".room-sign");
+  function paintRoom(k) {
+    const r = HOW[k]; intro.dataset.room = String(k + 1);
+    roomSign.className = "room-sign rs-" + r[2];
+    roomSign.innerHTML = r[2] === "subway" ? '<b class="rs-bullet">R</b><span class="rs-main"></span>' : '<span class="rs-main"></span><span class="rs-sub"></span>';
+    roomSign.querySelector(".rs-main").textContent = r[3];
+    const sub = roomSign.querySelector(".rs-sub"); if (sub) sub.textContent = r[4];
+    intro.classList.remove("walk"); void intro.offsetWidth; intro.classList.add("walk");
+  }
   let hp = 0;
   const hpHead = intro.querySelector(".hp-head"), hpBody = intro.querySelector(".hp-body");
   const hpCount = intro.querySelector(".hp-count"), hpDots = intro.querySelector(".hp-dots");
@@ -1058,7 +1067,9 @@ window.scrollTo(0, 0);
     hpHead.textContent = HOW[hp][0]; hpBody.textContent = HOW[hp][1];
     hpCount.textContent = (hp + 1) + " / " + HOW.length;
     [...hpDots.children].forEach((d, j) => d.classList.toggle("on", j === hp));
-    startBtn.textContent = hp === HOW.length - 1 ? "PLAY" : "NEXT";
+    startBtn.textContent = hp === HOW.length - 1 ? "ENTER THE GAME" : "NEXT";
+    hpCount.textContent = "HOW TO PLAY \u00b7 " + (hp + 1) + " OF " + HOW.length;
+    try { paintRoom(hp); } catch (e) {}
     if (navReady && v === 0) prev.disabled = hp === 0;
   }
   let navReady = false;
@@ -1166,7 +1177,9 @@ window.scrollTo(0, 0);
   });
   // swipe left / right on the card
   let sx = null, sy = null;
-  stage.addEventListener("touchstart", e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  const zoomed = () => !!(window.visualViewport && window.visualViewport.scale > 1.01);
+  stage.addEventListener("touchstart", e => { if (e.touches.length > 1 || zoomed()) { sx = null; return; } sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  stage.addEventListener("touchmove", e => { if (e.touches.length > 1) sx = null; }, { passive: true });
   stage.addEventListener("touchend", e => {
     if (sx === null) return;
     const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
@@ -1320,14 +1333,15 @@ window.scrollTo(0, 0);
     showRaw(Math.min(RAW.length - 1, rv + d));
   }
   /* Volume 2: titles only, everything locked, nothing plays. Add a title here when a song is ready to tease. */
-  const VOL2 = ["After Hours", "Mikey the Rat", "The Ridge to the Beach", "Fort Hamilton Parkway"];
+  const VOL2 = ["After Hours", "Mikey the Rat", "The Ridge to the Beach", "Fort Hamilton Parkway", "Wall Street Machine \u2013 Episode 1", null, null, "Wall Street Machine \u2013 Episode 2"];
   function renderV2() {
     let tiles = "";
     for (let i = 0; i < 9; i++) {
       const t = VOL2[i];
-      tiles += '<div class="v2-tile' + (t ? "" : " unknown") + '"><span class="v2-n">' + (i + 1) + '</span><span class="v2-t"></span><span class="v2-lock">' + lockSvg + '</span></div>';
+      const ep = t && t.match(/ \u2013 Episode (\d+)$/);
+      tiles += '<div class="v2-tile' + (t ? "" : " unknown") + '"' + (t ? ' aria-label="' + (i + 1) + '. ' + t + '"' : "") + '><span class="v2-n">' + (i + 1) + (ep ? " \u00b7 EP. " + ep[1] : "") + '</span><span class="v2-t"></span><span class="v2-lock">' + lockSvg + '</span></div>';
     }
-    const have = VOL2.length;
+    const have = VOL2.filter(Boolean).length;
     v2Card.innerHTML =
       '<div class="raw-kick">VOLUME 2 · COMING NEXT</div>' +
       '<div class="ninety-nine" aria-label="Volume 1 plus Volume 2 makes 99">' +
@@ -1337,7 +1351,7 @@ window.scrollTo(0, 0);
       '<p class="v2-story">1999 changed everything for OG. Volume 1 gave you nine. Volume 2 is nine more, with new questions. Fill them both and they read <b>’99</b>, the full album.</p>' +
       '<div class="v2-grid">' + tiles + '</div>' +
       '<p class="v2-count"><b>' + have + ' of 9</b> revealed · opens after Volume 1</p>';
-    v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] || "???"; });
+    v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] ? VOL2[i].replace(/ \u2013 Episode \d+$/, "") : "???"; });
   }
   function showRaw(i) {
     if (i !== rv) rawAudio.pause();
@@ -3192,7 +3206,7 @@ html, body, body.practice { background: #fff !important; }
 #v2 .v2-top .v2-story { text-align: left; }
 #v2 .v2-story { font-size: .74rem !important; line-height: 1.3 !important; }
 #v2 .v2-grid { gap: 5px !important; }
-#v2 .v2-tile { min-height: 0 !important; padding: 5px 4px !important; gap: 1px !important; }
+#v2 .v2-tile { min-height: 0 !important; padding: 3px 4px !important; gap: 1px !important; }
 #v2 .v2-tile .v2-n { font-size: .7rem !important; line-height: 1 !important; }
 #v2 .v2-tile .v2-t { font-size: .74rem !important; line-height: 1.1 !important; }
 .v2-cd { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 8px 6px 12px; border-radius: 10px; background: rgba(0,0,0,.18); border: 1px solid rgba(255,255,255,.25); }
@@ -3595,7 +3609,7 @@ html, body, body.practice { background: #fff !important; }
 
 <style>
 /* no zoom when tapping quickly: taps are taps, never "double-tap to zoom" */
-html, body, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulation; }
+html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulation; }   /* two-finger pinch still zooms */
 /* the game card never scrolls, not even a little */
 .practice .stage { overflow: hidden !important; }
 </style>
@@ -3694,6 +3708,40 @@ html, body, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulation;
   const rg = document.getElementById("resetGo"); if (rg) rg.addEventListener("click", () => { try { localStorage.removeItem(K); } catch (e) {} }, true);
 })();
 </script>
+<style>
+/* ---------- How to play = a walk through Bay Ridge: one room per step, one button, then into the game ---------- */
+.slide-intro:not(.welcome) .hp-dots { display: none !important; }
+.slide-intro:not(.welcome) .intro-title { display: none !important; }
+.slide-intro:not(.welcome) .hp-count { font: 800 .62rem/1 var(--body) !important; letter-spacing: .22em !important; color: #fff !important; opacity: .9; }
+.slide-intro .vol-badge { display: flex !important; justify-content: center !important; }
+/* nothing but forward on the right: the button is the way forward, the left arrow walks back */
+.stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)) .nav-btn.next { visibility: hidden !important; }
+/* the room's sign */
+.room-sign { display: none; }
+.slide-intro:not(.welcome) .room-sign { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 3px; margin: 14px auto 4px; min-width: 150px; height: 46px; box-sizing: border-box; padding: 0 18px; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,.35); }
+.room-sign .rs-main { font: 900 1.05rem/1 var(--body); letter-spacing: .08em; color: #fff; white-space: nowrap; }
+.room-sign .rs-sub { font: 800 .55rem/1 var(--body); letter-spacing: .2em; color: #fff; opacity: .9; white-space: nowrap; }
+.room-sign.rs-street { background: #0e6b3b; border: 2px solid #fff; outline: 2px solid #0e6b3b; }
+.room-sign.rs-store { background: #c81e1e; border: 2px solid #fff; outline: 2px solid #c81e1e; border-radius: 3px; }
+.room-sign.rs-park { background: #2e5a1f; border: 2px solid #e9e2c9; outline: 2px solid #2e5a1f; border-radius: 10px; }
+.room-sign.rs-park .rs-main, .room-sign.rs-park .rs-sub { color: #f4efd9; }
+.slide-intro .room-sign.rs-subway { flex-direction: row; gap: 10px; background: #111; border-radius: 2px; padding: 8px 16px 8px 10px; border-top: 3px solid #fff; }
+.room-sign .rs-bullet { width: 26px; height: 26px; border-radius: 50%; background: #c81e1e; color: #fff; display: grid; place-items: center; font: 900 .95rem/1 var(--body); }
+/* each room's backdrop, faint so the words stay easy to read */
+.stage-wrap { position: relative; }
+.stage-wrap::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 0; opacity: 0; transition: opacity .35s ease; background-repeat: repeat; }
+.stage-wrap > * { position: relative; z-index: 1; }
+.stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="1"])::after { opacity: 1; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2232%22%3E%3Cpath%20d%3D%22M0%201H64M0%2017H64M1%201V17M33%2017V33%22%20stroke%3D%22rgba%28255%2C255%2C255%2C.10%29%22%20stroke-width%3D%222%22%20fill%3D%22none%22/%3E%3C/svg%3E"); }
+.stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="2"])::after { opacity: 1; background-image: repeating-linear-gradient(90deg, rgba(200,30,30,.55) 0 22px, rgba(255,255,255,.22) 22px 44px); background-size: 100% 26px; background-repeat: no-repeat; background-position: top; }
+.stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="3"])::after { opacity: 1; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2228%22%20height%3D%2214%22%3E%3Cpath%20d%3D%22M0%20.5H28M.5%200V14%22%20stroke%3D%22rgba%28255%2C255%2C255%2C.12%29%22%20stroke-width%3D%221%22%20fill%3D%22none%22/%3E%3C/svg%3E"); }
+.stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="4"])::after { opacity: 1; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2222%22%20height%3D%2222%22%3E%3Cpath%20d%3D%22M0%200L22%2022M22%200L0%2022%22%20stroke%3D%22rgba%28255%2C255%2C255%2C.10%29%22%20stroke-width%3D%221.6%22%20fill%3D%22none%22/%3E%3C/svg%3E"); }
+.stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="5"])::after { opacity: 1; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%2260%22%3E%3Cpath%20d%3D%22M0%2060V38h14V26h10v12h8V18h16v20h6V30h12v30zM70%2060V34h10V22h6v-8h4v8h6v12h14V28h12v32zM140%2060V40h12V24h18v16h8V32h14v28z%22%20fill%3D%22rgba%280%2C0%2C0%2C.22%29%22/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22120%22%20height%3D%22120%22%3E%3Cpath%20d%3D%22M0%200L60%20120M30%200L60%2060M90%200L60%20120M120%200L60%2060%22%20stroke%3D%22rgba%28255%2C255%2C255%2C.08%29%22%20stroke-width%3D%221.2%22%20fill%3D%22none%22/%3E%3C/svg%3E"); background-repeat: repeat-x, repeat; background-position: bottom, top; background-size: 200px 60px, 120px 120px; }
+/* walking into the next room */
+.slide-intro.walk .room-sign, .slide-intro.walk .howpage { animation: roomIn .38s ease-out; }
+.slide-intro:not(.welcome) .hp-head, .slide-intro:not(.welcome) .hp-body { text-wrap: balance; }
+@keyframes roomIn { from { opacity: 0; transform: translateX(26px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide-intro.walk .room-sign, .slide-intro.walk .howpage { animation: none; } }
+</style>
 
 <div class="lab-tag">PRACTICE BOARD · NOT LIVE</div><style>.lab-tag{position:fixed;top:6px;left:50%;transform:translateX(-50%);z-index:50;background:#d62828;color:#fff;font:800 .55rem/1 Barlow,system-ui,sans-serif;letter-spacing:.12em;padding:4px 8px;border-radius:999px;pointer-events:none}</style>
 </body>
