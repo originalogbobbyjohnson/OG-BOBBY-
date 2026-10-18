@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OG Bobby · The Brooklyn Music Game</title>
 <meta name="description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
 <meta property="og:type" content="music.album">
@@ -1164,7 +1164,9 @@ window.scrollTo(0, 0);
   });
   // swipe left / right on the card
   let sx = null, sy = null;
-  stage.addEventListener("touchstart", e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  const zoomed = () => !!(window.visualViewport && window.visualViewport.scale > 1.01);
+  stage.addEventListener("touchstart", e => { if (e.touches.length > 1 || zoomed()) { sx = null; return; } sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  stage.addEventListener("touchmove", e => { if (e.touches.length > 1) sx = null; }, { passive: true });
   stage.addEventListener("touchend", e => {
     if (sx === null) return;
     const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
@@ -3594,7 +3596,7 @@ html, body, body.practice { background: #fff !important; }
 
 <style>
 /* no zoom when tapping quickly: taps are taps, never "double-tap to zoom" */
-html, body, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulation; }
+html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulation; }   /* two-finger pinch still zooms */
 /* the game card never scrolls, not even a little */
 .practice .stage { overflow: hidden !important; }
 </style>
