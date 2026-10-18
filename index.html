@@ -3408,8 +3408,8 @@ html, body, body.practice { background: #fff !important; }
   }
 
   /* ===================== 2 + 3. VOL. 2 COUNTDOWN + REMIND ME ===================== */
-  // first single Sunday Nov 1, 2026 (midnight New York time), then one a week for 9 weeks
-  const DROP0 = Date.parse("2026-11-01T00:00:00-04:00"), WEEK = 7 * 864e5;
+  // first single Sunday Nov 1, 2026 (9 AM New York time), then one a week for 9 weeks
+  const DROP0 = Date.parse("2026-11-01T09:00:00-05:00"), WEEK = 7 * 864e5;
   function nextDrop(now) {
     for (let k = 0; k < 9; k++) { const t = DROP0 + k * WEEK; if (t > now) return { t, k }; }
     return null;
