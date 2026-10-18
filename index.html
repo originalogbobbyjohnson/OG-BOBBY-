@@ -1927,7 +1927,7 @@ html, body, body.practice { background: #fff !important; }
 (function () {
   const sig = d => { let t = ""; d.querySelectorAll("script:not([src]), style").forEach(n => { t += n.textContent; }); let h = 0; for (let i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) | 0; return h + ":" + t.length; };
   let mine = null, pending = false, checking = false;
-  const busy = () => [...document.querySelectorAll("audio, video")].some(a => !a.paused && !a.ended) || [...document.querySelectorAll(".sheet")].some(s => !s.hidden);
+  const busy = () => [...document.querySelectorAll("audio, video")].some(a => !a.paused && !a.ended) || [...document.querySelectorAll(".sheet")].some(s => !s.hidden) || !!document.querySelector(".promo, .x-streak, .rank-toast") || (window.ogHold || 0) > Date.now();
   const go = () => { if (!pending) return; if (busy()) return; location.reload(); };
   async function check() {
     if (checking || pending) return; checking = true;
@@ -3668,5 +3668,29 @@ html, body, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulation;
 })();
 </script>
 
+<script>
+/* Promotions are never lost: the updater waits while one is on screen, and a promotion that got cut off shows the next time the game opens. */
+(function () {
+  if (typeof promote !== "function" || typeof RANKS === "undefined") return;
+  const K = "ogShown";
+  const cur = () => rankOf(blocksDone());
+  let shown = null; try { const v = localStorage.getItem(K); shown = v == null ? null : +v; } catch (e) {}
+  if (shown == null || isNaN(shown)) { shown = cur(); try { localStorage.setItem(K, String(shown)); } catch (e) {} }   // first time: nothing to catch up on
+  const base = promote;
+  promote = function (name) {
+    window.ogHold = Date.now() + 15000;   // keep the updater off while the jingle, OG's voice and the badge play
+    try { const i = RANKS.indexOf(name); if (i > shown) { shown = i; localStorage.setItem(K, String(i)); } } catch (e) {}
+    return base.apply(this, arguments);
+  };
+  function catchUp() {
+    const r = cur(); if (r <= shown || r <= 0) return;
+    if ([...document.querySelectorAll(".sheet")].some(s => !s.hidden) || [...document.querySelectorAll(".slide-intro")].some(s => !s.hidden && s.offsetParent)) return setTimeout(catchUp, 1500);   // wait until the welcome window is closed
+    promote(RANKS[r]);
+  }
+  window.addEventListener("load", () => setTimeout(catchUp, 1200));
+  document.addEventListener("click", () => setTimeout(catchUp, 600), { once: true });
+  const rg = document.getElementById("resetGo"); if (rg) rg.addEventListener("click", () => { try { localStorage.removeItem(K); } catch (e) {} }, true);
+})();
+</script>
 </body>
 </html>
