@@ -72,72 +72,39 @@ td:first-child { padding-right: 8px; }
 </div>
 <script>
 const SONGS = [{"slug": "whatever-it-takes", "t": "Whatever It Takes", "q": ["What year does OG's story start?"]}, {"slug": "ridge-brothers", "t": "Ridge Brothers", "q": ["Who connected OG to the Jorgenson brothers?"]}, {"slug": "bay-ridge-nights", "t": "Bay Ridge Nights", "q": ["Which Bay Ridge spot was for the squares?"]}, {"slug": "the-get-back", "t": "The Get Back", "q": ["How old was OG's baby girl in '99?", "When did the brother say \"he don't sell\"?"]}, {"slug": "pioneer", "t": "Pioneer", "q": ["Where did the hustle start?", "What did the partner do with the shared money?"]}, {"slug": "bars-and-clubs", "t": "Bars & Clubs", "q": ["Which Bay Ridge bar gets named?", "Which Manhattan club gets a shout-out?"]}, {"slug": "bay-ridge-is-mine", "t": "Bay Ridge Is Mine", "q": ["What holiday was coming when it went down?", "How much money went missing?", "What's the hook?"]}, {"slug": "black-rob", "t": "Black Rob", "q": ["Which gym did Rob start in?", "What was Rob to OG in the boxing gym?", "Rob is like OG's..."]}, {"slug": "positivity-spreads", "t": "Positivity Spreads", "q": ["Which Brooklyn park does OG train in?", "What spreads?", "Who did OG earn his black belt under?"]}];
-const SITE = "https://ogbobbybrooklyn.goatcounter.com";
-const LAUNCH = "2026-10-11";
-const KEY = "ogStatsKey";
+const NS = "ogbobbybrooklyn-c4f7a2";
 const $ = s => document.querySelector(s);
 const app = $("#app");
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-const day = d => d.toISOString().slice(0, 10);
-let range = "30";
+const clean = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9_.-]+/g, "-").slice(0, 60);
 
-function keyForm(msg) {
-  app.innerHTML = '<section class="key"><h2>ONE-TIME SETUP</h2>' + (msg ? '<div class="err">' + esc(msg) + '</div>' : "") +
-    '<p class="note">This page reads your numbers from GoatCounter. It needs a read-only key from your account, one time on each phone or computer you use:</p>' +
-    '<p class="note">1. Open <a href="' + SITE + '/user/api" target="_blank" rel="noopener">GoatCounter → Settings → API</a> (sign in with your ogbobbybrooklyn Gmail).<br>2. Tap <b>New token</b>, name it "stats", tick <b>Read statistics</b> only, and save.<br>3. Copy the token and paste it here.</p>' +
-    '<input id="k" type="password" autocomplete="off" placeholder="Paste your GoatCounter token">' +
-    '<button class="btn" id="go">Show my stats</button></section>';
-  $("#go").onclick = () => { const v = $("#k").value.trim(); if (!v) return; try { localStorage.setItem(KEY, v); } catch (e) {} load(); };
-}
-
-async function api(path, key) {
-  const r = await fetch(SITE + "/api/v0" + path, { headers: { "Authorization": "Bearer " + key, "Content-Type": "application/json" } });
-  if (r.status === 401 || r.status === 403) throw new Error("key");
-  if (!r.ok) throw new Error("http " + r.status);
-  return r.json();
-}
-async function allHits(key, start, end) {
-  const out = []; let excl = [];
-  for (let page = 0; page < 30; page++) {
-    const q = "/stats/hits?start=" + start + "&end=" + end + "&limit=100" + (excl.length ? "&exclude_paths=" + excl.join(",") : "");
-    const j = await api(q, key);
-    (j.hits || []).forEach(h => { out.push(h); excl.push(h.path_id); });
-    if (!j.more || !(j.hits || []).length) break;
-  }
-  return out;
+async function one(k) {
+  k = clean(k);
+  try { const r = await fetch("https://abacus.jasoncameron.dev/get/" + NS + "/" + k, { cache: "no-store" }); if (r.status === 404) return { v: 0, ok: true }; if (r.ok) { const j = await r.json(); return { v: +j.value || 0, ok: true }; } } catch (e) {}
+  try { const r = await fetch("https://api.counterapi.dev/v1/" + NS + "/" + k, { cache: "no-store" }); if (r.status === 404 || r.status === 400) return { v: 0, ok: true }; if (r.ok) { const j = await r.json(); return { v: +(j.count != null ? j.count : j.value) || 0, ok: true }; } } catch (e) {}
+  return { v: 0, ok: false };
 }
 
 async function load() {
-  let key = ""; try { key = localStorage.getItem(KEY) || ""; } catch (e) {}
-  if (!key) return keyForm();
   app.innerHTML = '<p class="k" style="text-align:center">LOADING…</p>';
-  const end = new Date(); const start = new Date(range === "all" ? LAUNCH + "T00:00:00" : Date.now() - (range === "1" ? 0 : (+range - 1)) * 864e5);
-  let hits;
-  try { hits = await allHits(key, day(start), day(end)); }
-  catch (e) {
-    if (e.message === "key") { try { localStorage.removeItem(KEY); } catch (x) {} return keyForm("That key didn't work. Make a new one with Read statistics ticked and paste it again."); }
-    app.innerHTML = '<div class="err">Couldn\'t reach GoatCounter from this page (' + esc(e.message) + '). Your numbers are still in your <a style="color:#fff" href="' + SITE + '" target="_blank" rel="noopener">GoatCounter dashboard</a>.</div>' + footer();
-    bindFoot(); return;
-  }
-  render(hits);
+  const keys = ["players", "started", "rank-corner-kid", "rank-og-soldier", "rank-og-protege", "streaks", "lightning", "share-rank", "share-lightning", "remind-vol2", "trophy-case", "fun-runs", "restarts", "secret-store", "secret-moon", "secret-bridge", "secret-caddy"];
+  SONGS.forEach(s => { keys.push("played-" + s.slug, "finished-" + s.slug); s.q.forEach((_, g) => keys.push("right-" + s.slug + "-q" + (g + 1), "wrong-" + s.slug + "-q" + (g + 1))); });
+  const res = await Promise.all(keys.map(one));
+  const c = {}; let reached = 0; keys.forEach((k, i) => { c[clean(k)] = res[i].v; if (res[i].ok) reached++; });
+  if (!reached) { app.innerHTML = '<div class="err">Couldn\'t reach the counters right now. Check your connection and pull down to refresh.</div>'; return; }
+  render(k => c[clean(k)] || 0);
 }
 
-function render(hits) {
-  const c = {}; hits.forEach(h => { const p = String(h.path || "").replace(/^\//, ""); c[p] = (c[p] || 0) + (h.count || h.count_unique || 0); });
-  const get = p => c[p] || 0;
-  const sum = pre => Object.keys(c).filter(p => p.startsWith(pre)).reduce((a, p) => a + c[p], 0);
-  const visitors = get("") + get("index.html");
-  const played = SONGS.reduce((a, s) => a + get("play/" + s.slug), 0);
-  const finished = sum("level-unlocked/");
-  const ranks = sum("rank/");
-  let h = '<div class="seg">' + [["1", "TODAY"], ["7", "7 DAYS"], ["30", "30 DAYS"], ["all", "ALL TIME"]].map(([v, l]) => '<button data-r="' + v + '" class="' + (range === v ? "on" : "") + '">' + l + '</button>').join("") + '</div>';
-  // ---- completion gauge: how many players finished all 9 songs (reached OG Protégé) ----
-  const rk = k => get("rank/" + k) + (encodeURIComponent(k) !== k ? get("rank/" + encodeURIComponent(k)) : 0);
-  const done = rk("og-protégé"), soldier = rk("og-soldier"), corner = rk("corner-kid");
-  const started = Math.max(get("play/" + SONGS[0].slug), corner, soldier, done);
+function render(get) {
+  const done = get("rank-og-protege"), soldier = get("rank-og-soldier"), corner = get("rank-corner-kid");
+  const started = Math.max(get("started"), corner, soldier, done);
+  const visitors = Math.max(get("players"), started);
+  const played = SONGS.reduce((a, s) => a + get("played-" + s.slug), 0);
+  const finished = SONGS.reduce((a, s) => a + get("finished-" + s.slug), 0);
   const pct = started ? done / started : 0;
-  const A = (f) => { const a = Math.PI * (1 - f), r = 120; return [150 + r * Math.cos(a), 150 - r * Math.sin(a)]; };
+  const A = f => { const a = Math.PI * (1 - f), r = 120; return [150 + r * Math.cos(a), 150 - r * Math.sin(a)]; };
   const [ex, ey] = A(Math.max(.0001, Math.min(1, pct)));
+  let h = '<p class="k" style="text-align:center">ALL TIME · EACH PLAYER COUNTED ONCE</p>';
   h += '<section class="gauge"><h2>COMPLETED THE GAME</h2>' +
     '<svg viewBox="0 0 300 170" aria-hidden="true"><defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#ffe680"/><stop offset=".6" stop-color="#f5c518"/><stop offset="1" stop-color="#c98a00"/></linearGradient></defs>' +
     '<path d="M30 150 A120 120 0 0 1 270 150" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="22" stroke-linecap="round"/>' +
@@ -145,30 +112,23 @@ function render(hits) {
     '</svg><div class="gn">' + done + '</div><div class="gl">PLAYERS FINISHED ALL 9</div>' +
     '<div class="gs">' + Math.round(pct * 100) + '% of the ' + started + ' who started</div>' +
     '<div class="ends"><span>0%</span><span>100%</span></div></section>';
-  // ---- how far players get ----
   const steps = [["Started the game", started, ""], ["Corner Kid · songs 1–3", corner, ""], ["OG Soldier · songs 4–6", soldier, ""], ["OG Protégé · all 9 songs", done, " top"]];
-  h += '<section><h2>HOW FAR PLAYERS GET</h2><div class="ladder">' + steps.map(([l, n, c]) => '<div class="st' + c + '"><div class="row"><span>' + l + '</span><b>' + n + (started ? ' · ' + Math.round(n / started * 100) + '%' : '') + '</b></div><div class="bar"><i style="width:' + (started ? Math.round(n / started * 100) : 0) + '%"></i></div></div>').join("") + '</div></section>';
-  h += '<div class="big"><div><b>' + visitors + '</b><i>VISITORS</i></div><div><b>' + played + '</b><i>SONG<br>PLAYS</i></div><div><b>' + finished + '</b><i>SONGS<br>FINISHED</i></div><div><b>' + ranks + '</b><i>RANK-UPS</i></div></div>';
-  // songs
+  h += '<section><h2>HOW FAR PLAYERS GET</h2><div class="ladder">' + steps.map(([l, n, cl]) => '<div class="st' + cl + '"><div class="row"><span>' + l + '</span><b>' + n + (started ? ' · ' + Math.round(n / started * 100) + '%' : '') + '</b></div><div class="bar"><i style="width:' + (started ? Math.round(n / started * 100) : 0) + '%"></i></div></div>').join("") + '</div></section>';
+  h += '<div class="big"><div><b>' + visitors + '</b><i>VISITORS</i></div><div><b>' + played + '</b><i>SONG<br>PLAYS</i></div><div><b>' + finished + '</b><i>SONGS<br>FINISHED</i></div><div><b>' + (corner + soldier + done) + '</b><i>RANK-UPS</i></div></div>';
   h += '<section><h2>EACH SONG</h2><table><tr><th>SONG</th><th>PLAYED</th><th>FINISHED</th><th>RATE</th></tr>' + SONGS.map((s, i) => {
-    const p = get("play/" + s.slug), f = get("level-unlocked/" + s.slug);
-    return '<tr><td>' + (i + 1) + '. ' + esc(s.t) + '</td><td>' + p + '</td><td>' + f + '</td><td>' + (p ? Math.round(f / p * 100) + "%" : "–") + '</td></tr>';
+    const p = get("played-" + s.slug), f = get("finished-" + s.slug);
+    return '<tr><td>' + (i + 1) + '. ' + esc(s.t) + '</td><td>' + p + '</td><td>' + f + '</td><td>' + (p ? Math.min(100, Math.round(f / p * 100)) + "%" : "–") + '</td></tr>';
   }).join("") + '</table></section>';
-  // hardest questions
-  const qs = []; SONGS.forEach(s => s.q.forEach((t, g) => { const r = get("right/" + s.slug + "/q" + (g + 1)), w = get("wrong/" + s.slug + "/q" + (g + 1)); if (r + w) qs.push({ s: s.t, t, r, w, miss: w / (r + w) }); }));
+  const qs = []; SONGS.forEach(s => s.q.forEach((t, g) => { const r = get("right-" + s.slug + "-q" + (g + 1)), w = get("wrong-" + s.slug + "-q" + (g + 1)); if (r + w) qs.push({ s: s.t, t, r, w, miss: w / (r + w) }); }));
   qs.sort((a, b) => b.miss - a.miss || (b.w - a.w));
-  h += '<section><h2>HARDEST QUESTIONS</h2>' + (qs.length ? qs.slice(0, 8).map(q => '<div class="q"><span class="s">' + esc(q.s.toUpperCase()) + '</span><span class="t">' + esc(q.t) + '</span><span class="p">' + Math.round(q.miss * 100) + '% missed · ' + q.w + ' wrong, ' + q.r + ' right</span><div class="bar"><i style="width:' + Math.round(q.miss * 100) + '%"></i></div></div>').join("") : '<p class="empty">No answers yet in this period.</p>') + '</section>';
-  // ranks
-  // extras
-  const X = [["Lightning rounds played", get("lightning/start")], ["Hot streaks (3 in a row)", sum("streak/")], ["Ranks shared", get("share/rank")], ["Lightning scores shared", get("share/lightning")], ["Vol. 2 reminders added", get("remind/vol2")], ["Secret spots found", sum("secret/")], ["Trophy case opened", get("trophy-case")], ["Fun runs", get("fun/start")], ["Game restarts", get("restart")]];
+  h += '<section><h2>HARDEST QUESTIONS · FIRST TRY</h2>' + (qs.length ? qs.slice(0, 8).map(q => '<div class="q"><span class="s">' + esc(q.s.toUpperCase()) + '</span><span class="t">' + esc(q.t) + '</span><span class="p">' + Math.round(q.miss * 100) + '% missed · ' + q.w + ' wrong, ' + q.r + ' right</span><div class="bar"><i style="width:' + Math.round(q.miss * 100) + '%"></i></div></div>').join("") : '<p class="empty">No answers yet.</p>') + '</section>';
+  const secrets = ["store", "moon", "bridge", "caddy"].reduce((a, k) => a + get("secret-" + k), 0);
+  const X = [["Lightning rounds played", get("lightning")], ["Hot streaks (3 in a row)", get("streaks")], ["Ranks shared", get("share-rank")], ["Lightning scores shared", get("share-lightning")], ["Vol. 2 reminders added", get("remind-vol2")], ["Secret spots found", secrets], ["Opened the trophy case", get("trophy-case")], ["Fun runs", get("fun-runs")], ["Game restarts", get("restarts")]];
   h += '<section><h2>EXTRAS</h2><div class="list">' + X.map(([l, n]) => '<span>' + l + '</span><span>' + n + '</span>').join("") + '</div></section>';
-  h += footer();
+  h += '<p class="foot">Counting started October 17, 2026. <button id="re">Refresh</button></p>';
   app.innerHTML = h;
-  app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { range = b.dataset.r; load(); });
-  bindFoot();
+  $("#re").onclick = load;
 }
-function footer() { return '<p class="foot">Numbers come from your GoatCounter account. <button id="forget">Remove key from this phone</button></p>'; }
-function bindFoot() { const f = $("#forget"); if (f) f.onclick = () => { try { localStorage.removeItem(KEY); } catch (e) {} keyForm(); }; }
 load();
 </script>
 </body>
