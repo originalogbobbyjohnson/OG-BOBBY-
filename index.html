@@ -22,7 +22,7 @@
 <link rel="icon" href="icon-game.png?v=2">
 <link rel="apple-touch-icon" href="icon-game.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap">
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap"></noscript>
 <style>/* the graffiti 9 with a straight tail instead of the hook (only the 9 comes from this file) */
 @font-face { font-family: "Sedgwick Nine"; src: url("brand/sedgwick-nine.woff") format("woff"); unicode-range: U+0039; font-display: swap; }</style>
 <style>
@@ -183,7 +183,7 @@ footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; 
 .about-box li b { color: var(--gold); }
 /* Wide screens: the Bay Ridge cover art fills the sides as a dark backdrop */
 @media (min-width: 700px) {
-  body::before { content: ""; position: fixed; inset: -40px; z-index: -1; background: url("cover.jpg") center / cover no-repeat; filter: blur(14px) brightness(.32) saturate(1.1); }
+  body::before { content: ""; position: fixed; inset: -40px; z-index: -1; background: url("cover.jpg?v=2") center / cover no-repeat; filter: blur(14px) brightness(.32) saturate(1.1); }
   html { background: var(--bg); }
   body { background: transparent; }
   .wrap { max-width: 560px; }
@@ -572,7 +572,7 @@ body.practice { overflow: hidden; }
   </section>
   <header>
     <div class="cover">
-      <img src="cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
+      <img src="cover.jpg?v=2" alt="OG Bobby artwork" width="1376" height="768">
     </div>
     <p class="tag">Bay Ridge, Brooklyn. The story, one episode at a time.</p>
   </header>
@@ -3323,7 +3323,7 @@ html, body, body.practice { background: #fff !important; }
     const disp = '"Anton", Impact, "Arial Narrow", sans-serif', body = '"Barlow", system-ui, -apple-system, sans-serif';
     const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#2f6cf0"); g.addColorStop(.5, "#1a4fc9"); g.addColorStop(1, "#0f2f80");
     x.fillStyle = g; x.fillRect(0, 0, W, H);
-    const [cover, word, emb] = await Promise.all([loadImg("cover.jpg"), loadImg("brand/og-bobby-wordmark-top.png"), kind === "rank" ? emblemImg(rIdx()) : Promise.resolve(null)]);
+    const [cover, word, emb] = await Promise.all([loadImg("cover.jpg?v=2"), loadImg("brand/og-bobby-wordmark-top.png"), kind === "rank" ? emblemImg(rIdx()) : Promise.resolve(null)]);
     if (cover) { const ch = W * cover.height / cover.width; x.drawImage(cover, 0, 0, W, ch); const fade = x.createLinearGradient(0, ch - 220, 0, ch); fade.addColorStop(0, "rgba(26,79,201,0)"); fade.addColorStop(1, "#1d52cc"); x.fillStyle = fade; x.fillRect(0, ch - 220, W, 220); }
     if (word) { const ww = 560, wh = ww * word.height / word.width; x.drawImage(word, 40, 34, ww, wh); }
     x.textAlign = "center"; x.fillStyle = "#fff";
