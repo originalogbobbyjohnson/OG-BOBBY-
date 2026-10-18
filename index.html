@@ -3745,8 +3745,8 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
 /* signs hang off to the side: faded, angled, with depth — the middle stays clean */
 .slide-intro:not(.welcome) { position: relative; }
 .slide-intro:not(.welcome) .room-sign { position: absolute; top: 74px; left: -30px; margin: 0; z-index: 0; pointer-events: none; opacity: .38; filter: blur(.4px);
-  transform-origin: left center; transform: perspective(260px) rotateY(52deg) rotateZ(-9deg) scale(1.23); box-shadow: 8px 10px 14px rgba(0,0,0,.35); }
-.slide-intro[data-room="2"]:not(.welcome) .room-sign, .slide-intro[data-room="4"]:not(.welcome) .room-sign { left: auto; right: -30px; transform-origin: right center; transform: perspective(260px) rotateY(-52deg) rotateZ(9deg) scale(1.23); box-shadow: -8px 10px 14px rgba(0,0,0,.35); }
+  transform-origin: left center; transform: perspective(260px) rotateY(52deg) rotateZ(-9deg) scale(1.35); box-shadow: 8px 10px 14px rgba(0,0,0,.35); }
+.slide-intro[data-room="2"]:not(.welcome) .room-sign, .slide-intro[data-room="4"]:not(.welcome) .room-sign { left: auto; right: -30px; transform-origin: right center; transform: perspective(260px) rotateY(-52deg) rotateZ(9deg) scale(1.35); box-shadow: -8px 10px 14px rgba(0,0,0,.35); }
 .slide-intro.walk .room-sign { animation: signIn .5s ease-out; }
 @keyframes signIn { from { opacity: 0; } to { opacity: .38; } }
 </style>
