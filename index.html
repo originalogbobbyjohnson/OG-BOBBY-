@@ -1767,8 +1767,9 @@ window.scrollTo(0, 0);
   // right / wrong: a quick game sound, then OG's reaction over a lowered song
   window.ogReact = function (ok, unlocked) {
     const S = window.ogSound;
-    if (S) S.sfx(ok ? (unlocked ? "unlock" : "right") : "wrong");
-    setTimeout(() => say(pickFrom(ok ? "right" : "wrong")), ok && unlocked ? 650 : 280);
+    if (S) S.sfx(ok ? (unlocked ? "spray" : "right") : "wrong");
+    if (ok && unlocked) { const t = document.getElementById("pTitle"); if (t) { t.classList.remove("og-paint"); void t.offsetWidth; t.classList.add("og-paint"); } }
+    setTimeout(() => say(pickFrom(ok ? "right" : "wrong")), ok && unlocked ? 1100 : 280);
   };
   const baseAnswer = answer;
   answer = async function (o, btn) {
@@ -1787,7 +1788,8 @@ window.scrollTo(0, 0);
     const src = VO.rank[name], S = window.ogSound;
     const finish = () => { promoting = false; if (resume) { resume = false; audio.play().catch(() => {}); } };
     const talk = () => { if (src) say(src, finish); else finish(); };
-    if (S) S.jingle(talk); else talk();
+    const pn = document.querySelector(".promo .promo-name"); if (pn) pn.classList.add("og-stamp");
+    if (S && S.on()) { S.sfx("stamp", 0.9); setTimeout(() => S.jingle(talk), 600); } else if (S) S.jingle(talk); else talk();
   };
   // one song away from the next rank: OG says his piece first, then the song starts
   const teased = {};
@@ -1799,7 +1801,10 @@ window.scrollTo(0, 0);
     if (!others.every(i => isOpen(EPISODES[i]))) return;
     teased[e.slug] = true;
     audio.pause();
-    say(VO.tease[k], () => audio.play().catch(() => {}));
+    const box = document.querySelector(".hdr3 > .album-release.big:not(.vol-box)");
+    if (box) { box.classList.remove("og-flicker"); void box.offsetWidth; box.classList.add("og-flicker"); }
+    if (window.ogSound) window.ogSound.sfx("flicker", 0.7);
+    setTimeout(() => say(VO.tease[k], () => audio.play().catch(() => {})), 1000);
   });
 })();
 
@@ -2045,7 +2050,7 @@ html, body, body.practice { background: #fff !important; }
 /* Game sounds: little taps, right/wrong hits, an unlock sting, and a scratch-and-beat jingle on every promotion.
    The song dips under OG's voice so you can hear him, then comes back up. */
 (function () {
-  const FILES = { tap: "sfx/tap.mp3", right: "sfx/right.mp3", wrong: "sfx/wrong.mp3", unlock: "sfx/unlock.mp3", jingle: "sfx/jingle.mp3" };
+  const FILES = { tap: "sfx/tap.mp3", right: "sfx/right.mp3", wrong: "sfx/wrong.mp3", unlock: "sfx/unlock.mp3", jingle: "sfx/jingle.mp3", siren: "sfx/siren.mp3", train: "sfx/train.mp3", spray: "sfx/spray.mp3", bell: "sfx/bell.mp3", flicker: "sfx/flicker.mp3", stamp: "sfx/stamp.mp3" };
   let on = true; try { on = localStorage.getItem("ogSfx") !== "0"; } catch (e) {}
   let ctx = null, gain = null, routed = false;
   const bufs = {};
@@ -3546,6 +3551,7 @@ html, body, body.practice { background: #fff !important; }
   }
   function run(pool) {
     tr("lightning/start", "Lightning round started");
+    try { window.ogSound && window.ogSound.sfx("bell", 0.75); } catch (e) {}
     // spread across songs: shuffle, prefer different questions
     const picks = []; const bag = shuffle(pool.slice()); const seen = {};
     for (const it of bag) { const key = it.e.slug + "|" + it.g + "|" + it.q.q; if (!seen[key]) { seen[key] = 1; picks.push(it); } if (picks.length >= LR_N) break; }
@@ -3768,5 +3774,42 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
     -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(50% - 330px), transparent calc(50% - 270px), transparent calc(50% + 270px), #000 calc(50% + 330px), #000 100%); mask-image: linear-gradient(90deg, #000 0, #000 calc(50% - 330px), transparent calc(50% - 270px), transparent calc(50% + 270px), #000 calc(50% + 330px), #000 100%); }
 }
 </style>
+<style>
+/* Street sounds: song title paints on at unlock, the '99 box flickers like a streetlight, gold stamp on a new rank */
+.og-paint { animation: ogPaint 1.1s linear 1; }
+@keyframes ogPaint { from { clip-path: inset(0 100% 0 0); filter: blur(2px); } to { clip-path: inset(0 0 0 0); filter: blur(0); } }
+.og-flicker { animation: ogFlick 1.1s steps(1) 1; }
+@keyframes ogFlick { 0%{opacity:1} 8%{opacity:.15} 14%{opacity:1} 30%{opacity:.25} 34%{opacity:1} 52%{opacity:.1} 60%{opacity:1} 100%{opacity:1} }
+.promo .promo-name.og-stamp { animation: ogStamp .7s cubic-bezier(.2,1.6,.4,1) 1 both; color: #f2b705 !important; text-shadow: 0 0 18px rgba(242,183,5,.75); }
+@keyframes ogStamp { 0% { transform: scale(2.2); opacity: 0; } 60% { transform: scale(.94); opacity: 1; } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .og-paint, .og-flicker, .promo .promo-name.og-stamp { animation: none; } }
+</style>
+<script>
+/* Street sounds: R train when you move on to the next block of 3 after finishing one, a distant siren when a hot streak (3+) breaks */
+(function () {
+  try {
+    const t = document.getElementById("pTitle"); if (!t || typeof BLOCKS === "undefined") return;
+    const blockOf = i => BLOCKS.findIndex(b => b.includes(i));
+    let last = typeof idx === "number" ? blockOf(idx) : -1; const rode = {};
+    new MutationObserver(() => {
+      const b = typeof idx === "number" ? blockOf(idx) : -1;
+      if (b < 0 || b === last) return;
+      const from = last; last = b;
+      if (from < 0 || rode[b]) return;
+      if (!BLOCKS[from].every(i => isOpen(EPISODES[i]))) return;   // only after the last stop is done
+      rode[b] = true;
+      if (window.ogSound) window.ogSound.sfx("train", 0.7);
+    }).observe(t, { childList: true, characterData: true, subtree: true });
+  } catch (e) {}
+  if (typeof answer === "function") {
+    let run = 0; const base = answer;
+    answer = async function (o, btn) {
+      await base(o, btn);
+      if (btn.classList.contains("right")) run++;
+      else if (btn.classList.contains("wrong")) { if (run >= 3 && window.ogSound) window.ogSound.sfx("siren", 0.35); run = 0; }
+    };
+  }
+})();
+</script>
 </body>
 </html>
