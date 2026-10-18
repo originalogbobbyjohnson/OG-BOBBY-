@@ -1943,7 +1943,7 @@ html, body, body.practice { background: #fff !important; }
 (function () {
   const sig = d => { let t = ""; d.querySelectorAll("script:not([src]), style").forEach(n => { t += n.textContent; }); let h = 0; for (let i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) | 0; return h + ":" + t.length; };
   let mine = null, pending = false, checking = false;
-  const busy = () => [...document.querySelectorAll("audio, video")].some(a => !a.paused && !a.ended) || [...document.querySelectorAll(".sheet")].some(s => !s.hidden) || !!document.querySelector(".promo, .x-streak, .rank-toast") || (window.ogHold || 0) > Date.now();
+  const busy = () => [...document.querySelectorAll("audio, video")].some(a => !a.paused && !a.ended) || [...document.querySelectorAll(".sheet")].some(s => !s.hidden) || !!document.querySelector(".promo, .x-streak, .rank-toast") || !!document.querySelector('.stage[data-v="intro"] .slide-intro:not(.welcome)') || (window.ogHold || 0) > Date.now();
   const go = () => { if (!pending) return; if (busy()) return; location.reload(); };
   async function check() {
     if (checking || pending) return; checking = true;
