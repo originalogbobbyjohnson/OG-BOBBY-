@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OG Made – 9</title>
+<meta name="color-scheme" content="dark only">
+<meta name="theme-color" content="#000000">
 <meta name="robots" content="noindex">
 <meta name="apple-mobile-web-app-title" content="OG Made – 9">
 <meta name="application-name" content="OG Made – 9">
@@ -27,66 +29,86 @@
 <style>/* the graffiti 9 with a straight tail instead of the hook (only the 9 comes from this file) */
 @font-face { font-family: "Sedgwick Nine"; src: url("../brand/sedgwick-nine.woff") format("woff"); unicode-range: U+0039; font-display: swap; }</style>
 <style>
+/* Street-corner cover first (art fills the screen, playlist name only); tap to open the songs.
+   Every text block sits on its own dark surface so nothing ever lands on white. */
 :root {
-  --bg: #0f1a12; --panel: #17251a; --line: #2a4231;
-  --fg: #eef3ea; --muted: #9db3a2; --gold: #e3b23c;
+  --bg: #0a0d0b; --panel: rgba(14,20,16,.92); --row: rgba(255,255,255,.04); --line: rgba(255,255,255,.10);
+  --fg: #ffffff; --soft: #e9ece8; --gold: #e3b23c;
   --display: "Anton", Impact, "Arial Narrow", sans-serif;
   --body: "Barlow", system-ui, -apple-system, sans-serif;
-  color-scheme: dark;
+  color-scheme: dark only;
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; background: var(--bg); color: var(--fg); }
-body { font-family: var(--body); font-size: 16px; -webkit-tap-highlight-color: transparent; }
-.wrap { max-width: 540px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 18px; }
-header > img { width: 100%; height: auto; aspect-ratio: 1376 / 768; object-fit: cover; border-radius: 14px; display: block; border: 2px solid #8a6d24; }
-.title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; }
-.title-row > div { min-width: 0; }
-h1 { margin: 0; line-height: 0; }
-h1 img { display: block; width: min(100%, 300px); height: auto; filter: drop-shadow(3px 3px 0 #000); }
-.list-tag { display: block; margin-top: 6px; font-family: "Sedgwick Nine", "Sedgwick Ave Display", "Permanent Marker", cursive; font-size: 1.6rem; line-height: 1; color: var(--gold); text-shadow: 2px 2px 0 #000; }
-.og-badge { flex: none; }
-.nine-badge { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 14px; background: #000; border: 2px solid #e3b23c; box-shadow: 0 0 18px 4px rgba(227,178,60,.6); }
-.nine-badge svg { width: 26px; height: auto; overflow: visible; }
-.nine-badge { display: flex; align-items: flex-start; justify-content: center; padding-top: 12px; gap: 1px; }
-.nine-badge .tick { font-family: var(--display); font-size: 1.6rem; line-height: .8; color: #fff; text-shadow: 2px 2px 0 #000; }
+html, body { margin: 0; background: #0a0d0b !important; color: var(--fg); }
+body { font-family: var(--body); font-size: 16px; -webkit-tap-highlight-color: transparent; min-height: 100dvh; }
+.nine { font-family: "Sedgwick Nine", "Sedgwick Ave Display", cursive; }
 
-.og-badge img { display: block; width: 64px; height: 64px; border-radius: 14px; box-shadow: 0 0 18px 4px rgba(227,178,60,.6); }
-.sub { color: var(--muted); margin-top: 6px; font-size: .95rem; }
-.now { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 12px; }
-.lab { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-#nowTitle { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1.05; }
+/* Cover */
+#cover { position: fixed; inset: 0; z-index: 5; background: #000; cursor: pointer; display: grid; transition: opacity .45s ease, transform .45s ease; }
+#cover.gone { opacity: 0; transform: scale(1.04); pointer-events: none; }
+#cover img.art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 52% 45%; }
+#cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,.85) 80%, #000 100%); }
+.cover-txt { position: relative; z-index: 1; align-self: end; justify-self: center; text-align: center; padding: 0 16px max(36px, env(safe-area-inset-bottom)); width: min(100%, 520px); }
+.cover-txt .wm { display: block; width: min(70%, 260px); height: auto; margin: 0 auto; filter: drop-shadow(3px 3px 0 #000); }
+.cover-txt .name { display: block; margin-top: 10px; font-family: "Sedgwick Nine", "Sedgwick Ave Display", cursive; font-size: clamp(2.4rem, 11vw, 3.4rem); line-height: 1; color: #fff; text-shadow: 3px 3px 0 #000; }
+.cover-txt .open { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 12px 26px; border-radius: 999px; background: rgba(0,0,0,.6); border: 2px solid var(--gold); color: #fff; font: 600 1rem var(--body); letter-spacing: .14em; text-transform: uppercase; }
+.cover-txt .open svg { width: 18px; height: 18px; fill: var(--gold); }
+
+/* Songs view */
+#bgArt { position: fixed; inset: 0; z-index: 0; background: #0a0d0b url("../cover.jpg") 52% 45% / cover no-repeat; filter: blur(18px) brightness(.35); transform: scale(1.1); }
+.wrap { position: relative; z-index: 1; max-width: 540px; margin: 0 auto; padding: max(20px, env(safe-area-inset-top)) 16px 48px; display: grid; gap: 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.top .back { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: rgba(0,0,0,.5); display: grid; place-items: center; cursor: pointer; }
+.top .back svg { width: 22px; height: 22px; fill: #fff; }
+.top .mid { flex: 1; min-width: 0; text-align: center; }
+.top .mid img { display: block; width: min(100%, 180px); height: auto; margin: 0 auto; filter: drop-shadow(2px 2px 0 #000); }
+.top .mid .name { display: block; margin-top: 4px; font-family: "Sedgwick Nine", "Sedgwick Ave Display", cursive; font-size: 1.6rem; line-height: 1; color: #fff; text-shadow: 2px 2px 0 #000; }
+.nine-badge { flex: none; display: flex; align-items: flex-start; justify-content: center; padding-top: 10px; gap: 1px; width: 52px; height: 52px; border-radius: 12px; background: #000; border: 2px solid #e3b23c; box-shadow: 0 0 14px 3px rgba(227,178,60,.55); }
+.nine-badge svg { width: 21px; height: auto; overflow: visible; }
+.nine-badge .tick { font-family: var(--display); font-size: 1.3rem; line-height: .8; color: #fff; text-shadow: 2px 2px 0 #000; }
+.now { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 16px; display: grid; gap: 12px; }
+.lab { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--soft); }
+#nowTitle { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1.05; color: #fff; }
 input[type=range] { width: 100%; accent-color: var(--gold); }
-.times { display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.times { display: flex; justify-content: space-between; color: var(--soft); font-size: .8rem; font-variant-numeric: tabular-nums; }
 .controls { display: flex; justify-content: center; align-items: center; gap: 20px; }
-.controls button { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 50%; width: 56px; height: 56px; display: grid; place-items: center; cursor: pointer; }
-.controls button.play { width: 72px; height: 72px; background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.controls button { background: rgba(0,0,0,.35); border: 1px solid var(--line); color: #fff; border-radius: 50%; width: 56px; height: 56px; display: grid; place-items: center; cursor: pointer; }
+.controls button.play { width: 72px; height: 72px; background: var(--gold); border-color: var(--gold); color: #000; }
 .controls svg { width: 24px; height: 24px; fill: currentColor; }
 .controls button.play svg { width: 30px; height: 30px; }
 button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-ol { list-style: none; margin: 0; padding: 0; display: grid; }
-li button { width: 100%; display: grid; grid-template-columns: 2rem 1fr auto; gap: 10px; align-items: center; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); color: var(--fg); font: inherit; padding: 13px 4px; cursor: pointer; }
-li button[aria-current="true"] { color: var(--gold); }
-li .n { color: var(--muted); font-variant-numeric: tabular-nums; font-size: .85rem; }
-li button[aria-current="true"] .n { color: var(--gold); }
-li .t { min-width: 0; overflow-wrap: anywhere; font-weight: 600; }
-li .d { color: var(--muted); font-size: .85rem; font-variant-numeric: tabular-nums; }
-footer { color: var(--muted); font-size: .8rem; text-align: center; }
+.songs { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 6px; }
+.songs .sub { color: var(--soft); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; padding: 12px 12px 8px; }
+ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+li button { width: 100%; display: grid; grid-template-columns: 2.2rem 1fr auto; gap: 10px; align-items: center; text-align: left; background: var(--row); border: 0; border-left: 3px solid transparent; border-radius: 12px; color: #fff; font: 600 1.05rem var(--body); padding: 14px 12px; cursor: pointer; }
+li .n { color: var(--soft); font-variant-numeric: tabular-nums; font-size: .9rem; text-align: center; }
+li .t { min-width: 0; overflow-wrap: anywhere; color: #fff; }
+li .d { color: var(--soft); font-size: .85rem; font-weight: 400; font-variant-numeric: tabular-nums; }
+li button[aria-current="true"] { background: rgba(227,178,60,.14); border-left-color: var(--gold); }
+li button[aria-current="true"] .t, li button[aria-current="true"] .n { color: var(--gold); }
+footer { color: var(--soft); font-size: .8rem; text-align: center; }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
+<div id="cover" role="button" tabindex="0" aria-label="Open OG MADE – 9">
+  <img class="art" src="../cover.jpg" alt="OG Bobby on a Bay Ridge corner at night, Verrazzano Bridge and full moon behind him">
+  <div class="cover-txt">
+    <img class="wm" src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220">
+    <span class="name">OG MADE – 9</span>
+    <span class="open"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Open</span>
+  </div>
+</div>
+<div id="bgArt" aria-hidden="true"></div>
 <div class="wrap">
-  <header>
-    <img src="../cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
-    <div class="title-row">
-      <div>
-        <h1><img src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"></h1>
-        <span class="list-tag">OG MADE – 9</span>
-      </div>
-      <div class="og-badge" aria-hidden="true"><span class="nine-badge"><span class="tick">’</span><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
+  <div class="top">
+    <button class="back" id="toCover" aria-label="Back to cover"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+    <div class="mid">
+      <img src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220">
+      <span class="name">OG MADE – 9</span>
     </div>
-    <div class="sub">9 songs · 32:27</div>
-  </header>
+    <div aria-hidden="true"><span class="nine-badge"><span class="tick">’</span><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
+  </div>
   <section class="now">
     <div class="lab">Now playing</div>
     <div id="nowTitle">Whatever It Takes</div>
@@ -98,7 +120,10 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; }
       <button id="next" aria-label="Next song"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
     </div>
   </section>
-  <ol id="list"></ol>
+  <section class="songs">
+    <div class="sub">9 songs · 32:27</div>
+    <ol id="list"></ol>
+  </section>
   <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
 </div>
 <audio id="audio" preload="metadata"></audio>
@@ -187,6 +212,11 @@ if ("mediaSession" in navigator) {
     navigator.mediaSession.setActionHandler("pause", () => audio.pause());
   } catch (e) {}
 }
+const coverEl = document.getElementById("cover");
+const openIt = () => { coverEl.classList.add("gone"); window.scrollTo(0, 0); };
+coverEl.addEventListener("click", openIt);
+coverEl.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openIt(); } });
+document.getElementById("toCover").onclick = () => coverEl.classList.remove("gone");
 mark(0);
 $("tot").textContent = fmt(FADE ? 1928.4 : T[0].d);
 </script>
