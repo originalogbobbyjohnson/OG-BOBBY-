@@ -1066,7 +1066,7 @@ window.scrollTo(0, 0);
     hp = Math.max(0, Math.min(HOW.length - 1, k));
     hpHead.textContent = HOW[hp][0]; hpBody.textContent = HOW[hp][1];
     hpCount.textContent = (hp + 1) + " / " + HOW.length;
-    [...hpDots.children].forEach((d, j) => d.classList.toggle("on", j === hp));
+    [...hpDots.children].forEach((d, j) => d.classList.toggle("on", j <= hp));
     startBtn.textContent = hp === HOW.length - 1 ? "ENTER THE GAME" : "NEXT";
     hpCount.textContent = "HOW TO PLAY \u00b7 " + (hp + 1) + " OF " + HOW.length;
     try { paintRoom(hp); } catch (e) {}
@@ -3710,7 +3710,9 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
 </script>
 <style>
 /* ---------- How to play = a walk through Bay Ridge: one room per step, one button, then into the game ---------- */
-.slide-intro:not(.welcome) .hp-dots { display: none !important; }
+.slide-intro:not(.welcome) .hp-dots { display: flex !important; visibility: visible !important; justify-content: center; gap: 12px; margin: 14px 0 0; pointer-events: none; }
+.slide-intro:not(.welcome) .hp-dots button { width: 11px !important; height: 11px !important; background: rgba(255,255,255,.18) !important; border: 2px solid #e02525 !important; box-sizing: border-box; }
+.slide-intro:not(.welcome) .hp-dots button.on { background: #e02525 !important; border-color: #fff !important; box-shadow: 0 0 6px rgba(224,37,37,.8); }
 .slide-intro:not(.welcome) .intro-title { display: none !important; }
 .slide-intro:not(.welcome) .hp-count { font: 800 .62rem/1 var(--body) !important; letter-spacing: .22em !important; color: #fff !important; opacity: .9; }
 .slide-intro .vol-badge { display: flex !important; justify-content: center !important; }
