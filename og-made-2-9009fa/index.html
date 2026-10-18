@@ -3,27 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>OG Made – 9</title>
+<title>OG Made – 9 · Season 2</title>
 <meta name="color-scheme" content="dark only">
 <meta name="theme-color" content="#000000">
 <meta name="robots" content="noindex">
-<meta name="apple-mobile-web-app-title" content="OG Made – 9">
-<meta name="application-name" content="OG Made – 9">
+<meta name="apple-mobile-web-app-title" content="OG Made – 9 · Season 2">
+<meta name="application-name" content="OG Made – 9 · Season 2">
 <meta name="description" content="OG Bobby · OG Made · Season 2 · 9 episodes">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="OG Bobby">
-<meta property="og:title" content="OG Made – 9">
+<meta property="og:title" content="OG Made – 9 · Season 2">
 <meta property="og:description" content="OG Bobby · OG Made · Season 2 · 9 episodes">
 <meta property="og:url" content="https://ogbobbybrooklyn.com/og-made-2-9009fa/">
-<meta property="og:image" content="https://ogbobbybrooklyn.com/og-made-2-9009fa/bay-ridge.jpg?v=1">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/og-made-2-9009fa/club-share.jpg?v=1">
 <meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1100">
-<meta property="og:image:height" content="613">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OG Made – 9">
-<meta name="twitter:image" content="https://ogbobbybrooklyn.com/og-made-2-9009fa/bay-ridge.jpg?v=1">
-<link rel="icon" href="bay-ridge-sq.png">
-<link rel="apple-touch-icon" href="bay-ridge-sq.png">
+<meta name="twitter:title" content="OG Made – 9 · Season 2">
+<meta name="twitter:image" content="https://ogbobbybrooklyn.com/og-made-2-9009fa/club-share.jpg?v=1">
+<link rel="icon" href="club-sq.png">
+<link rel="apple-touch-icon" href="club-sq.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&family=Sedgwick+Ave+Display&display=swap">
 <style>/* the graffiti 9 with a straight tail instead of the hook (only the 9 comes from this file) */
@@ -46,7 +46,7 @@ body { font-family: var(--body); font-size: 16px; -webkit-tap-highlight-color: t
 /* Cover */
 #cover { position: fixed; inset: 0; z-index: 5; background: #000; cursor: pointer; display: grid; transition: opacity .45s ease, transform .45s ease; }
 #cover.gone { opacity: 0; transform: scale(1.04); pointer-events: none; }
-#cover img.art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 52% 45%; }
+#cover img.art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
 #cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,.85) 80%, #000 100%); }
 .cover-txt { position: relative; z-index: 1; align-self: end; justify-self: center; text-align: center; padding: 0 16px max(36px, env(safe-area-inset-bottom)); width: min(100%, 520px); }
 .cover-txt .wm { display: block; width: min(70%, 260px); height: auto; margin: 0 auto; filter: drop-shadow(3px 3px 0 #000); }
@@ -55,7 +55,7 @@ body { font-family: var(--body); font-size: 16px; -webkit-tap-highlight-color: t
 .cover-txt .open svg { width: 18px; height: 18px; fill: var(--gold); }
 
 /* Songs view */
-#bgArt { position: fixed; inset: 0; z-index: 0; background: #0a0d0b url("bay-ridge.jpg") 52% 45% / cover no-repeat; filter: blur(18px) brightness(.35); transform: scale(1.1); }
+#bgArt { position: fixed; inset: 0; z-index: 0; background: #0a0d0b url("club.jpg") 50% 30% / cover no-repeat; filter: blur(18px) brightness(.35); transform: scale(1.1); }
 .wrap { position: relative; z-index: 1; max-width: 540px; margin: 0 auto; padding: max(20px, env(safe-area-inset-top)) 16px 48px; display: grid; gap: 16px; }
 .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .top .back { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: rgba(0,0,0,.5); display: grid; place-items: center; cursor: pointer; }
@@ -86,16 +86,20 @@ li .t { min-width: 0; overflow-wrap: anywhere; color: #fff; }
 li .d { color: var(--soft); font-size: .85rem; font-weight: 400; font-variant-numeric: tabular-nums; }
 li button[aria-current="true"] { background: rgba(227,178,60,.14); border-left-color: var(--gold); }
 li button[aria-current="true"] .t, li button[aria-current="true"] .n { color: var(--gold); }
+
+.cover-txt .sea { display: block; margin-top: 8px; color: #fff; font: 600 1rem var(--body); letter-spacing: .24em; text-transform: uppercase; text-shadow: 2px 2px 0 #000; }
+.top .mid .sea { display: block; margin-top: 2px; color: #fff; font: 600 .72rem var(--body); letter-spacing: .22em; text-transform: uppercase; }
 footer { color: var(--soft); font-size: .8rem; text-align: center; }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <div id="cover" role="button" tabindex="0" aria-label="Open OG MADE – 9">
-  <img class="art" src="bay-ridge.jpg" alt="A Bay Ridge corner at night, Verrazzano Bridge and full moon behind it">
+  <img class="art" src="club.jpg" alt="OG Bobby outside a Bay Ridge club at night">
   <div class="cover-txt">
     <img class="wm" src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220">
     <span class="name">OG MADE – 9</span>
+    <span class="sea">Season 2</span>
     <span class="open"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Open</span>
   </div>
 </div>
@@ -106,6 +110,7 @@ footer { color: var(--soft); font-size: .8rem; text-align: center; }
     <div class="mid">
       <img src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220">
       <span class="name">OG MADE – 9</span>
+      <span class="sea">Season 2</span>
     </div>
     <div aria-hidden="true"><span class="nine-badge"><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
   </div>
@@ -153,7 +158,7 @@ function mark(i) {
   if ("mediaSession" in navigator) {
     try {
       navigator.mediaSession.metadata = new MediaMetadata({ title: T[i].t, artist: "OG Bobby", album: "OG Made – 9",
-        artwork: [{ src: new URL("bay-ridge-sq.png", location.href).href, sizes: "512x512", type: "image/png" }] });
+        artwork: [{ src: new URL("club-sq.png", location.href).href, sizes: "512x512", type: "image/png" }] });
     } catch (e) {}
   }
 }
