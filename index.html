@@ -1227,14 +1227,32 @@ window.scrollTo(0, 0);
     const vv = window.visualViewport;
     if (vv && vv.scale > 1.01) return;   // pinch-zoomed: don't re-lay out, just let the phone magnify
     const vh = vv ? vv.height : innerHeight, vw = vv ? vv.width : innerWidth;
-    const z = Math.min(1, vh / DESIGN_H, vw / DESIGN_W);
+    if (Math.abs(vh - (window.__fitVh || 0)) > 2) { window.__fitK = 1; window.__fitVh = vh; }   // new screen size: start fresh
+    const z = Math.min(1, vh / DESIGN_H, vw / DESIGN_W) * (window.__fitK || 1);
     window.__z = z;
     document.documentElement.style.setProperty("--z", z);
     document.documentElement.style.setProperty("--appH", Math.floor(vh / z) + "px");
     const dock = document.querySelector(".dock");
     if (dock) document.documentElement.style.setProperty("--dockH", Math.ceil(dock.getBoundingClientRect().height / z) + "px");
     fitDock();
+    requestAnimationFrame(keepAboveDock);
   };
+  // if the phone's notch, home bar or fonts push the blue card (and RESTART GAME) under the bottom bar,
+  // shrink the whole game evenly until the card ends just above the bar
+  let tries = 0;
+  function keepAboveDock() {
+    const card = document.querySelector(".stage-wrap"), di = document.querySelector(".dock-in");
+    if (!card || !di || !card.offsetParent) return;
+    const vv = window.visualViewport; if (vv && vv.scale > 1.01) return;
+    const vh = vv ? vv.height : innerHeight;
+    const cb = card.getBoundingClientRect().bottom, dt = di.getBoundingClientRect().top;
+    const over = cb + 8 - dt;
+    if (over <= 0) { tries = 0; return; }
+    if (++tries > 4) { tries = 0; return; }
+    const need = cb + 8 + (vh - dt);
+    window.__fitK = (window.__fitK || 1) * Math.max(.6, (vh - 2) / need);
+    fit();
+  }
   fit();
   addEventListener("resize", fit);
   if (window.visualViewport) visualViewport.addEventListener("resize", fit);
