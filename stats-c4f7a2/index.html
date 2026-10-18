@@ -64,6 +64,20 @@ td:first-child { padding-right: 8px; }
 .ladder .st.top .bar i { background: linear-gradient(90deg, #ffe680, #f5c518 60%, #c98a00); }
 .foot { text-align: center; font-size: .75rem; }
 .foot button { all: unset; cursor: pointer; text-decoration: underline; }
+
+/* light theme: dark text on white cards, so it reads even if a viewer drops page backgrounds */
+:root { --card: #ffffff; --line: rgba(11,27,77,.16); }
+html, body { background: #e9effc !important; color: #0b1b4d !important; }
+body { background-image: none !important; }
+.wrap { background: #e9effc; }
+.top img { filter: drop-shadow(0 1px 2px rgba(0,0,0,.35)); background: #123a99; border-radius: 12px; padding: 8px 14px; width: 190px; }
+section, .big div { background: #fff !important; box-shadow: 0 1px 3px rgba(11,27,77,.14); color: #0b1b4d; }
+.gauge svg path[stroke="rgba(255,255,255,.15)"] { stroke: rgba(11,27,77,.12); }
+.bar { background: rgba(11,27,77,.12); }
+.err { background: #fde8e8; color: #7a1010; border-color: #d62828; }
+.note, .note a, .foot, .foot button { color: #0b1b4d; }
+.btn { color: #fff; }
+.seg button.on { background: #123a99; color: #fff; border-color: #123a99; }
 </style>
 </head>
 <body>
