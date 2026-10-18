@@ -3002,7 +3002,7 @@ html, body, body.practice { background: #fff !important; }
   document.getElementById("resetKeep").onclick = () => { sheet.hidden = true; };
   sheet.addEventListener("click", ev => { if (ev.target === sheet) sheet.hidden = true; });
   document.getElementById("resetGo").onclick = () => {
-    try { ["ogb2", "ogFun", "ogVoHi", "ogX"].forEach(k => localStorage.removeItem(k)); } catch (e) {}
+    try { ["ogb2", "ogFun", "ogVoHi", "ogX", "ogHowDone"].forEach(k => localStorage.removeItem(k)); } catch (e) {}
     try { sessionStorage.clear(); } catch (e) {}
     try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "restart", title: "Restarted the game", event: true }); } catch (e) {}
     try { document.querySelectorAll("audio, video").forEach(a => a.pause()); } catch (e) {}
