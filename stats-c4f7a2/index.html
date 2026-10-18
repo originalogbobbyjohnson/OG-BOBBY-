@@ -79,20 +79,30 @@ const app = $("#app");
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const clean = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9_.-]+/g, "-").slice(0, 60);
 
+let diag = "";
+const wait = ms => new Promise(r => setTimeout(r, ms));
 async function one(k) {
   k = clean(k);
-  try { const r = await fetch("https://abacus.jasoncameron.dev/get/" + NS + "/" + k, { cache: "no-store" }); if (r.status === 404) return { v: 0, ok: true }; if (r.ok) { const j = await r.json(); return { v: +j.value || 0, ok: true }; } } catch (e) {}
-  try { const r = await fetch("https://api.counterapi.dev/v1/" + NS + "/" + k, { cache: "no-store" }); if (r.status === 404 || r.status === 400) return { v: 0, ok: true }; if (r.ok) { const j = await r.json(); return { v: +(j.count != null ? j.count : j.value) || 0, ok: true }; } } catch (e) {}
+  for (let t = 0; t < 3; t++) {
+    try { const r = await fetch("https://abacus.jasoncameron.dev/get/" + NS + "/" + k, { cache: "no-store" }); if (r.status === 404) return { v: 0, ok: true }; if (r.ok) { const j = await r.json(); return { v: +j.value || 0, ok: true }; } diag = "abacus " + r.status; } catch (e) { diag = "abacus blocked"; }
+    try { const r = await fetch("https://api.counterapi.dev/v1/" + NS + "/" + k, { cache: "no-store" }); if (r.status === 404 || r.status === 400) return { v: 0, ok: true }; if (r.ok) { const j = await r.json(); return { v: +(j.count != null ? j.count : j.value) || 0, ok: true }; } diag += " / counterapi " + r.status; } catch (e) { diag += " / counterapi blocked"; }
+    await wait(700 * (t + 1));
+  }
   return { v: 0, ok: false };
+}
+async function pool(keys, n) {
+  const out = keys.map(() => ({ v: 0, ok: false })); let i = 0, oks = 0, fails = 0;
+  await Promise.all(Array.from({ length: n }, async () => { while (i < keys.length) { if (fails >= 6 && !oks) break; const j = i++; out[j] = await one(keys[j]); if (out[j].ok) oks++; else fails++; } }));
+  return out;
 }
 
 async function load() {
   app.innerHTML = '<p class="k" style="text-align:center">LOADING…</p>';
   const keys = ["players", "started", "rank-corner-kid", "rank-og-soldier", "rank-og-protege", "streaks", "lightning", "share-rank", "share-lightning", "remind-vol2", "trophy-case", "fun-runs", "restarts", "secret-store", "secret-moon", "secret-bridge", "secret-caddy"];
   SONGS.forEach(s => { keys.push("played-" + s.slug, "finished-" + s.slug); s.q.forEach((_, g) => keys.push("right-" + s.slug + "-q" + (g + 1), "wrong-" + s.slug + "-q" + (g + 1))); });
-  const res = await Promise.all(keys.map(one));
+  const res = await pool(keys, 4);
   const c = {}; let reached = 0; keys.forEach((k, i) => { c[clean(k)] = res[i].v; if (res[i].ok) reached++; });
-  if (!reached) { app.innerHTML = '<div class="err">Couldn\'t reach the counters right now. Check your connection and pull down to refresh.</div>'; return; }
+  if (!reached) { app.innerHTML = '<div class="err">Couldn\'t reach the counters right now. Check your connection and tap Refresh.' + (diag ? ' <small>(' + diag + ')</small>' : '') + ' <button id="re2" style="all:unset;text-decoration:underline;cursor:pointer">Refresh</button></div>'; $("#re2").onclick = load;; return; }
   render(k => c[clean(k)] || 0);
 }
 
