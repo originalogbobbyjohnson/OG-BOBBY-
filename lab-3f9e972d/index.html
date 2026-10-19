@@ -2609,7 +2609,7 @@ html, body, body.practice { background: #fff !important; }
 (function () { const b = document.querySelector(".slide-intro .fun-btn"); if (b) b.textContent = "PLAY AGAIN FOR FUN"; })();
 </script>
 <style>
-/* Season 2 board: "Dropping Nov. 1 · one single a week" stamped across it until it goes live */
+/* Season 2 board: "Dropping Nov. 17 · one single a week" stamped across it until it goes live */
 .mv.v2 { position: relative; }
 .mv.v2 .mv-body { opacity: .45; }
 .v2-drop { position: absolute; left: 50%; top: calc(50% + 15px); transform: translate(-50%, -50%) rotate(-8deg); z-index: 3; pointer-events: none;
@@ -2621,8 +2621,8 @@ html, body, body.practice { background: #fff !important; }
 <script>
 (function () {
   const v2 = document.querySelector(".mv.v2"); if (!v2 || v2.querySelector(".v2-drop")) return;
-  const d = document.createElement("div"); d.className = "v2-drop"; d.setAttribute("aria-label", "Season 2 dropping November 1st, one single a week");
-  d.innerHTML = "<b>DROPPING NOV. 1</b><i>ONE SINGLE A WEEK</i>";
+  const d = document.createElement("div"); d.className = "v2-drop"; d.setAttribute("aria-label", "Season 2 dropping November 17th, one single a week");
+  d.innerHTML = "<b>DROPPING NOV. 17</b><i>ONE SINGLE A WEEK</i>";
   v2.append(d);
 })();
 </script>
@@ -3100,7 +3100,7 @@ html, body, body.practice { background: #fff !important; }
 .og-bar .og-rec .spin .lbl > .by { margin-top: 3px !important; }
 </style>
 <style>
-/* DROPPING NOV. 1 bigger and easier to read */
+/* DROPPING NOV. 17 bigger and easier to read */
 .v2-drop b { font-size: .78rem !important; }
 @media (min-width: 600px) { .v2-drop b { font-size: .95rem !important; } }
 </style>
@@ -3391,8 +3391,8 @@ html, body, body.practice { background: #fff !important; }
   }
 
   /* ===================== 2 + 3. SEASON 2 COUNTDOWN + REMIND ME ===================== */
-  // first single Sunday Nov 1, 2026 (9 AM New York time), then one a week for 9 weeks
-  const DROP0 = Date.parse("2026-11-01T09:00:00-05:00"), WEEK = 7 * 864e5;
+  // first single Tuesday Nov 17, 2026 (9 AM New York time), then one a week for 9 weeks
+  const DROP0 = Date.parse("2026-11-17T09:00:00-05:00"), WEEK = 7 * 864e5;
   function nextDrop(now) {
     for (let k = 0; k < 9; k++) { const t = DROP0 + k * WEEK; if (t > now) return { t, k }; }
     return null;
