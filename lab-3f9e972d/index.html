@@ -2621,8 +2621,8 @@ html, body, body.practice { background: #fff !important; }
 <script>
 (function () {
   const v2 = document.querySelector(".mv.v2"); if (!v2 || v2.querySelector(".v2-drop")) return;
-  const d = document.createElement("div"); d.className = "v2-drop"; d.setAttribute("aria-label", "Season 2 dropping November 17th, one single a week");
-  d.innerHTML = "<b>DROPPING NOV. 17</b><i>ONE SINGLE A WEEK</i>";
+  const d = document.createElement("div"); d.className = "v2-drop"; d.setAttribute("aria-label", "Season 2 coming soon, one single a week");
+  d.innerHTML = "<b>COMING SOON</b><i>ONE SINGLE A WEEK</i>";
   v2.append(d);
 })();
 </script>
@@ -3391,8 +3391,8 @@ html, body, body.practice { background: #fff !important; }
   }
 
   /* ===================== 2 + 3. SEASON 2 COUNTDOWN + REMIND ME ===================== */
-  // first single Tuesday Nov 17, 2026 (9 AM New York time), then one a week for 9 weeks
-  const DROP0 = Date.parse("2026-11-17T09:00:00-05:00"), WEEK = 7 * 864e5;
+  // first single Tuesday Dec 1, 2026 (kept secret on the page: shows COMING SOON until the first drop) (9 AM New York time), then one a week for 9 weeks
+  const DROP0 = Date.parse("2026-12-01T09:00:00-05:00"), WEEK = 7 * 864e5;
   function nextDrop(now) {
     for (let k = 0; k < 9; k++) { const t = DROP0 + k * WEEK; if (t > now) return { t, k }; }
     return null;
@@ -3400,6 +3400,7 @@ html, body, body.practice { background: #fff !important; }
   function cdText() {
     const now = Date.now(), nd = nextDrop(now);
     if (!nd) return { k: "SEASON 2", n: "ALL 9 SINGLES ARE OUT" };
+    if (nd.k === 0) return { k: "SEASON 2", n: "COMING SOON" };
     let s = Math.max(0, Math.floor((nd.t - now) / 1000));
     const d = Math.floor(s / 86400); s -= d * 86400; const h = Math.floor(s / 3600); s -= h * 3600; const m = Math.floor(s / 60);
     const n = d > 0 ? d + (d === 1 ? " DAY " : " DAYS ") + h + " HRS" : h > 0 ? h + " HRS " + m + " MIN" : m + " MIN";
