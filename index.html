@@ -3385,13 +3385,28 @@ html, body, body.practice { background: #fff !important; }
     const wait = sheet('<p class="k">MAKING YOUR CARD…</p>');
     let blob = null; try { blob = await makeCard(kind, big, small); } catch (e) {}
     wait.close();
-    if (!blob) return;
     tr("share/" + kind, "Shared: " + kind);
-    const file = new File([blob], "og-bobby-" + kind + ".png", { type: "image/png" });
-    try { if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], text: text + " " + SITE }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
-    const url = URL.createObjectURL(blob);
-    sheet('<p class="k">YOUR CARD</p><img class="x-share-img" alt="Your OG Bobby card" src="' + url + '"><p>Press and hold the picture to save it, then post it to your story.</p>' +
-      '<a class="btn x-go" href="' + url + '" download="og-bobby-' + kind + '.png">Save picture</a><button class="btn x-close" type="button" data-close>Close</button>', () => URL.revokeObjectURL(url));
+    const link = SITE + "/";
+    const msg = text + "\nCan you beat me? Play here:\n" + link;
+    const img = blob ? URL.createObjectURL(blob) : "";
+    const file = blob ? new File([blob], "og-bobby-" + kind + ".png", { type: "image/png" }) : null;
+    const s = sheet('<p class="k">' + (kind === "rank" ? "SHARE MY RANK" : "SHARE MY SCORE") + '</p>' +
+      (img ? '<img class="x-share-img" alt="Your OG Bobby card" src="' + img + '">' : '') +
+      '<button class="btn x-go" type="button" data-text>Text a friend</button>' +
+      (blob ? '<button class="btn x-close" type="button" data-pic>Save picture for my story</button>' : '') +
+      '<button class="btn x-close" type="button" data-close>Close</button>', () => { if (img) URL.revokeObjectURL(img); });
+    // Text a friend: sends the message with the game link itself, so it lands as a tappable link that opens the game
+    s.querySelector("[data-text]").onclick = async ev => {
+      const b = ev.currentTarget;
+      try { if (navigator.share) { await navigator.share({ title: "OG Bobby · The Brooklyn Music Game", text: text + "\nCan you beat me? Play here:", url: link }); return; } } catch (e) { return; }
+      if (/iPhone|iPad|Android/i.test(navigator.userAgent)) { location.href = "sms:?&body=" + encodeURIComponent(msg); return; }
+      try { await navigator.clipboard.writeText(msg); b.textContent = "Copied, paste it anywhere"; setTimeout(() => { b.textContent = "Text a friend"; }, 1800); } catch (e) {}
+    };
+    const pic = s.querySelector("[data-pic]");
+    if (pic) pic.onclick = async () => {
+      try { if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file] }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+      const a = document.createElement("a"); a.href = img; a.download = file.name; document.body.append(a); a.click(); a.remove();
+    };
   }
   const shareRank = () => share("rank", rName().toUpperCase(), "MY RANK", "I'm " + rName() + " on OG Bobby's Brooklyn Music Game.");
   window.ogShareRank = shareRank;
