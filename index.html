@@ -1349,13 +1349,13 @@ window.scrollTo(0, 0);
     showRaw(Math.min(RAW.length - 1, rv + d));
   }
   /* Season 2: titles only, everything locked, nothing plays. Add a title here when a song is ready to tease. */
-  const VOL2 = ["After Hours", "Ridge Reels", "Bridgeview to Vegas", "Mikey the Rat", "Fort Hamilton Parkway", "Wall Street Machine \u2013 Episode 1", "The Ridge to the Beach", "Wall Street Machine \u2013 Episode 2", "Everybody\u2019s Bay Ridge"];
+  const VOL2 = ["After Hours", "Bridgeview to Vegas", "Wall Street Machine, Pt. 1", "Ridge Reels", "Mikey the Rat", "Fort Hamilton Parkway", "Wall Street Machine, Pt. 2", "The Ridge to the Beach", "Everybody\u2019s Bay Ridge"];
   function renderV2() {
     let tiles = "";
     for (let i = 0; i < 9; i++) {
       const t = VOL2[i];
-      const ep = t && t.match(/ \u2013 Episode (\d+)$/);
-      tiles += '<div class="v2-tile' + (t ? "" : " unknown") + '"' + (t ? ' aria-label="' + (i + 1) + '. ' + t + '"' : "") + '><span class="v2-n">' + (i + 1) + (ep ? " \u00b7 EP. " + ep[1] : "") + '</span><span class="v2-t"></span><span class="v2-lock">' + lockSvg + '</span></div>';
+      const ep = t && t.match(/, Pt\. (\d+)$/);
+      tiles += '<div class="v2-tile' + (t ? "" : " unknown") + '"' + (t ? ' aria-label="' + (i + 1) + '. ' + t + '"' : "") + '><span class="v2-n">' + (i + 1) + (ep ? " \u00b7 PT. " + ep[1] : "") + '</span><span class="v2-t"></span><span class="v2-lock">' + lockSvg + '</span></div>';
     }
     const have = VOL2.filter(Boolean).length;
     v2Card.innerHTML =
@@ -1367,7 +1367,7 @@ window.scrollTo(0, 0);
       '<p class="v2-story">1999 changed everything for OG. Season 1 gave you nine. Season 2 is nine more, with new questions. Fill them both and they read <b>’99</b>, the full album.</p>' +
       '<div class="v2-grid">' + tiles + '</div>' +
       '<p class="v2-count"><b>' + have + ' of 9</b> revealed · opens after Season 1</p>';
-    v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] ? VOL2[i].replace(/ \u2013 Episode \d+$/, "") : "???"; });
+    v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] ? VOL2[i].replace(/, Pt\. \d+$/, "") : "???"; });
   }
   function showRaw(i) {
     if (i !== rv) rawAudio.pause();
