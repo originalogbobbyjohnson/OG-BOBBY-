@@ -96,11 +96,17 @@ const clean = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCas
 let diag = "";
 const wait = ms => new Promise(r => setTimeout(r, ms));
 async function one(k) {
+  // Read every number from the same counter (abacus) so the page never mixes two sources.
+  // If abacus is busy (too many requests), wait and ask it again instead of switching counters.
   k = clean(k);
-  for (let t = 0; t < 3; t++) {
-    try { const r = await fetch("https://abacus.jasoncameron.dev/get/" + NS + "/" + k, { cache: "no-store" }); if (r.status === 404) return { v: 0, ok: true }; if (r.ok) { const j = await r.json(); return { v: +j.value || 0, ok: true }; } diag = "abacus " + r.status; } catch (e) { diag = "abacus blocked"; }
-    try { const r = await fetch("https://api.counterapi.dev/v1/" + NS + "/" + k, { cache: "no-store" }); if (r.status === 404 || r.status === 400) return { v: 0, ok: true }; if (r.ok) { const j = await r.json(); return { v: +(j.count != null ? j.count : j.value) || 0, ok: true }; } diag += " / counterapi " + r.status; } catch (e) { diag += " / counterapi blocked"; }
-    await wait(700 * (t + 1));
+  let blocked = 0;
+  for (let t = 0; t < 6; t++) {
+    try { const r = await fetch("https://abacus.jasoncameron.dev/get/" + NS + "/" + k, { cache: "no-store" }); if (r.status === 404) return { v: 0, ok: true }; if (r.ok) { const j = await r.json(); return { v: +j.value || 0, ok: true }; } diag = "abacus " + r.status; } catch (e) { diag = "abacus blocked"; blocked++; }
+    if (blocked >= 2) {
+      // abacus can't be reached at all from this phone: use the backup counter for this number instead
+      try { const r = await fetch("https://api.counterapi.dev/v1/" + NS + "/" + k, { cache: "no-store" }); if (r.status === 404 || r.status === 400) return { v: 0, ok: true }; if (r.ok) { const j = await r.json(); return { v: +(j.count != null ? j.count : j.value) || 0, ok: true }; } diag += " / counterapi " + r.status; } catch (e) { diag += " / counterapi blocked"; }
+    }
+    await wait(900 * (t + 1));
   }
   return { v: 0, ok: false };
 }
@@ -114,7 +120,7 @@ async function load() {
   app.innerHTML = '<p class="k" style="text-align:center">LOADING…</p>';
   const keys = ["players", "started", "rank-corner-kid", "rank-og-soldier", "rank-og-protege", "streaks", "lightning", "share-rank", "share-lightning", "remind-vol2", "trophy-case", "fun-runs", "restarts", "secret-store", "secret-moon", "secret-bridge", "secret-caddy"];
   SONGS.forEach(s => { keys.push("played-" + s.slug, "finished-" + s.slug); s.q.forEach((_, g) => keys.push("right-" + s.slug + "-q" + (g + 1), "wrong-" + s.slug + "-q" + (g + 1))); });
-  const res = await pool(keys, 4);
+  const res = await pool(keys, 2);
   const c = {}; let reached = 0; keys.forEach((k, i) => { c[clean(k)] = res[i].v; if (res[i].ok) reached++; });
   if (!reached) { app.innerHTML = '<div class="err">Couldn\'t reach the counters right now. Check your connection and tap Refresh.' + (diag ? ' <small>(' + diag + ')</small>' : '') + ' <button id="re2" style="all:unset;text-decoration:underline;cursor:pointer">Refresh</button></div>'; $("#re2").onclick = load;; return; }
   render(k => c[clean(k)] || 0);
@@ -124,7 +130,8 @@ function render(get) {
   const done = get("rank-og-protege"), soldier = get("rank-og-soldier"), corner = get("rank-corner-kid");
   const started = Math.max(get("started"), corner, soldier, done);
   const visitors = Math.max(get("players"), started);
-  const played = SONGS.reduce((a, s) => a + get("played-" + s.slug), 0);
+  const playsOf = s => Math.max(get("played-" + s.slug), get("finished-" + s.slug));
+  const played = SONGS.reduce((a, s) => a + playsOf(s), 0);
   const finished = SONGS.reduce((a, s) => a + get("finished-" + s.slug), 0);
   const pct = started ? done / started : 0;
   const A = f => { const a = Math.PI * (1 - f), r = 120; return [150 + r * Math.cos(a), 150 - r * Math.sin(a)]; };
@@ -141,8 +148,8 @@ function render(get) {
   h += '<section><h2>HOW FAR PLAYERS GET</h2><div class="ladder">' + steps.map(([l, n, cl]) => '<div class="st' + cl + '"><div class="row"><span>' + l + '</span><b>' + n + (started ? ' · ' + Math.round(n / started * 100) + '%' : '') + '</b></div><div class="bar"><i style="width:' + (started ? Math.round(n / started * 100) : 0) + '%"></i></div></div>').join("") + '</div></section>';
   h += '<div class="big"><div><b>' + visitors + '</b><i>VISITORS</i></div><div><b>' + played + '</b><i>SONG<br>PLAYS</i></div><div><b>' + finished + '</b><i>SONGS<br>FINISHED</i></div><div><b>' + (corner + soldier + done) + '</b><i>RANK-UPS</i></div></div>';
   h += '<section><h2>EACH SONG</h2><table><tr><th>SONG</th><th>PLAYED</th><th>FINISHED</th><th>RATE</th></tr>' + SONGS.map((s, i) => {
-    const p = get("played-" + s.slug), f = get("finished-" + s.slug);
-    return '<tr><td>' + (i + 1) + '. ' + esc(s.t) + '</td><td>' + p + '</td><td>' + f + '</td><td>' + (p ? Math.min(100, Math.round(f / p * 100)) + "%" : "–") + '</td></tr>';
+    const p = playsOf(s), f = get("finished-" + s.slug);
+    return '<tr><td>' + (i + 1) + '. ' + esc(s.t) + '</td><td>' + p + '</td><td>' + f + '</td><td>' + (p ? Math.round(f / p * 100) + "%" : "–") + '</td></tr>';
   }).join("") + '</table></section>';
   const qs = []; SONGS.forEach(s => s.q.forEach((t, g) => { const r = get("right-" + s.slug + "-q" + (g + 1)), w = get("wrong-" + s.slug + "-q" + (g + 1)); if (r + w) qs.push({ s: s.t, t, r, w, miss: w / (r + w) }); }));
   qs.sort((a, b) => b.miss - a.miss || (b.w - a.w));

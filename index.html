@@ -3716,7 +3716,7 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
       try {
         const p = String(path || ""); let m;
         if ((m = p.match(/^play\/(.+)$/))) { hitOnce("played-" + m[1]); if (typeof EPISODES !== "undefined" && EPISODES[0] && m[1] === EPISODES[0].slug) hitOnce("started"); }
-        else if ((m = p.match(/^level-unlocked\/(.+)$/))) hitOnce("finished-" + m[1]);
+        else if ((m = p.match(/^level-unlocked\/(.+)$/))) { hitOnce("played-" + m[1]); hitOnce("finished-" + m[1]); }
         else if ((m = p.match(/^rank\/(.+)$/))) hitOnce("rank-" + m[1]);
         else if ((m = p.match(/^(right|wrong)\/(.+)\/(q\d+)$/))) { const q = "q-" + m[2] + "-" + m[3]; if (!once[clean(q)]) { once[clean(q)] = 1; keep(); hit(m[1] + "-" + m[2] + "-" + m[3]); } }
         else if (/^streak\//.test(p)) hit("streaks");
