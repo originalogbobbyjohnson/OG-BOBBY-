@@ -4013,6 +4013,23 @@ body.practice #cred .cab-row .mv-rks > .mv-rk.won { border-color: #2fa34a !impor
 body.practice #cred .cab-row .mv-rks > .mv-rk b, body.practice #cred .mv.v2 .cab-row .mv-rks > .mv-rk b, body.practice #cred .cab-row .mv-rks > .mv-rk.won b { color: #fff !important; background: none !important; padding: 0 !important; border: 0 !important; box-shadow: none !important; font-size: clamp(.6rem, 2.7vw, .86rem) !important; font-weight: 800 !important; letter-spacing: .02em !important; text-shadow: none !important; white-space: normal !important; overflow: visible !important; text-overflow: clip !important; text-align: center; line-height: 1.05 !important; }
 body.practice #cred .cab-row .mv-rks > .mv-rk svg, body.practice #cred .cab-row .mv-rks > .mv-rk .m-emb { width: 13px !important; height: 15px !important; }
 body.practice #cred .cab-row .mv-rks > .mv-rk { gap: 4px !important; padding: 4px 3px !important; min-height: 30px !important; }
+
+/* ---------- '9 and 9 in red, side by side at the top and bottom of the middle column, each on its own season's side ---------- */
+body.practice #cred .cab-row { align-items: stretch !important; }
+body.practice #cred .cab-row > .mv { align-self: center; }
+body.practice #cred .cab-row .og-bar { height: auto !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; gap: 10px; }
+body.practice #cred .cab-row .og-bar .og-rec { position: relative !important; left: auto !important; top: auto !important; flex: none; }
+body.practice #cred .cab-row .og-bar > .mv-nine { display: none !important; }
+body.practice #cred .cab-row .og-bar::before { inset: auto !important; top: 50% !important; left: 50% !important; width: calc(100% + 20px) !important; aspect-ratio: 1; height: auto !important; transform: translate(-50%, -50%); }
+.cab-nines { display: flex; width: 100%; gap: 5px; position: relative; z-index: 7; pointer-events: none; }
+.cab-nines > span { flex: 1; display: flex; align-items: flex-start; }
+.cab-nines > .l { justify-content: flex-end; }
+.cab-nines > .r { justify-content: flex-start; }
+.cab-nines .tick { font-family: "Anton", Impact, sans-serif; font-size: 2.1rem; line-height: .8; color: #e0392b; text-shadow: 1px 2px 0 #000; margin-right: -1px; }
+.cab-nines svg.nine { width: 21px !important; height: 32px !important; filter: drop-shadow(1px 2px 0 #000); }
+.cab-nines svg, .cab-nines svg * { fill: #e0392b !important; stroke: #e0392b !important; }
+.cab-nines svg.nine g:first-child { stroke: transparent !important; }
+@media (min-width: 600px) { body.practice #cred .cab-row .og-bar { gap: 22px !important; } .cab-nines .tick { font-size: 2.7rem; } .cab-nines svg.nine { width: 27px !important; height: 41px !important; } .cab-nines { gap: 7px; } }
 </style>
 <script>
 /* keeps the cabinet in step with the game: pop-up mode while Welcome Back shows, NEXT on the first unfinished episode */
@@ -4028,6 +4045,12 @@ body.practice #cred .cab-row .mv-rks > .mv-rk { gap: 4px !important; padding: 4p
     let row = document.querySelector("#cred .cab-row");
     if (!row) { row = document.createElement("div"); row.className = "cab-row"; v1.parentNode.insertBefore(row, v1); }
     if (row.children[0] !== v1 || row.children[1] !== bar || row.children[2] !== v2) row.append(v1, bar, v2);
+    const l = bar.querySelector(".mv-nine.l"), r = bar.querySelector(".mv-nine.r");
+    if (l && r && !bar.querySelector(".cab-nines")) {
+      const make = cls => { const d = document.createElement("div"); d.className = "cab-nines " + cls; d.setAttribute("aria-hidden", "true");
+        d.innerHTML = '<span class="l">' + l.innerHTML + '</span><span class="r">' + r.innerHTML + '</span>'; return d; };
+      bar.prepend(make("top")); bar.append(make("bottom"));
+    }
   }
   function sync() {
     sides();
