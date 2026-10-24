@@ -3959,7 +3959,7 @@ body.practice #cred .cab-row .og-bar .mv-nine.l { left: -4px !important; right: 
 body.practice #cred .cab-row .og-bar .mv-nine.r { right: -4px !important; left: auto !important; }
 body.practice #cred .cab-row .og-bar .mv-nine .tick { color: #e0392b !important; font-size: 1.7rem !important; text-shadow: 1px 2px 0 #000; }
 body.practice #cred .cab-row .og-bar .mv-nine svg.nine { width: 17px !important; height: 26px !important; filter: drop-shadow(1px 2px 0 #000); }
-body.practice #cred .cab-row .og-bar .mv-nine svg, body.practice #cred .cab-row .og-bar .mv-nine svg * { fill: #e0392b !important; stroke: #e0392b !important; }
+body.practice #cred .cab-row .og-bar .mv-nine svg, body.practice #cred .cab-row .og-bar .mv-nine svg * { fill: none !important; stroke: #e0392b !important; }
 body.practice #cred .cab-row .og-bar .mv-nine svg.nine g:first-child { stroke: transparent !important; }
 body.practice #cred .cab-row .og-bar { width: 132px !important; height: 132px !important; display: block !important; }
 body.practice .cab-row .og-bar .og-rec, body.practice .cab-row .cab-play { width: 132px !important; height: 132px !important; }
@@ -4027,9 +4027,15 @@ body.practice #cred .cab-row .og-bar::before { inset: auto !important; top: 50% 
 .cab-nines > .r { justify-content: flex-start; }
 .cab-nines .tick { font-family: "Anton", Impact, sans-serif; font-size: 2.1rem; line-height: .8; color: #e0392b; text-shadow: 1px 2px 0 #000; margin-right: -1px; }
 .cab-nines svg.nine { width: 21px !important; height: 32px !important; filter: drop-shadow(1px 2px 0 #000); }
-.cab-nines svg, .cab-nines svg * { fill: #e0392b !important; stroke: #e0392b !important; }
+.cab-nines svg, .cab-nines svg * { fill: none !important; stroke: #e0392b !important; }
 .cab-nines svg.nine g:first-child { stroke: transparent !important; }
 @media (min-width: 600px) { body.practice #cred .cab-row .og-bar { gap: 22px !important; } .cab-nines .tick { font-size: 2.7rem; } .cab-nines svg.nine { width: 27px !important; height: 41px !important; } .cab-nines { gap: 7px; } }
+
+/* ---------- breathing room under the board, bigger episode title ---------- */
+body.practice #cred .cab-row { margin-bottom: 18px !important; }
+body.practice #player .hdr3 { margin-top: 6px !important; gap: 2px !important; }
+body.practice #player #pTitle { font-size: 1.85rem !important; line-height: 1.05 !important; }
+@media (min-width: 600px) { body.practice #player #pTitle { font-size: 2.2rem !important; } body.practice #cred .cab-row { margin-bottom: 24px !important; } }
 </style>
 <script>
 /* keeps the cabinet in step with the game: pop-up mode while Welcome Back shows, NEXT on the first unfinished episode */
