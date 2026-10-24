@@ -4006,6 +4006,13 @@ body.practice .cab-row .cab-play .tag { font-size: 1.3rem; top: -16px; }
   body.practice .cab-row .cab-play .disc svg { width: 56px; height: 56px; }
   body.practice .cab-row .cab-play .tag { font-size: 1.7rem; top: -12px; }
 }
+
+/* ---------- Rank names: full-row pills, white letters, green border when earned, red until then ---------- */
+body.practice #cred .cab-row .mv-rks > .mv-rk { width: 100% !important; box-sizing: border-box; justify-content: center !important; gap: 6px !important; padding: 5px 6px !important; border: 2px solid #e0392b !important; border-radius: 8px !important; background: rgba(0,0,0,.25) !important; box-shadow: none !important; }
+body.practice #cred .cab-row .mv-rks > .mv-rk.won { border-color: #2fa34a !important; }
+body.practice #cred .cab-row .mv-rks > .mv-rk b, body.practice #cred .mv.v2 .cab-row .mv-rks > .mv-rk b, body.practice #cred .cab-row .mv-rks > .mv-rk.won b { color: #fff !important; background: none !important; padding: 0 !important; border: 0 !important; box-shadow: none !important; font-size: clamp(.6rem, 2.7vw, .86rem) !important; font-weight: 800 !important; letter-spacing: .02em !important; text-shadow: none !important; white-space: normal !important; overflow: visible !important; text-overflow: clip !important; text-align: center; line-height: 1.05 !important; }
+body.practice #cred .cab-row .mv-rks > .mv-rk svg, body.practice #cred .cab-row .mv-rks > .mv-rk .m-emb { width: 13px !important; height: 15px !important; }
+body.practice #cred .cab-row .mv-rks > .mv-rk { gap: 4px !important; padding: 4px 3px !important; min-height: 30px !important; }
 </style>
 <script>
 /* keeps the cabinet in step with the game: pop-up mode while Welcome Back shows, NEXT on the first unfinished episode */
