@@ -4036,6 +4036,17 @@ body.practice #cred .cab-row { margin-bottom: 18px !important; }
 body.practice #player .hdr3 { margin-top: 6px !important; gap: 2px !important; }
 body.practice #player #pTitle { font-size: 1.85rem !important; line-height: 1.05 !important; }
 @media (min-width: 600px) { body.practice #player #pTitle { font-size: 2.2rem !important; } body.practice #cred .cab-row { margin-bottom: 24px !important; } }
+
+/* ---------- Gold record ---------- */
+body.practice .og-bar .og-rec .face, body.practice .og-bar .og-rec .spin {
+  background:
+    conic-gradient(from 30deg, rgba(255,255,255,0) 0deg, rgba(255,250,220,.55) 22deg, rgba(255,255,255,0) 55deg, rgba(255,255,255,0) 180deg, rgba(255,250,220,.4) 205deg, rgba(255,255,255,0) 240deg),
+    repeating-radial-gradient(circle, #b8862a 0 1.5px, #e9c25a 1.5px 3px, #c99a35 3px 4.5px),
+    radial-gradient(circle, #f3d478, #b8862a) !important;
+  box-shadow: 0 0 0 2px #6e4f14, 0 8px 22px rgba(0,0,0,.6), 0 0 28px rgba(232,178,58,.45) !important;
+}
+body.practice #cred .cab-row .og-bar::before { background: radial-gradient(circle, rgba(232,178,58,.3), rgba(232,178,58,0) 70%) !important; }
+body.practice .og-bar .og-rec .lbl { box-shadow: inset 0 0 0 2px rgba(255,255,255,.95), inset 0 0 0 4px #8a6a1e !important; }
 </style>
 <script>
 /* keeps the cabinet in step with the game: pop-up mode while Welcome Back shows, NEXT on the first unfinished episode */
