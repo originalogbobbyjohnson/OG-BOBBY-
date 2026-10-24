@@ -3866,7 +3866,8 @@ html, body, body.practice { background: var(--cab-night) !important; }
 body.practice .wrap { background: var(--cab-body) !important; box-shadow: inset 0 0 0 2px var(--cab-rim); border-radius: 22px 22px 0 0; }
 .practice .game-title { color: #fff !important; }
 .practice .cover > img { border-color: var(--cab-rim) !important; }
-.practice .cred, .practice section#cred { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+body.practice header .cover { overflow: hidden !important; }
+.practice .cred, .practice section#cred { background: transparent !important; border: 0 !important; box-shadow: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
 body.practice #cred .cred-name, body.practice #cred .mv-head .t { color: #fff !important; }
 .practice .mv-head { border-color: var(--cab-rim) !important; }
 .practice .mv.v1 .mv-head { border-color: #fff !important; }
@@ -3898,6 +3899,36 @@ body.practice #cred .mv.v2 .mv-rk, body.practice #cred .mv.v2 .mv-rk b { color: 
 #cabVeil > .slide-intro.welcome { position: static !important; transform: none !important; width: min(340px, 100%) !important; height: auto !important; min-height: 0 !important; padding: 22px 16px 18px !important; background: linear-gradient(160deg, #2148b8, #17307e) !important; border: 2px solid rgba(255,255,255,.28) !important; border-radius: 20px !important; box-shadow: 0 20px 50px rgba(0,0,0,.6) !important; color: #fff; animation: cabDrop .35s ease-out; zoom: var(--z, 1); }
 @keyframes cabDrop { from { opacity: 0; transform: translateY(10px) scale(.96); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .practice #list .ep.cab-next, #cabVeil > .slide-intro.welcome { animation: none; } }
+
+/* ---------- One board: no separate blue control card, the record in the middle is the big PLAY ME button ---------- */
+body.practice .stage-wrap, body.practice .stage-wrap.ends { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+body.practice .stage-wrap::before, body.practice .stage-wrap::after, body.practice .stage::before, body.practice .stage::after { display: none !important; }
+body.practice .stage, body.practice #player.player { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+body.practice #player .hdr3 .album-release { display: none !important; }
+body.practice #player .hdr3 { display: grid !important; justify-items: center; text-align: center; }
+body.practice #player .hdr3 { grid-template-columns: 1fr !important; }
+body.practice #player #pTitle { font-size: 1.4rem !important; width: 100%; max-width: none !important; text-wrap: balance; }
+body.practice.cab-ep #play { display: none !important; }
+body.practice .og-bar { position: relative; }
+body.practice .og-bar .og-rec { width: 150px !important; height: 150px !important; cursor: pointer; }
+.cab-play { all: unset; pointer-events: auto !important; position: absolute; z-index: 6; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.cab-play[hidden] { display: none !important; }
+@media (min-width: 600px) { body.practice .og-bar .og-rec { width: 190px !important; height: 190px !important; } .cab-play { width: 190px; height: 190px; } .cab-play .disc { width: 104px; height: 104px; } .cab-play .disc svg { width: 48px; height: 48px; } .cab-play .tag { top: -26px; font-size: 1.6rem; } }
+.cab-play .disc { width: 86px; height: 86px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 40% 35%, #ff5a4a, #d63a2f 60%, #a3221a); border: 3px solid #fff; box-shadow: 0 6px 18px rgba(0,0,0,.6); animation: cabRing 1.3s ease-out infinite; }
+.cab-play .disc svg { width: 40px; height: 40px; fill: #fff; margin-left: 6px; }
+.cab-play .tag { position: absolute; left: 50%; top: -18px; transform: translateX(-50%); font: 400 1.35rem/1 "Anton", Impact, sans-serif; letter-spacing: .08em; color: #fff; background: #d63a2f; border: 2px solid #fff; border-radius: 10px; padding: 6px 14px 5px; white-space: nowrap; box-shadow: 0 6px 14px rgba(0,0,0,.55); animation: cabBounce 1s ease-in-out infinite; }
+.cab-play .tag::after { content: ""; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%); border: 8px solid transparent; border-top-color: #fff; border-bottom: 0; }
+.cab-play .ep { position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%); font: 800 .7rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .14em; color: #fff; background: rgba(0,0,0,.75); border-radius: 99px; padding: 4px 10px; white-space: nowrap; }
+.cab-play.pause .disc { width: 54px; height: 54px; background: rgba(0,0,0,.55); border-width: 2px; animation: none; opacity: .85; }
+.cab-play.pause .disc svg { width: 24px; height: 24px; margin: 0; }
+.cab-play.pause .tag { display: none; }
+.cab-play.answer .disc { display: none; }
+.cab-play.answer .tag { top: auto; bottom: -26px; animation: cabBounce 1s ease-in-out infinite; }
+.cab-play.answer .ep { display: none; }
+.cab-play:focus-visible .disc { outline: 3px solid #fff; outline-offset: 4px; }
+@keyframes cabRing { 0% { box-shadow: 0 6px 18px rgba(0,0,0,.6), 0 0 0 0 rgba(214,58,47,.8); } 100% { box-shadow: 0 6px 18px rgba(0,0,0,.6), 0 0 0 22px rgba(214,58,47,0); } }
+@keyframes cabBounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -7px); } }
+@media (prefers-reduced-motion: reduce) { .cab-play .disc, .cab-play .tag { animation: none; } }
 </style>
 <script>
 /* keeps the cabinet in step with the game: pop-up mode while Welcome Back shows, NEXT on the first unfinished episode */
@@ -3915,10 +3946,40 @@ body.practice #cred .mv.v2 .mv-rk, body.practice #cred .mv.v2 .mv-rk b { color: 
       else if (!wbOn && intro.parentNode === veil) { home.insertBefore(intro, homeNext && homeNext.parentNode === home ? homeNext : null); }
       if (veil.hidden === wbOn) veil.hidden = !wbOn;
     }
+    paintPlay();
     const eps = [...document.querySelectorAll("#list .ep")];
     const nxt = eps.find(b => !b.querySelector(".s.open"));
     eps.forEach(b => { const want = b === nxt; if (b.classList.contains("cab-next") !== want) b.classList.toggle("cab-next", want); });
   }
+  // the big PLAY ME button over the record
+  const audioEl = document.getElementById("audio");
+  const play = document.createElement("button");
+  play.type = "button"; play.className = "cab-play"; play.hidden = true;
+  play.innerHTML = '<span class="tag">PLAY ME</span><span class="disc"><svg viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></svg></span>';
+  const tri = '<svg viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></svg>', bars = '<svg viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>';
+  play.addEventListener("click", () => {
+    if (play.classList.contains("answer")) { const q = document.querySelector("#quiz .opt:not([disabled])"); if (q) q.scrollIntoView({ block: "center", behavior: "smooth" }); return; }
+    const b = document.getElementById("play"); if (b) b.click();
+  });
+  function paintPlay() {
+    const bar = document.querySelector(".og-bar");
+    if (bar && play.parentNode !== bar) bar.append(play);
+    const stage = document.querySelector(".stage");
+    const onEp = !!(stage && stage.dataset.v === "ep") && document.getElementById("cabVeil").hidden;
+    if (document.body.classList.contains("cab-ep") !== onEp) document.body.classList.toggle("cab-ep", onEp);
+    const playing = audioEl && !audioEl.paused && !audioEl.ended;
+    const quiz = document.getElementById("quiz");
+    const waiting = !playing && quiz && quiz.classList.contains("on") && audioEl && audioEl.currentTime > 1;
+    const mode = !onEp ? "" : playing ? "pause" : waiting ? "answer" : "go";
+    if (play.dataset.mode !== mode) {
+      play.dataset.mode = mode; play.hidden = !mode;
+      play.classList.toggle("pause", mode === "pause"); play.classList.toggle("answer", mode === "answer");
+      play.querySelector(".tag").textContent = mode === "answer" ? "ANSWER BELOW" : "PLAY ME";
+      play.querySelector(".disc").innerHTML = mode === "pause" ? bars : tri;
+      play.setAttribute("aria-label", mode === "pause" ? "Pause" : mode === "answer" ? "Answer the question below" : "Play this episode");
+    }
+  }
+  if (audioEl) ["play", "pause", "ended", "seeked"].forEach(ev => audioEl.addEventListener(ev, () => requestAnimationFrame(sync)));
   let t = 0;
   const later = () => { cancelAnimationFrame(t); t = requestAnimationFrame(sync); };
   new MutationObserver(later).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ["class", "data-v", "hidden"] });
