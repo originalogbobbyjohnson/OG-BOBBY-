@@ -3929,6 +3929,55 @@ body.practice .og-bar .og-rec { width: 150px !important; height: 150px !importan
 @keyframes cabRing { 0% { box-shadow: 0 6px 18px rgba(0,0,0,.6), 0 0 0 0 rgba(214,58,47,.8); } 100% { box-shadow: 0 6px 18px rgba(0,0,0,.6), 0 0 0 22px rgba(214,58,47,0); } }
 @keyframes cabBounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -7px); } }
 @media (prefers-reduced-motion: reduce) { .cab-play .disc, .cab-play .tag { animation: none; } }
+
+/* ---------- Seasons on both sides of the record: big number boxes, the record in the middle, '9 and 9 hugging the record in red ---------- */
+body.practice #cred .cab-row { grid-column: 1 / -1 !important; width: 100% !important; display: grid !important; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 10px; margin-top: 8px; }
+body.practice #cred .cab-row > .mv { min-width: 0; margin: 0 !important; padding: 0 !important; display: grid !important; gap: 6px; align-content: center; grid-column: auto !important; }
+body.practice #cred .cab-row .mv-head { display: flex !important; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 3px 6px; height: auto !important; margin: 0 !important; padding: 0 0 5px !important; border-bottom-width: 2px !important; }
+body.practice #cred .cab-row .mv-head .t { font-size: .78rem !important; letter-spacing: .14em !important; white-space: nowrap; }
+body.practice #cred .cab-row .mv-body { display: grid !important; grid-template-columns: 1fr !important; gap: 8px !important; height: auto !important; }
+body.practice #cred .cab-row #list.on-meter, body.practice #cred .cab-row .v2-eps { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; grid-template-rows: none !important; grid-auto-rows: auto !important; align-items: start !important; gap: 6px !important; width: 100% !important; height: auto !important; margin: 0 !important; padding: 0 !important; }
+body.practice #cred .cab-row #list.on-meter li { display: block !important; width: auto !important; height: auto !important; aspect-ratio: 1; margin: 0 !important; }
+body.practice #cred .cab-row #list.on-meter li .ep { height: 100% !important; aspect-ratio: auto; }
+body.practice #cred .cab-row .v2-eps .v2-ep { aspect-ratio: 1; height: auto !important; }
+body.practice #cred .cab-row #list .ep, body.practice #cred .cab-row .v2-ep { width: 100% !important; height: auto !important; aspect-ratio: 1; min-height: 0 !important; display: grid !important; place-items: center; border-radius: 9px !important; font-size: clamp(1.05rem, 5vw, 1.6rem) !important; }
+body.practice #cred .cab-row #list .ep .n { font-size: clamp(1.05rem, 5vw, 1.6rem) !important; line-height: 1 !important; }
+body.practice #cred .cab-row #list .ep { transition: transform .12s; }
+body.practice #cred .cab-row #list .ep:active { transform: scale(.92); }
+@media (hover: hover) { body.practice #cred .cab-row #list .ep:hover { transform: scale(1.08); } }
+body.practice #cred .cab-row .mv-rks { display: grid !important; grid-template-rows: none !important; gap: 3px !important; height: auto !important; }
+body.practice #cred .cab-row .mv-rks .mv-rk { height: auto !important; min-height: 0 !important; display: flex !important; align-items: center; gap: 4px; padding: 0 !important; }
+body.practice #cred .cab-row .mv-rks .mv-rk b { font-size: clamp(.5rem, 2.3vw, .72rem) !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+body.practice #cred .cab-row .mv-rks .mv-rk svg, body.practice #cred .cab-row .mv-rks .mv-rk .m-emb { flex: none; width: 14px !important; height: 16px !important; }
+body.practice #cred .cab-row .og-bar { margin: 0 !important; width: auto !important; position: relative !important; grid-column: 2 !important; grid-row: 1 !important; }
+body.practice #cred .cab-row > .mv.v1 { grid-column: 1 !important; grid-row: 1 !important; }
+body.practice #cred .cab-row > .mv.v2 { grid-column: 3 !important; grid-row: 1 !important; }
+body.practice #cred .cab-row .mv-rks .mv-rk { margin: 0 !important; line-height: 1.1 !important; }
+body.practice #cred .cab-row .og-bar::before, body.practice #cred .cab-row .og-bar::after { display: none !important; }
+body.practice #cred .cab-row .og-bar .mv-nine { position: absolute !important; top: auto !important; bottom: -6px; transform: none !important; z-index: 7; }
+body.practice #cred .cab-row .og-bar .mv-nine.l { left: -4px !important; right: auto !important; }
+body.practice #cred .cab-row .og-bar .mv-nine.r { right: -4px !important; left: auto !important; }
+body.practice #cred .cab-row .og-bar .mv-nine .tick { color: #e0392b !important; font-size: 1.7rem !important; text-shadow: 1px 2px 0 #000; }
+body.practice #cred .cab-row .og-bar .mv-nine svg.nine { width: 17px !important; height: 26px !important; filter: drop-shadow(1px 2px 0 #000); }
+body.practice #cred .cab-row .og-bar .mv-nine svg, body.practice #cred .cab-row .og-bar .mv-nine svg * { fill: #e0392b !important; stroke: #e0392b !important; }
+body.practice #cred .cab-row .og-bar .mv-nine svg.nine g:first-child { stroke: transparent !important; }
+body.practice #cred .cab-row .og-bar { width: 132px !important; height: 132px !important; display: block !important; }
+body.practice .cab-row .og-bar .og-rec, body.practice .cab-row .cab-play { width: 132px !important; height: 132px !important; }
+body.practice #cred .cab-row .og-bar .og-rec { position: absolute !important; left: 0 !important; top: 0 !important; margin: 0 !important; }
+body.practice .cab-row .cab-play .disc { width: 74px; height: 74px; }
+body.practice .cab-row .cab-play .disc svg { width: 34px; height: 34px; }
+body.practice .cab-row .cab-play .tag { font-size: 1.15rem; top: -14px; padding: 5px 10px 4px; }
+@media (min-width: 600px) {
+  body.practice #cred .cab-row .og-bar { width: 190px !important; height: 190px !important; }
+  body.practice .cab-row .og-bar .og-rec, body.practice .cab-row .cab-play { width: 190px !important; height: 190px !important; }
+  body.practice .cab-row .cab-play .disc { width: 104px; height: 104px; }
+  body.practice .cab-row .cab-play .disc svg { width: 48px; height: 48px; }
+  body.practice .cab-row .cab-play .tag { font-size: 1.6rem; top: -24px; }
+  body.practice #cred .cab-row { gap: 18px; }
+  body.practice #cred .cab-row .mv-head .t { font-size: .95rem !important; }
+  body.practice #cred .cab-row .og-bar .mv-nine .tick { font-size: 2.2rem !important; }
+  body.practice #cred .cab-row .og-bar .mv-nine svg.nine { width: 22px !important; height: 34px !important; }
+}
 </style>
 <script>
 /* keeps the cabinet in step with the game: pop-up mode while Welcome Back shows, NEXT on the first unfinished episode */
@@ -3937,7 +3986,16 @@ body.practice .og-bar .og-rec { width: 150px !important; height: 150px !importan
   veil.id = "cabVeil"; veil.hidden = true; veil.setAttribute("role", "dialog"); veil.setAttribute("aria-modal", "true"); veil.setAttribute("aria-label", "Welcome back");
   document.body.append(veil);
   let home = null, homeNext = null;
+  // seasons on both sides of the record
+  function sides() {
+    const bar = document.querySelector("#cred .og-bar"), v1 = document.querySelector("#cred .mv.v1"), v2 = document.querySelector("#cred .mv.v2");
+    if (!bar || !v1 || !v2) return;
+    let row = document.querySelector("#cred .cab-row");
+    if (!row) { row = document.createElement("div"); row.className = "cab-row"; v1.parentNode.insertBefore(row, v1); }
+    if (row.children[0] !== v1 || row.children[1] !== bar || row.children[2] !== v2) row.append(v1, bar, v2);
+  }
   function sync() {
+    sides();
     const stage = document.querySelector(".stage");
     const intro = document.querySelector(".slide-intro");
     if (stage && intro) {
@@ -3969,7 +4027,9 @@ body.practice .og-bar .og-rec { width: 150px !important; height: 150px !importan
     if (document.body.classList.contains("cab-ep") !== onEp) document.body.classList.toggle("cab-ep", onEp);
     const playing = audioEl && !audioEl.paused && !audioEl.ended;
     const quiz = document.getElementById("quiz");
-    const waiting = !playing && quiz && quiz.classList.contains("on") && audioEl && audioEl.currentTime > 1;
+    let atStop = false;
+    try { const e = EPISODES[idx]; atStop = !!e && sec < e.cuts.length && (audioEl.ended || (audioEl.duration && audioEl.currentTime >= audioEl.duration - 0.3)); } catch (err) {}
+    const waiting = !playing && quiz && quiz.classList.contains("on") && atStop;
     const mode = !onEp ? "" : playing ? "pause" : waiting ? "answer" : "go";
     if (play.dataset.mode !== mode) {
       play.dataset.mode = mode; play.hidden = !mode;
