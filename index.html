@@ -4057,6 +4057,20 @@ body.practice .og-bar .og-rec .lbl { box-shadow: inset 0 0 0 2px rgba(255,255,25
 @media (min-width: 600px) { .cab-season .tick { font-size: 3.2rem; } .cab-season svg.nine { width: 33px !important; height: 50px !important; } }
 /* the bottom tile label is longer now */
 .switchboard .sb-tile .sb-lab { white-space: nowrap; }
+
+/* ---------- Season headers match: name and pill on one line, both at the top of their side ---------- */
+body.practice #cred .cab-row > .mv { align-self: start !important; }
+body.practice #cred .cab-row .mv-head { flex-wrap: nowrap !important; justify-content: space-between !important; align-items: center !important; gap: 4px !important; min-height: 22px; }
+body.practice #cred .cab-row .mv-head .t { font-size: clamp(.58rem, 2.6vw, .82rem) !important; letter-spacing: .08em !important; flex: none; }
+body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk, body.practice #cred .cab-row .mv.v1 .mv-head .nf { flex: none; margin: 0 !important; padding: 0 !important; }
+body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk b { font-size: clamp(.46rem, 2vw, .66rem) !important; white-space: nowrap; }
+body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk svg, body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk .m-emb { width: 12px !important; height: 12px !important; }
+body.practice #cred .cab-row .mv.v2 .mv-head > span:last-child { flex: none; margin: 0 !important; }
+body.practice #cred .cab-row .mv.v2 .mv-head > span:last-child::after { font-size: clamp(.4rem, 1.6vw, .6rem) !important; padding: 3px 5px !important; letter-spacing: .03em !important; display: inline-block; line-height: 1 !important; }
+body.practice #cred .cab-row > .mv { grid-template-columns: minmax(0, 1fr) !important; }
+body.practice #cred .cab-row .mv-head { height: 24px !important; min-width: 0; }
+body.practice #cred .cab-row .mv-head .t { font-size: clamp(.56rem, 2.3vw, .82rem) !important; }
+body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk b { font-size: clamp(.44rem, 1.75vw, .66rem) !important; }
 </style>
 <script>
 /* keeps the cabinet in step with the game: pop-up mode while Welcome Back shows, NEXT on the first unfinished episode */
