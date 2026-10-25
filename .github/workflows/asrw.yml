@@ -1,0 +1,24 @@
+name: asrw
+on:
+  push:
+    branches: [asr-w]
+permissions:
+  contents: write
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q faster-whisper
+      - run: |
+          mkdir -p asr
+          python3 - > asr/log.txt 2>&1 <<'PY' || true
+          from faster_whisper import WhisperModel
+          m=WhisperModel('small.en',device='cpu',compute_type='int8')
+          segs,_=m.transcribe('m/78a96d218928.mp3',vad_filter=False,condition_on_previous_text=False,beam_size=5)
+          open('asr/wsm.txt','w').write("\n".join(f"[{s.start:.1f}-{s.end:.1f}] {s.text.strip()}" for s in segs))
+          PY
+      - if: always()
+        run: |
+          git config user.name "OG Bobby"; git config user.email originalogbobbyjohnson@gmail.com
+          git add asr/ ; git commit -m "asr wsm" && git push
