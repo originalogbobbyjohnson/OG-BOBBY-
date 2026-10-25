@@ -12,9 +12,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -q faster-whisper==1.1.1 av==12.3.0
+      - run: pip install -q faster-whisper
       - run: |
-          python3 - <<'PY'
+          mkdir -p asr
+          python3 - > asr/log.txt 2>&1 <<'PY' || true
           from faster_whisper import WhisperModel
           import traceback, os
           os.makedirs('asr',exist_ok=True)
@@ -34,4 +35,4 @@ jobs:
       - if: always()
         run: |
           git config user.name "OG Bobby"; git config user.email originalogbobbyjohnson@gmail.com
-          git add asr/ || true; git add asr/sections.txt && git commit -m "asr sections" && git push
+          git add asr/ ; git commit -m "asr sections" && git push
