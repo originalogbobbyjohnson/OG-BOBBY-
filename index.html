@@ -4290,6 +4290,27 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 .cab-score .daily.done { background: transparent; border: 2px solid #2fa34a; padding: 4px 9px; animation: none; }
 .cab-score .daily:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 .cab-score .daily[hidden] { display: none; }
+.cab-score { flex-wrap: wrap; }
+.cab-score .t99 { all: unset; pointer-events: auto !important; position: relative; z-index: 6; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px; border-radius: 99px; border: 2px solid #ffd34d; color: #fff; font: 800 .62rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .1em; }
+.cab-score .t99[hidden] { display: none; }
+.cab-score .t99:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+/* 99 Test special effects: '99 and OG MADE flying at you */
+.fx99 { position: fixed; inset: 0; z-index: 1300; pointer-events: none; overflow: hidden; perspective: 600px; }
+.fx99 .p { position: absolute; left: 50%; top: 45%; display: flex; align-items: flex-start; will-change: transform, opacity; filter: drop-shadow(0 0 12px rgba(214,40,40,.8)); }
+.fx99 .p .nine { width: 1em; height: 1.4em; }
+.fx99 .p .tk { font: 400 1em/1 "Anton", Impact, sans-serif; color: #fff; margin-right: .04em; }
+.fx99 .p.red .nine path, .fx99 .p.red .nine ellipse { stroke: #d62828; }
+.fx99 .w { position: absolute; left: 50%; top: 45%; font: 400 1em/1 "Anton", Impact, sans-serif; letter-spacing: .06em; color: #ffd34d; white-space: nowrap; text-shadow: 3px 3px 0 #000, 0 0 24px rgba(255,211,77,.8); will-change: transform, opacity; }
+.fx99 .flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, rgba(255,211,77,.55), rgba(214,40,40,.25) 40%, transparent 70%); }
+@media (prefers-reduced-motion: reduce) { .fx99 { display: none; } }
+/* 99 question practice test */
+.cab-over.t99 .card { gap: 10px; }
+.cab-over .t99-top { width: 100%; display: flex; justify-content: space-between; align-items: baseline; font: 800 .72rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .16em; }
+.cab-over .t99-top b { color: #2fa34a; }
+.cab-over .t99-bar { width: 100%; height: 6px; border-radius: 99px; background: rgba(255,255,255,.15); overflow: hidden; }
+.cab-over .t99-bar i { display: block; height: 100%; background: #ffd34d; border-radius: 99px; transition: width .3s; }
+.cab-over .ep99 { font: 800 .75rem/1.2 "Barlow", system-ui, sans-serif; letter-spacing: .14em; color: #fff; }
+.cab-over .go[hidden] { display: none; }
 /* stars on cleared episode boxes */
 body.practice #cred .cab-row #list .ep { position: relative; }
 .ep-stars { position: absolute; left: 0; right: 0; bottom: 3px; display: flex; justify-content: center; gap: 1px; pointer-events: none; }
@@ -4371,9 +4392,10 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     let row = document.querySelector(".cab-score");
     if (!row) {
       row = document.createElement("div"); row.className = "cab-score";
-      row.innerHTML = '<span class="pts" aria-live="polite"><b>0</b><i>STREET CRED</i></span><button class="daily" type="button" hidden>★ DAILY QUESTION</button>';
+      row.innerHTML = '<span class="pts" aria-live="polite"><b>0</b><i>STREET CRED</i></span><button class="daily" type="button" hidden>★ DAILY QUESTION</button><button class="t99" type="button" hidden>★ 99 TEST</button>';
       head.after(row);
       row.querySelector(".daily").addEventListener("click", openDaily);
+      row.querySelector(".t99").addEventListener("click", openTest);
     }
     const target = score(), num = row.querySelector(".pts b");
     if (shown === null || !animate) { shown = target; num.textContent = fmtN(target); }
@@ -4389,6 +4411,8 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     const done = P.daily && P.daily.date === today();
     d.classList.toggle("done", !!done);
     d.textContent = done ? (P.daily.ok ? "✓ DAILY DONE" : "✓ DAILY · TOMORROW") : "★ DAILY QUESTION";
+    const tb = row.querySelector(".t99"), all9 = EPISODES.slice(0, N).every(isOpen);
+    if (tb.hidden === all9) tb.hidden = !all9;
   }
 
   /* ---- answers: hot-streak bonus, stars, cleared screen, boss clock ---- */
@@ -4425,14 +4449,15 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
       '<div class="title"></div><div class="stars">' + [0, 1, 2].map(k => starSvg(k < n ? "on" : "off")).join("") + '</div>' +
       '<div class="earn">+' + fmtN(epPoints(e)) + ' STREET CRED</div>' +
       (n < 3 ? '<div class="note">Replay it with no misses for all 3 stars.</div>' : '<div class="note">Perfect. Every answer on the first try.</div>') +
-      (next >= 0 ? '<button class="go" type="button">▶ EPISODE ' + (next + 1) + '</button>' : '<button class="go" type="button">BACK TO THE BOARD</button>') +
+      (next >= 0 ? '<button class="go" type="button">▶ EPISODE ' + (next + 1) + '</button>' : '<div class="note">Bonus unlocked: the 99 Test. All 99 questions, back to back.</div><button class="go t99go" type="button">★ TAKE THE 99 TEST</button><button class="go" type="button">BACK TO THE BOARD</button>') +
       '<button class="link" type="button">Back to the board</button>');
     d.querySelector(".title").textContent = e.title;
     if (next < 0) d.querySelector(".link").remove();
     d.querySelectorAll(".stars svg").forEach((s, k) => setTimeout(() => { s.classList.add("in"); if (k < n) snd("stamp", .5); }, 450 + k * 380));
     snd(last ? "bell" : "spray", .6);
     d.querySelector(".link") && d.querySelector(".link").addEventListener("click", () => d.remove());
-    d.querySelector(".go").addEventListener("click", () => {
+    const tg = d.querySelector(".t99go"); if (tg) tg.addEventListener("click", () => { d.remove(); openTest(); });
+    d.querySelector(".go:not(.t99go)").addEventListener("click", () => {
       d.remove();
       if (next < 0) return;
       const eps = document.querySelectorAll("#list .ep");
@@ -4520,6 +4545,114 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
       });
       box.append(b);
     });
+  }
+
+  /* ---- bonus: the 99 Test (unlocks once all 9 episodes are done; practice only, no Street Cred) ---- */
+  /* special effects: '99s and OG MADE flying out of the screen at you */
+  const fxOK = () => !(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+  function fx99(kind) {
+    if (!fxOK() || typeof nineSvg !== "function") return;
+    const L = document.createElement("div"); L.className = "fx99"; document.body.append(L);
+    const n = { intro: 18, right: 7, ep: 16, final: 36 }[kind] || 7, life = kind === "final" ? 3200 : kind === "right" ? 1300 : 2200;
+    const rand = (a, b) => a + Math.random() * (b - a);
+    const nine = (red, size) => { const p = document.createElement("div"); p.className = "p" + (red ? " red" : ""); p.style.fontSize = size + "px"; p.innerHTML = '<span class="tk">\u2019</span>' + nineSvg(1) + nineSvg(1); return p; };
+    if (kind !== "right") { const f = document.createElement("div"); f.className = "flash"; L.append(f); f.animate([{ opacity: 0 }, { opacity: 1, offset: .15 }, { opacity: 0 }], { duration: 900, easing: "ease-out" }); }
+    for (let k = 0; k < n; k++) {
+      const p = nine(k % 3 === 0, rand(18, 34)), a = rand(0, Math.PI * 2), r = rand(140, 420), spin = rand(-50, 50), delay = kind === "final" ? rand(0, 1400) : rand(0, 250);
+      L.append(p);
+      p.animate([
+        { transform: "translate(-50%,-50%) translate3d(0,0,-400px) scale(.2) rotate(0deg)", opacity: 0 },
+        { opacity: 1, offset: .2 },
+        { transform: "translate(-50%,-50%) translate3d(" + Math.cos(a) * r + "px," + Math.sin(a) * r + "px,420px) scale(2.4) rotate(" + spin + "deg)", opacity: 0 }
+      ], { duration: rand(900, 1500), delay, easing: "cubic-bezier(.2,.6,.3,1)", fill: "both" });
+    }
+    const word = (txt, size, delay, cls) => {
+      const w = document.createElement("div"); w.className = "w"; w.textContent = txt; w.style.fontSize = size + "px"; L.append(w);
+      w.animate([
+        { transform: "translate(-50%,-50%) scale(.1)", opacity: 0 },
+        { transform: "translate(-50%,-50%) scale(1.15)", opacity: 1, offset: .25 },
+        { transform: "translate(-50%,-50%) scale(1)", opacity: 1, offset: .6 },
+        { transform: "translate(-50%,-50%) scale(6)", opacity: 0 }
+      ], { duration: 1500, delay, easing: "ease-out", fill: "both" });
+      return w;
+    };
+    if (kind === "intro" || kind === "final") {
+      const big = nine(true, 90); L.append(big);
+      big.animate([
+        { transform: "translate(-50%,-50%) scale(.05) rotate(-20deg)", opacity: 0 },
+        { transform: "translate(-50%,-50%) scale(1.1) rotate(0deg)", opacity: 1, offset: .35 },
+        { transform: "translate(-50%,-50%) scale(1)", opacity: 1, offset: .6 },
+        { transform: "translate(-50%,-50%) scale(9)", opacity: 0 }
+      ], { duration: 1600, easing: "cubic-bezier(.3,.7,.3,1)", fill: "both" });
+      word("OG MADE", 52, 650);
+      if (kind === "final") { word("THE ALBUM", 40, 1700); setTimeout(() => fx99("right"), 2300); }
+      snd("spray", .6);
+    } else if (kind === "ep") { word("OG MADE", 44, 100); snd("stamp", .6); }
+    setTimeout(() => L.remove(), life + 1600);
+  }
+
+  function testList() { const out = []; EPISODES.slice(0, N).forEach((e, i) => e.qs.forEach((q, g) => poolOf(q).forEach(v => out.push({ i, g, v })))); return out; }
+  const tCount = (e, kind) => { try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "test99/" + kind, title: "99 Test " + kind, event: true }); } catch (err) {} };
+  function openTest() {
+    if (!EPISODES.slice(0, N).every(isOpen)) return;
+    try { document.getElementById("audio").pause(); } catch (e) {}
+    document.querySelectorAll(".cab-over").forEach(x => x.remove());
+    const L = testList(), T = P.t99 && P.t99.at > 0 && P.t99.at < L.length ? P.t99 : null;
+    const best = P.t99best != null ? '<div class="note">Your best: ' + P.t99best + ' / ' + L.length + '</div>' : "";
+    const d = over("t99", '<div class="kick">BONUS · SEASON 1</div><div class="big gold">99 TEST</div>' +
+      (T ? '<div class="note">You’re on question ' + (T.at + 1) + ' of ' + L.length + ', with ' + T.ok + ' right so far.</div><button class="go" type="button">KEEP GOING</button><button class="link fresh" type="button">Start over</button>'
+         : '<div class="note">All ' + L.length + ' questions from Season 1, one after another. Practice only, no Street Cred on the line.</div>' + best + '<button class="go fresh" type="button">START THE TEST</button>') +
+      '<button class="link out" type="button">Not now</button>');
+    d.querySelectorAll(".fresh").forEach(b => b.addEventListener("click", () => { P.t99 = { at: 0, ok: 0 }; keep(); tCount(null, "start"); d.remove(); fx99("intro"); setTimeout(testQ, 1300); }));
+    if (T) d.querySelector(".go").addEventListener("click", () => { d.remove(); fx99("intro"); setTimeout(testQ, 1300); });
+    d.querySelector(".out").addEventListener("click", () => d.remove());
+  }
+  function testQ() {
+    const L = testList(), T = P.t99; if (!T) return;
+    if (T.at >= L.length) return testDone();
+    const { i, g, v } = L[T.at], e = EPISODES[i];
+    const d = over("t99", '<div class="t99-top"><span>QUESTION ' + (T.at + 1) + ' OF ' + L.length + '</span><b>' + T.ok + ' RIGHT</b></div>' +
+      '<div class="t99-bar"><i style="width:' + (T.at / L.length * 100) + '%"></i></div>' +
+      '<div class="ep99"></div><div class="q"></div><div class="opts2"></div><div class="msg2"></div>' +
+      '<button class="go" type="button" hidden>' + (T.at + 1 >= L.length ? "SEE MY SCORE" : "NEXT ▶") + '</button><button class="link" type="button">Save and quit</button>');
+    d.querySelector(".ep99").textContent = "EPISODE " + (i + 1) + " · " + e.title.toUpperCase();
+    d.querySelector(".q").textContent = v.q;
+    const right = Promise.all(v.opts.map(o => check(e.slug, g, o))).then(r => r.indexOf(true));
+    const box = d.querySelector(".opts2"), msg = d.querySelector(".msg2"), nx = d.querySelector(".go");
+    d.querySelector(".link").addEventListener("click", () => d.remove());
+    v.opts.forEach((o, k) => {
+      const b = document.createElement("button"); b.type = "button"; b.className = "opt2"; b.textContent = o;
+      b.addEventListener("click", async () => {
+        box.querySelectorAll(".opt2").forEach(x => x.disabled = true); box.style.pointerEvents = "none";
+        const rk = await right, ok = rk === k;
+        b.classList.add(ok ? "right" : "wrong");
+        if (!ok && rk >= 0) box.children[rk].classList.add("right");
+        T.at++; if (ok) T.ok++; keep();
+        snd(ok ? "right" : "wrong", .6);
+        const epEnd = T.at < L.length && L[T.at].i !== i;   // just finished that episode's questions
+        if (epEnd) fx99("ep"); else if (ok) fx99("right");
+        msg.textContent = ok ? "That’s right." : "Not quite. The green one is the answer.";
+        d.querySelector(".t99-top b").textContent = T.ok + " RIGHT";
+        d.querySelector(".t99-bar i").style.width = (T.at / L.length * 100) + "%";
+        nx.hidden = false; nx.focus({ preventScroll: true });
+      });
+      box.append(b);
+    });
+    nx.addEventListener("click", () => { d.remove(); testQ(); });
+  }
+  function testDone() {
+    const L = testList(), n = P.t99 ? P.t99.ok : 0, total = L.length;
+    const newBest = P.t99best == null || n > P.t99best; if (newBest) P.t99best = n;
+    P.t99 = null; keep(); tCount(null, "finish");
+    const line = n === total ? "Perfect. Every single one. That’s OG." : n >= 90 ? "OG level. Run it back for a perfect " + total + "." : n >= 70 ? "Solid. Run it back for a perfect " + total + "." : "Go back through the episodes and run it again.";
+    const d = over("t99", '<div class="kick">99 TEST · FINAL SCORE</div><div class="big gold">' + n + ' / ' + total + '</div>' +
+      (newBest ? '<div class="earn">NEW BEST</div>' : '<div class="note">Your best: ' + P.t99best + ' / ' + total + '</div>') +
+      '<div class="note"></div><button class="go" type="button">TAKE IT AGAIN</button><button class="link" type="button">Back to the board</button>');
+    d.querySelectorAll(".note")[newBest ? 0 : 1].textContent = line;
+    snd(n === total ? "bell" : "stamp", .6);
+    fx99("final");
+    d.querySelector(".go").addEventListener("click", () => { P.t99 = { at: 0, ok: 0 }; keep(); tCount(null, "start"); d.remove(); fx99("intro"); setTimeout(testQ, 1300); });
+    d.querySelector(".link").addEventListener("click", () => d.remove());
   }
 
   /* ---- keep everything painted ---- */
