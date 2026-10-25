@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>OG Bobby Reels</title><meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@600;800&display=swap">
+<style>
+:root{--bg:#0d0f14;--card:#161a22;--rim:#343b4b;--red:#d63a2f;--green:#2fa34a;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#fff;font-family:Barlow,system-ui,sans-serif}
+.wrap{max-width:520px;margin:0 auto;padding:18px max(16px,env(safe-area-inset-left)) 50px;display:grid;gap:18px}
+header{text-align:center}header img{width:min(70vw,280px);height:auto}
+h1{margin:4px 0 0;font:400 1.6rem/1 Anton,Impact,sans-serif;letter-spacing:.08em}
+.reel{background:var(--card);border:1px solid var(--rim);border-radius:16px;padding:12px;display:grid;gap:10px}
+.reel h2{margin:0;font:400 1.3rem/1.1 Anton,Impact,sans-serif;letter-spacing:.04em}
+video{width:100%;border-radius:10px;background:#000;aspect-ratio:9/16}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btn{all:unset;cursor:pointer;text-align:center;padding:14px 10px;border-radius:12px;background:var(--red);font:800 .95rem/1 Barlow,sans-serif;letter-spacing:.06em}
+.btn.alt{background:transparent;border:2px solid #fff;padding:12px 10px}.btn.done{background:var(--green);border-color:var(--green)}
+.cap{white-space:pre-wrap;background:#0a0c10;border:1px solid var(--rim);border-radius:10px;padding:10px;font-size:.92rem;line-height:1.4}
+.btn.wide{grid-column:1/-1}
+</style></head><body><div class="wrap">
+<header><img src="../brand/og-bobby-wordmark-top.png" alt="OG Bobby"><h1>REELS</h1></header>
+<div id="list"></div></div>
+<script>
+const R=[
+{t:"Wall Street Machine Pt. 1",f:"wall-street-machine-pt1-30.mp4",c:"Follow @ogbobbybrooklyn 🔔 Like it, share it, tag your crew.\nFrom the green machine to the Wall Street machine 💸 Season 2 is coming.\n\n🎮 Play the music game at ogbobbybrooklyn.com\n\n#WallStreet #BayRidge #Brooklyn #OGBobby #BrooklynMusic #NYCMusic #WallStreetMachine #NYC #Hustle"},
+{t:"Positivity Spreads",f:"positivity-spreads-30.mp4",c:"Follow @ogbobbybrooklyn 🔔 Like it, share it, tag your crew.\nPositivity Spreads 💪 No gym. No membership. Just Brooklyn.\n\n🎮 Play the music game at ogbobbybrooklyn.com\n\n#BayRidge #Brooklyn #PositivitySpreads #OGBobby #BrooklynMusic #NYCMusic #FitOver50 #BodyweightTraining #JiuJitsu"}];
+const flash=(b,m)=>{const t=b.textContent;b.textContent=m;b.classList.add("done");setTimeout(()=>{b.textContent=t;b.classList.remove("done")},1800)};
+const list=document.getElementById("list");
+R.forEach(r=>{const s=document.createElement("section");s.className="reel";
+s.innerHTML='<h2></h2><video controls playsinline preload="metadata"></video><div class="btns"><button class="btn" data-a="save">SAVE / SHARE VIDEO</button><button class="btn alt" data-a="link">COPY LINK</button><button class="btn alt wide" data-a="cap">COPY CAPTION</button></div><div class="cap"></div>';
+s.querySelector("h2").textContent=r.t;s.querySelector("video").src=r.f;s.querySelector(".cap").textContent=r.c;
+s.querySelector('[data-a="save"]').onclick=async e=>{const b=e.currentTarget;
+ try{b.textContent="LOADING…";const blob=await (await fetch(r.f)).blob();const file=new File([blob],r.f,{type:"video/mp4"});
+  if(navigator.canShare&&navigator.canShare({files:[file]})){b.textContent="SAVE / SHARE VIDEO";await navigator.share({files:[file]});return}
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=r.f;document.body.append(a);a.click();a.remove();flash(b,"SAVED")}
+ catch(err){b.textContent="SAVE / SHARE VIDEO"}};
+s.querySelector('[data-a="link"]').onclick=e=>{const u=new URL(r.f,location.href).href;navigator.clipboard.writeText(u).then(()=>flash(e.currentTarget,"COPIED"))};
+s.querySelector('[data-a="cap"]').onclick=e=>{navigator.clipboard.writeText(r.c).then(()=>flash(e.currentTarget,"COPIED"))};
+list.append(s);list.append(document.createElement("div"))});
+list.style.display="grid";list.style.gap="18px";
+</script></body></html>
