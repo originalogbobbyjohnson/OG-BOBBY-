@@ -3030,7 +3030,7 @@ html, body, body.practice { background: #fff !important; }
   document.getElementById("resetKeep").onclick = () => { sheet.hidden = true; };
   sheet.addEventListener("click", ev => { if (ev.target === sheet) sheet.hidden = true; });
   document.getElementById("resetGo").onclick = () => {
-    try { ["ogb2", "ogFun", "ogVoHi", "ogX", "ogHowDone"].forEach(k => localStorage.removeItem(k)); } catch (e) {}
+    try { ["ogb2", "ogFun", "ogVoHi", "ogX", "ogHowDone", "ogPlus"].forEach(k => localStorage.removeItem(k)); } catch (e) {}
     try { sessionStorage.clear(); } catch (e) {}
     try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "restart", title: "Restarted the game", event: true }); } catch (e) {}
     try { document.querySelectorAll("audio, video").forEach(a => a.pause()); } catch (e) {}
@@ -4265,6 +4265,265 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
   }
   let t = 0;
   new MutationObserver(() => { cancelAnimationFrame(t); t = requestAnimationFrame(sync); }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["class", "data-v", "data-room"] });
+  sync();
+})();
+</script>
+<style id="cabPlusStyle">
+/* ---------- Game layer: stars, Street Cred score, episode cleared screen, boss level, daily question ---------- */
+/* score row under the meter title */
+.cab-score { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 2px 0 6px; }
+.cab-score .pts { position: relative; display: inline-flex; align-items: baseline; gap: 6px; padding: 4px 14px 3px; border: 2px solid #e8b23a; border-radius: 99px; background: rgba(0,0,0,.35); color: #fff; }
+.cab-score .pts b { font: 400 1.35rem/1 "Anton", Impact, sans-serif; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+.cab-score .pts i { font: 800 .6rem/1 "Barlow", system-ui, sans-serif; font-style: normal; letter-spacing: .14em; color: #fff; }
+.cab-score .plus { position: absolute; right: -6px; top: -6px; font: 400 1rem/1 "Anton", Impact, sans-serif; color: #e8b23a; text-shadow: 0 2px 0 #000; pointer-events: none; animation: cabPlus 1.2s ease-out forwards; }
+@keyframes cabPlus { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-26px); } }
+.cab-score .daily { all: unset; pointer-events: auto !important; position: relative; z-index: 6; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: 99px; background: #d63a2f; color: #fff; font: 800 .62rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .1em; animation: cabRing 1.6s ease-out infinite; }
+.cab-score .daily.done { background: transparent; border: 2px solid #2fa34a; padding: 4px 9px; animation: none; }
+.cab-score .daily:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.cab-score .daily[hidden] { display: none; }
+/* stars on cleared episode boxes */
+body.practice #cred .cab-row #list .ep { position: relative; }
+.ep-stars { position: absolute; left: 0; right: 0; bottom: 3px; display: flex; justify-content: center; gap: 1px; pointer-events: none; }
+.ep-stars svg { width: 9px; height: 9px; }
+.ep-stars .on { fill: #ffd34d; stroke: #7a5a0c; stroke-width: 1.5; }
+.ep-stars .off { fill: rgba(0,0,0,.35); stroke: rgba(255,255,255,.55); stroke-width: 1.5; }
+body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY(-4px); }
+@media (min-width: 600px) { .ep-stars svg { width: 11px; height: 11px; } }
+/* big screens: cleared, boss intro, daily question */
+.cab-over { position: fixed; inset: 0; z-index: 1200; display: grid; place-items: center; padding: 24px 18px; background: radial-gradient(ellipse at 50% 40%, rgba(40,30,10,.97), rgba(5,6,9,.99) 70%); animation: cabFade .3s ease-out; }
+.cab-over.boss { background: radial-gradient(ellipse at 50% 40%, rgba(90,10,8,.97), rgba(5,6,9,.99) 70%); }
+@keyframes cabFade { from { opacity: 0; } to { opacity: 1; } }
+.cab-over .card { width: min(360px, 100%); display: grid; justify-items: center; gap: 12px; text-align: center; color: #fff; }
+.cab-over .kick { font: 800 .8rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .32em; }
+.cab-over .big { font: 400 clamp(3rem, 16vw, 4.6rem)/.9 "Anton", Impact, sans-serif; letter-spacing: .03em; text-shadow: 3px 3px 0 #000; animation: cabSlam .45s cubic-bezier(.2,1.6,.4,1); }
+.cab-over.boss .big { color: #ff4a3a; }
+.cab-over .gold { color: #ffd34d; }
+@keyframes cabSlam { from { transform: scale(2.2); opacity: 0; } to { transform: none; opacity: 1; } }
+.cab-over .title { font: 400 1.6rem/1.1 "Anton", Impact, sans-serif; letter-spacing: .03em; }
+.cab-over .stars { display: flex; gap: 10px; margin: 6px 0; }
+.cab-over .stars svg { width: 58px; height: 58px; opacity: 0; transform: scale(2.4) rotate(-30deg); }
+.cab-over .stars svg.in { animation: cabStar .45s cubic-bezier(.2,1.6,.4,1) forwards; }
+@keyframes cabStar { to { opacity: 1; transform: none; } }
+.cab-over .stars .on { fill: #ffd34d; stroke: #7a5a0c; stroke-width: 1.2; filter: drop-shadow(0 0 10px rgba(255,211,77,.7)); }
+.cab-over .stars .off { fill: rgba(255,255,255,.08); stroke: rgba(255,255,255,.5); stroke-width: 1.2; }
+.cab-over .earn { font: 400 1.5rem/1 "Anton", Impact, sans-serif; color: #ffd34d; letter-spacing: .05em; }
+.cab-over .note { font: 600 1rem/1.35 "Barlow", system-ui, sans-serif; max-width: 30ch; }
+.cab-over .go { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; text-align: center; padding: 14px; border-radius: 14px; background: #d63a2f; box-shadow: 0 5px 0 #8f2119; font: 400 1.35rem/1 "Anton", Impact, sans-serif; letter-spacing: .1em; color: #fff; margin-top: 6px; }
+.cab-over .go:active { transform: translateY(3px); box-shadow: 0 2px 0 #8f2119; }
+.cab-over .go:focus-visible, .cab-over .link:focus-visible, .cab-over .opt2:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.cab-over .link { all: unset; cursor: pointer; font: 700 .9rem/1 "Barlow", system-ui, sans-serif; text-decoration: underline; text-underline-offset: 3px; padding: 6px; }
+.cab-over .q { font: 700 1.25rem/1.3 "Barlow", system-ui, sans-serif; }
+.cab-over .opts2 { display: grid; gap: 8px; width: 100%; }
+.cab-over .opt2 { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; padding: 13px 14px; border-radius: 12px; border: 2px solid rgba(255,255,255,.35); background: rgba(255,255,255,.06); font: 700 1.05rem/1.2 "Barlow", system-ui, sans-serif; text-align: left; }
+.cab-over .opt2.right { border-color: #2fa34a; background: rgba(47,163,74,.25); }
+.cab-over .opt2.wrong { border-color: #d63a2f; background: rgba(214,58,47,.25); }
+.cab-over .msg2 { min-height: 1.3em; font: 700 1rem/1.3 "Barlow", system-ui, sans-serif; }
+/* boss level clock */
+.boss-clock { height: 8px; border-radius: 99px; background: rgba(255,255,255,.12); overflow: hidden; margin-bottom: 4px; }
+.boss-clock i { display: block; height: 100%; width: 100%; background: #ff4a3a; transform-origin: left; }
+.boss-tag { font: 800 .62rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .16em; color: #ff4a3a; margin-bottom: 4px; }
+@media (prefers-reduced-motion: reduce) { .cab-over, .cab-over .big, .cab-over .stars svg.in, .cab-score .plus, .cab-score .daily { animation: none !important; } .cab-over .stars svg { opacity: 1; transform: none; } }
+</style>
+<script>
+(function () {
+  if (typeof EPISODES === "undefined" || typeof state === "undefined") return;
+  const KEY = "ogPlus";
+  let P = {};
+  try { P = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) {}
+  const keep = () => { try { localStorage.setItem(KEY, JSON.stringify(P)); } catch (e) {} };
+  const snd = (n, v) => { try { if (window.ogSound) window.ogSound.sfx(n, v); } catch (e) {} };
+  const starSvg = cls => '<svg viewBox="0 0 24 24" class="' + cls + '"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>';
+  const N = 9;
+
+  /* ---- stars and score ---- */
+  const missesOf = e => e.qs.reduce((n, _, g) => n + (state.tries[e.slug + "|" + g] || 0), 0);
+  const starsOf = e => !isOpen(e) ? 0 : (m => m === 0 ? 3 : m === 1 ? 2 : 1)(missesOf(e));
+  const epPoints = e => keysOf(e).reduce((s, _, g) => s + (state.first[e.slug + "|" + g] === true ? 100 : 50), 0) + starsOf(e) * 100;
+  function score() {
+    if (!Object.keys(state.keys || {}).length && P.extra) { P.extra = 0; keep(); }
+    return EPISODES.slice(0, N).reduce((s, e) => s + epPoints(e), 0) + (P.extra || 0);
+  }
+  const fmtN = n => n.toLocaleString("en-US");
+
+  function paintStars() {
+    document.querySelectorAll("#list .ep").forEach((b, i) => {
+      const e = EPISODES[i]; if (!e) return;
+      const n = starsOf(e); let box = b.querySelector(".ep-stars");
+      if (!n) { if (box) box.remove(); return; }
+      const html = [0, 1, 2].map(k => starSvg(k < n ? "on" : "off")).join("");
+      if (!box) { box = document.createElement("span"); box.className = "ep-stars"; box.setAttribute("aria-label", n + " of 3 stars"); b.append(box); }
+      if (box.dataset.n !== String(n)) { box.dataset.n = String(n); box.innerHTML = html; }
+    });
+  }
+
+  let shown = null, tick = 0;
+  function paintScore(animate) {
+    const head = document.querySelector("#cred .cred-head"); if (!head) return;
+    let row = document.querySelector(".cab-score");
+    if (!row) {
+      row = document.createElement("div"); row.className = "cab-score";
+      row.innerHTML = '<span class="pts" aria-live="polite"><b>0</b><i>STREET CRED</i></span><button class="daily" type="button" hidden>★ DAILY QUESTION</button>';
+      head.after(row);
+      row.querySelector(".daily").addEventListener("click", openDaily);
+    }
+    const target = score(), num = row.querySelector(".pts b");
+    if (shown === null || !animate) { shown = target; num.textContent = fmtN(target); }
+    else if (target !== shown) {
+      const from = shown, diff = target - from, t0 = performance.now(); shown = target;
+      if (diff > 0) { const p = document.createElement("span"); p.className = "plus"; p.textContent = "+" + fmtN(diff); row.querySelector(".pts").append(p); setTimeout(() => p.remove(), 1300); }
+      cancelAnimationFrame(tick);
+      const step = now => { const k = Math.min(1, (now - t0) / 700); num.textContent = fmtN(Math.round(from + diff * (1 - Math.pow(1 - k, 3)))); if (k < 1) tick = requestAnimationFrame(step); };
+      tick = requestAnimationFrame(step);
+    }
+    const d = row.querySelector(".daily"), pool = dailyPool();
+    d.hidden = !pool.length;
+    const done = P.daily && P.daily.date === today();
+    d.classList.toggle("done", !!done);
+    d.textContent = done ? (P.daily.ok ? "✓ DAILY DONE" : "✓ DAILY · TOMORROW") : "★ DAILY QUESTION";
+  }
+
+  /* ---- answers: hot-streak bonus, stars, cleared screen, boss clock ---- */
+  let run = 0, pending = null;
+  const baseAnswer = answer;
+  answer = async function (o, btn) {
+    const e = EPISODES[idx], wasOpen = !!e && isOpen(e);
+    const g = e ? gateOf(e) : 0, firstTry = !!e && !wasOpen && !((e.slug + "|" + g) in state.first);
+    stopClock();
+    await baseAnswer(o, btn);
+    if (!e || wasOpen) return;
+    if (btn.classList.contains("right")) {
+      if (firstTry) { run++; if (run >= 3) { P.extra = (P.extra || 0) + 100; keep(); } } else run = 0;
+      if (isOpen(e)) pending = EPISODES.indexOf(e);
+    } else if (btn.classList.contains("wrong")) { run = 0; if (EPISODES.indexOf(e) === BOSS) setTimeout(armClock, 1500); }
+    paintScore(true); paintStars();
+  };
+
+  /* ---- episode cleared screen ---- */
+  const BOSS = N - 1;
+  function over(cls, html) {
+    const d = document.createElement("div"); d.className = "cab-over " + (cls || ""); d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true");
+    d.innerHTML = '<div class="card">' + html + '</div>'; document.body.append(d);
+    const f = d.querySelector(".go, .opt2"); if (f) setTimeout(() => f.focus({ preventScroll: true }), 60);
+    return d;
+  }
+  function cleared(i) {
+    pending = null;
+    const e = EPISODES[i], n = starsOf(e), last = i === BOSS;
+    const next = EPISODES.slice(0, N).findIndex(x => !isOpen(x));
+    const d = over(last ? "" : "", (last
+        ? '<div class="kick">SEASON 1 · FINAL EPISODE</div><div class="big gold">SEASON 1<br>COMPLETE</div>'
+        : '<div class="kick">EPISODE ' + (i + 1) + '</div><div class="big">CLEARED</div>') +
+      '<div class="title"></div><div class="stars">' + [0, 1, 2].map(k => starSvg(k < n ? "on" : "off")).join("") + '</div>' +
+      '<div class="earn">+' + fmtN(epPoints(e)) + ' STREET CRED</div>' +
+      (n < 3 ? '<div class="note">Replay it with no misses for all 3 stars.</div>' : '<div class="note">Perfect. Every answer on the first try.</div>') +
+      (next >= 0 ? '<button class="go" type="button">▶ EPISODE ' + (next + 1) + '</button>' : '<button class="go" type="button">BACK TO THE BOARD</button>') +
+      '<button class="link" type="button">Back to the board</button>');
+    d.querySelector(".title").textContent = e.title;
+    if (next < 0) d.querySelector(".link").remove();
+    d.querySelectorAll(".stars svg").forEach((s, k) => setTimeout(() => { s.classList.add("in"); if (k < n) snd("stamp", .5); }, 450 + k * 380));
+    snd(last ? "bell" : "spray", .6);
+    d.querySelector(".link") && d.querySelector(".link").addEventListener("click", () => d.remove());
+    d.querySelector(".go").addEventListener("click", () => {
+      d.remove();
+      if (next < 0) return;
+      const eps = document.querySelectorAll("#list .ep");
+      if (idx !== next && eps[next]) eps[next].click();
+      setTimeout(() => { const a = document.getElementById("audio"), p = document.getElementById("play"); if (a && a.paused && p) p.click(); }, 250);
+    });
+  }
+  const audioEl = document.getElementById("audio");
+  audioEl.addEventListener("ended", () => setTimeout(() => {
+    if (pending !== null && (idx !== pending || sec >= EPISODES[pending].qs.length)) cleared(pending);
+    else if (idx === BOSS && !isOpen(EPISODES[BOSS])) armClock();
+  }, 60));
+
+  /* ---- boss level: Episode 9 ---- */
+  const CLOCK = 15;
+  let clockT = 0, clockEl = null;
+  function stopClock() { clearTimeout(clockT); clockT = 0; if (clockEl) { clockEl.remove(); clockEl = null; } }
+  function armClock() {
+    stopClock();
+    const e = EPISODES[BOSS]; if (idx !== BOSS || isOpen(e) || !audioEl.paused) return;
+    const g = gateOf(e); if (sec !== g) return;
+    const quiz = document.getElementById("quiz"); if (!quiz || !quiz.classList.contains("on")) return;
+    clockEl = document.createElement("div");
+    clockEl.innerHTML = '<div class="boss-tag">BOSS LEVEL · ' + CLOCK + ' SECONDS</div><div class="boss-clock"><i></i></div>';
+    quiz.prepend(clockEl);
+    const bar = clockEl.querySelector("i"); bar.animate([{ transform: "scaleX(1)" }, { transform: "scaleX(0)" }], { duration: CLOCK * 1000, easing: "linear", fill: "forwards" });
+    clockT = setTimeout(() => {
+      clockT = 0;
+      if (idx !== BOSS || gateOf(e) !== g || !audioEl.paused) return stopClock();
+      const q = curQ(e, g), wrong = q.opts[q.gx];
+      const btn = [...document.querySelectorAll("#opts .opt")].find(b => b.textContent === wrong) || document.createElement("button");
+      const m = document.getElementById("msg");
+      answer(wrong, btn).then(() => { if (m) { m.className = "msg bad"; m.textContent = "Time's up. Here comes a new question."; } });
+    }, CLOCK * 1000);
+  }
+  audioEl.addEventListener("play", stopClock);
+
+  function bossIntro() {
+    try { if (sessionStorage.getItem("ogBossSeen") === "1") return; sessionStorage.setItem("ogBossSeen", "1"); } catch (e) {}
+    const e = EPISODES[BOSS];
+    const d = over("boss", '<div class="kick">SEASON 1 · EPISODE 9</div><div class="big">FINAL<br>EPISODE</div><div class="title"></div>' +
+      '<div class="note">Boss level. ' + e.qs.length + ' stops, ' + CLOCK + ' seconds on every question. Run out of time and the question swaps.</div>' +
+      '<button class="go" type="button">I’M READY</button>');
+    d.querySelector(".title").textContent = e.title;
+    snd("bell", .6);
+    d.querySelector(".go").addEventListener("click", () => d.remove());
+  }
+
+  /* ---- daily question ---- */
+  const today = () => { const d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); };
+  function dailyPool() { const out = []; EPISODES.slice(0, N).forEach(e => keysOf(e).forEach((_, g) => out.push([e, g]))); return out; }
+  function seedOf(s) { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
+  async function check(slug, g, opt) {
+    const k = keyFor(slug, g, opt);
+    try { if ((await fetch("b/" + k + ".mp3", { method: "HEAD", cache: "no-store" })).ok) return true; } catch (e) {}
+    try { const r = await fetch("b/" + k + ".txt", { cache: "no-store" }); if (r.ok && /^[0-9a-f]{24}$/.test((await r.text()).trim())) return true; } catch (e) {}
+    return false;
+  }
+  function openDaily() {
+    const pool = dailyPool(); if (!pool.length) return;
+    if (P.daily && P.daily.date === today()) {
+      const d = over("", '<div class="kick">DAILY QUESTION</div><div class="big">' + (P.daily.ok ? "DONE" : "TOMORROW") + '</div><div class="note">' + (P.daily.ok ? "You got today’s question. A new one drops tomorrow." : "Today’s question is used up. A new one drops tomorrow.") + '</div><button class="go" type="button">BACK TO THE BOARD</button>');
+      d.querySelector(".go").addEventListener("click", () => d.remove()); return;
+    }
+    const h = seedOf(today()), [e, g] = pool[h % pool.length];
+    const variants = poolOf(e.qs[g]), q = variants[(h >>> 8) % variants.length];
+    const d = over("", '<div class="kick">DAILY QUESTION</div><div class="title"></div><div class="note">Get it right for +250 Street Cred. One try a day.</div><div class="q"></div><div class="opts2"></div><div class="msg2"></div><button class="link" type="button">Not now</button>');
+    d.querySelector(".title").textContent = e.title;
+    d.querySelector(".q").textContent = q.q;
+    const box = d.querySelector(".opts2"), msg = d.querySelector(".msg2");
+    d.querySelector(".link").addEventListener("click", () => d.remove());
+    q.opts.forEach(o => {
+      const b = document.createElement("button"); b.type = "button"; b.className = "opt2"; b.textContent = o;
+      b.addEventListener("click", async () => {
+        box.querySelectorAll(".opt2").forEach(x => x.disabled = true); box.style.pointerEvents = "none";
+        const ok = await check(e.slug, g, o);
+        b.classList.add(ok ? "right" : "wrong");
+        P.daily = { date: today(), ok }; if (ok) P.extra = (P.extra || 0) + 250; keep();
+        snd(ok ? "right" : "wrong", .6);
+        msg.textContent = ok ? "That’s right. +250 Street Cred." : "Not today. A new question drops tomorrow.";
+        const link = d.querySelector(".link"); link.textContent = "Back to the board";
+        try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "daily/" + (ok ? "right" : "wrong"), title: "Daily question " + (ok ? "right" : "wrong"), event: true }); } catch (err) {}
+        paintScore(true);
+      });
+      box.append(b);
+    });
+  }
+
+  /* ---- keep everything painted ---- */
+  if (typeof renderList === "function") { const rl = renderList; renderList = function () { const r = rl.apply(this, arguments); paintStars(); return r; }; }
+  let bossWas = -1, t = 0;
+  function sync() {
+    paintStars(); paintScore(false);
+    const stage = document.querySelector(".stage"), hall = document.getElementById("cabHall"), veil = document.getElementById("cabVeil");
+    const onBoard = stage && stage.dataset.v === "ep" && (!hall || hall.hidden) && (!veil || veil.hidden);
+    if (onBoard && idx === BOSS && bossWas !== BOSS && !isOpen(EPISODES[BOSS])) bossIntro();
+    if (onBoard && pending !== null && idx !== pending && !document.querySelector(".cab-over")) cleared(pending);
+    bossWas = onBoard ? idx : bossWas;
+  }
+  new MutationObserver(() => { cancelAnimationFrame(t); t = requestAnimationFrame(sync); }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["class", "data-v", "hidden"] });
   sync();
 })();
 </script>
