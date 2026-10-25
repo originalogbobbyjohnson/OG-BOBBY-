@@ -24,6 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap"></noscript>
 <style>/* the graffiti 9 with a straight tail instead of the hook (only the 9 comes from this file) */
+@font-face { font-family: "OG Dirt"; src: url("brand/rubik-dirt.woff") format("woff"); font-display: swap; }
 @font-face { font-family: "Sedgwick Nine"; src: url("brand/sedgwick-nine.woff") format("woff"); unicode-range: U+0039; font-display: swap; }</style>
 <style>
 /* Layout: one narrow column. Cover, how-it-works, score + reward ladder, the player with its question, then the episode list. */
@@ -4311,6 +4312,15 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 .cab-over .t99-bar i { display: block; height: 100%; background: #ffd34d; border-radius: 99px; transition: width .3s; }
 .cab-over .ep99 { font: 800 .75rem/1.2 "Barlow", system-ui, sans-serif; letter-spacing: .14em; color: #fff; }
 .cab-over .go[hidden] { display: none; }
+/* '99 Challenge title: graffiti '99 (straight 9s) over a gritty, beat-up CHALLENGE */
+:root { --ugly: "Sedgwick Nine", "OG Dirt", "Rubik Dirt", Impact, sans-serif; }
+.cab-over .c99 { display: grid; justify-items: center; gap: 2px; }
+.cab-over .c99 .c99n { display: flex; align-items: flex-start; font-size: clamp(3.4rem, 18vw, 5rem); line-height: 1; filter: drop-shadow(0 0 18px rgba(255,211,77,.45)); }
+.cab-over .c99 .c99n .tk { font: 400 1em/1 "Anton", Impact, sans-serif; color: #ffd34d; margin-right: .02em; }
+.cab-over .c99 .c99n .nine { width: .9em; height: 1.25em; }
+.cab-over .c99 .c99n .nine g:last-of-type { stroke: #ffd34d; }
+.cab-over .c99 .c99w { font: 400 clamp(2.3rem, 12vw, 3.4rem)/1 var(--ugly); letter-spacing: .02em; color: #fff; text-shadow: 3px 3px 0 #d62828, 5px 5px 0 #000; transform: rotate(-3deg); }
+.cab-over .t99-score { font-family: var(--ugly) !important; }
 /* 99 Test: unlock reveal before, celebration after */
 .cab-over.t99 .rise { opacity: 0; animation: t99Rise .55s cubic-bezier(.2,1.4,.4,1) forwards; animation-delay: var(--d, 0ms); }
 .cab-over.t99 .slam { opacity: 0; animation: t99Slam .5s cubic-bezier(.2,1.6,.4,1) forwards; animation-delay: var(--d, 0ms); }
@@ -4413,7 +4423,7 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     let row = document.querySelector(".cab-score");
     if (!row) {
       row = document.createElement("div"); row.className = "cab-score";
-      row.innerHTML = '<span class="pts" aria-live="polite"><b>0</b><i>STREET CRED</i></span><button class="daily" type="button" hidden>★ DAILY QUESTION</button><button class="t99" type="button" hidden>★ 99 TEST</button>';
+      row.innerHTML = '<span class="pts" aria-live="polite"><b>0</b><i>STREET CRED</i></span><button class="daily" type="button" hidden>★ DAILY QUESTION</button><button class="t99" type="button" hidden>★ \u201999 CHALLENGE</button>';
       head.after(row);
       row.querySelector(".daily").addEventListener("click", openDaily);
       row.querySelector(".t99").addEventListener("click", openTest);
@@ -4435,8 +4445,8 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     const tb = row.querySelector(".t99"), all9 = EPISODES.slice(0, N).every(isOpen);
     if (tb.hidden) tb.hidden = false;
     const done9 = EPISODES.slice(0, N).filter(isOpen).length, fresh = all9 && !P.t99seen;
-    const want = all9 ? (fresh ? "★ NEW · 99 TEST" : "★ 99 TEST") : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3h2v12H5V10zm2 0h6V7a3 3 0 0 0-6 0z"/></svg>99 TEST · ' + done9 + "/9";
-    if (tb.dataset.s !== want) { tb.dataset.s = want; tb.innerHTML = want; tb.classList.toggle("new", fresh); tb.classList.toggle("lock", !all9); tb.setAttribute("aria-label", all9 ? "Take the 99 Test" : "99 Test, locked: " + done9 + " of 9 episodes done"); }
+    const want = all9 ? (fresh ? "★ NEW · \u201999 CHALLENGE" : "★ \u201999 CHALLENGE") : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3h2v12H5V10zm2 0h6V7a3 3 0 0 0-6 0z"/></svg>\u201999 CHALLENGE · ' + done9 + "/9";
+    if (tb.dataset.s !== want) { tb.dataset.s = want; tb.innerHTML = want; tb.classList.toggle("new", fresh); tb.classList.toggle("lock", !all9); tb.setAttribute("aria-label", all9 ? "Take the '99 Challenge" : "'99 Challenge, locked: " + done9 + " of 9 episodes done"); }
   }
 
   /* ---- answers: hot-streak bonus, stars, cleared screen, boss clock ---- */
@@ -4473,7 +4483,7 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
       '<div class="title"></div><div class="stars">' + [0, 1, 2].map(k => starSvg(k < n ? "on" : "off")).join("") + '</div>' +
       '<div class="earn">+' + fmtN(epPoints(e)) + ' STREET CRED</div>' +
       (n < 3 ? '<div class="note">Replay it with no misses for all 3 stars.</div>' : '<div class="note">Perfect. Every answer on the first try.</div>') +
-      (next >= 0 ? '<button class="go" type="button">▶ EPISODE ' + (next + 1) + '</button>' : '<div class="note">Bonus unlocked: the 99 Test. All 99 questions, back to back.</div><button class="go t99go" type="button">★ TAKE THE 99 TEST</button><button class="go" type="button">BACK TO THE BOARD</button>') +
+      (next >= 0 ? '<button class="go" type="button">▶ EPISODE ' + (next + 1) + '</button>' : '<div class="note">Bonus unlocked: the ’99 Challenge. All 99 questions, back to back.</div><button class="go t99go" type="button">★ TAKE THE ’99 CHALLENGE</button><button class="go" type="button">BACK TO THE BOARD</button>') +
       '<button class="link" type="button">Back to the board</button>');
     d.querySelector(".title").textContent = e.title;
     if (next < 0) d.querySelector(".link").remove();
@@ -4616,13 +4626,13 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
   }
 
   function testList() { const out = []; EPISODES.slice(0, N).forEach((e, i) => e.qs.forEach((q, g) => poolOf(q).forEach(v => out.push({ i, g, v })))); return out; }
-  const tCount = (e, kind) => { try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "test99/" + kind, title: "99 Test " + kind, event: true }); } catch (err) {} };
+  const tCount = (e, kind) => { try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "test99/" + kind, title: "99 Challenge " + kind, event: true }); } catch (err) {} };
   /* locked: tells players what finishing all 9 gets them */
   function testTeaser() {
     document.querySelectorAll(".cab-over").forEach(x => x.remove());
     const done = EPISODES.slice(0, N).map(isOpen), n = done.filter(Boolean).length, left = N - n;
     const d = over("t99", '<div class="t99-unlock rise" style="--d:100ms;color:#d63a2f">BONUS · LOCKED</div>' +
-      '<div class="big gold slam" style="--d:350ms">99 TEST</div>' +
+      '<div class="c99 slam" style="--d:350ms"><span class="c99n"><span class="tk">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="c99w">CHALLENGE</span></div>' +
       '<div class="t99-dare rise" style="--d:700ms">Finish all 9 episodes to unlock.</div>' +
       '<div class="note rise" style="--d:850ms">Then take on all 99 Season 1 questions, back to back, with the full \u201999 blast.</div>' +
       '<div class="t99-boxes rise" style="--d:1000ms">' + done.map((o, k) => '<i class="' + (o ? "on" : "") + '">' + (k + 1) + '</i>').join("") + '</div>' +
@@ -4639,9 +4649,9 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     const best = P.t99best != null ? '<div class="note rise" style="--d:1500ms">Your best: ' + P.t99best + ' / ' + L.length + '</div>' : "";
     const first = !P.t99seen; P.t99seen = 1; keep();
     const d = over("t99", '<div class="t99-unlock rise" style="--d:150ms">' + (first ? "BONUS UNLOCKED" : "SEASON 1 · BONUS") + '</div>' +
-      '<div class="big gold slam" style="--d:700ms">99 TEST</div>' +
+      '<div class="c99 slam" style="--d:700ms"><span class="c99n"><span class="tk">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="c99w">CHALLENGE</span></div>' +
       (T ? '<div class="t99-dare rise" style="--d:1100ms">Finish what you started.</div><div class="note rise" style="--d:1300ms">You’re on question ' + (T.at + 1) + ' of ' + L.length + ', with ' + T.ok + ' right so far.</div><button class="go pulse" style="--d:1600ms" type="button">KEEP GOING</button><button class="link fresh rise" style="--d:1800ms" type="button">Start over</button>'
-         : '<div class="t99-dare rise" style="--d:1100ms">Think you know every bar? Prove it.</div><div class="note rise" style="--d:1300ms">All ' + L.length + ' questions from Season 1, back to back. Practice only, no Street Cred on the line.</div>' + best + '<button class="go fresh pulse" style="--d:1700ms" type="button">START THE TEST</button>') +
+         : '<div class="t99-dare rise" style="--d:1100ms">Think you know every bar? Prove it.</div><div class="note rise" style="--d:1300ms">All ' + L.length + ' questions from Season 1, back to back. Practice only, no Street Cred on the line.</div>' + best + '<button class="go fresh pulse" style="--d:1700ms" type="button">START THE CHALLENGE</button>') +
       '<button class="link out rise" style="--d:1900ms" type="button">Not now</button>');
     fx99("intro"); setTimeout(() => snd("stamp", .6), 750);
     d.querySelectorAll(".fresh").forEach(b => b.addEventListener("click", () => { P.t99 = { at: 0, ok: 0 }; keep(); tCount(null, "start"); d.remove(); fx99("intro"); setTimeout(testQ, 1300); }));
