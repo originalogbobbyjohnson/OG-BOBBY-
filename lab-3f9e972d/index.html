@@ -638,7 +638,7 @@ body.practice { overflow: hidden; }
       <li><b>Collect.</b> Finish any block of 3 songs to earn that block's playlist. Finish all 9 to earn Season 1.</li>
       <li><b>Run it back.</b> Earned a rank? Replay your unlocked songs with new questions, just for fun. No rewards, just bragging rights.</li>
       <li><b>Raw Cuts.</b> Stripped-down versions of the songs, in their own room.</li>
-      <li><b>Road to '99.</b> Season 2 comes next. Both seasons make the '99 album, and the climb goes on to OG Certified.</li>
+      <li><b>Road to '99.</b> Season 2 comes next. Both seasons make the '99 music series, and the climb goes on to OG Certified.</li>
     </ul>
     <button class="btn" id="aboutPlay" type="button">Let's play</button>
   </div>
@@ -817,7 +817,7 @@ function renderReward() {
   if (!p) return;
   const all = p >= EPISODES.length;
   $("rTitle").textContent = all ? "OG PROTÉGÉ" : "YOU EARNED A PLAYLIST";
-  $("rText").textContent = all ? "You finished all 9 songs. All of Season 1 is yours to stream. Season 2 is next, with a new set of questions. Finish both for the full ’99 album."
+  $("rText").textContent = all ? "You finished all 9 songs. All of Season 1 is yours to stream. Season 2 is next, with a new set of questions. Finish both for the full ’99 music series."
     : "Plays right here in the game. Finish another block of 3 to add it.";
   const box = $("picks"); box.innerHTML = "";
   songs.forEach(n => {
@@ -1348,7 +1348,7 @@ window.scrollTo(0, 0);
         '<figure><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span><figcaption>SEASON 1</figcaption></figure>' +
         '<figure>' + nineSvg(Math.max(.06, have / 9), "filling") + '<figcaption>SEASON 2</figcaption></figure>' +
       '</div>' +
-      '<p class="v2-story">1999 changed everything for OG. Season 1 gave you nine. Season 2 is nine more, with new questions. Fill them both and they read <b>’99</b>, the full album.</p>' +
+      '<p class="v2-story">1999 changed everything for OG. Season 1 gave you nine. Season 2 is nine more, with new questions. Fill them both and they read <b>’99</b>, the full music series.</p>' +
       '<div class="v2-grid">' + tiles + '</div>' +
       '<p class="v2-count"><b>' + have + ' of 9</b> revealed · opens after Season 1</p>';
     v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] ? VOL2[i].replace(/, Pt\. \d+$/, "") : "???"; });
@@ -1705,7 +1705,7 @@ window.scrollTo(0, 0);
     const g = document.createElement("div"); g.className = "vol-big right ghost"; g.setAttribute("aria-label", "Season 2, coming next");
     g.innerHTML = '<span class="v1nine">' + nineSvg(1) + '</span><span class="lab">SEASON 2</span>';
     const rel = document.createElement("div"); rel.className = "album-release big"; rel.setAttribute("aria-label", "\u201999, the album");
-    rel.innerHTML = '<span class="ar-num"><span class="tick">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="ar-sub">THE ALBUM</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
+    rel.innerHTML = '<span class="ar-num"><span class="tick">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="ar-sub">THE MUSIC SERIES</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
     head.prepend(rel);
     head.append(g);
   }
@@ -2429,7 +2429,7 @@ html, body, body.practice { background: #fff !important; }
       '<div class="mv-body"><div class="v2-eps">' + [1,2,3,4,5,6,7,8,9].map(n => '<span class="v2-ep">' + n + '</span>').join("") + '</div>' +
       '<div class="mv-rks">' + R2.map((r, k) => rk(r, rankEmblem(k + 4))).join("") + '</div></div></div>' +
     '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="o">OG</span><span class="c">CERTIFIED</span></span></div>' +
-    '<div class="m99" style="grid-column: 1 / -1"><span class="n99"><span class="tk">\u2019</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="m99t"><b>THE ALBUM</b><i>ALL 18 SONGS \u00b7 SEASON 1 + SEASON 2</i></span></div>';
+    '<div class="m99" style="grid-column: 1 / -1"><span class="n99"><span class="tk">\u2019</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="m99t"><b>THE MUSIC SERIES</b><i>ALL 18 SONGS \u00b7 SEASON 1 + SEASON 2</i></span></div>';
   const track = cred.querySelector(".cred-track"); (track || cred).after(m);
   m.querySelector(".slot").replaceWith(list);
   cred.classList.add("g9");
@@ -2655,7 +2655,7 @@ html, body, body.practice { background: #fff !important; }
   const n = m.querySelector(".n99");
   m.innerHTML = "";
   const a = document.createElement("div"); a.className = "m99a"; a.append(n);
-  const t = document.createElement("b"); t.textContent = "THE ALBUM"; a.append(t);
+  const t = document.createElement("b"); t.textContent = "THE MUSIC SERIES"; a.append(t);
   const sub = document.createElement("div"); sub.className = "m99s"; sub.textContent = "ALL 18 SONGS \u00b7 SEASON 1 + SEASON 2";
   m.append(a, sub);
 })();
@@ -2782,8 +2782,8 @@ html, body, body.practice { background: #fff !important; }
   const stamp = bar.querySelector(":scope > span"); if (!stamp) return;
   stamp.classList.add("og-st");
   const right = stamp.cloneNode(true);
-  const rec = document.createElement("div"); rec.className = "og-rec"; rec.setAttribute("aria-label", "'99 the album");
-  rec.innerHTML = '<div class="lbl"><span class="r99"><span class="tk">’</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="hole"></span><b>THE ALBUM</b></div>';
+  const rec = document.createElement("div"); rec.className = "og-rec"; rec.setAttribute("aria-label", "'99 the music series");
+  rec.innerHTML = '<div class="lbl"><span class="r99"><span class="tk">’</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="hole"></span><b>THE MUSIC SERIES</b></div>';
   stamp.after(rec); rec.after(right);
   window.dispatchEvent(new Event("resize"));
 })();
@@ -3356,7 +3356,7 @@ html, body, body.practice { background: #fff !important; }
       x.font = "110px " + disp; x.textAlign = "left"; x.fillText("’", sx - 2, ny + 84); x.textAlign = "center";
       x.drawImage(nine, sx + tw, ny, nw, nh); x.drawImage(nine, sx + tw + nw + gap, ny, nw, nh);
     }
-    x.font = "800 30px " + body; x.letterSpacing = "10px"; x.fillText("THE ALBUM", W / 2, fy + 165); x.letterSpacing = "0px";
+    x.font = "800 30px " + body; x.letterSpacing = "10px"; x.fillText("THE MUSIC SERIES", W / 2, fy + 165); x.letterSpacing = "0px";
     x.font = "800 40px " + body; x.fillText("Play at ogbobbybrooklyn.com", W / 2, H - 120);
     return new Promise(res => c.toBlob(b => res(b), "image/png"));
   }
