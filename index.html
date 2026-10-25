@@ -974,6 +974,8 @@ audio.addEventListener("ended", () => {
   } else if (plMode) {
     const s = earnedSongs(), nx = s.find(n => n > idx + 1);
     if (nx) playFromList(nx); else plMode = false;
+  } else if (window.ogClearPending && window.ogClearPending()) {
+    /* the Episode Cleared screen is on its way: its button starts the next episode */
   } else if (idx + 1 < EPISODES.length) load(idx + 1, true);
   setPlayIcon();
 });
@@ -1771,14 +1773,16 @@ window.scrollTo(0, 0);
   const v = new Audio(); v.preload = "auto";
   let busy = false, rot = { right: 0, wrong: 0 }, curFin = null;
   function say(src, done) {
-    if (curFin) curFin(true);
+    if (curFin) curFin();   // a line that gets cut off still hands off to whatever was waiting on it
     try { v.pause(); } catch (e) {}
     v.src = src; busy = true;
     const S = window.ogSound; if (S) S.duck(true);   // the song dips while OG talks
-    let over = false;
-    const fin = skip => { if (over) return; over = true; curFin = null; busy = false; v.onended = v.onerror = null; if (S) S.duck(false); if (!skip && done) done(); };
+    let over = false, guard = 0;
+    const fin = () => { if (over) return; over = true; clearTimeout(guard); curFin = null; busy = false; v.onended = v.onerror = v.onpause = null; if (S) S.duck(false); if (done) done(); };
     curFin = fin;
     v.onended = () => fin(); v.onerror = () => fin();
+    v.onpause = () => { if (!v.ended) setTimeout(() => { if (v.paused) fin(); }, 300); };   // phones can stop his voice when the song starts: move on
+    guard = setTimeout(fin, 12000);   // never wait on a voice line longer than this
     v.play().catch(() => fin());
   }
   const pickFrom = k => { const a = VO[k], s = a[rot[k] % a.length]; rot[k]++; return s; };
@@ -1804,14 +1808,18 @@ window.scrollTo(0, 0);
     else if (btn.classList.contains("wrong")) window.ogReact(false);
   };
   // rank-ups: the song cuts out, scratch-and-beat jingle, OG's congrats, then the song comes back
-  let promoting = false, resume = false;
+  let promoting = false, resume = false, promoT = 0;
   audio.addEventListener("play", () => { if (promoting) { resume = true; audio.pause(); } });
+  // the player tapped play: the celebration is over, the song plays
+  const letPlay = () => { if (!promoting) return; promoting = false; resume = false; clearTimeout(promoT); try { v.pause(); } catch (e) {} };
+  document.addEventListener("pointerdown", ev => { if (ev.target.closest && ev.target.closest("#play, .cab-play, .cab-over .go")) letPlay(); }, true);
   const basePromote = promote;
   promote = function (name) {
     basePromote(name);
     promoting = true; resume = !audio.paused; audio.pause();
     const src = VO.rank[name], S = window.ogSound;
-    const finish = () => { promoting = false; if (resume) { resume = false; audio.play().catch(() => {}); } };
+    const finish = () => { if (!promoting) return; promoting = false; clearTimeout(promoT); if (resume) { resume = false; audio.play().catch(() => {}); } };
+    clearTimeout(promoT); promoT = setTimeout(finish, 15000);   // the song always comes back, even if a sound never finishes
     const talk = () => { if (src) say(src, finish); else finish(); };
     const pn = document.querySelector(".promo .promo-name"); if (pn) pn.classList.add("og-stamp");
     if (S && S.on()) { S.sfx("stamp", 0.9); setTimeout(() => S.jingle(talk), 600); } else if (S) S.jingle(talk); else talk();
@@ -2111,7 +2119,7 @@ html, body, body.practice { background: #fff !important; }
     const s = ctx.createBufferSource(), g = ctx.createGain();
     s.buffer = b; g.gain.value = vol == null ? 1 : vol;
     s.connect(g); g.connect(ctx.destination);
-    if (done) s.onended = done;
+    if (done) { let f = false; const d = () => { if (f) return; f = true; done(); }; s.onended = d; setTimeout(d, (b.duration + 1) * 1000); }
     s.start();
   }
 
@@ -4433,8 +4441,9 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     });
   }
   const audioEl = document.getElementById("audio");
+  window.ogClearPending = () => pending !== null && pending === idx;
   audioEl.addEventListener("ended", () => setTimeout(() => {
-    if (pending !== null && (idx !== pending || sec >= EPISODES[pending].qs.length)) cleared(pending);
+    if (pending !== null && (idx !== pending || (sec >= EPISODES[pending].qs.length && audioEl.ended))) cleared(pending);   // only once the last part has actually played out
     else if (idx === BOSS && !isOpen(EPISODES[BOSS])) armClock();
   }, 60));
 
@@ -4520,9 +4529,10 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     paintStars(); paintScore(false);
     const stage = document.querySelector(".stage"), hall = document.getElementById("cabHall"), veil = document.getElementById("cabVeil");
     const onBoard = stage && stage.dataset.v === "ep" && (!hall || hall.hidden) && (!veil || veil.hidden);
-    if (onBoard && idx === BOSS && bossWas !== BOSS && !isOpen(EPISODES[BOSS])) bossIntro();
+    const covered = !!document.querySelector(".cab-over");
+    if (onBoard && !covered && idx === BOSS && bossWas !== BOSS && !isOpen(EPISODES[BOSS])) bossIntro();
     if (onBoard && pending !== null && idx !== pending && !document.querySelector(".cab-over")) cleared(pending);
-    bossWas = onBoard ? idx : bossWas;
+    if (!covered) bossWas = onBoard ? idx : bossWas;
   }
   new MutationObserver(() => { cancelAnimationFrame(t); t = requestAnimationFrame(sync); }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["class", "data-v", "hidden"] });
   sync();
