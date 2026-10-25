@@ -4156,13 +4156,14 @@ body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk b { font-size: clamp(.44rem,
 body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 #cabHall { position: fixed; inset: 0; z-index: 900; background: #07080b; overflow: hidden; display: grid; grid-template-rows: auto 1fr; padding: calc(env(safe-area-inset-top, 0px) + 14px) 18px calc(env(safe-area-inset-bottom, 0px) + 22px); }
 #cabHall[hidden] { display: none !important; }
-#cabHall .hall-scene { position: absolute; inset: 0; z-index: 0; }
+#cabHall .hall-scene { position: absolute; top: 0; bottom: 0; left: 50%; width: min(100%, 560px); transform: translateX(-50%); z-index: 0; overflow: hidden; }
+@media (min-width: 600px) { #cabHall .hall-scene { box-shadow: 0 0 0 2px #343b4b, 0 0 60px rgba(0,0,0,.8); } }
 #cabHall .hall-scene svg { width: 100%; height: 100%; display: block; }
-#cabHall .hall-scene.enter { animation: hallEnter .7s cubic-bezier(.2,.7,.2,1); }
+#cabHall .hall-scene.enter svg { animation: hallEnter .7s cubic-bezier(.2,.7,.2,1); }
 @keyframes hallEnter { from { transform: scale(1.18); opacity: 0; filter: blur(4px); } to { transform: none; opacity: 1; filter: none; } }
 #cabHall .hall-shade { position: absolute; inset: 0; z-index: 1; background: radial-gradient(ellipse 80% 45% at 50% 52%, rgba(5,6,9,.78), rgba(5,6,9,.25) 70%, rgba(5,6,9,0)); pointer-events: none; }
 #cabHall .hall-top { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; min-height: 52px; }
-#cabHall .hall-top img { width: min(52vw, 230px); height: auto; filter: drop-shadow(2px 3px 0 #000); }
+#cabHall .hall-top img { width: min(62vw, 270px); height: auto; display: block; }
 #cabHall .hall-x { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 2px solid rgba(255,255,255,.7); background: rgba(0,0,0,.45); color: #fff; font: 700 1.3rem/1 system-ui, sans-serif; cursor: pointer; display: grid; place-items: center; }
 #cabHall .hall-x[hidden] { display: none; }
 #cabHall .hall-room { position: relative; z-index: 2; display: grid; place-items: center; min-height: 0; }
@@ -4184,7 +4185,7 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 .hall-doors i:last-child { animation: doorR .9s cubic-bezier(.6,0,.3,1) .1s forwards; }
 @keyframes doorL { to { transform: translateX(-102%); } }
 @keyframes doorR { to { transform: translateX(102%); } }
-@media (prefers-reduced-motion: reduce) { #cabHall .hall-scene.enter, .hall-doors i { animation: none !important; } .hall-doors { display: none; } }
+@media (prefers-reduced-motion: reduce) { #cabHall .hall-scene.enter svg, .hall-doors i { animation: none !important; } .hall-doors { display: none; } }
 </style>
 <script>
 /* Hallway rooms */
@@ -4236,7 +4237,7 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
   const hall = document.createElement("div");
   hall.id = "cabHall"; hall.hidden = true; hall.setAttribute("role", "dialog"); hall.setAttribute("aria-label", "How to play");
   hall.innerHTML = '<div class="hall-scene" aria-hidden="true"></div><div class="hall-shade" aria-hidden="true"></div>' +
-    '<div class="hall-top"><img src="brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220"><button class="hall-x" type="button" aria-label="Back to the game" hidden>×</button></div>' +
+    '<div class="hall-top"><img src="brand/og-bobby-wordmark-top.png" alt="OG Bobby" width="1052" height="340"><button class="hall-x" type="button" aria-label="Back to the game" hidden>×</button></div>' +
     '<div class="hall-room"></div>';
   document.body.append(hall);
   const scene = hall.querySelector(".hall-scene"), roomBox = hall.querySelector(".hall-room"), xBtn = hall.querySelector(".hall-x");
