@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q faster-whisper
+      - run: pip install -q faster-whisper && pip install -q -U "av>=14.2"
       - run: |
           mkdir -p asr
           python3 - > asr/log.txt 2>&1 <<'PY' || true
