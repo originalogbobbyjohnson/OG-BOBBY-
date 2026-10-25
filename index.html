@@ -4311,6 +4311,27 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 .cab-over .t99-bar i { display: block; height: 100%; background: #ffd34d; border-radius: 99px; transition: width .3s; }
 .cab-over .ep99 { font: 800 .75rem/1.2 "Barlow", system-ui, sans-serif; letter-spacing: .14em; color: #fff; }
 .cab-over .go[hidden] { display: none; }
+/* 99 Test: unlock reveal before, celebration after */
+.cab-over.t99 .rise { opacity: 0; animation: t99Rise .55s cubic-bezier(.2,1.4,.4,1) forwards; animation-delay: var(--d, 0ms); }
+.cab-over.t99 .slam { opacity: 0; animation: t99Slam .5s cubic-bezier(.2,1.6,.4,1) forwards; animation-delay: var(--d, 0ms); }
+@keyframes t99Rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes t99Slam { from { opacity: 0; transform: scale(2.6); } to { opacity: 1; transform: none; } }
+.cab-over.t99 .note, .cab-over .t99-dare { text-wrap: balance; }
+.cab-over .t99-unlock { font: 800 .8rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .3em; color: #2fa34a; }
+.cab-over .t99-dare { font: 400 1.5rem/1.1 "Anton", Impact, sans-serif; letter-spacing: .04em; }
+.cab-over .go.pulse { animation: t99Rise .55s cubic-bezier(.2,1.4,.4,1) var(--d, 0ms) both, cabRing 1.4s ease-out calc(var(--d, 0ms) + .6s) infinite; }
+.cab-over .t99-score { font: 400 clamp(4rem, 22vw, 6.2rem)/.9 "Anton", Impact, sans-serif; color: #ffd34d; text-shadow: 3px 3px 0 #000, 0 0 30px rgba(255,211,77,.55); font-variant-numeric: tabular-nums; }
+.cab-over .t99-score small { font-size: .45em; color: #fff; }
+.cab-over .t99-tier { font: 400 clamp(2.2rem, 11vw, 3.2rem)/.95 "Anton", Impact, sans-serif; letter-spacing: .04em; color: #fff; text-shadow: 3px 3px 0 #d62828; }
+.cab-over .t99-tier.gold { color: #ffd34d; text-shadow: 3px 3px 0 #000, 0 0 26px rgba(255,211,77,.8); }
+.cab-over .t99-best { display: inline-block; padding: 6px 14px; border: 2px solid #2fa34a; border-radius: 99px; font: 800 .8rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .2em; color: #fff; }
+.cab-score .t99.lock { border-color: #d63a2f; }
+.cab-score .t99 svg { width: 10px; height: 10px; fill: currentColor; }
+.cab-over .t99-boxes { display: grid; grid-template-columns: repeat(9, 1fr); gap: 5px; width: 100%; }
+.cab-over .t99-boxes i { aspect-ratio: 1; max-width: 100%; border-radius: 6px; display: grid; place-items: center; font: 800 .8rem/1 "Barlow", system-ui, sans-serif; font-style: normal; color: #fff; background: #d63a2f; }
+.cab-over .t99-boxes i.on { background: #2fa34a; }
+.cab-score .t99.new { background: #ffd34d; color: #000; border-color: #ffd34d; animation: cabRing 1.4s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) { .cab-over.t99 .rise, .cab-over.t99 .slam, .cab-over .go.pulse { animation: none !important; opacity: 1 !important; } .cab-score .t99.new { animation: none; } }
 /* stars on cleared episode boxes */
 body.practice #cred .cab-row #list .ep { position: relative; }
 .ep-stars { position: absolute; left: 0; right: 0; bottom: 3px; display: flex; justify-content: center; gap: 1px; pointer-events: none; }
@@ -4412,7 +4433,10 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     d.classList.toggle("done", !!done);
     d.textContent = done ? (P.daily.ok ? "✓ DAILY DONE" : "✓ DAILY · TOMORROW") : "★ DAILY QUESTION";
     const tb = row.querySelector(".t99"), all9 = EPISODES.slice(0, N).every(isOpen);
-    if (tb.hidden === all9) tb.hidden = !all9;
+    if (tb.hidden) tb.hidden = false;
+    const done9 = EPISODES.slice(0, N).filter(isOpen).length, fresh = all9 && !P.t99seen;
+    const want = all9 ? (fresh ? "★ NEW · 99 TEST" : "★ 99 TEST") : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3h2v12H5V10zm2 0h6V7a3 3 0 0 0-6 0z"/></svg>99 TEST · ' + done9 + "/9";
+    if (tb.dataset.s !== want) { tb.dataset.s = want; tb.innerHTML = want; tb.classList.toggle("new", fresh); tb.classList.toggle("lock", !all9); tb.setAttribute("aria-label", all9 ? "Take the 99 Test" : "99 Test, locked: " + done9 + " of 9 episodes done"); }
   }
 
   /* ---- answers: hot-streak bonus, stars, cleared screen, boss clock ---- */
@@ -4593,16 +4617,33 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
 
   function testList() { const out = []; EPISODES.slice(0, N).forEach((e, i) => e.qs.forEach((q, g) => poolOf(q).forEach(v => out.push({ i, g, v })))); return out; }
   const tCount = (e, kind) => { try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "test99/" + kind, title: "99 Test " + kind, event: true }); } catch (err) {} };
+  /* locked: tells players what finishing all 9 gets them */
+  function testTeaser() {
+    document.querySelectorAll(".cab-over").forEach(x => x.remove());
+    const done = EPISODES.slice(0, N).map(isOpen), n = done.filter(Boolean).length, left = N - n;
+    const d = over("t99", '<div class="t99-unlock rise" style="--d:100ms;color:#d63a2f">BONUS · LOCKED</div>' +
+      '<div class="big gold slam" style="--d:350ms">99 TEST</div>' +
+      '<div class="t99-dare rise" style="--d:700ms">Finish all 9 episodes to unlock.</div>' +
+      '<div class="note rise" style="--d:850ms">Then take on all 99 Season 1 questions, back to back, with the full \u201999 blast.</div>' +
+      '<div class="t99-boxes rise" style="--d:1000ms">' + done.map((o, k) => '<i class="' + (o ? "on" : "") + '">' + (k + 1) + '</i>').join("") + '</div>' +
+      '<div class="note rise" style="--d:1100ms">' + (left === 1 ? "1 episode to go." : left + " episodes to go.") + '</div>' +
+      '<button class="go rise" style="--d:1250ms" type="button">KEEP PLAYING</button>');
+    fx99("right");
+    d.querySelector(".go").addEventListener("click", () => d.remove());
+  }
   function openTest() {
-    if (!EPISODES.slice(0, N).every(isOpen)) return;
+    if (!EPISODES.slice(0, N).every(isOpen)) return testTeaser();
     try { document.getElementById("audio").pause(); } catch (e) {}
     document.querySelectorAll(".cab-over").forEach(x => x.remove());
     const L = testList(), T = P.t99 && P.t99.at > 0 && P.t99.at < L.length ? P.t99 : null;
-    const best = P.t99best != null ? '<div class="note">Your best: ' + P.t99best + ' / ' + L.length + '</div>' : "";
-    const d = over("t99", '<div class="kick">BONUS · SEASON 1</div><div class="big gold">99 TEST</div>' +
-      (T ? '<div class="note">You’re on question ' + (T.at + 1) + ' of ' + L.length + ', with ' + T.ok + ' right so far.</div><button class="go" type="button">KEEP GOING</button><button class="link fresh" type="button">Start over</button>'
-         : '<div class="note">All ' + L.length + ' questions from Season 1, one after another. Practice only, no Street Cred on the line.</div>' + best + '<button class="go fresh" type="button">START THE TEST</button>') +
-      '<button class="link out" type="button">Not now</button>');
+    const best = P.t99best != null ? '<div class="note rise" style="--d:1500ms">Your best: ' + P.t99best + ' / ' + L.length + '</div>' : "";
+    const first = !P.t99seen; P.t99seen = 1; keep();
+    const d = over("t99", '<div class="t99-unlock rise" style="--d:150ms">' + (first ? "BONUS UNLOCKED" : "SEASON 1 · BONUS") + '</div>' +
+      '<div class="big gold slam" style="--d:700ms">99 TEST</div>' +
+      (T ? '<div class="t99-dare rise" style="--d:1100ms">Finish what you started.</div><div class="note rise" style="--d:1300ms">You’re on question ' + (T.at + 1) + ' of ' + L.length + ', with ' + T.ok + ' right so far.</div><button class="go pulse" style="--d:1600ms" type="button">KEEP GOING</button><button class="link fresh rise" style="--d:1800ms" type="button">Start over</button>'
+         : '<div class="t99-dare rise" style="--d:1100ms">Think you know every bar? Prove it.</div><div class="note rise" style="--d:1300ms">All ' + L.length + ' questions from Season 1, back to back. Practice only, no Street Cred on the line.</div>' + best + '<button class="go fresh pulse" style="--d:1700ms" type="button">START THE TEST</button>') +
+      '<button class="link out rise" style="--d:1900ms" type="button">Not now</button>');
+    fx99("intro"); setTimeout(() => snd("stamp", .6), 750);
     d.querySelectorAll(".fresh").forEach(b => b.addEventListener("click", () => { P.t99 = { at: 0, ok: 0 }; keep(); tCount(null, "start"); d.remove(); fx99("intro"); setTimeout(testQ, 1300); }));
     if (T) d.querySelector(".go").addEventListener("click", () => { d.remove(); fx99("intro"); setTimeout(testQ, 1300); });
     d.querySelector(".out").addEventListener("click", () => d.remove());
@@ -4644,13 +4685,21 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     const L = testList(), n = P.t99 ? P.t99.ok : 0, total = L.length;
     const newBest = P.t99best == null || n > P.t99best; if (newBest) P.t99best = n;
     P.t99 = null; keep(); tCount(null, "finish");
-    const line = n === total ? "Perfect. Every single one. That’s OG." : n >= 90 ? "OG level. Run it back for a perfect " + total + "." : n >= 70 ? "Solid. Run it back for a perfect " + total + "." : "Go back through the episodes and run it again.";
-    const d = over("t99", '<div class="kick">99 TEST · FINAL SCORE</div><div class="big gold">' + n + ' / ' + total + '</div>' +
-      (newBest ? '<div class="earn">NEW BEST</div>' : '<div class="note">Your best: ' + P.t99best + ' / ' + total + '</div>') +
-      '<div class="note"></div><button class="go" type="button">TAKE IT AGAIN</button><button class="link" type="button">Back to the board</button>');
+    const perfect = n === total;
+    const tier = perfect ? "PERFECT 99" : n >= 90 ? "OG LEVEL" : n >= 70 ? "SOLID" : "STILL GRINDING";
+    const line = perfect ? "Every single one. That’s OG." : n >= 90 ? "Run it back for a perfect " + total + "." : n >= 70 ? "Run it back for a perfect " + total + "." : "Go back through the episodes and run it again.";
+    const d = over("t99", '<div class="t99-unlock rise" style="--d:100ms">' + total + ' QUESTIONS · DONE</div>' +
+      '<div class="t99-dare slam" style="--d:400ms">YOU WENT THE DISTANCE</div>' +
+      '<div class="t99-score rise" style="--d:1000ms"><span>0</span><small> / ' + total + '</small></div>' +
+      '<div class="t99-tier slam' + (n >= 90 ? " gold" : "") + '" style="--d:2700ms">' + tier + '</div>' +
+      (newBest ? '<div class="t99-best slam" style="--d:3100ms">NEW BEST</div>' : '<div class="note rise" style="--d:3100ms">Your best: ' + P.t99best + ' / ' + total + '</div>') +
+      '<div class="note rise" style="--d:3400ms"></div><button class="go rise" style="--d:3700ms" type="button">TAKE IT AGAIN</button><button class="link rise" style="--d:3900ms" type="button">Back to the board</button>');
     d.querySelectorAll(".note")[newBest ? 0 : 1].textContent = line;
-    snd(n === total ? "bell" : "stamp", .6);
-    fx99("final");
+    snd("spray", .6); fx99("ep");
+    const num = d.querySelector(".t99-score span"), t0 = performance.now() + 1100;
+    const count = now => { const k = Math.max(0, Math.min(1, (now - t0) / 1500)); num.textContent = Math.round(n * (1 - Math.pow(1 - k, 3))); if (k < 1 && d.isConnected) requestAnimationFrame(count); };
+    requestAnimationFrame(count);
+    setTimeout(() => { if (!d.isConnected) return; snd(perfect ? "bell" : "stamp", .7); fx99("final"); if (perfect) setTimeout(() => d.isConnected && fx99("final"), 1800); }, 2700);
     d.querySelector(".go").addEventListener("click", () => { P.t99 = { at: 0, ok: 0 }; keep(); tCount(null, "start"); d.remove(); fx99("intro"); setTimeout(testQ, 1300); });
     d.querySelector(".link").addEventListener("click", () => d.remove());
   }
