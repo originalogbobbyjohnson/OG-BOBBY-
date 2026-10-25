@@ -152,7 +152,7 @@ function mark(i) {
   $("nowTitle").textContent = T[i].t;
   if ("mediaSession" in navigator) {
     try {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: T[i].t, artist: "OG Bobby", album: "OG Made – Fade ’9",
+      navigator.mediaSession.metadata = new MediaMetadata({ title: "\u2468 " + (i + 1) + " \u00b7 " + T[i].t, artist: "OG Bobby", album: "OG Made – Fade ’9",
         artwork: [{ src: new URL("../cover.png", location.href).href, sizes: "512x512", type: "image/png" }] });
     } catch (e) {}
   }

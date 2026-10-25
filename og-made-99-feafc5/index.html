@@ -187,7 +187,7 @@ function mark(i) {
   $("nowTitle").textContent = T[i].t;
   if ("mediaSession" in navigator) {
     try {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: (i + 1) + ". " + T[i].t, artist: "OG Bobby", album: "OG Made ’99 · Season " + T[i].se + " · Episode " + (T[i].n || i + 1),
+      navigator.mediaSession.metadata = new MediaMetadata({ title: (T[i].se === 2 ? "\u277e-" : "\u2468 ") + (T[i].n || i + 1) + " \u00b7 " + T[i].t, artist: "OG Bobby", album: "OG Made ’99 · Season " + T[i].se + " · Episode " + (T[i].n || i + 1),
         artwork: [{ src: new URL("icon-v2-512.png", location.href).href, sizes: "512x512", type: "image/png" }] });
     } catch (e) {}
   }
