@@ -105,6 +105,10 @@ li.sea .tk { font-family: var(--display); letter-spacing: 0; }
 .hdr .top .mid img { width: min(100%, 170px); }
 .hdr .album { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(227,178,60,.45); text-align: center; }
 .hdr .album .name { display: block; font-family: "Sedgwick Nine", "Sedgwick Ave Display", cursive; font-size: 1.45rem; line-height: 1; color: #fff; text-shadow: 2px 2px 0 #000; }
+.hdr .now { margin-top: 12px; padding: 12px 16px; gap: 8px; }
+.hdr #nowTitle { font-size: 1.5rem; }
+.hdr .controls button { width: 50px; height: 50px; }
+.hdr .controls button.play { width: 62px; height: 62px; }
 .hdr .album .series { display: block; margin-top: 6px; color: #fff; font: 600 .68rem var(--body); letter-spacing: .26em; text-transform: uppercase; }
 footer { color: var(--soft); font-size: .8rem; text-align: center; }
 </style>
@@ -132,7 +136,6 @@ footer { color: var(--soft); font-size: .8rem; text-align: center; }
     <div aria-hidden="true"><span class="nine-badge" style="width:66px"><span class="tick">’</span><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
   </div>
   <div class="album"><span class="name">OG MADE – ’99</span><span class="series">The Music Series</span></div>
-</header>
   <section class="now">
     <div class="lab">Now playing</div>
     <div id="nowTitle">Whatever It Takes</div>
@@ -144,6 +147,7 @@ footer { color: var(--soft); font-size: .8rem; text-align: center; }
       <button id="next" aria-label="Next song"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
     </div>
   </section>
+</header>
   <section class="songs">
     <ol id="list"></ol>
   </section>
