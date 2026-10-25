@@ -636,7 +636,7 @@ body.practice { overflow: hidden; }
       <li><b>Collect.</b> Finish any block of 3 songs to earn that block's playlist. Finish all 9 to earn Season 1.</li>
       <li><b>Run it back.</b> Earned a rank? Replay your unlocked songs with new questions, just for fun. No rewards, just bragging rights.</li>
       <li><b>Director’s Cuts.</b> Stripped-down versions of the songs, in their own room.</li>
-      <li><b>Road to '99.</b> OG Made is the album: Season 1 ('9) and Season 2 (9), nine episodes each. Put them together and you get '99. The climb goes on to OG Certified.</li>
+      <li><b>Road to '99.</b> OG Made is the music series: Season 1 ('9) and Season 2 (9), nine episodes each. Put them together and you get '99. The climb goes on to OG Certified.</li>
     </ul>
     <button class="btn" id="aboutPlay" type="button">Let's play</button>
   </div>
@@ -815,7 +815,7 @@ function renderReward() {
   if (!p) return;
   const all = p >= EPISODES.length;
   $("rTitle").textContent = all ? "OG PROTÉGÉ" : "YOU EARNED A PLAYLIST";
-  $("rText").textContent = all ? "You finished all 9 songs. All of Season 1 is yours to stream. Season 2 is next, with a new set of questions. Finish both for the full ’99 album."
+  $("rText").textContent = all ? "You finished all 9 songs. All of Season 1 is yours to stream. Season 2 is next, with a new set of questions. Finish both for the full ’99 music series."
     : "Plays right here in the game. Finish another block of 3 to add it.";
   const box = $("picks"); box.innerHTML = "";
   songs.forEach(n => {
@@ -1366,7 +1366,7 @@ window.scrollTo(0, 0);
         '<figure><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span><figcaption>SEASON 1</figcaption></figure>' +
         '<figure>' + nineSvg(Math.max(.06, have / 9), "filling") + '<figcaption>SEASON 2</figcaption></figure>' +
       '</div>' +
-      '<p class="v2-story">1999 changed everything for OG. Season 1 gave you nine. Season 2 is nine more, with new questions. Fill them both and they read <b>’99</b>, the full album.</p>' +
+      '<p class="v2-story">1999 changed everything for OG. Season 1 gave you nine. Season 2 is nine more, with new questions. Fill them both and they read <b>’99</b>, the full music series.</p>' +
       '<div class="v2-grid">' + tiles + '</div>' +
       '<p class="v2-count"><b>' + have + ' of 9</b> revealed · opens after Season 1</p>';
     v2Card.querySelectorAll(".v2-t").forEach((el, i) => { el.textContent = VOL2[i] ? VOL2[i].replace(/, Pt\. \d+$/, "") : "???"; });
