@@ -57,7 +57,7 @@ body { font-family: var(--body); font-size: 16px; -webkit-tap-highlight-color: t
 
 /* Songs view */
 #bgArt { position: fixed; inset: 0; z-index: 0; background: #0a0d0b url("art.jpg?v=3") 50% 30% / cover no-repeat; filter: blur(18px) brightness(.35); transform: scale(1.1); }
-.wrap { position: relative; z-index: 1; max-width: 540px; margin: 0 auto; padding: max(20px, env(safe-area-inset-top)) 16px 48px; display: grid; gap: 16px; }
+.wrap { position: relative; z-index: 1; max-width: 540px; margin: 0 auto; padding: 0 16px 48px; display: grid; gap: 16px; }
 .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .top .back { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: rgba(0,0,0,.5); display: grid; place-items: center; cursor: pointer; }
 .top .back svg { width: 22px; height: 22px; fill: #fff; }
@@ -100,6 +100,12 @@ li.sea .tk { font-family: var(--display); letter-spacing: 0; }
 
 .cover-txt .sea { display: block; margin-top: 8px; color: #fff; font: 600 1rem var(--body); letter-spacing: .24em; text-transform: uppercase; text-shadow: 2px 2px 0 #000; }
 .top .mid .sea { display: block; margin-top: 2px; color: #fff; font: 600 .72rem var(--body); letter-spacing: .22em; text-transform: uppercase; }
+/* Sticky header: OG Bobby row, then the album name on its own line */
+.hdr { position: sticky; top: 0; z-index: 5; margin: 0 -16px; padding: max(12px, env(safe-area-inset-top)) 16px 12px; background: rgba(6,8,7,.96); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,.08); }
+.hdr .top .mid img { width: min(100%, 170px); }
+.hdr .album { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(227,178,60,.45); text-align: center; }
+.hdr .album .name { display: block; font-family: "Sedgwick Nine", "Sedgwick Ave Display", cursive; font-size: 1.45rem; line-height: 1; color: #fff; text-shadow: 2px 2px 0 #000; }
+.hdr .album .series { display: block; margin-top: 6px; color: #fff; font: 600 .68rem var(--body); letter-spacing: .26em; text-transform: uppercase; }
 footer { color: var(--soft); font-size: .8rem; text-align: center; }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -117,15 +123,16 @@ footer { color: var(--soft); font-size: .8rem; text-align: center; }
 </div>
 <div id="bgArt" aria-hidden="true"></div>
 <div class="wrap">
+<header class="hdr">
   <div class="top">
     <button class="back" id="toCover" aria-label="Back to cover"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
     <div class="mid">
       <img src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220">
-      <span class="name">OG MADE – ’99</span>
-      <span class="sea">The Music Series</span>
     </div>
     <div aria-hidden="true"><span class="nine-badge" style="width:66px"><span class="tick">’</span><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
   </div>
+  <div class="album"><span class="name">OG MADE – ’99</span><span class="series">The Music Series</span></div>
+</header>
   <section class="now">
     <div class="lab">Now playing</div>
     <div id="nowTitle">Whatever It Takes</div>
@@ -170,8 +177,8 @@ function mark(i) {
   $("nowTitle").textContent = T[i].t;
   if ("mediaSession" in navigator) {
     try {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: T[i].t, artist: "OG Bobby", album: "OG Made ’99",
-        artwork: [{ src: new URL("art-sq.png", location.href).href, sizes: "512x512", type: "image/png" }] });
+      navigator.mediaSession.metadata = new MediaMetadata({ title: (i + 1) + ". " + T[i].t, artist: "OG Bobby", album: "OG Made ’99 · Season " + T[i].se + " · Episode " + (T[i].n || i + 1),
+        artwork: [{ src: new URL("icon-v2-512.png", location.href).href, sizes: "512x512", type: "image/png" }] });
     } catch (e) {}
   }
 }
