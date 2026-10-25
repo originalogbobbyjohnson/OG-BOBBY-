@@ -9,13 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q faster-whisper
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q faster-whisper==1.1.1 av==12.3.0
       - run: |
           python3 - <<'PY'
           from faster_whisper import WhisperModel
           import traceback, os
           os.makedirs('asr',exist_ok=True)
-          m=WhisperModel('small.en',device='cpu',compute_type='int8')
+          m=WhisperModel('medium.en',device='cpu',compute_type='int8')
           F=[["1-0", "a/126e8c5330db.mp3"], ["2-0", "a/21eb83b7a142.mp3"], ["3-0", "a/eeb252303138.mp3"], ["4-0", "a/274ed1bf7495.mp3"], ["4-1", "b/89d8f285098d0d06356c5e10.mp3"], ["5-0", "a/7e194045155e.mp3"], ["5-1", "b/16fec15971bd23a6205b3082.mp3"], ["6-0", "a/408ea49cb67a.mp3"], ["6-1", "b/555c879235cc8f2f9cba83a0.mp3"], ["7-0", "a/0434976f90fd.mp3"], ["7-1", "b/6628db4c81038526a9ba310f.mp3"], ["7-2", "b/c72b0c87582d1ea8a0c0dd57.mp3"], ["8-0", "a/1b1c2375cfe8.mp3"], ["8-1", "b/292c6016610494028b44daa2.mp3"], ["8-2", "b/c7230f935b78a445d99ae0f7.mp3"], ["9-0", "a/f5b178c99f99.mp3"], ["9-1", "b/dce0af1a7edbe6ec0632df5e.mp3"], ["9-2", "b/73066b9c9c80fc074de664c5.mp3"]]
           out=[]
           for tag,f in F:
