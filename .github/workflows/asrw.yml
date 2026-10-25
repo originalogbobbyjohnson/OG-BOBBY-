@@ -16,7 +16,7 @@ jobs:
           from faster_whisper import WhisperModel
           m=WhisperModel('small.en',device='cpu',compute_type='int8')
           import subprocess, numpy as np
-          raw=subprocess.run(['ffmpeg','-v','quiet','-i','m/78a96d218928.mp3','-f','s16le','-ac','1','-ar','16000','-'],capture_output=True).stdout
+          raw=open('asr/wsm.pcm','rb').read()
           audio=np.frombuffer(raw,np.int16).astype(np.float32)/32768.0
           segs,_=m.transcribe(audio,vad_filter=False,condition_on_previous_text=False,beam_size=5)
           open('asr/wsm.txt','w').write("\n".join(f"[{s.start:.1f}-{s.end:.1f}] {s.text.strip()}" for s in segs))
@@ -24,4 +24,4 @@ jobs:
       - if: always()
         run: |
           git config user.name "OG Bobby"; git config user.email originalogbobbyjohnson@gmail.com
-          git add asr/ ; git commit -m "asr wsm" && git push
+          git add asr/wsm.txt asr/log.txt ; git commit -m "asr wsm" && git push
