@@ -4236,12 +4236,11 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 #cabHall .hall-top img { width: min(62vw, 270px); height: auto; display: block; }
 /* pizza shop room only: OG MADE across the top, same graffiti lettering as the OG BOBBY wordmark */
 #cabHall .hall-made { display: none; font: 400 clamp(2.6rem, 13vw, 3.6rem)/1 "Sedgwick Ave Display", cursive; color: #fff; letter-spacing: .02em; white-space: nowrap; text-shadow: 2px 3px 0 #000, 0 6px 10px rgba(0,0,0,.65); }
-#cabHall[data-k="2"] .hall-top img { display: none; }
-#cabHall[data-k="2"] .hall-made { display: block; }
-/* token booth room: OG MADE '99 (white graffiti + the red neon '99), signed "- OG BOBBY" underneath on the right */
-#cabHall .hall-made99 { display: none; }
-#cabHall[data-k="0"] .hall-top img:not(.hm-sig img) { display: none; }
-#cabHall[data-k="0"] .hall-made99 { display: grid; justify-items: end; gap: 2px; }
+#cabHall .hall-made { display: none !important; }
+/* intro rooms: OG MADE '99 (white graffiti + the red neon '99), signed "- OG BOBBY" underneath on the right */
+/* every intro room carries the same OG MADE '99 header, signed OG BOBBY */
+#cabHall .hall-top > img { display: none; }
+#cabHall .hall-made99 { display: grid; justify-items: end; gap: 2px; }
 #cabHall .hm-row { display: flex; align-items: center; gap: 10px; }
 #cabHall .hm-word { font: 400 clamp(2.4rem, 12vw, 3.3rem)/1 "Sedgwick Ave Display", cursive; color: #fff; white-space: nowrap; text-shadow: 2px 3px 0 #000, 0 6px 10px rgba(0,0,0,.65); }
 #cabHall .hm-99 { width: clamp(78px, 21vw, 104px); height: auto; overflow: visible; filter: drop-shadow(0 4px 6px rgba(0,0,0,.6)); }

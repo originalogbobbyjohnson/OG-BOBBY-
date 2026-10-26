@@ -25,6 +25,7 @@
 <link rel="icon" href="icon-v2-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="icon-v2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../brand/og-made-header.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&family=Sedgwick+Ave+Display&display=swap">
 <style>/* the graffiti 9 with a straight tail instead of the hook (only the 9 comes from this file) */
 @font-face { font-family: "Sedgwick Nine"; src: url("../brand/sedgwick-nine.woff") format("woff"); unicode-range: U+0039; font-display: swap; }</style>
@@ -117,15 +118,21 @@ html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
 .wrap > .songs { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; margin-bottom: max(14px, env(safe-area-inset-bottom)); }
 .songs footer { padding: 18px 0 14px; }
 footer { color: var(--soft); font-size: .8rem; text-align: center; }
+.cover-omh { position: absolute; z-index: 1; top: calc(max(14px, env(safe-area-inset-top)) + 14px); left: 0; right: 0; display: flex; justify-content: center; }
+.cover-omh .omh { font-size: clamp(2.6rem, 13vw, 3.6rem); }
+.hdr .top .mid .omh.small { font-size: clamp(1.25rem, 6vw, 1.55rem); }
+.hdr .top .mid .omh img.omh-99 { width: 2.1em; max-width: none; }
+.hdr .top .mid .omh .omh-sig img { width: 6.2em; max-width: none; }
+.hdr .album { margin-top: 8px; padding-top: 8px; }
+.hdr .album .series { margin-top: 0; }
 </style>
 <script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <div id="cover" role="button" tabindex="0" aria-label="Open OG MADE ’99">
   <img class="art" src="art.jpg?v=3" alt="OG Bobby on Third Avenue in Bay Ridge at night with the Verrazzano Bridge lit up behind him">
-  <img class="wm-top" src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220">
+  <div class="cover-omh"><div class="omh " role="img" aria-label="OG Made ’99, signed OG Bobby"><div class="omh-row"><span class="omh-word">OG MADE</span><img class="omh-99" src="../brand/og-made-99.svg" alt=""></div><div class="omh-sig">— <img src="../brand/og-bobby-wordmark-top.png" alt=""></div></div></div>
   <div class="cover-txt">
-    <span class="name">OG MADE – ’99</span>
     <span class="sea">The Music Series</span>
     <span class="rel">First single release · December 1</span>
     <span class="open"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Open</span>
@@ -137,11 +144,11 @@ footer { color: var(--soft); font-size: .8rem; text-align: center; }
   <div class="top">
     <button class="back" id="toCover" aria-label="Back to cover"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
     <div class="mid">
-      <img src="../brand/og-bobby-wordmark.png" alt="OG Bobby" width="932" height="220">
+      <div class="omh small" role="img" aria-label="OG Made ’99, signed OG Bobby"><div class="omh-row"><span class="omh-word">OG MADE</span><img class="omh-99" src="../brand/og-made-99.svg" alt=""></div><div class="omh-sig">— <img src="../brand/og-bobby-wordmark-top.png" alt=""></div></div>
     </div>
     <div aria-hidden="true"><span class="nine-badge" style="width:66px"><span class="tick">’</span><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
   </div>
-  <div class="album"><span class="name">OG MADE – ’99</span><span class="series">The Music Series</span></div>
+  <div class="album"><span class="series">The Music Series</span></div>
   <section class="now">
     <div class="lab">Now playing</div>
     <div id="nowTitle">Whatever It Takes</div>

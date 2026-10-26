@@ -1,0 +1,9 @@
+/* OG MADE '99 header, signed by OG BOBBY. One look everywhere: the game's intro rooms, the '99 series page, Reels.
+   OG MADE = white graffiti lettering (Sedgwick Ave Display, same as the OG BOBBY wordmark), '99 = the red neon art (og-made-99.svg),
+   underneath on the right: a dash and the real OG BOBBY wordmark, like a signature. Scale it with font-size on .omh. */
+.omh { display: inline-grid; justify-items: end; gap: .05em; font-size: clamp(2.4rem, 12vw, 3.3rem); line-height: 1; }
+.omh-row { display: flex; align-items: center; gap: .2em; }
+.omh-word { font-family: "Sedgwick Ave Display", cursive; font-weight: 400; color: #fff; white-space: nowrap; text-shadow: .04em .06em 0 #000, 0 .12em .2em rgba(0,0,0,.65); }
+.omh-99 { width: 2.1em; height: auto; display: block; margin: -.35em -.15em -.35em 0; filter: drop-shadow(0 .08em .12em rgba(0,0,0,.6)); }
+.omh-sig { display: flex; align-items: center; gap: .12em; margin-right: .1em; color: #fff; font: 700 .32em/1 "Barlow", system-ui, sans-serif; text-shadow: 0 2px 4px rgba(0,0,0,.7); }
+.omh-sig img { display: block; width: 6.2em; height: auto; }
