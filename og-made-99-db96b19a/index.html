@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OG Made – ’99 · The Music Series</title>
+<meta name="color-scheme" content="dark only">
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="noindex">
+<meta name="apple-mobile-web-app-title" content="OG Made – ’99 · The Music Series">
+<meta name="application-name" content="OG Made – ’99 · The Music Series">
+<meta name="description" content="OG Bobby · Season 1 + Season 2 · 18 episodes · First single December 1">
+<meta property="og:type" content="music.album">
+<meta property="og:site_name" content="OG Bobby">
+<meta property="og:title" content="OG Made – ’99 · The Music Series">
+<meta property="og:description" content="OG Bobby · Season 1 + Season 2 · 18 episodes · First single December 1">
+<meta property="og:url" content="https://ogbobbybrooklyn.com/og-made-99-db96b19a/">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/og-made-99-db96b19a/share.jpg?v=3">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OG Made – ’99 · The Music Series">
+<meta name="twitter:image" content="https://ogbobbybrooklyn.com/og-made-99-db96b19a/share.jpg?v=3">
+<link rel="icon" href="icon-v2-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icon-v2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../brand/og-made-header.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&family=Sedgwick+Ave+Display&display=swap">
+<style>/* the graffiti 9 with a straight tail instead of the hook (only the 9 comes from this file) */
+@font-face { font-family: "Sedgwick Nine"; src: url("../brand/sedgwick-nine.woff") format("woff"); unicode-range: U+0039; font-display: swap; }</style>
+<style>
+/* Street-corner cover first (art fills the screen, playlist name only); tap to open the songs.
+   Every text block sits on its own dark surface so nothing ever lands on white. */
+:root {
+  --bg: #0a0d0b; --panel: rgba(14,20,16,.92); --row: rgba(255,255,255,.04); --line: rgba(255,255,255,.10);
+  --fg: #ffffff; --soft: #e9ece8; --gold: #e3b23c;
+  --display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --body: "Barlow", system-ui, -apple-system, sans-serif;
+  color-scheme: dark only;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #0a0d0b !important; color: var(--fg); }
+body { font-family: var(--body); font-size: 16px; -webkit-tap-highlight-color: transparent; min-height: 100dvh; }
+.nine { font-family: "Sedgwick Nine", "Sedgwick Ave Display", cursive; }
+
+/* Cover */
+#cover { position: fixed; inset: 0; z-index: 5; background: #000; cursor: pointer; display: grid; transition: opacity .45s ease, transform .45s ease; }
+#cover.gone { opacity: 0; transform: scale(1.04); pointer-events: none; }
+#cover img.art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+#cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 50%, rgba(0,0,0,.85) 80%, #000 100%); }
+.cover-txt { position: relative; z-index: 1; align-self: end; justify-self: center; text-align: center; padding: 0 16px max(36px, env(safe-area-inset-bottom)); width: min(100%, 520px); }
+.wm-top { position: absolute; z-index: 1; top: calc(max(14px, env(safe-area-inset-top)) + 10px); left: 50%; transform: translateX(-50%); width: min(66%, 300px); height: auto; filter: drop-shadow(3px 3px 0 #000); }
+.cover-txt .wm { display: block; width: min(70%, 260px); height: auto; margin: 0 auto; filter: drop-shadow(3px 3px 0 #000); }
+.cover-txt .name { display: block; margin-top: 10px; font-family: "Sedgwick Nine", "Sedgwick Ave Display", cursive; font-size: clamp(2.4rem, 11vw, 3.4rem); line-height: 1; color: #fff; text-shadow: 3px 3px 0 #000; }
+.cover-txt .open { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 12px 26px; border-radius: 999px; background: rgba(0,0,0,.6); border: 2px solid var(--gold); color: #fff; font: 600 1rem var(--body); letter-spacing: .14em; text-transform: uppercase; }
+.cover-txt .open svg { width: 18px; height: 18px; fill: var(--gold); }
+
+/* Songs view */
+#bgArt { position: fixed; inset: 0; z-index: 0; background: #0a0d0b url("art.jpg?v=3") 50% 30% / cover no-repeat; filter: blur(18px) brightness(.35); transform: scale(1.1); }
+.wrap { position: relative; z-index: 1; max-width: 540px; margin: 0 auto; padding: 0 16px 48px; display: grid; gap: 16px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.top .back { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: rgba(0,0,0,.5); display: grid; place-items: center; cursor: pointer; }
+.top .back svg { width: 22px; height: 22px; fill: #fff; }
+.top .mid { flex: 1; min-width: 0; text-align: center; }
+.top .mid img { display: block; width: min(100%, 180px); height: auto; margin: 0 auto; filter: drop-shadow(2px 2px 0 #000); }
+.top .mid .name { display: block; margin-top: 4px; font-family: "Sedgwick Nine", "Sedgwick Ave Display", cursive; font-size: 1.6rem; line-height: 1; color: #fff; text-shadow: 2px 2px 0 #000; }
+.nine-badge { flex: none; display: flex; align-items: flex-start; justify-content: center; padding-top: 10px; gap: 1px; width: 52px; height: 52px; border-radius: 12px; background: #000; border: 2px solid #e3b23c; box-shadow: 0 0 14px 3px rgba(227,178,60,.55); }
+.nine-badge svg { width: 17px; height: auto; overflow: visible; }
+.nine-badge .tick { font-family: var(--display); font-size: 1.3rem; line-height: .8; color: #fff; text-shadow: 2px 2px 0 #000; }
+.now { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 16px; display: grid; gap: 12px; }
+.lab { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--soft); }
+#nowTitle { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1.05; color: #fff; }
+input[type=range] { width: 100%; accent-color: var(--gold); }
+.times { display: flex; justify-content: space-between; color: var(--soft); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 20px; }
+.controls button { background: rgba(0,0,0,.35); border: 1px solid var(--line); color: #fff; border-radius: 50%; width: 56px; height: 56px; display: grid; place-items: center; cursor: pointer; }
+.controls button.play { width: 72px; height: 72px; background: var(--gold); border-color: var(--gold); color: #000; }
+.controls svg { width: 24px; height: 24px; fill: currentColor; }
+.controls button.play svg { width: 30px; height: 30px; }
+button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.songs { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 6px; }
+.songs .sub { color: var(--soft); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; padding: 12px 12px 8px; }
+ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+li button { width: 100%; display: grid; grid-template-columns: 2.2rem 1fr auto; gap: 10px; align-items: center; text-align: left; background: var(--row); border: 0; border-left: 3px solid transparent; border-radius: 12px; color: #fff; font: 600 1.05rem var(--body); padding: 14px 12px; cursor: pointer; }
+li .n { color: var(--soft); font-variant-numeric: tabular-nums; font-size: .9rem; text-align: center; }
+li .t { min-width: 0; overflow-wrap: anywhere; color: #fff; }
+li .d { color: var(--soft); font-size: .85rem; font-weight: 400; font-variant-numeric: tabular-nums; }
+li button[aria-current="true"] { background: rgba(227,178,60,.14); border-left-color: var(--gold); }
+li button[aria-current="true"] .t, li button[aria-current="true"] .n { color: var(--gold); }
+
+.cover-txt .name.big { font-size: clamp(3.4rem, 17vw, 5rem); margin-top: 6px; }
+.cover-txt .n99 { display: flex; justify-content: center; align-items: flex-start; margin-top: 2px; font-size: clamp(2.2rem, 10vw, 3rem); line-height: 1; color: #d62828; text-shadow: 3px 3px 0 #000; }
+.cover-txt .n99 .tk { font-family: var(--display); font-size: .8em; line-height: .9; color: #d62828; }
+.cover-txt .rel { display: block; margin-top: 6px; color: #fff; font: 600 .8rem var(--body); letter-spacing: .2em; text-transform: uppercase; text-shadow: 2px 2px 0 #000; }
+.top .mid .name { font-size: 1.5rem; }
+li.sea { padding: 14px 12px 6px; color: #fff; font: 600 .82rem var(--body); letter-spacing: .18em; text-transform: uppercase; }
+li.sea .nine { font-size: 1.15rem; letter-spacing: 0; }
+li.sea .tk { font-family: var(--display); letter-spacing: 0; }
+.songs { padding-top: 0; }
+
+.cover-txt .sea { display: block; margin-top: 8px; color: #fff; font: 600 1rem var(--body); letter-spacing: .24em; text-transform: uppercase; text-shadow: 2px 2px 0 #000; }
+.top .mid .sea { display: block; margin-top: 2px; color: #fff; font: 600 .72rem var(--body); letter-spacing: .22em; text-transform: uppercase; }
+/* Sticky header: OG Bobby row, then the album name on its own line */
+.hdr { position: sticky; top: 0; z-index: 5; margin: 0 -16px; padding: max(12px, env(safe-area-inset-top)) 16px 12px; background: rgba(6,8,7,.96); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,.08); }
+.hdr .top .mid img { width: min(100%, 170px); }
+.hdr .album { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(227,178,60,.45); text-align: center; }
+.hdr .album .name { display: block; font-family: "Sedgwick Nine", "Sedgwick Ave Display", cursive; font-size: 1.45rem; line-height: 1; color: #fff; text-shadow: 2px 2px 0 #000; }
+.hdr .now { margin-top: 12px; padding: 12px 16px; gap: 8px; }
+.hdr #nowTitle { font-size: 1.5rem; }
+.hdr .controls button { width: 50px; height: 50px; }
+.hdr .controls button.play { width: 62px; height: 62px; }
+.hdr .album .series { display: block; margin-top: 6px; color: #fff; font: 600 .68rem var(--body); letter-spacing: .26em; text-transform: uppercase; }
+/* App frame: page never moves; only the episode list scrolls */
+html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+.wrap { height: 100vh; height: 100dvh; display: flex; flex-direction: column; gap: 14px; padding-bottom: 0; box-sizing: border-box; }
+.wrap > .hdr { position: relative; flex: none; }
+.wrap > .songs { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; margin-bottom: max(14px, env(safe-area-inset-bottom)); }
+.songs footer { padding: 18px 0 14px; }
+footer { color: var(--soft); font-size: .8rem; text-align: center; }
+.cover-omh { position: absolute; z-index: 1; top: calc(max(14px, env(safe-area-inset-top)) + 14px); left: 0; right: 0; display: flex; justify-content: center; }
+.cover-omh .omh { font-size: clamp(2.6rem, 13vw, 3.6rem); }
+.hdr .top .mid .omh.small { font-size: clamp(1.25rem, 6vw, 1.55rem); }
+.hdr .top .mid .omh img.omh-99 { width: 2.1em; max-width: none; }
+.hdr .top .mid .omh .omh-sig img { width: 6.2em; max-width: none; }
+.hdr .album { margin-top: 8px; padding-top: 8px; }
+.hdr .album .series { margin-top: 0; }
+</style>
+<script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<div id="cover" role="button" tabindex="0" aria-label="Open OG MADE ’99">
+  <img class="art" src="art.jpg?v=3" alt="OG Bobby on Third Avenue in Bay Ridge at night with the Verrazzano Bridge lit up behind him">
+  <div class="cover-omh"><div class="omh " role="img" aria-label="OG Made ’99, signed OG Bobby"><div class="omh-row"><span class="omh-word">OG MADE</span><img class="omh-99" src="../brand/og-made-99.svg" alt=""></div><div class="omh-sig">— <img src="../brand/og-bobby-wordmark-top.png" alt=""></div></div></div>
+  <div class="cover-txt">
+    <span class="sea">The Music Series</span>
+    <span class="rel">First single release · December 1</span>
+    <span class="open"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Open</span>
+  </div>
+</div>
+<div id="bgArt" aria-hidden="true"></div>
+<div class="wrap">
+<header class="hdr">
+  <div class="top">
+    <button class="back" id="toCover" aria-label="Back to cover"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+    <div class="mid">
+      <div class="omh small" role="img" aria-label="OG Made ’99, signed OG Bobby"><div class="omh-row"><span class="omh-word">OG MADE</span><img class="omh-99" src="../brand/og-made-99.svg" alt=""></div><div class="omh-sig">— <img src="../brand/og-bobby-wordmark-top.png" alt=""></div></div>
+    </div>
+    <div aria-hidden="true"><span class="nine-badge" style="width:66px"><span class="tick">’</span><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
+  </div>
+  <div class="album"><span class="series">The Music Series</span></div>
+  <section class="now">
+    <div class="lab">Now playing</div>
+    <div id="nowTitle">Whatever It Takes</div>
+    <input type="range" id="seek" min="0" max="1000" value="0" aria-label="Seek">
+    <div class="times"><span id="cur">0:00</span><span id="tot">0:00</span></div>
+    <div class="controls">
+      <button id="prev" aria-label="Previous song"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
+      <button class="play" id="play" aria-label="Play"><svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      <button id="next" aria-label="Next song"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+    </div>
+  </section>
+</header>
+  <section class="songs">
+    <ol id="list"></ol>
+    <footer>© OG Bobby · Bay Ridge, Brooklyn</footer>
+  </section>
+</div>
+<audio id="audio" preload="metadata"></audio>
+<script>
+const CFG = {"mode": "tracks", "mix": "", "tracks": [{"t": "Whatever It Takes", "f": "36205c960b63.mp3", "d": 157.52, "s": 0.0, "n": 1, "se": 1}, {"t": "Ridge Brothers", "f": "59371541676c.mp3", "d": 206.39, "s": 0.0, "n": 2, "se": 1}, {"t": "Bay Ridge Nights", "f": "0cffe671ed63.mp3", "d": 187.17, "s": 0.0, "n": 3, "se": 1}, {"t": "The Get Back (Raw Cut)", "f": "628661269f01.mp3", "d": 202.42, "s": 0.0, "n": 4, "se": 1}, {"t": "Pioneer", "f": "2fcf00af916f.mp3", "d": 202.27, "s": 0.0, "n": 5, "se": 1}, {"t": "Bars & Clubs", "f": "e3f3994d13d2.mp3", "d": 160.99, "s": 0.0, "n": 6, "se": 1}, {"t": "Bay Ridge Is Mine", "f": "07e0acbb50a5.mp3", "d": 270.16, "s": 0.0, "n": 7, "se": 1}, {"t": "Black Rob", "f": "2ddaa23c04ec.mp3", "d": 214.18, "s": 0.0, "n": 8, "se": 1}, {"t": "Positivity Spreads", "f": "04ad61a7d37e.mp3", "d": 222.8, "s": 0.0, "n": 9, "se": 1}, {"t": "After Hours", "f": "f999844d0224.mp3", "d": 277.37, "s": 0.0, "n": 1, "se": 2}, {"t": "The Ridge to The Beach", "f": "7da0390d9b18.mp3", "d": 121.75, "s": 0.0, "n": 2, "se": 2}, {"t": "Wall Street Machine, Pt. 1", "f": "78a96d218928.mp3", "d": 186.02, "s": 0.0, "n": 3, "se": 2}, {"t": "Ridge Reels", "f": "daec866bb022.mp3", "d": 114.43, "s": 0.0, "n": 4, "se": 2}, {"t": "Mikey the Rat", "f": "cc5d301f8062.mp3", "d": 245.94, "s": 0.0, "n": 5, "se": 2}, {"t": "Fort Hamilton Parkway", "f": "3e21ffaaa1e1.mp3", "d": 262.44, "s": 0.0, "n": 6, "se": 2}, {"t": "Bridgeview to Vegas", "f": "570fb18098fa.mp3", "d": 207.29, "s": 0.0, "n": 7, "se": 2}, {"t": "Wall Street Machine, Pt. 2", "f": "2d4e874d7a0a.mp3", "d": 242.04, "s": 0.0, "n": 8, "se": 2}, {"t": "Everybody's Bay Ridge", "f": "625ec773210c.mp3", "d": 216.02, "s": 0.0, "n": 9, "se": 2}]};
+const T = CFG.tracks, FADE = CFG.mode === "fade";
+const audio = document.getElementById("audio");
+const $ = id => document.getElementById(id);
+const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+let cur = 0, seeking = false;
+
+T.forEach((t, i) => {
+  if (!i || T[i-1].se !== t.se) { const h = document.createElement("li"); h.className = "sea"; h.innerHTML = t.se === 1 ? 'Season 1 · <span class="tk">’</span><span class="nine">9</span>' : 'Season 2 · <span class="nine">9</span>'; $("list").appendChild(h); }
+  const li = document.createElement("li"), b = document.createElement("button");
+  b.innerHTML = '<span class="n">' + (t.n || i + 1) + '</span><span class="t"></span><span class="d">' + fmt(t.d) + '</span>';
+  b.querySelector(".t").textContent = t.t;
+  b.onclick = () => go(i, true);
+  li.appendChild(b); $("list").appendChild(li);
+});
+const btns = [...document.querySelectorAll("li button")];
+T.forEach((t, i) => btns[i].querySelector(".t").insertAdjacentHTML("beforeend", ""));
+
+function mark(i) {
+  if (i === cur && btns[i].getAttribute("aria-current")) return;
+  cur = i;
+  btns.forEach(b => b.removeAttribute("aria-current"));
+  btns[i].setAttribute("aria-current", "true");
+  $("nowTitle").textContent = T[i].t;
+  if ("mediaSession" in navigator) {
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: (T[i].se === 2 ? "\u2468 " : "\u2019\u2468 ") + (T[i].n || i + 1) + " \u00b7 " + T[i].t, artist: "OG Bobby", album: "OG Made ’99 · Season " + T[i].se + " · Episode " + (T[i].n || i + 1),
+        artwork: [{ src: new URL("icon-v2-512.png", location.href).href, sizes: "512x512", type: "image/png" }] });
+    } catch (e) {}
+  }
+}
+
+function go(i, play) {
+  if (i < 0 || i >= T.length) return;
+  if (FADE) {
+    if (!audio.src) audio.src = "../m/" + CFG.mix;
+    const seekTo = () => { audio.currentTime = T[i].s; };
+    if (audio.readyState >= 1) seekTo(); else audio.addEventListener("loadedmetadata", seekTo, { once: true });
+  } else {
+    audio.src = "../m/" + T[i].f;
+  }
+  mark(i);
+  if (play) audio.play().catch(() => {});
+}
+
+function idxAt(t) { let i = 0; for (let k = 0; k < T.length; k++) if (t >= T[k].s) i = k; return i; }
+
+audio.addEventListener("timeupdate", () => {
+  if (FADE) {
+    const i = idxAt(audio.currentTime + 0.5);
+    if (i !== cur) mark(i);
+    if (!seeking) {
+      const d = audio.duration || 1;
+      $("seek").value = audio.currentTime / d * 1000;
+      $("cur").textContent = fmt(audio.currentTime); $("tot").textContent = fmt(audio.duration);
+    }
+  } else if (!seeking) {
+    const d = audio.duration || T[cur].d;
+    $("seek").value = audio.currentTime / d * 1000;
+    $("cur").textContent = fmt(audio.currentTime); $("tot").textContent = fmt(d);
+  }
+});
+audio.addEventListener("ended", () => { if (!FADE && cur + 1 < T.length) go(cur + 1, true); setIcon(); });
+const setIcon = () => {
+  $("playIcon").innerHTML = audio.paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
+  $("play").setAttribute("aria-label", audio.paused ? "Play" : "Pause");
+};
+audio.addEventListener("play", setIcon); audio.addEventListener("pause", setIcon);
+
+$("play").onclick = () => { if (!audio.src) go(0, true); else audio.paused ? audio.play() : audio.pause(); };
+$("next").onclick = () => go(Math.min(cur + 1, T.length - 1), true);
+$("prev").onclick = () => {
+  const into = FADE ? audio.currentTime - T[cur].s : audio.currentTime;
+  go(into > 3 || cur === 0 ? cur : cur - 1, true);
+};
+$("seek").addEventListener("input", () => { seeking = true; const d = audio.duration || 0; $("cur").textContent = fmt($("seek").value / 1000 * d); });
+$("seek").addEventListener("change", () => { const d = audio.duration || 0; audio.currentTime = $("seek").value / 1000 * d; seeking = false; });
+
+if ("mediaSession" in navigator) {
+  try {
+    navigator.mediaSession.setActionHandler("nexttrack", () => $("next").onclick());
+    navigator.mediaSession.setActionHandler("previoustrack", () => $("prev").onclick());
+    navigator.mediaSession.setActionHandler("play", () => audio.play());
+    navigator.mediaSession.setActionHandler("pause", () => audio.pause());
+  } catch (e) {}
+}
+const coverEl = document.getElementById("cover");
+const openIt = () => { coverEl.classList.add("gone"); window.scrollTo(0, 0); };
+coverEl.addEventListener("click", openIt);
+coverEl.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openIt(); } });
+document.getElementById("toCover").onclick = () => coverEl.classList.remove("gone");
+mark(0);
+$("tot").textContent = fmt(T[0].d);
+</script>
+</body>
+</html>
