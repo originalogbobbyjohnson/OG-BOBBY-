@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OG Bobby · The Brooklyn Music Game</title>
-<meta name="description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
+<meta name="description" content="Free to play. Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="OG Bobby">
 <meta property="og:title" content="The Brooklyn Music Game">
-<meta property="og:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
+<meta property="og:description" content="Free to play. Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
 <meta property="og:url" content="https://ogbobbybrooklyn.com/">
 <meta property="og:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=3">
 <meta property="og:image:type" content="image/jpeg">
@@ -17,7 +17,7 @@
 <meta property="og:image:alt" content="OG Bobby on a Bay Ridge block at night — the Brooklyn music game">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Brooklyn Music Game">
-<meta name="twitter:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
+<meta name="twitter:description" content="Free to play. Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
 <meta name="twitter:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=3">
 <link rel="icon" href="icon-game.png?v=2">
 <link rel="apple-touch-icon" href="icon-game.png?v=2">
@@ -816,8 +816,8 @@ function renderReward() {
   if (!p) return;
   const all = p >= EPISODES.length;
   $("rTitle").textContent = all ? "OG PROTÉGÉ" : "YOU EARNED A PLAYLIST";
-  $("rText").textContent = all ? "You finished all 9 songs. All of Season 1 is yours to stream. Season 2 is next, with a new set of questions. Finish both for the full ’99 music series."
-    : "Plays right here in the game. Finish another block of 3 to add it.";
+  $("rText").textContent = all ? "Only on OG Bobby's game. You finished all 9 songs. All of Season 1 is yours to stream. Season 2 is next, with a new set of questions. Finish both for the full ’99 music series."
+    : "Only on OG Bobby's game. Plays right here. Finish another block of 3 to add it.";
   const box = $("picks"); box.innerHTML = "";
   songs.forEach(n => {
     const b = document.createElement("button"); b.type = "button"; b.className = "pl-song";
@@ -1036,6 +1036,7 @@ window.scrollTo(0, 0);
   document.querySelector(".how").remove();
   // how-to-play reads one page at a time; text box, dots and button never move
   const HOW = [
+    ["Free to play.", "Unlock playlists you can't get anywhere else.", "booth", "TOKEN BOOTH", "NO FARE"],
     ["Hit play.", "Every song is an episode of OG Bobby's story.", "subway", "BAY RIDGE AV", "R"],
     ["Every episode stops.", "Answer right to unlock the next verse.", "store", "PIZZA", "HOT SLICES"],
     ["Unlock a song.", "It plays in full.", "street", "84 ST", "4 AV"],
@@ -1044,7 +1045,7 @@ window.scrollTo(0, 0);
   ];
   const roomSign = intro.querySelector(".room-sign");
   function paintRoom(k) {
-    const r = HOW[k]; intro.dataset.room = String(k + 1);
+    const r = HOW[k]; intro.dataset.room = String(k);
     roomSign.className = "room-sign rs-" + r[2];
     roomSign.innerHTML = r[2] === "subway" ? '<b class="rs-bullet">R</b><span class="rs-main"></span>' : '<span class="rs-main"></span><span class="rs-sub"></span>';
     roomSign.querySelector(".rs-main").textContent = r[3];
@@ -1068,8 +1069,8 @@ window.scrollTo(0, 0);
     hpHead.textContent = HOW[hp][0]; hpBody.textContent = HOW[hp][1];
     hpCount.textContent = (hp + 1) + " / " + HOW.length;
     [...hpDots.children].forEach((d, j) => d.classList.toggle("on", j <= hp));
-    startBtn.textContent = hp === HOW.length - 1 ? "ENTER THE GAME" : "NEXT";
-    hpCount.textContent = "HOW TO PLAY \u00b7 " + (hp + 1) + " OF " + HOW.length;
+    startBtn.textContent = hp === HOW.length - 1 ? "ENTER THE GAME" : hp === 0 ? "GET ON THE TRAIN" : "NEXT";
+    hpCount.textContent = (hp === 0 ? "WELCOME" : "HOW TO PLAY") + " \u00b7 " + (hp + 1) + " OF " + HOW.length;
     try { paintRoom(hp); } catch (e) {}
     if (navReady && v === 0) prev.disabled = hp === 0;
   }
@@ -3784,6 +3785,8 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
 .room-sign .rs-main { font: 900 1.05rem/1 var(--body); letter-spacing: .08em; color: #fff; white-space: nowrap; }
 .room-sign .rs-sub { font: 800 .55rem/1 var(--body); letter-spacing: .2em; color: #fff; opacity: .9; white-space: nowrap; }
 .room-sign.rs-street { background: #0e6b3b; border: 2px solid #fff; outline: 2px solid #0e6b3b; }
+.room-sign.rs-booth { background: #111; border: 2px solid #e8b23a; outline: 2px solid #111; border-radius: 3px; }
+.room-sign.rs-booth .rs-sub { color: #e8b23a; opacity: 1; }
 .room-sign.rs-store { background: #c81e1e; border: 2px solid #fff; outline: 2px solid #c81e1e; border-radius: 3px; }
 .room-sign.rs-park { background: #2e5a1f; border: 2px solid #e9e2c9; outline: 2px solid #2e5a1f; border-radius: 10px; }
 .room-sign.rs-park .rs-main, .room-sign.rs-park .rs-sub { color: #f4efd9; }
@@ -4215,6 +4218,12 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
     '</defs>';
   const brownstones = (y, col, lit) => { let s = ""; const ws = [70, 80, 74, 86, 70]; let x = -10; ws.forEach((w, i) => { const top = y - 30 - (i % 2) * 18; s += '<rect x="' + x + '" y="' + top + '" width="' + w + '" height="' + (H - top) + '" fill="' + col + '"/><rect x="' + x + '" y="' + (top - 6) + '" width="' + w + '" height="8" fill="#2a1712"/>' + windows(x + 10, top + 20, 2, 9, 18, 26, 32, 46, lit) + '<path d="M' + (x + 20) + ' ' + (H - 120) + 'h' + (w - 30) + 'l14 40h' + (-(w - 2)) + 'z" fill="#2a1712"/>'; x += w; }); return s; };
   const SCENES = {
+    0: () => '<rect width="400" height="800" fill="url(#tile)"/><rect width="400" height="800" fill="#000" opacity=".4"/>' +
+      '<rect y="300" width="400" height="30" fill="#1f5b3a"/><rect y="305" width="400" height="20" fill="#2f7a4f"/>' +
+      '<rect x="60" y="330" width="280" height="360" fill="#3a2f22"/><rect x="76" y="350" width="248" height="200" fill="#d9c27a" opacity=".55"/><path d="M76 450h248M200 350v200" stroke="#3a2f22" stroke-width="6"/>' + glow(200, 450, 180, "warm", .45) +
+      '<rect x="60" y="560" width="280" height="14" fill="#5a4a36"/>' +
+      [20, 130, 240, 350].map(x => '<rect x="' + x + '" y="620" width="30" height="70" rx="4" fill="#8e939a"/><path d="M' + (x + 30) + ' 640h40M' + (x + 30) + ' 640l28 -16M' + (x + 30) + ' 640l28 16" stroke="#b8bdc4" stroke-width="5" stroke-linecap="round"/>').join("") +
+      '<rect y="690" width="400" height="110" fill="#2a2a2e"/><rect y="686" width="400" height="8" fill="#5d5b60"/>',
     3: () => '<rect width="400" height="800" fill="url(#night)"/>' + glow(300, 120, 90, "white", .35) + '<circle cx="300" cy="120" r="34" fill="#f3efe0"/>' +
       brownstones(330, "#6b3a2c", .35) +
       '<rect y="700" width="400" height="100" fill="#26262c"/><rect y="690" width="400" height="12" fill="#5d5b60"/>' +
@@ -4245,6 +4254,9 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
   };
   // something moving in every room
   const FX = {
+    0: () => glow(200, 175, 120, "warm", .6) + '<g class="fx-token"><circle cx="200" cy="175" r="62" fill="#a8771e"/><circle cx="200" cy="175" r="58" fill="#e8b23a"/><circle cx="200" cy="175" r="47" fill="none" stroke="#a8771e" stroke-width="3"/>' +
+      '<text x="200" y="152" font-size="11" font-weight="900" fill="#5a3d0c" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" letter-spacing="3">GOOD FOR</text><text x="200" y="190" font-size="32" font-weight="900" fill="#3d2906" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" letter-spacing="2">FREE</text><text x="200" y="208" font-size="11" font-weight="900" fill="#5a3d0c" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" letter-spacing="3">ONE RIDE</text>' +
+      '<path class="fx-shine" d="M160 140l18 -10l40 90l-18 10z" fill="#fff" opacity=".25"/></g>',
     2: () => '<g class="fx-neon"><rect x="110" y="112" width="180" height="62" rx="12" fill="#140606" stroke="#ff3b2f" stroke-width="5"/><text x="200" y="160" font-size="44" font-weight="900" fill="#fff" stroke="#ff3b2f" stroke-width="2" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" letter-spacing="6">PIZZA</text></g>' + glow(200, 143, 130, "red", .3) +
       '<rect x="14" y="676" width="96" height="10" rx="3" fill="#3a2414"/><ellipse cx="62" cy="662" rx="46" ry="16" fill="#c9862f"/><ellipse cx="62" cy="660" rx="38" ry="12" fill="#d2452b"/><ellipse cx="42" cy="657" rx="5" ry="2.5" fill="#8e2418"/><ellipse cx="66" cy="654" rx="5" ry="2.5" fill="#8e2418"/><ellipse cx="84" cy="661" rx="5" ry="2.5" fill="#8e2418"/><ellipse cx="56" cy="664" rx="5" ry="2.5" fill="#8e2418"/><ellipse cx="76" cy="666" rx="5" ry="2.5" fill="#8e2418"/><path class="fx-steam fx-s0" d="M46 640q-8 -14 0 -28t0 -28" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/><path class="fx-steam fx-s1" d="M62 640q-8 -14 0 -28t0 -28" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/><path class="fx-steam fx-s2" d="M78 640q-8 -14 0 -28t0 -28" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/><rect x="290" y="676" width="96" height="10" rx="3" fill="#3a2414"/><ellipse cx="338" cy="662" rx="46" ry="16" fill="#c9862f"/><ellipse cx="338" cy="660" rx="38" ry="12" fill="#d2452b"/><ellipse cx="318" cy="657" rx="5" ry="2.5" fill="#8e2418"/><ellipse cx="342" cy="654" rx="5" ry="2.5" fill="#8e2418"/><ellipse cx="360" cy="661" rx="5" ry="2.5" fill="#8e2418"/><ellipse cx="332" cy="664" rx="5" ry="2.5" fill="#8e2418"/><ellipse cx="352" cy="666" rx="5" ry="2.5" fill="#8e2418"/><path class="fx-steam fx-s0" d="M322 640q-8 -14 0 -28t0 -28" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/><path class="fx-steam fx-s1" d="M338 640q-8 -14 0 -28t0 -28" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/><path class="fx-steam fx-s2" d="M354 640q-8 -14 0 -28t0 -28" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>',
     3: () => '<g class="fx-car"><path d="M0 742h150v-26l-26 -22h-74l-30 22h-20z" fill="#1d2433"/><rect x="40" y="698" width="30" height="18" rx="3" fill="#8fb4d9" opacity=".5"/><rect x="78" y="698" width="40" height="18" rx="3" fill="#8fb4d9" opacity=".5"/>' +
@@ -4292,6 +4304,9 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 <style id="cabPlusStyle">
 /* Bay Ridge Av room: the R train pulls in and stops at the platform */
 /* moving pieces in each room */
+#cabHall .fx-token { transform-box: fill-box; transform-origin: center; animation: fxToken 1.6s cubic-bezier(.2,.7,.3,1) both, fxFloat 3s ease-in-out 1.6s infinite; }
+@keyframes fxToken { 0% { transform: translateY(-260px) scaleX(1); opacity: 0; } 15% { opacity: 1; } 30% { transform: translateY(-120px) scaleX(-1); } 50% { transform: translateY(-20px) scaleX(1); } 70% { transform: translateY(0) scaleX(-1); } 100% { transform: translateY(0) scaleX(1); } }
+@keyframes fxFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 #cabHall .fx-neon { animation: fxNeon 2.2s steps(1) both; }
 @keyframes fxNeon { 0% { opacity: 0; } 18% { opacity: 1; } 24% { opacity: .15; } 34% { opacity: 1; } 40% { opacity: .3; } 48%, 100% { opacity: 1; } }
 #cabHall .fx-steam { opacity: 0; animation: fxSteam 3s ease-out infinite; }
