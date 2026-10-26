@@ -937,9 +937,11 @@ async function answer(o, btn) {
     $("msg").className = "msg good";
     $("msg").textContent = isOpen(e) ? "That's right. Here's how it ends." : "That's right. Keep going.";
     drawTrack(e); renderList();
-    // If that part already finished, roll straight into the next one; if it's still playing, the next part follows when it ends.
-    const finished = sec === g && (audio.ended || audio.currentTime > (audio.duration || Infinity) - 1);
-    setTimeout(() => { renderQuiz(); if (finished) playSection(g + 1, true); }, 1000);
+    // Right answer: the verse they already nailed stops right away, no waiting it out.
+    // More parts left -> the next part starts on its own. Episode done -> the Episode Cleared screen pops up on its own.
+    audio.pause();
+    if (isOpen(e)) { window.ogHoldSong = true; renderQuiz(); }
+    else setTimeout(() => { if (EPISODES[idx] !== e || gateOf(e) !== g + 1) return; renderQuiz(); playSection(g + 1, true); }, 1700);
   } else {
     btn.classList.add("wrong");
     state.tries[id] = (state.tries[id] || 0) + 1;
@@ -1789,6 +1791,7 @@ window.scrollTo(0, 0);
     guard = setTimeout(fin, 12000);   // never wait on a voice line longer than this
     v.play().catch(() => fin());
   }
+  window.ogBusyTalking = () => busy || promoting;   // OG is talking or a rank-up is playing
   const pickFrom = k => { const a = VO[k], s = a[rot[k] % a.length]; rot[k]++; return s; };
   // first time someone hits PLAY on the how-to card
   document.addEventListener("click", e => {
@@ -1822,7 +1825,7 @@ window.scrollTo(0, 0);
     basePromote(name);
     promoting = true; resume = !audio.paused; audio.pause();
     const src = VO.rank[name], S = window.ogSound;
-    const finish = () => { if (!promoting) return; promoting = false; clearTimeout(promoT); if (resume) { resume = false; audio.play().catch(() => {}); } };
+    const finish = () => { if (!promoting) return; promoting = false; clearTimeout(promoT); if (resume) { resume = false; if (!window.ogHoldSong) audio.play().catch(() => {}); } };
     clearTimeout(promoT); promoT = setTimeout(finish, 15000);   // the song always comes back, even if a sound never finishes
     const talk = () => { if (src) say(src, finish); else finish(); };
     const pn = document.querySelector(".promo .promo-name"); if (pn) pn.classList.add("og-stamp");
@@ -4422,6 +4425,8 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 .cab-over .t99-boxes i.on { background: #2fa34a; }
 .cab-score .t99.new { background: #ffd34d; color: #000; border-color: #ffd34d; animation: cabRing 1.4s ease-out infinite; }
 @media (prefers-reduced-motion: reduce) { .cab-over.t99 .rise, .cab-over.t99 .slam, .cab-over .go.pulse { animation: none !important; opacity: 1 !important; } .cab-score .t99.new { animation: none; } }
+/* countdown under the next-episode button on the Episode Cleared screen */
+.cab-over .go .auto-in { display: block; margin-top: 5px; font: 800 .68rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: #fff; opacity: .9; }
 /* stars on cleared episode boxes */
 body.practice #cred .cab-row #list .ep { position: relative; }
 .ep-stars { position: absolute; left: 0; right: 0; bottom: 3px; display: flex; justify-content: center; gap: 1px; pointer-events: none; }
@@ -4540,7 +4545,7 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     if (!e || wasOpen) return;
     if (btn.classList.contains("right")) {
       if (firstTry) { run++; if (run >= 3) { P.extra = (P.extra || 0) + 100; keep(); } } else run = 0;
-      if (isOpen(e)) pending = EPISODES.indexOf(e);
+      if (isOpen(e)) { pending = EPISODES.indexOf(e); popCleared(pending); }
     } else if (btn.classList.contains("wrong")) { run = 0; if (EPISODES.indexOf(e) === BOSS) setTimeout(armClock, 1500); }
     paintScore(true); paintStars();
   };
@@ -4553,8 +4558,20 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     const f = d.querySelector(".go, .opt2"); if (f) setTimeout(() => f.focus({ preventScroll: true }), 60);
     return d;
   }
+  // pop the Episode Cleared screen as soon as OG's reaction and any rank-up are done
+  function popCleared(i) {
+    const t0 = Date.now();
+    const tick = () => {
+      if (pending !== i) return;
+      const waiting = (window.ogBusyTalking && window.ogBusyTalking()) || document.querySelector(".promo, .cab-over");
+      if (Date.now() - t0 < 1400 || (waiting && Date.now() - t0 < 16000)) { setTimeout(tick, 200); return; }
+      cleared(i);
+    };
+    setTimeout(tick, 200);
+  }
   function cleared(i) {
     pending = null;
+    try { audioEl.pause(); } catch (err) {}
     const e = EPISODES[i], n = starsOf(e), last = i === BOSS;
     const next = EPISODES.slice(0, N).findIndex(x => !isOpen(x));
     const d = over(last ? "" : "", (last
@@ -4570,8 +4587,19 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     d.querySelectorAll(".stars svg").forEach((s, k) => setTimeout(() => { s.classList.add("in"); if (k < n) snd("stamp", .5); }, 450 + k * 380));
     snd(last ? "bell" : "spray", .6);
     d.querySelector(".link") && d.querySelector(".link").addEventListener("click", () => d.remove());
-    const tg = d.querySelector(".t99go"); if (tg) tg.addEventListener("click", () => { d.remove(); openTest(); });
-    d.querySelector(".go:not(.t99go)").addEventListener("click", () => {
+    const tg = d.querySelector(".t99go"); if (tg) tg.addEventListener("click", () => { window.ogHoldSong = false; d.remove(); openTest(); });
+    const goBtn = d.querySelector(".go:not(.t99go)");
+    let autoT = 0;
+    const stopAuto = () => { clearInterval(autoT); autoT = 0; };
+    if (next >= 0) {
+      let left = 5; const label = "▶ EPISODE " + (next + 1);
+      const paint = () => { goBtn.innerHTML = label + '<span class="auto-in">Starting in ' + left + '</span>'; };
+      paint();
+      autoT = setInterval(() => { if (!d.isConnected) return stopAuto(); left--; if (left <= 0) { stopAuto(); goBtn.click(); } else paint(); }, 1000);
+    }
+    d.querySelector(".link") && d.querySelector(".link").addEventListener("click", () => { stopAuto(); window.ogHoldSong = false; });
+    goBtn.addEventListener("click", () => {
+      stopAuto(); window.ogHoldSong = false;
       d.remove();
       if (next < 0) return;
       const eps = document.querySelectorAll("#list .ep");
