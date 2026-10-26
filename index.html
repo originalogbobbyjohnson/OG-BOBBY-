@@ -4730,5 +4730,134 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
   sync();
 })();
 </script>
+<style id="cabShowStyle">
+/* ---------- TV-show touches: skyline that lights up, episode title card, "Previously on OG Made…", Season 2 on deck ---------- */
+/* 1. Bay Ridge skyline along the bottom of the board: one window per episode, bridge lights up when Season 1 is done */
+.stage-wrap > .cab-sky { position: absolute; left: 0; right: 0; bottom: 0; height: 46px; z-index: 0; pointer-events: none; display: none; }
+body.cab-ep .stage-wrap > .cab-sky, .stage-wrap[data-sky-on] > .cab-sky { display: block; }
+.stage-wrap > .stage, .stage-wrap > .nav-btn, .stage-wrap > .card-reset { z-index: 2; }
+.stage-wrap > .stage { position: relative; }
+.cab-sky svg { display: block; width: 100%; height: 100%; }
+.cab-sky .bld { fill: #232a38; }
+.cab-sky .brg { fill: none; stroke: #2b3344; stroke-width: 2.2; stroke-linecap: round; }
+.cab-sky .twr { fill: #2b3344; }
+.cab-sky .win { fill: #333b4e; transition: fill .6s ease; }
+.cab-sky .win.lit { fill: var(--cab-gold, #e8b23a); filter: drop-shadow(0 0 3px rgba(232,178,58,.9)); }
+.cab-sky .win.pop { animation: skyPop 1.4s ease-out 1; }
+.cab-sky .bl { fill: #39415a; transition: fill .8s ease; }
+.cab-sky.done .bl { fill: var(--cab-gold, #e8b23a); filter: drop-shadow(0 0 2.5px rgba(232,178,58,.9)); }
+.cab-sky.done .brg { stroke: #3a3220; }
+@keyframes skyPop { 0% { filter: drop-shadow(0 0 0 rgba(232,178,58,0)); } 30% { filter: drop-shadow(0 0 9px rgba(232,178,58,1)); } 100% { filter: drop-shadow(0 0 3px rgba(232,178,58,.9)); } }
+
+/* 2. Episode title card over the record, like the open of a TV show */
+.cab-title { position: absolute; left: 50%; top: 50%; z-index: 6; transform: translate(-50%, -50%) scale(.96); width: max-content; max-width: 100%; box-sizing: border-box; padding: 9px 10px 10px; border-radius: 12px; background: #0b0d12; border: 1.5px solid var(--cab-red, #d63a2f); box-shadow: 0 8px 22px rgba(0,0,0,.55); text-align: center; pointer-events: none; opacity: 0; transition: opacity .35s ease, transform .35s ease; }
+.cab-title.on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.cab-title .k { display: block; white-space: nowrap; font: 800 .58rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .28em; color: var(--cab-red, #d63a2f); margin-bottom: 6px; }
+.cab-title .n { display: block; font: 700 1rem/1.12 "Barlow", system-ui, sans-serif; letter-spacing: .02em; color: #fff; text-transform: uppercase; text-wrap: balance; }
+
+/* 4. "Previously on OG Made…" line in the Welcome Back pop-up */
+#cabVeil > .slide-intro.welcome .hp-box { height: auto !important; }
+.slide-intro.welcome .wb-prev { display: block; margin: 2px auto 0; max-width: 18rem; font: 500 .82rem/1.35 "Barlow", system-ui, sans-serif; color: #fff; text-wrap: balance; }
+.slide-intro.welcome .wb-prev i { font-style: italic; font-weight: 700; letter-spacing: .02em; }
+
+/* 5. Season 2 on deck: a slow red glow breathing behind the locked side (no date shown) */
+#cred .mv.v2::before { content: ""; position: absolute; inset: 18% -6% -4%; border-radius: 22px; background: radial-gradient(60% 55% at 50% 50%, rgba(214,58,47,.38), rgba(214,58,47,0) 70%); z-index: 0; pointer-events: none; animation: s2Deck 4.5s ease-in-out infinite; }
+#cred .mv.v2 > * { position: relative; z-index: 1; }
+@keyframes s2Deck { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) { #cred .mv.v2::before, .cab-sky .win.pop { animation: none; } .cab-title { transition: none; } }
+</style>
+<script>
+(function () {
+  if (typeof EPISODES === "undefined" || window.ogShow) return;
+  window.ogShow = true;
+  const N = EPISODES.length;
+  const openNow = () => EPISODES.map(e => { try { return !!isOpen(e); } catch (err) { return false; } });
+  let seen = null;   // which windows were already lit on screen (so only new ones pop)
+
+  /* ---- 1. skyline ---- */
+  function skySvg() {
+    // nine buildings of different heights across the left, the Verrazzano on the right
+    const H = [27, 35, 23, 31, 38, 25, 33, 29, 36], W = 12.5, G = 1.8, base = 46;
+    let s = '<svg viewBox="0 0 390 46" preserveAspectRatio="xMidYMax meet" aria-hidden="true">';
+    let x = 2;
+    H.forEach((h, k) => {
+      const top = base - h;
+      s += '<rect class="bld" x="' + x + '" y="' + top + '" width="' + W + '" height="' + h + '" rx="1.5"/>';
+      s += '<rect class="bld" x="' + (x - 1) + '" y="' + (top - 2) + '" width="' + (W + 2) + '" height="2.2"/>';   // cornice
+      s += '<rect class="win" data-k="' + k + '" x="' + (x + 3.5) + '" y="' + (top + 5) + '" width="6" height="7" rx=".8"/>';
+      x += W + G;
+    });
+    // bridge: two towers, the main cable, the deck, and the lights along the cable
+    const t1 = 290, t2 = 362, deck = 36;
+    s += '<rect class="twr" x="' + (t1 - 3) + '" y="4" width="6" height="42"/><rect class="twr" x="' + (t2 - 3) + '" y="4" width="6" height="42"/>';
+    s += '<path class="brg" d="M256 ' + deck + ' Q' + (t1 - 14) + ' 22 ' + t1 + ' 6 Q' + ((t1 + t2) / 2) + ' 34 ' + t2 + ' 6 Q' + (t2 + 14) + ' 22 388 ' + deck + '"/>';
+    s += '<path class="brg" d="M252 ' + deck + 'H390"/>';
+    for (let k = 1; k < 10; k++) {   // lights along the main span
+      const tt = k / 10, cx = (1 - tt) * (1 - tt) * t1 + 2 * (1 - tt) * tt * ((t1 + t2) / 2) + tt * tt * t2, cy = (1 - tt) * (1 - tt) * 6 + 2 * (1 - tt) * tt * 34 + tt * tt * 6;
+      s += '<circle class="bl" cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="1.6"/>';
+    }
+    [t1, t2].forEach(t => s += '<circle class="bl" cx="' + t + '" cy="3" r="2"/>');
+    return s + '</svg>';
+  }
+  function paintSky() {
+    const wrap = document.querySelector(".stage-wrap"); if (!wrap) return;
+    let sky = wrap.querySelector(":scope > .cab-sky");
+    if (!sky) { sky = document.createElement("div"); sky.className = "cab-sky"; sky.innerHTML = skySvg(); wrap.prepend(sky); }
+    const open = openNow(), all = open.every(Boolean);
+    sky.querySelectorAll(".win").forEach(w => {
+      const k = +w.dataset.k, on = !!open[k];
+      if (w.classList.contains("lit") !== on) {
+        w.classList.toggle("lit", on);
+        if (on && seen && !seen[k]) { w.classList.add("pop"); setTimeout(() => w.classList.remove("pop"), 1500); }
+      }
+    });
+    if (sky.classList.contains("done") !== all) sky.classList.toggle("done", all);
+    seen = open;
+  }
+
+  /* ---- 2. episode title card ---- */
+  const audio = document.getElementById("audio");
+  let card = null, cardT = 0, lastIdx = -2;
+  function titleCard() {
+    const bar = document.querySelector(".og-bar"); if (!bar || !document.body.classList.contains("cab-ep")) return;
+    const e = EPISODES[idx]; if (!e) return;
+    if (!card) { card = document.createElement("div"); card.className = "cab-title"; card.setAttribute("aria-hidden", "true"); card.innerHTML = '<span class="k"></span><span class="n"></span>'; }
+    if (card.parentNode !== bar) { if (getComputedStyle(bar).position === "static") bar.style.position = "relative"; bar.append(card); }
+    card.querySelector(".k").textContent = "EPISODE " + (idx + 1);
+    card.querySelector(".n").textContent = e.title;
+    clearTimeout(cardT);
+    card.classList.remove("on"); void card.offsetWidth; card.classList.add("on");
+    cardT = setTimeout(() => card.classList.remove("on"), 2300);
+  }
+  if (audio) audio.addEventListener("play", () => {
+    // only when an episode starts from the top (not when it picks back up after a question)
+    if (audio.currentTime < 0.6 && (idx !== lastIdx || audio.currentTime < 0.6)) titleCard();
+    lastIdx = idx;
+  });
+
+  /* ---- 4. "Previously on OG Made…" ---- */
+  function paintPrev() {
+    const intro = document.querySelector(".slide-intro.welcome"); if (!intro) return;
+    const body = intro.querySelector(".hp-body"); if (!body || !body.querySelector(".wb-done")) return;
+    const open = openNow(); let last = -1; open.forEach((o, k) => { if (o) last = k; });
+    let rk = 0; try { rk = rankOf(blocksDone()); } catch (err) {}
+    const done = open.filter(Boolean).length;
+    let txt;
+    if (done === 0) txt = "you were just getting started.";
+    else if (done === N) txt = "you cleared all nine and made " + RANKS[rk] + ".";
+    else txt = "you cleared Episode " + (last + 1) + (rk > 0 ? " and made " + RANKS[rk] + "." : ".");
+    let p = body.querySelector(".wb-prev");
+    if (!p) { p = document.createElement("span"); p.className = "wb-prev"; p.innerHTML = '<i>Previously on OG Made…</i> <span></span>'; body.append(p); }
+    const t = p.querySelector("span"); if (t.textContent !== txt) t.textContent = txt;
+  }
+
+  /* ---- keep it all painted ---- */
+  let raf = 0;
+  const later = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => { paintSky(); paintPrev(); }); };
+  new MutationObserver(later).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ["class", "data-v", "hidden"] });
+  later();
+})();
+</script>
 </body>
 </html>
