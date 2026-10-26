@@ -634,6 +634,7 @@ body.practice { overflow: hidden; }
       <li><b>Answer.</b> The song stops and asks what you just heard. Miss it and you get a new question, not a do-over.</li>
       <li><b>Unlock.</b> Get a song right and it's yours to play in full.</li>
       <li><b>Earn Street Cred.</b> First-try answers fill your meter. Climb from New Face to Corner Kid, OG Soldier and OG Protégé.</li>
+      <li><b>Stack Juice.</b> Every right answer, star, hot streak and daily question adds Juice. Stack enough and you go Gold, then Platinum, Multi-Platinum and Diamond.</li>
       <li><b>Collect.</b> Finish any block of 3 songs to earn that block's playlist. Finish all 9 to earn Season 1.</li>
       <li><b>Run it back.</b> Earned a rank? Replay your unlocked songs with new questions, just for fun. No rewards, just bragging rights.</li>
       <li><b>Director’s Cuts.</b> Stripped-down versions of the songs, in their own room.</li>
@@ -4420,6 +4421,17 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 .cab-score .daily:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 .cab-score .daily[hidden] { display: none; }
 .cab-score { flex-wrap: wrap; }
+/* Juice: plaque badge in the pill, and how far to the next plaque */
+.cab-score .pts .plq:empty { display: none; }
+.cab-score .pts .plq svg { width: 18px; height: 18px; display: block; align-self: center; filter: drop-shadow(0 0 4px rgba(255,255,255,.35)); }
+.cab-score .juice-next { flex-basis: 100%; display: grid; justify-items: center; gap: 4px; margin-top: 2px; }
+.cab-score .jn-bar { width: min(220px, 70%); height: 4px; border-radius: 99px; background: rgba(255,255,255,.15); overflow: hidden; }
+.cab-score .jn-bar i { display: block; height: 100%; background: #e8b23a; border-radius: 99px; transition: width .7s ease-out; }
+.cab-score .jn-txt { font: 800 .58rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .16em; color: #fff; }
+.cab-over .jn { font-weight: 800; letter-spacing: .14em; font-size: .8rem; color: #e8b23a; }
+.cab-over .plaque-disc svg { width: 120px; height: 120px; animation: plaqueSpin 2.4s ease-out; filter: drop-shadow(0 0 22px rgba(255,255,255,.35)); }
+@keyframes plaqueSpin { from { transform: rotate(-540deg) scale(.4); opacity: 0; } 40% { opacity: 1; } to { transform: rotate(0) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .cab-over .plaque-disc svg { animation: none; } }
 .cab-score .t99 { all: unset; pointer-events: auto !important; position: relative; z-index: 6; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px; border-radius: 99px; border: 2px solid #ffd34d; color: #fff; font: 800 .62rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .1em; }
 .cab-score .t99[hidden] { display: none; }
 .cab-score .t99:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
@@ -4536,6 +4548,40 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
   }
   const fmtN = n => n.toLocaleString("en-US");
 
+  /* ---- Juice: the points. Stacking Juice takes you up the plaque ladder, like a record going gold ---- */
+  const PLAQUES = [
+    { at: 1000, name: "GOLD", c: "#e8b23a" },
+    { at: 2500, name: "PLATINUM", c: "#dfe6ee" },
+    { at: 4000, name: "MULTI-PLATINUM", c: "#b9c7d8" },
+    { at: 6000, name: "DIAMOND", c: "#8fe3ff" }
+  ];
+  const plaqueOf = j => { let k = -1; PLAQUES.forEach((p, i) => { if (j >= p.at) k = i; }); return k; };
+  const discSvg = c => '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="' + c + '"/><circle cx="12" cy="12" r="8" fill="none" stroke="#000" stroke-opacity=".25"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="#000" stroke-opacity=".2"/><circle cx="12" cy="12" r="2.4" fill="#d63a2f"/><circle cx="12" cy="12" r=".8" fill="#000"/></svg>';
+  function juiceNext(j) {
+    const k = plaqueOf(j), nx = PLAQUES[k + 1];
+    if (!nx) return { done: true, txt: "DIAMOND · TOP OF THE LADDER", pct: 100 };
+    const from = k < 0 ? 0 : PLAQUES[k].at;
+    return { txt: fmtN(nx.at - j) + " JUICE TO " + nx.name, pct: Math.max(0, Math.min(100, (j - from) / (nx.at - from) * 100)), nx: nx };
+  }
+  function juiceNextHtml() { const n = juiceNext(score()); return '<div class="note jn">' + n.txt + '</div>'; }
+  function plaquePop(k) {
+    const p = PLAQUES[k], nx = PLAQUES[k + 1];
+    const show = () => {
+      // the Episode Cleared screen (and any rank-up) goes first; the plaque comes right after
+      if (pending !== null || document.querySelector(".cab-over, .promo") || (window.ogBusyTalking && window.ogBusyTalking())) return setTimeout(show, 400);
+      const au = document.getElementById("audio"), wasPlaying = au && !au.paused;
+      if (wasPlaying) au.pause();
+      const d = over("plaque-over", '<div class="kick">YOU WENT</div><div class="big" style="color:' + p.c + '">' + p.name + '</div>' +
+        '<div class="plaque-disc">' + discSvg(p.c) + '</div>' +
+        '<div class="earn">' + fmtN(p.at) + ' JUICE STACKED</div>' +
+        '<div class="note">' + (nx ? "Next plaque: " + nx.name + " at " + fmtN(nx.at) + " Juice." : "Top of the ladder. Nobody's got more juice than you.") + '</div>' +
+        '<button class="go" type="button">KEEP GOING</button>');
+      snd("stamp", .6); setTimeout(() => snd("bell", .5), 350);
+      d.querySelector(".go").addEventListener("click", () => { d.remove(); if (wasPlaying) au.play().catch(() => {}); });
+    };
+    setTimeout(show, 600);
+  }
+
   function paintStars() {
     document.querySelectorAll("#list .ep").forEach((b, i) => {
       const e = EPISODES[i]; if (!e) return;
@@ -4553,12 +4599,22 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     let row = document.querySelector(".cab-score");
     if (!row) {
       row = document.createElement("div"); row.className = "cab-score";
-      row.innerHTML = '<span class="pts" aria-live="polite"><b>0</b><i>STREET CRED</i></span><button class="daily" type="button" hidden>★ DAILY QUESTION</button><button class="t99" type="button" hidden>★ \u201999 CHALLENGE</button>';
+      row.innerHTML = '<span class="pts" aria-live="polite"><span class="plq" aria-hidden="true"></span><b>0</b><i>JUICE</i></span><button class="daily" type="button" hidden>★ DAILY QUESTION</button><button class="t99" type="button" hidden>★ \u201999 CHALLENGE</button>';
       head.after(row);
       row.querySelector(".daily").addEventListener("click", openDaily);
       row.querySelector(".t99").addEventListener("click", openTest);
     }
     const target = score(), num = row.querySelector(".pts b");
+    // plaque badge in the pill, and the countdown to the next plaque under it
+    const pk = plaqueOf(target), plq = row.querySelector(".plq");
+    if (plq.dataset.k !== String(pk)) { plq.dataset.k = String(pk); plq.innerHTML = pk < 0 ? "" : discSvg(PLAQUES[pk].c); plq.title = pk < 0 ? "" : PLAQUES[pk].name; }
+    let jn = row.querySelector(".juice-next");
+    if (!jn) { jn = document.createElement("div"); jn.className = "juice-next"; jn.innerHTML = '<div class="jn-bar"><i></i></div><div class="jn-txt"></div>'; row.append(jn); }
+    const nx = juiceNext(target);
+    jn.querySelector(".jn-txt").textContent = nx.txt; jn.querySelector(".jn-bar i").style.width = nx.pct + "%";
+    if (P.plaque == null) { P.plaque = pk; keep(); }
+    else if (pk > P.plaque) { P.plaque = pk; keep(); if (animate) plaquePop(pk); }
+    else if (pk < P.plaque) { P.plaque = pk; keep(); }   // a restart wipes the plaques too
     if (shown === null || !animate) { shown = target; num.textContent = fmtN(target); }
     else if (target !== shown) {
       const from = shown, diff = target - from, t0 = performance.now(); shown = target;
@@ -4623,7 +4679,7 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
         ? '<div class="kick">SEASON 1 · FINAL EPISODE</div><div class="big gold">SEASON 1<br>COMPLETE</div>'
         : '<div class="kick">EPISODE ' + (i + 1) + '</div><div class="big">CLEARED</div>') +
       '<div class="title"></div><div class="stars">' + [0, 1, 2].map(k => starSvg(k < n ? "on" : "off")).join("") + '</div>' +
-      '<div class="earn">+' + fmtN(epPoints(e)) + ' STREET CRED</div>' +
+      '<div class="earn">+' + fmtN(epPoints(e)) + ' JUICE</div>' + juiceNextHtml() +
       (n < 3 ? '<div class="note">Replay it with no misses for all 3 stars.</div>' : '<div class="note">Perfect. Every answer on the first try.</div>') +
       (next >= 0 ? '<button class="go" type="button">▶ EPISODE ' + (next + 1) + '</button>' : '<div class="note">Bonus unlocked: the ’99 Challenge. All 99 questions, back to back.</div><button class="go t99go" type="button">★ TAKE THE ’99 CHALLENGE</button><button class="go" type="button">BACK TO THE BOARD</button>') +
       '<button class="link" type="button">Back to the board</button>');
@@ -4712,7 +4768,7 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     }
     const h = seedOf(today()), [e, g] = pool[h % pool.length];
     const variants = poolOf(e.qs[g]), q = variants[(h >>> 8) % variants.length];
-    const d = over("", '<div class="kick">DAILY QUESTION</div><div class="title"></div><div class="note">Get it right for +250 Street Cred. One try a day.</div><div class="q"></div><div class="opts2"></div><div class="msg2"></div><button class="link" type="button">Not now</button>');
+    const d = over("", '<div class="kick">DAILY QUESTION</div><div class="title"></div><div class="note">Get it right for +250 Juice. One try a day.</div><div class="q"></div><div class="opts2"></div><div class="msg2"></div><button class="link" type="button">Not now</button>');
     d.querySelector(".title").textContent = e.title;
     d.querySelector(".q").textContent = q.q;
     const box = d.querySelector(".opts2"), msg = d.querySelector(".msg2");
@@ -4725,7 +4781,7 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
         b.classList.add(ok ? "right" : "wrong");
         P.daily = { date: today(), ok }; if (ok) P.extra = (P.extra || 0) + 250; keep();
         snd(ok ? "right" : "wrong", .6);
-        msg.textContent = ok ? "That’s right. +250 Street Cred." : "Not today. A new question drops tomorrow.";
+        msg.textContent = ok ? "That’s right. +250 Juice." : "Not today. A new question drops tomorrow.";
         const link = d.querySelector(".link"); link.textContent = "Back to the board";
         try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "daily/" + (ok ? "right" : "wrong"), title: "Daily question " + (ok ? "right" : "wrong"), event: true }); } catch (err) {}
         paintScore(true);
@@ -4804,7 +4860,7 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     const d = over("t99", '<div class="t99-unlock rise" style="--d:150ms">' + (first ? "BONUS UNLOCKED" : "SEASON 1 · BONUS") + '</div>' +
       '<div class="c99 slam" style="--d:700ms"><span class="c99n"><span class="tk">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="c99w">CHALLENGE</span></div>' +
       (T ? '<div class="t99-dare rise" style="--d:1100ms">Finish what you started.</div><div class="note rise" style="--d:1300ms">You’re on question ' + (T.at + 1) + ' of ' + L.length + ', with ' + T.ok + ' right so far.</div><button class="go pulse" style="--d:1600ms" type="button">KEEP GOING</button><button class="link fresh rise" style="--d:1800ms" type="button">Start over</button>'
-         : '<div class="t99-dare rise" style="--d:1100ms">Think you know every bar? Prove it.</div><div class="note rise" style="--d:1300ms">All ' + L.length + ' questions from Season 1, back to back. Practice only, no Street Cred on the line.</div>' + best + '<button class="go fresh pulse" style="--d:1700ms" type="button">START THE CHALLENGE</button>') +
+         : '<div class="t99-dare rise" style="--d:1100ms">Think you know every bar? Prove it.</div><div class="note rise" style="--d:1300ms">All ' + L.length + ' questions from Season 1, back to back. Practice only, no Juice on the line.</div>' + best + '<button class="go fresh pulse" style="--d:1700ms" type="button">START THE CHALLENGE</button>') +
       '<button class="link out rise" style="--d:1900ms" type="button">Not now</button>');
     fx99("intro"); setTimeout(() => snd("stamp", .6), 750);
     d.querySelectorAll(".fresh").forEach(b => b.addEventListener("click", () => { P.t99 = { at: 0, ok: 0 }; keep(); tCount(null, "start"); d.remove(); fx99("intro"); setTimeout(testQ, 1300); }));
