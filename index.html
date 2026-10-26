@@ -2090,7 +2090,7 @@ html, body, body.practice { background: #fff !important; }
 /* Game sounds: little taps, right/wrong hits, an unlock sting, and a scratch-and-beat jingle on every promotion.
    The song dips under OG's voice so you can hear him, then comes back up. */
 (function () {
-  const FILES = { tap: "sfx/tap.mp3", right: "sfx/right.mp3", wrong: "sfx/wrong.mp3", unlock: "sfx/unlock.mp3", jingle: "sfx/jingle.mp3", siren: "sfx/siren.mp3", train: "sfx/train.mp3", spray: "sfx/spray.mp3", bell: "sfx/bell.mp3", flicker: "sfx/flicker.mp3", stamp: "sfx/stamp.mp3", coin: "sfx/coin.mp3", neon: "sfx/neon.mp3", car: "sfx/car.mp3", fireworks: "sfx/fireworks.mp3", horn: "sfx/horn.mp3" };
+  const FILES = { tap: "sfx/tap.mp3", right: "sfx/right.mp3", wrong: "sfx/wrong.mp3", unlock: "sfx/unlock.mp3", jingle: "sfx/jingle.mp3", siren: "sfx/siren.mp3", train: "sfx/train.mp3", spray: "sfx/spray.mp3", bell: "sfx/bell.mp3", flicker: "sfx/flicker.mp3", stamp: "sfx/stamp.mp3", coin: "sfx/coin.mp3", spraytag: "sfx/spraytag.mp3", neon: "sfx/neon.mp3", car: "sfx/car.mp3", fireworks: "sfx/fireworks.mp3", horn: "sfx/horn.mp3" };
   let on = true; try { on = localStorage.getItem("ogSfx") !== "0"; } catch (e) {}
   let ctx = null, gain = null, routed = false;
   const bufs = {};
@@ -2102,12 +2102,18 @@ html, body, body.practice { background: #fff !important; }
     const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
     try { if (navigator.audioSession) navigator.audioSession.type = "playback"; } catch (e) {}
     try { ctx = new AC(); } catch (e) { ctx = null; return; }
-    Object.keys(FILES).forEach(k => {
-      fetch(FILES[k]).then(r => r.arrayBuffer())
-        .then(a => new Promise((res, rej) => ctx.decodeAudioData(a, res, rej)))
-        .then(b => { bufs[k] = b; }).catch(() => {});
-    });
+    // the How to play sounds decode first so the first rooms aren't silent
+    const first = ["train", "coin", "tap", "neon", "car", "spraytag", "siren", "fireworks", "horn"];
+    const order = first.filter(k => FILES[k]).concat(Object.keys(FILES).filter(k => first.indexOf(k) < 0));
+    order.reduce((chain, k) => chain.then(() => (raw[k] || fetch(FILES[k]).then(r => r.arrayBuffer()))
+        .then(a => new Promise((res, rej) => ctx.decodeAudioData(a.slice(0), res, rej)))
+        .then(b => { bufs[k] = b; }).catch(() => {})), Promise.resolve());
   }
+  // download the room sounds as soon as the page opens, so they're ready the moment the player first taps
+  const raw = {};
+  ["train", "coin", "neon", "car", "spraytag", "siren", "fireworks", "horn", "tap"].forEach(k => {
+    raw[k] = fetch(FILES[k]).then(r => r.arrayBuffer()); raw[k].catch(() => {});
+  });
   ["pointerdown", "touchend", "keydown"].forEach(ev => document.addEventListener(ev, boot, true));
   document.addEventListener("visibilitychange", () => { if (ctx && document.visibilityState === "visible" && ctx.state !== "running") { try { ctx.resume(); } catch (e) {} } });
   audio.addEventListener("play", () => { if (routed && ctx && ctx.state !== "running") { try { ctx.resume(); } catch (e) {} } });
@@ -2171,7 +2177,7 @@ html, body, body.practice { background: #fff !important; }
       if (bufs[k]) return go();
       // first tap of the visit: the sound may still be loading, so give it a moment
       const mine = roomSrc, t0 = Date.now();
-      const wait = () => { if (roomSrc !== mine) return; if (bufs[k]) go(); else if (Date.now() - t0 < 1500) setTimeout(wait, 100); };
+      const wait = () => { if (roomSrc !== mine) return; if (bufs[k]) go(); else if (Date.now() - t0 < 5000) setTimeout(wait, 80); };
       wait();
     });
   }
@@ -4323,8 +4329,8 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
     0: [["coin", 0.4, 0]],                                   // the token drops and bounces
     1: [["train", 0.7, 0]],                                  // the R pulls in
     2: [["neon", 0.35, 0]],                                  // the PIZZA sign buzzes and flickers on
-    3: [["car", 0.3, 0], ["spray", 0.28, 0.5]],              // a car rolls by, the tag sprays on
-    4: [["fireworks", 0.32, 0]],                             // fireworks over Owl's Head
+    3: [["car", 0.3, 0], ["spraytag", 0.4, 0], ["siren", 0.22, 1.2]],   // a car rolls by, the can rattles and sprays OG, then BOBBY, a siren far off
+    4: [["fireworks", 0.32, 0]],                             // fireworks over Owl's Head, pops and crackle only
     5: [["horn", 0.38, 0.3]]                                 // a boat horn out on the water
   };
   function roomSound(k) { try { if (window.ogSound && window.ogSound.room) window.ogSound.room(k == null ? null : ROOM_SFX[k]); } catch (e) {} }
@@ -4362,10 +4368,11 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 @keyframes fxAd { 0%, 62%, 70%, 76%, 100% { opacity: 1; } 64%, 72% { opacity: .15; } }
 #cabHall .fx-beacon { animation: fxBeacon 1.2s steps(1) infinite; }
 @keyframes fxBeacon { 50% { opacity: 0; } }
-#cabHall .fx-tagwipe { transform-box: fill-box; transform-origin: left center; animation: fxTag 2.2s .5s steps(22) both; }
-@keyframes fxTag { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-#cabHall .fx-spray { animation: fxSpray 2.2s .5s linear both; }
-@keyframes fxSpray { 0% { transform: translateX(0); opacity: .35; } 95% { transform: translateX(240px); opacity: .35; } 100% { transform: translateX(240px); opacity: 0; } }
+#cabHall .fx-tagwipe { transform-box: fill-box; transform-origin: left center; animation: fxTag 3.4s .6s linear both; }
+/* sprays OG, the can lifts for a beat, then sprays BOBBY */
+@keyframes fxTag { 0% { transform: scaleX(0); } 29%, 40% { transform: scaleX(.315); } 96%, 100% { transform: scaleX(1); } }
+#cabHall .fx-spray { animation: fxSpray 3.4s .6s linear both; }
+@keyframes fxSpray { 0% { transform: translateX(0); opacity: .35; } 29% { transform: translateX(72px); opacity: .35; } 30%, 39% { transform: translateX(76px); opacity: 0; } 40% { transform: translateX(78px); opacity: .35; } 96% { transform: translateX(240px); opacity: .35; } 100% { transform: translateX(240px); opacity: 0; } }
 #cabHall .fx-spk { transform-box: fill-box; transform-origin: center; animation: fxSpk .45s ease-in-out infinite; }
 @keyframes fxSpk { 50% { transform: scale(1.15); } }
 #cabHall .fx-note { opacity: 0; animation: fxNote 2.8s ease-out infinite; }
