@@ -764,7 +764,9 @@ let state = Object.assign({ keys: {}, tries: {}, first: {}, replay: {}, qv: {}, 
 if (!state.qv) state.qv = {};
 /* Each stop has a few questions from the same verse. A wrong answer swaps in a different one. */
 const poolOf = q => [q, ...(q.alt || [])];
-const curQ = (e, g) => { const p = poolOf(e.qs[g]); return p[(state.qv[e.slug + "|" + g] || 0) % p.length]; };
+// each new game starts every stop on a random version of its question; it stays put until a miss moves it on
+const qvOf = (e, g) => { const id = e.slug + "|" + g; if (!state.qv) state.qv = {}; if (state.qv[id] == null) { state.qv[id] = Math.floor(Math.random() * poolOf(e.qs[g]).length); try { store.set(state); } catch (err) {} } return state.qv[id]; };
+const curQ = (e, g) => { const p = poolOf(e.qs[g]); return p[qvOf(e, g) % p.length]; };
 const save = () => store.set(state);
 
 const $ = id => document.getElementById(id);
@@ -2188,7 +2190,7 @@ html, body, body.practice { background: #fff !important; }
   const doneSong = e => (fun.gate[e.slug] || 0) >= e.qs.length;
   // a question from the same verse, never the one you already answered to unlock it
   function funQ(e, g) {
-    const p = poolOf(e.qs[g]), used = (state.qv[e.slug + "|" + g] || 0) % p.length;
+    const p = poolOf(e.qs[g]), used = qvOf(e, g) % p.length;
     if (p.length < 2) return p[0];
     return p[(used + 1 + ((fun.run - 1) % (p.length - 1))) % p.length];
   }
