@@ -7,11 +7,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OG Bobby · The Brooklyn Music Game</title>
-<meta name="description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
+<meta name="description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="OG Bobby">
 <meta property="og:title" content="The Brooklyn Music Game">
-<meta property="og:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
+<meta property="og:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
 <meta property="og:url" content="https://ogbobbybrooklyn.com/">
 <meta property="og:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=3">
 <meta property="og:image:type" content="image/jpeg">
@@ -20,13 +20,14 @@
 <meta property="og:image:alt" content="OG Bobby on a Bay Ridge block at night — the Brooklyn music game">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Brooklyn Music Game">
-<meta name="twitter:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one level at a time.">
+<meta name="twitter:description" content="Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
 <meta name="twitter:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=3">
 <link rel="icon" href="icon-game.png?v=2">
 <link rel="apple-touch-icon" href="icon-game.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap">
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap"></noscript>
 <style>/* the graffiti 9 with a straight tail instead of the hook (only the 9 comes from this file) */
+@font-face { font-family: "OG Dirt"; src: url("brand/rubik-dirt.woff") format("woff"); font-display: swap; }
 @font-face { font-family: "Sedgwick Nine"; src: url("brand/sedgwick-nine.woff") format("woff"); unicode-range: U+0039; font-display: swap; }</style>
 <style>
 /* Layout: one narrow column. Cover, how-it-works, score + reward ladder, the player with its question, then the episode list. */
@@ -186,7 +187,7 @@ footer { color: var(--muted); font-size: .72rem; text-align: center; margin: 0; 
 .about-box li b { color: var(--gold); }
 /* Wide screens: the Bay Ridge cover art fills the sides as a dark backdrop */
 @media (min-width: 700px) {
-  body::before { content: ""; position: fixed; inset: -40px; z-index: -1; background: url("cover.jpg") center / cover no-repeat; filter: blur(14px) brightness(.32) saturate(1.1); }
+  body::before { content: ""; position: fixed; inset: -40px; z-index: -1; background: url("cover.jpg?v=2") center / cover no-repeat; filter: blur(14px) brightness(.32) saturate(1.1); }
   html { background: var(--bg); }
   body { background: transparent; }
   .wrap { max-width: 560px; }
@@ -574,7 +575,7 @@ body.practice { overflow: hidden; }
   </section>
   <header>
     <div class="cover">
-      <img src="cover.jpg" alt="OG Bobby artwork" width="1376" height="768">
+      <img src="cover.jpg?v=2" alt="OG Bobby artwork" width="1376" height="768">
     </div>
     <p class="tag">Bay Ridge, Brooklyn. The story, one episode at a time.</p>
   </header>
@@ -592,7 +593,7 @@ body.practice { overflow: hidden; }
 
   <section class="player" id="player" aria-live="polite">
     <div>
-      <div class="label" id="pEp">Level 1</div>
+      <div class="label" id="pEp">Episode 1</div>
       <div id="pTitle">Whatever It Takes</div>
       <div class="part" id="pPart">Part 1</div>
     </div>
@@ -617,7 +618,7 @@ body.practice { overflow: hidden; }
   </section>
 
   <section>
-    <h2>THE LEVELS</h2>
+    <h2>THE EPISODES</h2>
     <ol id="list"></ol>
   </section>
 
@@ -631,14 +632,14 @@ body.practice { overflow: hidden; }
     <h3 id="aboutTitle">The Brooklyn Music Game</h3>
     <p>A true Bay Ridge story told in songs. Every song is a level, and the story only moves when you prove you were listening.</p>
     <ul>
-      <li><b>Listen.</b> Each level is a chapter: the block, the fights, Wall Street, the comeback.</li>
+      <li><b>Listen.</b> Each episode is a chapter: the block, the fights, Wall Street, the comeback.</li>
       <li><b>Answer.</b> The song stops and asks what you just heard. Miss it and you get a new question, not a do-over.</li>
       <li><b>Unlock.</b> Get a song right and it's yours to play in full.</li>
       <li><b>Earn Street Cred.</b> First-try answers fill your meter. Climb from New Face to Corner Kid, OG Soldier and OG Protégé.</li>
       <li><b>Collect.</b> Finish any block of 3 songs to earn that block's playlist. Finish all 9 to earn Season 1.</li>
       <li><b>Run it back.</b> Earned a rank? Replay your unlocked songs with new questions, just for fun. No rewards, just bragging rights.</li>
-      <li><b>Raw Cuts.</b> Stripped-down versions of the songs, in their own room.</li>
-      <li><b>Road to '99.</b> Season 2 comes next. Both seasons make the '99 music series, and the climb goes on to OG Certified.</li>
+      <li><b>Director’s Cuts.</b> Stripped-down versions of the songs, in their own room.</li>
+      <li><b>Road to '99.</b> OG Made is the music series: Season 1 ('9) and Season 2 (9), nine episodes each. Put them together and you get '99. The climb goes on to OG Certified.</li>
     </ul>
     <button class="btn" id="aboutPlay" type="button">Let's play</button>
   </div>
@@ -672,7 +673,7 @@ body.practice { overflow: hidden; }
 <audio id="audio" preload="metadata" controlslist="nodownload noplaybackrate" disableremoteplayback></audio>
 
 <script>
-const EPISODES = [{"slug": "whatever-it-takes", "title": "Whatever It Takes", "a": "126e8c5330db", "v": 2, "cuts": [77.6], "dur": 160.0, "qs": [{"q": "What year does OG's story start?", "opts": ["1987", "1983", "3000"], "gx": 2, "alt": [{"q": "What was the bully's name?", "opts": ["Tony", "Eric", "Big Bird"], "gx": 2}, {"q": "What got grabbed on the way to the bully's door?", "opts": ["An oak branch", "A rubber chicken", "A bat"], "gx": 1}]}]}, {"slug": "ridge-brothers", "title": "Ridge Brothers", "a": "21eb83b7a142", "cuts": [144.7], "dur": 224.4, "qs": [{"q": "Who connected OG to the Jorgenson brothers?", "opts": ["Big brother Mike", "Jimmy Kush", "Santa Claus"], "gx": 2, "alt": [{"q": "Which brother was OG's age?", "opts": ["Grandpa Joe", "Andrew", "John"], "gx": 0}, {"q": "What made them brothers?", "opts": ["The street", "The same school", "A reality show"], "gx": 2}]}]}, {"slug": "bay-ridge-nights", "title": "Bay Ridge Nights", "a": "eeb252303138", "v": 2, "cuts": [130.9], "dur": 204.0, "qs": [{"q": "Which Bay Ridge spot was for the squares?", "opts": ["The White House", "Hobnail", "Pizza Wagon"], "gx": 0, "alt": [{"q": "Where'd they go for dinner when the pockets were right?", "opts": ["Hobnail", "The moon", "Gino's"], "gx": 1}, {"q": "Which park gets the shout-out at the end?", "opts": ["Moon Man Park", "Jurassic Park", "Owl's Head"], "gx": 1}]}]}, {"slug": "the-get-back", "title": "The Get Back", "a": "274ed1bf7495", "v": 2, "cuts": [96.0, 136.7], "dur": 210.0, "qs": [{"q": "How old was OG's baby girl in '99?", "opts": ["Thirty-five", "Three", "One"], "gx": 0, "alt": [{"q": "Where was OG working before it all shut down?", "opts": ["The docks", "Wall Street", "The North Pole"], "gx": 2}, {"q": "What year did Wall Street shut for OG?", "opts": ["3099", "1999", "1989"], "gx": 0}]}, {"q": "When did the brother say \"he don't sell\"?", "opts": ["On the moon", "New Year's Eve", "Christmas Eve"], "gx": 0, "alt": [{"q": "Who was OG with on Christmas Eve?", "opts": ["The Easter Bunny", "His wife", "His brother"], "gx": 0}, {"q": "What did the snake take while OG was gone?", "opts": ["His customers", "His goldfish", "His car"], "gx": 1}]}]}, {"slug": "pioneer", "title": "Pioneer", "a": "7e194045155e", "v": 3, "cuts": [75.9, 140.9], "dur": 205.0, "qs": [{"q": "Where did the hustle start?", "opts": ["Staten Island", "South Brooklyn", "Disney World"], "gx": 2, "alt": [{"q": "When does the story start?", "opts": ["The Stone Age", "Early 2000s", "Early 90's"], "gx": 0}, {"q": "How long was OG legit on Wall Street?", "opts": ["Five years", "Twenty years", "A hundred years"], "gx": 2}]}, {"q": "What did the partner do with the shared money?", "opts": ["Used it for his own moves", "Hid it overseas", "Gave it to the zoo"], "gx": 2, "alt": [{"q": "What was the partner, according to OG?", "opts": ["The brains", "Just a runner", "A dolphin trainer"], "gx": 2}, {"q": "How much of every dollar did OG hand him?", "opts": ["A quarter", "A million", "Half"], "gx": 1}]}]}, {"slug": "bars-and-clubs", "title": "Bars & Clubs", "a": "408ea49cb67a", "v": 2, "cuts": [66.6, 113.9], "dur": 161.0, "qs": [{"q": "Which Bay Ridge bar gets named?", "opts": ["Times Square Olive Garden", "Three Jolly Pigeons", "The Kettle Black"], "gx": 0, "alt": [{"q": "Which spot was for the boots?", "opts": ["Lone Star", "Chuck E. Cheese", "Hobnail"], "gx": 1}, {"q": "Which spot was for last call?", "opts": ["The library", "Gino's", "PJ's"], "gx": 0}]}, {"q": "Which Manhattan club gets a shout-out?", "opts": ["Limelight", "The Tunnel", "Chuck E. Cheese"], "gx": 2, "alt": [{"q": "Which club had the velvet rope at the door?", "opts": ["Studio 54", "The Tunnel", "Toys R Us"], "gx": 2}, {"q": "What night was China Club?", "opts": ["Never", "Monday", "Saturday"], "gx": 0}]}]}, {"slug": "bay-ridge-is-mine", "title": "Bay Ridge Is Mine", "a": "0434976f90fd", "v": 2, "cuts": [94.1, 146.8, 200.5], "dur": 280.8, "qs": [{"q": "What holiday was coming when it went down?", "opts": ["Valentine's Day", "Thanksgiving", "Christmas"], "gx": 0, "alt": [{"q": "What year did it go down?", "opts": ["1817", "2007", "2017"], "gx": 0}, {"q": "What did OG set for his partner?", "opts": ["A meeting", "A trap", "A lemonade stand"], "gx": 2}]}, {"q": "How much money went missing?", "opts": ["$7,000", "One dollar", "$70,000"], "gx": 1, "alt": [{"q": "Who's running the books now?", "opts": ["OG", "His brother", "His dentist"], "gx": 2}, {"q": "How many wannabe gangsters were mouthing off in the bar?", "opts": ["Five", "A hundred", "Two"], "gx": 1}]}, {"q": "What's the hook?", "opts": ["The OG's back", "The grit came back", "Who let the dogs out"], "gx": 2, "alt": [{"q": "What did the guy at the bar pick up?", "opts": ["OG's drink", "A bowling ball", "OG's phone"], "gx": 1}, {"q": "How did OG put him away?", "opts": ["A choke", "A pillow fight", "A kick"], "gx": 1}]}]}, {"slug": "black-rob", "title": "Black Rob", "a": "1b1c2375cfe8", "cuts": [56.3, 117.4, 152.7], "dur": 215.5, "qs": [{"q": "Which gym did Rob start in?", "opts": ["Gold's Gym", "Martin Snow's gym", "A bouncy castle"], "gx": 2, "alt": [{"q": "What did Rob ask OG to do?", "opts": ["Coach him", "Walk his dog", "Hire him"], "gx": 1}, {"q": "What year did OG hang up the gloves?", "opts": ["1899", "2009", "1999"], "gx": 0}]}, {"q": "What was Rob to OG in the boxing gym?", "opts": ["His landlord", "His first student", "His coach"], "gx": 0, "alt": [{"q": "Who was Rob's idol?", "opts": ["Mike Tyson", "Diego Corrales", "Elmo"], "gx": 2}, {"q": "Which gym was the Mecca?", "opts": ["Gleason's", "The mall food court", "Gold's Gym"], "gx": 1}]}, {"q": "Rob is like OG's...", "opts": ["Pet goldfish", "Cousin", "Little brother"], "gx": 0, "alt": [{"q": "What job did OG give Rob?", "opts": ["Number one runner", "Bookkeeper", "Ice cream man"], "gx": 2}, {"q": "How old was Rob when he was stacking it up?", "opts": ["Twenty", "Forty", "Three"], "gx": 2}]}]}, {"slug": "positivity-spreads", "title": "Positivity Spreads", "a": "f5b178c99f99", "v": 2, "cuts": [59.55, 139.45, 190.7], "dur": 222.8, "qs": [{"q": "Which Brooklyn park does OG train in?", "opts": ["Owl's Head", "Prospect Park", "The Central Park Zoo"], "gx": 2, "alt": [{"q": "What does OG have instead of a gym membership?", "opts": ["A home gym", "A bench on the shore", "A magic carpet"], "gx": 2}, {"q": "Where does OG finish the trip?", "opts": ["On the moon", "At the deli", "Under the girders"], "gx": 0}]}, {"q": "What spreads?", "opts": ["Rumors", "Positivity", "Butter"], "gx": 2, "alt": [{"q": "Where's the big bench?", "opts": ["In the garage", "On top of the Empire State", "By the water"], "gx": 1}, {"q": "What kind of weight does OG carry?", "opts": ["Body weight", "Free weights", "Paperweight"], "gx": 2}]}, {"q": "Who did OG earn his black belt under?", "opts": ["Royce Gracie", "Ricardo Almeida", "Rocky Balboa"], "gx": 2, "alt": [{"q": "Who does OG train next to?", "opts": ["Mickey Mouse", "Frankie Edgar", "Mike Tyson"], "gx": 0}, {"q": "What color belt?", "opts": ["Rainbow", "Brown", "Black"], "gx": 0}]}]}];
+const EPISODES = [{"slug": "whatever-it-takes", "title": "Whatever It Takes", "a": "126e8c5330db", "v": 3, "cuts": [75.0], "dur": 157.5, "qs": [{"q": "What year does OG's story start?", "opts": ["1987", "1983", "3000"], "gx": 2, "alt": [{"q": "What was the bully's name?", "opts": ["Tony", "Eric", "Big Bird"], "gx": 2}, {"q": "What got grabbed on the way to the bully's door?", "opts": ["An oak branch", "A rubber chicken", "A bat"], "gx": 1}, {"q": "How old was OG when it went down?", "opts": ["Ninety", "Fifteen", "Twelve"], "gx": 0}, {"q": "How old was Eric?", "opts": ["Eighteen", "Twenty-one", "Two"], "gx": 2}, {"q": "Where was OG hiding out, smoking?", "opts": ["The basement", "A spaceship", "The vestibule"], "gx": 1}, {"q": "What did Eric do to OG first?", "opts": ["Stole his bike", "Punched him in the face", "Sang him a lullaby"], "gx": 2}, {"q": "Who saw the blood and said \"let's go\"?", "opts": ["His pops", "The mailman", "His brother"], "gx": 1}, {"q": "Who did OG swing like?", "opts": ["Tinker Bell", "Babe Ruth", "Reggie Jackson"], "gx": 0}, {"q": "What did Pops say after?", "opts": ["Go apologize", "Guess you're even now", "Pass the gravy"], "gx": 2}, {"q": "How many years of havoc before OG ran the game?", "opts": ["Ten", "A thousand", "Two"], "gx": 1}]}]}, {"slug": "ridge-brothers", "title": "Ridge Brothers", "a": "21eb83b7a142", "v": 2, "cuts": [131.8], "dur": 206.4, "qs": [{"q": "Who connected OG to the Jorgenson brothers?", "opts": ["Big brother Mike", "Jimmy Kush", "Santa Claus"], "gx": 2, "alt": [{"q": "Which brother was OG's age?", "opts": ["Grandpa Joe", "Andrew", "John"], "gx": 0}, {"q": "What made them brothers?", "opts": ["The street", "The same school", "A reality show"], "gx": 2}, {"q": "How old were they when it started?", "opts": ["Twenty-one", "Thirteen", "Ninety"], "gx": 2}, {"q": "What stereo was in the dash?", "opts": ["Alpine", "A toaster", "Sony"], "gx": 1}, {"q": "OG was the what box kid?", "opts": ["Boom box", "Juice box", "Benz box"], "gx": 1}, {"q": "How much a pop?", "opts": ["A penny", "A hundred", "Fifty"], "gx": 0}, {"q": "How old was OG when he was raking it in?", "opts": ["Seventeen", "Twenty-five", "Four"], "gx": 2}, {"q": "Who was laughing at the chaos?", "opts": ["Andrew", "Grandma", "Mike"], "gx": 1}, {"q": "What line did they never cross?", "opts": ["Somebody else's zip code", "The equator", "The Verrazzano"], "gx": 1}, {"q": "What did the out-of-towners think they were?", "opts": ["Cops", "Ballerinas", "Thugs"], "gx": 1}]}]}, {"slug": "bay-ridge-nights", "title": "Bay Ridge Nights", "a": "eeb252303138", "v": 3, "cuts": [123.7], "dur": 187.2, "qs": [{"q": "Which Bay Ridge spot was for the squares?", "opts": ["The White House", "Hobnail", "Pizza Wagon"], "gx": 0, "alt": [{"q": "Where'd they go for dinner when the pockets were right?", "opts": ["Hobnail", "The moon", "Gino's"], "gx": 1}, {"q": "Which park gets the shout-out at the end?", "opts": ["Moon Man Park", "Jurassic Park", "Owl's Head"], "gx": 1}, {"q": "Which avenue was jumping?", "opts": ["Third Avenue", "Sesame Street", "Fifth Avenue"], "gx": 1}, {"q": "Which piece do you grab at Pizza Wagon?", "opts": ["The middle piece", "The corner piece", "The puzzle piece"], "gx": 2}, {"q": "How's the bottom of that slice?", "opts": ["Made of rubber", "Soggy", "Crispy"], "gx": 0}, {"q": "Which spot was packed?", "opts": ["Wavelengths", "Lone Star", "The library"], "gx": 2}, {"q": "Throw a hand at the bar, and you leave with what?", "opts": ["A free drink", "A black eye and a number", "A unicorn"], "gx": 2}, {"q": "Which boys were in the back?", "opts": ["Gowanus boys", "Backstreet Boys", "Verrazzano boys"], "gx": 1}, {"q": "Where did the kids turn into men?", "opts": ["Fort Hamilton", "Candy Land", "Coney Island"], "gx": 1}, {"q": "How long does the party go?", "opts": ["Till midnight", "Till the morning light", "Till next Christmas"], "gx": 2}]}]}, {"slug": "the-get-back", "title": "The Get Back", "a": "274ed1bf7495", "v": 3, "cuts": [96.0, 136.7], "dur": 202.4, "qs": [{"q": "How old was OG's baby girl in '99?", "opts": ["Thirty-five", "Three", "One"], "gx": 0, "alt": [{"q": "Where was OG working before it all shut down?", "opts": ["The docks", "Wall Street", "The North Pole"], "gx": 2}, {"q": "What year did Wall Street shut for OG?", "opts": ["3099", "1999", "1989"], "gx": 0}, {"q": "What was on the wall that didn't mean a thing?", "opts": ["His license", "A moose head", "His diploma"], "gx": 1}, {"q": "Who did OG work for on Wall Street?", "opts": ["Lawyers", "Crooks", "Clowns"], "gx": 2}, {"q": "Who did OG pick out and call in?", "opts": ["The smallest", "The tooth fairy", "The biggest"], "gx": 1}]}, {"q": "When did the brother say \"he don't sell\"?", "opts": ["On the moon", "New Year's Eve", "Christmas Eve"], "gx": 0, "alt": [{"q": "Who was OG with on Christmas Eve?", "opts": ["The Easter Bunny", "His wife", "His brother"], "gx": 0}, {"q": "What did the snake take while OG was gone?", "opts": ["His customers", "His goldfish", "His car"], "gx": 1}, {"q": "When was the meet?", "opts": ["Early morning", "Lunchtime at the zoo", "Midnight"], "gx": 1}, {"q": "What did OG do with it?", "opts": ["Let it go", "Put it in the vault", "Mailed it to Florida"], "gx": 2}]}]}, {"slug": "pioneer", "title": "Pioneer", "a": "7e194045155e", "v": 4, "cuts": [75.9, 140.9], "dur": 202.3, "qs": [{"q": "Where did the hustle start?", "opts": ["Staten Island", "South Brooklyn", "Disney World"], "gx": 2, "alt": [{"q": "When does the story start?", "opts": ["The Stone Age", "Early 2000s", "Early 90's"], "gx": 0}, {"q": "How long was OG legit on Wall Street?", "opts": ["Five years", "Twenty years", "A hundred years"], "gx": 2}, {"q": "What made everything get hot?", "opts": ["A blackout", "A parade", "A shot rang out"], "gx": 1}, {"q": "What did OG trade the corners for?", "opts": ["The towers", "A lemonade stand", "A boat"], "gx": 1}, {"q": "How much did OG stack on Wall Street?", "opts": ["A couple grand", "A couple million", "A couple pickles"], "gx": 2}]}, {"q": "What did the partner do with the shared money?", "opts": ["Used it for his own moves", "Hid it overseas", "Gave it to the zoo"], "gx": 2, "alt": [{"q": "What was the partner, according to OG?", "opts": ["The brains", "Just a runner", "A dolphin trainer"], "gx": 2}, {"q": "How much of every dollar did OG hand him?", "opts": ["A quarter", "A million", "Half"], "gx": 1}, {"q": "How many days a year did it run?", "opts": ["200", "Leap years only", "365"], "gx": 1}, {"q": "Behind OG's back, the partner played the...", "opts": ["Boss", "Piano", "Victim"], "gx": 1}]}]}, {"slug": "bars-and-clubs", "title": "Bars & Clubs", "a": "408ea49cb67a", "v": 2, "cuts": [66.6, 113.9], "dur": 161.0, "qs": [{"q": "Which Bay Ridge bar gets named?", "opts": ["Times Square Olive Garden", "Three Jolly Pigeons", "The Kettle Black"], "gx": 0, "alt": [{"q": "Which spot was for the boots?", "opts": ["Lone Star", "Chuck E. Cheese", "Hobnail"], "gx": 1}, {"q": "Which spot was for last call?", "opts": ["The library", "Gino's", "PJ's"], "gx": 0}, {"q": "Which spot was for after work?", "opts": ["Salty Dog", "TJ Bentley's", "The dentist"], "gx": 2}, {"q": "Which spot was for the dance floor?", "opts": ["Razzles", "The DMV", "Shooters"], "gx": 1}, {"q": "Where'd you go to be seen?", "opts": ["A library basement", "The Kettle Black", "Pastels and Rumors"], "gx": 0}]}, {"q": "Which Manhattan club gets a shout-out?", "opts": ["Limelight", "The Tunnel", "Chuck E. Cheese"], "gx": 2, "alt": [{"q": "Which club had the velvet rope at the door?", "opts": ["Studio 54", "The Tunnel", "Toys R Us"], "gx": 2}, {"q": "What night was China Club?", "opts": ["Never", "Monday", "Saturday"], "gx": 0}, {"q": "Who was in the game at China Club?", "opts": ["Santa Claus", "Black Rob", "Mike Tyson"], "gx": 0}, {"q": "Which Greeks knew everybody?", "opts": ["Chris and John", "Zeus and Hercules", "Nick and Gus"], "gx": 1}]}]}, {"slug": "bay-ridge-is-mine", "title": "Bay Ridge Is Mine", "a": "0434976f90fd", "v": 3, "cuts": [88.8, 141.5, 195.2], "dur": 270.2, "qs": [{"q": "What holiday was coming when it went down?", "opts": ["Valentine's Day", "Thanksgiving", "Christmas"], "gx": 0, "alt": [{"q": "What year did it go down?", "opts": ["1817", "2007", "2017"], "gx": 0}, {"q": "What did OG set for his partner?", "opts": ["A meeting", "A trap", "A lemonade stand"], "gx": 2}, {"q": "What did OG make his partner?", "opts": ["Bouncer", "Treasurer", "Court jester"], "gx": 2}]}, {"q": "How much money went missing?", "opts": ["$7,000", "One dollar", "$70,000"], "gx": 1, "alt": [{"q": "Who's running the books now?", "opts": ["OG", "His brother", "His dentist"], "gx": 2}, {"q": "How many wannabe gangsters were mouthing off in the bar?", "opts": ["Five", "A hundred", "Two"], "gx": 1}, {"q": "What did OG double up?", "opts": ["The order", "His pizza toppings", "The rent"], "gx": 1}]}, {"q": "What's the hook?", "opts": ["The OG's back", "The grit came back", "Who let the dogs out"], "gx": 2, "alt": [{"q": "What did the guy at the bar pick up?", "opts": ["OG's drink", "A bowling ball", "OG's phone"], "gx": 1}, {"q": "How did OG put him away?", "opts": ["A choke", "A pillow fight", "A kick"], "gx": 1}]}]}, {"slug": "black-rob", "title": "Black Rob", "a": "1b1c2375cfe8", "v": 2, "cuts": [56.3, 117.4, 152.7], "dur": 214.2, "qs": [{"q": "Which gym did Rob start in?", "opts": ["Gold's Gym", "Martin Snow's gym", "A bouncy castle"], "gx": 2, "alt": [{"q": "What did Rob ask OG to do?", "opts": ["Coach him", "Walk his dog", "Hire him"], "gx": 1}, {"q": "What year did OG hang up the gloves?", "opts": ["1899", "2009", "1999"], "gx": 0}, {"q": "What did OG close the same week he hung up the gloves?", "opts": ["His bank account", "A pickle jar", "The book on Wall Street"], "gx": 1}]}, {"q": "What was Rob to OG in the boxing gym?", "opts": ["His landlord", "His first student", "His coach"], "gx": 0, "alt": [{"q": "Who was Rob's idol?", "opts": ["Mike Tyson", "Diego Corrales", "Elmo"], "gx": 2}, {"q": "Which gym was the Mecca?", "opts": ["Gleason's", "The mall food court", "Gold's Gym"], "gx": 1}, {"q": "What leaked every round at Gleason's?", "opts": ["His nose", "His juice box", "His eye"], "gx": 1}]}, {"q": "Rob is like OG's...", "opts": ["Pet goldfish", "Cousin", "Little brother"], "gx": 0, "alt": [{"q": "What job did OG give Rob?", "opts": ["Number one runner", "Bookkeeper", "Ice cream man"], "gx": 2}, {"q": "How old was Rob when he was stacking it up?", "opts": ["Twenty", "Forty", "Three"], "gx": 2}]}]}, {"slug": "positivity-spreads", "title": "Positivity Spreads", "a": "f5b178c99f99", "v": 2, "cuts": [59.55, 139.45, 190.7], "dur": 222.8, "qs": [{"q": "Which Brooklyn park does OG train in?", "opts": ["Owl's Head", "Prospect Park", "The Central Park Zoo"], "gx": 2, "alt": [{"q": "What does OG have instead of a gym membership?", "opts": ["A home gym", "A bench on the shore", "A magic carpet"], "gx": 2}, {"q": "Where does OG finish the trip?", "opts": ["On the moon", "At the deli", "Under the girders"], "gx": 0}, {"q": "Where does OG do his dips?", "opts": ["On a cloud", "The rail by the water", "A kitchen chair"], "gx": 0}]}, {"q": "What spreads?", "opts": ["Rumors", "Positivity", "Butter"], "gx": 2, "alt": [{"q": "Where's the big bench?", "opts": ["In the garage", "On top of the Empire State", "By the water"], "gx": 1}, {"q": "What kind of weight does OG carry?", "opts": ["Body weight", "Free weights", "Paperweight"], "gx": 2}, {"q": "Back in the day, what did nobody in the hood have?", "opts": ["Boxing", "Grappling", "Wi-Fi"], "gx": 2}]}, {"q": "Who did OG earn his black belt under?", "opts": ["Royce Gracie", "Ricardo Almeida", "Rocky Balboa"], "gx": 2, "alt": [{"q": "Who does OG train next to?", "opts": ["Mickey Mouse", "Frankie Edgar", "Mike Tyson"], "gx": 0}, {"q": "What color belt?", "opts": ["Rainbow", "Brown", "Black"], "gx": 0}]}]}];
 const VIP = "vip-0609a49912/";
 const TOTAL_Q = EPISODES.reduce((n, e) => n + e.qs.length, 0);
 const BLOCKS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]];   // finish all 3 songs in a block, any order, any time, to earn that block's playlist
@@ -726,7 +727,7 @@ function promote(name) {
   d.querySelector(".promo-name").textContent = name;
   document.body.append(d);
   requestAnimationFrame(() => d.classList.add("on"));
-  setTimeout(() => { d.classList.remove("on"); setTimeout(() => d.remove(), 400); }, 4200);
+  d._t = setTimeout(() => { d.classList.remove("on"); setTimeout(() => d.remove(), 400); }, 4200);
 }
 
 /* Small SHA-256 so unlocking works on any connection. */
@@ -869,7 +870,7 @@ function playSection(s, autoplay) {
 function load(i, autoplay) {
   idx = i;
   const e = EPISODES[i];
-  $("pEp").innerHTML = '<span class="vol-tag"><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span>SEASON 1</span>Level ' + (i + 1);
+  $("pEp").innerHTML = '<span class="vol-tag"><span class="v1nine"><span class="tick">\u2019</span>' + nineSvg(1) + '</span>SEASON 1</span>Episode ' + (i + 1);
   $("pTitle").textContent = e.title;
   $("tot").textContent = fmt(e.dur);
   drawTrack(e);
@@ -976,6 +977,8 @@ audio.addEventListener("ended", () => {
   } else if (plMode) {
     const s = earnedSongs(), nx = s.find(n => n > idx + 1);
     if (nx) playFromList(nx); else plMode = false;
+  } else if (window.ogClearPending && window.ogClearPending()) {
+    /* the Episode Cleared screen is on its way: its button starts the next episode */
   } else if (idx + 1 < EPISODES.length) load(idx + 1, true);
   setPlayIcon();
 });
@@ -1035,8 +1038,8 @@ window.scrollTo(0, 0);
   document.querySelector(".how").remove();
   // how-to-play reads one page at a time; text box, dots and button never move
   const HOW = [
-    ["Hit play.", "Every song is a level of OG Bobby's story.", "street", "84 ST", "4 AV"],
-    ["Every level stops.", "Answer right to unlock the next verse.", "store", "CORNER STORE", "BAY RIDGE"],
+    ["Hit play.", "Every song is an episode of OG Bobby's story.", "street", "84 ST", "4 AV"],
+    ["Every episode stops.", "Answer right to unlock the next verse.", "store", "CORNER STORE", "BAY RIDGE"],
     ["Unlock a song.", "It plays in full.", "subway", "BAY RIDGE AV", "R"],
     ["Finish a block of 3.", "Earn that block's playlist.", "park", "OWL'S HEAD PARK", "NYC PARKS"],
     ["Finish all 9.", "Earn Season 1. Season 2 opens next.", "street", "SHORE RD", "VERRAZZANO"]
@@ -1091,8 +1094,8 @@ window.scrollTo(0, 0);
       const rk = rankOf(blocksDone());
       hpBody.innerHTML = '<span class="wb-rank"><span class="wb-emb">' + rankEmblem(rk) + '</span><span class="wb-name"></span></span><span class="wb-done"></span>';
       hpBody.querySelector(".wb-name").textContent = RANKS[rk];
-      hpBody.querySelector(".wb-done").textContent = done + " of " + EPISODES.length + " songs done" + (left ? "" : " \u00b7 Season 1 earned");
-      startBtn.textContent = "RETURN TO YOUR GAME";
+      hpBody.querySelector(".wb-done").textContent = done + " of " + EPISODES.length + " episodes done" + (left ? "" : " \u00b7 Season 1 earned");
+      startBtn.textContent = "\u25B6 PLAY EPISODE " + ((idx < 0 ? 0 : idx) + 1);
       if (navReady) prev.disabled = true;
     } else {
       howTitle.textContent = "How to play";
@@ -1229,14 +1232,32 @@ window.scrollTo(0, 0);
     const vv = window.visualViewport;
     if (vv && vv.scale > 1.01) return;   // pinch-zoomed: don't re-lay out, just let the phone magnify
     const vh = vv ? vv.height : innerHeight, vw = vv ? vv.width : innerWidth;
-    const z = Math.min(1, vh / DESIGN_H, vw / DESIGN_W);
+    if (Math.abs(vh - (window.__fitVh || 0)) > 2) { window.__fitK = 1; window.__fitVh = vh; }   // new screen size: start fresh
+    const z = Math.min(1, vh / DESIGN_H, vw / DESIGN_W) * (window.__fitK || 1);
     window.__z = z;
     document.documentElement.style.setProperty("--z", z);
     document.documentElement.style.setProperty("--appH", Math.floor(vh / z) + "px");
     const dock = document.querySelector(".dock");
     if (dock) document.documentElement.style.setProperty("--dockH", Math.ceil(dock.getBoundingClientRect().height / z) + "px");
     fitDock();
+    requestAnimationFrame(keepAboveDock);
   };
+  // if the phone's notch, home bar or fonts push the blue card (and RESTART GAME) under the bottom bar,
+  // shrink the whole game evenly until the card ends just above the bar
+  let tries = 0;
+  function keepAboveDock() {
+    const card = document.querySelector(".stage-wrap"), di = document.querySelector(".dock-in");
+    if (!card || !di || !card.offsetParent) return;
+    const vv = window.visualViewport; if (vv && vv.scale > 1.01) return;
+    const vh = vv ? vv.height : innerHeight;
+    const cb = card.getBoundingClientRect().bottom, dt = di.getBoundingClientRect().top;
+    const over = cb + 8 - dt;
+    if (over <= 0) { tries = 0; return; }
+    if (++tries > 4) { tries = 0; return; }
+    const need = cb + 8 + (vh - dt);
+    window.__fitK = (window.__fitK || 1) * Math.max(.6, (vh - 2) / need);
+    fit();
+  }
   fit();
   addEventListener("resize", fit);
   if (window.visualViewport) visualViewport.addEventListener("resize", fit);
@@ -1246,7 +1267,7 @@ window.scrollTo(0, 0);
 
   /* ---------- Raw Cuts: a separate window. Clear the full song first, then one question opens the raw version ---------- */
   const RAW = [{
-    slug: "the-get-back-raw", of: "the-get-back", title: "The Get Back", dur: 210.0,
+    slug: "the-get-back-raw", of: "the-get-back", title: "The Get Back", dur: 202.4,
     q: { q: "How much was a dub dub bag?", opts: ["Forty", "Twenty", "A million"], gx: 2,
       alt: [{ q: "Who did the snake call on OG?", opts: ["His grandma", "Some wannabe mobsters", "His crew"], gx: 0 },
             { q: "How long did they take to think it over?", opts: ["A week", "A day", "A hundred years"], gx: 2 }] }
@@ -1275,7 +1296,7 @@ window.scrollTo(0, 0);
   const scSvg = '<svg viewBox="0 0 24 24"><path d="M10.2 8.3c.5-.2 1-.3 1.6-.3 2.2 0 4 1.6 4.3 3.7.3-.1.7-.2 1-.2 1.6 0 2.9 1.3 2.9 2.9S18.7 17.3 17.1 17.3h-6.9zM8.8 9.2h.9v8.1h-.9zm-1.7.6H8v7.5h-.9zm-1.7.9h.9v6.6h-.9zm-1.7 1h.9v5.6h-.9zM2 12.8h.9v4.4H2z"/></svg>';
   const menuSvg = '<svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>';
   const mkTile = (label) => { const b = document.createElement("button"); b.type = "button"; b.className = "sb-tile"; b.dataset.label = label; return b; };
-  const rawT = mkTile("RAW CUTS"), v2T = mkTile("SEASON 2");
+  const rawT = mkTile("DIRECTOR’S CUTS"), v2T = mkTile("SEASON 2");
   rawT.onclick = () => mode === "raw" ? exitMode() : enterRaw();
   v2T.onclick = () => mode === "v2" ? exitMode() : enterV2();
   const single = dockRow.querySelector(".single-link");
@@ -1338,8 +1359,8 @@ window.scrollTo(0, 0);
     let tiles = "";
     for (let i = 0; i < 9; i++) {
       const t = VOL2[i];
-      const ep = t && t.match(/ \u2013 Episode (\d+)$/);
-      tiles += '<div class="v2-tile' + (t ? "" : " unknown") + '"' + (t ? ' aria-label="' + (i + 1) + '. ' + t + '"' : "") + '><span class="v2-n">' + (i + 1) + (ep ? " \u00b7 EP. " + ep[1] : "") + '</span><span class="v2-t"></span><span class="v2-lock">' + lockSvg + '</span></div>';
+      const ep = t && t.match(/, Pt\. (\d+)$/);
+      tiles += '<div class="v2-tile' + (t ? "" : " unknown") + '"' + (t ? ' aria-label="' + (i + 1) + '. ' + t + '"' : "") + '><span class="v2-n">' + (i + 1) + (ep ? " \u00b7 PT. " + ep[1] : "") + '</span><span class="v2-t"></span><span class="v2-lock">' + lockSvg + '</span></div>';
     }
     const have = VOL2.filter(Boolean).length;
     v2Card.innerHTML =
@@ -1362,7 +1383,7 @@ window.scrollTo(0, 0);
   }
   function renderRaw() {
     const r = RAW[rv], ei = rawEp(r), e = EPISODES[ei];
-    const head = '<div class="raw-kick">RAW CUT</div><div class="raw-title"></div>';
+    const head = '<div class="raw-kick">DIRECTOR’S CUT</div><div class="raw-title"></div>';
     if (state.raw[r.slug]) {
       rawCard.innerHTML = head + '<p class="raw-sub">Same story. Raw.</p>' +
         '<div class="raw-play"><div class="track" id="rTrack"><i id="rFill"></i></div>' +
@@ -1389,8 +1410,8 @@ window.scrollTo(0, 0);
       paint();
     } else if (!isOpen(e)) {
       rawCard.innerHTML = head + '<div class="raw-lock">' + lockSvg + '</div>' +
-        '<p class="raw-sub">Finish Level ' + (ei + 1) + ' to open this one. Then one more question unlocks the raw version.</p>' +
-        '<button class="btn ghost" id="rGo" type="button">Go to Level ' + (ei + 1) + '</button>';
+        '<p class="raw-sub">Finish Episode ' + (ei + 1) + ' to open this one. Then one more question unlocks the director’s cut.</p>' +
+        '<button class="btn ghost" id="rGo" type="button">Go to Episode ' + (ei + 1) + '</button>';
       rawCard.querySelector(".raw-title").textContent = r.title;
       $("rGo").onclick = () => { exitRaw(); go(ei + 1); };
     } else {
@@ -1426,7 +1447,7 @@ window.scrollTo(0, 0);
     if (ok) {
       btn.classList.add("right");
       state.raw[r.slug] = real; save();
-      $("rMsg").className = "msg good"; $("rMsg").textContent = "That's right. The raw cut is yours.";
+      $("rMsg").className = "msg good"; $("rMsg").textContent = "That's right. The director’s cut is yours.";
       setTimeout(() => { if (mode === "raw") renderRaw(); requestAnimationFrame(fitDock); }, 1000);
     } else {
       btn.classList.add("wrong");
@@ -1704,8 +1725,8 @@ window.scrollTo(0, 0);
   if (head && typeof nineSvg === "function" && !head.querySelector(".vol-big.ghost")) {
     const g = document.createElement("div"); g.className = "vol-big right ghost"; g.setAttribute("aria-label", "Season 2, coming next");
     g.innerHTML = '<span class="v1nine">' + nineSvg(1) + '</span><span class="lab">SEASON 2</span>';
-    const rel = document.createElement("div"); rel.className = "album-release big"; rel.setAttribute("aria-label", "\u201999, the album");
-    rel.innerHTML = '<span class="ar-num"><span class="tick">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="ar-sub">THE MUSIC SERIES</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
+    const rel = document.createElement("div"); rel.className = "album-release big"; rel.setAttribute("aria-label", "OG Made, \u201999");
+    rel.innerHTML = '<span class="ar-num"><span class="tick">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="ar-sub">OG MADE</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
     head.prepend(rel);
     head.append(g);
   }
@@ -1755,14 +1776,16 @@ window.scrollTo(0, 0);
   const v = new Audio(); v.preload = "auto";
   let busy = false, rot = { right: 0, wrong: 0 }, curFin = null;
   function say(src, done) {
-    if (curFin) curFin(true);
+    if (curFin) curFin();   // a line that gets cut off still hands off to whatever was waiting on it
     try { v.pause(); } catch (e) {}
     v.src = src; busy = true;
     const S = window.ogSound; if (S) S.duck(true);   // the song dips while OG talks
-    let over = false;
-    const fin = skip => { if (over) return; over = true; curFin = null; busy = false; v.onended = v.onerror = null; if (S) S.duck(false); if (!skip && done) done(); };
+    let over = false, guard = 0;
+    const fin = () => { if (over) return; over = true; clearTimeout(guard); curFin = null; busy = false; v.onended = v.onerror = v.onpause = null; if (S) S.duck(false); if (done) done(); };
     curFin = fin;
     v.onended = () => fin(); v.onerror = () => fin();
+    v.onpause = () => { if (!v.ended) setTimeout(() => { if (v.paused) fin(); }, 300); };   // phones can stop his voice when the song starts: move on
+    guard = setTimeout(fin, 12000);   // never wait on a voice line longer than this
     v.play().catch(() => fin());
   }
   const pickFrom = k => { const a = VO[k], s = a[rot[k] % a.length]; rot[k]++; return s; };
@@ -1776,8 +1799,9 @@ window.scrollTo(0, 0);
   // right / wrong: a quick game sound, then OG's reaction over a lowered song
   window.ogReact = function (ok, unlocked) {
     const S = window.ogSound;
-    if (S) S.sfx(ok ? (unlocked ? "unlock" : "right") : "wrong");
-    setTimeout(() => say(pickFrom(ok ? "right" : "wrong")), ok && unlocked ? 650 : 280);
+    if (S) S.sfx(ok ? (unlocked ? "spray" : "right") : "wrong");
+    if (ok && unlocked) { const t = document.getElementById("pTitle"); if (t) { t.classList.remove("og-paint"); void t.offsetWidth; t.classList.add("og-paint"); } }
+    setTimeout(() => say(pickFrom(ok ? "right" : "wrong")), ok && unlocked ? 1100 : 280);
   };
   const baseAnswer = answer;
   answer = async function (o, btn) {
@@ -1787,16 +1811,21 @@ window.scrollTo(0, 0);
     else if (btn.classList.contains("wrong")) window.ogReact(false);
   };
   // rank-ups: the song cuts out, scratch-and-beat jingle, OG's congrats, then the song comes back
-  let promoting = false, resume = false;
+  let promoting = false, resume = false, promoT = 0;
   audio.addEventListener("play", () => { if (promoting) { resume = true; audio.pause(); } });
+  // the player tapped play: the celebration is over, the song plays
+  const letPlay = () => { if (!promoting) return; promoting = false; resume = false; clearTimeout(promoT); try { v.pause(); } catch (e) {} };
+  document.addEventListener("pointerdown", ev => { if (ev.target.closest && ev.target.closest("#play, .cab-play, .cab-over .go")) letPlay(); }, true);
   const basePromote = promote;
   promote = function (name) {
     basePromote(name);
     promoting = true; resume = !audio.paused; audio.pause();
     const src = VO.rank[name], S = window.ogSound;
-    const finish = () => { promoting = false; if (resume) { resume = false; audio.play().catch(() => {}); } };
+    const finish = () => { if (!promoting) return; promoting = false; clearTimeout(promoT); if (resume) { resume = false; audio.play().catch(() => {}); } };
+    clearTimeout(promoT); promoT = setTimeout(finish, 15000);   // the song always comes back, even if a sound never finishes
     const talk = () => { if (src) say(src, finish); else finish(); };
-    if (S) S.jingle(talk); else talk();
+    const pn = document.querySelector(".promo .promo-name"); if (pn) pn.classList.add("og-stamp");
+    if (S && S.on()) { S.sfx("stamp", 0.9); setTimeout(() => S.jingle(talk), 600); } else if (S) S.jingle(talk); else talk();
   };
   // one song away from the next rank: OG says his piece first, then the song starts
   const teased = {};
@@ -1808,7 +1837,10 @@ window.scrollTo(0, 0);
     if (!others.every(i => isOpen(EPISODES[i]))) return;
     teased[e.slug] = true;
     audio.pause();
-    say(VO.tease[k], () => audio.play().catch(() => {}));
+    const box = document.querySelector(".hdr3 > .album-release.big:not(.vol-box)");
+    if (box) { box.classList.remove("og-flicker"); void box.offsetWidth; box.classList.add("og-flicker"); }
+    if (window.ogSound) window.ogSound.sfx("flicker", 0.7);
+    setTimeout(() => say(VO.tease[Math.min(blocksDone(), VO.tease.length - 1)], () => audio.play().catch(() => {})), 1000);   // the nudge names the rank they are about to earn, whichever block they finish
   });
 })();
 
@@ -2054,7 +2086,7 @@ html, body, body.practice { background: #fff !important; }
 /* Game sounds: little taps, right/wrong hits, an unlock sting, and a scratch-and-beat jingle on every promotion.
    The song dips under OG's voice so you can hear him, then comes back up. */
 (function () {
-  const FILES = { tap: "sfx/tap.mp3", right: "sfx/right.mp3", wrong: "sfx/wrong.mp3", unlock: "sfx/unlock.mp3", jingle: "sfx/jingle.mp3" };
+  const FILES = { tap: "sfx/tap.mp3", right: "sfx/right.mp3", wrong: "sfx/wrong.mp3", unlock: "sfx/unlock.mp3", jingle: "sfx/jingle.mp3", siren: "sfx/siren.mp3", train: "sfx/train.mp3", spray: "sfx/spray.mp3", bell: "sfx/bell.mp3", flicker: "sfx/flicker.mp3", stamp: "sfx/stamp.mp3" };
   let on = true; try { on = localStorage.getItem("ogSfx") !== "0"; } catch (e) {}
   let ctx = null, gain = null, routed = false;
   const bufs = {};
@@ -2090,7 +2122,7 @@ html, body, body.practice { background: #fff !important; }
     const s = ctx.createBufferSource(), g = ctx.createGain();
     s.buffer = b; g.gain.value = vol == null ? 1 : vol;
     s.connect(g); g.connect(ctx.destination);
-    if (done) s.onended = done;
+    if (done) { let f = false; const d = () => { if (f) return; f = true; done(); }; s.onended = d; setTimeout(d, (b.duration + 1) * 1000); }
     s.start();
   }
 
@@ -2429,7 +2461,7 @@ html, body, body.practice { background: #fff !important; }
       '<div class="mv-body"><div class="v2-eps">' + [1,2,3,4,5,6,7,8,9].map(n => '<span class="v2-ep">' + n + '</span>').join("") + '</div>' +
       '<div class="mv-rks">' + R2.map((r, k) => rk(r, rankEmblem(k + 4))).join("") + '</div></div></div>' +
     '<div class="og-bar" style="grid-column: 1 / -1"><span><span class="o">OG</span><span class="c">CERTIFIED</span></span></div>' +
-    '<div class="m99" style="grid-column: 1 / -1"><span class="n99"><span class="tk">\u2019</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="m99t"><b>THE MUSIC SERIES</b><i>ALL 18 SONGS \u00b7 SEASON 1 + SEASON 2</i></span></div>';
+    '<div class="m99" style="grid-column: 1 / -1"><span class="n99"><span class="tk">\u2019</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="m99t"><b>OG MADE</b><i>ALL 18 EPISODES \u00b7 SEASON 1 + SEASON 2</i></span></div>';
   const track = cred.querySelector(".cred-track"); (track || cred).after(m);
   m.querySelector(".slot").replaceWith(list);
   cred.classList.add("g9");
@@ -2655,8 +2687,8 @@ html, body, body.practice { background: #fff !important; }
   const n = m.querySelector(".n99");
   m.innerHTML = "";
   const a = document.createElement("div"); a.className = "m99a"; a.append(n);
-  const t = document.createElement("b"); t.textContent = "THE MUSIC SERIES"; a.append(t);
-  const sub = document.createElement("div"); sub.className = "m99s"; sub.textContent = "ALL 18 SONGS \u00b7 SEASON 1 + SEASON 2";
+  const t = document.createElement("b"); t.textContent = "OG MADE"; a.append(t);
+  const sub = document.createElement("div"); sub.className = "m99s"; sub.textContent = "ALL 18 EPISODES \u00b7 SEASON 1 + SEASON 2";
   m.append(a, sub);
 })();
 </script>
@@ -2782,8 +2814,8 @@ html, body, body.practice { background: #fff !important; }
   const stamp = bar.querySelector(":scope > span"); if (!stamp) return;
   stamp.classList.add("og-st");
   const right = stamp.cloneNode(true);
-  const rec = document.createElement("div"); rec.className = "og-rec"; rec.setAttribute("aria-label", "'99 the music series");
-  rec.innerHTML = '<div class="lbl"><span class="r99"><span class="tk">’</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="hole"></span><b>THE MUSIC SERIES</b></div>';
+  const rec = document.createElement("div"); rec.className = "og-rec"; rec.setAttribute("aria-label", "OG Made, '99");
+  rec.innerHTML = '<div class="lbl"><span class="r99"><span class="tk">’</span>' + (typeof nineSvg === "function" ? nineSvg(1) + nineSvg(1) : "99") + '</span><span class="hole"></span><b>OG MADE</b></div>';
   stamp.after(rec); rec.after(right);
   window.dispatchEvent(new Event("resize"));
 })();
@@ -3009,7 +3041,7 @@ html, body, body.practice { background: #fff !important; }
   document.getElementById("resetKeep").onclick = () => { sheet.hidden = true; };
   sheet.addEventListener("click", ev => { if (ev.target === sheet) sheet.hidden = true; });
   document.getElementById("resetGo").onclick = () => {
-    try { ["ogb2", "ogFun", "ogVoHi", "ogX", "ogHowDone"].forEach(k => localStorage.removeItem(k)); } catch (e) {}
+    try { ["ogb2", "ogFun", "ogVoHi", "ogX", "ogHowDone", "ogPlus"].forEach(k => localStorage.removeItem(k)); } catch (e) {}
     try { sessionStorage.clear(); } catch (e) {}
     try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "restart", title: "Restarted the game", event: true }); } catch (e) {}
     try { document.querySelectorAll("audio, video").forEach(a => a.pause()); } catch (e) {}
@@ -3042,7 +3074,7 @@ html, body, body.practice { background: #fff !important; }
   spin.innerHTML = '<div class="lbl"><span class="st"></span><span class="hole"></span><span class="by">OG BOBBY</span></div>';
   rec.append(spin);
   const st = spin.querySelector(".st"), by = spin.querySelector(".by");
-  const setName = t => { const raw = / \(Raw Cut\)$/.test(t); st.textContent = raw ? t.replace(/ \(Raw Cut\)$/, "") : t; by.textContent = raw ? "RAW CUT \u00b7 OG BOBBY" : "OG BOBBY"; };
+  const setName = t => { const raw = / \(Raw Cut\)$/.test(t); st.textContent = raw ? t.replace(/ \(Raw Cut\)$/, "") : t; by.textContent = raw ? "DIRECTOR’S CUT \u00b7 OG BOBBY" : "OG BOBBY"; };
   const isSong = a => { const s = a.currentSrc || a.src || ""; return s && !/\/(vo|sfx)\//.test(s); };
   const titleFor = a => {
     try { if (a === document.getElementById("audio") && typeof EPISODES !== "undefined" && EPISODES[idx]) return EPISODES[idx].title; } catch (e) {}
@@ -3173,7 +3205,7 @@ html, body, body.practice { background: #fff !important; }
   const head = document.querySelector("#player > div:first-child"); if (!head || head.classList.contains("hdr3")) return;
   const alb = head.querySelector(".album-release.big"); if (!alb) return;
   const vb = document.createElement("div"); vb.className = "album-release big vol-box"; vb.setAttribute("aria-label", "Season 1");
-  vb.innerHTML = '<span class="vb-num">SEASON 1</span><span class="ar-sub">9 SONGS</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
+  vb.innerHTML = '<span class="vb-num">SEASON 1</span><span class="ar-sub">9 EPISODES</span><i class="ar-c tl">\u2605</i><i class="ar-c tr">\u2605</i><i class="ar-c bl">\u2605</i><i class="ar-c br">\u2605</i>';
   head.append(vb); head.classList.add("hdr3");
   // both boxes exactly the same size
   const even = () => { vb.style.width = ""; alb.style.width = ""; const w = Math.max(alb.offsetWidth, vb.offsetWidth), h = Math.max(alb.offsetHeight, vb.offsetHeight); if (!w) return; alb.style.setProperty("width", w + "px", "important"); vb.style.setProperty("width", w + "px", "important"); vb.style.setProperty("height", h + "px", "important"); alb.style.setProperty("height", h + "px", "important"); };
@@ -3332,7 +3364,7 @@ html, body, body.practice { background: #fff !important; }
     const disp = '"Anton", Impact, "Arial Narrow", sans-serif', body = '"Barlow", system-ui, -apple-system, sans-serif';
     const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#2f6cf0"); g.addColorStop(.5, "#1a4fc9"); g.addColorStop(1, "#0f2f80");
     x.fillStyle = g; x.fillRect(0, 0, W, H);
-    const [cover, word, emb] = await Promise.all([loadImg("cover.jpg"), loadImg("brand/og-bobby-wordmark-top.png"), kind === "rank" ? emblemImg(rIdx()) : Promise.resolve(null)]);
+    const [cover, word, emb] = await Promise.all([loadImg("cover.jpg?v=2"), loadImg("brand/og-bobby-wordmark-top.png"), kind === "rank" ? emblemImg(rIdx()) : Promise.resolve(null)]);
     if (cover) { const ch = W * cover.height / cover.width; x.drawImage(cover, 0, 0, W, ch); const fade = x.createLinearGradient(0, ch - 220, 0, ch); fade.addColorStop(0, "rgba(26,79,201,0)"); fade.addColorStop(1, "#1d52cc"); x.fillStyle = fade; x.fillRect(0, ch - 220, W, 220); }
     if (word) { const ww = 560, wh = ww * word.height / word.width; x.drawImage(word, 40, 34, ww, wh); }
     x.textAlign = "center"; x.fillStyle = "#fff";
@@ -3356,7 +3388,7 @@ html, body, body.practice { background: #fff !important; }
       x.font = "110px " + disp; x.textAlign = "left"; x.fillText("’", sx - 2, ny + 84); x.textAlign = "center";
       x.drawImage(nine, sx + tw, ny, nw, nh); x.drawImage(nine, sx + tw + nw + gap, ny, nw, nh);
     }
-    x.font = "800 30px " + body; x.letterSpacing = "10px"; x.fillText("THE MUSIC SERIES", W / 2, fy + 165); x.letterSpacing = "0px";
+    x.font = "800 30px " + body; x.letterSpacing = "10px"; x.fillText("OG MADE", W / 2, fy + 165); x.letterSpacing = "0px";
     x.font = "800 40px " + body; x.fillText("Play at ogbobbybrooklyn.com", W / 2, H - 120);
     return new Promise(res => c.toBlob(b => res(b), "image/png"));
   }
@@ -3364,13 +3396,28 @@ html, body, body.practice { background: #fff !important; }
     const wait = sheet('<p class="k">MAKING YOUR CARD…</p>');
     let blob = null; try { blob = await makeCard(kind, big, small); } catch (e) {}
     wait.close();
-    if (!blob) return;
     tr("share/" + kind, "Shared: " + kind);
-    const file = new File([blob], "og-bobby-" + kind + ".png", { type: "image/png" });
-    try { if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], text: text + " " + SITE }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
-    const url = URL.createObjectURL(blob);
-    sheet('<p class="k">YOUR CARD</p><img class="x-share-img" alt="Your OG Bobby card" src="' + url + '"><p>Press and hold the picture to save it, then post it to your story.</p>' +
-      '<a class="btn x-go" href="' + url + '" download="og-bobby-' + kind + '.png">Save picture</a><button class="btn x-close" type="button" data-close>Close</button>', () => URL.revokeObjectURL(url));
+    const link = SITE + "/";
+    const msg = text + "\nCan you beat me? Play here:\n" + link;
+    const img = blob ? URL.createObjectURL(blob) : "";
+    const file = blob ? new File([blob], "og-bobby-" + kind + ".png", { type: "image/png" }) : null;
+    const s = sheet('<p class="k">' + (kind === "rank" ? "SHARE MY RANK" : "SHARE MY SCORE") + '</p>' +
+      (img ? '<img class="x-share-img" alt="Your OG Bobby card" src="' + img + '">' : '') +
+      '<button class="btn x-go" type="button" data-text>Text a friend</button>' +
+      (blob ? '<button class="btn x-close" type="button" data-pic>Save picture for my story</button>' : '') +
+      '<button class="btn x-close" type="button" data-close>Close</button>', () => { if (img) URL.revokeObjectURL(img); });
+    // Text a friend: sends the message with the game link itself, so it lands as a tappable link that opens the game
+    s.querySelector("[data-text]").onclick = async ev => {
+      const b = ev.currentTarget;
+      try { if (navigator.share) { await navigator.share({ title: "OG Bobby · The Brooklyn Music Game", text: text + "\nCan you beat me? Play here:", url: link }); return; } } catch (e) { return; }
+      if (/iPhone|iPad|Android/i.test(navigator.userAgent)) { location.href = "sms:?&body=" + encodeURIComponent(msg); return; }
+      try { await navigator.clipboard.writeText(msg); b.textContent = "Copied, paste it anywhere"; setTimeout(() => { b.textContent = "Text a friend"; }, 1800); } catch (e) {}
+    };
+    const pic = s.querySelector("[data-pic]");
+    if (pic) pic.onclick = async () => {
+      try { if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file] }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+      const a = document.createElement("a"); a.href = img; a.download = file.name; document.body.append(a); a.click(); a.remove();
+    };
   }
   const shareRank = () => share("rank", rName().toUpperCase(), "MY RANK", "I'm " + rName() + " on OG Bobby's Brooklyn Music Game.");
   window.ogShareRank = shareRank;
@@ -3384,9 +3431,12 @@ html, body, body.practice { background: #fff !important; }
       const b = document.createElement("button"); b.type = "button"; b.className = "x-promo-share"; b.textContent = "SHARE MY RANK";
       b.onclick = () => { p.remove(); shareRank(); };
       p.append(b);
-      // keep it on screen 4 more seconds
+      // stays up about 14 seconds (past the jingle and OG's voice); tap it to close sooner
+      clearTimeout(p._t);   // cancel the short 4-second exit so the longer one below wins
       const keep = setInterval(() => { if (!p.isConnected) return clearInterval(keep); p.classList.add("on"); }, 200);
-      setTimeout(() => { clearInterval(keep); p.classList.remove("on"); setTimeout(() => p.remove(), 400); }, 8200);
+      const close = () => { clearInterval(keep); p.classList.remove("on"); setTimeout(() => p.remove(), 400); };
+      setTimeout(close, 14000);
+      p.addEventListener("click", ev => { if (!ev.target.closest(".x-promo-share")) close(); });
     };
   }
 
@@ -3556,6 +3606,7 @@ html, body, body.practice { background: #fff !important; }
   }
   function run(pool) {
     tr("lightning/start", "Lightning round started");
+    try { window.ogSound && window.ogSound.sfx("bell", 0.75); } catch (e) {}
     // spread across songs: shuffle, prefer different questions
     const picks = []; const bag = shuffle(pool.slice()); const seen = {};
     for (const it of bag) { const key = it.e.slug + "|" + it.g + "|" + it.q.q; if (!seen[key]) { seen[key] = 1; picks.push(it); } if (picks.length >= LR_N) break; }
@@ -3676,7 +3727,7 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
       try {
         const p = String(path || ""); let m;
         if ((m = p.match(/^play\/(.+)$/))) { hitOnce("played-" + m[1]); if (typeof EPISODES !== "undefined" && EPISODES[0] && m[1] === EPISODES[0].slug) hitOnce("started"); }
-        else if ((m = p.match(/^level-unlocked\/(.+)$/))) hitOnce("finished-" + m[1]);
+        else if ((m = p.match(/^level-unlocked\/(.+)$/))) { hitOnce("played-" + m[1]); hitOnce("finished-" + m[1]); }
         else if ((m = p.match(/^rank\/(.+)$/))) hitOnce("rank-" + m[1]);
         else if ((m = p.match(/^(right|wrong)\/(.+)\/(q\d+)$/))) { const q = "q-" + m[2] + "-" + m[3]; if (!once[clean(q)]) { once[clean(q)] = 1; keep(); hit(m[1] + "-" + m[2] + "-" + m[3]); } }
         else if (/^streak\//.test(p)) hit("streaks");
@@ -3757,7 +3808,6 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
 .slide-intro:not(.welcome) .hp-head, .slide-intro:not(.welcome) .hp-body { text-wrap: balance; }
 @keyframes roomIn { from { opacity: 0; transform: translateX(26px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .slide-intro.walk .room-sign, .slide-intro.walk .howpage { animation: none; } }
-
 /* signs hang off to the side: faded, angled, with depth — the middle stays clean */
 .slide-intro:not(.welcome) { position: relative; }
 .slide-intro:not(.welcome) .room-sign { position: absolute; top: 74px; left: -30px; margin: 0; z-index: 0; pointer-events: none; opacity: .38; filter: blur(.4px);
@@ -3766,8 +3816,6 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
 .slide-intro.walk .room-sign { animation: signIn .5s ease-out; }
 @keyframes signIn { from { opacity: 0; } to { opacity: .38; } }
 </style>
-
-<div class="lab-tag">PRACTICE BOARD · NOT LIVE</div><style>.lab-tag{position:fixed;top:6px;left:50%;transform:translateX(-50%);z-index:50;background:#d62828;color:#fff;font:800 .55rem/1 Barlow,system-ui,sans-serif;letter-spacing:.12em;padding:4px 8px;border-radius:999px;pointer-events:none}</style>
 <style>@media (min-width: 700px) {
   html { background: #0a0e1a !important; }
   html body, html body.practice { background: transparent !important; }
@@ -3781,5 +3829,1037 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
     -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(50% - 330px), transparent calc(50% - 270px), transparent calc(50% + 270px), #000 calc(50% + 330px), #000 100%); mask-image: linear-gradient(90deg, #000 0, #000 calc(50% - 330px), transparent calc(50% - 270px), transparent calc(50% + 270px), #000 calc(50% + 330px), #000 100%); }
 }
 </style>
+<style>
+/* Street sounds: song title paints on at unlock, the '99 box flickers like a streetlight, gold stamp on a new rank */
+.og-paint { animation: ogPaint 1.1s linear 1; }
+@keyframes ogPaint { from { clip-path: inset(0 100% 0 0); filter: blur(2px); } to { clip-path: inset(0 0 0 0); filter: blur(0); } }
+.og-flicker { animation: ogFlick 1.1s steps(1) 1; }
+@keyframes ogFlick { 0%{opacity:1} 8%{opacity:.15} 14%{opacity:1} 30%{opacity:.25} 34%{opacity:1} 52%{opacity:.1} 60%{opacity:1} 100%{opacity:1} }
+.promo .promo-name.og-stamp { animation: ogStamp .7s cubic-bezier(.2,1.6,.4,1) 1 both; color: #f2b705 !important; text-shadow: 0 0 18px rgba(242,183,5,.75); }
+@keyframes ogStamp { 0% { transform: scale(2.2); opacity: 0; } 60% { transform: scale(.94); opacity: 1; } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .og-paint, .og-flicker, .promo .promo-name.og-stamp { animation: none; } }
+
+/* OG MADE is the album name: biggest word on the record label */
+.og-bar .og-rec .lbl b, .og-rec .lbl b { font-size: .66rem !important; letter-spacing: .04em !important; margin-right: -.04em !important; font-weight: 900 !important; }
+@media (min-width: 600px) { .og-bar .og-rec .lbl b, .og-rec .lbl b { font-size: .8rem !important; } }
+</style>
+<script>
+/* Street sounds: R train when you move on to the next block of 3 after finishing one, a distant siren when a hot streak (3+) breaks */
+(function () {
+  try {
+    const t = document.getElementById("pTitle"); if (!t || typeof BLOCKS === "undefined") return;
+    const blockOf = i => BLOCKS.findIndex(b => b.includes(i));
+    let last = typeof idx === "number" ? blockOf(idx) : -1; const rode = {};
+    new MutationObserver(() => {
+      const b = typeof idx === "number" ? blockOf(idx) : -1;
+      if (b < 0 || b === last) return;
+      const from = last; last = b;
+      if (from < 0 || rode[b]) return;
+      if (!BLOCKS[from].every(i => isOpen(EPISODES[i]))) return;   // only after the last stop is done
+      rode[b] = true;
+      if (window.ogSound) window.ogSound.sfx("train", 0.7);
+    }).observe(t, { childList: true, characterData: true, subtree: true });
+  } catch (e) {}
+  if (typeof answer === "function") {
+    let run = 0; const base = answer;
+    answer = async function (o, btn) {
+      await base(o, btn);
+      if (btn.classList.contains("right")) run++;
+      else if (btn.classList.contains("wrong")) { if (run >= 3 && window.ogSound) window.ogSound.sfx("siren", 0.35); run = 0; }
+    };
+  }
+})();
+</script>
+<style id="cabinet">
+/* ---------- One game cabinet: dark board, Welcome Back as a pop-up, pulsing NEXT box, white locked Season 2, one Restart ---------- */
+:root { --cab-night: #0d0f14; --cab-body: #161a22; --cab-rim: #343b4b; --cab-red: #d63a2f; --cab-green: #2fa34a; --cab-gold: #e8b23a; }
+html, body, body.practice { background: var(--cab-night) !important; }
+body.practice .wrap { background: var(--cab-body) !important; box-shadow: inset 0 0 0 2px var(--cab-rim); border-radius: 22px 22px 0 0; }
+.practice .game-title { color: #fff !important; }
+.practice .cover > img { border-color: var(--cab-rim) !important; }
+body.practice header .cover { overflow: hidden !important; }
+.practice .cred, .practice section#cred { background: transparent !important; border: 0 !important; box-shadow: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+body.practice #cred .cred-name, body.practice #cred .mv-head .t { color: #fff !important; }
+.practice .mv-head { border-color: var(--cab-rim) !important; }
+.practice .mv.v1 .mv-head { border-color: #fff !important; }
+.practice .og-st { display: none !important; }
+.practice .mv-nine, .practice .mv-nine .tick { color: #fff !important; fill: #fff; }
+.practice .mv-nine svg, .practice .mv-nine svg * { fill: #fff !important; stroke: #fff; }
+
+/* Season 2: dark locked tiles, white numbers and names */
+body.practice #cred .mv.v2 .v2-ep { position: relative; color: #fff !important; background: #0f1218 !important; border-color: var(--cab-rim) !important; opacity: 1 !important; box-shadow: none !important; }
+body.practice #cred .mv.v2 .v2-ep::after { content: ""; position: absolute; top: 2px; right: 2px; width: 6px; height: 7px; background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M6 10V7a6 6 0 0 1 12 0v3h1v12H5V10zm2 0h8V7a4 4 0 0 0-8 0z'/%3E%3C/svg%3E"); opacity: .75; }
+body.practice #cred .mv.v2 .mv-rk, body.practice #cred .mv.v2 .mv-rk b { color: #fff !important; opacity: 1 !important; }
+.practice .mv.v2 .mv-rk svg { opacity: .8; }
+.practice .v2-drop { display: none !important; }
+.practice .mv.v2 .mv-head > span:last-child::after { content: "COMING SOON"; font: 800 .52rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .08em; color: #fff; background: var(--cab-red); border-radius: 99px; padding: 3px 7px; white-space: nowrap; }
+
+/* the next episode to play pulses on the meter */
+.practice #list .ep.cab-next { position: relative; animation: cabPulse 1.4s ease-in-out infinite; }
+.practice #list .ep.cab-next::after { content: "NEXT"; position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 55%); font: 800 .42rem/1.4 "Barlow", system-ui, sans-serif; letter-spacing: .1em; color: var(--cab-red); background: #fff; border-radius: 3px; padding: 0 3px; pointer-events: none; }
+@keyframes cabPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(214,58,47,.75); } 50% { box-shadow: 0 0 0 6px rgba(214,58,47,0); } }
+
+/* bottom switchboard: four buttons, part of the cabinet */
+.practice .dock { background: #0f1218 !important; border-top: 2px solid var(--cab-rim) !important; }
+#sbReset { display: none !important; }
+.practice .switchboard { grid-template-columns: repeat(4, 1fr) !important; }
+
+/* Welcome Back floats over the dimmed board */
+#cabVeil { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 20px; background: rgba(6,8,12,.8); }
+#cabVeil[hidden] { display: none !important; }
+#cabVeil > .slide-intro.welcome { position: static !important; transform: none !important; width: min(340px, 100%) !important; height: auto !important; min-height: 0 !important; padding: 22px 16px 18px !important; background: linear-gradient(160deg, #2148b8, #17307e) !important; border: 2px solid rgba(255,255,255,.28) !important; border-radius: 20px !important; box-shadow: 0 20px 50px rgba(0,0,0,.6) !important; color: #fff; animation: cabDrop .35s ease-out; zoom: var(--z, 1); }
+@keyframes cabDrop { from { opacity: 0; transform: translateY(10px) scale(.96); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .practice #list .ep.cab-next, #cabVeil > .slide-intro.welcome { animation: none; } }
+
+/* ---------- One board: no separate blue control card, the record in the middle is the big PLAY ME button ---------- */
+body.practice .stage-wrap, body.practice .stage-wrap.ends { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+body.practice .stage-wrap::before, body.practice .stage-wrap::after, body.practice .stage::before, body.practice .stage::after { display: none !important; }
+body.practice .stage, body.practice #player.player { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+body.practice #player .hdr3 .album-release { display: none !important; }
+body.practice #player .hdr3 { display: grid !important; justify-items: center; text-align: center; }
+body.practice #player .hdr3 { grid-template-columns: 1fr !important; }
+body.practice #player #pTitle { font-size: 1.4rem !important; width: 100%; max-width: none !important; text-wrap: balance; }
+body.practice.cab-ep #play { display: none !important; }
+body.practice .og-bar { position: relative; }
+body.practice .og-bar .og-rec { width: 150px !important; height: 150px !important; cursor: pointer; }
+.cab-play { all: unset; pointer-events: auto !important; position: absolute; z-index: 6; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.cab-play[hidden] { display: none !important; }
+@media (min-width: 600px) { body.practice .og-bar .og-rec { width: 190px !important; height: 190px !important; } .cab-play { width: 190px; height: 190px; } .cab-play .disc { width: 104px; height: 104px; } .cab-play .disc svg { width: 48px; height: 48px; } .cab-play .tag { top: -26px; font-size: 1.6rem; } }
+.cab-play .disc { width: 86px; height: 86px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 40% 35%, #ff5a4a, #d63a2f 60%, #a3221a); border: 3px solid #fff; box-shadow: 0 6px 18px rgba(0,0,0,.6); animation: cabRing 1.3s ease-out infinite; }
+.cab-play .disc svg { width: 40px; height: 40px; fill: #fff; margin-left: 6px; }
+.cab-play .tag { position: absolute; left: 50%; top: -18px; transform: translateX(-50%); font: 400 1.35rem/1 "Anton", Impact, sans-serif; letter-spacing: .08em; color: #fff; background: #d63a2f; border: 2px solid #fff; border-radius: 10px; padding: 6px 14px 5px; white-space: nowrap; box-shadow: 0 6px 14px rgba(0,0,0,.55); animation: cabBounce 1s ease-in-out infinite; }
+.cab-play .tag::after { content: ""; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%); border: 8px solid transparent; border-top-color: #fff; border-bottom: 0; }
+.cab-play .ep { position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%); font: 800 .7rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .14em; color: #fff; background: rgba(0,0,0,.75); border-radius: 99px; padding: 4px 10px; white-space: nowrap; }
+.cab-play.pause .disc { width: 54px; height: 54px; background: rgba(0,0,0,.55); border-width: 2px; animation: none; opacity: .85; }
+.cab-play.pause .disc svg { width: 24px; height: 24px; margin: 0; }
+.cab-play.pause .tag { display: none; }
+.cab-play.answer .disc { display: none; }
+.cab-play.answer .tag { top: auto; bottom: -26px; animation: cabBounce 1s ease-in-out infinite; }
+.cab-play.answer .ep { display: none; }
+.cab-play:focus-visible .disc { outline: 3px solid #fff; outline-offset: 4px; }
+@keyframes cabRing { 0% { box-shadow: 0 6px 18px rgba(0,0,0,.6), 0 0 0 0 rgba(214,58,47,.8); } 100% { box-shadow: 0 6px 18px rgba(0,0,0,.6), 0 0 0 22px rgba(214,58,47,0); } }
+@keyframes cabBounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -7px); } }
+@media (prefers-reduced-motion: reduce) { .cab-play .disc, .cab-play .tag { animation: none; } }
+
+/* ---------- Seasons on both sides of the record: big number boxes, the record in the middle, '9 and 9 hugging the record in red ---------- */
+body.practice #cred .cab-row { grid-column: 1 / -1 !important; width: 100% !important; display: grid !important; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 10px; margin-top: 8px; }
+body.practice #cred .cab-row > .mv { min-width: 0; margin: 0 !important; padding: 0 !important; display: grid !important; gap: 6px; align-content: center; grid-column: auto !important; }
+body.practice #cred .cab-row .mv-head { display: flex !important; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 3px 6px; height: auto !important; margin: 0 !important; padding: 0 0 5px !important; border-bottom-width: 2px !important; }
+body.practice #cred .cab-row .mv-head .t { font-size: .78rem !important; letter-spacing: .14em !important; white-space: nowrap; }
+body.practice #cred .cab-row .mv-body { display: grid !important; grid-template-columns: 1fr !important; gap: 8px !important; height: auto !important; }
+body.practice #cred .cab-row #list.on-meter, body.practice #cred .cab-row .v2-eps { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; grid-template-rows: none !important; grid-auto-rows: auto !important; align-items: start !important; gap: 6px !important; width: 100% !important; height: auto !important; margin: 0 !important; padding: 0 !important; }
+body.practice #cred .cab-row #list.on-meter li { display: block !important; width: auto !important; height: auto !important; aspect-ratio: 1; margin: 0 !important; }
+body.practice #cred .cab-row #list.on-meter li .ep { height: 100% !important; aspect-ratio: auto; }
+body.practice #cred .cab-row .v2-eps .v2-ep { aspect-ratio: 1; height: auto !important; }
+body.practice #cred .cab-row #list .ep, body.practice #cred .cab-row .v2-ep { width: 100% !important; height: auto !important; aspect-ratio: 1; min-height: 0 !important; display: grid !important; place-items: center; border-radius: 9px !important; font-size: clamp(1.05rem, 5vw, 1.6rem) !important; }
+body.practice #cred .cab-row #list .ep .n { font-size: clamp(1.05rem, 5vw, 1.6rem) !important; line-height: 1 !important; }
+body.practice #cred .cab-row #list .ep { transition: transform .12s; }
+body.practice #cred .cab-row #list .ep:active { transform: scale(.92); }
+@media (hover: hover) { body.practice #cred .cab-row #list .ep:hover { transform: scale(1.08); } }
+body.practice #cred .cab-row .mv-rks { display: grid !important; grid-template-rows: none !important; gap: 3px !important; height: auto !important; }
+body.practice #cred .cab-row .mv-rks .mv-rk { height: auto !important; min-height: 0 !important; display: flex !important; align-items: center; gap: 4px; padding: 0 !important; }
+body.practice #cred .cab-row .mv-rks .mv-rk b { font-size: clamp(.5rem, 2.3vw, .72rem) !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+body.practice #cred .cab-row .mv-rks .mv-rk svg, body.practice #cred .cab-row .mv-rks .mv-rk .m-emb { flex: none; width: 14px !important; height: 16px !important; }
+body.practice #cred .cab-row .og-bar { margin: 0 !important; width: auto !important; position: relative !important; grid-column: 2 !important; grid-row: 1 !important; }
+body.practice #cred .cab-row > .mv.v1 { grid-column: 1 !important; grid-row: 1 !important; }
+body.practice #cred .cab-row > .mv.v2 { grid-column: 3 !important; grid-row: 1 !important; }
+body.practice #cred .cab-row .mv-rks .mv-rk { margin: 0 !important; line-height: 1.1 !important; }
+body.practice #cred .cab-row .og-bar::before, body.practice #cred .cab-row .og-bar::after { display: none !important; }
+body.practice #cred .cab-row .og-bar .mv-nine { position: absolute !important; top: auto !important; bottom: -6px; transform: none !important; z-index: 7; }
+body.practice #cred .cab-row .og-bar .mv-nine.l { left: -4px !important; right: auto !important; }
+body.practice #cred .cab-row .og-bar .mv-nine.r { right: -4px !important; left: auto !important; }
+body.practice #cred .cab-row .og-bar .mv-nine .tick { color: #e0392b !important; font-size: 1.7rem !important; text-shadow: 1px 2px 0 #000; }
+body.practice #cred .cab-row .og-bar .mv-nine svg.nine { width: 17px !important; height: 26px !important; filter: drop-shadow(1px 2px 0 #000); }
+body.practice #cred .cab-row .og-bar .mv-nine svg, body.practice #cred .cab-row .og-bar .mv-nine svg * { fill: none !important; stroke: #e0392b !important; }
+body.practice #cred .cab-row .og-bar .mv-nine svg.nine g:first-child { stroke: transparent !important; }
+body.practice #cred .cab-row .og-bar { width: 132px !important; height: 132px !important; display: block !important; }
+body.practice .cab-row .og-bar .og-rec, body.practice .cab-row .cab-play { width: 132px !important; height: 132px !important; }
+body.practice #cred .cab-row .og-bar .og-rec { position: absolute !important; left: 0 !important; top: 0 !important; margin: 0 !important; }
+body.practice .cab-row .cab-play .disc { width: 74px; height: 74px; }
+body.practice .cab-row .cab-play .disc svg { width: 34px; height: 34px; }
+body.practice .cab-row .cab-play .tag { font-size: 1.15rem; top: -14px; padding: 5px 10px 4px; }
+@media (min-width: 600px) {
+  body.practice #cred .cab-row .og-bar { width: 190px !important; height: 190px !important; }
+  body.practice .cab-row .og-bar .og-rec, body.practice .cab-row .cab-play { width: 190px !important; height: 190px !important; }
+  body.practice .cab-row .cab-play .disc { width: 104px; height: 104px; }
+  body.practice .cab-row .cab-play .disc svg { width: 48px; height: 48px; }
+  body.practice .cab-row .cab-play .tag { font-size: 1.6rem; top: -24px; }
+  body.practice #cred .cab-row { gap: 18px; }
+  body.practice #cred .cab-row .mv-head .t { font-size: .95rem !important; }
+  body.practice #cred .cab-row .og-bar .mv-nine .tick { font-size: 2.2rem !important; }
+  body.practice #cred .cab-row .og-bar .mv-nine svg.nine { width: 22px !important; height: 34px !important; }
+}
+
+/* ---------- Each rank sits right under its row of three; the record is the centerpiece ---------- */
+body.practice #cred .cab-row .mv-body { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 5px !important; align-items: center; }
+body.practice #cred .cab-row #list.on-meter, body.practice #cred .cab-row .v2-eps, body.practice #cred .cab-row .mv-rks { display: contents !important; }
+body.practice #cred .cab-row #list.on-meter > li:nth-child(n+10) { display: none !important; }
+body.practice #cred .cab-row #list.on-meter > li:nth-child(-n+3), body.practice #cred .cab-row .v2-eps > .v2-ep:nth-child(-n+3) { order: 1; }
+body.practice #cred .cab-row .mv-rks > .mv-rk:nth-child(1) { order: 2; }
+body.practice #cred .cab-row #list.on-meter > li:nth-child(n+4):nth-child(-n+6), body.practice #cred .cab-row .v2-eps > .v2-ep:nth-child(n+4):nth-child(-n+6) { order: 3; }
+body.practice #cred .cab-row .mv-rks > .mv-rk:nth-child(2) { order: 4; }
+body.practice #cred .cab-row #list.on-meter > li:nth-child(n+7):nth-child(-n+9), body.practice #cred .cab-row .v2-eps > .v2-ep:nth-child(n+7):nth-child(-n+9) { order: 5; }
+body.practice #cred .cab-row .mv-rks > .mv-rk:nth-child(3) { order: 6; }
+body.practice #cred .cab-row .mv-rks > .mv-rk { grid-column: 1 / -1 !important; justify-content: center !important; margin: 0 0 6px !important; }
+body.practice #cred .cab-row .mv-rks > .mv-rk:nth-child(3) { margin-bottom: 0 !important; }
+body.practice #cred .cab-row .mv-rks .mv-rk b { font-size: clamp(.5rem, 2.4vw, .78rem) !important; }
+/* the record: biggest thing on the board */
+body.practice #cred .cab-row { gap: 8px !important; }
+body.practice #cred .cab-row .og-bar, body.practice .cab-row .og-bar .og-rec, body.practice .cab-row .cab-play { width: 156px !important; height: 156px !important; }
+body.practice #cred .cab-row .og-bar::before { content: "" !important; display: block !important; position: absolute !important; inset: -10px !important; border-radius: 50% !important; background: radial-gradient(circle, rgba(214,58,47,.35), rgba(214,58,47,0) 70%) !important; z-index: 0 !important; pointer-events: none; }
+body.practice .cab-row .cab-play .disc { width: 84px; height: 84px; }
+body.practice .cab-row .cab-play .disc svg { width: 40px; height: 40px; }
+body.practice .cab-row .cab-play .tag { font-size: 1.3rem; top: -16px; }
+@media (min-width: 600px) {
+  body.practice #cred .cab-row { gap: 16px !important; }
+  body.practice #cred .cab-row .og-bar, body.practice .cab-row .og-bar .og-rec, body.practice .cab-row .cab-play { width: 230px !important; height: 230px !important; }
+  body.practice .cab-row .cab-play .disc { width: 120px; height: 120px; }
+  body.practice .cab-row .cab-play .disc svg { width: 56px; height: 56px; }
+  body.practice .cab-row .cab-play .tag { font-size: 1.7rem; top: -12px; }
+}
+
+/* ---------- Rank names: full-row pills, white letters, green border when earned, red until then ---------- */
+body.practice #cred .cab-row .mv-rks > .mv-rk { width: 100% !important; box-sizing: border-box; justify-content: center !important; gap: 6px !important; padding: 5px 6px !important; border: 2px solid #e0392b !important; border-radius: 8px !important; background: rgba(0,0,0,.25) !important; box-shadow: none !important; }
+body.practice #cred .cab-row .mv-rks > .mv-rk.won { border-color: #2fa34a !important; }
+body.practice #cred .cab-row .mv-rks > .mv-rk b, body.practice #cred .mv.v2 .cab-row .mv-rks > .mv-rk b, body.practice #cred .cab-row .mv-rks > .mv-rk.won b { color: #fff !important; background: none !important; padding: 0 !important; border: 0 !important; box-shadow: none !important; font-size: clamp(.6rem, 2.7vw, .86rem) !important; font-weight: 800 !important; letter-spacing: .02em !important; text-shadow: none !important; white-space: normal !important; overflow: visible !important; text-overflow: clip !important; text-align: center; line-height: 1.05 !important; }
+body.practice #cred .cab-row .mv-rks > .mv-rk svg, body.practice #cred .cab-row .mv-rks > .mv-rk .m-emb { width: 13px !important; height: 15px !important; }
+body.practice #cred .cab-row .mv-rks > .mv-rk { gap: 4px !important; padding: 4px 3px !important; min-height: 30px !important; }
+
+/* ---------- '9 and 9 in red, side by side at the top and bottom of the middle column, each on its own season's side ---------- */
+body.practice #cred .cab-row { align-items: stretch !important; }
+body.practice #cred .cab-row > .mv { align-self: center; }
+body.practice #cred .cab-row .og-bar { height: auto !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; gap: 10px; }
+body.practice #cred .cab-row .og-bar .og-rec { position: relative !important; left: auto !important; top: auto !important; flex: none; }
+body.practice #cred .cab-row .og-bar > .mv-nine { display: none !important; }
+body.practice #cred .cab-row .og-bar::before { inset: auto !important; top: 50% !important; left: 50% !important; width: calc(100% + 20px) !important; aspect-ratio: 1; height: auto !important; transform: translate(-50%, -50%); }
+.cab-nines { display: flex; width: 100%; gap: 5px; position: relative; z-index: 7; pointer-events: none; }
+.cab-nines > span { flex: 1; display: flex; align-items: flex-start; }
+.cab-nines > .l { justify-content: flex-end; }
+.cab-nines > .r { justify-content: flex-start; }
+.cab-nines .tick { font-family: "Anton", Impact, sans-serif; font-size: 2.1rem; line-height: .8; color: #e0392b; text-shadow: 1px 2px 0 #000; margin-right: -1px; }
+.cab-nines svg.nine { width: 21px !important; height: 32px !important; filter: drop-shadow(1px 2px 0 #000); }
+.cab-nines svg, .cab-nines svg * { fill: none !important; stroke: #e0392b !important; }
+.cab-nines svg.nine g:first-child { stroke: transparent !important; }
+@media (min-width: 600px) { body.practice #cred .cab-row .og-bar { gap: 22px !important; } .cab-nines .tick { font-size: 2.7rem; } .cab-nines svg.nine { width: 27px !important; height: 41px !important; } .cab-nines { gap: 7px; } }
+
+/* ---------- breathing room under the board, bigger episode title ---------- */
+body.practice #cred .cab-row { margin-bottom: 18px !important; }
+body.practice #player .hdr3 { margin-top: 6px !important; gap: 2px !important; }
+body.practice #player #pTitle { font-size: 1.85rem !important; line-height: 1.05 !important; }
+@media (min-width: 600px) { body.practice #player #pTitle { font-size: 2.2rem !important; } body.practice #cred .cab-row { margin-bottom: 24px !important; } }
+
+/* ---------- Gold record ---------- */
+body.practice .og-bar .og-rec .face, body.practice .og-bar .og-rec .spin {
+  background:
+    conic-gradient(from 30deg, rgba(255,255,255,0) 0deg, rgba(255,250,220,.55) 22deg, rgba(255,255,255,0) 55deg, rgba(255,255,255,0) 180deg, rgba(255,250,220,.4) 205deg, rgba(255,255,255,0) 240deg),
+    repeating-radial-gradient(circle, #b8862a 0 1.5px, #e9c25a 1.5px 3px, #c99a35 3px 4.5px),
+    radial-gradient(circle, #f3d478, #b8862a) !important;
+  box-shadow: 0 0 0 2px #6e4f14, 0 8px 22px rgba(0,0,0,.6), 0 0 28px rgba(232,178,58,.45) !important;
+}
+body.practice #cred .cab-row .og-bar::before { background: radial-gradient(circle, rgba(232,178,58,.3), rgba(232,178,58,0) 70%) !important; }
+body.practice .og-bar .og-rec .lbl { box-shadow: inset 0 0 0 2px rgba(255,255,255,.95), inset 0 0 0 4px #8a6a1e !important; }
+
+/* ---------- Season title cards: red '9 over Season 1, red 9 over Season 2 ---------- */
+.cab-season { display: flex; justify-content: center; align-items: flex-start; margin: 0 0 4px; pointer-events: none; filter: drop-shadow(2px 2px 0 #6e1209) drop-shadow(3px 3px 0 #000); }
+.cab-season .tick { font-family: "Anton", Impact, sans-serif; font-size: 2.6rem; line-height: .75; color: #e0392b; margin-right: 1px; }
+.cab-season svg.nine { width: 27px !important; height: 41px !important; }
+.cab-season svg, .cab-season svg * { fill: none !important; stroke: #e0392b !important; }
+.cab-season svg.nine g:first-child { stroke: transparent !important; }
+@media (min-width: 600px) { .cab-season .tick { font-size: 3.2rem; } .cab-season svg.nine { width: 33px !important; height: 50px !important; } }
+/* the bottom tile label is longer now */
+.switchboard .sb-tile .sb-lab { white-space: nowrap; }
+
+/* ---------- Season headers match: name and pill on one line, both at the top of their side ---------- */
+body.practice #cred .cab-row > .mv { align-self: start !important; }
+body.practice #cred .cab-row .mv-head { flex-wrap: nowrap !important; justify-content: space-between !important; align-items: center !important; gap: 4px !important; min-height: 22px; }
+body.practice #cred .cab-row .mv-head .t { font-size: clamp(.58rem, 2.6vw, .82rem) !important; letter-spacing: .08em !important; flex: none; }
+body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk, body.practice #cred .cab-row .mv.v1 .mv-head .nf { flex: none; margin: 0 !important; padding: 0 !important; }
+body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk b { font-size: clamp(.46rem, 2vw, .66rem) !important; white-space: nowrap; }
+body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk svg, body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk .m-emb { width: 12px !important; height: 12px !important; }
+body.practice #cred .cab-row .mv.v2 .mv-head > span:last-child { flex: none; margin: 0 !important; }
+body.practice #cred .cab-row .mv.v2 .mv-head > span:last-child::after { font-size: clamp(.4rem, 1.6vw, .6rem) !important; padding: 3px 5px !important; letter-spacing: .03em !important; display: inline-block; line-height: 1 !important; }
+body.practice #cred .cab-row > .mv { grid-template-columns: minmax(0, 1fr) !important; }
+body.practice #cred .cab-row .mv-head { height: 24px !important; min-width: 0; }
+body.practice #cred .cab-row .mv-head .t { font-size: clamp(.56rem, 2.3vw, .82rem) !important; }
+body.practice #cred .cab-row .mv.v1 .mv-head .mv-rk b { font-size: clamp(.44rem, 1.75vw, .66rem) !important; }
+</style>
+<script>
+/* keeps the cabinet in step with the game: pop-up mode while Welcome Back shows, NEXT on the first unfinished episode */
+(function () {
+  const veil = document.createElement("div");
+  veil.id = "cabVeil"; veil.hidden = true; veil.setAttribute("role", "dialog"); veil.setAttribute("aria-modal", "true"); veil.setAttribute("aria-label", "Welcome back");
+  document.body.append(veil);
+  let home = null, homeNext = null;
+  // seasons on both sides of the record
+  function sides() {
+    const bar = document.querySelector("#cred .og-bar"), v1 = document.querySelector("#cred .mv.v1"), v2 = document.querySelector("#cred .mv.v2");
+    if (!bar || !v1 || !v2) return;
+    let row = document.querySelector("#cred .cab-row");
+    if (!row) { row = document.createElement("div"); row.className = "cab-row"; v1.parentNode.insertBefore(row, v1); }
+    if (row.children[0] !== v1 || row.children[1] !== bar || row.children[2] !== v2) row.append(v1, bar, v2);
+    const l = bar.querySelector(".mv-nine.l"), r = bar.querySelector(".mv-nine.r");
+    if (l && r && !bar.querySelector(".cab-nines")) {
+      const make = cls => { const d = document.createElement("div"); d.className = "cab-nines " + cls; d.setAttribute("aria-hidden", "true");
+        d.innerHTML = '<span class="l">' + l.innerHTML + '</span><span class="r">' + r.innerHTML + '</span>'; return d; };
+      bar.prepend(make("top")); bar.append(make("bottom"));
+    }
+    if (typeof nineSvg === "function") [[v1, true], [v2, false]].forEach(([mv, tick]) => {
+      if (mv.querySelector(".cab-season")) return;
+      const d = document.createElement("div"); d.className = "cab-season"; d.setAttribute("aria-label", tick ? "Season 1, '9" : "Season 2, 9");
+      d.innerHTML = (tick ? '<span class="tick">\u2019</span>' : "") + nineSvg(1);
+      mv.prepend(d);
+    });
+  }
+  function sync() {
+    sides();
+    const stage = document.querySelector(".stage");
+    const intro = document.querySelector(".slide-intro");
+    if (stage && intro) {
+      const wbOn = stage.dataset.v === "intro" && intro.classList.contains("welcome");
+      if (wbOn && intro.parentNode !== veil) { home = intro.parentNode; homeNext = intro.nextSibling; veil.append(intro); }
+      else if (!wbOn && intro.parentNode === veil) { home.insertBefore(intro, homeNext && homeNext.parentNode === home ? homeNext : null); }
+      if (veil.hidden === wbOn) veil.hidden = !wbOn;
+    }
+    paintPlay();
+    const eps = [...document.querySelectorAll("#list .ep")];
+    const nxt = eps.find(b => !b.querySelector(".s.open"));
+    eps.forEach(b => { const want = b === nxt; if (b.classList.contains("cab-next") !== want) b.classList.toggle("cab-next", want); });
+  }
+  // the big PLAY ME button over the record
+  const audioEl = document.getElementById("audio");
+  const play = document.createElement("button");
+  play.type = "button"; play.className = "cab-play"; play.hidden = true;
+  play.innerHTML = '<span class="tag">PLAY ME</span><span class="disc"><svg viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></svg></span>';
+  const tri = '<svg viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></svg>', bars = '<svg viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>';
+  play.addEventListener("click", () => {
+    if (play.classList.contains("answer")) { const q = document.querySelector("#quiz .opt:not([disabled])"); if (q) q.scrollIntoView({ block: "center", behavior: "smooth" }); return; }
+    const b = document.getElementById("play"); if (b) b.click();
+  });
+  function paintPlay() {
+    const bar = document.querySelector(".og-bar");
+    if (bar && play.parentNode !== bar) bar.append(play);
+    const stage = document.querySelector(".stage");
+    const onEp = !!(stage && stage.dataset.v === "ep") && document.getElementById("cabVeil").hidden;
+    if (document.body.classList.contains("cab-ep") !== onEp) document.body.classList.toggle("cab-ep", onEp);
+    const playing = audioEl && !audioEl.paused && !audioEl.ended;
+    const quiz = document.getElementById("quiz");
+    let atStop = false;
+    try { const e = EPISODES[idx]; atStop = !!e && sec < e.cuts.length && (audioEl.ended || (audioEl.duration && audioEl.currentTime >= audioEl.duration - 0.3)); } catch (err) {}
+    const waiting = !playing && quiz && quiz.classList.contains("on") && atStop;
+    const mode = !onEp ? "" : playing ? "pause" : waiting ? "answer" : "go";
+    if (play.dataset.mode !== mode) {
+      play.dataset.mode = mode; play.hidden = !mode;
+      play.classList.toggle("pause", mode === "pause"); play.classList.toggle("answer", mode === "answer");
+      play.querySelector(".tag").textContent = mode === "answer" ? "ANSWER BELOW" : "PLAY ME";
+      play.querySelector(".disc").innerHTML = mode === "pause" ? bars : tri;
+      play.setAttribute("aria-label", mode === "pause" ? "Pause" : mode === "answer" ? "Answer the question below" : "Play this episode");
+    }
+  }
+  if (audioEl) ["play", "pause", "ended", "seeked"].forEach(ev => audioEl.addEventListener(ev, () => requestAnimationFrame(sync)));
+  let t = 0;
+  const later = () => { cancelAnimationFrame(t); t = requestAnimationFrame(sync); };
+  new MutationObserver(later).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ["class", "data-v", "hidden"] });
+  sync();
+})();
+</script>
+<style id="cabHallStyle">
+/* ---------- Hallway: the 5 How to play pages are full-screen rooms; the board stays hidden until you walk through all 5 ---------- */
+body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
+#cabHall { position: fixed; inset: 0; z-index: 900; background: #07080b; overflow: hidden; display: grid; grid-template-rows: auto 1fr; padding: calc(env(safe-area-inset-top, 0px) + 14px) 18px calc(env(safe-area-inset-bottom, 0px) + 22px); }
+#cabHall[hidden] { display: none !important; }
+#cabHall .hall-scene { position: absolute; top: 0; bottom: 0; left: 50%; width: min(100%, 560px); transform: translateX(-50%); z-index: 0; overflow: hidden; }
+@media (min-width: 600px) { #cabHall .hall-scene { box-shadow: 0 0 0 2px #343b4b, 0 0 60px rgba(0,0,0,.8); } }
+#cabHall .hall-scene svg { width: 100%; height: 100%; display: block; }
+#cabHall .hall-scene.enter svg { animation: hallEnter .7s cubic-bezier(.2,.7,.2,1); }
+@keyframes hallEnter { from { transform: scale(1.18); opacity: 0; filter: blur(4px); } to { transform: none; opacity: 1; filter: none; } }
+#cabHall .hall-shade { position: absolute; inset: 0; z-index: 1; background: radial-gradient(ellipse 80% 45% at 50% 52%, rgba(5,6,9,.78), rgba(5,6,9,.25) 70%, rgba(5,6,9,0)); pointer-events: none; }
+#cabHall .hall-top { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; min-height: 52px; }
+#cabHall .hall-top img { width: min(62vw, 270px); height: auto; display: block; }
+#cabHall .hall-x { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 2px solid rgba(255,255,255,.7); background: rgba(0,0,0,.45); color: #fff; font: 700 1.3rem/1 system-ui, sans-serif; cursor: pointer; display: grid; place-items: center; }
+#cabHall .hall-x[hidden] { display: none; }
+#cabHall .hall-room { position: relative; z-index: 2; display: grid; place-items: center; min-height: 0; }
+#cabHall .slide-intro { position: relative !important; inset: auto !important; transform: none !important; width: min(380px, 100%) !important; max-width: 100% !important; height: auto !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important; display: grid !important; justify-items: center; gap: 14px !important; text-align: center; overflow: visible !important; }
+#cabHall .slide-intro::before, #cabHall .slide-intro::after { display: none !important; }
+#cabHall .slide-intro .room-sign { position: relative !important; inset: auto !important; left: auto !important; right: auto !important; top: auto !important; transform: none !important; opacity: 1 !important; filter: drop-shadow(0 6px 10px rgba(0,0,0,.6)) !important; margin: 0 auto !important; }
+#cabHall .slide-intro .howpage { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; min-height: 0 !important; height: auto !important; }
+#cabHall .slide-intro .hp-box { background: rgba(8,10,14,.72) !important; border: 2px solid rgba(255,255,255,.18) !important; border-radius: 18px !important; padding: 22px 20px !important; box-shadow: 0 18px 40px rgba(0,0,0,.55) !important; backdrop-filter: none !important; }
+#cabHall .slide-intro .hp-head { font-size: 1.9rem !important; color: #fff !important; line-height: 1.1 !important; }
+#cabHall .slide-intro .hp-body { font-size: 1.15rem !important; color: #fff !important; }
+#cabHall .slide-intro .hp-count, #cabHall .slide-intro .intro-title { color: #fff !important; text-shadow: 0 2px 6px #000; }
+#cabHall .slide-intro .btn.start { font-size: 1.5rem !important; padding: 14px 44px !important; }
+#cabHall .slide-intro .hp-dots { margin-top: 4px !important; }
+@media (min-width: 600px) { #cabHall .slide-intro .hp-head { font-size: 2.3rem !important; } #cabHall .slide-intro .hp-body { font-size: 1.3rem !important; } }
+/* the doors open onto the board */
+.hall-doors { position: fixed; inset: 0; z-index: 950; pointer-events: none; display: flex; }
+.hall-doors i { flex: 1; background: linear-gradient(90deg, #1a120c, #2b1d12 50%, #1a120c); border: 3px solid #0b0705; box-shadow: inset 0 0 0 10px rgba(0,0,0,.25); }
+.hall-doors i:first-child { animation: doorL .9s cubic-bezier(.6,0,.3,1) .1s forwards; }
+.hall-doors i:last-child { animation: doorR .9s cubic-bezier(.6,0,.3,1) .1s forwards; }
+@keyframes doorL { to { transform: translateX(-102%); } }
+@keyframes doorR { to { transform: translateX(102%); } }
+@media (prefers-reduced-motion: reduce) { #cabHall .hall-scene.enter svg, .hall-doors i { animation: none !important; } .hall-doors { display: none; } }
+</style>
+<script>
+/* Hallway rooms */
+(function () {
+  const W = 400, H = 800;
+  const rnd = (seed => () => (seed = (seed * 9301 + 49297) % 233280) / 233280)(7);
+  const windows = (x0, y0, cols, rows, w, h, gx, gy, lit) => { let s = ""; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const on = rnd() < lit; s += '<rect x="' + (x0 + c * gx) + '" y="' + (y0 + r * gy) + '" width="' + w + '" height="' + h + '" rx="2" fill="' + (on ? "#f4c46a" : "#1b2130") + '" opacity="' + (on ? .9 : 1) + '"/>'; } return s; };
+  const glow = (cx, cy, r, col, op) => '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="url(#g' + col + ')" opacity="' + op + '"/>';
+  const defs = '<defs>' +
+    '<radialGradient id="gwarm"><stop offset="0" stop-color="#ffd58a" stop-opacity=".9"/><stop offset="1" stop-color="#ffd58a" stop-opacity="0"/></radialGradient>' +
+    '<radialGradient id="gred"><stop offset="0" stop-color="#ff4a3a" stop-opacity=".9"/><stop offset="1" stop-color="#ff4a3a" stop-opacity="0"/></radialGradient>' +
+    '<radialGradient id="gwhite"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>' +
+    '<radialGradient id="ggreen"><stop offset="0" stop-color="#8fe0a0" stop-opacity=".7"/><stop offset="1" stop-color="#8fe0a0" stop-opacity="0"/></radialGradient>' +
+    '<linearGradient id="night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1430"/><stop offset=".6" stop-color="#1a2348"/><stop offset="1" stop-color="#2a2440"/></linearGradient>' +
+    '<linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1230"/><stop offset=".55" stop-color="#2b2a5a"/><stop offset=".8" stop-color="#7a3b4a"/><stop offset="1" stop-color="#1a1a2e"/></linearGradient>' +
+    '<pattern id="brick" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#5a2a22"/><path d="M0 10h40M20 0v10M0 10v10M40 10v10" stroke="#3a1813" stroke-width="2"/></pattern>' +
+    '<pattern id="tile" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#e9e4d6"/><path d="M0 0h24M0 0v12" stroke="#b9b2a0" stroke-width="1.2"/></pattern>' +
+    '</defs>';
+  const brownstones = (y, col, lit) => { let s = ""; const ws = [70, 80, 74, 86, 70]; let x = -10; ws.forEach((w, i) => { const top = y - 30 - (i % 2) * 18; s += '<rect x="' + x + '" y="' + top + '" width="' + w + '" height="' + (H - top) + '" fill="' + col + '"/><rect x="' + x + '" y="' + (top - 6) + '" width="' + w + '" height="8" fill="#2a1712"/>' + windows(x + 10, top + 20, 2, 9, 18, 26, 32, 46, lit) + '<path d="M' + (x + 20) + ' ' + (H - 120) + 'h' + (w - 30) + 'l14 40h' + (-(w - 2)) + 'z" fill="#2a1712"/>'; x += w; }); return s; };
+  const SCENES = {
+    1: () => '<rect width="400" height="800" fill="url(#night)"/>' + glow(300, 120, 90, "white", .35) + '<circle cx="300" cy="120" r="34" fill="#f3efe0"/>' +
+      brownstones(330, "#6b3a2c", .35) +
+      '<rect y="700" width="400" height="100" fill="#26262c"/><rect y="690" width="400" height="12" fill="#5d5b60"/>' +
+      '<rect x="310" y="420" width="6" height="280" fill="#16181d"/><path d="M313 420q-30 0-34 18" stroke="#16181d" stroke-width="5" fill="none"/>' + glow(278, 444, 120, "warm", .55) + '<rect x="270" y="436" width="18" height="8" rx="3" fill="#ffe2a0"/>',
+    2: () => '<rect width="400" height="800" fill="url(#brick)"/><rect width="400" height="800" fill="#000" opacity=".35"/>' +
+      '<rect x="40" y="250" width="320" height="300" fill="#2a1a10"/><rect x="56" y="280" width="288" height="250" fill="#f2c37a" opacity=".85"/>' +
+      windows(70, 300, 6, 4, 34, 40, 46, 56, .7).replace(/#1b2130/g, "#8a5a2a") +
+      '<path d="M30 250h340l-20 -50h-300z" fill="#c62d24"/>' + [0, 1, 2, 3, 4, 5, 6].map(i => '<path d="M' + (50 + i * 46) + ' 200l-6 50h23l6 -50z" fill="#fff" opacity=".9"/>').join("") +
+      glow(200, 148, 150, "red", .35) +
+      '<rect y="700" width="400" height="100" fill="#3a3a40"/><rect y="690" width="400" height="12" fill="#6c6a70"/>',
+    3: () => '<rect width="400" height="800" fill="url(#tile)"/><rect width="400" height="800" fill="#000" opacity=".28"/>' +
+      '<rect y="230" width="400" height="34" fill="#1f5b3a"/><rect y="236" width="400" height="22" fill="#2f7a4f"/>' +
+      glow(200, 120, 160, "white", .35) + '<rect x="40" y="110" width="320" height="10" rx="5" fill="#fff" opacity=".85"/>' +
+      '<rect y="620" width="400" height="180" fill="#2a2a2e"/><rect y="610" width="400" height="14" fill="#e9e4d6"/><rect y="624" width="400" height="6" fill="#c81e1e"/>' +
+      '<rect y="690" width="400" height="110" fill="#121214"/><rect y="720" width="400" height="6" fill="#55555a"/><rect y="760" width="400" height="6" fill="#55555a"/>',
+    4: () => '<rect width="400" height="800" fill="#0a1a14"/>' + glow(200, 140, 260, "green", .18) +
+      [[-20, 260, 120], [90, 220, 140], [230, 250, 130], [330, 230, 120]].map(t => '<circle cx="' + (t[0] + t[2] / 2) + '" cy="' + (t[1] + 60) + '" r="' + t[2] / 1.4 + '" fill="#1c4a33"/><rect x="' + (t[0] + t[2] / 2 - 6) + '" y="' + (t[1] + 100) + '" width="12" height="300" fill="#1a1410"/>').join("") +
+      '<rect y="600" width="400" height="200" fill="#16241b"/><path d="M0 680q200 -40 400 0v120h-400z" fill="#2a2a2e"/>' +
+      [70, 330].map(x => '<rect x="' + (x - 3) + '" y="430" width="6" height="250" fill="#111"/><rect x="' + (x - 10) + '" y="418" width="20" height="16" rx="3" fill="#ffe2a0"/>' + glow(x, 430, 110, "warm", .55)).join("") +
+      '<rect x="140" y="640" width="120" height="10" rx="3" fill="#5a3a22"/><rect x="140" y="620" width="120" height="8" rx="3" fill="#5a3a22"/><rect x="148" y="650" width="6" height="26" fill="#222"/><rect x="246" y="650" width="6" height="26" fill="#222"/>',
+    5: () => '<rect width="400" height="800" fill="url(#dusk)"/>' +
+      '<rect y="520" width="400" height="280" fill="#0d1428"/>' + [0, 1, 2, 3, 4, 5, 6, 7].map(i => '<rect x="' + (20 + i * 48) + '" y="' + (540 + (i % 3) * 30) + '" width="30" height="2" fill="#f4c46a" opacity=".5"/>').join("") +
+      '<rect x="80" y="240" width="16" height="290" fill="#b9c3d6"/><rect x="304" y="240" width="16" height="290" fill="#b9c3d6"/><rect x="74" y="300" width="28" height="8" fill="#b9c3d6"/><rect x="298" y="300" width="28" height="8" fill="#b9c3d6"/>' +
+      '<path d="M-20 470Q88 230 88 240Q200 470 312 240Q312 230 420 470" stroke="#dfe6f2" stroke-width="3" fill="none"/>' +
+      '<rect x="-10" y="440" width="420" height="12" fill="#c9d2e2"/>' +
+      Array.from({ length: 21 }, (_, i) => '<circle cx="' + (i * 20) + '" cy="446" r="2.5" fill="#ffd58a"/>').join("") + glow(200, 446, 260, "warm", .25) +
+      '<rect y="700" width="400" height="100" fill="#1a1d24"/><rect y="690" width="400" height="10" fill="#3a3f4a"/>' + [40, 140, 260, 360].map(x => '<rect x="' + x + '" y="694" width="40" height="3" fill="#6a707c"/>').join("")
+  };
+  const hall = document.createElement("div");
+  hall.id = "cabHall"; hall.hidden = true; hall.setAttribute("role", "dialog"); hall.setAttribute("aria-label", "How to play");
+  hall.innerHTML = '<div class="hall-scene" aria-hidden="true"></div><div class="hall-shade" aria-hidden="true"></div>' +
+    '<div class="hall-top"><img src="brand/og-bobby-wordmark-top.png" alt="OG Bobby" width="1052" height="340"><button class="hall-x" type="button" aria-label="Back to the game" hidden>×</button></div>' +
+    '<div class="hall-room"></div>';
+  document.body.append(hall);
+  const scene = hall.querySelector(".hall-scene"), roomBox = hall.querySelector(".hall-room"), xBtn = hall.querySelector(".hall-x");
+  let home = null, homeNext = null, shown = "", wasHall = false;
+  const started = () => { try { const st = JSON.parse(localStorage.getItem("ogb2") || "{}"); return Object.keys(st.keys || {}).length > 0 || Object.keys(st.first || {}).length > 0; } catch (e) { return false; } };
+  xBtn.addEventListener("click", () => { const eps = document.querySelectorAll("#list .ep"); let i = 0; try { i = idx < 0 ? 0 : idx; } catch (e) {} const b = eps[i] || eps[0]; if (b) b.click(); });
+  function doors() {
+    const d = document.createElement("div"); d.className = "hall-doors"; d.innerHTML = "<i></i><i></i>";
+    document.body.append(d); setTimeout(() => d.remove(), 1200);
+  }
+  function sync() {
+    const stage = document.querySelector(".stage"), intro = document.querySelector(".slide-intro");
+    if (!stage || !intro) return;
+    const on = stage.dataset.v === "intro" && !intro.classList.contains("welcome");
+    if (on && intro.parentNode !== roomBox) { if (intro.parentNode && intro.parentNode.id !== "cabVeil") { home = intro.parentNode; homeNext = intro.nextSibling; } roomBox.append(intro); }
+    else if (!on && intro.parentNode === roomBox && home) home.insertBefore(intro, homeNext && homeNext.parentNode === home ? homeNext : null);
+    if (hall.hidden === on) hall.hidden = !on;
+    document.body.classList.toggle("cab-hall", on);
+    if (on) {
+      const k = intro.dataset.room || "1";
+      if (shown !== k) { shown = k; scene.innerHTML = '<svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">' + defs + (SCENES[k] || SCENES[1])() + '</svg>'; scene.classList.remove("enter"); void scene.offsetWidth; scene.classList.add("enter"); }
+      const x = started(); if (xBtn.hidden === x) xBtn.hidden = !x;
+    } else shown = "";
+    if (wasHall && !on && stage.dataset.v !== "intro") doors();
+    wasHall = on;
+  }
+  let t = 0;
+  new MutationObserver(() => { cancelAnimationFrame(t); t = requestAnimationFrame(sync); }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["class", "data-v", "data-room"] });
+  sync();
+})();
+</script>
+<style id="cabPlusStyle">
+/* ---------- Game layer: stars, Street Cred score, episode cleared screen, boss level, daily question ---------- */
+/* score row under the meter title */
+.cab-score { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 2px 0 6px; }
+.cab-score .pts { position: relative; display: inline-flex; align-items: baseline; gap: 6px; padding: 4px 14px 3px; border: 2px solid #e8b23a; border-radius: 99px; background: rgba(0,0,0,.35); color: #fff; }
+.cab-score .pts b { font: 400 1.35rem/1 "Anton", Impact, sans-serif; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+.cab-score .pts i { font: 800 .6rem/1 "Barlow", system-ui, sans-serif; font-style: normal; letter-spacing: .14em; color: #fff; }
+.cab-score .plus { position: absolute; right: -6px; top: -6px; font: 400 1rem/1 "Anton", Impact, sans-serif; color: #e8b23a; text-shadow: 0 2px 0 #000; pointer-events: none; animation: cabPlus 1.2s ease-out forwards; }
+@keyframes cabPlus { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-26px); } }
+.cab-score .daily { all: unset; pointer-events: auto !important; position: relative; z-index: 6; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; padding: 6px 11px; border-radius: 99px; background: #d63a2f; color: #fff; font: 800 .62rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .1em; animation: cabRing 1.6s ease-out infinite; }
+.cab-score .daily.done { background: transparent; border: 2px solid #2fa34a; padding: 4px 9px; animation: none; }
+.cab-score .daily:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.cab-score .daily[hidden] { display: none; }
+.cab-score { flex-wrap: wrap; }
+.cab-score .t99 { all: unset; pointer-events: auto !important; position: relative; z-index: 6; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px; border-radius: 99px; border: 2px solid #ffd34d; color: #fff; font: 800 .62rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .1em; }
+.cab-score .t99[hidden] { display: none; }
+.cab-score .t99:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+/* 99 Test special effects: '99 and OG MADE flying at you */
+.fx99 { position: fixed; inset: 0; z-index: 1300; pointer-events: none; overflow: hidden; perspective: 600px; }
+.fx99 .p { position: absolute; left: 50%; top: 45%; display: flex; align-items: flex-start; will-change: transform, opacity; filter: drop-shadow(0 0 12px rgba(214,40,40,.8)); }
+.fx99 .p .nine { width: 1em; height: 1.4em; }
+.fx99 .p .tk { font: 400 1em/1 "Anton", Impact, sans-serif; color: #fff; margin-right: .04em; }
+.fx99 .p.red .nine path, .fx99 .p.red .nine ellipse { stroke: #d62828; }
+.fx99 .w { position: absolute; left: 50%; top: 45%; font: 400 1em/1 "Anton", Impact, sans-serif; letter-spacing: .06em; color: #ffd34d; white-space: nowrap; text-shadow: 3px 3px 0 #000, 0 0 24px rgba(255,211,77,.8); will-change: transform, opacity; }
+.fx99 .flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, rgba(255,211,77,.55), rgba(214,40,40,.25) 40%, transparent 70%); }
+@media (prefers-reduced-motion: reduce) { .fx99 { display: none; } }
+/* 99 question practice test */
+.cab-over.t99 .card { gap: 10px; }
+.cab-over .t99-top { width: 100%; display: flex; justify-content: space-between; align-items: baseline; font: 800 .72rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .16em; }
+.cab-over .t99-top b { color: #2fa34a; }
+.cab-over .t99-bar { width: 100%; height: 6px; border-radius: 99px; background: rgba(255,255,255,.15); overflow: hidden; }
+.cab-over .t99-bar i { display: block; height: 100%; background: #ffd34d; border-radius: 99px; transition: width .3s; }
+.cab-over .ep99 { font: 800 .75rem/1.2 "Barlow", system-ui, sans-serif; letter-spacing: .14em; color: #fff; }
+.cab-over .go[hidden] { display: none; }
+/* '99 Challenge title: graffiti '99 (straight 9s) over a gritty, beat-up CHALLENGE */
+:root { --ugly: "Sedgwick Nine", "OG Dirt", "Rubik Dirt", Impact, sans-serif; }
+.cab-over .c99 { display: grid; justify-items: center; gap: 2px; }
+.cab-over .c99 .c99n { display: flex; align-items: flex-start; font-size: clamp(3.4rem, 18vw, 5rem); line-height: 1; filter: drop-shadow(0 0 18px rgba(255,211,77,.45)); }
+.cab-over .c99 .c99n .tk { font: 400 1em/1 "Anton", Impact, sans-serif; color: #ffd34d; margin-right: .02em; }
+.cab-over .c99 .c99n .nine { width: .9em; height: 1.25em; }
+.cab-over .c99 .c99n .nine g:last-of-type { stroke: #ffd34d; }
+.cab-over .c99 .c99w { font: 400 clamp(2.3rem, 12vw, 3.4rem)/1 var(--ugly); letter-spacing: .02em; color: #fff; text-shadow: 3px 3px 0 #d62828, 5px 5px 0 #000; transform: rotate(-3deg); }
+.cab-over .t99-score { font-family: var(--ugly) !important; }
+/* 99 Test: unlock reveal before, celebration after */
+.cab-over.t99 .rise { opacity: 0; animation: t99Rise .55s cubic-bezier(.2,1.4,.4,1) forwards; animation-delay: var(--d, 0ms); }
+.cab-over.t99 .slam { opacity: 0; animation: t99Slam .5s cubic-bezier(.2,1.6,.4,1) forwards; animation-delay: var(--d, 0ms); }
+@keyframes t99Rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes t99Slam { from { opacity: 0; transform: scale(2.6); } to { opacity: 1; transform: none; } }
+.cab-over.t99 .note, .cab-over .t99-dare { text-wrap: balance; }
+.cab-over .t99-unlock { font: 800 .8rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .3em; color: #2fa34a; }
+.cab-over .t99-dare { font: 400 1.5rem/1.1 "Anton", Impact, sans-serif; letter-spacing: .04em; }
+.cab-over .go.pulse { animation: t99Rise .55s cubic-bezier(.2,1.4,.4,1) var(--d, 0ms) both, cabRing 1.4s ease-out calc(var(--d, 0ms) + .6s) infinite; }
+.cab-over .t99-score { font: 400 clamp(4rem, 22vw, 6.2rem)/.9 "Anton", Impact, sans-serif; color: #ffd34d; text-shadow: 3px 3px 0 #000, 0 0 30px rgba(255,211,77,.55); font-variant-numeric: tabular-nums; }
+.cab-over .t99-score small { font-size: .45em; color: #fff; }
+.cab-over .t99-tier { font: 400 clamp(2.2rem, 11vw, 3.2rem)/.95 "Anton", Impact, sans-serif; letter-spacing: .04em; color: #fff; text-shadow: 3px 3px 0 #d62828; }
+.cab-over .t99-tier.gold { color: #ffd34d; text-shadow: 3px 3px 0 #000, 0 0 26px rgba(255,211,77,.8); }
+.cab-over .t99-best { display: inline-block; padding: 6px 14px; border: 2px solid #2fa34a; border-radius: 99px; font: 800 .8rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .2em; color: #fff; }
+.cab-score .t99.lock { border-color: #d63a2f; }
+.cab-score .t99 svg { width: 10px; height: 10px; fill: currentColor; }
+.cab-over .t99-boxes { display: grid; grid-template-columns: repeat(9, 1fr); gap: 5px; width: 100%; }
+.cab-over .t99-boxes i { aspect-ratio: 1; max-width: 100%; border-radius: 6px; display: grid; place-items: center; font: 800 .8rem/1 "Barlow", system-ui, sans-serif; font-style: normal; color: #fff; background: #d63a2f; }
+.cab-over .t99-boxes i.on { background: #2fa34a; }
+.cab-score .t99.new { background: #ffd34d; color: #000; border-color: #ffd34d; animation: cabRing 1.4s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) { .cab-over.t99 .rise, .cab-over.t99 .slam, .cab-over .go.pulse { animation: none !important; opacity: 1 !important; } .cab-score .t99.new { animation: none; } }
+/* stars on cleared episode boxes */
+body.practice #cred .cab-row #list .ep { position: relative; }
+.ep-stars { position: absolute; left: 0; right: 0; bottom: 3px; display: flex; justify-content: center; gap: 1px; pointer-events: none; }
+.ep-stars svg { width: 9px; height: 9px; }
+.ep-stars .on { fill: #ffd34d; stroke: #7a5a0c; stroke-width: 1.5; }
+.ep-stars .off { fill: rgba(0,0,0,.35); stroke: rgba(255,255,255,.55); stroke-width: 1.5; }
+body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY(-4px); }
+@media (min-width: 600px) { .ep-stars svg { width: 11px; height: 11px; } }
+/* big screens: cleared, boss intro, daily question */
+.cab-over { position: fixed; inset: 0; z-index: 1200; display: grid; place-items: center; padding: 24px 18px; background: radial-gradient(ellipse at 50% 40%, rgba(40,30,10,.97), rgba(5,6,9,.99) 70%); animation: cabFade .3s ease-out; }
+.cab-over.boss { background: radial-gradient(ellipse at 50% 40%, rgba(90,10,8,.97), rgba(5,6,9,.99) 70%); }
+@keyframes cabFade { from { opacity: 0; } to { opacity: 1; } }
+.cab-over .card { width: min(360px, 100%); display: grid; justify-items: center; gap: 12px; text-align: center; color: #fff; }
+.cab-over .kick { font: 800 .8rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .32em; }
+.cab-over .big { font: 400 clamp(3rem, 16vw, 4.6rem)/.9 "Anton", Impact, sans-serif; letter-spacing: .03em; text-shadow: 3px 3px 0 #000; animation: cabSlam .45s cubic-bezier(.2,1.6,.4,1); }
+.cab-over.boss .big { color: #ff4a3a; }
+.cab-over .gold { color: #ffd34d; }
+@keyframes cabSlam { from { transform: scale(2.2); opacity: 0; } to { transform: none; opacity: 1; } }
+.cab-over .title { font: 400 1.6rem/1.1 "Anton", Impact, sans-serif; letter-spacing: .03em; }
+.cab-over .stars { display: flex; gap: 10px; margin: 6px 0; }
+.cab-over .stars svg { width: 58px; height: 58px; opacity: 0; transform: scale(2.4) rotate(-30deg); }
+.cab-over .stars svg.in { animation: cabStar .45s cubic-bezier(.2,1.6,.4,1) forwards; }
+@keyframes cabStar { to { opacity: 1; transform: none; } }
+.cab-over .stars .on { fill: #ffd34d; stroke: #7a5a0c; stroke-width: 1.2; filter: drop-shadow(0 0 10px rgba(255,211,77,.7)); }
+.cab-over .stars .off { fill: rgba(255,255,255,.08); stroke: rgba(255,255,255,.5); stroke-width: 1.2; }
+.cab-over .earn { font: 400 1.5rem/1 "Anton", Impact, sans-serif; color: #ffd34d; letter-spacing: .05em; }
+.cab-over .note { font: 600 1rem/1.35 "Barlow", system-ui, sans-serif; max-width: 30ch; }
+.cab-over .go { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; text-align: center; padding: 14px; border-radius: 14px; background: #d63a2f; box-shadow: 0 5px 0 #8f2119; font: 400 1.35rem/1 "Anton", Impact, sans-serif; letter-spacing: .1em; color: #fff; margin-top: 6px; }
+.cab-over .go:active { transform: translateY(3px); box-shadow: 0 2px 0 #8f2119; }
+.cab-over .go:focus-visible, .cab-over .link:focus-visible, .cab-over .opt2:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.cab-over .link { all: unset; cursor: pointer; font: 700 .9rem/1 "Barlow", system-ui, sans-serif; text-decoration: underline; text-underline-offset: 3px; padding: 6px; }
+.cab-over .q { font: 700 1.25rem/1.3 "Barlow", system-ui, sans-serif; }
+.cab-over .opts2 { display: grid; gap: 8px; width: 100%; }
+.cab-over .opt2 { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; padding: 13px 14px; border-radius: 12px; border: 2px solid rgba(255,255,255,.35); background: rgba(255,255,255,.06); font: 700 1.05rem/1.2 "Barlow", system-ui, sans-serif; text-align: left; }
+.cab-over .opt2.right { border-color: #2fa34a; background: rgba(47,163,74,.25); }
+.cab-over .opt2.wrong { border-color: #d63a2f; background: rgba(214,58,47,.25); }
+.cab-over .msg2 { min-height: 1.3em; font: 700 1rem/1.3 "Barlow", system-ui, sans-serif; }
+/* boss level clock */
+.boss-clock { height: 8px; border-radius: 99px; background: rgba(255,255,255,.12); overflow: hidden; margin-bottom: 4px; }
+.boss-clock i { display: block; height: 100%; width: 100%; background: #ff4a3a; transform-origin: left; }
+.boss-tag { font: 800 .62rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .16em; color: #ff4a3a; margin-bottom: 4px; }
+@media (prefers-reduced-motion: reduce) { .cab-over, .cab-over .big, .cab-over .stars svg.in, .cab-score .plus, .cab-score .daily { animation: none !important; } .cab-over .stars svg { opacity: 1; transform: none; } }
+</style>
+<script>
+(function () {
+  if (typeof EPISODES === "undefined" || typeof state === "undefined") return;
+  const KEY = "ogPlus";
+  let P = {};
+  try { P = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) {}
+  const keep = () => { try { localStorage.setItem(KEY, JSON.stringify(P)); } catch (e) {} };
+  const snd = (n, v) => { try { if (window.ogSound) window.ogSound.sfx(n, v); } catch (e) {} };
+  const starSvg = cls => '<svg viewBox="0 0 24 24" class="' + cls + '"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>';
+  const N = 9;
+
+  /* ---- stars and score ---- */
+  const missesOf = e => e.qs.reduce((n, _, g) => n + (state.tries[e.slug + "|" + g] || 0), 0);
+  const starsOf = e => !isOpen(e) ? 0 : (m => m === 0 ? 3 : m === 1 ? 2 : 1)(missesOf(e));
+  const epPoints = e => keysOf(e).reduce((s, _, g) => s + (state.first[e.slug + "|" + g] === true ? 100 : 50), 0) + starsOf(e) * 100;
+  function score() {
+    if (!Object.keys(state.keys || {}).length && P.extra) { P.extra = 0; keep(); }
+    return EPISODES.slice(0, N).reduce((s, e) => s + epPoints(e), 0) + (P.extra || 0);
+  }
+  const fmtN = n => n.toLocaleString("en-US");
+
+  function paintStars() {
+    document.querySelectorAll("#list .ep").forEach((b, i) => {
+      const e = EPISODES[i]; if (!e) return;
+      const n = starsOf(e); let box = b.querySelector(".ep-stars");
+      if (!n) { if (box) box.remove(); return; }
+      const html = [0, 1, 2].map(k => starSvg(k < n ? "on" : "off")).join("");
+      if (!box) { box = document.createElement("span"); box.className = "ep-stars"; box.setAttribute("aria-label", n + " of 3 stars"); b.append(box); }
+      if (box.dataset.n !== String(n)) { box.dataset.n = String(n); box.innerHTML = html; }
+    });
+  }
+
+  let shown = null, tick = 0;
+  function paintScore(animate) {
+    const head = document.querySelector("#cred .cred-head"); if (!head) return;
+    let row = document.querySelector(".cab-score");
+    if (!row) {
+      row = document.createElement("div"); row.className = "cab-score";
+      row.innerHTML = '<span class="pts" aria-live="polite"><b>0</b><i>STREET CRED</i></span><button class="daily" type="button" hidden>★ DAILY QUESTION</button><button class="t99" type="button" hidden>★ \u201999 CHALLENGE</button>';
+      head.after(row);
+      row.querySelector(".daily").addEventListener("click", openDaily);
+      row.querySelector(".t99").addEventListener("click", openTest);
+    }
+    const target = score(), num = row.querySelector(".pts b");
+    if (shown === null || !animate) { shown = target; num.textContent = fmtN(target); }
+    else if (target !== shown) {
+      const from = shown, diff = target - from, t0 = performance.now(); shown = target;
+      if (diff > 0) { const p = document.createElement("span"); p.className = "plus"; p.textContent = "+" + fmtN(diff); row.querySelector(".pts").append(p); setTimeout(() => p.remove(), 1300); }
+      cancelAnimationFrame(tick);
+      const step = now => { const k = Math.min(1, (now - t0) / 700); num.textContent = fmtN(Math.round(from + diff * (1 - Math.pow(1 - k, 3)))); if (k < 1) tick = requestAnimationFrame(step); };
+      tick = requestAnimationFrame(step);
+    }
+    const d = row.querySelector(".daily"), pool = dailyPool();
+    d.hidden = !pool.length;
+    const done = P.daily && P.daily.date === today();
+    d.classList.toggle("done", !!done);
+    d.textContent = done ? (P.daily.ok ? "✓ DAILY DONE" : "✓ DAILY · TOMORROW") : "★ DAILY QUESTION";
+    const tb = row.querySelector(".t99"), all9 = EPISODES.slice(0, N).every(isOpen);
+    if (tb.hidden) tb.hidden = false;
+    const done9 = EPISODES.slice(0, N).filter(isOpen).length, fresh = all9 && !P.t99seen;
+    const want = all9 ? (fresh ? "★ NEW · \u201999 CHALLENGE" : "★ \u201999 CHALLENGE") : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3h2v12H5V10zm2 0h6V7a3 3 0 0 0-6 0z"/></svg>\u201999 CHALLENGE · ' + done9 + "/9";
+    if (tb.dataset.s !== want) { tb.dataset.s = want; tb.innerHTML = want; tb.classList.toggle("new", fresh); tb.classList.toggle("lock", !all9); tb.setAttribute("aria-label", all9 ? "Take the '99 Challenge" : "'99 Challenge, locked: " + done9 + " of 9 episodes done"); }
+  }
+
+  /* ---- answers: hot-streak bonus, stars, cleared screen, boss clock ---- */
+  let run = 0, pending = null;
+  const baseAnswer = answer;
+  answer = async function (o, btn) {
+    const e = EPISODES[idx], wasOpen = !!e && isOpen(e);
+    const g = e ? gateOf(e) : 0, firstTry = !!e && !wasOpen && !((e.slug + "|" + g) in state.first);
+    stopClock();
+    await baseAnswer(o, btn);
+    if (!e || wasOpen) return;
+    if (btn.classList.contains("right")) {
+      if (firstTry) { run++; if (run >= 3) { P.extra = (P.extra || 0) + 100; keep(); } } else run = 0;
+      if (isOpen(e)) pending = EPISODES.indexOf(e);
+    } else if (btn.classList.contains("wrong")) { run = 0; if (EPISODES.indexOf(e) === BOSS) setTimeout(armClock, 1500); }
+    paintScore(true); paintStars();
+  };
+
+  /* ---- episode cleared screen ---- */
+  const BOSS = N - 1;
+  function over(cls, html) {
+    const d = document.createElement("div"); d.className = "cab-over " + (cls || ""); d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true");
+    d.innerHTML = '<div class="card">' + html + '</div>'; document.body.append(d);
+    const f = d.querySelector(".go, .opt2"); if (f) setTimeout(() => f.focus({ preventScroll: true }), 60);
+    return d;
+  }
+  function cleared(i) {
+    pending = null;
+    const e = EPISODES[i], n = starsOf(e), last = i === BOSS;
+    const next = EPISODES.slice(0, N).findIndex(x => !isOpen(x));
+    const d = over(last ? "" : "", (last
+        ? '<div class="kick">SEASON 1 · FINAL EPISODE</div><div class="big gold">SEASON 1<br>COMPLETE</div>'
+        : '<div class="kick">EPISODE ' + (i + 1) + '</div><div class="big">CLEARED</div>') +
+      '<div class="title"></div><div class="stars">' + [0, 1, 2].map(k => starSvg(k < n ? "on" : "off")).join("") + '</div>' +
+      '<div class="earn">+' + fmtN(epPoints(e)) + ' STREET CRED</div>' +
+      (n < 3 ? '<div class="note">Replay it with no misses for all 3 stars.</div>' : '<div class="note">Perfect. Every answer on the first try.</div>') +
+      (next >= 0 ? '<button class="go" type="button">▶ EPISODE ' + (next + 1) + '</button>' : '<div class="note">Bonus unlocked: the ’99 Challenge. All 99 questions, back to back.</div><button class="go t99go" type="button">★ TAKE THE ’99 CHALLENGE</button><button class="go" type="button">BACK TO THE BOARD</button>') +
+      '<button class="link" type="button">Back to the board</button>');
+    d.querySelector(".title").textContent = e.title;
+    if (next < 0) d.querySelector(".link").remove();
+    d.querySelectorAll(".stars svg").forEach((s, k) => setTimeout(() => { s.classList.add("in"); if (k < n) snd("stamp", .5); }, 450 + k * 380));
+    snd(last ? "bell" : "spray", .6);
+    d.querySelector(".link") && d.querySelector(".link").addEventListener("click", () => d.remove());
+    const tg = d.querySelector(".t99go"); if (tg) tg.addEventListener("click", () => { d.remove(); openTest(); });
+    d.querySelector(".go:not(.t99go)").addEventListener("click", () => {
+      d.remove();
+      if (next < 0) return;
+      const eps = document.querySelectorAll("#list .ep");
+      if (idx !== next && eps[next]) eps[next].click();
+      setTimeout(() => { const a = document.getElementById("audio"), p = document.getElementById("play"); if (a && a.paused && p) p.click(); }, 250);
+    });
+  }
+  const audioEl = document.getElementById("audio");
+  window.ogClearPending = () => pending !== null && pending === idx;
+  audioEl.addEventListener("ended", () => setTimeout(() => {
+    if (pending !== null && (idx !== pending || (sec >= EPISODES[pending].qs.length && audioEl.ended))) cleared(pending);   // only once the last part has actually played out
+    else if (idx === BOSS && !isOpen(EPISODES[BOSS])) armClock();
+  }, 60));
+
+  /* ---- boss level: Episode 9 ---- */
+  const CLOCK = 15;
+  let clockT = 0, clockEl = null;
+  function stopClock() { clearTimeout(clockT); clockT = 0; if (clockEl) { clockEl.remove(); clockEl = null; } }
+  function armClock() {
+    stopClock();
+    const e = EPISODES[BOSS]; if (idx !== BOSS || isOpen(e) || !audioEl.paused) return;
+    const g = gateOf(e); if (sec !== g) return;
+    const quiz = document.getElementById("quiz"); if (!quiz || !quiz.classList.contains("on")) return;
+    clockEl = document.createElement("div");
+    clockEl.innerHTML = '<div class="boss-tag">BOSS LEVEL · ' + CLOCK + ' SECONDS</div><div class="boss-clock"><i></i></div>';
+    quiz.prepend(clockEl);
+    const bar = clockEl.querySelector("i"); bar.animate([{ transform: "scaleX(1)" }, { transform: "scaleX(0)" }], { duration: CLOCK * 1000, easing: "linear", fill: "forwards" });
+    clockT = setTimeout(() => {
+      clockT = 0;
+      if (idx !== BOSS || gateOf(e) !== g || !audioEl.paused) return stopClock();
+      const q = curQ(e, g), wrong = q.opts[q.gx];
+      const btn = [...document.querySelectorAll("#opts .opt")].find(b => b.textContent === wrong) || document.createElement("button");
+      const m = document.getElementById("msg");
+      answer(wrong, btn).then(() => { if (m) { m.className = "msg bad"; m.textContent = "Time's up. Here comes a new question."; } });
+    }, CLOCK * 1000);
+  }
+  audioEl.addEventListener("play", stopClock);
+
+  function bossIntro() {
+    try { if (sessionStorage.getItem("ogBossSeen") === "1") return; sessionStorage.setItem("ogBossSeen", "1"); } catch (e) {}
+    const e = EPISODES[BOSS];
+    const d = over("boss", '<div class="kick">SEASON 1 · EPISODE 9</div><div class="big">FINAL<br>EPISODE</div><div class="title"></div>' +
+      '<div class="note">Boss level. ' + e.qs.length + ' stops, ' + CLOCK + ' seconds on every question. Run out of time and the question swaps.</div>' +
+      '<button class="go" type="button">I’M READY</button>');
+    d.querySelector(".title").textContent = e.title;
+    snd("bell", .6);
+    d.querySelector(".go").addEventListener("click", () => d.remove());
+  }
+
+  /* ---- daily question ---- */
+  const today = () => { const d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); };
+  function dailyPool() { const out = []; EPISODES.slice(0, N).forEach(e => keysOf(e).forEach((_, g) => out.push([e, g]))); return out; }
+  function seedOf(s) { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
+  async function check(slug, g, opt) {
+    const k = keyFor(slug, g, opt);
+    try { if ((await fetch("b/" + k + ".mp3", { method: "HEAD", cache: "no-store" })).ok) return true; } catch (e) {}
+    try { const r = await fetch("b/" + k + ".txt", { cache: "no-store" }); if (r.ok && /^[0-9a-f]{24}$/.test((await r.text()).trim())) return true; } catch (e) {}
+    return false;
+  }
+  function openDaily() {
+    const pool = dailyPool(); if (!pool.length) return;
+    if (P.daily && P.daily.date === today()) {
+      const d = over("", '<div class="kick">DAILY QUESTION</div><div class="big">' + (P.daily.ok ? "DONE" : "TOMORROW") + '</div><div class="note">' + (P.daily.ok ? "You got today’s question. A new one drops tomorrow." : "Today’s question is used up. A new one drops tomorrow.") + '</div><button class="go" type="button">BACK TO THE BOARD</button>');
+      d.querySelector(".go").addEventListener("click", () => d.remove()); return;
+    }
+    const h = seedOf(today()), [e, g] = pool[h % pool.length];
+    const variants = poolOf(e.qs[g]), q = variants[(h >>> 8) % variants.length];
+    const d = over("", '<div class="kick">DAILY QUESTION</div><div class="title"></div><div class="note">Get it right for +250 Street Cred. One try a day.</div><div class="q"></div><div class="opts2"></div><div class="msg2"></div><button class="link" type="button">Not now</button>');
+    d.querySelector(".title").textContent = e.title;
+    d.querySelector(".q").textContent = q.q;
+    const box = d.querySelector(".opts2"), msg = d.querySelector(".msg2");
+    d.querySelector(".link").addEventListener("click", () => d.remove());
+    q.opts.forEach(o => {
+      const b = document.createElement("button"); b.type = "button"; b.className = "opt2"; b.textContent = o;
+      b.addEventListener("click", async () => {
+        box.querySelectorAll(".opt2").forEach(x => x.disabled = true); box.style.pointerEvents = "none";
+        const ok = await check(e.slug, g, o);
+        b.classList.add(ok ? "right" : "wrong");
+        P.daily = { date: today(), ok }; if (ok) P.extra = (P.extra || 0) + 250; keep();
+        snd(ok ? "right" : "wrong", .6);
+        msg.textContent = ok ? "That’s right. +250 Street Cred." : "Not today. A new question drops tomorrow.";
+        const link = d.querySelector(".link"); link.textContent = "Back to the board";
+        try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "daily/" + (ok ? "right" : "wrong"), title: "Daily question " + (ok ? "right" : "wrong"), event: true }); } catch (err) {}
+        paintScore(true);
+      });
+      box.append(b);
+    });
+  }
+
+  /* ---- bonus: the 99 Test (unlocks once all 9 episodes are done; practice only, no Street Cred) ---- */
+  /* special effects: '99s and OG MADE flying out of the screen at you */
+  const fxOK = () => !(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+  function fx99(kind) {
+    if (!fxOK() || typeof nineSvg !== "function") return;
+    const L = document.createElement("div"); L.className = "fx99"; document.body.append(L);
+    const n = { intro: 18, right: 7, ep: 16, final: 36 }[kind] || 7, life = kind === "final" ? 3200 : kind === "right" ? 1300 : 2200;
+    const rand = (a, b) => a + Math.random() * (b - a);
+    const nine = (red, size) => { const p = document.createElement("div"); p.className = "p" + (red ? " red" : ""); p.style.fontSize = size + "px"; p.innerHTML = '<span class="tk">\u2019</span>' + nineSvg(1) + nineSvg(1); return p; };
+    if (kind !== "right") { const f = document.createElement("div"); f.className = "flash"; L.append(f); f.animate([{ opacity: 0 }, { opacity: 1, offset: .15 }, { opacity: 0 }], { duration: 900, easing: "ease-out" }); }
+    for (let k = 0; k < n; k++) {
+      const p = nine(k % 3 === 0, rand(18, 34)), a = rand(0, Math.PI * 2), r = rand(140, 420), spin = rand(-50, 50), delay = kind === "final" ? rand(0, 1400) : rand(0, 250);
+      L.append(p);
+      p.animate([
+        { transform: "translate(-50%,-50%) translate3d(0,0,-400px) scale(.2) rotate(0deg)", opacity: 0 },
+        { opacity: 1, offset: .2 },
+        { transform: "translate(-50%,-50%) translate3d(" + Math.cos(a) * r + "px," + Math.sin(a) * r + "px,420px) scale(2.4) rotate(" + spin + "deg)", opacity: 0 }
+      ], { duration: rand(900, 1500), delay, easing: "cubic-bezier(.2,.6,.3,1)", fill: "both" });
+    }
+    const word = (txt, size, delay, cls) => {
+      const w = document.createElement("div"); w.className = "w"; w.textContent = txt; w.style.fontSize = size + "px"; L.append(w);
+      w.animate([
+        { transform: "translate(-50%,-50%) scale(.1)", opacity: 0 },
+        { transform: "translate(-50%,-50%) scale(1.15)", opacity: 1, offset: .25 },
+        { transform: "translate(-50%,-50%) scale(1)", opacity: 1, offset: .6 },
+        { transform: "translate(-50%,-50%) scale(6)", opacity: 0 }
+      ], { duration: 1500, delay, easing: "ease-out", fill: "both" });
+      return w;
+    };
+    if (kind === "intro" || kind === "final") {
+      const big = nine(true, 90); L.append(big);
+      big.animate([
+        { transform: "translate(-50%,-50%) scale(.05) rotate(-20deg)", opacity: 0 },
+        { transform: "translate(-50%,-50%) scale(1.1) rotate(0deg)", opacity: 1, offset: .35 },
+        { transform: "translate(-50%,-50%) scale(1)", opacity: 1, offset: .6 },
+        { transform: "translate(-50%,-50%) scale(9)", opacity: 0 }
+      ], { duration: 1600, easing: "cubic-bezier(.3,.7,.3,1)", fill: "both" });
+      word("OG MADE", 52, 650);
+      if (kind === "final") { word("THE MUSIC SERIES", 34, 1700); setTimeout(() => fx99("right"), 2300); }
+      snd("spray", .6);
+    } else if (kind === "ep") { word("OG MADE", 44, 100); snd("stamp", .6); }
+    setTimeout(() => L.remove(), life + 1600);
+  }
+
+  function testList() { const out = []; EPISODES.slice(0, N).forEach((e, i) => e.qs.forEach((q, g) => poolOf(q).forEach(v => out.push({ i, g, v })))); return out; }
+  const tCount = (e, kind) => { try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "test99/" + kind, title: "99 Challenge " + kind, event: true }); } catch (err) {} };
+  /* locked: tells players what finishing all 9 gets them */
+  function testTeaser() {
+    document.querySelectorAll(".cab-over").forEach(x => x.remove());
+    const done = EPISODES.slice(0, N).map(isOpen), n = done.filter(Boolean).length, left = N - n;
+    const d = over("t99", '<div class="t99-unlock rise" style="--d:100ms;color:#d63a2f">BONUS · LOCKED</div>' +
+      '<div class="c99 slam" style="--d:350ms"><span class="c99n"><span class="tk">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="c99w">CHALLENGE</span></div>' +
+      '<div class="t99-dare rise" style="--d:700ms">Finish all 9 episodes to unlock.</div>' +
+      '<div class="note rise" style="--d:850ms">Then take on all 99 Season 1 questions, back to back, with the full \u201999 blast.</div>' +
+      '<div class="t99-boxes rise" style="--d:1000ms">' + done.map((o, k) => '<i class="' + (o ? "on" : "") + '">' + (k + 1) + '</i>').join("") + '</div>' +
+      '<div class="note rise" style="--d:1100ms">' + (left === 1 ? "1 episode to go." : left + " episodes to go.") + '</div>' +
+      '<button class="go rise" style="--d:1250ms" type="button">KEEP PLAYING</button>');
+    fx99("right");
+    d.querySelector(".go").addEventListener("click", () => d.remove());
+  }
+  function openTest() {
+    if (!EPISODES.slice(0, N).every(isOpen)) return testTeaser();
+    try { document.getElementById("audio").pause(); } catch (e) {}
+    document.querySelectorAll(".cab-over").forEach(x => x.remove());
+    const L = testList(), T = P.t99 && P.t99.at > 0 && P.t99.at < L.length ? P.t99 : null;
+    const best = P.t99best != null ? '<div class="note rise" style="--d:1500ms">Your best: ' + P.t99best + ' / ' + L.length + '</div>' : "";
+    const first = !P.t99seen; P.t99seen = 1; keep();
+    const d = over("t99", '<div class="t99-unlock rise" style="--d:150ms">' + (first ? "BONUS UNLOCKED" : "SEASON 1 · BONUS") + '</div>' +
+      '<div class="c99 slam" style="--d:700ms"><span class="c99n"><span class="tk">\u2019</span>' + nineSvg(1) + nineSvg(1) + '</span><span class="c99w">CHALLENGE</span></div>' +
+      (T ? '<div class="t99-dare rise" style="--d:1100ms">Finish what you started.</div><div class="note rise" style="--d:1300ms">You’re on question ' + (T.at + 1) + ' of ' + L.length + ', with ' + T.ok + ' right so far.</div><button class="go pulse" style="--d:1600ms" type="button">KEEP GOING</button><button class="link fresh rise" style="--d:1800ms" type="button">Start over</button>'
+         : '<div class="t99-dare rise" style="--d:1100ms">Think you know every bar? Prove it.</div><div class="note rise" style="--d:1300ms">All ' + L.length + ' questions from Season 1, back to back. Practice only, no Street Cred on the line.</div>' + best + '<button class="go fresh pulse" style="--d:1700ms" type="button">START THE CHALLENGE</button>') +
+      '<button class="link out rise" style="--d:1900ms" type="button">Not now</button>');
+    fx99("intro"); setTimeout(() => snd("stamp", .6), 750);
+    d.querySelectorAll(".fresh").forEach(b => b.addEventListener("click", () => { P.t99 = { at: 0, ok: 0 }; keep(); tCount(null, "start"); d.remove(); fx99("intro"); setTimeout(testQ, 1300); }));
+    if (T) d.querySelector(".go").addEventListener("click", () => { d.remove(); fx99("intro"); setTimeout(testQ, 1300); });
+    d.querySelector(".out").addEventListener("click", () => d.remove());
+  }
+  function testQ() {
+    const L = testList(), T = P.t99; if (!T) return;
+    if (T.at >= L.length) return testDone();
+    const { i, g, v } = L[T.at], e = EPISODES[i];
+    const d = over("t99", '<div class="t99-top"><span>QUESTION ' + (T.at + 1) + ' OF ' + L.length + '</span><b>' + T.ok + ' RIGHT</b></div>' +
+      '<div class="t99-bar"><i style="width:' + (T.at / L.length * 100) + '%"></i></div>' +
+      '<div class="ep99"></div><div class="q"></div><div class="opts2"></div><div class="msg2"></div>' +
+      '<button class="go" type="button" hidden>' + (T.at + 1 >= L.length ? "SEE MY SCORE" : "NEXT ▶") + '</button><button class="link" type="button">Save and quit</button>');
+    d.querySelector(".ep99").textContent = "EPISODE " + (i + 1) + " · " + e.title.toUpperCase();
+    d.querySelector(".q").textContent = v.q;
+    const right = Promise.all(v.opts.map(o => check(e.slug, g, o))).then(r => r.indexOf(true));
+    const box = d.querySelector(".opts2"), msg = d.querySelector(".msg2"), nx = d.querySelector(".go");
+    d.querySelector(".link").addEventListener("click", () => d.remove());
+    v.opts.forEach((o, k) => {
+      const b = document.createElement("button"); b.type = "button"; b.className = "opt2"; b.textContent = o;
+      b.addEventListener("click", async () => {
+        box.querySelectorAll(".opt2").forEach(x => x.disabled = true); box.style.pointerEvents = "none";
+        const rk = await right, ok = rk === k;
+        b.classList.add(ok ? "right" : "wrong");
+        if (!ok && rk >= 0) box.children[rk].classList.add("right");
+        T.at++; if (ok) T.ok++; keep();
+        snd(ok ? "right" : "wrong", .6);
+        const epEnd = T.at < L.length && L[T.at].i !== i;   // just finished that episode's questions
+        if (epEnd) fx99("ep"); else if (ok) fx99("right");
+        msg.textContent = ok ? "That’s right." : "Not quite. The green one is the answer.";
+        d.querySelector(".t99-top b").textContent = T.ok + " RIGHT";
+        d.querySelector(".t99-bar i").style.width = (T.at / L.length * 100) + "%";
+        nx.hidden = false; nx.focus({ preventScroll: true });
+      });
+      box.append(b);
+    });
+    nx.addEventListener("click", () => { d.remove(); testQ(); });
+  }
+  function testDone() {
+    const L = testList(), n = P.t99 ? P.t99.ok : 0, total = L.length;
+    const newBest = P.t99best == null || n > P.t99best; if (newBest) P.t99best = n;
+    P.t99 = null; keep(); tCount(null, "finish");
+    const perfect = n === total;
+    const tier = perfect ? "PERFECT 99" : n >= 90 ? "OG LEVEL" : n >= 70 ? "SOLID" : "STILL GRINDING";
+    const line = perfect ? "Every single one. That’s OG." : n >= 90 ? "Run it back for a perfect " + total + "." : n >= 70 ? "Run it back for a perfect " + total + "." : "Go back through the episodes and run it again.";
+    const d = over("t99", '<div class="t99-unlock rise" style="--d:100ms">' + total + ' QUESTIONS · DONE</div>' +
+      '<div class="t99-dare slam" style="--d:400ms">YOU WENT THE DISTANCE</div>' +
+      '<div class="t99-score rise" style="--d:1000ms"><span>0</span><small> / ' + total + '</small></div>' +
+      '<div class="t99-tier slam' + (n >= 90 ? " gold" : "") + '" style="--d:2700ms">' + tier + '</div>' +
+      (newBest ? '<div class="t99-best slam" style="--d:3100ms">NEW BEST</div>' : '<div class="note rise" style="--d:3100ms">Your best: ' + P.t99best + ' / ' + total + '</div>') +
+      '<div class="note rise" style="--d:3400ms"></div><button class="go rise" style="--d:3700ms" type="button">TAKE IT AGAIN</button><button class="link rise" style="--d:3900ms" type="button">Back to the board</button>');
+    d.querySelectorAll(".note")[newBest ? 0 : 1].textContent = line;
+    snd("spray", .6); fx99("ep");
+    const num = d.querySelector(".t99-score span"), t0 = performance.now() + 1100;
+    const count = now => { const k = Math.max(0, Math.min(1, (now - t0) / 1500)); num.textContent = Math.round(n * (1 - Math.pow(1 - k, 3))); if (k < 1 && d.isConnected) requestAnimationFrame(count); };
+    requestAnimationFrame(count);
+    setTimeout(() => { if (!d.isConnected) return; snd(perfect ? "bell" : "stamp", .7); fx99("final"); if (perfect) setTimeout(() => d.isConnected && fx99("final"), 1800); }, 2700);
+    d.querySelector(".go").addEventListener("click", () => { P.t99 = { at: 0, ok: 0 }; keep(); tCount(null, "start"); d.remove(); fx99("intro"); setTimeout(testQ, 1300); });
+    d.querySelector(".link").addEventListener("click", () => d.remove());
+  }
+
+  /* ---- keep everything painted ---- */
+  if (typeof renderList === "function") { const rl = renderList; renderList = function () { const r = rl.apply(this, arguments); paintStars(); return r; }; }
+  let bossWas = -1, t = 0;
+  function sync() {
+    paintStars(); paintScore(false);
+    const stage = document.querySelector(".stage"), hall = document.getElementById("cabHall"), veil = document.getElementById("cabVeil");
+    const onBoard = stage && stage.dataset.v === "ep" && (!hall || hall.hidden) && (!veil || veil.hidden);
+    const covered = !!document.querySelector(".cab-over");
+    if (onBoard && !covered && idx === BOSS && bossWas !== BOSS && !isOpen(EPISODES[BOSS])) bossIntro();
+    if (onBoard && pending !== null && idx !== pending && !document.querySelector(".cab-over")) cleared(pending);
+    if (!covered) bossWas = onBoard ? idx : bossWas;
+  }
+  new MutationObserver(() => { cancelAnimationFrame(t); t = requestAnimationFrame(sync); }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["class", "data-v", "hidden"] });
+  sync();
+})();
+</script>
+<style id="cabShowStyle">
+/* ---------- TV-show touches: skyline that lights up, episode title card, "Previously on OG Made…", Season 2 on deck ---------- */
+/* 1. Bay Ridge skyline along the bottom of the board: one window per episode, bridge lights up when Season 1 is done */
+.stage-wrap > .cab-sky { position: absolute; left: 0; right: 0; bottom: 0; height: 46px; z-index: 0; pointer-events: none; display: none; }
+body.cab-ep .stage-wrap > .cab-sky, .stage-wrap[data-sky-on] > .cab-sky { display: block; }
+.stage-wrap > .stage, .stage-wrap > .nav-btn, .stage-wrap > .card-reset { z-index: 2; }
+.stage-wrap > .stage { position: relative; }
+.cab-sky svg { display: block; width: 100%; height: 100%; }
+.cab-sky .bld { fill: #232a38; }
+.cab-sky .brg { fill: none; stroke: #2b3344; stroke-width: 2.2; stroke-linecap: round; }
+.cab-sky .twr { fill: #2b3344; }
+.cab-sky .win { fill: #333b4e; transition: fill .6s ease; }
+.cab-sky .win.lit { fill: var(--cab-gold, #e8b23a); filter: drop-shadow(0 0 3px rgba(232,178,58,.9)); }
+.cab-sky .win.pop { animation: skyPop 1.4s ease-out 1; }
+.cab-sky .bl { fill: #39415a; transition: fill .8s ease; }
+.cab-sky.done .bl { fill: var(--cab-gold, #e8b23a); filter: drop-shadow(0 0 2.5px rgba(232,178,58,.9)); }
+.cab-sky.done .brg { stroke: #3a3220; }
+@keyframes skyPop { 0% { filter: drop-shadow(0 0 0 rgba(232,178,58,0)); } 30% { filter: drop-shadow(0 0 9px rgba(232,178,58,1)); } 100% { filter: drop-shadow(0 0 3px rgba(232,178,58,.9)); } }
+
+/* 2. Episode title card over the record, like the open of a TV show */
+.cab-title { position: absolute; left: 50%; top: 50%; z-index: 6; transform: translate(-50%, -50%) scale(.96); width: max-content; max-width: 100%; box-sizing: border-box; padding: 9px 10px 10px; border-radius: 12px; background: #0b0d12; border: 1.5px solid var(--cab-red, #d63a2f); box-shadow: 0 8px 22px rgba(0,0,0,.55); text-align: center; pointer-events: none; opacity: 0; transition: opacity .35s ease, transform .35s ease; }
+.cab-title.on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.cab-title .k { display: block; white-space: nowrap; font: 800 .58rem/1 "Barlow", system-ui, sans-serif; letter-spacing: .28em; color: var(--cab-red, #d63a2f); margin-bottom: 6px; }
+.cab-title .n { display: block; font: 700 1rem/1.12 "Barlow", system-ui, sans-serif; letter-spacing: .02em; color: #fff; text-transform: uppercase; text-wrap: balance; }
+
+/* 4. "Previously on OG Made…" line in the Welcome Back pop-up */
+#cabVeil > .slide-intro.welcome .hp-box { height: auto !important; }
+.slide-intro.welcome .wb-prev { display: block; margin: 2px auto 0; max-width: 18rem; font: 500 .82rem/1.35 "Barlow", system-ui, sans-serif; color: #fff; text-wrap: balance; }
+.slide-intro.welcome .wb-prev i { font-style: italic; font-weight: 700; letter-spacing: .02em; }
+
+/* 5. Season 2 on deck: a slow red glow breathing behind the locked side (no date shown) */
+#cred .mv.v2::before { content: ""; position: absolute; inset: 18% -6% -4%; border-radius: 22px; background: radial-gradient(60% 55% at 50% 50%, rgba(214,58,47,.38), rgba(214,58,47,0) 70%); z-index: 0; pointer-events: none; animation: s2Deck 4.5s ease-in-out infinite; }
+#cred .mv.v2 > * { position: relative; z-index: 1; }
+@keyframes s2Deck { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) { #cred .mv.v2::before, .cab-sky .win.pop { animation: none; } .cab-title { transition: none; } }
+</style>
+<script>
+(function () {
+  if (typeof EPISODES === "undefined" || window.ogShow) return;
+  window.ogShow = true;
+  const N = EPISODES.length;
+  const openNow = () => EPISODES.map(e => { try { return !!isOpen(e); } catch (err) { return false; } });
+  let seen = null;   // which windows were already lit on screen (so only new ones pop)
+
+  /* ---- 1. skyline ---- */
+  function skySvg() {
+    // nine buildings of different heights across the left, the Verrazzano on the right
+    const H = [27, 35, 23, 31, 38, 25, 33, 29, 36], W = 12.5, G = 1.8, base = 46;
+    let s = '<svg viewBox="0 0 390 46" preserveAspectRatio="xMidYMax meet" aria-hidden="true">';
+    let x = 2;
+    H.forEach((h, k) => {
+      const top = base - h;
+      s += '<rect class="bld" x="' + x + '" y="' + top + '" width="' + W + '" height="' + h + '" rx="1.5"/>';
+      s += '<rect class="bld" x="' + (x - 1) + '" y="' + (top - 2) + '" width="' + (W + 2) + '" height="2.2"/>';   // cornice
+      s += '<rect class="win" data-k="' + k + '" x="' + (x + 3.5) + '" y="' + (top + 5) + '" width="6" height="7" rx=".8"/>';
+      x += W + G;
+    });
+    // bridge: two towers, the main cable, the deck, and the lights along the cable
+    const t1 = 290, t2 = 362, deck = 36;
+    s += '<rect class="twr" x="' + (t1 - 3) + '" y="4" width="6" height="42"/><rect class="twr" x="' + (t2 - 3) + '" y="4" width="6" height="42"/>';
+    s += '<path class="brg" d="M256 ' + deck + ' Q' + (t1 - 14) + ' 22 ' + t1 + ' 6 Q' + ((t1 + t2) / 2) + ' 34 ' + t2 + ' 6 Q' + (t2 + 14) + ' 22 388 ' + deck + '"/>';
+    s += '<path class="brg" d="M252 ' + deck + 'H390"/>';
+    for (let k = 1; k < 10; k++) {   // lights along the main span
+      const tt = k / 10, cx = (1 - tt) * (1 - tt) * t1 + 2 * (1 - tt) * tt * ((t1 + t2) / 2) + tt * tt * t2, cy = (1 - tt) * (1 - tt) * 6 + 2 * (1 - tt) * tt * 34 + tt * tt * 6;
+      s += '<circle class="bl" cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="1.6"/>';
+    }
+    [t1, t2].forEach(t => s += '<circle class="bl" cx="' + t + '" cy="3" r="2"/>');
+    return s + '</svg>';
+  }
+  function paintSky() {
+    const wrap = document.querySelector(".stage-wrap"); if (!wrap) return;
+    let sky = wrap.querySelector(":scope > .cab-sky");
+    if (!sky) { sky = document.createElement("div"); sky.className = "cab-sky"; sky.innerHTML = skySvg(); wrap.prepend(sky); }
+    const open = openNow(), all = open.every(Boolean);
+    sky.querySelectorAll(".win").forEach(w => {
+      const k = +w.dataset.k, on = !!open[k];
+      if (w.classList.contains("lit") !== on) {
+        w.classList.toggle("lit", on);
+        if (on && seen && !seen[k]) { w.classList.add("pop"); setTimeout(() => w.classList.remove("pop"), 1500); }
+      }
+    });
+    if (sky.classList.contains("done") !== all) sky.classList.toggle("done", all);
+    seen = open;
+  }
+
+  /* ---- 2. episode title card ---- */
+  const audio = document.getElementById("audio");
+  let card = null, cardT = 0, lastIdx = -2;
+  function titleCard() {
+    const bar = document.querySelector(".og-bar"); if (!bar || !document.body.classList.contains("cab-ep")) return;
+    const e = EPISODES[idx]; if (!e) return;
+    if (!card) { card = document.createElement("div"); card.className = "cab-title"; card.setAttribute("aria-hidden", "true"); card.innerHTML = '<span class="k"></span><span class="n"></span>'; }
+    if (card.parentNode !== bar) { if (getComputedStyle(bar).position === "static") bar.style.position = "relative"; bar.append(card); }
+    card.querySelector(".k").textContent = "EPISODE " + (idx + 1);
+    card.querySelector(".n").textContent = e.title;
+    clearTimeout(cardT);
+    card.classList.remove("on"); void card.offsetWidth; card.classList.add("on");
+    cardT = setTimeout(() => card.classList.remove("on"), 2300);
+  }
+  if (audio) audio.addEventListener("play", () => {
+    // only when an episode starts from the top (not when it picks back up after a question)
+    if (audio.currentTime < 0.6 && (idx !== lastIdx || audio.currentTime < 0.6)) titleCard();
+    lastIdx = idx;
+  });
+
+  /* ---- 4. "Previously on OG Made…" ---- */
+  function paintPrev() {
+    const intro = document.querySelector(".slide-intro.welcome"); if (!intro) return;
+    const body = intro.querySelector(".hp-body"); if (!body || !body.querySelector(".wb-done")) return;
+    const open = openNow(); let last = -1; open.forEach((o, k) => { if (o) last = k; });
+    let rk = 0; try { rk = rankOf(blocksDone()); } catch (err) {}
+    const done = open.filter(Boolean).length;
+    let txt;
+    if (done === 0) txt = "you were just getting started.";
+    else if (done === N) txt = "you cleared all nine and made " + RANKS[rk] + ".";
+    else txt = "you cleared Episode " + (last + 1) + (rk > 0 ? " and made " + RANKS[rk] + "." : ".");
+    let p = body.querySelector(".wb-prev");
+    if (!p) { p = document.createElement("span"); p.className = "wb-prev"; p.innerHTML = '<i>Previously on OG Made…</i> <span></span>'; body.append(p); }
+    const t = p.querySelector("span"); if (t.textContent !== txt) t.textContent = txt;
+  }
+
+  /* ---- keep it all painted ---- */
+  let raf = 0;
+  const later = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => { paintSky(); paintPrev(); }); };
+  new MutationObserver(later).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ["class", "data-v", "hidden"] });
+  later();
+})();
+</script>
 </body>
 </html>
