@@ -4234,6 +4234,10 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 #cabHall .hall-shade { position: absolute; inset: 0; z-index: 1; background: radial-gradient(ellipse 80% 45% at 50% 52%, rgba(5,6,9,.78), rgba(5,6,9,.25) 70%, rgba(5,6,9,0)); pointer-events: none; }
 #cabHall .hall-top { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; min-height: 52px; }
 #cabHall .hall-top img { width: min(62vw, 270px); height: auto; display: block; }
+/* pizza shop room only: OG MADE across the top, same graffiti lettering as the OG BOBBY wordmark */
+#cabHall .hall-made { display: none; font: 400 clamp(2.6rem, 13vw, 3.6rem)/1 "Sedgwick Ave Display", cursive; color: #fff; letter-spacing: .02em; white-space: nowrap; text-shadow: 2px 3px 0 #000, 0 6px 10px rgba(0,0,0,.65); }
+#cabHall[data-k="2"] .hall-top img { display: none; }
+#cabHall[data-k="2"] .hall-made { display: block; }
 #cabHall .hall-x { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 2px solid rgba(255,255,255,.7); background: rgba(0,0,0,.45); color: #fff; font: 700 1.3rem/1 system-ui, sans-serif; cursor: pointer; display: grid; place-items: center; }
 #cabHall .hall-x[hidden] { display: none; }
 #cabHall .hall-room { position: relative; z-index: 2; display: grid; place-items: center; min-height: 0; }
@@ -4340,7 +4344,7 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
   const hall = document.createElement("div");
   hall.id = "cabHall"; hall.hidden = true; hall.setAttribute("role", "dialog"); hall.setAttribute("aria-label", "How to play");
   hall.innerHTML = '<div class="hall-scene" aria-hidden="true"></div><div class="hall-shade" aria-hidden="true"></div>' +
-    '<div class="hall-top"><img src="brand/og-bobby-wordmark-top.png" alt="OG Bobby" width="1052" height="340"><button class="hall-x" type="button" aria-label="Back to the game" hidden>×</button></div>' +
+    '<div class="hall-top"><img src="brand/og-bobby-wordmark-top.png" alt="OG Bobby" width="1052" height="340"><div class="hall-made" aria-label="OG Made">OG MADE</div><button class="hall-x" type="button" aria-label="Back to the game" hidden>×</button></div>' +
     '<div class="hall-room"></div>';
   document.body.append(hall);
   const scene = hall.querySelector(".hall-scene"), roomBox = hall.querySelector(".hall-room"), xBtn = hall.querySelector(".hall-x");
@@ -4371,7 +4375,7 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
     document.body.classList.toggle("cab-hall", on);
     if (on) {
       const k = intro.dataset.room || "1";
-      if (shown !== k) { shown = k; scene.innerHTML = '<svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">' + defs + (SCENES[k] || SCENES[1])() + (FX[k] ? FX[k]() : "") + '</svg>'; scene.classList.remove("enter"); void scene.offsetWidth; scene.classList.add("enter");  roomSound(k); }
+      if (shown !== k) { shown = k; hall.dataset.k = k; scene.innerHTML = '<svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">' + defs + (SCENES[k] || SCENES[1])() + (FX[k] ? FX[k]() : "") + '</svg>'; scene.classList.remove("enter"); void scene.offsetWidth; scene.classList.add("enter");  roomSound(k); }
       const x = started(); if (xBtn.hidden === x) xBtn.hidden = !x;
     } else { if (shown) roomSound(null); shown = ""; }
     if (wasHall && !on && stage.dataset.v !== "intro") doors();
