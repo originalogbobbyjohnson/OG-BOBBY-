@@ -4979,10 +4979,18 @@ body.cab-ep .stage-wrap > .cab-sky, .stage-wrap[data-sky-on] > .cab-sky { displa
     const onEp = !!(stage && stage.dataset.v === "ep");
     const playing = !audioEl.paused && !audioEl.ended;
     if (!onEp && !playing) openFor = null;
-    if (openFor !== null && openFor !== cur() && !playing) openFor = null;
-    setOpen(playing || openFor === cur());
+    if (openFor !== null && openFor !== cur()) openFor = null;
+    setOpen(openFor === cur());
   }
-  audioEl.addEventListener("play", () => { openFor = cur(); check(); });
+  const listMode = () => { try { return !!plMode; } catch (e) { return false; } };
+  // only the record opens the doors: pressing it arms this episode
+  document.addEventListener("click", e => { if (e.target.closest && e.target.closest(".cab-play")) openFor = cur(); }, true);
+  // a new episode that tries to start on its own waits behind the closed doors for the record press (the earned playlist keeps rolling)
+  audioEl.addEventListener("play", () => {
+    if (openFor === cur()) return check();
+    if (listMode()) { openFor = cur(); return check(); }
+    audioEl.pause(); check();
+  });
   ["pause", "ended", "emptied", "loadstart"].forEach(ev => audioEl.addEventListener(ev, () => requestAnimationFrame(check)));
   let t = 0;
   new MutationObserver(() => { cancelAnimationFrame(t); t = requestAnimationFrame(check); }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["data-v", "class"] });
