@@ -2115,7 +2115,13 @@ html, body, body.practice { background: #fff !important; }
   ["trainin", "coin", "neon", "car", "spraytag", "siren", "fireworks", "horn", "tap"].forEach(k => {
     raw[k] = fetch(FILES[k]).then(r => r.arrayBuffer()); raw[k].catch(() => {});
   });
-  ["pointerdown", "touchend", "keydown"].forEach(ev => document.addEventListener(ev, boot, true));
+  let unlocked = false;
+  const unlock = () => {
+    boot(); if (!ctx || unlocked) return;
+    try { const b = ctx.createBuffer(1, 1, 22050), s = ctx.createBufferSource(); s.buffer = b; s.connect(ctx.destination); s.start(0); } catch (e) {}
+    try { ctx.resume().then(() => { if (ctx.state === "running") unlocked = true; }); } catch (e) {}
+  };
+  ["pointerdown", "touchend", "click", "keydown"].forEach(ev => document.addEventListener(ev, unlock, true));
   document.addEventListener("visibilitychange", () => { if (ctx && document.visibilityState === "visible" && ctx.state !== "running") { try { ctx.resume(); } catch (e) {} } });
   audio.addEventListener("play", () => { if (routed && ctx && ctx.state !== "running") { try { ctx.resume(); } catch (e) {} } });
 
@@ -2168,7 +2174,18 @@ html, body, body.practice { background: #fff !important; }
     const now = ctx ? ctx.currentTime : 0;
     roomSrc.forEach(r => { try { r.g.gain.setTargetAtTime(0, now, 0.08); r.s.stop(now + 0.4); } catch (e) {} });
     roomSrc = [];
-    if (!list || !on || !ctx || ctx.state !== "running") return;
+    if (!list || !on) return;
+    if (!ctx) boot();
+    if (!ctx) return;
+    // iPhones: on the very first tap the sound engine is still waking up (that's the R train room).
+    // Wait for it instead of skipping the sound.
+    if (ctx.state !== "running") {
+      const mine = roomSrc, t0 = Date.now();
+      try { ctx.resume(); } catch (e) {}
+      const wake = () => { if (roomSrc !== mine) return; if (ctx.state === "running") room(list); else if (Date.now() - t0 < 4000) setTimeout(wake, 60); };
+      setTimeout(wake, 30);
+      return;
+    }
     list.forEach(([k, vol, delay]) => {
       const go = () => {
         const s = ctx.createBufferSource(), g = ctx.createGain();
