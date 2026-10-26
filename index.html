@@ -1036,9 +1036,9 @@ window.scrollTo(0, 0);
   document.querySelector(".how").remove();
   // how-to-play reads one page at a time; text box, dots and button never move
   const HOW = [
-    ["Hit play.", "Every song is an episode of OG Bobby's story.", "street", "84 ST", "4 AV"],
+    ["Hit play.", "Every song is an episode of OG Bobby's story.", "subway", "BAY RIDGE AV", "R"],
     ["Every episode stops.", "Answer right to unlock the next verse.", "store", "CORNER STORE", "BAY RIDGE"],
-    ["Unlock a song.", "It plays in full.", "subway", "BAY RIDGE AV", "R"],
+    ["Unlock a song.", "It plays in full.", "street", "84 ST", "4 AV"],
     ["Finish a block of 3.", "Earn that block's playlist.", "park", "OWL'S HEAD PARK", "NYC PARKS"],
     ["Finish all 9.", "Earn Season 1. Season 2 opens next.", "street", "SHORE RD", "VERRAZZANO"]
   ];
@@ -3796,9 +3796,9 @@ html, body, *, button, a, .opt, .x-opt, .sb-tile, .ep { touch-action: manipulati
   -webkit-mask-image: linear-gradient(90deg, #000 0, #000 9%, transparent 19%, transparent 81%, #000 91%, #000 100%);
           mask-image: linear-gradient(90deg, #000 0, #000 9%, transparent 19%, transparent 81%, #000 91%, #000 100%); }
 .stage-wrap > * { position: relative; z-index: 1; }
-.stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="1"])::after { opacity: 1; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2232%22%3E%3Cpath%20d%3D%22M0%201H64M0%2017H64M1%201V17M33%2017V33%22%20stroke%3D%22rgba%28255%2C255%2C255%2C.10%29%22%20stroke-width%3D%222%22%20fill%3D%22none%22/%3E%3C/svg%3E"); }
+.stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="3"])::after { opacity: 1; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2264%22%20height%3D%2232%22%3E%3Cpath%20d%3D%22M0%201H64M0%2017H64M1%201V17M33%2017V33%22%20stroke%3D%22rgba%28255%2C255%2C255%2C.10%29%22%20stroke-width%3D%222%22%20fill%3D%22none%22/%3E%3C/svg%3E"); }
 .stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="2"])::after { opacity: 1; background-image: repeating-linear-gradient(0deg, rgba(200,30,30,.4) 0 18px, rgba(255,255,255,.13) 18px 36px); background-size: 100% 100%; background-repeat: no-repeat; }
-.stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="3"])::after { opacity: 1; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2228%22%20height%3D%2214%22%3E%3Cpath%20d%3D%22M0%20.5H28M.5%200V14%22%20stroke%3D%22rgba%28255%2C255%2C255%2C.12%29%22%20stroke-width%3D%221%22%20fill%3D%22none%22/%3E%3C/svg%3E"); }
+.stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="1"])::after { opacity: 1; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2228%22%20height%3D%2214%22%3E%3Cpath%20d%3D%22M0%20.5H28M.5%200V14%22%20stroke%3D%22rgba%28255%2C255%2C255%2C.12%29%22%20stroke-width%3D%221%22%20fill%3D%22none%22/%3E%3C/svg%3E"); }
 .stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="4"])::after { opacity: 1; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2222%22%20height%3D%2222%22%3E%3Cpath%20d%3D%22M0%200L22%2022M22%200L0%2022%22%20stroke%3D%22rgba%28255%2C255%2C255%2C.10%29%22%20stroke-width%3D%221.6%22%20fill%3D%22none%22/%3E%3C/svg%3E"); }
 .stage-wrap:has(.stage[data-v="intro"] .slide-intro:not(.welcome)[data-room="5"])::after { opacity: 1; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%2260%22%3E%3Cpath%20d%3D%22M0%2060V38h14V26h10v12h8V18h16v20h6V30h12v30zM70%2060V34h10V22h6v-8h4v8h6v12h14V28h12v32zM140%2060V40h12V24h18v16h8V32h14v28z%22%20fill%3D%22rgba%280%2C0%2C0%2C.22%29%22/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22120%22%20height%3D%22120%22%3E%3Cpath%20d%3D%22M0%200L60%20120M30%200L60%2060M90%200L60%20120M120%200L60%2060%22%20stroke%3D%22rgba%28255%2C255%2C255%2C.08%29%22%20stroke-width%3D%221.2%22%20fill%3D%22none%22/%3E%3C/svg%3E"); background-repeat: repeat-x, repeat; background-position: bottom, top; background-size: 200px 60px, 120px 120px; }
 /* walking into the next room */
@@ -4215,7 +4215,7 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
     '</defs>';
   const brownstones = (y, col, lit) => { let s = ""; const ws = [70, 80, 74, 86, 70]; let x = -10; ws.forEach((w, i) => { const top = y - 30 - (i % 2) * 18; s += '<rect x="' + x + '" y="' + top + '" width="' + w + '" height="' + (H - top) + '" fill="' + col + '"/><rect x="' + x + '" y="' + (top - 6) + '" width="' + w + '" height="8" fill="#2a1712"/>' + windows(x + 10, top + 20, 2, 9, 18, 26, 32, 46, lit) + '<path d="M' + (x + 20) + ' ' + (H - 120) + 'h' + (w - 30) + 'l14 40h' + (-(w - 2)) + 'z" fill="#2a1712"/>'; x += w; }); return s; };
   const SCENES = {
-    1: () => '<rect width="400" height="800" fill="url(#night)"/>' + glow(300, 120, 90, "white", .35) + '<circle cx="300" cy="120" r="34" fill="#f3efe0"/>' +
+    3: () => '<rect width="400" height="800" fill="url(#night)"/>' + glow(300, 120, 90, "white", .35) + '<circle cx="300" cy="120" r="34" fill="#f3efe0"/>' +
       brownstones(330, "#6b3a2c", .35) +
       '<rect y="700" width="400" height="100" fill="#26262c"/><rect y="690" width="400" height="12" fill="#5d5b60"/>' +
       '<rect x="310" y="420" width="6" height="280" fill="#16181d"/><path d="M313 420q-30 0-34 18" stroke="#16181d" stroke-width="5" fill="none"/>' + glow(278, 444, 120, "warm", .55) + '<rect x="270" y="436" width="18" height="8" rx="3" fill="#ffe2a0"/>',
@@ -4225,11 +4225,11 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
       '<path d="M30 250h340l-20 -50h-300z" fill="#c62d24"/>' + [0, 1, 2, 3, 4, 5, 6].map(i => '<path d="M' + (50 + i * 46) + ' 200l-6 50h23l6 -50z" fill="#fff" opacity=".9"/>').join("") +
       glow(200, 148, 150, "red", .35) +
       '<rect y="700" width="400" height="100" fill="#3a3a40"/><rect y="690" width="400" height="12" fill="#6c6a70"/>',
-    3: () => '<rect width="400" height="800" fill="url(#tile)"/><rect width="400" height="800" fill="#000" opacity=".28"/>' +
+    1: () => '<rect width="400" height="800" fill="url(#tile)"/><rect width="400" height="800" fill="#000" opacity=".28"/>' +
       '<rect y="230" width="400" height="34" fill="#1f5b3a"/><rect y="236" width="400" height="22" fill="#2f7a4f"/>' +
       glow(200, 120, 160, "white", .35) + '<rect x="40" y="110" width="320" height="10" rx="5" fill="#fff" opacity=".85"/>' +
       '<rect y="620" width="400" height="180" fill="#2a2a2e"/><rect y="610" width="400" height="14" fill="#e9e4d6"/><rect y="624" width="400" height="6" fill="#c81e1e"/>' +
-      '<rect y="690" width="400" height="110" fill="#121214"/><rect y="720" width="400" height="6" fill="#55555a"/><rect y="760" width="400" height="6" fill="#55555a"/>',
+      '<rect y="690" width="400" height="110" fill="#121214"/><rect y="720" width="400" height="6" fill="#55555a"/><rect y="760" width="400" height="6" fill="#55555a"/>' + '<g class="r-train"><rect x="0" y="632" width="236" height="118" rx="12" fill="#b4b9c0" stroke="#1a1a1a" stroke-width="3"/><rect x="0" y="634" width="236" height="18" rx="10" fill="#d6d9de"/><rect x="18" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="70" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="122" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="174" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="0" y="708" width="236" height="5" fill="#c81e1e"/><circle cx="210" cy="730" r="13" fill="#c81e1e"/><text x="210" y="736" font-size="17" font-weight="900" fill="#fff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">R</text><rect x="244" y="632" width="236" height="118" rx="12" fill="#b4b9c0" stroke="#1a1a1a" stroke-width="3"/><rect x="244" y="634" width="236" height="18" rx="10" fill="#d6d9de"/><rect x="262" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="314" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="366" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="418" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="244" y="708" width="236" height="5" fill="#c81e1e"/><circle cx="454" cy="730" r="13" fill="#c81e1e"/><text x="454" y="736" font-size="17" font-weight="900" fill="#fff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">R</text><rect x="488" y="632" width="236" height="118" rx="12" fill="#b4b9c0" stroke="#1a1a1a" stroke-width="3"/><rect x="488" y="634" width="236" height="18" rx="10" fill="#d6d9de"/><rect x="506" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="558" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="610" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="662" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="488" y="708" width="236" height="5" fill="#c81e1e"/><circle cx="698" cy="730" r="13" fill="#c81e1e"/><text x="698" y="736" font-size="17" font-weight="900" fill="#fff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">R</text><rect x="732" y="632" width="236" height="118" rx="12" fill="#b4b9c0" stroke="#1a1a1a" stroke-width="3"/><rect x="732" y="634" width="236" height="18" rx="10" fill="#d6d9de"/><rect x="750" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="802" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="854" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="906" y="660" width="34" height="34" rx="4" fill="#1a1d22"/><rect x="732" y="708" width="236" height="5" fill="#c81e1e"/><circle cx="942" cy="730" r="13" fill="#c81e1e"/><text x="942" y="736" font-size="17" font-weight="900" fill="#fff" text-anchor="middle" font-family="Helvetica,Arial,sans-serif">R</text></g>',
     4: () => '<rect width="400" height="800" fill="#0a1a14"/>' + glow(200, 140, 260, "green", .18) +
       [[-20, 260, 120], [90, 220, 140], [230, 250, 130], [330, 230, 120]].map(t => '<circle cx="' + (t[0] + t[2] / 2) + '" cy="' + (t[1] + 60) + '" r="' + t[2] / 1.4 + '" fill="#1c4a33"/><rect x="' + (t[0] + t[2] / 2 - 6) + '" y="' + (t[1] + 100) + '" width="12" height="300" fill="#1a1410"/>').join("") +
       '<rect y="600" width="400" height="200" fill="#16241b"/><path d="M0 680q200 -40 400 0v120h-400z" fill="#2a2a2e"/>' +
@@ -4267,7 +4267,7 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
     document.body.classList.toggle("cab-hall", on);
     if (on) {
       const k = intro.dataset.room || "1";
-      if (shown !== k) { shown = k; scene.innerHTML = '<svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">' + defs + (SCENES[k] || SCENES[1])() + '</svg>'; scene.classList.remove("enter"); void scene.offsetWidth; scene.classList.add("enter"); }
+      if (shown !== k) { shown = k; scene.innerHTML = '<svg viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">' + defs + (SCENES[k] || SCENES[1])() + '</svg>'; scene.classList.remove("enter"); void scene.offsetWidth; scene.classList.add("enter");  if (k === "1" && window.ogSound) { try { window.ogSound.sfx("train", 0.7); } catch (e) {} } }
       const x = started(); if (xBtn.hidden === x) xBtn.hidden = !x;
     } else shown = "";
     if (wasHall && !on && stage.dataset.v !== "intro") doors();
@@ -4279,6 +4279,10 @@ body.cab-hall .wrap, body.cab-hall .dock { visibility: hidden !important; }
 })();
 </script>
 <style id="cabPlusStyle">
+/* Bay Ridge Av room: the R train pulls in and stops at the platform */
+#cabHall .r-train { animation: rTrainIn 2.4s cubic-bezier(.12,.75,.22,1) both; }
+@keyframes rTrainIn { from { transform: translateX(1000px); } to { transform: translateX(-310px); } }
+@media (prefers-reduced-motion: reduce) { #cabHall .r-train { animation: none; transform: translateX(-310px); } }
 /* ---------- Game layer: stars, Street Cred score, episode cleared screen, boss level, daily question ---------- */
 /* score row under the meter title */
 .cab-score { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 2px 0 6px; }
