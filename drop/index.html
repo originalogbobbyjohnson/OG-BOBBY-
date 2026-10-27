@@ -58,6 +58,11 @@ h1 { margin: 0; font: 400 clamp(1.7rem, 8vw, 2.2rem)/1.05 "Anton", Impact, sans-
 .lk { flex: 1; border: 1px solid var(--line); border-radius: 12px; padding: 12px 8px; display: flex; flex-direction: column; gap: 6px; align-items: center; }
 .lk b { font: 400 1.05rem/1.1 "Anton", Impact, sans-serif; letter-spacing: .03em; text-transform: uppercase; }
 .lk span { font: 700 .68rem/1 "Barlow", sans-serif; letter-spacing: .14em; color: var(--red); }
+.cd { display: flex; justify-content: center; gap: 8px; }
+.cd div { min-width: 64px; border: 1px solid var(--line); border-radius: 12px; padding: 10px 4px 8px; display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.cd b { font: 400 1.9rem/1 "Anton", Impact, sans-serif; font-variant-numeric: tabular-nums; }
+.cd span { font: 700 .62rem/1 "Barlow", sans-serif; letter-spacing: .16em; color: var(--gold); }
+.date { font: 700 1.05rem/1.2 "Barlow", sans-serif; letter-spacing: .06em; color: #fff; }
 .lk svg { width: 18px; height: 18px; fill: #fff; }
 </style>
 </head>
@@ -85,12 +90,29 @@ h1 { margin: 0; font: 400 clamp(1.7rem, 8vw, 2.2rem)/1.05 "Anton", Impact, sans-
   const i = frees.includes(want) ? want : frees[frees.length - 1];
   const panel = el("panel");
 
-  if (i === undefined) {                       /* nothing out yet: tease, send them to Season 1 */
+  const when = d => new Date(d).toLocaleString("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric" }).toUpperCase();
+  const short = d => new Date(d).toLocaleString("en-US", { timeZone: "America/New_York", weekday: "short", month: "short", day: "numeric" }).replace(",", "").toUpperCase();
+  function countdown(box, target) {
+    const t = new Date(target).getTime();
+    box.innerHTML = '<div><b>0</b><span>DAYS</span></div><div><b>0</b><span>HRS</span></div><div><b>0</b><span>MIN</span></div><div><b>0</b><span>SEC</span></div>';
+    const b = box.querySelectorAll("b");
+    const tick = () => {
+      let s = Math.max(0, Math.floor((t - Date.now()) / 1000));
+      const v = [Math.floor(s / 86400), Math.floor(s % 86400 / 3600), Math.floor(s % 3600 / 60), s % 60];
+      v.forEach((n, k) => { b[k].textContent = k ? String(n).padStart(2, "0") : n; });
+      if (s <= 0) { clearInterval(iv); box.outerHTML = '<p class="date">DROPPING NOW. REFRESH IN A MINUTE.</p>'; }
+    };
+    const iv = setInterval(tick, 1000); tick();
+  }
+
+  if (i === undefined) {                       /* nothing out yet: countdown to Episode 1 */
     el("badge").textContent = "COMING SOON"; el("badge").classList.remove("free");
-    panel.innerHTML = '<div class="kick">SEASON 2 · EPISODE 1</div><h1></h1>' +
-      '<p class="note">Drops soon, free. No game, no catch. Just press play.</p>' +
+    panel.innerHTML = '<div class="kick">SEASON 2 · EPISODE 1 · FREE SINGLE</div><h1></h1>' +
+      '<p class="date">' + when(S.DROPS[0]) + ' · 9 AM</p><div class="cd" id="cd"></div>' +
+      '<p class="note">Free. No game, no catch. Just press play.</p>' +
       '<a class="btn" href="' + GAME + '">PLAY SEASON 1 NOW</a>';
     panel.querySelector("h1").textContent = name(E[0].title);
+    countdown(el("cd"), S.DROPS[0]);
     track("drop/soon", "Drop page: coming soon");
     return;
   }
@@ -117,6 +139,7 @@ h1 { margin: 0; font: 400 clamp(1.7rem, 8vw, 2.2rem)/1.05 "Anton", Impact, sans-
       '</div>' +
       '<p class="note">They’re in the game. You heard Episode ' + (i + 1) + ', so you know the answers. Free to play.</p>' +
       '<a class="btn" id="go" href="' + GAME + '">PLAY THE GAME</a>' +
+      (S.DROPS && S.DROPS[Math.floor(i / 3) + 1] && E[i + 3] ? '<p class="date" id="nx">NEXT FREE SINGLE · ' + short(S.DROPS[Math.floor(i / 3) + 1]) + ' · 9 AM</p>' : "") +
       '<button class="btn ghost" id="again" type="button">PLAY EPISODE ' + (i + 1) + ' AGAIN</button>' +
     '</div>';
   el("t").textContent = name(ep.title);

@@ -3,9 +3,13 @@
    the two after each one are played in the game, and open only after the free single's questions are cleared.
    Releases go out in blocks of three: block 1 = episodes 1-3, block 2 = 4-6, block 3 = 7-9.
    LIVE_BLOCKS is how many blocks are out. It stays 0 until release morning, then goes up by one each drop.
-   A song's "audio" file is only added on the morning it drops, so nothing can be heard early. */
+   A song's "audio" file is only added on the morning it drops, so nothing can be heard early.
+   Season 2 rule: new players don't need Season 1 finished. Clear the week's free single's questions and that
+   week's two game episodes open. */
 window.OG_S2 = {
   LIVE_BLOCKS: 0,
+  /* Drop days, 9 AM New York time: block 1 (eps 1-3), block 2 (4-6), block 3 (7-9). Shown on the drop page countdown. */
+  DROPS: ["2026-12-01T09:00:00-05:00", "2026-12-08T09:00:00-05:00", "2026-12-15T09:00:00-05:00"],
   EPISODES: [
     { title: "After Hours",                audio: "", art: "" },
     { title: "The Ridge to the Beach",     audio: "", art: "" },
