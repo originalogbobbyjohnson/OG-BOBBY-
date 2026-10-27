@@ -7,14 +7,14 @@ BEGIN:VEVENT
 UID:og-bobby-vol2-2026@ogbobbybrooklyn.com
 DTSTAMP:20261019T000000Z
 DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261118
-RRULE:FREQ=WEEKLY;COUNT=9
-SUMMARY:OG Bobby · Season 2 new single drops
-DESCRIPTION:A new OG Bobby single drops today at 9 AM. Play it at https://ogbobbybrooklyn.com
+DTEND;VALUE=DATE:20261202
+RRULE:FREQ=WEEKLY;COUNT=3
+SUMMARY:OG Bobby · Season 2 new episodes drop
+DESCRIPTION:New OG Bobby episodes drop today at 9 AM: one free single\, two more in the game. https://ogbobbybrooklyn.com/drop/
 URL:https://ogbobbybrooklyn.com
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:New OG Bobby single today
+DESCRIPTION:New OG Bobby episodes today
 TRIGGER:PT9H
 END:VALARM
 END:VEVENT

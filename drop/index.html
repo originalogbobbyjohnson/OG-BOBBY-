@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OG Made · Season 2 · OG Bobby</title>
+<meta name="description" content="OG Made '99, Season 2. New episode out now. Free to listen.">
+<meta property="og:type" content="music.song">
+<meta property="og:site_name" content="OG Bobby">
+<meta property="og:title" content="OG Made · Season 2 · New Episode">
+<meta property="og:description" content="Free to listen. Tap and play.">
+<meta property="og:url" content="https://ogbobbybrooklyn.com/drop/">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/drop/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OG Made · Season 2 · New Episode">
+<meta name="twitter:image" content="https://ogbobbybrooklyn.com/drop/share.jpg">
+<link rel="icon" href="../icon-game.png?v=2">
+<link rel="apple-touch-icon" href="../icon-game.png?v=2">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap">
+<link rel="stylesheet" href="../brand/og-made-header.css">
+<style>
+:root { --bg:#0c0d10; --panel:#16181d; --line:#2b2f38; --red:#d62828; --green:#2fa84f; --gold:#e3b23c; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--bg); color: #fff; font-family: "Barlow", system-ui, sans-serif; }
+body { display: flex; justify-content: center; align-items: center; min-height: 100dvh; padding: 16px 16px max(20px, env(safe-area-inset-bottom)); }
+.card { width: 100%; max-width: 440px; display: flex; flex-direction: column; gap: 14px; }
+.head { display: flex; justify-content: center; padding-top: 4px; }
+.omh { font-size: clamp(2.1rem, 11vw, 2.8rem); }
+.art { position: relative; border-radius: 14px; overflow: hidden; border: 2px solid #3a2a10; aspect-ratio: 1206 / 669; background: #000; }
+.art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.badge { position: absolute; left: 10px; top: 10px; background: var(--red); color: #fff; font: 700 .72rem/1 "Barlow", sans-serif; letter-spacing: .14em; padding: 7px 10px; border-radius: 99px; }
+.badge.free { background: var(--green); }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px; text-align: center; }
+.kick { font: 700 .78rem/1 "Barlow", sans-serif; letter-spacing: .18em; color: var(--gold); }
+h1 { margin: 0; font: 400 clamp(1.7rem, 8vw, 2.2rem)/1.05 "Anton", Impact, sans-serif; letter-spacing: .03em; text-transform: uppercase; }
+.note { margin: 0; font-size: 1rem; line-height: 1.35; color: #fff; }
+.bar { position: relative; height: 8px; background: #2b2f38; border-radius: 99px; overflow: hidden; cursor: pointer; }
+.bar i { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--gold); }
+.times { display: flex; justify-content: space-between; font-size: .82rem; color: #fff; font-variant-numeric: tabular-nums; }
+.controls { display: flex; justify-content: center; align-items: center; gap: 22px; }
+.rb { background: none; border: 1px solid var(--line); color: #fff; border-radius: 50%; width: 46px; height: 46px; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.rb svg { width: 20px; height: 20px; fill: currentColor; }
+#play { width: 76px; height: 76px; background: var(--red); border-color: var(--red); box-shadow: 0 0 0 6px rgba(214,40,40,.18); }
+#play svg { width: 34px; height: 34px; }
+#play.pulse { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 14px rgba(214,40,40,.05); } }
+.btn { display: block; width: 100%; text-align: center; text-decoration: none; font: 700 1rem/1 "Barlow", sans-serif; letter-spacing: .1em; color: #fff; background: var(--red); padding: 17px 14px; border-radius: 12px; border: 0; cursor: pointer; }
+.btn.ghost { background: none; border: 1px solid var(--line); font-size: .85rem; padding: 13px; }
+.foot { text-align: center; font-size: .78rem; color: #fff; opacity: .85; }
+.foot a { color: var(--gold); text-decoration: none; font-weight: 700; }
+.player { display: flex; flex-direction: column; gap: 12px; }
+.next { display: none; }
+.done .player { display: none; }
+.done .next { display: flex; flex-direction: column; gap: 12px; }
+.locks { display: flex; gap: 10px; }
+.lk { flex: 1; border: 1px solid var(--line); border-radius: 12px; padding: 12px 8px; display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.lk b { font: 400 1.05rem/1.1 "Anton", Impact, sans-serif; letter-spacing: .03em; text-transform: uppercase; }
+.lk span { font: 700 .68rem/1 "Barlow", sans-serif; letter-spacing: .14em; color: var(--red); }
+.lk svg { width: 18px; height: 18px; fill: #fff; }
+</style>
+</head>
+<body>
+<main class="card" id="card">
+  <div class="head"><div class="omh" role="img" aria-label="OG Made ’99, signed OG Bobby"><div class="omh-row"><span class="omh-word">OG MADE</span><img class="omh-99" src="../brand/og-made-99.svg" alt=""></div><div class="omh-sig">— <img src="../brand/og-bobby-wordmark-top.png" alt=""></div></div></div>
+  <div class="art"><img id="art" src="art.jpg" alt="OG Bobby in a Bay Ridge alley at night" width="1206" height="669"><span class="badge free" id="badge">FREE SINGLE</span></div>
+  <section class="panel" id="panel"></section>
+  <div class="foot" id="foot">© OG Bobby · Bay Ridge, BK · <a href="https://ogbobbybrooklyn.com/">Free to play: the game</a></div>
+</main>
+<audio id="a" preload="metadata"></audio>
+<script src="../season2.js"></script>
+<script>
+(function () {
+  const S = window.OG_S2, E = S.EPISODES, el = id => document.getElementById(id), a = el("a");
+  const GAME = "https://ogbobbybrooklyn.com/";
+  const lock = '<svg viewBox="0 0 24 24"><path d="M17 9V7A5 5 0 0 0 7 7v2H5v13h14V9h-2zM9 7a3 3 0 0 1 6 0v2H9V7zm4 9.7V19h-2v-2.3a2 2 0 1 1 2 0z"/></svg>';
+  const fmt = t => { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
+  const name = t => t.replace(/, Pt\. (\d+)$/, " Pt. $1");
+  const track = (p, t) => { try { window.goatcounter && window.goatcounter.count({ path: p, title: t, event: true }); } catch (e) {} };
+
+  /* Which free single to show: ?ep=4 picks one that's out, otherwise the newest one out. */
+  const frees = E.map((e, i) => i).filter(i => S.isFree(i) && S.isOut(i) && E[i].audio);
+  const want = parseInt(new URLSearchParams(location.search).get("ep"), 10) - 1;
+  const i = frees.includes(want) ? want : frees[frees.length - 1];
+  const panel = el("panel");
+
+  if (i === undefined) {                       /* nothing out yet: tease, send them to Season 1 */
+    el("badge").textContent = "COMING SOON"; el("badge").classList.remove("free");
+    panel.innerHTML = '<div class="kick">SEASON 2 · EPISODE 1</div><h1></h1>' +
+      '<p class="note">Drops soon, free. No game, no catch. Just press play.</p>' +
+      '<a class="btn" href="' + GAME + '">PLAY SEASON 1 NOW</a>';
+    panel.querySelector("h1").textContent = name(E[0].title);
+    track("drop/soon", "Drop page: coming soon");
+    return;
+  }
+
+  const ep = E[i], g1 = i + 1, g2 = i + 2;
+  if (ep.art) el("art").src = ep.art;
+  a.src = ep.audio;
+  panel.innerHTML =
+    '<div class="player">' +
+      '<div class="kick">SEASON 2 · EPISODE ' + (i + 1) + '</div><h1 id="t"></h1>' +
+      '<div class="bar" id="bar"><i id="fill"></i></div>' +
+      '<div class="times"><span id="cur">0:00</span><span id="tot">0:00</span></div>' +
+      '<div class="controls">' +
+        '<button class="rb" id="back" type="button" aria-label="Back 15 seconds"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></button>' +
+        '<button class="rb pulse" id="play" type="button" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>' +
+        '<button class="rb" id="fwd" type="button" aria-label="Forward 15 seconds"><svg viewBox="0 0 24 24"><path d="M12 5V1l5 5-5 5V7a6 6 0 1 0 6 6h2a8 8 0 1 1-8-8z"/></svg></button>' +
+      '</div>' +
+    '</div>' +
+    '<div class="next">' +
+      '<div class="kick">THAT WAS EPISODE ' + (i + 1) + '</div><h1>THE STORY KEEPS GOING</h1>' +
+      '<div class="locks">' +
+        '<div class="lk">' + lock + '<b id="n1"></b><span>EPISODE ' + (g1 + 1) + '</span></div>' +
+        '<div class="lk">' + lock + '<b id="n2"></b><span>EPISODE ' + (g2 + 1) + '</span></div>' +
+      '</div>' +
+      '<p class="note">They’re in the game. You heard Episode ' + (i + 1) + ', so you know the answers. Free to play.</p>' +
+      '<a class="btn" id="go" href="' + GAME + '">PLAY THE GAME</a>' +
+      '<button class="btn ghost" id="again" type="button">PLAY EPISODE ' + (i + 1) + ' AGAIN</button>' +
+    '</div>';
+  el("t").textContent = name(ep.title);
+  el("n1").textContent = name(E[g1].title);
+  el("n2").textContent = name(E[g2].title);
+
+  const paint = () => {
+    el("play").innerHTML = a.paused ? '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>' : '<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>';
+    el("play").setAttribute("aria-label", a.paused ? "Play" : "Pause");
+    el("cur").textContent = fmt(a.currentTime);
+    if (a.duration) { el("tot").textContent = fmt(a.duration); el("fill").style.width = (a.currentTime / a.duration * 100) + "%"; }
+  };
+  ["play", "pause", "timeupdate", "loadedmetadata"].forEach(ev => a.addEventListener(ev, paint));
+  let started = false;
+  el("play").onclick = () => {
+    el("play").classList.remove("pulse");
+    if (a.paused) { a.play().catch(() => {}); if (!started) { started = true; track("drop/play/" + (i + 1), "Free single played: " + ep.title); } }
+    else a.pause();
+  };
+  el("back").onclick = () => { a.currentTime = Math.max(0, a.currentTime - 15); };
+  el("fwd").onclick = () => { a.currentTime = Math.min(a.duration || 0, a.currentTime + 15); };
+  el("bar").onclick = ev => { const b = el("bar").getBoundingClientRect(); if (a.duration) a.currentTime = (ev.clientX - b.left) / b.width * a.duration; };
+  a.addEventListener("ended", () => {
+    document.body.classList.add("done"); el("foot").style.visibility = "hidden";
+    track("drop/finished/" + (i + 1), "Free single finished: " + ep.title);
+  });
+  el("go").onclick = () => track("drop/to-game/" + (i + 1), "Drop page to game");
+  el("again").onclick = () => { document.body.classList.remove("done"); el("foot").style.visibility = ""; a.currentTime = 0; a.play().catch(() => {}); };
+})();
+</script>
+<script data-goatcounter="https://ogbobbybrooklyn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
