@@ -634,7 +634,7 @@ body.practice { overflow: hidden; }
       <li><b>Answer.</b> The song stops and asks what you just heard. Miss it and you get a new question, not a do-over.</li>
       <li><b>Unlock.</b> Get a song right and it's yours to play in full.</li>
       <li><b>Earn Street Cred.</b> First-try answers fill your meter. Climb from New Face to Corner Kid, OG Soldier and OG Protégé.</li>
-      <li><b>Stack Juice.</b> Every right answer, star, hot streak and daily question adds Juice. Stack enough and you go Gold, then Platinum, Multi-Platinum and Diamond.</li>
+      <li><b>Stack Juice.</b> Every right answer, star and daily question adds Juice. A perfect Season 1 is 9,900. Stack enough and you go Gold, then Platinum, Multi-Platinum and Diamond.</li>
       <li><b>Collect.</b> Finish any block of 3 songs to earn that block's playlist. Finish all 9 to earn Season 1.</li>
       <li><b>Run it back.</b> Earned a rank? Replay your unlocked songs with new questions, just for fun. No rewards, just bragging rights.</li>
       <li><b>Director’s Cuts.</b> Stripped-down versions of the songs, in their own room.</li>
@@ -4583,7 +4583,9 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
   /* ---- stars and score ---- */
   const missesOf = e => e.qs.reduce((n, _, g) => n + (state.tries[e.slug + "|" + g] || 0), 0);
   const starsOf = e => !isOpen(e) ? 0 : (m => m === 0 ? 3 : m === 1 ? 2 : 1)(missesOf(e));
-  const epPoints = e => keysOf(e).reduce((s, _, g) => s + (state.first[e.slug + "|" + g] === true ? 100 : 50), 0) + starsOf(e) * 100;
+  const epPoints = e => keysOf(e).reduce((s, _, g) => s + (state.first[e.slug + "|" + g] === true ? 250 : 100), 0) + starsOf(e) * 200;   // perfect Season 1 = 18 x 250 + 27 stars x 200 = 9,900
+  // one-time: drop the old hot-streak Juice so a perfect Season 1 lands on 9,900 (keeps today's daily question)
+  if (P.jv !== 2) { P.extra = (P.daily && P.daily.ok && P.daily.date === (d => d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate())(new Date())) ? 250 : 0; P.jv = 2; P.plaque = null; keep(); }
   function score() {
     if (!Object.keys(state.keys || {}).length && P.extra) { P.extra = 0; keep(); }
     return EPISODES.slice(0, N).reduce((s, e) => s + epPoints(e), 0) + (P.extra || 0);
@@ -4592,10 +4594,10 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
 
   /* ---- Juice: the points. Stacking Juice takes you up the plaque ladder, like a record going gold ---- */
   const PLAQUES = [
-    { at: 1000, name: "GOLD", c: "#e8b23a" },
-    { at: 2500, name: "PLATINUM", c: "#dfe6ee" },
-    { at: 4000, name: "MULTI-PLATINUM", c: "#b9c7d8" },
-    { at: 6000, name: "DIAMOND", c: "#8fe3ff" }
+    { at: 2000, name: "GOLD", c: "#e8b23a" },
+    { at: 4500, name: "PLATINUM", c: "#dfe6ee" },
+    { at: 7000, name: "MULTI-PLATINUM", c: "#b9c7d8" },
+    { at: 9900, name: "DIAMOND", c: "#8fe3ff" }
   ];
   const plaqueOf = j => { let k = -1; PLAQUES.forEach((p, i) => { if (j >= p.at) k = i; }); return k; };
   const discSvg = c => '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="' + c + '"/><circle cx="12" cy="12" r="8" fill="none" stroke="#000" stroke-opacity=".25"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="#000" stroke-opacity=".2"/><circle cx="12" cy="12" r="2.4" fill="#d63a2f"/><circle cx="12" cy="12" r=".8" fill="#000"/></svg>';
@@ -4687,7 +4689,7 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     await baseAnswer(o, btn);
     if (!e || wasOpen) return;
     if (btn.classList.contains("right")) {
-      if (firstTry) { run++; if (run >= 3) { P.extra = (P.extra || 0) + 100; keep(); } } else run = 0;
+      if (firstTry) run++; else run = 0;
       if (isOpen(e)) { pending = EPISODES.indexOf(e); popCleared(pending); }
     } else if (btn.classList.contains("wrong")) { run = 0; if (EPISODES.indexOf(e) === BOSS) setTimeout(armClock, 1500); }
     paintScore(true); paintStars();
