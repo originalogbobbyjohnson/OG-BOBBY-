@@ -634,7 +634,7 @@ body.practice { overflow: hidden; }
       <li><b>Answer.</b> The song stops and asks what you just heard. Miss it and you get a new question, not a do-over.</li>
       <li><b>Unlock.</b> Get a song right and it's yours to play in full.</li>
       <li><b>Earn Street Cred.</b> First-try answers fill your meter. Climb from New Face to Corner Kid, OG Soldier and OG Protégé.</li>
-      <li><b>Stack Juice.</b> Every right answer, star and daily question adds Juice. A perfect Season 1 is 9,900. Stack enough and you go Gold, then Platinum, Multi-Platinum and Diamond.</li>
+      <li><b>Stack Juice.</b> Every right answer and star adds Juice. A perfect Season 1 is 9,900. Hot streaks stack Flames toward the ON FIRE badge, and daily questions stack Daily Wins toward the REGULAR badge. Both live in your trophy case. Stack enough and you go Gold, then Platinum, Multi-Platinum and Diamond.</li>
       <li><b>Collect.</b> Finish any block of 3 songs to earn that block's playlist. Finish all 9 to earn Season 1.</li>
       <li><b>Run it back.</b> Earned a rank? Replay your unlocked songs with new questions, just for fun. No rewards, just bragging rights.</li>
       <li><b>Director’s Cuts.</b> Stripped-down versions of the songs, in their own room.</li>
@@ -3329,6 +3329,12 @@ html, body, body.practice { background: #fff !important; }
 .x-tc-pl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .x-tc-pl span { padding: 7px 4px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,.4); color: rgba(255,255,255,.55); font: 800 .6rem/1.2 var(--body); letter-spacing: .08em; }
 .x-tc-pl span.on { background: #1f8a3c; border-color: #2fbf57; color: #fff; }
+.x-tc-side { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.x-tc-side div { display: grid; gap: 5px; justify-items: center; padding: 9px 4px; border-radius: 8px; background: rgba(255,255,255,.06); }
+.x-tc-side b { font-family: var(--display); font-size: 1.25rem; color: #fff; line-height: 1; font-weight: 400; }
+.x-tc-side i { font: 800 .52rem/1.15 var(--body); font-style: normal; letter-spacing: .1em; color: #fff; }
+.x-tc-side em { font: 800 .56rem/1 var(--body); font-style: normal; letter-spacing: .12em; color: #fff; padding: 4px 8px; border-radius: 99px; border: 1.5px solid #d63a2f; }
+.x-tc-side em.on { border-color: #2fbf57; background: rgba(47,191,87,.18); }
 .x-tc-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .x-tc-stats div { display: grid; gap: 4px; padding: 8px 2px; border-radius: 8px; background: rgba(255,255,255,.06); }
 .x-tc-stats b { font-family: var(--display); font-size: 1.25rem; color: #fff; line-height: 1; font-weight: 400; }
@@ -3544,6 +3550,17 @@ html, body, body.practice { background: #fff !important; }
     setTimeout(() => { t.classList.remove("on"); setTimeout(() => t.remove(), 300); }, 2000);
     try { if (window.ogSound && !document.querySelector(".promo")) setTimeout(() => window.ogSound.sfx("unlock", .45), 150); } catch (e) {}
   }
+  // hot streaks and daily wins count toward their own badges in the trophy case (not Juice)
+  const SIDE = { fire: 6, reg: 7 };
+  function sideToast(txt) {
+    const t = document.createElement("div"); t.className = "x-streak"; t.setAttribute("role", "status");
+    t.innerHTML = flame + txt; document.body.append(t);
+    requestAnimationFrame(() => t.classList.add("on"));
+    setTimeout(() => { t.classList.remove("on"); setTimeout(() => t.remove(), 300); }, 2600);
+    try { if (window.ogSound) window.ogSound.sfx("stamp", .5); } catch (e) {}
+  }
+  window.ogSideToast = sideToast;
+  window.ogSide = SIDE;
   if (typeof answer === "function") {
     const baseAnswer = answer;
     answer = async function (o, btn) {
@@ -3552,7 +3569,7 @@ html, body, body.practice { background: #fff !important; }
       if (btn.classList.contains("right")) {
         if (firstTry) {
           streak++; if (streak > (X.bestStreak || 0)) { X.bestStreak = streak; xsave(); }
-          if (streak % 3 === 0) { if (!document.querySelector(".promo")) streakToast(streak); tr("streak/" + streak, "Hot streak: " + streak); }   // a promotion is the bigger moment: no second pop-up on top of it
+          if (streak % 3 === 0) { X.flames = (X.flames || 0) + 1; xsave(); if (X.flames === SIDE.fire) setTimeout(() => sideToast("ON FIRE BADGE EARNED"), 2300); if (!document.querySelector(".promo")) streakToast(streak); tr("streak/" + streak, "Hot streak: " + streak); }   // a promotion is the bigger moment: no second pop-up on top of it
         } else streak = 0;
         // 11. load the next part of the song right away so it starts without a wait
         if (e && keysOf(e)[g]) warm(srcFor(e, g + 1));
@@ -3582,6 +3599,9 @@ html, body, body.practice { background: #fff !important; }
       '<div class="x-tc-top"><div class="x-tc-emb">' + rankEmblem(rIdx()) + '</div><div class="x-tc-rank">' + esc(rName().toUpperCase()) + '</div><div class="x-tc-sub">' + songsDone() + ' of 9 songs finished</div></div>' +
       '<p class="k">SONGS</p><div class="x-tc-songs">' + songs + '</div>' +
       '<p class="k">PLAYLISTS</p><div class="x-tc-pl">' + pl + '</div>' +
+      (() => { const f = X.flames || 0, dw = (window.ogDailyWins && window.ogDailyWins()) || 0;
+        const card = (n, goal, lab, badge) => '<div><b>' + n + (n < goal ? '<small style="font-size:.7em">/' + goal + '</small>' : '') + '</b><i>' + lab + '</i><em class="' + (n >= goal ? "on" : "") + '">' + badge + '</em></div>';
+        return '<p class="k">SIDE HUSTLE</p><div class="x-tc-side">' + card(f, SIDE.fire, "HOT STREAK<br>FLAMES", "ON FIRE") + card(dw, SIDE.reg, "DAILY<br>WINS", "REGULAR") + '</div>'; })() +
       '<div class="x-tc-stats"><div><b>' + (X.bestStreak || 0) + '</b><i>BEST<br>STREAK</i></div><div><b>' + (X.lrBest != null ? X.lrBest + "/10" : "–") + '</b><i>LIGHTNING<br>BEST</i></div><div><b>' + eggs + '/' + EGGS.length + '</b><i>SECRET<br>SPOTS</i></div></div>' +
       '<div class="row2"><button class="btn x-go" type="button" data-share>Share my rank</button><button class="btn x-close" type="button" data-close>Close</button></div>'
     ).querySelector("[data-share]").onclick = function () { this.closest(".sheet").remove(); shareRank(); };
@@ -4584,8 +4604,9 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
   const missesOf = e => e.qs.reduce((n, _, g) => n + (state.tries[e.slug + "|" + g] || 0), 0);
   const starsOf = e => !isOpen(e) ? 0 : (m => m === 0 ? 3 : m === 1 ? 2 : 1)(missesOf(e));
   const epPoints = e => keysOf(e).reduce((s, _, g) => s + (state.first[e.slug + "|" + g] === true ? 250 : 100), 0) + starsOf(e) * 200;   // perfect Season 1 = 18 x 250 + 27 stars x 200 = 9,900
-  // one-time: drop the old hot-streak Juice so a perfect Season 1 lands on 9,900 (keeps today's daily question)
-  if (P.jv !== 2) { P.extra = (P.daily && P.daily.ok && P.daily.date === (d => d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate())(new Date())) ? 250 : 0; P.jv = 2; P.plaque = null; keep(); }
+  // one-time: Juice is episodes only, so a perfect Season 1 is exactly 9,900 (streaks and daily wins have their own badges)
+  if (P.jv !== 3) { if (P.jv === 2 && P.extra >= 250 && !P.dailyWins) P.dailyWins = 1; P.extra = 0; P.jv = 3; P.plaque = null; keep(); }
+  window.ogDailyWins = () => P.dailyWins || 0;
   function score() {
     if (!Object.keys(state.keys || {}).length && P.extra) { P.extra = 0; keep(); }
     return EPISODES.slice(0, N).reduce((s, e) => s + epPoints(e), 0) + (P.extra || 0);
@@ -4812,7 +4833,7 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
     }
     const h = seedOf(today()), [e, g] = pool[h % pool.length];
     const variants = poolOf(e.qs[g]), q = variants[(h >>> 8) % variants.length];
-    const d = over("", '<div class="kick">DAILY QUESTION</div><div class="title"></div><div class="note">Get it right for +250 Juice. One try a day.</div><div class="q"></div><div class="opts2"></div><div class="msg2"></div><button class="link" type="button">Not now</button>');
+    const d = over("", '<div class="kick">DAILY QUESTION</div><div class="title"></div><div class="note">Get it right for a Daily Win. 7 wins earns the REGULAR badge. One try a day.</div><div class="q"></div><div class="opts2"></div><div class="msg2"></div><button class="link" type="button">Not now</button>');
     d.querySelector(".title").textContent = e.title;
     d.querySelector(".q").textContent = q.q;
     const box = d.querySelector(".opts2"), msg = d.querySelector(".msg2");
@@ -4823,9 +4844,11 @@ body.practice #cred .cab-row #list .ep:has(.ep-stars) .n { transform: translateY
         box.querySelectorAll(".opt2").forEach(x => x.disabled = true); box.style.pointerEvents = "none";
         const ok = await check(e.slug, g, o);
         b.classList.add(ok ? "right" : "wrong");
-        P.daily = { date: today(), ok }; if (ok) P.extra = (P.extra || 0) + 250; keep();
+        P.daily = { date: today(), ok }; if (ok) P.dailyWins = (P.dailyWins || 0) + 1; keep();
+        const goal = (window.ogSide && window.ogSide.reg) || 7, dw = P.dailyWins || 0;
+        if (ok && dw === goal && window.ogSideToast) setTimeout(() => window.ogSideToast("REGULAR BADGE EARNED"), 900);
         snd(ok ? "right" : "wrong", .6);
-        msg.textContent = ok ? "That’s right. +250 Juice." : "Not today. A new question drops tomorrow.";
+        msg.textContent = ok ? (dw < goal ? "That’s right. Daily Win " + dw + " of " + goal + " toward REGULAR." : "That’s right. " + dw + " Daily Wins.") : "Not today. A new question drops tomorrow.";
         const link = d.querySelector(".link"); link.textContent = "Back to the board";
         try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "daily/" + (ok ? "right" : "wrong"), title: "Daily question " + (ok ? "right" : "wrong"), event: true }); } catch (err) {}
         paintScore(true);
