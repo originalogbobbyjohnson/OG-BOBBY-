@@ -318,9 +318,9 @@ function passStop(k, scored) {
 
 /* what each rank pays out */
 const RANK_REWARDS = {
-  "Lyfer": { bongs: 5, line: "You made it out of Gunther status. FYL gang." },
-  "Gorilla": { bongs: 10, line: "Gorilla NEMS approved. The jungle knows your name." },
-  "Silverback": { bongs: 25, line: "All 9 episodes cleared. You run the whole Coney Island." }
+  "Lyfer": { bongs: 5, line: "Welcome to FYL gang." },
+  "Gorilla": { bongs: 10, line: "Gorilla NEMS approved." },
+  "Silverback": { bongs: 25, line: "You run all of Coney Island." }
 };
 function rankUpScreen(k, rank) {
   const r = RANK_REWARDS[rank], prev = RANKS.indexOf(rank) ? RANKS[RANKS.indexOf(rank) - 1] : "Gunther";
