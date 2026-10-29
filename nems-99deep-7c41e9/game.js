@@ -8,138 +8,141 @@
    the verse right before that stop. The first option is the right answer (shuffled on screen).
    An episode with no cuts yet is still being set up (its verse stops get marked by listening). */
 const EPISODES = [
+  /* First stop of every song lands right around 30 seconds (on the end of a lyric line).
+     Every question in a pool is about lines heard before that stop. */
   /* ---- Row 1: one stop each ---- */
-  { title: "Don't Ever Disrespect Me", id: "5JMt_oOQZBs", cuts: [56.0], qs: [[
+  { title: "Don't Ever Disrespect Me", id: "5JMt_oOQZBs", cuts: [30.8], qs: [[
       ["How does NEMS say to find out if he's really like that?", "Ask around the boroughs", "Google it", "Ask his barber"],
       ["What does NEMS hit 'em with across the head?", "A spiked bat", "A pillow", "A frying pan"],
       ["After the knockout, he tapped their pockets for what?", "The nightcap", "Bus fare", "The rent"],
-      ["His chain has him calling what Sesame Street character?", "Snuffleupagus", "Big Bird", "Cookie Monster"],
-      ["He walks around like the city is his because...", "It is", "He bought it", "He's the mayor"],
-      ["If you want smoke, he'll flame you with what?", "The fifth", "A lighter", "A birthday candle"]
+      ["If you want smoke, he'll flame you with what?", "The fifth", "A lighter", "A birthday candle"],
+      ["What has he got, so watch out?", "The shrapnel", "The flu", "The keys"],
+      ["What does he call you before he goes after your girl?", "A bozo", "A genius", "A legend"]
     ]] },
-  { title: "High Regards", id: "cyLGDa3HXLE", cuts: [55.4], qs: [[
+  { title: "High Regards", id: "cyLGDa3HXLE", cuts: [30.5], qs: [[
       ["Where he's from, people learn to swim with what?", "The sharks", "The dolphins", "The ducks"],
       ["Leave what open and killers will sit in your car?", "The whip door", "The sunroof", "The trunk"],
       ["Which Harlem park does he wheelie up to?", "Rucker Park", "Central Park", "Marcus Garvey Park"],
-      ["Whose daughter is he cool with?", "Rich Porter's", "Frank Lucas's", "Nicky Barnes's"],
-      ["How many shots did Dust take and still stand?", "22", "2", "50"],
-      ["Walking with holes in him, he's the what man?", "Swiss cheese", "Gingerbread", "Ice cream"]
+      ["The wheelie makes what sound?", "Skrrt skrrt", "Beep beep", "Vroom vroom"],
+      ["Put a stain up on your what?", "Shirt", "Sneakers", "Car seat"],
+      ["Who did he grow up with?", "The Fergs", "The Jacksons", "The Wayans"]
     ]] },
-  { title: "Unbelievable", id: "BdL17TM8a18", cuts: [45.5], qs: [[
+  { title: "Unbelievable", id: "BdL17TM8a18", cuts: [31.3], qs: [[
       ["His man is doing time with who?", "The lifers", "The rookies", "His cousins"],
       ["He's not part of what?", "This new era", "The old school", "The union"],
+      ["What do they say about what y'all do on those corners?", "It ain't righteous", "It's genius", "It's legal"],
       ["He spins off in something with what kind of doors?", "Foreign doors", "Barn doors", "Sliding doors"],
-      ["His ice looks like it's doing what?", "Crawling off", "Melting", "Dancing"],
-      ["Somebody looks a little like the what, so he's hauling off?", "Fed", "Mailman", "Landlord"],
-      ["His man says he's got a plug. NEMS says what?", "Bring him in", "Send him home", "Call me later"]
+      ["He's getting money. He ain't what?", "Falling off", "Slowing down", "Going home"],
+      ["His ice looks like it's doing what?", "Crawling off", "Melting", "Dancing"]
     ]] },
 
   /* ---- Row 2: two stops each ---- */
-  { title: "My Side", id: "X5cghDmzGyY", cuts: [76.0, 116.4], qs: [[
+  { title: "My Side", id: "X5cghDmzGyY", cuts: [30.7, 116.4], qs: [[
       ["Fully-auto in this what?", "Coupe", "Pickup truck", "Minivan"],
+      ["He's seen too much in life to ever be the same what?", "Me", "Kid", "Man"],
       ["He got his change up, but never let it what?", "Change him", "Slow him down", "Go to his head"],
-      ["Where are they every day, never hiding?", "Outside by the shop", "At the beach", "In the studio"],
-      ["How far from the rise do you come meet the guys?", "Two blocks", "Two miles", "Two towns"],
+      ["He can't let these suckers do what?", "Take him", "Beat him", "Find him"],
       ["If he tells you he loves you, that's on what?", "His life", "His chain", "His sneakers"]
     ], [
+      ["Where are they every day, never hiding?", "Outside by the shop", "At the beach", "In the studio"],
+      ["How far from the rise do you come meet the guys?", "Two blocks", "Two miles", "Two towns"],
       ["His brodie won't do music. He just wants to what?", "Slide", "Sing", "Sleep"],
       ["They pulled him out the game, but he what?", "Jumped back in", "Retired", "Moved to Florida"],
-      ["He needs his money on the front and the what?", "Backend", "Side", "Top"],
-      ["He says what he means and means what he what?", "Says", "Writes", "Sings"],
       ["Keep it a hundred and stick to your what?", "Word", "Block", "Diet"]
     ]] },
-  { title: "The Greatest", id: "bDegHmCY3q4", cuts: [78.2, 129.2], qs: [[
+  { title: "The Greatest", id: "bDegHmCY3q4", cuts: [44.1, 129.2], qs: [[
+      ["What's he gonna be?", "The greatest", "The richest", "The loudest"],
+      ["No matter the what?", "Journey", "Weather", "Money"],
+      ["Top of the what?", "Sky", "Charts", "Building"],
+      ["Who does he tell not to cry?", "Mama", "His girl", "The fans"],
+      ["Who does this one go out to?", "You", "The haters", "The label"]
+    ], [
       ["When nobody believed, who did he believe in?", "Himself", "His coach", "The label"],
-      ["Down to his last, he still won't ask for what?", "Help", "Directions", "A loan"],
       ["How does he walk in?", "Chest out", "Head down", "Backwards"],
       ["He's walking out the building with what?", "The championship belt", "A trophy", "A record deal"],
-      ["Some chase cheddar their whole life. He's chasing what?", "A legacy", "Fame", "The bus"]
-    ], [
+      ["Some chase cheddar their whole life. He's chasing what?", "A legacy", "Fame", "The bus"],
       ["What did he do on some nights to keep going?", "Pray", "Party", "Sleep in"],
-      ["Some left the block. What happened to the others?", "They decayed", "They got rich", "They moved south"],
       ["What would they have bet on him?", "Houses", "Cars", "Their chains"],
-      ["What did God put on him?", "The talent", "The weight", "The bill"],
-      ["Pitching in the street until he had what?", "Calluses", "A record deal", "A trophy"]
+      ["What did God put on him?", "The talent", "The weight", "The bill"]
     ]] },
-  { title: "2 Live & Die in NY", id: "J4MD9DHYw6A", cuts: [62.6, 135.6], qs: [[
+  { title: "2 Live & Die in NY", id: "J4MD9DHYw6A", cuts: [31.0, 135.6], qs: [[
+      ["Which producer gets shouted out at the start?", "Statik Selektah", "DJ Premier", "Scram Jones"],
+      ["Where does he say he's from at the start?", "Coney Island", "Harlem", "The Bronx"],
+      ["They're outside on the what?", "Regular", "Weekend", "Low"],
       ["What does he call New York?", "The city of dreams", "The concrete jungle", "The Big Apple"],
-      ["How many guns and clips?", "A hundred", "Ten", "A thousand"],
-      ["Out here, you're either blasting or what?", "Flossing", "Fasting", "Bossing"],
-      ["Everything moves quick, so they do what?", "Talk fast", "Walk slow", "Drive fast"],
-      ["Want his attention? Then talk what?", "Cash", "Sports", "Music"],
-      ["On the wrong block, you'd better what?", "Walk fast", "Run home", "Call a cab"]
+      ["What are they out here living?", "Their dreams", "Their best life", "Large"]
     ], [
+      ["How many guns and clips?", "A hundred", "Ten", "A thousand"],
+      ["Want his attention? Then talk what?", "Cash", "Sports", "Music"],
       ["Right after \"Bing Bong,\" he says he's the what of this?", "Face", "King", "Voice"],
       ["Which boroughs does he run down?", "Bronx, Manhattan, Queens and Staten", "Just Brooklyn", "Jersey and Long Island"],
-      ["Get washed and catch a nice what?", "Fade", "Wave", "Ride"],
       ["What sandwich does he order?", "A chopped cheese", "A bacon egg and cheese", "A meatball hero"],
       ["Why is it the best city in the world?", "The hustle never stops", "The pizza", "The parks"]
     ]] },
 
   /* ---- Row 3: three stops each ---- */
-  { title: "The Bar Exam (Remix)", id: "OT29Mahw3ms", cuts: [64.4, 131.2, 193.4], qs: [[
+  { title: "The Bar Exam (Remix)", id: "OT29Mahw3ms", cuts: [30.5, 131.2, 193.4], qs: [[
+      ["Where does the intro say they're from?", "Brooklyn and Harlem", "Queens and the Bronx", "Staten Island"],
+      ["Who didn't know what to do with Buckshot?", "Major labels", "His teachers", "The cops"],
       ["Who made Duck Down with Buckshot?", "Dru Ha", "Dr. Dre", "Diddy"],
-      ["What old-school ride does Buckshot have on him?", "A Porsche Cayenne", "A Range Rover", "A Cadillac"],
-      ["After the show, what might he have to catch?", "A tour", "A cab", "A train"],
-      ["Mess with Buckshot and you're up until when?", "The morning", "Midnight", "Noon"]
+      ["Buckshot brings his boys in with who?", "Boot Camp", "The Wu", "D-Block"],
+      ["What old-school ride does Buckshot have on him?", "A Porsche Cayenne", "A Range Rover", "A Cadillac"]
     ], [
+      ["After the show, what might he have to catch?", "A tour", "A cab", "A train"],
+      ["Mess with Buckshot and you're up until when?", "The morning", "Midnight", "Noon"],
       ["When NEMS writes, it feels like who?", "Big L", "Big Pun", "Big Daddy Kane"],
-      ["He's out until when?", "The moon's shining", "The sun comes up", "Lunchtime"],
       ["His ladder isn't for what?", "Roof climbing", "Painting", "Picking apples"],
-      ["He's just trying to make a cool what?", "Light mil'", "Hundred bucks", "Billion"],
       ["If you're a demon, he's Satan with what?", "The pitchfork", "A torch", "A halo"],
       ["Those aren't what kind of diamonds?", "Rolex", "Cartier", "Tiffany"]
     ], [
       ["The whole gang from CI might throw you off what?", "The Wonder Wheel", "The Cyclone", "The pier"],
+      ["What album might he be jamming in LA?", "The Chronic", "Illmatic", "Ready to Die"],
       ["His bars hit like who slamming on the Sonics?", "Shawn Kemp", "Gary Payton", "Kevin Durant"],
       ["Out in Brooklyn, he's the Puerto Rican who?", "Chris Wallace", "Big Pun", "Fat Joe"],
-      ["He doesn't drink or smoke. He stacks what?", "Crisp dollars", "Records", "Sneakers"],
-      ["Who sent the beat?", "Brown", "Premier", "Alchemist"],
-      ["What album might he be jamming in LA?", "The Chronic", "Illmatic", "Ready to Die"]
+      ["He doesn't drink or smoke. He stacks what?", "Crisp dollars", "Records", "Sneakers"]
     ]] },
-  { title: "Where You Know Me From", id: "xTWp-aeE794", cuts: [133.0, 208.0, 268.1], qs: [[
+  { title: "Where You Know Me From", id: "xTWp-aeE794", cuts: [31.3, 133.0, 268.1], qs: [[
+      ["How many shots? He only needs...", "One", "Ten", "A hundred"],
+      ["It's FYL until when?", "The casket drops", "The sun comes up", "The party's over"],
+      ["What's he been doing out here?", "Grinding", "Sleeping", "Partying"],
+      ["Whose turn is it?", "His", "Yours", "Nobody's"]
+    ], [
       ["What do guys fresh off parole eat for their first meal?", "Ramen noodles", "Steak", "Pizza"],
       ["Where's NEMS sipping Zimas with a Cuban cigar?", "Palm Beach", "Miami", "Las Vegas"],
       ["Where's the Coney Island legend's statue?", "In front of Nathan's", "On the boardwalk", "By the Cyclone"],
-      ["It's FYL until when?", "The casket drops", "The sun comes up", "The party's over"],
       ["What car is the hater sitting in?", "A Wraith", "A Bentley", "A Honda"],
       ["Who did NEMS tell to \"get in your place\"?", "Gunther", "Gary", "Gus"]
     ], [
-      ["What shoes did he hop out rocking?", "Suede Wally Clarks", "Jordans", "Timbs"],
       ["What car had them sick when they saw it park?", "A Masi", "A Lambo", "A minivan"],
+      ["What shoes did he hop out rocking?", "Suede Wally Clarks", "Jordans", "Timbs"],
       ["He's like the shooting guard on what?", "The top team", "The bench", "The JV squad"],
       ["He's got the rap game in what hold?", "A figure four", "A headlock", "A full nelson"],
-      ["How many of the year's top ten verses does he claim?", "Six or more", "One", "All ten"]
-    ], [
-      ["What kind of money does NEMS have?", "\"NEMS, you getting fat\" money", "Lunch money", "Monopoly money"],
-      ["Where was he when his man asked why he's not signed?", "A barbecue", "A wedding", "The barbershop"],
       ["What does NEMS say he doesn't do?", "Smoke or drink", "Sleep", "Eat"],
-      ["What did he build his whole thing off of?", "Skills", "Politics", "Luck"],
-      ["Lonely at the top? He's always been a what?", "Loner", "Leader", "Lover"]
+      ["Where was he when his man asked why he's not signed?", "A barbecue", "A wedding", "The barbershop"],
+      ["What did he build his whole thing off of?", "Skills", "Politics", "Luck"]
     ]] },
-  { title: "Bing Bong (Remix)", id: "_3pF6_wqy7s", cuts: [58.9, 164.0, 223.6], qs: [[
+  { title: "Bing Bong (Remix)", id: "_3pF6_wqy7s", cuts: [31.8, 164.0, 223.6], qs: [[
+      ["He's with the kings of where?", "New York", "LA", "Atlanta"],
       ["In the first verse, who's he like \"with the raw\"?", "Big Daddy Kane", "Kanye West", "Big Pun"],
-      ["Who \"designed\" him in the first verse?", "Dapper Dan", "Versace", "Ralph Lauren"],
-      ["He's been fresh since the class of what year?", "'93", "'03", "'83"],
-      ["How much is on the watch?", "Four million", "Forty grand", "Four dollars"],
-      ["How big is the mansion?", "Twenty thousand square feet", "Two thousand square feet", "Two hundred square feet"],
-      ["Who does the first verse say \"knows\"?", "The whole Coney Island", "The whole Bronx", "The whole internet"],
-      ["Surfing in what makes it hard to breathe?", "Maybachs", "Minivans", "Taxis"],
-      ["Where do they post it for the gods to see?", "The 'Gram", "The fridge", "The bulletin board"]
+      ["Birthed out the water, started charging what?", "Fees", "Phones", "Rent"],
+      ["Surfing in what makes it hard to breathe?", "Maybachs", "Minivans", "Taxis"]
     ], [
+      ["Who \"designed\" him?", "Dapper Dan", "Versace", "Ralph Lauren"],
+      ["How much is on the watch?", "Four million", "Forty grand", "Four dollars"],
+      ["Who knows, according to the verse?", "The whole Coney Island", "The whole Bronx", "The whole internet"],
+      ["He used to be gorilla, but now he's what?", "King Kong", "Godzilla", "Curious George"],
+      ["Who would tell you he's the one?", "Biggie", "Jay-Z", "Diddy"],
       ["Where did NEMS bring Coney Island?", "The White House", "Times Square", "The moon"],
       ["How many on TikTok?", "A billion", "A million", "A thousand"],
-      ["Who would tell you he's the one?", "Biggie", "Jay-Z", "Diddy"],
-      ["He used to be gorilla, but now he's what?", "King Kong", "Godzilla", "Curious George"],
-      ["Bing-bong at your front door, then what?", "Ding-dong", "Knock-knock", "Ring-ring"],
       ["Mess with a Bored Ape and you go where?", "The yacht club", "The zoo", "The bank"]
     ], [
       ["He slaps them with paddles like he's playing what?", "Ping-pong", "Tennis", "Baseball"],
+      ["Everything about him is real right. Y'all been what?", "Wrong", "Late", "Lost"],
       ["Which DJ gets a shout-out?", "Mister Cee", "Funkmaster Flex", "DJ Clue"],
-      ["What does he put in anybody's face?", "His foot", "A pie", "A camera"],
-      ["Everything about him is real right. Y'all been what?", "Wrong", "Late", "Lost"]
+      ["What does he put in anybody's face?", "His foot", "A pie", "A camera"]
     ]] }
 ];
+
 
 /* stops per row: 1, 2, 3 */
 const STOPS = [1, 1, 1, 2, 2, 2, 3, 3, 3];
@@ -262,6 +265,7 @@ let atStop = false;
 function shuffle(a) { return a.map(v => [Math.random(), v]).sort((x, y) => x[0] - y[0]).map(x => x[1]); }
 
 function renderCard() {
+  try { renderMeterBar(player && player.getCurrentTime ? player.getCurrentTime() : null); } catch (e) {}
   const body = $("qBody");
   if (current < 0) { $("qLevel").textContent = ""; $("qNum").textContent = ""; body.innerHTML = '<div class="listen">Tap the record to start Episode 1.</div>'; return; }
   const e = EPISODES[current], g = gatesOf(current), n = STOPS[current];
@@ -417,9 +421,28 @@ window.onYouTubeIframeAPIReady = () => { ytReady = true; if (pending != null) { 
 (function () { const t = document.createElement("script"); t.src = "https://www.youtube.com/iframe_api"; document.head.append(t); })();
 
 /* watch the clock: when the song reaches the next verse stop, pause and ask */
+/* the stop meter under the video: fills up as the song gets to the next verse stop */
+function renderMeterBar(t) {
+  const fill = $("smFill"), lbl = $("smLbl");
+  if (current < 0) { fill.style.width = "0%"; lbl.textContent = ""; $("stopMeter").classList.remove("hot", "done"); return; }
+  const e = EPISODES[current], g = gatesOf(current), n = STOPS[current];
+  $("stopMeter").classList.toggle("done", isCleared(current));
+  if (isCleared(current)) { fill.style.width = "100%"; lbl.textContent = "EPISODE CLEARED · FULL SONG UNLOCKED"; return; }
+  const cut = e.cuts[g], from = g ? e.cuts[g - 1] : 0;
+  if (cut == null) { fill.style.width = "0%"; lbl.textContent = ""; return; }
+  if (atStop) { fill.style.width = "100%"; lbl.textContent = "STOP " + (g + 1) + " OF " + n + " · ANSWER TO KEEP IT GOING"; $("stopMeter").classList.add("hot"); return; }
+  t = t == null ? from : t;
+  const pct = Math.max(0, Math.min(100, 100 * (t - from) / (cut - from)));
+  fill.style.width = pct + "%";
+  const left = Math.max(0, Math.ceil(cut - t));
+  $("stopMeter").classList.toggle("hot", left <= 5);
+  lbl.textContent = "STOP " + (g + 1) + " OF " + n + " IN " + fmt(left) + "  ·  " + fmt(Math.max(0, t)) + " / " + fmt(cut);
+}
+
 function startWatch() {
   clearInterval(watch);
   watch = setInterval(() => {
+    if (player && player.getCurrentTime && current > -1) { try { renderMeterBar(player.getCurrentTime()); } catch (e) {} }
     if (!player || !player.getCurrentTime || current < 0 || atStop) return;
     const e = EPISODES[current];
     if (!ready(e) || isCleared(current)) return;

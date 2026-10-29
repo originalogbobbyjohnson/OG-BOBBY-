@@ -294,6 +294,14 @@ a { color: var(--fg); }
 .tr-big { width: 130px; margin: 0 auto; } .tr-big svg { width: 100%; filter: grayscale(1) brightness(.4); } .tr-big.got svg { filter: drop-shadow(0 0 14px rgba(224,165,44,.8)); }
 .trophies { gap: 7px; }
 .trow { padding: 6px 10px; }
+/* stop meter */
+.stopmeter { display: grid; gap: 4px; }
+.sm-bar { height: 10px; border-radius: 99px; background: var(--panel2); border: 1.5px solid var(--line); overflow: hidden; }
+.sm-bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--cyan), var(--pink)); border-radius: 99px; transition: width .2s linear; }
+.stopmeter.hot .sm-bar i { background: var(--red); }
+.stopmeter.hot .sm-bar { border-color: var(--red); animation: pulse 1s ease-in-out infinite; }
+.stopmeter.done .sm-bar i { background: var(--green); }
+.sm-lbl { font-weight: 700; font-size: .72rem; letter-spacing: .08em; text-align: center; font-variant-numeric: tabular-nums; min-height: 1.1em; white-space: pre; }
 </style>
 </head>
 <body>
@@ -352,6 +360,7 @@ a { color: var(--fg); }
       <section class="panel" id="pPlay" aria-label="Now playing">
         <div class="ep"><span class="k" id="epNum">EPISODE 1</span><span class="n" id="epName">Bing Bong</span></div>
         <div class="screen"><div id="yt"></div></div>
+        <div class="stopmeter" id="stopMeter"><div class="sm-bar"><i id="smFill"></i></div><div class="sm-lbl" id="smLbl"></div></div>
         <div class="qcard"><div class="qhead"><span id="qLevel"></span><span id="qNum"></span></div><div id="qBody"></div></div>
         <div class="doors" id="doors">
           <div class="door l"><span class="door-tag">NEMS</span><button class="door-btn" id="doorPlay" type="button">PRESS PLAY</button></div>
@@ -423,6 +432,6 @@ a { color: var(--fg); }
 
 <script src="scenes.js?v=3"></script>
 <script src="sfx.js?v=1"></script>
-<script src="game.js?v=9"></script>
+<script src="game.js?v=10"></script>
 </body>
 </html>
