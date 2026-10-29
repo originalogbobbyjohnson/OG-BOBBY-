@@ -316,7 +316,46 @@ function passStop(k, scored) {
   } else if (player && ready(EPISODES[k])) { player.playVideo(); }
 }
 
+/* what each rank pays out */
+const RANK_REWARDS = {
+  "Lyfer": { bongs: 5, line: "You made it out of Gunther status. FYL gang." },
+  "Gorilla": { bongs: 10, line: "Gorilla NEMS approved. The jungle knows your name." },
+  "Silverback": { bongs: 25, line: "All 9 episodes cleared. You run the whole Coney Island." }
+};
+function rankUpScreen(k, rank) {
+  const r = RANK_REWARDS[rank], prev = RANKS.indexOf(rank) ? RANKS[RANKS.indexOf(rank) - 1] : "Gunther";
+  state.bongs += r.bongs; save(); renderAll();
+  SFX.cleared(); setTimeout(() => SFX.stamp(), 700);
+  const finale = allDone(), next = EPISODES[k + 1];
+  showModal(
+    '<div class="k">ROW ' + (Math.floor(k / 3) + 1) + ' CLEARED · RANK UP</div>' +
+    '<div class="rk-from">NO MORE ' + prev.toUpperCase() + '</div>' +
+    '<div class="rk-name">' + rank.toUpperCase() + '</div>' +
+    '<p style="margin:0">' + r.line + '</p>' +
+    '<div class="rewards"><div class="rw-h">REWARDS UNLOCKED</div>' +
+      '<div class="rw"><b>+' + r.bongs + '</b> Bing Bongs</div>' +
+      '<div class="rw"><b>' + rank + '</b> rank card to share</div>' +
+      '<div class="rw"><b>+' + JUICE_EACH.toLocaleString() + '</b> Juice · ' + starHTML(state.stars[k]) + '</div>' +
+      (finale ? '<div class="rw"><b>99 Challenge</b> unlocked: beat it to become King Kong</div>'
+              : '<div class="rw">Next row: songs stop <b>' + (STOPS[k + 1] === 2 ? "twice" : "three times") + '</b></div>') +
+    '</div>' +
+    '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY EPISODE " + (k + 2)) + '</button>' +
+    '<button class="next" id="mShare" type="button">Share my ' + rank + ' card</button></div>');
+  rankConfetti();
+  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else introEpisode(k + 1); };
+  $("mShare").onclick = () => { closeModal(); $("shareBtn").click(); };
+}
+function rankConfetti() {
+  const colors = ["#ff3d7f", "#38e8ff", "#fccc0a", "#5ee27a", "#e0a52c", "#fff"];
+  for (let i = 0; i < 60; i++) {
+    const d = document.createElement("i"); d.className = "conf";
+    d.style.cssText = "position:fixed;z-index:61;left:" + Math.random() * 100 + "%;background:" + colors[i % colors.length] + ";animation-duration:" + (1.8 + Math.random() * 1.8) + "s;animation-delay:" + Math.random() * .5 + "s";
+    document.body.append(d); setTimeout(() => d.remove(), 4200);
+  }
+}
+
 function episodeCleared(k, rankUp) {
+  if (rankUp) return rankUpScreen(k, rankUp);
   SFX.cleared();
   const finale = allDone();
   const next = EPISODES[k + 1];
@@ -324,10 +363,11 @@ function episodeCleared(k, rankUp) {
     '<div class="k">' + (k === 8 ? "BOSS EPISODE BEATEN" : "ROW " + (Math.floor(k / 3) + 1) + " · " + RANKS[Math.floor(k / 3)].toUpperCase()) + '</div>' +
     '<h3>EPISODE ' + (k + 1) + ' CLEARED</h3>' +
     '<div class="stars">' + starHTML(state.stars[k]) + '</div>' +
+    '<div class="rw-line">+' + JUICE_EACH.toLocaleString() + ' JUICE · ' + (2 - (k % 3)) + ' more to rank up to ' + RANKS[Math.floor(k / 3)].toUpperCase() + '</div>' +
     '<p style="margin:0">' + (finale ? "You're a Silverback now. Beat the 99 Challenge to become King Kong." : next ? "Episode " + (k + 2) + " unlocked: <b>" + esc(next.title) + "</b>" + (STOPS[k + 1] > STOPS[k] ? "<br>Heads up: songs in this row stop " + (STOPS[k + 1] === 2 ? "twice" : "three times") + "." : "") : "") + '</p>' +
     '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY EPISODE " + (k + 2)) + '</button>' +
     (ready(EPISODES[k]) && !finale ? '<button class="next" id="mStay" type="button">Keep listening to this one</button>' : '') + '</div>',
-    () => { if (rankUp) setTimeout(() => promote(rankUp), 250); });
+    null);
   $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else introEpisode(k + 1); };
   if ($("mStay")) $("mStay").onclick = () => { closeModal(); if (player) player.playVideo(); };
 }

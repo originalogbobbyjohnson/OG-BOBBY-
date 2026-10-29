@@ -255,6 +255,15 @@ a { color: var(--fg); }
 .ep-stops i { width: 34px; height: 34px; border-radius: 8px; border: 2px solid var(--red); display: grid; place-items: center; font-style: normal; font-family: var(--display); }
 .ep-tip { margin: 0; font-size: .95rem; }
 @keyframes epIn { from { transform: scale(2.2); opacity: 0; } }
+/* rank-up screen */
+.rk-from { font-weight: 700; letter-spacing: .2em; font-size: .78rem; text-decoration: line-through; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+.rk-name { font-family: var(--display); font-size: clamp(2.8rem, 14vw, 3.8rem); line-height: 1; letter-spacing: .05em; color: var(--gold); text-shadow: 0 0 22px rgba(224,165,44,.6), 4px 4px 0 #000; animation: epIn .7s cubic-bezier(.2,1.3,.4,1) both; }
+.rewards { display: grid; gap: 6px; text-align: left; background: var(--panel2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.rw-h { font-weight: 700; letter-spacing: .18em; font-size: .7rem; color: var(--green); text-align: center; }
+.rw { font-weight: 600; }
+.rw b { color: var(--gold); }
+.rw .stars, .rw i { font-size: 1rem; }
+.rw-line { font-weight: 700; font-size: .85rem; letter-spacing: .06em; color: var(--green); }
 </style>
 </head>
 <body>
@@ -381,6 +390,6 @@ a { color: var(--fg); }
 
 <script src="scenes.js?v=3"></script>
 <script src="sfx.js?v=1"></script>
-<script src="game.js?v=5"></script>
+<script src="game.js?v=6"></script>
 </body>
 </html>
