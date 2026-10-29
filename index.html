@@ -5234,5 +5234,42 @@ body.cab-ep .stage-wrap > .cab-sky, .stage-wrap[data-sky-on] > .cab-sky { displa
   cover.append(box);
 })();
 </script>
+<style>
+/* ---------- Song pictures: each episode's picture fills the cabinet doors (splits down the middle as they open) and sits faintly behind the song card ---------- */
+#player { isolation: isolate; }
+#player .ep-art { position: absolute; inset: 0; z-index: -1; border-radius: inherit; overflow: hidden; pointer-events: none; }
+#player .ep-art i { position: absolute; inset: 0; background: var(--ep-art) center 30% / cover no-repeat; opacity: .55; transition: opacity .6s; }
+#player .ep-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,13,18,.35) 0%, rgba(11,13,18,.78) 42%, rgba(11,13,18,.94) 100%); }
+.cab-doors .door { background-image: var(--ep-art), linear-gradient(180deg, #1b1f29 0%, #10131a 55%, #0b0d12 100%); background-size: 200% 100%, cover; background-repeat: no-repeat; }
+.cab-doors .door.l { background-position: left center, center; }
+.cab-doors .door.r { background-position: right center, center; }
+.cab-doors .door::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,.55) 100%); pointer-events: none; }
+.cab-doors .door img, .cab-doors .door i { z-index: 1; }
+.cab-doors .hint { text-shadow: 0 2px 6px #000; bottom: 7%; }
+.cab-doors .door img { top: 74%; width: 120%; }
+.cab-doors .door.l img { left: 40%; } .cab-doors .door.r img { right: 40%; }
+</style>
+<script>
+/* Which picture goes with which song. Swap any file in art/songs/ to change a picture. */
+(function () {
+  const ART = ["art/songs/s1-01.jpg", "art/songs/s1-02.jpg", "art/songs/s1-03.jpg", "art/songs/s1-04.jpg", "art/songs/s1-05.jpg",
+               "art/songs/s1-06.jpg", "art/songs/s1-07.jpg", "art/songs/s1-08.jpg", "art/songs/s1-09.jpg"];
+  const player = document.getElementById("player"); if (!player) return;
+  const back = document.createElement("div"); back.className = "ep-art"; back.setAttribute("aria-hidden", "true"); back.innerHTML = "<i></i>";
+  player.prepend(back);
+  ART.forEach(src => { const im = new Image(); im.src = src; });   // load them ahead so the doors never show blank
+  let shown = null;
+  function paint() {
+    let k = 0; try { k = idx; } catch (e) {}
+    const src = ART[k] || ART[0];
+    if (src === shown) return; shown = src;
+    player.style.setProperty("--ep-art", 'url("' + src + '")');
+  }
+  paint();
+  let t = 0;
+  new MutationObserver(() => { cancelAnimationFrame(t); t = requestAnimationFrame(paint); }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["data-v", "class"] });
+  setInterval(paint, 700);
+})();
+</script>
 </body>
 </html>
