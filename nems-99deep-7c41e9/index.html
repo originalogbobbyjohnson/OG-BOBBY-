@@ -124,7 +124,7 @@ a { color: var(--fg); }
 .empty { border: 2px dashed var(--line); border-radius: 10px; padding: 12px; text-align: center; }
 .next { background: transparent; border: 2px solid var(--red); border-radius: 9px; padding: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .doors { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; z-index: 3; pointer-events: none; }
-.door { background: repeating-linear-gradient(90deg, #c91f2e 0 22px, #f4efe6 22px 44px); border: 3px solid #000; display: grid; place-items: center; overflow: hidden; transition: transform .8s cubic-bezier(.6,0,.2,1); pointer-events: auto; position: relative; }
+.door { background: repeating-linear-gradient(90deg, #c91f2e 0 22px, #f4efe6 22px 44px); border: 3px solid #000; display: grid; place-items: center; overflow: hidden; transition: transform 2.8s cubic-bezier(.45,0,.25,1) .4s; pointer-events: auto; position: relative; }
 .door.l { border-right-width: 1.5px; } .door.r { border-left-width: 1.5px; }
 .doors.open .door.l { transform: translateX(-102%); } .doors.open .door.r { transform: translateX(102%); }
 .doors.open { pointer-events: none; } .doors.open .door { pointer-events: none; }
