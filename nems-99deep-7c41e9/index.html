@@ -631,15 +631,16 @@ function renderTrophies() {
   $("tSecrets").textContent = Object.keys(state.secrets).length + " / 3";
   $("tChal").textContent = state.chalBest != null ? state.chalBest + " right" : "—";
 }
-$("shareBtn").onclick = () => {
+$("shareBtn").onclick = async () => {
+  try { await Promise.all([document.fonts.load('120px "Sedgwick Ave Display"'), document.fonts.load("120px Anton")]); } catch (e) {}
   const c = document.createElement("canvas"); c.width = 1080; c.height = 1350; const g = c.getContext("2d");
   const grd = g.createRadialGradient(540, 300, 50, 540, 500, 1100); grd.addColorStop(0, "#3a1066"); grd.addColorStop(1, "#07070d");
   g.fillStyle = grd; g.fillRect(0, 0, 1080, 1350);
   g.strokeStyle = "#d62828"; g.lineWidth = 16; g.strokeRect(40, 40, 1000, 1270);
   g.textAlign = "center"; g.lineJoin = "round";
-  const tagText = (t, y, size, color, rot) => { g.save(); g.translate(540, y); g.rotate(rot); g.font = size + 'px "Sedgwick Ave Display", cursive'; g.lineWidth = size / 8; g.strokeStyle = "#000"; g.strokeText(t, 0, 0); g.fillStyle = color; g.fillText(t, 0, 0); g.restore(); };
-  tagText("NEMS", 300, 230, "#38e8ff", -0.06);
-  tagText("BING BONG", 430, 90, "#ff3d7f", -0.04);
+  const tagText = (t, y, size, color, rot) => { g.save(); g.translate(540, y); g.rotate(rot); g.font = size + 'px "Sedgwick Ave Display", cursive'; g.lineWidth = Math.max(6, size / 16); g.strokeStyle = "#000"; g.strokeText(t, 0, 0); g.fillStyle = color; g.fillText(t, 0, 0); g.restore(); };
+  tagText("NEMS", 300, 200, "#38e8ff", -0.06);
+  tagText("BING BONG", 440, 84, "#ff3d7f", -0.04);
   g.fillStyle = "#fff"; g.font = '64px Anton, Impact, sans-serif'; g.fillText("I'M RANKED", 540, 610);
   g.fillStyle = "#e0a52c"; g.font = '150px Anton, Impact, sans-serif'; g.fillText(rankName().toUpperCase(), 540, 780);
   g.fillStyle = "#fff"; g.font = '54px Barlow, sans-serif'; g.fillText(state.juice.toLocaleString() + " Juice · " + levelsDone() + " of 9 episodes", 540, 880);
