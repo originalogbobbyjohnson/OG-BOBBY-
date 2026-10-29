@@ -100,7 +100,7 @@ a { color: var(--fg); }
 .stats b { font-family: var(--display); font-weight: 400; font-size: 1.25rem; }
 .stats .juice b { color: var(--green); }
 .deck { display: grid; place-items: center; gap: 6px; flex: 1; min-height: 0; }
-.record { width: min(52vw, 30vh, 210px); aspect-ratio: 1; border-radius: 50%; border: 0; padding: 0; position: relative;
+.record { width: min(46vw, 24vh, 210px); aspect-ratio: 1; border-radius: 50%; border: 0; padding: 0; position: relative;
   background: repeating-radial-gradient(circle, #0d0d0f 0 2px, #1d1d22 2px 4px); box-shadow: 0 0 0 3px #000, 0 0 0 6px var(--red), 0 10px 26px rgba(0,0,0,.7); display: grid; place-items: center; }
 .record .label { width: 40%; aspect-ratio: 1; border-radius: 50%; background: var(--red); display: grid; place-items: center; position: relative; }
 .record .label .lt { position: absolute; top: 12%; font-family: var(--tag); font-size: .78rem; color: #fff; -webkit-text-stroke: .5px #000; }
@@ -175,6 +175,69 @@ a { color: var(--fg); }
 .toast.on { opacity: 1; transform: translateX(-50%) translateY(0); }
 @media (max-height: 640px) { .nems { font-size: 2rem; } .tags { font-size: 1.05rem; } .meter { gap: 6px; } .lv { font-size: .85rem; } .qtext { font-size: .95rem; } .opt { padding: 7px 10px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* board extras */
+.extras { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.xbtn { border: 2px solid var(--red); background: var(--panel2); border-radius: 10px; padding: 8px 6px; font-family: var(--display); letter-spacing: .08em; font-size: .9rem; line-height: 1.1; }
+.xbtn small { display: block; font-family: var(--body); font-weight: 700; letter-spacing: .02em; font-size: .68rem; text-transform: none; }
+.xbtn.ready { border-color: var(--green); animation: pulse 1.6s ease-in-out infinite; }
+.xbtn.gold { border-color: var(--gold); color: var(--gold); }
+.streak { text-align: center; font-weight: 700; font-size: .8rem; letter-spacing: .08em; min-height: 1.1em; }
+.streak b { color: var(--pink); }
+.qcard.boss { border: 2px solid var(--red); animation: pulse 1.4s ease-in-out infinite; }
+.boss-tag { color: var(--fg); background: var(--red); padding: 1px 6px; border-radius: 4px; }
+
+/* trophy case */
+.trophies { display: grid; gap: 8px; flex: 1; min-height: 0; align-content: start; }
+.tgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.tcell { background: var(--panel2); border-radius: 9px; padding: 6px; text-align: center; font-size: .72rem; font-weight: 700; }
+.tcell .st { font-size: .95rem; letter-spacing: 1px; color: var(--line); }
+.tcell .st i { font-style: normal; color: var(--gold); }
+.trow { display: flex; justify-content: space-between; background: var(--panel2); border-radius: 9px; padding: 8px 10px; font-weight: 700; font-size: .85rem; }
+.trow b { font-family: var(--display); font-weight: 400; letter-spacing: .04em; }
+.share-btn { background: var(--red); border: 0; border-radius: 10px; padding: 11px; font-family: var(--display); letter-spacing: .1em; font-size: 1rem; box-shadow: 0 3px 0 #000; }
+
+/* modal (episode cleared, daily, welcome back, share card) */
+.modal { position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.7); display: grid; place-items: center; padding: 20px max(16px, env(safe-area-inset-right, 0px)) 20px max(16px, env(safe-area-inset-left, 0px)); }
+.mcard { width: min(100%, 380px); max-height: 100%; overflow: auto; background: var(--panel); border: 3px solid var(--red); border-radius: 18px; padding: 18px 16px 16px; display: grid; gap: 12px; text-align: center; position: relative; animation: pop .35s cubic-bezier(.2,1.4,.4,1); }
+@keyframes pop { from { transform: scale(.7); opacity: 0; } }
+.mcard .x { position: absolute; top: 8px; right: 8px; background: none; border: 2px solid var(--line); border-radius: 50%; width: 32px; height: 32px; font-weight: 700; }
+.mcard h3 { margin: 0; font-family: var(--display); font-size: 1.7rem; letter-spacing: .05em; line-height: 1.05; }
+.mcard .k { font-size: .72rem; font-weight: 700; letter-spacing: .18em; color: var(--pink); }
+.stars { font-size: 2.4rem; letter-spacing: 6px; color: var(--line); line-height: 1; }
+.stars i { font-style: normal; color: var(--gold); display: inline-block; animation: starIn .5s both; }
+.stars i:nth-child(2) { animation-delay: .25s; } .stars i:nth-child(3) { animation-delay: .5s; }
+@keyframes starIn { from { transform: scale(0) rotate(-90deg); } }
+.mcard .qtext { text-align: left; }
+.mcard img { width: 100%; border-radius: 12px; border: 2px solid #000; }
+
+/* rank-up badge */
+.promo { position: fixed; left: 50%; top: 18%; transform: translateX(-50%) scale(.6); opacity: 0; z-index: 70; background: #000; border: 3px solid var(--gold); border-radius: 18px; padding: 16px 26px; text-align: center; transition: .35s cubic-bezier(.2,1.4,.4,1); }
+.promo.on { opacity: 1; transform: translateX(-50%) scale(1); }
+.promo .pk { font-weight: 700; letter-spacing: .3em; font-size: .75rem; color: var(--gold); }
+.promo .pn { font-family: var(--display); font-size: 2rem; letter-spacing: .06em; }
+.promo .ps { font-family: var(--tag); color: var(--cyan); font-size: 1.1rem; }
+.promo .x { position: absolute; top: 4px; right: 6px; background: none; border: 0; font-weight: 700; font-size: 1rem; }
+
+/* 99 challenge */
+.chal { position: fixed; inset: 0; z-index: 65; background: radial-gradient(100% 70% at 50% 30%, #3a1066 0%, #07070d 70%); display: grid; place-items: center; overflow: hidden;
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.chal-in { width: min(100%, 420px); display: grid; gap: 14px; text-align: center; position: relative; z-index: 2; }
+.big99 { display: flex; justify-content: center; gap: 4px; animation: zoom99 1.4s cubic-bezier(.2,1.2,.3,1) both; }
+.big99 svg.nine { width: 90px; height: 126px; filter: drop-shadow(0 0 18px rgba(214,40,40,.8)); }
+@keyframes zoom99 { 0% { transform: scale(6) rotate(-12deg); opacity: 0; } 60% { opacity: 1; } 100% { transform: scale(1) rotate(0); } }
+.chal h2 { margin: 0; font-family: var(--display); font-size: 2.2rem; letter-spacing: .08em; }
+.chal p { margin: 0; color: var(--soft); }
+.chal .qcard { text-align: left; }
+.chal-bar { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.chal-bar i { display: block; height: 100%; background: var(--green); transition: width .3s; }
+.flying { position: absolute; font-family: var(--display); color: var(--red); opacity: .55; animation: fly 2.4s linear forwards; z-index: 1; pointer-events: none; text-shadow: 2px 2px 0 #000; }
+@keyframes fly { from { transform: translate(-50%, -50%) scale(.2); opacity: .9; } to { transform: translate(var(--dx), var(--dy)) scale(2.6); opacity: 0; } }
+.conf { position: absolute; width: 8px; height: 14px; top: -20px; z-index: 1; animation: fall linear forwards; pointer-events: none; }
+@keyframes fall { to { transform: translateY(110vh) rotate(720deg); } }
+.toggle { display: flex; justify-content: space-between; align-items: center; background: var(--panel2); border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 12px; font-weight: 700; }
+.toggle button { border: 2px solid var(--green); background: none; border-radius: 999px; padding: 4px 12px; font-weight: 700; }
+.toggle button.off { border-color: var(--red); }
 </style>
 </head>
 <body>
@@ -209,7 +272,7 @@ a { color: var(--fg); }
     <svg class="coaster" id="coaster" viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true"></svg>
     <div class="demo">PITCH DEMO · PRIVATE</div>
     <div class="top-row"><span class="nems">NEMS</span><span class="mini99" id="mini99"></span></div>
-    <div class="tags"><span class="t1">BING BONG</span><span class="t3">GORILLA NEMS</span><span class="t2">FYL</span></div>
+    <div class="tags"><span class="t1" id="sec0">BING BONG</span><span class="t3" id="sec1">GORILLA NEMS</span><span class="t2" id="sec2">FYL</span></div>
   </header>
 
   <div class="viewport" id="viewport">
@@ -218,6 +281,11 @@ a { color: var(--fg); }
         <div class="meter" id="meter"></div>
         <div class="top-rank" id="topRank">99 DEEP</div>
         <div class="stats"><span>Questions <b id="qCount">0</b> / 99</span><span class="juice">Juice <b id="juice">0</b></span></div>
+        <div class="extras">
+          <button class="xbtn" id="dailyBtn" type="button">DAILY QUESTION<small id="dailySub">1 free Bing Bong a day</small></button>
+          <button class="xbtn" id="chalBtn" type="button">99 CHALLENGE<small id="chalSub">Clear all 9 to unlock</small></button>
+        </div>
+        <div class="streak" id="streakLine"></div>
         <div class="deck">
           <button class="record" id="record" type="button" aria-label="Play"><span class="label"><span class="lt">NEMS</span><svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg></span></button>
           <div class="hint" id="hint">Tap the record to play</div>
@@ -238,12 +306,25 @@ a { color: var(--fg); }
         <h2 class="ptitle">THE 9 SONGS</h2>
         <ul class="songs" id="songs"></ul>
       </section>
+
+      <section class="panel" id="pTrophy" aria-label="Trophy case">
+        <h2 class="ptitle">TROPHY CASE</h2>
+        <div class="trophies">
+          <div class="tgrid" id="starGrid"></div>
+          <div class="trow"><span>Rank</span><b id="tRank">—</b></div>
+          <div class="trow"><span>Bing Bongs</span><b id="tBongs">0</b></div>
+          <div class="trow"><span>Best hot streak</span><b id="tStreak">0</b></div>
+          <div class="trow"><span>Secret spots found</span><b id="tSecrets">0 / 3</b></div>
+          <div class="trow"><span>99 Challenge best</span><b id="tChal">—</b></div>
+          <button class="share-btn" id="shareBtn" type="button">SHARE MY RANK</button>
+        </div>
+      </section>
     </div>
   </div>
 
   <nav class="pager">
     <button class="arrow" id="prev" type="button" aria-label="Previous screen">‹</button>
-    <div class="tabs" id="tabs"><button class="tab on" type="button" data-i="0">BOARD</button><button class="tab" type="button" data-i="1">PLAY</button><button class="tab" type="button" data-i="2">SONGS</button></div>
+    <div class="tabs" id="tabs"><button class="tab on" type="button" data-i="0">BOARD</button><button class="tab" type="button" data-i="1">PLAY</button><button class="tab" type="button" data-i="2">SONGS</button><button class="tab" type="button" data-i="3">TROPHIES</button></div>
     <button class="arrow" id="next" type="button" aria-label="Next screen">›</button>
   </nav>
 
@@ -259,15 +340,21 @@ a { color: var(--fg); }
 <div class="sheet" id="menu" role="dialog" aria-label="Menu" hidden>
   <h3>NEMS <button class="x" id="menuX" type="button" aria-label="Close menu">✕</button></h3>
   <div class="links" id="menuLinks"></div>
+  <div class="toggle"><span>Game sounds</span><button type="button" id="soundBtn">ON</button></div>
   <div class="links">
+    <button type="button" id="chalDemo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21l1.5-7L2 9.3l7-.8z"/></svg>Preview the 99 Challenge<small style="margin-left:auto">pitch demo</small></button>
     <button type="button" id="replayHow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 17h-2v-2h2zm2.1-7.7-.9.9c-.7.7-1.2 1.3-1.2 2.8h-2v-.5c0-1.1.4-2.1 1.2-2.8l1.2-1.3c.4-.4.6-.9.6-1.4a2 2 0 0 0-4 0H8a4 4 0 0 1 8 0c0 .9-.4 1.7-.9 2.3z"/></svg>How to play</button>
   </div>
   <p class="about">Listen to the songs, answer what you heard, unlock the next song. 9 songs, 9 levels, 99 questions.</p>
 </div>
 
 <div class="toast" id="toast" role="status"></div>
+<div class="modal" id="modal" hidden><div class="mcard" id="mcard"></div></div>
+<div class="promo" id="promo" role="status"><button class="x" type="button" id="promoX" aria-label="Close">✕</button><div class="pk">PROMOTED</div><div class="pn" id="promoName"></div><div class="ps">Coney Island, Brooklyn</div></div>
+<div class="chal" id="chal" hidden><div class="chal-in" id="chalIn"></div></div>
 
 <script src="scenes.js?v=3"></script>
+<script src="sfx.js?v=1"></script>
 <script>
 const ARTIST = {
   name: "NEMS",
@@ -348,7 +435,8 @@ const store = {
   get() { try { return JSON.parse(localStorage.getItem("deep99nems") || "{}"); } catch (e) { return {}; } },
   set(v) { try { localStorage.setItem("deep99nems", JSON.stringify(v)); } catch (e) {} }
 };
-let state = Object.assign({ done: 0, juice: 0, seenHow: false }, store.get());
+const FRESH = () => ({ done: 0, juice: 0, seenHow: true, misses: {}, stars: {}, streak: 0, best: 0, bongs: 0, daily: "", secrets: {}, chalBest: null, rank: 0 });
+let state = Object.assign(FRESH(), { seenHow: false }, store.get());
 const save = () => store.set(state);
 const levelOf = n => Math.min(LEVELS, Math.floor(n / PER) + 1);
 const levelsDone = () => Math.floor(state.done / PER);
@@ -359,10 +447,11 @@ function toast(t) { const el = $("toast"); el.textContent = t; el.classList.add(
 /* ---------- panels ---------- */
 let pIdx = 0;
 function goPanel(i) {
-  pIdx = Math.max(0, Math.min(2, i));
+  pIdx = Math.max(0, Math.min(3, i));
   $("track").style.transform = "translateX(" + (-100 * pIdx) + "%)";
   document.querySelectorAll(".tab").forEach((t, k) => t.classList.toggle("on", k === pIdx));
-  $("prev").disabled = pIdx === 0; $("next").disabled = pIdx === 2;
+  $("prev").disabled = pIdx === 0; $("next").disabled = pIdx === 3;
+  if (pIdx === 3) renderTrophies();
 }
 $("prev").onclick = () => goPanel(pIdx - 1);
 $("next").onclick = () => goPanel(pIdx + 1);
@@ -414,7 +503,10 @@ function renderQuestion() {
     body.innerHTML = '<div class="qtext">You went 99 DEEP. Every song is unlocked.</div>'; return;
   }
   const n = state.done;
-  $("qLevel").textContent = "Level " + levelOf(n); $("qNum").textContent = "Q " + (n + 1) + " of 99";
+  const boss = levelOf(n) === 9;
+  $("qLevel").innerHTML = boss ? '<span class="boss-tag">BOSS LEVEL</span>' : "Level " + levelOf(n);
+  $("qNum").textContent = "Q " + (n + 1) + " of 99";
+  document.querySelector("#pPlay .qcard").classList.toggle("boss", boss);
   const q = ARTIST.questions[n];
   if (!q) {
     body.innerHTML = '<div class="empty">Question ' + (n + 1) + ' is waiting for the artist\'s approval.</div><button class="next" id="skip" type="button">Preview next question</button>';
@@ -426,26 +518,197 @@ function renderQuestion() {
   q.opts.forEach((o, i) => {
     const b = document.createElement("button"); b.type = "button"; b.className = "opt"; b.textContent = o;
     b.onclick = () => {
-      if (i === q.answer) { b.classList.add("right"); setTimeout(() => advance(true), 550); }
-      else { b.classList.add("wrong"); toast("NOT QUITE. LISTEN AGAIN."); }
+      if (b.disabled) return;
+      if (i === q.answer) { box.querySelectorAll("button").forEach(x => x.disabled = true); b.classList.add("right"); SFX.right(); gotRight(); setTimeout(() => advance(true), 550); }
+      else { b.classList.add("wrong"); b.disabled = true; SFX.wrong(); gotWrong(levelOf(n)); toast("NOT QUITE. LISTEN AGAIN."); }
     };
     box.append(b);
   });
 }
 
+function gotRight() {
+  state.streak++; state.best = Math.max(state.best, state.streak);
+  if (state.streak % 5 === 0) { state.bongs += 1; SFX.streak(); toast("HOT STREAK x" + state.streak + " · +1 BING BONG"); }
+  save(); renderStreak();
+}
+function gotWrong(lv) { state.streak = 0; state.misses[lv] = (state.misses[lv] || 0) + 1; save(); renderStreak(); }
+function renderStreak() { $("streakLine").innerHTML = state.streak >= 2 ? "HOT STREAK <b>x" + state.streak + "</b>" : ""; }
+const starsFor = lv => { const m = state.misses[lv] || 0; return m === 0 ? 3 : m <= 2 ? 2 : 1; };
+const starHTML = n => [0, 1, 2].map(i => i < n ? "<i>★</i>" : "★").join("");
+
 function advance(scored) {
-  const before = levelsDone(), beforeRank = Math.floor(before / 3);
+  const before = levelsDone();
   state.done = Math.min(99, state.done + 1);
   if (scored) state.juice += JUICE_EACH;
-  save();
   const after = levelsDone();
-  if (after > before) {
-    if (Math.floor(after / 3) > beforeRank) toast("PROMOTED: " + RANKS[Math.floor(after / 3) - 1].toUpperCase());
-    else if (after < 9) toast("SONG " + (after + 1) + " UNLOCKED");
-  }
-  if (state.done >= 99) toast("99 DEEP");
+  if (after > before) state.stars[after] = starsFor(after);
+  save();
   renderAll();
+  if (after > before) episodeCleared(after);
 }
+
+function episodeCleared(lv) {
+  SFX.cleared();
+  const next = ARTIST.songs[lv];
+  const rankUp = lv % 3 === 0 ? RANKS[lv / 3 - 1] : null;
+  const finale = lv === 9;
+  showModal(
+    '<div class="k">' + (finale ? "BOSS LEVEL BEATEN" : "LEVEL " + lv) + '</div>' +
+    '<h3>EPISODE ' + lv + ' CLEARED</h3>' +
+    '<div class="stars">' + starHTML(state.stars[lv]) + '</div>' +
+    '<p style="margin:0">' + (finale ? "You went 99 DEEP. The 99 Challenge is open." : "Song " + (lv + 1) + " unlocked: <b>" + esc(next.title) + "</b>") + '</p>' +
+    '<button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY SONG " + (lv + 1)) + '</button>',
+    () => { if (rankUp) setTimeout(() => promote(rankUp), 250); });
+  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else playSong(lv); };
+}
+
+let promoT = null;
+function promote(name) {
+  SFX.stamp();
+  $("promoName").textContent = name.toUpperCase();
+  $("promo").classList.add("on");
+  clearTimeout(promoT); promoT = setTimeout(() => $("promo").classList.remove("on"), 5000);
+}
+$("promoX").onclick = () => { clearTimeout(promoT); $("promo").classList.remove("on"); };
+
+const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+let onModalClose = null;
+function showModal(html, onClose) {
+  $("mcard").innerHTML = '<button class="x" type="button" id="mX" aria-label="Close">✕</button>' + html;
+  $("modal").hidden = false; onModalClose = onClose || null;
+  $("mX").onclick = closeModal;
+}
+function closeModal() { $("modal").hidden = true; const f = onModalClose; onModalClose = null; if (f) f(); }
+$("modal").addEventListener("click", e => { if (e.target.id === "modal") closeModal(); });
+
+/* ---------- daily question: one a day, pays a Bing Bong ---------- */
+const today = () => new Date().toISOString().slice(0, 10);
+const FILLED = ARTIST.questions.map((q, i) => q ? i : -1).filter(i => i >= 0);
+function renderExtras() {
+  const doneToday = state.daily === today();
+  $("dailyBtn").classList.toggle("ready", !doneToday);
+  $("dailySub").textContent = doneToday ? "Done today · come back tomorrow" : "1 free Bing Bong a day";
+  const open = state.done >= 99;
+  $("chalBtn").classList.toggle("gold", open);
+  $("chalSub").textContent = open ? (state.chalBest != null ? "Best: " + state.chalBest + " right" : "Unlocked · go 99 deep") : "Clear all 9 to unlock";
+}
+$("dailyBtn").onclick = () => {
+  if (state.daily === today()) { toast("COME BACK TOMORROW"); return; }
+  const d = today(), seed = [...d].reduce((a, c) => a * 31 + c.charCodeAt(0) >>> 0, 7);
+  const q = ARTIST.questions[FILLED[seed % FILLED.length]];
+  showModal('<div class="k">DAILY QUESTION · ' + d + '</div><div class="qtext">' + esc(q.q) + '</div><div class="opts" id="dOpts"></div>');
+  q.opts.forEach((o, i) => {
+    const b = document.createElement("button"); b.type = "button"; b.className = "opt"; b.textContent = o;
+    b.onclick = () => {
+      $("dOpts").querySelectorAll("button").forEach(x => x.disabled = true);
+      state.daily = d;
+      if (i === q.answer) { b.classList.add("right"); SFX.right(); state.bongs += 1; toast("+1 BING BONG"); }
+      else { b.classList.add("wrong"); $("dOpts").children[q.answer].classList.add("right"); SFX.wrong(); toast("TOMORROW'S ANOTHER SHOT"); }
+      save(); renderExtras(); setTimeout(closeModal, 1400);
+    };
+    $("dOpts").append(b);
+  });
+};
+
+/* ---------- secret spots: tap the tags up top ---------- */
+["sec0", "sec1", "sec2"].forEach((id, i) => {
+  $(id).style.cursor = "pointer";
+  $(id).addEventListener("click", () => {
+    if (state.secrets[i]) return;
+    state.secrets[i] = 1; state.bongs += 2; save();
+    if (i === 0) SFX.chime(0); else SFX.streak();
+    toast("SECRET SPOT " + Object.keys(state.secrets).length + "/3 · +2 BING BONGS");
+  });
+});
+
+/* ---------- trophy case + share card ---------- */
+const rankName = () => state.done >= 99 ? "99 DEEP" : levelsDone() >= 3 ? RANKS[Math.floor(levelsDone() / 3) - 1] : "New Face";
+function renderTrophies() {
+  $("starGrid").innerHTML = ARTIST.songs.map((s, k) => '<div class="tcell">EP ' + (k + 1) + '<div class="st">' + (state.stars[k + 1] ? starHTML(state.stars[k + 1]) : "★★★") + '</div></div>').join("");
+  $("tRank").textContent = rankName().toUpperCase();
+  $("tBongs").textContent = state.bongs;
+  $("tStreak").textContent = state.best;
+  $("tSecrets").textContent = Object.keys(state.secrets).length + " / 3";
+  $("tChal").textContent = state.chalBest != null ? state.chalBest + " right" : "—";
+}
+$("shareBtn").onclick = () => {
+  const c = document.createElement("canvas"); c.width = 1080; c.height = 1350; const g = c.getContext("2d");
+  const grd = g.createRadialGradient(540, 300, 50, 540, 500, 1100); grd.addColorStop(0, "#3a1066"); grd.addColorStop(1, "#07070d");
+  g.fillStyle = grd; g.fillRect(0, 0, 1080, 1350);
+  g.strokeStyle = "#d62828"; g.lineWidth = 16; g.strokeRect(40, 40, 1000, 1270);
+  g.textAlign = "center"; g.lineJoin = "round";
+  const tagText = (t, y, size, color, rot) => { g.save(); g.translate(540, y); g.rotate(rot); g.font = size + 'px "Sedgwick Ave Display", cursive'; g.lineWidth = size / 8; g.strokeStyle = "#000"; g.strokeText(t, 0, 0); g.fillStyle = color; g.fillText(t, 0, 0); g.restore(); };
+  tagText("NEMS", 300, 230, "#38e8ff", -0.06);
+  tagText("BING BONG", 430, 90, "#ff3d7f", -0.04);
+  g.fillStyle = "#fff"; g.font = '64px Anton, Impact, sans-serif'; g.fillText("I'M RANKED", 540, 610);
+  g.fillStyle = "#e0a52c"; g.font = '150px Anton, Impact, sans-serif'; g.fillText(rankName().toUpperCase(), 540, 780);
+  g.fillStyle = "#fff"; g.font = '54px Barlow, sans-serif'; g.fillText(state.juice.toLocaleString() + " Juice · " + levelsDone() + " of 9 episodes", 540, 880);
+  g.fillStyle = "#e0a52c"; g.font = '70px sans-serif'; g.fillText(ARTIST.songs.map((s, k) => state.stars[k + 1] ? "★" : "☆").join(" "), 540, 990);
+  g.fillStyle = "#fff"; g.font = '58px Anton, Impact, sans-serif'; g.fillText("CAN YOU GO 99 DEEP?", 540, 1150);
+  tagText("FYL", 540, 1260, "#fccc0a", 0.05);
+  showModal('<div class="k">SHARE MY RANK</div><img alt="Your NEMS rank card" src="' + c.toDataURL("image/png") + '"><p style="margin:0;font-size:.9rem">Press and hold the card to save it, then post it to your story.</p>');
+};
+
+/* ---------- the 99 Challenge ---------- */
+let ch = null;
+function confetti(n) {
+  const colors = ["#ff3d7f", "#38e8ff", "#fccc0a", "#5ee27a", "#d62828", "#fff"];
+  for (let i = 0; i < n; i++) {
+    const d = document.createElement("i"); d.className = "conf";
+    d.style.left = Math.random() * 100 + "%"; d.style.background = colors[i % colors.length];
+    d.style.animationDuration = (1.8 + Math.random() * 1.8) + "s"; d.style.animationDelay = (Math.random() * .6) + "s";
+    $("chal").append(d); setTimeout(() => d.remove(), 4200);
+  }
+}
+function flying99() {
+  for (let i = 0; i < 14; i++) {
+    const f = document.createElement("div"); f.className = "flying"; f.textContent = i % 3 ? "99" : "DEEP";
+    f.style.left = "50%"; f.style.top = "40%"; f.style.fontSize = (20 + Math.random() * 30) + "px";
+    const a = Math.random() * Math.PI * 2; f.style.setProperty("--dx", Math.cos(a) * 60 + "vw"); f.style.setProperty("--dy", Math.sin(a) * 60 + "vh");
+    f.style.animationDelay = (i * 0.08) + "s";
+    $("chal").append(f); setTimeout(() => f.remove(), 3200);
+  }
+}
+function startChallenge(demo) {
+  if (!demo && state.done < 99) { toast("CLEAR ALL 9 EPISODES FIRST"); return; }
+  if (player && player.pauseVideo) player.pauseVideo();
+  const order = FILLED.slice().sort(() => Math.random() - .5);
+  ch = { order, i: 0, right: 0, demo };
+  $("chal").hidden = false;
+  $("chalIn").innerHTML = '<div class="big99">' + nine() + nine() + '</div><h2>THE 99 CHALLENGE</h2><p>Every question, back to back. No hints. How deep can you go?</p>' +
+    (FILLED.length < 99 ? '<p style="font-size:.85rem">' + FILLED.length + ' of 99 questions are written so far.</p>' : '') +
+    '<button class="big-btn" id="chGo" type="button">GO 99 DEEP</button><button class="next" id="chQuit" type="button">Not now</button>';
+  SFX.fanfare99(); flying99();
+  $("chGo").onclick = chalQuestion; $("chQuit").onclick = endChallenge;
+}
+function chalQuestion() {
+  if (ch.i >= ch.order.length) return chalDone();
+  const q = ARTIST.questions[ch.order[ch.i]];
+  $("chalIn").innerHTML = '<div class="qhead" style="justify-content:space-between;display:flex"><span>99 CHALLENGE</span><span>' + (ch.i + 1) + ' / ' + ch.order.length + ' · ' + ch.right + ' right</span></div>' +
+    '<div class="chal-bar"><i style="width:' + (100 * ch.i / ch.order.length) + '%"></i></div>' +
+    '<div class="qcard"><div class="qtext">' + esc(q.q) + '</div><div class="opts" id="cOpts"></div></div><button class="next" id="chQuit" type="button">Quit challenge</button>';
+  q.opts.forEach((o, i) => {
+    const b = document.createElement("button"); b.type = "button"; b.className = "opt"; b.textContent = o;
+    b.onclick = () => {
+      $("cOpts").querySelectorAll("button").forEach(x => x.disabled = true);
+      if (i === q.answer) { b.classList.add("right"); SFX.right(); ch.right++; }
+      else { b.classList.add("wrong"); $("cOpts").children[q.answer].classList.add("right"); SFX.wrong(); }
+      ch.i++; setTimeout(chalQuestion, 650);
+    };
+    $("cOpts").append(b);
+  });
+  $("chQuit").onclick = endChallenge;
+}
+function chalDone() {
+  if (!ch.demo) { state.chalBest = Math.max(state.chalBest || 0, ch.right); save(); renderExtras(); }
+  $("chalIn").innerHTML = '<div class="big99">' + nine() + nine() + '</div><h2>' + ch.right + ' / ' + ch.order.length + '</h2><p>' + (ch.right === ch.order.length ? "PERFECT. You went all the way 99 DEEP." : "Run it back and go deeper.") + '</p>' +
+    '<button class="big-btn" id="chAgain" type="button">RUN IT BACK</button><button class="next" id="chQuit" type="button">Back to the game</button>';
+  SFX.fanfare99(); flying99(); confetti(70);
+  $("chAgain").onclick = () => startChallenge(ch.demo); $("chQuit").onclick = endChallenge;
+}
+function endChallenge() { $("chal").hidden = true; ch = null; }
+$("chalBtn").onclick = () => startChallenge(false);
+$("chalDemo").onclick = () => { openMenu(false); startChallenge(true); };
 
 /* ---------- player: record opens the cabinet doors, video plays inside ---------- */
 let current = -1, player = null, ytReady = false, pending = null;
@@ -492,6 +755,9 @@ const openMenu = on => { $("menu").hidden = !on; $("scrim").hidden = !on; };
 $("menuBtn").onclick = () => openMenu(true);
 $("menuX").onclick = () => openMenu(false);
 $("scrim").onclick = () => openMenu(false);
+const paintSound = () => { $("soundBtn").textContent = SFX.on ? "ON" : "OFF"; $("soundBtn").classList.toggle("off", !SFX.on); };
+$("soundBtn").onclick = () => { SFX.set(!SFX.on); paintSound(); if (SFX.on) SFX.right(); };
+paintSound();
 $("replayHow").onclick = () => { openMenu(false); howI = 0; showHow(); $("how").hidden = false; };
 
 /* restart: same spot on every screen, tap twice to confirm */
@@ -500,7 +766,7 @@ $("restart").onclick = () => {
   if (!b.dataset.sure) { b.dataset.sure = "1"; b.textContent = "Tap again"; setTimeout(() => { delete b.dataset.sure; b.textContent = "Restart"; }, 3000); return; }
   delete b.dataset.sure; b.textContent = "Restart";
   if (player && player.pauseVideo) player.pauseVideo();
-  state = { done: 0, juice: 0, seenHow: true }; save(); current = -1;
+  state = FRESH(); save(); current = -1;
   $("doors").classList.remove("open"); showEpisode(0); goPanel(0); renderAll(); toast("NEW GAME");
 };
 
@@ -517,18 +783,30 @@ let howI = 0;
 function showHow() {
   const h = HOW[howI];
   $("howScene").innerHTML = h.s();
-  if (howI === 0 && window.bingBong) setTimeout(window.bingBong, 2300);
+  SFX.stop();
+  ({ 0: SFX.train, 1: SFX.coaster, 2: SFX.organ, 3: SFX.parachute, 4: SFX.spray })[howI]();
   $("howTitle").textContent = h.t; $("howText").textContent = h.x;
   $("howDots").innerHTML = HOW.map((_, i) => '<i class="' + (i === howI ? "on" : "") + '"></i>').join("");
   $("howNext").textContent = howI === HOW.length - 1 ? "START PLAYING" : "NEXT";
 }
 $("howNext").onclick = () => {
   if (howI < HOW.length - 1) { howI++; showHow(); return; }
-  state.seenHow = true; save(); $("how").hidden = true; $("game").hidden = false;
+  SFX.stop(); state.seenHow = true; save(); $("how").hidden = true; $("game").hidden = false;
 };
 $("enter").onclick = () => {
   $("welcome").hidden = true;
-  if (state.seenHow) { $("game").hidden = false; return; }
+  SFX.unlock();
+  if (state.seenHow) {
+    $("game").hidden = false;
+    if (state.done > 0) {
+      const ld = levelsDone();
+      showModal('<div class="k">WELCOME BACK</div><h3>PREVIOUSLY ON NEMS…</h3><p style="margin:0">' +
+        (ld ? "You cleared " + ld + " episode" + (ld > 1 ? "s" : "") + " and you're ranked <b>" + esc(rankName()) + "</b>." : "You were " + (state.done % PER) + " questions into Episode 1.") +
+        ' Juice: <b>' + state.juice.toLocaleString() + '</b>.</p><button class="big-btn" id="mGo" type="button">PICK UP WHERE YOU LEFT OFF</button>');
+      $("mGo").onclick = closeModal;
+    }
+    return;
+  }
   howI = 0; showHow(); $("how").hidden = false;
 };
 
@@ -540,7 +818,7 @@ $("enter").onclick = () => {
   $("coaster").innerHTML = '<clipPath id="cc"><path d="' + d + ' L400 64 L0 64Z"/></clipPath><g clip-path="url(#cc)" stroke="#f7f3ea" stroke-width="1">' + posts + '</g><path d="' + d + '" fill="none" stroke="#f7f3ea" stroke-width="2.5"/>';
 })();
 
-function renderAll() { renderMeter(); renderQuestion(); renderSongs(); }
+function renderAll() { renderMeter(); renderQuestion(); renderSongs(); renderExtras(); renderStreak(); if (pIdx === 3) renderTrophies(); }
 $("logoW").innerHTML = nine() + nine() + '<span class="deep">DEEP</span>';
 $("mini99").innerHTML = nine() + nine() + 'DEEP';
 showEpisode(0); goPanel(0); renderAll();
