@@ -144,7 +144,7 @@ const EPISODES = [
 /* stops per row: 1, 2, 3 */
 const STOPS = [1, 1, 1, 2, 2, 2, 3, 3, 3];
 const ROWS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]];
-const RANKS = ["New Fan", "Real Fan", "Day One"];
+const RANKS = ["Lyfer", "Gorilla", "Silverback"];   // NEMS slang: start as a Gunther, top out as King Kong
 const TOTAL_STOPS = STOPS.reduce((a, b) => a + b, 0);   // 18
 const JUICE_EACH = 550;                                  // 18 stops x 550 = 9,900
 const ready = e => e.cuts.length > 0;
@@ -178,7 +178,8 @@ const isOpen = k => k === 0 || isCleared(k - 1);               // song 1 free, e
 const stopsPassed = () => Object.keys(state.gates).reduce((n, k) => n + Math.min(state.gates[k], STOPS[k]), 0);
 const rowsDone = () => ROWS.filter(r => r.every(isCleared)).length;
 const allDone = () => EPISODES.every((e, k) => isCleared(k));
-const rankName = () => allDone() ? "99 DEEP" : rowsDone() ? RANKS[rowsDone() - 1] : "New Face";
+const kong = () => state.chalBest != null && state.chalBest >= 99;
+const rankName = () => kong() ? "King Kong" : rowsDone() ? RANKS[rowsDone() - 1] : "Gunther";
 const fmt = t => Math.floor(t / 60) + ":" + String(Math.floor(t % 60)).padStart(2, "0");
 
 function toast(t) { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2200); }
@@ -217,7 +218,8 @@ function renderMeter() {
       '<div class="per">' + (r + 1) + (r ? " stops" : " stop") + ' a song</div>';
     m.append(el);
   });
-  $("topRank").classList.toggle("got", allDone());
+  $("topRank").textContent = kong() ? "KING KONG" : "YOU'RE A " + rankName().toUpperCase();
+  $("topRank").classList.toggle("got", kong());
   $("qCount").textContent = stopsPassed();
   $("juice").textContent = state.juice.toLocaleString();
 }
@@ -248,7 +250,7 @@ function renderCard() {
   if (current < 0) { $("qLevel").textContent = ""; $("qNum").textContent = ""; body.innerHTML = '<div class="listen">Tap the record to start Episode 1.</div>'; return; }
   const e = EPISODES[current], g = gatesOf(current), n = STOPS[current];
   const row = Math.floor(current / 3);
-  $("qLevel").textContent = RANKS[row].toUpperCase() + " ROW";
+  $("qLevel").textContent = "ROW " + (row + 1) + " · " + RANKS[row].toUpperCase();
   $("qNum").textContent = isCleared(current) ? "CLEARED" : "STOP " + Math.min(g + 1, n) + " OF " + n;
   document.querySelector("#pPlay .qcard").classList.toggle("boss", current === 8 && !isCleared(current));
   if (!ready(e)) {
@@ -286,11 +288,15 @@ function renderCard() {
 }
 
 function gotRight() {
-  state.streak++; state.best = Math.max(state.best, state.streak);
+  missRun = 0; state.streak++; state.best = Math.max(state.best, state.streak);
   if (state.streak % 5 === 0) { state.bongs += 1; SFX.streak(); toast("HOT STREAK x" + state.streak + " · +1 BING BONG"); }
   save(); renderStreak();
 }
-function gotWrong(k) { state.streak = 0; state.misses[k] = (state.misses[k] || 0) + 1; save(); renderStreak(); }
+let missRun = 0;
+function gotWrong(k) {
+  state.streak = 0; state.misses[k] = (state.misses[k] || 0) + 1; save(); renderStreak();
+  if (++missRun === 3) { missRun = 0; setTimeout(() => { SFX.wrong(); toast("GUNTHER ALERT! LISTEN CLOSER"); }, 900); }
+}
 function renderStreak() { $("streakLine").innerHTML = state.streak >= 2 ? "HOT STREAK <b>x" + state.streak + "</b>" : ""; }
 const starsFor = k => { const m = state.misses[k] || 0; return m === 0 ? 3 : m <= 2 ? 2 : 1; };
 const starHTML = n => [0, 1, 2].map(i => i < n ? "<i>★</i>" : "★").join("");
@@ -315,10 +321,10 @@ function episodeCleared(k, rankUp) {
   const finale = allDone();
   const next = EPISODES[k + 1];
   showModal(
-    '<div class="k">' + (k === 8 ? "BOSS EPISODE BEATEN" : RANKS[Math.floor(k / 3)].toUpperCase() + " ROW") + '</div>' +
+    '<div class="k">' + (k === 8 ? "BOSS EPISODE BEATEN" : "ROW " + (Math.floor(k / 3) + 1) + " · " + RANKS[Math.floor(k / 3)].toUpperCase()) + '</div>' +
     '<h3>EPISODE ' + (k + 1) + ' CLEARED</h3>' +
     '<div class="stars">' + starHTML(state.stars[k]) + '</div>' +
-    '<p style="margin:0">' + (finale ? "You went 99 DEEP. The 99 Challenge is open." : next ? "Episode " + (k + 2) + " unlocked: <b>" + esc(next.title) + "</b>" + (STOPS[k + 1] > STOPS[k] ? "<br>Heads up: songs in this row stop " + (STOPS[k + 1] === 2 ? "twice" : "three times") + "." : "") : "") + '</p>' +
+    '<p style="margin:0">' + (finale ? "You're a Silverback now. Beat the 99 Challenge to become King Kong." : next ? "Episode " + (k + 2) + " unlocked: <b>" + esc(next.title) + "</b>" + (STOPS[k + 1] > STOPS[k] ? "<br>Heads up: songs in this row stop " + (STOPS[k + 1] === 2 ? "twice" : "three times") + "." : "") : "") + '</p>' +
     '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY EPISODE " + (k + 2)) + '</button>' +
     (ready(EPISODES[k]) && !finale ? '<button class="next" id="mStay" type="button">Keep listening to this one</button>' : '') + '</div>',
     () => { if (rankUp) setTimeout(() => promote(rankUp), 250); });
@@ -386,7 +392,7 @@ function introEpisode(k) {
   $("doors").classList.remove("open");
   current = k; atStop = false; showEpisode(k); renderSongs(); renderCard(); goPanel(1);
   const n = STOPS[k];
-  $("ecKick").textContent = RANKS[Math.floor(k / 3)].toUpperCase() + " ROW" + (k === 8 ? " · BOSS EPISODE" : "");
+  $("ecKick").textContent = "ROW " + (Math.floor(k / 3) + 1) + " · " + RANKS[Math.floor(k / 3)].toUpperCase() + (k === 8 ? " · BOSS EPISODE" : "");
   $("ecNum").textContent = "EPISODE " + (k + 1);
   $("ecTitle").textContent = EPISODES[k].title;
   $("ecStops").innerHTML = Array.from({ length: n }, (_, i) => "<i>" + (i + 1) + "</i>").join("") ;
@@ -552,8 +558,10 @@ function chalQuestion() {
   $("chQuit").onclick = endChallenge;
 }
 function chalDone() {
-  if (!ch.demo) { state.chalBest = Math.max(state.chalBest || 0, ch.right); save(); renderExtras(); }
-  $("chalIn").innerHTML = '<div class="big99">' + nine() + nine() + '</div><h2>' + ch.right + ' / ' + ch.order.length + '</h2><p>' + (ch.right === ch.order.length ? "PERFECT. You went all the way 99 DEEP." : "Run it back and go deeper.") + '</p>' +
+  const wasKong = kong();
+  if (!ch.demo) { state.chalBest = Math.max(state.chalBest || 0, ch.right); save(); renderExtras(); renderMeter(); }
+  if (!ch.demo && !wasKong && kong()) setTimeout(() => promote("King Kong"), 1600);
+  $("chalIn").innerHTML = '<div class="big99">' + nine() + nine() + '</div><h2>' + ch.right + ' / ' + ch.order.length + '</h2><p>' + (ch.right === ch.order.length ? "PERFECT. You went 99 DEEP. You're King Kong now." : "Run it back and go deeper.") + '</p>' +
     '<button class="big-btn" id="chAgain" type="button">RUN IT BACK</button><button class="next" id="chQuit" type="button">Back to the game</button>';
   SFX.fanfare99(); flying99(); confetti(70);
   $("chAgain").onclick = () => startChallenge(ch.demo); $("chQuit").onclick = endChallenge;
@@ -591,7 +599,7 @@ const HOW = [
   { s: SC.train, t: "PRESS PLAY", x: "Last stop, Coney Island. Tap the record. Every song is an episode." },
   { s: SC.cyclone, t: "EVERY SONG STOPS", x: "At the end of a verse the song stops and asks about what you just heard. Answer right and it keeps going." },
   { s: SC.wheel, t: "1, THEN 2, THEN 3", x: "Songs 1–3 stop once. Songs 4–6 stop twice. Songs 7–9 stop three times." },
-  { s: SC.parachute, t: "CLIMB THE RANKS", x: "Clear a row of 3 to rank up: New Fan, Real Fan, Day One. Clear all 9 to go 99 DEEP." },
+  { s: SC.parachute, t: "CLIMB THE RANKS", x: "Everybody starts as a Gunther. Clear a row to rank up: Lyfer, Gorilla, Silverback. Beat the 99 Challenge to become King Kong." },
   { s: SC.corner, t: "WELCOME TO THE BLOCK", x: "Mermaid Avenue and West 16th Street. This is NEMS's game." }
 ];
 let howI = 0;
