@@ -7,7 +7,7 @@
 <title>NEMS · 99 DEEP</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap">
 <style>
 /* Layout: one dark game cabinet, one narrow column, every screen framed with no scrolling on the card. */
 :root {
@@ -110,6 +110,25 @@ a.yt { color: var(--fg); text-decoration: underline; text-decoration-color: var(
 .song button.pick { background: none; border: 0; padding: 0; text-align: left; font-weight: 700; color: var(--fg); text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 4px; }
 .song.playing { outline: 2px solid var(--green); }
 .tap-hint { font-size: .85rem; font-weight: 600; text-align: center; }
+/* Coney Island scenes */
+.scene { width: 100%; max-width: 420px; aspect-ratio: 400 / 260; border-radius: 14px; overflow: hidden; border: 3px solid #000; box-shadow: 0 0 0 2px var(--red-dim); background: #000; }
+.scene svg { display: block; width: 100%; height: 100%; }
+.anim-train { animation: pullIn 2.6s cubic-bezier(.15,.7,.25,1) both; }
+@keyframes pullIn { from { transform: translateX(420px); } to { transform: translateX(0); } }
+.spin-wheel { animation: wheelSpin 14s linear infinite; }
+.car-level { transform-box: fill-box; transform-origin: 50% 0; animation: wheelSpin 14s linear infinite reverse; }
+@keyframes wheelSpin { to { transform: rotate(360deg); } }
+.blink { animation: blink 1.4s ease-in-out infinite; }
+@keyframes blink { 50% { opacity: .2; } }
+.chute { animation: drop 4.5s ease-in-out infinite; }
+@keyframes drop { 0%, 15% { transform: translateY(0); } 55%, 65% { transform: translateY(104px); } 100% { transform: translateY(0); } }
+.tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; font-family: "Sedgwick Ave Display", "Permanent Marker", cursive; font-size: 1.35rem; line-height: 1.1; }
+.tags span { -webkit-text-stroke: 1px #000; text-shadow: 2px 2px 0 #000; }
+.tags .t1 { color: #ff3d7f; transform: rotate(-4deg); }
+.tags .t2 { color: #fccc0a; transform: rotate(5deg); }
+.tags .t3 { color: #38e8ff; transform: rotate(-2deg); }
+.room-in { gap: 16px; }
+.room h2 { font-size: clamp(1.6rem, 7vw, 2.2rem); }
 </style>
 </head>
 <body>
@@ -121,13 +140,14 @@ a.yt { color: var(--fg); text-decoration: underline; text-decoration-color: var(
     <h2>ARE YOU READY TO GO 99 DEEP?</h2>
     <p>Free to play. Listen, answer, unlock the music.</p>
     <button class="big-btn" id="enter" type="button">LET'S GO</button>
+    <div class="tags"><span class="t1">BING BONG</span><span class="t2">FYL</span><span class="t3">GORILLA NEMS</span></div>
   </div>
 </section>
 
 <!-- How to play rooms -->
 <section class="room" id="how" hidden>
   <div class="room-in">
-    <div class="icon" id="howIcon"></div>
+    <div class="scene" id="howScene"></div>
     <h2 id="howTitle"></h2>
     <p id="howText"></p>
     <div class="dots" id="howDots"></div>
@@ -139,6 +159,7 @@ a.yt { color: var(--fg); text-decoration: underline; text-decoration-color: var(
   <div class="preview-tag">PITCH DEMO · PRIVATE</div>
   <div class="logo" id="logoB"></div>
   <h1 class="artist"><small>THE MUSIC GAME OF</small><span id="artistName"></span></h1>
+  <div class="tags"><span class="t1">BING BONG</span><span class="t3">GORILLA NEMS</span><span class="t2">FYL</span></div>
 
   <div class="cab">
     <div class="meter" id="meter"></div>
@@ -169,11 +190,12 @@ a.yt { color: var(--fg); text-decoration: underline; text-decoration-color: var(
 <div class="toast" id="toast" role="status"></div>
 <audio id="audio" preload="metadata" controlslist="nodownload noplaybackrate"></audio>
 
+<script src="scenes.js?v=1"></script>
 <script>
 /* ============================================================
    ARTIST SETUP — this is the only part that changes per artist.
    name:  artist name
-   songs: 5 to 10 songs. Song 1 is free. src = audio file path.
+   songs: exactly 9 songs, one per level. Song 1 is free. src = audio file path.
    questions: 99 slots. Fill each with { q, opts: [a, b, c], answer }
               (answer = number 0, 1 or 2). Empty slots show as "waiting".
    ============================================================ */
@@ -182,9 +204,13 @@ const ARTIST = {
   /* Pitch demo: each song plays inside the game from his official YouTube upload. */
   songs: [
     { title: "Bing Bong", id: "99Km36i5gJE", watch: "https://www.youtube.com/watch?v=99Km36i5gJE" },
+    { title: "Nathan's", id: "zrJSy0sR5VE", watch: "https://www.youtube.com/watch?v=zrJSy0sR5VE" },
     { title: "Where You Know Me From", id: "xTWp-aeE794", watch: "https://www.youtube.com/watch?v=xTWp-aeE794" },
+    { title: "Timb Boots", id: "QoGD5baPwx4", watch: "https://www.youtube.com/watch?v=QoGD5baPwx4" },
     { title: "Don't Ever Disrespect Me", id: "5JMt_oOQZBs", watch: "https://www.youtube.com/watch?v=5JMt_oOQZBs" },
+    { title: "Gahbage", id: "pIkDmgeUhXY", watch: "https://www.youtube.com/watch?v=pIkDmgeUhXY" },
     { title: "Blicky", id: "A5uAk8gjAn8", watch: "https://www.youtube.com/watch?v=A5uAk8gjAn8" },
+    { title: "Keep On", id: "nyvR95qocNY", watch: "https://www.youtube.com/watch?v=nyvR95qocNY" },
     { title: "Bing Bong (Remix)", id: "_3pF6_wqy7s", watch: "https://www.youtube.com/watch?v=_3pF6_wqy7s" }
   ],
   questions: (() => {
@@ -222,7 +248,9 @@ const ARTIST = {
       { q: "Which label put out Rise of the Silverback?", opts: ["Def Jam", "Goliath Records", "Rhymesayers"], answer: 1 },
       { q: "Who produced the original \"Bing Bong\"?", opts: ["Scram Jones", "Jazzsoon", "Vinny Idol"], answer: 2 },
       { q: "Which NBA team got its own \"Bing Bong\" remix?", opts: ["The Knicks", "The Nets", "The Celtics"], answer: 0 },
-      { q: "What year was NEMS born?", opts: ["1979", "1982", "1986"], answer: 1 }
+      { q: "What year was NEMS born?", opts: ["1979", "1982", "1986"], answer: 1 },
+      { q: "Who produced \"Nathan's\"?", opts: ["Drumma Boy", "Ron Browz", "Vinny Idol"], answer: 0 },
+      { q: "Who joins NEMS and Scram Jones on \"Keep On\"?", opts: ["Tish Hyman", "Remy Ma", "Dave East"], answer: 0 }
     ];
     return Array.from({ length: 99 }, (_, i) => filled[i] || null);
   })()
@@ -232,8 +260,8 @@ const ARTIST = {
 const LEVELS = 9, PER = 11, JUICE_EACH = 100;   // perfect run = 9,900 Juice
 const RANKS = ["New Fan", "Real Fan", "Day One"];
 
-/* Song 1 is free; the rest unlock evenly across the 9 levels, the last one at level 9. */
-const unlockAt = ARTIST.songs.map((s, k) => k === 0 ? 0 : Math.round(k * LEVELS / (ARTIST.songs.length - 1)));
+/* 9 songs, 9 levels: one song per level. */
+const unlockAt = ARTIST.songs.map((s, k) => k);   // exactly 9 songs: song 1 free, each cleared level unlocks the next song
 
 /* Graffiti-style 9 with a straight stem, no hook */
 function nine() {
@@ -373,16 +401,18 @@ $("record").onclick = () => {
 };
 
 /* How to play: one short instruction per room */
+const SC = window.CONEY_SCENES;
 const HOW = [
-  { i: "♪", t: "PRESS PLAY", x: "Tap the record to hear the music." },
-  { i: "?", t: "ANSWER WHAT YOU HEARD", x: "Every question comes straight from the songs." },
-  { i: "+", t: "UNLOCK THE MUSIC", x: "Clear levels to unlock new songs. Song 1 is free." },
-  { i: "★", t: "CLIMB THE RANKS", x: "New Fan, Real Fan, Day One. Answer all 99 to go 99 DEEP." }
+  { s: SC.train, t: "PRESS PLAY", x: "Last stop, Coney Island. Tap the record to hear the music." },
+  { s: SC.cyclone, t: "ANSWER WHAT YOU HEARD", x: "Every question comes straight from the songs. Hold on tight." },
+  { s: SC.wheel, t: "UNLOCK THE MUSIC", x: "Clear levels to unlock new songs. Bing Bong is free." },
+  { s: SC.parachute, t: "CLIMB THE RANKS", x: "New Fan, Real Fan, Day One. Answer all 99 to go 99 DEEP." },
+  { s: SC.corner, t: "WELCOME TO THE BLOCK", x: "Mermaid Avenue and West 16th Street. This is NEMS's game." }
 ];
 let howI = 0;
 function showHow() {
   const h = HOW[howI];
-  $("howIcon").textContent = h.i; $("howTitle").textContent = h.t; $("howText").textContent = h.x;
+  $("howScene").innerHTML = h.s(); if (howI === 0 && window.bingBong) setTimeout(window.bingBong, 2300); $("howTitle").textContent = h.t; $("howText").textContent = h.x;
   $("howDots").innerHTML = HOW.map((_, i) => '<i class="' + (i === howI ? "on" : "") + '"></i>').join("");
   $("howNext").textContent = howI === HOW.length - 1 ? "START PLAYING" : "NEXT";
 }
