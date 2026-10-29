@@ -238,7 +238,8 @@ a { color: var(--fg); }
 .toggle { display: flex; justify-content: space-between; align-items: center; background: var(--panel2); border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 12px; font-weight: 700; }
 .toggle button { border: 2px solid var(--green); background: none; border-radius: 999px; padding: 4px 12px; font-weight: 700; }
 .toggle button.off { border-color: var(--red); }
-.per { text-align: center; font-size: .66rem; font-weight: 700; letter-spacing: .04em; }
+.row { min-width: 0; }
+.per { white-space: nowrap; text-align: center; font-size: .66rem; font-weight: 700; letter-spacing: .04em; }
 .listen { font-weight: 700; text-align: center; padding: 10px 6px; }
 </style>
 </head>
@@ -357,6 +358,6 @@ a { color: var(--fg); }
 
 <script src="scenes.js?v=3"></script>
 <script src="sfx.js?v=1"></script>
-<script src="game.js?v=1"></script>
+<script src="game.js?v=2"></script>
 </body>
 </html>

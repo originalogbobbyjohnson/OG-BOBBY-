@@ -114,7 +114,7 @@ function renderMeter() {
     const nextUp = EPISODES.findIndex((e, k) => !isCleared(k));
     el.innerHTML = '<div class="boxes">' + row.map(k => '<div class="lv' + (isCleared(k) ? " done" : k === nextUp ? " now" : "") + '">' + (k + 1) + '</div>').join("") + '</div>' +
       '<div class="rank' + (row.every(isCleared) ? " got" : "") + '">' + RANKS[r] + '</div>' +
-      '<div class="per">' + (r + 1) + (r ? " questions" : " question") + ' per song</div>';
+      '<div class="per">' + (r + 1) + (r ? " stops" : " stop") + ' a song</div>';
     m.append(el);
   });
   $("topRank").classList.toggle("got", allDone());
