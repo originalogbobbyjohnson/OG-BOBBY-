@@ -5,142 +5,190 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <title>NEMS · 99 DEEP</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap">
 <style>
-/* Layout: one dark game cabinet, one narrow column, every screen framed with no scrolling on the card. */
+/* Layout: one framed screen, no scrolling. Panels slide left/right: Board, Play, Songs. Dock with menu at the bottom. */
 :root {
-  --bg: #0d0e11; --panel: #17181d; --panel2: #202228; --line: #2e3038;
-  --fg: #ffffff; --soft: #e9e6df; --red: #d62828; --red-dim: #5a1717;
-  --green: #35b867; --gold: #e0a52c;
+  --bg: #0b0c14; --panel: #151726; --panel2: #1e2135; --line: #2c3050;
+  --fg: #ffffff; --soft: #ece8f5; --red: #d62828; --red-dim: #5a1717;
+  --green: #35b867; --gold: #e0a52c; --pink: #ff3d7f; --cyan: #38e8ff; --sun: #fccc0a; --lime: #5ee27a;
   --display: "Anton", Impact, "Arial Narrow", sans-serif;
   --body: "Barlow", system-ui, -apple-system, sans-serif;
+  --tag: "Sedgwick Ave Display", "Permanent Marker", cursive;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
-html, body { height: 100%; }
-body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.4;
-  -webkit-tap-highlight-color: transparent;
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+html, body { height: 100%; margin: 0; overflow: hidden; }
+body { background: radial-gradient(120% 70% at 50% 0%, #2a1650 0%, var(--bg) 60%); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.35; -webkit-tap-highlight-color: transparent; }
 button { font: inherit; color: inherit; cursor: pointer; }
-button:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
-.app { max-width: 480px; margin: 0 auto; padding-block: 14px 24px; display: grid; gap: 14px; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+a { color: var(--fg); }
 
-/* Logo: 99 drawn as two straight-stem nines, then DEEP */
-.logo { display: flex; align-items: center; gap: 8px; justify-content: center; }
-.logo svg.nine { width: 30px; height: 42px; }
-.logo .deep { font-family: var(--display); font-size: 2.6rem; letter-spacing: .06em; line-height: 1; text-shadow: 3px 3px 0 #000; }
-.artist { font-family: var(--display); text-align: center; font-size: clamp(1.9rem, 9vw, 2.8rem); letter-spacing: .04em; line-height: 1.05; text-wrap: balance; margin: 0; }
-.artist small { display: block; font-family: var(--body); font-weight: 700; font-size: .78rem; letter-spacing: .22em; color: var(--red); margin-bottom: 4px; }
+/* graffiti tags */
+.tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 14px; font-family: var(--tag); font-size: 1.25rem; line-height: 1.1; }
+.tags span { -webkit-text-stroke: 1px #000; text-shadow: 2px 2px 0 #000; display: inline-block; }
+.t1 { color: var(--pink); transform: rotate(-4deg); } .t2 { color: var(--sun); transform: rotate(5deg); } .t3 { color: var(--cyan); transform: rotate(-2deg); }
 
-/* Full-screen rooms (welcome + how to play) */
-.room { position: fixed; inset: 0; z-index: 20; background: var(--bg); display: grid; place-items: center;
-  padding: max(24px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(24px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
-.room-in { width: min(100%, 420px); display: grid; gap: 22px; text-align: center; }
-.room h2 { font-family: var(--display); font-size: 2.2rem; letter-spacing: .04em; line-height: 1.1; margin: 0; text-wrap: balance; }
-.room p { margin: 0; font-size: 1.1rem; color: var(--soft); }
-.room .icon { font-family: var(--display); font-size: 4.5rem; line-height: 1; color: var(--red); animation: bob 2.4s ease-in-out infinite; }
+/* ---------- full-screen rooms (welcome + how to play) ---------- */
+.room { position: fixed; inset: 0; z-index: 20; background: inherit; display: grid; place-items: center; overflow: hidden;
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  background: radial-gradient(120% 70% at 50% 0%, #2a1650 0%, var(--bg) 60%); }
+.room-in { width: min(100%, 420px); display: grid; gap: 14px; text-align: center; }
+.room h2 { font-family: var(--display); font-size: clamp(1.6rem, 7vw, 2.2rem); letter-spacing: .04em; line-height: 1.1; margin: 0; text-wrap: balance; }
+.room p { margin: 0; font-size: 1.05rem; color: var(--soft); }
 .dots { display: flex; gap: 8px; justify-content: center; }
 .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
 .dots i.on { background: var(--red); }
-.big-btn { background: var(--red); border: 0; border-radius: 12px; padding: 16px 20px; font-family: var(--display); font-size: 1.3rem; letter-spacing: .08em; }
-@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.big-btn { background: var(--red); border: 0; border-radius: 12px; padding: 15px 20px; font-family: var(--display); font-size: 1.3rem; letter-spacing: .08em; box-shadow: 0 4px 0 #000; }
+.logo { display: flex; align-items: center; gap: 6px; justify-content: center; }
+.logo svg.nine { width: 26px; height: 36px; }
+.logo .deep { font-family: var(--display); font-size: 2.2rem; letter-spacing: .06em; line-height: 1; text-shadow: 3px 3px 0 #000; }
+.welcome-name { font-family: var(--tag); font-size: clamp(3rem, 16vw, 4.6rem); line-height: 1; color: var(--cyan); -webkit-text-stroke: 2px #000; text-shadow: 4px 4px 0 #000; transform: rotate(-4deg); }
+.socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.soc { display: inline-flex; align-items: center; gap: 6px; padding: 7px 11px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--panel); font-weight: 700; font-size: .85rem; text-decoration: none; }
+.soc svg { width: 16px; height: 16px; fill: currentColor; }
 
-/* Cabinet */
-.cab { background: var(--panel); border: 2px solid var(--red-dim); border-radius: 18px; padding: 16px; display: grid; gap: 16px; }
-.meter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.row { display: grid; gap: 6px; }
-.row .boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
-.lv { aspect-ratio: 1; border-radius: 6px; border: 2px solid var(--red); display: grid; place-items: center; font-family: var(--display); font-size: 1.05rem; }
-.lv.done { background: var(--green); border-color: var(--green); }
-.lv.now { box-shadow: 0 0 0 3px rgba(214,40,40,.4); animation: pulse 1.6s ease-in-out infinite; }
-.rank { text-align: center; font-weight: 700; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; border: 1.5px solid var(--red); border-radius: 999px; padding: 3px 4px; }
-.rank.got { border-color: var(--green); }
-.top-rank { text-align: center; font-family: var(--display); letter-spacing: .1em; font-size: 1.15rem; color: var(--fg); }
-.top-rank.got { color: var(--gold); text-shadow: 0 0 14px rgba(224,165,44,.6); }
-@keyframes pulse { 50% { box-shadow: 0 0 0 6px rgba(214,40,40,.15); } }
-
-.stats { display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; font-variant-numeric: tabular-nums; }
-.stats b { font-family: var(--display); font-weight: 400; font-size: 1.4rem; letter-spacing: .03em; }
-.stats .juice b { color: var(--green); }
-
-/* Record = play button */
-.deck { display: grid; place-items: center; gap: 8px; }
-.record { width: 168px; height: 168px; border-radius: 50%; border: 0; padding: 0;
-  background: repeating-radial-gradient(circle, #111 0 2px, #1c1c1f 2px 4px); box-shadow: 0 0 0 3px #000, 0 8px 24px rgba(0,0,0,.6);
-  display: grid; place-items: center; position: relative; }
-.record .label { width: 64px; height: 64px; border-radius: 50%; background: var(--red); display: grid; place-items: center; }
-.record .label svg { width: 26px; height: 26px; fill: var(--fg); }
-.record.spin { animation: spin 3s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.now-playing { font-weight: 700; text-align: center; min-height: 1.4em; }
-a.yt { color: var(--fg); text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 4px; }
-
-/* Question card */
-.qcard { background: var(--panel2); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; }
-.qhead { display: flex; justify-content: space-between; font-weight: 700; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; color: var(--red); font-variant-numeric: tabular-nums; }
-.qtext { font-size: 1.15rem; font-weight: 600; min-height: 3em; }
-.empty { border: 2px dashed var(--line); border-radius: 10px; padding: 14px; text-align: center; color: var(--soft); }
-.opts { display: grid; gap: 8px; }
-.opt { background: var(--panel); border: 2px solid var(--line); border-radius: 10px; padding: 12px; text-align: left; font-weight: 600; }
-.opt.right { border-color: var(--green); }
-.opt.wrong { border-color: var(--red); }
-.next { background: transparent; border: 2px solid var(--red); border-radius: 10px; padding: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
-
-/* Songs */
-.songs { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
-.song { display: grid; grid-template-columns: 26px 1fr auto; gap: 10px; align-items: center; background: var(--panel2); border-radius: 10px; padding: 10px 12px; }
-.song .n { font-family: var(--display); font-size: 1.1rem; text-align: center; }
-.song .t { min-width: 0; font-weight: 700; }
-.song .s { font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; border: 1.5px solid var(--red); white-space: nowrap; }
-.song .s.open { border-color: var(--green); }
-.sec-title { font-family: var(--display); letter-spacing: .08em; font-size: 1.1rem; margin: 0; }
-
-.restart { justify-self: center; background: transparent; border: 0; color: var(--fg); font-weight: 700; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: underline; text-underline-offset: 4px; padding: 6px; }
-.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%) translateY(20px); opacity: 0; background: var(--green); color: var(--fg);
-  font-family: var(--display); letter-spacing: .08em; font-size: 1.2rem; padding: 12px 20px; border-radius: 12px; transition: .3s; z-index: 30; pointer-events: none; }
-.toast.on { opacity: 1; transform: translateX(-50%) translateY(0); }
-.preview-tag { text-align: center; font-size: .78rem; font-weight: 700; letter-spacing: .14em; color: var(--red); }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
-.screen { width: 100%; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 12px; overflow: hidden; background: #000; border: 2px solid var(--red-dim); }
-.screen iframe, .screen > div { width: 100%; height: 100%; display: block; border: 0; }
-.song button.pick { background: none; border: 0; padding: 0; text-align: left; font-weight: 700; color: var(--fg); text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 4px; }
-.song.playing { outline: 2px solid var(--green); }
-.tap-hint { font-size: .85rem; font-weight: 600; text-align: center; }
-/* Coney Island scenes */
+/* scenes */
 .scene { width: 100%; max-width: 420px; aspect-ratio: 400 / 260; border-radius: 14px; overflow: hidden; border: 3px solid #000; box-shadow: 0 0 0 2px var(--red-dim); background: #000; }
 .scene svg { display: block; width: 100%; height: 100%; }
 .anim-train { animation: pullIn 2.6s cubic-bezier(.15,.7,.25,1) both; }
 @keyframes pullIn { from { transform: translateX(420px); } to { transform: translateX(0); } }
-.spin-wheel { animation: wheelSpin 14s linear infinite; }
-.car-level { transform-box: fill-box; transform-origin: 50% 0; animation: wheelSpin 14s linear infinite reverse; }
+.spin-wheel { animation: wheelSpin 16s linear infinite; }
+.car-level { transform-box: fill-box; transform-origin: 50% 0; animation: wheelSpin 16s linear infinite reverse; }
 @keyframes wheelSpin { to { transform: rotate(360deg); } }
 .blink { animation: blink 1.4s ease-in-out infinite; }
 @keyframes blink { 50% { opacity: .2; } }
 .chute { animation: drop 4.5s ease-in-out infinite; }
 @keyframes drop { 0%, 15% { transform: translateY(0); } 55%, 65% { transform: translateY(104px); } 100% { transform: translateY(0); } }
-.tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; font-family: "Sedgwick Ave Display", "Permanent Marker", cursive; font-size: 1.35rem; line-height: 1.1; }
-.tags span { -webkit-text-stroke: 1px #000; text-shadow: 2px 2px 0 #000; }
-.tags .t1 { color: #ff3d7f; transform: rotate(-4deg); }
-.tags .t2 { color: #fccc0a; transform: rotate(5deg); }
-.tags .t3 { color: #38e8ff; transform: rotate(-2deg); }
-.room-in { gap: 16px; }
-.room h2 { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+
+/* ---------- the game: one screen, no scroll ---------- */
+.game { height: 100%; display: grid; grid-template-rows: auto 1fr auto auto; max-width: 480px; margin: 0 auto;
+  padding: max(8px, env(safe-area-inset-top, 0px)) max(14px, env(safe-area-inset-right, 0px)) max(8px, env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px)); gap: 8px; }
+.top { position: relative; display: grid; gap: 2px; text-align: center; padding-top: 4px; }
+.coaster { position: absolute; inset: 0 -14px auto; height: 64px; opacity: .35; pointer-events: none; z-index: -1; }
+.top-row { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.nems { font-family: var(--tag); font-size: 2.4rem; line-height: 1; color: var(--cyan); -webkit-text-stroke: 1.5px #000; text-shadow: 3px 3px 0 #000; transform: rotate(-3deg); }
+.mini99 { display: flex; align-items: center; gap: 2px; font-family: var(--display); letter-spacing: .06em; font-size: .95rem; }
+.mini99 svg.nine { width: 12px; height: 17px; }
+.demo { font-size: .66rem; font-weight: 700; letter-spacing: .16em; color: var(--pink); }
+
+.viewport { overflow: hidden; border-radius: 18px; position: relative; min-height: 0; }
+.track { display: flex; height: 100%; transition: transform .35s cubic-bezier(.3,.7,.3,1); }
+.panel { flex: 0 0 100%; height: 100%; min-height: 0; padding: 12px; display: flex; flex-direction: column; gap: 10px; justify-content: center;
+  background: var(--panel); border: 3px solid var(--red); border-radius: 18px; position: relative; overflow: hidden; }
+/* marquee bulbs along the top edge of every panel, like the boardwalk */
+.panel::before { content: ""; position: absolute; left: 10px; right: 10px; top: 4px; height: 6px;
+  background: radial-gradient(circle, #fff3b0 0 2px, transparent 2.5px) 0 0 / 14px 6px repeat-x; animation: bulbs 1.2s steps(2) infinite; }
+@keyframes bulbs { 50% { background-position: 7px 0; } }
+.ptitle { font-family: var(--display); letter-spacing: .1em; font-size: 1rem; text-align: center; margin: 0; }
+
+/* Board panel */
+.meter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.row { display: grid; gap: 5px; }
+.row .boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.lv { aspect-ratio: 1; border-radius: 6px; border: 2px solid var(--red); display: grid; place-items: center; font-family: var(--display); font-size: 1rem; }
+.lv.done { background: var(--green); border-color: var(--green); }
+.lv.now { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 5px rgba(214,40,40,.3); } }
+.rank { text-align: center; font-weight: 700; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; border: 1.5px solid var(--red); border-radius: 999px; padding: 2px 4px; }
+.rank.got { border-color: var(--green); }
+.top-rank { text-align: center; font-family: var(--display); letter-spacing: .12em; font-size: 1.1rem; }
+.top-rank.got { color: var(--gold); text-shadow: 0 0 14px rgba(224,165,44,.7); }
+.stats { display: flex; justify-content: space-between; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stats b { font-family: var(--display); font-weight: 400; font-size: 1.25rem; }
+.stats .juice b { color: var(--green); }
+.deck { display: grid; place-items: center; gap: 6px; flex: 1; min-height: 0; }
+.record { width: min(52vw, 30vh, 210px); aspect-ratio: 1; border-radius: 50%; border: 0; padding: 0; position: relative;
+  background: repeating-radial-gradient(circle, #0d0d0f 0 2px, #1d1d22 2px 4px); box-shadow: 0 0 0 3px #000, 0 0 0 6px var(--red), 0 10px 26px rgba(0,0,0,.7); display: grid; place-items: center; }
+.record .label { width: 40%; aspect-ratio: 1; border-radius: 50%; background: var(--red); display: grid; place-items: center; position: relative; }
+.record .label .lt { position: absolute; top: 12%; font-family: var(--tag); font-size: .78rem; color: #fff; -webkit-text-stroke: .5px #000; }
+.record .label svg { width: 38%; height: 38%; fill: #fff; margin-top: 18%; }
+.record.spin { animation: spin 3s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.hint { font-weight: 700; font-size: .9rem; text-align: center; }
+
+/* Play panel: cabinet with doors that open */
+.ep { text-align: center; display: grid; gap: 2px; }
+.ep .k { font-size: .72rem; font-weight: 700; letter-spacing: .18em; color: var(--pink); }
+.ep .n { font-family: var(--display); font-size: 1.25rem; letter-spacing: .04em; line-height: 1.1; }
+.screen { width: min(100%, calc(30vh * 16 / 9)); aspect-ratio: 16 / 9; margin: 0 auto; border-radius: 10px; overflow: hidden; background: #000; border: 2px solid #000; box-shadow: 0 0 0 2px var(--red-dim); flex-shrink: 0; }
+.screen iframe, .screen > div { width: 100%; height: 100%; display: block; border: 0; }
+.qcard { background: var(--panel2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; display: grid; gap: 8px; min-height: 0; }
+.qhead { display: flex; justify-content: space-between; font-weight: 700; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--pink); font-variant-numeric: tabular-nums; }
+.qtext { font-size: 1.02rem; font-weight: 700; }
+.opts { display: grid; gap: 6px; }
+.opt { background: var(--panel); border: 2px solid var(--line); border-radius: 9px; padding: 9px 11px; text-align: left; font-weight: 600; }
+.opt.right { border-color: var(--green); } .opt.wrong { border-color: var(--red); }
+.empty { border: 2px dashed var(--line); border-radius: 10px; padding: 12px; text-align: center; }
+.next { background: transparent; border: 2px solid var(--red); border-radius: 9px; padding: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.doors { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; z-index: 3; pointer-events: none; }
+.door { background: repeating-linear-gradient(90deg, #c91f2e 0 22px, #f4efe6 22px 44px); border: 3px solid #000; display: grid; place-items: center; overflow: hidden; transition: transform .8s cubic-bezier(.6,0,.2,1); pointer-events: auto; position: relative; }
+.door.l { border-right-width: 1.5px; } .door.r { border-left-width: 1.5px; }
+.doors.open .door.l { transform: translateX(-102%); } .doors.open .door.r { transform: translateX(102%); }
+.doors.open { pointer-events: none; } .doors.open .door { pointer-events: none; }
+.door-tag { position: absolute; top: 34%; font-family: var(--tag); font-size: 3.4rem; color: var(--cyan); -webkit-text-stroke: 2px #000; text-shadow: 3px 3px 0 #000; white-space: nowrap; }
+.door.l .door-tag { right: -1px; transform: translateX(50%) rotate(-5deg); }
+.door.r .door-tag { left: -1px; transform: translateX(-50%) rotate(-5deg); }
+.door-btn { position: absolute; bottom: 20%; background: #000; border: 2px solid #fff; border-radius: 999px; padding: 8px 14px; font-family: var(--display); letter-spacing: .1em; font-size: .95rem; white-space: nowrap; }
+.door.l .door-btn { right: 0; transform: translateX(50%); } .door.r .door-btn { display: none; }
+
+/* Songs panel */
+.songs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-rows: repeat(9, minmax(0, 1fr)); gap: 5px; flex: 1; min-height: 0; }
+.song { display: grid; grid-template-columns: 24px 1fr auto; gap: 8px; align-items: center; background: var(--panel2); border-radius: 9px; padding: 0 10px; min-height: 0; }
+.song.playing { outline: 2px solid var(--green); }
+.song .n { font-family: var(--display); text-align: center; }
+.song .t { min-width: 0; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.song .t button { background: none; border: 0; padding: 0; font-weight: 700; text-align: left; text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 3px; }
+.song .s { font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; border: 1.5px solid var(--red); white-space: nowrap; }
+.song .s.open { border-color: var(--green); }
+
+/* pager + dock */
+.pager { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; }
+.arrow { width: 44px; height: 36px; border-radius: 10px; border: 2px solid var(--red); background: transparent; font-family: var(--display); font-size: 1.3rem; line-height: 1; }
+.arrow:disabled { opacity: .25; }
+.tabs { display: flex; justify-content: center; gap: 6px; }
+.tab { border: 0; background: none; font-weight: 700; font-size: .75rem; letter-spacing: .12em; padding: 6px 8px; border-bottom: 2px solid transparent; }
+.tab.on { border-bottom-color: var(--red); }
+.dock { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; border-top: 1px solid var(--line); padding-top: 8px; }
+.dock .menu-btn { justify-self: start; display: inline-flex; align-items: center; gap: 6px; background: var(--panel); border: 1.5px solid var(--line); border-radius: 10px; padding: 7px 11px; font-weight: 700; font-size: .85rem; }
+.dock .menu-btn svg { width: 18px; height: 18px; fill: currentColor; }
+.dock .sig { font-family: var(--tag); font-size: 1rem; color: var(--sun); -webkit-text-stroke: .6px #000; }
+.dock .restart { justify-self: end; background: none; border: 0; font-weight: 700; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: underline; text-underline-offset: 4px; padding: 6px 2px; }
+
+/* menu sheet (drops up from the dock) */
+.scrim { position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 40; }
+.sheet { position: fixed; left: 50%; bottom: 0; transform: translateX(-50%); width: min(100%, 480px); z-index: 41; background: var(--panel); border: 3px solid var(--red); border-bottom: 0; border-radius: 18px 18px 0 0;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) max(18px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: grid; gap: 12px; animation: up .25s ease-out; }
+@keyframes up { from { transform: translate(-50%, 30px); opacity: 0; } }
+.sheet h3 { margin: 0; font-family: var(--display); letter-spacing: .08em; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; }
+.sheet .x { background: none; border: 2px solid var(--line); border-radius: 50%; width: 34px; height: 34px; font-weight: 700; }
+.links { display: grid; gap: 8px; }
+.links a, .links button { display: flex; align-items: center; gap: 10px; text-decoration: none; background: var(--panel2); border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 12px; font-weight: 700; text-align: left; width: 100%; }
+.links svg { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
+.links small { display: block; font-weight: 600; font-size: .8rem; }
+.about { font-size: .9rem; margin: 0; }
+
+.toast { position: fixed; left: 50%; top: calc(14px + env(safe-area-inset-top, 0px)); transform: translateX(-50%) translateY(-20px); opacity: 0; background: var(--green); color: var(--fg);
+  font-family: var(--display); letter-spacing: .08em; font-size: 1.1rem; padding: 10px 18px; border-radius: 12px; transition: .3s; z-index: 50; pointer-events: none; border: 2px solid #000; white-space: nowrap; }
+.toast.on { opacity: 1; transform: translateX(-50%) translateY(0); }
+@media (max-height: 640px) { .nems { font-size: 2rem; } .tags { font-size: 1.05rem; } .meter { gap: 6px; } .lv { font-size: .85rem; } .qtext { font-size: .95rem; } .opt { padding: 7px 10px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 </style>
 </head>
 <body>
 
-<!-- Welcome room -->
+<!-- Front page -->
 <section class="room" id="welcome">
   <div class="room-in">
     <div class="logo" id="logoW"></div>
+    <div class="welcome-name">NEMS</div>
+    <div class="tags"><span class="t1">BING BONG</span><span class="t2">FYL</span><span class="t3">GORILLA NEMS</span></div>
     <h2>ARE YOU READY TO GO 99 DEEP?</h2>
     <p>Free to play. Listen, answer, unlock the music.</p>
     <button class="big-btn" id="enter" type="button">LET'S GO</button>
-    <div class="tags"><span class="t1">BING BONG</span><span class="t2">FYL</span><span class="t3">GORILLA NEMS</span></div>
+    <div class="socials" id="socialsW"></div>
   </div>
 </section>
 
@@ -155,50 +203,72 @@ a.yt { color: var(--fg); text-decoration: underline; text-decoration-color: var(
   </div>
 </section>
 
-<main class="app" id="board" hidden>
-  <div class="preview-tag">PITCH DEMO · PRIVATE</div>
-  <div class="logo" id="logoB"></div>
-  <h1 class="artist"><small>THE MUSIC GAME OF</small><span id="artistName"></span></h1>
-  <div class="tags"><span class="t1">BING BONG</span><span class="t3">GORILLA NEMS</span><span class="t2">FYL</span></div>
+<!-- The game -->
+<div class="game" id="game" hidden>
+  <header class="top">
+    <svg class="coaster" id="coaster" viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div class="demo">PITCH DEMO · PRIVATE</div>
+    <div class="top-row"><span class="nems">NEMS</span><span class="mini99" id="mini99"></span></div>
+    <div class="tags"><span class="t1">BING BONG</span><span class="t3">GORILLA NEMS</span><span class="t2">FYL</span></div>
+  </header>
 
-  <div class="cab">
-    <div class="meter" id="meter"></div>
-    <div class="top-rank" id="topRank">99 DEEP</div>
-    <div class="stats">
-      <span>Questions <b id="qCount">0</b> / 99</span>
-      <span class="juice">Juice <b id="juice">0</b></span>
+  <div class="viewport" id="viewport">
+    <div class="track" id="track">
+      <section class="panel" id="pBoard" aria-label="Board">
+        <div class="meter" id="meter"></div>
+        <div class="top-rank" id="topRank">99 DEEP</div>
+        <div class="stats"><span>Questions <b id="qCount">0</b> / 99</span><span class="juice">Juice <b id="juice">0</b></span></div>
+        <div class="deck">
+          <button class="record" id="record" type="button" aria-label="Play"><span class="label"><span class="lt">NEMS</span><svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg></span></button>
+          <div class="hint" id="hint">Tap the record to play</div>
+        </div>
+      </section>
+
+      <section class="panel" id="pPlay" aria-label="Now playing">
+        <div class="ep"><span class="k" id="epNum">EPISODE 1</span><span class="n" id="epName">Bing Bong</span></div>
+        <div class="screen"><div id="yt"></div></div>
+        <div class="qcard"><div class="qhead"><span id="qLevel"></span><span id="qNum"></span></div><div id="qBody"></div></div>
+        <div class="doors" id="doors">
+          <div class="door l"><span class="door-tag">NEMS</span><button class="door-btn" id="doorPlay" type="button">PRESS PLAY</button></div>
+          <div class="door r"><span class="door-tag">NEMS</span></div>
+        </div>
+      </section>
+
+      <section class="panel" id="pSongs" aria-label="Songs">
+        <h2 class="ptitle">THE 9 SONGS</h2>
+        <ul class="songs" id="songs"></ul>
+      </section>
     </div>
-
-    <div class="deck">
-      <button class="record" id="record" type="button" aria-label="Play"><span class="label"><svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg></span></button>
-      <div class="now-playing" id="nowPlaying">Tap the record to play</div>
-      <div class="screen" id="screen" hidden><div id="yt"></div></div>
-    </div>
-
-    <div class="qcard" id="qcard">
-      <div class="qhead"><span id="qLevel"></span><span id="qNum"></span></div>
-      <div id="qBody"></div>
-    </div>
-
-    <button class="restart" id="restart" type="button">Restart game</button>
   </div>
 
-  <h2 class="sec-title">THE SONGS</h2>
-  <ul class="songs" id="songs"></ul>
-</main>
+  <nav class="pager">
+    <button class="arrow" id="prev" type="button" aria-label="Previous screen">‹</button>
+    <div class="tabs" id="tabs"><button class="tab on" type="button" data-i="0">BOARD</button><button class="tab" type="button" data-i="1">PLAY</button><button class="tab" type="button" data-i="2">SONGS</button></div>
+    <button class="arrow" id="next" type="button" aria-label="Next screen">›</button>
+  </nav>
+
+  <footer class="dock">
+    <button class="menu-btn" id="menuBtn" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>Menu</button>
+    <span class="sig">Coney Island</span>
+    <button class="restart" id="restart" type="button">Restart</button>
+  </footer>
+</div>
+
+<!-- Menu -->
+<div class="scrim" id="scrim" hidden></div>
+<div class="sheet" id="menu" role="dialog" aria-label="Menu" hidden>
+  <h3>NEMS <button class="x" id="menuX" type="button" aria-label="Close menu">✕</button></h3>
+  <div class="links" id="menuLinks"></div>
+  <div class="links">
+    <button type="button" id="replayHow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 17h-2v-2h2zm2.1-7.7-.9.9c-.7.7-1.2 1.3-1.2 2.8h-2v-.5c0-1.1.4-2.1 1.2-2.8l1.2-1.3c.4-.4.6-.9.6-1.4a2 2 0 0 0-4 0H8a4 4 0 0 1 8 0c0 .9-.4 1.7-.9 2.3z"/></svg>How to play</button>
+  </div>
+  <p class="about">Listen to the songs, answer what you heard, unlock the next song. 9 songs, 9 levels, 99 questions.</p>
+</div>
 
 <div class="toast" id="toast" role="status"></div>
-<audio id="audio" preload="metadata" controlslist="nodownload noplaybackrate"></audio>
 
 <script src="scenes.js?v=3"></script>
 <script>
-/* ============================================================
-   ARTIST SETUP — this is the only part that changes per artist.
-   name:  artist name
-   songs: exactly 9 songs, one per level. Song 1 is free. src = audio file path.
-   questions: 99 slots. Fill each with { q, opts: [a, b, c], answer }
-              (answer = number 0, 1 or 2). Empty slots show as "waiting".
-   ============================================================ */
 const ARTIST = {
   name: "NEMS",
   /* Pitch demo: each song plays inside the game from his official YouTube upload. */
@@ -256,44 +326,66 @@ const ARTIST = {
   })()
 };
 
-/* 9 levels x 11 questions = 99. Ranks are earned for each finished row of 3 levels. */
-const LEVELS = 9, PER = 11, JUICE_EACH = 100;   // perfect run = 9,900 Juice
-const RANKS = ["New Fan", "Real Fan", "Day One"];
+/* Social links (shown on the front page and in the menu) */
+const SOCIALS = [
+  { name: "Instagram", handle: "@nems_fyl", url: "https://www.instagram.com/nems_fyl/", icon: '<path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>' },
+  { name: "YouTube", handle: "NEMS", url: "https://www.youtube.com/channel/UCsHfMGNzk13L4k_tHgr287w", icon: '<path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8zM10 15V9l5.2 3z"/>' },
+  { name: "TikTok", handle: "@nems_fyl", url: "https://www.tiktok.com/@nems_fyl", icon: '<path d="M16.6 3c.4 2 1.7 3.4 3.9 3.6v3a7 7 0 0 1-3.9-1.2v6.2a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.4V3z"/>' }
+];
 
-/* 9 songs, 9 levels: one song per level. */
-const unlockAt = ARTIST.songs.map((s, k) => k);   // exactly 9 songs: song 1 free, each cleared level unlocks the next song
+const LEVELS = 9, PER = 11, JUICE_EACH = 100;          // perfect run = 9,900 Juice
+const RANKS = ["New Fan", "Real Fan", "Day One"];
+const unlockAt = ARTIST.songs.map((s, k) => k);       // 9 songs: song 1 free, each cleared level opens the next
 
 /* Graffiti-style 9 with a straight stem, no hook */
 function nine() {
   const g = (c, d) => '<g transform="translate(' + d + ' ' + d + ')" fill="none" stroke="' + c + '" stroke-width="12" stroke-linecap="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g>';
   return '<svg class="nine" viewBox="-4 -4 72 100" aria-hidden="true">' + g("#000", 4) + g("#d62828", 0) + '</svg>';
 }
-const logoHTML = nine() + nine() + '<span class="deep">DEEP</span>';
 
 const $ = id => document.getElementById(id);
 const store = {
-  get() { try { return JSON.parse(localStorage.getItem("deep99") || "{}"); } catch (e) { return {}; } },
-  set(v) { try { localStorage.setItem("deep99", JSON.stringify(v)); } catch (e) {} }
+  get() { try { return JSON.parse(localStorage.getItem("deep99nems") || "{}"); } catch (e) { return {}; } },
+  set(v) { try { localStorage.setItem("deep99nems", JSON.stringify(v)); } catch (e) {} }
 };
 let state = Object.assign({ done: 0, juice: 0, seenHow: false }, store.get());
 const save = () => store.set(state);
-
-const levelOf = n => Math.min(LEVELS, Math.floor(n / PER) + 1);       // level of question n (0-based)
+const levelOf = n => Math.min(LEVELS, Math.floor(n / PER) + 1);
 const levelsDone = () => Math.floor(state.done / PER);
 const isOpen = k => levelsDone() >= unlockAt[k];
 
 function toast(t) { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2200); }
 
+/* ---------- panels ---------- */
+let pIdx = 0;
+function goPanel(i) {
+  pIdx = Math.max(0, Math.min(2, i));
+  $("track").style.transform = "translateX(" + (-100 * pIdx) + "%)";
+  document.querySelectorAll(".tab").forEach((t, k) => t.classList.toggle("on", k === pIdx));
+  $("prev").disabled = pIdx === 0; $("next").disabled = pIdx === 2;
+}
+$("prev").onclick = () => goPanel(pIdx - 1);
+$("next").onclick = () => goPanel(pIdx + 1);
+document.querySelectorAll(".tab").forEach(t => t.onclick = () => goPanel(+t.dataset.i));
+(function swipe() {
+  let x0 = null, y0 = null;
+  const vp = $("viewport");
+  vp.addEventListener("touchstart", e => { if (e.touches.length === 1) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; } }, { passive: true });
+  vp.addEventListener("touchend", e => {
+    if (x0 == null) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4) goPanel(pIdx + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+})();
+
+/* ---------- board ---------- */
 function renderMeter() {
   const m = $("meter"); m.innerHTML = "";
   const ld = levelsDone();
   for (let r = 0; r < 3; r++) {
     const row = document.createElement("div"); row.className = "row";
     let boxes = '<div class="boxes">';
-    for (let c = 0; c < 3; c++) {
-      const lv = r * 3 + c + 1;
-      boxes += '<div class="lv' + (lv <= ld ? " done" : lv === ld + 1 && state.done < 99 ? " now" : "") + '">' + lv + '</div>';
-    }
+    for (let c = 0; c < 3; c++) { const lv = r * 3 + c + 1; boxes += '<div class="lv' + (lv <= ld ? " done" : lv === ld + 1 && state.done < 99 ? " now" : "") + '">' + lv + '</div>'; }
     row.innerHTML = boxes + '</div><div class="rank' + (ld >= (r + 1) * 3 ? " got" : "") + '">' + RANKS[r] + '</div>';
     m.append(row);
   }
@@ -305,14 +397,12 @@ function renderMeter() {
 function renderSongs() {
   const ul = $("songs"); ul.innerHTML = "";
   ARTIST.songs.forEach((s, k) => {
-    const li = document.createElement("li"); li.className = "song";
+    const li = document.createElement("li"); li.className = "song" + (k === current ? " playing" : "");
     const open = isOpen(k);
-    li.innerHTML = '<span class="n">' + (k + 1) + '</span><span class="t"></span><span class="s' + (open ? " open" : "") + '">' +
-      (k === 0 ? "Free" : open ? "Unlocked" : "Level " + unlockAt[k]) + '</span>';
+    li.innerHTML = '<span class="n">' + (k + 1) + '</span><span class="t"></span><span class="s' + (open ? " open" : "") + '">' + (k === 0 ? "Free" : open ? "Unlocked" : "Level " + unlockAt[k]) + '</span>';
     const t = li.querySelector(".t");
-    if (open) { const b = document.createElement("button"); b.type = "button"; b.className = "pick"; b.textContent = s.title; b.onclick = () => playSong(k); t.append(b); }
+    if (open) { const b = document.createElement("button"); b.type = "button"; b.textContent = s.title; b.onclick = () => playSong(k); t.append(b); }
     else t.textContent = s.title;
-    if (k === current) li.classList.add("playing");
     ul.append(li);
   });
 }
@@ -321,17 +411,14 @@ function renderQuestion() {
   const body = $("qBody");
   if (state.done >= 99) {
     $("qLevel").textContent = "All levels cleared"; $("qNum").textContent = "99 / 99";
-    body.innerHTML = '<div class="qtext">You went 99 DEEP. Every song is unlocked.</div>';
-    return;
+    body.innerHTML = '<div class="qtext">You went 99 DEEP. Every song is unlocked.</div>'; return;
   }
-  const n = state.done, lv = levelOf(n);
-  $("qLevel").textContent = "Level " + lv; $("qNum").textContent = "Question " + (n + 1) + " of 99";
+  const n = state.done;
+  $("qLevel").textContent = "Level " + levelOf(n); $("qNum").textContent = "Q " + (n + 1) + " of 99";
   const q = ARTIST.questions[n];
   if (!q) {
-    body.innerHTML = '<div class="empty">Question slot ' + (n + 1) + ' is waiting for the artist\'s approval.</div>' +
-      '<button class="next" id="skip" type="button">Preview next slot</button>';
-    $("skip").onclick = () => advance(false);
-    return;
+    body.innerHTML = '<div class="empty">Question ' + (n + 1) + ' is waiting for the artist\'s approval.</div><button class="next" id="skip" type="button">Preview next question</button>';
+    $("skip").onclick = () => advance(false); return;
   }
   body.innerHTML = '<div class="qtext"></div><div class="opts"></div>';
   body.querySelector(".qtext").textContent = q.q;
@@ -339,8 +426,8 @@ function renderQuestion() {
   q.opts.forEach((o, i) => {
     const b = document.createElement("button"); b.type = "button"; b.className = "opt"; b.textContent = o;
     b.onclick = () => {
-      if (i === q.answer) { b.classList.add("right"); setTimeout(() => advance(true), 600); }
-      else { b.classList.add("wrong"); toast("Not quite. Listen again."); }
+      if (i === q.answer) { b.classList.add("right"); setTimeout(() => advance(true), 550); }
+      else { b.classList.add("wrong"); toast("NOT QUITE. LISTEN AGAIN."); }
     };
     box.append(b);
   });
@@ -353,89 +440,110 @@ function advance(scored) {
   save();
   const after = levelsDone();
   if (after > before) {
-    const newly = ARTIST.songs.findIndex((s, k) => unlockAt[k] > before && unlockAt[k] <= after);
     if (Math.floor(after / 3) > beforeRank) toast("PROMOTED: " + RANKS[Math.floor(after / 3) - 1].toUpperCase());
-    else if (newly > -1) toast("SONG " + (newly + 1) + " UNLOCKED");
-    else toast("LEVEL " + (before + 1) + " CLEARED");
+    else if (after < 9) toast("SONG " + (after + 1) + " UNLOCKED");
   }
   if (state.done >= 99) toast("99 DEEP");
   renderAll();
 }
 
-/* Record: plays the newest unlocked song */
-const audio = $("audio");
+/* ---------- player: record opens the cabinet doors, video plays inside ---------- */
 let current = -1, player = null, ytReady = false, pending = null;
-const setIcon = on => { $("playIcon").innerHTML = on ? '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>' : '<path d="M8 5v14l11-7z"/>'; $("record").classList.toggle("spin", on); };
+const setPlaying = on => {
+  $("playIcon").innerHTML = on ? '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>' : '<path d="M8 5v14l11-7z"/>';
+  $("record").classList.toggle("spin", on);
+  $("hint").textContent = on ? "Now playing: " + ARTIST.songs[current].title : "Tap the record to play";
+};
 window.onYouTubeIframeAPIReady = () => { ytReady = true; if (pending != null) { const k = pending; pending = null; playSong(k); } };
 (function () { const t = document.createElement("script"); t.src = "https://www.youtube.com/iframe_api"; document.head.append(t); })();
 
-function fallback(s) {
-  const np = $("nowPlaying"); np.textContent = "";
-  const a = document.createElement("a"); a.href = s.watch; a.target = "_blank"; a.rel = "noopener"; a.className = "yt";
-  a.textContent = "This video only plays on YouTube. Tap to watch.";
-  np.append(a);
-}
+function showEpisode(k) { $("epNum").textContent = "EPISODE " + (k + 1); $("epName").textContent = ARTIST.songs[k].title; }
 function playSong(k) {
   const s = ARTIST.songs[k];
   if (!isOpen(k)) { toast("LOCKED UNTIL LEVEL " + unlockAt[k]); return; }
-  current = k; renderSongs();
-  $("nowPlaying").textContent = s.title;
-  $("screen").hidden = false;
+  current = k; renderSongs(); showEpisode(k);
+  goPanel(1);
+  $("doors").classList.add("open");
   if (!ytReady) { pending = k; return; }
   if (!player) {
     player = new YT.Player("yt", {
       videoId: s.id, playerVars: { playsinline: 1, rel: 0, modestbranding: 1 },
       events: {
         onReady: e => e.target.playVideo(),
-        onStateChange: e => setIcon(e.data === YT.PlayerState.PLAYING),
-        onError: () => { setIcon(false); fallback(ARTIST.songs[current]); }
+        onStateChange: e => setPlaying(e.data === YT.PlayerState.PLAYING),
+        onError: () => { setPlaying(false); toast("TAP TO WATCH ON YOUTUBE"); }
       }
     });
   } else player.loadVideoById(s.id);
 }
+const newestOpen = () => { let k = 0; ARTIST.songs.forEach((s, i) => { if (isOpen(i)) k = i; }); return k; };
 $("record").onclick = () => {
   if (player && player.getPlayerState && player.getPlayerState() === YT.PlayerState.PLAYING) { player.pauseVideo(); return; }
-  if (player && current > -1 && player.getPlayerState() === YT.PlayerState.PAUSED) { player.playVideo(); return; }
-  let k = 0; ARTIST.songs.forEach((s, i) => { if (isOpen(i)) k = i; });
-  playSong(current > -1 ? current : k);
+  if (player && current > -1 && player.getPlayerState() === YT.PlayerState.PAUSED) { player.playVideo(); goPanel(1); return; }
+  playSong(current > -1 ? current : newestOpen());
+};
+$("doorPlay").onclick = () => playSong(current > -1 ? current : newestOpen());
+
+/* ---------- menu ---------- */
+const socialLink = s => '<a href="' + s.url + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true">' + s.icon + '</svg><span>' + s.name + '<small>' + s.handle + '</small></span></a>';
+$("menuLinks").innerHTML = SOCIALS.map(socialLink).join("");
+$("socialsW").innerHTML = SOCIALS.map(s => '<a class="soc" href="' + s.url + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true">' + s.icon + '</svg>' + s.handle + '</a>').join("");
+const openMenu = on => { $("menu").hidden = !on; $("scrim").hidden = !on; };
+$("menuBtn").onclick = () => openMenu(true);
+$("menuX").onclick = () => openMenu(false);
+$("scrim").onclick = () => openMenu(false);
+$("replayHow").onclick = () => { openMenu(false); howI = 0; showHow(); $("how").hidden = false; };
+
+/* restart: same spot on every screen, tap twice to confirm */
+$("restart").onclick = () => {
+  const b = $("restart");
+  if (!b.dataset.sure) { b.dataset.sure = "1"; b.textContent = "Tap again"; setTimeout(() => { delete b.dataset.sure; b.textContent = "Restart"; }, 3000); return; }
+  delete b.dataset.sure; b.textContent = "Restart";
+  if (player && player.pauseVideo) player.pauseVideo();
+  state = { done: 0, juice: 0, seenHow: true }; save(); current = -1;
+  $("doors").classList.remove("open"); showEpisode(0); goPanel(0); renderAll(); toast("NEW GAME");
 };
 
-/* How to play: one short instruction per room */
+/* ---------- welcome + how to play (Coney Island rooms) ---------- */
 const SC = window.CONEY_SCENES;
 const HOW = [
   { s: SC.train, t: "PRESS PLAY", x: "Last stop, Coney Island. Tap the record to hear the music." },
   { s: SC.cyclone, t: "ANSWER WHAT YOU HEARD", x: "Every question comes straight from the songs. Hold on tight." },
-  { s: SC.wheel, t: "UNLOCK THE MUSIC", x: "Clear levels to unlock new songs. Bing Bong is free." },
+  { s: SC.wheel, t: "UNLOCK THE MUSIC", x: "Clear a level to unlock the next song. Bing Bong is free." },
   { s: SC.parachute, t: "CLIMB THE RANKS", x: "New Fan, Real Fan, Day One. Answer all 99 to go 99 DEEP." },
   { s: SC.corner, t: "WELCOME TO THE BLOCK", x: "Mermaid Avenue and West 16th Street. This is NEMS's game." }
 ];
 let howI = 0;
 function showHow() {
   const h = HOW[howI];
-  $("howScene").innerHTML = h.s(); if (howI === 0 && window.bingBong) setTimeout(window.bingBong, 2300); $("howTitle").textContent = h.t; $("howText").textContent = h.x;
+  $("howScene").innerHTML = h.s();
+  if (howI === 0 && window.bingBong) setTimeout(window.bingBong, 2300);
+  $("howTitle").textContent = h.t; $("howText").textContent = h.x;
   $("howDots").innerHTML = HOW.map((_, i) => '<i class="' + (i === howI ? "on" : "") + '"></i>').join("");
   $("howNext").textContent = howI === HOW.length - 1 ? "START PLAYING" : "NEXT";
 }
 $("howNext").onclick = () => {
   if (howI < HOW.length - 1) { howI++; showHow(); return; }
-  state.seenHow = true; save(); $("how").hidden = true; $("board").hidden = false;
+  state.seenHow = true; save(); $("how").hidden = true; $("game").hidden = false;
 };
 $("enter").onclick = () => {
   $("welcome").hidden = true;
-  if (state.seenHow) { $("board").hidden = false; return; }
+  if (state.seenHow) { $("game").hidden = false; return; }
   howI = 0; showHow(); $("how").hidden = false;
 };
-$("restart").onclick = () => {
-  const b = $("restart");
-  if (!b.dataset.sure) { b.dataset.sure = "1"; b.textContent = "Tap again to erase and start over"; setTimeout(() => { delete b.dataset.sure; b.textContent = "Restart game"; }, 3000); return; }
-  delete b.dataset.sure; b.textContent = "Restart game";
-  audio.pause(); if (player && player.pauseVideo) player.pauseVideo(); state = { done: 0, juice: 0, seenHow: true }; save(); renderAll(); toast("NEW GAME");
-};
+
+/* small Cyclone silhouette behind the header */
+(function () {
+  const pts = [[0, 60], [40, 60], [80, 12], [96, 10], [118, 58], [150, 30], [180, 58], [212, 38], [244, 58], [276, 44], [306, 58], [340, 40], [372, 58], [400, 50]];
+  let d = "M" + pts.map(p => p.join(" ")).join(" L"), posts = "";
+  for (let x = 6; x < 400; x += 10) posts += '<line x1="' + x + '" y1="64" x2="' + x + '" y2="20"/>';
+  $("coaster").innerHTML = '<clipPath id="cc"><path d="' + d + ' L400 64 L0 64Z"/></clipPath><g clip-path="url(#cc)" stroke="#f7f3ea" stroke-width="1">' + posts + '</g><path d="' + d + '" fill="none" stroke="#f7f3ea" stroke-width="2.5"/>';
+})();
 
 function renderAll() { renderMeter(); renderQuestion(); renderSongs(); }
-$("logoW").innerHTML = logoHTML; $("logoB").innerHTML = logoHTML;
-$("artistName").textContent = ARTIST.name;
-renderAll();
+$("logoW").innerHTML = nine() + nine() + '<span class="deep">DEEP</span>';
+$("mini99").innerHTML = nine() + nine() + 'DEEP';
+showEpisode(0); goPanel(0); renderAll();
 </script>
 </body>
 </html>
