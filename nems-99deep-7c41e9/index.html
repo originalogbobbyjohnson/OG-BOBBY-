@@ -88,7 +88,8 @@ a { color: var(--fg); }
 .meter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .row { display: grid; gap: 5px; }
 .row .boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
-.lv { aspect-ratio: 1; border-radius: 6px; border: 2px solid var(--red); display: grid; place-items: center; font-family: var(--display); font-size: 1rem; }
+.lv { aspect-ratio: 1; border-radius: 6px; border: 2px solid var(--red); display: grid; place-items: center; font-family: var(--display); font-size: 1rem; background: transparent; padding: 0; color: var(--fg); cursor: pointer; }
+.lv:active { transform: scale(.92); }
 .lv.done { background: var(--green); border-color: var(--green); }
 .lv.now { animation: pulse 1.6s ease-in-out infinite; }
 @keyframes pulse { 50% { box-shadow: 0 0 0 5px rgba(214,40,40,.3); } }
@@ -271,6 +272,28 @@ a { color: var(--fg); }
 .dots button { width: 12px; height: 12px; padding: 0; border-radius: 50%; border: 0; background: var(--line); }
 .dots button.on { background: var(--red); }
 .dots { gap: 12px; }
+/* episode info (tap a meter number) */
+.ei-title { font-family: var(--tag); font-size: clamp(1.8rem, 9vw, 2.4rem); line-height: 1.05; color: var(--cyan); -webkit-text-stroke: 1px #000; text-shadow: 3px 3px 0 #000; text-wrap: balance; }
+.ei-stops { display: flex; justify-content: center; align-items: center; gap: 6px; font-weight: 700; font-size: .85rem; }
+.ei-stops i { width: 26px; height: 26px; border-radius: 6px; border: 2px solid var(--red); display: grid; place-items: center; font-style: normal; font-family: var(--display); }
+.ei-stops i.got { background: var(--green); border-color: var(--green); }
+.ei-stops span { margin-left: 4px; }
+.ei-status { font-weight: 700; } .ei-status.done { color: var(--green); } .ei-status.lock { color: var(--pink); }
+.ei-status i { font-style: normal; color: var(--gold); }
+/* the cage: trophy shelf behind bars */
+.cage { position: relative; border-radius: 12px; padding: 10px 8px 6px; background: linear-gradient(#1a1324, #0e0b14); border: 2px solid #4a4f5a; }
+.cage::after { content: ""; position: absolute; inset: 0; border-radius: 10px; pointer-events: none;
+  background: repeating-linear-gradient(90deg, transparent 0 calc(20% - 3px), rgba(160,168,180,.35) calc(20% - 3px) 20%); }
+.shelf { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; position: relative; z-index: 1; border-bottom: 6px solid #3b2418; padding-bottom: 2px; }
+.trophy { background: none; border: 0; padding: 0; display: grid; justify-items: center; gap: 2px; position: relative; cursor: pointer; }
+.trophy svg { width: 100%; max-width: 62px; height: auto; filter: grayscale(1) brightness(.35); transition: .3s; }
+.trophy.got svg { filter: drop-shadow(0 0 8px rgba(224,165,44,.7)); }
+.trophy span { font-size: .62rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.trophy.got span { color: var(--gold); }
+.trophy em { position: absolute; top: 30%; font-style: normal; font-size: .9rem; }
+.tr-big { width: 130px; margin: 0 auto; } .tr-big svg { width: 100%; filter: grayscale(1) brightness(.4); } .tr-big.got svg { filter: drop-shadow(0 0 14px rgba(224,165,44,.8)); }
+.trophies { gap: 7px; }
+.trow { padding: 6px 10px; }
 </style>
 </head>
 <body>
@@ -344,6 +367,7 @@ a { color: var(--fg); }
       <section class="panel" id="pTrophy" aria-label="The Cage">
         <h2 class="ptitle">THE CAGE</h2>
         <div class="trophies">
+          <div class="cage"><div class="shelf" id="shelf"></div></div>
           <div class="tgrid" id="starGrid"></div>
           <div class="trow"><span>Rank</span><b id="tRank">—</b></div>
           <div class="trow"><span>Bing Bongs</span><b id="tBongs">0</b></div>
@@ -399,6 +423,6 @@ a { color: var(--fg); }
 
 <script src="scenes.js?v=3"></script>
 <script src="sfx.js?v=1"></script>
-<script src="game.js?v=8"></script>
+<script src="game.js?v=9"></script>
 </body>
 </html>

@@ -213,15 +213,31 @@ function renderMeter() {
   ROWS.forEach((row, r) => {
     const el = document.createElement("div"); el.className = "row";
     const nextUp = EPISODES.findIndex((e, k) => !isCleared(k));
-    el.innerHTML = '<div class="boxes">' + row.map(k => '<div class="lv' + (isCleared(k) ? " done" : k === nextUp ? " now" : "") + '">' + (k + 1) + '</div>').join("") + '</div>' +
+    el.innerHTML = '<div class="boxes">' + row.map(k => '<button type="button" data-ep="' + k + '" aria-label="Episode ' + (k + 1) + '" class="lv' + (isCleared(k) ? " done" : k === nextUp ? " now" : "") + (isOpen(k) ? "" : " locked") + '">' + (k + 1) + '</button>').join("") + '</div>' +
       '<div class="rank' + (row.every(isCleared) ? " got" : "") + '">' + RANKS[r] + '</div>' +
       '<div class="per">' + (r + 1) + (r ? " stops" : " stop") + ' a song</div>';
     m.append(el);
   });
+  m.querySelectorAll(".lv").forEach(b => b.onclick = () => episodeInfo(+b.dataset.ep));
   $("topRank").textContent = kong() ? "KING KONG" : "YOU'RE A " + rankName().toUpperCase();
   $("topRank").classList.toggle("got", kong());
   $("qCount").textContent = stopsPassed();
   $("juice").textContent = state.juice.toLocaleString();
+}
+
+/* tap a number on the meter: song name, status, and a way in */
+function episodeInfo(k) {
+  const e = EPISODES[k], row = Math.floor(k / 3), open = isOpen(k), done = isCleared(k), n = STOPS[k];
+  const status = done ? "Cleared · " + starHTML(state.stars[k])
+    : gatesOf(k) ? "In progress · stop " + (gatesOf(k) + 1) + " of " + n
+    : open ? "Ready to play" : "Locked · clear Episode " + k + " first";
+  showModal('<div class="k">EPISODE ' + (k + 1) + ' · ROW ' + (row + 1) + ' · ' + RANKS[row].toUpperCase() + '</div>' +
+    '<div class="ei-title"></div>' +
+    '<div class="ei-stops">' + Array.from({ length: n }, (_, i) => '<i class="' + (i < gatesOf(k) || done ? "got" : "") + '">' + (i + 1) + '</i>').join("") + '<span>' + n + (n > 1 ? " verse stops" : " verse stop") + '</span></div>' +
+    '<div class="ei-status' + (done ? " done" : open ? "" : " lock") + '">' + status + '</div>' +
+    (open ? '<button class="big-btn" id="eiGo" type="button">' + (done ? "PLAY IT AGAIN" : gatesOf(k) ? "KEEP GOING" : "PLAY EPISODE " + (k + 1)) + '</button>' : ''));
+  $("mcard").querySelector(".ei-title").textContent = e.title;
+  if (open) $("eiGo").onclick = () => { closeModal(); if (k === current) playSong(k); else introEpisode(k); };
 }
 
 function renderSongs() {
@@ -521,7 +537,46 @@ $("dailyBtn").onclick = () => {
 });
 
 /* ---------- trophy case + share card ---------- */
+/* the trophy shelf: one trophy per rank, earned ones glow */
+const TROPHIES = [
+  { name: "Gunther", how: "Everybody starts here.", got: () => true },
+  { name: "Lyfer", how: "Clear row 1 (Episodes 1–3).", got: () => rowsDone() >= 1 },
+  { name: "Gorilla", how: "Clear row 2 (Episodes 4–6).", got: () => rowsDone() >= 2 },
+  { name: "Silverback", how: "Clear all 9 episodes.", got: () => rowsDone() >= 3 },
+  { name: "King Kong", how: "Get all 99 right in the 99 Challenge.", got: () => kong() }
+];
+function trophyArt(i) {
+  const plinth = '<rect x="14" y="80" width="52" height="14" rx="2" fill="#3b2418"/><rect x="10" y="92" width="60" height="6" rx="2" fill="#2a170f"/><rect x="24" y="84" width="32" height="6" rx="1" fill="#c9a24a"/>';
+  const face = (fill, mask) => '<ellipse cx="40" cy="44" rx="20" ry="22" fill="' + fill + '"/><path d="M22 36q18-12 36 0v4H22z" fill="' + mask + '"/>' +
+    '<ellipse cx="40" cy="52" rx="13" ry="12" fill="' + mask + '"/><circle cx="33" cy="42" r="2.6" fill="#111"/><circle cx="47" cy="42" r="2.6" fill="#111"/>' +
+    '<ellipse cx="37" cy="51" rx="2" ry="1.4" fill="#111"/><ellipse cx="43" cy="51" rx="2" ry="1.4" fill="#111"/><path d="M33 58q7 4 14 0" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round"/>';
+  const art = [
+    /* Gunther: a dented tin can */
+    '<rect x="26" y="34" width="28" height="44" rx="3" fill="#8d939b"/><ellipse cx="40" cy="34" rx="14" ry="4" fill="#b8bec6"/><path d="M30 50l6 4-5 4" stroke="#5b6168" stroke-width="2" fill="none"/>' +
+    '<rect x="26" y="52" width="28" height="12" fill="#d62828"/><text x="40" y="62" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="10" fill="#fff">G</text>',
+    /* Lyfer: gold chain with an FYL plate */
+    '<path d="M18 22q22 44 44 0" fill="none" stroke="#e0a52c" stroke-width="5" stroke-dasharray="5 3" stroke-linecap="round"/>' +
+    '<rect x="25" y="46" width="30" height="24" rx="4" fill="#e0a52c" stroke="#7a5512" stroke-width="2"/><text x="40" y="63" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="13" fill="#3a1a00">FYL</text>',
+    /* Gorilla: gold cup with a gorilla face */
+    '<path d="M22 24h36v18q0 20-18 22q-18-2-18-22z" fill="#e0a52c"/><path d="M22 28q-10 0-10 9t12 10M58 28q10 0 10 9t-12 10" fill="none" stroke="#e0a52c" stroke-width="4"/>' +
+    '<rect x="36" y="64" width="8" height="10" fill="#e0a52c"/><rect x="28" y="73" width="24" height="6" rx="2" fill="#c08a1c"/>' +
+    '<g transform="translate(40 40) scale(.42) translate(-40 -44)">' + face("#3a2a1e", "#6b4d36") + '</g>',
+    /* Silverback: silver gorilla head */
+    '<g transform="translate(0 2)">' + face("#c9ced6", "#8d939b") + '</g>',
+    /* King Kong: gold gorilla head with a crown */
+    '<g transform="translate(0 6)">' + face("#e0a52c", "#a8741a") + '</g><path d="M24 26l6-12 6 9 4-12 4 12 6-9 6 12z" fill="#ffd34d" stroke="#7a5512" stroke-width="1.5"/>'
+  ][i];
+  return '<svg viewBox="0 0 80 100" aria-hidden="true">' + art + plinth + '</svg>';
+}
+function trophyInfo(i) {
+  const t = TROPHIES[i], got = t.got();
+  showModal('<div class="k">THE CAGE · TROPHY ' + (i + 1) + ' OF 5</div><div class="tr-big' + (got ? " got" : "") + '">' + trophyArt(i) + '</div>' +
+    '<h3>' + t.name.toUpperCase() + '</h3><p style="margin:0">' + (got ? "Earned. " : "Locked. ") + t.how + '</p>');
+}
 function renderTrophies() {
+  $("shelf").innerHTML = TROPHIES.map((t, i) => '<button type="button" class="trophy' + (t.got() ? " got" : "") + '" data-i="' + i + '" aria-label="' + t.name + (t.got() ? " trophy, earned" : " trophy, locked") + '">' +
+    trophyArt(i) + '<span>' + t.name + '</span>' + (t.got() ? "" : '<em aria-hidden="true">🔒</em>') + '</button>').join("");
+  $("shelf").querySelectorAll(".trophy").forEach(b => b.onclick = () => trophyInfo(+b.dataset.i));
   $("starGrid").innerHTML = EPISODES.map((e, k) => '<div class="tcell">EP ' + (k + 1) + '<div class="st">' + (state.stars[k] ? starHTML(state.stars[k]) : "★★★") + '</div></div>').join("");
   $("tRank").textContent = rankName().toUpperCase();
   $("tBongs").textContent = state.bongs;
