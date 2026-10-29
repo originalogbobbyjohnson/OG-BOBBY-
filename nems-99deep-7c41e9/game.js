@@ -391,7 +391,7 @@ function closeModal() { $("modal").hidden = true; const f = onModalClose; onModa
 $("modal").addEventListener("click", e => { if (e.target.id === "modal") closeModal(); });
 
 /* ---------- player: the record opens the cabinet, the video stops at each verse ---------- */
-let current = -1, player = null, ytReady = false, pending = null, watch = null;
+let current = -1, player = null, ytReady = false, pending = null, watch = null, loadedId = null;
 const setPlaying = on => {
   $("playIcon").innerHTML = on ? '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>' : '<path d="M8 5v14l11-7z"/>';
   $("record").classList.toggle("spin", on);
@@ -448,13 +448,14 @@ function showEpisode(k) { $("epNum").textContent = "EPISODE " + (k + 1) + " · "
 function playSong(k) {
   const e = EPISODES[k];
   if (!isOpen(k)) { toast("CLEAR EPISODE " + k + " FIRST"); return; }
-  const same = k === current;
+  const same = player && loadedId === e.id;
   current = k; atStop = false; renderSongs(); showEpisode(k); renderCard();
   goPanel(1);
   $("doors").classList.add("open");
   if (!ytReady) { pending = k; return; }
   /* start where the last passed stop left off */
   const from = isCleared(k) || !ready(e) ? 0 : (gatesOf(k) ? e.cuts[gatesOf(k) - 1] : 0);
+  loadedId = e.id;
   if (!player) {
     player = new YT.Player("yt", {
       videoId: e.id, playerVars: { playsinline: 1, rel: 0, modestbranding: 1, start: Math.floor(from) },
@@ -464,7 +465,7 @@ function playSong(k) {
         onError: () => { setPlaying(false); toast("THIS VIDEO WON'T PLAY HERE"); }
       }
     });
-  } else if (same && !atStop) { player.playVideo(); }
+  } else if (same) { player.playVideo(); }
   else player.loadVideoById({ videoId: e.id, startSeconds: from });
 }
 const newestOpen = () => { let k = 0; EPISODES.forEach((e, i) => { if (isOpen(i)) k = i; }); return k; };
@@ -621,17 +622,31 @@ $("chalDemo").onclick = () => { openMenu(false); startChallenge(true); };
 const paintSound = () => { $("soundBtn").textContent = SFX.on ? "ON" : "OFF"; $("soundBtn").classList.toggle("off", !SFX.on); };
 $("soundBtn").onclick = () => { SFX.set(!SFX.on); paintSound(); if (SFX.on) SFX.right(); };
 paintSound();
-$("replayHow").onclick = () => { openMenu(false); if (player && player.pauseVideo) player.pauseVideo(); howI = 0; showHow(); $("how").hidden = false; };
+$("replayHow").onclick = () => { openMenu(false); try { if (player && player.pauseVideo) player.pauseVideo(); } catch (e) {} howI = 0; showHow(); $("how").hidden = false; };
 
 /* restart: same spot on every screen, tap twice to confirm */
+/* everything that can be open on top of the game gets closed */
+function closeOverlays() {
+  $("modal").hidden = true; onModalClose = null;
+  $("epCard").hidden = true; $("chal").hidden = true; ch = null;
+  openMenu(false); $("promo").classList.remove("on");
+}
+function stopMusic() { try { if (player && player.stopVideo) player.stopVideo(); } catch (e) {} setPlaying(false); SFX.stop(); }
+/* back to the lobby: progress is kept */
+function toLobby() {
+  stopMusic(); closeOverlays();
+  current = -1; atStop = false; $("doors").classList.remove("open");
+  $("game").hidden = true; $("how").hidden = true; $("welcome").hidden = false;
+  showEpisode(0); goPanel(0); renderAll();
+}
+/* restart: asks first, then erases progress and goes back to the lobby */
 $("restart").onclick = () => {
-  const b = $("restart");
-  if (!b.dataset.sure) { b.dataset.sure = "1"; b.textContent = "Tap again"; setTimeout(() => { delete b.dataset.sure; b.textContent = "Restart"; }, 3000); return; }
-  delete b.dataset.sure; b.textContent = "Restart";
-  if (player && player.stopVideo) player.stopVideo();
-  state = FRESH(); save(); current = -1; atStop = false;
-  $("doors").classList.remove("open"); showEpisode(0); goPanel(0); renderAll(); toast("NEW GAME");
+  showModal('<div class="k">RESTART</div><h3>START OVER?</h3><p style="margin:0">This erases your episodes, ranks, Juice and Bing Bongs, and takes you back to the lobby.</p>' +
+    '<div style="display:grid;gap:8px"><button class="big-btn" id="rsYes" type="button">YES, START OVER</button><button class="next" id="rsNo" type="button">Cancel</button></div>');
+  $("rsNo").onclick = closeModal;
+  $("rsYes").onclick = () => { state = Object.assign(FRESH(), { seenHow: false }); save(); toLobby(); toast("NEW GAME"); };
 };
+$("lobbyBtn").onclick = () => { openMenu(false); toLobby(); };
 
 /* ---------- welcome + how to play (Coney Island rooms) ---------- */
 const SC = window.CONEY_SCENES;
@@ -649,27 +664,38 @@ function showHow() {
   SFX.stop();
   ({ 0: SFX.train, 1: SFX.coaster, 2: SFX.organ, 3: SFX.parachute, 4: SFX.spray })[howI]();
   $("howTitle").textContent = h.t; $("howText").textContent = h.x;
-  $("howDots").innerHTML = HOW.map((_, i) => '<i class="' + (i === howI ? "on" : "") + '"></i>').join("");
+  $("howDots").innerHTML = HOW.map((_, i) => '<button type="button" aria-label="Page ' + (i + 1) + '" class="' + (i === howI ? "on" : "") + '" data-i="' + i + '"></button>').join("");
+  $("howDots").querySelectorAll("button").forEach(d => d.onclick = () => { howI = +d.dataset.i; showHow(); });
   $("howNext").textContent = howI === HOW.length - 1 ? "START PLAYING" : "NEXT";
+  $("howBack").textContent = howI === 0 ? "LOBBY" : "BACK";
+  $("howSkip").hidden = !state.seenHow || howI === HOW.length - 1;
 }
+function leaveRooms() {
+  SFX.stop(); const first = !state.seenHow; state.seenHow = true; save();
+  $("how").hidden = true; $("game").hidden = false;
+  if (!first) welcomeBack();
+}
+$("howBack").onclick = () => {
+  if (howI > 0) { howI--; showHow(); return; }
+  SFX.stop(); $("how").hidden = true; $("welcome").hidden = false;
+};
+$("howSkip").onclick = leaveRooms;
 $("howNext").onclick = () => {
   if (howI < HOW.length - 1) { howI++; showHow(); return; }
-  SFX.stop(); state.seenHow = true; save(); $("how").hidden = true; $("game").hidden = false;
+  leaveRooms();
 };
+function welcomeBack() {
+  if (stopsPassed() === 0) return;
+  const c = EPISODES.filter((e, k) => isCleared(k)).length;
+  showModal('<div class="k">WELCOME BACK</div><h3>PREVIOUSLY ON NEMS…</h3><p style="margin:0">' +
+    (c ? "You cleared " + c + " episode" + (c > 1 ? "s" : "") + " and you're ranked <b>" + esc(rankName()) + "</b>." : "You were partway into Episode 1.") +
+    ' Juice: <b>' + state.juice.toLocaleString() + '</b>.</p><button class="big-btn" id="mGo" type="button">PICK UP WHERE YOU LEFT OFF</button>');
+  $("mGo").onclick = closeModal;
+}
+/* LET'S GO always walks the Coney Island rooms; returning players can skip */
 $("enter").onclick = () => {
-  $("welcome").hidden = true;
   SFX.unlock();
-  if (state.seenHow) {
-    $("game").hidden = false;
-    if (stopsPassed() > 0) {
-      const c = EPISODES.filter((e, k) => isCleared(k)).length;
-      showModal('<div class="k">WELCOME BACK</div><h3>PREVIOUSLY ON NEMS…</h3><p style="margin:0">' +
-        (c ? "You cleared " + c + " episode" + (c > 1 ? "s" : "") + " and you're ranked <b>" + esc(rankName()) + "</b>." : "You were partway into Episode 1.") +
-        ' Juice: <b>' + state.juice.toLocaleString() + '</b>.</p><button class="big-btn" id="mGo" type="button">PICK UP WHERE YOU LEFT OFF</button>');
-      $("mGo").onclick = closeModal;
-    }
-    return;
-  }
+  $("welcome").hidden = true;
   howI = 0; showHow(); $("how").hidden = false;
 };
 

@@ -264,6 +264,13 @@ a { color: var(--fg); }
 .rw b { color: var(--gold); }
 .rw .stars, .rw i { font-size: 1rem; }
 .rw-line { font-weight: 700; font-size: .85rem; letter-spacing: .06em; color: var(--green); }
+/* room navigation */
+.room-nav { display: grid; grid-template-columns: auto 1fr; gap: 10px; }
+.back-btn { background: transparent; border: 2px solid var(--red); border-radius: 12px; padding: 0 16px; font-family: var(--display); letter-spacing: .08em; font-size: 1rem; }
+.skip-btn { background: none; border: 0; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; text-decoration: underline; text-underline-offset: 4px; padding: 4px; justify-self: center; }
+.dots button { width: 12px; height: 12px; padding: 0; border-radius: 50%; border: 0; background: var(--line); }
+.dots button.on { background: var(--red); }
+.dots { gap: 12px; }
 </style>
 </head>
 <body>
@@ -288,7 +295,8 @@ a { color: var(--fg); }
     <h2 id="howTitle"></h2>
     <p id="howText"></p>
     <div class="dots" id="howDots"></div>
-    <button class="big-btn" id="howNext" type="button">NEXT</button>
+    <div class="room-nav"><button class="back-btn" id="howBack" type="button">BACK</button><button class="big-btn" id="howNext" type="button">NEXT</button></div>
+    <button class="skip-btn" id="howSkip" type="button" hidden>Skip intro</button>
   </div>
 </section>
 
@@ -369,6 +377,7 @@ a { color: var(--fg); }
   <div class="toggle"><span>Game sounds</span><button type="button" id="soundBtn">ON</button></div>
   <div class="links">
     <button type="button" id="chalDemo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21l1.5-7L2 9.3l7-.8z"/></svg>Preview the 99 Challenge<small style="margin-left:auto">pitch demo</small></button>
+    <button type="button" id="lobbyBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 11h3v9h6v-6h2v6h6v-9h3z"/></svg>Back to the lobby<small style="margin-left:auto">keeps progress</small></button>
     <button type="button" id="replayHow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 17h-2v-2h2zm2.1-7.7-.9.9c-.7.7-1.2 1.3-1.2 2.8h-2v-.5c0-1.1.4-2.1 1.2-2.8l1.2-1.3c.4-.4.6-.9.6-1.4a2 2 0 0 0-4 0H8a4 4 0 0 1 8 0c0 .9-.4 1.7-.9 2.3z"/></svg>How to play</button>
   </div>
   <p class="about">Every song stops at the end of a verse and asks about what you just heard. Songs 1–3 stop once, 4–6 twice, 7–9 three times. Clear a row of 3 to rank up.</p>
@@ -390,6 +399,6 @@ a { color: var(--fg); }
 
 <script src="scenes.js?v=3"></script>
 <script src="sfx.js?v=1"></script>
-<script src="game.js?v=7"></script>
+<script src="game.js?v=8"></script>
 </body>
 </html>
