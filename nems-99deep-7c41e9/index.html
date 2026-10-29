@@ -241,6 +241,20 @@ a { color: var(--fg); }
 .row { min-width: 0; }
 .per { white-space: nowrap; text-align: center; font-size: .66rem; font-weight: 700; letter-spacing: .04em; }
 .listen { font-weight: 700; text-align: center; padding: 10px 6px; }
+/* episode title card */
+.epcard { position: fixed; inset: 0; z-index: 62; display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(120% 80% at 50% 20%, #3a1066 0%, #07070d 70%);
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.epcard::before { content: ""; position: absolute; left: 0; right: 0; top: max(14px, env(safe-area-inset-top, 0px)); height: 8px;
+  background: radial-gradient(circle, #fff3b0 0 2.5px, transparent 3px) 0 0 / 18px 8px repeat-x; animation: bulbs 1.2s steps(2) infinite; }
+.ep-in { width: min(100%, 400px); display: grid; gap: 14px; text-align: center; }
+.ep-k { font-weight: 700; letter-spacing: .24em; font-size: .78rem; color: var(--pink); }
+.ep-num { font-family: var(--display); font-size: clamp(2.6rem, 13vw, 3.6rem); letter-spacing: .06em; line-height: 1; color: var(--fg); text-shadow: 4px 4px 0 #000; animation: epIn .6s cubic-bezier(.2,1.3,.4,1) both; }
+.ep-title { font-family: var(--tag); font-size: clamp(2rem, 10vw, 2.9rem); line-height: 1.05; color: var(--cyan); -webkit-text-stroke: 1.5px #000; text-shadow: 3px 3px 0 #000; text-wrap: balance; animation: epIn .6s .2s cubic-bezier(.2,1.3,.4,1) both; }
+.ep-stops { display: flex; justify-content: center; gap: 8px; }
+.ep-stops i { width: 34px; height: 34px; border-radius: 8px; border: 2px solid var(--red); display: grid; place-items: center; font-style: normal; font-family: var(--display); }
+.ep-tip { margin: 0; font-size: .95rem; }
+@keyframes epIn { from { transform: scale(2.2); opacity: 0; } }
 </style>
 </head>
 <body>
@@ -354,10 +368,19 @@ a { color: var(--fg); }
 <div class="toast" id="toast" role="status"></div>
 <div class="modal" id="modal" hidden><div class="mcard" id="mcard"></div></div>
 <div class="promo" id="promo" role="status"><button class="x" type="button" id="promoX" aria-label="Close">✕</button><div class="pk">PROMOTED</div><div class="pn" id="promoName"></div><div class="ps">Coney Island, Brooklyn</div></div>
+<div class="epcard" id="epCard" hidden><div class="ep-in">
+  <div class="ep-k" id="ecKick">NEW FAN ROW</div>
+  <div class="ep-num" id="ecNum">EPISODE 2</div>
+  <div class="ep-title" id="ecTitle"></div>
+  <div class="ep-stops" id="ecStops"></div>
+  <p class="ep-tip">The song stops at the end of the verse. Answer what you heard to keep it going.</p>
+  <button class="big-btn" id="ecGo" type="button">PLAY</button>
+  <div class="tags"><span class="t1">BING BONG</span><span class="t2">FYL</span><span class="t3">GORILLA NEMS</span></div>
+</div></div>
 <div class="chal" id="chal" hidden><div class="chal-in" id="chalIn"></div></div>
 
 <script src="scenes.js?v=3"></script>
 <script src="sfx.js?v=1"></script>
-<script src="game.js?v=3"></script>
+<script src="game.js?v=4"></script>
 </body>
 </html>

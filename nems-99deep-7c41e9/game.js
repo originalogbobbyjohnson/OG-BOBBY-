@@ -231,7 +231,7 @@ function renderSongs() {
     li.innerHTML = '<span class="n">' + (k + 1) + '</span><span class="t"></span><span class="s' + (isCleared(k) ? " open" : "") + '">' +
       (isCleared(k) ? "Cleared" : open ? stops : "Locked") + '</span>';
     const t = li.querySelector(".t");
-    if (open) { const b = document.createElement("button"); b.type = "button"; b.textContent = e.title; b.onclick = () => playSong(k); t.append(b); }
+    if (open) { const b = document.createElement("button"); b.type = "button"; b.textContent = e.title; b.onclick = () => (k === current ? playSong(k) : introEpisode(k)); t.append(b); }
     else t.textContent = e.title;
     ul.append(li);
   });
@@ -322,7 +322,7 @@ function episodeCleared(k, rankUp) {
     '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY EPISODE " + (k + 2)) + '</button>' +
     (ready(EPISODES[k]) && !finale ? '<button class="next" id="mStay" type="button">Keep listening to this one</button>' : '') + '</div>',
     () => { if (rankUp) setTimeout(() => promote(rankUp), 250); });
-  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else playSong(k + 1); };
+  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else introEpisode(k + 1); };
   if ($("mStay")) $("mStay").onclick = () => { closeModal(); if (player) player.playVideo(); };
 }
 
@@ -379,6 +379,25 @@ function guardSeek() {
   if (cut != null && player.getCurrentTime() > cut + 1.5) { player.seekTo(Math.max(0, cut - 0.5), true); }
 }
 
+/* title card before an episode starts: Episode N, the song, how many stops, then PLAY */
+function introEpisode(k) {
+  if (!isOpen(k)) { toast("CLEAR EPISODE " + k + " FIRST"); return; }
+  if (player && player.pauseVideo) player.pauseVideo();
+  $("doors").classList.remove("open");
+  current = k; atStop = false; showEpisode(k); renderSongs(); renderCard(); goPanel(1);
+  const n = STOPS[k];
+  $("ecKick").textContent = RANKS[Math.floor(k / 3)].toUpperCase() + " ROW" + (k === 8 ? " · BOSS EPISODE" : "");
+  $("ecNum").textContent = "EPISODE " + (k + 1);
+  $("ecTitle").textContent = EPISODES[k].title;
+  $("ecStops").innerHTML = Array.from({ length: n }, (_, i) => "<i>" + (i + 1) + "</i>").join("") ;
+  $("ecStops").setAttribute("aria-label", n + (n > 1 ? " stops" : " stop"));
+  $("ecGo").textContent = "PLAY EPISODE " + (k + 1);
+  $("epCard").hidden = false;
+  /* restart the zoom-in animation each time */
+  ["ecNum", "ecTitle"].forEach(id => { const el = $(id); el.style.animation = "none"; void el.offsetWidth; el.style.animation = ""; });
+  SFX.chime(0);
+  $("ecGo").onclick = () => { $("epCard").hidden = true; SFX.unlock(); playSong(k); };
+}
 function showEpisode(k) { $("epNum").textContent = "EPISODE " + (k + 1) + " · " + STOPS[k] + (STOPS[k] > 1 ? " STOPS" : " STOP"); $("epName").textContent = EPISODES[k].title; }
 function playSong(k) {
   const e = EPISODES[k];
@@ -408,9 +427,9 @@ $("record").onclick = () => {
   if (atStop) { goPanel(1); toast("ANSWER TO KEEP IT GOING"); return; }
   if (player && player.getPlayerState && player.getPlayerState() === YT.PlayerState.PLAYING) { player.pauseVideo(); return; }
   if (player && current > -1 && player.getPlayerState() === YT.PlayerState.PAUSED) { player.playVideo(); goPanel(1); return; }
-  playSong(current > -1 ? current : newestOpen());
+  if (current < 0) introEpisode(newestOpen()); else playSong(current);
 };
-$("doorPlay").onclick = () => { SFX.unlock(); playSong(current > -1 ? current : newestOpen()); };
+$("doorPlay").onclick = () => { SFX.unlock(); if (current < 0) introEpisode(newestOpen()); else playSong(current); };
 
 /* ---------- daily question: one a day from the verse pools, pays a Bing Bong ---------- */
 const today = () => new Date().toISOString().slice(0, 10);
