@@ -43,76 +43,151 @@
       sky("s1", "#1b1f4b", "#f0703a"));
   }
 
-  /* 2. The Cyclone: white wooden coaster, red car riding the hills */
+  /* Smooth curve helper: Catmull-Rom through key points, sampled every ~2px */
+  function smooth(pts) {
+    const out = [];
+    for (let i = 0; i < pts.length - 1; i++) {
+      const p0 = pts[Math.max(0, i - 1)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(pts.length - 1, i + 2)];
+      const n = Math.max(4, Math.ceil(Math.hypot(p2[0] - p1[0], p2[1] - p1[1]) / 2));
+      for (let k = 0; k < n; k++) {
+        const t = k / n, t2 = t * t, t3 = t2 * t;
+        out.push([0, 1].map(j => 0.5 * ((2 * p1[j]) + (-p0[j] + p2[j]) * t + (2 * p0[j] - 5 * p1[j] + 4 * p2[j] - p3[j]) * t2 + (-p0[j] + 3 * p1[j] - 3 * p2[j] + p3[j]) * t3)));
+      }
+    }
+    out.push(pts[pts.length - 1]);
+    return out;
+  }
+  const pathOf = pts => "M" + pts.map(p => p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" L");
+
+  /* 2. The Cyclone: white wooden lattice, long lift hill, steep first drop, red train */
   function cyclone() {
-    const track = "M0 210 L40 210 L90 70 L140 190 L180 110 L220 190 L260 130 L300 190 L340 150 L400 190";
-    let lattice = "";
-    for (let x = 10; x < 400; x += 18) lattice += '<line x1="' + x + '" y1="210" x2="' + (x + 9) + '" y2="105" stroke="#f4efe6" stroke-width="1.4" opacity=".7"/>';
+    const GROUND = 214;
+    const key = [[-10, 188], [28, 188], [118, 44], [128, 40], [138, 48], [170, 198], [184, 202], [206, 110], [222, 106], [246, 196], [258, 200], [280, 134], [294, 132], [312, 192], [324, 196], [342, 156], [356, 154], [372, 192], [410, 186]];
+    const tr = smooth(key);
+    const yAt = x => { for (let i = 1; i < tr.length; i++) if (tr[i][0] >= x && tr[i - 1][0] <= x) { const [x0, y0] = tr[i - 1], [x1, y1] = tr[i]; return x1 === x0 ? y0 : y0 + (y1 - y0) * (x - x0) / (x1 - x0); } return GROUND; };
+    let bents = "";
+    const step = 9, row = 16;
+    for (let x = 4; x < 400; x += step) {
+      const top = yAt(x) + 4;
+      if (top >= GROUND - 2) continue;
+      bents += '<line x1="' + x + '" y1="' + top.toFixed(1) + '" x2="' + x + '" y2="' + GROUND + '"/>';
+      const tn = yAt(x + step) + 4;
+      for (let y = GROUND; y - row > Math.max(top, tn); y -= row) {
+        if (x + step < 400) bents += '<line x1="' + x + '" y1="' + y + '" x2="' + (x + step) + '" y2="' + (y - row) + '"/><line x1="' + x + '" y1="' + (y - row) + '" x2="' + (x + step) + '" y2="' + y + '"/>';
+      }
+    }
+    const d = pathOf(tr);
+    const car = (delay) =>
+      '<g><path d="M-11 -11 h20 q4 0 4 4 v7 h-26 z" fill="#d62828" stroke="#1a1a1a" stroke-width="1.2"/>' +
+      '<rect x="-11" y="-4" width="24" height="2" fill="#ffd34d"/>' +
+      '<circle cx="-5" cy="-13" r="2.6" fill="#ffd9b0"/><circle cx="3" cy="-13" r="2.6" fill="#ffd9b0"/>' +
+      '<animateMotion dur="6s" begin="' + delay + 's" repeatCount="indefinite" rotate="auto" path="' + d + '"/></g>';
     return svg(
       '<rect width="400" height="260" fill="url(#s2)"/>' +
-      '<clipPath id="c2"><path d="' + track + ' L400 260 L0 260Z"/></clipPath>' +
-      '<g clip-path="url(#c2)">' + lattice + '</g>' +
-      '<path d="' + track + '" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/>' +
-      '<path d="' + track + '" fill="none" stroke="#d62828" stroke-width="2" stroke-linejoin="round"/>' +
-      '<g><rect x="-14" y="-12" width="28" height="12" rx="3" fill="#d62828" stroke="#000" stroke-width="1.5"/>' +
-        '<circle cx="-6" cy="-14" r="3" fill="#ffd9b0"/><circle cx="6" cy="-14" r="3" fill="#ffd9b0"/>' +
-        '<animateMotion dur="5s" repeatCount="indefinite" rotate="auto" path="' + track + '"/></g>' +
-      '<rect x="0" y="210" width="400" height="50" fill="#20242c"/>' +
-      '<rect x="120" y="222" width="160" height="26" rx="4" fill="#d62828"/>' +
-      '<text x="200" y="241" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="18" letter-spacing="3" fill="#fff">CYCLONE</text>' +
-      tag("NEMS", 300, 54, 34, "#fccc0a", -8),
-      sky("s2", "#ff8a3d", "#ffd27a"));
+      '<g stroke="#f7f3ea" stroke-width="1.3" opacity=".92">' + bents + '</g>' +
+      /* track: dark rails on a white deck, chain on the lift hill */
+      '<path d="' + d + '" fill="none" stroke="#f7f3ea" stroke-width="7" stroke-linejoin="round"/>' +
+      '<path d="' + d + '" fill="none" stroke="#3a2a20" stroke-width="2.4" stroke-linejoin="round"/>' +
+      '<path d="M30 186 L117 46" stroke="#555" stroke-width="1.2" stroke-dasharray="2 2"/>' +
+      car(0) + car(-0.18) + car(-0.36) +
+      /* station + sidewalk */
+      '<rect x="0" y="176" width="44" height="38" fill="#c43b2e"/><rect x="0" y="172" width="48" height="6" fill="#f7f3ea"/>' +
+      '<rect x="0" y="' + GROUND + '" width="400" height="46" fill="#2a2d35"/><rect x="0" y="' + GROUND + '" width="400" height="5" fill="#8a8f99"/>' +
+      '<text x="200" y="244" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="17" letter-spacing="4" fill="#fff">CYCLONE · SINCE 1927</text>' +
+      tag("NEMS", 300, 58, 34, "#fccc0a", -8),
+      sky("s2", "#ff7a3d", "#ffd98a"));
   }
 
-  /* 3. The Wonder Wheel: colored cars, slow spin, lights */
+  /* 3. The Wonder Wheel: eccentric steel wheel, swinging cars on S-shaped tracks, lit rim, two A-frame legs */
   function wheel() {
-    const cx = 200, cy = 112, r = 86, colors = ["#ff3d7f", "#38e8ff", "#fccc0a", "#5ee27a", "#ff6319", "#b06bff"];
-    let spokes = "", cars = "", lights = "";
-    for (let i = 0; i < 16; i++) {
-      const a = i * Math.PI / 8, x = cx + r * Math.cos(a), y = cy + r * Math.sin(a);
-      spokes += '<line x1="' + cx + '" y1="' + cy + '" x2="' + x.toFixed(1) + '" y2="' + y.toFixed(1) + '" stroke="#f4efe6" stroke-width="1.5"/>';
-      lights += '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="2.4" fill="#fff6c2" class="blink" style="animation-delay:' + (i * 0.12).toFixed(2) + 's"/>';
-      cars += '<g transform="translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ')"><g class="car-level"><rect x="-8" y="-2" width="16" height="13" rx="3" fill="' + colors[i % colors.length] + '" stroke="#000" stroke-width="1.2"/></g></g>';
+    const cx = 200, cy = 104, R = 90, Ri = 34;
+    const P = (r, a) => [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+    const f = n => n.toFixed(1);
+    let rim = "", spokes = "", tracks = "", cars = "", bulbs = "";
+    /* outer rim: double ring with zig-zag truss */
+    let zig = "";
+    for (let i = 0; i <= 48; i++) { const a = i * Math.PI / 24, [x, y] = P(i % 2 ? R : R - 8, a); zig += (i ? " L" : "M") + f(x) + " " + f(y); }
+    rim = '<circle cx="' + cx + '" cy="' + cy + '" r="' + R + '"/><circle cx="' + cx + '" cy="' + cy + '" r="' + (R - 8) + '"/><path d="' + zig + '" fill="none"/>' +
+          '<circle cx="' + cx + '" cy="' + cy + '" r="' + Ri + '"/>';
+    for (let i = 0; i < 16; i++) { const [x, y] = P(R - 8, i * Math.PI / 8); spokes += '<line x1="' + cx + '" y1="' + cy + '" x2="' + f(x) + '" y2="' + f(y) + '"/>'; }
+    for (let i = 0; i < 8; i++) {
+      /* S-curve track from the inner ring out to the rim */
+      const a = i * Math.PI / 4 + 0.2, [x0, y0] = P(Ri, a), [x3, y3] = P(R - 8, a + 0.55);
+      const [x1, y1] = P(Ri + 28, a - 0.45), [x2, y2] = P(R - 30, a + 0.95);
+      tracks += '<path d="M' + f(x0) + ' ' + f(y0) + ' C' + f(x1) + ' ' + f(y1) + ' ' + f(x2) + ' ' + f(y2) + ' ' + f(x3) + ' ' + f(y3) + '"/>';
+      /* a swinging car partway along each S-track */
+      const t = 0.62, mt = 1 - t;
+      const sx = mt * mt * mt * x0 + 3 * mt * mt * t * x1 + 3 * mt * t * t * x2 + t * t * t * x3;
+      const sy = mt * mt * mt * y0 + 3 * mt * mt * t * y1 + 3 * mt * t * t * y2 + t * t * t * y3;
+      cars += '<g transform="translate(' + f(sx) + ' ' + f(sy) + ')"><g class="car-level"><line x1="0" y1="0" x2="0" y2="5" stroke="#333"/><rect x="-7" y="4" width="14" height="11" rx="2.5" fill="' + (i % 2 ? "#1f6fd1" : "#d62828") + '" stroke="#111" stroke-width="1"/><rect x="-5" y="6" width="10" height="4" fill="#cfe6ff"/></g></g>';
+      /* a fixed car on the rim between tracks */
+      const [rx, ry] = P(R, a - 0.2 + Math.PI / 8);
+      cars += '<g transform="translate(' + f(rx) + ' ' + f(ry) + ')"><g class="car-level"><line x1="0" y1="0" x2="0" y2="5" stroke="#333"/><rect x="-7" y="4" width="14" height="11" rx="2.5" fill="#f2f2f2" stroke="#111" stroke-width="1"/><rect x="-5" y="6" width="10" height="4" fill="#9fd3ff"/></g></g>';
     }
+    for (let i = 0; i < 32; i++) { const [x, y] = P(R, i * Math.PI / 16); bulbs += '<circle cx="' + f(x) + '" cy="' + f(y) + '" r="1.8" fill="#fff3b0" class="blink" style="animation-delay:' + (i * 0.07).toFixed(2) + 's"/>'; }
+    /* A-frame legs with lattice */
+    let legs = "";
+    [[-1], [1]].forEach(([sgn]) => {
+      const bx = cx + sgn * 74;
+      legs += '<path d="M' + cx + ' ' + cy + ' L' + (bx - 8) + ' 232 M' + cx + ' ' + cy + ' L' + (bx + 8) + ' 232" stroke-width="4"/>';
+      for (let y = cy + 18; y < 230; y += 14) {
+        const k = (y - cy) / (232 - cy), xa = cx + (bx - 8 - cx) * k, xb = cx + (bx + 8 - cx) * k;
+        legs += '<line x1="' + f(xa) + '" y1="' + y + '" x2="' + f(xb) + '" y2="' + (y + 14) + '" stroke-width="1.2"/>';
+      }
+    });
     return svg(
       '<rect width="400" height="260" fill="url(#s3)"/>' +
-      '<path d="M200 112 L130 232 M200 112 L270 232" stroke="#f4efe6" stroke-width="7"/>' +
-      '<g class="spin-wheel" style="transform-origin:200px 112px">' +
-        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="#f4efe6" stroke-width="4"/>' +
-        '<circle cx="' + cx + '" cy="' + cy + '" r="' + (r - 30) + '" fill="none" stroke="#ff3d7f" stroke-width="2"/>' +
-        spokes + lights + cars + '</g>' +
-      '<circle cx="200" cy="112" r="10" fill="#d62828" stroke="#000" stroke-width="2"/>' +
-      '<rect x="0" y="232" width="400" height="28" fill="#20242c"/>' +
-      '<rect x="138" y="236" width="124" height="20" rx="4" fill="#38e8ff"/>' +
-      '<text x="200" y="251" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="14" letter-spacing="2" fill="#000">WONDER WHEEL</text>' +
-      tag("FYL", 28, 70, 40, "#ff3d7f", -10) + tag("BING BONG", 280, 210, 26, "#5ee27a", -6),
-      sky("s3", "#140f3a", "#5a2a8a"));
+      '<g stroke="#ede6d6" fill="none">' + legs + '</g>' +
+      '<g class="spin-wheel" style="transform-origin:' + cx + 'px ' + cy + 'px">' +
+        '<g stroke="#ede6d6" stroke-width="1.6" fill="none">' + spokes + '</g>' +
+        '<g stroke="#ede6d6" stroke-width="2.6" fill="none">' + rim + '</g>' +
+        '<g stroke="#f7d36a" stroke-width="2" fill="none">' + tracks + '</g>' +
+        bulbs + cars + '</g>' +
+      '<circle cx="' + cx + '" cy="' + cy + '" r="9" fill="#ede6d6" stroke="#111" stroke-width="1.5"/>' +
+      '<rect x="0" y="232" width="400" height="28" fill="#2a2d35"/>' +
+      '<text x="200" y="252" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="14" letter-spacing="3" fill="#fff">WONDER WHEEL · SINCE 1920</text>' +
+      tag("FYL", 22, 70, 40, "#ff3d7f", -10) + tag("BING BONG", 300, 216, 24, "#5ee27a", -6),
+      sky("s3", "#120e33", "#4b2580"));
   }
 
-  /* 4. The Parachute Jump: red tower, chute drops and rises, beach below */
+  /* 4. The Parachute Jump: tall red-orange open steel tower, 12-arm crown, boardwalk and beach below */
   function parachute() {
-    let ribs = "", lattice = "";
+    const cx = 200, top = 66, base = 206, f = n => n.toFixed(1);
+    const half = y => 9 + Math.pow((y - top) / (base - top), 1.6) * 34;   // slender column flaring at the base
+    let frame = "";
+    [-1, -0.45, 0.45, 1].forEach(k => { let d = ""; for (let y = top; y <= base; y += 4) d += (y === top ? "M" : " L") + f(cx + k * half(y)) + " " + y; frame += '<path d="' + d + '" stroke-width="' + (Math.abs(k) === 1 ? 2.6 : 1.4) + '"/>'; });
+    for (let y = top; y < base; y += 10) {
+      const h0 = half(y), h1 = half(y + 10);
+      frame += '<line x1="' + f(cx - h0) + '" y1="' + y + '" x2="' + f(cx + h0) + '" y2="' + y + '" stroke-width="1"/>' +
+               '<line x1="' + f(cx - h0) + '" y1="' + y + '" x2="' + f(cx + h1) + '" y2="' + (y + 10) + '" stroke-width=".9"/>' +
+               '<line x1="' + f(cx + h0) + '" y1="' + y + '" x2="' + f(cx - h1) + '" y2="' + (y + 10) + '" stroke-width=".9"/>';
+    }
+    /* crown: 12 arms seen from the side as a flattened ring, with struts back to the column */
+    let crown = "", cables = "";
+    const ry = 9, rx = 92, ringY = 50;
     for (let i = 0; i < 12; i++) {
-      const a = Math.PI + i * Math.PI / 11, x = 200 + 70 * Math.cos(a), y = 52 + 26 * Math.sin(a) * -1;
-      ribs += '<line x1="200" y1="40" x2="' + x.toFixed(1) + '" y2="' + (52 + Math.abs(y - 52) * 0.3).toFixed(1) + '" stroke="#e23b3b" stroke-width="2.4"/>';
+      const a = i * Math.PI / 6, ex = cx + rx * Math.cos(a), ey = ringY + ry * Math.sin(a);
+      crown += '<line x1="' + cx + '" y1="34" x2="' + f(ex) + '" y2="' + f(ey) + '" stroke-width="2"/>' +
+               '<line x1="' + f(cx + 9 * Math.sign(Math.cos(a) || 1)) + '" y1="' + (top + 6) + '" x2="' + f(cx + (ex - cx) * 0.62) + '" y2="' + f(ringY + (ey - ringY) * 0.62) + '" stroke-width="1.2"/>';
+      if (Math.sin(a) >= 0) cables += '<line x1="' + f(ex) + '" y1="' + f(ey) + '" x2="' + f(ex) + '" y2="' + f(ey + 18) + '" stroke="#f3e9d8" stroke-width=".8"/>';
     }
-    for (let y = 60; y < 220; y += 16) {
-      const half = 10 + (y - 60) * 0.16;
-      lattice += '<line x1="' + (200 - half) + '" y1="' + y + '" x2="' + (200 + half + 3) + '" y2="' + (y + 16) + '" stroke="#e23b3b" stroke-width="1.5"/>' +
-                 '<line x1="' + (200 + half) + '" y1="' + y + '" x2="' + (200 - half - 3) + '" y2="' + (y + 16) + '" stroke="#e23b3b" stroke-width="1.5"/>';
-    }
+    crown += '<ellipse cx="' + cx + '" cy="' + ringY + '" rx="' + rx + '" ry="' + ry + '" fill="none" stroke-width="2.4"/>' +
+             '<path d="M' + (cx - 9) + ' ' + top + ' L' + (cx - 4) + ' 34 L' + (cx + 4) + ' 34 L' + (cx + 9) + ' ' + top + '" stroke-width="2"/>' +
+             '<rect x="' + (cx - 3) + '" y="24" width="6" height="10" fill="#d9472b"/>';
+    /* boardwalk planks */
+    let planks = "";
+    for (let x = 0; x < 400; x += 12) planks += '<line x1="' + x + '" y1="206" x2="' + (x - 6) + '" y2="216" stroke="#7a5a3a" stroke-width="1"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#s4)"/>' +
-      '<rect x="0" y="196" width="400" height="22" fill="#2a7fb8"/>' +
-      '<rect x="0" y="214" width="400" height="46" fill="#f2d49b"/>' +
-      '<path d="M190 52 L170 216 M210 52 L230 216" stroke="#e23b3b" stroke-width="5"/>' + lattice +
-      '<path d="M130 54 Q200 30 270 54" fill="none" stroke="#e23b3b" stroke-width="4"/>' + ribs +
-      '<rect x="196" y="28" width="8" height="14" fill="#e23b3b"/>' +
-      '<g class="chute"><path d="M236 70 q16 -18 32 0 z" fill="#fff" stroke="#d62828" stroke-width="2"/>' +
-        '<line x1="238" y1="70" x2="252" y2="86" stroke="#fff"/><line x1="266" y1="70" x2="252" y2="86" stroke="#fff"/>' +
-        '<rect x="248" y="86" width="8" height="8" fill="#38e8ff" stroke="#000"/></g>' +
-      tag("GORILLA NEMS", 18, 246, 30, "#fccc0a", -4),
-      sky("s4", "#58c3ff", "#bfe9ff"));
+      '<rect x="0" y="186" width="400" height="20" fill="#2f7fb7"/>' +
+      '<g fill="none" stroke="#d9472b">' + frame + crown + '</g>' + cables +
+      '<g class="chute"><path d="M' + (cx + 82) + ' 66 q14 -16 28 0 z" fill="#fff" stroke="#d62828" stroke-width="1.6"/>' +
+        '<line x1="' + (cx + 84) + '" y1="66" x2="' + (cx + 96) + '" y2="80" stroke="#fff"/><line x1="' + (cx + 108) + '" y1="66" x2="' + (cx + 96) + '" y2="80" stroke="#fff"/>' +
+        '<rect x="' + (cx + 92) + '" y="80" width="8" height="8" fill="#38e8ff" stroke="#000"/></g>' +
+      '<rect x="0" y="206" width="400" height="12" fill="#a77b4f"/>' + planks +
+      '<rect x="0" y="218" width="400" height="42" fill="#efd39a"/>' +
+      tag("GORILLA NEMS", 14, 248, 30, "#fccc0a", -4),
+      sky("s4", "#4fb8f5", "#c4ecff"));
   }
 
   /* 5. The corner: Mermaid Av & W 16 St, brick wall covered in tags */
