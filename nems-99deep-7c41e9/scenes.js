@@ -26,8 +26,8 @@
       /* station sign */
       '<rect x="60" y="66" width="280" height="34" rx="4" fill="#111"/>' +
       '<rect x="60" y="66" width="280" height="4" fill="#fff"/>' +
-      '<text x="72" y="91" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">Coney Island–Stillwell Av</text>' +
-      bullet(266, 84, "D", "#ff6319") + bullet(290, 84, "F", "#ff6319") + bullet(314, 84, "N", "#fccc0a", true) + bullet(338, 84, "Q", "#fccc0a", true) +
+      '<text x="72" y="91" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="13" fill="#fff">Coney Island–Stillwell Av</text>' +
+      bullet(254, 84, "D", "#ff6319") + bullet(278, 84, "F", "#ff6319") + bullet(302, 84, "N", "#fccc0a", true) + bullet(326, 84, "Q", "#fccc0a", true) +
       /* train slides in from the right and stops */
       '<g class="anim-train">' +
         '<rect x="8" y="118" width="300" height="62" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
@@ -126,10 +126,10 @@
     return svg(
       '<rect width="400" height="260" fill="#5e2a22"/>' + bricks +
       '<rect x="0" y="0" width="400" height="30" fill="#141a2e"/>' +
-      tag("NEMS", 60, 120, 76, "#38e8ff", -6) +
-      tag("BING BONG", 40, 182, 40, "#ff3d7f", -3) +
-      tag("FYL", 250, 92, 44, "#fccc0a", -12) +
-      tag("GORILLA", 232, 190, 26, "#5ee27a", -5) +
+      tag("NEMS", 30, 112, 70, "#38e8ff", -6) +
+      tag("BING BONG", 24, 192, 36, "#ff3d7f", -3) +
+      tag("FYL", 222, 150, 44, "#fccc0a", -10) +
+      tag("GORILLA", 222, 200, 22, "#5ee27a", -5) +
       '<rect x="0" y="210" width="400" height="50" fill="#3a3d45"/>' +
       '<rect x="0" y="210" width="400" height="6" fill="#9aa0aa"/>' +
       /* sign pole */
