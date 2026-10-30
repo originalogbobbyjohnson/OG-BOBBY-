@@ -93,7 +93,7 @@ a { color: var(--fg); }
 .lv.done { background: var(--green); border-color: var(--green); }
 .lv.now { animation: pg-pulse 1.6s ease-in-out infinite; }
 @keyframes pg-pulse { 50% { box-shadow: 0 0 0 5px rgba(214,40,40,.3); } }
-.rank { text-align: center; font-weight: 700; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; border: 1.5px solid var(--red); border-radius: 999px; padding: 2px 4px; }
+.rank { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; text-align: center; font-weight: 700; font-size: clamp(.58rem, 2.6vw, .72rem); letter-spacing: .04em; text-transform: uppercase; border: 1.5px solid var(--red); border-radius: 999px; padding: 2px 4px; }
 .rank.got { border-color: var(--green); }
 .top-rank { text-align: center; font-family: var(--display); letter-spacing: .12em; font-size: 1.1rem; }
 .top-rank.got { color: var(--gold); text-shadow: 0 0 14px rgba(224,165,44,.7); }
