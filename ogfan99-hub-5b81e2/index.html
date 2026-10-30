@@ -103,7 +103,7 @@ const ARTISTS = [
   { who: "NEMS", hood: "Coney Island", stop: "Stillwell Av", trains: [["D", "#ff6319"], ["F", "#ff6319"], ["N", "#fccc0a", 1], ["Q", "#fccc0a", 1]], color: "#38e8ff",
     url: "../nems-99deep-7c41e9/", status: "demo", line: "Bing Bong. FYL. Gorilla NEMS from Mermaid Av and W 16th.", save: "deep99nems3", lat: 40.5773, lng: -73.9811 },
   { who: "Lil Dee", hood: "Coney Island", stop: "W 8 St–NY Aquarium", trains: [["F", "#ff6319"], ["Q", "#fccc0a", 1]], color: "#ffd34d",
-    url: null, status: "soon", line: "Danny James. The 1 Train cypher kid from Coney Island.", save: null, lat: 40.5762, lng: -73.9759 },
+    url: "../lildee-ogfan99-770ae9/", status: "demo", line: "Danny James. The 1 Train cypher kid from Coney Island.", save: "ogfan99lildee1", lat: 40.5762, lng: -73.9759 },
   /* prospects from the follower research: on the map as "soon", nothing public until they sign */
   { who: "Joey Bada$$", hood: "Flatbush", stop: "Church Av", trains: [["2", "#ee352e"], ["5", "#00933c"]], color: "#fff",
     url: null, status: "soon", line: "Pro Era. 2.8M on Instagram.", save: null, lat: 40.6508, lng: -73.9496 },
@@ -115,7 +115,7 @@ const ARTISTS = [
     url: null, status: "soon", line: "Rap Up every year. 921K on Instagram.", save: null, lat: 40.6784, lng: -73.9052 },
   { who: "Troy Ave", hood: "Crown Heights", stop: "Crown Hts–Utica Av", trains: [["3", "#ee352e"], ["4", "#00933c"]], color: "#fff",
     url: null, status: "soon", line: "BSB. 798K on Instagram. Check his legal status first.", save: null, lat: 40.6689, lng: -73.9329 },
-  { who: "Flatbush Zombies", hood: "Flatbush", stop: "Newkirk Av", trains: [["2", "#ee352e"], ["5", "#00933c"]], color: "#fff",
+  { who: "Flatbush Zombies", hood: "Flatbush", stop: "Newkirk Plaza", trains: [["B", "#ff6319"], ["Q", "#fccc0a", 1]], color: "#fff",
     url: null, status: "soon", line: "The Glorious Dead. 449K on Instagram.", save: null, lat: 40.6350, lng: -73.9629 },
   { who: "The Shark", hood: "Belmont, the Bronx", stop: "Fordham Rd", trains: [["B", "#ff6319"], ["D", "#ff6319"]], color: "#fff",
     url: null, status: "soon", line: "Bronx Italian underground, from the 90s.", save: null, lat: 40.8613, lng: -73.8975 }
@@ -186,14 +186,13 @@ const NYC = {
   /* the Bronx and Westchester */
   bx: [40.97,-73.911, 40.915,-73.913, 40.90,-73.916, 40.888,-73.919, 40.880,-73.924, 40.876,-73.918, 40.870,-73.911, 40.862,-73.912, 40.852,-73.919, 40.84,-73.927, 40.828,-73.931, 40.815,-73.931, 40.806,-73.927, 40.801,-73.919, 40.802,-73.907, 40.805,-73.894, 40.806,-73.882, 40.800,-73.875, 40.807,-73.868, 40.815,-73.868, 40.808,-73.858, 40.806,-73.848, 40.812,-73.838, 40.805,-73.828, 40.800,-73.812, 40.804,-73.795, 40.812,-73.789, 40.825,-73.799, 40.835,-73.807, 40.848,-73.807, 40.858,-73.799, 40.862,-73.789, 40.872,-73.785, 40.885,-73.781, 40.895,-73.774, 40.905,-73.759, 40.918,-73.740, 40.93,-73.72, 40.97,-73.68],
   /* Manhattan */
-  mn: [40.7005,-74.016, 40.708,-74.019, 40.718,-74.015, 40.73,-74.011, 40.743,-74.0095, 40.756,-74.005, 40.768,-73.996, 40.78,-73.989, 40.793,-73.979, 40.806,-73.968, 40.82,-73.960, 40.835,-73.951, 40.851,-73.947, 40.864,-73.936, 40.873,-73.930, 40.8775,-73.923, 40.8735,-73.9165, 40.866,-73.918, 40.856,-73.9245, 40.845,-73.930, 40.832,-73.9355, 40.82,-73.936, 40.81,-73.934, 40.803,-73.931, 40.796,-73.929, 40.787,-73.938, 40.777,-73.942, 40.766,-73.951, 40.755,-73.962, 40.744,-73.971, 40.732,-73.9725, 40.72,-73.974, 40.7115,-73.978, 40.708,-73.994, 40.705,-74.004, 40.7015,-74.0115],
+  mn: [40.7005,-74.016, 40.708,-74.019, 40.718,-74.015, 40.73,-74.011, 40.743,-74.0095, 40.756,-74.005, 40.768,-73.996, 40.78,-73.989, 40.793,-73.979, 40.806,-73.968, 40.82,-73.960, 40.835,-73.951, 40.851,-73.947, 40.864,-73.936, 40.873,-73.930, 40.8775,-73.923, 40.8735,-73.9165, 40.866,-73.918, 40.856,-73.9245, 40.845,-73.930, 40.832,-73.9355, 40.82,-73.936, 40.81,-73.934, 40.803,-73.931, 40.796,-73.929, 40.787,-73.938, 40.777,-73.942, 40.766,-73.951, 40.755,-73.962, 40.744,-73.971, 40.732,-73.9725, 40.72,-73.974, 40.7115,-73.9795, 40.7085,-73.9945, 40.705,-74.004, 40.7015,-74.0115],
   /* Brooklyn + Queens (+ Nassau, greyed) — one land mass, clockwise from Fort Hamilton */
-  li: [40.6075,-74.0385, 40.616,-74.042, 40.626,-74.041, 40.636,-74.037, 40.644,-74.028, 40.652,-74.020, 40.66,-74.012, 40.668,-74.013, 40.674,-74.019, 40.68,-74.014, 40.687,-74.004, 40.695,-73.999, 40.7025,-73.994, 40.704,-73.985, 40.701,-73.976, 40.706,-73.969, 40.714,-73.967, 40.724,-73.962, 40.733,-73.960, 40.740,-73.960, 40.748,-73.958, 40.756,-73.948, 40.765,-73.939, 40.773,-73.936, 40.780,-73.922, 40.779,-73.908, 40.776,-73.895, 40.774,-73.886, 40.781,-73.880, 40.778,-73.864, 40.770,-73.858, 40.762,-73.852, 40.764,-73.842, 40.776,-73.845, 40.788,-73.846, 40.795,-73.830, 40.796,-73.810, 40.796,-73.790, 40.792,-73.777, 40.780,-73.775, 40.770,-73.760, 40.785,-73.748, 40.805,-73.744, 40.825,-73.730, 40.830,-73.69, 40.83,-73.60, 40.60,-73.60, 40.587,-73.68, 40.590,-73.740, 40.585,-73.780, 40.577,-73.820, 40.567,-73.870, 40.557,-73.910, 40.549,-73.938, 40.556,-73.942, 40.562,-73.925, 40.572,-73.890, 40.583,-73.850, 40.591,-73.815, 40.597,-73.785, 40.604,-73.765, 40.615,-73.760, 40.625,-73.765, 40.630,-73.780, 40.626,-73.795, 40.638,-73.825, 40.648,-73.838, 40.645,-73.860, 40.638,-73.880, 40.628,-73.890, 40.618,-73.905, 40.606,-73.908, 40.595,-73.900, 40.585,-73.892, 40.578,-73.895, 40.582,-73.915, 40.581,-73.935, 40.5765,-73.945, 40.5735,-73.962, 40.571,-73.985, 40.5735,-74.002, 40.578,-74.012, 40.583,-74.004, 40.5845,-73.992, 40.590,-73.996, 40.596,-74.002, 40.601,-74.013, 40.605,-74.028],
+  li: [40.6075,-74.0385, 40.616,-74.042, 40.626,-74.041, 40.636,-74.037, 40.644,-74.028, 40.652,-74.020, 40.66,-74.012, 40.668,-74.013, 40.674,-74.019, 40.68,-74.014, 40.687,-74.004, 40.695,-73.999, 40.701,-73.9945, 40.7015,-73.986, 40.6995,-73.977, 40.705,-73.9675, 40.713,-73.964, 40.724,-73.960, 40.733,-73.960, 40.740,-73.960, 40.748,-73.9555, 40.757,-73.945, 40.765,-73.939, 40.773,-73.936, 40.780,-73.922, 40.779,-73.908, 40.776,-73.895, 40.774,-73.886, 40.781,-73.880, 40.778,-73.864, 40.770,-73.858, 40.762,-73.852, 40.764,-73.842, 40.776,-73.845, 40.788,-73.846, 40.795,-73.830, 40.796,-73.810, 40.796,-73.790, 40.792,-73.777, 40.780,-73.775, 40.770,-73.760, 40.785,-73.748, 40.805,-73.744, 40.825,-73.730, 40.830,-73.69, 40.83,-73.60, 40.60,-73.60, 40.587,-73.68, 40.590,-73.740, 40.585,-73.780, 40.577,-73.820, 40.567,-73.870, 40.557,-73.910, 40.549,-73.938, 40.556,-73.942, 40.562,-73.925, 40.572,-73.890, 40.583,-73.850, 40.591,-73.815, 40.597,-73.785, 40.604,-73.765, 40.615,-73.760, 40.625,-73.765, 40.630,-73.780, 40.626,-73.795, 40.638,-73.825, 40.648,-73.838, 40.645,-73.860, 40.638,-73.880, 40.628,-73.890, 40.618,-73.905, 40.606,-73.908, 40.595,-73.900, 40.585,-73.892, 40.578,-73.895, 40.582,-73.915, 40.581,-73.935, 40.5765,-73.945, 40.5735,-73.962, 40.571,-73.985, 40.5735,-74.002, 40.578,-74.012, 40.583,-74.004, 40.5845,-73.992, 40.590,-73.996, 40.596,-74.002, 40.601,-74.013, 40.605,-74.028],
   /* islands */
   isl: [
     [40.7935,-73.893, 40.796,-73.877, 40.788,-73.873, 40.785,-73.886],                    /* Rikers */
     [40.800,-73.925, 40.801,-73.914, 40.792,-73.912, 40.783,-73.924, 40.787,-73.929],     /* Randalls & Wards */
-    [40.7745,-73.9395, 40.7725,-73.9370, 40.7515,-73.9585, 40.7535,-73.9615],             /* Roosevelt */
     [40.6935,-74.015, 40.689,-74.011, 40.6855,-74.0175, 40.690,-74.022],                  /* Governors */
     [40.624,-73.823, 40.621,-73.811, 40.598,-73.814, 40.598,-73.823]                      /* Broad Channel */
   ],
@@ -255,7 +254,7 @@ const LAND = "#f3ecd9", OUT = "#e2ded3", WATER = "#a9d6ef", PARK = "#b3d69a";
 function mapBase() {
   const T = (lat, lng, t, o) => { const [x, y] = proj(lat, lng); return '<text x="' + f1(x) + '" y="' + f1(y) + '"' + (o || "") + '>' + t + '</text>'; };
   const water = ' font-family="Helvetica, Arial, sans-serif" font-style="italic" font-size="8.5" letter-spacing=".6" fill="#3f7fb2" text-anchor="middle"';
-  const boro = ' font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="3.5" fill="#26221b" fill-opacity=".8" text-anchor="middle"';
+  const boro = ' font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="3.5" fill="#26221b" text-anchor="middle" stroke="' + LAND + '" stroke-width="3" stroke-linejoin="round" paint-order="stroke"';
   const rot = (lat, lng, a) => { const [x, y] = proj(lat, lng); return ' transform="rotate(' + f1(a) + ' ' + f1(x) + ' ' + f1(y) + ')"'; };
   /* angle of a river or island on the drawn map, from two real points along it */
   const ang = (a, b, c, d) => { const p = proj(a, b), q = proj(c, d); return Math.atan2(q[1] - p[1], q[0] - p[0]) * 180 / Math.PI; };
@@ -277,15 +276,14 @@ function mapBase() {
     at(40.7395, -73.9655, "East River", water + rot(40.7395, -73.9655, ang(40.725, -73.971, 40.752, -73.958))) +
     '<text x="6" y="' + f1(proj(40.668, 0)[1]) + '"' + water.replace('text-anchor="middle"', 'text-anchor="start"') + '>Upper Bay</text>' +
     '<text x="6" y="' + f1(proj(40.560, 0)[1]) + '"' + water.replace('text-anchor="middle"', 'text-anchor="start"') + '>Lower Bay</text>' +
-    at(40.618, -73.845, "Jamaica Bay", water) + at(40.552, -73.80, "ATLANTIC OCEAN", water + ' font-size="9.5" letter-spacing="3"') +
+    at(40.603, -73.862, "Jamaica Bay", water) + at(40.552, -73.80, "ATLANTIC OCEAN", water + ' font-size="9.5" letter-spacing="3"') +
     at(40.822, -73.762, "Long Island", water) + at(40.813, -73.762, "Sound", water) +
-    at(40.904, -73.818, "THE BRONX", boro) + at(40.785, -73.800, "QUEENS", boro) + at(40.612, -73.918, "BROOKLYN", boro + ' font-size="13" letter-spacing="3"') +
+    at(40.901, -73.800, "THE BRONX", boro + ' font-size="13" letter-spacing="3"') + at(40.738, -73.772, "QUEENS", boro + ' font-size="14"') + at(40.621, -73.930, "BROOKLYN", boro + ' font-size="12" letter-spacing="2.5"') +
     at(40.842, -73.957, "MANHATTAN", boro + ' font-size="10" letter-spacing="2.5"' + rot(40.842, -73.957, mAng)) +
     at(40.80, -74.03, "NEW JERSEY", ' font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" letter-spacing="1.5" fill="#26221b" fill-opacity=".45" text-anchor="middle"' + rot(40.80, -74.03, hAng));
-  /* the trains: a thin land-colored casing first so crossings read cleanly, then the colors, then the station dots */
+  /* the trains, then the station dots */
   const T2 = LINES.map(([c, o, pts]) => ({ c, pts, P: track(pts, o) }));
   s += '<g fill="none" stroke-linecap="round" stroke-linejoin="round">' +
-    T2.map(l => '<path d="' + rounded(l.P, 9) + '" stroke="' + LAND + '" stroke-width="5.4"/>').join("") +
     T2.map(l => '<path d="' + rounded(l.P, 9) + '" stroke="' + l.c + '" stroke-width="3.3"/>').join("") + '</g>';
   /* station dots — one per spot, skipping any that would crowd a dot already drawn */
   const dots = [];
@@ -299,20 +297,20 @@ function drawMap() {
   const pos = ARTISTS.map(a => proj(a.lat, a.lng));
   /* labels: try right, left, below, above — keep the first spot that hits no other label, dot or the map edge */
   const boxes = pos.map(([x, y]) => [x - 8, y - 8, x + 8, y + 8]), hit = (b, c) => b[0] < c[2] && b[2] > c[0] && b[1] < c[3] && b[3] > c[1];
-  const labels = [];
+  const labels = [], lab = {};
   ARTISTS.map((a, i) => i).filter(i => ARTISTS[i].status !== "soon").sort((i, j) => (ARTISTS[i].status === "live" ? 0 : 1) - (ARTISTS[j].status === "live" ? 0 : 1)).forEach(i => {
     const a = ARTISTS[i], [x, y] = pos[i], wn = a.who.length * 9.4 + 4, ws = a.stop.length * 5.7, w = Math.max(wn, ws);
     const spots = [["start", x + 11, y - 2, [x + 9, y - 16, x + 11 + w, y + 12]], ["end", x - 11, y - 2, [x - 11 - w, y - 16, x - 9, y + 12]],
       ["middle", x, y + 22, [x - w / 2, y + 7, x + w / 2, y + 35]], ["middle", x, y - 22, [x - w / 2, y - 37, x + w / 2, y - 8]]];
     const ok = s => s[3][0] > 2 && s[3][2] < MAP_W - 2 && s[3][1] > 2 && s[3][3] < MAP_H - 2 && !boxes.some((b, j) => j !== i && hit(s[3], b)) && !labels.some(l => hit(s[3], l));
     const s = spots.find(ok) || spots[0];
-    labels.push(s[3]); a._lab = s;
+    labels.push(s[3]); lab[i] = s;
   });
   const st = ARTISTS.map((a, i) => {
     const [x, y] = pos[i].map(f1), live = a.status === "live", hitc = '<circle cx="' + x + '" cy="' + y + '" r="14" fill="#000" fill-opacity="0"/>';
     if (a.status === "soon") return '<g class="stn" tabindex="0" role="button" aria-label="' + esc(a.who + ", " + a.hood + ", coming soon") + '" data-i="' + i + '">' + hitc +
       '<circle class="ring" cx="' + x + '" cy="' + y + '" r="4.2" fill="#9b9b9b" stroke="#000" stroke-width="1.6"/></g>';
-    const [anc, lx, ly] = a._lab;
+    const [anc, lx, ly] = lab[i];
     return '<g class="stn" tabindex="0" role="button" aria-label="' + esc(a.who + ", " + a.hood) + '" data-i="' + i + '">' + hitc +
       (live ? '<circle class="glow" cx="' + x + '" cy="' + y + '" r="8" fill="#35b867"/>' : '') +
       '<circle class="ring" cx="' + x + '" cy="' + y + '" r="6" fill="#fff" stroke="#000" stroke-width="2.6"/>' +
