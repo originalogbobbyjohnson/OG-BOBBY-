@@ -5235,19 +5235,19 @@ body.cab-ep .stage-wrap > .cab-sky, .stage-wrap[data-sky-on] > .cab-sky { displa
 })();
 </script>
 <style>
-/* ---------- Song pictures: each episode's picture fills the cabinet doors (splits down the middle as they open) and sits faintly behind the song card ---------- */
+/* ---------- Song pictures: the doors split open to reveal the episode's picture in the song window ---------- */
 #player { isolation: isolate; }
 #player .ep-art { position: absolute; inset: 0; z-index: -1; border-radius: inherit; overflow: hidden; pointer-events: none; }
 #player .ep-art i { position: absolute; inset: 0; background: var(--ep-art) center 30% / cover no-repeat; opacity: .55; transition: opacity .6s; }
 #player .ep-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,13,18,.35) 0%, rgba(11,13,18,.78) 42%, rgba(11,13,18,.94) 100%); }
-.cab-doors .door { background-image: var(--ep-art), linear-gradient(180deg, #1b1f29 0%, #10131a 55%, #0b0d12 100%); background-size: 200% 100%, cover; background-repeat: no-repeat; }
-.cab-doors .door.l { background-position: left center, center; }
-.cab-doors .door.r { background-position: right center, center; }
-.cab-doors .door::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,.55) 100%); pointer-events: none; }
-.cab-doors .door img, .cab-doors .door i { z-index: 1; }
-.cab-doors .hint { text-shadow: 0 2px 6px #000; bottom: 7%; }
-.cab-doors .door img { top: 74%; width: 120%; }
-.cab-doors .door.l img { left: 40%; } .cab-doors .door.r img { right: 40%; }
+/* the doors stay plain: OG BOBBY lettering only. The song's picture shows in the window behind them once they split open. */
+#player .ep-art i { opacity: 0; background-position: center 22%; transition: opacity .9s .35s; }
+#player.cab-reveal .ep-art i, .cab-doors.gone ~ .ep-art i { opacity: .92; }
+#player .ep-art::after { background: linear-gradient(180deg, rgba(11,13,18,.25) 0%, rgba(11,13,18,.35) 22%, rgba(11,13,18,.82) 46%, rgba(11,13,18,.95) 100%); }
+/* song title centered across the window */
+body #player > div.hdr3 { grid-template-columns: minmax(0, 1fr) !important; padding-left: 54px !important; padding-right: 54px !important; }
+body #player > div.hdr3 > #pEp, body #player > div.hdr3 > #pTitle, body #player > div.hdr3 > #pPart { grid-column: 1 / -1 !important; justify-self: center !important; text-align: center !important; }
+body #player > div.hdr3 > #pTitle { text-shadow: 0 2px 8px #000, 0 0 2px #000; }
 </style>
 <script>
 /* Which picture goes with which song. Swap any file in art/songs/ to change a picture. */
