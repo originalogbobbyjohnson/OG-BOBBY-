@@ -97,13 +97,13 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
    status: "live" = public game · "demo" = private pitch demo (hidden once the app goes public) · "soon" = coming */
 const ARTISTS = [
   { who: "OG Bobby", hood: "Bay Ridge", stop: "Bay Ridge Av", trains: [["R", "#fccc0a", 1]], color: "#ffffff",
-    url: "../", status: "live", line: "The man who started it all. Brooklyn story raps, '99." , save: null, x: 70, y: 150 },
+    url: "../", status: "live", line: "The man who started it all. Brooklyn story raps, '99." , save: null, x: 70, y: 284 },
   { who: "Cold Sholda", hood: "Gravesend", stop: "Avenue U", trains: [["F", "#ff6319"]], color: "#9fe3ff",
-    url: "../coldsholda-ogfan99-0f4c9d/", status: "demo", line: "New Rome. Coffee shop social club. Cold heart, cold chain.", save: "ogfan99cold1", x: 228, y: 196 },
+    url: "../coldsholda-ogfan99-0f4c9d/", status: "demo", line: "New Rome. Coffee shop social club. Cold heart, cold chain.", save: "ogfan99cold1", x: 228, y: 336 },
   { who: "NEMS", hood: "Coney Island", stop: "Stillwell Av", trains: [["D", "#ff6319"], ["F", "#ff6319"], ["N", "#fccc0a", 1], ["Q", "#fccc0a", 1]], color: "#38e8ff",
-    url: "../nems-99deep-7c41e9/", status: "demo", line: "Bing Bong. FYL. Gorilla NEMS from Mermaid Av and W 16th.", save: "deep99nems3", x: 200, y: 292 }
+    url: "../nems-99deep-7c41e9/", status: "demo", line: "Bing Bong. FYL. Gorilla NEMS from Mermaid Av and W 16th.", save: "deep99nems3", x: 200, y: 426 }
 ];
-const SOON = ["Queens", "The Bronx", "Manhattan", "Staten Island"];
+const SOON = ["The Bronx", "Queens", "Manhattan"];
 
 const $ = id => document.getElementById(id);
 const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -114,7 +114,7 @@ function progress(a) {
   try { const s = JSON.parse(localStorage.getItem(a.save) || "{}"); const g = Object.values(s.gates || {}).reduce((x, y) => x + y, 0); return { stops: g, cleared: Object.keys(s.cleared || {}).length }; } catch (e) { return null; }
 }
 
-/* ---------- the map: Brooklyn, three lines heading south to the water ---------- */
+/* ---------- the map: the Bronx, Manhattan, Queens and Brooklyn (Staten Island left out for now) ---------- */
 function drawMap() {
   const st = ARTISTS.map((a, i) => {
     const live = a.status === "live";
@@ -126,19 +126,30 @@ function drawMap() {
       '</g>';
   }).join("");
   $("map").innerHTML =
-    '<svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">' +
-    /* water + land */
-    '<rect width="400" height="340" fill="#0f2740"/>' +
-    '<path d="M0 0H400V250Q340 262 300 268Q250 276 200 306Q150 290 120 276Q80 262 40 250Q20 236 0 236Z" fill="#1a2238"/>' +
-    '<text x="300" y="320" font-family="Barlow, sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#5f86ad">ATLANTIC</text>' +
-    '<text x="14" y="300" font-family="Barlow, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#5f86ad">THE NARROWS</text>' +
-    '<text x="250" y="40" font-family="Anton, Impact, sans-serif" font-size="22" letter-spacing="4" fill="#2c3664">BROOKLYN</text>' +
-    /* R train down 4th Ave to Bay Ridge */
-    '<path d="M150 0V60Q150 90 120 100L70 120V150" fill="none" stroke="#fccc0a" stroke-width="7" stroke-linecap="round"/>' +
-    /* F train down McDonald Ave to Avenue U, then Coney */
-    '<path d="M228 0V196Q228 260 206 286" fill="none" stroke="#ff6319" stroke-width="7" stroke-linecap="round"/>' +
+    '<svg viewBox="0 0 400 470" xmlns="http://www.w3.org/2000/svg">' +
+    '<rect width="400" height="470" fill="#0f2740"/>' +
+    /* the Bronx */
+    '<path d="M150 0H400V96Q330 112 268 100Q220 92 182 108Q160 70 150 0Z" fill="#1a2238"/>' +
+    /* Manhattan */
+    '<path d="M150 18Q170 80 186 112Q196 160 178 214Q166 240 150 252Q136 236 134 210Q140 160 136 112Q132 60 150 18Z" fill="#1a2238"/>' +
+    /* Queens */
+    '<path d="M204 130Q260 112 400 120V300Q340 290 300 270Q260 250 222 236Q206 196 204 130Z" fill="#1a2238"/>' +
+    /* Brooklyn */
+    '<path d="M162 262Q200 240 222 244Q262 262 300 280Q340 298 400 308V392Q340 404 300 410Q250 418 200 446Q150 430 120 416Q80 402 40 390Q20 376 0 376V318Q60 300 112 282Q140 270 162 262Z" fill="#1a2238"/>' +
+    '<text x="236" y="40" font-family="Anton, Impact, sans-serif" font-size="20" letter-spacing="4" fill="#2c3664">THE BRONX</text>' +
+    '<text x="104" y="150" transform="rotate(-80 104 150)" font-family="Anton, Impact, sans-serif" font-size="14" letter-spacing="3" fill="#2c3664">MANHATTAN</text>' +
+    '<text x="290" y="190" font-family="Anton, Impact, sans-serif" font-size="20" letter-spacing="4" fill="#2c3664">QUEENS</text>' +
+    '<text x="250" y="330" font-family="Anton, Impact, sans-serif" font-size="20" letter-spacing="4" fill="#2c3664">BROOKLYN</text>' +
+    '<text x="300" y="455" font-family="Barlow, sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#5f86ad">ATLANTIC</text>' +
+    '<text x="14" y="440" font-family="Barlow, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#5f86ad">THE NARROWS</text>' +
+    /* R train down to Bay Ridge */
+    '<path d="M156 250Q150 300 120 310L70 320V284" fill="none" stroke="#fccc0a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>' +
+    /* F train down McDonald Ave to Avenue U and Coney */
+    '<path d="M168 160V250Q210 270 228 300V336Q228 396 206 420" fill="none" stroke="#ff6319" stroke-width="7" stroke-linecap="round"/>' +
     /* N/Q to Coney */
-    '<path d="M262 0V170Q262 250 214 290" fill="none" stroke="#fccc0a" stroke-width="7" stroke-linecap="round"/>' +
+    '<path d="M156 200Q200 250 262 290V316Q262 386 214 424" fill="none" stroke="#fccc0a" stroke-width="7" stroke-linecap="round"/>' +
+    /* 4 train up into the Bronx (stations added as artists sign on) */
+    '<path d="M168 160V100Q200 70 260 60" fill="none" stroke="#00933c" stroke-width="7" stroke-linecap="round"/>' +
     st + '</svg>';
   $("map").querySelectorAll(".stn").forEach(g => {
     g.onclick = () => openCard(+g.dataset.i);
