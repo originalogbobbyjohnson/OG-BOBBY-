@@ -101,9 +101,26 @@ const ARTISTS = [
   { who: "Cold Sholda", hood: "Gravesend", stop: "Avenue U", trains: [["F", "#ff6319"]], color: "#9fe3ff",
     url: "../coldsholda-ogfan99-0f4c9d/", status: "demo", line: "New Rome. Coffee shop social club. Cold heart, cold chain.", save: "ogfan99cold1", x: 228, y: 336 },
   { who: "NEMS", hood: "Coney Island", stop: "Stillwell Av", trains: [["D", "#ff6319"], ["F", "#ff6319"], ["N", "#fccc0a", 1], ["Q", "#fccc0a", 1]], color: "#38e8ff",
-    url: "../nems-99deep-7c41e9/", status: "demo", line: "Bing Bong. FYL. Gorilla NEMS from Mermaid Av and W 16th.", save: "deep99nems3", x: 200, y: 426 }
+    url: "../nems-99deep-7c41e9/", status: "demo", line: "Bing Bong. FYL. Gorilla NEMS from Mermaid Av and W 16th.", save: "deep99nems3", x: 200, y: 426 },
+  { who: "Lil Dee", hood: "Coney Island", stop: "W 8 St–NY Aquarium", trains: [["F", "#ff6319"], ["Q", "#fccc0a", 1]], color: "#ffd34d",
+    url: null, status: "soon", line: "Danny James. The 1 Train cypher kid from Coney Island.", save: null, x: 290, y: 404 },
+  /* prospects from the follower research: on the map as "soon", nothing public until they sign */
+  { who: "Joey Bada$$", hood: "Flatbush", stop: "Church Av", trains: [["2", "#ee352e"], ["5", "#00933c"]], color: "#fff",
+    url: null, status: "soon", line: "Pro Era. 2.8M on Instagram.", save: null, x: 340, y: 336 },
+  { who: "Papoose", hood: "Bed-Stuy", stop: "Nostrand Av", trains: [["A", "#0039a6"], ["C", "#0039a6"]], color: "#fff",
+    url: null, status: "soon", line: "Bed-Stuy legend. 2.7M on Instagram.", save: null, x: 252, y: 280 },
+  { who: "Maino", hood: "Bed-Stuy", stop: "Utica Av", trains: [["A", "#0039a6"], ["C", "#0039a6"]], color: "#fff",
+    url: null, status: "soon", line: "Runs his own label. 1.3M on Instagram.", save: null, x: 292, y: 284 },
+  { who: "Uncle Murda", hood: "East New York", stop: "Broadway Junction", trains: [["A", "#0039a6"], ["C", "#0039a6"], ["L", "#a7a9ac", 1]], color: "#fff",
+    url: null, status: "soon", line: "Rap Up every year. 921K on Instagram.", save: null, x: 372, y: 296 },
+  { who: "Troy Ave", hood: "Crown Heights", stop: "Crown Hts–Utica Av", trains: [["3", "#ee352e"], ["4", "#00933c"]], color: "#fff",
+    url: null, status: "soon", line: "BSB. 798K on Instagram. Check his legal status first.", save: null, x: 318, y: 310 },
+  { who: "Flatbush Zombies", hood: "Flatbush", stop: "Newkirk Av", trains: [["2", "#ee352e"], ["5", "#00933c"]], color: "#fff",
+    url: null, status: "soon", line: "The Glorious Dead. 449K on Instagram.", save: null, x: 356, y: 360 },
+  { who: "The Shark", hood: "Belmont, the Bronx", stop: "Fordham Rd", trains: [["B", "#ff6319"], ["D", "#ff6319"]], color: "#fff",
+    url: null, status: "soon", line: "Bronx Italian underground, from the 90s.", save: null, x: 252, y: 62 }
 ];
-const SOON = ["The Bronx", "Queens", "Manhattan"];
+const SOON = ["Queens", "Manhattan"];
 
 const $ = id => document.getElementById(id);
 const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -118,6 +135,8 @@ function progress(a) {
 function drawMap() {
   const st = ARTISTS.map((a, i) => {
     const live = a.status === "live";
+    if (a.status === "soon") return '<g class="stn" tabindex="0" role="button" aria-label="' + esc(a.who + ", " + a.hood + ", coming soon") + '" data-i="' + i + '">' +
+      '<circle class="ring" cx="' + a.x + '" cy="' + a.y + '" r="7" fill="#8a90a8" stroke="#000" stroke-width="2.5"/></g>';
     return '<g class="stn" tabindex="0" role="button" aria-label="' + esc(a.who + ", " + a.hood) + '" data-i="' + i + '">' +
       (live ? '<circle class="glow" cx="' + a.x + '" cy="' + a.y + '" r="13" fill="#35b867"/>' : '') +
       '<circle class="ring" cx="' + a.x + '" cy="' + a.y + '" r="11" fill="#fff" stroke="#000" stroke-width="3"/>' +
@@ -161,8 +180,8 @@ function drawMap() {
 function drawList() {
   $("list").innerHTML = ARTISTS.map((a, i) =>
     '<li><button class="row" type="button" data-i="' + i + '"><span class="bul">' + bullets(a) + '</span>' +
-    '<span><span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + ', Brooklyn</small></span>' +
-    '<span class="pill ' + a.status + '">' + (a.status === "live" ? "LIVE" : "DEMO") + '</span></button></li>').join("") +
+    '<span><span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + (a.hood.includes("Bronx") ? "" : ", Brooklyn") + '</small></span>' +
+    '<span class="pill ' + a.status + '">' + ({ live: "LIVE", demo: "DEMO", soon: "SOON" })[a.status] + '</span></button></li>').join("") +
     SOON.map(b => '<li><div class="row soon"><span class="bul"><i style="background:#2c3050">·</i></span><span><span class="who">' + b + '</span><small>Next stops</small></span><span class="pill soon">SOON</span></div></li>').join("");
   $("list").querySelectorAll("button.row").forEach(b => b.onclick = () => openCard(+b.dataset.i));
 }
@@ -173,10 +192,10 @@ function openCard(i) {
   $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button>' +
     '<div class="sign"><span>' + esc(a.stop) + '</span><span class="bul">' + bullets(a) + '</span></div>' +
     '<div class="who" style="color:' + a.color + '">' + esc(a.who) + '</div>' +
-    '<p>' + esc(a.hood) + ', Brooklyn · 9 songs · 99 questions</p>' +
+    '<p>' + esc(a.hood) + (a.hood.includes("Bronx") ? "" : ", Brooklyn") + ' · 9 songs · 99 questions</p>' +
     '<p>' + esc(a.line) + '</p>' +
     (p && p.stops ? '<p class="prog">Your progress: ' + p.stops + ' of 18 stops · ' + p.cleared + ' of 9 episodes</p>' : '') +
-    '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>';
+    (a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
   $("card").hidden = false; $("scrim").hidden = false;
   $("cx").onclick = closeCard;
 }
