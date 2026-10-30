@@ -133,7 +133,7 @@ a { color: var(--fg); }
 .door.l .door-tag { right: -1px; transform: translateX(50%) rotate(-5deg); }
 .door.r .door-tag { left: -1px; transform: translateX(-50%) rotate(-5deg); }
 .door-btn { position: absolute; bottom: 20%; background: #000; border: 2px solid #fff; border-radius: 999px; padding: 8px 14px; font-family: var(--display); letter-spacing: .1em; font-size: .95rem; white-space: nowrap; }
-.door.l .door-btn { right: 0; transform: translateX(50%); } .door.r .door-btn { display: none; }
+.doors > .door-btn { left: 50%; transform: translateX(-50%); z-index: 3; transition: opacity .4s; } .doors.open > .door-btn { opacity: 0; }
 
 /* Songs panel */
 .songs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-rows: repeat(9, minmax(0, 1fr)); gap: 5px; flex: 1; min-height: 0; }
@@ -363,8 +363,9 @@ a { color: var(--fg); }
         <div class="stopmeter" id="stopMeter"><div class="sm-bar"><i id="smFill"></i></div><div class="sm-lbl" id="smLbl"></div></div>
         <div class="qcard"><div class="qhead"><span id="qLevel"></span><span id="qNum"></span></div><div id="qBody"></div></div>
         <div class="doors" id="doors">
-          <div class="door l"><span class="door-tag">NEMS</span><button class="door-btn" id="doorPlay" type="button">PRESS PLAY</button></div>
+          <div class="door l"><span class="door-tag">NEMS</span></div>
           <div class="door r"><span class="door-tag">NEMS</span></div>
+          <button class="door-btn" id="doorPlay" type="button">PRESS PLAY</button>
         </div>
       </section>
 
