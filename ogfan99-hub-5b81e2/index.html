@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#0b0c14">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="OG FAN 99">
+<title>OG FAN 99</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap">
+<style>
+/* the graffiti 9 with a straight stem (same font file the OG Bobby game uses) */
+@font-face { font-family: "Sedgwick Nine"; src: url("../brand/sedgwick-nine.woff") format("woff"); unicode-range: U+0039; }
+:root {
+  --bg: #0b0c14; --panel: #151726; --line: #2c3050; --fg: #fff; --soft: #ece8f5;
+  --red: #d62828; --gold: #e8b84a; --green: #35b867;
+  --display: "Anton", Impact, sans-serif; --body: "Barlow", system-ui, sans-serif;
+  --tag: "Sedgwick Nine", "Sedgwick Ave Display", "Permanent Marker", cursive;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; }
+body { background: radial-gradient(120% 60% at 50% 0%, #1d2550 0%, var(--bg) 60%); color: var(--fg); font-family: var(--body); -webkit-tap-highlight-color: transparent; }
+button { font: inherit; color: inherit; cursor: pointer; }
+a { color: inherit; }
+.wrap { width: min(100%, 460px); margin: 0 auto; padding: max(14px, env(safe-area-inset-top)) 16px max(20px, env(safe-area-inset-bottom)); display: grid; gap: 14px; }
+
+/* logo */
+.logo { text-align: center; padding-top: 6px; }
+.logo .og { font-family: var(--tag); font-size: 3.4rem; line-height: .9; color: #fff; -webkit-text-stroke: 2px #000; text-shadow: 4px 4px 0 #000; transform: rotate(-4deg); display: inline-block; }
+.logo .og b { color: var(--red); font-weight: 400; }
+.logo p { margin: 8px 0 0; font-weight: 700; letter-spacing: .18em; font-size: .78rem; color: var(--gold); }
+.demo { text-align: center; font-size: .66rem; font-weight: 700; letter-spacing: .16em; color: var(--red); }
+
+/* subway map */
+.map { position: relative; border-radius: 16px; overflow: hidden; border: 3px solid #000; box-shadow: 0 0 0 2px #2a2f55; background: #10162a; }
+.map svg { display: block; width: 100%; height: auto; }
+.stn { cursor: pointer; }
+.stn:focus { outline: none; }
+.stn:focus-visible circle.ring { stroke: #fff; stroke-width: 4; }
+@keyframes pulse { 0%, 100% { r: 13; opacity: .55; } 50% { r: 19; opacity: 0; } }
+.glow { animation: pulse 2s ease-in-out infinite; }
+
+/* station list */
+h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-size: 1.15rem; }
+.list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; width: 100%; text-align: left; background: var(--panel); border: 1.5px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+.row .who { font-family: var(--tag); font-size: 1.35rem; line-height: 1; -webkit-text-stroke: .8px #000; }
+.row small { display: block; font-size: .8rem; color: var(--soft); margin-top: 3px; }
+.bul { display: flex; gap: 3px; }
+.bul i { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font: 700 .8rem/1 Helvetica, Arial, sans-serif; font-style: normal; }
+.pill { font-size: .66rem; font-weight: 700; letter-spacing: .12em; padding: 5px 8px; border-radius: 999px; white-space: nowrap; }
+.pill.live { background: var(--green); color: #031; }
+.pill.demo { border: 1.5px solid var(--gold); color: var(--gold); }
+.pill.soon { border: 1.5px solid var(--line); color: var(--soft); }
+.row.soon { opacity: .6; }
+
+/* station card */
+.scrim { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 10; }
+.card { position: fixed; left: 50%; bottom: max(14px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 24px), 440px); z-index: 11; padding-top: 40px !important;
+  background: var(--panel); border: 2px solid var(--line); border-radius: 18px; padding: 18px; display: grid; gap: 10px; text-align: center; animation: up .25s ease-out; }
+@keyframes up { from { transform: translate(-50%, 30px); opacity: 0; } }
+.card .sign { background: #111; border-top: 4px solid #fff; border-radius: 4px; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; font: 700 1rem Helvetica, Arial, sans-serif; text-align: left; }
+.card .who { font-family: var(--tag); font-size: 2.4rem; line-height: 1; -webkit-text-stroke: 1.5px #000; text-shadow: 3px 3px 0 #000; }
+.card p { margin: 0; color: var(--soft); }
+.card .prog { font-weight: 700; color: var(--gold); }
+.go { display: block; background: var(--red); border-radius: 12px; padding: 14px; font-family: var(--display); letter-spacing: .08em; font-size: 1.2rem; text-decoration: none; box-shadow: 0 4px 0 #000; }
+.x { position: absolute; top: 8px; right: 10px; background: none; border: 0; font-size: 1.3rem; }
+.foot { text-align: center; font-size: .78rem; color: var(--soft); }
+.foot b { color: var(--gold); }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="demo">PRIVATE PREVIEW</div>
+  <header class="logo">
+    <div class="og">OG FAN <b>99</b></div>
+    <p>NEW YORK'S INDEPENDENT ARTISTS</p>
+  </header>
+
+  <div class="map" id="map" aria-label="Subway map of the artists"></div>
+
+  <h2>PICK A STATION</h2>
+  <ul class="list" id="list"></ul>
+
+  <p class="foot">Every artist gets 9 songs and 99 questions.<br>Prove you're a <b>true fan</b>. Free to play.</p>
+</main>
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="card" id="card" role="dialog" hidden></div>
+
+<script>
+/* Every artist on the app. Add one line here per new artist.
+   status: "live" = public game · "demo" = private pitch demo (hidden once the app goes public) · "soon" = coming */
+const ARTISTS = [
+  { who: "OG Bobby", hood: "Bay Ridge", stop: "Bay Ridge Av", trains: [["R", "#fccc0a", 1]], color: "#ffffff",
+    url: "../", status: "live", line: "The man who started it all. Brooklyn story raps, '99." , save: null, x: 70, y: 150 },
+  { who: "Cold Sholda", hood: "Gravesend", stop: "Avenue U", trains: [["F", "#ff6319"]], color: "#9fe3ff",
+    url: "../coldsholda-ogfan99-0f4c9d/", status: "demo", line: "New Rome. Coffee shop social club. Cold heart, cold chain.", save: "ogfan99cold1", x: 228, y: 196 },
+  { who: "NEMS", hood: "Coney Island", stop: "Stillwell Av", trains: [["D", "#ff6319"], ["F", "#ff6319"], ["N", "#fccc0a", 1], ["Q", "#fccc0a", 1]], color: "#38e8ff",
+    url: "../nems-99deep-7c41e9/", status: "demo", line: "Bing Bong. FYL. Gorilla NEMS from Mermaid Av and W 16th.", save: "deep99nems3", x: 200, y: 292 }
+];
+const SOON = ["Queens", "The Bronx", "Manhattan", "Staten Island"];
+
+const $ = id => document.getElementById(id);
+const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const bullets = a => a.trains.map(([l, c, dark]) => '<i style="background:' + c + ';color:' + (dark ? "#000" : "#fff") + '">' + l + '</i>').join("");
+/* progress comes from each game's own save on this phone (all games live on the same site) */
+function progress(a) {
+  if (!a.save) return null;
+  try { const s = JSON.parse(localStorage.getItem(a.save) || "{}"); const g = Object.values(s.gates || {}).reduce((x, y) => x + y, 0); return { stops: g, cleared: Object.keys(s.cleared || {}).length }; } catch (e) { return null; }
+}
+
+/* ---------- the map: Brooklyn, three lines heading south to the water ---------- */
+function drawMap() {
+  const st = ARTISTS.map((a, i) => {
+    const live = a.status === "live";
+    return '<g class="stn" tabindex="0" role="button" aria-label="' + esc(a.who + ", " + a.hood) + '" data-i="' + i + '">' +
+      (live ? '<circle class="glow" cx="' + a.x + '" cy="' + a.y + '" r="13" fill="#35b867"/>' : '') +
+      '<circle class="ring" cx="' + a.x + '" cy="' + a.y + '" r="11" fill="#fff" stroke="#000" stroke-width="3"/>' +
+      '<text x="' + (a.x + (a.x > 300 ? -16 : 16)) + '" y="' + (a.y - 8) + '" text-anchor="' + (a.x > 300 ? "end" : "start") + '" font-family="Sedgwick Nine, Sedgwick Ave Display, cursive" font-size="20" fill="' + a.color + '" stroke="#000" stroke-width="3" paint-order="stroke">' + esc(a.who) + '</text>' +
+      '<text x="' + (a.x + (a.x > 300 ? -16 : 16)) + '" y="' + (a.y + 10) + '" text-anchor="' + (a.x > 300 ? "end" : "start") + '" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">' + esc(a.stop) + '</text>' +
+      '</g>';
+  }).join("");
+  $("map").innerHTML =
+    '<svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">' +
+    /* water + land */
+    '<rect width="400" height="340" fill="#0f2740"/>' +
+    '<path d="M0 0H400V250Q340 262 300 268Q250 276 200 306Q150 290 120 276Q80 262 40 250Q20 236 0 236Z" fill="#1a2238"/>' +
+    '<text x="300" y="320" font-family="Barlow, sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#5f86ad">ATLANTIC</text>' +
+    '<text x="14" y="300" font-family="Barlow, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#5f86ad">THE NARROWS</text>' +
+    '<text x="250" y="40" font-family="Anton, Impact, sans-serif" font-size="22" letter-spacing="4" fill="#2c3664">BROOKLYN</text>' +
+    /* R train down 4th Ave to Bay Ridge */
+    '<path d="M150 0V60Q150 90 120 100L70 120V150" fill="none" stroke="#fccc0a" stroke-width="7" stroke-linecap="round"/>' +
+    /* F train down McDonald Ave to Avenue U, then Coney */
+    '<path d="M228 0V196Q228 260 206 286" fill="none" stroke="#ff6319" stroke-width="7" stroke-linecap="round"/>' +
+    /* N/Q to Coney */
+    '<path d="M262 0V170Q262 250 214 290" fill="none" stroke="#fccc0a" stroke-width="7" stroke-linecap="round"/>' +
+    st + '</svg>';
+  $("map").querySelectorAll(".stn").forEach(g => {
+    g.onclick = () => openCard(+g.dataset.i);
+    g.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openCard(+g.dataset.i); } };
+  });
+}
+
+/* ---------- the list under the map ---------- */
+function drawList() {
+  $("list").innerHTML = ARTISTS.map((a, i) =>
+    '<li><button class="row" type="button" data-i="' + i + '"><span class="bul">' + bullets(a) + '</span>' +
+    '<span><span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + ', Brooklyn</small></span>' +
+    '<span class="pill ' + a.status + '">' + (a.status === "live" ? "LIVE" : "DEMO") + '</span></button></li>').join("") +
+    SOON.map(b => '<li><div class="row soon"><span class="bul"><i style="background:#2c3050">·</i></span><span><span class="who">' + b + '</span><small>Next stops</small></span><span class="pill soon">SOON</span></div></li>').join("");
+  $("list").querySelectorAll("button.row").forEach(b => b.onclick = () => openCard(+b.dataset.i));
+}
+
+/* ---------- station card: who, where, progress, PLAY ---------- */
+function openCard(i) {
+  const a = ARTISTS[i], p = progress(a);
+  $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button>' +
+    '<div class="sign"><span>' + esc(a.stop) + '</span><span class="bul">' + bullets(a) + '</span></div>' +
+    '<div class="who" style="color:' + a.color + '">' + esc(a.who) + '</div>' +
+    '<p>' + esc(a.hood) + ', Brooklyn · 9 songs · 99 questions</p>' +
+    '<p>' + esc(a.line) + '</p>' +
+    (p && p.stops ? '<p class="prog">Your progress: ' + p.stops + ' of 18 stops · ' + p.cleared + ' of 9 episodes</p>' : '') +
+    '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>';
+  $("card").hidden = false; $("scrim").hidden = false;
+  $("cx").onclick = closeCard;
+}
+function closeCard() { $("card").hidden = true; $("scrim").hidden = true; }
+$("scrim").onclick = closeCard;
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeCard(); });
+
+drawMap(); drawList();
+</script>
+</body>
+</html>
