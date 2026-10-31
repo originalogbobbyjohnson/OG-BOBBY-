@@ -7,6 +7,14 @@
    cuts: the second each verse ends. qs: one pool per stop; every question in a pool is about
    the verse right before that stop. The first option is the right answer (shuffled on screen).
    An episode with no cuts yet is still being set up (its verse stops get marked by listening). */
+/* "songs" format: 3 or more songs fill the classic 9-box board. Row 1 plays each song to its first verse stop,
+   row 2 to its second, row 3 through all three verses, so fans go deeper into the same songs each row. */
+if (CFG.songs) {
+  const S = CFG.songs.filter(s => !s.locked), eps = [];
+  [1, 2, 3].forEach(n => { for (let i = 0; i < 3; i++) { const s = S[(eps.length) % S.length]; const seenN = eps.filter(e => e.id === s.id).length; eps.push({ title: s.title + (seenN ? " · Round " + (seenN + 1) : ""), id: s.id, start: s.start, cuts: s.cuts.slice(0, n), qs: s.qs.slice(0, n), round: n, song: S.indexOf(s) }); } });
+  CFG.episodes = eps;
+  if (CFG.ranks.length === 5) { const R = CFG.ranks, T = CFG.trophyArt; CFG.ranks = [R[0], R[2], R[4]]; if (T && T.length === 7) CFG.trophyArt = [T[0], T[1], T[3], T[5], T[6]]; }
+}
 const EPISODES = CFG.episodes;
 
 
@@ -402,7 +410,7 @@ $("doorPlay").onclick = () => { SFX.unlock(); if (current < 0) introEpisode(newe
 
 /* ---------- daily question: one a day from the verse pools, pays a Cannoli ---------- */
 const today = () => new Date().toISOString().slice(0, 10);
-const ALLQ = EPISODES.flatMap(e => e.qs.flat());
+const ALLQ = CFG.songs ? CFG.songs.filter(s => !s.locked).flatMap(s => s.qs.flat()) : EPISODES.flatMap(e => e.qs.flat());
 function renderExtras() {
   const doneToday = state.daily === today();
   $("dailyBtn").classList.toggle("ready", !doneToday);
@@ -593,7 +601,10 @@ $("lobbyBtn").onclick = () => { openMenu(false); toLobby(); };
 
 /* ---------- welcome + how to play (Gravesend rooms) ---------- */
 const SC = window.SCENES;
+const SONGS_TXT = CFG.songs ? { "1, THEN 2, THEN 3": "Row 1 stops each song once. Row 2 plays the same songs again and stops twice. Row 3 goes all the way through: three stops.", "CLIMB THE RANKS": "Everybody starts as a " + CFG.startRank + ". Clear a row to rank up: " + RANKS.join(", ") + ". Beat the 99 Challenge to become " + CFG.topRank + "." } : null;
+if (SONGS_TXT) CFG.rooms.forEach(r => { if (SONGS_TXT[r.t]) r.x = SONGS_TXT[r.t]; });
 const HOW = CFG.rooms.map(r => ({ s: SC[r.scene], t: FIVE && r.t === "1, THEN 2, THEN 3" ? "3 STOPS A SONG" : r.t, x: FIVE && r.t === "1, THEN 2, THEN 3" ? "Every song stops 3 times, once after each verse. Beat a song to rank up. Song 5 is the boss." : FIVE && r.t === "CLIMB THE RANKS" ? "Everybody starts as a " + CFG.startRank + ". Every song you beat is a rank up: " + RANKS.join(", ") + ". Beat the 99 Challenge to become " + CFG.topRank + "." : r.x, snd: r.sfx }));
+if (CFG.songs) { const ab = document.querySelector(".about"); if (ab) ab.textContent = "Every song stops at the end of a verse and asks about what you just heard. Row 1 stops once, row 2 twice, row 3 three times. Clear a row of 3 to rank up."; }
 if (FIVE) { const ab = document.querySelector(".about"); if (ab) ab.textContent = "Every song stops 3 times, once at the end of each verse, and asks about what you just heard. Every song you beat is a rank up. Song 5 is the boss."; }
 let howI = 0;
 function showHow() {
