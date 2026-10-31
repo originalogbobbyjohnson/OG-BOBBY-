@@ -47,6 +47,22 @@ a { color: inherit; }
 @keyframes pulse { 0%, 100% { r: 8; opacity: .7; } 50% { r: 15; opacity: 0; } }
 .glow { animation: pulse 2s ease-in-out infinite; }
 
+/* live zoomable map */
+.map.live { height: 460px; background: #e9e6df; }
+.map.live .leaflet-container { width: 100%; height: 100%; font-family: var(--body); background: #e9e6df; }
+.leaflet-tooltip.alab { background: #000; color: #fff; border: 2px solid #fff; border-radius: 8px; padding: 2px 7px; font-family: var(--tag); font-size: 14px; box-shadow: 0 2px 0 #000; }
+.leaflet-tooltip.alab:before { display: none; }
+.zhint { text-align: center; font-size: .72rem; color: var(--soft); margin: 6px 0 0; }
+.key { background: var(--panel); border: 1.5px solid var(--line); border-radius: 14px; padding: 10px 12px; }
+.key summary { cursor: pointer; font-family: var(--display); letter-spacing: .08em; font-size: 1rem; list-style: none; }
+.key summary::-webkit-details-marker { display: none; }
+.key summary:after { content: " +"; color: var(--gold); }
+.key[open] summary:after { content: " –"; }
+.key ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 7px; }
+.key li { display: grid; grid-template-columns: 22px auto 1fr; align-items: center; gap: 8px; font-size: .82rem; }
+.key .sw { height: 6px; border-radius: 3px; }
+.key .bul i { width: 20px; height: 20px; font-size: .72rem; }
+
 /* station list */
 h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-size: 1.15rem; }
 .list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
@@ -79,6 +95,8 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .foot { text-align: center; font-size: .78rem; color: var(--soft); }
 .foot b { color: var(--gold); }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <meta name="copyright" content="© 2026 OG Bobby · OG FAN 99. All rights reserved.">
 <script src="/brand/guard.js"></script>
 </head>
@@ -91,6 +109,8 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
   </header>
 
   <div class="map" id="map" aria-label="Subway map of the artists"></div>
+  <p class="zhint" id="zhint" hidden>Pinch or use + / − to zoom. Tap a station to open it.</p>
+  <details class="key" id="key" hidden><summary>SUBWAY KEY</summary><ul id="keyList"></ul></details>
 
   <h2>PICK A STATION</h2>
   <ul class="list" id="list"></ul>
@@ -126,7 +146,9 @@ const ARTISTS = [
   { who: "Lloyd Banks", hood: "South Jamaica", boro: "Queens", stop: "Jamaica Center", trains: [["E", "#0039a6"], ["J", "#996633"], ["Z", "#996633"]], color: "#4aa8ff",
     url: "../lloydbanks-ogfan99-5155da/", status: "demo", line: "The Punchline King. Hunger for more.", save: "ogfan99lloydbanks1", lat: 40.7022, lng: -73.8011 },
   { who: "Action Bronson", hood: "Flushing", boro: "Queens", stop: "Flushing–Main St", trains: [["7", "#b933ad"]], color: "#ffd23f",
-    url: "../actionbronson-ogfan99-c76eba/", status: "demo", line: "Bam Bam. Chef turned MC. Baklava for everybody.", save: "ogfan99actionbronson1", lat: 40.7596, lng: -73.8301 }
+    url: "../actionbronson-ogfan99-c76eba/", status: "demo", line: "Bam Bam. Chef turned MC. Baklava for everybody.", save: "ogfan99actionbronson1", lat: 40.7596, lng: -73.8301 },
+  { who: "Nas", hood: "Queensbridge", boro: "Queens", stop: "Queensboro Plaza", trains: [["7", "#b933ad"], ["N", "#fccc0a", 1], ["W", "#fccc0a", 1]], color: "#e8c766",
+    url: "../nas-ogfan99-4adcd7/", status: "demo", line: "Illmatic. QB's finest. The world is yours.", save: "ogfan99nas1", lat: 40.7509, lng: -73.9402 }
 ];
 const SOON = ["Manhattan"];
 
@@ -371,7 +393,42 @@ async function checkKey() {
   } catch (e) {}
   drawList();
 }
-drawMap(); drawList(); checkKey();
+/* ---------- live map: real streets you can zoom, real subway lines, artist stations on top ---------- */
+const LINECOL = { "1": "#ee352e", "4": "#00933c", "7": "#b933ad", "A": "#0039a6", "B": "#ff6319", "G": "#6cbe45", "J": "#996633", "L": "#a7a9ac", "N": "#fccc0a", "S": "#808183" };
+const KEY = [["1", ["1","2","3"], "7 Av / Broadway"], ["4", ["4","5","6"], "Lexington Av"], ["7", ["7"], "Flushing"], ["A", ["A","C","E"], "8 Av"], ["B", ["B","D","F","M"], "6 Av"], ["G", ["G"], "Crosstown"], ["J", ["J","Z"], "Nassau St"], ["L", ["L"], "14 St–Canarsie"], ["N", ["N","Q","R","W"], "Broadway"], ["S", ["S"], "Shuttles"]];
+const SUBWAY_URL = "https://services6.arcgis.com/IX0rbbPRMd0YfCJN/ArcGIS/rest/services/NYC_DoITT_Subway_Line/FeatureServer/0/query?where=1%3D1&outFields=RT_SYMBOL,NAME&outSR=4326&f=geojson&geometryPrecision=5";
+async function subwayData() {
+  try { const c = localStorage.getItem("ogfan99subway2"); if (c) return JSON.parse(c); } catch (e) {}
+  const j = await (await fetch(SUBWAY_URL)).json();
+  try { localStorage.setItem("ogfan99subway2", JSON.stringify(j)); } catch (e) {}
+  return j;
+}
+function liveMap() {
+  if (!window.L) return;                       // no map library: keep the drawn map
+  const el = $("map"); el.innerHTML = ""; el.classList.add("live");
+  const m = L.map(el, { zoomControl: true, attributionControl: true, minZoom: 10, maxZoom: 18, zoomSnap: .5 });
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", { subdomains: "abcd", maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>' }).addTo(m);
+  const lines = L.layerGroup().addTo(m), pins = L.layerGroup().addTo(m);
+  subwayData().then(j => {
+    L.geoJSON(j, { interactive: false, style: f => ({ color: LINECOL[f.properties.RT_SYMBOL] || "#555", weight: 4, opacity: .9 }) }).addTo(lines);
+    pins.eachLayer(p => p.bringToFront && p.bringToFront());
+  }).catch(() => {});
+  const ll = [];
+  ARTISTS.forEach((a, i) => {
+    if (a.lat == null) return; ll.push([a.lat, a.lng]);
+    const c = L.circleMarker([a.lat, a.lng], { radius: 9, color: "#000", weight: 3, fillColor: "#fff", fillOpacity: 1 }).addTo(pins);
+    c.bindTooltip(a.who, { permanent: true, direction: "right", offset: [10, 0], className: "alab" });
+    c.on("click", () => openCard(i));
+  });
+  m.fitBounds(ll, { padding: [30, 30] });
+  const labels = () => { const z = m.getZoom(); pins.eachLayer(p => { const t = p.getTooltip && p.getTooltip(); if (t) (z >= 12 ? p.openTooltip() : p.closeTooltip()); }); };
+  m.on("zoomend", labels); labels();
+  $("zhint").hidden = false; $("key").hidden = false;
+  $("keyList").innerHTML = KEY.map(([k, ls, name]) => '<li><span class="sw" style="background:' + LINECOL[k] + '"></span><span class="bul">' +
+    ls.map(l => '<i style="background:' + LINECOL[k] + ';color:' + (k === "N" ? "#000" : "#fff") + '">' + l + '</i>').join("") + '</span><span>' + name + '</span></li>').join("");
+}
+drawMap(); drawList(); checkKey(); liveMap();
 </script>
 </body>
 </html>
