@@ -11,7 +11,7 @@
    row 2 to its second, row 3 through all three verses, so fans go deeper into the same songs each row. */
 if (CFG.songs) {
   const S = CFG.songs.filter(s => !s.locked), eps = [];
-  [1, 2, 3].forEach(n => { for (let i = 0; i < 3; i++) { const s = S[(eps.length) % S.length]; eps.push({ title: s.title + (n > 1 ? " · Round " + n : ""), id: s.id, start: s.start, cuts: s.cuts.slice(0, n), qs: s.qs.slice(0, n), round: n, song: S.indexOf(s) }); } });
+  [1, 2, 3].forEach(n => { for (let i = 0; i < 3; i++) { const s = S[(eps.length) % S.length]; const seenN = eps.filter(e => e.id === s.id).length; eps.push({ title: s.title + (seenN ? " · Round " + (seenN + 1) : ""), id: s.id, start: s.start, cuts: s.cuts.slice(0, n), qs: s.qs.slice(0, n), round: n, song: S.indexOf(s) }); } });
   CFG.episodes = eps;
   if (CFG.ranks.length === 5) { const R = CFG.ranks, T = CFG.trophyArt; CFG.ranks = [R[0], R[2], R[4]]; if (T && T.length === 7) CFG.trophyArt = [T[0], T[1], T[3], T[5], T[6]]; }
 }
