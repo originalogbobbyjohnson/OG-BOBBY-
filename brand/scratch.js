@@ -18,7 +18,7 @@
       getT: () => au.currentTime,
       setT: t => { try { au.currentTime = t; } catch (e) {} },
       bounds: () => [0, Math.max(0, (au.duration || 0) - 0.4)],
-      mute: on => { au.muted = on; },
+      mute: on => { if (on) { au._v = au.volume; au.volume = 0.18; } else { au.volume = au._v != null ? au._v : 1; } },
       toggle: null
     };
   } else if (document.getElementById("record")) {
@@ -50,7 +50,7 @@
           return [lo, Math.max(lo, hi)];
         } catch (err) { return [0, 0]; }
       },
-      mute: on => { try { on ? yt().mute() : yt().unMute(); } catch (e) {} },
+      mute: on => { try { const p = yt(); if (on) { p._v = p.getVolume(); p.setVolume(18); } else p.setVolume(p._v != null ? p._v : 100); } catch (e) {} },
       /* a tap on the video works like a tap on the record */
       toggle: () => { try { const p = yt(); if (typeof atStop !== "undefined" && atStop) return; if (p.getPlayerState() === 1) p.pauseVideo(); else if (p.getPlayerState() === 2) p.playVideo(); } catch (e) {} }
     };
@@ -59,11 +59,30 @@
   if (!A) return;
 
   /* scratch sound: looping noise through a band-pass filter that follows the hand speed */
-  let ctx = null, src = null, filt = null, gain = null;
+  let ctx = null, src = null, filt = null, gain = null, unlocked = false;
+  function silentWav() {                 // half a second of silence, as a playable file
+    const n = 4000, b = new ArrayBuffer(44 + n * 2), v = new DataView(b), w = (o, t) => { for (let i = 0; i < t.length; i++) v.setUint8(o + i, t.charCodeAt(i)); };
+    w(0, "RIFF"); v.setUint32(4, 36 + n * 2, true); w(8, "WAVE"); w(12, "fmt "); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+    v.setUint32(24, 8000, true); v.setUint32(28, 16000, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true); w(36, "data"); v.setUint32(40, n * 2, true);
+    return URL.createObjectURL(new Blob([b], { type: "audio/wav" }));
+  }
+  function unlock() {                    // must run inside a real tap (iPhone rule)
+    try {
+      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      if (ctx.state !== "running") ctx.resume();
+      if (!unlocked) {
+        unlocked = true;
+        const a = document.createElement("audio"); a.src = silentWav(); a.loop = true; a.setAttribute("playsinline", ""); a.volume = 0.01;
+        a.play().catch(() => {});        // keeps the phone's audio in "playback" mode so the silent switch doesn't mute the scratch
+        const b = ctx.createBuffer(1, 1, 22050), s0 = ctx.createBufferSource(); s0.buffer = b; s0.connect(ctx.destination); s0.start(0);
+      }
+    } catch (e) {}
+  }
+  ["touchstart", "touchend", "pointerdown", "click"].forEach(ev => document.addEventListener(ev, unlock, { capture: true, passive: true }));
   function soundOn() {
     try {
       ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
-      if (ctx.state === "suspended") ctx.resume();
+      if (ctx.state !== "running") ctx.resume();
       const len = ctx.sampleRate, buf = ctx.createBuffer(1, len, ctx.sampleRate), d = buf.getChannelData(0);
       for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * (0.6 + 0.4 * Math.sin(i / 37));
       src = ctx.createBufferSource(); src.buffer = buf; src.loop = true;
@@ -76,7 +95,7 @@
     if (!src) return;
     const s = Math.min(1, Math.abs(v) / 7), t = ctx.currentTime;
     filt.frequency.setTargetAtTime(300 + s * 2600 + (v < 0 ? -120 : 0), t, 0.02);
-    gain.gain.setTargetAtTime(s < 0.03 ? 0 : 0.12 + s * 0.45, t, 0.02);
+    gain.gain.setTargetAtTime(s < 0.03 ? 0 : 0.25 + s * 0.6, t, 0.02);
   }
   function soundOff() {
     if (!src) return;
