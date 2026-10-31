@@ -109,8 +109,37 @@
   document.addEventListener("pointercancel", end, true);
   document.addEventListener("click", e => { if (performance.now() - eatClick < 450) { e.stopPropagation(); e.preventDefault(); } }, true);
 
+  /* a friendly heads-up the first few times a song plays: the record can be scratched (never again once they've tried it) */
+  const KEY = "ogScratchHint";
+  const seen = () => { try { return JSON.parse(localStorage.getItem(KEY) || '{"n":0,"done":0}'); } catch (e) { return { n: 0, done: 0 }; } };
+  const save = v => { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {} };
+  let tip = null, tipT = 0, wasPlaying = false;
+  function showTip() {
+    const el = A.el(); if (!el) return;
+    const r = el.getBoundingClientRect(); if (!r.width || r.bottom < 0 || r.top > innerHeight) return;
+    const v = seen(); if (v.done || v.n >= 3) return; v.n++; save(v);
+    tip = document.createElement("div"); tip.className = "og-scratch-tip";
+    tip.innerHTML = '<b>&#8635; SCRATCH ME</b><span>Drag the record to rewind or fast-forward</span>';
+    document.body.appendChild(tip);
+    const w = tip.offsetWidth, h = tip.offsetHeight, above = r.top - h - 14 > 8;
+    tip.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + "px";
+    tip.style.top = (above ? r.top - h - 12 : r.bottom + 12) + "px";
+    tip.classList.add(above ? "up" : "down");
+    clearTimeout(tipT); tipT = setTimeout(hideTip, 5000);
+  }
+  function hideTip() { if (tip) { const t = tip; tip = null; t.classList.add("bye"); setTimeout(() => t.remove(), 400); } }
+  setInterval(() => { const p = A.playing(); if (p && !wasPlaying) setTimeout(() => { if (A.playing() && !S) showTip(); }, 1500); wasPlaying = p; }, 600);
+  document.addEventListener("pointermove", () => { if (S && S.moved) { hideTip(); const v = seen(); if (!v.done) { v.done = 1; save(v); } } }, true);
+  addEventListener("scroll", hideTip, { passive: true });
+
   /* the page must not scroll when a finger drags across the spinning record */
   const st = document.createElement("style");
-  st.textContent = "#record, .og-bar .og-rec, .og-bar .cab-play { touch-action: none; -webkit-user-select: none; user-select: none; }";
+  st.textContent = "#record, .og-bar .og-rec, .og-bar .cab-play { touch-action: none; -webkit-user-select: none; user-select: none; }" +
+    ".og-scratch-tip{position:fixed;z-index:99990;pointer-events:none;display:flex;flex-direction:column;align-items:center;gap:2px;background:#f2c14e;color:#000;border:2px solid #000;border-radius:12px;padding:7px 12px;box-shadow:0 3px 0 #000;font:700 11px/1.2 Helvetica,Arial,sans-serif;text-align:center;max-width:220px;animation:ogTipIn .35s cubic-bezier(.2,1.4,.4,1)}" +
+    ".og-scratch-tip b{font:900 14px/1 Helvetica,Arial,sans-serif;letter-spacing:.08em}" +
+    ".og-scratch-tip:after{content:'';position:absolute;left:50%;margin-left:-7px;border:7px solid transparent}" +
+    ".og-scratch-tip.up:after{top:100%;border-top-color:#000}.og-scratch-tip.down:after{bottom:100%;border-bottom-color:#000}" +
+    ".og-scratch-tip.bye{opacity:0;transition:opacity .35s}" +
+    "@keyframes ogTipIn{from{opacity:0;transform:translateY(6px) scale(.9)}to{opacity:1;transform:none}}";
   document.head.appendChild(st);
 })();
