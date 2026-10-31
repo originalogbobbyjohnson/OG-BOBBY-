@@ -54,7 +54,7 @@ a { color: inherit; }
 /* live zoomable map */
 .map.live { height: 460px; background: #e9e6df; isolation: isolate; z-index: 0; }
 .map.live .leaflet-container { width: 100%; height: 100%; font-family: var(--body); background: #e9e6df; }
-.leaflet-tooltip.alab { background: #000; color: #fff; border: 2px solid #fff; border-radius: 8px; padding: 2px 7px; font-family: var(--tag); font-size: 14px; box-shadow: 0 2px 0 #000; }
+.leaflet-tooltip.alab { background: #000; color: #fff; border: 2px solid #fff; border-radius: 8px; padding: 2px 7px; font-family: var(--tag); font-size: var(--labfs, 14px); box-shadow: 0 2px 0 #000; }
 .leaflet-tooltip.alab:before { display: none; }
 .zhint { text-align: center; font-size: .72rem; color: var(--soft); margin: 6px 0 0; }
 .key { background: var(--panel); border: 1.5px solid var(--line); border-radius: 14px; padding: 10px 12px; }
@@ -755,7 +755,11 @@ function liveMap() {
     c.on("click", () => openCard(i));
   });
   m.fitBounds(ll, { padding: [30, 30] });
-  const labels = () => { const z = m.getZoom(); pins.eachLayer(p => { const t = p.getTooltip && p.getTooltip(); if (t) (z >= 12 ? p.openTooltip() : p.closeTooltip()); }); };
+  const labels = () => { const z = m.getZoom();
+    /* names and pins grow as you zoom into the streets */
+    const fs = Math.round(Math.max(14, Math.min(30, 14 + (z - 12) * 4))), r = Math.round(Math.max(9, Math.min(16, 9 + (z - 12) * 1.75)));
+    el.style.setProperty("--labfs", fs + "px");
+    pins.eachLayer(p => { if (p.setRadius) p.setRadius(r); const t = p.getTooltip && p.getTooltip(); if (t) { t.options.offset = [r + 2, 0]; (z >= 12 ? p.openTooltip() : p.closeTooltip()); } }); };
   m.on("zoomend", labels); labels();
   $("zhint").hidden = false; $("key").hidden = false;
   $("keyList").innerHTML = KEY.map(([k, ls, name]) => '<li><span class="sw" style="background:' + LINECOL[k] + '"></span><span class="bul">' +
