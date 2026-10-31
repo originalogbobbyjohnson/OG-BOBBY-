@@ -718,11 +718,12 @@ $("scrim").onclick = closeCard;
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeCard(); });
 
 /* ---------- the Vault: unsigned artists stay locked; the owner key opens every door on this phone ---------- */
+const OWNER_H = ["b2b7bce5767e125a4dc7bc68c8c98fabcc4597e0d8d20e8ce46c565ded524acf", "d4ed073225697637629c09e3b21e510f72fb8f27579c7621d5498738c8168376"];
 async function checkKey() {
   try {
     const k = new URLSearchParams(location.search).get("k");
-    if (k) { const h = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(k)))).map(b => b.toString(16).padStart(2, "0")).join("");
-      if (h === "d4ed073225697637629c09e3b21e510f72fb8f27579c7621d5498738c8168376") localStorage.setItem("ogfan99owner", "1"); }
+    if (k) { const h = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(k.trim().toLowerCase())))).map(b => b.toString(16).padStart(2, "0")).join("");
+      if (OWNER_H.includes(h)) localStorage.setItem("ogfan99owner", "1"); }
     try { recolorPins(); } catch (e) {}
   } catch (e) {}
   drawList();
@@ -776,8 +777,8 @@ function goArtist(i) {
 }
 function recolorPins() { (window.__pins || []).forEach(c => { const a = ARTISTS[c.__i]; c.setStyle({ fillColor: a.status === "live" ? "#35b867" : a.status === "demo" && isOwner() ? "#e8b84a" : "#d62828" }); }); }
 async function tryKey(k) {
-  try { const h = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(String(k).trim())))).map(b => b.toString(16).padStart(2, "0")).join("");
-    if (h === "d4ed073225697637629c09e3b21e510f72fb8f27579c7621d5498738c8168376") { localStorage.setItem("ogfan99owner", "1"); drawList(); recolorPins(); return true; } } catch (e) {}
+  try { const h = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(String(k).trim().toLowerCase())))).map(b => b.toString(16).padStart(2, "0")).join("");
+    if (OWNER_H.includes(h)) { localStorage.setItem("ogfan99owner", "1"); drawList(); recolorPins(); return true; } } catch (e) {}
   return false;
 }
 /* owner unlock from inside the app: tap PRIVATE PREVIEW three times and enter the key */
