@@ -410,5 +410,673 @@ window.CFG = {
    "cuts": [],
    "qs": []
   }
+ ],
+ "explicitSongs": [
+  {
+   "title": "I Need Love",
+   "id": "NEUX-HYRtUA",
+   "start": 9.9,
+   "cuts": [
+    37.6,
+    132.1,
+    200.4
+   ],
+   "qs": [
+    [
+     [
+      "\"When I'm alone in my room sometimes I stare at the...\"",
+      "Wall",
+      "Window",
+      "Ceiling"
+     ],
+     [
+      "\"In the back of my mind I hear my ___ call\"",
+      "Conscience",
+      "Mother",
+      "Heart"
+     ],
+     [
+      "\"I need a girl who's as sweet as a...\"",
+      "Dove",
+      "Rose",
+      "Peach"
+     ],
+     [
+      "\"For the first time in my life, I see I need...\"",
+      "Love",
+      "Help",
+      "Time"
+     ],
+     [
+      "\"There I was giggling about the...\"",
+      "Games",
+      "Girls",
+      "Days"
+     ],
+     [
+      "\"That I had played with many...\"",
+      "Hearts",
+      "Minds",
+      "Friends"
+     ],
+     [
+      "\"And I'm not sayin' no...\"",
+      "Names",
+      "Lies",
+      "More"
+     ],
+     [
+      "\"Teardrops made my eyes...\"",
+      "Burn",
+      "Blue",
+      "Close"
+     ],
+     [
+      "\"I'll never dish another raw...\"",
+      "Deal",
+      "Meal",
+      "Hand"
+     ]
+    ],
+    [
+     [
+      "\"Playin' make believe, pretending that I'm...\"",
+      "True",
+      "Yours",
+      "Cool"
+     ],
+     [
+      "\"Inside my soul because my soul is...\"",
+      "Cold",
+      "Old",
+      "Gold"
+     ],
+     [
+      "\"The other half needs affection and...\"",
+      "Joy",
+      "Love",
+      "Time"
+     ],
+     [
+      "\"Romance, sheer delight, how...\"",
+      "Sweet",
+      "Nice",
+      "Right"
+     ],
+     [
+      "He'll lay down his jacket so you can walk over a...?",
+      "Puddle",
+      "Bridge",
+      "Curb"
+     ],
+     [
+      "\"I'll give you a ___, pull out your chair before we eat\"",
+      "Rose",
+      "Ring",
+      "Call"
+     ],
+     [
+      "\"It's ___ whenever I'm with you\"",
+      "Deja vu",
+      "Magic",
+      "Heaven"
+     ],
+     [
+      "\"Fantasies can run, but they can't...\"",
+      "Hide",
+      "Stop",
+      "Fly"
+     ]
+    ],
+    [
+     [
+      "He'll make it up to her if she comes with him to which city?",
+      "Atlantic City",
+      "Jersey City",
+      "Kansas City"
+     ],
+     [
+      "\"I'm no longer a playboy on the...\"",
+      "Run",
+      "Phone",
+      "Block"
+     ],
+     [
+      "\"Friendship, trust, honor, respect...\"",
+      "Admiration",
+      "Money",
+      "Patience"
+     ],
+     [
+      "\"It's taught me love and how to be a real...\"",
+      "Man",
+      "Friend",
+      "King"
+     ],
+     [
+      "\"Understand I'll be frozen in...\"",
+      "Time",
+      "Ice",
+      "Place"
+     ],
+     [
+      "\"I'm not gonna leave it in ___'s hands\"",
+      "Destiny",
+      "Cupid",
+      "Fate"
+     ],
+     [
+      "\"I can't sit and wait for my ___ to arrive\"",
+      "Princess",
+      "Queen",
+      "Lady"
+     ],
+     [
+      "\"I'll search the whole ___ for that special girl\"",
+      "World",
+      "City",
+      "Block"
+     ],
+     [
+      "\"When I finally find you watch our love...\"",
+      "Unfurl",
+      "Grow",
+      "Shine"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "I'm Bad",
+   "id": "oVDfyc2lh4Q",
+   "start": 29.6,
+   "cuts": [
+    57,
+    140.5,
+    204
+   ],
+   "qs": [
+    [
+     [
+      "\"No rapper can rap quite like...\"",
+      "I can",
+      "You can",
+      "He can"
+     ],
+     [
+      "\"Not the last Mafioso, I'm a MC...\"",
+      "Cop",
+      "Boss",
+      "King"
+     ],
+     [
+      "\"Make you say 'Go LL,' and do the...\"",
+      "Wop",
+      "Wobble",
+      "Bounce"
+     ],
+     [
+      "\"If you think you can outrhyme me, yeah boy I...\"",
+      "Bet",
+      "Know",
+      "See"
+     ],
+     [
+      "\"'Cause I ain't met who can do that...\"",
+      "Yet",
+      "Now",
+      "Here"
+     ],
+     [
+      "\"Trendsetter, I'm better, my rhymes are...\"",
+      "Good",
+      "Hot",
+      "Fresh"
+     ],
+     [
+      "His gold nameplate says...?",
+      "I wish you would",
+      "Cool J",
+      "Number one"
+     ],
+     [
+      "\"When ___ begin, then I gotta join in\"",
+      "Battles",
+      "Parties",
+      "Shows"
+     ],
+     [
+      "\"Before my rhyme is over, you know I'mma...\"",
+      "Win",
+      "Grin",
+      "Spin"
+     ]
+    ],
+    [
+     [
+      "\"Cool J has arrived, so you better make...\"",
+      "Way",
+      "Room",
+      "Noise"
+     ],
+     [
+      "\"Ask anybody in the crowd, they say the kid don't...\"",
+      "Play",
+      "Stop",
+      "Quit"
+     ],
+     [
+      "\"I don't wear a disguise because I don't owe the...\"",
+      "Mob",
+      "Bank",
+      "Man"
+     ],
+     [
+      "\"Got concrete rhymes, been rappin' for...\" how many years?",
+      "Ten",
+      "Five",
+      "Twenty"
+     ],
+     [
+      "\"MCs can't win, I make 'em rust like...\"",
+      "Tin",
+      "Iron",
+      "Nails"
+     ],
+     [
+      "\"They call me ___, my hat is like a shark's fin\"",
+      "Jaws",
+      "Fins",
+      "Hammer"
+     ],
+     [
+      "\"Used to rock in my ___, now I'm number one\"",
+      "Basement",
+      "Bedroom",
+      "Backyard"
+     ],
+     [
+      "\"I'm the pinnacle, that means I reign...\"",
+      "Supreme",
+      "Forever",
+      "Alone"
+     ]
+    ],
+    [
+     [
+      "Bobcat, E Love and the...?",
+      "Cut Creator",
+      "DJ Scratch",
+      "Kid Capri"
+     ],
+     [
+      "\"I'm devastating, I'm so good it's a...\"",
+      "Shame",
+      "Crime",
+      "Gift"
+     ],
+     [
+      "\"I'm as strong as a...\"",
+      "Bull",
+      "Bear",
+      "Ox"
+     ],
+     [
+      "\"I enjoy what I'm doing plus I'm paid in...\"",
+      "Full",
+      "Cash",
+      "Gold"
+     ],
+     [
+      "\"Not Buckaroo...\"",
+      "Banzai",
+      "Bandit",
+      "Bonanza"
+     ],
+     [
+      "\"Never retire or put my mic on the...\"",
+      "Shelf",
+      "Floor",
+      "Stand"
+     ],
+     [
+      "\"You want a hit, give me an hour plus a pen and a...\"",
+      "Pad",
+      "Beat",
+      "Desk"
+     ],
+     [
+      "\"So forget Oreos, eat Cool J...\"",
+      "Cookies",
+      "Cupcakes",
+      "Candy"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Hey Lover",
+   "id": "Um99r6sgspY",
+   "start": 9.6,
+   "cuts": [
+    46,
+    162,
+    216.2
+   ],
+   "qs": [
+    [
+     [
+      "\"I've been watchin' you from...\"",
+      "Afar",
+      "The corner",
+      "The window"
+     ],
+     [
+      "\"This is more than a...\"",
+      "Crush",
+      "Fling",
+      "Game"
+     ],
+     [
+      "\"It was all up at...\"",
+      "Ruckers",
+      "The Garden",
+      "The mall"
+     ],
+     [
+      "\"Smiling, a ___ bag in your hand\"",
+      "Coach",
+      "Gucci",
+      "Prada"
+     ],
+     [
+      "\"I was layin' in the coupe with my hat turned...\"",
+      "Back",
+      "Down",
+      "Up"
+     ],
+     [
+      "\"We caught eyes for a moment and that was...\"",
+      "That",
+      "It",
+      "Love"
+     ],
+     [
+      "\"So I skated off as you...\"",
+      "Strolled off",
+      "Walked away",
+      "Drove off"
+     ],
+     [
+      "\"You're all a real man can need and ever...\"",
+      "Ask for",
+      "Want",
+      "Dream of"
+     ]
+    ],
+    [
+     [
+      "\"I gotta take ya from your man, that's my...\"",
+      "Mission",
+      "Plan",
+      "Job"
+     ],
+     [
+      "\"If his love is real, he gotta handle...\"",
+      "Competition",
+      "Business",
+      "Pressure"
+     ],
+     [
+      "\"You only knew him...\" how many months?",
+      "Five",
+      "Two",
+      "Ten"
+     ],
+     [
+      "\"Lookin' at my own eyes in the...\"",
+      "Rear view",
+      "Mirror",
+      "Window"
+     ],
+     [
+      "\"I can't believe it, I ain't had a crush in...\"",
+      "Years",
+      "Months",
+      "Weeks"
+     ],
+     [
+      "\"I see you at the ___ waitin' everyday\"",
+      "Bus stop",
+      "Train",
+      "Corner"
+     ],
+     [
+      "\"We would walk down the aisle of...\"",
+      "Destiny",
+      "Dreams",
+      "Love"
+     ],
+     [
+      "\"Break ya off a little chump change to do your...\"",
+      "Hair",
+      "Nails",
+      "Shopping"
+     ]
+    ],
+    [
+     [
+      "\"Last week I saw you at the...\"",
+      "Mall",
+      "Movies",
+      "Park"
+     ],
+     [
+      "\"Standing at the ___ 'bout to make a call\"",
+      "Pay phone",
+      "Front desk",
+      "Corner store"
+     ],
+     [
+      "\"We talked about travellin' the distant...\"",
+      "Lands",
+      "Seas",
+      "Roads"
+     ],
+     [
+      "\"Escaping all the madness out here in the...\"",
+      "World",
+      "City",
+      "Streets"
+     ],
+     [
+      "\"Becomin' my wife, no longer my...\"",
+      "Girl",
+      "Friend",
+      "Crush"
+     ],
+     [
+      "\"Into an ocean of ___ we both fell\"",
+      "Love",
+      "Dreams",
+      "Tears"
+     ],
+     [
+      "\"But it's a fantasy, it won't come...\"",
+      "True",
+      "Back",
+      "Soon"
+     ],
+     [
+      "\"We never even ___ and your man swear he love you\"",
+      "Spoke",
+      "Met",
+      "Danced"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Headsprung",
+   "id": "JQcAzie9AJ0",
+   "cuts": [
+    38.4,
+    115.6,
+    258.5
+   ],
+   "qs": [
+    [
+     [
+      "\"They call me Big L'y, Big...\"",
+      "Silly",
+      "Willy",
+      "Chilly"
+     ],
+     [
+      "\"Big money, big...\"",
+      "Billy",
+      "Willie",
+      "Milly"
+     ],
+     [
+      "\"Timbaland, ladies love on the...\"",
+      "Track",
+      "Beat",
+      "Phone"
+     ],
+     [
+      "\"Lovely get the ice, pop...\"",
+      "Champagne",
+      "Bottles",
+      "Corks"
+     ],
+     [
+      "\"Don't forget I used to ride on the...\"",
+      "Train",
+      "Bus",
+      "Bike"
+     ],
+     [
+      "\"Go crazy in the mall with...\"",
+      "James",
+      "Jay",
+      "Jim"
+     ],
+     [
+      "\"Bring the women in to chill for...\"",
+      "Free",
+      "Three",
+      "Me"
+     ],
+     [
+      "\"You better have...\"",
+      "ID",
+      "Cash",
+      "Style"
+     ]
+    ],
+    [
+     [
+      "\"When we be up in the...\"",
+      "Club",
+      "Car",
+      "Spot"
+     ],
+     [
+      "\"Girls always come to the...\"",
+      "Back",
+      "Front",
+      "Bar"
+     ],
+     [
+      "\"Lord have...\"",
+      "Mercy",
+      "Patience",
+      "Pity"
+     ],
+     [
+      "\"Steady sticking to the ___, give it up\"",
+      "Wall",
+      "Bar",
+      "Floor"
+     ],
+     [
+      "\"Sneaking through the back ___, live it up\"",
+      "Door",
+      "Room",
+      "Way"
+     ],
+     [
+      "\"Got the champagne, pour me a...\"",
+      "Cup",
+      "Glass",
+      "Round"
+     ],
+     [
+      "\"Tell the bar, another...\"",
+      "Round",
+      "Bottle",
+      "Song"
+     ],
+     [
+      "\"Got all my mans holding me...\"",
+      "Down",
+      "Up",
+      "Close"
+     ]
+    ],
+    [
+     [
+      "\"Hey ladies, no need to get your hair...\"",
+      "Done",
+      "Cut",
+      "Fixed"
+     ],
+     [
+      "\"Yo fellas, no need to throw them...\"",
+      "Ones",
+      "Twos",
+      "Fives"
+     ],
+     [
+      "\"When Def Jam signed me they hit the...\"",
+      "Lottery",
+      "Jackpot",
+      "Ceiling"
+     ],
+     [
+      "\"I'm the greatest of all...\"",
+      "Time",
+      "Queens",
+      "Rap"
+     ],
+     [
+      "\"No hype man, no...\"",
+      "Crew",
+      "Team",
+      "Fans"
+     ],
+     [
+      "\"No reason for ghost...\"",
+      "Writers",
+      "Stories",
+      "Hunters"
+     ],
+     [
+      "\"Check ya T-Mobile, it's all over the...\"",
+      "Wire",
+      "News",
+      "Town"
+     ],
+     [
+      "\"You think I'm hot, you preaching to the...\"",
+      "Choir",
+      "Crowd",
+      "Church"
+     ]
+    ]
+   ]
+  }
  ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

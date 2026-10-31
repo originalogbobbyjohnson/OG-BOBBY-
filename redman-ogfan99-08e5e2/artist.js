@@ -398,5 +398,674 @@ window.CFG = {
    "cuts": [],
    "qs": []
   }
+ ],
+ "explicitSongs": [
+  {
+   "title": "Funkorama",
+   "id": "0T-owlnvWBg",
+   "start": 14.1,
+   "cuts": [
+    55.3,
+    100.8,
+    155.1
+   ],
+   "qs": [
+    [
+     [
+      "\"This is Funk Doctor...\"",
+      "Spock",
+      "Doom",
+      "Strange"
+     ],
+     [
+      "\"As we look at our...\"",
+      "Clocks",
+      "Watches",
+      "Maps"
+     ],
+     [
+      "\"We gonna take you on a ship to another...\"",
+      "Journey",
+      "Planet",
+      "Galaxy"
+     ],
+     [
+      "The ship goes to the...?",
+      "Darkside",
+      "Moon",
+      "Bricks"
+     ],
+     [
+      "\"My funk prognosis make my brains...\"",
+      "Comatose",
+      "Explode",
+      "Spin"
+     ],
+     [
+      "\"I don't have to be ___ to make your eyes freeze\"",
+      "Madonna",
+      "Prince",
+      "Cher"
+     ],
+     [
+      "\"For this, you need a journalist...\"",
+      "Scientist",
+      "Doctor",
+      "Professor"
+     ],
+     [
+      "\"I blow the spot up in any hood and...\"",
+      "Boondocks",
+      "Borough",
+      "Block"
+     ]
+    ],
+    [
+     [
+      "\"Make the bully of the block move and get new...\"",
+      "Locks",
+      "Shoes",
+      "Friends"
+     ],
+     [
+      "\"The phenomical...\"",
+      "Astronomical",
+      "Comical",
+      "Chemical"
+     ],
+     [
+      "\"Feelin'...\"",
+      "Nauseous",
+      "Dizzy",
+      "Famous"
+     ],
+     [
+      "\"I swing funk like...\"",
+      "Nunchucks",
+      "A bat",
+      "A rope"
+     ],
+     [
+      "\"Hot like...\"",
+      "Worcestershire",
+      "Tabasco",
+      "Jalapeños"
+     ],
+     [
+      "\"My funk speech make words wear...\"",
+      "Sun visors",
+      "Sneakers",
+      "Hats"
+     ],
+     [
+      "\"I'm gettin' down with the ___ in your trunk\"",
+      "Funk",
+      "Bass",
+      "Beat"
+     ],
+     [
+      "\"You would swear Redman was inside the...\"",
+      "Trunk",
+      "Radio",
+      "Glovebox"
+     ]
+    ],
+    [
+     [
+      "\"I'm off the...\"",
+      "Meter",
+      "Wall",
+      "Chain"
+     ],
+     [
+      "\"I make computers catch...\"",
+      "Amnesia",
+      "A cold",
+      "Fire"
+     ],
+     [
+      "\"I'm swifter than roller blades on...\"",
+      "Ice Capades",
+      "Broadway",
+      "The boardwalk"
+     ],
+     [
+      "\"I'm Fearless like...\"",
+      "Four",
+      "Five",
+      "Ten"
+     ],
+     [
+      "\"I'm Kool like...\"",
+      "Aid",
+      "Moe Dee",
+      "Herc"
+     ],
+     [
+      "\"My grammar slam from here to York...\"",
+      "Alabama",
+      "Georgia",
+      "Texas"
+     ],
+     [
+      "\"I'm nutty like...\"",
+      "Planters",
+      "Peanut butter",
+      "Squirrels"
+     ],
+     [
+      "\"Def like Jam or Squad, or Def like...\"",
+      "Lep",
+      "Pop",
+      "Kid"
+     ],
+     [
+      "\"I'm worldwide like Triple F.A.T....\"",
+      "Goose",
+      "Duck",
+      "Bird"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Da Goodness",
+   "id": "ZtzNc2hyJqM",
+   "start": 17.8,
+   "cuts": [
+    59.7,
+    131.8,
+    167.6
+   ],
+   "qs": [
+    [
+     [
+      "What phrase does he chant at the start?",
+      "Check it out",
+      "Here we go",
+      "Turn it up"
+     ],
+     [
+      "\"What up Doc, what the...\"",
+      "Deal",
+      "Word",
+      "Move"
+     ],
+     [
+      "\"Clock the squeal, the MC...\"",
+      "Overkill",
+      "Overload",
+      "Overtime"
+     ],
+     [
+      "\"Jumpin' out...\"",
+      "Planes",
+      "Windows",
+      "Cars"
+     ],
+     [
+      "\"Jumpin' out planes, ___'s the name\"",
+      "Doc",
+      "Red",
+      "Funk"
+     ],
+     [
+      "\"The flame back to relieve the...\"",
+      "Pain",
+      "Rain",
+      "Strain"
+     ],
+     [
+      "\"Me and my man jumpin' out...\"",
+      "Sedans",
+      "Planes",
+      "Trucks"
+     ],
+     [
+      "\"22-inch rims to parachute out the Lex...\"",
+      "Coupe",
+      "Truck",
+      "Jeep"
+     ]
+    ],
+    [
+     [
+      "\"Buy a whip straight up cash out the...\"",
+      "Car lot",
+      "Bank",
+      "Mall"
+     ],
+     [
+      "\"Switch from Red to...\"",
+      "Roy",
+      "Reggie",
+      "Ray"
+     ],
+     [
+      "\"Funk Doc, Def Squad, from the ___ set\"",
+      "Jersey",
+      "Brooklyn",
+      "Bronx"
+     ],
+     [
+      "\"Do you feel it in your...\"",
+      "Body",
+      "Soul",
+      "Feet"
+     ],
+     [
+      "\"Do you wanna rock a...\"",
+      "Party",
+      "Show",
+      "Boat"
+     ],
+     [
+      "\"My palm is like the cape on...\"",
+      "Spawn",
+      "Batman",
+      "Superman"
+     ],
+     [
+      "\"Opposite of Goodfellas...\"",
+      "De Niro",
+      "Pesci",
+      "Liotta"
+     ],
+     [
+      "\"Go to any ___ who rock the mic thorough\"",
+      "Borough",
+      "City",
+      "Block"
+     ]
+    ],
+    [
+     [
+      "\"Hot potato, drop the...\"",
+      "Data",
+      "Mic",
+      "Beat"
+     ],
+     [
+      "\"Emancipation...\"",
+      "Proclamator",
+      "Professor",
+      "Generator"
+     ],
+     [
+      "\"As a juvenile brought Cazals off...\"",
+      "Canal",
+      "Broad",
+      "Market"
+     ],
+     [
+      "\"Brick City be the pros at...\"",
+      "Wildin' out",
+      "Ballin'",
+      "Dancin'"
+     ],
+     [
+      "\"Get dressed like Thousand...\"",
+      "Isle",
+      "Ranch",
+      "Island"
+     ],
+     [
+      "Who does he make do the cha-cha?",
+      "Zsa Zsa Gabor",
+      "Marilyn Monroe",
+      "Lucille Ball"
+     ],
+     [
+      "\"Tremblin', pickin' up the ___ again\"",
+      "Pen",
+      "Mic",
+      "Phone"
+     ],
+     [
+      "\"Got impact like DJ threw on...\"",
+      "Benjamins",
+      "Records",
+      "Lights"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Whateva Man",
+   "id": "tdx6Z7qujIA",
+   "start": 42.3,
+   "cuts": [
+    84.3,
+    161.5,
+    218
+   ],
+   "qs": [
+    [
+     [
+      "\"Microphone, check one...\"",
+      "Two",
+      "Three",
+      "Mic"
+     ],
+     [
+      "\"You ready to get ___, man?\"",
+      "Down",
+      "Up",
+      "Loud"
+     ],
+     [
+      "What does he keep answering?",
+      "Whatever, man",
+      "Sure thing",
+      "Let's go"
+     ],
+     [
+      "\"Check it, Kool V, I keeps it...\"",
+      "Bangin'",
+      "Movin'",
+      "Rockin'"
+     ],
+     [
+      "\"Uh-huh, keep it...\"",
+      "Swangin'",
+      "Hangin'",
+      "Singin'"
+     ],
+     [
+      "\"Hard, far from...\"",
+      "Commercial",
+      "Normal",
+      "Simple"
+     ],
+     [
+      "\"It's like that, no...\"",
+      "Doubt",
+      "Joke",
+      "Lie"
+     ],
+     [
+      "\"Ayo, I be...\"",
+      "SWV",
+      "TLC",
+      "EPMD"
+     ],
+     [
+      "\"You the one, rap...\"",
+      "Shogun",
+      "Samurai",
+      "Legend"
+     ]
+    ],
+    [
+     [
+      "\"The county took a tax...\"",
+      "Assessment",
+      "Return",
+      "Break"
+     ],
+     [
+      "How much does the county want?",
+      "$5,000",
+      "$500",
+      "$50,000"
+     ],
+     [
+      "\"We have it for you in the...\"",
+      "Morning",
+      "Evening",
+      "Mail"
+     ],
+     [
+      "\"I will not take your filthy, stolen...\"",
+      "Money",
+      "Car",
+      "Gold"
+     ],
+     [
+      "\"Your boombox better form a...\"",
+      "Union",
+      "Band",
+      "Crew"
+     ],
+     [
+      "\"I leave your circuits...\"",
+      "Overworked",
+      "Overheated",
+      "Burnt out"
+     ],
+     [
+      "\"I be in the ___ with E\"",
+      "500",
+      "Benz",
+      "Jeep"
+     ],
+     [
+      "\"That's masters like the Furious...\"",
+      "Five",
+      "Four",
+      "Six"
+     ]
+    ],
+    [
+     [
+      "\"You ready to get this...\"",
+      "Chedda",
+      "Party",
+      "Money"
+     ],
+     [
+      "\"Most of 'em wasn't ___ and they knew it\"",
+      "Graduating",
+      "Studying",
+      "Listening"
+     ],
+     [
+      "\"Yeah, boy, I speak it...\"",
+      "Fluent",
+      "Proper",
+      "Loud"
+     ],
+     [
+      "\"I light your college dorm with my entourage from...\"",
+      "Newark",
+      "Brooklyn",
+      "Trenton"
+     ],
+     [
+      "\"Bigger they come, harder they...\"",
+      "Fall",
+      "Fight",
+      "Run"
+     ],
+     [
+      "\"Things changed since I was ___ years old\"",
+      "Twelve",
+      "Ten",
+      "Sixteen"
+     ],
+     [
+      "\"I specialize in wreckin' mics and area...\"",
+      "Codes",
+      "Maps",
+      "Clubs"
+     ],
+     [
+      "\"I got different forms to make you lose your...\"",
+      "Calm",
+      "Mind",
+      "Cool"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "I'll Bee Dat",
+   "id": "Si186d57Ra4",
+   "start": 13.4,
+   "cuts": [
+    54.7,
+    133.5,
+    181.2
+   ],
+   "qs": [
+    [
+     [
+      "\"Yo, Sim ___\"",
+      "Simma",
+      "Sala",
+      "Simon"
+     ],
+     [
+      "\"Who got the keys to my...\"",
+      "Bimmer",
+      "Benz",
+      "Jeep"
+     ],
+     [
+      "\"That's how we act when we...\"",
+      "Team up",
+      "Show up",
+      "Link up"
+     ],
+     [
+      "\"I bailed out the county with counterfeit...\"",
+      "Bills",
+      "Checks",
+      "Coins"
+     ],
+     [
+      "\"My slang be high range...\"",
+      "Brick City",
+      "Jersey",
+      "Newark"
+     ],
+     [
+      "\"I'm highly...\"",
+      "Octane",
+      "Charged",
+      "Rated"
+     ],
+     [
+      "\"It's all about...\"",
+      "Game",
+      "Fame",
+      "Money"
+     ],
+     [
+      "\"That's how we ___ when we team up\"",
+      "Act",
+      "Roll",
+      "Ride"
+     ]
+    ],
+    [
+     [
+      "\"Gorilla impact in this rap...\"",
+      "Habitat",
+      "Jungle",
+      "Game"
+     ],
+     [
+      "\"Get you stepping in your...\"",
+      "Air Max",
+      "Jordans",
+      "Timbs"
+     ],
+     [
+      "\"Big Kap on the...\"",
+      "Wheels",
+      "Mic",
+      "Decks"
+     ],
+     [
+      "\"In two laps, I give Stella her...\"",
+      "Groove back",
+      "Crown back",
+      "Keys back"
+     ],
+     [
+      "\"Soon as I walk in, the dogs are...\"",
+      "Barking",
+      "Howling",
+      "Running"
+     ],
+     [
+      "\"I stay in front like...\"",
+      "Handicapped parking",
+      "A bodyguard",
+      "The DJ"
+     ],
+     [
+      "\"Roll up to the jam with the front end...\"",
+      "Bent up",
+      "Lifted",
+      "Shining"
+     ],
+     [
+      "\"You be on Banned From TV Part...\"",
+      "Three",
+      "Two",
+      "Four"
+     ],
+     [
+      "\"Not platinum on wax but platinum in the...\"",
+      "Streets",
+      "Clubs",
+      "Hood"
+     ]
+    ],
+    [
+     [
+      "\"Nine months she carried a...\"",
+      "Seed",
+      "Child",
+      "Dream"
+     ],
+     [
+      "\"___ months she carried a seed\"",
+      "Nine",
+      "Six",
+      "Ten"
+     ],
+     [
+      "\"Once was a dream, could've been a...\"",
+      "King",
+      "Star",
+      "Queen"
+     ],
+     [
+      "\"Devil's advocate...\"",
+      "Hot",
+      "Cold",
+      "Wild"
+     ],
+     [
+      "\"Devil's advocate hot, it takes ___ to do it\"",
+      "Days",
+      "Hours",
+      "Years"
+     ],
+     [
+      "\"MC's be...\"",
+      "Clonin'",
+      "Frontin'",
+      "Runnin'"
+     ],
+     [
+      "\"Before Doc stretch up and morning...\"",
+      "Yawning",
+      "Coffee",
+      "Training"
+     ],
+     [
+      "\"I'll be that, I'll be...\"",
+      "That",
+      "Back",
+      "There"
+     ]
+    ]
+   ]
+  }
  ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
