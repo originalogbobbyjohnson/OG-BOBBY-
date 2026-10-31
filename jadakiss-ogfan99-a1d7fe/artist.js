@@ -278,7 +278,7 @@ window.CFG = {
    "id": "QWW-Vu-juPk",
    "start": 31,
    "cuts": [
-    99.6,
+    62.3,
     142.1,
     186
    ],
@@ -307,24 +307,6 @@ window.CFG = {
       "Me",
       "Them",
       "You"
-     ],
-     [
-      "What does he drive off road?",
-      "Wrangler",
-      "Bronco",
-      "Range Rover"
-     ],
-     [
-      "The roof and the what are gone?",
-      "Doors",
-      "Seats",
-      "Wheels"
-     ],
-     [
-      "All they talk about is who?",
-      "Me",
-      "Money",
-      "Music"
      ],
      [
       "\"I ain't even in the ___ but soon as something happen\"",
@@ -387,6 +369,24 @@ window.CFG = {
       "50",
       "Jay-Z",
       "Nas"
+     ],
+     [
+      "What does he drive off road?",
+      "Wrangler",
+      "Bronco",
+      "Range Rover"
+     ],
+     [
+      "The roof and the what are gone?",
+      "Doors",
+      "Seats",
+      "Wheels"
+     ],
+     [
+      "All they talk about is who?",
+      "Me",
+      "Money",
+      "Music"
      ]
     ],
     [
@@ -612,7 +612,7 @@ window.CFG = {
    "title": "Why",
    "id": "S46cLQKgtPE",
    "cuts": [
-    62.6,
+    42.5,
     132.3,
     199.5
    ],
@@ -641,24 +641,6 @@ window.CFG = {
       "Cake",
       "Call",
       "Ring"
-     ],
-     [
-      "A brother up north is better than who?",
-      "Jordan",
-      "Magic",
-      "Bird"
-     ],
-     [
-      "At the bar, straight shots instead of popping what?",
-      "Cris",
-      "Corks",
-      "Balloons"
-     ],
-     [
-      "\"Why you ain't stacked instead of try to be...\"",
-      "Fly",
-      "Rich",
-      "Loud"
      ],
      [
       "The song opens: \"Is that...\"",
@@ -715,6 +697,24 @@ window.CFG = {
       "Have",
       "Find",
       "Keep"
+     ],
+     [
+      "A brother up north is better than who?",
+      "Jordan",
+      "Magic",
+      "Bird"
+     ],
+     [
+      "At the bar, straight shots instead of popping what?",
+      "Cris",
+      "Corks",
+      "Balloons"
+     ],
+     [
+      "\"Why you ain't stacked instead of try to be...\"",
+      "Fly",
+      "Rich",
+      "Loud"
      ]
     ],
     [
@@ -767,7 +767,8 @@ window.CFG = {
       "Time"
      ]
     ]
-   ]
+   ],
+   "start": 10.9
   }
  ]
 };

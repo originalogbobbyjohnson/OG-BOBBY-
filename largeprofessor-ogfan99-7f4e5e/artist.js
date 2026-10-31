@@ -241,7 +241,7 @@ window.CFG = {
    "title": "In The Scrolls",
    "id": "2_ZC1T48mRw",
    "cuts": [
-    58.5,
+    38.4,
     87.4,
     112.5
    ],
@@ -272,22 +272,10 @@ window.CFG = {
       "Jamaica"
      ],
      [
-      "Who put him on?",
-      "Marley Marl",
-      "Eric B.",
-      "Pete Rock"
-     ],
-     [
       "He returned the favor for his...?",
       "Neighbor",
       "Brother",
       "Teacher"
-     ],
-     [
-      "Nobody does it better than...?",
-      "Us",
-      "Queens",
-      "Them"
      ]
     ],
     [
@@ -326,6 +314,18 @@ window.CFG = {
       "Rapper",
       "DJ",
       "Producer"
+     ],
+     [
+      "Who put him on?",
+      "Marley Marl",
+      "Eric B.",
+      "Pete Rock"
+     ],
+     [
+      "Nobody does it better than...?",
+      "Us",
+      "Queens",
+      "Them"
      ]
     ],
     [
@@ -366,14 +366,15 @@ window.CFG = {
       "Them"
      ]
     ]
-   ]
+   ],
+   "start": 9
   },
   {
    "title": "Forever (Gensu Dean feat. Large Professor)",
    "id": "7WY-L-4stoE",
    "start": 148,
    "cuts": [
-    204.4,
+    178.2,
     264.7,
     310.2
    ],
@@ -408,18 +409,6 @@ window.CFG = {
       "Storm",
       "Needle",
       "Crowd"
-     ],
-     [
-      "Where did they go down to?",
-      "The cathedral",
-      "The basement",
-      "The park"
-     ],
-     [
-      "The stained glass showed images of...?",
-      "B-boys",
-      "Kings",
-      "Angels"
      ]
     ],
     [
@@ -458,6 +447,18 @@ window.CFG = {
       "Hip hop",
       "Queens",
       "Fans"
+     ],
+     [
+      "Where did they go down to?",
+      "The cathedral",
+      "The basement",
+      "The park"
+     ],
+     [
+      "The stained glass showed images of...?",
+      "B-boys",
+      "Kings",
+      "Angels"
      ]
     ],
     [
@@ -510,7 +511,7 @@ window.CFG = {
    "title": "The Mad Scientist",
    "id": "X29NxNPHIes",
    "cuts": [
-    81.4,
+    49.1,
     144.3,
     205.4
    ],
@@ -551,12 +552,6 @@ window.CFG = {
       "Stretches it",
       "Erases it",
       "Burns it"
-     ],
-     [
-      "He's driven by everything...?",
-      "Real",
-      "Loud",
-      "New"
      ]
     ],
     [
@@ -601,6 +596,12 @@ window.CFG = {
       "Wherever I go",
       "Every Friday",
       "In Queens"
+     ],
+     [
+      "He's driven by everything...?",
+      "Real",
+      "Loud",
+      "New"
      ]
     ],
     [
@@ -641,7 +642,8 @@ window.CFG = {
       "Blown"
      ]
     ]
-   ]
+   ],
+   "start": 18.9
   },
   {
    "title": "I Juswannachill",
@@ -778,7 +780,8 @@ window.CFG = {
       "Generation"
      ]
     ]
-   ]
+   ],
+   "start": 8.6
   }
  ]
 };

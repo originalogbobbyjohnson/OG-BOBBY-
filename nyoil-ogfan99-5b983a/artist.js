@@ -383,18 +383,12 @@ window.CFG = {
    "id": "G18IqCnzPnM",
    "start": 100,
    "cuts": [
-    173.6,
+    138.4,
     231.9,
     288.7
    ],
    "qs": [
     [
-     [
-      "He went from bankrupt to what?",
-      "Banked up",
-      "Fed up",
-      "Grown up"
-     ],
      [
       "He went from running on E to fill the what?",
       "Tank up",
@@ -424,12 +418,6 @@ window.CFG = {
       "That",
       "Home",
       "The door"
-     ],
-     [
-      "Beware, Brutus, he's Popeye eating his what?",
-      "Spinach",
-      "Veggies",
-      "Lunch"
      ]
     ],
     [
@@ -474,6 +462,18 @@ window.CFG = {
       "Well",
       "Bad",
       "Loud"
+     ],
+     [
+      "He went from bankrupt to what?",
+      "Banked up",
+      "Fed up",
+      "Grown up"
+     ],
+     [
+      "Beware, Brutus, he's Popeye eating his what?",
+      "Spinach",
+      "Veggies",
+      "Lunch"
      ]
     ],
     [

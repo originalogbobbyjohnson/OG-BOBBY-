@@ -1,1 +1,755 @@
-window.CFG = {"name":"Lloyd Banks","nameUpper":"LLOYD BANKS","short":"BANKS","hood":"South Jamaica","hoodUpper":"SOUTH JAMAICA","boro":"Queens","saveKey":"ogfan99lloydbanks1","startRank":"Lame","ranks":["Cold Corner Kid","Hungry Warrior","Blue Hefner"],"topRank":"Punchline King","point":"Punchline","points":"Punchlines","rankRewards":{"Cold Corner Kid":{"bongs":5,"line":"You held it down on the Cold Corner."},"Hungry Warrior":{"bongs":10,"line":"The hunger for more. You never get full."},"Blue Hefner":{"bongs":25,"line":"You run all of South Jamaica."}},"trophyArt":["<path d=\"M38 24v12\" stroke=\"#5a4a30\" stroke-width=\"2\"/><circle cx=\"38\" cy=\"22\" r=\"2.5\" fill=\"#9aa0a6\"/><g transform=\"rotate(-8 40 54)\"><rect x=\"16\" y=\"36\" width=\"48\" height=\"38\" rx=\"2\" fill=\"#c8a878\" stroke=\"#7a5a30\" stroke-width=\"2\"/><text x=\"40\" y=\"68\" text-anchor=\"middle\" font-family=\"Anton,Impact,sans-serif\" font-size=\"30\" fill=\"#5a3a20\">L</text></g>","<rect x=\"38\" y=\"24\" width=\"4\" height=\"56\" fill=\"#9aa0a6\"/><rect x=\"10\" y=\"26\" width=\"60\" height=\"16\" rx=\"2\" fill=\"#1f7a3a\" stroke=\"#fff\" stroke-width=\"1.2\"/><text x=\"40\" y=\"38\" text-anchor=\"middle\" font-family=\"Helvetica,Arial,sans-serif\" font-weight=\"700\" font-size=\"8.5\" textLength=\"52\" lengthAdjust=\"spacingAndGlyphs\" fill=\"#fff\">COLD CORNER</text><path d=\"M16 26l3-6 3 6M30 26l2-5 2 5M50 26l3-7 3 7M62 26l2-5 2 5\" fill=\"#cfefff\"/><path d=\"M22 58l6 0M25 55v6M23 56l4 4M27 56l-4 4\" stroke=\"#cfefff\" stroke-width=\"1.6\"/><path d=\"M54 52h6M57 49v6M55 50l4 4M59 50l-4 4\" stroke=\"#cfefff\" stroke-width=\"1.6\"/>","<path d=\"M40 16l26 8v20q0 24-26 34q-26-10-26-34V24z\" fill=\"#2f5d9a\" stroke=\"#f2c14e\" stroke-width=\"2.5\"/><path d=\"M40 22l20 6v16q0 18-20 27q-20-9-20-27V28z\" fill=\"none\" stroke=\"#9ec6e8\" stroke-width=\"1\"/><text x=\"40\" y=\"53\" text-anchor=\"middle\" font-family=\"Anton,Impact,sans-serif\" font-size=\"15\" fill=\"#f2c14e\">HFM</text>","<path d=\"M40 14q4 0 4 4t-4 4M26 28l14-8 14 8\" fill=\"none\" stroke=\"#f2c14e\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><path d=\"M24 28l16 8 16-8 12 14-8 6v28H20V48l-8-6z\" fill=\"#1f5fd0\" stroke=\"#0e2a66\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M32 30l8 22 8-22\" fill=\"none\" stroke=\"#0e2a66\" stroke-width=\"5\"/><path d=\"M20 58h40\" stroke=\"#0e2a66\" stroke-width=\"3\"/><path d=\"M40 58l-6 10M40 58l6 10\" stroke=\"#0e2a66\" stroke-width=\"2\"/>","<path d=\"M26 26l4-12 6 7 4-10 4 10 6-7 4 12z\" fill=\"#ffcc33\" stroke=\"#7a5512\" stroke-width=\"1.2\"/><path d=\"M22 44q0-16 18-16h4q16 0 16 18v12q0 8-8 8H30q-8 0-8-8z\" fill=\"#e0a52c\" stroke=\"#7a5512\" stroke-width=\"1.5\"/><path d=\"M22 46q-4 0-4 6t6 6\" fill=\"#e0a52c\" stroke=\"#7a5512\" stroke-width=\"1.5\"/><rect x=\"26\" y=\"66\" width=\"30\" height=\"12\" rx=\"2\" fill=\"#f4efe6\" stroke=\"#7a5512\" stroke-width=\"1.2\"/><text x=\"41\" y=\"75.5\" text-anchor=\"middle\" font-family=\"Anton,Impact,sans-serif\" font-size=\"8\" fill=\"#2f5d9a\">PLK</text><circle cx=\"40\" cy=\"18\" r=\"2\" fill=\"#4aa8ff\"/>"],"clubTitle":"The Cold Corner","clubTab":"CORNER","tags":["MBAM","HUNGER FOR MORE","PLK"],"c1":"#4aa8ff","c2":"#f2c14e","c3":"#c9d6e8","bg":"#0a1630","headerSvg":"<g fill=\"#f7f3ea\"><rect x=\"0\" y=\"30\" width=\"400\" height=\"6\"/><path d=\"M16 36h8l-2 28h-4z\"/><path d=\"M76 36h8l-2 28h-4z\"/><path d=\"M136 36h8l-2 28h-4z\"/><path d=\"M196 36h8l-2 28h-4z\"/><path d=\"M256 36h8l-2 28h-4z\"/><path d=\"M316 36h8l-2 28h-4z\"/><path d=\"M376 36h8l-2 28h-4z\"/><path d=\"M140 30V12l60-10 60 10v18z\" opacity=\".7\"/><rect x=\"40\" y=\"14\" width=\"56\" height=\"12\" rx=\"4\"/><path d=\"M300 64V48l6-12h70l6 12v16z\"/><path d=\"M308 36l12-8h44l12 8z\"/><rect x=\"0\" y=\"54\" width=\"400\" height=\"10\"/></g>","socials":[{"name":"Instagram","handle":"@lloydbanks","url":"https://www.instagram.com/lloydbanks/"}],"rooms":[{"scene":"train","t":"PRESS PLAY","x":"Take the E, J or Z to Jamaica Center-Parsons/Archer. Tap the record. Every song is an episode.","sfx":"train"},{"scene":"avenue","t":"EVERY SONG STOPS","x":"At the end of a verse the song stops and asks about what you just heard. Answer right and it keeps going.","sfx":"traffic"},{"scene":"manor","t":"1, THEN 2, THEN 3","x":"Songs 1–3 stop once. Songs 4–6 stop twice. Songs 7–9 stop three times.","sfx":"bell"},{"scene":"station","t":"CLIMB THE RANKS","x":"Everybody starts as a Lame. Clear a row to rank up: Cold Corner Kid, Hungry Warrior, Blue Hefner. Beat the 99 Challenge to become Punchline King.","sfx":"train"},{"scene":"corner","t":"WELCOME TO SOUTH JAMAICA","x":"Parsons Blvd and Archer Av. This is Lloyd Banks's game.","sfx":"spray"}],"songs":[{"title":"Beamer, Benz or Bentley","id":"dTR7yvONCV8","cuts":[45.1,97.8,167.9],"qs":[[["What three cars are in the hook?","Beamer, Benz, Bentley","Buick, Benz, Bentley","Beamer, Bugatti, Benz"],["His jeans are never what?","Empty","Tight","Clean"],["How many horses when he rolls by?","More than 500","More than 300","More than 1,000"],["What color is the new Bentley?","Vanilla and cherry","Black and gold","Blue and silver"],["Which hockey name does he throw on?","Gretzky","Lemieux","Messier"],["He's ready like which basketball star?","Kobe Bryant","Michael Jordan","LeBron James"],["The scheming don't what?","Affect me","Stop me","Scare me"],["I'm calm, I'm what?","Cool","Quiet","Clean"],["Where's his ring and his what?","Confetti","Trophy","Crown"]],[["Platinum bezel, and a platinum what?","Band","Chain","Grill"],["What does he press before he's stunting?","A button","The gas","Play"],["His roof looks like it's doing what?","Ducking","Dancing","Flying"],["The meter goes up to what?","200 something","100 flat","300 plus"],["His trunk does wonders doing what?","Bumping","Rattling","Shaking"],["He's not the one for what?","Jumping","Talking","Running"],["Everything is brand what?","New","Name","Clean"],["When he rolls by, they're doing what at him?","Waving","Staring","Yelling"]],[["He's making movies like who?","Tom Cruise","Will Smith","Denzel"],["His nickname should be what?","Ruben","Rocky","Richie"],["Necks what?","Studded","Frozen","Shining"],["What does he see in the sky?","Sparks","Planes","Stars"],["They'll have it looking like the what?","Fourth of July","New Year's Eve","Christmas"],["If it ain't the Gucci, it's the what?","Louis","Prada","Fendi"],["If not Polo, then it's what?","Rugby","Nautica","Lacoste"],["I'm fresh, I'm what?","Fly","Fast","Fine"]]]},{"title":"Hands Up","id":"5lfzarWWy4A","cuts":[54.3,94.6,175.3],"qs":[[["They're going way past what time?","A quarter to 3:00","Midnight","Half past 2:00"],["Where is he good?","The V.I.P.","The parking lot","The front row"],["Everything ain't cool as a what?","A fan","A breeze","Ice"],["What do they pop like it's all free?","Bottles","Balloons","Popcorn"],["Before he leaves, he'll buy out the what?","The bar","The club","The store"],["What did they come to do?","Party","Fight","Work"],["Go and order what you want, it's on who?","Him","Them","You"],["I'm a G, take a look at a what?","Star","Car","Boss"]],[["It feels so good to live what?","Sucker free","Stress free","Rent free"],["He's a what who wants to ride around in that car?","Rap star","Big boss","Movie star"],["How many in the front?","Two","One","Three"],["What's in the back?","The plasma","The speakers","The bags"],["This ain't a free what?","Ride","Lunch","Show"],["You gotta have the what?","Gas","Cash","Keys"],["He's busy, so he moves a bit what?","Faster","Slower","Smoother"],["You can't tell him yes if he don't what?","Ask ya","Call ya","Need ya"]],[["He cruises through the what?","Strip","City","Hood"],["What size wheels on the whip?","22s","20s","24s"],["How much is his outfit?","$1,000","$500","$10,000"],["It ain't only the what?","Ferrari","Lambo","Bentley"],["What year does he say it is now?","2006","2004","2010"],["The mansion and the what got them mad?","Swimming pool","Cars","Jewels"],["They don't see the faces, they just see the what?","Chains","Cars","Cash"],["It's the everyday what?","Mentality","Hustle","Routine"]]]},{"title":"On Fire","id":"7waWNvGO2C8","cuts":[60.4,99.8,160],"qs":[[["You are now rocking with the what?","The best","The rest","The worst"],["It's burning hot, we on what?","Fire","Ice","Point"],["How big are the chrome spokes?","26-inch","22-inch","20-inch"],["What ride are the spokes on?","A Hummer","A Bentley","A Jeep"],["How long will this heat last?","The whole summer","One night","Till winter"],["When you stop, what's still spinning?","Your hair","Your rims","Your head"],["What city opens the song?","New York City","Brooklyn","Atlanta"],["Light the what on fire?","The roof","The block","The stage"]],[["What team's cap does he wear?","Raiders","Yankees","Lakers"],["What color gloves?","All black","All white","Red"],["He's a ladies what?","Man","Choice","Favorite"],["What kind of sales does he mention?","Record sales","Car sales","Bake sales"],["Not to mention the boy packs what?","Clubs","Bags","Lunches"],["New artists are getting the wrong what?","Deals","Advice","Beats"],["How old does he say he is?","21","19","25"],["He's sitting on what?","Mils","Rims","Couches"]],[["If you know anything about him, you know he's a what?","Baller","Rapper","Rookie"],["His diamond is about as clear as what?","Water","Glass","Ice"],["He got bread, but ain't spent a what?","Quarter","Dollar","Dime"],["He ain't biased riding through the what?","Town","Block","City"],["Regular chick or R&B what?","Diva","Singer","Star"],["He ain't a what?","Mind reader","Fortune teller","Magician"],["We getting what in here?","Loose","Rich","Tired"],["It's burning hot up in this what?","Spot","Room","Club"]]]},{"title":"I'm So Fly","id":"H7s3uEQESVc","cuts":[38.8,138,223],"qs":[[["He's so fly and he got what?","Money","Time","Style"],["He can tell you're jealous by what?","The look in your eye","Your voice","Your walk"],["G-Unit's going straight to the what this year?","The top","The bank","The bottom"],["Lloyd Banks is fresh off the what?","The gutter","The plane","The block"],["He's too smooth to do what?","Stutter","Stumble","Slip"],["Who does he tell he loves before he leaves?","His mother","His girl","His brother"],["They don't do it like who?","Us","Them","Before"],["I'm so fly, I'm on what?","Point","Time","Fire"],["When he rides by, he don't what?","Care","Stop","Stare"]],[["Banks is cooler than the other side of the what?","The pillow","The fridge","The moon"],["You hear more oohs than who at the Rucker?","Skip to My Lou","Hot Sauce","The Professor"],["That bandana just looks like a what?","A handkerchief","A scarf","A flag"],["He ain't scared of nothing but who?","Jesus","His mother","The cops"],["He's eating in Rome, you're eating what?","Ramen noodles","Pizza","Pasta"],["He's got 40 clones, then look down, that's 40 what?","Stones","Rings","Chains"],["It's a privilege to ride with a what?","Celeb","Boss","Legend"],["He don't roam with the what?","Poodles","Puppies","Posers"],["Vroom, there's Tony in a what?","Lexus","Benz","Jeep"]],[["They harass them where?","The airport","The mall","The club"],["He's got the patience of a what?","High school teacher","Saint","Doctor"],["His heart's colder than whose?","Jack Frost's","Mr. Freeze's","The Iceman's"],["They pack shows and attract what?","Bosses","Fans","Crowds"],["What color are his Forces?","Black","White","Red"],["No one knows how much that's what?","Costing","Making","Worth"],["His name rings in each what?","State","City","Block"],["You don't gotta go all the way to where?","L.A.","Miami","Houston"]]]}]};
+window.CFG = {
+ "name": "Lloyd Banks",
+ "nameUpper": "LLOYD BANKS",
+ "short": "BANKS",
+ "hood": "South Jamaica",
+ "hoodUpper": "SOUTH JAMAICA",
+ "boro": "Queens",
+ "saveKey": "ogfan99lloydbanks1",
+ "startRank": "Lame",
+ "ranks": [
+  "Cold Corner Kid",
+  "Hungry Warrior",
+  "Blue Hefner"
+ ],
+ "topRank": "Punchline King",
+ "point": "Punchline",
+ "points": "Punchlines",
+ "rankRewards": {
+  "Cold Corner Kid": {
+   "bongs": 5,
+   "line": "You held it down on the Cold Corner."
+  },
+  "Hungry Warrior": {
+   "bongs": 10,
+   "line": "The hunger for more. You never get full."
+  },
+  "Blue Hefner": {
+   "bongs": 25,
+   "line": "You run all of South Jamaica."
+  }
+ },
+ "trophyArt": [
+  "<path d=\"M38 24v12\" stroke=\"#5a4a30\" stroke-width=\"2\"/><circle cx=\"38\" cy=\"22\" r=\"2.5\" fill=\"#9aa0a6\"/><g transform=\"rotate(-8 40 54)\"><rect x=\"16\" y=\"36\" width=\"48\" height=\"38\" rx=\"2\" fill=\"#c8a878\" stroke=\"#7a5a30\" stroke-width=\"2\"/><text x=\"40\" y=\"68\" text-anchor=\"middle\" font-family=\"Anton,Impact,sans-serif\" font-size=\"30\" fill=\"#5a3a20\">L</text></g>",
+  "<rect x=\"38\" y=\"24\" width=\"4\" height=\"56\" fill=\"#9aa0a6\"/><rect x=\"10\" y=\"26\" width=\"60\" height=\"16\" rx=\"2\" fill=\"#1f7a3a\" stroke=\"#fff\" stroke-width=\"1.2\"/><text x=\"40\" y=\"38\" text-anchor=\"middle\" font-family=\"Helvetica,Arial,sans-serif\" font-weight=\"700\" font-size=\"8.5\" textLength=\"52\" lengthAdjust=\"spacingAndGlyphs\" fill=\"#fff\">COLD CORNER</text><path d=\"M16 26l3-6 3 6M30 26l2-5 2 5M50 26l3-7 3 7M62 26l2-5 2 5\" fill=\"#cfefff\"/><path d=\"M22 58l6 0M25 55v6M23 56l4 4M27 56l-4 4\" stroke=\"#cfefff\" stroke-width=\"1.6\"/><path d=\"M54 52h6M57 49v6M55 50l4 4M59 50l-4 4\" stroke=\"#cfefff\" stroke-width=\"1.6\"/>",
+  "<path d=\"M40 16l26 8v20q0 24-26 34q-26-10-26-34V24z\" fill=\"#2f5d9a\" stroke=\"#f2c14e\" stroke-width=\"2.5\"/><path d=\"M40 22l20 6v16q0 18-20 27q-20-9-20-27V28z\" fill=\"none\" stroke=\"#9ec6e8\" stroke-width=\"1\"/><text x=\"40\" y=\"53\" text-anchor=\"middle\" font-family=\"Anton,Impact,sans-serif\" font-size=\"15\" fill=\"#f2c14e\">HFM</text>",
+  "<path d=\"M40 14q4 0 4 4t-4 4M26 28l14-8 14 8\" fill=\"none\" stroke=\"#f2c14e\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><path d=\"M24 28l16 8 16-8 12 14-8 6v28H20V48l-8-6z\" fill=\"#1f5fd0\" stroke=\"#0e2a66\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M32 30l8 22 8-22\" fill=\"none\" stroke=\"#0e2a66\" stroke-width=\"5\"/><path d=\"M20 58h40\" stroke=\"#0e2a66\" stroke-width=\"3\"/><path d=\"M40 58l-6 10M40 58l6 10\" stroke=\"#0e2a66\" stroke-width=\"2\"/>",
+  "<path d=\"M26 26l4-12 6 7 4-10 4 10 6-7 4 12z\" fill=\"#ffcc33\" stroke=\"#7a5512\" stroke-width=\"1.2\"/><path d=\"M22 44q0-16 18-16h4q16 0 16 18v12q0 8-8 8H30q-8 0-8-8z\" fill=\"#e0a52c\" stroke=\"#7a5512\" stroke-width=\"1.5\"/><path d=\"M22 46q-4 0-4 6t6 6\" fill=\"#e0a52c\" stroke=\"#7a5512\" stroke-width=\"1.5\"/><rect x=\"26\" y=\"66\" width=\"30\" height=\"12\" rx=\"2\" fill=\"#f4efe6\" stroke=\"#7a5512\" stroke-width=\"1.2\"/><text x=\"41\" y=\"75.5\" text-anchor=\"middle\" font-family=\"Anton,Impact,sans-serif\" font-size=\"8\" fill=\"#2f5d9a\">PLK</text><circle cx=\"40\" cy=\"18\" r=\"2\" fill=\"#4aa8ff\"/>"
+ ],
+ "clubTitle": "The Cold Corner",
+ "clubTab": "CORNER",
+ "tags": [
+  "MBAM",
+  "HUNGER FOR MORE",
+  "PLK"
+ ],
+ "c1": "#4aa8ff",
+ "c2": "#f2c14e",
+ "c3": "#c9d6e8",
+ "bg": "#0a1630",
+ "headerSvg": "<g fill=\"#f7f3ea\"><rect x=\"0\" y=\"30\" width=\"400\" height=\"6\"/><path d=\"M16 36h8l-2 28h-4z\"/><path d=\"M76 36h8l-2 28h-4z\"/><path d=\"M136 36h8l-2 28h-4z\"/><path d=\"M196 36h8l-2 28h-4z\"/><path d=\"M256 36h8l-2 28h-4z\"/><path d=\"M316 36h8l-2 28h-4z\"/><path d=\"M376 36h8l-2 28h-4z\"/><path d=\"M140 30V12l60-10 60 10v18z\" opacity=\".7\"/><rect x=\"40\" y=\"14\" width=\"56\" height=\"12\" rx=\"4\"/><path d=\"M300 64V48l6-12h70l6 12v16z\"/><path d=\"M308 36l12-8h44l12 8z\"/><rect x=\"0\" y=\"54\" width=\"400\" height=\"10\"/></g>",
+ "socials": [
+  {
+   "name": "Instagram",
+   "handle": "@lloydbanks",
+   "url": "https://www.instagram.com/lloydbanks/"
+  }
+ ],
+ "rooms": [
+  {
+   "scene": "train",
+   "t": "PRESS PLAY",
+   "x": "Take the E, J or Z to Jamaica Center-Parsons/Archer. Tap the record. Every song is an episode.",
+   "sfx": "train"
+  },
+  {
+   "scene": "avenue",
+   "t": "EVERY SONG STOPS",
+   "x": "At the end of a verse the song stops and asks about what you just heard. Answer right and it keeps going.",
+   "sfx": "traffic"
+  },
+  {
+   "scene": "manor",
+   "t": "1, THEN 2, THEN 3",
+   "x": "Songs 1–3 stop once. Songs 4–6 stop twice. Songs 7–9 stop three times.",
+   "sfx": "bell"
+  },
+  {
+   "scene": "station",
+   "t": "CLIMB THE RANKS",
+   "x": "Everybody starts as a Lame. Clear a row to rank up: Cold Corner Kid, Hungry Warrior, Blue Hefner. Beat the 99 Challenge to become Punchline King.",
+   "sfx": "train"
+  },
+  {
+   "scene": "corner",
+   "t": "WELCOME TO SOUTH JAMAICA",
+   "x": "Parsons Blvd and Archer Av. This is Lloyd Banks's game.",
+   "sfx": "spray"
+  }
+ ],
+ "songs": [
+  {
+   "title": "Beamer, Benz or Bentley",
+   "id": "dTR7yvONCV8",
+   "cuts": [
+    32.9,
+    97.8,
+    167.9
+   ],
+   "qs": [
+    [
+     [
+      "What three cars are in the hook?",
+      "Beamer, Benz, Bentley",
+      "Buick, Benz, Bentley",
+      "Beamer, Bugatti, Benz"
+     ],
+     [
+      "His jeans are never what?",
+      "Empty",
+      "Tight",
+      "Clean"
+     ],
+     [
+      "Which hockey name does he throw on?",
+      "Gretzky",
+      "Lemieux",
+      "Messier"
+     ],
+     [
+      "The scheming don't what?",
+      "Affect me",
+      "Stop me",
+      "Scare me"
+     ],
+     [
+      "I'm calm, I'm what?",
+      "Cool",
+      "Quiet",
+      "Clean"
+     ]
+    ],
+    [
+     [
+      "Platinum bezel, and a platinum what?",
+      "Band",
+      "Chain",
+      "Grill"
+     ],
+     [
+      "What does he press before he's stunting?",
+      "A button",
+      "The gas",
+      "Play"
+     ],
+     [
+      "His roof looks like it's doing what?",
+      "Ducking",
+      "Dancing",
+      "Flying"
+     ],
+     [
+      "The meter goes up to what?",
+      "200 something",
+      "100 flat",
+      "300 plus"
+     ],
+     [
+      "His trunk does wonders doing what?",
+      "Bumping",
+      "Rattling",
+      "Shaking"
+     ],
+     [
+      "He's not the one for what?",
+      "Jumping",
+      "Talking",
+      "Running"
+     ],
+     [
+      "Everything is brand what?",
+      "New",
+      "Name",
+      "Clean"
+     ],
+     [
+      "When he rolls by, they're doing what at him?",
+      "Waving",
+      "Staring",
+      "Yelling"
+     ],
+     [
+      "How many horses when he rolls by?",
+      "More than 500",
+      "More than 300",
+      "More than 1,000"
+     ],
+     [
+      "What color is the new Bentley?",
+      "Vanilla and cherry",
+      "Black and gold",
+      "Blue and silver"
+     ],
+     [
+      "He's ready like which basketball star?",
+      "Kobe Bryant",
+      "Michael Jordan",
+      "LeBron James"
+     ],
+     [
+      "Where's his ring and his what?",
+      "Confetti",
+      "Trophy",
+      "Crown"
+     ]
+    ],
+    [
+     [
+      "He's making movies like who?",
+      "Tom Cruise",
+      "Will Smith",
+      "Denzel"
+     ],
+     [
+      "His nickname should be what?",
+      "Ruben",
+      "Rocky",
+      "Richie"
+     ],
+     [
+      "Necks what?",
+      "Studded",
+      "Frozen",
+      "Shining"
+     ],
+     [
+      "What does he see in the sky?",
+      "Sparks",
+      "Planes",
+      "Stars"
+     ],
+     [
+      "They'll have it looking like the what?",
+      "Fourth of July",
+      "New Year's Eve",
+      "Christmas"
+     ],
+     [
+      "If it ain't the Gucci, it's the what?",
+      "Louis",
+      "Prada",
+      "Fendi"
+     ],
+     [
+      "If not Polo, then it's what?",
+      "Rugby",
+      "Nautica",
+      "Lacoste"
+     ],
+     [
+      "I'm fresh, I'm what?",
+      "Fly",
+      "Fast",
+      "Fine"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Hands Up",
+   "id": "5lfzarWWy4A",
+   "cuts": [
+    54.3,
+    94.6,
+    175.3
+   ],
+   "qs": [
+    [
+     [
+      "They're going way past what time?",
+      "A quarter to 3:00",
+      "Midnight",
+      "Half past 2:00"
+     ],
+     [
+      "Where is he good?",
+      "The V.I.P.",
+      "The parking lot",
+      "The front row"
+     ],
+     [
+      "Everything ain't cool as a what?",
+      "A fan",
+      "A breeze",
+      "Ice"
+     ],
+     [
+      "What do they pop like it's all free?",
+      "Bottles",
+      "Balloons",
+      "Popcorn"
+     ],
+     [
+      "Before he leaves, he'll buy out the what?",
+      "The bar",
+      "The club",
+      "The store"
+     ],
+     [
+      "What did they come to do?",
+      "Party",
+      "Fight",
+      "Work"
+     ],
+     [
+      "Go and order what you want, it's on who?",
+      "Him",
+      "Them",
+      "You"
+     ],
+     [
+      "I'm a G, take a look at a what?",
+      "Star",
+      "Car",
+      "Boss"
+     ]
+    ],
+    [
+     [
+      "It feels so good to live what?",
+      "Sucker free",
+      "Stress free",
+      "Rent free"
+     ],
+     [
+      "He's a what who wants to ride around in that car?",
+      "Rap star",
+      "Big boss",
+      "Movie star"
+     ],
+     [
+      "How many in the front?",
+      "Two",
+      "One",
+      "Three"
+     ],
+     [
+      "What's in the back?",
+      "The plasma",
+      "The speakers",
+      "The bags"
+     ],
+     [
+      "This ain't a free what?",
+      "Ride",
+      "Lunch",
+      "Show"
+     ],
+     [
+      "You gotta have the what?",
+      "Gas",
+      "Cash",
+      "Keys"
+     ],
+     [
+      "He's busy, so he moves a bit what?",
+      "Faster",
+      "Slower",
+      "Smoother"
+     ],
+     [
+      "You can't tell him yes if he don't what?",
+      "Ask ya",
+      "Call ya",
+      "Need ya"
+     ]
+    ],
+    [
+     [
+      "He cruises through the what?",
+      "Strip",
+      "City",
+      "Hood"
+     ],
+     [
+      "What size wheels on the whip?",
+      "22s",
+      "20s",
+      "24s"
+     ],
+     [
+      "How much is his outfit?",
+      "$1,000",
+      "$500",
+      "$10,000"
+     ],
+     [
+      "It ain't only the what?",
+      "Ferrari",
+      "Lambo",
+      "Bentley"
+     ],
+     [
+      "What year does he say it is now?",
+      "2006",
+      "2004",
+      "2010"
+     ],
+     [
+      "The mansion and the what got them mad?",
+      "Swimming pool",
+      "Cars",
+      "Jewels"
+     ],
+     [
+      "They don't see the faces, they just see the what?",
+      "Chains",
+      "Cars",
+      "Cash"
+     ],
+     [
+      "It's the everyday what?",
+      "Mentality",
+      "Hustle",
+      "Routine"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "On Fire",
+   "id": "7waWNvGO2C8",
+   "cuts": [
+    44.8,
+    99.8,
+    160
+   ],
+   "qs": [
+    [
+     [
+      "You are now rocking with the what?",
+      "The best",
+      "The rest",
+      "The worst"
+     ],
+     [
+      "It's burning hot, we on what?",
+      "Fire",
+      "Ice",
+      "Point"
+     ],
+     [
+      "How big are the chrome spokes?",
+      "26-inch",
+      "22-inch",
+      "20-inch"
+     ],
+     [
+      "What city opens the song?",
+      "New York City",
+      "Brooklyn",
+      "Atlanta"
+     ],
+     [
+      "Light the what on fire?",
+      "The roof",
+      "The block",
+      "The stage"
+     ]
+    ],
+    [
+     [
+      "What team's cap does he wear?",
+      "Raiders",
+      "Yankees",
+      "Lakers"
+     ],
+     [
+      "What color gloves?",
+      "All black",
+      "All white",
+      "Red"
+     ],
+     [
+      "He's a ladies what?",
+      "Man",
+      "Choice",
+      "Favorite"
+     ],
+     [
+      "What kind of sales does he mention?",
+      "Record sales",
+      "Car sales",
+      "Bake sales"
+     ],
+     [
+      "Not to mention the boy packs what?",
+      "Clubs",
+      "Bags",
+      "Lunches"
+     ],
+     [
+      "New artists are getting the wrong what?",
+      "Deals",
+      "Advice",
+      "Beats"
+     ],
+     [
+      "How old does he say he is?",
+      "21",
+      "19",
+      "25"
+     ],
+     [
+      "He's sitting on what?",
+      "Mils",
+      "Rims",
+      "Couches"
+     ],
+     [
+      "What ride are the spokes on?",
+      "A Hummer",
+      "A Bentley",
+      "A Jeep"
+     ],
+     [
+      "How long will this heat last?",
+      "The whole summer",
+      "One night",
+      "Till winter"
+     ],
+     [
+      "When you stop, what's still spinning?",
+      "Your hair",
+      "Your rims",
+      "Your head"
+     ]
+    ],
+    [
+     [
+      "If you know anything about him, you know he's a what?",
+      "Baller",
+      "Rapper",
+      "Rookie"
+     ],
+     [
+      "His diamond is about as clear as what?",
+      "Water",
+      "Glass",
+      "Ice"
+     ],
+     [
+      "He got bread, but ain't spent a what?",
+      "Quarter",
+      "Dollar",
+      "Dime"
+     ],
+     [
+      "He ain't biased riding through the what?",
+      "Town",
+      "Block",
+      "City"
+     ],
+     [
+      "Regular chick or R&B what?",
+      "Diva",
+      "Singer",
+      "Star"
+     ],
+     [
+      "He ain't a what?",
+      "Mind reader",
+      "Fortune teller",
+      "Magician"
+     ],
+     [
+      "We getting what in here?",
+      "Loose",
+      "Rich",
+      "Tired"
+     ],
+     [
+      "It's burning hot up in this what?",
+      "Spot",
+      "Room",
+      "Club"
+     ]
+    ]
+   ],
+   "start": 9.1
+  },
+  {
+   "title": "I'm So Fly",
+   "id": "H7s3uEQESVc",
+   "cuts": [
+    38.8,
+    138,
+    223
+   ],
+   "qs": [
+    [
+     [
+      "He's so fly and he got what?",
+      "Money",
+      "Time",
+      "Style"
+     ],
+     [
+      "He can tell you're jealous by what?",
+      "The look in your eye",
+      "Your voice",
+      "Your walk"
+     ],
+     [
+      "G-Unit's going straight to the what this year?",
+      "The top",
+      "The bank",
+      "The bottom"
+     ],
+     [
+      "Lloyd Banks is fresh off the what?",
+      "The gutter",
+      "The plane",
+      "The block"
+     ],
+     [
+      "He's too smooth to do what?",
+      "Stutter",
+      "Stumble",
+      "Slip"
+     ],
+     [
+      "Who does he tell he loves before he leaves?",
+      "His mother",
+      "His girl",
+      "His brother"
+     ],
+     [
+      "They don't do it like who?",
+      "Us",
+      "Them",
+      "Before"
+     ],
+     [
+      "I'm so fly, I'm on what?",
+      "Point",
+      "Time",
+      "Fire"
+     ],
+     [
+      "When he rides by, he don't what?",
+      "Care",
+      "Stop",
+      "Stare"
+     ]
+    ],
+    [
+     [
+      "Banks is cooler than the other side of the what?",
+      "The pillow",
+      "The fridge",
+      "The moon"
+     ],
+     [
+      "You hear more oohs than who at the Rucker?",
+      "Skip to My Lou",
+      "Hot Sauce",
+      "The Professor"
+     ],
+     [
+      "That bandana just looks like a what?",
+      "A handkerchief",
+      "A scarf",
+      "A flag"
+     ],
+     [
+      "He ain't scared of nothing but who?",
+      "Jesus",
+      "His mother",
+      "The cops"
+     ],
+     [
+      "He's eating in Rome, you're eating what?",
+      "Ramen noodles",
+      "Pizza",
+      "Pasta"
+     ],
+     [
+      "He's got 40 clones, then look down, that's 40 what?",
+      "Stones",
+      "Rings",
+      "Chains"
+     ],
+     [
+      "It's a privilege to ride with a what?",
+      "Celeb",
+      "Boss",
+      "Legend"
+     ],
+     [
+      "He don't roam with the what?",
+      "Poodles",
+      "Puppies",
+      "Posers"
+     ],
+     [
+      "Vroom, there's Tony in a what?",
+      "Lexus",
+      "Benz",
+      "Jeep"
+     ]
+    ],
+    [
+     [
+      "They harass them where?",
+      "The airport",
+      "The mall",
+      "The club"
+     ],
+     [
+      "He's got the patience of a what?",
+      "High school teacher",
+      "Saint",
+      "Doctor"
+     ],
+     [
+      "His heart's colder than whose?",
+      "Jack Frost's",
+      "Mr. Freeze's",
+      "The Iceman's"
+     ],
+     [
+      "They pack shows and attract what?",
+      "Bosses",
+      "Fans",
+      "Crowds"
+     ],
+     [
+      "What color are his Forces?",
+      "Black",
+      "White",
+      "Red"
+     ],
+     [
+      "No one knows how much that's what?",
+      "Costing",
+      "Making",
+      "Worth"
+     ],
+     [
+      "His name rings in each what?",
+      "State",
+      "City",
+      "Block"
+     ],
+     [
+      "You don't gotta go all the way to where?",
+      "L.A.",
+      "Miami",
+      "Houston"
+     ]
+    ]
+   ]
+  }
+ ]
+};

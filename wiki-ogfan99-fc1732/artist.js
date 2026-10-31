@@ -234,13 +234,14 @@ window.CFG = {
       "Midnight"
      ]
     ]
-   ]
+   ],
+   "start": 7.2
   },
   {
    "title": "Mayor",
    "id": "o-ziihiGyFc",
    "cuts": [
-    84.9,
+    52,
     138.9,
     213
    ],
@@ -281,12 +282,6 @@ window.CFG = {
       "Intellectual",
       "Fast",
       "Loud"
-     ],
-     [
-      "He got a hot head, but he's staying what?",
-      "Cold",
-      "Calm",
-      "Home"
      ]
     ],
     [
@@ -325,6 +320,12 @@ window.CFG = {
       "His soul",
       "His money",
       "His voice"
+     ],
+     [
+      "He got a hot head, but he's staying what?",
+      "Cold",
+      "Calm",
+      "Home"
      ]
     ],
     [
@@ -365,7 +366,8 @@ window.CFG = {
       "Sleep"
      ]
     ]
-   ]
+   ],
+   "start": 22
   },
   {
    "title": "Pretty Bull",
@@ -502,12 +504,13 @@ window.CFG = {
       "Rain"
      ]
     ]
-   ]
+   ],
+   "start": 10.7
   },
   {
    "title": "IHNY",
    "id": "t1MNHKNY9qI",
-   "start": 44,
+   "start": 60.4,
    "cuts": [
     122.5,
     159.7,

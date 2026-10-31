@@ -432,13 +432,14 @@ window.CFG = {
       "Lucky"
      ]
     ]
-   ]
+   ],
+   "start": 17.6
   },
   {
    "title": "GOAT",
    "id": "mm5CEzYt2UQ",
    "cuts": [
-    50.9,
+    30.9,
     66,
     82.9
    ],
@@ -469,28 +470,10 @@ window.CFG = {
       "Jimmy Cliff"
      ],
      [
-      "Muscles with the what?",
-      "Brains",
-      "Heart",
-      "Money"
-     ],
-     [
-      "You hustle through the what?",
-      "Pain",
-      "Night",
-      "Crowd"
-     ],
-     [
       "It just ain't adding what?",
       "Up",
       "Down",
       "In"
-     ],
-     [
-      "Hustle through the pain to pull the what?",
-      "Plane",
-      "Rope",
-      "Car"
      ]
     ],
     [
@@ -541,6 +524,24 @@ window.CFG = {
       "Houses",
       "Dreams",
       "Chains"
+     ],
+     [
+      "Muscles with the what?",
+      "Brains",
+      "Heart",
+      "Money"
+     ],
+     [
+      "You hustle through the what?",
+      "Pain",
+      "Night",
+      "Crowd"
+     ],
+     [
+      "Hustle through the pain to pull the what?",
+      "Plane",
+      "Rope",
+      "Car"
      ]
     ],
     [

@@ -98,7 +98,7 @@ window.CFG = {
    "title": "Hey Here We Go",
    "id": "yHgcjyZU-5A",
    "cuts": [
-    58.7,
+    39.1,
     112.2,
     195.3
    ],
@@ -139,12 +139,6 @@ window.CFG = {
       "Last",
       "Top",
       "End"
-     ],
-     [
-      "What does the hook say?",
-      "Here we go",
-      "Let's go",
-      "There it goes"
      ],
      [
       "\"I'mma flip it...\" how?",
@@ -201,6 +195,12 @@ window.CFG = {
       "Attack",
       "Relax",
       "Leave"
+     ],
+     [
+      "What does the hook say?",
+      "Here we go",
+      "Let's go",
+      "There it goes"
      ]
     ],
     [
@@ -253,13 +253,14 @@ window.CFG = {
       "Want"
      ]
     ]
-   ]
+   ],
+   "start": 8.2
   },
   {
    "title": "You Got My Back",
    "id": "8UY5q5YjQZA",
    "cuts": [
-    72.4,
+    39.8,
     131.2,
     192.2
    ],
@@ -282,30 +283,6 @@ window.CFG = {
       "Back",
       "Word",
       "Vote"
-     ],
-     [
-      "You watch my what?",
-      "Rear",
-      "Step",
-      "Door"
-     ],
-     [
-      "When the coast is clear, we what?",
-      "Chill",
-      "Party",
-      "Leave"
-     ],
-     [
-      "Other friendships are done and gone, but ours is going what?",
-      "Strong",
-      "Steady",
-      "Far"
-     ],
-     [
-      "You always see some what for brothers?",
-      "Unity",
-      "Money",
-      "Trouble"
      ],
      [
       "It's real, not a what?",
@@ -374,6 +351,30 @@ window.CFG = {
       "Joke",
       "Mess",
       "Dream"
+     ],
+     [
+      "You watch my what?",
+      "Rear",
+      "Step",
+      "Door"
+     ],
+     [
+      "When the coast is clear, we what?",
+      "Chill",
+      "Party",
+      "Leave"
+     ],
+     [
+      "Other friendships are done and gone, but ours is going what?",
+      "Strong",
+      "Steady",
+      "Far"
+     ],
+     [
+      "You always see some what for brothers?",
+      "Unity",
+      "Money",
+      "Trouble"
      ]
     ],
     [
@@ -426,13 +427,14 @@ window.CFG = {
       "Block"
      ]
     ]
-   ]
+   ],
+   "start": 8.8
   },
   {
    "title": "Never Never Land",
    "id": "6RggEJ1D_ag",
    "cuts": [
-    75.2,
+    47.6,
     142.6,
     216.3
    ],
@@ -457,28 +459,10 @@ window.CFG = {
       "Song"
      ],
      [
-      "Follow me now on the path to the what?",
-      "Mountain",
-      "River",
-      "City"
-     ],
-     [
       "When he reaches the top, what should he do?",
       "Shout",
       "Jump",
       "Sing"
-     ],
-     [
-      "\"I have no...\" what?",
-      "Idea",
-      "Time",
-      "Money"
-     ],
-     [
-      "His structural what is what attracts?",
-      "Craft",
-      "Plan",
-      "Rhyme"
      ],
      [
       "Kids seek the what?",
@@ -535,6 +519,24 @@ window.CFG = {
       "Piece",
       "Day",
       "Car"
+     ],
+     [
+      "Follow me now on the path to the what?",
+      "Mountain",
+      "River",
+      "City"
+     ],
+     [
+      "\"I have no...\" what?",
+      "Idea",
+      "Time",
+      "Money"
+     ],
+     [
+      "His structural what is what attracts?",
+      "Craft",
+      "Plan",
+      "Rhyme"
      ]
     ],
     [
@@ -593,7 +595,8 @@ window.CFG = {
       "Powers"
      ]
     ]
-   ]
+   ],
+   "start": 12.8
   },
   {
    "title": "One To Grow On",
@@ -754,7 +757,8 @@ window.CFG = {
       "Days"
      ]
     ]
-   ]
+   ],
+   "start": 17.5
   }
  ]
 };

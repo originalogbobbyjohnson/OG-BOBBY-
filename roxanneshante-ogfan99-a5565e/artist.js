@@ -98,18 +98,12 @@ window.CFG = {
    "title": "Wack Itt",
    "id": "-cQ7xKG5Lzc",
    "cuts": [
-    66.8,
+    43.3,
     107.6,
     197
    ],
    "qs": [
     [
-     [
-      "What does she call this dance?",
-      "The Wack Itt",
-      "The Wop",
-      "The Snake"
-     ],
      [
       "How often does she do it?",
       "All the time",
@@ -135,34 +129,10 @@ window.CFG = {
       "Minute"
      ],
      [
-      "Where is she sitting?",
-      "In my room",
-      "On the stoop",
-      "On the train"
-     ],
-     [
-      "She decided to get what?",
-      "Wacky",
-      "Busy",
-      "Ready"
-     ],
-     [
       "\"This is how I...\" what?",
       "Do it",
       "Move it",
       "Say it"
-     ],
-     [
-      "She's trying to guess what?",
-      "What to do",
-      "Who to call",
-      "Where to go"
-     ],
-     [
-      "\"Cause you know yo, that's...\" what?",
-      "True",
-      "Cool",
-      "Fun"
      ],
      [
       "When should you put on a jacket?",
@@ -237,6 +207,36 @@ window.CFG = {
       "On",
       "Back",
       "Here"
+     ],
+     [
+      "What does she call this dance?",
+      "The Wack Itt",
+      "The Wop",
+      "The Snake"
+     ],
+     [
+      "Where is she sitting?",
+      "In my room",
+      "On the stoop",
+      "On the train"
+     ],
+     [
+      "She decided to get what?",
+      "Wacky",
+      "Busy",
+      "Ready"
+     ],
+     [
+      "She's trying to guess what?",
+      "What to do",
+      "Who to call",
+      "Where to go"
+     ],
+     [
+      "\"Cause you know yo, that's...\" what?",
+      "True",
+      "Cool",
+      "Fun"
      ]
     ],
     [
@@ -307,7 +307,8 @@ window.CFG = {
       "Shout"
      ]
     ]
-   ]
+   ],
+   "start": 14.4
   },
   {
    "title": "Go On Girl",
@@ -380,7 +381,10 @@ window.CFG = {
       "Fake"
      ],
      [
-      "\"When I'm in a...\" what?", "Battle", "Club", "Crowd"
+      "\"When I'm in a...\" what?",
+      "Battle",
+      "Club",
+      "Crowd"
      ]
     ],
     [
@@ -519,7 +523,8 @@ window.CFG = {
       "The crowd"
      ]
     ]
-   ]
+   ],
+   "start": 13.3
   },
   {
    "title": "Queen of Rox (Shanté Rox On)",

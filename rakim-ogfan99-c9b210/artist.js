@@ -265,7 +265,7 @@ window.CFG = {
    "title": "When I B On Tha Mic",
    "id": "M34OelgSlKI",
    "cuts": [
-    61.3,
+    38.7,
     121.6,
     181.8
    ],
@@ -300,24 +300,6 @@ window.CFG = {
       "Hot",
       "Cool",
       "Real"
-     ],
-     [
-      "\"Knock it down ___ style\"",
-      "Lumberjack",
-      "Karate",
-      "Boxer"
-     ],
-     [
-      "Show her the town, steal her heart, no money...",
-      "Down",
-      "Spent",
-      "Back"
-     ],
-     [
-      "Get respect in the hood, credit is...",
-      "Good",
-      "Bad",
-      "Gold"
      ]
     ],
     [
@@ -368,6 +350,24 @@ window.CFG = {
       "Mastered",
       "Started",
       "Perfect"
+     ],
+     [
+      "\"Knock it down ___ style\"",
+      "Lumberjack",
+      "Karate",
+      "Boxer"
+     ],
+     [
+      "Show her the town, steal her heart, no money...",
+      "Down",
+      "Spent",
+      "Back"
+     ],
+     [
+      "Get respect in the hood, credit is...",
+      "Good",
+      "Bad",
+      "Gold"
      ]
     ],
     [
@@ -432,7 +432,7 @@ window.CFG = {
    "title": "I Ain't No Joke",
    "id": "2TN-kDEKxF0",
    "cuts": [
-    68.2,
+    30.7,
     142.5,
     215.5
    ],
@@ -467,24 +467,6 @@ window.CFG = {
       "Storm",
       "Night",
       "Room"
-     ],
-     [
-      "\"Deep concentration 'cause I'm no...\"",
-      "Comedian",
-      "Magician",
-      "Amateur"
-     ],
-     [
-      "\"Jokers are wild if you wanna be...\"",
-      "Tame",
-      "Famous",
-      "Free"
-     ],
-     [
-      "\"Write a rhyme in ___ in every show you see me in\"",
-      "Graffiti",
-      "Pencil",
-      "Silence"
      ]
     ],
     [
@@ -535,6 +517,24 @@ window.CFG = {
       "Switch",
       "Quit",
       "Rest"
+     ],
+     [
+      "\"Deep concentration 'cause I'm no...\"",
+      "Comedian",
+      "Magician",
+      "Amateur"
+     ],
+     [
+      "\"Jokers are wild if you wanna be...\"",
+      "Tame",
+      "Famous",
+      "Free"
+     ],
+     [
+      "\"Write a rhyme in ___ in every show you see me in\"",
+      "Graffiti",
+      "Pencil",
+      "Silence"
      ]
     ],
     [
@@ -599,7 +599,7 @@ window.CFG = {
    "title": "Follow The Leader",
    "id": "95gP3m-uBHA",
    "cuts": [
-    90.9,
+    36,
     169.4,
     248.9
    ],
@@ -628,24 +628,6 @@ window.CFG = {
       "Daily",
       "Famous",
       "Secret"
-     ],
-     [
-      "\"Let's travel at magnificent speeds around the...\"",
-      "Universe",
-      "Planet",
-      "City"
-     ],
-     [
-      "\"Planets as small as balls of...\"",
-      "Clay",
-      "Yarn",
-      "Dust"
-     ],
-     [
-      "\"Far as the eye can see, not even a...\"",
-      "Satellite",
-      "Star",
-      "Cloud"
      ],
      [
       "\"Self-esteem makes me super, superb, and...\"",
@@ -702,6 +684,24 @@ window.CFG = {
       "Wrote",
       "Heard",
       "Found"
+     ],
+     [
+      "\"Let's travel at magnificent speeds around the...\"",
+      "Universe",
+      "Planet",
+      "City"
+     ],
+     [
+      "\"Planets as small as balls of...\"",
+      "Clay",
+      "Yarn",
+      "Dust"
+     ],
+     [
+      "\"Far as the eye can see, not even a...\"",
+      "Satellite",
+      "Star",
+      "Cloud"
      ]
     ],
     [

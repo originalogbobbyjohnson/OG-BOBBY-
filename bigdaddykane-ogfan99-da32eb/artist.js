@@ -318,13 +318,14 @@ window.CFG = {
       "Home"
      ]
     ]
-   ]
+   ],
+   "start": 28.7
   },
   {
    "title": "Smooth Operator",
    "id": "7CivihbG_A0",
    "cuts": [
-    96.2,
+    65.1,
     138.8,
     194.1
    ],
@@ -359,42 +360,6 @@ window.CFG = {
       "Tempo",
       "Groove",
       "Beat"
-     ],
-     [
-      "He's not animated like a what?",
-      "Cartoon",
-      "Robot",
-      "Puppet"
-     ],
-     [
-      "The listeners and the what?",
-      "Spectators",
-      "Dancers",
-      "Fans"
-     ],
-     [
-      "Then yo, the show will go what?",
-      "On",
-      "Off",
-      "Long"
-     ],
-     [
-      "He's transforming on what?",
-      "Stage",
-      "Screen",
-      "Air"
-     ],
-     [
-      "Not animated, he's for what?",
-      "Real",
-      "Show",
-      "Fun"
-     ],
-     [
-      "Let's groove with the what?",
-      "Smooth Operator",
-      "Juice Crew",
-      "DJ"
      ]
     ],
     [
@@ -463,6 +428,42 @@ window.CFG = {
       "Smooth Operator",
       "Hip hop king",
       "Bad boy"
+     ],
+     [
+      "He's not animated like a what?",
+      "Cartoon",
+      "Robot",
+      "Puppet"
+     ],
+     [
+      "The listeners and the what?",
+      "Spectators",
+      "Dancers",
+      "Fans"
+     ],
+     [
+      "Then yo, the show will go what?",
+      "On",
+      "Off",
+      "Long"
+     ],
+     [
+      "He's transforming on what?",
+      "Stage",
+      "Screen",
+      "Air"
+     ],
+     [
+      "Not animated, he's for what?",
+      "Real",
+      "Show",
+      "Fun"
+     ],
+     [
+      "Let's groove with the what?",
+      "Smooth Operator",
+      "Juice Crew",
+      "DJ"
      ]
     ],
     [
@@ -533,13 +534,14 @@ window.CFG = {
       "Slow"
      ]
     ]
-   ]
+   ],
+   "start": 28
   },
   {
    "title": "Ain't No Half-Steppin'",
    "id": "RNVefp-SxvE",
    "cuts": [
-    109.3,
+    30.4,
     190.5,
     248.8
    ],
@@ -550,42 +552,6 @@ window.CFG = {
       "Half stepping",
       "Slowing down",
       "Stopping"
-     ],
-     [
-      "He says he's the what?",
-      "King",
-      "Prince",
-      "Boss"
-     ],
-     [
-      "He's up for what?",
-      "Victory",
-      "Battle",
-      "Glory"
-     ],
-     [
-      "He's the authentic what?",
-      "Poet",
-      "Writer",
-      "DJ"
-     ],
-     [
-      "To beat him it's gonna take a what?",
-      "Miracle",
-      "Lifetime",
-      "Million"
-     ],
-     [
-      "The name is Big Daddy: yes Big, not what?",
-      "Little",
-      "Small",
-      "Baby"
-     ],
-     [
-      "Here's your walking what?",
-      "Papers",
-      "Shoes",
-      "Orders"
      ],
      [
       "What letters get spelled out at the start?",
@@ -678,6 +644,42 @@ window.CFG = {
       "Gab",
       "Song",
       "Rhyme"
+     ],
+     [
+      "He says he's the what?",
+      "King",
+      "Prince",
+      "Boss"
+     ],
+     [
+      "He's up for what?",
+      "Victory",
+      "Battle",
+      "Glory"
+     ],
+     [
+      "He's the authentic what?",
+      "Poet",
+      "Writer",
+      "DJ"
+     ],
+     [
+      "To beat him it's gonna take a what?",
+      "Miracle",
+      "Lifetime",
+      "Million"
+     ],
+     [
+      "The name is Big Daddy: yes Big, not what?",
+      "Little",
+      "Small",
+      "Baby"
+     ],
+     [
+      "Here's your walking what?",
+      "Papers",
+      "Shoes",
+      "Orders"
      ]
     ],
     [

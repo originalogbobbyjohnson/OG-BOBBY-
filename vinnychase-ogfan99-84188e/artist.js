@@ -366,7 +366,8 @@ window.CFG = {
       "Late"
      ]
     ]
-   ]
+   ],
+   "start": 20.1
   },
   {
    "title": "L.U.X.U.R.Y.",
@@ -503,13 +504,14 @@ window.CFG = {
       "Harlem World"
      ]
     ]
-   ]
+   ],
+   "start": 17.8
   },
   {
    "title": "Belong To The City / Christie's",
    "id": "T0HKmRH-4ec",
    "cuts": [
-    69.1,
+    48.9,
     128,
     234.1
    ],
@@ -544,18 +546,6 @@ window.CFG = {
       "Rookie",
       "Veteran",
       "Legend"
-     ],
-     [
-      "He puts art in the middle and does what?",
-      "Frames that",
-      "Sells that",
-      "Signs that"
-     ],
-     [
-      "Whose city is it?",
-      "Mine",
-      "Theirs",
-      "Nobody's"
      ]
     ],
     [
@@ -600,6 +590,18 @@ window.CFG = {
       "Bloomberg",
       "Giuliani",
       "de Blasio"
+     ],
+     [
+      "He puts art in the middle and does what?",
+      "Frames that",
+      "Sells that",
+      "Signs that"
+     ],
+     [
+      "Whose city is it?",
+      "Mine",
+      "Theirs",
+      "Nobody's"
      ]
     ],
     [
@@ -646,7 +648,8 @@ window.CFG = {
       "4.5 million"
      ]
     ]
-   ]
+   ],
+   "start": 19.1
   },
   {
    "title": "Harlem Roses",
@@ -771,7 +774,8 @@ window.CFG = {
       "Gold"
      ]
     ]
-   ]
+   ],
+   "start": 13.8
   }
  ]
 };

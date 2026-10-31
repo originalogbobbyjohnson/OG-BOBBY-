@@ -109,7 +109,7 @@ window.CFG = {
    "title": "I Need Love",
    "id": "NEUX-HYRtUA",
    "cuts": [
-    66.3,
+    37.6,
     132.2,
     200.5
    ],
@@ -144,18 +144,6 @@ window.CFG = {
       "Deal",
       "Meal",
       "Hand"
-     ],
-     [
-      "\"Inside my soul because my soul is...\"?",
-      "Cold",
-      "Old",
-      "Gold"
-     ],
-     [
-      "\"The other half needs affection and...\"?",
-      "Joy",
-      "Love",
-      "Time"
      ]
     ],
     [
@@ -200,6 +188,18 @@ window.CFG = {
       "Hide",
       "Stop",
       "Fly"
+     ],
+     [
+      "\"Inside my soul because my soul is...\"?",
+      "Cold",
+      "Old",
+      "Gold"
+     ],
+     [
+      "\"The other half needs affection and...\"?",
+      "Joy",
+      "Love",
+      "Time"
      ]
     ],
     [
@@ -253,7 +253,7 @@ window.CFG = {
    "id": "oVDfyc2lh4Q",
    "start": 26,
    "cuts": [
-    75.5,
+    57,
     140.6,
     204.1
    ],
@@ -288,18 +288,6 @@ window.CFG = {
       "Win",
       "Grin",
       "Spin"
-     ],
-     [
-      "\"Cool J has arrived, so you better make...\"?",
-      "Way",
-      "Room",
-      "Noise"
-     ],
-     [
-      "\"Ask anybody in the crowd, they say the kid don't...\"?",
-      "Play",
-      "Stop",
-      "Quit"
      ]
     ],
     [
@@ -344,6 +332,18 @@ window.CFG = {
       "Jellybean",
       "Grape",
       "Cookie"
+     ],
+     [
+      "\"Cool J has arrived, so you better make...\"?",
+      "Way",
+      "Room",
+      "Noise"
+     ],
+     [
+      "\"Ask anybody in the crowd, they say the kid don't...\"?",
+      "Play",
+      "Stop",
+      "Quit"
      ]
     ],
     [

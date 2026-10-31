@@ -223,13 +223,14 @@ window.CFG = {
       "Breaking"
      ]
     ]
-   ]
+   ],
+   "start": 8.3
   },
   {
    "title": "Let 'Em Know",
    "id": "vX1B879dbfA",
    "cuts": [
-    62.5,
+    48,
     110.7,
     145.2
    ],
@@ -264,12 +265,6 @@ window.CFG = {
       "Sideline",
       "Bench",
       "Outfield"
-     ],
-     [
-      "As long as it's his penny, they're fitting to win a what?",
-      "Pennant",
-      "Trophy",
-      "Ring"
      ]
     ],
     [
@@ -308,6 +303,12 @@ window.CFG = {
       "Entitled",
       "Untitled",
       "For the Record"
+     ],
+     [
+      "As long as it's his penny, they're fitting to win a what?",
+      "Pennant",
+      "Trophy",
+      "Ring"
      ]
     ],
     [
@@ -348,13 +349,14 @@ window.CFG = {
       "Moving back"
      ]
     ]
-   ]
+   ],
+   "start": 8.3
   },
   {
    "title": "Get Down",
    "id": "IeHVpWMvfqc",
    "cuts": [
-    99.5,
+    55.2,
     139.3,
     188.9
    ],
@@ -389,18 +391,6 @@ window.CFG = {
       "Subpar",
       "On par",
       "Superstars"
-     ],
-     [
-      "He was just another star on the what?",
-      "Block",
-      "Stage",
-      "Radio"
-     ],
-     [
-      "The magic's back in the what?",
-      "Air",
-      "City",
-      "Booth"
      ]
     ],
     [
@@ -445,6 +435,18 @@ window.CFG = {
       "Grammatics",
       "Acrobatics",
       "Dramatics"
+     ],
+     [
+      "He was just another star on the what?",
+      "Block",
+      "Stage",
+      "Radio"
+     ],
+     [
+      "The magic's back in the what?",
+      "Air",
+      "City",
+      "Booth"
      ]
     ],
     [
@@ -491,7 +493,8 @@ window.CFG = {
       "The clubs"
      ]
     ]
-   ]
+   ],
+   "start": 25.3
   },
   {
    "title": "That Raw",

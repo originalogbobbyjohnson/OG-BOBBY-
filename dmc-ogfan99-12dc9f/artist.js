@@ -105,7 +105,7 @@ window.CFG = {
    "id": "8oNOAXJDJio",
    "start": 47,
    "cuts": [
-    107.8,
+    76.9,
     144.9,
     203.6
    ],
@@ -142,40 +142,10 @@ window.CFG = {
       "The crowd"
      ],
      [
-      "\"So hit it...\" who?",
-      "Run",
-      "Jay",
-      "D"
-     ],
-     [
-      "\"For these routines like...\" what year?",
-      "1983",
-      "1986",
-      "1979"
-     ],
-     [
       "\"Yo D that's me, the King, the...\"?",
       "MC",
       "DJ",
       "Champ"
-     ],
-     [
-      "\"It's like the A the B to the...\"?",
-      "C",
-      "D",
-      "E"
-     ],
-     [
-      "\"Dance to the rhythm, the rhyme, the cold...\"?",
-      "Flow",
-      "Show",
-      "Night"
-     ],
-     [
-      "\"So rhymers speak your...\"?",
-      "Peace",
-      "Mind",
-      "Truth"
      ]
     ],
     [
@@ -244,6 +214,36 @@ window.CFG = {
       "Days",
       "Hours",
       "Weeks"
+     ],
+     [
+      "\"So hit it...\" who?",
+      "Run",
+      "Jay",
+      "D"
+     ],
+     [
+      "\"For these routines like...\" what year?",
+      "1983",
+      "1986",
+      "1979"
+     ],
+     [
+      "\"It's like the A the B to the...\"?",
+      "C",
+      "D",
+      "E"
+     ],
+     [
+      "\"Dance to the rhythm, the rhyme, the cold...\"?",
+      "Flow",
+      "Show",
+      "Night"
+     ],
+     [
+      "\"So rhymers speak your...\"?",
+      "Peace",
+      "Mind",
+      "Truth"
      ]
     ],
     [
@@ -320,7 +320,7 @@ window.CFG = {
    "title": "Down With The King",
    "id": "RUXpNMMqW1A",
    "cuts": [
-    78.7,
+    35.8,
     138.6,
     238.2
    ],
@@ -345,30 +345,6 @@ window.CFG = {
       "Five"
      ],
      [
-      "\"Race for the border my...\"?",
-      "Daughter",
-      "Brother",
-      "Partner"
-     ],
-     [
-      "\"Jeeps rockin' beats in the...\"?",
-      "Streets",
-      "Parks",
-      "Bronx"
-     ],
-     [
-      "\"Gather or rather form a...\"?",
-      "Circle",
-      "Line",
-      "Crew"
-     ],
-     [
-      "\"Shut him down, the king with a...\"?",
-      "Crown",
-      "Sound",
-      "Gown"
-     ],
-     [
       "\"Recruiting suckers mackin' mic and makin' ___ of 'em\"?",
       "Men",
       "Fans",
@@ -379,18 +355,6 @@ window.CFG = {
       "Peers",
       "Friends",
       "Fans"
-     ],
-     [
-      "\"Brothers or others could never ever rock a...\"?",
-      "Crowd",
-      "Party",
-      "Block"
-     ],
-     [
-      "\"And it's time for hangin'...\"?",
-      "Out",
-      "Around",
-      "Tough"
      ]
     ],
     [
@@ -459,6 +423,42 @@ window.CFG = {
       "Windmill",
       "Turntable",
       "Corner"
+     ],
+     [
+      "\"Race for the border my...\"?",
+      "Daughter",
+      "Brother",
+      "Partner"
+     ],
+     [
+      "\"Jeeps rockin' beats in the...\"?",
+      "Streets",
+      "Parks",
+      "Bronx"
+     ],
+     [
+      "\"Gather or rather form a...\"?",
+      "Circle",
+      "Line",
+      "Crew"
+     ],
+     [
+      "\"Shut him down, the king with a...\"?",
+      "Crown",
+      "Sound",
+      "Gown"
+     ],
+     [
+      "\"Brothers or others could never ever rock a...\"?",
+      "Crowd",
+      "Party",
+      "Block"
+     ],
+     [
+      "\"And it's time for hangin'...\"?",
+      "Out",
+      "Around",
+      "Tough"
      ]
     ],
     [
@@ -535,7 +535,7 @@ window.CFG = {
    "title": "Run's House",
    "id": "0xMJZHrG_94",
    "cuts": [
-    85.6,
+    32.1,
     124.4,
     173.9
    ],
@@ -554,36 +554,6 @@ window.CFG = {
       "Plan"
      ],
      [
-      "\"Till the ruler came with a cooler...\"?",
-      "Name",
-      "Game",
-      "Chain"
-     ],
-     [
-      "\"Well my name is DMC the all time...\"?",
-      "Great",
-      "King",
-      "Best"
-     ],
-     [
-      "\"I bust the most rhymes in New York...\"?",
-      "State",
-      "City",
-      "Town"
-     ],
-     [
-      "\"The wanted man from the wanted...\"?",
-      "Clan",
-      "Land",
-      "Band"
-     ],
-     [
-      "\"R U N D M C...\"?",
-      "Complete",
-      "On the beat",
-      "In the street"
-     ],
-     [
       "\"A whole lot of super stars on this...\"?",
       "Stage",
       "Show",
@@ -594,12 +564,6 @@ window.CFG = {
       "Trend",
       "Game",
       "Fad"
-     ],
-     [
-      "\"Name is Run my son, number one for...\"?",
-      "Fun",
-      "Life",
-      "Real"
      ],
      [
       "Whose house?",
@@ -674,6 +638,42 @@ window.CFG = {
       "Left",
       "Right",
       "Slept"
+     ],
+     [
+      "\"Till the ruler came with a cooler...\"?",
+      "Name",
+      "Game",
+      "Chain"
+     ],
+     [
+      "\"Well my name is DMC the all time...\"?",
+      "Great",
+      "King",
+      "Best"
+     ],
+     [
+      "\"I bust the most rhymes in New York...\"?",
+      "State",
+      "City",
+      "Town"
+     ],
+     [
+      "\"The wanted man from the wanted...\"?",
+      "Clan",
+      "Land",
+      "Band"
+     ],
+     [
+      "\"R U N D M C...\"?",
+      "Complete",
+      "On the beat",
+      "In the street"
+     ],
+     [
+      "\"Name is Run my son, number one for...\"?",
+      "Fun",
+      "Life",
+      "Real"
      ]
     ],
     [

@@ -247,7 +247,7 @@ window.CFG = {
    "title": "The Carpenter",
    "id": "pP7VeA_r2Jg",
    "cuts": [
-    51.3,
+    32.5,
     93.8,
     148
    ],
@@ -278,22 +278,10 @@ window.CFG = {
       "Lincoln"
      ],
      [
-      "Wake up and smell the what?",
-      "Vultures",
-      "Coffee",
-      "Roses"
-     ],
-     [
       "Make a chess move, don't be getting what?",
       "Fretful",
       "Careless",
       "Tired"
-     ],
-     [
-      "He feels younger because he's what?",
-      "Sober",
-      "Rested",
-      "Rich"
      ]
     ],
     [
@@ -338,6 +326,18 @@ window.CFG = {
       "Soy",
       "Hola",
       "Amigo"
+     ],
+     [
+      "Wake up and smell the what?",
+      "Vultures",
+      "Coffee",
+      "Roses"
+     ],
+     [
+      "He feels younger because he's what?",
+      "Sober",
+      "Rested",
+      "Rich"
      ]
     ],
     [
@@ -384,7 +384,7 @@ window.CFG = {
    "title": "Conjugal Visit to the Prison of the Mind",
    "id": "RYcaen6QwnE",
    "cuts": [
-    46.9,
+    35.9,
     93.3,
     141.9
    ],
@@ -419,12 +419,6 @@ window.CFG = {
       "Street",
       "Park",
       "Rain"
-     ],
-     [
-      "His time is what-proof?",
-      "Waste-proof",
-      "Water-proof",
-      "Fool-proof"
      ]
     ],
     [
@@ -469,6 +463,12 @@ window.CFG = {
       "Mind",
       "Heart",
       "Soul"
+     ],
+     [
+      "His time is what-proof?",
+      "Waste-proof",
+      "Water-proof",
+      "Fool-proof"
      ]
     ],
     [

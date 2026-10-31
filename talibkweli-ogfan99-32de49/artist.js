@@ -104,7 +104,7 @@ window.CFG = {
    "title": "The Blast",
    "id": "ihItq4ZQ8LM",
    "cuts": [
-    68.4,
+    54.2,
     118.1,
     170.9
    ],
@@ -139,18 +139,6 @@ window.CFG = {
       "Phonetically",
       "Backwards",
       "Slowly"
-     ],
-     [
-      "\"You got my brain crying like sunset on a...\"?",
-      "Saturday",
-      "Sunday",
-      "Friday"
-     ],
-     [
-      "\"Stop crying, be strong for your...\"?",
-      "Mom",
-      "Team",
-      "Pops"
      ]
     ],
     [
@@ -189,6 +177,18 @@ window.CFG = {
       "Track",
       "Phone",
       "Stage"
+     ],
+     [
+      "\"You got my brain crying like sunset on a...\"?",
+      "Saturday",
+      "Sunday",
+      "Friday"
+     ],
+     [
+      "\"Stop crying, be strong for your...\"?",
+      "Mom",
+      "Team",
+      "Pops"
      ]
     ],
     [
@@ -229,7 +229,8 @@ window.CFG = {
       "Market"
      ]
     ]
-   ]
+   ],
+   "start": 24.4
   },
   {
    "title": "Get By",

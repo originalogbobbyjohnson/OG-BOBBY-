@@ -104,7 +104,7 @@ window.CFG = {
    "title": "Every Tick Tick Tick",
    "id": "IdM2t4ejZL4",
    "cuts": [
-    44.9,
+    31.5,
     93.4,
     114.8
    ],
@@ -135,40 +135,10 @@ window.CFG = {
       "Walking"
      ],
      [
-      "\"It is what it...\"",
-      "Is",
-      "Was",
-      "Be"
-     ],
-     [
-      "\"It all fades to...\"",
-      "Gray",
-      "Black",
-      "Blue"
-     ],
-     [
-      "\"Man plans, the Lord...\"",
-      "Laughs",
-      "Listens",
-      "Waits"
-     ],
-     [
       "\"Did you really take the...\"",
       "Time",
       "Trip",
       "Chance"
-     ],
-     [
-      "\"Half bar...\"",
-      "Rhyme",
-      "Beat",
-      "Line"
-     ],
-     [
-      "\"Busy in...\"",
-      "Life",
-      "School",
-      "Work"
      ],
      [
       "\"Every tick tick tick...\"",
@@ -243,6 +213,36 @@ window.CFG = {
       "One",
       "Two",
       "Beat"
+     ],
+     [
+      "\"It is what it...\"",
+      "Is",
+      "Was",
+      "Be"
+     ],
+     [
+      "\"It all fades to...\"",
+      "Gray",
+      "Black",
+      "Blue"
+     ],
+     [
+      "\"Man plans, the Lord...\"",
+      "Laughs",
+      "Listens",
+      "Waits"
+     ],
+     [
+      "\"Half bar...\"",
+      "Rhyme",
+      "Beat",
+      "Line"
+     ],
+     [
+      "\"Busy in...\"",
+      "Life",
+      "School",
+      "Work"
      ]
     ],
     [
@@ -319,7 +319,7 @@ window.CFG = {
    "title": "No Country for Old Men",
    "id": "d-Av_CtaR1k",
    "cuts": [
-    75.2,
+    39.9,
     126.3,
     201.5
    ],
@@ -350,22 +350,10 @@ window.CFG = {
       "Stop"
      ],
      [
-      "\"Your ___ is staying alive\"",
-      "GPS",
-      "Phone",
-      "Radio"
-     ],
-     [
       "\"Only the ___ survive\"",
       "Strong",
       "Young",
       "Fast"
-     ],
-     [
-      "Elder is the roof that shelters the...",
-      "Youth",
-      "Family",
-      "City"
      ],
      [
       "\"Weak go, just a matter of...\"",
@@ -378,12 +366,6 @@ window.CFG = {
       "Questions",
       "Games",
       "Answers"
-     ],
-     [
-      "\"No country for...\"",
-      "Old men",
-      "Young men",
-      "Strangers"
      ],
      [
       "\"Don't care less, though you can't...\"",
@@ -458,6 +440,24 @@ window.CFG = {
       "Tracks",
       "Roots",
       "Bricks"
+     ],
+     [
+      "\"Your ___ is staying alive\"",
+      "GPS",
+      "Phone",
+      "Radio"
+     ],
+     [
+      "Elder is the roof that shelters the...",
+      "Youth",
+      "Family",
+      "City"
+     ],
+     [
+      "\"No country for...\"",
+      "Old men",
+      "Young men",
+      "Strangers"
      ]
     ],
     [
@@ -528,13 +528,14 @@ window.CFG = {
       "Hide"
      ]
     ]
-   ]
+   ],
+   "start": 9.6
   },
   {
    "title": "Give We The Pride",
    "id": "gNPPF8W1zPU",
    "cuts": [
-    119.4,
+    44.7,
     229.3,
     299.7
    ],
@@ -559,24 +560,6 @@ window.CFG = {
       "Fame and fortune"
      ],
      [
-      "We need pride to...",
-      "Survive",
-      "Succeed",
-      "Sing"
-     ],
-     [
-      "When he sees wrong, he's got to say it...",
-      "Loud",
-      "Twice",
-      "Softly"
-     ],
-     [
-      "Who does he see confused?",
-      "Young people",
-      "Teachers",
-      "Old friends"
-     ],
-     [
       "Give them hope, give them love, get them...",
       "Pride",
       "Money",
@@ -587,24 +570,6 @@ window.CFG = {
       "Fly",
       "Free",
       "Fine"
-     ],
-     [
-      "\"Get some...\"",
-      "Character",
-      "Money",
-      "Rest"
-     ],
-     [
-      "Keeping songs from being...",
-      "Strong",
-      "Heard",
-      "Played"
-     ],
-     [
-      "Young stars don't know who they...",
-      "Are",
-      "Love",
-      "Know"
      ]
     ],
     [
@@ -673,6 +638,42 @@ window.CFG = {
       "Love you",
       "Need you",
       "Hear you"
+     ],
+     [
+      "We need pride to...",
+      "Survive",
+      "Succeed",
+      "Sing"
+     ],
+     [
+      "When he sees wrong, he's got to say it...",
+      "Loud",
+      "Twice",
+      "Softly"
+     ],
+     [
+      "Who does he see confused?",
+      "Young people",
+      "Teachers",
+      "Old friends"
+     ],
+     [
+      "\"Get some...\"",
+      "Character",
+      "Money",
+      "Rest"
+     ],
+     [
+      "Keeping songs from being...",
+      "Strong",
+      "Heard",
+      "Played"
+     ],
+     [
+      "Young stars don't know who they...",
+      "Are",
+      "Love",
+      "Know"
      ]
     ],
     [
@@ -743,7 +744,8 @@ window.CFG = {
       "Crowd"
      ]
     ]
-   ]
+   ],
+   "start": 14.2
   }
  ]
 };
