@@ -133,6 +133,17 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .tile .bul i { width: 19px; height: 19px; font-size: .68rem; }
 .tile.soon { opacity: .7; }
 
+.tally { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; background: #111; border-top: 4px solid #fff; border-radius: 8px; padding: 8px 6px; }
+.tally div { text-align: center; font: 700 .62rem/1.15 Helvetica, Arial, sans-serif; color: #fff; letter-spacing: .03em; }
+.tally b { display: block; font-family: var(--display); font-size: 1.25rem; color: var(--gold); letter-spacing: .04em; }
+.tally .all { grid-column: 1 / -1; font-size: .72rem; letter-spacing: .14em; color: var(--gold); padding-bottom: 4px; border-bottom: 1px solid #333; margin-bottom: 4px; }
+.bhead { display: grid; gap: 8px; justify-items: center; }
+.bhead h3 { margin: 0; white-space: nowrap; font-family: var(--display); letter-spacing: .08em; font-size: 1.05rem; }
+.bhead h3 span { color: var(--gold); }
+.sorts { display: flex; gap: 4px; }
+.sorts button { white-space: nowrap; background: #111; color: #fff; border: 1.5px solid #3a3f48; border-radius: 99px; padding: 5px 9px; font: 700 .62rem Helvetica, Arial, sans-serif; letter-spacing: .06em; }
+.sorts button[aria-pressed="true"] { background: #fff; color: #000; border-color: #fff; }
+
 /* station card */
 .scrim { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 2000; }
 .card { position: fixed; left: 50%; bottom: max(14px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 24px), 440px); z-index: 2001; padding-top: 40px !important;
@@ -175,8 +186,10 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
   <p class="zhint" id="zhint" hidden>Pinch or use + / − to zoom. Tap a station to open it.</p>
   <details class="key" id="key" hidden><summary>SUBWAY KEY</summary><ul id="keyList"></ul></details>
 
+  <div class="tally" id="tally"></div>
   <h2>PICK YOUR BOROUGH</h2>
   <div class="boros" id="boros" role="tablist"></div>
+  <div class="bhead"><h3 id="bname"></h3><div class="sorts" id="sorts"></div></div>
   <div class="legend" id="legend"></div>
   <div class="steel"><i class="rv tl"></i><i class="rv tr"></i><i class="rv bl"></i><i class="rv br"></i><ul class="tiles" id="list"></ul></div>
 
@@ -652,14 +665,25 @@ function drawMap() {
 const isOwner = () => { try { return localStorage.getItem("ogfan99owner") === "1"; } catch (e) { return false; } };
 const boroOf = a => a.boro || "Brooklyn";
 const BOROS = ["Brooklyn", "Queens", "the Bronx", "Manhattan", "Staten Island", "Westchester", "Long Island", "New Jersey"];
+let sortBy = (() => { try { return localStorage.getItem("ogfan99sort") || "az"; } catch (e) { return "az"; } })();
 let boroTab = (() => { try { return localStorage.getItem("ogfan99boro") || "Brooklyn"; } catch (e) { return "Brooklyn"; } })();
 const pillHTML = a => (a.status === "demo" || a.status === "vault") ? '<span class="pill ' + (isOwner() && a.status === "demo" ? "ready" : "vault") + '"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() && a.status === "demo" ? "READY" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>';
 function drawList() {
   $("legend").innerHTML = '<span><i style="background:var(--green)"></i>LIVE</span>' + (isOwner() ? '<span><i style="background:#e8b84a"></i>READY · GAME BUILT</span>' : '') + '<span><i style="background:#d62828"></i>' + (isOwner() ? "VAULT · BEING BUILT" : "VAULT · OPENS WHEN THEY SIGN") + '</span>';
   const count = b => ARTISTS.filter(a => boroOf(a) === b).length;
-  $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '<small>' + (count(b) ? count(b) + (count(b) > 1 ? " STOPS" : " STOP") : "SOON") + '</small></button>').join("");
+  $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '<small>' + (count(b) ? count(b) + (count(b) > 1 ? " ARTISTS" : " ARTIST") : "SOON") + '</small></button>').join("");
   $("boros").querySelectorAll(".boro").forEach(t => t.onclick = () => { boroTab = t.dataset.b; try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); });
-  const here = ARTISTS.map((a, i) => [a, i]).filter(([a]) => boroOf(a) === boroTab);
+  $("tally").innerHTML = '<div class="all">' + ARTISTS.length + ' ARTISTS ON THE LINE</div>' + BOROS.map(b => '<div><b>' + count(b) + '</b>' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '</div>').join("");
+  const nb = count(boroTab);
+  $("bname").innerHTML = esc(boroTab.replace("the ", "").toUpperCase()) + ' · <span>' + nb + (nb === 1 ? " ARTIST" : " ARTISTS") + '</span>';
+  $("sorts").innerHTML = [["az", "A–Z"], ["games", "GAMES FIRST"], ["line", "BY LINE"]].map(([k, t]) => '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
+  $("sorts").querySelectorAll("button").forEach(b => b.onclick = () => { sortBy = b.dataset.s; try { localStorage.setItem("ogfan99sort", sortBy); } catch (e) {} drawList(); });
+  const rank = a => a.status === "live" ? 0 : a.status === "demo" ? 1 : 2, nm = a => a.who.replace(/^(the|a\$ap) /i, "").toLowerCase();
+  const LORDER = "1234567ACEBDFMGJZLNQRWS";
+  const lineKey = a => { const t = (a.trains[0] || ["~"])[0]; const k = LORDER.indexOf(t); return (k < 0 ? 99 : k) + ":" + nm(a); };
+  const here = ARTISTS.map((a, i) => [a, i]).filter(([a]) => boroOf(a) === boroTab).sort(([a], [b]) =>
+    sortBy === "games" ? (rank(a) - rank(b)) || nm(a).localeCompare(nm(b)) :
+    sortBy === "line" ? lineKey(a).localeCompare(lineKey(b), undefined, { numeric: true }) : nm(a).localeCompare(nm(b)));
   $("list").innerHTML = here.length ? here.map(([a, i]) =>
     '<li><button class="tile" type="button" data-i="' + i + '"><span class="tl-top"><span class="bul">' + bullets(a) + '</span>' + pillHTML(a) + '</span>' +
     '<span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + '</small></button></li>').join("")
