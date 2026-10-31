@@ -188,6 +188,42 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .exBtn.on { background: #f2c14e !important; color: #000 !important; border-color: #000 !important; }
 .ebadge { display: inline-grid; place-items: center; width: 17px; height: 17px; margin-left: 6px; border-radius: 3px; background: #fff; color: #000; font: 900 11px/1 Helvetica, Arial, sans-serif; vertical-align: middle; -webkit-text-stroke: 0; text-shadow: none; }
 .exnote { color: #f2c14e; font-weight: 700; }
+
+/* ---------- app frame: map + boroughs + sort on top, only the artist list scrolls, buttons fixed at the bottom ---------- */
+html, body { height: 100%; overflow: hidden; }
+.wrap.app { height: 100dvh; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px; padding: max(8px, env(safe-area-inset-top)) 12px 0; }
+.appbar { flex: none; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.appbar .og { font-family: var(--tag); font-size: 1.9rem; line-height: 1; color: #fff; -webkit-text-stroke: 1.2px #000; text-shadow: 2px 2px 0 #000; transform: rotate(-3deg); }
+.appbar .og b { color: var(--red); font-weight: 400; }
+.appbar .demo { font-size: .6rem; }
+.mapbox { flex: none; position: relative; height: var(--mh, 46vh); }
+.mapbox .map { height: 100%; }
+.mapbox .map.live { height: 100% !important; }
+.mapbox .map:not(.live) { overflow: auto; }
+.keybtn { position: absolute; left: 10px; bottom: 10px; z-index: 1000; background: #111; color: #fff; border: 2px solid #fff; border-radius: 999px; padding: 6px 12px; font: 800 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; box-shadow: 0 3px 0 #000; cursor: pointer; }
+.findbtn { display: none !important; }
+.wrap.app .boros { flex: none; display: flex; overflow-x: auto; gap: 6px; grid-template-columns: none; scrollbar-width: none; padding-bottom: 2px; }
+.wrap.app .boros::-webkit-scrollbar { display: none; }
+.wrap.app .boro { flex: 0 0 auto; padding: 7px 11px 6px; font-size: .74rem; }
+.wrap.app .bhead { flex: none; display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+.wrap.app .bhead h3 { display: none; }
+.wrap.app .bhead { justify-content: center; }
+.wrap.app .sorts { overflow-x: auto; scrollbar-width: none; max-width: 100%; }
+.wrap.app .sorts button { padding: 4px 7px; font-size: .56rem; }
+.listwrap { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; border-radius: 16px; }
+.dock2 { flex: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 8px 0 max(10px, env(safe-area-inset-bottom)); }
+.dock2 button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 50px; border: 2px solid #000; border-radius: 12px; box-shadow: 0 3px 0 #000; font: 800 10px/1.1 Helvetica, Arial, sans-serif; letter-spacing: .06em; color: #fff; background: #1d2033; cursor: pointer; padding: 4px 2px; }
+.dock2 button b { font-size: 17px; line-height: 1; }
+.dock2 #restartAll { background: #d62828 !important; color: #fff !important; border-color: #000 !important; margin: 0; flex-direction: column; }
+.dock2 #findBtn2 { background: var(--gold); color: #000; }
+.dock2 .exBtn { background: #111 !important; color: #fff !important; border-color: #fff !important; margin: 0; }
+.dock2 .exBtn.on { background: #f2c14e !important; color: #000 !important; border-color: #000 !important; }
+.dock2 .exBtn small { font-size: 8px; letter-spacing: .1em; }
+.more { position: fixed; inset: 0; z-index: 2500; background: rgba(0,0,0,.6); display: flex; align-items: flex-end; justify-content: center; }
+.more[hidden] { display: none; }
+.more-in { width: min(100%, 460px); max-height: 82dvh; overflow-y: auto; background: var(--panel); border: 3px solid var(--red); border-bottom: 0; border-radius: 18px 18px 0 0; padding: 14px 14px max(18px, env(safe-area-inset-bottom)); display: grid; gap: 12px; }
+.more-h { display: flex; justify-content: space-between; align-items: center; font-family: var(--display); letter-spacing: .1em; font-size: 1.1rem; }
+.more-h .x { position: static; background: none; border: 2px solid var(--line); border-radius: 50%; width: 34px; height: 34px; color: #fff; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -206,28 +242,33 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
     <div class="st-small">PRIVATE PREVIEW</div>
   </div>
 </div>
-<main class="wrap">
-  <div class="topbtns"><button class="restartAll" id="restartAll" type="button" aria-label="Back to the very beginning">&#8634; START OVER<small>BACK TO THE DOORS</small></button><button class="restartAll exBtn" id="exBtn" type="button"></button></div>
+<main class="wrap app">
+  <header class="appbar"><div class="og">OG FAN <b>99</b></div><span class="demo">PRIVATE PREVIEW</span></header>
 
-  <div class="demo">PRIVATE PREVIEW</div>
-  <header class="logo">
-    <div class="og">OG FAN <b>99</b></div>
-    <p>NEW YORK'S INDEPENDENT ARTISTS</p>
-  </header>
+  <div class="mapbox" id="mapbox"><div class="map" id="map" aria-label="Subway map of the artists"></div><button class="keybtn" id="keyBtn" type="button">SUBWAY KEY</button></div>
 
-  <div class="map" id="map" aria-label="Subway map of the artists"></div>
-  <p class="zhint" id="zhint" hidden>Pinch or use + / − to zoom. Tap a station to open it.</p>
-  <details class="key" id="key" hidden><summary>SUBWAY KEY</summary><ul id="keyList"></ul></details>
-
-  <div class="tally" id="tally"></div>
-  <h2>PICK YOUR BOROUGH</h2>
   <div class="boros" id="boros" role="tablist"></div>
   <div class="bhead"><h3 id="bname"></h3><div class="sorts" id="sorts"></div></div>
-  <div class="legend" id="legend"></div>
-  <div class="steel"><i class="rv tl"></i><i class="rv tr"></i><i class="rv bl"></i><i class="rv br"></i><ul class="tiles" id="list"></ul></div>
+  <div class="listwrap" id="listwrap"><div class="steel"><i class="rv tl"></i><i class="rv tr"></i><i class="rv bl"></i><i class="rv br"></i><ul class="tiles" id="list"></ul></div></div>
 
-  <p class="foot">Every artist gets 9 songs and 99 questions.<br>Prove you're a <b>true fan</b>. Free to play.</p>
+  <nav class="dock2">
+    <button type="button" id="moreBtn"><b>&#9776;</b>MORE</button>
+    <button type="button" class="restartAll" id="restartAll" aria-label="Back to the very beginning"><b>&#8634;</b>START OVER</button>
+    <button type="button" class="exBtn" id="exBtn"></button>
+    <button type="button" id="findBtn2"><b>&#128269;</b>FIND</button>
+  </nav>
 </main>
+
+<div class="more" id="more" hidden>
+  <div class="more-in">
+    <div class="more-h"><span>OG FAN 99</span><button class="x" id="moreX" type="button" aria-label="Close">&#10005;</button></div>
+    <div class="tally" id="tally"></div>
+    <div class="legend" id="legend"></div>
+    <p class="zhint" id="zhint" hidden>Pinch or use + / &minus; to zoom. Tap a station to open it.</p>
+    <details class="key" id="key" hidden open><summary>SUBWAY KEY</summary><ul id="keyList"></ul></details>
+    <p class="foot">Every artist gets 9 songs and 99 questions.<br>Prove you're a <b>true fan</b>. Free to play.</p>
+  </div>
+</div>
 
 <div class="scrim" id="scrim" hidden></div>
 <div class="card" id="card" role="dialog" hidden></div>
@@ -866,7 +907,7 @@ function drawList() {
   $("legend").innerHTML = '<span><i style="background:var(--green)"></i>LIVE</span>' + (isOwner() ? '<span><i style="background:#e8b84a"></i>READY · GAME BUILT</span>' : '') + '<span><i style="background:#d62828"></i>' + (isOwner() ? "VAULT · BEING BUILT" : "VAULT · OPENS WHEN THEY SIGN") + '</span>';
   const count = b => ARTISTS.filter(a => boroOf(a) === b).length;
   $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '<small>' + (count(b) ? count(b) + (count(b) > 1 ? " ARTISTS" : " ARTIST") : "SOON") + '</small></button>').join("");
-  $("boros").querySelectorAll(".boro").forEach(t => t.onclick = () => { boroTab = t.dataset.b; try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); });
+  $("boros").querySelectorAll(".boro").forEach(t => t.onclick = () => { boroTab = t.dataset.b; try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); try { $("listwrap").scrollTop = 0; } catch (e) {} });
   $("tally").innerHTML = '<div class="all">' + ARTISTS.length + ' ARTISTS ON THE LINE</div>' + BOROS.map(b => '<div><b>' + count(b) + '</b>' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '</div>').join("");
   const nb = count(boroTab);
   $("bname").innerHTML = esc(boroTab.replace("the ", "").toUpperCase()) + ' · <span>' + nb + (nb === 1 ? " ARTIST" : " ARTISTS") + '</span>';
@@ -1004,7 +1045,7 @@ function closeFind() { $("card").classList.remove("findcard"); closeCard(); }
 /* tap an artist's name or dot on the map: straight into their game when it's open to you, otherwise their station card */
 const EXPL = () => { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } };
 const exBadge = a => a.ex ? '<span class="ebadge" title="Explicit version">E</span>' : '';
-function paintEx() { const b = $("exBtn"); if (!b) return; b.classList.toggle("on", EXPL()); b.innerHTML = (EXPL() ? "EXPLICIT: ON" : "EXPLICIT: OFF") + "<small>" + (EXPL() ? "TAP TO TURN OFF" : "18+ · TAP TO TURN ON") + "</small>"; }
+function paintEx() { const b = $("exBtn"); if (!b) return; b.classList.toggle("on", EXPL()); b.innerHTML = "<b>E</b>" + (EXPL() ? "EXPLICIT ON" : "EXPLICIT") + "<small>" + (EXPL() ? "TAP TO TURN OFF" : "18+") + "</small>"; }
 function askExplicit(then) {
   if (EXPL()) { try { localStorage.removeItem("ogfan99explicit"); } catch (e) {} paintEx(); drawList(); if (then) then(); return; }
   $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="who" style="color:#f2c14e">EXPLICIT LYRICS</div>' +
@@ -1033,6 +1074,26 @@ async function tryKey(k) {
 drawMap(); drawList(); checkKey(); liveMap();
 paintEx(); $("exBtn").onclick = () => askExplicit();
 $("restartAll").onclick = () => { window.scrollTo(0, 0); location.href = location.pathname + "?v=" + Date.now(); };
+/* bottom bar + MORE sheet */
+$("findBtn2").onclick = () => openFind();
+const moreOpen = on => { $("more").hidden = !on; };
+$("moreBtn").onclick = () => moreOpen(true);
+$("moreX").onclick = () => moreOpen(false);
+$("more").onclick = e => { if (e.target === $("more")) moreOpen(false); };
+$("keyBtn").onclick = () => { moreOpen(true); $("key").open = true; setTimeout(() => $("key").scrollIntoView({ block: "start", behavior: "smooth" }), 50); };
+/* the map is big when you open the app and shrinks to about half as you scroll down the artist list */
+(function () {
+  const lw = $("listwrap"), mb = $("mapbox"); let raf = 0, last = -1;
+  const apply = () => {
+    raf = 0; const vh = innerHeight, big = Math.round(vh * 0.44), small = Math.round(vh * 0.22);
+    const h = Math.max(small, big - lw.scrollTop * 0.7);
+    if (h === last) return; last = h; mb.style.setProperty("--mh", h + "px");
+    try { if (window.__map) window.__map.invalidateSize({ pan: false }); } catch (e) {}
+  };
+  lw.addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(apply); }, { passive: true });
+  addEventListener("resize", () => { last = -1; apply(); });
+  apply();
+})();
 /* start screen: every line's bullet hops, tap and the doors open */
 (function () {
   const seen = {}, b = [];
