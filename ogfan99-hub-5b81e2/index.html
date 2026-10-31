@@ -79,8 +79,14 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .pill.live { background: var(--green); color: #031; }
 .pill.demo { border: 1.5px solid var(--gold); color: var(--gold); }
 .pill.soon { border: 1.5px solid var(--line); color: var(--soft); }
-.pill.vault { background: #e8b84a; color: #1a1300; }
-.pill.vault svg { width: 9px; height: 10px; margin-right: 4px; vertical-align: -1px; }
+.pill.vault { background: #d62828; color: #fff; }
+.pill.vault path { stroke: #fff; } .pill.vault rect { fill: #fff; }
+.pill.ready { background: #e8b84a; color: #1a1300; }
+.pill.ready path { stroke: #1a1300; } .pill.ready rect { fill: #1a1300; }
+.legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 12px; font-size: .7rem; font-weight: 700; letter-spacing: .06em; color: #fff; margin: -2px 0 0; }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.pill.vault svg, .pill.ready svg { width: 9px; height: 10px; margin-right: 4px; vertical-align: -1px; }
 .go.locked { background: #1d2033; border: 2px solid var(--gold); color: var(--gold); }
 .vnote { color: var(--gold); font-weight: 600; }
 .row.soon { opacity: .6; }
@@ -171,6 +177,7 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 
   <h2>PICK YOUR BOROUGH</h2>
   <div class="boros" id="boros" role="tablist"></div>
+  <div class="legend" id="legend"></div>
   <div class="steel"><i class="rv tl"></i><i class="rv tr"></i><i class="rv bl"></i><i class="rv br"></i><ul class="tiles" id="list"></ul></div>
 
   <p class="foot">Every artist gets 9 songs and 99 questions.<br>Prove you're a <b>true fan</b>. Free to play.</p>
@@ -646,8 +653,9 @@ const isOwner = () => { try { return localStorage.getItem("ogfan99owner") === "1
 const boroOf = a => a.boro || "Brooklyn";
 const BOROS = ["Brooklyn", "Queens", "the Bronx", "Manhattan", "Staten Island", "Westchester", "Long Island", "New Jersey"];
 let boroTab = (() => { try { return localStorage.getItem("ogfan99boro") || "Brooklyn"; } catch (e) { return "Brooklyn"; } })();
-const pillHTML = a => (a.status === "demo" || a.status === "vault") ? '<span class="pill vault"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() && a.status === "demo" ? "OPEN" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>';
+const pillHTML = a => (a.status === "demo" || a.status === "vault") ? '<span class="pill ' + (isOwner() && a.status === "demo" ? "ready" : "vault") + '"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() && a.status === "demo" ? "READY" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>';
 function drawList() {
+  $("legend").innerHTML = '<span><i style="background:var(--green)"></i>LIVE</span>' + (isOwner() ? '<span><i style="background:#e8b84a"></i>READY · GAME BUILT</span>' : '') + '<span><i style="background:#d62828"></i>' + (isOwner() ? "VAULT · BEING BUILT" : "VAULT · OPENS WHEN THEY SIGN") + '</span>';
   const count = b => ARTISTS.filter(a => boroOf(a) === b).length;
   $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '<small>' + (count(b) ? count(b) + (count(b) > 1 ? " STOPS" : " STOP") : "SOON") + '</small></button>').join("");
   $("boros").querySelectorAll(".boro").forEach(t => t.onclick = () => { boroTab = t.dataset.b; try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); });
@@ -709,7 +717,7 @@ function liveMap() {
   const ll = [];
   ARTISTS.forEach((a, i) => {
     if (a.lat == null) return; ll.push([a.lat, a.lng]);
-    const c = L.circleMarker([a.lat, a.lng], { radius: 9, color: "#000", weight: 3, fillColor: "#fff", fillOpacity: 1 }).addTo(pins);
+    const c = L.circleMarker([a.lat, a.lng], { radius: 9, color: "#000", weight: 3, fillColor: a.status === "live" ? "#35b867" : a.status === "demo" && isOwner() ? "#e8b84a" : "#d62828", fillOpacity: 1 }).addTo(pins);
     c.bindTooltip(a.who, { permanent: true, direction: "right", offset: [10, 0], className: "alab" });
     c.on("click", () => openCard(i));
   });
