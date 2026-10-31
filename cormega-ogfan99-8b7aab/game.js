@@ -224,10 +224,10 @@ function rankUpScreen(k, rank) {
       (finale ? '<div class="rw"><b>99 Challenge</b> unlocked: beat it to become ' + CFG.topRank + '</div>'
               : '<div class="rw">Next row: songs stop <b>' + (STOPS[k + 1] === 2 ? "twice" : "three times") + '</b></div>') +
     '</div>' +
-    '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY EPISODE " + (k + 2)) + '</button>' +
+    '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : isLocked(k + 1) ? "BACK TO THE SONGS" : "PLAY EPISODE " + (k + 2)) + '</button>' +
     '<button class="next" id="mShare" type="button">Share my ' + rank + ' card</button></div>');
   rankConfetti();
-  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else introEpisode(k + 1); };
+  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else if (isLocked(k + 1)) toast(SIGN_LINE.toUpperCase()); else introEpisode(k + 1); };
   $("mShare").onclick = () => { closeModal(); $("shareBtn").click(); };
 }
 function rankConfetti() {
@@ -249,11 +249,11 @@ function episodeCleared(k, rankUp) {
     '<h3>EPISODE ' + (k + 1) + ' CLEARED</h3>' +
     '<div class="stars">' + starHTML(state.stars[k]) + '</div>' +
     '<div class="rw-line">+' + JUICE_EACH.toLocaleString() + ' JUICE · ' + (2 - (k % 3)) + ' more to rank up to ' + RANKS[Math.floor(k / 3)].toUpperCase() + '</div>' +
-    '<p style="margin:0">' + (finale ? "You're a " + RANKS[2] + " now. Beat the 99 Challenge to become " + CFG.topRank + "." : next ? "Episode " + (k + 2) + " unlocked: <b>" + esc(next.title) + "</b>" + (STOPS[k + 1] > STOPS[k] ? "<br>Heads up: songs in this row stop " + (STOPS[k + 1] === 2 ? "twice" : "three times") + "." : "") : "") + '</p>' +
-    '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY EPISODE " + (k + 2)) + '</button>' +
+    '<p style="margin:0">' + (finale ? "You're a " + RANKS[2] + " now. Beat the 99 Challenge to become " + CFG.topRank + "." : next && isLocked(k + 1) ? "That's every song open for now. The rest unlock when " + esc(CFG.name) + " signs." : next ? "Episode " + (k + 2) + " unlocked: <b>" + esc(next.title) + "</b>" + (STOPS[k + 1] > STOPS[k] ? "<br>Heads up: songs in this row stop " + (STOPS[k + 1] === 2 ? "twice" : "three times") + "." : "") : "") + '</p>' +
+    '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : isLocked(k + 1) ? "BACK TO THE SONGS" : "PLAY EPISODE " + (k + 2)) + '</button>' +
     (ready(EPISODES[k]) && !finale ? '<button class="next" id="mStay" type="button">Keep listening to this one</button>' : '') + '</div>',
     null);
-  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else introEpisode(k + 1); };
+  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else if (isLocked(k + 1)) toast(SIGN_LINE.toUpperCase()); else introEpisode(k + 1); };
   if ($("mStay")) $("mStay").onclick = () => { closeModal(); if (player) player.playVideo(); };
 }
 
