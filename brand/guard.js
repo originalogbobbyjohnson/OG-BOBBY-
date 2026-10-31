@@ -29,6 +29,16 @@
           a2.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>All artists<small style="margin-left:auto">back to the very beginning</small>';
           a2.onclick = function () { a.click(); };
           lb.after(r2, a2);
+          /* explicit lyrics switch (18+): the same setting as the app; games with an explicit version swap their songs */
+          var isEx = function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } };
+          var hasEx = !!(window.CFG && window.CFG.explicitSongs);
+          var x2 = document.createElement("button"); x2.type = "button"; x2.id = "ogMenuEx";
+          x2.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 8h6v2h-4v1.5h3.5v2H11V15h4v2H9z"/></svg>Explicit lyrics: ' + (isEx() ? "ON" : "OFF") + '<small style="margin-left:auto">' + (hasEx ? "18+ version" : "18+") + '</small>';
+          x2.onclick = function () {
+            if (isEx()) { try { localStorage.removeItem("ogfan99explicit"); } catch (e) {} location.reload(); return; }
+            if (window.confirm("Explicit lyrics are for 18 and older. Some songs will have curse words in the music; the questions always stay clean. Turn it on?")) { try { localStorage.setItem("ogfan99explicit", "1"); } catch (e) {} location.reload(); }
+          };
+          a2.after(x2);
         }
         return;
       }

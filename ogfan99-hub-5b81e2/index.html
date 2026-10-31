@@ -181,11 +181,18 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 
 .restartAll { position: relative; margin: 0 0 10px; display: flex; flex-direction: column; align-items: center; gap: 1px; background: #d62828; color: #fff; border: 2px solid #000; border-radius: 12px; padding: 7px 11px; font: 800 12px/1 Helvetica, Arial, sans-serif; letter-spacing: .06em; box-shadow: 0 3px 0 #000; cursor: pointer; }
 .restartAll small { font-size: 8px; letter-spacing: .14em; }
+
+.topbtns { display: flex; gap: 8px; margin: 0 0 10px; }
+.topbtns .restartAll { margin: 0; }
+.exBtn { background: #111 !important; color: #fff !important; border-color: #fff !important; }
+.exBtn.on { background: #f2c14e !important; color: #000 !important; border-color: #000 !important; }
+.ebadge { display: inline-grid; place-items: center; width: 17px; height: 17px; margin-left: 6px; border-radius: 3px; background: #fff; color: #000; font: 900 11px/1 Helvetica, Arial, sans-serif; vertical-align: middle; -webkit-text-stroke: 0; text-shadow: none; }
+.exnote { color: #f2c14e; font-weight: 700; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <meta name="copyright" content="© 2026 OG Bobby · OG FAN 99. All rights reserved.">
-<script src="/brand/guard.js?v=3"></script>
+<script src="/brand/guard.js?v=4"></script>
 </head>
 <body>
 <div class="start" id="start" role="button" tabindex="0" aria-label="Tap to start">
@@ -200,7 +207,7 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
   </div>
 </div>
 <main class="wrap">
-  <button class="restartAll" id="restartAll" type="button" aria-label="Back to the very beginning">&#8634; START OVER<small>BACK TO THE DOORS</small></button>
+  <div class="topbtns"><button class="restartAll" id="restartAll" type="button" aria-label="Back to the very beginning">&#8634; START OVER<small>BACK TO THE DOORS</small></button><button class="restartAll exBtn" id="exBtn" type="button"></button></div>
 
   <div class="demo">PRIVATE PREVIEW</div>
   <header class="logo">
@@ -874,7 +881,7 @@ function drawList() {
     sortBy === "line" ? lineKey(a).localeCompare(lineKey(b), undefined, { numeric: true }) : nm(a).localeCompare(nm(b)));
   $("list").innerHTML = here.length ? here.map(([a, i]) =>
     '<li><button class="tile" type="button" data-i="' + i + '"><span class="tl-top"><span class="bul">' + bullets(a) + '</span>' + pillHTML(a) + '</span>' +
-    '<span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + '</small>' + (isOwner() ? '<span class="tier ' + tierOf(a) + '">' + tierOf(a).toUpperCase() + '</span>' : '') + '</button></li>').join("")
+    '<span class="who" style="color:' + a.color + '">' + esc(a.who) + exBadge(a) + '</span><small>' + esc(a.hood) + '</small>' + (isOwner() ? '<span class="tier ' + tierOf(a) + '">' + tierOf(a).toUpperCase() + '</span>' : '') + '</button></li>').join("")
     : '<li><div class="tile soon"><span class="tl-top"><span class="bul"><i style="background:#2c3050">·</i></span><span class="pill soon">SOON</span></span><span class="who">' + esc(boroTab.replace("the ", "")) + '</span><small>Next stops on the line</small></div></li>';
   $("list").querySelectorAll("button.tile").forEach(b => b.onclick = () => openCard(+b.dataset.i));
 }
@@ -884,13 +891,14 @@ function openCard(i) {
   const a = ARTISTS[i], p = progress(a);
   $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button>' +
     '<div class="sign"><span>' + esc(a.stop) + '</span><span class="bul">' + bullets(a) + '</span></div>' +
-    '<div class="who" style="color:' + a.color + '">' + esc(a.who) + '</div>' +
+    '<div class="who" style="color:' + a.color + '">' + esc(a.who) + exBadge(a) + '</div>' +
     '<p>' + esc(a.hood) + (a.hood.includes(", ") ? "" : ", " + boroOf(a)) + ' · 9 songs · 99 questions</p>' +
     '<p>' + esc(a.line) + '</p>' +
     (p && p.stops ? '<p class="prog">Your progress: ' + p.stops + ' of 18 stops · ' + p.cleared + ' of 9 episodes</p>' : '') +
-    (a.status === "vault" ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">' + (isOwner() ? "GAME BEING BUILT" : "OPENS WHEN " + esc(a.who.toUpperCase()) + " SIGNS") + '</div>' : a.status === "demo" && !isOwner() ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">OPENS WHEN ' + esc(a.who.toUpperCase()) + ' SIGNS</div>' : a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
+    (a.ex === 2 && !EXPL() && a.status !== "vault" ? '<p class="exnote">This game uses explicit lyrics (18+).</p><button class="go" id="exGo" type="button" style="width:100%;border:0">TURN ON EXPLICIT TO PLAY</button>' : a.status === "vault" ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">' + (isOwner() ? "GAME BEING BUILT" : "OPENS WHEN " + esc(a.who.toUpperCase()) + " SIGNS") + '</div>' : a.status === "demo" && !isOwner() ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">OPENS WHEN ' + esc(a.who.toUpperCase()) + ' SIGNS</div>' : a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
   $("card").hidden = false; $("scrim").hidden = false;
   $("cx").onclick = closeCard;
+  if ($("exGo")) $("exGo").onclick = () => askExplicit(() => goArtist(i));
 }
 function closeCard() { $("card").hidden = true; $("scrim").hidden = true; }
 $("scrim").onclick = closeCard;
@@ -994,8 +1002,21 @@ function openFind() {
 function closeFind() { $("card").classList.remove("findcard"); closeCard(); }
 
 /* tap an artist's name or dot on the map: straight into their game when it's open to you, otherwise their station card */
+const EXPL = () => { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } };
+const exBadge = a => a.ex ? '<span class="ebadge" title="Explicit version">E</span>' : '';
+function paintEx() { const b = $("exBtn"); if (!b) return; b.classList.toggle("on", EXPL()); b.innerHTML = (EXPL() ? "EXPLICIT: ON" : "EXPLICIT: OFF") + "<small>" + (EXPL() ? "TAP TO TURN OFF" : "18+ · TAP TO TURN ON") + "</small>"; }
+function askExplicit(then) {
+  if (EXPL()) { try { localStorage.removeItem("ogfan99explicit"); } catch (e) {} paintEx(); drawList(); if (then) then(); return; }
+  $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="who" style="color:#f2c14e">EXPLICIT LYRICS</div>' +
+    '<p>For 18 and older. Some songs will have curse words in the music. The questions always stay clean.</p>' +
+    '<button class="go" id="exYes" type="button" style="width:100%;border:0">I\'M 18+ · TURN IT ON</button><button class="go" id="exNo" type="button" style="width:100%;border:0;background:#2c3050;margin-top:8px">NOT NOW</button>';
+  $("card").hidden = false; $("scrim").hidden = false;
+  $("cx").onclick = closeCard; $("exNo").onclick = closeCard;
+  $("exYes").onclick = () => { try { localStorage.setItem("ogfan99explicit", "1"); } catch (e) {} closeCard(); paintEx(); drawList(); if (then) then(); };
+}
 function goArtist(i) {
   const a = ARTISTS[i];
+  if (a.ex === 2 && !EXPL()) { openCard(i); return; }
   if (a.url && (a.status === "live" || (a.status === "demo" && isOwner()))) location.href = a.url + "?from=ogfan99";
   else openCard(i);
 }
@@ -1010,6 +1031,7 @@ async function tryKey(k) {
   el.addEventListener("click", async () => { taps++; clearTimeout(t); t = setTimeout(() => taps = 0, 1200);
     if (taps >= 3) { taps = 0; const k = prompt("Owner key"); if (k) alert(await tryKey(k) ? "Vault unlocked on this phone." : "That key didn't work."); } }); })();
 drawMap(); drawList(); checkKey(); liveMap();
+paintEx(); $("exBtn").onclick = () => askExplicit();
 $("restartAll").onclick = () => { window.scrollTo(0, 0); location.href = location.pathname + "?v=" + Date.now(); };
 /* start screen: every line's bullet hops, tap and the doors open */
 (function () {
