@@ -54,7 +54,7 @@ a { color: inherit; }
 /* live zoomable map */
 .map.live { height: 460px; background: #e9e6df; isolation: isolate; z-index: 0; }
 .map.live .leaflet-container { width: 100%; height: 100%; font-family: var(--body); background: #e9e6df; }
-.leaflet-tooltip.alab { background: #000; color: #fff; border: 2px solid #fff; border-radius: 8px; padding: 2px 7px; font-family: var(--tag); font-size: var(--labfs, 14px); box-shadow: 0 2px 0 #000; }
+.leaflet-tooltip.alab { cursor: pointer; pointer-events: auto; background: #000; color: #fff; border: 2px solid #fff; border-radius: 8px; padding: 2px 7px; font-family: var(--tag); font-size: var(--labfs, 14px); box-shadow: 0 2px 0 #000; }
 .leaflet-tooltip.alab:before { display: none; }
 .zhint { text-align: center; font-size: .72rem; color: var(--soft); margin: 6px 0 0; }
 .key { background: var(--panel); border: 1.5px solid var(--line); border-radius: 14px; padding: 10px 12px; }
@@ -723,6 +723,7 @@ async function checkKey() {
     const k = new URLSearchParams(location.search).get("k");
     if (k) { const h = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(k)))).map(b => b.toString(16).padStart(2, "0")).join("");
       if (h === "d4ed073225697637629c09e3b21e510f72fb8f27579c7621d5498738c8168376") localStorage.setItem("ogfan99owner", "1"); }
+    try { recolorPins(); } catch (e) {}
   } catch (e) {}
   drawList();
 }
@@ -751,8 +752,9 @@ function liveMap() {
   ARTISTS.forEach((a, i) => {
     if (a.lat == null) return; ll.push([a.lat, a.lng]);
     const c = L.circleMarker([a.lat, a.lng], { radius: 9, color: "#000", weight: 3, fillColor: a.status === "live" ? "#35b867" : a.status === "demo" && isOwner() ? "#e8b84a" : "#d62828", fillOpacity: 1 }).addTo(pins);
-    c.bindTooltip(a.who, { permanent: true, direction: "right", offset: [10, 0], className: "alab" });
-    c.on("click", () => openCard(i));
+    c.bindTooltip(a.who, { permanent: true, interactive: true, direction: "right", offset: [10, 0], className: "alab" });
+    c.on("click", () => goArtist(i));
+    c.__i = i; window.__pins = window.__pins || []; window.__pins.push(c);
   });
   m.fitBounds(ll, { padding: [30, 30] });
   const labels = () => { const z = m.getZoom();
@@ -765,6 +767,23 @@ function liveMap() {
   $("keyList").innerHTML = KEY.map(([k, ls, name]) => '<li><span class="sw" style="background:' + LINECOL[k] + '"></span><span class="bul">' +
     ls.map(l => '<i style="background:' + LINECOL[k] + ';color:' + (k === "N" ? "#000" : "#fff") + '">' + l + '</i>').join("") + '</span><span>' + name + '</span></li>').join("");
 }
+
+/* tap an artist's name or dot on the map: straight into their game when it's open to you, otherwise their station card */
+function goArtist(i) {
+  const a = ARTISTS[i];
+  if (a.url && (a.status === "live" || (a.status === "demo" && isOwner()))) location.href = a.url + "?from=ogfan99";
+  else openCard(i);
+}
+function recolorPins() { (window.__pins || []).forEach(c => { const a = ARTISTS[c.__i]; c.setStyle({ fillColor: a.status === "live" ? "#35b867" : a.status === "demo" && isOwner() ? "#e8b84a" : "#d62828" }); }); }
+async function tryKey(k) {
+  try { const h = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(String(k).trim())))).map(b => b.toString(16).padStart(2, "0")).join("");
+    if (h === "d4ed073225697637629c09e3b21e510f72fb8f27579c7621d5498738c8168376") { localStorage.setItem("ogfan99owner", "1"); drawList(); recolorPins(); return true; } } catch (e) {}
+  return false;
+}
+/* owner unlock from inside the app: tap PRIVATE PREVIEW three times and enter the key */
+(function () { let taps = 0, t = null; const el = document.querySelector(".demo"); if (!el) return; el.style.cursor = "pointer";
+  el.addEventListener("click", async () => { taps++; clearTimeout(t); t = setTimeout(() => taps = 0, 1200);
+    if (taps >= 3) { taps = 0; const k = prompt("Owner key"); if (k) alert(await tryKey(k) ? "Vault unlocked on this phone." : "That key didn't work."); } }); })();
 drawMap(); drawList(); checkKey(); liveMap();
 /* start screen: every line's bullet hops, tap and the doors open */
 (function () {
