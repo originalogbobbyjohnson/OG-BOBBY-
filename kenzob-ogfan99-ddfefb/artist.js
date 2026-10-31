@@ -103,25 +103,35 @@ window.CFG = {
   {
    "title": "Bump It",
    "id": "BWU2HqZR-pM",
-   "listen": true
+   "listen": true,
+   "cuts": [],
+   "qs": []
   },
   {
    "title": "Make It Lit",
    "id": "1oSl3_1qZPE",
-   "listen": true
+   "listen": true,
+   "cuts": [],
+   "qs": []
   },
   {
    "title": "BFFR",
    "id": "qpdfKEqTqZE",
-   "listen": true
+   "listen": true,
+   "cuts": [],
+   "qs": []
   },
   {
    "title": "No Tweakin",
-   "locked": true
+   "locked": true,
+   "cuts": [],
+   "qs": []
   },
   {
    "title": "The Realest",
-   "locked": true
+   "locked": true,
+   "cuts": [],
+   "qs": []
   }
  ],
  "preview": true
