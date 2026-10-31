@@ -23,8 +23,9 @@ const ICONS = {
   "Instagram": '<path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>',
   "YouTube": '<path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8zM10 15V9l5.2 3z"/>',
   "TikTok": '<path d="M16.6 3c.4 2 1.7 3.4 3.9 3.6v3a7 7 0 0 1-3.9-1.2v6.2a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.4V3z"/>',
+  "X": '<path d="M3 3h5l4.3 5.9L17.5 3H21l-7.1 8.1L21.5 21h-5l-4.7-6.4L6 21H2.5l7.6-8.6z"/>',
 };
-const SOCIALS = CFG.socials.map(s => Object.assign({ icon: ICONS[s.name] }, s));
+const SOCIALS = CFG.socials.map(s => Object.assign({ icon: ICONS[s.name] || ICONS[s.name === "Twitter" ? "X" : ""] }, s));
 
 /* Graffiti-style 9 with a straight stem, no hook */
 function nine() {
@@ -289,6 +290,7 @@ window.onYouTubeIframeAPIReady = () => { ytReady = true; if (pending != null) { 
 /* the stop meter under the video: fills up as the song gets to the next verse stop */
 function renderMeterBar(t) {
   const fill = $("smFill"), lbl = $("smLbl");
+  const sk = $("smSkip"); if (sk) sk.hidden = true;
   if (current < 0) { fill.style.width = "0%"; lbl.textContent = ""; $("stopMeter").classList.remove("hot", "done"); return; }
   const e = EPISODES[current], g = gatesOf(current), n = STOPS[current];
   $("stopMeter").classList.toggle("done", isCleared(current));
@@ -301,6 +303,7 @@ function renderMeterBar(t) {
   fill.style.width = pct + "%";
   const left = Math.max(0, Math.ceil(cut - t));
   $("stopMeter").classList.toggle("hot", left <= 5);
+  if (sk) sk.hidden = !(player && left > 3 && t >= from - 1);
   lbl.textContent = "STOP " + (g + 1) + " OF " + n + " IN " + fmt(left) + "  ·  " + fmt(Math.max(0, t)) + " / " + fmt(cut);
 }
 
@@ -322,6 +325,14 @@ function startWatch() {
     }
   }, 200);
 }
+/* confident fans can jump straight to the question at the end of this verse */
+document.addEventListener("click", ev => {
+  if (!ev.target.closest || !ev.target.closest("#smSkip")) return;
+  if (!player || current < 0 || atStop || isCleared(current)) return;
+  const e = EPISODES[current], cut = e.cuts[gatesOf(current)];
+  if (cut == null) return;
+  player.seekTo(Math.max(0, cut - 0.3), true); if (player.playVideo) player.playVideo();
+});
 /* no skipping ahead past a stop that hasn't been answered */
 function guardSeek() {
   if (!player || current < 0 || isCleared(current)) return;

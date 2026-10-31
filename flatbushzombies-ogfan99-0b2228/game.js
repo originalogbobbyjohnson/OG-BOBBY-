@@ -23,8 +23,9 @@ const ICONS = {
   "Instagram": '<path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>',
   "YouTube": '<path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8zM10 15V9l5.2 3z"/>',
   "TikTok": '<path d="M16.6 3c.4 2 1.7 3.4 3.9 3.6v3a7 7 0 0 1-3.9-1.2v6.2a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.4V3z"/>',
+  "X": '<path d="M3 3h5l4.3 5.9L17.5 3H21l-7.1 8.1L21.5 21h-5l-4.7-6.4L6 21H2.5l7.6-8.6z"/>',
 };
-const SOCIALS = CFG.socials.map(s => Object.assign({ icon: ICONS[s.name] }, s));
+const SOCIALS = CFG.socials.map(s => Object.assign({ icon: ICONS[s.name] || ICONS[s.name === "Twitter" ? "X" : ""] }, s));
 
 /* Graffiti-style 9 with a straight stem, no hook */
 function nine() {
@@ -44,7 +45,9 @@ const save = () => store.set(state);
 
 const gatesOf = k => state.gates[k] || 0;                      // stops passed in episode k
 const isCleared = k => !!state.cleared[k];
-const isOpen = k => k === 0 || isCleared(k - 1);               // song 1 free, each cleared episode opens the next
+const isLocked = k => !!(EPISODES[k] && EPISODES[k].locked);   // pitch demo: song waits for the artist's timed lyrics
+const SIGN_LINE = "Unlocks when " + CFG.name + " signs";
+const isOpen = k => !isLocked(k) && (k === 0 || isCleared(k - 1));               // song 1 free, each cleared episode opens the next
 const stopsPassed = () => Object.keys(state.gates).reduce((n, k) => n + Math.min(state.gates[k], STOPS[k]), 0);
 const rowsDone = () => ROWS.filter(r => r.every(isCleared)).length;
 const allDone = () => EPISODES.every((e, k) => isCleared(k));
@@ -100,7 +103,7 @@ function episodeInfo(k) {
   const e = EPISODES[k], row = Math.floor(k / 3), open = isOpen(k), done = isCleared(k), n = STOPS[k];
   const status = done ? "Cleared · " + starHTML(state.stars[k])
     : gatesOf(k) ? "In progress · stop " + (gatesOf(k) + 1) + " of " + n
-    : open ? "Ready to play" : "Locked · clear Episode " + k + " first";
+    : open ? "Ready to play" : isLocked(k) ? SIGN_LINE : "Locked · clear Episode " + k + " first";
   showModal('<div class="k">EPISODE ' + (k + 1) + ' · ROW ' + (row + 1) + ' · ' + RANKS[row].toUpperCase() + '</div>' +
     '<div class="ei-title"></div>' +
     '<div class="ei-stops">' + Array.from({ length: n }, (_, i) => '<i class="' + (i < gatesOf(k) || done ? "got" : "") + '">' + (i + 1) + '</i>').join("") + '<span>' + n + (n > 1 ? " verse stops" : " verse stop") + '</span></div>' +
@@ -117,7 +120,7 @@ function renderSongs() {
     const open = isOpen(k);
     const stops = STOPS[k] + (STOPS[k] > 1 ? " stops" : " stop");
     li.innerHTML = '<span class="n">' + (k + 1) + '</span><span class="t"></span><span class="s' + (isCleared(k) ? " open" : "") + '">' +
-      (isCleared(k) ? "Cleared" : open ? stops : "Locked") + '</span>';
+      (isCleared(k) ? "Cleared" : open ? stops : isLocked(k) ? "Soon" : "Locked") + '</span>';
     const t = li.querySelector(".t");
     if (open) { const b = document.createElement("button"); b.type = "button"; b.textContent = e.title; b.onclick = () => (k === current ? playSong(k) : introEpisode(k)); t.append(b); }
     else t.textContent = e.title;
@@ -222,10 +225,10 @@ function rankUpScreen(k, rank) {
       (finale ? '<div class="rw"><b>99 Challenge</b> unlocked: beat it to become ' + CFG.topRank + '</div>'
               : '<div class="rw">Next row: songs stop <b>' + (STOPS[k + 1] === 2 ? "twice" : "three times") + '</b></div>') +
     '</div>' +
-    '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY EPISODE " + (k + 2)) + '</button>' +
+    '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : isLocked(k + 1) ? "BACK TO THE SONGS" : "PLAY EPISODE " + (k + 2)) + '</button>' +
     '<button class="next" id="mShare" type="button">Share my ' + rank + ' card</button></div>');
   rankConfetti();
-  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else introEpisode(k + 1); };
+  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else if (isLocked(k + 1)) toast(SIGN_LINE.toUpperCase()); else introEpisode(k + 1); };
   $("mShare").onclick = () => { closeModal(); $("shareBtn").click(); };
 }
 function rankConfetti() {
@@ -247,11 +250,11 @@ function episodeCleared(k, rankUp) {
     '<h3>EPISODE ' + (k + 1) + ' CLEARED</h3>' +
     '<div class="stars">' + starHTML(state.stars[k]) + '</div>' +
     '<div class="rw-line">+' + JUICE_EACH.toLocaleString() + ' JUICE · ' + (2 - (k % 3)) + ' more to rank up to ' + RANKS[Math.floor(k / 3)].toUpperCase() + '</div>' +
-    '<p style="margin:0">' + (finale ? "You're a " + RANKS[2] + " now. Beat the 99 Challenge to become " + CFG.topRank + "." : next ? "Episode " + (k + 2) + " unlocked: <b>" + esc(next.title) + "</b>" + (STOPS[k + 1] > STOPS[k] ? "<br>Heads up: songs in this row stop " + (STOPS[k + 1] === 2 ? "twice" : "three times") + "." : "") : "") + '</p>' +
-    '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY EPISODE " + (k + 2)) + '</button>' +
+    '<p style="margin:0">' + (finale ? "You're a " + RANKS[2] + " now. Beat the 99 Challenge to become " + CFG.topRank + "." : next && isLocked(k + 1) ? "That's every song open for now. The rest unlock when " + esc(CFG.name) + " signs." : next ? "Episode " + (k + 2) + " unlocked: <b>" + esc(next.title) + "</b>" + (STOPS[k + 1] > STOPS[k] ? "<br>Heads up: songs in this row stop " + (STOPS[k + 1] === 2 ? "twice" : "three times") + "." : "") : "") + '</p>' +
+    '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : isLocked(k + 1) ? "BACK TO THE SONGS" : "PLAY EPISODE " + (k + 2)) + '</button>' +
     (ready(EPISODES[k]) && !finale ? '<button class="next" id="mStay" type="button">Keep listening to this one</button>' : '') + '</div>',
     null);
-  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else introEpisode(k + 1); };
+  $("mGo").onclick = () => { closeModal(); if (finale) startChallenge(false); else if (isLocked(k + 1)) toast(SIGN_LINE.toUpperCase()); else introEpisode(k + 1); };
   if ($("mStay")) $("mStay").onclick = () => { closeModal(); if (player) player.playVideo(); };
 }
 
@@ -287,6 +290,7 @@ window.onYouTubeIframeAPIReady = () => { ytReady = true; if (pending != null) { 
 /* the stop meter under the video: fills up as the song gets to the next verse stop */
 function renderMeterBar(t) {
   const fill = $("smFill"), lbl = $("smLbl");
+  const sk = $("smSkip"); if (sk) sk.hidden = true;
   if (current < 0) { fill.style.width = "0%"; lbl.textContent = ""; $("stopMeter").classList.remove("hot", "done"); return; }
   const e = EPISODES[current], g = gatesOf(current), n = STOPS[current];
   $("stopMeter").classList.toggle("done", isCleared(current));
@@ -299,6 +303,7 @@ function renderMeterBar(t) {
   fill.style.width = pct + "%";
   const left = Math.max(0, Math.ceil(cut - t));
   $("stopMeter").classList.toggle("hot", left <= 5);
+  if (sk) sk.hidden = !(player && left > 3 && t >= from - 1);
   lbl.textContent = "STOP " + (g + 1) + " OF " + n + " IN " + fmt(left) + "  ·  " + fmt(Math.max(0, t)) + " / " + fmt(cut);
 }
 
@@ -320,6 +325,14 @@ function startWatch() {
     }
   }, 200);
 }
+/* confident fans can jump straight to the question at the end of this verse */
+document.addEventListener("click", ev => {
+  if (!ev.target.closest || !ev.target.closest("#smSkip")) return;
+  if (!player || current < 0 || atStop || isCleared(current)) return;
+  const e = EPISODES[current], cut = e.cuts[gatesOf(current)];
+  if (cut == null) return;
+  player.seekTo(Math.max(0, cut - 0.3), true); if (player.playVideo) player.playVideo();
+});
 /* no skipping ahead past a stop that hasn't been answered */
 function guardSeek() {
   if (!player || current < 0 || isCleared(current)) return;
@@ -329,6 +342,7 @@ function guardSeek() {
 
 /* title card before an episode starts: Episode N, the song, how many stops, then PLAY */
 function introEpisode(k) {
+  if (isLocked(k)) { toast(SIGN_LINE.toUpperCase()); return; }
   if (!isOpen(k)) { toast("CLEAR EPISODE " + k + " FIRST"); return; }
   if (player && player.pauseVideo) player.pauseVideo();
   $("doors").classList.remove("open");

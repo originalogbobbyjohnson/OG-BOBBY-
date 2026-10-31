@@ -11,6 +11,10 @@
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <title>OG FAN 99</title>
+<meta property="og:title" content="OG FAN 99">
+<meta property="og:description" content="New York's independent artists. 9 songs. 99 questions. Prove you're a true fan.">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/ogfan99-hub-5b81e2/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap">
 <style>
@@ -81,6 +85,48 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .vnote { color: var(--gold); font-weight: 600; }
 .row.soon { opacity: .6; }
 
+
+/* ---------- start screen: subway doors that open into the game ---------- */
+.start { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; overflow: hidden; cursor: pointer; }
+.st-door { position: absolute; top: 0; bottom: 0; width: 50%; background: linear-gradient(90deg, #8d96a1, #d7dce2 30%, #aab2bc 60%, #e4e8ec 85%, #9aa3ad); transition: transform .7s cubic-bezier(.6,0,.2,1); }
+.st-door.l { left: 0; border-right: 6px solid #1a1a1a; }
+.st-door.r { right: 0; border-left: 6px solid #1a1a1a; }
+.st-door i { position: absolute; top: 14%; width: 56%; height: 34%; background: linear-gradient(160deg, #1b2a44, #0b0c14 70%); border: 7px solid #2a2f37; border-radius: 14px; box-shadow: inset 0 0 0 2px #000; }
+.st-door.l i { right: 14%; } .st-door.r i { left: 14%; }
+.st-door b { position: absolute; bottom: 12%; width: 14px; height: 70px; background: #2a2f37; border-radius: 7px; }
+.st-door.l b { right: 22px; } .st-door.r b { left: 22px; }
+.st-in { position: relative; z-index: 2; text-align: center; display: grid; gap: 14px; justify-items: center; padding: 22px 26px; background: rgba(8,9,16,.92); border: 3px solid #000; border-radius: 22px; box-shadow: 0 0 0 3px #c9cfd6, 0 18px 40px rgba(0,0,0,.6); transition: opacity .25s, transform .25s; width: min(86vw, 360px); }
+.st-sign { background: #111; border-top: 5px solid #fff; border-radius: 4px; padding: 7px 12px; font: 700 .9rem Helvetica, Arial, sans-serif; color: #fff; width: 100%; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
+.st-logo { font-family: var(--tag); font-size: 3.6rem; line-height: .9; color: #fff; -webkit-text-stroke: 2px #000; text-shadow: 4px 4px 0 #000; transform: rotate(-4deg); }
+.st-logo b { color: var(--red); font-weight: 400; }
+.st-sub { margin: 0; font-weight: 700; letter-spacing: .18em; font-size: .72rem; color: var(--gold); }
+.st-buls { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; max-width: 280px; }
+.st-buls i { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font: 700 .78rem/1 Helvetica, Arial, sans-serif; font-style: normal; animation: st-hop 1.6s ease-in-out infinite; }
+@keyframes st-hop { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.st-go { background: var(--red); color: #fff; border: 0; border-radius: 14px; padding: 14px 26px; font-family: var(--display); letter-spacing: .12em; font-size: 1.35rem; box-shadow: 0 5px 0 #000; animation: st-blink 1.2s steps(2, start) infinite; }
+@keyframes st-blink { 50% { filter: brightness(1.35); } }
+.st-small { font-size: .66rem; letter-spacing: .2em; font-weight: 700; color: var(--red); }
+.start.open .st-in { opacity: 0; transform: scale(.92); }
+.start.open .st-door.l { transform: translateX(-102%); }
+.start.open .st-door.r { transform: translateX(102%); }
+
+/* ---------- boroughs: steel sign tabs + a framed board of stations ---------- */
+.boros { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.boro { background: #111; color: #fff; border: 0; border-top: 4px solid #fff; border-radius: 6px; padding: 9px 2px 7px; font: 700 .7rem/1.1 Helvetica, Arial, sans-serif; letter-spacing: .04em; box-shadow: 0 0 0 2px #3a3f48; }
+.boro small { display: block; margin-top: 3px; color: var(--gold); font-size: .62rem; }
+.boro[aria-selected="true"] { background: var(--gold); color: #000; border-top-color: #000; }
+.boro[aria-selected="true"] small { color: #000; }
+.steel { position: relative; padding: 14px; border-radius: 16px; background: linear-gradient(135deg, #b9c0c8, #eef1f4 22%, #9aa3ad 45%, #dfe3e7 70%, #8d96a1); box-shadow: inset 0 0 0 2px #6b737d, 0 6px 0 #000; }
+.steel .rv { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #fff, #6b737d 70%); }
+.rv.tl { top: 5px; left: 5px; } .rv.tr { top: 5px; right: 5px; } .rv.bl { bottom: 5px; left: 5px; } .rv.br { bottom: 5px; right: 5px; }
+.tiles { list-style: none; margin: 0; padding: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; background: #0d0f1a; border-radius: 10px; box-shadow: inset 0 0 0 2px #000; min-height: 120px; }
+.tile { width: 100%; height: 100%; display: grid; gap: 6px; align-content: start; text-align: left; background: var(--panel); border: 1.5px solid var(--line); border-radius: 12px; padding: 10px; }
+.tile .who { font-family: var(--tag); font-size: 1.15rem; line-height: 1; -webkit-text-stroke: .7px #000; overflow-wrap: anywhere; }
+.tile small { font-size: .72rem; color: var(--soft); }
+.tile .tl-top { display: flex; justify-content: space-between; align-items: center; gap: 4px; }
+.tile .bul i { width: 19px; height: 19px; font-size: .68rem; }
+.tile.soon { opacity: .7; }
+
 /* station card */
 .scrim { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 10; }
 .card { position: fixed; left: 50%; bottom: max(14px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 24px), 440px); z-index: 11; padding-top: 40px !important;
@@ -101,6 +147,17 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 <script src="/brand/guard.js"></script>
 </head>
 <body>
+<div class="start" id="start" role="button" tabindex="0" aria-label="Tap to start">
+  <div class="st-door l"><i></i><b></b></div><div class="st-door r"><i></i><b></b></div>
+  <div class="st-in">
+    <div class="st-sign"><span>NOW BOARDING</span><span>5 BOROUGHS</span></div>
+    <div class="st-logo">OG FAN <b>99</b></div>
+    <p class="st-sub">NEW YORK'S INDEPENDENT ARTISTS</p>
+    <div class="st-buls" id="stBuls"></div>
+    <button class="st-go" type="button">TAP TO START</button>
+    <div class="st-small">PRIVATE PREVIEW</div>
+  </div>
+</div>
 <main class="wrap">
   <div class="demo">PRIVATE PREVIEW</div>
   <header class="logo">
@@ -112,8 +169,9 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
   <p class="zhint" id="zhint" hidden>Pinch or use + / − to zoom. Tap a station to open it.</p>
   <details class="key" id="key" hidden><summary>SUBWAY KEY</summary><ul id="keyList"></ul></details>
 
-  <h2>PICK A STATION</h2>
-  <ul class="list" id="list"></ul>
+  <h2>PICK YOUR BOROUGH</h2>
+  <div class="boros" id="boros" role="tablist"></div>
+  <div class="steel"><i class="rv tl"></i><i class="rv tr"></i><i class="rv bl"></i><i class="rv br"></i><ul class="tiles" id="list"></ul></div>
 
   <p class="foot">Every artist gets 9 songs and 99 questions.<br>Prove you're a <b>true fan</b>. Free to play.</p>
 </main>
@@ -371,13 +429,19 @@ function drawMap() {
 /* ---------- the list under the map ---------- */
 const isOwner = () => { try { return localStorage.getItem("ogfan99owner") === "1"; } catch (e) { return false; } };
 const boroOf = a => a.boro || "Brooklyn";
+const BOROS = ["Brooklyn", "Queens", "the Bronx", "Manhattan"];
+let boroTab = (() => { try { return localStorage.getItem("ogfan99boro") || "Brooklyn"; } catch (e) { return "Brooklyn"; } })();
+const pillHTML = a => a.status === "demo" ? '<span class="pill vault"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() ? "OPEN" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>';
 function drawList() {
-  $("list").innerHTML = ARTISTS.map((a, i) =>
-    '<li><button class="row" type="button" data-i="' + i + '"><span class="bul">' + bullets(a) + '</span>' +
-    '<span><span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + (a.hood.includes(", ") ? "" : ", " + boroOf(a)) + '</small></span>' +
-    (a.status === "demo" ? '<span class="pill vault"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() ? "OPEN" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>') + '</button></li>').join("") +
-    SOON.map(b => '<li><div class="row soon"><span class="bul"><i style="background:#2c3050">·</i></span><span><span class="who">' + b + '</span><small>Next stops</small></span><span class="pill soon">SOON</span></div></li>').join("");
-  $("list").querySelectorAll("button.row").forEach(b => b.onclick = () => openCard(+b.dataset.i));
+  const count = b => ARTISTS.filter(a => boroOf(a) === b).length;
+  $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + b.replace("the ", "").toUpperCase() + '<small>' + (count(b) ? count(b) + (count(b) > 1 ? " STOPS" : " STOP") : "SOON") + '</small></button>').join("");
+  $("boros").querySelectorAll(".boro").forEach(t => t.onclick = () => { boroTab = t.dataset.b; try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); });
+  const here = ARTISTS.map((a, i) => [a, i]).filter(([a]) => boroOf(a) === boroTab);
+  $("list").innerHTML = here.length ? here.map(([a, i]) =>
+    '<li><button class="tile" type="button" data-i="' + i + '"><span class="tl-top"><span class="bul">' + bullets(a) + '</span>' + pillHTML(a) + '</span>' +
+    '<span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + '</small></button></li>').join("")
+    : '<li><div class="tile soon"><span class="tl-top"><span class="bul"><i style="background:#2c3050">·</i></span><span class="pill soon">SOON</span></span><span class="who">' + esc(boroTab.replace("the ", "")) + '</span><small>Next stops on the line</small></div></li>';
+  $("list").querySelectorAll("button.tile").forEach(b => b.onclick = () => openCard(+b.dataset.i));
 }
 
 /* ---------- station card: who, where, progress, PLAY ---------- */
@@ -442,6 +506,19 @@ function liveMap() {
     ls.map(l => '<i style="background:' + LINECOL[k] + ';color:' + (k === "N" ? "#000" : "#fff") + '">' + l + '</i>').join("") + '</span><span>' + name + '</span></li>').join("");
 }
 drawMap(); drawList(); checkKey(); liveMap();
+/* start screen: every line's bullet hops, tap and the doors open */
+(function () {
+  const seen = {}, b = [];
+  ARTISTS.forEach(a => a.trains.forEach(t => { if (!seen[t[0]]) { seen[t[0]] = 1; b.push(t); } }));
+  $("stBuls").innerHTML = b.map((t, i) => '<i style="background:' + t[1] + ';color:' + (t[2] ? "#000" : "#fff") + ';animation-delay:' + (i * .08) + 's">' + t[0] + '</i>').join("");
+  const go = () => {
+    const st = $("start"); if (st.classList.contains("open")) return;
+    try { const ac = new (window.AudioContext || window.webkitAudioContext)(); [[659, 0], [523, .32]].forEach(([f, d]) => { const o = ac.createOscillator(), g = ac.createGain(); o.frequency.value = f; o.type = "sine"; g.gain.setValueAtTime(.0001, ac.currentTime + d); g.gain.exponentialRampToValueAtTime(.25, ac.currentTime + d + .02); g.gain.exponentialRampToValueAtTime(.0001, ac.currentTime + d + .6); o.connect(g).connect(ac.destination); o.start(ac.currentTime + d); o.stop(ac.currentTime + d + .65); }); } catch (e) {}
+    st.classList.add("open"); setTimeout(() => st.remove(), 800);
+  };
+  $("start").addEventListener("click", go);
+  $("start").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(); });
+})();
 </script>
 </body>
 </html>

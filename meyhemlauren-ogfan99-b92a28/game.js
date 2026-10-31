@@ -290,6 +290,7 @@ window.onYouTubeIframeAPIReady = () => { ytReady = true; if (pending != null) { 
 /* the stop meter under the video: fills up as the song gets to the next verse stop */
 function renderMeterBar(t) {
   const fill = $("smFill"), lbl = $("smLbl");
+  const sk = $("smSkip"); if (sk) sk.hidden = true;
   if (current < 0) { fill.style.width = "0%"; lbl.textContent = ""; $("stopMeter").classList.remove("hot", "done"); return; }
   const e = EPISODES[current], g = gatesOf(current), n = STOPS[current];
   $("stopMeter").classList.toggle("done", isCleared(current));
@@ -302,6 +303,7 @@ function renderMeterBar(t) {
   fill.style.width = pct + "%";
   const left = Math.max(0, Math.ceil(cut - t));
   $("stopMeter").classList.toggle("hot", left <= 5);
+  if (sk) sk.hidden = !(player && left > 3 && t >= from - 1);
   lbl.textContent = "STOP " + (g + 1) + " OF " + n + " IN " + fmt(left) + "  ·  " + fmt(Math.max(0, t)) + " / " + fmt(cut);
 }
 
@@ -323,6 +325,14 @@ function startWatch() {
     }
   }, 200);
 }
+/* confident fans can jump straight to the question at the end of this verse */
+document.addEventListener("click", ev => {
+  if (!ev.target.closest || !ev.target.closest("#smSkip")) return;
+  if (!player || current < 0 || atStop || isCleared(current)) return;
+  const e = EPISODES[current], cut = e.cuts[gatesOf(current)];
+  if (cut == null) return;
+  player.seekTo(Math.max(0, cut - 0.3), true); if (player.playVideo) player.playVideo();
+});
 /* no skipping ahead past a stop that hasn't been answered */
 function guardSeek() {
   if (!player || current < 0 || isCleared(current)) return;
