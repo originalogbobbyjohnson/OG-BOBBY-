@@ -179,7 +179,7 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .find li b { display: block; font-size: 1rem; } .find li small { color: #fff; opacity: .85; font-size: .78rem; }
 .find li .mi { color: var(--gold); font-weight: 800; font-size: .8rem; white-space: nowrap; }
 
-.restartAll { position: absolute; z-index: 1500; top: calc(env(safe-area-inset-top, 0px) + 10px); left: 10px; display: flex; flex-direction: column; align-items: center; gap: 1px; background: #d62828; color: #fff; border: 2px solid #000; border-radius: 12px; padding: 7px 11px; font: 800 12px/1 Helvetica, Arial, sans-serif; letter-spacing: .06em; box-shadow: 0 3px 0 #000; cursor: pointer; }
+.restartAll { position: relative; margin: 0 0 10px; display: flex; flex-direction: column; align-items: center; gap: 1px; background: #d62828; color: #fff; border: 2px solid #000; border-radius: 12px; padding: 7px 11px; font: 800 12px/1 Helvetica, Arial, sans-serif; letter-spacing: .06em; box-shadow: 0 3px 0 #000; cursor: pointer; }
 .restartAll small { font-size: 8px; letter-spacing: .14em; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
@@ -199,8 +199,9 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
     <div class="st-small">PRIVATE PREVIEW</div>
   </div>
 </div>
-<button class="restartAll" id="restartAll" type="button" aria-label="Back to the very beginning">&#8634; START OVER<small>BACK TO THE DOORS</small></button>
 <main class="wrap">
+  <button class="restartAll" id="restartAll" type="button" aria-label="Back to the very beginning">&#8634; START OVER<small>BACK TO THE DOORS</small></button>
+
   <div class="demo">PRIVATE PREVIEW</div>
   <header class="logo">
     <div class="og">OG FAN <b>99</b></div>
