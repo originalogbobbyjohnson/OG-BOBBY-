@@ -52,7 +52,7 @@ a { color: inherit; }
 .glow { animation: pulse 2s ease-in-out infinite; }
 
 /* live zoomable map */
-.map.live { height: 460px; background: #e9e6df; }
+.map.live { height: 460px; background: #e9e6df; isolation: isolate; z-index: 0; }
 .map.live .leaflet-container { width: 100%; height: 100%; font-family: var(--body); background: #e9e6df; }
 .leaflet-tooltip.alab { background: #000; color: #fff; border: 2px solid #fff; border-radius: 8px; padding: 2px 7px; font-family: var(--tag); font-size: 14px; box-shadow: 0 2px 0 #000; }
 .leaflet-tooltip.alab:before { display: none; }
@@ -87,7 +87,7 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 
 
 /* ---------- start screen: subway doors that open into the game ---------- */
-.start { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; overflow: hidden; cursor: pointer; }
+.start { position: fixed; inset: 0; z-index: 3000; display: grid; place-items: center; overflow: hidden; cursor: pointer; }
 .st-door { position: absolute; top: 0; bottom: 0; width: 50%; background: linear-gradient(90deg, #8d96a1, #d7dce2 30%, #aab2bc 60%, #e4e8ec 85%, #9aa3ad); transition: transform .7s cubic-bezier(.6,0,.2,1); }
 .st-door.l { left: 0; border-right: 6px solid #1a1a1a; }
 .st-door.r { right: 0; border-left: 6px solid #1a1a1a; }
@@ -128,8 +128,8 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .tile.soon { opacity: .7; }
 
 /* station card */
-.scrim { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 10; }
-.card { position: fixed; left: 50%; bottom: max(14px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 24px), 440px); z-index: 11; padding-top: 40px !important;
+.scrim { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 2000; }
+.card { position: fixed; left: 50%; bottom: max(14px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 24px), 440px); z-index: 2001; padding-top: 40px !important;
   background: var(--panel); border: 2px solid var(--line); border-radius: 18px; padding: 18px; display: grid; gap: 10px; text-align: center; animation: up .25s ease-out; }
 @keyframes up { from { transform: translate(-50%, 30px); opacity: 0; } }
 .card .sign { background: #111; border-top: 4px solid #fff; border-radius: 4px; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; font: 700 1rem Helvetica, Arial, sans-serif; text-align: left; }
