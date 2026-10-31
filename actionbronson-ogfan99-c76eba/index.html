@@ -213,8 +213,8 @@ a { color: var(--fg); }
 .mcard img { width: 100%; border-radius: 12px; border: 2px solid #000; }
 
 /* rank-up badge */
-.promo { position: fixed; left: 50%; top: 18%; transform: translateX(-50%) scale(.6); opacity: 0; z-index: 70; background: #000; border: 3px solid var(--gold); border-radius: 18px; padding: 16px 26px; text-align: center; transition: .35s cubic-bezier(.2,1.4,.4,1); }
-.promo.on { opacity: 1; transform: translateX(-50%) scale(1); }
+.promo { position: fixed; left: 50%; top: 18%; transform: translateX(-50%) scale(.6); opacity: 0; pointer-events: none; z-index: 70; background: #000; border: 3px solid var(--gold); border-radius: 18px; padding: 16px 26px; text-align: center; transition: .35s cubic-bezier(.2,1.4,.4,1); }
+.promo.on { opacity: 1; transform: translateX(-50%) scale(1); pointer-events: auto; }
 .promo .pk { font-weight: 700; letter-spacing: .3em; font-size: .75rem; color: var(--gold); }
 .promo .pn { font-family: var(--display); font-size: 2rem; letter-spacing: .06em; }
 .promo .ps { font-family: var(--tag); color: var(--cyan); font-size: 1.1rem; }
