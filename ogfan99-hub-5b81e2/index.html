@@ -59,6 +59,10 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .pill.live { background: var(--green); color: #031; }
 .pill.demo { border: 1.5px solid var(--gold); color: var(--gold); }
 .pill.soon { border: 1.5px solid var(--line); color: var(--soft); }
+.pill.vault { background: #e8b84a; color: #1a1300; }
+.pill.vault svg { width: 9px; height: 10px; margin-right: 4px; vertical-align: -1px; }
+.go.locked { background: #1d2033; border: 2px solid var(--gold); color: var(--gold); }
+.vnote { color: var(--gold); font-weight: 600; }
 .row.soon { opacity: .6; }
 
 /* station card */
@@ -99,7 +103,7 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 
 <script>
 /* Every artist on the app. Add one line here per new artist.
-   status: "live" = public game · "demo" = private pitch demo (hidden once the app goes public) · "soon" = coming */
+   status: "live" = public game · "demo" = built, locked in the Vault until the artist signs (owner key opens it) · "soon" = coming */
 const ARTISTS = [
   { who: "OG Bobby", hood: "Bay Ridge", stop: "Bay Ridge Av", trains: [["R", "#fccc0a", 1]], color: "#ffffff",
     url: "../", status: "live", line: "The man who started it all. Brooklyn story raps, '99." , save: null, lat: 40.6346, lng: -74.0235 },
@@ -115,9 +119,16 @@ const ARTISTS = [
   { who: "Papoose", hood: "Bed-Stuy", stop: "Nostrand Av", trains: [["A", "#0039a6"], ["C", "#0039a6"]], color: "#fff",
     url: "../papoose-ogfan99-6ae3a3/", status: "demo", line: "Bed-Stuy legend. 2.7M on Instagram.", save: "ogfan99papoose1", lat: 40.6804, lng: -73.9503 },
   { who: "Flatbush Zombies", hood: "Flatbush", stop: "Newkirk Plaza", trains: [["B", "#ff6319"], ["Q", "#fccc0a", 1]], color: "#fff",
-    url: "../flatbushzombies-ogfan99-0b2228/", status: "demo", line: "The Glorious Dead. 449K on Instagram.", save: "ogfan99flatbushzombies1", lat: 40.6350, lng: -73.9629 }
+    url: "../flatbushzombies-ogfan99-0b2228/", status: "demo", line: "The Glorious Dead. 449K on Instagram.", save: "ogfan99flatbushzombies1", lat: 40.6350, lng: -73.9629 },
+  /* Queens */
+  { who: "Cormega", hood: "Queensbridge", boro: "Queens", stop: "21 St–Queensbridge", trains: [["F", "#ff6319"]], color: "#f2c14e",
+    url: "../cormega-ogfan99-8b7aab/", status: "demo", line: "The Realness. Legal Hustle. Queensbridge storyteller.", save: "ogfan99cormega1", lat: 40.7540, lng: -73.9428 },
+  { who: "Lloyd Banks", hood: "South Jamaica", boro: "Queens", stop: "Jamaica Center", trains: [["E", "#0039a6"], ["J", "#996633"], ["Z", "#996633"]], color: "#4aa8ff",
+    url: "../lloydbanks-ogfan99-5155da/", status: "demo", line: "The Punchline King. Hunger for more.", save: "ogfan99lloydbanks1", lat: 40.7022, lng: -73.8011 },
+  { who: "Action Bronson", hood: "Flushing", boro: "Queens", stop: "Flushing–Main St", trains: [["7", "#b933ad"]], color: "#ffd23f",
+    url: "../actionbronson-ogfan99-c76eba/", status: "demo", line: "Bam Bam. Chef turned MC. Baklava for everybody.", save: "ogfan99actionbronson1", lat: 40.7596, lng: -73.8301 }
 ];
-const SOON = ["Queens", "Manhattan"];
+const SOON = ["Manhattan"];
 
 const $ = id => document.getElementById(id);
 const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -323,11 +334,13 @@ function drawMap() {
 }
 
 /* ---------- the list under the map ---------- */
+const isOwner = () => { try { return localStorage.getItem("ogfan99owner") === "1"; } catch (e) { return false; } };
+const boroOf = a => a.boro || "Brooklyn";
 function drawList() {
   $("list").innerHTML = ARTISTS.map((a, i) =>
     '<li><button class="row" type="button" data-i="' + i + '"><span class="bul">' + bullets(a) + '</span>' +
-    '<span><span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + (a.hood.includes("Bronx") ? "" : ", Brooklyn") + '</small></span>' +
-    '<span class="pill ' + a.status + '">' + ({ live: "LIVE", demo: "DEMO", soon: "SOON" })[a.status] + '</span></button></li>').join("") +
+    '<span><span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + (a.hood.includes(", ") ? "" : ", " + boroOf(a)) + '</small></span>' +
+    (a.status === "demo" ? '<span class="pill vault"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() ? "OPEN" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>') + '</button></li>').join("") +
     SOON.map(b => '<li><div class="row soon"><span class="bul"><i style="background:#2c3050">·</i></span><span><span class="who">' + b + '</span><small>Next stops</small></span><span class="pill soon">SOON</span></div></li>').join("");
   $("list").querySelectorAll("button.row").forEach(b => b.onclick = () => openCard(+b.dataset.i));
 }
@@ -338,10 +351,10 @@ function openCard(i) {
   $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button>' +
     '<div class="sign"><span>' + esc(a.stop) + '</span><span class="bul">' + bullets(a) + '</span></div>' +
     '<div class="who" style="color:' + a.color + '">' + esc(a.who) + '</div>' +
-    '<p>' + esc(a.hood) + (a.hood.includes("Bronx") ? "" : ", Brooklyn") + ' · 9 songs · 99 questions</p>' +
+    '<p>' + esc(a.hood) + (a.hood.includes(", ") ? "" : ", " + boroOf(a)) + ' · 9 songs · 99 questions</p>' +
     '<p>' + esc(a.line) + '</p>' +
     (p && p.stops ? '<p class="prog">Your progress: ' + p.stops + ' of 18 stops · ' + p.cleared + ' of 9 episodes</p>' : '') +
-    (a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
+    (a.status === "demo" && !isOwner() ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">OPENS WHEN ' + esc(a.who.toUpperCase()) + ' SIGNS</div>' : a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
   $("card").hidden = false; $("scrim").hidden = false;
   $("cx").onclick = closeCard;
 }
@@ -349,7 +362,16 @@ function closeCard() { $("card").hidden = true; $("scrim").hidden = true; }
 $("scrim").onclick = closeCard;
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeCard(); });
 
-drawMap(); drawList();
+/* ---------- the Vault: unsigned artists stay locked; the owner key opens every door on this phone ---------- */
+async function checkKey() {
+  try {
+    const k = new URLSearchParams(location.search).get("k");
+    if (k) { const h = Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(k)))).map(b => b.toString(16).padStart(2, "0")).join("");
+      if (h === "d4ed073225697637629c09e3b21e510f72fb8f27579c7621d5498738c8168376") localStorage.setItem("ogfan99owner", "1"); }
+  } catch (e) {}
+  drawList();
+}
+drawMap(); drawList(); checkKey();
 </script>
 </body>
 </html>
