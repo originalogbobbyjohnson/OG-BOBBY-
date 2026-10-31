@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>OG FAN 99 – MC Lyte</title>
+<link rel="apple-touch-icon" href="/ogfan99-hub-5b81e2/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/ogfan99-hub-5b81e2/icon-192.png">
+<meta name="apple-mobile-web-app-title" content="OG FAN 99">
+<meta property="og:title" content="OG FAN 99 – MC Lyte">
+<meta property="og:description" content="9 songs. 99 questions. Prove you're a true fan.">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/ogfan99-hub-5b81e2/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;700&family=Sedgwick+Ave+Display&display=swap">
+<style>
+/* Layout: one framed screen, no scrolling. Panels slide left/right: Board, Play, Songs. Dock with menu at the bottom. */
+:root {
+  --bg: #0b0c14; --panel: #151726; --panel2: #1e2135; --line: #2c3050;
+  --fg: #ffffff; --soft: #ece8f5; --red: #d62828; --red-dim: #5a1717;
+  --green: #35b867; --gold: #e0a52c; --pink: #f5c84a; --cyan: #ff8a5b; --sun: #7fd1ff; --lime: #5ee27a;
+  --display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --body: "Barlow", system-ui, -apple-system, sans-serif;
+  --tag: "Sedgwick Ave Display", "Permanent Marker", cursive;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; margin: 0; overflow: hidden; }
+body { background: radial-gradient(120% 70% at 50% 0%, #1a0f14 0%, var(--bg) 60%); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.35; -webkit-tap-highlight-color: transparent; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+a { color: var(--fg); }
+
+/* graffiti tags */
+.tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 14px; font-family: var(--tag); font-size: 1.25rem; line-height: 1.1; }
+.tags span { -webkit-text-stroke: 1px #000; text-shadow: 2px 2px 0 #000; display: inline-block; }
+.t1 { color: var(--pink); transform: rotate(-4deg); } .t2 { color: var(--sun); transform: rotate(5deg); } .t3 { color: var(--cyan); transform: rotate(-2deg); }
+
+/* ---------- full-screen rooms (welcome + how to play) ---------- */
+.room { position: fixed; inset: 0; z-index: 20; background: inherit; display: grid; place-items: center; overflow: hidden;
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  background: radial-gradient(120% 70% at 50% 0%, #1a0f14 0%, var(--bg) 60%); }
+.room-in { width: min(100%, 420px); display: grid; gap: 14px; text-align: center; }
+.room h2 { font-family: var(--display); font-size: clamp(1.6rem, 7vw, 2.2rem); letter-spacing: .04em; line-height: 1.1; margin: 0; text-wrap: balance; }
+.room p { margin: 0; font-size: 1.05rem; color: var(--soft); }
+.dots { display: flex; gap: 8px; justify-content: center; }
+.dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+.dots i.on { background: var(--red); }
+.big-btn { background: var(--red); border: 0; border-radius: 12px; padding: 15px 20px; font-family: var(--display); font-size: 1.3rem; letter-spacing: .08em; box-shadow: 0 4px 0 #000; }
+.logo { display: flex; align-items: center; gap: 6px; justify-content: center; }
+.logo svg.nine { width: 26px; height: 36px; }
+.logo .deep { font-family: var(--display); font-size: 2.2rem; letter-spacing: .06em; line-height: 1; text-shadow: 3px 3px 0 #000; }
+.welcome-name { font-family: var(--tag); font-size: clamp(2.6rem, 13vw, 3.8rem); line-height: 1; color: var(--cyan); -webkit-text-stroke: 2px #000; text-shadow: 4px 4px 0 #000; transform: rotate(-4deg); }
+.socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.soc { display: inline-flex; align-items: center; gap: 6px; padding: 7px 11px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--panel); font-weight: 700; font-size: .85rem; text-decoration: none; }
+.soc svg { width: 16px; height: 16px; fill: currentColor; }
+
+/* scenes */
+.scene { width: 100%; max-width: 420px; aspect-ratio: 400 / 260; border-radius: 14px; overflow: hidden; border: 3px solid #000; box-shadow: 0 0 0 2px var(--red-dim); background: #000; }
+.scene svg { display: block; width: 100%; height: 100%; }
+.anim-train { animation: pg-pullIn 2.6s cubic-bezier(.15,.7,.25,1) both; }
+@keyframes pg-pullIn { from { transform: translateX(420px); } to { transform: translateX(0); } }
+.spin-wheel { animation: pg-wheelSpin 16s linear infinite; }
+.car-level { transform-box: fill-box; transform-origin: 50% 0; animation: pg-wheelSpin 16s linear infinite reverse; }
+@keyframes pg-wheelSpin { to { transform: rotate(360deg); } }
+.blink { animation: pg-blink 1.4s ease-in-out infinite; }
+@keyframes pg-blink { 50% { opacity: .2; } }
+.chute { animation: pg-drop 4.5s ease-in-out infinite; }
+@keyframes pg-drop { 0%, 15% { transform: translateY(0); } 55%, 65% { transform: translateY(104px); } 100% { transform: translateY(0); } }
+
+/* ---------- the game: one screen, no scroll ---------- */
+.game { height: 100%; display: grid; grid-template-rows: auto 1fr auto auto; max-width: 480px; margin: 0 auto;
+  padding: max(8px, env(safe-area-inset-top, 0px)) max(14px, env(safe-area-inset-right, 0px)) max(8px, env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px)); gap: 8px; }
+.top { position: relative; display: grid; gap: 2px; text-align: center; padding-top: 4px; }
+.coaster { position: absolute; inset: 0 -14px auto; height: 64px; opacity: .35; pointer-events: none; z-index: -1; }
+.top-row { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.nems { font-family: var(--tag); font-size: 1.7rem; line-height: 1; color: var(--cyan); -webkit-text-stroke: 1.5px #000; text-shadow: 3px 3px 0 #000; transform: rotate(-3deg); }
+.mini99 { display: flex; align-items: center; gap: 2px; font-family: var(--display); letter-spacing: .06em; font-size: .95rem; }
+.mini99 svg.nine { width: 12px; height: 17px; }
+.demo { font-size: .66rem; font-weight: 700; letter-spacing: .16em; color: var(--pink); }
+
+.viewport { overflow: hidden; border-radius: 18px; position: relative; min-height: 0; }
+.track { display: flex; height: 100%; transition: transform .35s cubic-bezier(.3,.7,.3,1); }
+.panel { flex: 0 0 100%; height: 100%; min-height: 0; padding: 12px; display: flex; flex-direction: column; gap: 10px; justify-content: center;
+  background: var(--panel); border: 3px solid var(--red); border-radius: 18px; position: relative; overflow: hidden; }
+/* marquee bulbs along the top edge of every panel, like the boardwalk */
+.panel::before { content: ""; position: absolute; left: 10px; right: 10px; top: 4px; height: 6px;
+  background: radial-gradient(circle, #fff3b0 0 2px, transparent 2.5px) 0 0 / 14px 6px repeat-x; animation: pg-bulbs 1.2s steps(2) infinite; }
+@keyframes pg-bulbs { 50% { background-position: 7px 0; } }
+.ptitle { font-family: var(--display); letter-spacing: .1em; font-size: 1rem; text-align: center; margin: 0; }
+
+/* Board panel */
+.meter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.row { display: grid; gap: 5px; }
+.row .boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+.lv { aspect-ratio: 1; border-radius: 6px; border: 2px solid var(--red); display: grid; place-items: center; font-family: var(--display); font-size: 1rem; background: transparent; padding: 0; color: var(--fg); cursor: pointer; }
+.lv:active { transform: scale(.92); }
+.lv.done { background: var(--green); border-color: var(--green); }
+.lv.now { animation: pg-pulse 1.6s ease-in-out infinite; }
+@keyframes pg-pulse { 50% { box-shadow: 0 0 0 5px rgba(214,40,40,.3); } }
+.rank { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; text-align: center; font-weight: 700; font-size: clamp(.58rem, 2.6vw, .72rem); letter-spacing: .04em; text-transform: uppercase; border: 1.5px solid var(--red); border-radius: 999px; padding: 2px 4px; }
+.rank.got { border-color: var(--green); }
+.top-rank { text-align: center; font-family: var(--display); letter-spacing: .12em; font-size: 1.1rem; }
+.top-rank.got { color: var(--gold); text-shadow: 0 0 14px rgba(224,165,44,.7); }
+.stats { display: flex; justify-content: space-between; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stats b { font-family: var(--display); font-weight: 400; font-size: 1.25rem; }
+.stats .juice b { color: var(--green); }
+.deck { display: grid; place-items: center; gap: 6px; flex: 1; min-height: 0; }
+.record { width: min(46vw, 24vh, 210px); aspect-ratio: 1; border-radius: 50%; border: 0; padding: 0; position: relative;
+  background: repeating-radial-gradient(circle, #0d0d0f 0 2px, #1d1d22 2px 4px); box-shadow: 0 0 0 3px #000, 0 0 0 6px var(--red), 0 10px 26px rgba(0,0,0,.7); display: grid; place-items: center; }
+.record .label { width: 40%; aspect-ratio: 1; border-radius: 50%; background: var(--red); display: grid; place-items: center; position: relative; }
+.record .label .lt { position: absolute; top: 12%; font-family: var(--tag); font-size: .78rem; color: #fff; -webkit-text-stroke: .5px #000; }
+.record .label svg { width: 38%; height: 38%; fill: #fff; margin-top: 18%; }
+.record.spin { animation: pg-spin 3s linear infinite; }
+@keyframes pg-spin { to { transform: rotate(360deg); } }
+.hint { font-weight: 700; font-size: .9rem; text-align: center; }
+
+/* Play panel: cabinet with doors that open */
+.ep { text-align: center; display: grid; gap: 2px; }
+.ep .k { font-size: .72rem; font-weight: 700; letter-spacing: .18em; color: var(--pink); }
+.ep .n { font-family: var(--display); font-size: 1.25rem; letter-spacing: .04em; line-height: 1.1; }
+.screen { width: min(100%, calc(30vh * 16 / 9)); aspect-ratio: 16 / 9; margin: 0 auto; border-radius: 10px; overflow: hidden; background: #000; border: 2px solid #000; box-shadow: 0 0 0 2px var(--red-dim); flex-shrink: 0; }
+.screen iframe, .screen > div { width: 100%; height: 100%; display: block; border: 0; }
+.qcard { background: var(--panel2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; display: grid; gap: 8px; min-height: 0; }
+.qhead { display: flex; justify-content: space-between; font-weight: 700; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--pink); font-variant-numeric: tabular-nums; }
+.qtext { font-size: 1.02rem; font-weight: 700; }
+.opts { display: grid; gap: 6px; }
+.opt { background: var(--panel); border: 2px solid var(--line); border-radius: 9px; padding: 9px 11px; text-align: left; font-weight: 600; }
+.opt.right { border-color: var(--green); } .opt.wrong { border-color: var(--red); }
+.empty { border: 2px dashed var(--line); border-radius: 10px; padding: 12px; text-align: center; }
+.next { background: transparent; border: 2px solid var(--red); border-radius: 9px; padding: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.doors { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; z-index: 3; pointer-events: none; }
+.door { background: repeating-linear-gradient(90deg, #c91f2e 0 22px, #f4efe6 22px 44px); border: 3px solid #000; display: grid; place-items: center; overflow: hidden; transition: transform 2.8s cubic-bezier(.45,0,.25,1) .4s; pointer-events: auto; position: relative; }
+.door.l { border-right-width: 1.5px; } .door.r { border-left-width: 1.5px; }
+.doors.open .door.l { transform: translateX(-102%); } .doors.open .door.r { transform: translateX(102%); }
+.doors.open { pointer-events: none; } .doors.open .door { pointer-events: none; }
+.door-tag { position: absolute; top: 34%; font-family: var(--tag); font-size: 3.4rem; color: var(--cyan); -webkit-text-stroke: 2px #000; text-shadow: 3px 3px 0 #000; white-space: nowrap; }
+.door.l .door-tag { right: -1px; transform: translateX(50%) rotate(-5deg); }
+.door.r .door-tag { left: -1px; transform: translateX(-50%) rotate(-5deg); }
+.door-btn { position: absolute; bottom: 20%; background: #000; border: 2px solid #fff; border-radius: 999px; padding: 8px 14px; font-family: var(--display); letter-spacing: .1em; font-size: .95rem; white-space: nowrap; }
+.doors > .door-btn { left: 50%; transform: translateX(-50%); z-index: 3; transition: opacity .4s; } .doors.open > .door-btn { opacity: 0; }
+
+/* Songs panel */
+.songs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-rows: repeat(9, minmax(0, 1fr)); gap: 5px; flex: 1; min-height: 0; }
+.song { display: grid; grid-template-columns: 24px 1fr auto; gap: 8px; align-items: center; background: var(--panel2); border-radius: 9px; padding: 0 10px; min-height: 0; }
+.song.playing { outline: 2px solid var(--green); }
+.song .n { font-family: var(--display); text-align: center; }
+.song .t { min-width: 0; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.song .t button { background: none; border: 0; padding: 0; font-weight: 700; text-align: left; text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 3px; }
+.song .s { font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px; border-radius: 999px; border: 1.5px solid var(--red); white-space: nowrap; }
+.song .s.open { border-color: var(--green); }
+
+/* pager + dock */
+.pager { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; }
+.arrow { width: 44px; height: 36px; border-radius: 10px; border: 2px solid var(--red); background: transparent; font-family: var(--display); font-size: 1.3rem; line-height: 1; }
+.arrow:disabled { opacity: .25; }
+.tabs { display: flex; justify-content: center; gap: 6px; }
+.tab { border: 0; background: none; font-weight: 700; font-size: .75rem; letter-spacing: .12em; padding: 6px 8px; border-bottom: 2px solid transparent; }
+.tab.on { border-bottom-color: var(--red); }
+.dock { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; border-top: 1px solid var(--line); padding-top: 8px; }
+.dock .menu-btn { justify-self: start; display: inline-flex; align-items: center; gap: 6px; background: var(--panel); border: 1.5px solid var(--line); border-radius: 10px; padding: 7px 11px; font-weight: 700; font-size: .85rem; }
+.dock .menu-btn svg { width: 18px; height: 18px; fill: currentColor; }
+.dock .sig { font-family: var(--tag); font-size: 1rem; color: var(--sun); -webkit-text-stroke: .6px #000; }
+.dock .restart { justify-self: end; background: none; border: 0; font-weight: 700; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; text-decoration: underline; text-underline-offset: 4px; padding: 6px 2px; }
+
+/* menu sheet (drops up from the dock) */
+.scrim { position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 40; }
+.sheet { position: fixed; left: 50%; bottom: 0; transform: translateX(-50%); width: min(100%, 480px); z-index: 41; background: var(--panel); border: 3px solid var(--red); border-bottom: 0; border-radius: 18px 18px 0 0;
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) max(18px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: grid; gap: 12px; animation: pg-up .25s ease-out; }
+@keyframes pg-up { from { transform: translate(-50%, 30px); opacity: 0; } }
+.sheet h3 { margin: 0; font-family: var(--display); letter-spacing: .08em; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; }
+.sheet .x { background: none; border: 2px solid var(--line); border-radius: 50%; width: 34px; height: 34px; font-weight: 700; }
+.links { display: grid; gap: 8px; }
+.links a, .links button { display: flex; align-items: center; gap: 10px; text-decoration: none; background: var(--panel2); border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 12px; font-weight: 700; text-align: left; width: 100%; }
+.links svg { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
+.links small { display: block; font-weight: 600; font-size: .8rem; }
+.about { font-size: .9rem; margin: 0; }
+
+.toast { position: fixed; left: 50%; top: calc(14px + env(safe-area-inset-top, 0px)); transform: translateX(-50%) translateY(-20px); opacity: 0; background: var(--green); color: var(--fg);
+  font-family: var(--display); letter-spacing: .08em; font-size: 1.1rem; padding: 10px 18px; border-radius: 12px; transition: .3s; z-index: 50; pointer-events: none; border: 2px solid #000; white-space: nowrap; }
+.toast.on { opacity: 1; transform: translateX(-50%) translateY(0); }
+@media (max-height: 640px) { .nems { font-size: 1.6rem; } .tags { font-size: 1.05rem; } .meter { gap: 6px; } .lv { font-size: .85rem; } .qtext { font-size: .95rem; } .opt { padding: 7px 10px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* board extras */
+.extras { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.xbtn { border: 2px solid var(--red); background: var(--panel2); border-radius: 10px; padding: 8px 6px; font-family: var(--display); letter-spacing: .08em; font-size: .9rem; line-height: 1.1; }
+.xbtn small { display: block; font-family: var(--body); font-weight: 700; letter-spacing: .02em; font-size: .68rem; text-transform: none; }
+.xbtn.ready { border-color: var(--green); animation: pg-pulse 1.6s ease-in-out infinite; }
+.xbtn.gold { border-color: var(--gold); color: var(--gold); }
+.streak { text-align: center; font-weight: 700; font-size: .8rem; letter-spacing: .08em; min-height: 1.1em; }
+.streak b { color: var(--pink); }
+.qcard.boss { border: 2px solid var(--red); animation: pg-pulse 1.4s ease-in-out infinite; }
+.boss-tag { color: var(--fg); background: var(--red); padding: 1px 6px; border-radius: 4px; }
+
+/* trophy case */
+.trophies { display: grid; gap: 8px; flex: 1; min-height: 0; align-content: start; }
+.tgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.tcell { background: var(--panel2); border-radius: 9px; padding: 6px; text-align: center; font-size: .72rem; font-weight: 700; }
+.tcell .st { font-size: .95rem; letter-spacing: 1px; color: var(--line); }
+.tcell .st i { font-style: normal; color: var(--gold); }
+.trow { display: flex; justify-content: space-between; background: var(--panel2); border-radius: 9px; padding: 8px 10px; font-weight: 700; font-size: .85rem; }
+.trow b { font-family: var(--display); font-weight: 400; letter-spacing: .04em; }
+.share-btn { background: var(--red); border: 0; border-radius: 10px; padding: 11px; font-family: var(--display); letter-spacing: .1em; font-size: 1rem; box-shadow: 0 3px 0 #000; }
+
+/* modal (episode cleared, daily, welcome back, share card) */
+.modal { position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.7); display: grid; place-items: center; padding: 20px max(16px, env(safe-area-inset-right, 0px)) 20px max(16px, env(safe-area-inset-left, 0px)); }
+.mcard { width: min(100%, 380px); max-height: 100%; overflow: auto; background: var(--panel); border: 3px solid var(--red); border-radius: 18px; padding: 18px 16px 16px; display: grid; gap: 12px; text-align: center; position: relative; animation: pg-pop .35s cubic-bezier(.2,1.4,.4,1); }
+@keyframes pg-pop { from { transform: scale(.7); opacity: 0; } }
+.mcard .x { position: absolute; top: 8px; right: 8px; background: none; border: 2px solid var(--line); border-radius: 50%; width: 32px; height: 32px; font-weight: 700; }
+.mcard h3 { margin: 0; font-family: var(--display); font-size: 1.7rem; letter-spacing: .05em; line-height: 1.05; }
+.mcard .k { font-size: .72rem; font-weight: 700; letter-spacing: .18em; color: var(--pink); }
+.stars { font-size: 2.4rem; letter-spacing: 6px; color: var(--line); line-height: 1; }
+.stars i { font-style: normal; color: var(--gold); display: inline-block; animation: pg-starIn .5s both; }
+.stars i:nth-child(2) { animation-delay: .25s; } .stars i:nth-child(3) { animation-delay: .5s; }
+@keyframes pg-starIn { from { transform: scale(0) rotate(-90deg); } }
+.mcard .qtext { text-align: left; }
+.mcard img { width: 100%; border-radius: 12px; border: 2px solid #000; }
+
+/* rank-up badge */
+.promo { position: fixed; left: 50%; top: 18%; transform: translateX(-50%) scale(.6); opacity: 0; pointer-events: none; z-index: 70; background: #000; border: 3px solid var(--gold); border-radius: 18px; padding: 16px 26px; text-align: center; transition: .35s cubic-bezier(.2,1.4,.4,1); }
+.promo.on { opacity: 1; transform: translateX(-50%) scale(1); pointer-events: auto; }
+.promo .pk { font-weight: 700; letter-spacing: .3em; font-size: .75rem; color: var(--gold); }
+.promo .pn { font-family: var(--display); font-size: 2rem; letter-spacing: .06em; }
+.promo .ps { font-family: var(--tag); color: var(--cyan); font-size: 1.1rem; }
+.promo .x { position: absolute; top: 4px; right: 6px; background: none; border: 0; font-weight: 700; font-size: 1rem; }
+
+/* 99 challenge */
+.chal { position: fixed; inset: 0; z-index: 65; background: radial-gradient(100% 70% at 50% 30%, #3a1066 0%, #07070d 70%); display: grid; place-items: center; overflow: hidden;
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.chal-in { width: min(100%, 420px); display: grid; gap: 14px; text-align: center; position: relative; z-index: 2; }
+.big99 { display: flex; justify-content: center; gap: 4px; animation: pg-zoom99 1.4s cubic-bezier(.2,1.2,.3,1) both; }
+.big99 svg.nine { width: 90px; height: 126px; filter: drop-shadow(0 0 18px rgba(214,40,40,.8)); }
+@keyframes pg-zoom99 { 0% { transform: scale(6) rotate(-12deg); opacity: 0; } 60% { opacity: 1; } 100% { transform: scale(1) rotate(0); } }
+.chal h2 { margin: 0; font-family: var(--display); font-size: 2.2rem; letter-spacing: .08em; }
+.chal p { margin: 0; color: var(--soft); }
+.chal .qcard { text-align: left; }
+.chal-bar { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.chal-bar i { display: block; height: 100%; background: var(--green); transition: width .3s; }
+.flying { position: absolute; font-family: var(--display); color: var(--red); opacity: .55; animation: pg-fly 2.4s linear forwards; z-index: 1; pointer-events: none; text-shadow: 2px 2px 0 #000; }
+@keyframes pg-fly { from { transform: translate(-50%, -50%) scale(.2); opacity: .9; } to { transform: translate(var(--dx), var(--dy)) scale(2.6); opacity: 0; } }
+.conf { position: absolute; width: 8px; height: 14px; top: -20px; z-index: 1; animation: pg-fall linear forwards; pointer-events: none; }
+@keyframes pg-fall { to { transform: translateY(110vh) rotate(720deg); } }
+.toggle { display: flex; justify-content: space-between; align-items: center; background: var(--panel2); border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 12px; font-weight: 700; }
+.toggle button { border: 2px solid var(--green); background: none; border-radius: 999px; padding: 4px 12px; font-weight: 700; }
+.toggle button.off { border-color: var(--red); }
+.row { min-width: 0; }
+.per { white-space: nowrap; text-align: center; font-size: .66rem; font-weight: 700; letter-spacing: .04em; }
+.listen { font-weight: 700; text-align: center; padding: 10px 6px; }
+/* episode title card */
+.epcard { position: fixed; inset: 0; z-index: 62; display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(120% 80% at 50% 20%, #3a1066 0%, #07070d 70%);
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.epcard::before { content: ""; position: absolute; left: 0; right: 0; top: max(14px, env(safe-area-inset-top, 0px)); height: 8px;
+  background: radial-gradient(circle, #fff3b0 0 2.5px, transparent 3px) 0 0 / 18px 8px repeat-x; animation: pg-bulbs 1.2s steps(2) infinite; }
+.ep-in { width: min(100%, 400px); display: grid; gap: 14px; text-align: center; }
+.ep-k { font-weight: 700; letter-spacing: .24em; font-size: .78rem; color: var(--pink); }
+.ep-num { font-family: var(--display); font-size: clamp(2.6rem, 13vw, 3.6rem); letter-spacing: .06em; line-height: 1; color: var(--fg); text-shadow: 4px 4px 0 #000; animation: pg-epIn .6s cubic-bezier(.2,1.3,.4,1) both; }
+.ep-title { font-family: var(--tag); font-size: clamp(2rem, 10vw, 2.9rem); line-height: 1.05; color: var(--cyan); -webkit-text-stroke: 1.5px #000; text-shadow: 3px 3px 0 #000; text-wrap: balance; animation: pg-epIn .6s .2s cubic-bezier(.2,1.3,.4,1) both; }
+.ep-stops { display: flex; justify-content: center; gap: 8px; }
+.ep-stops i { width: 34px; height: 34px; border-radius: 8px; border: 2px solid var(--red); display: grid; place-items: center; font-style: normal; font-family: var(--display); }
+.ep-tip { margin: 0; font-size: .95rem; }
+@keyframes pg-epIn { from { transform: scale(2.2); opacity: 0; } }
+/* rank-up screen */
+.rk-from { font-weight: 700; letter-spacing: .2em; font-size: .78rem; text-decoration: line-through; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+.rk-name { font-family: var(--display); font-size: clamp(2.8rem, 14vw, 3.8rem); line-height: 1; letter-spacing: .05em; color: var(--gold); text-shadow: 0 0 22px rgba(224,165,44,.6), 4px 4px 0 #000; animation: pg-epIn .7s cubic-bezier(.2,1.3,.4,1) both; }
+.rewards { display: grid; gap: 6px; text-align: left; background: var(--panel2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.rw-h { font-weight: 700; letter-spacing: .18em; font-size: .7rem; color: var(--green); text-align: center; }
+.rw { font-weight: 600; }
+.rw b { color: var(--gold); }
+.rw .stars, .rw i { font-size: 1rem; }
+.rw-line { font-weight: 700; font-size: .85rem; letter-spacing: .06em; color: var(--green); }
+/* room navigation */
+.room-nav { display: grid; grid-template-columns: auto 1fr; gap: 10px; }
+.back-btn { background: transparent; border: 2px solid var(--red); border-radius: 12px; padding: 0 16px; font-family: var(--display); letter-spacing: .08em; font-size: 1rem; }
+.skip-btn { background: none; border: 0; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; text-decoration: underline; text-underline-offset: 4px; padding: 4px; justify-self: center; }
+.dots button { width: 12px; height: 12px; padding: 0; border-radius: 50%; border: 0; background: var(--line); }
+.dots button.on { background: var(--red); }
+.dots { gap: 12px; }
+/* episode info (tap a meter number) */
+.ei-title { font-family: var(--tag); font-size: clamp(1.8rem, 9vw, 2.4rem); line-height: 1.05; color: var(--cyan); -webkit-text-stroke: 1px #000; text-shadow: 3px 3px 0 #000; text-wrap: balance; }
+.ei-stops { display: flex; justify-content: center; align-items: center; gap: 6px; font-weight: 700; font-size: .85rem; }
+.ei-stops i { width: 26px; height: 26px; border-radius: 6px; border: 2px solid var(--red); display: grid; place-items: center; font-style: normal; font-family: var(--display); }
+.ei-stops i.got { background: var(--green); border-color: var(--green); }
+.ei-stops span { margin-left: 4px; }
+.ei-status { font-weight: 700; } .ei-status.done { color: var(--green); } .ei-status.lock { color: var(--pink); }
+.ei-status i { font-style: normal; color: var(--gold); }
+/* trophy shelf */
+.cage { position: relative; border-radius: 12px; padding: 10px 8px 6px; background: linear-gradient(#2a1d14, #120c08); border: 2px solid #4a4f5a; }
+.cage::after { content: ""; position: absolute; inset: 0; border-radius: 10px; pointer-events: none;
+  background: linear-gradient(transparent 0 0) , repeating-linear-gradient(90deg, #ff8a5b 0 14px, #f5c84a 14px 28px, #7fd1ff 28px 42px) top / 100% 8px no-repeat; opacity: .9; }
+.shelf.many .trophy span { font-size: .5rem; }
+.shelf { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; position: relative; z-index: 1; border-bottom: 6px solid #3b2418; padding-bottom: 2px; }
+.trophy { background: none; border: 0; padding: 0; display: grid; justify-items: center; gap: 2px; position: relative; cursor: pointer; }
+.trophy svg { width: 100%; max-width: 62px; height: auto; filter: grayscale(1) brightness(.35); transition: .3s; }
+.trophy.got svg { filter: drop-shadow(0 0 8px rgba(224,165,44,.7)); }
+.trophy span { font-size: .62rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.trophy.got span { color: var(--gold); }
+.trophy em { position: absolute; top: 30%; font-style: normal; font-size: .9rem; }
+.tr-big { width: 130px; margin: 0 auto; } .tr-big svg { width: 100%; filter: grayscale(1) brightness(.4); } .tr-big.got svg { filter: drop-shadow(0 0 14px rgba(224,165,44,.8)); }
+.trophies { gap: 7px; }
+.trow { padding: 6px 10px; }
+/* stop meter */
+.stopmeter { display: grid; gap: 4px; }
+.sm-bar { height: 10px; border-radius: 99px; background: var(--panel2); border: 1.5px solid var(--line); overflow: hidden; }
+.sm-bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--cyan), var(--pink)); border-radius: 99px; transition: width .2s linear; }
+.stopmeter.hot .sm-bar i { background: var(--red); }
+.stopmeter.hot .sm-bar { border-color: var(--red); animation: pg-pulse 1s ease-in-out infinite; }
+.stopmeter.done .sm-bar i { background: var(--green); }
+.sm-skip { display: block; margin: 6px auto 0; background: var(--gold); color: #000; border: 0; border-radius: 99px; padding: 7px 16px; font-family: var(--display); letter-spacing: .08em; font-size: .85rem; box-shadow: 0 3px 0 #000; }
+.sm-skip[hidden] { display: none; }
+.sm-lbl { font-weight: 700; font-size: .72rem; letter-spacing: .08em; text-align: center; font-variant-numeric: tabular-nums; min-height: 1.1em; white-space: pre; }
+</style>
+<meta name="copyright" content="© 2026 OG Bobby · OG FAN 99. All rights reserved.">
+<script src="/brand/guard.js"></script>
+</head>
+<body>
+
+<!-- Front page -->
+<section class="room" id="welcome">
+  <div class="room-in">
+    <div class="logo" id="logoW"></div>
+    <div class="welcome-name">MC LYTE</div>
+    <div class="tags"><span class="t1">1ST PRIORITY</span><span class="t2">LYTE AS A ROCK</span><span class="t3">LYTRO</span></div>
+    <h2>ARE YOU AN OG FAN?</h2>
+    <p>Free to play. Listen, answer, unlock the music.</p>
+    <button class="big-btn" id="enter" type="button">LET'S GO</button>
+    <div class="socials" id="socialsW"></div>
+  </div>
+</section>
+
+<!-- How to play rooms -->
+<section class="room" id="how" hidden>
+  <div class="room-in">
+    <div class="scene" id="howScene"></div>
+    <h2 id="howTitle"></h2>
+    <p id="howText"></p>
+    <div class="dots" id="howDots"></div>
+    <div class="room-nav"><button class="back-btn" id="howBack" type="button">BACK</button><button class="big-btn" id="howNext" type="button">NEXT</button></div>
+    <button class="skip-btn" id="howSkip" type="button" hidden>Skip intro</button>
+  </div>
+</section>
+
+<!-- The game -->
+<div class="game" id="game" hidden>
+  <header class="top">
+    <svg class="coaster" id="coaster" viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div class="demo">PITCH DEMO · PRIVATE</div>
+    <div class="top-row"><span class="nems">MC LYTE</span><span class="mini99" id="mini99"></span></div>
+    <div class="tags"><span class="t1" id="sec0">1ST PRIORITY</span><span class="t3" id="sec1">LYTRO</span><span class="t2" id="sec2">LYTE AS A ROCK</span></div>
+  </header>
+
+  <div class="viewport" id="viewport">
+    <div class="track" id="track">
+      <section class="panel" id="pBoard" aria-label="Board">
+        <div class="meter" id="meter"></div>
+        <div class="top-rank" id="topRank">OG FAN 99</div>
+        <div class="stats"><span>Stops <b id="qCount">0</b> / <i id="qTotal" style="font-style:normal">18</i></span><span class="juice">Juice <b id="juice">0</b></span></div>
+        <div class="extras">
+          <button class="xbtn" id="dailyBtn" type="button">DAILY QUESTION<small id="dailySub">1 free Rock a day</small></button>
+          <button class="xbtn" id="chalBtn" type="button">99 CHALLENGE<small id="chalSub">Clear all 9 to unlock</small></button>
+        </div>
+        <div class="streak" id="streakLine"></div>
+        <div class="deck">
+          <button class="record" id="record" type="button" aria-label="Play"><span class="label"><span class="lt">LYTE</span><svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg></span></button>
+          <div class="hint" id="hint">Tap the record to play</div>
+        </div>
+      </section>
+
+      <section class="panel" id="pPlay" aria-label="Now playing">
+        <div class="ep"><span class="k" id="epNum">EPISODE 1</span><span class="n" id="epName">Stop, Look, Listen</span></div>
+        <div class="screen"><div id="yt"></div></div>
+        <div class="stopmeter" id="stopMeter"><div class="sm-bar"><i id="smFill"></i></div><div class="sm-lbl" id="smLbl"></div><button class="sm-skip" id="smSkip" type="button" hidden>SKIP TO THE QUESTION &#9197;</button></div>
+        <div class="qcard"><div class="qhead"><span id="qLevel"></span><span id="qNum"></span></div><div id="qBody"></div></div>
+        <div class="doors" id="doors">
+          <div class="door l"><span class="door-tag">LYTE</span></div>
+          <div class="door r"><span class="door-tag">LYTE</span></div>
+          <button class="door-btn" id="doorPlay" type="button">PRESS PLAY</button>
+        </div>
+      </section>
+
+      <section class="panel" id="pSongs" aria-label="Songs">
+        <h2 class="ptitle">THE 9 SONGS</h2>
+        <ul class="songs" id="songs"></ul>
+      </section>
+
+      <section class="panel" id="pTrophy" aria-label="The Rock Pile">
+        <h2 class="ptitle">THE ROCK PILE</h2>
+        <div class="trophies">
+          <div class="cage"><div class="shelf" id="shelf"></div></div>
+          <div class="tgrid" id="starGrid"></div>
+          <div class="trow"><span>Rank</span><b id="tRank">—</b></div>
+          <div class="trow"><span>Rocks</span><b id="tBongs">0</b></div>
+          <div class="trow"><span>Best hot streak</span><b id="tStreak">0</b></div>
+          <div class="trow"><span>Secret spots found</span><b id="tSecrets">0 / 3</b></div>
+          <div class="trow"><span>99 Challenge best</span><b id="tChal">—</b></div>
+          <button class="share-btn" id="shareBtn" type="button">SHARE MY RANK</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <nav class="pager">
+    <button class="arrow" id="prev" type="button" aria-label="Previous screen">‹</button>
+    <div class="tabs" id="tabs"><button class="tab on" type="button" data-i="0">BOARD</button><button class="tab" type="button" data-i="1">PLAY</button><button class="tab" type="button" data-i="2">SONGS</button><button class="tab" type="button" data-i="3">ROCKS</button></div>
+    <button class="arrow" id="next" type="button" aria-label="Next screen">›</button>
+  </nav>
+
+  <footer class="dock">
+    <button class="menu-btn" id="menuBtn" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>Menu</button>
+    <span class="sig">East Flatbush</span>
+    <button class="restart" id="restart" type="button">Restart</button>
+  </footer>
+</div>
+
+<!-- Menu -->
+<div class="scrim" id="scrim" hidden></div>
+<div class="sheet" id="menu" role="dialog" aria-label="Menu" hidden>
+  <h3>MC LYTE <button class="x" id="menuX" type="button" aria-label="Close menu">✕</button></h3>
+  <div class="links" id="menuLinks"></div>
+  <div class="toggle"><span>Game sounds</span><button type="button" id="soundBtn">ON</button></div>
+  <div class="links">
+    <button type="button" id="chalDemo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21l1.5-7L2 9.3l7-.8z"/></svg>Preview the 99 Challenge<small style="margin-left:auto">pitch demo</small></button>
+    <button type="button" id="lobbyBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 11h3v9h6v-6h2v6h6v-9h3z"/></svg>Back to the lobby<small style="margin-left:auto">keeps progress</small></button>
+    <button type="button" id="replayHow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 17h-2v-2h2zm2.1-7.7-.9.9c-.7.7-1.2 1.3-1.2 2.8h-2v-.5c0-1.1.4-2.1 1.2-2.8l1.2-1.3c.4-.4.6-.9.6-1.4a2 2 0 0 0-4 0H8a4 4 0 0 1 8 0c0 .9-.4 1.7-.9 2.3z"/></svg>How to play</button>
+  </div>
+  <p class="about">Every song stops at the end of a verse and asks about what you just heard. Songs 1–3 stop once, 4–6 twice, 7–9 three times. Clear a row of 3 to rank up.</p>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+<div class="modal" id="modal" hidden><div class="mcard" id="mcard"></div></div>
+<div class="promo" id="promo" role="status"><button class="x" type="button" id="promoX" aria-label="Close">✕</button><div class="pk">PROMOTED</div><div class="pn" id="promoName"></div><div class="ps">East Flatbush, Brooklyn</div></div>
+<div class="epcard" id="epCard" hidden><div class="ep-in">
+  <div class="ep-k" id="ecKick">NEW FAN ROW</div>
+  <div class="ep-num" id="ecNum">EPISODE 2</div>
+  <div class="ep-title" id="ecTitle"></div>
+  <div class="ep-stops" id="ecStops"></div>
+  <p class="ep-tip">The song stops at the end of the verse. Answer what you heard to keep it going.</p>
+  <button class="big-btn" id="ecGo" type="button">PLAY</button>
+  <div class="tags"><span class="t1">1ST PRIORITY</span><span class="t2">LYTE AS A ROCK</span><span class="t3">LYTRO</span></div>
+</div></div>
+<div class="chal" id="chal" hidden><div class="chal-in" id="chalIn"></div></div>
+
+<script src="artist.js?v=1"></script>
+<script src="scenes.js?v=1"></script>
+<script src="sfx.js?v=2"></script>
+<script src="game.js?v=3"></script>
+</body>
+</html>
