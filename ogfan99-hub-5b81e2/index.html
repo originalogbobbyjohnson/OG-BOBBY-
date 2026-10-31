@@ -112,6 +112,7 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .st-sub { margin: 0; font-weight: 700; letter-spacing: .18em; font-size: .72rem; color: var(--gold); }
 .st-buls { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; max-width: 280px; }
 .st-buls i { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font: 700 .78rem/1 Helvetica, Arial, sans-serif; font-style: normal; animation: st-hop 1.6s ease-in-out infinite; }
+.st-buls i.wide { width: auto; padding: 0 7px; border-radius: 11px; font-size: .62rem; }
 @keyframes st-hop { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 .st-go { background: var(--red); color: #fff; border: 0; border-radius: 14px; padding: 14px 26px; font-family: var(--display); letter-spacing: .12em; font-size: 1.35rem; box-shadow: 0 5px 0 #000; animation: st-blink 1.2s steps(2, start) infinite; }
 @keyframes st-blink { 50% { filter: brightness(1.35); } }
@@ -851,7 +852,7 @@ drawMap(); drawList(); checkKey(); liveMap();
 (function () {
   const seen = {}, b = [];
   ARTISTS.forEach(a => a.trains.forEach(t => { if (!seen[t[0]]) { seen[t[0]] = 1; b.push(t); } }));
-  $("stBuls").innerHTML = b.map((t, i) => '<i style="background:' + t[1] + ';color:' + (t[2] ? "#000" : "#fff") + ';animation-delay:' + (i * .08) + 's">' + t[0] + '</i>').join("");
+  $("stBuls").innerHTML = b.map((t, i) => '<i' + (t[0].length > 1 && !/^\d$/.test(t[0]) ? ' class="wide"' : '') + ' style="background:' + t[1] + ';color:' + (t[2] ? "#000" : "#fff") + ';animation-delay:' + (i * .08) + 's">' + t[0] + '</i>').join("");
   const go = () => {
     const st = $("start"); if (st.classList.contains("open")) return;
     try { const ac = new (window.AudioContext || window.webkitAudioContext)(); [[659, 0], [523, .32]].forEach(([f, d]) => { const o = ac.createOscillator(), g = ac.createGain(); o.frequency.value = f; o.type = "sine"; g.gain.setValueAtTime(.0001, ac.currentTime + d); g.gain.exponentialRampToValueAtTime(.25, ac.currentTime + d + .02); g.gain.exponentialRampToValueAtTime(.0001, ac.currentTime + d + .6); o.connect(g).connect(ac.destination); o.start(ac.currentTime + d); o.stop(ac.currentTime + d + .65); }); } catch (e) {}
