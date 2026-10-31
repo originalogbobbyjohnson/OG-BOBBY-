@@ -161,6 +161,22 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .x { position: absolute; top: 8px; right: 10px; background: none; border: 0; font-size: 1.3rem; }
 .foot { text-align: center; font-size: .78rem; color: var(--soft); }
 .foot b { color: var(--gold); }
+
+/* FIND: search artists, hoods, stops — or who's closest to you */
+.findbtn { position: absolute; top: 10px; right: 10px; z-index: 1000; display: flex; align-items: center; gap: 6px; background: var(--gold); color: #000; border: 2px solid #000; border-radius: 999px; padding: 8px 14px; font-family: var(--display); letter-spacing: .1em; font-size: .95rem; box-shadow: 0 3px 0 #000; cursor: pointer; }
+.findbtn svg { width: 18px; height: 18px; }
+.find { max-height: min(86vh, 640px); display: flex !important; flex-direction: column; gap: 10px; text-align: left !important; }
+.find h4 { margin: 0; font-family: var(--display); letter-spacing: .12em; font-size: 1.2rem; color: var(--gold); }
+.find input { width: 100%; box-sizing: border-box; font-size: 16px; padding: 12px 14px; border-radius: 12px; border: 2px solid var(--gold); background: #0d0f1c; color: #fff; outline: none; }
+.find .fbtns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.find .fbtns button { border: 2px solid #000; border-radius: 12px; padding: 10px 6px; font-weight: 800; letter-spacing: .06em; font-size: .78rem; box-shadow: 0 3px 0 #000; cursor: pointer; }
+.find .fb-me { background: var(--red); color: #fff; } .find .fb-addr { background: #fff; color: #000; }
+.find .fmsg { color: var(--gold); font-weight: 700; font-size: .85rem; min-height: 1em; }
+.find ul { list-style: none; margin: 0; padding: 0; overflow-y: auto; display: grid; gap: 6px; }
+.find li button { width: 100%; display: grid; grid-template-columns: 14px 1fr auto; gap: 10px; align-items: center; text-align: left; background: #161a2e; border: 1.5px solid #2a2f55; border-radius: 10px; padding: 9px 11px; color: #fff; cursor: pointer; }
+.find li .dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #000; }
+.find li b { display: block; font-size: 1rem; } .find li small { color: #fff; opacity: .85; font-size: .78rem; }
+.find li .mi { color: var(--gold); font-weight: 800; font-size: .8rem; white-space: nowrap; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -758,6 +774,9 @@ function liveMap() {
     c.__i = i; window.__pins = window.__pins || []; window.__pins.push(c);
   });
   m.fitBounds(ll, { padding: [30, 30] });
+  window.__map = m;
+  const fb = document.createElement("button"); fb.type = "button"; fb.className = "findbtn"; fb.innerHTML = '<svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#000" stroke-width="3"/><path d="M15 15l6 6" stroke="#000" stroke-width="3.4" stroke-linecap="round"/></svg>FIND';
+  L.DomEvent.disableClickPropagation(fb); fb.onclick = openFind; el.appendChild(fb);
   const labels = () => { const z = m.getZoom();
     /* names and pins grow as you zoom into the streets */
     const fs = Math.round(Math.max(14, Math.min(30, 14 + (z - 12) * 4))), r = Math.round(Math.max(9, Math.min(16, 9 + (z - 12) * 1.75)));
@@ -768,6 +787,48 @@ function liveMap() {
   $("keyList").innerHTML = KEY.map(([k, ls, name]) => '<li><span class="sw" style="background:' + LINECOL[k] + '"></span><span class="bul">' +
     ls.map(l => '<i style="background:' + LINECOL[k] + ';color:' + (k === "N" ? "#000" : "#fff") + '">' + l + '</i>').join("") + '</span><span>' + name + '</span></li>').join("");
 }
+
+
+/* ---------- FIND: search by name, hood, borough, stop — or nearest to you ---------- */
+const miles = (a, b, c, d) => { const R = 3958.8, r = x => x * Math.PI / 180, dl = r(c - a), dg = r(d - b);
+  const h = Math.sin(dl / 2) ** 2 + Math.cos(r(a)) * Math.cos(r(c)) * Math.sin(dg / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)); };
+const pinCol = a => a.status === "live" ? "#35b867" : a.status === "demo" && isOwner() ? "#e8b84a" : "#d62828";
+let findFrom = null;
+function findRows(list) {
+  $("fList").innerHTML = list.slice(0, 40).map(([a, i, d]) => '<li><button type="button" data-i="' + i + '"><span class="dot" style="background:' + pinCol(a) + '"></span><span><b>' + esc(a.who) + '</b><small>' + esc(a.hood) + ' · ' + esc(a.stop) + '</small></span>' +
+    (d != null ? '<span class="mi">' + (d < 10 ? d.toFixed(1) : Math.round(d)) + ' MI</span>' : '<span class="mi">' + (a.status === "vault" || (a.status === "demo" && !isOwner()) ? "VAULT" : "PLAY") + '</span>') + '</button></li>').join("");
+  $("fList").querySelectorAll("button").forEach(b => b.onclick = () => { closeFind(); const i = +b.dataset.i, a = ARTISTS[i];
+    if (window.__map && a.lat != null) window.__map.flyTo([a.lat, a.lng], 15, { duration: .8 }); setTimeout(() => goArtist(i), 850); });
+}
+function findSearch() {
+  const q = $("fq").value.trim().toLowerCase();
+  let list = ARTISTS.map((a, i) => [a, i, findFrom && a.lat != null ? miles(findFrom[0], findFrom[1], a.lat, a.lng) : null]);
+  if (q && !findFrom) list = list.filter(([a]) => [a.who, a.hood, a.stop, boroOf(a)].join(" ").toLowerCase().includes(q));
+  if (findFrom) list.sort((x, y) => x[2] - y[2]); else list.sort((x, y) => x[0].who.localeCompare(y[0].who));
+  $("fmsg").textContent = findFrom ? "CLOSEST ARTISTS TO " + findFrom[2] : q ? list.length + " FOUND" : ARTISTS.length + " ARTISTS · TYPE TO SEARCH";
+  findRows(list);
+}
+function openFind() {
+  $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="find"><h4>FIND AN ARTIST</h4>' +
+    '<input id="fq" type="search" placeholder="Name, neighborhood, borough or train stop" autocomplete="off">' +
+    '<div class="fbtns"><button class="fb-me" id="fMe" type="button">&#128205; NEAR ME</button><button class="fb-addr" id="fAddr" type="button">&#127968; NEAR AN ADDRESS</button></div>' +
+    '<div class="fmsg" id="fmsg"></div><ul id="fList"></ul></div>';
+  $("card").classList.add("findcard"); $("card").hidden = false; $("scrim").hidden = false; $("cx").onclick = closeFind;
+  findFrom = null; findSearch();
+  $("fq").oninput = () => { findFrom = null; findSearch(); };
+  $("fMe").onclick = () => { $("fmsg").textContent = "FINDING YOU…";
+    if (!navigator.geolocation) { $("fmsg").textContent = "LOCATION ISN'T AVAILABLE ON THIS PHONE. TRY AN ADDRESS."; return; }
+    navigator.geolocation.getCurrentPosition(p => { findFrom = [p.coords.latitude, p.coords.longitude, "YOU"]; findSearch(); },
+      () => { $("fmsg").textContent = "LOCATION WAS BLOCKED. TYPE AN ADDRESS OR ZIP, THEN TAP NEAR AN ADDRESS."; }, { timeout: 12000 }); };
+  $("fAddr").onclick = async () => { const q = $("fq").value.trim();
+    if (!q) { $("fmsg").textContent = "TYPE AN ADDRESS OR ZIP CODE ABOVE FIRST."; $("fq").focus(); return; }
+    $("fmsg").textContent = "LOOKING UP THAT ADDRESS…";
+    try { const r = await fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&viewbox=-74.6,41.3,-72.9,40.3&q=" + encodeURIComponent(q)).then(x => x.json());
+      if (!r.length) { $("fmsg").textContent = "COULDN'T FIND THAT ADDRESS. TRY ADDING THE TOWN OR ZIP."; return; }
+      findFrom = [+r[0].lat, +r[0].lon, q.toUpperCase().slice(0, 30)]; findSearch();
+    } catch (e) { $("fmsg").textContent = "ADDRESS LOOKUP IS BUSY. TRY NEAR ME OR AGAIN IN A MINUTE."; } };
+}
+function closeFind() { $("card").classList.remove("findcard"); closeCard(); }
 
 /* tap an artist's name or dot on the map: straight into their game when it's open to you, otherwise their station card */
 function goArtist(i) {
