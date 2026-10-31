@@ -148,7 +148,7 @@ const EPISODES = [
 /* stops per row: 1, 2, 3 */
 const STOPS = [1, 1, 1, 2, 2, 2, 3, 3, 3];
 const ROWS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]];
-const RANKS = ["Corner Boy", "Made Man", "Boss"];   // Cold Sholda slang: start as a Fredo, top out as Caesar
+const RANKS = ["Soldier", "Capo", "Underboss"];   // family ranks: start as an Associate, top out as Capo di tutti capi
 const TOTAL_STOPS = STOPS.reduce((a, b) => a + b, 0);   // 18
 const JUICE_EACH = 550;                                  // 18 stops x 550 = 9,900
 const ready = e => e.cuts.length > 0;
@@ -182,7 +182,8 @@ const stopsPassed = () => Object.keys(state.gates).reduce((n, k) => n + Math.min
 const rowsDone = () => ROWS.filter(r => r.every(isCleared)).length;
 const allDone = () => EPISODES.every((e, k) => isCleared(k));
 const kong = () => state.chalBest != null && state.chalBest >= 99;
-const rankName = () => kong() ? "Caesar" : rowsDone() ? RANKS[rowsDone() - 1] : "Fredo";
+const certified = () => state.chalBest != null && state.chalBest >= 90;
+const rankName = () => kong() ? "Capo di tutti capi" : certified() ? "Certified Boss" : rowsDone() ? RANKS[rowsDone() - 1] : "Associate";
 const fmt = t => Math.floor(t / 60) + ":" + String(Math.floor(t % 60)).padStart(2, "0");
 
 function toast(t) { const el = $("toast"); el.textContent = t; el.classList.add("on"); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove("on"), 2200); }
@@ -222,7 +223,7 @@ function renderMeter() {
     m.append(el);
   });
   m.querySelectorAll(".lv").forEach(b => b.onclick = () => episodeInfo(+b.dataset.ep));
-  $("topRank").textContent = kong() ? "CAESAR" : "YOU'RE A " + rankName().toUpperCase();
+  $("topRank").textContent = kong() ? "CAPO DI TUTTI CAPI" : certified() ? "CERTIFIED BOSS" : "YOU'RE A " + rankName().toUpperCase();
   $("topRank").classList.toggle("got", kong());
   $("qCount").textContent = stopsPassed();
   $("juice").textContent = state.juice.toLocaleString();
@@ -338,12 +339,12 @@ function passStop(k, scored) {
 
 /* what each rank pays out */
 const RANK_REWARDS = {
-  "Corner Boy": { bongs: 5, line: "You're outside now. Welcome to the corner." },
-  "Made Man": { bongs: 10, line: "You got a seat at the table full of made men." },
-  "Boss": { bongs: 25, line: "You run all of Gravesend." }
+  "Soldier": { bongs: 5, line: "You're made now. You're with the family." },
+  "Capo": { bongs: 10, line: "You got your own crew now." },
+  "Underboss": { bongs: 25, line: "Second in command. One step from the top." }
 };
 function rankUpScreen(k, rank) {
-  const r = RANK_REWARDS[rank], prev = RANKS.indexOf(rank) ? RANKS[RANKS.indexOf(rank) - 1] : "Fredo";
+  const r = RANK_REWARDS[rank], prev = RANKS.indexOf(rank) ? RANKS[RANKS.indexOf(rank) - 1] : "Associate";
   state.bongs += r.bongs; save(); renderAll();
   SFX.cleared(); setTimeout(() => SFX.stamp(), 700);
   const finale = allDone(), next = EPISODES[k + 1];
@@ -356,7 +357,7 @@ function rankUpScreen(k, rank) {
       '<div class="rw"><b>+' + r.bongs + '</b> Cannolis</div>' +
       '<div class="rw"><b>' + rank + '</b> rank card to share</div>' +
       '<div class="rw"><b>+' + JUICE_EACH.toLocaleString() + '</b> Juice · ' + starHTML(state.stars[k]) + '</div>' +
-      (finale ? '<div class="rw"><b>99 Challenge</b> unlocked: beat it to become Caesar</div>'
+      (finale ? '<div class="rw"><b>99 Challenge</b> unlocked: get 90 right to become a Certified Boss, all 99 for Capo di tutti capi</div>'
               : '<div class="rw">Next row: songs stop <b>' + (STOPS[k + 1] === 2 ? "twice" : "three times") + '</b></div>') +
     '</div>' +
     '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY EPISODE " + (k + 2)) + '</button>' +
@@ -384,7 +385,7 @@ function episodeCleared(k, rankUp) {
     '<h3>EPISODE ' + (k + 1) + ' CLEARED</h3>' +
     '<div class="stars">' + starHTML(state.stars[k]) + '</div>' +
     '<div class="rw-line">+' + JUICE_EACH.toLocaleString() + ' JUICE · ' + (2 - (k % 3)) + ' more to rank up to ' + RANKS[Math.floor(k / 3)].toUpperCase() + '</div>' +
-    '<p style="margin:0">' + (finale ? "You're a Boss now. Beat the 99 Challenge to become Caesar." : next ? "Episode " + (k + 2) + " unlocked: <b>" + esc(next.title) + "</b>" + (STOPS[k + 1] > STOPS[k] ? "<br>Heads up: songs in this row stop " + (STOPS[k + 1] === 2 ? "twice" : "three times") + "." : "") : "") + '</p>' +
+    '<p style="margin:0">' + (finale ? "You're the Underboss now. Beat the 99 Challenge to become a Certified Boss." : next ? "Episode " + (k + 2) + " unlocked: <b>" + esc(next.title) + "</b>" + (STOPS[k + 1] > STOPS[k] ? "<br>Heads up: songs in this row stop " + (STOPS[k + 1] === 2 ? "twice" : "three times") + "." : "") : "") + '</p>' +
     '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : "PLAY EPISODE " + (k + 2)) + '</button>' +
     (ready(EPISODES[k]) && !finale ? '<button class="next" id="mStay" type="button">Keep listening to this one</button>' : '') + '</div>',
     null);
@@ -572,11 +573,12 @@ $("dailyBtn").onclick = () => {
 /* ---------- trophy case + share card ---------- */
 /* the trophy shelf: one trophy per rank, earned ones glow */
 const TROPHIES = [
-  { name: "Fredo", how: "Everybody starts here.", got: () => true },
-  { name: "Corner Boy", how: "Clear row 1 (Episodes 1–3).", got: () => rowsDone() >= 1 },
-  { name: "Made Man", how: "Clear row 2 (Episodes 4–6).", got: () => rowsDone() >= 2 },
-  { name: "Boss", how: "Clear all 9 episodes.", got: () => rowsDone() >= 3 },
-  { name: "Caesar", how: "Get all 99 right in the 99 Challenge.", got: () => kong() }
+  { name: "Associate", how: "Everybody starts here.", got: () => true },
+  { name: "Soldier", how: "Clear row 1 (Episodes 1–3).", got: () => rowsDone() >= 1 },
+  { name: "Capo", how: "Clear row 2 (Episodes 4–6).", got: () => rowsDone() >= 2 },
+  { name: "Underboss", how: "Clear all 9 episodes.", got: () => rowsDone() >= 3 },
+  { name: "Certified Boss", how: "Get 90 or more right in the 99 Challenge.", got: () => certified() },
+  { name: "Capo di tutti capi", how: "Get all 99 right in the 99 Challenge.", got: () => kong() }
 ];
 function trophyArt(i) {
   const plinth = '<rect x="14" y="80" width="52" height="14" rx="2" fill="#3b2418"/><rect x="10" y="92" width="60" height="6" rx="2" fill="#2a170f"/><rect x="24" y="84" width="32" height="6" rx="1" fill="#c9a24a"/>';
@@ -598,7 +600,11 @@ function trophyArt(i) {
     '<path d="M16 22q24 46 48 0" fill="none" stroke="#e0a52c" stroke-width="5" stroke-dasharray="5 3" stroke-linecap="round"/>' +
     '<circle cx="40" cy="60" r="15" fill="#e0a52c" stroke="#7a5512" stroke-width="2"/><text x="40" y="66" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="15" fill="#123a5c">CS</text>' +
     '<circle cx="31" cy="48" r="2" fill="#dff6ff"/><circle cx="51" cy="50" r="2" fill="#dff6ff"/><circle cx="44" cy="74" r="1.6" fill="#dff6ff"/>',
-    /* Caesar: gold laurel crown */
+    /* Certified Boss: gold seal stamped CERTIFIED */
+    '<circle cx="40" cy="50" r="24" fill="#e0a52c" stroke="#7a5512" stroke-width="2"/><circle cx="40" cy="50" r="18" fill="none" stroke="#7a5512" stroke-width="1.5" stroke-dasharray="3 2"/>' +
+    '<path d="M28 70l-6 12 8-3 4 7 4-14zM52 70l6 12-8-3-4 7-4-14z" fill="#d62828" stroke="#5a1717" stroke-width="1"/>' +
+    '<text x="40" y="47" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="8" fill="#3b2418">CERTIFIED</text><text x="40" y="60" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="12" fill="#3b2418">BOSS</text>',
+    /* Capo di tutti capi: gold laurel crown */
     '<path d="M40 70q-24-4-26-34" fill="none" stroke="#c08a1c" stroke-width="2.5"/><path d="M40 70q24-4 26-34" fill="none" stroke="#c08a1c" stroke-width="2.5"/>' +
     [0, 1, 2, 3, 4].map(i => { const y = 64 - i * 7, dx = 4 + i * 3.4; return '<ellipse cx="' + (40 - dx - 6) + '" cy="' + y + '" rx="7" ry="3.2" transform="rotate(' + (-30 - i * 8) + ' ' + (40 - dx - 6) + ' ' + y + ')" fill="#ffd34d" stroke="#7a5512" stroke-width="1"/>' +
       '<ellipse cx="' + (40 + dx + 6) + '" cy="' + y + '" rx="7" ry="3.2" transform="rotate(' + (30 + i * 8) + ' ' + (40 + dx + 6) + ' ' + y + ')" fill="#ffd34d" stroke="#7a5512" stroke-width="1"/>'; }).join("") +
@@ -608,7 +614,7 @@ function trophyArt(i) {
 }
 function trophyInfo(i) {
   const t = TROPHIES[i], got = t.got();
-  showModal('<div class="k">THE SOCIAL CLUB · TROPHY ' + (i + 1) + ' OF 5</div><div class="tr-big' + (got ? " got" : "") + '">' + trophyArt(i) + '</div>' +
+  showModal('<div class="k">THE SOCIAL CLUB · TROPHY ' + (i + 1) + ' OF 6</div><div class="tr-big' + (got ? " got" : "") + '">' + trophyArt(i) + '</div>' +
     '<h3>' + t.name.toUpperCase() + '</h3><p style="margin:0">' + (got ? "Earned. " : "Locked. ") + t.how + '</p>');
 }
 function renderTrophies() {
@@ -633,7 +639,7 @@ $("shareBtn").onclick = async () => {
   tagText("COLD SHOLDA", 300, 130, "#9fe3ff", -0.06);
   tagText("NEW ROME", 440, 84, "#e8b84a", -0.04);
   g.fillStyle = "#fff"; g.font = '64px Anton, Impact, sans-serif'; g.fillText("I'M RANKED", 540, 610);
-  g.fillStyle = "#e0a52c"; g.font = '150px Anton, Impact, sans-serif'; g.fillText(rankName().toUpperCase(), 540, 780);
+  g.fillStyle = "#e0a52c"; { const rn = rankName().toUpperCase(); g.font = (rn.length > 12 ? 92 : 150) + 'px Anton, Impact, sans-serif'; g.fillText(rn, 540, 780); }
   g.fillStyle = "#fff"; g.font = '54px Barlow, sans-serif'; g.fillText(state.juice.toLocaleString() + " Juice · " + EPISODES.filter((e, k) => isCleared(k)).length + " of 9 episodes", 540, 880);
   g.fillStyle = "#e0a52c"; g.font = '70px sans-serif'; g.fillText(EPISODES.map((e, k) => state.stars[k] ? "★" : "☆").join(" "), 540, 990);
   g.fillStyle = "#fff"; g.font = '58px Anton, Impact, sans-serif'; g.fillText("ARE YOU AN OG FAN?", 540, 1150);
@@ -692,10 +698,11 @@ function chalQuestion() {
   $("chQuit").onclick = endChallenge;
 }
 function chalDone() {
-  const wasKong = kong();
+  const wasKong = kong(), wasCert = certified();
   if (!ch.demo) { state.chalBest = Math.max(state.chalBest || 0, ch.right); save(); renderExtras(); renderMeter(); }
-  if (!ch.demo && !wasKong && kong()) setTimeout(() => promote("Caesar"), 1600);
-  $("chalIn").innerHTML = '<div class="big99">' + nine() + nine() + '</div><h2>' + ch.right + ' / ' + ch.order.length + '</h2><p>' + (ch.right === ch.order.length ? "PERFECT. All 99. You're Caesar now." : "Run it back and go deeper.") + '</p>' +
+  if (!ch.demo && !wasKong && kong()) setTimeout(() => promote("Capo di tutti capi"), 1600);
+  else if (!ch.demo && !wasCert && certified()) setTimeout(() => promote("Certified Boss"), 1600);
+  $("chalIn").innerHTML = '<div class="big99">' + nine() + nine() + '</div><h2>' + ch.right + ' / ' + ch.order.length + '</h2><p>' + (ch.right === ch.order.length ? "PERFECT. All 99. You're Capo di tutti capi now." : "Run it back and go deeper.") + '</p>' +
     '<button class="big-btn" id="chAgain" type="button">RUN IT BACK</button><button class="next" id="chQuit" type="button">Back to the game</button>';
   SFX.fanfare99(); flying99(); confetti(70);
   $("chAgain").onclick = () => startChallenge(ch.demo); $("chQuit").onclick = endChallenge;
@@ -747,7 +754,7 @@ const HOW = [
   { s: SC.train, t: "PRESS PLAY", x: "Take the F to Avenue U. Tap the record. Every song is an episode." },
   { s: SC.club, t: "EVERY SONG STOPS", x: "At the end of a verse the song stops and asks about what you just heard. Answer right and it keeps going." },
   { s: SC.old, t: "1, THEN 2, THEN 3", x: "Songs 1–3 stop once. Songs 4–6 stop twice. Songs 7–9 stop three times." },
-  { s: SC.rome, t: "CLIMB THE RANKS", x: "Everybody starts as a Fredo. Clear a row to rank up: Corner Boy, Made Man, Boss. Beat the 99 Challenge to become Caesar." },
+  { s: SC.rome, t: "CLIMB THE RANKS", x: "Everybody starts as an Associate. Clear a row to rank up: Soldier, Capo, Underboss. 90 right in the 99 Challenge makes you a Certified Boss; all 99 makes you Capo di tutti capi." },
   { s: SC.corner, t: "WELCOME TO GRAVESEND", x: "Avenue U and McDonald Avenue, under the F. This is Cold Sholda's game." }
 ];
 let howI = 0;
