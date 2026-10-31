@@ -291,6 +291,7 @@ a { color: var(--fg); }
 .cage { position: relative; border-radius: 12px; padding: 10px 8px 6px; background: linear-gradient(#2a1d14, #120c08); border: 2px solid #4a4f5a; }
 .cage::after { content: ""; position: absolute; inset: 0; border-radius: 10px; pointer-events: none;
   background: linear-gradient(transparent 0 0) , repeating-linear-gradient(90deg, #ff3b3b 0 14px, #ffb020 14px 28px, #4aa3ff 28px 42px) top / 100% 8px no-repeat; opacity: .9; }
+.shelf.many .trophy span { font-size: .5rem; }
 .shelf { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; position: relative; z-index: 1; border-bottom: 6px solid #3b2418; padding-bottom: 2px; }
 .trophy { background: none; border: 0; padding: 0; display: grid; justify-items: center; gap: 2px; position: relative; cursor: pointer; }
 .trophy svg { width: 100%; max-width: 62px; height: auto; filter: grayscale(1) brightness(.35); transition: .3s; }
@@ -356,7 +357,7 @@ a { color: var(--fg); }
       <section class="panel" id="pBoard" aria-label="Board">
         <div class="meter" id="meter"></div>
         <div class="top-rank" id="topRank">OG FAN 99</div>
-        <div class="stats"><span>Stops <b id="qCount">0</b> / 18</span><span class="juice">Juice <b id="juice">0</b></span></div>
+        <div class="stats"><span>Stops <b id="qCount">0</b> / <i id="qTotal" style="font-style:normal">18</i></span><span class="juice">Juice <b id="juice">0</b></span></div>
         <div class="extras">
           <button class="xbtn" id="dailyBtn" type="button">DAILY QUESTION<small id="dailySub">1 free Bucket a day</small></button>
           <button class="xbtn" id="chalBtn" type="button">99 CHALLENGE<small id="chalSub">Clear all 9 to unlock</small></button>
@@ -442,9 +443,9 @@ a { color: var(--fg); }
 </div></div>
 <div class="chal" id="chal" hidden><div class="chal-in" id="chalIn"></div></div>
 
-<script src="artist.js?v=1"></script>
+<script src="artist.js?v=6"></script>
 <script src="scenes.js?v=1"></script>
 <script src="sfx.js?v=2"></script>
-<script src="game.js?v=3"></script>
+<script src="game.js?v=6"></script>
 </body>
 </html>
