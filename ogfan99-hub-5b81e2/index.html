@@ -40,7 +40,7 @@ a { color: inherit; }
 
 /* subway map */
 .map { position: relative; border-radius: 16px; overflow: hidden; border: 3px solid #000; box-shadow: 0 0 0 2px #2a2f55; background: #a9d6ef; }
-.map svg { display: block; width: 100%; height: auto; }
+.map:not(.live) svg { display: block; width: 100%; height: auto; }
 .stn { cursor: pointer; }
 .stn:focus { outline: none; }
 .stn:focus-visible circle.ring { stroke: #d62828; stroke-width: 3.5; }
@@ -407,8 +407,8 @@ function liveMap() {
   if (!window.L) return;                       // no map library: keep the drawn map
   const el = $("map"); el.innerHTML = ""; el.classList.add("live");
   const m = L.map(el, { zoomControl: true, attributionControl: true, minZoom: 10, maxZoom: 18, zoomSnap: .5 });
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", { subdomains: "abcd", maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>' }).addTo(m);
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(m);
   const lines = L.layerGroup().addTo(m), pins = L.layerGroup().addTo(m);
   subwayData().then(j => {
     L.geoJSON(j, { interactive: false, style: f => ({ color: LINECOL[f.properties.RT_SYMBOL] || "#555", weight: 4, opacity: .9 }) }).addTo(lines);
