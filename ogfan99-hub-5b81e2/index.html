@@ -83,6 +83,10 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .pill.vault path { stroke: #fff; } .pill.vault rect { fill: #fff; }
 .pill.ready { background: #e8b84a; color: #1a1300; }
 .pill.ready path { stroke: #1a1300; } .pill.ready rect { fill: #1a1300; }
+.tier { justify-self: start; font: 700 .55rem Helvetica, Arial, sans-serif; letter-spacing: .12em; padding: 3px 6px; border-radius: 4px; }
+.tier.mainstream { background: #b933ad; color: #fff; }
+.tier.legend { border: 1.5px solid var(--gold); color: var(--gold); }
+.tier.indie { border: 1.5px solid #6cbe45; color: #6cbe45; }
 .legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 12px; font-size: .7rem; font-weight: 700; letter-spacing: .06em; color: #fff; margin: -2px 0 0; }
 .legend span { display: inline-flex; align-items: center; gap: 5px; }
 .legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
@@ -664,6 +668,10 @@ function drawMap() {
 /* ---------- the list under the map ---------- */
 const isOwner = () => { try { return localStorage.getItem("ogfan99owner") === "1"; } catch (e) { return false; } };
 const boroOf = a => a.boro || "Brooklyn";
+/* backend tiers (owner view only): mainstream names get approached differently than independents */
+const TIER_MAIN = new Set(["Jay-Z", "Nas", "LL Cool J", "Cardi B", "Ice Spice", "A$AP Rocky", "French Montana", "Fat Joe", "Cam'ron", "Jadakiss", "Queen Latifah", "Swizz Beatz", "A Boogie wit da Hoodie", "Remy Ma", "Action Bronson", "Joey Bada$$", "Dave East", "Jim Jones", "Lloyd Banks", "Styles P", "Sheck Wes", "Ferg (A$AP Ferg)", "Mase", "Azealia Banks", "Juelz Santana", "Flatbush Zombies", "Papoose", "Maino"]);
+const TIER_LEG = new Set(["Rakim", "Big Daddy Kane", "KRS-One", "Slick Rick", "Kool G Rap", "MC Lyte", "Kurtis Blow", "Doug E. Fresh", "Kool Moe Dee", "Melle Mel", "DMC", "Chuck D", "Grand Puba", "Pete Rock", "Erick Sermon", "Redman", "Roxanne Shant\u00e9", "MC Shan", "Special Ed", "Masta Ace", "Kool Keith", "Lord Finesse", "Diamond D", "Showbiz & A.G.", "Buckshot", "Smif-N-Wessun", "M.O.P.", "Jeru the Damaja", "Large Professor", "Mr. Cheeks", "Rah Digga", "Havoc", "AZ", "Pharoahe Monch", "Cormega", "Lord Tariq & Peter Gunz", "Mic Geronimo", "D-Nice", "The U.M.C.'s", "Sheek Louch"]);
+const tierOf = a => TIER_MAIN.has(a.who) ? "mainstream" : TIER_LEG.has(a.who) ? "legend" : "indie";
 const BOROS = ["Brooklyn", "Queens", "the Bronx", "Manhattan", "Staten Island", "Westchester", "Long Island", "New Jersey"];
 let sortBy = (() => { try { return localStorage.getItem("ogfan99sort") || "az"; } catch (e) { return "az"; } })();
 let boroTab = (() => { try { return localStorage.getItem("ogfan99boro") || "Brooklyn"; } catch (e) { return "Brooklyn"; } })();
@@ -676,17 +684,18 @@ function drawList() {
   $("tally").innerHTML = '<div class="all">' + ARTISTS.length + ' ARTISTS ON THE LINE</div>' + BOROS.map(b => '<div><b>' + count(b) + '</b>' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '</div>').join("");
   const nb = count(boroTab);
   $("bname").innerHTML = esc(boroTab.replace("the ", "").toUpperCase()) + ' · <span>' + nb + (nb === 1 ? " ARTIST" : " ARTISTS") + '</span>';
-  $("sorts").innerHTML = [["az", "A–Z"], ["games", "GAMES FIRST"], ["line", "BY LINE"]].map(([k, t]) => '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
+  $("sorts").innerHTML = [["az", "A–Z"], ["games", "GAMES FIRST"], ["line", "BY LINE"]].concat(isOwner() ? [["tier", "BY TIER"]] : []).map(([k, t]) => '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
   $("sorts").querySelectorAll("button").forEach(b => b.onclick = () => { sortBy = b.dataset.s; try { localStorage.setItem("ogfan99sort", sortBy); } catch (e) {} drawList(); });
   const rank = a => a.status === "live" ? 0 : a.status === "demo" ? 1 : 2, nm = a => a.who.replace(/^(the|a\$ap) /i, "").toLowerCase();
   const LORDER = "1234567ACEBDFMGJZLNQRWS";
   const lineKey = a => { const t = (a.trains[0] || ["~"])[0]; const k = LORDER.indexOf(t); return (k < 0 ? 99 : k) + ":" + nm(a); };
   const here = ARTISTS.map((a, i) => [a, i]).filter(([a]) => boroOf(a) === boroTab).sort(([a], [b]) =>
     sortBy === "games" ? (rank(a) - rank(b)) || nm(a).localeCompare(nm(b)) :
+    sortBy === "tier" && isOwner() ? ({ mainstream: 0, legend: 1, indie: 2 }[tierOf(a)] - { mainstream: 0, legend: 1, indie: 2 }[tierOf(b)]) || nm(a).localeCompare(nm(b)) :
     sortBy === "line" ? lineKey(a).localeCompare(lineKey(b), undefined, { numeric: true }) : nm(a).localeCompare(nm(b)));
   $("list").innerHTML = here.length ? here.map(([a, i]) =>
     '<li><button class="tile" type="button" data-i="' + i + '"><span class="tl-top"><span class="bul">' + bullets(a) + '</span>' + pillHTML(a) + '</span>' +
-    '<span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + '</small></button></li>').join("")
+    '<span class="who" style="color:' + a.color + '">' + esc(a.who) + '</span><small>' + esc(a.hood) + '</small>' + (isOwner() ? '<span class="tier ' + tierOf(a) + '">' + tierOf(a).toUpperCase() + '</span>' : '') + '</button></li>').join("")
     : '<li><div class="tile soon"><span class="tl-top"><span class="bul"><i style="background:#2c3050">·</i></span><span class="pill soon">SOON</span></span><span class="who">' + esc(boroTab.replace("the ", "")) + '</span><small>Next stops on the line</small></div></li>';
   $("list").querySelectorAll("button.tile").forEach(b => b.onclick = () => openCard(+b.dataset.i));
 }
