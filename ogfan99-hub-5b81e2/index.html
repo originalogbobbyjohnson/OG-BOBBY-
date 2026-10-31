@@ -198,6 +198,12 @@ const ARTISTS = [
     url: "../papoose-ogfan99-6ae3a3/", status: "demo", line: "Bed-Stuy legend. 2.7M on Instagram.", save: "ogfan99papoose1", lat: 40.6804, lng: -73.9503 },
   { who: "Flatbush Zombies", hood: "Flatbush", stop: "Newkirk Plaza", trains: [["B", "#ff6319"], ["Q", "#fccc0a", 1]], color: "#fff",
     url: "../flatbushzombies-ogfan99-0b2228/", status: "demo", line: "The Glorious Dead. 449K on Instagram.", save: "ogfan99flatbushzombies1", lat: 40.6350, lng: -73.9629 },
+  { who: "Maino", hood: "Bed-Stuy", stop: "Utica Av", trains: [["A", "#0039a6"], ["C", "#0039a6"]], color: "#ff3b30",
+    url: "../maino-ogfan99-b44504/", status: "demo", line: "Hi Hater. Runs his own label out of Bed-Stuy.", save: "ogfan99maino1", lat: 40.6793, lng: -73.9307 },
+  { who: "Uncle Murda", hood: "East New York", stop: "Broadway Junction", trains: [["A", "#0039a6"], ["C", "#0039a6"], ["L", "#a7a9ac"], ["J", "#996633"], ["Z", "#996633"]], color: "#ff4d3d",
+    url: "../unclemurda-ogfan99-b61d52/", status: "demo", line: "East New York. The Rap Up every year.", save: "ogfan99unclemurda1", lat: 40.6784, lng: -73.9052 },
+  { who: "Troy Ave", hood: "Crown Heights", stop: "Crown Hts–Utica Av", trains: [["3", "#ee352e"], ["4", "#00933c"]], color: "#ffffff",
+    url: null, status: "vault", line: "BSB. All about the money.", save: null, lat: 40.6689, lng: -73.9329 },
   /* Queens */
   { who: "Cormega", hood: "Queensbridge", boro: "Queens", stop: "21 St–Queensbridge", trains: [["F", "#ff6319"]], color: "#f2c14e",
     url: "../cormega-ogfan99-8b7aab/", status: "demo", line: "The Realness. Legal Hustle. Queensbridge storyteller.", save: "ogfan99cormega1", lat: 40.7540, lng: -73.9428 },
@@ -219,9 +225,11 @@ const ARTISTS = [
   { who: "Cory Gunz", hood: "Soundview", boro: "the Bronx", stop: "Morrison Av–Soundview", trains: [["6", "#00933c"]], color: "#f5c542",
     url: "../corygunz-ogfan99-62c6e0/", status: "demo", line: "Uptown baby. The youngest in charge with the fastest flow.", save: "ogfan99corygunz1", lat: 40.8295, lng: -73.8745 },
   { who: "French Montana", hood: "South Bronx", boro: "the Bronx", stop: "3 Av–149 St", trains: [["2", "#ee352e"], ["5", "#00933c"]], color: "#ffc83d",
-    url: "../frenchmontana-ogfan99-55dc5f/", status: "demo", line: "Haan! From Morocco to the South Bronx. Unforgettable.", save: "ogfan99frenchmontana1", lat: 40.8162, lng: -73.9177 }
+    url: "../frenchmontana-ogfan99-55dc5f/", status: "demo", line: "Haan! From Morocco to the South Bronx. Unforgettable.", save: "ogfan99frenchmontana1", lat: 40.8162, lng: -73.9177 },
+  { who: "The Shark", hood: "Belmont", boro: "the Bronx", stop: "Fordham Rd", trains: [["B", "#ff6319"], ["D", "#ff6319"]], color: "#f4f1ea",
+    url: "../theshark-ogfan99-bb3911/", status: "demo", line: "Bronx Italian underground. Lo Squalo.", save: "ogfan99theshark1", lat: 40.8613, lng: -73.8975 }
 ];
-const SOON = ["Manhattan"];
+const SOON = [];
 
 const $ = id => document.getElementById(id);
 const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -429,12 +437,12 @@ function drawMap() {
 /* ---------- the list under the map ---------- */
 const isOwner = () => { try { return localStorage.getItem("ogfan99owner") === "1"; } catch (e) { return false; } };
 const boroOf = a => a.boro || "Brooklyn";
-const BOROS = ["Brooklyn", "Queens", "the Bronx", "Manhattan"];
+const BOROS = ["Brooklyn", "Queens", "the Bronx", "Manhattan", "Staten Island", "Westchester", "Long Island", "New Jersey"];
 let boroTab = (() => { try { return localStorage.getItem("ogfan99boro") || "Brooklyn"; } catch (e) { return "Brooklyn"; } })();
-const pillHTML = a => a.status === "demo" ? '<span class="pill vault"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() ? "OPEN" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>';
+const pillHTML = a => (a.status === "demo" || a.status === "vault") ? '<span class="pill vault"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() && a.status === "demo" ? "OPEN" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>';
 function drawList() {
   const count = b => ARTISTS.filter(a => boroOf(a) === b).length;
-  $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + b.replace("the ", "").toUpperCase() + '<small>' + (count(b) ? count(b) + (count(b) > 1 ? " STOPS" : " STOP") : "SOON") + '</small></button>').join("");
+  $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '<small>' + (count(b) ? count(b) + (count(b) > 1 ? " STOPS" : " STOP") : "SOON") + '</small></button>').join("");
   $("boros").querySelectorAll(".boro").forEach(t => t.onclick = () => { boroTab = t.dataset.b; try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); });
   const here = ARTISTS.map((a, i) => [a, i]).filter(([a]) => boroOf(a) === boroTab);
   $("list").innerHTML = here.length ? here.map(([a, i]) =>
@@ -453,7 +461,7 @@ function openCard(i) {
     '<p>' + esc(a.hood) + (a.hood.includes(", ") ? "" : ", " + boroOf(a)) + ' · 9 songs · 99 questions</p>' +
     '<p>' + esc(a.line) + '</p>' +
     (p && p.stops ? '<p class="prog">Your progress: ' + p.stops + ' of 18 stops · ' + p.cleared + ' of 9 episodes</p>' : '') +
-    (a.status === "demo" && !isOwner() ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">OPENS WHEN ' + esc(a.who.toUpperCase()) + ' SIGNS</div>' : a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
+    (a.status === "vault" ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">' + (isOwner() ? "GAME BEING BUILT" : "OPENS WHEN " + esc(a.who.toUpperCase()) + " SIGNS") + '</div>' : a.status === "demo" && !isOwner() ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">OPENS WHEN ' + esc(a.who.toUpperCase()) + ' SIGNS</div>' : a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
   $("card").hidden = false; $("scrim").hidden = false;
   $("cx").onclick = closeCard;
 }
