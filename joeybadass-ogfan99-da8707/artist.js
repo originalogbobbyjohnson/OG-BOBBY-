@@ -111,19 +111,19 @@ window.CFG = {
       ["Stay connected to what?", "Source", "Wi-Fi", "Family"],
       ["He copped the Porsche just for his what?", "Mental health", "Birthday", "Girl"]
     ]] },
-    { title: "My Town", id: "lIxThTF_vzI", cuts: [52.4, 299.6], qs: [[
-      ["Who's on the beat?", "Kirk", "Statik", "Premier"],
-      ["The days is numbered like days of what?", "Summer", "Winter", "School"],
-      ["Is it me, B, you, or what?", "A UV ray", "A laser", "A sunbeam"],
-      ["Lights off when I what?", "Black out", "Walk in", "Go home"],
-      ["Lightweight, I ain't even what?", "Maxed out", "Warmed up", "Tried"],
-      ["The thirst for what is sad?", "Attention", "Money", "Water"]
+    { title: "Hazeus View", id: "s3-WyRrBB2k", cuts: [59.7, 130.2], qs: [[
+      ["What does he ask: will I see you through my what?", "Hazeus view", "Rearview", "Window view"],
+      ["You ain't running with the what yet?", "Apes", "Cops", "Kings"],
+      ["Apex at the neck of which building?", "The Empire State", "The Chrysler", "The Freedom Tower"],
+      ["Tonight he takes it back to what year?", "1999", "1988", "2001"],
+      ["He's a titan like who?", "Zeus", "Hercules", "Thor"],
+      ["He kicks flows till it's what kind of fighting?", "Kung-Fu fighting", "Street fighting", "Pillow fighting"]
     ], [
-      ["He'll get through it fast like what?", "Ramadan", "Lightning", "A race"],
-      ["Tell them real bars is back in what?", "Style", "Town", "Stock"],
-      ["Joey says \"I'm a\" what?", "Gladiator", "Rookie", "Pilot"],
-      ["He was at Jordan with the what?", "Kickflip", "Jump shot", "New sneakers"],
-      ["Welcome to what city?", "New York City", "Atlanta", "LA"]
+      ["He can't see what he can't what?", "Relate to", "Afford", "Reach"],
+      ["Who does he ask to see through his hazeus?", "Jesus", "His mother", "His fans"],
+      ["One day his voice will be heard on every what?", "Radio station", "Street corner", "Train"],
+      ["What ratio does he say is changing?", "Fake to real", "Rich to poor", "Young to old"],
+      ["What question does he keep asking near the end of the verse?", "Should I stay or should I go?", "Where do I go?", "Who's next?"]
     ]] },
     { title: "Zipcodes", id: "Fy3070QgHV0", cuts: [40.6, 69.3, 126.8], qs: [[
       ["Who's on the beat?", "Kirk Knight", "Statik Selektah", "DJ Premier"],
