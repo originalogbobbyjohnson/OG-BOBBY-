@@ -12,7 +12,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <title>OG FAN 99</title>
 <meta property="og:title" content="OG FAN 99">
-<meta property="og:description" content="New York's independent artists. 9 songs. 99 questions. Prove you're a true fan.">
+<meta property="og:description" content="New York's independent artists. 99 questions. Prove you're a true fan.">
 <meta property="og:image" content="https://ogbobbybrooklyn.com/ogfan99-hub-5b81e2/share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -224,6 +224,7 @@ html, body { height: 100%; overflow: hidden; }
 .more-in { width: min(100%, 460px); max-height: 82dvh; overflow-y: auto; background: var(--panel); border: 3px solid var(--red); border-bottom: 0; border-radius: 18px 18px 0 0; padding: 14px 14px max(18px, env(safe-area-inset-bottom)); display: grid; gap: 12px; }
 .more-h { display: flex; justify-content: space-between; align-items: center; font-family: var(--display); letter-spacing: .1em; font-size: 1.1rem; }
 .more-h .x { position: static; background: none; border: 2px solid var(--line); border-radius: 50%; width: 34px; height: 34px; color: #fff; }
+.leaflet-tooltip.stoplab{background:#000;color:#fff;border:2px solid #fff;font:800 12px/1.1 Helvetica,Arial,sans-serif;letter-spacing:.04em;padding:4px 7px;border-radius:6px}.leaflet-tooltip.stoplab:before{display:none}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -264,9 +265,9 @@ html, body { height: 100%; overflow: hidden; }
     <div class="more-h"><span>OG FAN 99</span><button class="x" id="moreX" type="button" aria-label="Close">&#10005;</button></div>
     <div class="tally" id="tally"></div>
     <div class="legend" id="legend"></div>
-    <p class="zhint" id="zhint" hidden>Pinch or use + / &minus; to zoom. Tap a station to open it.</p>
+    <p class="zhint" id="zhint" hidden>Pinch or use + / &minus; to zoom. Tap an artist to open their game. Tap any subway stop to see whoTap a station to open it.</p>#39;s near it.</p>
     <details class="key" id="key" hidden open><summary>SUBWAY KEY</summary><ul id="keyList"></ul></details>
-    <p class="foot">Every artist gets 9 songs and 99 questions.<br>Prove you're a <b>true fan</b>. Free to play.</p>
+    <p class="foot">Every artist gets 99 questions.<br>Prove you're a <b>true fan</b>. Free to play.</p>
   </div>
 </div>
 
@@ -933,7 +934,7 @@ function openCard(i) {
   $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button>' +
     '<div class="sign"><span>' + esc(a.stop) + '</span><span class="bul">' + bullets(a) + '</span></div>' +
     '<div class="who" style="color:' + a.color + '">' + esc(a.who) + exBadge(a) + '</div>' +
-    '<p>' + esc(a.hood) + (a.hood.includes(", ") ? "" : ", " + boroOf(a)) + ' · 9 songs · 99 questions</p>' +
+    '<p>' + esc(a.hood) + (a.hood.includes(", ") ? "" : ", " + boroOf(a)) + ' · 99 questions</p>' +
     '<p>' + esc(a.line) + '</p>' +
     (p && p.stops ? '<p class="prog">Your progress: ' + p.stops + ' of 18 stops · ' + p.cleared + ' of 9 episodes</p>' : '') +
     (a.ex === 2 && !EXPL() && a.status !== "vault" ? '<p class="exnote">This game uses explicit lyrics (18+).</p><button class="go" id="exGo" type="button" style="width:100%;border:0">TURN ON EXPLICIT TO PLAY</button>' : a.status === "vault" ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">' + (isOwner() ? "GAME BEING BUILT" : "OPENS WHEN " + esc(a.who.toUpperCase()) + " SIGNS") + '</div>' : a.status === "demo" && !isOwner() ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">OPENS WHEN ' + esc(a.who.toUpperCase()) + ' SIGNS</div>' : a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
@@ -966,6 +967,14 @@ async function subwayData() {
   try { localStorage.setItem("ogfan99subway2", JSON.stringify(j)); } catch (e) {}
   return j;
 }
+const STOPS_URL = "https://services6.arcgis.com/IX0rbbPRMd0YfCJN/ArcGIS/rest/services/NYC_Subway_Stops/FeatureServer/0/query?where=1%3D1&outFields=name,line&outSR=4326&f=geojson&geometryPrecision=5";
+async function subwayStops() {
+  try { const c = localStorage.getItem("ogfan99stops1"); if (c) return JSON.parse(c); } catch (e) {}
+  const j = await (await fetch(STOPS_URL)).json();
+  try { localStorage.setItem("ogfan99stops1", JSON.stringify(j)); } catch (e) {}
+  return j;
+}
+function openStation(name, lat, lng) { openFind(); findFrom = [lat, lng, name.toUpperCase() + " STATION"]; $("fq").value = ""; findSearch(); }
 function liveMap() {
   if (!window.L) return;                       // no map library: keep the drawn map
   const el = $("map"); el.innerHTML = ""; el.classList.add("live");
@@ -977,6 +986,18 @@ function liveMap() {
     L.geoJSON(j, { interactive: false, style: f => ({ color: LINECOL[f.properties.RT_SYMBOL] || "#555", weight: 4, opacity: .9 }) }).addTo(lines);
     pins.eachLayer(p => p.bringToFront && p.bringToFront());
   }).catch(() => {});
+  /* real subway stations: tap one to see the artists closest to it */
+  m.createPane("stops"); m.getPane("stops").style.zIndex = 450;
+  const stops = L.layerGroup().addTo(m);
+  subwayStops().then(j => {
+    j.features.forEach(f => { const [lng, lat] = f.geometry.coordinates, nm = f.properties.name;
+      const s = L.circleMarker([lat, lng], { pane: "stops", radius: 5, color: "#000", weight: 2, fillColor: "#fff", fillOpacity: 1 }).addTo(stops);
+      s.bindTooltip(nm, { direction: "top", offset: [0, -6], className: "stoplab" });
+      s.on("click", e => { L.DomEvent.stopPropagation(e); openStation(nm, lat, lng); }); });
+    stopSize();
+  }).catch(() => {});
+  const stopSize = () => { const z = m.getZoom(); stops.eachLayer(s => s.setRadius(z >= 14 ? 8 : z >= 12 ? 6 : 4)); };
+  m.on("zoomend", stopSize);
   const ll = [];
   ARTISTS.forEach((a, i) => {
     if (a.lat == null) return; ll.push([a.lat, a.lng]);
