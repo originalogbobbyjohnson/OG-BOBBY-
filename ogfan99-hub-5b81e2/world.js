@@ -167,7 +167,7 @@
     ({ lounge: drawLounge, fans: drawFans, regions: drawRegions, genres: drawGenres })[id]();
     panes[id].scrollTop = 0;
   }
-  window.OGW = { go: go };
+  window.OGW = { go: go, h: { row: function () { return row.apply(null, arguments); }, initials: initials, avColor: avColor, meta: meta, bul: bul, owner: owner, live: live, LS: LS, cert: function (a) { return certInfo(a); } } };
 
   /* ---------- LOUNGE: artist to artist ---------- */
   var L = { sub: "friends", q: "", preview: false };
