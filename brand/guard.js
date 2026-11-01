@@ -10,7 +10,7 @@
   document.head.appendChild(s);
   /* every OG FAN 99 artist game gets a way back to the app's map of all artists */
   var p = location.pathname;
-  if (/-ogfan99-|nems-99deep-/.test(p)) {
+  if (/-ogfan99-|nems-99deep-/.test(p) || (/from=ogfan99/.test(location.search) || /ogfan99-hub/.test(document.referrer)) && (p === "/" || p === "/index.html")) {
     var add = function () {
       if (document.getElementById("ogfanBack") || document.getElementById("ogfanBack2")) return;
       var a = document.createElement("a"); a.id = "ogfanBack"; a.href = "/ogfan99-hub-5b81e2/"; a.textContent = "◀ ALL ARTISTS";

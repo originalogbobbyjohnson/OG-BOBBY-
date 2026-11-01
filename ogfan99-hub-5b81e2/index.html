@@ -330,7 +330,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <meta name="copyright" content="© 2026 OG Bobby · OG FAN 99. All rights reserved.">
-<script src="/brand/guard.js?v=9"></script>
+<script src="/brand/guard.js?v=10"></script>
 <script src="/brand/ogfb.js?v=1"></script>
 </head>
 <body>
@@ -798,6 +798,9 @@ const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;",
 const bullets = a => a.trains.map(([l, c, dark]) => '<i style="background:' + c + ';color:' + (dark ? "#000" : "#fff") + '">' + l + '</i>').join("");
 /* progress comes from each game's own save on this phone (all games live on the same site) */
 function progress(a) {
+  /* OG Bobby's own game keeps its progress its own way: each unlocked song counts as an episode, each key as a stop */
+  if (a.who === "OG Bobby") { try { const g = JSON.parse(localStorage.getItem("ogb2") || "{}"), k = g.keys || {}; const songs = Object.keys(k).filter(x => (k[x] || []).length);
+    return { stops: songs.reduce((n, x) => n + k[x].length, 0) * 2, cleared: songs.length }; } catch (e) { return null; } }
   if (!a.save) return null;
   try { const s = JSON.parse(localStorage.getItem(a.save) || "{}"); const g = Object.values(s.gates || {}).reduce((x, y) => x + y, 0); return { stops: g, cleared: Object.keys(s.cleared || {}).length }; } catch (e) { return null; }
 }
