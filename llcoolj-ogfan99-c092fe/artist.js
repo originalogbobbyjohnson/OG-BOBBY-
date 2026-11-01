@@ -104,146 +104,219 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
    "title": "I Need Love",
    "id": "NEUX-HYRtUA",
+   "start": 9.9,
    "cuts": [
     37.6,
-    132.2,
-    200.5
+    66.3,
+    113.9
    ],
    "qs": [
     [
      [
-      "\"When I'm alone in my room sometimes I stare at the...\"?",
-      "Wall",
-      "Window",
-      "Ceiling"
+      "Where is he alone?",
+      "In my room",
+      "In my car",
+      "On the block"
      ],
      [
-      "\"I need a girl who's as sweet as a...\"?",
+      "What does he stare at?",
+      "The wall",
+      "The ceiling",
+      "The phone"
+     ],
+     [
+      "What does he hear call in the back of his mind?",
+      "My conscience",
+      "My mama",
+      "My crew"
+     ],
+     [
+      "He needs a girl as sweet as a what?",
       "Dove",
       "Rose",
       "Peach"
      ],
      [
-      "\"In the back of my mind I hear my ___ call\"?",
-      "Conscience",
-      "Mother",
-      "Heart"
-     ],
-     [
-      "\"Tear drops made my eyes...\"?",
-      "Burn",
-      "Blue",
-      "Close"
-     ],
-     [
-      "\"I'll never dish another raw...\"?",
-      "Deal",
-      "Meal",
-      "Hand"
-     ]
-    ],
-    [
-     [
-      "\"Romance, sheer delight, how...\"?",
-      "Sweet",
-      "Nice",
-      "Right"
-     ],
-     [
-      "He'll lay down his jacket so you can walk over a...?",
-      "Puddle",
-      "Bridge",
-      "Curb"
-     ],
-     [
-      "\"I'll give you a ___, pull out your chair\"?",
-      "Rose",
-      "Ring",
-      "Call"
-     ],
-     [
-      "\"It's ___ whenever I'm with you\"?",
-      "Deja vu",
-      "Magic",
-      "Heaven"
-     ],
-     [
-      "\"You ain't in my closet, or under my...\"?",
-      "Rug",
-      "Bed",
-      "Stairs"
-     ],
-     [
-      "\"This love search is really makin' me...\"?",
-      "Bug",
-      "Smile",
-      "Tired"
-     ],
-     [
-      "\"Fantasies can run, but they can't...\"?",
-      "Hide",
-      "Stop",
-      "Fly"
-     ],
-     [
-      "\"Inside my soul because my soul is...\"?",
-      "Cold",
-      "Old",
-      "Gold"
-     ],
-     [
-      "\"The other half needs affection and...\"?",
-      "Joy",
+      "For the first time in his life, he sees he needs what?",
       "Love",
-      "Time"
+      "Money",
+      "Rest"
+     ],
+     [
+      "What was he giggling about?",
+      "The games",
+      "The jokes",
+      "The movies"
+     ],
+     [
+      "He played games with many what?",
+      "Hearts",
+      "Minds",
+      "Friends"
+     ],
+     [
+      "What is he not saying?",
+      "No names",
+      "No lies",
+      "No secrets"
+     ],
+     [
+      "What made his eyes burn?",
+      "Tear drops",
+      "The smoke",
+      "The sun"
+     ],
+     [
+      "\"Look what you've done to...\" who?",
+      "Her",
+      "Me",
+      "Us"
+     ],
+     [
+      "He'll never dish another raw what?",
+      "Deal",
+      "Rhyme",
+      "Meal"
      ]
     ],
     [
      [
-      "\"I'm no longer a playboy on the...\"?",
-      "Run",
-      "Phone",
-      "Block"
-     ],
-     [
-      "\"Friendship, trust, honor, respect...\"?",
-      "Admiration",
+      "He was playin' make what?",
+      "Believe",
       "Money",
-      "Patience"
+      "Music"
      ],
      [
-      "\"It's taught me love and how to be a real...\"?",
-      "Man",
-      "Friend",
-      "King"
+      "What was he holding in?",
+      "My laugh",
+      "My tears",
+      "My breath"
      ],
      [
-      "\"Understand I'll be frozen in...\"?",
-      "Time",
-      "Ice",
-      "Place"
+      "What word does he say while kissing your ear?",
+      "Amor",
+      "Baby",
+      "Bonjour"
      ],
      [
-      "\"I can't sit and wait for my ___ to arrive\"?",
-      "Princess",
-      "Queen",
-      "Lady"
+      "Where does he kiss you while saying amor?",
+      "On the ear",
+      "On the hand",
+      "On the forehead"
      ],
      [
-      "\"I'll search the whole ___ for that special girl\"?",
-      "World",
-      "City",
-      "Block"
+      "What does he whisper he'll always be?",
+      "Here",
+      "True",
+      "Yours"
      ],
      [
-      "\"When I finally find you watch our love...\"?",
-      "Unfurl",
-      "Grow",
-      "Shine"
+      "What does he often do?",
+      "Reminisce",
+      "Travel",
+      "Party"
+     ],
+     [
+      "A desire for true love is floatin' where?",
+      "Around",
+      "Away",
+      "Above"
+     ],
+     [
+      "What is his soul?",
+      "Cold",
+      "Gold",
+      "Old"
+     ],
+     [
+      "One half deserves to be this way till he's what?",
+      "Old",
+      "Rich",
+      "Gone"
+     ],
+     [
+      "The other half needs affection and what?",
+      "Joy",
+      "Money",
+      "Peace"
+     ],
+     [
+      "The warmth is created by a girl and a what?",
+      "Boy",
+      "Song",
+      "Ring"
+     ]
+    ],
+    [
+     [
+      "How's his tour going?",
+      "Good",
+      "Slow",
+      "Canceled"
+     ],
+     [
+      "What is he sellin' a lot of?",
+      "Tickets",
+      "Records",
+      "T-shirts"
+     ],
+     [
+      "Who calls him all the time?",
+      "Girls",
+      "Reporters",
+      "His mama"
+     ],
+     [
+      "What does the little girl call her dad?",
+      "Daddy",
+      "Pops",
+      "Sir"
+     ],
+     [
+      "Romance, sheer what?",
+      "Delight",
+      "Magic",
+      "Luck"
+     ],
+     [
+      "He needs a girl to make his life what?",
+      "Complete",
+      "Easy",
+      "Busy"
+     ],
+     [
+      "What will he lay down so you can walk over a puddle?",
+      "My jacket",
+      "My hat",
+      "My towel"
+     ],
+     [
+      "What flower will he give you?",
+      "A rose",
+      "A tulip",
+      "A daisy"
+     ],
+     [
+      "What will he pull out before you eat?",
+      "Your chair",
+      "The menu",
+      "His wallet"
+     ],
+     [
+      "He kisses you on the what and says you're so sweet?",
+      "Cheek",
+      "Hand",
+      "Forehead"
+     ],
+     [
+      "What does he feel whenever he's with you?",
+      "Deja vu",
+      "Butterflies",
+      "Nervous"
      ]
     ]
    ]
@@ -260,155 +333,425 @@ window.CFG = {
    "qs": [
     [
      [
-      "\"No rapper can rap quite like...\"?",
+      "No rapper can rap quite like who?",
       "I can",
-      "You can",
-      "He can"
+      "Run can",
+      "Rakim can"
      ],
      [
-      "\"Make you say 'Go LL,' and do the...\"?",
+      "What kind of cop is he?",
+      "An MC cop",
+      "A street cop",
+      "A rent-a-cop"
+     ],
+     [
+      "He makes you say \"Go LL\" and do the what?",
       "Wop",
-      "Wobble",
-      "Bounce"
+      "Wave",
+      "Wobble"
      ],
      [
-      "His gold nameplate says...?",
-      "I wish you would",
-      "Cool J",
-      "Number one"
+      "Think you can outrhyme him? \"Yeah boy, I...\"",
+      "Bet",
+      "Doubt it",
+      "Know"
      ],
      [
-      "\"Trendsetter, I'm better, my rhymes are...\"?",
+      "He ain't met anyone who can do what yet?",
+      "Outrhyme me",
+      "Beat my score",
+      "Dance like me"
+     ],
+     [
+      "He's a trend what?",
+      "Setter",
+      "Maker",
+      "Watcher"
+     ],
+     [
+      "How are his rhymes?",
       "Good",
-      "Hot",
-      "Fresh"
+      "Bad",
+      "Slow"
      ],
      [
-      "\"Before my rhyme is over, you know I'mma...\"?",
+      "What kind of nameplate does he have?",
+      "Gold",
+      "Silver",
+      "Diamond"
+     ],
+     [
+      "His nameplate says \"I wish you...\" what?",
+      "Would",
+      "Could",
+      "Knew"
+     ],
+     [
+      "When battles begin, he's gotta what?",
+      "Join in",
+      "Back out",
+      "Sit down"
+     ],
+     [
+      "Before his rhyme is over, he'll what?",
       "Win",
-      "Grin",
-      "Spin"
+      "Quit",
+      "Stop"
      ]
     ],
     [
      [
-      "\"Got concrete rhymes, been rappin' for...\" how many years?",
+      "Cool J has arrived, so you better make what?",
+      "Way",
+      "Noise",
+      "Room"
+     ],
+     [
+      "Ask anybody where?",
+      "In the crowd",
+      "On the block",
+      "At the store"
+     ],
+     [
+      "So many girls, he thinks his what is tapped?",
+      "Phone",
+      "Car",
+      "Door"
+     ],
+     [
+      "What kind of rhymes has he got?",
+      "Concrete",
+      "Golden",
+      "Paper"
+     ],
+     [
+      "How many years has he been rappin'?",
       "Ten",
       "Five",
       "Twenty"
      ],
      [
-      "\"MCs can't win, I make 'em rust like...\"?",
-      "Tin",
-      "Iron",
-      "Nails"
+      "Even when he's braggin', he's being what?",
+      "Sincere",
+      "Funny",
+      "Loud"
      ],
      [
-      "\"They call me ___, my hat is like a shark's fin\"?",
+      "He makes MCs rust like what?",
+      "Tin",
+      "Iron",
+      "Old cars"
+     ],
+     [
+      "What do they call him?",
       "Jaws",
-      "Fins",
+      "Shark",
       "Hammer"
      ],
      [
-      "\"The best rapper you've heard is...\"?",
-      "LL Cool J",
-      "Kool Moe Dee",
-      "Run"
+      "His hat is like a shark's what?",
+      "Fin",
+      "Tooth",
+      "Tail"
      ],
      [
-      "\"Used to rock in my ___, now I'm number one\"?",
-      "Basement",
-      "Bedroom",
-      "Backyard"
+      "Where did he used to rock?",
+      "My basement",
+      "My school",
+      "The park"
      ],
      [
-      "\"I'm the pinnacle, that means I reign...\"?",
-      "Supreme",
-      "Forever",
-      "Alone"
-     ],
-     [
-      "\"I'll crush you like a...\"?",
-      "Jellybean",
-      "Grape",
-      "Cookie"
-     ],
-     [
-      "\"Cool J has arrived, so you better make...\"?",
-      "Way",
-      "Room",
-      "Noise"
-     ],
-     [
-      "\"Ask anybody in the crowd, they say the kid don't...\"?",
-      "Play",
-      "Stop",
-      "Quit"
+      "As the pinnacle, what does he do?",
+      "Reign supreme",
+      "Rule the block",
+      "Rock the bells"
      ]
     ],
     [
      [
-      "\"I'm as strong as a...\"?",
+      "How many other group members was he spotted with?",
+      "Three",
+      "Two",
+      "Five"
+     ],
+     [
+      "Which DJ is named with Bobcat and E Love?",
+      "Cut Creator",
+      "Jam Master Jay",
+      "DJ Scratch"
+     ],
+     [
+      "Police say use what kind of caution?",
+      "Extreme",
+      "Some",
+      "No"
+     ],
+     [
+      "Your ego did what?",
+      "Shrunk",
+      "Grew",
+      "Broke"
+     ],
+     [
+      "He's so good it's a what?",
+      "Shame",
+      "Crime",
+      "Gift"
+     ],
+     [
+      "He's as strong as a what?",
       "Bull",
       "Bear",
       "Ox"
      ],
      [
-      "\"I enjoy what I'm doing plus I'm paid in...\"?",
+      "He enjoys it, plus he's paid in what?",
       "Full",
       "Cash",
       "Gold"
      ],
      [
-      "\"Never retire or put my mic on the...\"?",
+      "He'll never put his mic on the what?",
       "Shelf",
       "Floor",
-      "Stand"
+      "Table"
      ],
      [
-      "\"The baddest rapper in the history of...\"?",
-      "Rap itself",
-      "Queens",
-      "The world"
-     ],
-     [
-      "\"Not bitter or mad, just provin' I'm...\"?",
-      "Bad",
-      "Rad",
-      "Glad"
-     ],
-     [
-      "\"You want a hit, give me an hour plus a pen and a...\"?",
+      "For a hit: an hour, a pen and a what?",
       "Pad",
       "Beat",
-      "Booth"
+      "Desk"
      ],
      [
-      "\"So forget Oreos, eat Cool J...\"?",
-      "Cookies",
-      "Cupcakes",
-      "Candy"
+      "Forget Oreos, eat what?",
+      "Cool J cookies",
+      "Chips Ahoy",
+      "Fig Newtons"
+     ],
+     [
+      "He's not bitter or what?",
+      "Mad",
+      "Sad",
+      "Tired"
      ]
     ]
    ]
   },
   {
-   "title": "Rock the Bells",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Going Back to Cali",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
    "title": "Mama Said Knock You Out",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "vimZj8HW0Kg",
+   "start": 8,
+   "cuts": [
+    37.9,
+    117.6,
+    179.2
+   ],
+   "qs": [
+    [
+     [
+      "Don't call it a what?",
+      "Comeback",
+      "Mixtape",
+      "Remix"
+     ],
+     [
+      "How long has he been here?",
+      "Years",
+      "Months",
+      "Days"
+     ],
+     [
+      "Who is he rockin'?",
+      "My peers",
+      "The crowd",
+      "The world"
+     ],
+     [
+      "The tears rain down like a what?",
+      "Monsoon",
+      "River",
+      "Storm"
+     ],
+     [
+      "Listen to the bass go what?",
+      "Boom",
+      "Bang",
+      "Bump"
+     ],
+     [
+      "What's overpowerin'?",
+      "Explosions",
+      "Speakers",
+      "Thunder"
+     ],
+     [
+      "He's towerin' over the what?",
+      "Competition",
+      "City",
+      "Crowd"
+     ],
+     [
+      "When he drops, he's wrecking what?",
+      "Shop",
+      "House",
+      "Shows"
+     ],
+     [
+      "Don't you dare what?",
+      "Stare",
+      "Speak",
+      "Leave"
+     ],
+     [
+      "Don't ever what him to the rest?",
+      "Compare",
+      "Prepare",
+      "Declare"
+     ],
+     [
+      "What is the competition paying?",
+      "The price",
+      "The bill",
+      "The rent"
+     ]
+    ],
+    [
+     [
+      "Who said knock you out?",
+      "Mama",
+      "Daddy",
+      "The coach"
+     ],
+     [
+      "Don't call this a regular what?",
+      "Jam",
+      "Song",
+      "Track"
+     ],
+     [
+      "He's gonna rock this what?",
+      "Land",
+      "Party",
+      "Stage"
+     ],
+     [
+      "He'll take the itty-bitty world by what?",
+      "Storm",
+      "Surprise",
+      "Force"
+     ],
+     [
+      "He's just getting what?",
+      "Warm",
+      "Started",
+      "Paid"
+     ],
+     [
+      "Which boxer does he name?",
+      "Muhammad Ali",
+      "Mike Tyson",
+      "Joe Frazier"
+     ],
+     [
+      "What did they call Ali?",
+      "Cassius",
+      "Smokin' Joe",
+      "Iron Mike"
+     ],
+     [
+      "\"How ya like me...\" what?",
+      "Now",
+      "Here",
+      "Then"
+     ],
+     [
+      "Who won't the ripper let you get with?",
+      "Mr. Smith",
+      "Mr. T",
+      "Mr. Jones"
+     ],
+     [
+      "Listen to my what shift?",
+      "Gear",
+      "Night",
+      "Time"
+     ],
+     [
+      "He's kinda like which movie hero?",
+      "Shaft",
+      "Rocky",
+      "Superfly"
+     ]
+    ],
+    [
+     [
+      "What does he call out before the chant?",
+      "Breakdown",
+      "Throwdown",
+      "Showdown"
+     ],
+     [
+      "What was he doin' when he heard you?",
+      "Shadow boxin'",
+      "Jump ropin'",
+      "Sleepin'"
+     ],
+     [
+      "Where did he hear you?",
+      "On the radio",
+      "On TV",
+      "In the club"
+     ],
+     [
+      "You forgot that he was what?",
+      "Raw",
+      "Rich",
+      "Here"
+     ],
+     [
+      "What has he got now?",
+      "A new tour",
+      "A new car",
+      "A new crew"
+     ],
+     [
+      "He's going what?",
+      "Insane",
+      "Home",
+      "Platinum"
+     ],
+     [
+      "He's startin' a what?",
+      "Hurricane",
+      "Party",
+      "Fire"
+     ],
+     [
+      "He's releasin' what?",
+      "Pain",
+      "Records",
+      "Doves"
+     ],
+     [
+      "You can't gain or what?",
+      "Maintain",
+      "Complain",
+      "Explain"
+     ],
+     [
+      "Unless you say my what?",
+      "Name",
+      "Rhyme",
+      "Song"
+     ],
+     [
+      "\"I'm gonna knock you...\" what?",
+      "Out",
+      "Down",
+      "Over"
+     ]
+    ]
+   ]
   }
  ],
  "explicitSongs": [

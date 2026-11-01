@@ -139,5 +139,656 @@ window.CFG = {
    "qs": []
   }
  ],
+ "explicitSongs": [
+  {
+   "title": "Judgement Day",
+   "id": "5F4kTIFsg_M",
+   "start": 25.7,
+   "cuts": [
+    67.6,
+    93.1,
+    148
+   ],
+   "qs": [
+    [
+     [
+      "Nobody goes until who says so?",
+      "The God",
+      "The boss",
+      "The DJ"
+     ],
+     [
+      "What role does he play this evening?",
+      "Host",
+      "Judge",
+      "Referee"
+     ],
+     [
+      "Who's holding the fort?",
+      "Mr. Meth",
+      "Mr. Rae",
+      "Mr. Ghost"
+     ],
+     [
+      "What does he say is too long?",
+      "The song",
+      "The line",
+      "The night"
+     ],
+     [
+      "Kids are dead what?",
+      "Wrong",
+      "Broke",
+      "Tired"
+     ],
+     [
+      "Which famous plea does he borrow?",
+      "Can't we all get along?",
+      "Why can't we be friends?",
+      "Let's stay together"
+     ],
+     [
+      "Besides his pinkie, what does he show you?",
+      "His thumb",
+      "His ring",
+      "His fist"
+     ],
+     [
+      "What does something smell like?",
+      "Fish",
+      "Smoke",
+      "Money"
+     ],
+     [
+      "What does he call the loudmouth?",
+      "Mr. Big Mouth",
+      "Mr. Know-It-All",
+      "Mr. Talker"
+     ],
+     [
+      "Who struck through the slum?",
+      "Johnny",
+      "Jimmy",
+      "Joey"
+     ],
+     [
+      "What kind of drum does he play?",
+      "Shaolin drum",
+      "Steel drum",
+      "Bass drum"
+     ]
+    ],
+    [
+     [
+      "Where don't you dare step?",
+      "In the square",
+      "In the ring",
+      "On the stage"
+     ],
+     [
+      "What does he call you when he says kids ain't playing?",
+      "Playa",
+      "Homie",
+      "Partner"
+     ],
+     [
+      "How many ways are there?",
+      "One",
+      "Two",
+      "Three"
+     ],
+     [
+      "Whose way is the only way?",
+      "His way",
+      "Your way",
+      "The right way"
+     ],
+     [
+      "The countdown begins at what number?",
+      "Ten",
+      "Five",
+      "Twenty"
+     ],
+     [
+      "Where was he born, at number nine?",
+      "In the mind",
+      "In the street",
+      "In the city"
+     ],
+     [
+      "What does he tell you to behold at seven?",
+      "Armageddon",
+      "The future",
+      "The light"
+     ],
+     [
+      "Who gets no love at six?",
+      "The rich",
+      "The fake",
+      "The weak"
+     ],
+     [
+      "Who will survive at five?",
+      "Only the strong",
+      "Only the smart",
+      "Only the true"
+     ],
+     [
+      "How many degrees at number three?",
+      "Sixty",
+      "Ninety",
+      "Thirty"
+     ],
+     [
+      "What does he step into at number one?",
+      "The millennium",
+      "The light",
+      "The square"
+     ]
+    ],
+    [
+     [
+      "What's the name of this one?",
+      "Judgement Day",
+      "Doomsday",
+      "Armageddon"
+     ],
+     [
+      "Who should you blame instead of him?",
+      "Society",
+      "The industry",
+      "The radio"
+     ],
+     [
+      "Where do you put your hands?",
+      "In the air",
+      "On your hips",
+      "In your pockets"
+     ],
+     [
+      "Where's the party?",
+      "Over here",
+      "Downtown",
+      "Next door"
+     ],
+     [
+      "What year does he say to keep bouncing?",
+      "Two-thousand",
+      "Ninety-nine",
+      "Two-thousand one"
+     ],
+     [
+      "How many seconds on the T-minus count?",
+      "Thirty",
+      "Ten",
+      "Sixty"
+     ],
+     [
+      "New York's finest are still doing what?",
+      "Wildin'",
+      "Chillin'",
+      "Grindin'"
+     ],
+     [
+      "What are they howling at?",
+      "The full moon",
+      "The stars",
+      "The city"
+     ],
+     [
+      "What does he feel for his crew?",
+      "Love",
+      "Pride",
+      "Trust"
+     ],
+     [
+      "What does he plant to let the garden grow?",
+      "The seed",
+      "The roots",
+      "A tree"
+     ],
+     [
+      "Which toy has the Kung-Fu Grip?",
+      "G.I. Joe",
+      "He-Man",
+      "Transformers"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Release Yo' Delf",
+   "id": "UyiFDN-V_h0",
+   "start": 50.6,
+   "cuts": [
+    85.8,
+    134.7,
+    188.1
+   ],
+   "qs": [
+    [
+     [
+      "What does he call other rappers' styles?",
+      "Bogus",
+      "Weak",
+      "Played out"
+     ],
+     [
+      "What does he tell you to prepare for?",
+      "This verse",
+      "The storm",
+      "The hook"
+     ],
+     [
+      "What kind of voodoo is this verse?",
+      "Tical voodoo",
+      "Shaolin voodoo",
+      "Wu voodoo"
+     ],
+     [
+      "What does the stuff ignite?",
+      "Stimulation",
+      "Fire",
+      "The crowd"
+     ],
+     [
+      "He's that house over what?",
+      "Water",
+      "Fire",
+      "The hill"
+     ],
+     [
+      "Which disaster movie does he say it's as deep as?",
+      "The Poseidon Adventure",
+      "Titanic",
+      "Jaws"
+     ],
+     [
+      "What do people need to touch?",
+      "Their picture",
+      "The sky",
+      "The mic"
+     ],
+     [
+      "What's spreading?",
+      "The sickness",
+      "The word",
+      "The fire"
+     ],
+     [
+      "How is the sickness spreading?",
+      "With the quickness",
+      "Slowly",
+      "Through the radio"
+     ],
+     [
+      "Which word does he chant over and over?",
+      "Tical",
+      "Wu-Tang",
+      "Shaolin"
+     ],
+     [
+      "How many times in a row does he chant it?",
+      "Four",
+      "Two",
+      "Six"
+     ]
+    ],
+    [
+     [
+      "What do they keep doing?",
+      "Movin'",
+      "Grindin'",
+      "Rollin'"
+     ],
+     [
+      "Besides the rhythm, what's that?",
+      "That sound",
+      "That beat",
+      "That noise"
+     ],
+     [
+      "Who's getting down?",
+      "Party people",
+      "Wu people",
+      "City people"
+     ],
+     [
+      "When it hits the baddest who?",
+      "Man",
+      "Crew",
+      "DJ"
+     ],
+     [
+      "What does the bridge tell you to release?",
+      "Yo' delf",
+      "The beat",
+      "Your mind"
+     ],
+     [
+      "What did somebody say?",
+      "It's on",
+      "It's over",
+      "It's time"
+     ],
+     [
+      "Which crew shouldn't you front on?",
+      "The Clan",
+      "The Mob",
+      "The Firm"
+     ],
+     [
+      "For his brother, who would he take it to?",
+      "The Pope",
+      "The President",
+      "The Mayor"
+     ],
+     [
+      "Word to who?",
+      "Mother",
+      "Father",
+      "God"
+     ],
+     [
+      "What does he ask his people?",
+      "Where you at?",
+      "You ready?",
+      "You with it?"
+     ],
+     [
+      "Which cartoon sailor's line does he borrow?",
+      "Popeye's",
+      "Bluto's",
+      "Captain Crunch's"
+     ]
+    ],
+    [
+     [
+      "What do they think they are?",
+      "Bigger",
+      "Better",
+      "Tougher"
+     ],
+     [
+      "What is he when he starts to kick it?",
+      "Wicked",
+      "Wild",
+      "Wired"
+     ],
+     [
+      "What kind of sound is it?",
+      "Raw",
+      "Loud",
+      "Smooth"
+     ],
+     [
+      "What does he wash it down with?",
+      "A Mystic",
+      "A soda",
+      "A forty"
+     ],
+     [
+      "Then what drink does he add?",
+      "A Snapple",
+      "A Sprite",
+      "A Pepsi"
+     ],
+     [
+      "What does the other guy want?",
+      "The juice",
+      "The money",
+      "The mic"
+     ],
+     [
+      "What doesn't he want?",
+      "The hassle",
+      "The fame",
+      "The beef"
+     ],
+     [
+      "What do they try to overthrow?",
+      "The castle",
+      "The king",
+      "The throne"
+     ],
+     [
+      "Better yet, what instead of the castle?",
+      "The tent",
+      "The tower",
+      "The house"
+     ],
+     [
+      "Where's he coming to?",
+      "Your town",
+      "Your house",
+      "Your show"
+     ],
+     [
+      "The second bridge says breathe in until when?",
+      "Till then",
+      "Till dawn",
+      "Till it's over"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "All I Need",
+   "id": "OFLyEdD_mDE",
+   "start": 20,
+   "cuts": [
+    52.7,
+    104.7,
+    151.5
+   ],
+   "qs": [
+    [
+     [
+      "What does he say she is, all that he...?",
+      "Needs",
+      "Wants",
+      "Has"
+     ],
+     [
+      "What will he be for her?",
+      "There",
+      "True",
+      "Home"
+     ],
+     [
+      "If she keeps it real, what does he do?",
+      "Keeps it real",
+      "Keeps it quiet",
+      "Keeps it moving"
+     ],
+     [
+      "What good thing does she have, per the hook?",
+      "Power-U",
+      "A good heart",
+      "A good job"
+     ],
+     [
+      "When is he there for her?",
+      "Anytime",
+      "Weekends",
+      "Late nights"
+     ],
+     [
+      "Whose world is he in?",
+      "Hers",
+      "His",
+      "Everyone's"
+     ],
+     [
+      "What makes a man feel better than anything?",
+      "A woman",
+      "Money",
+      "Music"
+     ],
+     [
+      "What is the queen wearing?",
+      "A crown",
+      "A ring",
+      "A gown"
+     ],
+     [
+      "What is she down for?",
+      "Whatever",
+      "The ride",
+      "The money"
+     ],
+     [
+      "How many things are forever?",
+      "Few",
+      "Many",
+      "None"
+     ],
+     [
+      "Back when he was nothing, she made him feel like what?",
+      "Something",
+      "A king",
+      "A star"
+     ]
+    ],
+    [
+     [
+      "What color were the skies?",
+      "Gray",
+      "Blue",
+      "Black"
+     ],
+     [
+      "Where would she rub him?",
+      "On his back",
+      "On his head",
+      "On his hands"
+     ],
+     [
+      "What would she tell him it'll be?",
+      "Okay",
+      "Over",
+      "Better"
+     ],
+     [
+      "To a brother like him, that's what?",
+      "Real",
+      "Rare",
+      "Love"
+     ],
+     [
+      "What will he walk so they can live?",
+      "These dogs",
+      "The block",
+      "The line"
+     ],
+     [
+      "How many kids does he picture?",
+      "Thousands",
+      "Two",
+      "Ten"
+     ],
+     [
+      "What phrase does he swear on before talking about rings?",
+      "Word life",
+      "Word up",
+      "Real talk"
+     ],
+     [
+      "What doesn't she need to be his wife?",
+      "A ring",
+      "A dress",
+      "A party"
+     ],
+     [
+      "They'll be living in the lap of what?",
+      "Luxury",
+      "Love",
+      "Leisure"
+     ],
+     [
+      "How is he going now?",
+      "All out",
+      "Back home",
+      "Slow"
+     ],
+     [
+      "How much love does he have to give?",
+      "Mad love",
+      "Some love",
+      "Real love"
+     ]
+    ],
+    [
+     [
+      "Besides her body, what does he love?",
+      "Her skin tone",
+      "Her smile",
+      "Her voice"
+     ],
+     [
+      "What does she have of her own?",
+      "A mind",
+      "A car",
+      "A plan"
+     ],
+     [
+      "What doesn't he need to do?",
+      "Shop around",
+      "Look around",
+      "Run around"
+     ],
+     [
+      "Where might he be locked up?",
+      "Up North",
+      "Downtown",
+      "Out West"
+     ],
+     [
+      "While he's away, she's in the world doing what?",
+      "Rockin'",
+      "Waiting",
+      "Working"
+     ],
+     [
+      "How much cloth does she wear?",
+      "Three-fourths",
+      "Half",
+      "A little"
+     ],
+     [
+      "What does she never do?",
+      "Show off",
+      "Go out",
+      "Talk back"
+     ],
+     [
+      "If he's Noah, she can be his what?",
+      "Wiz",
+      "Eve",
+      "Ruth"
+     ],
+     [
+      "If he's the Sun, she's the what?",
+      "Earth",
+      "Moon",
+      "Star"
+     ],
+     [
+      "What gets resurrected through birth?",
+      "The God",
+      "The King",
+      "The Love"
+     ],
+     [
+      "What kind of craving does he have for her?",
+      "A love jonz",
+      "A sweet tooth",
+      "A habit"
+     ]
+    ]
+   ]
+  }
+ ],
  "preview": true
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
