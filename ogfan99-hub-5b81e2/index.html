@@ -1675,8 +1675,9 @@ window.OGX = (function () {
 (function () {
   const box = $("mapbox"), b = document.createElement("button"); b.type = "button"; b.className = "mapbig"; b.setAttribute("aria-label", "Make the map bigger"); b.innerHTML = "&#10530;";
   box.appendChild(b);
-  const fix = () => setTimeout(() => { try { window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 60);
-  b.onclick = e => { e.stopPropagation(); const on = !box.classList.contains("big"); box.classList.toggle("big", on); b.innerHTML = on ? "&#10529; SMALL" : "&#10530;"; b.setAttribute("aria-label", on ? "Make the map small again" : "Make the map bigger"); fix(); };
+  let keep = null;
+  const fix = on => setTimeout(() => { try { const m = window.__map; m.invalidateSize({ pan: false }); if (keep) m.setView(keep[0], Math.max(10, keep[1] + (on ? 1 : -1)), { animate: false }); } catch (e) {} }, 60);
+  b.onclick = e => { e.stopPropagation(); const on = !box.classList.contains("big"); try { keep = [window.__map.getCenter(), window.__map.getZoom()]; } catch (er) { keep = null; } box.classList.toggle("big", on); b.innerHTML = on ? "&#10529; SMALL" : "&#10530;"; b.setAttribute("aria-label", on ? "Make the map small again" : "Make the map bigger"); fix(on); };
   /* opening an artist from the big map shrinks it first so the card and list are right there */
   $("list").addEventListener("click", () => { if (box.classList.contains("big")) b.click(); }, true);
   const _oc = openCard; openCard = function () { if (box.classList.contains("big")) b.click(); return _oc.apply(this, arguments); };
