@@ -132,6 +132,12 @@
     var p = panes.lounge;
     var head = '<div class="wp-h"><div class="t">ARTIST LOUNGE</div><div class="s">WHERE THE ARTISTS LINK UP</div></div>';
     if (L.preview && owner()) { p.innerHTML = head + loungeInside(); wireInside(); return; }
+    if (live() && !L.gate) { p.innerHTML = head + '<p class="wmsg">Loading...</p>'; OGFB.social.me().then(function (m) {
+        if (!m) { L.gate = 1; drawLounge(); L.gate = 0; return; }
+        if (m.none) return pickDoor(true);
+        if (!m.approved) { p.innerHTML = head + '<div class="wbox"><h4>YOU\'RE ON THE LIST</h4><p>Your door is <b>' + esc(m.door) + '</b>. OG Bobby checks every artist before they get in. You\'ll be able to add OG 99 friends as soon as he approves you.</p></div><button class="wbtn dark" id="lgOut" type="button">SIGN OUT</button>'; $("lgOut").onclick = function () { OGFB.social.signOut().then(drawLounge); }; return; }
+        liveInside(m);
+      }).catch(function () { L.gate = 1; drawLounge(); L.gate = 0; }); return; }
     p.innerHTML = head +
       '<div class="wbox"><h4>OG 99 FRIENDS</h4><p>Every artist on the map gets a door. Inside the Lounge, artists find each other, send friend requests and talk one-on-one.</p>' +
       '<ol class="wsteps"><li>Claim your door on the map</li><li>OG Bobby approves you, so every artist in here is real</li><li>Sign in, add OG 99 friends and start talking</li></ol></div>' +
@@ -171,9 +177,9 @@
     }).catch(function () { body.innerHTML = '<p class="wmsg">Couldn\'t load approvals. Try again.</p>'; });
   }
 
-  function pickDoor() {
+  function pickDoor(join) {
     var p = panes.lounge;
-    p.innerHTML = '<div class="wp-h"><div class="t">CLAIM YOUR DOOR</div><div class="s">FIND YOUR NAME ON THE MAP</div></div>' +
+    p.innerHTML = '<div class="wp-h"><div class="t">' + (join ? "WHICH DOOR IS YOURS?" : "CLAIM YOUR DOOR") + '</div><div class="s">FIND YOUR NAME ON THE MAP</div></div>' +
       '<input class="lsearch" id="pdQ" placeholder="Type your artist name" autocapitalize="off" autocomplete="off">' +
       '<div id="pdList" style="display:grid;gap:6px"></div><button class="wbtn dark" id="pdBack" type="button">BACK</button>';
     var draw = function () {
@@ -182,8 +188,10 @@
       $("pdList").innerHTML = out.slice(0, 30).map(function (x) { return row(x[0], '<button class="wbtn sm gold" type="button" data-i="' + x[1] + '">THAT\'S ME</button>'); }).join("") || '<p class="wmsg">Not on the map yet? Message OG Bobby on Instagram to get your door.</p>';
     };
     $("pdQ").oninput = draw; draw();
-    $("pdList").onclick = function (e) { var b = e.target.closest("[data-i]"); if (b && typeof openClaim === "function") openClaim(+b.dataset.i); };
-    $("pdBack").onclick = drawLounge;
+    $("pdList").onclick = function (e) { var b = e.target.closest("[data-i]"); if (!b) return;
+      if (join) { b.disabled = true; var a = A()[+b.dataset.i]; OGFB.social.join("artist", a.who, a.who).then(drawLounge); return; }
+      if (typeof openClaim === "function") openClaim(+b.dataset.i); };
+    $("pdBack").onclick = join ? function () { OGFB.social.signOut().then(drawLounge); } : drawLounge;
   }
 
   function row(a, acts, tag) {
@@ -232,6 +240,40 @@
       if (b.dataset.add) { st2.sent[b.dataset.add] = 1; psave(st2); b.outerHTML = '<button class="wbtn sm dark" type="button" disabled>SENT</button>'; }
     };
   }
+  /* LIVE lounge: real approved artists, friend requests and chats from the online database */
+  function liveInside(m) {
+    var p = panes.lounge, S = OGFB.social;
+    Promise.all([S.members("artist"), S.incoming(), S.friends()]).then(function (r) {
+      var mem = {}; r[0].forEach(function (x) { mem[x.id] = x; }); var inc = r[1], fr = r[2];
+      var door = function (x) { var n = x && (x.door || x.name); return Object.assign({}, find(n), { who: (x && x.name) || n }); };
+      var me = door(m), sent = LS("ogfan99sent") || {};
+      var subs = [["friends", "FRIENDS", 0], ["requests", "REQUESTS", inc.length], ["find", "FIND ARTISTS", 0], ["messages", "MESSAGES", 0]];
+      p.innerHTML = '<div class="wp-h"><div class="t">ARTIST LOUNGE</div><div class="s">WHERE THE ARTISTS LINK UP</div></div>' +
+        '<div class="prof"><div class="av" style="background:' + avColor(me) + '">' + esc(initials(me.who)) + '</div><div><div class="nm">' + esc(me.who) + '</div><div class="mt">' + esc(meta(me)) + bul(me) + '<br>&#129309; ' + fr.length + ' OG 99 FRIENDS</div></div></div>' +
+        '<div class="lsub">' + subs.map(function (x) { return '<button type="button" data-s="' + x[0] + '"' + (L.sub === x[0] ? ' class="on"' : '') + '>' + x[1] + (x[2] ? '<i>' + x[2] + '</i>' : '') + '</button>'; }).join("") + '</div><div id="lgBody" style="display:grid;gap:6px"></div>' +
+        '<button class="wbtn dark" id="lgOut" type="button">SIGN OUT</button>';
+      p.querySelector(".lsub").onclick = function (e) { var b = e.target.closest("[data-s]"); if (!b) return; L.sub = b.dataset.s; liveInside(m); };
+      $("lgOut").onclick = function () { S.signOut().then(drawLounge); };
+      var body = $("lgBody");
+      var chatBtn = function (u) { return '<button class="wbtn sm gold" type="button" data-cu="' + esc(u) + '">MESSAGE</button>'; };
+      if (L.sub === "friends" || L.sub === "messages") {
+        body.innerHTML = fr.map(function (u) { return row(door(mem[u] || { name: "Artist" }), chatBtn(u), "&#129309; FRIENDS"); }).join("") || '<p class="wmsg">No OG 99 friends yet. Tap FIND ARTISTS.</p>';
+      } else if (L.sub === "requests") {
+        body.innerHTML = inc.map(function (q) { return row(door(mem[q.from] || { name: "Artist" }), '<button class="wbtn sm gold" type="button" data-acc="' + esc(q.id) + '">ACCEPT</button><button class="wbtn sm dark" type="button" data-dec="' + esc(q.id) + '">&#10005;</button>', "WANTS TO LINK"); }).join("") || '<p class="wmsg">No new friend requests.</p>';
+      } else {
+        var list = r[0].filter(function (x) { return x.id !== m.id && fr.indexOf(x.id) < 0; });
+        body.innerHTML = list.map(function (x) { return row(door(x), sent[x.id] ? '<button class="wbtn sm dark" type="button" disabled>SENT</button>' : '<button class="wbtn sm" type="button" data-add="' + esc(x.id) + '">+ ADD</button>'); }).join("") || '<p class="wmsg">You\'re linked with every artist in the Lounge so far.</p>';
+      }
+      body.onclick = function (e) {
+        var b = e.target.closest("button"); if (!b || b.disabled) return; b.disabled = true;
+        if (b.dataset.cu) { b.disabled = false; return openChat(door(mem[b.dataset.cu]).who, b.dataset.cu); }
+        if (b.dataset.acc) return S.respond(b.dataset.acc, true).then(function () { L.sub = "friends"; liveInside(m); });
+        if (b.dataset.dec) return S.respond(b.dataset.dec, false).then(function () { liveInside(m); });
+        if (b.dataset.add) return S.request(b.dataset.add).then(function () { sent[b.dataset.add] = 1; LS("ogfan99sent", sent); b.textContent = "SENT"; }).catch(function () { b.disabled = false; });
+      };
+    }).catch(function () { p.innerHTML = '<p class="wmsg">Couldn\'t load the Lounge. Check your connection and try again.</p>'; });
+  }
+
   function find(n) { var all = A().concat(sampleFriends, sampleReqs); for (var i = 0; i < all.length; i++) if (all[i].who === n) return all[i]; return { who: n }; }
 
   /* chat window (preview keeps messages on this phone; live mode uses the online database) */
@@ -240,11 +282,13 @@
     '<div class="msgs" id="chMsgs"></div><div class="safe"><button type="button" id="chBlock">BLOCK</button><button type="button" id="chReport">REPORT</button></div>' +
     '<div class="cf"><textarea id="chIn" maxlength="1000" placeholder="Message"></textarea><button type="button" id="chSend">SEND</button></div>';
   document.body.appendChild(chat);
-  var chWith = null;
-  function openChat(n) {
-    chWith = n; var a = find(n);
+  var chWith = null, chUid = null, chOff = null;
+  function openChat(n, uid) {
+    chWith = n; chUid = uid || null; var a = find(n);
+    if (chOff) { try { chOff(); } catch (e) {} chOff = null; }
+    if (chUid) { $("chMsgs").innerHTML = ""; OGFB.social.listen(chUid, function (msgs) { var me = firebase.auth().currentUser.uid; $("chMsgs").innerHTML = '<div class="day">YOU\'RE OG 99 FRIENDS · SAY WHAT\'S UP</div>' + msgs.map(function (x) { return '<div class="bub' + (x.from === me ? " me" : "") + '">' + esc(x.text) + '</div>'; }).join(""); $("chMsgs").scrollTop = 1e6; }).then(function (off) { chOff = off; }); }
     $("chAv").textContent = initials(n); $("chAv").style.background = avColor(a); $("chNm").textContent = n; $("chMt").innerHTML = esc(meta(a)) + bul(a);
-    paintChat(); chat.hidden = false; setTimeout(function () { $("chIn").focus(); }, 50);
+    if (!chUid) paintChat(); chat.hidden = false; setTimeout(function () { $("chIn").focus(); }, 50);
   }
   function paintChat() {
     var c = (pstate().chats[chWith] || []);
@@ -252,14 +296,15 @@
     $("chMsgs").innerHTML = first + c.map(function (m) { return '<div class="bub' + (m.me ? " me" : "") + '">' + esc(m.t) + '</div>'; }).join("");
     $("chMsgs").scrollTop = 1e6;
   }
-  $("chX").onclick = function () { chat.hidden = true; if (cur === "lounge") drawLounge(); };
+  $("chX").onclick = function () { chat.hidden = true; if (chOff) { try { chOff(); } catch (e) {} chOff = null; } if (cur === "lounge") drawLounge(); };
   $("chSend").onclick = function () {
-    var t = $("chIn").value.trim(); if (!t) return; var s = pstate(); (s.chats[chWith] = s.chats[chWith] || []).push({ me: 1, t: t.slice(0, 1000) }); psave(s); $("chIn").value = ""; paintChat();
+    var t = $("chIn").value.trim(); if (!t) return;
+    if (chUid) { $("chIn").value = ""; OGFB.social.send(chUid, t).catch(function () { note("COULDN'T SEND. TRY AGAIN."); $("chIn").value = t; }); return; } var s = pstate(); (s.chats[chWith] = s.chats[chWith] || []).push({ me: 1, t: t.slice(0, 1000) }); psave(s); $("chIn").value = ""; paintChat();
   };
   $("chIn").addEventListener("keydown", function (e) { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("chSend").click(); } });
   var note = function (t) { var d = document.createElement("div"); d.className = "day"; d.textContent = t; $("chMsgs").appendChild(d); $("chMsgs").scrollTop = 1e6; };
-  $("chBlock").onclick = function () { if (live()) OGFB.social.block(chWith); note(live() ? "BLOCKED. THEY CAN'T MESSAGE YOU." : "PREVIEW · BLOCK WORKS WHEN THE LOUNGE GOES LIVE"); };
-  $("chReport").onclick = function () { if (live()) OGFB.social.report(chWith); note(live() ? "REPORTED. OG BOBBY WILL TAKE A LOOK." : "PREVIEW · REPORTS GO TO OG BOBBY WHEN LIVE"); };
+  $("chBlock").onclick = function () { if (chUid) OGFB.social.block(chUid); note(chUid ? "BLOCKED. THEY CAN'T MESSAGE YOU." : "PREVIEW · BLOCK WORKS WHEN THE LOUNGE GOES LIVE"); };
+  $("chReport").onclick = function () { if (chUid) OGFB.social.report(chUid + " " + chWith); note(chUid ? "REPORTED. OG BOBBY WILL TAKE A LOOK." : "PREVIEW · REPORTS GO TO OG BOBBY WHEN LIVE"); };
 
   /* ---------- FANS: the fan side (template, under construction) ---------- */
   function drawFans() {
