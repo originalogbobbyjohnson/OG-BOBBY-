@@ -100,5 +100,654 @@ window.CFG = {
     { title: "Success", locked: true, cuts: [], qs: [] },
     { title: "Take A Look At My Life", locked: true, cuts: [], qs: [] },
     { title: "Envy", locked: true, cuts: [], qs: [] }
+  ],
+  explicitSongs: [
+   {
+    "title": "All The Way Up",
+    "id": "y2ak_oBeC-I",
+    "cuts": [
+     40.8,
+     98.1,
+     208.5
+    ],
+    "qs": [
+     [
+      [
+       "What word kicks off the song, said twice?",
+       "Go",
+       "Up",
+       "Yo"
+      ],
+      [
+       "\"Nothing can ___ me\"",
+       "Stop",
+       "Hold",
+       "Touch"
+      ],
+      [
+       "\"I'm all the way...\"",
+       "Up",
+       "Out",
+       "In"
+      ],
+      [
+       "\"Shorty what you want? Shorty what you...\"",
+       "Need",
+       "Got",
+       "Like"
+      ],
+      [
+       "\"We ain't ever...\"",
+       "Leavin'",
+       "Losin'",
+       "Stoppin'"
+      ],
+      [
+       "\"Counting up this...\"",
+       "Money",
+       "Paper",
+       "Change"
+      ],
+      [
+       "\"We ain't never...\"",
+       "Sleepin'",
+       "Stoppin'",
+       "Restin'"
+      ],
+      [
+       "\"You got V12, I got...\"",
+       "12V",
+       "V8",
+       "12 cars"
+      ]
+     ],
+     [
+      [
+       "\"With ___ coupes and Rolexes\"",
+       "Bentley",
+       "Benz",
+       "Porsche"
+      ],
+      [
+       "Bentley coupes and what watches?",
+       "Rolexes",
+       "Cartiers",
+       "APs"
+      ],
+      [
+       "\"Had to stash the...\"",
+       "Jewels",
+       "Cash",
+       "Keys"
+      ],
+      [
+       "\"Shorty ___ showin' off her new things\"",
+       "Uptown",
+       "Downtown",
+       "Crosstown"
+      ],
+      [
+       "\"Showin' off her new...\"",
+       "Things",
+       "Shoes",
+       "Clothes"
+      ],
+      [
+       "\"Couldn't take it off so I gave her...\"",
+       "The chain",
+       "The ring",
+       "The watch"
+      ],
+      [
+       "\"Champion sound, yeah I got a few...\"",
+       "Rings",
+       "Belts",
+       "Cars"
+      ],
+      [
+       "\"And you can ___ up\"",
+       "Stay",
+       "Stand",
+       "Go"
+      ],
+      [
+       "\"If you ask anybody where I...\"",
+       "Live",
+       "Stay",
+       "Go"
+      ],
+      [
+       "\"They'll point to the...\"",
+       "Hills",
+       "Sky",
+       "Top"
+      ]
+     ],
+     [
+      [
+       "\"Just left the big house to a ___ house\"",
+       "Bigger",
+       "Brand new",
+       "Beach"
+      ],
+      [
+       "\"Chanel ___ bag\"",
+       "Croc",
+       "Quilted",
+       "Leather"
+      ],
+      [
+       "\"With the gold...\"",
+       "Chains",
+       "Teeth",
+       "Rings"
+      ],
+      [
+       "\"I'm talkin' color money, purple...\"",
+       "Yen",
+       "Euros",
+       "Pesos"
+      ],
+      [
+       "\"...and blue...\"",
+       "Dirham",
+       "Dollars",
+       "Pounds"
+      ],
+      [
+       "\"I got brown...\"",
+       "Lira",
+       "Pesos",
+       "Rupees"
+      ],
+      [
+       "\"Hopped in the helicopter...\"",
+       "Uber",
+       "Taxi",
+       "Jet"
+      ],
+      [
+       "What gets said twice before the beat cuts out?",
+       "Stop the music",
+       "Turn it up",
+       "Hold it down"
+      ],
+      [
+       "\"They want us...\"",
+       "Broke",
+       "Gone",
+       "Quiet"
+      ],
+      [
+       "\"They don't want us to be ___ up\"",
+       "Blessed",
+       "Lifted",
+       "Locked"
+      ],
+      [
+       "\"___, what you want?\"",
+       "Shorty",
+       "Mami",
+       "Baby"
+      ]
+     ]
+    ]
+   },
+   {
+    "title": "What's Luv?",
+    "id": "VpvyG2NrS1Y",
+    "cuts": [
+     40.2,
+     101.1,
+     216.4
+    ],
+    "qs": [
+     [
+      [
+       "\"Joe Crack the...\"",
+       "Don",
+       "Boss",
+       "King"
+      ],
+      [
+       "Which producer gets shouted out at the start?",
+       "Irv Gotti",
+       "Scott Storch",
+       "Just Blaze"
+      ],
+      [
+       "Which singer gets named at the start?",
+       "Ashanti",
+       "Beyoncé",
+       "Mya"
+      ],
+      [
+       "\"Ashanti, Terror, Terror...\"",
+       "Squad",
+       "Dome",
+       "Team"
+      ],
+      [
+       "\"It should be about us, be about...\"",
+       "Trust",
+       "Love",
+       "Time"
+      ],
+      [
+       "\"Got to do, got to do with it,...\"",
+       "Babe",
+       "Girl",
+       "Boy"
+      ],
+      [
+       "\"What's ___\" (the hook)",
+       "Love",
+       "Up",
+       "Good"
+      ],
+      [
+       "\"It's about ___, it's about trust\"",
+       "Us",
+       "You",
+       "Me"
+      ]
+     ],
+     [
+      [
+       "\"Woo, yeah, slow ___, baby\"",
+       "Down",
+       "It",
+       "Up"
+      ],
+      [
+       "\"Let you know from the...\"",
+       "Gate",
+       "Start",
+       "Door"
+      ],
+      [
+       "\"She can be the ___ type\"",
+       "Office",
+       "Quiet",
+       "Party"
+      ],
+      [
+       "\"I'm a ___, whether in a hoodie or a linen\"",
+       "Rider",
+       "Baller",
+       "Driver"
+      ],
+      [
+       "\"Whether in a hoodie or a...\"",
+       "Linen",
+       "Leather",
+       "Suit"
+      ],
+      [
+       "\"A provider, you should see the ___ on my women\"",
+       "Jewelry",
+       "Diamonds",
+       "Furs"
+      ],
+      [
+       "\"And I'm livin' it...\"",
+       "Up",
+       "Large",
+       "Right"
+      ],
+      [
+       "\"The Squad stay fillin' the...\"",
+       "Truck",
+       "Club",
+       "Car"
+      ],
+      [
+       "\"You say you gotta man and you're in...\"",
+       "Love",
+       "Trouble",
+       "Deep"
+      ],
+      [
+       "\"After the ___, me and you\"",
+       "Party",
+       "Show",
+       "Club"
+      ],
+      [
+       "\"Could just slide for a...\"",
+       "Few",
+       "While",
+       "Night"
+      ],
+      [
+       "Right before the hook: \"That's...\"",
+       "Love",
+       "Life",
+       "Right"
+      ]
+     ],
+     [
+      [
+       "\"Mami I know you got...\"",
+       "Issues",
+       "Problems",
+       "Feelings"
+      ],
+      [
+       "\"Tattoo on your chest with his ___ in the middle\"",
+       "Name",
+       "Face",
+       "Number"
+      ],
+      [
+       "\"I'm not a ___, I just crush a lot\"",
+       "Hater",
+       "Player",
+       "Stalker"
+      ],
+      [
+       "\"You need to come a little...\"",
+       "Closer",
+       "Faster",
+       "Later"
+      ],
+      [
+       "\"Under my arms like a ___ is supposed to\"",
+       "Don",
+       "Man",
+       "King"
+      ],
+      [
+       "\"Please believe, you ___ with me\"",
+       "Leave",
+       "Roll",
+       "Ride"
+      ],
+      [
+       "\"You need to trust the God and jump in the...\"",
+       "Car",
+       "Cab",
+       "Jet"
+      ],
+      [
+       "\"For a little hard eight at the...\"",
+       "Taj Mahal",
+       "Bellagio",
+       "Borgata"
+      ],
+      [
+       "\"I stroll in the club with my ___ down\"",
+       "Hat",
+       "Head",
+       "Hood"
+      ],
+      [
+       "\"___ style, hot steppin'\"",
+       "Michael Jack",
+       "Elvis",
+       "Prince"
+      ],
+      [
+       "\"Might be the chain or the...\"",
+       "Whip",
+       "Watch",
+       "Ring"
+      ],
+      [
+       "\"Put your body in...\"",
+       "Motion",
+       "Action",
+       "The air"
+      ]
+     ]
+    ]
+   },
+   {
+    "title": "Lean Back",
+    "id": "ajmI1P3r1w4",
+    "start": 28.8,
+    "cuts": [
+     70.6,
+     155.6,
+     246.1
+    ],
+    "qs": [
+     [
+      [
+       "\"Throw your hands in the...\"",
+       "Air",
+       "Sky",
+       "Back"
+      ],
+      [
+       "\"Feel this right...\"",
+       "Here",
+       "Now",
+       "There"
+      ],
+      [
+       "Which producer does he shout out at the start?",
+       "Scott Storch",
+       "Swizz Beatz",
+       "Just Blaze"
+      ],
+      [
+       "\"Yeah, Khaled, I...\"",
+       "See you",
+       "Hear you",
+       "Got you"
+      ],
+      [
+       "\"We from the ___, New York\"",
+       "Bronx",
+       "Harlem",
+       "Brooklyn"
+      ],
+      [
+       "\"We from the Bronx, New York...\"",
+       "Things happen",
+       "Hands up",
+       "Stand up"
+      ],
+      [
+       "\"It's a cold world and this is...\"",
+       "Ice",
+       "Life",
+       "Gold"
+      ],
+      [
+       "\"Got the ___ in front of the building\"",
+       "Phantom",
+       "Bentley",
+       "Hummer"
+      ],
+      [
+       "The building is on which avenue?",
+       "Trinity Ave",
+       "Prospect Ave",
+       "Tinton Ave"
+      ],
+      [
+       "How many years has he been legit?",
+       "Ten",
+       "Five",
+       "Twenty"
+      ],
+      [
+       "\"As a young'n, was too much to ___ with\"",
+       "Cope",
+       "Deal",
+       "Live"
+      ]
+     ],
+     [
+      [
+       "\"I put the pieces to the...\"",
+       "Puzzle",
+       "Game",
+       "Plan"
+      ],
+      [
+       "\"Me and my peoples was gon'...\"",
+       "Bubble",
+       "Shine",
+       "Blow"
+      ],
+      [
+       "He came out the gate on some what?",
+       "Flo-Jo",
+       "Rocky",
+       "Jordan"
+      ],
+      [
+       "\"Fat brother with the...\"",
+       "Logo",
+       "Chain",
+       "Hat"
+      ],
+      [
+       "\"We just pull up our...\"",
+       "Pants",
+       "Sleeves",
+       "Socks"
+      ],
+      [
+       "\"And do the...\"",
+       "Rockaway",
+       "Running man",
+       "Wop"
+      ],
+      [
+       "\"R to the Ezzy, M to the...\"",
+       "Yzzy",
+       "Izzy",
+       "Ozzy"
+      ],
+      [
+       "\"Got a date at...\"",
+       "Eight",
+       "Nine",
+       "Ten"
+      ],
+      [
+       "\"I just bought a ___ so I can ride\"",
+       "Bike",
+       "Car",
+       "Boat"
+      ],
+      [
+       "\"With a matchin'...\"",
+       "Jacket",
+       "Helmet",
+       "Hat"
+      ],
+      [
+       "\"'Bout to cop me a...\"",
+       "Mansion",
+       "Benz",
+       "Yacht"
+      ],
+      [
+       "\"Listen, we don't pay...\"",
+       "Admission",
+       "Attention",
+       "Taxes"
+      ],
+      [
+       "\"And the ___ don't check us\"",
+       "Bouncers",
+       "Cops",
+       "Doormen"
+      ],
+      [
+       "\"Said he liked my ___, started relaxin'\"",
+       "Necklace",
+       "Sneakers",
+       "Jacket"
+      ]
+     ],
+     [
+      [
+       "\"I just got orders from ___ himself\"",
+       "Fat Joe",
+       "Remy",
+       "The DJ"
+      ],
+      [
+       "\"We at...\"",
+       "Capacity",
+       "The door",
+       "The max"
+      ],
+      [
+       "\"That mean we...\"",
+       "Full",
+       "Done",
+       "Closed"
+      ],
+      [
+       "\"Now we living better now, ___ sweater now\"",
+       "Gucci",
+       "Prada",
+       "Polo"
+      ],
+      [
+       "That G4 can fly through any what?",
+       "Weather",
+       "Storm",
+       "Night"
+      ],
+      [
+       "Who gets tight when you're worth some millions?",
+       "Haters",
+       "Fans",
+       "Neighbors"
+      ],
+      [
+       "What does he sport to hurt their feelings?",
+       "Chinchilla",
+       "Mink",
+       "Leather"
+      ],
+      [
+       "\"You can find Joe Crack at all type of...\"",
+       "Events",
+       "Parties",
+       "Clubs"
+      ],
+      [
+       "He's front row in which city?",
+       "Vegas",
+       "Miami",
+       "Atlanta"
+      ],
+      [
+       "\"Front row to all the...\"",
+       "Fights",
+       "Games",
+       "Shows"
+      ],
+      [
+       "Which court does he not wanna speak about?",
+       "The Rucker",
+       "The Garden",
+       "Dyckman"
+      ],
+      [
+       "\"Not even ___ Kirkland could imagine this\"",
+       "Pee Wee",
+       "Pete",
+       "Pat"
+      ],
+      [
+       "His team didn't have to play to win the what?",
+       "Championship",
+       "Trophy",
+       "Series"
+      ]
+     ]
+    ]
+   }
   ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
