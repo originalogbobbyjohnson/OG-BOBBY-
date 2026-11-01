@@ -346,18 +346,16 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .wrap.app > .metrorow, .wrap.app > .dock2 { display: none !important; }
 .wrap.app { padding-bottom: max(8px, env(safe-area-inset-bottom)) !important; }
 .wrap.app .boros { gap: 4px !important; }
-.wrap.app .boro { display: flex !important; align-items: center; justify-content: center; gap: 4px; padding: 6px 2px 5px !important; border-top-width: 4px !important; font-size: .64rem !important; }
-.wrap.app .boro small { min-width: 0 !important; padding: 1px 4px !important; font-size: .6rem !important; box-shadow: 0 0 0 1px #f2c14e !important; }
+.wrap.app .boro { display: flex !important; align-items: center; justify-content: center; gap: 3px; padding: 6px 1px 5px !important; border-top-width: 4px !important; font-size: .58rem !important; letter-spacing: 0 !important; overflow: visible !important; }
+.wrap.app .boro small { min-width: 0 !important; padding: 1px 3px !important; font-size: .56rem !important; box-shadow: 0 0 0 1px #f2c14e !important; }
 .wrap.app .boro small .bw { display: none; }
-.lnav { flex: none; position: relative; height: 0; z-index: 5; }
-.lnav .ln { position: absolute; right: 8px; display: grid; gap: 6px; bottom: 10px; }
-.lnav button { width: 42px; height: 42px; border-radius: 50%; border: 2px solid #000; background: #e8b84a; color: #000; font: 900 16px/1 Helvetica, Arial, sans-serif; box-shadow: 0 3px 0 #000, 0 0 12px rgba(232,184,74,.6); cursor: pointer; display: grid; place-items: center; padding: 0; }
-.lnav button.up { background: #1d2033; color: #e8b84a; border-color: #e8b84a; }
-.lnav button.auto { font-size: 10px; letter-spacing: .04em; background: #d62828; color: #fff; }
-.lnav button.auto.on { background: #fff; color: #d62828; }
-.lnav button.cue { animation: lncue 1.2s ease-in-out 4; }
-@keyframes lncue { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
-.wrap.app.paneon > .lnav { display: none; }
+.bhead .ln { display: flex; gap: 5px; align-items: center; }
+.bhead .ln button { width: 34px; height: 30px; border-radius: 9px; border: 2px solid #000; background: #e8b84a; color: #000; font: 900 13px/1 Helvetica, Arial, sans-serif; box-shadow: 0 2px 0 #000; cursor: pointer; display: grid; place-items: center; padding: 0; }
+.bhead .ln button.up { background: #1d2033; color: #e8b84a; border-color: #e8b84a; }
+.bhead .ln button.auto { width: auto; padding: 0 7px; font-size: 10px; letter-spacing: .06em; background: #d62828; color: #fff; }
+.bhead .ln button.auto.on { background: #fff; color: #d62828; }
+.bhead .ln button.cue { animation: lncue 1.2s ease-in-out 5; }
+@keyframes lncue { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -385,9 +383,8 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
   <div class="mapbox" id="mapbox"><div class="map" id="map" aria-label="Subway map of the artists"></div><button class="keybtn" id="keyBtn" type="button">SUBWAY KEY</button></div>
 
   <div class="boros" id="boros" role="tablist"></div>
-  <div class="bhead"><h3 id="bname"></h3><button class="sortbtn" id="sortBtn" type="button"></button><div class="vtog" id="vtog"></div><div class="sortpop" id="sortPop" hidden><div class="sorts" id="sorts"></div></div></div>
+  <div class="bhead"><h3 id="bname"></h3><button class="sortbtn" id="sortBtn" type="button"></button><div class="ln" id="lnav"><button type="button" class="up" id="lnUp" aria-label="Previous artist">&#9650;</button><button type="button" class="cue" id="lnDn" aria-label="Next artist">&#9660;</button><button type="button" class="auto" id="lnAuto" aria-label="Auto scroll">AUTO</button></div><div class="vtog" id="vtog"></div><div class="sortpop" id="sortPop" hidden><div class="sorts" id="sorts"></div></div></div>
   <div class="listwrap" id="listwrap"><div class="steel"><i class="rv tl"></i><i class="rv tr"></i><i class="rv bl"></i><i class="rv br"></i><ul class="tiles" id="list"></ul></div></div>
-  <div class="lnav" id="lnav"><div class="ln"><button type="button" class="auto" id="lnAuto" aria-label="Auto scroll">AUTO</button><button type="button" class="up" id="lnUp" aria-label="Previous artist">&#9650;</button><button type="button" class="cue" id="lnDn" aria-label="Next artist">&#9660;</button></div></div>
 
   <nav class="dock2">
     <button type="button" id="moreBtn"><b>&#9776;</b>MORE</button>
