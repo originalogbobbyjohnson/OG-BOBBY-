@@ -362,8 +362,14 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 @keyframes lncue { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
 .tiles > li.picked > .tile::after, .tiles.simple > li.picked .srow::after { content: "TAP AGAIN TO OPEN \25B6"; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%); white-space: nowrap; background: #f2c14e; color: #000; font: 900 9px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; padding: 4px 7px; border-radius: 99px; border: 1.5px solid #000; z-index: 3; }
 .tiles.simple > li.picked .srow { position: relative; }
-.allnyc { position: absolute; right: 10px; top: 10px; z-index: 1000; background: #e8b84a; color: #000; border: 2px solid #000; border-radius: 999px; padding: 6px 12px; font: 900 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; box-shadow: 0 2px 0 #000; cursor: pointer; }
+.allnyc { position: absolute; right: 58px; top: 10px; z-index: 1000; background: #e8b84a; color: #000; border: 2px solid #000; border-radius: 999px; padding: 6px 12px; font: 900 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; box-shadow: 0 2px 0 #000; cursor: pointer; }
 .allnyc[hidden] { display: none; }
+.mapbig { position: absolute; right: 10px; top: 10px; z-index: 1000; width: 40px; height: 34px; background: #111; color: #fff; border: 2px solid #fff; border-radius: 10px; font: 900 18px/1 Helvetica, Arial, sans-serif; box-shadow: 0 2px 0 #000; cursor: pointer; display: grid; place-items: center; padding: 0; }
+.mapbox.big { position: fixed !important; inset: 0; height: auto !important; z-index: 2400; background: #0b0c14; padding: max(8px, env(safe-area-inset-top)) 8px max(8px, env(safe-area-inset-bottom)); }
+.mapbox.big .map { border-radius: 14px; }
+.mapbox.big .mapbig { top: calc(max(8px, env(safe-area-inset-top)) + 10px); right: 18px; background: #e8b84a; color: #000; border-color: #000; width: auto; padding: 0 12px; font-size: 12px; letter-spacing: .08em; }
+.mapbox.big .allnyc { top: calc(max(8px, env(safe-area-inset-top)) + 10px); right: 118px; }
+.mapbox.big .keybtn { left: 18px; bottom: calc(max(8px, env(safe-area-inset-bottom)) + 10px); }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -1662,6 +1668,18 @@ window.OGX = (function () {
   const b = document.createElement("button"); b.type = "button"; b.id = "allNyc"; b.className = "allnyc"; b.textContent = "ALL NYC"; b.hidden = true;
   $("mapbox").appendChild(b);
   b.onclick = () => { mode = "all"; user = false; lastPin = -1; glow(-1); sync(false); if (window.__map) window.__map.flyTo([40.735, -73.95], 10, { duration: .6 }); };
+})();
+</script>
+<script>
+/* ⤢ makes the map full screen; SMALL puts it back in its spot */
+(function () {
+  const box = $("mapbox"), b = document.createElement("button"); b.type = "button"; b.className = "mapbig"; b.setAttribute("aria-label", "Make the map bigger"); b.innerHTML = "&#10530;";
+  box.appendChild(b);
+  const fix = () => setTimeout(() => { try { window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 60);
+  b.onclick = e => { e.stopPropagation(); const on = !box.classList.contains("big"); box.classList.toggle("big", on); b.innerHTML = on ? "&#10529; SMALL" : "&#10530;"; b.setAttribute("aria-label", on ? "Make the map small again" : "Make the map bigger"); fix(); };
+  /* opening an artist from the big map shrinks it first so the card and list are right there */
+  $("list").addEventListener("click", () => { if (box.classList.contains("big")) b.click(); }, true);
+  const _oc = openCard; openCard = function () { if (box.classList.contains("big")) b.click(); return _oc.apply(this, arguments); };
 })();
 </script>
 </body>
