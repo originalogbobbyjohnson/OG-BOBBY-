@@ -294,6 +294,11 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 @keyframes tin { from { transform: translate(-50%, 30px); opacity: 0; } }
 .confetti { position: fixed; top: -12px; z-index: 2700; width: 9px; height: 14px; border-radius: 2px; pointer-events: none; animation: cfall linear forwards; }
 @keyframes cfall { to { transform: translateY(105vh) rotate(720deg); } }
+
+/* artist list: glides when you flick fast, then clicks onto one artist as it slows down */
+.listwrap { scroll-snap-type: y mandatory; scroll-padding-top: 14px; }
+.tiles > li { scroll-snap-align: start; scroll-snap-stop: normal; }
+.tiles.simple > li { scroll-snap-align: start; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
