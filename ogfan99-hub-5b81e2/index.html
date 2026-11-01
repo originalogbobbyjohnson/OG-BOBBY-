@@ -1406,8 +1406,11 @@ window.OGX = (function () {
     const base = lw.getBoundingClientRect().top - lw.scrollTop + 4, simple = list.classList.contains("simple");
     const rows = []; items.forEach(li => { const t = Math.round(li.getBoundingClientRect().top - base); const r = rows.find(x => Math.abs(x.t - t) < 4); if (r) r.li.push(li); else rows.push({ t, li: [li] }); });
     rows.forEach((r, k) => { const nt = k + 1 < rows.length ? rows[k + 1].t : r.t + r.li[0].offsetHeight + 8;
-      r.li.forEach((li, c) => { const y = Math.round(r.t + c * Math.min(56, (nt - r.t) / r.li.length)); stops.push([y, li]);
-        if (!simple && c > 0) { const m = document.createElement("i"); m.className = "snapmk"; m.style.top = (li.offsetTop + (y - r.t)) + "px"; steel.appendChild(m); } }); });
+      /* the left tile lights up a little before the row reaches the top, the right one when it lands, so the whole row stays in view */
+      const n = r.li.length, step = Math.min(56, (r.t - (k ? rows[k - 1].t : 0)) / Math.max(1, n));
+      r.li.forEach((li, c) => { const y = Math.max(0, Math.round(r.t - (n - 1 - c) * step)); stops.push([y, li]);
+        if (!simple && c < n - 1 && y > 0) { const m = document.createElement("i"); m.className = "snapmk"; m.style.top = Math.max(0, li.offsetTop + (y - r.t)) + "px"; steel.appendChild(m); } }); });
+    stops.sort((a, b) => a[0] - b[0]);
     /* room at the bottom so the last artists can still reach the top spot */
     const last = rows[rows.length - 1]; list.style.paddingBottom = Math.max(10, lw.clientHeight - (last.li[0].offsetHeight + 24)) + "px";
     mark();
