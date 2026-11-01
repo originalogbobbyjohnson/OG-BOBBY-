@@ -975,6 +975,7 @@ async function subwayStops() {
   return j;
 }
 function openStation(name, lat, lng) { openFind(); findFrom = [lat, lng, name.toUpperCase() + " STATION"]; $("fq").value = ""; findSearch(); }
+const topPins = () => (window.__pins || []).forEach(c => { if (ARTISTS[c.__i].who === "NEMS" || ARTISTS[c.__i].status === "live") c.bringToFront(); });
 function liveMap() {
   if (!window.L) return;                       // no map library: keep the drawn map
   const el = $("map"); el.innerHTML = ""; el.classList.add("live");
@@ -984,10 +985,10 @@ function liveMap() {
   const lines = L.layerGroup().addTo(m), pins = L.layerGroup().addTo(m);
   subwayData().then(j => {
     L.geoJSON(j, { interactive: false, style: f => ({ color: LINECOL[f.properties.RT_SYMBOL] || "#555", weight: 4, opacity: .9 }) }).addTo(lines);
-    pins.eachLayer(p => p.bringToFront && p.bringToFront());
+    pins.eachLayer(p => p.bringToFront && p.bringToFront()); topPins();
   }).catch(() => {});
   /* real subway stations: tap one to see the artists closest to it */
-  m.createPane("stops"); m.getPane("stops").style.zIndex = 450;
+  m.createPane("stops"); m.getPane("stops").style.zIndex = 450; m.createPane("artists"); m.getPane("artists").style.zIndex = 470;
   const stops = L.layerGroup().addTo(m);
   subwayStops().then(j => {
     j.features.forEach(f => { const [lng, lat] = f.geometry.coordinates, nm = f.properties.name;
@@ -999,13 +1000,21 @@ function liveMap() {
   const stopSize = () => { const z = m.getZoom(); stops.eachLayer(s => s.setRadius(z >= 14 ? 8 : z >= 12 ? 6 : 4)); };
   m.on("zoomend", stopSize);
   const ll = [];
+  /* artists at the same stop get fanned out in a small ring so every one can be seen and tapped */
+  const spot = {}, groups = [];
+  ARTISTS.forEach((a, i) => { if (a.lat == null) return;
+    const g = groups.find(g => Math.abs(g.lat - a.lat) < .0012 && Math.abs(g.lng - a.lng) < .0015);
+    if (g) g.m.push(i); else groups.push({ lat: a.lat, lng: a.lng, m: [i] }); });
+  groups.forEach(g => g.m.forEach((i, k) => { const n = g.m.length, t = 2 * Math.PI * k / n - Math.PI / 2, r = n > 1 ? .0011 + n * .00012 : 0;
+    spot[i] = [g.lat + r * Math.sin(t), g.lng + r * 1.32 * Math.cos(t)]; }));
   ARTISTS.forEach((a, i) => {
     if (a.lat == null) return; ll.push([a.lat, a.lng]);
-    const c = L.circleMarker([a.lat, a.lng], { radius: 9, color: "#000", weight: 3, fillColor: a.status === "live" ? "#35b867" : a.status === "demo" && isOwner() ? "#e8b84a" : "#d62828", fillOpacity: 1 }).addTo(pins);
+    const c = L.circleMarker(spot[i], { pane: "artists", radius: 9, color: "#000", weight: 3, fillColor: a.status === "live" ? "#35b867" : a.status === "demo" && isOwner() ? "#e8b84a" : "#d62828", fillOpacity: 1 }).addTo(pins);
     c.bindTooltip(a.who, { permanent: true, interactive: true, direction: "right", offset: [10, 0], className: "alab" });
     c.on("click", () => goArtist(i));
     c.__i = i; window.__pins = window.__pins || []; window.__pins.push(c);
   });
+  topPins();
   m.fitBounds(ll, { padding: [30, 30] });
   window.__map = m;
   const fb = document.createElement("button"); fb.type = "button"; fb.className = "findbtn"; fb.innerHTML = '<svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#000" stroke-width="3"/><path d="M15 15l6 6" stroke="#000" stroke-width="3.4" stroke-linecap="round"/></svg>FIND';
