@@ -226,6 +226,11 @@ html, body { height: 100%; overflow: hidden; }
 .more-h .x { position: static; background: none; border: 2px solid var(--line); border-radius: 50%; width: 34px; height: 34px; color: #fff; }
 .leaflet-tooltip.stoplab{background:#000;color:#fff;border:2px solid #fff;font:800 12px/1.1 Helvetica,Arial,sans-serif;letter-spacing:.04em;padding:4px 7px;border-radius:6px}.leaflet-tooltip.stoplab:before{display:none}
 .tally .tb{cursor:pointer;border-radius:6px;padding:3px 0}.tally .tb:active{background:#2a2a2a}.key li{cursor:pointer;border-radius:8px;padding:3px 4px}.key li:active{background:#2c3050}
+.sorts .vsep{flex:0 0 1px;background:#3a3f48;margin:2px 3px}
+.tiles.simple{display:block;padding:6px}.tiles.simple li{border-bottom:1px solid #23283a}.tiles.simple li:last-child{border-bottom:0}
+.srow{width:100%;display:grid;grid-template-columns:12px 1fr auto;gap:10px;align-items:center;background:none;border:0;padding:10px 6px;color:#fff;text-align:left;font:600 15px/1.25 Helvetica,Arial,sans-serif;cursor:pointer}
+.srow .sdot{width:10px;height:10px;border-radius:50%;border:1.5px solid #000}.srow small{display:block;font:400 12px/1.3 Helvetica,Arial,sans-serif;color:#fff;opacity:.85}
+.srow .sst{font:700 11px Helvetica,Arial,sans-serif;letter-spacing:.06em;color:#f2c14e}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -903,6 +908,7 @@ const TIER_LEG = new Set(["Rakim", "Big Daddy Kane", "KRS-One", "Slick Rick", "K
 const tierOf = a => TIER_MAIN.has(a.who) ? "mainstream" : TIER_LEG.has(a.who) ? "legend" : "indie";
 const BOROS = ["Brooklyn", "Queens", "the Bronx", "Manhattan", "Staten Island", "Westchester", "Long Island", "New Jersey"];
 let sortBy = (() => { try { return localStorage.getItem("ogfan99sort") || "az"; } catch (e) { return "az"; } })();
+let listView = (() => { try { return localStorage.getItem("ogfan99view") || "tiles"; } catch (e) { return "tiles"; } })();
 let boroTab = (() => { try { return localStorage.getItem("ogfan99boro") || "Brooklyn"; } catch (e) { return "Brooklyn"; } })();
 const pillHTML = a => (a.status === "demo" || a.status === "vault") ? '<span class="pill ' + (isOwner() && a.status === "demo" ? "ready" : "vault") + '"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() && a.status === "demo" ? "READY" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>';
 function drawList() {
@@ -916,7 +922,9 @@ function drawList() {
   const nb = count(boroTab);
   $("bname").innerHTML = esc(boroTab.replace("the ", "").toUpperCase()) + ' · <span>' + nb + (nb === 1 ? " ARTIST" : " ARTISTS") + '</span>';
   $("sorts").innerHTML = [["az", "A–Z"], ["games", "GAMES FIRST"], ["line", "BY LINE"]].concat(isOwner() ? [["tier", "BY TIER"]] : []).map(([k, t]) => '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
-  $("sorts").querySelectorAll("button").forEach(b => b.onclick = () => { sortBy = b.dataset.s; try { localStorage.setItem("ogfan99sort", sortBy); } catch (e) {} drawList(); });
+  $("sorts").innerHTML += '<span class="vsep"></span>' + [["tiles", "&#9638; TILES"], ["simple", "&#9776; LIST"]].map(([k, t]) => '<button type="button" class="vbtn" data-v="' + k + '" aria-pressed="' + (k === listView) + '">' + t + '</button>').join("");
+  $("sorts").querySelectorAll("button[data-s]").forEach(b => b.onclick = () => { sortBy = b.dataset.s; try { localStorage.setItem("ogfan99sort", sortBy); } catch (e) {} drawList(); });
+  $("sorts").querySelectorAll("button[data-v]").forEach(b => b.onclick = () => { listView = b.dataset.v; try { localStorage.setItem("ogfan99view", listView); } catch (e) {} drawList(); });
   const rank = a => a.status === "live" ? 0 : a.status === "demo" ? 1 : 2, nm = a => a.who.replace(/^(the|a\$ap) /i, "").toLowerCase();
   const LORDER = "1234567ACEBDFMGJZLNQRWS";
   const lineKey = a => { const t = (a.trains[0] || ["~"])[0]; const k = LORDER.indexOf(t); return (k < 0 ? 99 : k) + ":" + nm(a); };
@@ -924,6 +932,13 @@ function drawList() {
     sortBy === "games" ? (rank(a) - rank(b)) || nm(a).localeCompare(nm(b)) :
     sortBy === "tier" && isOwner() ? ({ mainstream: 0, legend: 1, indie: 2 }[tierOf(a)] - { mainstream: 0, legend: 1, indie: 2 }[tierOf(b)]) || nm(a).localeCompare(nm(b)) :
     sortBy === "line" ? lineKey(a).localeCompare(lineKey(b), undefined, { numeric: true }) : nm(a).localeCompare(nm(b)));
+  $("list").classList.toggle("simple", listView === "simple");
+  if (listView === "simple" && here.length) {
+    $("list").innerHTML = here.map(([a, i]) => '<li><button class="srow" type="button" data-i="' + i + '"><span class="sdot" style="background:' + pinCol(a) + '"></span><span class="snm">' + esc(a.who) + (a.ex ? ' (E)' : '') + '<small>' + esc(a.hood) + ' · ' + esc(a.stop) + '</small></span><span class="sst">' +
+      (a.status === "live" || (a.status === "demo" && isOwner()) ? "PLAY" : "VAULT") + '</span></button></li>').join("");
+    $("list").querySelectorAll("button.srow").forEach(b => b.onclick = () => openCard(+b.dataset.i));
+    return;
+  }
   $("list").innerHTML = here.length ? here.map(([a, i]) =>
     '<li><button class="tile" type="button" data-i="' + i + '"><span class="tl-top"><span class="bul">' + bullets(a) + '</span>' + pillHTML(a) + '</span>' +
     '<span class="who" style="color:' + a.color + '">' + esc(a.who) + exBadge(a) + '</span><small>' + esc(a.hood) + '</small>' + (isOwner() ? '<span class="tier ' + tierOf(a) + '">' + tierOf(a).toUpperCase() + '</span>' : '') + '</button></li>').join("")
@@ -1061,14 +1076,18 @@ function findSearch() {
 function openFind() {
   $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="find"><h4>FIND AN ARTIST</h4>' +
     '<input id="fq" type="search" placeholder="Name, neighborhood, borough or train stop" autocomplete="off">' +
-    '<div class="fbtns"><button class="fb-me" id="fMe" type="button">&#128205; NEAR ME</button><button class="fb-addr" id="fAddr" type="button">&#127968; NEAR AN ADDRESS</button></div>' +
+    '<div class="fbtns"><button class="fb-me" id="fMe" type="button">&#128205; USE WHERE I AM</button><button class="fb-addr" id="fAddr" type="button">&#127968; SEARCH THIS ADDRESS</button></div>' +
     '<div class="fmsg" id="fmsg"></div><ul id="fList"></ul></div>';
   $("card").classList.add("findcard"); $("card").hidden = false; $("scrim").hidden = false; $("cx").onclick = closeFind;
   findFrom = null; findSearch();
   $("fq").oninput = () => { findFrom = null; findSearch(); };
   $("fMe").onclick = () => { $("fmsg").textContent = "FINDING YOU…";
     if (!navigator.geolocation) { $("fmsg").textContent = "LOCATION ISN'T AVAILABLE ON THIS PHONE. TRY AN ADDRESS."; return; }
-    navigator.geolocation.getCurrentPosition(p => { findFrom = [p.coords.latitude, p.coords.longitude, "YOU"]; findSearch(); },
+    navigator.geolocation.getCurrentPosition(async p => { const la = p.coords.latitude, lo = p.coords.longitude; findFrom = [la, lo, "YOU"]; findSearch();
+      /* fill the box with the address you're at right now */
+      try { const r = await fetch("https://nominatim.openstreetmap.org/reverse?format=json&zoom=18&lat=" + la + "&lon=" + lo).then(x => x.json()), ad = r.address || {};
+        const line = [[ad.house_number, ad.road].filter(Boolean).join(" "), ad.neighbourhood || ad.suburb || ad.city_district || ad.city || ad.town, ad.postcode].filter(Boolean).join(", ");
+        if (line) { $("fq").value = line; findFrom[2] = line.toUpperCase().slice(0, 40); findSearch(); } } catch (e) {} },
       () => { $("fmsg").textContent = "LOCATION WAS BLOCKED. TYPE AN ADDRESS OR ZIP, THEN TAP NEAR AN ADDRESS."; }, { timeout: 12000 }); };
   $("fAddr").onclick = async () => { const q = $("fq").value.trim();
     if (!q) { $("fmsg").textContent = "TYPE AN ADDRESS OR ZIP CODE ABOVE FIRST."; $("fq").focus(); return; }
