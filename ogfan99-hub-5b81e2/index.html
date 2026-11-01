@@ -299,6 +299,12 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .listwrap { scroll-snap-type: y mandatory; scroll-padding-top: 14px; }
 .tiles > li { scroll-snap-align: start; scroll-snap-stop: normal; }
 .tiles.simple > li { scroll-snap-align: start; }
+
+/* the artist the list has clicked onto glows and pops out */
+.tiles > li > .tile, .tiles > li > .srow { transition: transform .18s ease, box-shadow .18s ease; }
+.tiles > li.focus > .tile { transform: scale(1.04); box-shadow: 0 0 0 3px #f2c14e, 0 0 22px rgba(242,193,78,.75); position: relative; z-index: 2; }
+.tiles.simple > li.focus { background: linear-gradient(90deg, rgba(242,193,78,.18), rgba(242,193,78,.04)); border-radius: 12px; box-shadow: inset 4px 0 0 #f2c14e, 0 0 18px rgba(242,193,78,.45); }
+.tiles.simple > li.focus .srow { transform: scale(1.03); }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -1386,6 +1392,19 @@ window.OGX = (function () {
   drawList(); stars(); OGX.mapMarks();
   if (!OGX.celebrate(stats().rank)) OGX.nextStop();
   addEventListener("pageshow", () => { drawList(); stars(); });
+})();
+
+/* highlight the artist row the list is resting on (the snap line near the top of the list) */
+(function () {
+  const lw = $("listwrap"); let raf = 0;
+  const mark = () => { raf = 0; const items = [...$("list").children]; if (!items.length) return;
+    const top = lw.getBoundingClientRect().top + 14, atEnd = lw.scrollTop + lw.clientHeight >= lw.scrollHeight - 4;
+    let best = null, bd = 1e9;
+    items.forEach(li => { const r = li.getBoundingClientRect(); const d = atEnd ? Math.abs(r.bottom - (lw.getBoundingClientRect().bottom - 14)) : Math.abs(r.top - top); if (d < bd - 2) { bd = d; best = r.top; } });
+    items.forEach(li => li.classList.toggle("focus", Math.abs(li.getBoundingClientRect().top - best) < 4)); };
+  lw.addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(mark); }, { passive: true });
+  new MutationObserver(() => requestAnimationFrame(mark)).observe($("list"), { childList: true });
+  mark();
 })();
 /* start screen: every line's bullet hops, tap and the doors open */
 (function () {
