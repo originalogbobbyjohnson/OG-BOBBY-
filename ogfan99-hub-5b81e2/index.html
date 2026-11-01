@@ -908,7 +908,9 @@ const TIER_MAIN = new Set(["Jay-Z", "Nas", "LL Cool J", "Cardi B", "Ice Spice", 
 const TIER_LEG = new Set(["Rakim", "Big Daddy Kane", "KRS-One", "Slick Rick", "Kool G Rap", "MC Lyte", "Kurtis Blow", "Doug E. Fresh", "Kool Moe Dee", "Melle Mel", "DMC", "Chuck D", "Grand Puba", "Pete Rock", "Erick Sermon", "Redman", "Roxanne Shant\u00e9", "MC Shan", "Special Ed", "Masta Ace", "Kool Keith", "Lord Finesse", "Diamond D", "Showbiz & A.G.", "Buckshot", "Smif-N-Wessun", "M.O.P.", "Jeru the Damaja", "Large Professor", "Mr. Cheeks", "Rah Digga", "Havoc", "AZ", "Pharoahe Monch", "Cormega", "Lord Tariq & Peter Gunz", "Mic Geronimo", "D-Nice", "The U.M.C.'s", "Sheek Louch", "Raekwon", "RZA", "GZA", "Inspectah Deck", "U-God", "Masta Killa", "Killah Priest", "Cappadonna", "De La Soul", "Naughty by Nature", "Lords of the Underground", "CL Smooth", "Sadat X", "Positive K", "Grandmaster Caz", "Sha-Rock", "Jungle Brothers", "Leaders of the New School", "PMD", "Keith Murray", "MC Serch", "Craig G", "Camp Lo", "Prince Paul", "Killarmy", "Wise Intelligent", "El Da Sensei"]);
 const tierOf = a => TIER_MAIN.has(a.who) ? "mainstream" : TIER_LEG.has(a.who) ? "legend" : "indie";
 const BOROS = ["Brooklyn", "Queens", "the Bronx", "Manhattan", "Staten Island", "Westchester", "Long Island", "New Jersey"];
-let sortBy = (() => { try { return localStorage.getItem("ogfan99sort") || "az"; } catch (e) { return "az"; } })();
+let sortBy = (() => { try { const v = localStorage.getItem("ogfan99sort") || "az"; return v === "tier" || v === "tierup" ? "az" : v; } catch (e) { return "az"; } })();
+/* tier order is a second switch that works on top of A–Z or READY GAMES: "" off, "top" top first, "low" low first */
+let tierDir = (() => { try { return localStorage.getItem("ogfan99tier") || ""; } catch (e) { return ""; } })();
 let listView = (() => { try { return localStorage.getItem("ogfan99view") || "tiles"; } catch (e) { return "tiles"; } })();
 let boroTab = (() => { try { return localStorage.getItem("ogfan99boro") || "Brooklyn"; } catch (e) { return "Brooklyn"; } })();
 const pillHTML = a => (a.status === "demo" || a.status === "vault") ? '<span class="pill ' + (isOwner() && a.status === "demo" ? "ready" : "vault") + '"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() && a.status === "demo" ? "READY" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>';
@@ -922,17 +924,18 @@ function drawList() {
     const tab = $("boros").querySelector('[data-b="' + boroTab + '"]'); if (tab && tab.scrollIntoView) tab.scrollIntoView({ inline: "center", block: "nearest" }); });
   const nb = count(boroTab);
   $("bname").innerHTML = esc(boroTab.replace("the ", "").toUpperCase()) + ' · <span>' + nb + (nb === 1 ? " ARTIST" : " ARTISTS") + '</span>';
-  $("sorts").innerHTML = [["az", "A–Z"], ["games", "READY GAMES"], ["line", "BY LINE"]].concat(isOwner() ? [["tier", "TIER &#9660; TOP FIRST"], ["tierup", "TIER &#9650; LOW FIRST"]] : []).map(([k, t]) => '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
+  $("sorts").innerHTML = [["az", "A–Z"], ["games", "READY GAMES"], ["line", "BY LINE"]].concat(isOwner() ? [["top", "TIER &#9660; TOP FIRST"], ["low", "TIER &#9650; LOW FIRST"]] : []).map(([k, t]) => k === "top" || k === "low" ? '<button type="button" data-t="' + k + '" aria-pressed="' + (k === tierDir) + '">' + t + '</button>' : '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
   $("sorts").innerHTML += '<span class="vsep"></span>' + [["tiles", "&#9638; TILES"], ["simple", "&#9776; LIST"]].map(([k, t]) => '<button type="button" class="vbtn" data-v="' + k + '" aria-pressed="' + (k === listView) + '">' + t + '</button>').join("");
-  $("sorts").querySelectorAll("button[data-s]").forEach(b => b.onclick = () => { sortBy = b.dataset.s; try { localStorage.setItem("ogfan99sort", sortBy); } catch (e) {} drawList(); });
+  $("sorts").querySelectorAll("button[data-s]").forEach(b => b.onclick = () => { sortBy = b.dataset.s; if (sortBy === "line") tierDir = ""; try { localStorage.setItem("ogfan99sort", sortBy); localStorage.setItem("ogfan99tier", tierDir); } catch (e) {} drawList(); });
+  $("sorts").querySelectorAll("button[data-t]").forEach(b => b.onclick = () => { tierDir = tierDir === b.dataset.t ? "" : b.dataset.t; if (tierDir && sortBy === "line") sortBy = "az"; try { localStorage.setItem("ogfan99tier", tierDir); localStorage.setItem("ogfan99sort", sortBy); } catch (e) {} drawList(); });
   $("sorts").querySelectorAll("button[data-v]").forEach(b => b.onclick = () => { listView = b.dataset.v; try { localStorage.setItem("ogfan99view", listView); } catch (e) {} drawList(); });
   const rank = a => a.status === "live" ? 0 : a.status === "demo" ? 1 : 2, nm = a => a.who.replace(/^(the|a\$ap) /i, "").toLowerCase();
+  const TO = { mainstream: 0, legend: 1, indie: 2 }, tierCmp = (a, b) => !tierDir || !isOwner() ? 0 : (TO[tierOf(a)] - TO[tierOf(b)]) * (tierDir === "low" ? -1 : 1);
   const LORDER = "1234567ACEBDFMGJZLNQRWS";
   const lineKey = a => { const t = (a.trains[0] || ["~"])[0]; const k = LORDER.indexOf(t); return (k < 0 ? 99 : k) + ":" + nm(a); };
   const here = ARTISTS.map((a, i) => [a, i]).filter(([a]) => boroOf(a) === boroTab).sort(([a], [b]) =>
-    sortBy === "games" ? (rank(a) - rank(b)) || nm(a).localeCompare(nm(b)) :
-    sortBy === "tier" && isOwner() ? ({ mainstream: 0, legend: 1, indie: 2 }[tierOf(a)] - { mainstream: 0, legend: 1, indie: 2 }[tierOf(b)]) || nm(a).localeCompare(nm(b)) :
-    sortBy === "tierup" && isOwner() ? ({ mainstream: 2, legend: 1, indie: 0 }[tierOf(a)] - { mainstream: 2, legend: 1, indie: 0 }[tierOf(b)]) || nm(a).localeCompare(nm(b)) :
+    sortBy === "games" ? (rank(a) - rank(b)) || tierCmp(a, b) || nm(a).localeCompare(nm(b)) :
+    sortBy === "az" && tierDir && isOwner() ? tierCmp(a, b) || nm(a).localeCompare(nm(b)) :
     sortBy === "line" ? lineKey(a).localeCompare(lineKey(b), undefined, { numeric: true }) : nm(a).localeCompare(nm(b)));
   $("list").classList.toggle("simple", listView === "simple");
   if (listView === "simple" && here.length) {
