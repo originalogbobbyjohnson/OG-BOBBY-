@@ -307,11 +307,31 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .tiles.simple > li.focus .srow { transform: scale(1.03); }
 .snapmk { position: absolute; left: 0; width: 1px; height: 1px; scroll-snap-align: start; pointer-events: none; }
 .tiles > li.focus > .tile { transform: scale(1.06) !important; }
+
+/* ---------- claim your door + riders board ---------- */
+.claimbtn { width: 100%; margin-top: 8px; background: none; border: 2px dashed #f2c14e; color: #f2c14e; border-radius: 12px; padding: 10px; font: 900 12px/1.2 Helvetica, Arial, sans-serif; letter-spacing: .06em; cursor: pointer; }
+.claim { display: grid; gap: 8px; text-align: left; }
+.claim label { font: 800 11px Helvetica, Arial, sans-serif; letter-spacing: .1em; color: #f2c14e; }
+.claim input, .claim select, .claim textarea { width: 100%; box-sizing: border-box; font-size: 16px; padding: 10px 12px; border-radius: 10px; border: 2px solid #2a2f55; background: #0d0f1c; color: #fff; }
+.claim textarea { min-height: 70px; resize: vertical; }
+.claim .chk { display: flex; gap: 8px; align-items: flex-start; font: 600 13px/1.3 Helvetica, Arial, sans-serif; color: #fff; }
+.claim .chk input { width: auto; margin-top: 2px; }
+.claim .msg { font: 800 13px Helvetica, Arial, sans-serif; color: #f2c14e; min-height: 1em; }
+.rboard { display: grid; gap: 6px; text-align: left; margin-top: 6px; }
+.rboard h5 { margin: 12px 0 4px; font: 900 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .14em; color: #f2c14e; }
+.rboard .rr { display: grid; grid-template-columns: 28px 1fr auto; gap: 8px; align-items: center; padding: 7px 9px; border-radius: 9px; background: #10132a; border: 1.5px solid #2a2f55; color: #fff; font: 700 13px Helvetica, Arial, sans-serif; }
+.rboard .rr.me { border-color: #f2c14e; box-shadow: 0 0 10px rgba(242,193,78,.4); }
+.rboard .rr b { color: #f2c14e; } .rboard .rr small { display: block; font-size: 10px; letter-spacing: .08em; opacity: .85; }
+.rboard .rn { display: grid; grid-template-columns: 1fr auto; gap: 6px; }
+.rboard .rn input { font-size: 16px; padding: 9px 11px; border-radius: 10px; border: 2px solid #2a2f55; background: #0d0f1c; color: #fff; min-width: 0; }
+.rboard .rn button { border: 2px solid #000; border-radius: 10px; background: #f2c14e; color: #000; font: 900 12px Helvetica, Arial, sans-serif; padding: 0 12px; cursor: pointer; }
+.rboard p { margin: 0; font-size: 12px; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <meta name="copyright" content="© 2026 OG Bobby · OG FAN 99. All rights reserved.">
 <script src="/brand/guard.js?v=9"></script>
+<script src="/brand/ogfb.js?v=1"></script>
 </head>
 <body>
 <div class="start" id="start" role="button" tabindex="0" aria-label="Tap to start">
@@ -989,9 +1009,9 @@ let sortBy = (() => { try { const v = localStorage.getItem("ogfan99sort") || "az
 let tierDir = (() => { try { return localStorage.getItem("ogfan99tier") || ""; } catch (e) { return ""; } })();
 let listView = (() => { try { return localStorage.getItem("ogfan99view") || "tiles"; } catch (e) { return "tiles"; } })();
 let boroTab = (() => { try { return localStorage.getItem("ogfan99boro") || "Brooklyn"; } catch (e) { return "Brooklyn"; } })();
-const pillHTML = a => (a.status === "demo" || a.status === "vault") ? '<span class="pill ' + (isOwner() && a.status === "demo" ? "ready" : "vault") + '"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() && a.status === "demo" ? "READY" : "VAULT") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>';
+const pillHTML = a => (a.status === "demo" || a.status === "vault") ? '<span class="pill ' + (isOwner() && a.status === "demo" ? "ready" : "vault") + '"><svg viewBox="0 0 9 10"><rect x="0" y="4" width="9" height="6" rx="1" fill="#1a1300"/><path d="M2 4.5V3a2.5 2.5 0 0 1 5 0v1.5" stroke="#1a1300" stroke-width="1.4" fill="none"/></svg>' + (isOwner() ? (a.status === "demo" ? "READY" : "VAULT") : "SOON") + '</span>' : '<span class="pill ' + a.status + '">' + ({ live: "LIVE", soon: "SOON" })[a.status] + '</span>';
 function drawList() {
-  $("legend").innerHTML = '<span><i style="background:var(--green)"></i>LIVE</span>' + (isOwner() ? '<span><i style="background:#e8b84a"></i>READY · GAME BUILT</span>' : '') + '<span><i style="background:#d62828"></i>' + (isOwner() ? "VAULT · BEING BUILT" : "VAULT · OPENS WHEN THEY SIGN") + '</span>';
+  $("legend").innerHTML = '<span><i style="background:var(--green)"></i>LIVE</span>' + (isOwner() ? '<span><i style="background:#e8b84a"></i>READY · GAME BUILT</span>' : '') + '<span><i style="background:#d62828"></i>' + (isOwner() ? "VAULT · BEING BUILT" : "COMING SOON") + '</span>';
   const count = b => ARTISTS.filter(a => boroOf(a) === b).length;
   $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '<small>' + (count(b) ? count(b) + (count(b) > 1 ? " ARTISTS" : " ARTIST") : "SOON") + '</small></button>').join("");
   $("boros").querySelectorAll(".boro").forEach(t => t.onclick = () => { boroTab = t.dataset.b; try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); try { $("listwrap").scrollTop = 0; } catch (e) {} });
@@ -1017,7 +1037,7 @@ function drawList() {
   $("list").classList.toggle("simple", listView === "simple");
   if (listView === "simple" && here.length) {
     $("list").innerHTML = here.map(([a, i]) => '<li><button class="srow" type="button" data-i="' + i + '"><span class="sdot" style="background:' + pinCol(a) + '"></span><span class="snm">' + esc(a.who) + (a.ex ? ' (E)' : '') + '<small>' + esc(a.hood) + ' · ' + esc(a.stop) + '</small></span><span class="sst">' + ('<span class="tier ' + tierOf(a) + '">' + tierOf(a).toUpperCase() + '</span>') +
-      (a.status === "live" || (a.status === "demo" && isOwner()) ? "PLAY" : "VAULT") + '</span></button></li>').join("");
+      (a.status === "live" || (a.status === "demo" && isOwner()) ? "PLAY" : isOwner() ? "VAULT" : "SOON") + '</span></button></li>').join("");
     $("list").querySelectorAll("button.srow").forEach(b => b.onclick = () => openCard(+b.dataset.i));
     return;
   }
@@ -1037,9 +1057,10 @@ function openCard(i) {
     '<p>' + esc(a.hood) + (a.hood.includes(", ") ? "" : ", " + boroOf(a)) + ' · 99 questions</p>' +
     '<p>' + esc(a.line) + '</p>' +
     (p && p.stops ? '<p class="prog">Your progress: ' + p.stops + ' of 18 stops · ' + p.cleared + ' of 9 episodes</p>' : '') +
-    (a.ex === 2 && !EXPL() && a.status !== "vault" ? '<p class="exnote">This game uses explicit lyrics (18+).</p><button class="go" id="exGo" type="button" style="width:100%;border:0">TURN ON EXPLICIT TO PLAY</button>' : a.status === "vault" ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">' + (isOwner() ? "GAME BEING BUILT" : "OPENS WHEN " + esc(a.who.toUpperCase()) + " SIGNS") + '</div>' : a.status === "demo" && !isOwner() ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">OPENS WHEN ' + esc(a.who.toUpperCase()) + ' SIGNS</div>' : a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
+    (a.ex === 2 && !EXPL() && (a.status === "live" || (a.status === "demo" && isOwner())) ? '<p class="exnote">This game uses explicit lyrics (18+).</p><button class="go" id="exGo" type="button" style="width:100%;border:0">TURN ON EXPLICIT TO PLAY</button>' : a.status === "vault" && isOwner() ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">GAME BEING BUILT</div>' : (a.status === "vault" || a.status === "demo") && !isOwner() ? '<p class="vnote">' + esc(a.who) + '\'s game is coming soon to OG FAN 99.</p><div class="go locked">COMING SOON</div><button class="claimbtn" id="claimGo" type="button">ARE YOU ' + esc(a.who.toUpperCase()) + '? CLAIM YOUR DOOR</button>' : a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
   $("card").hidden = false; $("scrim").hidden = false;
   $("cx").onclick = closeCard;
+  if ($("claimGo")) $("claimGo").onclick = () => openClaim(i);
   if ($("exGo")) $("exGo").onclick = () => askExplicit(() => goArtist(i));
 }
 function closeCard() { $("card").hidden = true; $("scrim").hidden = true; }
@@ -1144,7 +1165,7 @@ const pinCol = a => a.status === "live" ? "#35b867" : a.status === "demo" && isO
 let findFrom = null;
 function findRows(list) {
   $("fList").innerHTML = list.slice(0, 40).map(([a, i, d]) => '<li><button type="button" data-i="' + i + '"><span class="dot" style="background:' + pinCol(a) + '"></span><span><b>' + esc(a.who) + '</b><small>' + esc(a.hood) + ' · ' + esc(a.stop) + '</small></span>' +
-    (d != null ? '<span class="mi">' + (d < 10 ? d.toFixed(1) : Math.round(d)) + ' MI</span>' : '<span class="mi">' + (a.status === "vault" || (a.status === "demo" && !isOwner()) ? "VAULT" : "PLAY") + '</span>') + '</button></li>').join("");
+    (d != null ? '<span class="mi">' + (d < 10 ? d.toFixed(1) : Math.round(d)) + ' MI</span>' : '<span class="mi">' + (a.status === "vault" || (a.status === "demo" && !isOwner()) ? (isOwner() ? "VAULT" : "SOON") : "PLAY") + '</span>') + '</button></li>').join("");
   $("fList").querySelectorAll("button").forEach(b => b.onclick = () => { closeFind(); const i = +b.dataset.i, a = ARTISTS[i];
     if (window.__map && a.lat != null) window.__map.flyTo([a.lat, a.lng], 15, { duration: .8 }); setTimeout(() => goArtist(i), 850); });
 }
@@ -1198,7 +1219,7 @@ function askExplicit(then) {
 }
 function goArtist(i) {
   const a = ARTISTS[i]; try { sessionStorage.setItem("ogfan99last", String(i)); } catch (e) {}
-  if (window.OGX && OGX.mysteryIdx() === i && a.url) { location.href = a.url + "?from=ogfan99&mystery=1"; return; }
+  if (window.OGX && OGX.mysteryIdx() === i && a.url && isOwner()) { location.href = a.url + "?from=ogfan99&mystery=1"; return; }
   if (a.ex === 2 && !EXPL()) { openCard(i); return; }
   if (a.url && (a.status === "live" || (a.status === "demo" && isOwner()))) location.href = a.url + "?from=ogfan99";
   else openCard(i);
@@ -1213,6 +1234,7 @@ async function tryKey(k) {
 (function () { let taps = 0, t = null; const el = document.querySelector(".demo"); if (!el) return; el.style.cursor = "pointer";
   el.addEventListener("click", async () => { taps++; clearTimeout(t); t = setTimeout(() => taps = 0, 1200);
     if (taps >= 3) { taps = 0; const k = prompt("Owner key"); if (k) alert(await tryKey(k) ? "Vault unlocked on this phone." : "That key didn't work."); } }); })();
+document.querySelectorAll(".demo,.st-small").forEach(e => { if (!isOwner()) e.textContent = "FRIENDS & FAMILY"; });
 drawMap(); drawList(); checkKey(); liveMap();
 paintEx(); $("exBtn").onclick = () => askExplicit();
 $("restartAll").onclick = () => { window.scrollTo(0, 0); location.href = location.pathname + "?v=" + Date.now(); };
@@ -1237,6 +1259,52 @@ $("keyBtn").onclick = () => { moreOpen(true); $("key").open = true; setTimeout((
 })();
 
 
+
+/* ---------- CLAIM YOUR DOOR: an artist (or their manager) asks to open their game ---------- */
+function openClaim(i) {
+  const a = ARTISTS[i];
+  $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="who" style="color:#f2c14e">CLAIM YOUR DOOR</div>' +
+    '<p>Is this your door? Tell OG Bobby who you are and he\'ll reach out to open <b>' + esc(a.who) + '</b>\'s game.</p><div class="claim">' +
+    '<label for="clName">YOUR NAME</label><input id="clName" autocomplete="name">' +
+    '<label for="clRole">YOU ARE</label><select id="clRole"><option>The artist</option><option>Manager</option><option>Label / team</option></select>' +
+    '<label for="clIg">INSTAGRAM</label><input id="clIg" placeholder="@" autocapitalize="off">' +
+    '<label for="clEmail">EMAIL</label><input id="clEmail" type="email" autocomplete="email" autocapitalize="off">' +
+    '<label for="clPhone">PHONE (OPTIONAL)</label><input id="clPhone" type="tel" autocomplete="tel">' +
+    '<label for="clNote">ANYTHING ELSE (OPTIONAL)</label><textarea id="clNote" maxlength="600"></textarea>' +
+    '<div class="chk"><input type="checkbox" id="clOk"><span>I am ' + esc(a.who) + ' or I work with them, and it\'s OK for OG Bobby to contact me.</span></div>' +
+    '<button class="go" id="clSend" type="button" style="width:100%;border:0">SEND MY CLAIM</button><div class="msg" id="clMsg"></div></div>';
+  $("card").hidden = false; $("scrim").hidden = false; $("cx").onclick = closeCard;
+  if (!window.OGFB || !OGFB.ready()) { $("clMsg").textContent = "Door claims open very soon."; }
+  $("clSend").onclick = async () => {
+    const v = id => $(id).value.trim(), email = v("clEmail");
+    if (!v("clName") || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { $("clMsg").textContent = "Add your name and a real email."; return; }
+    if (!$("clOk").checked) { $("clMsg").textContent = "Check the box so OG Bobby can reach you."; return; }
+    if (!window.OGFB || !OGFB.ready()) { $("clMsg").textContent = "Door claims open very soon. Check back shortly."; return; }
+    $("clSend").disabled = true; $("clMsg").textContent = "SENDING…";
+    try { await OGFB.submitClaim({ artist: a.who, name: v("clName").slice(0, 60), role: $("clRole").value, ig: v("clIg").slice(0, 40), email: email.slice(0, 120), phone: v("clPhone").slice(0, 30), note: v("clNote").slice(0, 600) });
+      $("card").querySelector(".claim").innerHTML = '<div class="who" style="color:#35b867;font-size:1.6rem">CLAIM SENT</div><p>Thanks. OG Bobby will reach out about opening ' + esc(a.who) + '\'s door.</p>';
+    } catch (e) { $("clSend").disabled = false; $("clMsg").textContent = "That didn't go through. Try again in a minute."; }
+  };
+}
+/* ---------- RIDERS BOARD: top players by ride points (friends & family) ---------- */
+window.OGRB = (function () {
+  const me = () => { try { let r = JSON.parse(localStorage.getItem("ogfan99rider") || "null"); if (!r) { r = { id: "r" + Math.random().toString(36).slice(2, 12), name: "" }; localStorage.setItem("ogfan99rider", JSON.stringify(r)); } return r; } catch (e) { return { id: "r0", name: "" }; } };
+  const clean = n => n.replace(/[^\w .'-]/g, "").trim().slice(0, 16);
+  async function push(pts, rank) { const r = me(); if (!r.name || !window.OGFB || !OGFB.ready()) return;
+    if (r.last === pts) return; try { await OGFB.saveRider(r.id, r.name, pts, rank); r.last = pts; localStorage.setItem("ogfan99rider", JSON.stringify(r)); } catch (e) {} }
+  function html() { return '<div class="rboard" id="rboard"><h5>RIDERS BOARD</h5><div id="rbList"><p>Loading…</p></div>' +
+    '<div class="rn"><input id="rbName" maxlength="16" placeholder="Your rider name" value="' + esc(me().name) + '"><button id="rbSave" type="button">SAVE</button></div><p id="rbMsg"></p></div>'; }
+  async function fill(pts, rank) {
+    const el = $("rbList"); if (!el) return;
+    if (!window.OGFB || !OGFB.ready()) { el.innerHTML = "<p>The Riders Board opens very soon.</p>"; }
+    else { try { const L = await OGFB.topRiders(20), id = me().id;
+      el.innerHTML = L.length ? L.map((x, k) => '<div class="rr' + (x.id === id ? " me" : "") + '"><b>' + (k + 1) + '</b><span>' + esc(x.name) + '<small>' + esc(x.rank || "") + '</small></span><b>' + x.pts + '</b></div>').join("") : "<p>No riders yet. Be the first.</p>";
+    } catch (e) { el.innerHTML = "<p>Couldn't load the board right now.</p>"; } }
+    $("rbSave").onclick = async () => { const n = clean($("rbName").value); if (!n) { $("rbMsg").textContent = "Pick a name (letters and numbers)."; return; }
+      const r = me(); r.name = n; r.last = null; localStorage.setItem("ogfan99rider", JSON.stringify(r)); $("rbMsg").textContent = "Saved."; await push(pts, rank); fill(pts, rank); };
+  }
+  return { push, html, fill };
+})();
 /* ---------- OGX: streaks, badges, achievements, mystery door, next stop, celebrations ---------- */
 window.OGX = (function () {
   const LS = (k, v) => { try { if (v === undefined) return JSON.parse(localStorage.getItem(k) || "null"); localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } };
@@ -1287,6 +1355,7 @@ window.OGX = (function () {
   }
   /* the Mystery Door: one locked artist a week you can sneak into */
   function mysteryIdx() {
+    if (!isOwner()) return -1; /* friends & family launch: only OG Bobby's game is open, so no sneak previews for fans yet */
     const c = ARTISTS.map((a, i) => i).filter(i => { const a = ARTISTS[i]; return a.url && a.status !== "live" && !playable(a) && a.ex !== 2; });
     const pool = c.length ? c : ARTISTS.map((a, i) => i).filter(i => ARTISTS[i].url && ARTISTS[i].status !== "live" && !(prog(ARTISTS[i]).stops));
     if (!pool.length) return -1; const d = new Date(), wk = Math.floor((d - new Date(d.getFullYear(), 0, 1)) / 6048e5) + d.getFullYear() * 53;
@@ -1368,8 +1437,8 @@ window.OGX = (function () {
       '<div class="row"><span>Artists played</span><b>' + s.played + '</b></div><div class="row"><span>Stops cleared</span><b>' + s.stops + '</b></div><div class="row"><span>Episodes cleared</span><b>' + s.eps + '</b></div>' +
       (s.next ? '<div class="row"><span>Next rank</span><b>' + s.next[1] + ' at ' + s.next[0] + '</b></div>' : '') +
       '<div class="row"><span>Ride streak</span><b>&#128293; ' + OGX.streak() + (OGX.streak() === 1 ? ' day' : ' days') + '</b></div>' +
-      '<p style="margin:4px 0 0">Every stop you clear is a ride point. Stops on <b>Today\'s Train</b> count double. Play every day to keep your streak.</p></div>' + OGX.wallHTML();
-    $("card").hidden = false; $("scrim").hidden = false; $("cx").onclick = closeCard; };
+      '<p style="margin:4px 0 0">Every stop you clear is a ride point. Stops on <b>Today\'s Train</b> count double. Play every day to keep your streak.</p></div>' + OGRB.html() + OGX.wallHTML();
+    $("card").hidden = false; $("scrim").hidden = false; $("cx").onclick = closeCard; OGRB.fill(s.pts, s.rank); };
   /* gold stars on the map for artists you've played */
   function stars() {
     if (!window.__map || !window.L) return; (window.__stars || []).forEach(m => m.remove()); window.__stars = [];
@@ -1390,10 +1459,11 @@ window.OGX = (function () {
   document.addEventListener("click", e => { if (!$("sortPop").hidden && !$("sortPop").contains(e.target) && e.target !== $("sortBtn")) $("sortPop").hidden = true; });
   OGX.setStats(stats);
   const _dl = drawList; drawList = function () { _dl(); afterList(); OGX.marks(); };
-  const _oc = openCard; openCard = function (i) { _oc(i); if (OGX.mysteryIdx() === i && ARTISTS[i].url && !($("card").querySelector("a.go"))) {
+  const _oc = openCard; openCard = function (i) { _oc(i); if (OGX.mysteryIdx() === i && ARTISTS[i].url && !($("card").querySelector("a.go")) && isOwner()) {
     $("card").insertAdjacentHTML("beforeend", '<p class="vnote" style="color:#ff7af0">&#10067; MYSTERY DOOR · OPEN THIS WEEK ONLY</p><a class="go" style="background:#b933ad" href="' + ARTISTS[i].url + '?from=ogfan99&mystery=1">SNEAK PREVIEW</a>'); } };
   drawList(); stars(); OGX.mapMarks();
   if (!OGX.celebrate(stats().rank)) OGX.nextStop();
+  { const s0 = stats(); OGRB.push(s0.pts, s0.rank); }
   addEventListener("pageshow", () => { drawList(); stars(); });
 })();
 
