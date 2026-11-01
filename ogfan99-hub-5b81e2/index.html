@@ -152,7 +152,7 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 /* station card */
 .scrim { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 2000; }
 .card { position: fixed; left: 50%; bottom: max(14px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 24px), 440px); z-index: 2001; padding-top: 40px !important;
-  background: var(--panel); border: 2px solid var(--line); border-radius: 18px; padding: 18px; display: grid; gap: 10px; text-align: center; animation: up .25s ease-out; }
+  background: var(--panel); border: 2px solid var(--line); border-radius: 18px; padding: 18px; display: grid; gap: 10px; text-align: center; animation: up .25s ease-out; max-height: calc(100dvh - 28px); overflow-y: auto; box-sizing: border-box; }
 @keyframes up { from { transform: translate(-50%, 30px); opacity: 0; } }
 .card .sign { background: #111; border-top: 4px solid #fff; border-radius: 4px; padding: 8px 12px; display: flex; align-items: center; justify-content: space-between; font: 700 1rem Helvetica, Arial, sans-serif; text-align: left; }
 .card .who { font-family: var(--tag); font-size: 2.4rem; line-height: 1; -webkit-text-stroke: 1.5px #000; text-shadow: 3px 3px 0 #000; }
