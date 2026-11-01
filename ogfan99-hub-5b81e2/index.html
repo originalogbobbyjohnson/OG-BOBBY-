@@ -231,11 +231,12 @@ html, body { height: 100%; overflow: hidden; }
 .srow{width:100%;display:grid;grid-template-columns:12px 1fr auto;gap:10px;align-items:center;background:none;border:0;padding:10px 6px;color:#fff;text-align:left;font:600 15px/1.25 Helvetica,Arial,sans-serif;cursor:pointer}
 .srow .sdot{width:10px;height:10px;border-radius:50%;border:1.5px solid #000}.srow small{display:block;font:400 12px/1.3 Helvetica,Arial,sans-serif;color:#fff;opacity:.85}
 .srow .sst{font:700 11px Helvetica,Arial,sans-serif;letter-spacing:.06em;color:#f2c14e}
+.srow .sst{display:flex;flex-direction:column;align-items:flex-end;gap:4px}.srow .sst .tier{font-size:9px}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <meta name="copyright" content="© 2026 OG Bobby · OG FAN 99. All rights reserved.">
-<script src="/brand/guard.js?v=5"></script>
+<script src="/brand/guard.js?v=6"></script>
 </head>
 <body>
 <div class="start" id="start" role="button" tabindex="0" aria-label="Tap to start">
@@ -921,7 +922,7 @@ function drawList() {
     const tab = $("boros").querySelector('[data-b="' + boroTab + '"]'); if (tab && tab.scrollIntoView) tab.scrollIntoView({ inline: "center", block: "nearest" }); });
   const nb = count(boroTab);
   $("bname").innerHTML = esc(boroTab.replace("the ", "").toUpperCase()) + ' · <span>' + nb + (nb === 1 ? " ARTIST" : " ARTISTS") + '</span>';
-  $("sorts").innerHTML = [["az", "A–Z"], ["games", "READY GAMES"], ["line", "BY LINE"]].concat(isOwner() ? [["tier", "BY TIER"]] : []).map(([k, t]) => '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
+  $("sorts").innerHTML = [["az", "A–Z"], ["games", "READY GAMES"], ["line", "BY LINE"]].concat(isOwner() ? [["tier", "TIER &#9660; TOP FIRST"], ["tierup", "TIER &#9650; LOW FIRST"]] : []).map(([k, t]) => '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
   $("sorts").innerHTML += '<span class="vsep"></span>' + [["tiles", "&#9638; TILES"], ["simple", "&#9776; LIST"]].map(([k, t]) => '<button type="button" class="vbtn" data-v="' + k + '" aria-pressed="' + (k === listView) + '">' + t + '</button>').join("");
   $("sorts").querySelectorAll("button[data-s]").forEach(b => b.onclick = () => { sortBy = b.dataset.s; try { localStorage.setItem("ogfan99sort", sortBy); } catch (e) {} drawList(); });
   $("sorts").querySelectorAll("button[data-v]").forEach(b => b.onclick = () => { listView = b.dataset.v; try { localStorage.setItem("ogfan99view", listView); } catch (e) {} drawList(); });
@@ -931,10 +932,11 @@ function drawList() {
   const here = ARTISTS.map((a, i) => [a, i]).filter(([a]) => boroOf(a) === boroTab).sort(([a], [b]) =>
     sortBy === "games" ? (rank(a) - rank(b)) || nm(a).localeCompare(nm(b)) :
     sortBy === "tier" && isOwner() ? ({ mainstream: 0, legend: 1, indie: 2 }[tierOf(a)] - { mainstream: 0, legend: 1, indie: 2 }[tierOf(b)]) || nm(a).localeCompare(nm(b)) :
+    sortBy === "tierup" && isOwner() ? ({ mainstream: 2, legend: 1, indie: 0 }[tierOf(a)] - { mainstream: 2, legend: 1, indie: 0 }[tierOf(b)]) || nm(a).localeCompare(nm(b)) :
     sortBy === "line" ? lineKey(a).localeCompare(lineKey(b), undefined, { numeric: true }) : nm(a).localeCompare(nm(b)));
   $("list").classList.toggle("simple", listView === "simple");
   if (listView === "simple" && here.length) {
-    $("list").innerHTML = here.map(([a, i]) => '<li><button class="srow" type="button" data-i="' + i + '"><span class="sdot" style="background:' + pinCol(a) + '"></span><span class="snm">' + esc(a.who) + (a.ex ? ' (E)' : '') + '<small>' + esc(a.hood) + ' · ' + esc(a.stop) + '</small></span><span class="sst">' +
+    $("list").innerHTML = here.map(([a, i]) => '<li><button class="srow" type="button" data-i="' + i + '"><span class="sdot" style="background:' + pinCol(a) + '"></span><span class="snm">' + esc(a.who) + (a.ex ? ' (E)' : '') + '<small>' + esc(a.hood) + ' · ' + esc(a.stop) + '</small></span><span class="sst">' + (isOwner() ? '<span class="tier ' + tierOf(a) + '">' + tierOf(a).toUpperCase() + '</span>' : '') +
       (a.status === "live" || (a.status === "demo" && isOwner()) ? "PLAY" : "VAULT") + '</span></button></li>').join("");
     $("list").querySelectorAll("button.srow").forEach(b => b.onclick = () => openCard(+b.dataset.i));
     return;

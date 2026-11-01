@@ -55,4 +55,5 @@
   };
   document.addEventListener("visibilitychange", function () { if (document.hidden) hush(); });
   window.addEventListener("pagehide", hush);
+  try { if (!document.getElementById("nycSidesJs")) { var ns = document.createElement("script"); ns.id = "nycSidesJs"; ns.src = "/brand/nycsides.js?v=1"; document.head.appendChild(ns); } } catch (e) {}
 })();
