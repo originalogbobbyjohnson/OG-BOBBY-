@@ -232,7 +232,7 @@
       '<div id="pdList" style="display:grid;gap:6px"></div><button class="wbtn dark" id="pdBack" type="button">BACK</button>';
     var draw = function () {
       var q = $("pdQ").value.trim().toLowerCase(), out = [];
-      A().forEach(function (a, i) { if (a.who === "OG Bobby") return; if (!q || a.who.toLowerCase().indexOf(q) >= 0) out.push([a, i]); });
+      A().forEach(function (a, i) { if (a.who === "OG Bobby" && !join) return; if (!q || a.who.toLowerCase().indexOf(q) >= 0) out.push([a, i]); });
       $("pdList").innerHTML = out.slice(0, 30).map(function (x) { return row(x[0], '<button class="wbtn sm gold" type="button" data-i="' + x[1] + '">THAT\'S ME</button>'); }).join("") || '<p class="wmsg">Not on the map yet? Message OG Bobby on Instagram to get your door.</p>';
     };
     $("pdQ").oninput = draw; draw();
@@ -314,7 +314,15 @@
       if (L.sub === "friends" || L.sub === "messages") {
         body.innerHTML = fr.map(function (u) { return row(door(mem[u] || { name: "Artist" }), chatBtn(u), "&#129309; FRIENDS"); }).join("") || '<p class="wmsg">No OG 99 friends yet. Tap FIND ARTISTS.</p>';
       } else if (L.sub === "fans") {
-        body.innerHTML = uc("CERTIFIED FANS + FAN NOTES", "Your Certified Fans and their weekly notes show up here once fan sign-in goes live.");
+        body.innerHTML = '<p class="wmsg">Loading...</p>';
+        Promise.all([S.certFans(m.door || m.name), S.notes()]).then(function (r2) {
+          var cf = r2[0], nt = r2[1], ids = cf.map(function (c) { return c.fan; }).concat(nt.map(function (n) { return n.fan; })).filter(function (v, k, arr) { return arr.indexOf(v) === k; });
+          return Promise.all(ids.map(function (id) { return S.member(id).catch(function () { return null; }); })).then(function (fm) {
+            var nm = {}; fm.forEach(function (f) { if (f) nm[f.id] = f.name; });
+            body.innerHTML = '<div class="wbox"><h4>CERTIFIED FANS (' + cf.length + ')</h4>' + (cf.map(function (c) { return row({ who: nm[c.fan] || "Fan", boro: "Brooklyn" }, '', "&#9733; PERFECT RUN"); }).join("") || '<p>No Certified Fans yet. A fan gets here with a perfect run on your game.</p>') + '</div>' +
+              '<div class="wbox"><h4>FAN NOTES (' + nt.length + ')</h4>' + (nt.map(function (n) { return '<div class="prow" style="grid-template-columns:1fr"><div><div class="nm">' + esc(nm[n.fan] || "Fan") + '</div><div style="color:#fff;font-size:.86rem;line-height:1.3;margin-top:4px">' + esc(n.text) + '</div></div></div>'; }).join("") || '<p>No notes yet.</p>') + '</div>';
+          });
+        }).catch(function () { body.innerHTML = '<p class="wmsg">Couldn\'t load your fans. Try again.</p>'; });
       } else if (L.sub === "requests") {
         body.innerHTML = inc.map(function (q) { return row(door(mem[q.from] || { name: "Artist" }), '<button class="wbtn sm gold" type="button" data-acc="' + esc(q.id) + '">ACCEPT</button><button class="wbtn sm dark" type="button" data-dec="' + esc(q.id) + '">&#10005;</button>', "WANTS TO LINK"); }).join("") || '<p class="wmsg">No new friend requests.</p>';
       } else {
@@ -392,8 +400,33 @@
     "Fan notes to artists: 18+ only, one note per artist per week. The artist decides if a conversation starts.",
     "Artists can mute, block or remove any fan. Removing a fan takes back that Certified badge.",
     "Two reports from different artists locks your messages until OG Bobby reviews it. Serious cases are banned for good."];
+  var FM = { me: undefined, certs: null };
+  function fanLive(done) {
+    if (!live()) { FM.me = null; return done(); }
+    OGFB.social.me().then(function (m) { FM.me = m; if (!m || m.none) { FM.certs = null; return done(); }
+      return OGFB.social.certsMine().then(function (c) { FM.certs = c; done(); }); }).catch(function () { FM.me = null; done(); });
+  }
+  function fanNote(a) {
+    var body = $("fzBody");
+    body.innerHTML = '<div class="wbox"><h4>FAN NOTE TO ' + esc(a.who).toUpperCase() + '</h4><p>One note a week. No links, phone numbers or addresses. Keep it respectful.</p><textarea class="lsearch" id="fnText" maxlength="280" rows="4" placeholder="Say something real"></textarea><button class="wbtn gold" id="fnSend" type="button">SEND NOTE</button><button class="wbtn dark" id="fnBack" type="button">BACK</button><div class="wmsg" id="fnMsg"></div></div>';
+    $("fnBack").onclick = drawFans;
+    $("fnSend").onclick = function () {
+      var t = $("fnText").value.trim(); if (!t) return;
+      if (/https?:|www\.|\d{3}[-. ]?\d{3}[-. ]?\d{4}/i.test(t)) { $("fnMsg").textContent = "No links or phone numbers in notes."; return; }
+      $("fnSend").disabled = true;
+      OGFB.social.members("artist").then(function (ms) { var to = ms.filter(function (m) { return m.door === a.who; })[0];
+        if (!to) { $("fnMsg").textContent = a.who + " isn't in the Lounge yet. Your note can go out once they join."; $("fnSend").disabled = false; return; }
+        return OGFB.social.note(to.id, a.who, t).then(function () { $("fnMsg").textContent = "Sent. You can send " + a.who + " another note next week."; });
+      }).catch(function () { $("fnMsg").textContent = "You already sent " + a.who + " a note this week, or something went wrong."; $("fnSend").disabled = false; });
+    };
+  }
   function drawFans() {
-    var p = panes.fans, list = certs(), got = list.filter(function (x) { return x.c.ok; }), lv = certLevel(got.length);
+    if (FM.me === undefined) { panes.fans.innerHTML = '<p class="wmsg">Loading...</p>'; return fanLive(drawFans); }
+    var p = panes.fans, list = certs(), lv;
+    /* signed-in fans: only perfect runs the site watched count */
+    if (FM.certs) { list = list.map(function (x) { var ok = FM.certs.some(function (c) { return c.artist === x.a.who; }); return { a: x.a, i: x.i, c: { pct: ok ? 100 : Math.min(x.c.pct, 99), ok: ok, played: true } }; });
+      FM.certs.forEach(function (c) { if (!list.some(function (x) { return x.a.who === c.artist; })) { var i = A().findIndex(function (a) { return a.who === c.artist; }); if (i >= 0) list.push({ a: A()[i], i: i, c: { pct: 100, ok: true, played: true } }); } }); }
+    var got = list.filter(function (x) { return x.c.ok; }); lv = certLevel(got.length);
     var subs = [["me", "MY CARD"], ["certified", "CERTIFIED"], ["friends", "FAN FRIENDS"], ["wall", "FAN WALL"]];
     var h = '<div class="wp-h"><div class="t">FAN ZONE</div><div class="s">WHERE THE TRUE FANS RIDE TOGETHER</div></div>' +
       '<div class="lsub">' + subs.map(function (x) { return '<button type="button" data-f="' + x[0] + '"' + (F.sub === x[0] ? ' class="on"' : '') + '>' + x[1] + (x[0] === "certified" && got.length ? '<i>' + got.length + '</i>' : '') + '</button>'; }).join("") + '</div><div id="fzBody" style="display:grid;gap:8px"></div>';
@@ -402,7 +435,10 @@
     var body = $("fzBody");
     if (F.sub === "me") {
       var metro = $("metro") ? $("metro").innerHTML : "", r = LS("ogfan99rider") || {};
-      body.innerHTML = '<div class="wbox"><h4>YOUR RIDER CARD</h4>' + (metro ? '<button class="metro" type="button" id="fzMetro" style="width:100%">' + metro + '</button>' : '') +
+      var acct = !live() ? '' : !FM.me ? '<div class="wbox"><h4>SIGN IN AS A FAN</h4><p>Sign in so your perfect runs count on the site, follow your Certified artists and send fan notes.</p><button class="wbtn gold" id="fzIn" type="button">SIGN IN WITH GOOGLE</button></div>'
+        : FM.me.none ? '<div class="wbox"><h4>MAKE YOUR FAN CARD</h4><input class="lsearch" id="fzName" maxlength="24" placeholder="Your fan name"><div class="chk" style="display:flex;gap:8px;align-items:center;color:#fff;font-size:.86rem"><input type="checkbox" id="fzAdult"><span>I\'m 18 or older (needed to send fan notes)</span></div><div class="chk" style="display:flex;gap:8px;align-items:center;color:#fff;font-size:.86rem"><input type="checkbox" id="fzRules"><span>I agree to the Fan Rules below</span></div><button class="wbtn gold" id="fzJoin" type="button">START MY FAN CARD</button><div class="wmsg" id="fzMsg"></div></div>'
+        : '<div class="wbox"><h4>SIGNED IN AS ' + esc(FM.me.name).toUpperCase() + '</h4><p>' + (FM.me.kind === "artist" ? "This is your artist account. Use a different Google account to play as a fan." : "Your perfect runs count on the site now." + (FM.me.adult ? "" : " Fan notes are for 18+.")) + '</p><button class="wbtn dark" id="fzOut" type="button">SIGN OUT</button></div>';
+      body.innerHTML = acct + '<div class="wbox"><h4>YOUR RIDER CARD</h4>' + (metro ? '<button class="metro" type="button" id="fzMetro" style="width:100%">' + metro + '</button>' : '') +
         '<p>' + (r.name ? "Riding as <b>" + esc(r.name) + "</b>." : "Play any game to start your rider card.") + '</p></div>' +
         '<div class="prof"><div class="av" style="background:#e8b84a;color:#000">&#9733;</div><div><div class="nm">' + (lv.cur ? lv.cur[1] : "NOT CERTIFIED YET") + '</div><div class="mt">' + got.length + ' ARTIST' + (got.length === 1 ? '' : 'S') + ' CERTIFIED' + (lv.next ? ' · ' + (lv.next[0] - got.length) + ' MORE FOR ' + lv.next[1] : '') + '</div></div></div>' +
         '<div class="wbox"><h4>CONNECT WITH THE ARTISTS</h4><ol class="wsteps"><li>Play an artist\'s full game</li><li>Get a perfect run: every box, 3 stars, no misses</li><li>You\'re OG Certified. You land on that artist\'s Certified Fans wall and get their updates</li><li>18+? Send that artist one fan note a week. They choose to write back</li></ol><p>The more perfect games you finish, the more artists you\'re connected to.</p></div>' +
@@ -410,11 +446,15 @@
         '<div class="wbox"><h4>FAN RULES</h4><ol class="wsteps">' + RULES.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ol></div>';
       if ($("fzMetro")) $("fzMetro").onclick = function () { go("map"); setTimeout(function () { $("metro").click(); }, 60); };
       $("fzGo").onclick = function () { F.sub = "certified"; drawFans(); };
+      if ($("fzIn")) $("fzIn").onclick = function () { OGFB.social.signIn().then(function () { FM.me = undefined; drawFans(); }); };
+      if ($("fzOut")) $("fzOut").onclick = function () { OGFB.social.signOut().then(function () { FM.me = undefined; FM.certs = null; drawFans(); }); };
+      if ($("fzJoin")) $("fzJoin").onclick = function () { var n = $("fzName").value.trim(); if (!n) { $("fzMsg").textContent = "Pick a fan name."; return; } if (!$("fzRules").checked) { $("fzMsg").textContent = "Check the box to agree to the Fan Rules."; return; }
+        OGFB.social.join("fan", n, "", $("fzAdult").checked).then(function () { FM.me = undefined; drawFans(); }).catch(function () { $("fzMsg").textContent = "Couldn't save. Try again."; }); };
     } else if (F.sub === "certified") {
       var near = list.filter(function (x) { return !x.c.ok; }).sort(function (x, y) { return y.c.pct - x.c.pct; }).slice(0, 8);
-      body.innerHTML = '<div class="wbox"><h4>OG CERTIFIED (' + got.length + ')</h4>' + (got.length ? got.map(function (x) { return row(x.a, '<button class="wbtn sm gold" type="button" data-play="' + x.i + '">PLAY</button>', "&#9733; CERTIFIED FAN"); }).join("") : '<p>No perfect games yet. Clear every box of an artist\'s game with 3 stars to get certified.</p>') + '</div>' +
+      body.innerHTML = '<div class="wbox"><h4>OG CERTIFIED (' + got.length + ')</h4>' + (got.length ? got.map(function (x) { return row(x.a, (FM.me && FM.me.adult && FM.me.kind === "fan" ? '<button class="wbtn sm" type="button" data-note="' + x.i + '">NOTE</button>' : '') + '<button class="wbtn sm gold" type="button" data-play="' + x.i + '">PLAY</button>', "&#9733; CERTIFIED FAN"); }).join("") : '<p>No perfect games yet. Clear every box of an artist\'s game with 3 stars to get certified.</p>') + '</div>' +
         '<div class="wbox"><h4>ALMOST THERE</h4>' + (near.length ? near.map(function (x) { return row(x.a, '<button class="wbtn sm" type="button" data-play="' + x.i + '">GO</button>', x.c.pct + '% PERFECT'); }).join("") : '<p>Start any game on the map and it shows up here.</p>') + '</div>';
-      body.onclick = function (e) { var b = e.target.closest("[data-play]"); if (!b) return; go("map"); setTimeout(function () { try { openCard(+b.dataset.play); } catch (er) {} }, 80); };
+      body.onclick = function (e) { var nb = e.target.closest("[data-note]"); if (nb) return fanNote(A()[+nb.dataset.note]); var b = e.target.closest("[data-play]"); if (!b) return; go("map"); setTimeout(function () { try { openCard(+b.dataset.play); } catch (er) {} }, 80); };
     } else if (F.sub === "friends") {
       var fs = LS("ogfan99fans") || {};
       body.innerHTML = '<span class="sample">PREVIEW · SAMPLE FANS UNTIL FAN SIGN-IN GOES LIVE</span>' +
