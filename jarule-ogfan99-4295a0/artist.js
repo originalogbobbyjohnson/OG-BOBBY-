@@ -99,40 +99,654 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Always on Time",
-   "id": "0tcDXJfAFVw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Caught Up",
+   "id": "IeLx00bjVKc",
+   "start": 20.8,
+   "cuts": [
+    60,
+    138.4,
+    196.5
+   ],
+   "qs": [
+    [
+     [
+      "Why me and you had to meet, talk, and get ___?",
+      "Caught up",
+      "Mixed up",
+      "Tied up"
+     ],
+     [
+      "It's enough to get any ___ caught up",
+      "Man",
+      "Kid",
+      "Fan"
+     ],
+     [
+      "I'm feeling we should both be ___",
+      "Free",
+      "Friends",
+      "Fine"
+     ],
+     [
+      "Just imagine what life be ___ me",
+      "Without",
+      "Around",
+      "Beside"
+     ],
+     [
+      "Mami, I put my best ___ forward",
+      "Foot",
+      "Face",
+      "Step"
+     ],
+     [
+      "He's pigeon-toed and what else?",
+      "Bow legged",
+      "Knock kneed",
+      "Flat footed"
+     ],
+     [
+      "You ain't too proud to ___",
+      "Beg",
+      "Ask",
+      "Wait"
+     ],
+     [
+      "When we met, you was a what?",
+      "Seven",
+      "Five",
+      "Nine"
+     ],
+     [
+      "Just creepin' to what number?",
+      "Ten",
+      "Eight",
+      "Twelve"
+     ],
+     [
+      "And now you my lucky ___",
+      "Quarter",
+      "Penny",
+      "Charm"
+     ],
+     [
+      "When the weather is cold, feelings grow ___",
+      "Stronger",
+      "Colder",
+      "Deeper"
+     ]
+    ],
+    [
+     [
+      "It feels like walkin' ___",
+      "Pneumonia",
+      "Fever",
+      "Flu"
+     ],
+     [
+      "Sniffling and sneezing and ___",
+      "Coughing",
+      "Shaking",
+      "Sweating"
+     ],
+     [
+      "He's having dreams about her ___",
+      "Jeans",
+      "Shoes",
+      "Smile"
+     ],
+     [
+      "She's wearin' my ___ already",
+      "Name",
+      "Chain",
+      "Jacket"
+     ],
+     [
+      "But for you I fell ___",
+      "Backwards",
+      "Forward",
+      "Sideways"
+     ],
+     [
+      "Why I always pick the ones not in their right ___",
+      "Mind",
+      "Lane",
+      "Place"
+     ],
+     [
+      "Like Al said, it's the scent of a ___",
+      "Woman",
+      "Rose",
+      "Summer"
+     ],
+     [
+      "Playin' hardball like Doc ___",
+      "Gooden",
+      "Rivers",
+      "Holliday"
+     ],
+     [
+      "Our situation is kinda ___",
+      "Amusin'",
+      "Confusin'",
+      "Losin'"
+     ],
+     [
+      "It's like we're more than friends, but less than ___",
+      "Lovers",
+      "Strangers",
+      "Family"
+     ],
+     [
+      "Hang out at the mansion in the ___ on weekends",
+      "Hamptons",
+      "Poconos",
+      "Bahamas"
+     ]
+    ],
+    [
+     [
+      "Have you been ___ like I touch ya?",
+      "Touched",
+      "Hugged",
+      "Held"
+     ],
+     [
+      "Been loved like I ___ ya",
+      "Love",
+      "Need",
+      "Want"
+     ],
+     [
+      "Be ___, be real",
+      "Real",
+      "True",
+      "Cool"
+     ],
+     [
+      "Have you ever been ___ like I see you?",
+      "Seen",
+      "Known",
+      "Missed"
+     ],
+     [
+      "Been heard how I ___ you",
+      "Hear",
+      "Feel",
+      "Call"
+     ],
+     [
+      "Girl, you're my ___",
+      "Sunshine",
+      "Rainbow",
+      "Shooting star"
+     ],
+     [
+      "But sometimes it gets a little ___",
+      "Cloudy",
+      "Rainy",
+      "Windy"
+     ],
+     [
+      "Them sunny days, I see the ___",
+      "Sunrise",
+      "Ocean",
+      "Skyline"
+     ],
+     [
+      "Get up every morning to eggs and ___",
+      "Steak",
+      "Toast",
+      "Grits"
+     ],
+     [
+      "So we separated on good ___",
+      "Terms",
+      "Times",
+      "Vibes"
+     ],
+     [
+      "When I see you, still the ___ to ask is",
+      "Question",
+      "Answer",
+      "Reason"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Mesmerize",
-   "id": "VcP96KbFIIU",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Thug Lovin'",
+   "id": "b5NXlIlygts",
+   "start": 29.5,
+   "cuts": [
+    69.6,
+    104.2,
+    166.1
+   ],
+   "qs": [
+    [
+     [
+      "It's on and ___, baby",
+      "Popping",
+      "Rocking",
+      "Jumping"
+     ],
+     [
+      "The last ___",
+      "Temptation",
+      "Summer",
+      "Dance"
+     ],
+     [
+      "He's ___",
+      "Back",
+      "Here",
+      "Home"
+     ],
+     [
+      "Y'all know who I'm ___ 'bout",
+      "Talking",
+      "Singing",
+      "Rapping"
+     ],
+     [
+      "Till the world ___",
+      "Over",
+      "Ends",
+      "Turns"
+     ],
+     [
+      "And I know you're gettin' ___",
+      "Bored",
+      "Tired",
+      "Lonely"
+     ],
+     [
+      "Dealin' with ___",
+      "Him",
+      "Them",
+      "Life"
+     ],
+     [
+      "I know you miss my lovin', my ___",
+      "Thuggin'",
+      "Huggin'",
+      "Buzzin'"
+     ],
+     [
+      "What kind of lovin' is it?",
+      "Thug",
+      "Puppy",
+      "True"
+     ],
+     [
+      "You're livin' your life faithfully and ___",
+      "Safely",
+      "Slowly",
+      "Quietly"
+     ],
+     [
+      "But you miss being ___ to me, don't you?",
+      "Next",
+      "Close",
+      "Good"
+     ]
+    ],
+    [
+     [
+      "Don't let our love ___ you",
+      "Haunt",
+      "Hurt",
+      "Fool"
+     ],
+     [
+      "Back out on anyone who tries to interfere or ___",
+      "Intervene",
+      "Interrupt",
+      "Intercept"
+     ],
+     [
+      "Wrist on ___",
+      "Freeze",
+      "Fire",
+      "Lock"
+     ],
+     [
+      "What size shoes?",
+      "19",
+      "12",
+      "15"
+     ],
+     [
+      "Coming through in that new ___ thing",
+      "Bentley",
+      "Benz",
+      "Range"
+     ],
+     [
+      "The talk of the ___",
+      "Town",
+      "Block",
+      "Street"
+     ],
+     [
+      "The tease of the ___",
+      "City",
+      "Party",
+      "Night"
+     ],
+     [
+      "You and I make headlines like Lo and ___",
+      "Diddy",
+      "Marc",
+      "Ben"
+     ],
+     [
+      "Or Bob and ___",
+      "Whitney",
+      "Brandy",
+      "Tina"
+     ],
+     [
+      "The Lord sent me a pound like a ___",
+      "Pugilist",
+      "Preacher",
+      "Prophet"
+     ],
+     [
+      "Grin real ___",
+      "Devilish",
+      "Childish",
+      "Stylish"
+     ]
+    ],
+    [
+     [
+      "Sweet thing, you ___ it",
+      "Livin'",
+      "Lovin'",
+      "Feelin'"
+     ],
+     [
+      "Let me let you live it a little ___",
+      "Bit",
+      "Bigger",
+      "Better"
+     ],
+     [
+      "A stressful ___ is hard to deal with",
+      "Relationship",
+      "Situation",
+      "Conversation"
+     ],
+     [
+      "On your weekly ___",
+      "Visits",
+      "Trips",
+      "Calls"
+     ],
+     [
+      "Use a code ___",
+      "Name",
+      "Word",
+      "Number"
+     ],
+     [
+      "To protect the ___",
+      "Innocent",
+      "Family",
+      "Secret"
+     ],
+     [
+      "Maybe I'm too ___",
+      "Generous",
+      "Jealous",
+      "Famous"
+     ],
+     [
+      "Is it money or ___?",
+      "God",
+      "Love",
+      "Fame"
+     ],
+     [
+      "Betrayal, trust, sustain your ___",
+      "Vows",
+      "Rings",
+      "Words"
+     ],
+     [
+      "They should be secretly held ___",
+      "Sacred",
+      "Close",
+      "Tight"
+     ],
+     [
+      "Occasionally you get cold wet ___",
+      "Feet",
+      "Hands",
+      "Eyes"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Put It on Me",
+   "title": "Put It On Me",
    "id": "V1D5lTxRwtQ",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Livin' It Up",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "New York",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "start": 10.5,
+   "cuts": [
+    50.9,
+    73,
+    103.3
+   ],
+   "qs": [
+    [
+     [
+      "Because I ___ ya",
+      "Love",
+      "Need",
+      "Miss"
+     ],
+     [
+      "And don't you ___ it",
+      "Forget",
+      "Regret",
+      "Doubt"
+     ],
+     [
+      "___ you need me",
+      "Whenever",
+      "Wherever",
+      "However"
+     ],
+     [
+      "If you want me to ___ it on you",
+      "Put",
+      "Lay",
+      "Turn"
+     ],
+     [
+      "Darling, where would I ___?",
+      "Be",
+      "Go",
+      "Stay"
+     ],
+     [
+      "Where would I be without my ___?",
+      "Baby",
+      "Lady",
+      "Family"
+     ],
+     [
+      "The thought alone might ___ me",
+      "Break",
+      "Shake",
+      "Change"
+     ],
+     [
+      "I don't wanna go ___",
+      "Crazy",
+      "Away",
+      "Home"
+     ],
+     [
+      "Every thug needs a ___",
+      "Lady",
+      "Friend",
+      "Chance"
+     ],
+     [
+      "Where would I be without ___, baby?",
+      "You",
+      "Them",
+      "Love"
+     ],
+     [
+      "Who needs a lady?",
+      "Every thug",
+      "Every king",
+      "Every man"
+     ]
+    ],
+    [
+     [
+      "Girl, it feel like you and I been ___ together",
+      "Mourning",
+      "Growing",
+      "Rolling"
+     ],
+     [
+      "We're ___",
+      "Inseparable",
+      "Unbreakable",
+      "Unstoppable"
+     ],
+     [
+      "We chose pain over ___",
+      "Pleasure",
+      "Power",
+      "Pride"
+     ],
+     [
+      "You'll forever be a ___ of me",
+      "Part",
+      "Piece",
+      "Side"
+     ],
+     [
+      "Mind, body and ___",
+      "Soul",
+      "Heart",
+      "Spirit"
+     ],
+     [
+      "Ain't no I in ___",
+      "We",
+      "Team",
+      "Us"
+     ],
+     [
+      "When you cry, who wipes your ___?",
+      "Tears",
+      "Face",
+      "Eyes"
+     ],
+     [
+      "Who's tellin' you there's nothing to ___?",
+      "Fear",
+      "Lose",
+      "Hide"
+     ],
+     [
+      "Girl, I'll always be ___",
+      "There",
+      "Near",
+      "True"
+     ],
+     [
+      "When you need a shoulder to ___ on",
+      "Lean",
+      "Cry",
+      "Rest"
+     ],
+     [
+      "Never hesitate knowin' you can call on your ___",
+      "Soulmate",
+      "Homie",
+      "Family"
+     ]
+    ],
+    [
+     [
+      "And vice ___",
+      "Versa",
+      "Verse",
+      "Vice"
+     ],
+     [
+      "See Jacob and frost your ___",
+      "Wrist",
+      "Neck",
+      "Ring"
+     ],
+     [
+      "Now you ___ me",
+      "Owe",
+      "Know",
+      "Need"
+     ],
+     [
+      "I know you're tired of being ___",
+      "Lonely",
+      "Alone",
+      "Hurt"
+     ],
+     [
+      "So baby girl put it on ___",
+      "Me",
+      "Him",
+      "Now"
+     ],
+     [
+      "I only think about ___",
+      "You",
+      "Us",
+      "Love"
+     ],
+     [
+      "If what you're saying is ___",
+      "True",
+      "Real",
+      "Right"
+     ],
+     [
+      "I need someone to ___ me",
+      "Hold",
+      "Love",
+      "Call"
+     ],
+     [
+      "I will, I will, I ___",
+      "Will",
+      "Won't",
+      "Can"
+     ],
+     [
+      "Where'd I be ___ you?",
+      "Without",
+      "Beside",
+      "Around"
+     ],
+     [
+      "After the hook she sings: whoa, ___",
+      "Whoa",
+      "Oh",
+      "Yeah"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };
