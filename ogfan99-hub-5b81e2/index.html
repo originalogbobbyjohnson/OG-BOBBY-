@@ -296,7 +296,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 @keyframes cfall { to { transform: translateY(105vh) rotate(720deg); } }
 
 /* artist list: glides when you flick fast, then clicks onto one artist as it slows down */
-.listwrap { scroll-snap-type: y mandatory; scroll-padding-top: 14px; }
+.listwrap { scroll-snap-type: y mandatory; scroll-padding-top: 4px; }
 .tiles > li { scroll-snap-align: start; scroll-snap-stop: normal; }
 .tiles.simple > li { scroll-snap-align: start; }
 
@@ -1398,7 +1398,7 @@ window.OGX = (function () {
 (function () {
   const lw = $("listwrap"); let raf = 0;
   const mark = () => { raf = 0; const items = [...$("list").children]; if (!items.length) return;
-    const top = lw.getBoundingClientRect().top + 14, atEnd = lw.scrollTop + lw.clientHeight >= lw.scrollHeight - 4;
+    const top = lw.getBoundingClientRect().top + 4, atEnd = lw.scrollTop + lw.clientHeight >= lw.scrollHeight - 4;
     let best = null, bd = 1e9;
     items.forEach(li => { const r = li.getBoundingClientRect(); const d = atEnd ? Math.abs(r.bottom - (lw.getBoundingClientRect().bottom - 14)) : Math.abs(r.top - top); if (d < bd - 2) { bd = d; best = r.top; } });
     items.forEach(li => li.classList.toggle("focus", Math.abs(li.getBoundingClientRect().top - best) < 4)); };
