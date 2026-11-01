@@ -1162,7 +1162,7 @@ function liveMap() {
     c.__i = i; window.__pins = window.__pins || []; window.__pins.push(c);
   });
   topPins();
-  m.fitBounds(ll, { padding: [30, 30] });
+  m.setView([40.735, -73.95], 10);
   window.__map = m;
   const fb = document.createElement("button"); fb.type = "button"; fb.className = "findbtn"; fb.innerHTML = '<svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#000" stroke-width="3"/><path d="M15 15l6 6" stroke="#000" stroke-width="3.4" stroke-linecap="round"/></svg>FIND';
   L.DomEvent.disableClickPropagation(fb); fb.onclick = openFind; el.appendChild(fb);
@@ -1500,9 +1500,10 @@ window.OGX = (function () {
     const rows = []; items.forEach(li => { const t = Math.round(li.getBoundingClientRect().top - base); const r = rows.find(x => Math.abs(x.t - t) < 4); if (r) r.li.push(li); else rows.push({ t, li: [li] }); });
     rows.forEach((r, k) => { const nt = k + 1 < rows.length ? rows[k + 1].t : r.t + r.li[0].offsetHeight + 8;
       /* the left tile lights up a little before the row reaches the top, the right one when it lands, so the whole row stays in view */
-      const n = r.li.length, step = Math.min(56, (r.t - (k ? rows[k - 1].t : 0)) / Math.max(1, n));
-      r.li.forEach((li, c) => { const y = Math.max(0, Math.round(r.t - (n - 1 - c) * step)); stops.push([y, li]);
-        if (!simple && c < n - 1) { const m = document.createElement("i"); m.className = "snapmk"; m.style.top = Math.max(0, li.offsetTop + (y - r.t)) + "px"; steel.appendChild(m); } }); });
+      /* left tile lights when its row lands at the top; a small nudge further lights the right one (the row barely moves, so it stays in view) */
+      const n = r.li.length;
+      r.li.forEach((li, c) => { const y = Math.round(r.t + c * 24); stops.push([y, li]);
+        if (!simple && c > 0) { const m = document.createElement("i"); m.className = "snapmk"; m.style.top = (li.offsetTop + (y - r.t)) + "px"; steel.appendChild(m); } }); });
     stops.sort((a, b) => a[0] - b[0]);
     /* room at the bottom so the last artists can still reach the top spot */
     const last = rows[rows.length - 1]; list.style.paddingBottom = Math.max(10, lw.clientHeight - (last.li[0].offsetHeight + 24)) + "px";
@@ -1551,7 +1552,7 @@ window.OGX = (function () {
     const st = $("start"); if (st.classList.contains("open")) return;
     try { const ac = new (window.AudioContext || window.webkitAudioContext)(); [[659, 0], [523, .32]].forEach(([f, d]) => { const o = ac.createOscillator(), g = ac.createGain(); o.frequency.value = f; o.type = "sine"; g.gain.setValueAtTime(.0001, ac.currentTime + d); g.gain.exponentialRampToValueAtTime(.25, ac.currentTime + d + .02); g.gain.exponentialRampToValueAtTime(.0001, ac.currentTime + d + .6); o.connect(g).connect(ac.destination); o.start(ac.currentTime + d); o.stop(ac.currentTime + d + .65); }); } catch (e) {}
     st.classList.add("ann"); const sa = document.createElement("div"); sa.className = "st-ann"; sa.innerHTML = "<span>STAND CLEAR OF THE</span><span>CLOSING DOORS, PLEASE</span>"; st.appendChild(sa);
-    setTimeout(() => { st.classList.add("open"); setTimeout(() => { st.remove(); try { const m = window.__map; m.invalidateSize(); m.fitBounds(ARTISTS.filter(a => a.lat != null).map(a => [a.lat, a.lng]), { padding: [24, 24] }); } catch (e) {} }, 800); }, 1350);
+    setTimeout(() => { st.classList.add("open"); setTimeout(() => { st.remove(); try { const m = window.__map; m.invalidateSize(); m.setView([40.735, -73.95], 10); } catch (e) {} }, 800); }, 1350);
   };
   $("start").addEventListener("click", go);
   $("start").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(); });
