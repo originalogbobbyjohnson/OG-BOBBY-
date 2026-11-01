@@ -1170,14 +1170,15 @@ function openFind() {
       /* fill the box with the address you're at right now */
       try { const r = await fetch("https://nominatim.openstreetmap.org/reverse?format=json&zoom=18&lat=" + la + "&lon=" + lo).then(x => x.json()), ad = r.address || {};
         const line = [[ad.house_number, ad.road].filter(Boolean).join(" "), ad.neighbourhood || ad.suburb || ad.city_district || ad.city || ad.town, ad.postcode].filter(Boolean).join(", ");
-        if (line) { $("fq").value = line; findFrom[2] = line.toUpperCase().slice(0, 40); findSearch(); } } catch (e) {} },
+        if (line) { $("fq").value = line; window.__fqAuto = line; findFrom[2] = line.toUpperCase().slice(0, 40); findSearch(); } } catch (e) {} },
       () => { $("fmsg").textContent = "LOCATION WAS BLOCKED. TYPE AN ADDRESS OR ZIP, THEN TAP NEAR AN ADDRESS."; }, { timeout: 12000 }); };
   $("fAddr").onclick = async () => { const q = $("fq").value.trim();
-    if (!q) { $("fmsg").textContent = "TYPE AN ADDRESS OR ZIP CODE ABOVE FIRST."; $("fq").focus(); return; }
+    /* an address that was filled in for you (or already searched) gets cleared so you can type a new one right away */
+    if (!q || q === window.__fqAuto) { $("fq").value = ""; window.__fqAuto = null; $("fmsg").textContent = "TYPE AN ADDRESS OR ZIP CODE, THEN TAP SEARCH THIS ADDRESS."; $("fq").focus(); return; }
     $("fmsg").textContent = "LOOKING UP THAT ADDRESS…";
     try { const r = await fetch("https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=us&viewbox=-74.6,41.3,-72.9,40.3&q=" + encodeURIComponent(q)).then(x => x.json());
       if (!r.length) { $("fmsg").textContent = "COULDN'T FIND THAT ADDRESS. TRY ADDING THE TOWN OR ZIP."; return; }
-      findFrom = [+r[0].lat, +r[0].lon, q.toUpperCase().slice(0, 30)]; findSearch();
+      findFrom = [+r[0].lat, +r[0].lon, q.toUpperCase().slice(0, 30)]; findSearch(); window.__fqAuto = q;
     } catch (e) { $("fmsg").textContent = "ADDRESS LOOKUP IS BUSY. TRY NEAR ME OR AGAIN IN A MINUTE."; } };
 }
 function closeFind() { $("card").classList.remove("findcard"); closeCard(); }
