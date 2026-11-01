@@ -367,7 +367,7 @@
   /* perfect = every one of the 9 boxes cleared with 3 stars (no misses); OG Bobby's own game = all 99 right on the 99 test */
   var CERT_LV = [[1, "OG CERTIFIED"], [5, "TRUE FAN"], [10, "DEEP CUT"], [25, "HALL OF FAMER"], [50, "OG LEGEND"]];
   function certInfo(a) {
-    if (a.who === "OG Bobby") { var g = LS("ogb2") || {}; var b = g.t99best || 0; return { pct: Math.min(100, Math.round(b / 99 * 100)), ok: b >= 99, played: b > 0 }; }
+    if (a.who === "OG Bobby") { var g = LS("ogPlus") || {}; var b = g.t99best || 0; return { pct: Math.min(100, Math.round(b / 99 * 100)), ok: b >= 99, played: b > 0 }; }
     if (!a.save) return { pct: 0, ok: false, played: false };
     var best = { pct: 0, ok: false, played: false };
     [a.save, a.save + "x"].forEach(function (k) {
