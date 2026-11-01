@@ -243,7 +243,7 @@ html, body { height: 100%; overflow: hidden; }
 .metro .mc-rank { font-family: var(--display); font-size: 15px; letter-spacing: .06em; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .metro .mc-st { font: 800 9.5px/1 Helvetica, Arial, sans-serif; letter-spacing: .05em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .metro .mc-bar { height: 4px; background: rgba(0,0,0,.25); border-radius: 2px; overflow: hidden; } .metro .mc-bar i { display: block; height: 100%; background: #000; }
-.today { display: grid; align-content: center; gap: 2px; max-width: 128px; border: 2px solid #000; border-radius: 10px; padding: 5px 8px; background: #d62828; color: #fff; box-shadow: 0 3px 0 #000; cursor: pointer; text-align: left; animation: td-glow 2.4s ease-in-out infinite; }
+.today { display: grid; align-content: center; gap: 3px; max-width: 140px; white-space: nowrap; border: 2px solid #000; border-radius: 10px; padding: 5px 8px; background: #d62828; color: #fff; box-shadow: 0 3px 0 #000; cursor: pointer; text-align: left; animation: td-glow 2.4s ease-in-out infinite; }
 .today small { font: 900 8.5px/1 Helvetica, Arial, sans-serif; letter-spacing: .1em; color: #ffd23f; }
 .today b { font: 800 12px/1.1 Helvetica, Arial, sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 @keyframes td-glow { 50% { box-shadow: 0 3px 0 #000, 0 0 14px rgba(255,210,63,.7); } }
@@ -259,13 +259,13 @@ html, body { height: 100%; overflow: hidden; }
 .sortpop .sorts button { font-size: .72rem !important; padding: 8px 12px !important; text-align: left; }
 .sortpop .sorts .vsep, .sortpop .sorts .vbtn { display: none; }
 .wrap.app .boros { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: visible; gap: 5px; }
-.wrap.app .boro { padding: 6px 2px 5px; font: 900 .74rem/1 Helvetica, Arial, sans-serif; letter-spacing: .04em; border-top: 5px solid #fff; display: grid; justify-items: center; gap: 4px; }
+.wrap.app .boro { padding: 5px 2px 4px; font: 900 .74rem/1 Helvetica, Arial, sans-serif; letter-spacing: .04em; border-top: 5px solid #fff; display: grid; justify-items: center; gap: 4px; }
 .wrap.app .boro small { margin: 0; min-width: 26px; padding: 2px 6px; border-radius: 99px; background: #000; color: #f2c14e; font: 900 .7rem/1.1 Helvetica, Arial, sans-serif; box-shadow: 0 0 0 1.5px #f2c14e, 0 0 8px rgba(242,193,78,.55); }
 .wrap.app .boro[aria-selected="true"] small { background: #000; color: #f2c14e; }
 .pstar { color: #f2c14e; text-shadow: 0 0 6px rgba(242,193,78,.8); margin-left: 4px; }
 .leaflet-marker-icon.mstar { font-size: 15px; line-height: 15px; color: #f2c14e; text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 6px rgba(242,193,78,.9); text-align: center; pointer-events: none; }
 .start.ann .st-in { opacity: 0; transform: scale(.94); }
-.st-ann { position: relative; z-index: 3; display: grid; gap: 6px; padding: 16px 18px; background: #000; border: 3px solid #333; border-radius: 10px; box-shadow: 0 0 0 3px #c9cfd6;
+.st-ann { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: max-content; max-width: 86vw; z-index: 3; display: grid; gap: 6px; padding: 16px 18px; background: #000; border: 3px solid #333; border-radius: 10px; box-shadow: 0 0 0 3px #c9cfd6;
   font: 800 1rem/1.15 "Courier New", monospace; letter-spacing: .08em; color: #ff8a1f; text-shadow: 0 0 8px rgba(255,138,31,.85); text-align: center; animation: st-ann 1.35s steps(1) both; }
 @keyframes st-ann { 0% { opacity: 0; } 8% { opacity: 1; } 45% { opacity: .35; } 55% { opacity: 1; } 100% { opacity: 1; } }
 .mcstats { display: grid; gap: 10px; text-align: left; } .mcstats .row { display: flex; justify-content: space-between; font: 700 14px Helvetica, Arial, sans-serif; color: #fff; border-bottom: 1px solid #2a2f55; padding-bottom: 6px; }
@@ -1224,9 +1224,9 @@ $("keyBtn").onclick = () => { moreOpen(true); $("key").open = true; setTimeout((
   }
   function paintMetro() {
     const s = stats();
-    $("metro").innerHTML = '<span class="mc-l">OG<b>METRO</b></span><span class="mc-r"><span class="mc-rank">' + s.rank + '</span><span class="mc-st">' + s.played + ' ARTISTS · ' + s.pts + ' RIDE PTS · ' + s.eps + ' EPISODES</span><span class="mc-bar"><i style="width:' + s.pct + '%"></i></span></span>';
+    $("metro").innerHTML = '<span class="mc-l">OG<b>METRO</b></span><span class="mc-r"><span class="mc-rank">' + s.rank + '</span><span class="mc-st">' + s.played + ' ARTISTS · ' + s.pts + ' PTS · ' + s.eps + ' EPS</span><span class="mc-bar"><i style="width:' + s.pct + '%"></i></span></span>';
     const i = todayIdx(); $("today").hidden = i < 0;
-    if (i >= 0) { $("today").innerHTML = '<small>&#9733; TODAY\'S TRAIN · 2X</small><b>' + esc(ARTISTS[i].who) + '</b>'; $("today").onclick = () => goArtist(i); }
+    if (i >= 0) { $("today").innerHTML = '<small>&#9733; TODAY\'S TRAIN 2X</small><b>' + esc(ARTISTS[i].who) + '</b>'; $("today").onclick = () => goArtist(i); }
   }
   $("metro").onclick = () => { const s = stats();
     $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="who" style="color:#f2c14e">YOUR METROCARD</div><div class="mcstats">' +
