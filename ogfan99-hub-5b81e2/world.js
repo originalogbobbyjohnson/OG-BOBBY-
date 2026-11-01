@@ -62,7 +62,7 @@
     ".prow .acts{display:flex;gap:5px}",
     ".lsearch{width:100%;box-sizing:border-box;border:2px solid #e8b84a;border-radius:10px;background:#0b0c14;color:#fff;padding:10px;font:600 15px Helvetica,Arial,sans-serif}",
     ".lsearch::placeholder{color:#e8b84a;opacity:.8}",
-    ".sample{justify-self:start;background:#2c3050;color:#fff;font:900 .58rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;padding:4px 6px;border-radius:5px}",
+    ".sample{justify-self:start;max-width:100%;white-space:normal;line-height:1.3;background:#2c3050;color:#fff;font:900 .58rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;padding:4px 6px;border-radius:5px}",
     /* chat window */
     ".chat{position:fixed;inset:0;z-index:2600;background:#0b0c14;display:flex;flex-direction:column;max-width:460px;margin:0 auto}",
     ".chat[hidden]{display:none}",
@@ -223,7 +223,7 @@
     } else if (L.sub === "fans") {
       var muted = s.muted || {};
       body.innerHTML = '<div class="wbox"><h4>CERTIFIED FANS</h4><p>Fans who got a perfect run on your game. They see your updates. You can mute or remove anyone.</p>' +
-        sampleFans.filter(function (f) { return muted[f.who] !== 2; }).map(function (f) { return row(f, muted[f.who] ? '<button class="wbtn sm dark" type="button" disabled>MUTED</button>' : '<button class="wbtn sm dark" type="button" data-mute="' + esc(f.who) + '">MUTE</button><button class="wbtn sm" type="button" data-rm="' + esc(f.who) + '">&#10005;</button>', "&#9733; CERTIFIED · " + f.n + " ARTISTS"); }).join("") + '</div>' +
+        sampleFans.filter(function (f) { return muted[f.who] !== 2; }).map(function (f) { return row(f, muted[f.who] ? '<button class="wbtn sm dark" type="button" disabled>MUTED</button>' : '<button class="wbtn sm dark" type="button" data-mute="' + esc(f.who) + '">MUTE</button><button class="wbtn sm" type="button" data-rm="' + esc(f.who) + '">&#10005;</button>', "&#9733; CERTIFIED · " + f.n + (f.n === 1 ? " ARTIST" : " ARTISTS")); }).join("") + '</div>' +
         '<div class="wbox"><h4>FAN NOTES</h4><p>One note per fan per week, 18+ only. You decide who you write back.</p>' +
         (muted["Sample Fan 2"] ? '' : '<div class="prow" style="grid-template-columns:38px 1fr"><div class="av" style="background:#7b3fbf">SF</div><div><div class="nm">Sample Fan 2</div><div style="color:#fff;font-size:.86rem;line-height:1.3;margin:4px 0 6px">Got a perfect run on your game. Your last song is my favorite. Keep them coming!</div><div class="acts"><button class="wbtn sm gold" type="button" data-chat="Sample Fan 2">REPLY</button><button class="wbtn sm dark" type="button" data-mute="Sample Fan 2">IGNORE</button></div></div></div>') + '</div>';
     } else if (L.sub === "find") {
