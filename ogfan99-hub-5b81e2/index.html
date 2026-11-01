@@ -1021,7 +1021,8 @@ function liveMap() {
       s.on("click", e => { L.DomEvent.stopPropagation(e); openStation(nm, lat, lng); }); });
     stopSize();
   }).catch(() => {});
-  const stopSize = () => { const z = m.getZoom(); stops.eachLayer(s => s.setRadius(z >= 14 ? 8 : z >= 12 ? 6 : 4)); };
+  /* stop dots only once you zoom into the streets, so the big map stays clean */
+  const stopSize = () => { const z = m.getZoom(); if (z < 12) { if (m.hasLayer(stops)) m.removeLayer(stops); return; } if (!m.hasLayer(stops)) stops.addTo(m); stops.eachLayer(s => s.setRadius(z >= 14 ? 8 : 6)); };
   m.on("zoomend", stopSize);
   const ll = [];
   /* artists at the same stop get fanned out in a small ring so every one can be seen and tapped */
