@@ -93,40 +93,1341 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
    "title": "There It Go (The Whistle Song)",
    "id": "EGMOD3rVsK8",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Mic Check",
-   "id": "LwfVA-1Pg5g",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 23.6,
+   "cuts": [
+    64.9,
+    121.7,
+    155.7
+   ],
+   "qs": [
+    [
+     [
+      "Which crew is it?",
+      "Dipset",
+      "G-Unit",
+      "Roc-A-Fella"
+     ],
+     [
+      "There it go baby, don't what now?",
+      "Stop",
+      "Leave",
+      "Wait"
+     ],
+     [
+      "Damn, shorty look what?",
+      "Good",
+      "Fly",
+      "Fine"
+     ],
+     [
+      "Okay, time to what at her?",
+      "Whistle",
+      "Wave",
+      "Wink"
+     ],
+     [
+      "Girl, you make his what blow?",
+      "Whistle",
+      "Horn",
+      "Mind"
+     ],
+     [
+      "Top down and he's at it what?",
+      "Again",
+      "Today",
+      "Tonight"
+     ],
+     [
+      "It's hot now and he's at it to what?",
+      "Win",
+      "Spin",
+      "Grin"
+     ],
+     [
+      "Who want it with him?",
+      "Nobody",
+      "Everybody",
+      "Somebody"
+     ],
+     [
+      "Oh, he's so what?",
+      "Fly",
+      "Hot",
+      "Cool"
+     ],
+     [
+      "Oh mami, come and what him?",
+      "Get",
+      "See",
+      "Call"
+     ],
+     [
+      "Move it 'til you feel what?",
+      "Something",
+      "Nothing",
+      "Better"
+     ]
+    ],
+    [
+     [
+      "If you want it, come and what it?",
+      "Get",
+      "Take",
+      "Grab"
+     ],
+     [
+      "He ain't what, he's with it?",
+      "Kidding",
+      "Lying",
+      "Playing"
+     ],
+     [
+      "Girl, let him see you get what?",
+      "Low",
+      "Down",
+      "Up"
+     ],
+     [
+      "Move it like a what and come right back?",
+      "Boomerang",
+      "Yo-yo",
+      "Pendulum"
+     ],
+     [
+      "He don't need to what?",
+      "Ask",
+      "Wait",
+      "Beg"
+     ],
+     [
+      "Chicks love his G'd up what?",
+      "Swagger",
+      "Style",
+      "Smile"
+     ],
+     [
+      "Bring it here baby, come what?",
+      "On",
+      "Back",
+      "Here"
+     ],
+     [
+      "There it go, set it what, baby?",
+      "Down",
+      "Up",
+      "Off"
+     ],
+     [
+      "It's Dipset, oh. There it go, what?",
+      "Aight",
+      "Okay",
+      "Right"
+     ]
+    ],
+    [
+     [
+      "He's so hot, what?",
+      "Terrific",
+      "Electric",
+      "Fantastic"
+     ],
+     [
+      "It's so not fair to the other what?",
+      "Guys",
+      "Girls",
+      "Crews"
+     ],
+     [
+      "He knows not his what?",
+      "Limit",
+      "Name",
+      "Place"
+     ],
+     [
+      "'Til then he's doing his what?",
+      "Thing",
+      "Job",
+      "Dance"
+     ],
+     [
+      "That'll keep you in the what?",
+      "Ring",
+      "Game",
+      "Club"
+     ],
+     [
+      "You do it like a what, lil' lady?",
+      "Pro",
+      "Star",
+      "Queen"
+     ],
+     [
+      "Bring it here, let it what, lil' lady?",
+      "Show",
+      "Go",
+      "Shine"
+     ],
+     [
+      "'Til the sun what?",
+      "Sets",
+      "Rises",
+      "Shines"
+     ],
+     [
+      "Girl, you make him want to what?",
+      "Know",
+      "Go",
+      "Dance"
+     ]
+    ]
+   ]
   },
   {
    "title": "Oh Yes",
    "id": "Ie99CDG-X2o",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Dipset (Santana's Town)",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "start": 14.2,
+   "cuts": [
+    54.5,
+    83.2,
+    148.2
+   ],
+   "qs": [
+    [
+     [
+      "Who made the beat? He shouts out the what?",
+      "Heatmakerz",
+      "Neptunes",
+      "Just Blaze"
+     ],
+     [
+      "He thinks this the what right here?",
+      "One",
+      "Song",
+      "Jam"
+     ],
+     [
+      "He's moving what?",
+      "Again",
+      "Fast",
+      "Up"
+     ],
+     [
+      "He says: I'm what?",
+      "Nice",
+      "Back",
+      "Here"
+     ],
+     [
+      "He's Mr. who?",
+      "Postman",
+      "Mailman",
+      "Big Man"
+     ],
+     [
+      "He gets big what?",
+      "Chips",
+      "Checks",
+      "Bands"
+     ],
+     [
+      "Cash like no what?",
+      "Other",
+      "One",
+      "Limit"
+     ]
+    ],
+    [
+     [
+      "He explores and what?",
+      "Cruises",
+      "Travels",
+      "Sails"
+     ],
+     [
+      "Island what that's new?",
+      "Shores",
+      "Beaches",
+      "Hotels"
+     ],
+     [
+      "Bring the what out?",
+      "Boat",
+      "Car",
+      "Cash"
+     ],
+     [
+      "Watch the what move?",
+      "Water",
+      "Waves",
+      "Crowd"
+     ],
+     [
+      "He's a water what?",
+      "Dude",
+      "Boy",
+      "Man"
+     ],
+     [
+      "Jet skis, water what?",
+      "Pools",
+      "Parks",
+      "Slides"
+     ],
+     [
+      "Surfin' the what?",
+      "Wave",
+      "Web",
+      "Net"
+     ],
+     [
+      "Like cowabunga, what?",
+      "Dude",
+      "Man",
+      "Bro"
+     ]
+    ],
+    [
+     [
+      "This the what, yep?",
+      "Jam",
+      "One",
+      "Song"
+     ],
+     [
+      "Put your what up?",
+      "Hands",
+      "Glasses",
+      "Lighters"
+     ],
+     [
+      "And just what?",
+      "Wave",
+      "Clap",
+      "Jump"
+     ],
+     [
+      "Oh man, he's what?",
+      "Back",
+      "Here",
+      "Hot"
+     ],
+     [
+      "Sorry about the what?",
+      "Wait",
+      "Delay",
+      "Noise"
+     ],
+     [
+      "He can't let his peeps down, can't let his what down?",
+      "Seed",
+      "Team",
+      "Fans"
+     ],
+     [
+      "They need him out where?",
+      "There",
+      "Here",
+      "Home"
+     ],
+     [
+      "He can't let the what down?",
+      "Streets",
+      "City",
+      "Game"
+     ],
+     [
+      "He gotta do it what now?",
+      "B-I-G",
+      "Big time",
+      "Right"
+     ],
+     [
+      "Plus the ladies love the what?",
+      "Kid",
+      "Man",
+      "Boy"
+     ],
+     [
+      "Plus the what love the kid?",
+      "Babies",
+      "Haters",
+      "Fans"
+     ],
+     [
+      "Could it be he's from the what?",
+      "Eighties",
+      "Seventies",
+      "Nineties"
+     ],
+     [
+      "Call him a grinder, call him a what?",
+      "Survivor",
+      "Winner",
+      "Hustler"
+     ],
+     [
+      "Why should he what?",
+      "Wait",
+      "Stop",
+      "Quit"
+     ]
+    ]
+   ]
   },
   {
    "title": "Back to the Crib",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "xhI9qGuNsJA",
+   "start": 36.5,
+   "cuts": [
+    67.4,
+    97.9,
+    142.7
+   ],
+   "qs": [
+    [
+     [
+      "Shorty said she really what him?",
+      "Feeling",
+      "Loving",
+      "Missing"
+     ],
+     [
+      "Shorty said she wanna what with him?",
+      "Roll",
+      "Dance",
+      "Talk"
+     ],
+     [
+      "She don't know that they going back to the what?",
+      "Crib",
+      "Club",
+      "Party"
+     ],
+     [
+      "She wanna what with him?",
+      "Go",
+      "Eat",
+      "Stay"
+     ],
+     [
+      "He told her have a seat in his what?",
+      "Ride",
+      "Booth",
+      "Room"
+     ]
+    ],
+    [
+     [
+      "She looking good in them new tall what?",
+      "Heels",
+      "Boots",
+      "Jeans"
+     ],
+     [
+      "Looking at her like a full course what?",
+      "Meal",
+      "Menu",
+      "Dinner"
+     ],
+     [
+      "He got all the girls what him?",
+      "Checking",
+      "Calling",
+      "Chasing"
+     ],
+     [
+      "They know he's a dog, but they love his what?",
+      "Pedigree",
+      "Swagger",
+      "Money"
+     ],
+     [
+      "Hottest in the what?",
+      "Hood",
+      "City",
+      "Club"
+     ],
+     [
+      "Freshest on the what?",
+      "Block",
+      "Scene",
+      "Street"
+     ],
+     [
+      "All this Gucci and this what?",
+      "Louis",
+      "Prada",
+      "Fendi"
+     ],
+     [
+      "He stays Polo down to the what?",
+      "Socks",
+      "Shoes",
+      "Hat"
+     ],
+     [
+      "Rings, chains and watch worth more than what?",
+      "Fort Knox",
+      "A mansion",
+      "The bank"
+     ],
+     [
+      "Temporary plates on the what?",
+      "Audi R8",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "Diamonds match what he's what?",
+      "Wearing",
+      "Driving",
+      "Drinking"
+     ],
+     [
+      "She can't stop what?",
+      "Staring",
+      "Dancing",
+      "Smiling"
+     ]
+    ],
+    [
+     [
+      "Runway what?",
+      "Walk",
+      "Strut",
+      "Show"
+     ],
+     [
+      "Beauty queen what?",
+      "Face",
+      "Smile",
+      "Crown"
+     ],
+     [
+      "Hair did, manicure, what?",
+      "Pedicure",
+      "Facial",
+      "Massage"
+     ],
+     [
+      "Attitude like who?",
+      "Vivica",
+      "Jada",
+      "Queen Latifah"
+     ],
+     [
+      "When she played in what movie?",
+      "Set It Off",
+      "Friday",
+      "Belly"
+     ],
+     [
+      "She feeling his what?",
+      "Swag",
+      "Style",
+      "Chain"
+     ],
+     [
+      "Not only is she what, she's feeling on him?",
+      "Dancing",
+      "Talking",
+      "Singing"
+     ],
+     [
+      "The feelings what?",
+      "Mutual",
+      "Real",
+      "Strong"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Dipset (Santana's Town)",
+   "id": "zrfJ8oJTNFk",
+   "start": 12.1,
+   "cuts": [
+    41.6,
+    79.6,
+    90.9
+   ],
+   "qs": [
+    [
+     [
+      "Juelz, dip dip, Santana, what?",
+      "Set set",
+      "Get get",
+      "Bet bet"
+     ],
+     [
+      "Who you with? Throw up your what?",
+      "Set",
+      "Hands",
+      "Flag"
+     ],
+     [
+      "It's Santana, who you what?",
+      "With",
+      "Down",
+      "Rolling"
+     ],
+     [
+      "Which crew does he chant?",
+      "Dipset",
+      "Roc-A-Fella",
+      "G-Unit"
+     ]
+    ],
+    [
+     [
+      "The game has what?",
+      "Changed",
+      "Ended",
+      "Started"
+     ],
+     [
+      "A what, a whole collection?",
+      "Selection",
+      "Section",
+      "Delegation"
+     ],
+     [
+      "A selection, a whole what?",
+      "Collection",
+      "Closet",
+      "Crew"
+     ],
+     [
+      "This isn't no what in here?",
+      "Game",
+      "Joke",
+      "Party"
+     ],
+     [
+      "Like who was here?",
+      "Kurt Cobain",
+      "Jimi Hendrix",
+      "Elvis"
+     ],
+     [
+      "Dangerous, brainless, what?",
+      "Stainless",
+      "Nameless",
+      "Shameless"
+     ],
+     [
+      "His diddy what?",
+      "Bop",
+      "Walk",
+      "Step"
+     ],
+     [
+      "Barge through the city what?",
+      "Blocks",
+      "Streets",
+      "Lights"
+     ]
+    ],
+    [
+     [
+      "Go, it's your what?",
+      "Birthday",
+      "Party",
+      "Night"
+     ],
+     [
+      "What's his birthplace?",
+      "Harlem",
+      "The Bronx",
+      "Brooklyn"
+     ],
+     [
+      "Doomsday, what day?",
+      "Goons",
+      "Moons",
+      "Lose"
+     ],
+     [
+      "Tuesday to what?",
+      "Thursday",
+      "Friday",
+      "Sunday"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "There It Go (The Whistle Song)",
+   "id": "EGMOD3rVsK8",
+   "start": 23.6,
+   "cuts": [
+    64.9,
+    121.7,
+    155.7
+   ],
+   "qs": [
+    [
+     [
+      "Which crew is it?",
+      "Dipset",
+      "G-Unit",
+      "Roc-A-Fella"
+     ],
+     [
+      "There it go baby, don't what now?",
+      "Stop",
+      "Leave",
+      "Wait"
+     ],
+     [
+      "Damn, shorty look what?",
+      "Good",
+      "Fly",
+      "Fine"
+     ],
+     [
+      "Okay, time to what at her?",
+      "Whistle",
+      "Wave",
+      "Wink"
+     ],
+     [
+      "Girl, you make his what blow?",
+      "Whistle",
+      "Horn",
+      "Mind"
+     ],
+     [
+      "Top down and he's at it what?",
+      "Again",
+      "Today",
+      "Tonight"
+     ],
+     [
+      "It's hot now and he's at it to what?",
+      "Win",
+      "Spin",
+      "Grin"
+     ],
+     [
+      "Who want it with him?",
+      "Nobody",
+      "Everybody",
+      "Somebody"
+     ],
+     [
+      "Oh, he's so what?",
+      "Fly",
+      "Hot",
+      "Cool"
+     ],
+     [
+      "Oh mami, come and what him?",
+      "Get",
+      "See",
+      "Call"
+     ],
+     [
+      "Move it 'til you feel what?",
+      "Something",
+      "Nothing",
+      "Better"
+     ]
+    ],
+    [
+     [
+      "If you want it, come and what it?",
+      "Get",
+      "Take",
+      "Grab"
+     ],
+     [
+      "He ain't what, he's with it?",
+      "Kidding",
+      "Lying",
+      "Playing"
+     ],
+     [
+      "Girl, let him see you get what?",
+      "Low",
+      "Down",
+      "Up"
+     ],
+     [
+      "Move it like a what and come right back?",
+      "Boomerang",
+      "Yo-yo",
+      "Pendulum"
+     ],
+     [
+      "He don't need to what?",
+      "Ask",
+      "Wait",
+      "Beg"
+     ],
+     [
+      "Chicks love his G'd up what?",
+      "Swagger",
+      "Style",
+      "Smile"
+     ],
+     [
+      "Bring it here baby, come what?",
+      "On",
+      "Back",
+      "Here"
+     ],
+     [
+      "There it go, set it what, baby?",
+      "Down",
+      "Up",
+      "Off"
+     ],
+     [
+      "It's Dipset, oh. There it go, what?",
+      "Aight",
+      "Okay",
+      "Right"
+     ]
+    ],
+    [
+     [
+      "He's so hot, what?",
+      "Terrific",
+      "Electric",
+      "Fantastic"
+     ],
+     [
+      "It's so not fair to the other what?",
+      "Guys",
+      "Girls",
+      "Crews"
+     ],
+     [
+      "He knows not his what?",
+      "Limit",
+      "Name",
+      "Place"
+     ],
+     [
+      "'Til then he's doing his what?",
+      "Thing",
+      "Job",
+      "Dance"
+     ],
+     [
+      "That'll keep you in the what?",
+      "Ring",
+      "Game",
+      "Club"
+     ],
+     [
+      "You do it like a what, lil' lady?",
+      "Pro",
+      "Star",
+      "Queen"
+     ],
+     [
+      "Bring it here, let it what, lil' lady?",
+      "Show",
+      "Go",
+      "Shine"
+     ],
+     [
+      "'Til the sun what?",
+      "Sets",
+      "Rises",
+      "Shines"
+     ],
+     [
+      "Girl, you make him want to what?",
+      "Know",
+      "Go",
+      "Dance"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Oh Yes",
+   "id": "Ie99CDG-X2o",
+   "start": 14.2,
+   "cuts": [
+    54.5,
+    83.2,
+    148.2
+   ],
+   "qs": [
+    [
+     [
+      "Who made the beat? He shouts out the what?",
+      "Heatmakerz",
+      "Neptunes",
+      "Just Blaze"
+     ],
+     [
+      "He thinks this the what right here?",
+      "One",
+      "Song",
+      "Jam"
+     ],
+     [
+      "He's moving what?",
+      "Again",
+      "Fast",
+      "Up"
+     ],
+     [
+      "He says: I'm what?",
+      "Nice",
+      "Back",
+      "Here"
+     ],
+     [
+      "He's Mr. who?",
+      "Postman",
+      "Mailman",
+      "Big Man"
+     ],
+     [
+      "He gets big what?",
+      "Chips",
+      "Checks",
+      "Bands"
+     ],
+     [
+      "Cash like no what?",
+      "Other",
+      "One",
+      "Limit"
+     ]
+    ],
+    [
+     [
+      "He explores and what?",
+      "Cruises",
+      "Travels",
+      "Sails"
+     ],
+     [
+      "Island what that's new?",
+      "Shores",
+      "Beaches",
+      "Hotels"
+     ],
+     [
+      "Bring the what out?",
+      "Boat",
+      "Car",
+      "Cash"
+     ],
+     [
+      "Watch the what move?",
+      "Water",
+      "Waves",
+      "Crowd"
+     ],
+     [
+      "He's a water what?",
+      "Dude",
+      "Boy",
+      "Man"
+     ],
+     [
+      "Jet skis, water what?",
+      "Pools",
+      "Parks",
+      "Slides"
+     ],
+     [
+      "Surfin' the what?",
+      "Wave",
+      "Web",
+      "Net"
+     ],
+     [
+      "Like cowabunga, what?",
+      "Dude",
+      "Man",
+      "Bro"
+     ]
+    ],
+    [
+     [
+      "This the what, yep?",
+      "Jam",
+      "One",
+      "Song"
+     ],
+     [
+      "Put your what up?",
+      "Hands",
+      "Glasses",
+      "Lighters"
+     ],
+     [
+      "And just what?",
+      "Wave",
+      "Clap",
+      "Jump"
+     ],
+     [
+      "Oh man, he's what?",
+      "Back",
+      "Here",
+      "Hot"
+     ],
+     [
+      "Sorry about the what?",
+      "Wait",
+      "Delay",
+      "Noise"
+     ],
+     [
+      "He can't let his peeps down, can't let his what down?",
+      "Seed",
+      "Team",
+      "Fans"
+     ],
+     [
+      "They need him out where?",
+      "There",
+      "Here",
+      "Home"
+     ],
+     [
+      "He can't let the what down?",
+      "Streets",
+      "City",
+      "Game"
+     ],
+     [
+      "He gotta do it what now?",
+      "B-I-G",
+      "Big time",
+      "Right"
+     ],
+     [
+      "Plus the ladies love the what?",
+      "Kid",
+      "Man",
+      "Boy"
+     ],
+     [
+      "Plus the what love the kid?",
+      "Babies",
+      "Haters",
+      "Fans"
+     ],
+     [
+      "Could it be he's from the what?",
+      "Eighties",
+      "Seventies",
+      "Nineties"
+     ],
+     [
+      "Call him a grinder, call him a what?",
+      "Survivor",
+      "Winner",
+      "Hustler"
+     ],
+     [
+      "Why should he what?",
+      "Wait",
+      "Stop",
+      "Quit"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Back to the Crib",
+   "id": "xhI9qGuNsJA",
+   "start": 36.5,
+   "cuts": [
+    67.4,
+    97.9,
+    142.7
+   ],
+   "qs": [
+    [
+     [
+      "Shorty said she really what him?",
+      "Feeling",
+      "Loving",
+      "Missing"
+     ],
+     [
+      "Shorty said she wanna what with him?",
+      "Roll",
+      "Dance",
+      "Talk"
+     ],
+     [
+      "She don't know that they going back to the what?",
+      "Crib",
+      "Club",
+      "Party"
+     ],
+     [
+      "She wanna what with him?",
+      "Go",
+      "Eat",
+      "Stay"
+     ],
+     [
+      "He told her have a seat in his what?",
+      "Ride",
+      "Booth",
+      "Room"
+     ]
+    ],
+    [
+     [
+      "She looking good in them new tall what?",
+      "Heels",
+      "Boots",
+      "Jeans"
+     ],
+     [
+      "Looking at her like a full course what?",
+      "Meal",
+      "Menu",
+      "Dinner"
+     ],
+     [
+      "He got all the girls what him?",
+      "Checking",
+      "Calling",
+      "Chasing"
+     ],
+     [
+      "They know he's a dog, but they love his what?",
+      "Pedigree",
+      "Swagger",
+      "Money"
+     ],
+     [
+      "Hottest in the what?",
+      "Hood",
+      "City",
+      "Club"
+     ],
+     [
+      "Freshest on the what?",
+      "Block",
+      "Scene",
+      "Street"
+     ],
+     [
+      "All this Gucci and this what?",
+      "Louis",
+      "Prada",
+      "Fendi"
+     ],
+     [
+      "He stays Polo down to the what?",
+      "Socks",
+      "Shoes",
+      "Hat"
+     ],
+     [
+      "Rings, chains and watch worth more than what?",
+      "Fort Knox",
+      "A mansion",
+      "The bank"
+     ],
+     [
+      "Temporary plates on the what?",
+      "Audi R8",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "Diamonds match what he's what?",
+      "Wearing",
+      "Driving",
+      "Drinking"
+     ],
+     [
+      "She can't stop what?",
+      "Staring",
+      "Dancing",
+      "Smiling"
+     ]
+    ],
+    [
+     [
+      "Runway what?",
+      "Walk",
+      "Strut",
+      "Show"
+     ],
+     [
+      "Beauty queen what?",
+      "Face",
+      "Smile",
+      "Crown"
+     ],
+     [
+      "Hair did, manicure, what?",
+      "Pedicure",
+      "Facial",
+      "Massage"
+     ],
+     [
+      "Attitude like who?",
+      "Vivica",
+      "Jada",
+      "Queen Latifah"
+     ],
+     [
+      "When she played in what movie?",
+      "Set It Off",
+      "Friday",
+      "Belly"
+     ],
+     [
+      "She feeling his what?",
+      "Swag",
+      "Style",
+      "Chain"
+     ],
+     [
+      "Not only is she what, she's feeling on him?",
+      "Dancing",
+      "Talking",
+      "Singing"
+     ],
+     [
+      "The feelings what?",
+      "Mutual",
+      "Real",
+      "Strong"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Dipset (Santana's Town)",
+   "id": "zrfJ8oJTNFk",
+   "start": 12.1,
+   "cuts": [
+    41.6,
+    79.6,
+    90.9
+   ],
+   "qs": [
+    [
+     [
+      "Juelz, dip dip, Santana, what?",
+      "Set set",
+      "Get get",
+      "Bet bet"
+     ],
+     [
+      "Who you with? Throw up your what?",
+      "Set",
+      "Hands",
+      "Flag"
+     ],
+     [
+      "It's Santana, who you what?",
+      "With",
+      "Down",
+      "Rolling"
+     ],
+     [
+      "Which crew does he chant?",
+      "Dipset",
+      "Roc-A-Fella",
+      "G-Unit"
+     ]
+    ],
+    [
+     [
+      "The game has what?",
+      "Changed",
+      "Ended",
+      "Started"
+     ],
+     [
+      "A what, a whole collection?",
+      "Selection",
+      "Section",
+      "Delegation"
+     ],
+     [
+      "A selection, a whole what?",
+      "Collection",
+      "Closet",
+      "Crew"
+     ],
+     [
+      "This isn't no what in here?",
+      "Game",
+      "Joke",
+      "Party"
+     ],
+     [
+      "Like who was here?",
+      "Kurt Cobain",
+      "Jimi Hendrix",
+      "Elvis"
+     ],
+     [
+      "Dangerous, brainless, what?",
+      "Stainless",
+      "Nameless",
+      "Shameless"
+     ],
+     [
+      "His diddy what?",
+      "Bop",
+      "Walk",
+      "Step"
+     ],
+     [
+      "Barge through the city what?",
+      "Blocks",
+      "Streets",
+      "Lights"
+     ]
+    ],
+    [
+     [
+      "Go, it's your what?",
+      "Birthday",
+      "Party",
+      "Night"
+     ],
+     [
+      "What's his birthplace?",
+      "Harlem",
+      "The Bronx",
+      "Brooklyn"
+     ],
+     [
+      "Doomsday, what day?",
+      "Goons",
+      "Moons",
+      "Lose"
+     ],
+     [
+      "Tuesday to what?",
+      "Thursday",
+      "Friday",
+      "Sunday"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

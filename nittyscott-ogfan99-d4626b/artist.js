@@ -99,40 +99,1303 @@ window.CFG = {
   }
  ],
  "saveKey": "ogfan99nittyscott1",
- "episodes": [
+ "songs": [
   {
-   "title": "La Diaspora",
-   "id": "oz-KSud2zT0",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Generation Now",
+   "id": "tsoW0FL_xEc",
+   "cuts": [
+    41.6,
+    92,
+    165
+   ],
+   "qs": [
+    [
+     [
+      "This generation rules the what?",
+      "Nation",
+      "World",
+      "Streets"
+     ],
+     [
+      "No victims, no what?",
+      "Villains",
+      "Heroes",
+      "Rules"
+     ],
+     [
+      "No limits, just what?",
+      "Visions",
+      "Dreams",
+      "Goals"
+     ],
+     [
+      "Surrender what to mingle with the divine?",
+      "Ego",
+      "Pride",
+      "Fear"
+     ],
+     [
+      "Wipe your what before you enter her mind?",
+      "Feet",
+      "Shoes",
+      "Hands"
+     ],
+     [
+      "She's barefoot sitting in the what?",
+      "Lotus",
+      "Garden",
+      "Grass"
+     ],
+     [
+      "Have you taken what?",
+      "Notice",
+      "Notes",
+      "Time"
+     ],
+     [
+      "Thinking she needs stress? She thinks it's what?",
+      "Needless",
+      "Useless",
+      "Endless"
+     ],
+     [
+      "Flirting with the flora, floating with the what?",
+      "Fauna",
+      "Water",
+      "Wind"
+     ],
+     [
+      "They want to find an art to what?",
+      "Chill",
+      "Live",
+      "Heal"
+     ]
+    ],
+    [
+     [
+      "Her let-it-what metaphysical flow?",
+      "Glow",
+      "Go",
+      "Flow"
+     ],
+     [
+      "Entering the what?",
+      "Indigo",
+      "Unknown",
+      "Void"
+     ],
+     [
+      "Life is but a what?",
+      "Dream",
+      "Game",
+      "Test"
+     ],
+     [
+      "Reality is leaking at the what?",
+      "Seams",
+      "Edges",
+      "Roof"
+     ],
+     [
+      "But it's what?",
+      "Lucid",
+      "Real",
+      "Fine"
+     ],
+     [
+      "From the root up to the what?",
+      "Crown",
+      "Sky",
+      "Top"
+     ],
+     [
+      "It's amazing in the void until you come back what?",
+      "Down",
+      "Home",
+      "Around"
+     ],
+     [
+      "If she can't keep calm, she just keeps what?",
+      "On",
+      "Going",
+      "Moving"
+     ],
+     [
+      "Be the queen of the what?",
+      "Renaissance",
+      "Nation",
+      "Streets"
+     ],
+     [
+      "Mother of the new what?",
+      "Era",
+      "World",
+      "Age"
+     ],
+     [
+      "Touch her what?",
+      "Tiara",
+      "Crown",
+      "Hand"
+     ]
+    ],
+    [
+     [
+      "If every what-year-old was taught meditation?",
+      "8",
+      "10",
+      "5"
+     ],
+     [
+      "We'd have peace for an entire what?",
+      "Generation",
+      "Century",
+      "Lifetime"
+     ],
+     [
+      "Set the times what?",
+      "Ablaze",
+      "Free",
+      "Right"
+     ],
+     [
+      "We do it in what?",
+      "Waves",
+      "Groups",
+      "Silence"
+     ],
+     [
+      "Be brave like who?",
+      "Ancestors",
+      "Soldiers",
+      "Lions"
+     ],
+     [
+      "The world is what?",
+      "Burning",
+      "Turning",
+      "Changing"
+     ],
+     [
+      "But she got a second what?",
+      "Plan",
+      "Chance",
+      "Wind"
+     ],
+     [
+      "Carry the camaraderie to what?",
+      "Continents",
+      "Countries",
+      "Cities"
+     ],
+     [
+      "We don't need religion 'cause we got our what?",
+      "Consciousness",
+      "Faith",
+      "Music"
+     ],
+     [
+      "She ain't just an what?",
+      "Optimist",
+      "Artist",
+      "Dreamer"
+     ],
+     [
+      "New what is coming?",
+      "Earth",
+      "Day",
+      "Age"
+     ],
+     [
+      "Realized beings will spread what and fly?",
+      "Wings",
+      "Love",
+      "Out"
+     ]
+    ]
+   ]
   },
   {
    "title": "Flower Child",
    "id": "46j_q1Wr0jY",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 8.7,
+   "cuts": [
+    38,
+    88.5,
+    119.9
+   ],
+   "qs": [
+    [
+     [
+      "Pardon her what ways?",
+      "Bohemian",
+      "Brooklyn",
+      "Hippie"
+     ],
+     [
+      "You said you love her, so don't what her?",
+      "Rush",
+      "Push",
+      "Call"
+     ],
+     [
+      "Love is what?",
+      "Patient",
+      "Kind",
+      "Blind"
+     ],
+     [
+      "Now you got to what her?",
+      "Trust",
+      "Call",
+      "Wait for"
+     ],
+     [
+      "Take form like the canvas of the what?",
+      "Grand Canyon",
+      "Night sky",
+      "Ocean"
+     ],
+     [
+      "Product of a beautiful what?",
+      "Storm",
+      "Mind",
+      "Day"
+     ],
+     [
+      "Quietly preparing for a what?",
+      "Start",
+      "Storm",
+      "Show"
+     ],
+     [
+      "Let her Michelangelo her what?",
+      "Sistine Chapel",
+      "Statue",
+      "Canvas"
+     ],
+     [
+      "What wasn't built in a day?",
+      "Rome",
+      "Paris",
+      "Brooklyn"
+     ],
+     [
+      "Diamonds need a while before they hit the what?",
+      "Display",
+      "Market",
+      "Store"
+     ]
+    ],
+    [
+     [
+      "Like her mama in the what?",
+      "Kitchen",
+      "Garden",
+      "Church"
+     ],
+     [
+      "She begged her for a what?",
+      "Taste",
+      "Bite",
+      "Plate"
+     ],
+     [
+      "Her mama said it wasn't what?",
+      "Ready",
+      "Done",
+      "Hot"
+     ],
+     [
+      "She stir it up what?",
+      "Slow",
+      "Fast",
+      "Twice"
+     ],
+     [
+      "This is not a what?",
+      "Racetrack",
+      "Highway",
+      "Contest"
+     ],
+     [
+      "Sometimes she's got to stall the what?",
+      "BPM",
+      "Beat",
+      "Clock"
+     ],
+     [
+      "Weave these dreams and polish up these what?",
+      "Gems",
+      "Rhymes",
+      "Shoes"
+     ],
+     [
+      "Stop and smell the what?",
+      "Roses",
+      "Flowers",
+      "Coffee"
+     ],
+     [
+      "Keeping up with the Kardashians and the what?",
+      "Joneses",
+      "Smiths",
+      "Wests"
+     ],
+     [
+      "Greatness gets better with what?",
+      "Time",
+      "Age",
+      "Money"
+     ],
+     [
+      "Concrete what?",
+      "Roses",
+      "Jungle",
+      "Walls"
+     ],
+     [
+      "It's a secret what in her mind?",
+      "Garden",
+      "Room",
+      "Place"
+     ]
+    ],
+    [
+     [
+      "Flower child, what creativity?",
+      "Buffering",
+      "Loading",
+      "Growing"
+     ],
+     [
+      "Hustling for the numbers, you miss the what?",
+      "Journey",
+      "Point",
+      "Moment"
+     ],
+     [
+      "If you climb too what?",
+      "Fast",
+      "High",
+      "Slow"
+     ],
+     [
+      "The beauty of the what?",
+      "Struggle",
+      "Journey",
+      "Garden"
+     ],
+     [
+      "She wants the legendary like what?",
+      "Excalibur",
+      "Camelot",
+      "Zeus"
+     ],
+     [
+      "Liberated as a what?",
+      "Bachelor",
+      "Bird",
+      "Child"
+     ],
+     [
+      "Never falling victim to these what?",
+      "Calendars",
+      "Clocks",
+      "Critics"
+     ],
+     [
+      "Rough draft after rough what?",
+      "Draft",
+      "Copy",
+      "Cut"
+     ],
+     [
+      "Perfecting her what craft?",
+      "Abstract",
+      "Artistic",
+      "Secret"
+     ],
+     [
+      "Now they calling her what?",
+      "Celebrity",
+      "Legend",
+      "Superstar"
+     ],
+     [
+      "The only thing she cares about is her what?",
+      "Integrity",
+      "Family",
+      "Music"
+     ]
+    ]
+   ]
   },
   {
    "title": "Skippin' Clouds",
    "id": "lPi1cKfbKmw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Kaleidoscopes",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Generation Now",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "start": 32.4,
+   "cuts": [
+    59.2,
+    128.6,
+    197
+   ],
+   "qs": [
+    [
+     [
+      "First dose getting chased with the truth what?",
+      "Serum",
+      "Pill",
+      "Water"
+     ],
+     [
+      "These heights, she never what them?",
+      "Fears",
+      "Sees",
+      "Climbs"
+     ],
+     [
+      "Plenty wheels in the what?",
+      "Sky",
+      "Street",
+      "Air"
+     ],
+     [
+      "She knows how to what them?",
+      "Steer",
+      "Ride",
+      "Fix"
+     ],
+     [
+      "She shouldn't operate what?",
+      "Machinery",
+      "Vehicles",
+      "Planes"
+     ],
+     [
+      "Going, going, what?",
+      "Gone",
+      "Up",
+      "High"
+     ],
+     [
+      "Hearing these what?",
+      "Colors",
+      "Voices",
+      "Sounds"
+     ],
+     [
+      "And seeing sound what?",
+      "Bites",
+      "Waves",
+      "Checks"
+     ],
+     [
+      "She's skipping what?",
+      "Clouds",
+      "Rocks",
+      "Stones"
+     ]
+    ],
+    [
+     [
+      "Into meditation and align her what?",
+      "Chakras",
+      "Spine",
+      "Mind"
+     ],
+     [
+      "Call her who when she's on The Color Purple?",
+      "Oprah",
+      "Whoopi",
+      "Alice"
+     ],
+     [
+      "When she's on the color what?",
+      "Purple",
+      "Blue",
+      "Red"
+     ],
+     [
+      "Her tea is what?",
+      "Herbal",
+      "Green",
+      "Sweet"
+     ],
+     [
+      "The remedy is what?",
+      "Nonverbal",
+      "Natural",
+      "Simple"
+     ],
+     [
+      "She ain't a square 'cause she don't fit inside your what?",
+      "Circle",
+      "Box",
+      "Crew"
+     ],
+     [
+      "Like smashing on a what?",
+      "Rooftop",
+      "Table",
+      "Drum"
+     ],
+     [
+      "Trees like who?",
+      "Aladdin",
+      "Tarzan",
+      "Jasmine"
+     ],
+     [
+      "Her what is blurred?",
+      "Vision",
+      "Mind",
+      "Memory"
+     ],
+     [
+      "Try to stop her and she's flipping the what?",
+      "Bird",
+      "Coin",
+      "Script"
+     ],
+     [
+      "She just ordered the what?",
+      "Okra",
+      "Fries",
+      "Tea"
+     ],
+     [
+      "She thinks she's who?",
+      "Deepak Chopra",
+      "Dalai Lama",
+      "Oprah"
+     ]
+    ],
+    [
+     [
+      "Elevated, she feels closer up to who?",
+      "Him",
+      "Them",
+      "Home"
+     ],
+     [
+      "The trip is out of this what?",
+      "World",
+      "Place",
+      "Galaxy"
+     ],
+     [
+      "You what?",
+      "Dig",
+      "See",
+      "Know"
+     ],
+     [
+      "She be living in her what?",
+      "Skin",
+      "Mind",
+      "World"
+     ],
+     [
+      "Her soul still blowing in the what?",
+      "Wind",
+      "Breeze",
+      "Sky"
+     ],
+     [
+      "She's a free what?",
+      "Spirit",
+      "Bird",
+      "Soul"
+     ],
+     [
+      "She's something like a who?",
+      "Marley",
+      "Hendrix",
+      "Lennon"
+     ],
+     [
+      "In a strawberry what?",
+      "Field",
+      "Patch",
+      "Farm"
+     ],
+     [
+      "None of these men will be disturbing her what?",
+      "Zen",
+      "Peace",
+      "Sleep"
+     ],
+     [
+      "If you ever left the what, you know what she means?",
+      "Planet",
+      "City",
+      "Country"
+     ],
+     [
+      "Can't reach the status while she's sitting on a what?",
+      "Stratus",
+      "Cloud",
+      "Throne"
+     ],
+     [
+      "Could you hold your what long enough?",
+      "Breath",
+      "Ground",
+      "Tongue"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Generation Now",
+   "id": "tsoW0FL_xEc",
+   "cuts": [
+    41.6,
+    92,
+    165
+   ],
+   "qs": [
+    [
+     [
+      "This generation rules the what?",
+      "Nation",
+      "World",
+      "Streets"
+     ],
+     [
+      "No victims, no what?",
+      "Villains",
+      "Heroes",
+      "Rules"
+     ],
+     [
+      "No limits, just what?",
+      "Visions",
+      "Dreams",
+      "Goals"
+     ],
+     [
+      "Surrender what to mingle with the divine?",
+      "Ego",
+      "Pride",
+      "Fear"
+     ],
+     [
+      "Wipe your what before you enter her mind?",
+      "Feet",
+      "Shoes",
+      "Hands"
+     ],
+     [
+      "She's barefoot sitting in the what?",
+      "Lotus",
+      "Garden",
+      "Grass"
+     ],
+     [
+      "Have you taken what?",
+      "Notice",
+      "Notes",
+      "Time"
+     ],
+     [
+      "Thinking she needs stress? She thinks it's what?",
+      "Needless",
+      "Useless",
+      "Endless"
+     ],
+     [
+      "Flirting with the flora, floating with the what?",
+      "Fauna",
+      "Water",
+      "Wind"
+     ],
+     [
+      "They want to find an art to what?",
+      "Chill",
+      "Live",
+      "Heal"
+     ]
+    ],
+    [
+     [
+      "Her let-it-what metaphysical flow?",
+      "Glow",
+      "Go",
+      "Flow"
+     ],
+     [
+      "Entering the what?",
+      "Indigo",
+      "Unknown",
+      "Void"
+     ],
+     [
+      "Life is but a what?",
+      "Dream",
+      "Game",
+      "Test"
+     ],
+     [
+      "Reality is leaking at the what?",
+      "Seams",
+      "Edges",
+      "Roof"
+     ],
+     [
+      "But it's what?",
+      "Lucid",
+      "Real",
+      "Fine"
+     ],
+     [
+      "From the root up to the what?",
+      "Crown",
+      "Sky",
+      "Top"
+     ],
+     [
+      "It's amazing in the void until you come back what?",
+      "Down",
+      "Home",
+      "Around"
+     ],
+     [
+      "If she can't keep calm, she just keeps what?",
+      "On",
+      "Going",
+      "Moving"
+     ],
+     [
+      "Be the queen of the what?",
+      "Renaissance",
+      "Nation",
+      "Streets"
+     ],
+     [
+      "Mother of the new what?",
+      "Era",
+      "World",
+      "Age"
+     ],
+     [
+      "Touch her what?",
+      "Tiara",
+      "Crown",
+      "Hand"
+     ]
+    ],
+    [
+     [
+      "If every what-year-old was taught meditation?",
+      "8",
+      "10",
+      "5"
+     ],
+     [
+      "We'd have peace for an entire what?",
+      "Generation",
+      "Century",
+      "Lifetime"
+     ],
+     [
+      "Set the times what?",
+      "Ablaze",
+      "Free",
+      "Right"
+     ],
+     [
+      "We do it in what?",
+      "Waves",
+      "Groups",
+      "Silence"
+     ],
+     [
+      "Be brave like who?",
+      "Ancestors",
+      "Soldiers",
+      "Lions"
+     ],
+     [
+      "The world is what?",
+      "Burning",
+      "Turning",
+      "Changing"
+     ],
+     [
+      "But she got a second what?",
+      "Plan",
+      "Chance",
+      "Wind"
+     ],
+     [
+      "Carry the camaraderie to what?",
+      "Continents",
+      "Countries",
+      "Cities"
+     ],
+     [
+      "We don't need religion 'cause we got our what?",
+      "Consciousness",
+      "Faith",
+      "Music"
+     ],
+     [
+      "She ain't just an what?",
+      "Optimist",
+      "Artist",
+      "Dreamer"
+     ],
+     [
+      "New what is coming?",
+      "Earth",
+      "Day",
+      "Age"
+     ],
+     [
+      "Realized beings will spread what and fly?",
+      "Wings",
+      "Love",
+      "Out"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Flower Child",
+   "id": "46j_q1Wr0jY",
+   "start": 8.7,
+   "cuts": [
+    38,
+    88.5,
+    119.9
+   ],
+   "qs": [
+    [
+     [
+      "Pardon her what ways?",
+      "Bohemian",
+      "Brooklyn",
+      "Hippie"
+     ],
+     [
+      "You said you love her, so don't what her?",
+      "Rush",
+      "Push",
+      "Call"
+     ],
+     [
+      "Love is what?",
+      "Patient",
+      "Kind",
+      "Blind"
+     ],
+     [
+      "Now you got to what her?",
+      "Trust",
+      "Call",
+      "Wait for"
+     ],
+     [
+      "Take form like the canvas of the what?",
+      "Grand Canyon",
+      "Night sky",
+      "Ocean"
+     ],
+     [
+      "Product of a beautiful what?",
+      "Storm",
+      "Mind",
+      "Day"
+     ],
+     [
+      "Quietly preparing for a what?",
+      "Start",
+      "Storm",
+      "Show"
+     ],
+     [
+      "Let her Michelangelo her what?",
+      "Sistine Chapel",
+      "Statue",
+      "Canvas"
+     ],
+     [
+      "What wasn't built in a day?",
+      "Rome",
+      "Paris",
+      "Brooklyn"
+     ],
+     [
+      "Diamonds need a while before they hit the what?",
+      "Display",
+      "Market",
+      "Store"
+     ]
+    ],
+    [
+     [
+      "Like her mama in the what?",
+      "Kitchen",
+      "Garden",
+      "Church"
+     ],
+     [
+      "She begged her for a what?",
+      "Taste",
+      "Bite",
+      "Plate"
+     ],
+     [
+      "Her mama said it wasn't what?",
+      "Ready",
+      "Done",
+      "Hot"
+     ],
+     [
+      "She stir it up what?",
+      "Slow",
+      "Fast",
+      "Twice"
+     ],
+     [
+      "This is not a what?",
+      "Racetrack",
+      "Highway",
+      "Contest"
+     ],
+     [
+      "Sometimes she's got to stall the what?",
+      "BPM",
+      "Beat",
+      "Clock"
+     ],
+     [
+      "Weave these dreams and polish up these what?",
+      "Gems",
+      "Rhymes",
+      "Shoes"
+     ],
+     [
+      "Stop and smell the what?",
+      "Roses",
+      "Flowers",
+      "Coffee"
+     ],
+     [
+      "Keeping up with the Kardashians and the what?",
+      "Joneses",
+      "Smiths",
+      "Wests"
+     ],
+     [
+      "Greatness gets better with what?",
+      "Time",
+      "Age",
+      "Money"
+     ],
+     [
+      "Concrete what?",
+      "Roses",
+      "Jungle",
+      "Walls"
+     ],
+     [
+      "It's a secret what in her mind?",
+      "Garden",
+      "Room",
+      "Place"
+     ]
+    ],
+    [
+     [
+      "Flower child, what creativity?",
+      "Buffering",
+      "Loading",
+      "Growing"
+     ],
+     [
+      "Hustling for the numbers, you miss the what?",
+      "Journey",
+      "Point",
+      "Moment"
+     ],
+     [
+      "If you climb too what?",
+      "Fast",
+      "High",
+      "Slow"
+     ],
+     [
+      "The beauty of the what?",
+      "Struggle",
+      "Journey",
+      "Garden"
+     ],
+     [
+      "She wants the legendary like what?",
+      "Excalibur",
+      "Camelot",
+      "Zeus"
+     ],
+     [
+      "Liberated as a what?",
+      "Bachelor",
+      "Bird",
+      "Child"
+     ],
+     [
+      "Never falling victim to these what?",
+      "Calendars",
+      "Clocks",
+      "Critics"
+     ],
+     [
+      "Rough draft after rough what?",
+      "Draft",
+      "Copy",
+      "Cut"
+     ],
+     [
+      "Perfecting her what craft?",
+      "Abstract",
+      "Artistic",
+      "Secret"
+     ],
+     [
+      "Now they calling her what?",
+      "Celebrity",
+      "Legend",
+      "Superstar"
+     ],
+     [
+      "The only thing she cares about is her what?",
+      "Integrity",
+      "Family",
+      "Music"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Skippin' Clouds",
+   "id": "lPi1cKfbKmw",
+   "start": 32.4,
+   "cuts": [
+    59.2,
+    128.6,
+    197
+   ],
+   "qs": [
+    [
+     [
+      "First dose getting chased with the truth what?",
+      "Serum",
+      "Pill",
+      "Water"
+     ],
+     [
+      "These heights, she never what them?",
+      "Fears",
+      "Sees",
+      "Climbs"
+     ],
+     [
+      "Plenty wheels in the what?",
+      "Sky",
+      "Street",
+      "Air"
+     ],
+     [
+      "She knows how to what them?",
+      "Steer",
+      "Ride",
+      "Fix"
+     ],
+     [
+      "She shouldn't operate what?",
+      "Machinery",
+      "Vehicles",
+      "Planes"
+     ],
+     [
+      "Going, going, what?",
+      "Gone",
+      "Up",
+      "High"
+     ],
+     [
+      "Hearing these what?",
+      "Colors",
+      "Voices",
+      "Sounds"
+     ],
+     [
+      "And seeing sound what?",
+      "Bites",
+      "Waves",
+      "Checks"
+     ],
+     [
+      "She's skipping what?",
+      "Clouds",
+      "Rocks",
+      "Stones"
+     ]
+    ],
+    [
+     [
+      "Into meditation and align her what?",
+      "Chakras",
+      "Spine",
+      "Mind"
+     ],
+     [
+      "Call her who when she's on The Color Purple?",
+      "Oprah",
+      "Whoopi",
+      "Alice"
+     ],
+     [
+      "When she's on the color what?",
+      "Purple",
+      "Blue",
+      "Red"
+     ],
+     [
+      "Her tea is what?",
+      "Herbal",
+      "Green",
+      "Sweet"
+     ],
+     [
+      "The remedy is what?",
+      "Nonverbal",
+      "Natural",
+      "Simple"
+     ],
+     [
+      "She ain't a square 'cause she don't fit inside your what?",
+      "Circle",
+      "Box",
+      "Crew"
+     ],
+     [
+      "Like smashing on a what?",
+      "Rooftop",
+      "Table",
+      "Drum"
+     ],
+     [
+      "Trees like who?",
+      "Aladdin",
+      "Tarzan",
+      "Jasmine"
+     ],
+     [
+      "Her what is blurred?",
+      "Vision",
+      "Mind",
+      "Memory"
+     ],
+     [
+      "Try to stop her and she's flipping the what?",
+      "Bird",
+      "Coin",
+      "Script"
+     ],
+     [
+      "She just ordered the what?",
+      "Okra",
+      "Fries",
+      "Tea"
+     ],
+     [
+      "She thinks she's who?",
+      "Deepak Chopra",
+      "Dalai Lama",
+      "Oprah"
+     ]
+    ],
+    [
+     [
+      "Elevated, she feels closer up to who?",
+      "Him",
+      "Them",
+      "Home"
+     ],
+     [
+      "The trip is out of this what?",
+      "World",
+      "Place",
+      "Galaxy"
+     ],
+     [
+      "You what?",
+      "Dig",
+      "See",
+      "Know"
+     ],
+     [
+      "She be living in her what?",
+      "Skin",
+      "Mind",
+      "World"
+     ],
+     [
+      "Her soul still blowing in the what?",
+      "Wind",
+      "Breeze",
+      "Sky"
+     ],
+     [
+      "She's a free what?",
+      "Spirit",
+      "Bird",
+      "Soul"
+     ],
+     [
+      "She's something like a who?",
+      "Marley",
+      "Hendrix",
+      "Lennon"
+     ],
+     [
+      "In a strawberry what?",
+      "Field",
+      "Patch",
+      "Farm"
+     ],
+     [
+      "None of these men will be disturbing her what?",
+      "Zen",
+      "Peace",
+      "Sleep"
+     ],
+     [
+      "If you ever left the what, you know what she means?",
+      "Planet",
+      "City",
+      "Country"
+     ],
+     [
+      "Can't reach the status while she's sitting on a what?",
+      "Stratus",
+      "Cloud",
+      "Throne"
+     ],
+     [
+      "Could you hold your what long enough?",
+      "Breath",
+      "Ground",
+      "Tongue"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

@@ -93,40 +93,1303 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
    "title": "The Zone Mission",
    "id": "sWJHtMw7Yac",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 7.2,
+   "cuts": [
+    37.3,
+    90.9,
+    158.9
+   ],
+   "qs": [
+    [
+     [
+      "He interrupts the what?",
+      "Norm",
+      "Show",
+      "Program"
+     ],
+     [
+      "To deliver the original what?",
+      "Blueprint",
+      "Formula",
+      "Recipe"
+     ],
+     [
+      "On microphones he never what?",
+      "Clones",
+      "Copies",
+      "Bites"
+     ],
+     [
+      "DNA be the new what?",
+      "Flows",
+      "Rhymes",
+      "Styles"
+     ],
+     [
+      "What does he bruise with?",
+      "Vocabulary",
+      "Fists",
+      "Beats"
+     ],
+     [
+      "How does he rhyme?",
+      "Lyrically recklessly",
+      "Slow and steady",
+      "Off the paper"
+     ],
+     [
+      "Best to those that ain't what?",
+      "Breathless",
+      "Speechless",
+      "Restless"
+     ],
+     [
+      "Fake big shots get cut to small what?",
+      "Bills",
+      "Bits",
+      "Pieces"
+     ],
+     [
+      "Insisting that you're what?",
+      "Players",
+      "Ballers",
+      "Stars"
+     ],
+     [
+      "They're gonna get on the what?",
+      "Field",
+      "Court",
+      "Stage"
+     ],
+     [
+      "We can take this back to what year?",
+      "'89",
+      "'79",
+      "'99"
+     ]
+    ],
+    [
+     [
+      "He'll play his part like half moons and what?",
+      "Flat tops",
+      "Fades",
+      "Hi-tops"
+     ],
+     [
+      "Battle while the what rocks?",
+      "Track",
+      "Crowd",
+      "Party"
+     ],
+     [
+      "He buffs what?",
+      "Skills",
+      "Rhymes",
+      "Shoes"
+     ],
+     [
+      "A cappella over what?",
+      "Silence",
+      "Drums",
+      "Static"
+     ],
+     [
+      "Or do this for the what?",
+      "Benjamins",
+      "Fame",
+      "Love"
+     ],
+     [
+      "Yoke up the what?",
+      "DJ",
+      "MC",
+      "Promoter"
+     ],
+     [
+      "Yoke up the DJ and sabotage the what?",
+      "Playlist",
+      "Turntables",
+      "Party"
+     ],
+     [
+      "Here's a taste of the rap what?",
+      "Latest",
+      "Greatest",
+      "Classics"
+     ],
+     [
+      "Ice on his what?",
+      "Whip",
+      "Wrist",
+      "Chain"
+     ],
+     [
+      "Remain what?",
+      "Unimpressed",
+      "Undefeated",
+      "Unknown"
+     ],
+     [
+      "No respect for the what?",
+      "Remainder",
+      "Rookies",
+      "Fakes"
+     ]
+    ],
+    [
+     [
+      "He comes with the what?",
+      "Unexpected",
+      "Unknown",
+      "Heat"
+     ],
+     [
+      "Looking for a what, so prepared for the worst?",
+      "Crew",
+      "Job",
+      "Fight"
+     ],
+     [
+      "He crushes your confidence like the what?",
+      "A&R",
+      "Critics",
+      "Label"
+     ],
+     [
+      "Your demo goes in the what?",
+      "Trash can",
+      "Mail",
+      "Drawer"
+     ],
+     [
+      "More talent than your what?",
+      "Tenement",
+      "Crew",
+      "Label"
+     ],
+     [
+      "Skill with suburban what?",
+      "Etiquette",
+      "Manners",
+      "Attitude"
+     ],
+     [
+      "He's far from what?",
+      "Ghetto",
+      "Home",
+      "Perfect"
+     ],
+     [
+      "You never tie, like fat what?",
+      "Laces",
+      "Knots",
+      "Ropes"
+     ],
+     [
+      "He's avoided like what highway at 5 p.m.?",
+      "I-95",
+      "The BQE",
+      "Route 9"
+     ],
+     [
+      "The Lexuses in your what?",
+      "Video",
+      "Garage",
+      "Driveway"
+     ],
+     [
+      "Pull the what out?",
+      "Microphone",
+      "Plug",
+      "Cash"
+     ],
+     [
+      "Take back the what?",
+      "Art form",
+      "Crown",
+      "Culture"
+     ]
+    ]
+   ]
   },
   {
    "title": "Q & A",
    "id": "Cm-BplfUkTs",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 21.7,
+   "cuts": [
+    46,
+    113.8,
+    161.9
+   ],
+   "qs": [
+    [
+     [
+      "How did he start? He calls it a dumb what?",
+      "Question",
+      "Answer",
+      "Idea"
+     ],
+     [
+      "Where is he from? Mind your what?",
+      "Business",
+      "Manners",
+      "Mouth"
+     ],
+     [
+      "He says you're what?",
+      "Bluffing",
+      "Joking",
+      "Lying"
+     ],
+     [
+      "For his goal, he wants a what?",
+      "Caddy",
+      "Benz",
+      "Mansion"
+     ],
+     [
+      "Chicks call him a cheap what?",
+      "Skate",
+      "Date",
+      "Guy"
+     ],
+     [
+      "He took her on a what?",
+      "Date",
+      "Ride",
+      "Trip"
+     ],
+     [
+      "She was thinking they gonna eat what?",
+      "Steak",
+      "Lobster",
+      "Sushi"
+     ],
+     [
+      "He picks up the what if they don't ask too much?",
+      "Check",
+      "Phone",
+      "Tab"
+     ],
+     [
+      "If that menu looks what, they go Dutch?",
+      "French",
+      "Fancy",
+      "Italian"
+     ],
+     [
+      "If the menu looks French, they go what?",
+      "Dutch",
+      "Home",
+      "Broke"
+     ]
+    ],
+    [
+     [
+      "He don't make what beats?",
+      "Synthesized",
+      "Free",
+      "Cheap"
+     ],
+     [
+      "You ain't getting promos if you ain't a what?",
+      "DJ",
+      "Fan",
+      "Friend"
+     ],
+     [
+      "He gets his clothes off what?",
+      "eBay",
+      "Canal Street",
+      "Craigslist"
+     ],
+     [
+      "He's a native what?",
+      "New Yorker",
+      "Brooklynite",
+      "Jersey kid"
+     ],
+     [
+      "He hates the Knicks and the what?",
+      "Giants",
+      "Yankees",
+      "Jets"
+     ],
+     [
+      "He's running for what?",
+      "President",
+      "Mayor",
+      "Office"
+     ],
+     [
+      "Do you freestyle? You can't hear it until you what?",
+      "Pay him",
+      "Ask him",
+      "Clap"
+     ],
+     [
+      "Pay him at the what?",
+      "Door",
+      "Show",
+      "Bank"
+     ],
+     [
+      "He's got to get his platinum what somehow?",
+      "Teeth",
+      "Chain",
+      "Plaque"
+     ],
+     [
+      "She asks: can you survive off what?",
+      "Music",
+      "Love",
+      "Fame"
+     ],
+     [
+      "She asks: do you have a day what?",
+      "Job",
+      "Off",
+      "Plan"
+     ],
+     [
+      "He left the last hour for kids that want his what?",
+      "Autograph",
+      "Money",
+      "Beats"
+     ]
+    ],
+    [
+     [
+      "If he weren't making music, he'd play for the what?",
+      "Jets",
+      "Knicks",
+      "Giants"
+     ],
+     [
+      "He could go hut what?",
+      "Hike",
+      "Hut",
+      "Go"
+     ],
+     [
+      "Girls think he's what?",
+      "Stingy",
+      "Cheap",
+      "Broke"
+     ],
+     [
+      "Give him his what back?",
+      "CD",
+      "Money",
+      "Jacket"
+     ],
+     [
+      "As for getting married, only if it's who?",
+      "Lucy",
+      "Lisa",
+      "Maria"
+     ],
+     [
+      "Hey Lucy, if you're what?",
+      "Listening",
+      "Watching",
+      "Single"
+     ],
+     [
+      "Baby, he'd what?",
+      "Propose",
+      "Call",
+      "Wait"
+     ],
+     [
+      "Or if she has a look-what?",
+      "Alike",
+      "Good",
+      "Twice"
+     ],
+     [
+      "Since Lucy ain't here, the interview is what?",
+      "Done",
+      "Over",
+      "Canceled"
+     ],
+     [
+      "She asks what he'd do if he weren't making what?",
+      "Music",
+      "Money",
+      "Beats"
+     ]
+    ]
+   ]
   },
   {
    "title": "Zone for President",
    "id": "cX2Xvbxc0ck",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Candy Razors",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "The Commandments",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "cuts": [
+    42.5,
+    83.9,
+    145.6
+   ],
+   "qs": [
+    [
+     [
+      "Here comes the Zone up the what?",
+      "Ave",
+      "Block",
+      "Street"
+     ],
+     [
+      "Prank-calling what master?",
+      "Phone",
+      "Party",
+      "Mic"
+     ],
+     [
+      "Next year he's doing what?",
+      "Eight tracks",
+      "Cassettes",
+      "Vinyl"
+     ],
+     [
+      "Video on what?",
+      "Betamax",
+      "VHS",
+      "DVD"
+     ],
+     [
+      "Even who can't kick him off the scene?",
+      "Hype Williams",
+      "Puffy",
+      "Spike Lee"
+     ],
+     [
+      "He ain't no what?",
+      "CEO",
+      "Star",
+      "Boss"
+     ],
+     [
+      "Called you long what?",
+      "Distance",
+      "Ago",
+      "Time"
+     ],
+     [
+      "He was bumming what?",
+      "Cell service",
+      "Change",
+      "Rides"
+     ],
+     [
+      "Chicks hella what when he takes them to eat?",
+      "Nervous",
+      "Hungry",
+      "Happy"
+     ],
+     [
+      "He's out the door when they bring the what?",
+      "Receipt",
+      "Check",
+      "Food"
+     ],
+     [
+      "You'll wash dishes for a what?",
+      "Week",
+      "Month",
+      "Day"
+     ]
+    ],
+    [
+     [
+      "Zone being a what?",
+      "Cheapskate",
+      "Big spender",
+      "Baller"
+     ],
+     [
+      "Hitting up the what bills?",
+      "Dollar",
+      "Hundred",
+      "Fifty"
+     ],
+     [
+      "All about the who?",
+      "Washington",
+      "Lincoln",
+      "Jackson"
+     ],
+     [
+      "His phone bill is what?",
+      "Overdue",
+      "Paid",
+      "Huge"
+     ],
+     [
+      "She don't like him, he's here to stay like what?",
+      "Stretch marks",
+      "Tattoos",
+      "Scars"
+     ],
+     [
+      "We don't do no what?",
+      "Hooks",
+      "Skits",
+      "Features"
+     ],
+     [
+      "He ain't got no time to what with y'all?",
+      "Play",
+      "Talk",
+      "Rap"
+     ],
+     [
+      "He's being straight up what?",
+      "Honest",
+      "Real",
+      "Rude"
+     ],
+     [
+      "He's got to get something off his what?",
+      "Chest",
+      "Mind",
+      "Back"
+     ],
+     [
+      "Pay very careful what?",
+      "Attention",
+      "Respect",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "Asking for a beat? Take what to go?",
+      "Coffee",
+      "Lunch",
+      "Pizza"
+     ],
+     [
+      "You ain't platinum in the what?",
+      "Chat room",
+      "Stores",
+      "Streets"
+     ],
+     [
+      "Right click and what?",
+      "Send",
+      "Save",
+      "Delete"
+     ],
+     [
+      "He hopes your hard drive what?",
+      "Crashes",
+      "Freezes",
+      "Burns"
+     ],
+     [
+      "He's been rapping since when?",
+      "'81",
+      "'91",
+      "'79"
+     ],
+     [
+      "Talking about belt buckles nobody what?",
+      "Wears",
+      "Buys",
+      "Likes"
+     ],
+     [
+      "Try to save hip hop? Are you what?",
+      "Insane",
+      "Serious",
+      "Kidding"
+     ],
+     [
+      "Still 10 years what?",
+      "Behind",
+      "Ahead",
+      "Late"
+     ],
+     [
+      "He still does what dance to keep up with the times?",
+      "Running man",
+      "Robot",
+      "Cabbage patch"
+     ],
+     [
+      "Still can't pop, what?",
+      "Lock",
+      "Spin",
+      "Dance"
+     ],
+     [
+      "He sleeps on the what?",
+      "Floor",
+      "Couch",
+      "Train"
+     ],
+     [
+      "Working off the what?",
+      "Books",
+      "Clock",
+      "Grid"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "The Zone Mission",
+   "id": "sWJHtMw7Yac",
+   "start": 7.2,
+   "cuts": [
+    37.3,
+    90.9,
+    158.9
+   ],
+   "qs": [
+    [
+     [
+      "He interrupts the what?",
+      "Norm",
+      "Show",
+      "Program"
+     ],
+     [
+      "To deliver the original what?",
+      "Blueprint",
+      "Formula",
+      "Recipe"
+     ],
+     [
+      "On microphones he never what?",
+      "Clones",
+      "Copies",
+      "Bites"
+     ],
+     [
+      "DNA be the new what?",
+      "Flows",
+      "Rhymes",
+      "Styles"
+     ],
+     [
+      "What does he bruise with?",
+      "Vocabulary",
+      "Fists",
+      "Beats"
+     ],
+     [
+      "How does he rhyme?",
+      "Lyrically recklessly",
+      "Slow and steady",
+      "Off the paper"
+     ],
+     [
+      "Best to those that ain't what?",
+      "Breathless",
+      "Speechless",
+      "Restless"
+     ],
+     [
+      "Fake big shots get cut to small what?",
+      "Bills",
+      "Bits",
+      "Pieces"
+     ],
+     [
+      "Insisting that you're what?",
+      "Players",
+      "Ballers",
+      "Stars"
+     ],
+     [
+      "They're gonna get on the what?",
+      "Field",
+      "Court",
+      "Stage"
+     ],
+     [
+      "We can take this back to what year?",
+      "'89",
+      "'79",
+      "'99"
+     ]
+    ],
+    [
+     [
+      "He'll play his part like half moons and what?",
+      "Flat tops",
+      "Fades",
+      "Hi-tops"
+     ],
+     [
+      "Battle while the what rocks?",
+      "Track",
+      "Crowd",
+      "Party"
+     ],
+     [
+      "He buffs what?",
+      "Skills",
+      "Rhymes",
+      "Shoes"
+     ],
+     [
+      "A cappella over what?",
+      "Silence",
+      "Drums",
+      "Static"
+     ],
+     [
+      "Or do this for the what?",
+      "Benjamins",
+      "Fame",
+      "Love"
+     ],
+     [
+      "Yoke up the what?",
+      "DJ",
+      "MC",
+      "Promoter"
+     ],
+     [
+      "Yoke up the DJ and sabotage the what?",
+      "Playlist",
+      "Turntables",
+      "Party"
+     ],
+     [
+      "Here's a taste of the rap what?",
+      "Latest",
+      "Greatest",
+      "Classics"
+     ],
+     [
+      "Ice on his what?",
+      "Whip",
+      "Wrist",
+      "Chain"
+     ],
+     [
+      "Remain what?",
+      "Unimpressed",
+      "Undefeated",
+      "Unknown"
+     ],
+     [
+      "No respect for the what?",
+      "Remainder",
+      "Rookies",
+      "Fakes"
+     ]
+    ],
+    [
+     [
+      "He comes with the what?",
+      "Unexpected",
+      "Unknown",
+      "Heat"
+     ],
+     [
+      "Looking for a what, so prepared for the worst?",
+      "Crew",
+      "Job",
+      "Fight"
+     ],
+     [
+      "He crushes your confidence like the what?",
+      "A&R",
+      "Critics",
+      "Label"
+     ],
+     [
+      "Your demo goes in the what?",
+      "Trash can",
+      "Mail",
+      "Drawer"
+     ],
+     [
+      "More talent than your what?",
+      "Tenement",
+      "Crew",
+      "Label"
+     ],
+     [
+      "Skill with suburban what?",
+      "Etiquette",
+      "Manners",
+      "Attitude"
+     ],
+     [
+      "He's far from what?",
+      "Ghetto",
+      "Home",
+      "Perfect"
+     ],
+     [
+      "You never tie, like fat what?",
+      "Laces",
+      "Knots",
+      "Ropes"
+     ],
+     [
+      "He's avoided like what highway at 5 p.m.?",
+      "I-95",
+      "The BQE",
+      "Route 9"
+     ],
+     [
+      "The Lexuses in your what?",
+      "Video",
+      "Garage",
+      "Driveway"
+     ],
+     [
+      "Pull the what out?",
+      "Microphone",
+      "Plug",
+      "Cash"
+     ],
+     [
+      "Take back the what?",
+      "Art form",
+      "Crown",
+      "Culture"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Q & A",
+   "id": "Cm-BplfUkTs",
+   "start": 21.7,
+   "cuts": [
+    46,
+    113.8,
+    161.9
+   ],
+   "qs": [
+    [
+     [
+      "How did he start? He calls it a dumb what?",
+      "Question",
+      "Answer",
+      "Idea"
+     ],
+     [
+      "Where is he from? Mind your what?",
+      "Business",
+      "Manners",
+      "Mouth"
+     ],
+     [
+      "He says you're what?",
+      "Bluffing",
+      "Joking",
+      "Lying"
+     ],
+     [
+      "For his goal, he wants a what?",
+      "Caddy",
+      "Benz",
+      "Mansion"
+     ],
+     [
+      "Chicks call him a cheap what?",
+      "Skate",
+      "Date",
+      "Guy"
+     ],
+     [
+      "He took her on a what?",
+      "Date",
+      "Ride",
+      "Trip"
+     ],
+     [
+      "She was thinking they gonna eat what?",
+      "Steak",
+      "Lobster",
+      "Sushi"
+     ],
+     [
+      "He picks up the what if they don't ask too much?",
+      "Check",
+      "Phone",
+      "Tab"
+     ],
+     [
+      "If that menu looks what, they go Dutch?",
+      "French",
+      "Fancy",
+      "Italian"
+     ],
+     [
+      "If the menu looks French, they go what?",
+      "Dutch",
+      "Home",
+      "Broke"
+     ]
+    ],
+    [
+     [
+      "He don't make what beats?",
+      "Synthesized",
+      "Free",
+      "Cheap"
+     ],
+     [
+      "You ain't getting promos if you ain't a what?",
+      "DJ",
+      "Fan",
+      "Friend"
+     ],
+     [
+      "He gets his clothes off what?",
+      "eBay",
+      "Canal Street",
+      "Craigslist"
+     ],
+     [
+      "He's a native what?",
+      "New Yorker",
+      "Brooklynite",
+      "Jersey kid"
+     ],
+     [
+      "He hates the Knicks and the what?",
+      "Giants",
+      "Yankees",
+      "Jets"
+     ],
+     [
+      "He's running for what?",
+      "President",
+      "Mayor",
+      "Office"
+     ],
+     [
+      "Do you freestyle? You can't hear it until you what?",
+      "Pay him",
+      "Ask him",
+      "Clap"
+     ],
+     [
+      "Pay him at the what?",
+      "Door",
+      "Show",
+      "Bank"
+     ],
+     [
+      "He's got to get his platinum what somehow?",
+      "Teeth",
+      "Chain",
+      "Plaque"
+     ],
+     [
+      "She asks: can you survive off what?",
+      "Music",
+      "Love",
+      "Fame"
+     ],
+     [
+      "She asks: do you have a day what?",
+      "Job",
+      "Off",
+      "Plan"
+     ],
+     [
+      "He left the last hour for kids that want his what?",
+      "Autograph",
+      "Money",
+      "Beats"
+     ]
+    ],
+    [
+     [
+      "If he weren't making music, he'd play for the what?",
+      "Jets",
+      "Knicks",
+      "Giants"
+     ],
+     [
+      "He could go hut what?",
+      "Hike",
+      "Hut",
+      "Go"
+     ],
+     [
+      "Girls think he's what?",
+      "Stingy",
+      "Cheap",
+      "Broke"
+     ],
+     [
+      "Give him his what back?",
+      "CD",
+      "Money",
+      "Jacket"
+     ],
+     [
+      "As for getting married, only if it's who?",
+      "Lucy",
+      "Lisa",
+      "Maria"
+     ],
+     [
+      "Hey Lucy, if you're what?",
+      "Listening",
+      "Watching",
+      "Single"
+     ],
+     [
+      "Baby, he'd what?",
+      "Propose",
+      "Call",
+      "Wait"
+     ],
+     [
+      "Or if she has a look-what?",
+      "Alike",
+      "Good",
+      "Twice"
+     ],
+     [
+      "Since Lucy ain't here, the interview is what?",
+      "Done",
+      "Over",
+      "Canceled"
+     ],
+     [
+      "She asks what he'd do if he weren't making what?",
+      "Music",
+      "Money",
+      "Beats"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Zone for President",
+   "id": "cX2Xvbxc0ck",
+   "cuts": [
+    42.5,
+    83.9,
+    145.6
+   ],
+   "qs": [
+    [
+     [
+      "Here comes the Zone up the what?",
+      "Ave",
+      "Block",
+      "Street"
+     ],
+     [
+      "Prank-calling what master?",
+      "Phone",
+      "Party",
+      "Mic"
+     ],
+     [
+      "Next year he's doing what?",
+      "Eight tracks",
+      "Cassettes",
+      "Vinyl"
+     ],
+     [
+      "Video on what?",
+      "Betamax",
+      "VHS",
+      "DVD"
+     ],
+     [
+      "Even who can't kick him off the scene?",
+      "Hype Williams",
+      "Puffy",
+      "Spike Lee"
+     ],
+     [
+      "He ain't no what?",
+      "CEO",
+      "Star",
+      "Boss"
+     ],
+     [
+      "Called you long what?",
+      "Distance",
+      "Ago",
+      "Time"
+     ],
+     [
+      "He was bumming what?",
+      "Cell service",
+      "Change",
+      "Rides"
+     ],
+     [
+      "Chicks hella what when he takes them to eat?",
+      "Nervous",
+      "Hungry",
+      "Happy"
+     ],
+     [
+      "He's out the door when they bring the what?",
+      "Receipt",
+      "Check",
+      "Food"
+     ],
+     [
+      "You'll wash dishes for a what?",
+      "Week",
+      "Month",
+      "Day"
+     ]
+    ],
+    [
+     [
+      "Zone being a what?",
+      "Cheapskate",
+      "Big spender",
+      "Baller"
+     ],
+     [
+      "Hitting up the what bills?",
+      "Dollar",
+      "Hundred",
+      "Fifty"
+     ],
+     [
+      "All about the who?",
+      "Washington",
+      "Lincoln",
+      "Jackson"
+     ],
+     [
+      "His phone bill is what?",
+      "Overdue",
+      "Paid",
+      "Huge"
+     ],
+     [
+      "She don't like him, he's here to stay like what?",
+      "Stretch marks",
+      "Tattoos",
+      "Scars"
+     ],
+     [
+      "We don't do no what?",
+      "Hooks",
+      "Skits",
+      "Features"
+     ],
+     [
+      "He ain't got no time to what with y'all?",
+      "Play",
+      "Talk",
+      "Rap"
+     ],
+     [
+      "He's being straight up what?",
+      "Honest",
+      "Real",
+      "Rude"
+     ],
+     [
+      "He's got to get something off his what?",
+      "Chest",
+      "Mind",
+      "Back"
+     ],
+     [
+      "Pay very careful what?",
+      "Attention",
+      "Respect",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "Asking for a beat? Take what to go?",
+      "Coffee",
+      "Lunch",
+      "Pizza"
+     ],
+     [
+      "You ain't platinum in the what?",
+      "Chat room",
+      "Stores",
+      "Streets"
+     ],
+     [
+      "Right click and what?",
+      "Send",
+      "Save",
+      "Delete"
+     ],
+     [
+      "He hopes your hard drive what?",
+      "Crashes",
+      "Freezes",
+      "Burns"
+     ],
+     [
+      "He's been rapping since when?",
+      "'81",
+      "'91",
+      "'79"
+     ],
+     [
+      "Talking about belt buckles nobody what?",
+      "Wears",
+      "Buys",
+      "Likes"
+     ],
+     [
+      "Try to save hip hop? Are you what?",
+      "Insane",
+      "Serious",
+      "Kidding"
+     ],
+     [
+      "Still 10 years what?",
+      "Behind",
+      "Ahead",
+      "Late"
+     ],
+     [
+      "He still does what dance to keep up with the times?",
+      "Running man",
+      "Robot",
+      "Cabbage patch"
+     ],
+     [
+      "Still can't pop, what?",
+      "Lock",
+      "Spin",
+      "Dance"
+     ],
+     [
+      "He sleeps on the what?",
+      "Floor",
+      "Couch",
+      "Train"
+     ],
+     [
+      "Working off the what?",
+      "Books",
+      "Clock",
+      "Grid"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

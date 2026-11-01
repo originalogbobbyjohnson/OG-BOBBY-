@@ -93,40 +93,1305 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Ikebana",
-   "id": "47XJn25dFas",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Spellling",
-   "id": "YcwoEopPJFk",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Betamax",
-   "id": "eYjCuknTd9Q",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Equiano",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Son Still Shine / Obama Incense",
+   "id": "XWQvrat1DpY",
+   "start": 9.8,
+   "cuts": [
+    45.7,
+    86,
+    158.4
+   ],
+   "qs": [
+    [
+     [
+      "His girl say this beat sound what?",
+      "Unfinished",
+      "Empty",
+      "Slow"
+     ],
+     [
+      "That's where his what go?",
+      "Voice",
+      "Verse",
+      "Bass"
+     ],
+     [
+      "Drop it in the what?",
+      "Canyon",
+      "River",
+      "Ocean"
+     ],
+     [
+      "Old flows left what?",
+      "Abandoned",
+      "Behind",
+      "Broken"
+     ],
+     [
+      "His humble offering to the what?",
+      "Planet",
+      "People",
+      "Gods"
+     ],
+     [
+      "Take root, seated, and what it?",
+      "Plant",
+      "Water",
+      "Grow"
+     ],
+     [
+      "He takes heed and protects his what?",
+      "Magic",
+      "Family",
+      "Name"
+     ],
+     [
+      "Counteract the what damage?",
+      "Psychic",
+      "Lasting",
+      "Real"
+     ],
+     [
+      "Repeated mantras, broken what?",
+      "Patterns",
+      "Promises",
+      "Records"
+     ],
+     [
+      "Real existence beyond what?",
+      "Consumption",
+      "Money",
+      "Fame"
+     ],
+     [
+      "Sacrifice what?",
+      "Comfort",
+      "Sleep",
+      "Money"
+     ],
+     [
+      "Where did he find the what?",
+      "Gumption",
+      "Courage",
+      "Time"
+     ]
+    ],
+    [
+     [
+      "Sun still what?",
+      "Shine",
+      "Rise",
+      "Burn"
+     ],
+     [
+      "Iron the wrinkles out of his what?",
+      "Mind",
+      "Shirt",
+      "Face"
+     ],
+     [
+      "He don't what?",
+      "Grind",
+      "Stop",
+      "Sleep"
+     ],
+     [
+      "Operate in a space of what?",
+      "Abundance",
+      "Silence",
+      "Light"
+     ],
+     [
+      "Style and what?",
+      "Substance",
+      "Grace",
+      "Flavor"
+     ],
+     [
+      "He had other plans but he was what?",
+      "Summoned",
+      "Called",
+      "Stopped"
+     ],
+     [
+      "Still laughing with true what?",
+      "Passion",
+      "Friends",
+      "Joy"
+     ],
+     [
+      "Trying not to ash on this white what?",
+      "Linen",
+      "Shirt",
+      "Couch"
+     ],
+     [
+      "Brown water what?",
+      "Swelling",
+      "Rising",
+      "Flowing"
+     ],
+     [
+      "Holding back what?",
+      "Feelings",
+      "Tears",
+      "Anger"
+     ],
+     [
+      "In the end the what wins?",
+      "Devil",
+      "House",
+      "Truth"
+     ],
+     [
+      "Bones to nourish future what?",
+      "Soil",
+      "Trees",
+      "Kids"
+     ]
+    ],
+    [
+     [
+      "Gentle breath, the what whisper?",
+      "Goddess",
+      "Angel",
+      "Wind"
+     ],
+     [
+      "Money house what?",
+      "Blessings",
+      "Rules",
+      "Keys"
+     ],
+     [
+      "What kind of incense?",
+      "Obama",
+      "Nag Champa",
+      "Sandalwood"
+     ],
+     [
+      "Remove your what before you enter?",
+      "Shoes",
+      "Hat",
+      "Coat"
+     ],
+     [
+      "For weeks his brain been in the what?",
+      "Blender",
+      "Clouds",
+      "Gutter"
+     ],
+     [
+      "If only he could what?",
+      "Remember",
+      "Forget",
+      "Sleep"
+     ],
+     [
+      "Drafty what?",
+      "Windows",
+      "Doors",
+      "Halls"
+     ],
+     [
+      "Blackening and black, but it's what?",
+      "Home",
+      "Fine",
+      "Cold"
+     ],
+     [
+      "Growing old, scattered what at the doorstep?",
+      "Bones",
+      "Leaves",
+      "Mail"
+     ],
+     [
+      "Caution, he's a native what?",
+      "New Yorker",
+      "Brooklynite",
+      "Son"
+     ],
+     [
+      "He still loves her, but feels like he what?",
+      "Lost one",
+      "Won",
+      "Moved on"
+     ],
+     [
+      "Somewhere between Saturday night and what?",
+      "Sunday morning",
+      "Monday",
+      "Friday night"
+     ],
+     [
+      "You want it all but it can't what you?",
+      "Save",
+      "Help",
+      "Change"
+     ],
+     [
+      "Same sun no matter who you what to?",
+      "Pray",
+      "Talk",
+      "Sing"
+     ]
+    ]
+   ]
   },
   {
    "title": "Make Me Wise",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "0F-k_Sk7_hI",
+   "start": 22,
+   "cuts": [
+    55.5,
+    93,
+    128.5
+   ],
+   "qs": [
+    [
+     [
+      "Booted and what?",
+      "Suited",
+      "Ready",
+      "Rooted"
+     ],
+     [
+      "America's last what?",
+      "Driver",
+      "Hope",
+      "Star"
+     ],
+     [
+      "Minister of what?",
+      "Culture",
+      "Music",
+      "Defense"
+     ],
+     [
+      "Heart of public what?",
+      "Enemy",
+      "Housing",
+      "School"
+     ],
+     [
+      "Refugees in the what parking lot?",
+      "Home Depot",
+      "Walmart",
+      "Target"
+     ],
+     [
+      "The next spot ain't have what he...?",
+      "Needed",
+      "Wanted",
+      "Ordered"
+     ],
+     [
+      "He let the what blink?",
+      "Blinkers",
+      "Lights",
+      "Signals"
+     ],
+     [
+      "Metal type what?",
+      "Beat",
+      "Song",
+      "Band"
+     ],
+     [
+      "And it don't what?",
+      "Stop",
+      "Quit",
+      "End"
+     ]
+    ],
+    [
+     [
+      "Make him what?",
+      "Wise",
+      "Rich",
+      "Strong"
+     ],
+     [
+      "Can't play cards till the what's done?",
+      "Dealing",
+      "Shuffling",
+      "Betting"
+     ],
+     [
+      "Close his eyes, make sure he what something?",
+      "Feels",
+      "Sees",
+      "Says"
+     ],
+     [
+      "Fresh, fortified, built to what?",
+      "Destroy",
+      "Last",
+      "Win"
+     ],
+     [
+      "Scarcity is a lie of the what?",
+      "State",
+      "Rich",
+      "Times"
+     ],
+     [
+      "They parrot what?",
+      "Propaganda",
+      "Gossip",
+      "Lyrics"
+     ],
+     [
+      "With pie in the what?",
+      "Face",
+      "Sky",
+      "Oven"
+     ],
+     [
+      "Watch and what?",
+      "Pray",
+      "Wait",
+      "Listen"
+     ],
+     [
+      "All he give, all he what?",
+      "Take",
+      "Need",
+      "Lose"
+     ],
+     [
+      "Stories that we shouldn't what?",
+      "Say",
+      "Hear",
+      "Write"
+     ]
+    ],
+    [
+     [
+      "We shouldn't have to work so hard in what?",
+      "Love",
+      "Life",
+      "Vain"
+     ],
+     [
+      "He needs some what?",
+      "Room",
+      "Help",
+      "Hands"
+     ],
+     [
+      "Triple what it...?",
+      "Cost",
+      "Made",
+      "Paid"
+     ],
+     [
+      "He swears he ain't do it for what?",
+      "Rewards",
+      "Money",
+      "Fame"
+     ],
+     [
+      "Talk to him, he talks what?",
+      "Back",
+      "Slow",
+      "Loud"
+     ],
+     [
+      "He writes what, forgetting why?",
+      "Songs",
+      "Letters",
+      "Rhymes"
+     ],
+     [
+      "Then hit the what fully dipped?",
+      "Stage",
+      "Road",
+      "Club"
+     ],
+     [
+      "Watch how the what flip?",
+      "Spells",
+      "Tables",
+      "Coins"
+     ],
+     [
+      "In your mouth like Dr. who?",
+      "Giggles",
+      "Dre",
+      "Seuss"
+     ],
+     [
+      "The laws of what?",
+      "Reflex",
+      "Gravity",
+      "Nature"
+     ],
+     [
+      "We not worshipping the what no more?",
+      "Sun",
+      "Moon",
+      "Money"
+     ],
+     [
+      "Beat juggles at the baby what?",
+      "Shower",
+      "Party",
+      "Show"
+     ],
+     [
+      "Dressed like he sells what?",
+      "Sherbet",
+      "Ice cream",
+      "Cars"
+     ],
+     [
+      "Even gods get what?",
+      "Bored",
+      "Tired",
+      "Old"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Ikebana",
+   "id": "47XJn25dFas",
+   "start": 9.2,
+   "cuts": [
+    40.6,
+    84,
+    128.7
+   ],
+   "qs": [
+    [
+     [
+      "He do it for what now?",
+      "Real",
+      "Love",
+      "Money"
+     ],
+     [
+      "How much out the credit?",
+      "3,800",
+      "1,500",
+      "10,000"
+     ],
+     [
+      "It's what labor?",
+      "Sweat",
+      "Hard",
+      "Cheap"
+     ],
+     [
+      "Talking out his what?",
+      "Head",
+      "Mind",
+      "Mouth"
+     ],
+     [
+      "Leave the what running?",
+      "Meter",
+      "Engine",
+      "Water"
+     ],
+     [
+      "He'll be back in how many?",
+      "10",
+      "5",
+      "20"
+     ],
+     [
+      "Something worthy out of what?",
+      "Reach",
+      "Sight",
+      "Time"
+     ],
+     [
+      "Inside, repeating what?",
+      "Numbers",
+      "Words",
+      "Prayers"
+     ],
+     [
+      "A bouquet chosen for his what?",
+      "Boo",
+      "Mom",
+      "Show"
+     ]
+    ],
+    [
+     [
+      "He feels like everybody what?",
+      "Knew",
+      "Left",
+      "Lied"
+     ],
+     [
+      "All his comings and what?",
+      "Goings",
+      "Doings",
+      "Leavings"
+     ],
+     [
+      "Right where you what him?",
+      "Lost",
+      "Found",
+      "Left"
+     ],
+     [
+      "A black power what away?",
+      "Nap",
+      "Move",
+      "Step"
+     ],
+     [
+      "On time but off what?",
+      "Key",
+      "Beat",
+      "Track"
+     ],
+     [
+      "Good morning, what coffee?",
+      "Ethiopian",
+      "Jamaican",
+      "Colombian"
+     ],
+     [
+      "Burn away before they what?",
+      "Penetrate",
+      "Land",
+      "Hit"
+     ],
+     [
+      "If you were in the what?",
+      "Way",
+      "Room",
+      "Game"
+     ]
+    ],
+    [
+     [
+      "What tape?",
+      "Disintegration",
+      "Mix",
+      "Demo"
+     ],
+     [
+      "Don't be what?",
+      "Cynical",
+      "Critical",
+      "Typical"
+     ],
+     [
+      "Complicated what?",
+      "Chemical",
+      "Situation",
+      "Formula"
+     ],
+     [
+      "Made it out the what?",
+      "Winner",
+      "Loser",
+      "Hero"
+     ],
+     [
+      "Let's get what?",
+      "Physical",
+      "Started",
+      "Together"
+     ],
+     [
+      "His favorite month?",
+      "September",
+      "October",
+      "June"
+     ],
+     [
+      "He makes gorgeous what?",
+      "Babies",
+      "Music",
+      "Flowers"
+     ],
+     [
+      "Hold those what?",
+      "Shoulders",
+      "Hands",
+      "Heads"
+     ],
+     [
+      "Almost what?",
+      "Over",
+      "Home",
+      "Done"
+     ],
+     [
+      "Being alive, he must look what?",
+      "Up",
+      "Out",
+      "Back"
+     ],
+     [
+      "When he tells the what?",
+      "Truth",
+      "Story",
+      "Jokes"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Son Still Shine / Obama Incense",
+   "id": "XWQvrat1DpY",
+   "start": 9.8,
+   "cuts": [
+    45.7,
+    86,
+    158.4
+   ],
+   "qs": [
+    [
+     [
+      "His girl say this beat sound what?",
+      "Unfinished",
+      "Empty",
+      "Slow"
+     ],
+     [
+      "That's where his what go?",
+      "Voice",
+      "Verse",
+      "Bass"
+     ],
+     [
+      "Drop it in the what?",
+      "Canyon",
+      "River",
+      "Ocean"
+     ],
+     [
+      "Old flows left what?",
+      "Abandoned",
+      "Behind",
+      "Broken"
+     ],
+     [
+      "His humble offering to the what?",
+      "Planet",
+      "People",
+      "Gods"
+     ],
+     [
+      "Take root, seated, and what it?",
+      "Plant",
+      "Water",
+      "Grow"
+     ],
+     [
+      "He takes heed and protects his what?",
+      "Magic",
+      "Family",
+      "Name"
+     ],
+     [
+      "Counteract the what damage?",
+      "Psychic",
+      "Lasting",
+      "Real"
+     ],
+     [
+      "Repeated mantras, broken what?",
+      "Patterns",
+      "Promises",
+      "Records"
+     ],
+     [
+      "Real existence beyond what?",
+      "Consumption",
+      "Money",
+      "Fame"
+     ],
+     [
+      "Sacrifice what?",
+      "Comfort",
+      "Sleep",
+      "Money"
+     ],
+     [
+      "Where did he find the what?",
+      "Gumption",
+      "Courage",
+      "Time"
+     ]
+    ],
+    [
+     [
+      "Sun still what?",
+      "Shine",
+      "Rise",
+      "Burn"
+     ],
+     [
+      "Iron the wrinkles out of his what?",
+      "Mind",
+      "Shirt",
+      "Face"
+     ],
+     [
+      "He don't what?",
+      "Grind",
+      "Stop",
+      "Sleep"
+     ],
+     [
+      "Operate in a space of what?",
+      "Abundance",
+      "Silence",
+      "Light"
+     ],
+     [
+      "Style and what?",
+      "Substance",
+      "Grace",
+      "Flavor"
+     ],
+     [
+      "He had other plans but he was what?",
+      "Summoned",
+      "Called",
+      "Stopped"
+     ],
+     [
+      "Still laughing with true what?",
+      "Passion",
+      "Friends",
+      "Joy"
+     ],
+     [
+      "Trying not to ash on this white what?",
+      "Linen",
+      "Shirt",
+      "Couch"
+     ],
+     [
+      "Brown water what?",
+      "Swelling",
+      "Rising",
+      "Flowing"
+     ],
+     [
+      "Holding back what?",
+      "Feelings",
+      "Tears",
+      "Anger"
+     ],
+     [
+      "In the end the what wins?",
+      "Devil",
+      "House",
+      "Truth"
+     ],
+     [
+      "Bones to nourish future what?",
+      "Soil",
+      "Trees",
+      "Kids"
+     ]
+    ],
+    [
+     [
+      "Gentle breath, the what whisper?",
+      "Goddess",
+      "Angel",
+      "Wind"
+     ],
+     [
+      "Money house what?",
+      "Blessings",
+      "Rules",
+      "Keys"
+     ],
+     [
+      "What kind of incense?",
+      "Obama",
+      "Nag Champa",
+      "Sandalwood"
+     ],
+     [
+      "Remove your what before you enter?",
+      "Shoes",
+      "Hat",
+      "Coat"
+     ],
+     [
+      "For weeks his brain been in the what?",
+      "Blender",
+      "Clouds",
+      "Gutter"
+     ],
+     [
+      "If only he could what?",
+      "Remember",
+      "Forget",
+      "Sleep"
+     ],
+     [
+      "Drafty what?",
+      "Windows",
+      "Doors",
+      "Halls"
+     ],
+     [
+      "Blackening and black, but it's what?",
+      "Home",
+      "Fine",
+      "Cold"
+     ],
+     [
+      "Growing old, scattered what at the doorstep?",
+      "Bones",
+      "Leaves",
+      "Mail"
+     ],
+     [
+      "Caution, he's a native what?",
+      "New Yorker",
+      "Brooklynite",
+      "Son"
+     ],
+     [
+      "He still loves her, but feels like he what?",
+      "Lost one",
+      "Won",
+      "Moved on"
+     ],
+     [
+      "Somewhere between Saturday night and what?",
+      "Sunday morning",
+      "Monday",
+      "Friday night"
+     ],
+     [
+      "You want it all but it can't what you?",
+      "Save",
+      "Help",
+      "Change"
+     ],
+     [
+      "Same sun no matter who you what to?",
+      "Pray",
+      "Talk",
+      "Sing"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Make Me Wise",
+   "id": "0F-k_Sk7_hI",
+   "start": 22,
+   "cuts": [
+    55.5,
+    93,
+    128.5
+   ],
+   "qs": [
+    [
+     [
+      "Booted and what?",
+      "Suited",
+      "Ready",
+      "Rooted"
+     ],
+     [
+      "America's last what?",
+      "Driver",
+      "Hope",
+      "Star"
+     ],
+     [
+      "Minister of what?",
+      "Culture",
+      "Music",
+      "Defense"
+     ],
+     [
+      "Heart of public what?",
+      "Enemy",
+      "Housing",
+      "School"
+     ],
+     [
+      "Refugees in the what parking lot?",
+      "Home Depot",
+      "Walmart",
+      "Target"
+     ],
+     [
+      "The next spot ain't have what he...?",
+      "Needed",
+      "Wanted",
+      "Ordered"
+     ],
+     [
+      "He let the what blink?",
+      "Blinkers",
+      "Lights",
+      "Signals"
+     ],
+     [
+      "Metal type what?",
+      "Beat",
+      "Song",
+      "Band"
+     ],
+     [
+      "And it don't what?",
+      "Stop",
+      "Quit",
+      "End"
+     ]
+    ],
+    [
+     [
+      "Make him what?",
+      "Wise",
+      "Rich",
+      "Strong"
+     ],
+     [
+      "Can't play cards till the what's done?",
+      "Dealing",
+      "Shuffling",
+      "Betting"
+     ],
+     [
+      "Close his eyes, make sure he what something?",
+      "Feels",
+      "Sees",
+      "Says"
+     ],
+     [
+      "Fresh, fortified, built to what?",
+      "Destroy",
+      "Last",
+      "Win"
+     ],
+     [
+      "Scarcity is a lie of the what?",
+      "State",
+      "Rich",
+      "Times"
+     ],
+     [
+      "They parrot what?",
+      "Propaganda",
+      "Gossip",
+      "Lyrics"
+     ],
+     [
+      "With pie in the what?",
+      "Face",
+      "Sky",
+      "Oven"
+     ],
+     [
+      "Watch and what?",
+      "Pray",
+      "Wait",
+      "Listen"
+     ],
+     [
+      "All he give, all he what?",
+      "Take",
+      "Need",
+      "Lose"
+     ],
+     [
+      "Stories that we shouldn't what?",
+      "Say",
+      "Hear",
+      "Write"
+     ]
+    ],
+    [
+     [
+      "We shouldn't have to work so hard in what?",
+      "Love",
+      "Life",
+      "Vain"
+     ],
+     [
+      "He needs some what?",
+      "Room",
+      "Help",
+      "Hands"
+     ],
+     [
+      "Triple what it...?",
+      "Cost",
+      "Made",
+      "Paid"
+     ],
+     [
+      "He swears he ain't do it for what?",
+      "Rewards",
+      "Money",
+      "Fame"
+     ],
+     [
+      "Talk to him, he talks what?",
+      "Back",
+      "Slow",
+      "Loud"
+     ],
+     [
+      "He writes what, forgetting why?",
+      "Songs",
+      "Letters",
+      "Rhymes"
+     ],
+     [
+      "Then hit the what fully dipped?",
+      "Stage",
+      "Road",
+      "Club"
+     ],
+     [
+      "Watch how the what flip?",
+      "Spells",
+      "Tables",
+      "Coins"
+     ],
+     [
+      "In your mouth like Dr. who?",
+      "Giggles",
+      "Dre",
+      "Seuss"
+     ],
+     [
+      "The laws of what?",
+      "Reflex",
+      "Gravity",
+      "Nature"
+     ],
+     [
+      "We not worshipping the what no more?",
+      "Sun",
+      "Moon",
+      "Money"
+     ],
+     [
+      "Beat juggles at the baby what?",
+      "Shower",
+      "Party",
+      "Show"
+     ],
+     [
+      "Dressed like he sells what?",
+      "Sherbet",
+      "Ice cream",
+      "Cars"
+     ],
+     [
+      "Even gods get what?",
+      "Bored",
+      "Tired",
+      "Old"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Ikebana",
+   "id": "47XJn25dFas",
+   "start": 9.2,
+   "cuts": [
+    40.6,
+    84,
+    128.7
+   ],
+   "qs": [
+    [
+     [
+      "He do it for what now?",
+      "Real",
+      "Love",
+      "Money"
+     ],
+     [
+      "How much out the credit?",
+      "3,800",
+      "1,500",
+      "10,000"
+     ],
+     [
+      "It's what labor?",
+      "Sweat",
+      "Hard",
+      "Cheap"
+     ],
+     [
+      "Talking out his what?",
+      "Head",
+      "Mind",
+      "Mouth"
+     ],
+     [
+      "Leave the what running?",
+      "Meter",
+      "Engine",
+      "Water"
+     ],
+     [
+      "He'll be back in how many?",
+      "10",
+      "5",
+      "20"
+     ],
+     [
+      "Something worthy out of what?",
+      "Reach",
+      "Sight",
+      "Time"
+     ],
+     [
+      "Inside, repeating what?",
+      "Numbers",
+      "Words",
+      "Prayers"
+     ],
+     [
+      "A bouquet chosen for his what?",
+      "Boo",
+      "Mom",
+      "Show"
+     ]
+    ],
+    [
+     [
+      "He feels like everybody what?",
+      "Knew",
+      "Left",
+      "Lied"
+     ],
+     [
+      "All his comings and what?",
+      "Goings",
+      "Doings",
+      "Leavings"
+     ],
+     [
+      "Right where you what him?",
+      "Lost",
+      "Found",
+      "Left"
+     ],
+     [
+      "A black power what away?",
+      "Nap",
+      "Move",
+      "Step"
+     ],
+     [
+      "On time but off what?",
+      "Key",
+      "Beat",
+      "Track"
+     ],
+     [
+      "Good morning, what coffee?",
+      "Ethiopian",
+      "Jamaican",
+      "Colombian"
+     ],
+     [
+      "Burn away before they what?",
+      "Penetrate",
+      "Land",
+      "Hit"
+     ],
+     [
+      "If you were in the what?",
+      "Way",
+      "Room",
+      "Game"
+     ]
+    ],
+    [
+     [
+      "What tape?",
+      "Disintegration",
+      "Mix",
+      "Demo"
+     ],
+     [
+      "Don't be what?",
+      "Cynical",
+      "Critical",
+      "Typical"
+     ],
+     [
+      "Complicated what?",
+      "Chemical",
+      "Situation",
+      "Formula"
+     ],
+     [
+      "Made it out the what?",
+      "Winner",
+      "Loser",
+      "Hero"
+     ],
+     [
+      "Let's get what?",
+      "Physical",
+      "Started",
+      "Together"
+     ],
+     [
+      "His favorite month?",
+      "September",
+      "October",
+      "June"
+     ],
+     [
+      "He makes gorgeous what?",
+      "Babies",
+      "Music",
+      "Flowers"
+     ],
+     [
+      "Hold those what?",
+      "Shoulders",
+      "Hands",
+      "Heads"
+     ],
+     [
+      "Almost what?",
+      "Over",
+      "Home",
+      "Done"
+     ],
+     [
+      "Being alive, he must look what?",
+      "Up",
+      "Out",
+      "Back"
+     ],
+     [
+      "When he tells the what?",
+      "Truth",
+      "Story",
+      "Jokes"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

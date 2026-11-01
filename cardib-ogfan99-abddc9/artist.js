@@ -99,40 +99,1305 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Up",
-   "id": "rCiBgLOcuKU",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Like What (Freestyle)",
-   "id": "GcNC7YnlhKc",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "AH HA",
+   "id": "I-5e_J3LWS8",
+   "start": 5.8,
+   "cuts": [
+    47,
+    87.9,
+    147.4
+   ],
+   "qs": [
+    [
+     [
+      "Look, broke, you what?",
+      "Wish",
+      "Wait",
+      "Lose"
+     ],
+     [
+      "She's on her what?",
+      "Way",
+      "Grind",
+      "Phone"
+     ],
+     [
+      "They so bad she don't what?",
+      "See it",
+      "Feel it",
+      "Need it"
+     ],
+     [
+      "Really hate her? So what?",
+      "Be it",
+      "Leave it",
+      "What"
+     ],
+     [
+      "Give exactly what you what?",
+      "Want",
+      "Need",
+      "Asked"
+     ],
+     [
+      "They never played with her how many times?",
+      "Once",
+      "Twice",
+      "Ever"
+     ],
+     [
+      "They want her to care about them so what?",
+      "Bad",
+      "Much",
+      "Long"
+     ],
+     [
+      "They want her to what about them so bad?",
+      "Care",
+      "Talk",
+      "Worry"
+     ],
+     [
+      "She ain't what about none of them?",
+      "Worried",
+      "Thinking",
+      "Talking"
+     ],
+     [
+      "Can't flex on her with something she what?",
+      "Had",
+      "Bought",
+      "Wore"
+     ],
+     [
+      "Can't do what on her with something she had?",
+      "Flex",
+      "Stunt",
+      "Shine"
+     ],
+     [
+      "She's laughing like what?",
+      "Ah ha",
+      "Ha ha",
+      "Hee hee"
+     ]
+    ],
+    [
+     [
+      "Let her post her little what?",
+      "Pic",
+      "Clip",
+      "Song"
+     ],
+     [
+      "Let her show off her what?",
+      "Fit",
+      "Ring",
+      "Car"
+     ],
+     [
+      "We know what what you in?",
+      "Crib",
+      "Car",
+      "Room"
+     ],
+     [
+      "She's jumping off the back of what?",
+      "Boats",
+      "Trucks",
+      "Jets"
+     ],
+     [
+      "Jumping off boats in the what?",
+      "Caribbean",
+      "Hamptons",
+      "Bahamas"
+     ],
+     [
+      "She's about to post another what?",
+      "Picture",
+      "Song",
+      "Video"
+     ],
+     [
+      "Post another picture, make them what?",
+      "Sick",
+      "Mad",
+      "Cry"
+     ],
+     [
+      "Make them sick what?",
+      "Again",
+      "Today",
+      "Forever"
+     ],
+     [
+      "She'll be hopping out the what?",
+      "Water",
+      "Jet",
+      "Car"
+     ],
+     [
+      "Her skin is what?",
+      "Glistening",
+      "Glowing",
+      "Shining"
+     ],
+     [
+      "It's what?",
+      "Sickening",
+      "Amazing",
+      "Different"
+     ],
+     [
+      "You don't like her? Then why you what?",
+      "Listening",
+      "Watching",
+      "Calling"
+     ],
+     [
+      "For real, y'all was what?",
+      "Lucky",
+      "Ready",
+      "Scared"
+     ],
+     [
+      "Cute in the what?",
+      "Face",
+      "Dress",
+      "Pic"
+     ]
+    ],
+    [
+     [
+      "Who's as what as her? She's trying to figure it out",
+      "Hot",
+      "Fly",
+      "Rich"
+     ],
+     [
+      "Who hot as her, that's what she's trying to what?",
+      "Figure out",
+      "Find out",
+      "Work out"
+     ],
+     [
+      "She says she don't what him?",
+      "Want",
+      "Need",
+      "Like"
+     ],
+     [
+      "You bark pretty loud for a what?",
+      "Lapdog",
+      "Puppy",
+      "Chihuahua"
+     ],
+     [
+      "You bark pretty what for a lapdog?",
+      "Loud",
+      "Hard",
+      "Much"
+     ],
+     [
+      "To get this kind of what, you got to sell your catalog?",
+      "House",
+      "Car",
+      "Chain"
+     ],
+     [
+      "Big flirt, cold what?",
+      "Hearted",
+      "Blooded",
+      "Shoulder"
+     ],
+     [
+      "Big what, cold hearted?",
+      "Flirt",
+      "Heart",
+      "Talker"
+     ],
+     [
+      "She looks better, she what better?",
+      "Dresses",
+      "Raps",
+      "Lives"
+     ],
+     [
+      "All her exes is old like a what?",
+      "Love letter",
+      "Photo",
+      "Record"
+     ],
+     [
+      "All her what is old like a love letter?",
+      "Exes",
+      "Songs",
+      "Shoes"
+     ],
+     [
+      "She put them to sleep on the what?",
+      "Track",
+      "Beat",
+      "Stage"
+     ],
+     [
+      "She makes a what beat faster?",
+      "Heart",
+      "Drum",
+      "Track"
+     ]
+    ]
+   ]
   },
   {
    "title": "Enough (Miami)",
    "id": "narFtb5tdTQ",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 8,
+   "cuts": [
+    51.3,
+    96,
+    117.5
+   ],
+   "qs": [
+    [
+     [
+      "They picking cheap and what?",
+      "Expensive",
+      "Designer",
+      "Pricey"
+     ],
+     [
+      "You know the what?",
+      "Difference",
+      "Answer",
+      "Rules"
+     ],
+     [
+      "She can survive in the coldest what?",
+      "Conditions",
+      "Winters",
+      "Places"
+     ],
+     [
+      "Soap in the what?",
+      "Dishes",
+      "Sink",
+      "Tub"
+     ],
+     [
+      "She applies pressure like what kind of constrictors?",
+      "Boa",
+      "Python",
+      "Cobra"
+     ],
+     [
+      "She applies what like boa constrictors?",
+      "Pressure",
+      "Venom",
+      "Grip"
+     ],
+     [
+      "Where is she?",
+      "Miami",
+      "Atlanta",
+      "Vegas"
+     ],
+     [
+      "In Miami she pulls up on a what?",
+      "Cruise ship",
+      "Yacht",
+      "Jet ski"
+     ],
+     [
+      "If you scared then just what?",
+      "Say that",
+      "Leave",
+      "Run"
+     ],
+     [
+      "Enough is what?",
+      "Enough",
+      "Too much",
+      "Over"
+     ],
+     [
+      "They was just in her what?",
+      "DMs",
+      "Face",
+      "Business"
+     ]
+    ],
+    [
+     [
+      "She's about to call up who?",
+      "Diamond",
+      "Mommy",
+      "Jordan"
+     ],
+     [
+      "Ooh what, cool down?",
+      "Child",
+      "Girl",
+      "Baby"
+     ],
+     [
+      "Ooh child, cool what?",
+      "Down",
+      "Off",
+      "Out"
+     ],
+     [
+      "Too what, too wild?",
+      "High",
+      "Fly",
+      "Fast"
+     ],
+     [
+      "Too high, too what?",
+      "Wild",
+      "Fly",
+      "Fast"
+     ],
+     [
+      "What kind of style?",
+      "New",
+      "Old",
+      "Fresh"
+     ],
+     [
+      "She be big in their what?",
+      "Pocket",
+      "Feelings",
+      "Heads"
+     ],
+     [
+      "She's what, she's running the city?",
+      "Pretty",
+      "Rich",
+      "Famous"
+     ],
+     [
+      "She's pretty, she's running the what?",
+      "City",
+      "Game",
+      "Show"
+     ],
+     [
+      "She's on it in every what?",
+      "Department",
+      "Borough",
+      "Room"
+     ]
+    ],
+    [
+     [
+      "A lot of what, a lot of score?",
+      "Winning",
+      "Money",
+      "Fans"
+     ],
+     [
+      "A lot of winning, a lot of what?",
+      "Scoring",
+      "Losing",
+      "Fighting"
+     ],
+     [
+      "Cardi Bryant, Cardi who?",
+      "Jordan",
+      "James",
+      "Curry"
+     ],
+     [
+      "They all what?",
+      "Losers",
+      "Haters",
+      "Lames"
+     ],
+     [
+      "What they can do is not what?",
+      "Important",
+      "Enough",
+      "Better"
+     ],
+     [
+      "She's getting better and what?",
+      "Better",
+      "Bigger",
+      "Richer"
+     ],
+     [
+      "She does not see no what?",
+      "Competitors",
+      "Haters",
+      "Problems"
+     ],
+     [
+      "The gang said it was what?",
+      "Regular",
+      "Over",
+      "Easy"
+     ],
+     [
+      "See her with what?",
+      "Money",
+      "Diamonds",
+      "Cars"
+     ],
+     [
+      "These ones is what?",
+      "Bugging",
+      "Hating",
+      "Lying"
+     ],
+     [
+      "Either they what or she's invisible?",
+      "Blind",
+      "Slow",
+      "Jealous"
+     ],
+     [
+      "Either they blind or she's what?",
+      "Invisible",
+      "Too fly",
+      "Gone"
+     ],
+     [
+      "They can't see her at what?",
+      "Night",
+      "All",
+      "Work"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Bodak Yellow",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "I Like It",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Money",
+   "id": "zUOh09GoQgk",
+   "start": 5.3,
+   "cuts": [
+    30.7,
+    89.9,
+    196
+   ],
+   "qs": [
+    [
+     [
+      "Big fat what?",
+      "Checks",
+      "Chains",
+      "Rings"
+     ],
+     [
+      "Big large what?",
+      "Bills",
+      "Bands",
+      "Bags"
+     ],
+     [
+      "She'll flip like ten what?",
+      "Cartwheels",
+      "Backflips",
+      "Somersaults"
+     ],
+     [
+      "Her look so what?",
+      "Cute",
+      "Hot",
+      "Fly"
+     ],
+     [
+      "She was born to what?",
+      "Flex",
+      "Shine",
+      "Win"
+     ],
+     [
+      "Born to flex, what's on her neck?",
+      "Diamonds",
+      "Gold",
+      "Pearls"
+     ],
+     [
+      "She likes boardrooms and what?",
+      "Jets",
+      "Yachts",
+      "Cars"
+     ],
+     [
+      "She likes what and jets?",
+      "Boardrooms",
+      "Penthouses",
+      "Mansions"
+     ],
+     [
+      "Nothing in this world she likes more than what?",
+      "Checks",
+      "Diamonds",
+      "Shoes"
+     ],
+     [
+      "Nothing in this what she likes more than checks?",
+      "World",
+      "City",
+      "Life"
+     ]
+    ],
+    [
+     [
+      "She gotta fly, she need a what?",
+      "Jet",
+      "Plane",
+      "Pilot"
+     ],
+     [
+      "She needs room for her what?",
+      "Legs",
+      "Bags",
+      "Friends"
+     ],
+     [
+      "She got a what, she need some money?",
+      "Baby",
+      "House",
+      "Crew"
+     ],
+     [
+      "She got a baby, she need some what?",
+      "Money",
+      "Time",
+      "Help"
+     ],
+     [
+      "All y'all in what?",
+      "Trouble",
+      "Danger",
+      "Debt"
+     ],
+     [
+      "She heard that Cardi went what?",
+      "Pop",
+      "Platinum",
+      "Broke"
+     ],
+     [
+      "That's her bursting their what?",
+      "Bubble",
+      "Balloon",
+      "Dreams"
+     ],
+     [
+      "She's the one with the what?",
+      "Drip",
+      "Hits",
+      "Crown"
+     ],
+     [
+      "Passing the what, damn she's fine?",
+      "Mirror",
+      "Window",
+      "Club"
+     ],
+     [
+      "Passing the mirror, damn she's what?",
+      "Fine",
+      "Fly",
+      "Rich"
+     ],
+     [
+      "Let 'em try her, it's what time?",
+      "Hammer",
+      "Show",
+      "Party"
+     ]
+    ],
+    [
+     [
+      "All her pajamas is what?",
+      "Leather",
+      "Silk",
+      "Satin"
+     ],
+     [
+      "Kiss the what?",
+      "Ring",
+      "Hand",
+      "Crown"
+     ],
+     [
+      "Kiss the ring and kick what?",
+      "Rocks",
+      "Doors",
+      "Back"
+     ],
+     [
+      "Drum it down, back it what?",
+      "Up",
+      "Out",
+      "In"
+     ],
+     [
+      "What word does she repeat at the end?",
+      "Money",
+      "Diamonds",
+      "Checks"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "AH HA",
+   "id": "I-5e_J3LWS8",
+   "start": 5.8,
+   "cuts": [
+    47,
+    87.9,
+    147.4
+   ],
+   "qs": [
+    [
+     [
+      "Look, broke, you what?",
+      "Wish",
+      "Wait",
+      "Lose"
+     ],
+     [
+      "She's on her what?",
+      "Way",
+      "Grind",
+      "Phone"
+     ],
+     [
+      "They so bad she don't what?",
+      "See it",
+      "Feel it",
+      "Need it"
+     ],
+     [
+      "Really hate her? So what?",
+      "Be it",
+      "Leave it",
+      "What"
+     ],
+     [
+      "Give exactly what you what?",
+      "Want",
+      "Need",
+      "Asked"
+     ],
+     [
+      "They never played with her how many times?",
+      "Once",
+      "Twice",
+      "Ever"
+     ],
+     [
+      "They want her to care about them so what?",
+      "Bad",
+      "Much",
+      "Long"
+     ],
+     [
+      "They want her to what about them so bad?",
+      "Care",
+      "Talk",
+      "Worry"
+     ],
+     [
+      "She ain't what about none of them?",
+      "Worried",
+      "Thinking",
+      "Talking"
+     ],
+     [
+      "Can't flex on her with something she what?",
+      "Had",
+      "Bought",
+      "Wore"
+     ],
+     [
+      "Can't do what on her with something she had?",
+      "Flex",
+      "Stunt",
+      "Shine"
+     ],
+     [
+      "She's laughing like what?",
+      "Ah ha",
+      "Ha ha",
+      "Hee hee"
+     ]
+    ],
+    [
+     [
+      "Let her post her little what?",
+      "Pic",
+      "Clip",
+      "Song"
+     ],
+     [
+      "Let her show off her what?",
+      "Fit",
+      "Ring",
+      "Car"
+     ],
+     [
+      "We know what what you in?",
+      "Crib",
+      "Car",
+      "Room"
+     ],
+     [
+      "She's jumping off the back of what?",
+      "Boats",
+      "Trucks",
+      "Jets"
+     ],
+     [
+      "Jumping off boats in the what?",
+      "Caribbean",
+      "Hamptons",
+      "Bahamas"
+     ],
+     [
+      "She's about to post another what?",
+      "Picture",
+      "Song",
+      "Video"
+     ],
+     [
+      "Post another picture, make them what?",
+      "Sick",
+      "Mad",
+      "Cry"
+     ],
+     [
+      "Make them sick what?",
+      "Again",
+      "Today",
+      "Forever"
+     ],
+     [
+      "She'll be hopping out the what?",
+      "Water",
+      "Jet",
+      "Car"
+     ],
+     [
+      "Her skin is what?",
+      "Glistening",
+      "Glowing",
+      "Shining"
+     ],
+     [
+      "It's what?",
+      "Sickening",
+      "Amazing",
+      "Different"
+     ],
+     [
+      "You don't like her? Then why you what?",
+      "Listening",
+      "Watching",
+      "Calling"
+     ],
+     [
+      "For real, y'all was what?",
+      "Lucky",
+      "Ready",
+      "Scared"
+     ],
+     [
+      "Cute in the what?",
+      "Face",
+      "Dress",
+      "Pic"
+     ]
+    ],
+    [
+     [
+      "Who's as what as her? She's trying to figure it out",
+      "Hot",
+      "Fly",
+      "Rich"
+     ],
+     [
+      "Who hot as her, that's what she's trying to what?",
+      "Figure out",
+      "Find out",
+      "Work out"
+     ],
+     [
+      "She says she don't what him?",
+      "Want",
+      "Need",
+      "Like"
+     ],
+     [
+      "You bark pretty loud for a what?",
+      "Lapdog",
+      "Puppy",
+      "Chihuahua"
+     ],
+     [
+      "You bark pretty what for a lapdog?",
+      "Loud",
+      "Hard",
+      "Much"
+     ],
+     [
+      "To get this kind of what, you got to sell your catalog?",
+      "House",
+      "Car",
+      "Chain"
+     ],
+     [
+      "Big flirt, cold what?",
+      "Hearted",
+      "Blooded",
+      "Shoulder"
+     ],
+     [
+      "Big what, cold hearted?",
+      "Flirt",
+      "Heart",
+      "Talker"
+     ],
+     [
+      "She looks better, she what better?",
+      "Dresses",
+      "Raps",
+      "Lives"
+     ],
+     [
+      "All her exes is old like a what?",
+      "Love letter",
+      "Photo",
+      "Record"
+     ],
+     [
+      "All her what is old like a love letter?",
+      "Exes",
+      "Songs",
+      "Shoes"
+     ],
+     [
+      "She put them to sleep on the what?",
+      "Track",
+      "Beat",
+      "Stage"
+     ],
+     [
+      "She makes a what beat faster?",
+      "Heart",
+      "Drum",
+      "Track"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Enough (Miami)",
+   "id": "narFtb5tdTQ",
+   "start": 8,
+   "cuts": [
+    51.3,
+    96,
+    117.5
+   ],
+   "qs": [
+    [
+     [
+      "They picking cheap and what?",
+      "Expensive",
+      "Designer",
+      "Pricey"
+     ],
+     [
+      "You know the what?",
+      "Difference",
+      "Answer",
+      "Rules"
+     ],
+     [
+      "She can survive in the coldest what?",
+      "Conditions",
+      "Winters",
+      "Places"
+     ],
+     [
+      "Soap in the what?",
+      "Dishes",
+      "Sink",
+      "Tub"
+     ],
+     [
+      "She applies pressure like what kind of constrictors?",
+      "Boa",
+      "Python",
+      "Cobra"
+     ],
+     [
+      "She applies what like boa constrictors?",
+      "Pressure",
+      "Venom",
+      "Grip"
+     ],
+     [
+      "Where is she?",
+      "Miami",
+      "Atlanta",
+      "Vegas"
+     ],
+     [
+      "In Miami she pulls up on a what?",
+      "Cruise ship",
+      "Yacht",
+      "Jet ski"
+     ],
+     [
+      "If you scared then just what?",
+      "Say that",
+      "Leave",
+      "Run"
+     ],
+     [
+      "Enough is what?",
+      "Enough",
+      "Too much",
+      "Over"
+     ],
+     [
+      "They was just in her what?",
+      "DMs",
+      "Face",
+      "Business"
+     ]
+    ],
+    [
+     [
+      "She's about to call up who?",
+      "Diamond",
+      "Mommy",
+      "Jordan"
+     ],
+     [
+      "Ooh what, cool down?",
+      "Child",
+      "Girl",
+      "Baby"
+     ],
+     [
+      "Ooh child, cool what?",
+      "Down",
+      "Off",
+      "Out"
+     ],
+     [
+      "Too what, too wild?",
+      "High",
+      "Fly",
+      "Fast"
+     ],
+     [
+      "Too high, too what?",
+      "Wild",
+      "Fly",
+      "Fast"
+     ],
+     [
+      "What kind of style?",
+      "New",
+      "Old",
+      "Fresh"
+     ],
+     [
+      "She be big in their what?",
+      "Pocket",
+      "Feelings",
+      "Heads"
+     ],
+     [
+      "She's what, she's running the city?",
+      "Pretty",
+      "Rich",
+      "Famous"
+     ],
+     [
+      "She's pretty, she's running the what?",
+      "City",
+      "Game",
+      "Show"
+     ],
+     [
+      "She's on it in every what?",
+      "Department",
+      "Borough",
+      "Room"
+     ]
+    ],
+    [
+     [
+      "A lot of what, a lot of score?",
+      "Winning",
+      "Money",
+      "Fans"
+     ],
+     [
+      "A lot of winning, a lot of what?",
+      "Scoring",
+      "Losing",
+      "Fighting"
+     ],
+     [
+      "Cardi Bryant, Cardi who?",
+      "Jordan",
+      "James",
+      "Curry"
+     ],
+     [
+      "They all what?",
+      "Losers",
+      "Haters",
+      "Lames"
+     ],
+     [
+      "What they can do is not what?",
+      "Important",
+      "Enough",
+      "Better"
+     ],
+     [
+      "She's getting better and what?",
+      "Better",
+      "Bigger",
+      "Richer"
+     ],
+     [
+      "She does not see no what?",
+      "Competitors",
+      "Haters",
+      "Problems"
+     ],
+     [
+      "The gang said it was what?",
+      "Regular",
+      "Over",
+      "Easy"
+     ],
+     [
+      "See her with what?",
+      "Money",
+      "Diamonds",
+      "Cars"
+     ],
+     [
+      "These ones is what?",
+      "Bugging",
+      "Hating",
+      "Lying"
+     ],
+     [
+      "Either they what or she's invisible?",
+      "Blind",
+      "Slow",
+      "Jealous"
+     ],
+     [
+      "Either they blind or she's what?",
+      "Invisible",
+      "Too fly",
+      "Gone"
+     ],
+     [
+      "They can't see her at what?",
+      "Night",
+      "All",
+      "Work"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Money",
+   "id": "zUOh09GoQgk",
+   "start": 5.3,
+   "cuts": [
+    30.7,
+    89.9,
+    196
+   ],
+   "qs": [
+    [
+     [
+      "Big fat what?",
+      "Checks",
+      "Chains",
+      "Rings"
+     ],
+     [
+      "Big large what?",
+      "Bills",
+      "Bands",
+      "Bags"
+     ],
+     [
+      "She'll flip like ten what?",
+      "Cartwheels",
+      "Backflips",
+      "Somersaults"
+     ],
+     [
+      "Her look so what?",
+      "Cute",
+      "Hot",
+      "Fly"
+     ],
+     [
+      "She was born to what?",
+      "Flex",
+      "Shine",
+      "Win"
+     ],
+     [
+      "Born to flex, what's on her neck?",
+      "Diamonds",
+      "Gold",
+      "Pearls"
+     ],
+     [
+      "She likes boardrooms and what?",
+      "Jets",
+      "Yachts",
+      "Cars"
+     ],
+     [
+      "She likes what and jets?",
+      "Boardrooms",
+      "Penthouses",
+      "Mansions"
+     ],
+     [
+      "Nothing in this world she likes more than what?",
+      "Checks",
+      "Diamonds",
+      "Shoes"
+     ],
+     [
+      "Nothing in this what she likes more than checks?",
+      "World",
+      "City",
+      "Life"
+     ]
+    ],
+    [
+     [
+      "She gotta fly, she need a what?",
+      "Jet",
+      "Plane",
+      "Pilot"
+     ],
+     [
+      "She needs room for her what?",
+      "Legs",
+      "Bags",
+      "Friends"
+     ],
+     [
+      "She got a what, she need some money?",
+      "Baby",
+      "House",
+      "Crew"
+     ],
+     [
+      "She got a baby, she need some what?",
+      "Money",
+      "Time",
+      "Help"
+     ],
+     [
+      "All y'all in what?",
+      "Trouble",
+      "Danger",
+      "Debt"
+     ],
+     [
+      "She heard that Cardi went what?",
+      "Pop",
+      "Platinum",
+      "Broke"
+     ],
+     [
+      "That's her bursting their what?",
+      "Bubble",
+      "Balloon",
+      "Dreams"
+     ],
+     [
+      "She's the one with the what?",
+      "Drip",
+      "Hits",
+      "Crown"
+     ],
+     [
+      "Passing the what, damn she's fine?",
+      "Mirror",
+      "Window",
+      "Club"
+     ],
+     [
+      "Passing the mirror, damn she's what?",
+      "Fine",
+      "Fly",
+      "Rich"
+     ],
+     [
+      "Let 'em try her, it's what time?",
+      "Hammer",
+      "Show",
+      "Party"
+     ]
+    ],
+    [
+     [
+      "All her pajamas is what?",
+      "Leather",
+      "Silk",
+      "Satin"
+     ],
+     [
+      "Kiss the what?",
+      "Ring",
+      "Hand",
+      "Crown"
+     ],
+     [
+      "Kiss the ring and kick what?",
+      "Rocks",
+      "Doors",
+      "Back"
+     ],
+     [
+      "Drum it down, back it what?",
+      "Up",
+      "Out",
+      "In"
+     ],
+     [
+      "What word does she repeat at the end?",
+      "Money",
+      "Diamonds",
+      "Checks"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

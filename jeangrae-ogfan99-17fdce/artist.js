@@ -93,40 +93,1305 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "My Story",
-   "id": "jFz6ECvaiqQ",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Love Song",
-   "id": "hrWL7ieIU7A",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "The Time Is Now",
-   "id": "6-USLopNqWw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Kill Screen",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "My Crew",
+   "id": "7EVSRVxVoEw",
+   "start": 37.1,
+   "cuts": [
+    79,
+    144.5,
+    204
+   ],
+   "qs": [
+    [
+     [
+      "Her family dream with her under city what?",
+      "Lights",
+      "Skies",
+      "Stars"
+     ],
+     [
+      "Words travel deep in your what?",
+      "Spirit",
+      "Mind",
+      "Bones"
+     ],
+     [
+      "She cruises the what?",
+      "Block",
+      "City",
+      "Coast"
+     ],
+     [
+      "She serenades the what with the speakers?",
+      "Moonlight",
+      "Sunset",
+      "Neighbors"
+     ],
+     [
+      "Clicks and crews and hoods and what?",
+      "Gangs",
+      "Blocks",
+      "Teams"
+     ],
+     [
+      "She's loving you what?",
+      "Dearly",
+      "Truly",
+      "Always"
+     ],
+     [
+      "Keep what?",
+      "Hustling",
+      "Pushing",
+      "Going"
+     ],
+     [
+      "Juggling pressure, life and what?",
+      "Success",
+      "Stress",
+      "Love"
+     ],
+     [
+      "We bury ourselves in jail without what?",
+      "Shovels",
+      "Lawyers",
+      "Keys"
+     ],
+     [
+      "What happened to us in the bigger what?",
+      "Picture",
+      "Plan",
+      "Game"
+     ],
+     [
+      "When one of us falls, we all what?",
+      "Fall",
+      "Cry",
+      "Fail"
+     ],
+     [
+      "And it's just what?",
+      "Begun",
+      "Over",
+      "Fine"
+     ]
+    ],
+    [
+     [
+      "She represents for a what?",
+      "Nation",
+      "City",
+      "Crew"
+     ],
+     [
+      "Thought we was in it what?",
+      "Together",
+      "Forever",
+      "Alone"
+     ],
+     [
+      "When money rains and what weather?",
+      "Sunny",
+      "Stormy",
+      "Cold"
+     ],
+     [
+      "Tougher than what?",
+      "Leather",
+      "Steel",
+      "Nails"
+     ],
+     [
+      "But weaker than what?",
+      "Glass",
+      "Paper",
+      "Water"
+     ],
+     [
+      "Clothes, cash, ice and whips have what us?",
+      "Blinded",
+      "Changed",
+      "Saved"
+     ],
+     [
+      "They gotta put us all on a what?",
+      "Show",
+      "Stage",
+      "List"
+     ],
+     [
+      "Y'all lost her somewhere between waking and what?",
+      "Coffee",
+      "Sleeping",
+      "Breakfast"
+     ],
+     [
+      "It changed so quick she didn't what?",
+      "Blink",
+      "Notice",
+      "Breathe"
+     ],
+     [
+      "We can't even open the what?",
+      "Map",
+      "Door",
+      "Book"
+     ],
+     [
+      "Filling it back up with what?",
+      "Trash",
+      "Hate",
+      "Junk"
+     ],
+     [
+      "Wait up, she means what?",
+      "Cash",
+      "Trash",
+      "Fame"
+     ]
+    ],
+    [
+     [
+      "Music just doesn't what?",
+      "Matter",
+      "Sell",
+      "Stop"
+     ],
+     [
+      "Pitching emotions to broken what?",
+      "Ears",
+      "Hearts",
+      "Radios"
+     ],
+     [
+      "Back when it was spoken what?",
+      "Clearly",
+      "Loudly",
+      "Softly"
+     ],
+     [
+      "Replacing kings of what?",
+      "Court",
+      "Rap",
+      "Kings"
+     ],
+     [
+      "Justice what?",
+      "Bought",
+      "Served",
+      "Blind"
+     ],
+     [
+      "Swimming with what in public pools?",
+      "Sharks",
+      "Fish",
+      "Kids"
+     ],
+     [
+      "In public pools and what water?",
+      "Shallow",
+      "Deep",
+      "Cold"
+     ],
+     [
+      "She wouldn't let her what have his way with you?",
+      "Brother",
+      "Cousin",
+      "Man"
+     ],
+     [
+      "She's only stating what?",
+      "Facts",
+      "Truth",
+      "Rules"
+     ],
+     [
+      "Plain as what?",
+      "Floodlights",
+      "Day",
+      "Sunlight"
+     ],
+     [
+      "She just wants some what?",
+      "Unity",
+      "Money",
+      "Peace"
+     ],
+     [
+      "She wants a crew to be just like it what?",
+      "Used to be",
+      "Should be",
+      "Is"
+     ]
+    ]
+   ]
   },
   {
    "title": "U & Me & Everyone We Know",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "L-5UdiGZe8U",
+   "start": 31.2,
+   "cuts": [
+    62.9,
+    113.5,
+    205.6
+   ],
+   "qs": [
+    [
+     [
+      "Back here is square what?",
+      "One",
+      "Zero",
+      "Two"
+     ],
+     [
+      "A home run without winning any what?",
+      "Bases",
+      "Games",
+      "Points"
+     ],
+     [
+      "Basic reasoning out the what?",
+      "Window",
+      "Door",
+      "Box"
+     ],
+     [
+      "Style like she got kicked off a what?",
+      "Cloud",
+      "Show",
+      "Team"
+     ],
+     [
+      "What year rap references?",
+      "'95",
+      "'89",
+      "'99"
+     ],
+     [
+      "She should have said it was what year?",
+      "'94",
+      "'96",
+      "'93"
+     ],
+     [
+      "Hard place when you want to still what to it?",
+      "Rock",
+      "Dance",
+      "Listen"
+     ],
+     [
+      "Living in her glass what?",
+      "House",
+      "Castle",
+      "Tower"
+     ],
+     [
+      "Steady throwing what through it?",
+      "Rocks",
+      "Bricks",
+      "Balls"
+     ]
+    ],
+    [
+     [
+      "She never stopped feeling the what for you?",
+      "Love",
+      "Pain",
+      "Need"
+     ],
+     [
+      "She just stopped being the what for you?",
+      "One",
+      "Girl",
+      "Friend"
+     ],
+     [
+      "She thinks too much, over-what everything?",
+      "Analyzing",
+      "Thinking",
+      "Doing"
+     ],
+     [
+      "She's over-what-izing everything?",
+      "Dramatizing",
+      "Criticizing",
+      "Organizing"
+     ],
+     [
+      "You're never on the what she's on?",
+      "Level",
+      "Page",
+      "Road"
+     ],
+     [
+      "Like watching what commercials?",
+      "Fitness",
+      "Food",
+      "Car"
+     ],
+     [
+      "Watching commercials from the what?",
+      "Couch",
+      "Bed",
+      "Floor"
+     ],
+     [
+      "She knows you're what?",
+      "Lazy",
+      "Busy",
+      "Tired"
+     ],
+     [
+      "Easier to pick a partner less what?",
+      "Crazy",
+      "Pretty",
+      "Smart"
+     ],
+     [
+      "Nice to have you back in her world as her what?",
+      "Friend",
+      "Man",
+      "Boo"
+     ]
+    ],
+    [
+     [
+      "Sometimes she's got to say it what?",
+      "Simply",
+      "Twice",
+      "Loud"
+     ],
+     [
+      "Things are simple, we make them what?",
+      "Complicated",
+      "Worse",
+      "Better"
+     ],
+     [
+      "A child in a space in the what?",
+      "Monologue",
+      "Story",
+      "Song"
+     ],
+     [
+      "Seeks a what to light higher?",
+      "Spark",
+      "Candle",
+      "Match"
+     ],
+     [
+      "She still what you?",
+      "Adores",
+      "Loves",
+      "Misses"
+     ],
+     [
+      "You adore her, what-ically?",
+      "Theoretically",
+      "Basically",
+      "Actually"
+     ],
+     [
+      "She's got to shut the what on you?",
+      "Door",
+      "Phone",
+      "Book"
+     ],
+     [
+      "So she can find out who was what for her?",
+      "Next",
+      "Right",
+      "Meant"
+     ],
+     [
+      "You and me and everyone we what?",
+      "Know",
+      "Love",
+      "Meet"
+     ],
+     [
+      "You won't find what you're looking for — stay what?",
+      "Searching",
+      "Strong",
+      "Ready"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Kill Screen",
+   "id": "QzK-fn9NaCE",
+   "start": 88,
+   "cuts": [
+    126.9,
+    163.3,
+    205
+   ],
+   "qs": [
+    [
+     [
+      "Praise the what?",
+      "Rock",
+      "Lord",
+      "Sun"
+     ],
+     [
+      "She ain't a savior, just your what?",
+      "Neighbor",
+      "Friend",
+      "Sister"
+     ],
+     [
+      "Like amazing who?",
+      "Peter",
+      "Bruce",
+      "Clark"
+     ],
+     [
+      "Hers is the spider what?",
+      "Bite",
+      "Web",
+      "Sense"
+     ],
+     [
+      "The webs are Aunt and what?",
+      "Uncle",
+      "Mother",
+      "Cousin"
+     ],
+     [
+      "What kind of season?",
+      "Humble",
+      "Hunting",
+      "Open"
+     ],
+     [
+      "Turn around and walk how many paces?",
+      "Four",
+      "Ten",
+      "Three"
+     ],
+     [
+      "She walks for how many?",
+      "Five",
+      "Six",
+      "Two"
+     ],
+     [
+      "86 in all what?",
+      "Cases",
+      "Places",
+      "Spaces"
+     ],
+     [
+      "She's the figure what sideways?",
+      "Eight",
+      "Four",
+      "Six"
+     ],
+     [
+      "Always what?",
+      "Ageless",
+      "Famous",
+      "Faithful"
+     ]
+    ],
+    [
+     [
+      "Y'all in the club what?",
+      "Aimless",
+      "Faceless",
+      "Nameless"
+     ],
+     [
+      "Record around on what?",
+      "Spaceships",
+      "Spinners",
+      "Rooftops"
+     ],
+     [
+      "She's the modern what?",
+      "Anomaly",
+      "Legend",
+      "Classic"
+     ],
+     [
+      "She represents the what?",
+      "Basement",
+      "Borough",
+      "Block"
+     ],
+     [
+      "Raised up what?",
+      "Cageless",
+      "Fearless",
+      "Homeless"
+     ],
+     [
+      "Boundaries? She got what?",
+      "None",
+      "Some",
+      "Plenty"
+     ],
+     [
+      "She's not an 80s what?",
+      "Baby",
+      "Child",
+      "Kid"
+     ],
+     [
+      "She was the type of what city?",
+      "New York",
+      "Chicago",
+      "Philly"
+     ],
+     [
+      "Even though who was careful?",
+      "Mama",
+      "Papa",
+      "Grandma"
+     ],
+     [
+      "Finding the light in the what?",
+      "Dark",
+      "Tunnel",
+      "Night"
+     ],
+     [
+      "Just life in the mirror what?",
+      "Reflection",
+      "Image",
+      "Glass"
+     ]
+    ],
+    [
+     [
+      "In the end we are who we what?",
+      "Are",
+      "Were",
+      "Want"
+     ],
+     [
+      "She's Bond and a what?",
+      "Villain",
+      "Hero",
+      "Spy"
+     ],
+     [
+      "Dress mismatch like what soldiers?",
+      "Confederate",
+      "Toy",
+      "Union"
+     ],
+     [
+      "Level is over, going for the what?",
+      "Kill screen",
+      "High score",
+      "Bonus"
+     ],
+     [
+      "A fist full of what?",
+      "Quarters",
+      "Tokens",
+      "Dollars"
+     ],
+     [
+      "Billy Mitchell, she's a what?",
+      "Fiend",
+      "Champ",
+      "Gamer"
+     ],
+     [
+      "Jumping what?",
+      "Barrels",
+      "Hurdles",
+      "Fences"
+     ],
+     [
+      "She was a pre-teen what?",
+      "Prodigy",
+      "Genius",
+      "Rapper"
+     ],
+     [
+      "A plethora of what?",
+      "Knowledge",
+      "Rhymes",
+      "Money"
+     ],
+     [
+      "She'll never respect a comment from a what?",
+      "Novice",
+      "Hater",
+      "Stranger"
+     ],
+     [
+      "She'll never be just a common what?",
+      "Denominator",
+      "Rapper",
+      "Girl"
+     ],
+     [
+      "The Phoenix from the what?",
+      "Fire",
+      "Ashes",
+      "Sky"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "My Crew",
+   "id": "7EVSRVxVoEw",
+   "start": 37.1,
+   "cuts": [
+    79,
+    144.5,
+    204
+   ],
+   "qs": [
+    [
+     [
+      "Her family dream with her under city what?",
+      "Lights",
+      "Skies",
+      "Stars"
+     ],
+     [
+      "Words travel deep in your what?",
+      "Spirit",
+      "Mind",
+      "Bones"
+     ],
+     [
+      "She cruises the what?",
+      "Block",
+      "City",
+      "Coast"
+     ],
+     [
+      "She serenades the what with the speakers?",
+      "Moonlight",
+      "Sunset",
+      "Neighbors"
+     ],
+     [
+      "Clicks and crews and hoods and what?",
+      "Gangs",
+      "Blocks",
+      "Teams"
+     ],
+     [
+      "She's loving you what?",
+      "Dearly",
+      "Truly",
+      "Always"
+     ],
+     [
+      "Keep what?",
+      "Hustling",
+      "Pushing",
+      "Going"
+     ],
+     [
+      "Juggling pressure, life and what?",
+      "Success",
+      "Stress",
+      "Love"
+     ],
+     [
+      "We bury ourselves in jail without what?",
+      "Shovels",
+      "Lawyers",
+      "Keys"
+     ],
+     [
+      "What happened to us in the bigger what?",
+      "Picture",
+      "Plan",
+      "Game"
+     ],
+     [
+      "When one of us falls, we all what?",
+      "Fall",
+      "Cry",
+      "Fail"
+     ],
+     [
+      "And it's just what?",
+      "Begun",
+      "Over",
+      "Fine"
+     ]
+    ],
+    [
+     [
+      "She represents for a what?",
+      "Nation",
+      "City",
+      "Crew"
+     ],
+     [
+      "Thought we was in it what?",
+      "Together",
+      "Forever",
+      "Alone"
+     ],
+     [
+      "When money rains and what weather?",
+      "Sunny",
+      "Stormy",
+      "Cold"
+     ],
+     [
+      "Tougher than what?",
+      "Leather",
+      "Steel",
+      "Nails"
+     ],
+     [
+      "But weaker than what?",
+      "Glass",
+      "Paper",
+      "Water"
+     ],
+     [
+      "Clothes, cash, ice and whips have what us?",
+      "Blinded",
+      "Changed",
+      "Saved"
+     ],
+     [
+      "They gotta put us all on a what?",
+      "Show",
+      "Stage",
+      "List"
+     ],
+     [
+      "Y'all lost her somewhere between waking and what?",
+      "Coffee",
+      "Sleeping",
+      "Breakfast"
+     ],
+     [
+      "It changed so quick she didn't what?",
+      "Blink",
+      "Notice",
+      "Breathe"
+     ],
+     [
+      "We can't even open the what?",
+      "Map",
+      "Door",
+      "Book"
+     ],
+     [
+      "Filling it back up with what?",
+      "Trash",
+      "Hate",
+      "Junk"
+     ],
+     [
+      "Wait up, she means what?",
+      "Cash",
+      "Trash",
+      "Fame"
+     ]
+    ],
+    [
+     [
+      "Music just doesn't what?",
+      "Matter",
+      "Sell",
+      "Stop"
+     ],
+     [
+      "Pitching emotions to broken what?",
+      "Ears",
+      "Hearts",
+      "Radios"
+     ],
+     [
+      "Back when it was spoken what?",
+      "Clearly",
+      "Loudly",
+      "Softly"
+     ],
+     [
+      "Replacing kings of what?",
+      "Court",
+      "Rap",
+      "Kings"
+     ],
+     [
+      "Justice what?",
+      "Bought",
+      "Served",
+      "Blind"
+     ],
+     [
+      "Swimming with what in public pools?",
+      "Sharks",
+      "Fish",
+      "Kids"
+     ],
+     [
+      "In public pools and what water?",
+      "Shallow",
+      "Deep",
+      "Cold"
+     ],
+     [
+      "She wouldn't let her what have his way with you?",
+      "Brother",
+      "Cousin",
+      "Man"
+     ],
+     [
+      "She's only stating what?",
+      "Facts",
+      "Truth",
+      "Rules"
+     ],
+     [
+      "Plain as what?",
+      "Floodlights",
+      "Day",
+      "Sunlight"
+     ],
+     [
+      "She just wants some what?",
+      "Unity",
+      "Money",
+      "Peace"
+     ],
+     [
+      "She wants a crew to be just like it what?",
+      "Used to be",
+      "Should be",
+      "Is"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "U & Me & Everyone We Know",
+   "id": "L-5UdiGZe8U",
+   "start": 31.2,
+   "cuts": [
+    62.9,
+    113.5,
+    205.6
+   ],
+   "qs": [
+    [
+     [
+      "Back here is square what?",
+      "One",
+      "Zero",
+      "Two"
+     ],
+     [
+      "A home run without winning any what?",
+      "Bases",
+      "Games",
+      "Points"
+     ],
+     [
+      "Basic reasoning out the what?",
+      "Window",
+      "Door",
+      "Box"
+     ],
+     [
+      "Style like she got kicked off a what?",
+      "Cloud",
+      "Show",
+      "Team"
+     ],
+     [
+      "What year rap references?",
+      "'95",
+      "'89",
+      "'99"
+     ],
+     [
+      "She should have said it was what year?",
+      "'94",
+      "'96",
+      "'93"
+     ],
+     [
+      "Hard place when you want to still what to it?",
+      "Rock",
+      "Dance",
+      "Listen"
+     ],
+     [
+      "Living in her glass what?",
+      "House",
+      "Castle",
+      "Tower"
+     ],
+     [
+      "Steady throwing what through it?",
+      "Rocks",
+      "Bricks",
+      "Balls"
+     ]
+    ],
+    [
+     [
+      "She never stopped feeling the what for you?",
+      "Love",
+      "Pain",
+      "Need"
+     ],
+     [
+      "She just stopped being the what for you?",
+      "One",
+      "Girl",
+      "Friend"
+     ],
+     [
+      "She thinks too much, over-what everything?",
+      "Analyzing",
+      "Thinking",
+      "Doing"
+     ],
+     [
+      "She's over-what-izing everything?",
+      "Dramatizing",
+      "Criticizing",
+      "Organizing"
+     ],
+     [
+      "You're never on the what she's on?",
+      "Level",
+      "Page",
+      "Road"
+     ],
+     [
+      "Like watching what commercials?",
+      "Fitness",
+      "Food",
+      "Car"
+     ],
+     [
+      "Watching commercials from the what?",
+      "Couch",
+      "Bed",
+      "Floor"
+     ],
+     [
+      "She knows you're what?",
+      "Lazy",
+      "Busy",
+      "Tired"
+     ],
+     [
+      "Easier to pick a partner less what?",
+      "Crazy",
+      "Pretty",
+      "Smart"
+     ],
+     [
+      "Nice to have you back in her world as her what?",
+      "Friend",
+      "Man",
+      "Boo"
+     ]
+    ],
+    [
+     [
+      "Sometimes she's got to say it what?",
+      "Simply",
+      "Twice",
+      "Loud"
+     ],
+     [
+      "Things are simple, we make them what?",
+      "Complicated",
+      "Worse",
+      "Better"
+     ],
+     [
+      "A child in a space in the what?",
+      "Monologue",
+      "Story",
+      "Song"
+     ],
+     [
+      "Seeks a what to light higher?",
+      "Spark",
+      "Candle",
+      "Match"
+     ],
+     [
+      "She still what you?",
+      "Adores",
+      "Loves",
+      "Misses"
+     ],
+     [
+      "You adore her, what-ically?",
+      "Theoretically",
+      "Basically",
+      "Actually"
+     ],
+     [
+      "She's got to shut the what on you?",
+      "Door",
+      "Phone",
+      "Book"
+     ],
+     [
+      "So she can find out who was what for her?",
+      "Next",
+      "Right",
+      "Meant"
+     ],
+     [
+      "You and me and everyone we what?",
+      "Know",
+      "Love",
+      "Meet"
+     ],
+     [
+      "You won't find what you're looking for — stay what?",
+      "Searching",
+      "Strong",
+      "Ready"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Kill Screen",
+   "id": "QzK-fn9NaCE",
+   "start": 88,
+   "cuts": [
+    126.9,
+    163.3,
+    205
+   ],
+   "qs": [
+    [
+     [
+      "Praise the what?",
+      "Rock",
+      "Lord",
+      "Sun"
+     ],
+     [
+      "She ain't a savior, just your what?",
+      "Neighbor",
+      "Friend",
+      "Sister"
+     ],
+     [
+      "Like amazing who?",
+      "Peter",
+      "Bruce",
+      "Clark"
+     ],
+     [
+      "Hers is the spider what?",
+      "Bite",
+      "Web",
+      "Sense"
+     ],
+     [
+      "The webs are Aunt and what?",
+      "Uncle",
+      "Mother",
+      "Cousin"
+     ],
+     [
+      "What kind of season?",
+      "Humble",
+      "Hunting",
+      "Open"
+     ],
+     [
+      "Turn around and walk how many paces?",
+      "Four",
+      "Ten",
+      "Three"
+     ],
+     [
+      "She walks for how many?",
+      "Five",
+      "Six",
+      "Two"
+     ],
+     [
+      "86 in all what?",
+      "Cases",
+      "Places",
+      "Spaces"
+     ],
+     [
+      "She's the figure what sideways?",
+      "Eight",
+      "Four",
+      "Six"
+     ],
+     [
+      "Always what?",
+      "Ageless",
+      "Famous",
+      "Faithful"
+     ]
+    ],
+    [
+     [
+      "Y'all in the club what?",
+      "Aimless",
+      "Faceless",
+      "Nameless"
+     ],
+     [
+      "Record around on what?",
+      "Spaceships",
+      "Spinners",
+      "Rooftops"
+     ],
+     [
+      "She's the modern what?",
+      "Anomaly",
+      "Legend",
+      "Classic"
+     ],
+     [
+      "She represents the what?",
+      "Basement",
+      "Borough",
+      "Block"
+     ],
+     [
+      "Raised up what?",
+      "Cageless",
+      "Fearless",
+      "Homeless"
+     ],
+     [
+      "Boundaries? She got what?",
+      "None",
+      "Some",
+      "Plenty"
+     ],
+     [
+      "She's not an 80s what?",
+      "Baby",
+      "Child",
+      "Kid"
+     ],
+     [
+      "She was the type of what city?",
+      "New York",
+      "Chicago",
+      "Philly"
+     ],
+     [
+      "Even though who was careful?",
+      "Mama",
+      "Papa",
+      "Grandma"
+     ],
+     [
+      "Finding the light in the what?",
+      "Dark",
+      "Tunnel",
+      "Night"
+     ],
+     [
+      "Just life in the mirror what?",
+      "Reflection",
+      "Image",
+      "Glass"
+     ]
+    ],
+    [
+     [
+      "In the end we are who we what?",
+      "Are",
+      "Were",
+      "Want"
+     ],
+     [
+      "She's Bond and a what?",
+      "Villain",
+      "Hero",
+      "Spy"
+     ],
+     [
+      "Dress mismatch like what soldiers?",
+      "Confederate",
+      "Toy",
+      "Union"
+     ],
+     [
+      "Level is over, going for the what?",
+      "Kill screen",
+      "High score",
+      "Bonus"
+     ],
+     [
+      "A fist full of what?",
+      "Quarters",
+      "Tokens",
+      "Dollars"
+     ],
+     [
+      "Billy Mitchell, she's a what?",
+      "Fiend",
+      "Champ",
+      "Gamer"
+     ],
+     [
+      "Jumping what?",
+      "Barrels",
+      "Hurdles",
+      "Fences"
+     ],
+     [
+      "She was a pre-teen what?",
+      "Prodigy",
+      "Genius",
+      "Rapper"
+     ],
+     [
+      "A plethora of what?",
+      "Knowledge",
+      "Rhymes",
+      "Money"
+     ],
+     [
+      "She'll never respect a comment from a what?",
+      "Novice",
+      "Hater",
+      "Stranger"
+     ],
+     [
+      "She'll never be just a common what?",
+      "Denominator",
+      "Rapper",
+      "Girl"
+     ],
+     [
+      "The Phoenix from the what?",
+      "Fire",
+      "Ashes",
+      "Sky"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
