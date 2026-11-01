@@ -29,6 +29,7 @@
     join: function (kind, name, door) { return auth().then(function () { return firebase.firestore().collection("members").doc(uid()).set({ kind: kind, name: String(name).slice(0, 40), door: String(door || "").slice(0, 60), approved: false, t: now() }); }); },
     members: function (kind) { return db().then(function (d) { return d.collection("members").where("approved", "==", true).where("kind", "==", kind).limit(500).get(); }).then(rows); },
     pending: function () { return db().then(function (d) { return d.collection("members").where("approved", "==", false).limit(100).get(); }).then(rows); },
+    claims: function () { return db().then(function (d) { return d.collection("claims").orderBy("t", "desc").limit(100).get(); }).then(rows); },
     approve: function (id, yes) { return db().then(function (d) { return d.collection("members").doc(id).update({ approved: !!yes }); }); },
     request: function (to) { var me = uid(); return db().then(function (d) { return d.collection("requests").doc(me + "_" + to).set({ from: me, to: to, status: "pending", t: now() }); }); },
     incoming: function () { return db().then(function (d) { return d.collection("requests").where("to", "==", uid()).where("status", "==", "pending").get(); }).then(rows); },

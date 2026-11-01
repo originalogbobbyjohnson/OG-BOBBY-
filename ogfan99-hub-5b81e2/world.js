@@ -138,13 +138,37 @@
       '<button class="wbtn" id="lgClaim" type="button">ARE YOU AN ARTIST? CLAIM YOUR DOOR</button>' +
       '<button class="wbtn dark" id="lgIn" type="button">ALREADY APPROVED? SIGN IN</button>' +
       '<div class="wmsg" id="lgMsg"></div>' +
-      (owner() ? '<div class="wbox"><h4>OWNER PREVIEW</h4><p>See the Lounge the way an approved artist will, signed in as you. Sample artists stand in until real artists join.</p><button class="wbtn gold" id="lgPrev" type="button">PREVIEW THE LOUNGE AS OG BOBBY</button></div>' : "");
+      (owner() ? '<div class="wbox"><h4>OWNER PREVIEW</h4><p>See the Lounge the way an approved artist will, signed in as you. Sample artists stand in until real artists join.</p><button class="wbtn gold" id="lgPrev" type="button">PREVIEW THE LOUNGE AS OG BOBBY</button></div>' + '<div class="wbox"><h4>DOOR CLAIMS + APPROVALS</h4><p>Artists who claim their door land here. Approve the real ones to let them into the Lounge.</p><button class="wbtn dark" id="lgAdm" type="button">OPEN APPROVALS</button></div>' : "");
     $("lgClaim").onclick = pickDoor;
     $("lgIn").onclick = function () {
       if (live()) { OGFB.social.signIn().then(function () { drawLounge(); }).catch(function () { $("lgMsg").textContent = "Sign-in didn't go through. Try again."; }); return; }
       $("lgMsg").textContent = "Sign-in opens when the Lounge goes live.";
     };
     if ($("lgPrev")) $("lgPrev").onclick = function () { L.preview = true; drawLounge(); };
+    if ($("lgAdm")) $("lgAdm").onclick = drawApprovals;
+  }
+
+  /* owner only: door claims and Lounge sign-ups waiting for OG Bobby's OK (the database rules only let his Google account do this) */
+  function drawApprovals() {
+    var p = panes.lounge;
+    p.innerHTML = '<div class="wp-h"><div class="t">APPROVALS</div><div class="s">ONLY REAL ARTISTS GET IN</div></div><div id="apBody" style="display:grid;gap:8px"></div><button class="wbtn dark" id="apBack" type="button">BACK</button>';
+    $("apBack").onclick = drawLounge;
+    var body = $("apBody");
+    if (!live()) { body.innerHTML = '<div class="tape"><span class="uc">OPENS WITH THE LOUNGE</span><h4>HOW IT WILL WORK</h4><p>1. An artist taps CLAIM YOUR DOOR and sends their name, Instagram and email.<br>2. Their claim shows up right here.<br>3. You check their Instagram, then tap APPROVE. They can sign in and start adding OG 99 friends.</p></div>'; return; }
+    body.innerHTML = '<p class="wmsg">Loading...</p>';
+    OGFB.social.me().then(function (m) {
+      if (!m) { body.innerHTML = '<button class="wbtn gold" id="apIn" type="button">SIGN IN AS OG BOBBY</button>'; $("apIn").onclick = function () { OGFB.social.signIn().then(drawApprovals); }; return; }
+      return Promise.all([OGFB.social.claims().catch(function () { return null; }), OGFB.social.pending().catch(function () { return null; })]).then(function (r) {
+        var cl = r[0], pe = r[1];
+        if (cl === null && pe === null) { body.innerHTML = '<p class="wmsg">This Google account can\'t open approvals. Sign in with your own.</p>'; return; }
+        var h = '<h4 style="margin:0;font-family:var(--display);letter-spacing:.1em">DOOR CLAIMS (' + (cl || []).length + ')</h4>';
+        h += (cl || []).map(function (c) { return '<div class="wbox"><p><b>' + esc(c.artist) + '</b> · ' + esc(c.role) + '</p><p>' + esc(c.name) + ' · ' + esc(c.ig) + '<br>' + esc(c.email) + (c.phone ? ' · ' + esc(c.phone) : '') + '</p>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>'; }).join("") || '<p class="wmsg">No claims yet.</p>';
+        h += '<h4 style="margin:6px 0 0;font-family:var(--display);letter-spacing:.1em">WAITING TO GET IN (' + (pe || []).length + ')</h4>';
+        h += (pe || []).map(function (m2) { return row({ who: m2.name, hood: m2.door }, '<button class="wbtn sm gold" type="button" data-ok="' + esc(m2.id) + '">APPROVE</button>'); }).join("") || '<p class="wmsg">Nobody waiting.</p>';
+        body.innerHTML = h;
+        body.onclick = function (e) { var b2 = e.target.closest("[data-ok]"); if (!b2) return; b2.disabled = true; OGFB.social.approve(b2.dataset.ok, true).then(drawApprovals); };
+      });
+    }).catch(function () { body.innerHTML = '<p class="wmsg">Couldn\'t load approvals. Try again.</p>'; });
   }
 
   function pickDoor() {
