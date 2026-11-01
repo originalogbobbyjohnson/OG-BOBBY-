@@ -55,5 +55,29 @@
   };
   document.addEventListener("visibilitychange", function () { if (document.hidden) hush(); });
   window.addEventListener("pagehide", hush);
+
+  /* the bottom pager: arrows and the BOARD / PLAY / SONGS / ... tabs are one connected bar, and each arrow says where it goes */
+  var pager = function () {
+    var pv = document.getElementById("prev"), nx = document.getElementById("next"), tb = document.getElementById("tabs");
+    if (!pv || !nx || !tb || document.getElementById("ogPagerCss")) return;
+    var st = document.createElement("style"); st.id = "ogPagerCss";
+    st.textContent = ".pager{grid-template-columns:auto 1fr auto!important;align-items:stretch!important;background:#0d0f1a;border:2px solid var(--red,#d62828);border-radius:14px;overflow:hidden;padding:0!important;gap:0!important}" +
+      ".pager .arrow{width:auto!important;min-width:62px;height:auto!important;border:0!important;border-radius:0!important;background:var(--red,#d62828)!important;color:#fff!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:5px 8px!important;font:800 9px/1.1 Helvetica,Arial,sans-serif!important;letter-spacing:.08em;cursor:pointer}" +
+      ".pager .arrow b{font:400 22px/1 var(--display,Impact),sans-serif;letter-spacing:0}" +
+      ".pager .arrow:disabled{opacity:1!important;background:#1d1f2e!important;color:#3a3f55!important}" +
+      ".pager .tabs{align-items:center;gap:2px!important;padding:5px 4px}" +
+      ".pager .tab{border-radius:9px;padding:7px 7px!important;border-bottom:0!important;color:#fff}" +
+      ".pager .tab.on{background:#fff;color:#000}";
+    document.head.appendChild(st);
+    var names = function () { return Array.prototype.map.call(tb.querySelectorAll(".tab"), function (t) { return t.textContent.trim(); }); };
+    var paint = function () { var n = names(), tabs = tb.querySelectorAll(".tab"), i = 0;
+      Array.prototype.forEach.call(tabs, function (t, k) { if (t.classList.contains("on")) i = k; });
+      pv.innerHTML = "<b>&#8249;</b>" + (i > 0 ? n[i - 1] : "");
+      nx.innerHTML = "<b>&#8250;</b>" + (i < n.length - 1 ? n[i + 1] : "");
+      pv.setAttribute("aria-label", i > 0 ? "Back to " + n[i - 1] : "Previous screen"); nx.setAttribute("aria-label", i < n.length - 1 ? "On to " + n[i + 1] : "Next screen"); };
+    new MutationObserver(paint).observe(tb, { subtree: true, attributes: true, attributeFilter: ["class"] });
+    paint();
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", pager); else pager();
   try { if (!document.getElementById("nycSidesJs")) { var ns = document.createElement("script"); ns.id = "nycSidesJs"; ns.src = "/brand/nycsides.js?v=1"; document.head.appendChild(ns); } } catch (e) {}
 })();
