@@ -89,8 +89,8 @@
   /* trophy rank names: shrink any long word until it fits its own spot on the shelf, so names never run into each other */
   var fitShelf = function () { var sh = document.getElementById("shelf"); if (!sh) return;
     var fit = function () { Array.prototype.forEach.call(sh.querySelectorAll(".trophy"), function (t) { var s = t.querySelector("span"); if (!s) return;
-      s.style.fontSize = ""; s.style.width = "auto"; s.style.maxWidth = "100%"; var w = t.clientWidth, fs = parseFloat(getComputedStyle(s).fontSize), n = 0;
-      while (s.scrollWidth > w + 1 && fs > 6 && n++ < 30) { fs -= 0.5; s.style.fontSize = fs + "px"; } }); };
+      s.style.removeProperty("font-size"); s.style.width = "auto"; s.style.maxWidth = "100%"; var w = t.clientWidth, fs = parseFloat(getComputedStyle(s).fontSize), n = 0;
+      while (s.scrollWidth > w + 1 && fs > 6 && n++ < 30) { fs -= 0.5; s.style.setProperty("font-size", fs + "px", "important"); } }); };
     new MutationObserver(function () { setTimeout(fit, 30); }).observe(sh, { childList: true });
     addEventListener("resize", fit); fit(); };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fitShelf); else fitShelf();
