@@ -173,7 +173,8 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .find .fbtns button { border: 2px solid #000; border-radius: 12px; padding: 10px 6px; font-weight: 800; letter-spacing: .06em; font-size: .78rem; box-shadow: 0 3px 0 #000; cursor: pointer; }
 .find .fb-me { background: var(--red); color: #fff; } .find .fb-addr { background: #fff; color: #000; }
 .find .fmsg { color: var(--gold); font-weight: 700; font-size: .85rem; min-height: 1em; }
-.find ul { list-style: none; margin: 0; padding: 0; overflow-y: auto; display: grid; gap: 6px; }
+.find .fmsg { flex: none; line-height: 1.3; }
+.find ul { list-style: none; margin: 0; padding: 0; overflow-y: auto; min-height: 0; flex: 1 1 auto; display: grid; gap: 6px; }
 .find li button { width: 100%; display: grid; grid-template-columns: 14px 1fr auto; gap: 10px; align-items: center; text-align: left; background: #161a2e; border: 1.5px solid #2a2f55; border-radius: 10px; padding: 9px 11px; color: #fff; cursor: pointer; }
 .find li .dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #000; }
 .find li b { display: block; font-size: 1rem; } .find li small { color: #fff; opacity: .85; font-size: .78rem; }
@@ -326,18 +327,33 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .rboard .rn input { font-size: 16px; padding: 9px 11px; border-radius: 10px; border: 2px solid #2a2f55; background: #0d0f1c; color: #fff; min-width: 0; }
 .rboard .rn button { border: 2px solid #000; border-radius: 10px; background: #f2c14e; color: #000; font: 900 12px Helvetica, Arial, sans-serif; padding: 0 12px; cursor: pointer; }
 .rboard p { margin: 0; font-size: 12px; }
+
+/* ---------- fan perks: one LED ticker line, tap for the full list ---------- */
+.perkbar { flex: none; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 0; height: 28px; padding: 0; border: 2px solid #000; border-radius: 8px; background: #000; overflow: hidden; cursor: pointer; box-shadow: 0 0 0 1.5px #f2c14e, 0 0 12px rgba(242,193,78,.35); }
+.perkbar .pk-tag { height: 100%; display: flex; align-items: center; padding: 0 9px; background: #f2c14e; color: #000; font: 900 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; white-space: nowrap; }
+.perkbar .pk-run { overflow: hidden; white-space: nowrap; position: relative; height: 100%; display: flex; align-items: center; }
+.perkbar #pkRun { display: inline-block; padding-left: 100%; font: 700 12px/1 "Courier New", monospace; letter-spacing: .06em; color: #ff8a1f; text-shadow: 0 0 6px rgba(255,138,31,.8); animation: pkscroll 38s linear infinite; }
+@keyframes pkscroll { to { transform: translateX(-100%); } }
+.perks { display: grid; gap: 8px; text-align: left; }
+.perks .pk { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: center; padding: 9px 10px; border-radius: 10px; background: #10132a; border: 1.5px solid #2a2f55; }
+.perks .pk i { font-style: normal; font-size: 24px; text-align: center; }
+.perks .pk b { display: block; font: 800 14px/1.2 Helvetica, Arial, sans-serif; color: #fff; } .perks .pk small { font: 500 12px/1.3 Helvetica, Arial, sans-serif; color: #fff; opacity: .85; }
+.perks h5 { margin: 6px 0 0; font: 900 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .14em; color: #f2c14e; }
+.perks .how { font: 600 13px/1.4 Helvetica, Arial, sans-serif; color: #fff; }
+.perks .fine { font: 500 11px/1.35 Helvetica, Arial, sans-serif; color: #fff; opacity: .75; }
+.soonlbl { text-align: center; font: 900 15px/1 Helvetica, Arial, sans-serif; letter-spacing: .14em; color: #f2c14e; padding: 6px 0 2px; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <meta name="copyright" content="© 2026 OG Bobby · OG FAN 99. All rights reserved.">
-<script src="/brand/guard.js?v=10"></script>
+<script src="/brand/guard.js?v=11"></script>
 <script src="/brand/ogfb.js?v=1"></script>
 </head>
 <body>
 <div class="start" id="start" role="button" tabindex="0" aria-label="Tap to start">
   <div class="st-door l"><i></i><b></b></div><div class="st-door r"><i></i><b></b></div>
   <div class="st-in">
-    <div class="st-sign"><span>NOW BOARDING</span><span>5 BOROUGHS</span></div>
+    <div class="st-sign"><span>NOW BOARDING</span><span>NYC + METRO</span></div>
     <div class="st-logo">OG FAN <b>99</b></div>
     <p class="st-sub">NEW YORK'S INDEPENDENT ARTISTS</p>
     <div class="st-buls" id="stBuls"></div>
@@ -347,6 +363,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 </div>
 <main class="wrap app">
   <header class="appbar"><div class="og">OG FAN <b>99</b></div><span class="demo">PRIVATE PREVIEW</span></header>
+  <button class="perkbar" id="perkBar" type="button" aria-label="Fan perks"><span class="pk-tag">&#127873; PLAY TO WIN</span><span class="pk-run"><span id="pkRun"></span></span></button>
   <div class="metrorow"><button class="metro" id="metro" type="button"></button><button class="today" id="today" type="button"></button></div>
 
   <div class="mapbox" id="mapbox"><div class="map" id="map" aria-label="Subway map of the artists"></div><button class="keybtn" id="keyBtn" type="button">SUBWAY KEY</button></div>
@@ -409,7 +426,7 @@ const ARTISTS = [
     url: "../lloydbanks-ogfan99-5155da/", status: "demo", line: "The Punchline King. Hunger for more.", save: "ogfan99lloydbanks1", lat: 40.7022, lng: -73.8011 },
   { who: "Action Bronson", hood: "Flushing", boro: "Queens", stop: "Flushing–Main St", trains: [["7", "#b933ad"]], color: "#ffd23f",
     url: "../actionbronson-ogfan99-c76eba/", status: "demo", line: "Bam Bam. Chef turned MC. Baklava for everybody.", save: "ogfan99actionbronson1", lat: 40.7596, lng: -73.8301 },
-  { who: "Nas", hood: "Queensbridge", boro: "Queens", stop: "Queensboro Plaza", trains: [["7", "#b933ad"], ["N", "#fccc0a", 1], ["W", "#fccc0a", 1]], color: "#e8c766",
+  { who: "Nas", hood: "Queensbridge", boro: "Queens", stop: "21 St–Queensbridge", trains: [["F", "#ff6319"]], color: "#e8c766",
     url: "../nas-ogfan99-4adcd7/", status: "demo", line: "Illmatic. QB's finest. The world is yours.", save: "ogfan99nas1", lat: 40.7509, lng: -73.9402 },
   { who: "Havoc", hood: "Queensbridge", boro: "Queens", stop: "Queens Plaza", trains: [["E", "#0039a6"], ["M", "#ff6319"], ["R", "#fccc0a", 1]], color: "#f2efe6",
     url: "../havoc-ogfan99-4bb61f/", status: "demo", line: "Half of Mobb Deep. The producer behind the QB sound.", save: "ogfan99havoc1", lat: 40.7489, lng: -73.9373 },
@@ -1017,7 +1034,8 @@ function drawList() {
   $("legend").innerHTML = '<span><i style="background:var(--green)"></i>LIVE</span>' + (isOwner() ? '<span><i style="background:#e8b84a"></i>READY · GAME BUILT</span>' : '') + '<span><i style="background:#d62828"></i>' + (isOwner() ? "VAULT · BEING BUILT" : "COMING SOON") + '</span>';
   const count = b => ARTISTS.filter(a => boroOf(a) === b).length;
   $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '<small>' + (count(b) ? count(b) + (count(b) > 1 ? " ARTISTS" : " ARTIST") : "SOON") + '</small></button>').join("");
-  $("boros").querySelectorAll(".boro").forEach(t => t.onclick = () => { boroTab = t.dataset.b; try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); try { $("listwrap").scrollTop = 0; } catch (e) {} });
+  $("boros").querySelectorAll(".boro").forEach(t => t.onclick = () => { boroTab = t.dataset.b;
+    try { const pts = ARTISTS.filter(a => boroOf(a) === t.dataset.b && a.lat != null).map(a => [a.lat, a.lng]); if (window.__map && pts.length) window.__map.flyToBounds(pts, { padding: [30, 30], maxZoom: 13, duration: .7 }); } catch (e) {} try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); try { $("listwrap").scrollTop = 0; } catch (e) {} });
   $("tally").innerHTML = '<div class="all">' + ARTISTS.length + ' ARTISTS ON THE LINE</div>' + BOROS.map(b => '<div class="tb" role="button" tabindex="0" data-b="' + b + '"><b>' + count(b) + '</b>' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '</div>').join("");
   $("tally").querySelectorAll(".tb").forEach(t => t.onclick = () => { moreOpen(false); boroTab = t.dataset.b; try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); try { $("listwrap").scrollTop = 0; } catch (e) {}
     const tab = $("boros").querySelector('[data-b="' + boroTab + '"]'); if (tab && tab.scrollIntoView) tab.scrollIntoView({ inline: "center", block: "nearest" }); });
@@ -1060,7 +1078,7 @@ function openCard(i) {
     '<p>' + esc(a.hood) + (a.hood.includes(", ") ? "" : ", " + boroOf(a)) + ' · 99 questions</p>' +
     '<p>' + esc(a.line) + '</p>' +
     (p && p.stops ? '<p class="prog">Your progress: ' + p.stops + ' of 18 stops · ' + p.cleared + ' of 9 episodes</p>' : '') +
-    (a.ex === 2 && !EXPL() && (a.status === "live" || (a.status === "demo" && isOwner())) ? '<p class="exnote">This game uses explicit lyrics (18+).</p><button class="go" id="exGo" type="button" style="width:100%;border:0">TURN ON EXPLICIT TO PLAY</button>' : a.status === "vault" && isOwner() ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">GAME BEING BUILT</div>' : (a.status === "vault" || a.status === "demo") && !isOwner() ? '<p class="vnote">' + esc(a.who) + '\'s game is coming soon to OG FAN 99.</p><div class="go locked">COMING SOON</div><button class="claimbtn" id="claimGo" type="button">ARE YOU ' + esc(a.who.toUpperCase()) + '? CLAIM YOUR DOOR</button>' : a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
+    (a.ex === 2 && !EXPL() && (a.status === "live" || (a.status === "demo" && isOwner())) ? '<p class="exnote">This game uses explicit lyrics (18+).</p><button class="go" id="exGo" type="button" style="width:100%;border:0">TURN ON EXPLICIT TO PLAY</button>' : a.status === "vault" && isOwner() ? '<p class="vnote">Locked in the OG FAN 99 Vault.</p><div class="go locked">GAME BEING BUILT</div>' : (a.status === "vault" || a.status === "demo") && !isOwner() ? '<p class="vnote">' + esc(a.who) + '\'s game is coming soon to OG FAN 99.</p><div class="soonlbl">&#128337; COMING SOON</div><button class="claimbtn" id="claimGo" type="button">ARE YOU ' + esc(a.who.toUpperCase()) + '? CLAIM YOUR DOOR</button>' : a.url ? '<a class="go" href="' + a.url + '?from=ogfan99">' + (p && p.stops ? "KEEP PLAYING" : "PLAY " + esc(a.who.toUpperCase())) + '</a>' : '<div class="go" style="background:#2c3050">COMING SOON</div>');
   $("card").hidden = false; $("scrim").hidden = false;
   $("cx").onclick = closeCard;
   if ($("claimGo")) $("claimGo").onclick = () => openClaim(i);
@@ -1176,13 +1194,14 @@ function findSearch() {
   const q = $("fq").value.trim().toLowerCase();
   let list = ARTISTS.map((a, i) => [a, i, findFrom && a.lat != null ? miles(findFrom[0], findFrom[1], a.lat, a.lng) : null]);
   if (q && !findFrom) list = list.filter(([a]) => [a.who, a.hood, a.stop, boroOf(a)].join(" ").toLowerCase().includes(q));
-  if (findFrom) list.sort((x, y) => x[2] - y[2]); else list.sort((x, y) => x[0].who.localeCompare(y[0].who));
+  const sc = a => { const w = a.who.toLowerCase(); return !q ? 0 : w === q ? 0 : w.startsWith(q) ? 1 : w.split(/\s+/).some(x => x.startsWith(q)) ? 2 : 3; };
+  if (findFrom) list.sort((x, y) => x[2] - y[2]); else list.sort((x, y) => sc(x[0]) - sc(y[0]) || x[0].who.localeCompare(y[0].who));
   $("fmsg").textContent = findFrom ? "CLOSEST ARTISTS TO " + findFrom[2] : q ? list.length + " FOUND" : ARTISTS.length + " ARTISTS · TYPE TO SEARCH";
   findRows(list);
 }
 function openFind() {
   $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="find"><h4>FIND AN ARTIST</h4>' +
-    '<input id="fq" type="search" placeholder="Name, neighborhood, borough or train stop" autocomplete="off">' +
+    '<input id="fq" type="search" placeholder="Artist, hood, borough or stop" autocomplete="off">' +
     '<div class="fbtns"><button class="fb-me" id="fMe" type="button">&#128205; USE WHERE I AM</button><button class="fb-addr" id="fAddr" type="button">&#127968; SEARCH THIS ADDRESS</button></div>' +
     '<div class="fmsg" id="fmsg"></div><ul id="fList"></ul></div>';
   $("card").classList.add("findcard"); $("card").hidden = false; $("scrim").hidden = false; $("cx").onclick = closeFind;
@@ -1195,7 +1214,7 @@ function openFind() {
       try { const r = await fetch("https://nominatim.openstreetmap.org/reverse?format=json&zoom=18&lat=" + la + "&lon=" + lo).then(x => x.json()), ad = r.address || {};
         const line = [[ad.house_number, ad.road].filter(Boolean).join(" "), ad.neighbourhood || ad.suburb || ad.city_district || ad.city || ad.town, ad.postcode].filter(Boolean).join(", ");
         if (line) { $("fq").value = line; window.__fqAuto = line; findFrom[2] = line.toUpperCase().slice(0, 40); findSearch(); } } catch (e) {} },
-      () => { $("fmsg").textContent = "LOCATION WAS BLOCKED. TYPE AN ADDRESS OR ZIP, THEN TAP NEAR AN ADDRESS."; }, { timeout: 12000 }); };
+      () => { $("fmsg").textContent = "LOCATION WAS BLOCKED. TYPE AN ADDRESS OR ZIP, THEN TAP SEARCH THIS ADDRESS."; }, { timeout: 12000 }); };
   $("fAddr").onclick = async () => { const q = $("fq").value.trim();
     /* an address that was filled in for you (or already searched) gets cleared so you can type a new one right away */
     if (!q || q === window.__fqAuto) { $("fq").value = ""; window.__fqAuto = null; $("fmsg").textContent = "TYPE AN ADDRESS OR ZIP CODE, THEN TAP SEARCH THIS ADDRESS."; $("fq").focus(); return; }
@@ -1210,7 +1229,7 @@ function closeFind() { $("card").classList.remove("findcard"); closeCard(); }
 /* tap an artist's name or dot on the map: straight into their game when it's open to you, otherwise their station card */
 const EXPL = () => { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } };
 const exBadge = a => a.ex ? '<span class="ebadge" title="Explicit version">E</span>' : '';
-function paintEx() { const b = $("exBtn"); if (!b) return; b.classList.toggle("on", EXPL()); b.innerHTML = "<b>E</b>" + (EXPL() ? "EXPLICIT ON" : "EXPLICIT") + "<small>" + (EXPL() ? "TAP TO TURN OFF" : "18+") + "</small>"; }
+function paintEx() { const b = $("exBtn"); if (!b) return; b.classList.toggle("on", EXPL()); b.innerHTML = "<b>E</b>" + (EXPL() ? "ON" : "EXPLICIT") + "<small>" + (EXPL() ? "18+ · TAP OFF" : "18+") + "</small>"; }
 function askExplicit(then) {
   if (EXPL()) { try { localStorage.removeItem("ogfan99explicit"); } catch (e) {} paintEx(); drawList(); if (then) then(); return; }
   $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="who" style="color:#f2c14e">EXPLICIT LYRICS</div>' +
@@ -1408,7 +1427,7 @@ window.OGX = (function () {
 (function () {
   const RANKS = [[0, "NEW RIDER"], [10, "STRAPHANGER"], [40, "LOCAL RIDER"], [100, "EXPRESS RIDER"], [250, "CONDUCTOR"], [500, "MOTORMAN"], [1000, "KING OF THE LINE"]];
   const today = () => { const d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); };
-  const playable = a => a.url && (a.status === "live" || (a.status === "demo" && isOwner())) && !(a.ex === 2 && !EXPL());
+  const playable = a => a.url && (a.status === "live" || (a.status === "demo" && isOwner())) && a.ex !== 2;
   const LS = (k, v) => { try { if (v === undefined) return JSON.parse(localStorage.getItem(k) || "null"); localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } };
   function todayIdx() {
     const list = ARTISTS.map((a, i) => i).filter(i => playable(ARTISTS[i])); if (!list.length) return -1;
@@ -1497,6 +1516,32 @@ window.OGX = (function () {
   addEventListener("resize", () => requestAnimationFrame(layout));
   layout();
 })();
+
+/* ---------- FAN PERKS: what playing can win you (offered by the artists who join; varies by artist) ---------- */
+(function () {
+  const P = [["&#127908;", "Shoutouts from the artist", "A personal shoutout in a Story, a video or on stage."],
+    ["&#127915;", "Show tickets &amp; guest list", "Tickets, guest-list spots and meet &amp; greets at local shows."],
+    ["&#128191;", "Unreleased music first", "Hear new songs, snippets and Director's Cuts before anyone else."],
+    ["&#128085;", "Signed merch &amp; giveaways", "Signed vinyl, posters, tees and limited drops."],
+    ["&#127916;", "Be in a music video", "Extras spots and cameos in upcoming videos."],
+    ["&#127911;", "Studio &amp; listening sessions", "Private listening parties and studio visits."],
+    ["&#128176;", "Merch &amp; ticket discounts", "Fan-only discount codes for the top riders."],
+    ["&#128222;", "Video calls &amp; Q&amp;As", "Live Q&amp;As and one-on-one calls with the artist."],
+    ["&#127874;", "Birthday shoutouts", "A birthday video for OG Certified fans."],
+    ["&#128220;", "Your name in the credits", "Thank-you credits on releases for the realest fans."],
+    ["&#127941;", "OG Certified status", "Your rider name on the artist's wall of fans."]];
+  $("pkRun").textContent = P.map(p => p[1].replace(/&amp;/g, "&").toUpperCase()).join("   ★   ") + "   ★   ";
+  $("perkBar").onclick = () => {
+    $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="who" style="color:#f2c14e">PLAY TO WIN</div><div class="perks">' +
+      '<p class="how">The more you ride, the more you can win. Top riders, OG Certified fans and anyone who clears the 99 Challenge get first shot at artist perks like these:</p>' +
+      P.map(p => '<div class="pk"><i>' + p[0] + '</i><span><b>' + p[1] + '</b><small>' + p[2] + '</small></span></div>').join("") +
+      '<h5>HOW TO EARN THEM</h5><p class="how">&#9654; Clear episodes and rank up on your MetroCard<br>&#9654; Beat the 99 Challenge to go OG Certified<br>&#9654; Climb the Riders Board<br>&#9654; Keep your ride streak alive</p>' +
+      '<p class="fine">Perks are offered by the artists on OG FAN 99 and vary by artist. Not every artist offers every perk.</p>' +
+      '<a class="go" id="pkGo" href="#" style="display:block;text-align:center">START PLAYING</a></div>';
+    $("card").hidden = false; $("scrim").hidden = false; $("cx").onclick = closeCard;
+    $("pkGo").onclick = e => { e.preventDefault(); closeCard(); const i = ARTISTS.findIndex(a => a.status === "live"); if (i >= 0) goArtist(i); };
+  };
+})();
 /* start screen: every line's bullet hops, tap and the doors open */
 (function () {
   const seen = {}, b = [];
@@ -1506,7 +1551,7 @@ window.OGX = (function () {
     const st = $("start"); if (st.classList.contains("open")) return;
     try { const ac = new (window.AudioContext || window.webkitAudioContext)(); [[659, 0], [523, .32]].forEach(([f, d]) => { const o = ac.createOscillator(), g = ac.createGain(); o.frequency.value = f; o.type = "sine"; g.gain.setValueAtTime(.0001, ac.currentTime + d); g.gain.exponentialRampToValueAtTime(.25, ac.currentTime + d + .02); g.gain.exponentialRampToValueAtTime(.0001, ac.currentTime + d + .6); o.connect(g).connect(ac.destination); o.start(ac.currentTime + d); o.stop(ac.currentTime + d + .65); }); } catch (e) {}
     st.classList.add("ann"); const sa = document.createElement("div"); sa.className = "st-ann"; sa.innerHTML = "<span>STAND CLEAR OF THE</span><span>CLOSING DOORS, PLEASE</span>"; st.appendChild(sa);
-    setTimeout(() => { st.classList.add("open"); setTimeout(() => st.remove(), 800); }, 1350);
+    setTimeout(() => { st.classList.add("open"); setTimeout(() => { st.remove(); try { const m = window.__map; m.invalidateSize(); m.fitBounds(ARTISTS.filter(a => a.lat != null).map(a => [a.lat, a.lng]), { padding: [24, 24] }); } catch (e) {} }, 800); }, 1350);
   };
   $("start").addEventListener("click", go);
   $("start").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(); });
