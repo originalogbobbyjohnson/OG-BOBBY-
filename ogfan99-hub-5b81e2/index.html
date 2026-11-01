@@ -926,17 +926,18 @@ function drawList() {
   $("bname").innerHTML = esc(boroTab.replace("the ", "").toUpperCase()) + ' · <span>' + nb + (nb === 1 ? " ARTIST" : " ARTISTS") + '</span>';
   $("sorts").innerHTML = [["az", "A–Z"], ["games", "READY GAMES"], ["line", "BY LINE"]].concat(isOwner() ? [["top", "TIER &#9660; TOP FIRST"], ["low", "TIER &#9650; LOW FIRST"]] : []).map(([k, t]) => k === "top" || k === "low" ? '<button type="button" data-t="' + k + '" aria-pressed="' + (k === tierDir) + '">' + t + '</button>' : '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
   $("sorts").innerHTML += '<span class="vsep"></span>' + [["tiles", "&#9638; TILES"], ["simple", "&#9776; LIST"]].map(([k, t]) => '<button type="button" class="vbtn" data-v="' + k + '" aria-pressed="' + (k === listView) + '">' + t + '</button>').join("");
-  $("sorts").querySelectorAll("button[data-s]").forEach(b => b.onclick = () => { sortBy = b.dataset.s; if (sortBy === "line") tierDir = ""; try { localStorage.setItem("ogfan99sort", sortBy); localStorage.setItem("ogfan99tier", tierDir); } catch (e) {} drawList(); });
-  $("sorts").querySelectorAll("button[data-t]").forEach(b => b.onclick = () => { tierDir = tierDir === b.dataset.t ? "" : b.dataset.t; if (tierDir && sortBy === "line") sortBy = "az"; try { localStorage.setItem("ogfan99tier", tierDir); localStorage.setItem("ogfan99sort", sortBy); } catch (e) {} drawList(); });
+  $("sorts").querySelectorAll("button[data-s]").forEach(b => b.onclick = () => { sortBy = b.dataset.s; try { localStorage.setItem("ogfan99sort", sortBy); localStorage.setItem("ogfan99tier", tierDir); } catch (e) {} drawList(); });
+  $("sorts").querySelectorAll("button[data-t]").forEach(b => b.onclick = () => { tierDir = tierDir === b.dataset.t ? "" : b.dataset.t; try { localStorage.setItem("ogfan99tier", tierDir); localStorage.setItem("ogfan99sort", sortBy); } catch (e) {} drawList(); });
   $("sorts").querySelectorAll("button[data-v]").forEach(b => b.onclick = () => { listView = b.dataset.v; try { localStorage.setItem("ogfan99view", listView); } catch (e) {} drawList(); });
   const rank = a => a.status === "live" ? 0 : a.status === "demo" ? 1 : 2, nm = a => a.who.replace(/^(the|a\$ap) /i, "").toLowerCase();
   const TO = { mainstream: 0, legend: 1, indie: 2 }, tierCmp = (a, b) => !tierDir || !isOwner() ? 0 : (TO[tierOf(a)] - TO[tierOf(b)]) * (tierDir === "low" ? -1 : 1);
   const LORDER = "1234567ACEBDFMGJZLNQRWS";
+  const lineKey0 = a => { const k = LORDER.indexOf((a.trains[0] || ["~"])[0]); return k < 0 ? 99 : k; };
   const lineKey = a => { const t = (a.trains[0] || ["~"])[0]; const k = LORDER.indexOf(t); return (k < 0 ? 99 : k) + ":" + nm(a); };
   const here = ARTISTS.map((a, i) => [a, i]).filter(([a]) => boroOf(a) === boroTab).sort(([a], [b]) =>
     sortBy === "games" ? (rank(a) - rank(b)) || tierCmp(a, b) || nm(a).localeCompare(nm(b)) :
     sortBy === "az" && tierDir && isOwner() ? tierCmp(a, b) || nm(a).localeCompare(nm(b)) :
-    sortBy === "line" ? lineKey(a).localeCompare(lineKey(b), undefined, { numeric: true }) : nm(a).localeCompare(nm(b)));
+    sortBy === "line" ? lineKey0(a) - lineKey0(b) || tierCmp(a, b) || nm(a).localeCompare(nm(b)) : nm(a).localeCompare(nm(b)));
   $("list").classList.toggle("simple", listView === "simple");
   if (listView === "simple" && here.length) {
     $("list").innerHTML = here.map(([a, i]) => '<li><button class="srow" type="button" data-i="' + i + '"><span class="sdot" style="background:' + pinCol(a) + '"></span><span class="snm">' + esc(a.who) + (a.ex ? ' (E)' : '') + '<small>' + esc(a.hood) + ' · ' + esc(a.stop) + '</small></span><span class="sst">' + (isOwner() ? '<span class="tier ' + tierOf(a) + '">' + tierOf(a).toUpperCase() + '</span>' : '') +
