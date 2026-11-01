@@ -99,40 +99,1305 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
+  {
+   "title": "You Can't Stop Me Now",
+   "id": "p22Xzq5RzUc",
+   "start": 39.2,
+   "cuts": [
+    79,
+    103.3,
+    161
+   ],
+   "qs": [
+    [
+     [
+      "No matter how hard you what?",
+      "Try",
+      "Fight",
+      "Run"
+     ],
+     [
+      "You can't stop him when?",
+      "Now",
+      "Tonight",
+      "Ever"
+     ],
+     [
+      "He's the greatest what of all time?",
+      "B-boy",
+      "MC",
+      "Producer"
+     ],
+     [
+      "The greatest B-boy of all what?",
+      "Time",
+      "Times square",
+      "The city"
+     ],
+     [
+      "He started from what?",
+      "Small",
+      "Nothing",
+      "The bottom"
+     ],
+     [
+      "He was trying to make the what?",
+      "Come up",
+      "Big time",
+      "Top"
+     ],
+     [
+      "He used to make a few what a week?",
+      "G's",
+      "Bucks",
+      "Songs"
+     ],
+     [
+      "Cops love to what?",
+      "Block",
+      "Watch",
+      "Talk"
+     ]
+    ],
+    [
+     [
+      "He rented an SP-1200 what?",
+      "Sampler",
+      "Keyboard",
+      "Turntable"
+     ],
+     [
+      "He got a Yamaha how-many-track?",
+      "Four",
+      "Eight",
+      "Two"
+     ],
+     [
+      "What brand was the four-track?",
+      "Yamaha",
+      "Tascam",
+      "Roland"
+     ],
+     [
+      "The bass came from the what?",
+      "Lab",
+      "Club",
+      "Car"
+     ],
+     [
+      "They waited outside for the what to pick up?",
+      "Truck",
+      "Bus",
+      "Cab"
+     ],
+     [
+      "Nothing would work, so they did what?",
+      "Back up",
+      "Gave up",
+      "Moved out"
+     ],
+     [
+      "The pass on the SP12 got what?",
+      "Pressed",
+      "Erased",
+      "Stolen"
+     ],
+     [
+      "He made it for the street so the family could what?",
+      "Eat",
+      "Sleep",
+      "Smile"
+     ]
+    ],
+    [
+     [
+      "In what year did Wu-Tang drop their first LP?",
+      "'93",
+      "'91",
+      "'95"
+     ],
+     [
+      "Wu-Tang dropped their first what?",
+      "LP",
+      "Mixtape",
+      "Single"
+     ],
+     [
+      "They went what?",
+      "Platinum",
+      "Gold",
+      "Diamond"
+     ],
+     [
+      "They were bombing all around the what?",
+      "World",
+      "Block",
+      "Map"
+     ],
+     [
+      "Killer bees start what?",
+      "Swarming",
+      "Buzzing",
+      "Flying"
+     ],
+     [
+      "You can't stop us, you can't what us?",
+      "Block",
+      "Drop",
+      "Shock"
+     ],
+     [
+      "Rock us or what us?",
+      "Mock",
+      "Knock",
+      "Lock"
+     ],
+     [
+      "Knock us or what us?",
+      "Top",
+      "Stop",
+      "Drop"
+     ],
+     [
+      "Better sit back and what us?",
+      "Watch",
+      "Join",
+      "Thank"
+     ]
+    ]
+   ]
+  },
   {
    "title": "Grits",
    "id": "snX7sYS7HAQ",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 73,
+   "cuts": [
+    97.6,
+    133.9,
+    181.5
+   ],
+   "qs": [
+    [
+     [
+      "An old killer what?",
+      "Bee",
+      "Kid",
+      "Head"
+     ],
+     [
+      "How many were in the bed?",
+      "Four",
+      "Two",
+      "Six"
+     ],
+     [
+      "They would fight for the what?",
+      "Spoon",
+      "Fork",
+      "Bowl"
+     ],
+     [
+      "Somebody yells it's time to what?",
+      "Eat",
+      "Sleep",
+      "Go"
+     ],
+     [
+      "Across the floor you hear a dozen what feet?",
+      "Stampeding",
+      "Little",
+      "Running"
+     ],
+     [
+      "How many stampeding feet?",
+      "A dozen",
+      "Twenty",
+      "A hundred"
+     ],
+     [
+      "A one-pound box of what?",
+      "Sugar",
+      "Salt",
+      "Rice"
+     ],
+     [
+      "And a stick of what?",
+      "Margarine",
+      "Gum",
+      "Cinnamon"
+     ],
+     [
+      "A hot pot of what?",
+      "Grits",
+      "Rice",
+      "Beans"
+     ],
+     [
+      "It kept his family from what?",
+      "Starving",
+      "Fighting",
+      "Leaving"
+     ],
+     [
+      "The alert was in which room?",
+      "Kitchen",
+      "Hallway",
+      "Bedroom"
+     ]
+    ],
+    [
+     [
+      "Welfare what?",
+      "Check",
+      "Line",
+      "Office"
+     ],
+     [
+      "Straight out the bottle as a what?",
+      "Baby",
+      "Kid",
+      "Teen"
+     ],
+     [
+      "Steamy hot what?",
+      "Milk",
+      "Tea",
+      "Soup"
+     ],
+     [
+      "Served in less than how many minutes?",
+      "Five",
+      "Ten",
+      "Two"
+     ],
+     [
+      "A pot of boiling what?",
+      "Water",
+      "Oil",
+      "Rice"
+     ],
+     [
+      "A house full of brothers and what?",
+      "Sisters",
+      "Cousins",
+      "Friends"
+     ],
+     [
+      "The pot sat on the what in the kitchen?",
+      "Stove",
+      "Table",
+      "Floor"
+     ],
+     [
+      "When he was what, they had nothing at all?",
+      "Small",
+      "Young",
+      "Broke"
+     ],
+     [
+      "They had nothing at what?",
+      "All",
+      "Home",
+      "Night"
+     ],
+     [
+      "They used to eat grits for what?",
+      "Dinner",
+      "Breakfast",
+      "Lunch"
+     ]
+    ],
+    [
+     [
+      "Growing up, not as what?",
+      "Fortunate",
+      "Famous",
+      "Lucky"
+     ],
+     [
+      "Too young, no what to hire him?",
+      "Jobs",
+      "Bosses",
+      "Stores"
+     ],
+     [
+      "Walking down the street, thinking of a what?",
+      "Master plan",
+      "Way out",
+      "Better life"
+     ],
+     [
+      "\"Now let's take it back for\" what?",
+      "Real",
+      "Good",
+      "Now"
+     ],
+     [
+      "They used to build ghetto what?",
+      "Big Wheels",
+      "Go-karts",
+      "Bikes"
+     ],
+     [
+      "Made with shopping cart what?",
+      "Wheels",
+      "Handles",
+      "Baskets"
+     ],
+     [
+      "And wood to nail the what on?",
+      "Seat",
+      "Wheel",
+      "Roof"
+     ],
+     [
+      "Girls were skipping what in the streets?",
+      "Rope",
+      "School",
+      "Rocks"
+     ],
+     [
+      "In the summer what?",
+      "Heat",
+      "Rain",
+      "Sun"
+     ],
+     [
+      "You flip baseball what?",
+      "Cards",
+      "Caps",
+      "Bats"
+     ],
+     [
+      "Baseball cards for what?",
+      "Keeps",
+      "Fun",
+      "Money"
+     ],
+     [
+      "Mama said it's getting what?",
+      "Late",
+      "Dark",
+      "Cold"
+     ],
+     [
+      "Mama said it's time to come what?",
+      "Eat",
+      "Inside",
+      "Home"
+     ]
+    ]
+   ]
   },
   {
    "title": "Saturday Afternoon Kung Fu Theater",
    "id": "DCKFyGVMkX8",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
+   "start": 9.1,
+   "cuts": [
+    51.1,
+    108,
+    174.6
+   ],
+   "qs": [
+    [
+     [
+      "What day's afternoon theater?",
+      "Saturday",
+      "Sunday",
+      "Friday"
+     ],
+     [
+      "Saturday Afternoon what Theater?",
+      "Kung-Fu",
+      "Karate",
+      "Movie"
+     ],
+     [
+      "Who does the kid call out to?",
+      "Mommy",
+      "Daddy",
+      "Grandma"
+     ],
+     [
+      "\"What's today's special\" what?",
+      "Feature",
+      "Episode",
+      "Guest"
+     ],
+     [
+      "Today's feature: Bobby Digital versus who?",
+      "The RZA",
+      "The GZA",
+      "Shogun"
+     ],
+     [
+      "And the Pit Full of what?",
+      "Snakes",
+      "Spiders",
+      "Ninjas"
+     ],
+     [
+      "\"Turn my mic up a little\" what?",
+      "Bit",
+      "More",
+      "Louder"
+     ],
+     [
+      "He can take a raindrop and turn it to what?",
+      "An icicle",
+      "A snowflake",
+      "A diamond"
+     ],
+     [
+      "He pulls off in a blue what?",
+      "Escalade",
+      "Bentley",
+      "Lexus"
+     ],
+     [
+      "What color is the Escalade?",
+      "Blue",
+      "Black",
+      "White"
+     ],
+     [
+      "You're still rocking what?",
+      "Tricycles",
+      "Skateboards",
+      "Scooters"
+     ],
+     [
+      "Whose mask is on his face?",
+      "Michael Myers",
+      "Jason's",
+      "Freddy's"
+     ],
+     [
+      "The mask is what-filtered?",
+      "Copper",
+      "Carbon",
+      "Silver"
+     ]
+    ],
+    [
+     [
+      "He's a what killer?",
+      "Virus",
+      "Germ",
+      "Beat"
+     ],
+     [
+      "Try to what him?",
+      "Quarantine",
+      "Arrest",
+      "Stop"
+     ],
+     [
+      "His chi increases like who?",
+      "Akira",
+      "Goku",
+      "Bruce Lee"
+     ],
+     [
+      "Money's coming in the what?",
+      "Mail",
+      "Bank",
+      "Bag"
+     ],
+     [
+      "He's got cheese like a what?",
+      "Quesadilla",
+      "Pizza",
+      "Burger"
+     ],
+     [
+      "Your rap is too what?",
+      "Synthetic",
+      "Simple",
+      "Slow"
+     ],
+     [
+      "This is verbal what?",
+      "Athletics",
+      "Warfare",
+      "Gymnastics"
+     ],
+     [
+      "How many pressure points?",
+      "36",
+      "12",
+      "100"
+     ],
+     [
+      "Bobby Digital back in Black what?",
+      "Shampoo",
+      "Belt",
+      "Jacket"
+     ],
+     [
+      "It's like Animal House, National what?",
+      "Lampoon",
+      "Treasure",
+      "Geographic"
+     ],
+     [
+      "He bought a mansion but still sleeps in whose room?",
+      "His mother's",
+      "His brother's",
+      "His son's"
+     ],
+     [
+      "He's floating on whose yacht?",
+      "His brother's",
+      "His father's",
+      "His friend's"
+     ],
+     [
+      "Hip-hop was going what?",
+      "Cold",
+      "Soft",
+      "Pop"
+     ]
+    ],
+    [
+     [
+      "Classical physics, mechanical physics and what?",
+      "Thermodynamics",
+      "Chemistry",
+      "Geometry"
+     ],
+     [
+      "These are powers used by the great who?",
+      "Bobby Digital",
+      "The Abbot",
+      "Prince Rakeem"
+     ],
+     [
+      "They say the sun'll come out when?",
+      "Tomorrow",
+      "Today",
+      "Sunday"
+     ],
+     [
+      "The Greeks believed the sun was dragged across the sky by whom?",
+      "Apollo",
+      "Zeus",
+      "Hercules"
+     ],
+     [
+      "Fred Sanford used to argue with whom?",
+      "Rollo",
+      "Ralph",
+      "Lester"
+     ],
+     [
+      "Mike learned to throw hands with whom?",
+      "Cus D'Amato",
+      "Don King",
+      "Angelo Dundee"
+     ],
+     [
+      "Who's in dark clothes?",
+      "Tony Stark",
+      "Bruce Wayne",
+      "Peter Parker"
+     ],
+     [
+      "A homeless man reached in the garbage can for his evening what?",
+      "Meal",
+      "Paper",
+      "Coat"
+     ],
+     [
+      "Who was still preaching?",
+      "The Pope",
+      "The pastor",
+      "The imam"
+     ],
+     [
+      "His fake friends are still what?",
+      "Leeching",
+      "Lying",
+      "Hating"
+     ],
+     [
+      "They won't accept his what?",
+      "Teachings",
+      "Music",
+      "Advice"
+     ],
+     [
+      "Clear it out like it's what?",
+      "Clearasil",
+      "Windex",
+      "Bleach"
+     ],
+     [
+      "Spin like a what?",
+      "Ferris wheel",
+      "Top",
+      "Record"
+     ],
+     [
+      "It's a day off like who?",
+      "Ferris Bueller",
+      "Bart Simpson",
+      "Pee-wee Herman"
+     ]
+    ]
+   ]
+  }
+ ],
+ "explicitSongs": [
   {
    "title": "You Can't Stop Me Now",
    "id": "p22Xzq5RzUc",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 39.2,
+   "cuts": [
+    79,
+    103.3,
+    161
+   ],
+   "qs": [
+    [
+     [
+      "No matter how hard you what?",
+      "Try",
+      "Fight",
+      "Run"
+     ],
+     [
+      "You can't stop him when?",
+      "Now",
+      "Tonight",
+      "Ever"
+     ],
+     [
+      "He's the greatest what of all time?",
+      "B-boy",
+      "MC",
+      "Producer"
+     ],
+     [
+      "The greatest B-boy of all what?",
+      "Time",
+      "Times square",
+      "The city"
+     ],
+     [
+      "He started from what?",
+      "Small",
+      "Nothing",
+      "The bottom"
+     ],
+     [
+      "He was trying to make the what?",
+      "Come up",
+      "Big time",
+      "Top"
+     ],
+     [
+      "He used to make a few what a week?",
+      "G's",
+      "Bucks",
+      "Songs"
+     ],
+     [
+      "Cops love to what?",
+      "Block",
+      "Watch",
+      "Talk"
+     ]
+    ],
+    [
+     [
+      "He rented an SP-1200 what?",
+      "Sampler",
+      "Keyboard",
+      "Turntable"
+     ],
+     [
+      "He got a Yamaha how-many-track?",
+      "Four",
+      "Eight",
+      "Two"
+     ],
+     [
+      "What brand was the four-track?",
+      "Yamaha",
+      "Tascam",
+      "Roland"
+     ],
+     [
+      "The bass came from the what?",
+      "Lab",
+      "Club",
+      "Car"
+     ],
+     [
+      "They waited outside for the what to pick up?",
+      "Truck",
+      "Bus",
+      "Cab"
+     ],
+     [
+      "Nothing would work, so they did what?",
+      "Back up",
+      "Gave up",
+      "Moved out"
+     ],
+     [
+      "The pass on the SP12 got what?",
+      "Pressed",
+      "Erased",
+      "Stolen"
+     ],
+     [
+      "He made it for the street so the family could what?",
+      "Eat",
+      "Sleep",
+      "Smile"
+     ]
+    ],
+    [
+     [
+      "In what year did Wu-Tang drop their first LP?",
+      "'93",
+      "'91",
+      "'95"
+     ],
+     [
+      "Wu-Tang dropped their first what?",
+      "LP",
+      "Mixtape",
+      "Single"
+     ],
+     [
+      "They went what?",
+      "Platinum",
+      "Gold",
+      "Diamond"
+     ],
+     [
+      "They were bombing all around the what?",
+      "World",
+      "Block",
+      "Map"
+     ],
+     [
+      "Killer bees start what?",
+      "Swarming",
+      "Buzzing",
+      "Flying"
+     ],
+     [
+      "You can't stop us, you can't what us?",
+      "Block",
+      "Drop",
+      "Shock"
+     ],
+     [
+      "Rock us or what us?",
+      "Mock",
+      "Knock",
+      "Lock"
+     ],
+     [
+      "Knock us or what us?",
+      "Top",
+      "Stop",
+      "Drop"
+     ],
+     [
+      "Better sit back and what us?",
+      "Watch",
+      "Join",
+      "Thank"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Holocaust (Silkworm)",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Grits",
+   "id": "snX7sYS7HAQ",
+   "start": 73,
+   "cuts": [
+    97.6,
+    133.9,
+    181.5
+   ],
+   "qs": [
+    [
+     [
+      "An old killer what?",
+      "Bee",
+      "Kid",
+      "Head"
+     ],
+     [
+      "How many were in the bed?",
+      "Four",
+      "Two",
+      "Six"
+     ],
+     [
+      "They would fight for the what?",
+      "Spoon",
+      "Fork",
+      "Bowl"
+     ],
+     [
+      "Somebody yells it's time to what?",
+      "Eat",
+      "Sleep",
+      "Go"
+     ],
+     [
+      "Across the floor you hear a dozen what feet?",
+      "Stampeding",
+      "Little",
+      "Running"
+     ],
+     [
+      "How many stampeding feet?",
+      "A dozen",
+      "Twenty",
+      "A hundred"
+     ],
+     [
+      "A one-pound box of what?",
+      "Sugar",
+      "Salt",
+      "Rice"
+     ],
+     [
+      "And a stick of what?",
+      "Margarine",
+      "Gum",
+      "Cinnamon"
+     ],
+     [
+      "A hot pot of what?",
+      "Grits",
+      "Rice",
+      "Beans"
+     ],
+     [
+      "It kept his family from what?",
+      "Starving",
+      "Fighting",
+      "Leaving"
+     ],
+     [
+      "The alert was in which room?",
+      "Kitchen",
+      "Hallway",
+      "Bedroom"
+     ]
+    ],
+    [
+     [
+      "Welfare what?",
+      "Check",
+      "Line",
+      "Office"
+     ],
+     [
+      "Straight out the bottle as a what?",
+      "Baby",
+      "Kid",
+      "Teen"
+     ],
+     [
+      "Steamy hot what?",
+      "Milk",
+      "Tea",
+      "Soup"
+     ],
+     [
+      "Served in less than how many minutes?",
+      "Five",
+      "Ten",
+      "Two"
+     ],
+     [
+      "A pot of boiling what?",
+      "Water",
+      "Oil",
+      "Rice"
+     ],
+     [
+      "A house full of brothers and what?",
+      "Sisters",
+      "Cousins",
+      "Friends"
+     ],
+     [
+      "The pot sat on the what in the kitchen?",
+      "Stove",
+      "Table",
+      "Floor"
+     ],
+     [
+      "When he was what, they had nothing at all?",
+      "Small",
+      "Young",
+      "Broke"
+     ],
+     [
+      "They had nothing at what?",
+      "All",
+      "Home",
+      "Night"
+     ],
+     [
+      "They used to eat grits for what?",
+      "Dinner",
+      "Breakfast",
+      "Lunch"
+     ]
+    ],
+    [
+     [
+      "Growing up, not as what?",
+      "Fortunate",
+      "Famous",
+      "Lucky"
+     ],
+     [
+      "Too young, no what to hire him?",
+      "Jobs",
+      "Bosses",
+      "Stores"
+     ],
+     [
+      "Walking down the street, thinking of a what?",
+      "Master plan",
+      "Way out",
+      "Better life"
+     ],
+     [
+      "\"Now let's take it back for\" what?",
+      "Real",
+      "Good",
+      "Now"
+     ],
+     [
+      "They used to build ghetto what?",
+      "Big Wheels",
+      "Go-karts",
+      "Bikes"
+     ],
+     [
+      "Made with shopping cart what?",
+      "Wheels",
+      "Handles",
+      "Baskets"
+     ],
+     [
+      "And wood to nail the what on?",
+      "Seat",
+      "Wheel",
+      "Roof"
+     ],
+     [
+      "Girls were skipping what in the streets?",
+      "Rope",
+      "School",
+      "Rocks"
+     ],
+     [
+      "In the summer what?",
+      "Heat",
+      "Rain",
+      "Sun"
+     ],
+     [
+      "You flip baseball what?",
+      "Cards",
+      "Caps",
+      "Bats"
+     ],
+     [
+      "Baseball cards for what?",
+      "Keeps",
+      "Fun",
+      "Money"
+     ],
+     [
+      "Mama said it's getting what?",
+      "Late",
+      "Dark",
+      "Cold"
+     ],
+     [
+      "Mama said it's time to come what?",
+      "Eat",
+      "Inside",
+      "Home"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Wu-Wear: The Garment Renaissance",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Saturday Afternoon Kung Fu Theater",
+   "id": "DCKFyGVMkX8",
+   "start": 9.1,
+   "cuts": [
+    51.1,
+    108,
+    174.6
+   ],
+   "qs": [
+    [
+     [
+      "What day's afternoon theater?",
+      "Saturday",
+      "Sunday",
+      "Friday"
+     ],
+     [
+      "Saturday Afternoon what Theater?",
+      "Kung-Fu",
+      "Karate",
+      "Movie"
+     ],
+     [
+      "Who does the kid call out to?",
+      "Mommy",
+      "Daddy",
+      "Grandma"
+     ],
+     [
+      "\"What's today's special\" what?",
+      "Feature",
+      "Episode",
+      "Guest"
+     ],
+     [
+      "Today's feature: Bobby Digital versus who?",
+      "The RZA",
+      "The GZA",
+      "Shogun"
+     ],
+     [
+      "And the Pit Full of what?",
+      "Snakes",
+      "Spiders",
+      "Ninjas"
+     ],
+     [
+      "\"Turn my mic up a little\" what?",
+      "Bit",
+      "More",
+      "Louder"
+     ],
+     [
+      "He can take a raindrop and turn it to what?",
+      "An icicle",
+      "A snowflake",
+      "A diamond"
+     ],
+     [
+      "He pulls off in a blue what?",
+      "Escalade",
+      "Bentley",
+      "Lexus"
+     ],
+     [
+      "What color is the Escalade?",
+      "Blue",
+      "Black",
+      "White"
+     ],
+     [
+      "You're still rocking what?",
+      "Tricycles",
+      "Skateboards",
+      "Scooters"
+     ],
+     [
+      "Whose mask is on his face?",
+      "Michael Myers",
+      "Jason's",
+      "Freddy's"
+     ],
+     [
+      "The mask is what-filtered?",
+      "Copper",
+      "Carbon",
+      "Silver"
+     ]
+    ],
+    [
+     [
+      "He's a what killer?",
+      "Virus",
+      "Germ",
+      "Beat"
+     ],
+     [
+      "Try to what him?",
+      "Quarantine",
+      "Arrest",
+      "Stop"
+     ],
+     [
+      "His chi increases like who?",
+      "Akira",
+      "Goku",
+      "Bruce Lee"
+     ],
+     [
+      "Money's coming in the what?",
+      "Mail",
+      "Bank",
+      "Bag"
+     ],
+     [
+      "He's got cheese like a what?",
+      "Quesadilla",
+      "Pizza",
+      "Burger"
+     ],
+     [
+      "Your rap is too what?",
+      "Synthetic",
+      "Simple",
+      "Slow"
+     ],
+     [
+      "This is verbal what?",
+      "Athletics",
+      "Warfare",
+      "Gymnastics"
+     ],
+     [
+      "How many pressure points?",
+      "36",
+      "12",
+      "100"
+     ],
+     [
+      "Bobby Digital back in Black what?",
+      "Shampoo",
+      "Belt",
+      "Jacket"
+     ],
+     [
+      "It's like Animal House, National what?",
+      "Lampoon",
+      "Treasure",
+      "Geographic"
+     ],
+     [
+      "He bought a mansion but still sleeps in whose room?",
+      "His mother's",
+      "His brother's",
+      "His son's"
+     ],
+     [
+      "He's floating on whose yacht?",
+      "His brother's",
+      "His father's",
+      "His friend's"
+     ],
+     [
+      "Hip-hop was going what?",
+      "Cold",
+      "Soft",
+      "Pop"
+     ]
+    ],
+    [
+     [
+      "Classical physics, mechanical physics and what?",
+      "Thermodynamics",
+      "Chemistry",
+      "Geometry"
+     ],
+     [
+      "These are powers used by the great who?",
+      "Bobby Digital",
+      "The Abbot",
+      "Prince Rakeem"
+     ],
+     [
+      "They say the sun'll come out when?",
+      "Tomorrow",
+      "Today",
+      "Sunday"
+     ],
+     [
+      "The Greeks believed the sun was dragged across the sky by whom?",
+      "Apollo",
+      "Zeus",
+      "Hercules"
+     ],
+     [
+      "Fred Sanford used to argue with whom?",
+      "Rollo",
+      "Ralph",
+      "Lester"
+     ],
+     [
+      "Mike learned to throw hands with whom?",
+      "Cus D'Amato",
+      "Don King",
+      "Angelo Dundee"
+     ],
+     [
+      "Who's in dark clothes?",
+      "Tony Stark",
+      "Bruce Wayne",
+      "Peter Parker"
+     ],
+     [
+      "A homeless man reached in the garbage can for his evening what?",
+      "Meal",
+      "Paper",
+      "Coat"
+     ],
+     [
+      "Who was still preaching?",
+      "The Pope",
+      "The pastor",
+      "The imam"
+     ],
+     [
+      "His fake friends are still what?",
+      "Leeching",
+      "Lying",
+      "Hating"
+     ],
+     [
+      "They won't accept his what?",
+      "Teachings",
+      "Music",
+      "Advice"
+     ],
+     [
+      "Clear it out like it's what?",
+      "Clearasil",
+      "Windex",
+      "Bleach"
+     ],
+     [
+      "Spin like a what?",
+      "Ferris wheel",
+      "Top",
+      "Record"
+     ],
+     [
+      "It's a day off like who?",
+      "Ferris Bueller",
+      "Bart Simpson",
+      "Pee-wee Herman"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

@@ -93,40 +93,1303 @@ window.CFG = {
   }
  ],
  "saveKey": "ogfan99grandmastercaz1",
- "episodes": [
+ "songs": [
   {
-   "title": "MC Delight",
-   "id": "lDlgB9MbLNA",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Scene of the Rhyme",
-   "id": "uz9o-qVpflM",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "South Bronx Subway Rap",
+   "id": "xwAOMF5C2iU",
+   "start": 11,
+   "cuts": [
+    48,
+    94,
+    140.8
+   ],
+   "qs": [
+    [
+     [
+      "Which part of New York is he in?",
+      "South Bronx",
+      "Harlem",
+      "Brooklyn"
+     ],
+     [
+      "\"What do I\" what?",
+      "See",
+      "Need",
+      "Know"
+     ],
+     [
+      "He sees what growing up?",
+      "Kids",
+      "Trees",
+      "Buildings"
+     ],
+     [
+      "Kids growing up in the what?",
+      "Community",
+      "Projects",
+      "Streets"
+     ],
+     [
+      "The streets are what?",
+      "Filthy",
+      "Empty",
+      "Crowded"
+     ],
+     [
+      "Crime is what?",
+      "High",
+      "Low",
+      "Down"
+     ],
+     [
+      "People look what when you walk by?",
+      "Suspicious",
+      "Happy",
+      "Away"
+     ],
+     [
+      "When it comes to violence, nobody what?",
+      "Wins",
+      "Cares",
+      "Talks"
+     ]
+    ],
+    [
+     [
+      "Grime and what?",
+      "Pollution",
+      "Garbage",
+      "Noise"
+     ],
+     [
+      "Tell me where do I what in?",
+      "Fit",
+      "Live",
+      "Belong"
+     ],
+     [
+      "South Bronx, that's where he what?",
+      "Dwells",
+      "Works",
+      "Rhymes"
+     ],
+     [
+      "Full of frustration and what?",
+      "Poverty",
+      "Anger",
+      "Pain"
+     ],
+     [
+      "It's a challenge, an what?",
+      "Opportunity",
+      "Adventure",
+      "Obstacle"
+     ],
+     [
+      "To rise what?",
+      "Above",
+      "Up",
+      "Higher"
+     ],
+     [
+      "You got to start with what?",
+      "Nothing",
+      "Something",
+      "A plan"
+     ],
+     [
+      "And then you what?",
+      "Build",
+      "Rise",
+      "Grow"
+     ],
+     [
+      "Follow your what?",
+      "Dream",
+      "Heart",
+      "Path"
+     ],
+     [
+      "Until it's what?",
+      "Fulfilled",
+      "Finished",
+      "Real"
+     ]
+    ],
+    [
+     [
+      "We all have our what?",
+      "Dreams",
+      "Problems",
+      "Days"
+     ],
+     [
+      "\"I'm a\" what?",
+      "Warrior",
+      "Soldier",
+      "Teacher"
+     ],
+     [
+      "His art is his what?",
+      "Sword",
+      "Shield",
+      "Voice"
+     ],
+     [
+      "A place in society is his what?",
+      "Reward",
+      "Right",
+      "Goal"
+     ],
+     [
+      "A mind is a terrible thing to what?",
+      "Waste",
+      "Lose",
+      "Hide"
+     ],
+     [
+      "Success is something we all want to what?",
+      "Taste",
+      "Find",
+      "Have"
+     ],
+     [
+      "Everyone has a what on the earth?",
+      "Talent",
+      "Purpose",
+      "Place"
+     ],
+     [
+      "Take it or leave it for what it's what?",
+      "Worth",
+      "Said",
+      "Done"
+     ],
+     [
+      "No matter how hard things may what?",
+      "Seem",
+      "Get",
+      "Look"
+     ],
+     [
+      "You've got the what?",
+      "Potential",
+      "Power",
+      "Key"
+     ],
+     [
+      "It's up to us to make our homes rate an what?",
+      "A+",
+      "A",
+      "Ten"
+     ],
+     [
+      "Let your mind be pure and what?",
+      "Free",
+      "Clean",
+      "Strong"
+     ]
+    ]
+   ]
   },
   {
    "title": "I'm a Legend",
    "id": "LwL7FaVYvj0",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "cuts": [
+    38.6,
+    70.9,
+    198.2
+   ],
+   "qs": [
+    [
+     [
+      "Peace to all the party what?",
+      "People",
+      "Crews",
+      "Ladies"
+     ],
+     [
+      "\"Once again, my\" what?",
+      "Friend",
+      "Brother",
+      "People"
+     ],
+     [
+      "He's the grandest of them what?",
+      "All",
+      "Time",
+      "Here"
+     ],
+     [
+      "Even your who calls him Caz?",
+      "Mama",
+      "Sister",
+      "Teacher"
+     ],
+     [
+      "He's chilling in the place to what?",
+      "Be",
+      "Rock",
+      "Party"
+     ],
+     [
+      "His DJ is named what?",
+      "Power",
+      "Flash",
+      "Kool"
+     ],
+     [
+      "Coming at you with a little bit of what?",
+      "Flavor",
+      "Rhythm",
+      "Soul"
+     ],
+     [
+      "\"Here is the\" what?",
+      "Deal",
+      "Truth",
+      "Plan"
+     ],
+     [
+      "He never does what?",
+      "Steal",
+      "Quit",
+      "Lie"
+     ],
+     [
+      "He cheers you on like a what?",
+      "Crowd",
+      "Coach",
+      "Fan"
+     ],
+     [
+      "He's got a shot at the what?",
+      "Top",
+      "Title",
+      "Crown"
+     ],
+     [
+      "And he's what it?",
+      "Grabbing",
+      "Taking",
+      "Missing"
+     ]
+    ],
+    [
+     [
+      "He's too grand, too what?",
+      "Demanding",
+      "Famous",
+      "Smooth"
+     ],
+     [
+      "Large and what?",
+      "Outstanding",
+      "In charge",
+      "Strong"
+     ],
+     [
+      "You'll have to hand in what?",
+      "Proof",
+      "Money",
+      "Rhymes"
+     ],
+     [
+      "He tears the what off the place?",
+      "Roof",
+      "Doors",
+      "Walls"
+     ],
+     [
+      "He and Power got the funky what?",
+      "Bass",
+      "Beat",
+      "Style"
+     ],
+     [
+      "He's a what?",
+      "Legend",
+      "Master",
+      "Pioneer"
+     ],
+     [
+      "A legend in his what?",
+      "Time",
+      "Town",
+      "Crew"
+     ],
+     [
+      "\"And that's only in my\" what?",
+      "Mind",
+      "Heart",
+      "Dreams"
+     ]
+    ],
+    [
+     [
+      "Caz the legend is totally what?",
+      "Awesome",
+      "Fresh",
+      "Smooth"
+     ],
+     [
+      "He's strong as the day is what?",
+      "Long",
+      "Bright",
+      "Hot"
+     ],
+     [
+      "He's a born what?",
+      "Winner",
+      "Leader",
+      "Rhymer"
+     ],
+     [
+      "Always in a position of what?",
+      "Power",
+      "Strength",
+      "Respect"
+     ],
+     [
+      "He towers over the what?",
+      "Rest",
+      "City",
+      "Crowd"
+     ],
+     [
+      "He never what?",
+      "Falters",
+      "Sleeps",
+      "Stops"
+     ],
+     [
+      "He can't rest unless he's in a what?",
+      "BMW",
+      "Cadillac",
+      "Benz"
+     ],
+     [
+      "Some of you thought he was what?",
+      "Over",
+      "Old",
+      "Gone"
+     ],
+     [
+      "Rhyme for what?",
+      "Rhyme",
+      "Dime",
+      "Time"
+     ],
+     [
+      "He's an old school what?",
+      "Veteran",
+      "Teacher",
+      "Legend"
+     ],
+     [
+      "He's in a class that only how many can claim?",
+      "Three",
+      "Two",
+      "Five"
+     ],
+     [
+      "On stage he doesn't be what?",
+      "Rehearsing",
+      "Nervous",
+      "Sitting"
+     ],
+     [
+      "What was the place to go?",
+      "Harlem World",
+      "The Fever",
+      "The Roxy"
+     ],
+     [
+      "He ruled with Tony Tone and who?",
+      "Charlie Chase",
+      "Grandmaster Flash",
+      "Kool Herc"
+     ],
+     [
+      "Cold Crush in what?",
+      "Effect",
+      "Control",
+      "Town"
+     ],
+     [
+      "He doesn't hold no what?",
+      "Animosities",
+      "Grudges",
+      "Regrets"
+     ]
+    ]
+   ]
   },
   {
-   "title": "South Bronx Subway Rap",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Move the Crowd",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Star Search",
+   "id": "B_9Vp8vn3Pg",
+   "start": 90.5,
+   "cuts": [
+    120.6,
+    172.2,
+    225.1
+   ],
+   "qs": [
+    [
+     [
+      "In the city of bright what?",
+      "Lights",
+      "Stars",
+      "Nights"
+     ],
+     [
+      "Girlfriend's on a what?",
+      "Mission",
+      "Diet",
+      "Date"
+     ],
+     [
+      "She don't want no regular what?",
+      "Dude",
+      "Job",
+      "Life"
+     ],
+     [
+      "That's her what?",
+      "Attitude",
+      "Style",
+      "Rule"
+     ],
+     [
+      "She dresses like a Hollywood what?",
+      "Diva",
+      "Star",
+      "Queen"
+     ],
+     [
+      "If she don't know you, she don't what you?",
+      "Need",
+      "See",
+      "Call"
+     ],
+     [
+      "The what game is the only game she'll play?",
+      "Fame",
+      "Money",
+      "Love"
+     ],
+     [
+      "To meet her you need a what?",
+      "Resume",
+      "Reference",
+      "Ride"
+     ],
+     [
+      "She gets in free, VIP at a what?",
+      "Party",
+      "Concert",
+      "Club"
+     ],
+     [
+      "She goes to every concert as if it was what?",
+      "Church",
+      "School",
+      "Work"
+     ],
+     [
+      "Honey's on a what?",
+      "Star Search",
+      "Mission",
+      "Talent show"
+     ]
+    ],
+    [
+     [
+      "Her autograph book is as thick as a what?",
+      "Bible",
+      "Dictionary",
+      "Phone book"
+     ],
+     [
+      "She waits for the arrival of whoever's what?",
+      "Popping",
+      "Famous",
+      "Rich"
+     ],
+     [
+      "A party at the what?",
+      "Hotel",
+      "Mansion",
+      "Club"
+     ],
+     [
+      "She's the first one to what?",
+      "Drop in",
+      "Leave",
+      "Dance"
+     ],
+     [
+      "She'll be there till what?",
+      "Morning",
+      "Midnight",
+      "Noon"
+     ],
+     [
+      "With her dress all what?",
+      "Wrinkled",
+      "Torn",
+      "Wet"
+     ],
+     [
+      "When the sun is what?",
+      "Dawning",
+      "Shining",
+      "Setting"
+     ],
+     [
+      "She swears to God she's no what?",
+      "Groupie",
+      "Liar",
+      "Fan"
+     ],
+     [
+      "She's a name what?",
+      "Dropper",
+      "Caller",
+      "Taker"
+     ],
+     [
+      "Saying who she knows like she's so what?",
+      "Proper",
+      "Famous",
+      "Pretty"
+     ],
+     [
+      "She got a flick with whom?",
+      "Big Daddy Kane",
+      "LL Cool J",
+      "Rakim"
+     ]
+    ],
+    [
+     [
+      "Take a what or grab a spot on line?",
+      "Number",
+      "Ticket",
+      "Seat"
+     ],
+     [
+      "Join the what of those who thought?",
+      "List",
+      "Club",
+      "Crowd"
+     ],
+     [
+      "A hit movie or a record on the what?",
+      "Charts",
+      "Radio",
+      "Shelf"
+     ],
+     [
+      "Home girl's a what?",
+      "Heartbreaker",
+      "Gold digger",
+      "Superstar"
+     ],
+     [
+      "She breaks hearts by the what?",
+      "Dozens",
+      "Hundreds",
+      "Day"
+     ],
+     [
+      "She ain't that fly but she's got the what?",
+      "Nerve",
+      "Looks",
+      "Style"
+     ],
+     [
+      "She'll go through how many before she learns her lesson?",
+      "Ten",
+      "Two",
+      "Twenty"
+     ],
+     [
+      "You could be somebody's what?",
+      "Wife",
+      "Star",
+      "Boss"
+     ],
+     [
+      "Nothing wrong with striving for the what?",
+      "Stars",
+      "Top",
+      "Money"
+     ],
+     [
+      "Stop to smell the what?",
+      "Roses",
+      "Coffee",
+      "Flowers"
+     ],
+     [
+      "Then you can go to a real what?",
+      "Church",
+      "School",
+      "Job"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "South Bronx Subway Rap",
+   "id": "xwAOMF5C2iU",
+   "start": 11,
+   "cuts": [
+    48,
+    94,
+    140.8
+   ],
+   "qs": [
+    [
+     [
+      "Which part of New York is he in?",
+      "South Bronx",
+      "Harlem",
+      "Brooklyn"
+     ],
+     [
+      "\"What do I\" what?",
+      "See",
+      "Need",
+      "Know"
+     ],
+     [
+      "He sees what growing up?",
+      "Kids",
+      "Trees",
+      "Buildings"
+     ],
+     [
+      "Kids growing up in the what?",
+      "Community",
+      "Projects",
+      "Streets"
+     ],
+     [
+      "The streets are what?",
+      "Filthy",
+      "Empty",
+      "Crowded"
+     ],
+     [
+      "Crime is what?",
+      "High",
+      "Low",
+      "Down"
+     ],
+     [
+      "People look what when you walk by?",
+      "Suspicious",
+      "Happy",
+      "Away"
+     ],
+     [
+      "When it comes to violence, nobody what?",
+      "Wins",
+      "Cares",
+      "Talks"
+     ]
+    ],
+    [
+     [
+      "Grime and what?",
+      "Pollution",
+      "Garbage",
+      "Noise"
+     ],
+     [
+      "Tell me where do I what in?",
+      "Fit",
+      "Live",
+      "Belong"
+     ],
+     [
+      "South Bronx, that's where he what?",
+      "Dwells",
+      "Works",
+      "Rhymes"
+     ],
+     [
+      "Full of frustration and what?",
+      "Poverty",
+      "Anger",
+      "Pain"
+     ],
+     [
+      "It's a challenge, an what?",
+      "Opportunity",
+      "Adventure",
+      "Obstacle"
+     ],
+     [
+      "To rise what?",
+      "Above",
+      "Up",
+      "Higher"
+     ],
+     [
+      "You got to start with what?",
+      "Nothing",
+      "Something",
+      "A plan"
+     ],
+     [
+      "And then you what?",
+      "Build",
+      "Rise",
+      "Grow"
+     ],
+     [
+      "Follow your what?",
+      "Dream",
+      "Heart",
+      "Path"
+     ],
+     [
+      "Until it's what?",
+      "Fulfilled",
+      "Finished",
+      "Real"
+     ]
+    ],
+    [
+     [
+      "We all have our what?",
+      "Dreams",
+      "Problems",
+      "Days"
+     ],
+     [
+      "\"I'm a\" what?",
+      "Warrior",
+      "Soldier",
+      "Teacher"
+     ],
+     [
+      "His art is his what?",
+      "Sword",
+      "Shield",
+      "Voice"
+     ],
+     [
+      "A place in society is his what?",
+      "Reward",
+      "Right",
+      "Goal"
+     ],
+     [
+      "A mind is a terrible thing to what?",
+      "Waste",
+      "Lose",
+      "Hide"
+     ],
+     [
+      "Success is something we all want to what?",
+      "Taste",
+      "Find",
+      "Have"
+     ],
+     [
+      "Everyone has a what on the earth?",
+      "Talent",
+      "Purpose",
+      "Place"
+     ],
+     [
+      "Take it or leave it for what it's what?",
+      "Worth",
+      "Said",
+      "Done"
+     ],
+     [
+      "No matter how hard things may what?",
+      "Seem",
+      "Get",
+      "Look"
+     ],
+     [
+      "You've got the what?",
+      "Potential",
+      "Power",
+      "Key"
+     ],
+     [
+      "It's up to us to make our homes rate an what?",
+      "A+",
+      "A",
+      "Ten"
+     ],
+     [
+      "Let your mind be pure and what?",
+      "Free",
+      "Clean",
+      "Strong"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "I'm a Legend",
+   "id": "LwL7FaVYvj0",
+   "cuts": [
+    38.6,
+    70.9,
+    198.2
+   ],
+   "qs": [
+    [
+     [
+      "Peace to all the party what?",
+      "People",
+      "Crews",
+      "Ladies"
+     ],
+     [
+      "\"Once again, my\" what?",
+      "Friend",
+      "Brother",
+      "People"
+     ],
+     [
+      "He's the grandest of them what?",
+      "All",
+      "Time",
+      "Here"
+     ],
+     [
+      "Even your who calls him Caz?",
+      "Mama",
+      "Sister",
+      "Teacher"
+     ],
+     [
+      "He's chilling in the place to what?",
+      "Be",
+      "Rock",
+      "Party"
+     ],
+     [
+      "His DJ is named what?",
+      "Power",
+      "Flash",
+      "Kool"
+     ],
+     [
+      "Coming at you with a little bit of what?",
+      "Flavor",
+      "Rhythm",
+      "Soul"
+     ],
+     [
+      "\"Here is the\" what?",
+      "Deal",
+      "Truth",
+      "Plan"
+     ],
+     [
+      "He never does what?",
+      "Steal",
+      "Quit",
+      "Lie"
+     ],
+     [
+      "He cheers you on like a what?",
+      "Crowd",
+      "Coach",
+      "Fan"
+     ],
+     [
+      "He's got a shot at the what?",
+      "Top",
+      "Title",
+      "Crown"
+     ],
+     [
+      "And he's what it?",
+      "Grabbing",
+      "Taking",
+      "Missing"
+     ]
+    ],
+    [
+     [
+      "He's too grand, too what?",
+      "Demanding",
+      "Famous",
+      "Smooth"
+     ],
+     [
+      "Large and what?",
+      "Outstanding",
+      "In charge",
+      "Strong"
+     ],
+     [
+      "You'll have to hand in what?",
+      "Proof",
+      "Money",
+      "Rhymes"
+     ],
+     [
+      "He tears the what off the place?",
+      "Roof",
+      "Doors",
+      "Walls"
+     ],
+     [
+      "He and Power got the funky what?",
+      "Bass",
+      "Beat",
+      "Style"
+     ],
+     [
+      "He's a what?",
+      "Legend",
+      "Master",
+      "Pioneer"
+     ],
+     [
+      "A legend in his what?",
+      "Time",
+      "Town",
+      "Crew"
+     ],
+     [
+      "\"And that's only in my\" what?",
+      "Mind",
+      "Heart",
+      "Dreams"
+     ]
+    ],
+    [
+     [
+      "Caz the legend is totally what?",
+      "Awesome",
+      "Fresh",
+      "Smooth"
+     ],
+     [
+      "He's strong as the day is what?",
+      "Long",
+      "Bright",
+      "Hot"
+     ],
+     [
+      "He's a born what?",
+      "Winner",
+      "Leader",
+      "Rhymer"
+     ],
+     [
+      "Always in a position of what?",
+      "Power",
+      "Strength",
+      "Respect"
+     ],
+     [
+      "He towers over the what?",
+      "Rest",
+      "City",
+      "Crowd"
+     ],
+     [
+      "He never what?",
+      "Falters",
+      "Sleeps",
+      "Stops"
+     ],
+     [
+      "He can't rest unless he's in a what?",
+      "BMW",
+      "Cadillac",
+      "Benz"
+     ],
+     [
+      "Some of you thought he was what?",
+      "Over",
+      "Old",
+      "Gone"
+     ],
+     [
+      "Rhyme for what?",
+      "Rhyme",
+      "Dime",
+      "Time"
+     ],
+     [
+      "He's an old school what?",
+      "Veteran",
+      "Teacher",
+      "Legend"
+     ],
+     [
+      "He's in a class that only how many can claim?",
+      "Three",
+      "Two",
+      "Five"
+     ],
+     [
+      "On stage he doesn't be what?",
+      "Rehearsing",
+      "Nervous",
+      "Sitting"
+     ],
+     [
+      "What was the place to go?",
+      "Harlem World",
+      "The Fever",
+      "The Roxy"
+     ],
+     [
+      "He ruled with Tony Tone and who?",
+      "Charlie Chase",
+      "Grandmaster Flash",
+      "Kool Herc"
+     ],
+     [
+      "Cold Crush in what?",
+      "Effect",
+      "Control",
+      "Town"
+     ],
+     [
+      "He doesn't hold no what?",
+      "Animosities",
+      "Grudges",
+      "Regrets"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Star Search",
+   "id": "B_9Vp8vn3Pg",
+   "start": 90.5,
+   "cuts": [
+    120.6,
+    172.2,
+    225.1
+   ],
+   "qs": [
+    [
+     [
+      "In the city of bright what?",
+      "Lights",
+      "Stars",
+      "Nights"
+     ],
+     [
+      "Girlfriend's on a what?",
+      "Mission",
+      "Diet",
+      "Date"
+     ],
+     [
+      "She don't want no regular what?",
+      "Dude",
+      "Job",
+      "Life"
+     ],
+     [
+      "That's her what?",
+      "Attitude",
+      "Style",
+      "Rule"
+     ],
+     [
+      "She dresses like a Hollywood what?",
+      "Diva",
+      "Star",
+      "Queen"
+     ],
+     [
+      "If she don't know you, she don't what you?",
+      "Need",
+      "See",
+      "Call"
+     ],
+     [
+      "The what game is the only game she'll play?",
+      "Fame",
+      "Money",
+      "Love"
+     ],
+     [
+      "To meet her you need a what?",
+      "Resume",
+      "Reference",
+      "Ride"
+     ],
+     [
+      "She gets in free, VIP at a what?",
+      "Party",
+      "Concert",
+      "Club"
+     ],
+     [
+      "She goes to every concert as if it was what?",
+      "Church",
+      "School",
+      "Work"
+     ],
+     [
+      "Honey's on a what?",
+      "Star Search",
+      "Mission",
+      "Talent show"
+     ]
+    ],
+    [
+     [
+      "Her autograph book is as thick as a what?",
+      "Bible",
+      "Dictionary",
+      "Phone book"
+     ],
+     [
+      "She waits for the arrival of whoever's what?",
+      "Popping",
+      "Famous",
+      "Rich"
+     ],
+     [
+      "A party at the what?",
+      "Hotel",
+      "Mansion",
+      "Club"
+     ],
+     [
+      "She's the first one to what?",
+      "Drop in",
+      "Leave",
+      "Dance"
+     ],
+     [
+      "She'll be there till what?",
+      "Morning",
+      "Midnight",
+      "Noon"
+     ],
+     [
+      "With her dress all what?",
+      "Wrinkled",
+      "Torn",
+      "Wet"
+     ],
+     [
+      "When the sun is what?",
+      "Dawning",
+      "Shining",
+      "Setting"
+     ],
+     [
+      "She swears to God she's no what?",
+      "Groupie",
+      "Liar",
+      "Fan"
+     ],
+     [
+      "She's a name what?",
+      "Dropper",
+      "Caller",
+      "Taker"
+     ],
+     [
+      "Saying who she knows like she's so what?",
+      "Proper",
+      "Famous",
+      "Pretty"
+     ],
+     [
+      "She got a flick with whom?",
+      "Big Daddy Kane",
+      "LL Cool J",
+      "Rakim"
+     ]
+    ],
+    [
+     [
+      "Take a what or grab a spot on line?",
+      "Number",
+      "Ticket",
+      "Seat"
+     ],
+     [
+      "Join the what of those who thought?",
+      "List",
+      "Club",
+      "Crowd"
+     ],
+     [
+      "A hit movie or a record on the what?",
+      "Charts",
+      "Radio",
+      "Shelf"
+     ],
+     [
+      "Home girl's a what?",
+      "Heartbreaker",
+      "Gold digger",
+      "Superstar"
+     ],
+     [
+      "She breaks hearts by the what?",
+      "Dozens",
+      "Hundreds",
+      "Day"
+     ],
+     [
+      "She ain't that fly but she's got the what?",
+      "Nerve",
+      "Looks",
+      "Style"
+     ],
+     [
+      "She'll go through how many before she learns her lesson?",
+      "Ten",
+      "Two",
+      "Twenty"
+     ],
+     [
+      "You could be somebody's what?",
+      "Wife",
+      "Star",
+      "Boss"
+     ],
+     [
+      "Nothing wrong with striving for the what?",
+      "Stars",
+      "Top",
+      "Money"
+     ],
+     [
+      "Stop to smell the what?",
+      "Roses",
+      "Coffee",
+      "Flowers"
+     ],
+     [
+      "Then you can go to a real what?",
+      "Church",
+      "School",
+      "Job"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

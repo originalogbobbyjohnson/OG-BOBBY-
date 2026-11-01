@@ -93,40 +93,1305 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
    "title": "The Slickness",
    "id": "TxEhbqIc7Zw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 20.6,
+   "cuts": [
+    44.7,
+    81.2,
+    130.3
+   ],
+   "qs": [
+    [
+     [
+      "They're mad at him 'cause he can't what them?",
+      "Smell",
+      "Hear",
+      "See"
+     ],
+     [
+      "He's still smashing up the what?",
+      "Cerebellum",
+      "Competition",
+      "Speakers"
+     ],
+     [
+      "He spits rhymes like what?",
+      "Sitcoms",
+      "Sermons",
+      "Cartoons"
+     ],
+     [
+      "Sitcoms to whom?",
+      "Aaron Spelling",
+      "Norman Lear",
+      "Bill Cosby"
+     ],
+     [
+      "It's like he's standing on the what, yelling?",
+      "Moon",
+      "Roof",
+      "Stage"
+     ],
+     [
+      "His ultra-what?",
+      "Magnetic",
+      "Violent",
+      "Sonic"
+     ],
+     [
+      "Jungle what?",
+      "Boogies",
+      "Brothers",
+      "Fever"
+     ],
+     [
+      "Crispy like what?",
+      "Popeyes",
+      "KFC",
+      "Bacon"
+     ],
+     [
+      "Fresh what?",
+      "Tims",
+      "Kicks",
+      "Jordans"
+     ],
+     [
+      "Fresh Tims in the what?",
+      "Hoodie",
+      "Rain",
+      "Winter"
+     ]
+    ],
+    [
+     [
+      "You're still what?",
+      "Sleeping",
+      "Talking",
+      "Hating"
+     ],
+     [
+      "Ghetto what?",
+      "Navy",
+      "Army",
+      "Fabulous"
+     ],
+     [
+      "Ghetto Navy is still what?",
+      "Creeping",
+      "Crying",
+      "Running"
+     ],
+     [
+      "By the grace of what?",
+      "God",
+      "Luck",
+      "Time"
+     ],
+     [
+      "We here, still what?",
+      "Eating",
+      "Breathing",
+      "Grinding"
+     ],
+     [
+      "Still eating, still what?",
+      "Hot",
+      "Fresh",
+      "Cold"
+     ],
+     [
+      "Hardcore head still what?",
+      "Seeking",
+      "Nodding",
+      "Rocking"
+     ],
+     [
+      "The slickness, how we what?",
+      "Move",
+      "Live",
+      "Groove"
+     ]
+    ],
+    [
+     [
+      "Before the hood crocodile line, he's still what?",
+      "Hungry",
+      "Humble",
+      "Hustling"
+     ],
+     [
+      "The hood crocodile who?",
+      "Dundee",
+      "Hunter",
+      "Jones"
+     ],
+     [
+      "Your head's hard like a what?",
+      "Rock",
+      "Brick",
+      "Wall"
+     ],
+     [
+      "But your heart is what?",
+      "Spongy",
+      "Cold",
+      "Soft"
+     ],
+     [
+      "He's been on the grind since what day?",
+      "Sunday",
+      "Monday",
+      "Friday"
+     ],
+     [
+      "Swift with it like bullet what?",
+      "Trains",
+      "Proof",
+      "Time"
+     ],
+     [
+      "A lot of cats move what?",
+      "Clumsy",
+      "Slow",
+      "Sneaky"
+     ],
+     [
+      "They talk behind his back like who?",
+      "Al Bundy",
+      "Archie Bunker",
+      "Homer Simpson"
+     ],
+     [
+      "Fools love him where?",
+      "Worldwide",
+      "Uptown",
+      "Overseas"
+     ],
+     [
+      "Suitcasing, shoes what?",
+      "Muddy",
+      "Shined",
+      "Untied"
+     ],
+     [
+      "He's riding the mini what?",
+      "Scooter",
+      "Cooper",
+      "Bike"
+     ],
+     [
+      "For his true fans he keeps the what live?",
+      "Jam",
+      "Party",
+      "Show"
+     ],
+     [
+      "Hold it down, keep your what up?",
+      "Head",
+      "Hands",
+      "Guard"
+     ]
+    ]
+   ]
   },
   {
    "title": "Right 2 Know",
    "id": "LF_8YvX95T4",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 23.4,
+   "cuts": [
+    57.3,
+    120,
+    189.5
+   ],
+   "qs": [
+    [
+     [
+      "This is a what?",
+      "Discussion",
+      "Lesson",
+      "Warning"
+     ],
+     [
+      "He has to say he's African-American on an what?",
+      "Application",
+      "Envelope",
+      "ID"
+     ],
+     [
+      "Why does he got to have a what?",
+      "Reputation",
+      "Gun",
+      "Job"
+     ],
+     [
+      "Why are you getting what, still hating?",
+      "Paper",
+      "Older",
+      "Famous"
+     ],
+     [
+      "Why aren't you getting that pretty what?",
+      "Girl",
+      "Ride",
+      "House"
+     ],
+     [
+      "He's flying what?",
+      "High",
+      "Solo",
+      "Home"
+     ],
+     [
+      "Why can't we love the what and let it do what it do?",
+      "Love",
+      "Music",
+      "Money"
+     ],
+     [
+      "Why can't he spread some hood what to you and your crew?",
+      "Luck",
+      "Love",
+      "Peace"
+     ],
+     [
+      "Why can't you come to the party and just have a good what?",
+      "Time",
+      "Drink",
+      "Dance"
+     ],
+     [
+      "You're a baller on the what?",
+      "Grind",
+      "Court",
+      "Block"
+     ],
+     [
+      "Why can't some choose to live what?",
+      "Color blind",
+      "Free",
+      "Quiet"
+     ],
+     [
+      "Why can't she let the next chick what?",
+      "Shine",
+      "Speak",
+      "Win"
+     ]
+    ],
+    [
+     [
+      "Let's take a trip into another what?",
+      "World",
+      "Time",
+      "Zone"
+     ],
+     [
+      "Real, with just a couple of what?",
+      "Questions",
+      "Rhymes",
+      "Friends"
+     ],
+     [
+      "How folks really what?",
+      "Feel",
+      "Live",
+      "Think"
+     ],
+     [
+      "It's just a what?",
+      "Test",
+      "Game",
+      "Phase"
+     ],
+     [
+      "Which leader wasn't aware?",
+      "Tony Blair",
+      "Gordon Brown",
+      "Margaret Thatcher"
+     ],
+     [
+      "Them hitting which country?",
+      "The UK",
+      "France",
+      "Spain"
+     ],
+     [
+      "Why does he get out and travel the what?",
+      "Earth",
+      "States",
+      "Coast"
+     ],
+     [
+      "Why do shows make people feel it in their what?",
+      "Soul",
+      "Bones",
+      "Heart"
+     ],
+     [
+      "Why can't you make real hip-hop with what?",
+      "Rock and roll",
+      "Jazz",
+      "Country"
+     ]
+    ],
+    [
+     [
+      "Why can't he be from what city?",
+      "New York",
+      "Chicago",
+      "LA"
+     ],
+     [
+      "Why aren't his parents aware of his what?",
+      "Grades",
+      "Friends",
+      "Girl"
+     ],
+     [
+      "Why does keeping it real sometimes go what?",
+      "Wrong",
+      "Viral",
+      "Bad"
+     ],
+     [
+      "Why didn't you visit your fam up where?",
+      "North",
+      "State",
+      "Top"
+     ],
+     [
+      "Why do you eat so much what?",
+      "Pork",
+      "Candy",
+      "Sugar"
+     ],
+     [
+      "Why did you never show your brother what?",
+      "Support",
+      "Love",
+      "Respect"
+     ],
+     [
+      "Why ain't you saying nothing in your what?",
+      "Rhymes",
+      "Songs",
+      "Letters"
+     ],
+     [
+      "Why are you still on the what?",
+      "Court",
+      "Corner",
+      "Couch"
+     ],
+     [
+      "Why are you wasting time reaching for what?",
+      "Mine",
+      "Gold",
+      "Fame"
+     ],
+     [
+      "Why can't men respect what?",
+      "Mankind",
+      "Women",
+      "Elders"
+     ],
+     [
+      "He's got a right to what?",
+      "Know",
+      "Speak",
+      "Vote"
+     ]
+    ]
+   ]
   },
   {
    "title": "The Message",
    "id": "ap-sGfsnQM8",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Be Easy",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Medicine Men",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "start": 18.5,
+   "cuts": [
+    50.5,
+    108.8,
+    176.8
+   ],
+   "qs": [
+    [
+     [
+      "\"This is the\" what?",
+      "Jungle",
+      "Struggle",
+      "City"
+     ],
+     [
+      "Sometimes he's got to what?",
+      "Wonder",
+      "Pray",
+      "Leave"
+     ],
+     [
+      "Will they see another what?",
+      "Summer",
+      "Birthday",
+      "Morning"
+     ],
+     [
+      "Folks are chasing what everywhere?",
+      "Cash",
+      "Dreams",
+      "Girls"
+     ],
+     [
+      "When your back's against the what?",
+      "Wall",
+      "Ropes",
+      "Door"
+     ],
+     [
+      "You just don't what?",
+      "Care",
+      "Stop",
+      "Sleep"
+     ],
+     [
+      "Refusing to what?",
+      "Fail",
+      "Fold",
+      "Quit"
+     ],
+     [
+      "It's time to make what?",
+      "Noise",
+      "Moves",
+      "Money"
+     ],
+     [
+      "The hood's trapped by the what?",
+      "Law",
+      "Fence",
+      "Rent"
+     ],
+     [
+      "Cops toss the back of an unlocked what?",
+      "Car",
+      "Door",
+      "Truck"
+     ]
+    ],
+    [
+     [
+      "Don't push him, 'cause he's already on the what?",
+      "Edge",
+      "Floor",
+      "Brink"
+     ],
+     [
+      "Babies are having what?",
+      "Babies",
+      "Problems",
+      "Birthdays"
+     ],
+     [
+      "Some are digging in the what?",
+      "Garbage can",
+      "Couch",
+      "Sand"
+     ],
+     [
+      "Man's trying to get what?",
+      "Right",
+      "Rich",
+      "Home"
+     ],
+     [
+      "Hungry and can't sit what?",
+      "Tight",
+      "Still",
+      "Down"
+     ],
+     [
+      "Begging for what?",
+      "Change",
+      "Food",
+      "Help"
+     ],
+     [
+      "She's got two babies to what?",
+      "Feed",
+      "Raise",
+      "Dress"
+     ],
+     [
+      "And no food at what?",
+      "Home",
+      "School",
+      "All"
+     ],
+     [
+      "It's hot in the what?",
+      "City",
+      "Summer",
+      "Kitchen"
+     ],
+     [
+      "The predicament is not what?",
+      "Pretty",
+      "Pleasant",
+      "Fair"
+     ],
+     [
+      "They can't make it on their what?",
+      "Own",
+      "Pay",
+      "Block"
+     ],
+     [
+      "\"On my job, hard body\" what?",
+      "Getting my bread",
+      "Every day",
+      "Night and day"
+     ],
+     [
+      "\"This is the jungle\" — will they see another what?",
+      "Summer",
+      "Spring",
+      "Sunrise"
+     ]
+    ],
+    [
+     [
+      "His brother's doing what?",
+      "Bad",
+      "Good",
+      "Time"
+     ],
+     [
+      "She still lets him back what?",
+      "In",
+      "Home",
+      "Out"
+     ],
+     [
+      "That's not what?",
+      "Healthy",
+      "Right",
+      "Fair"
+     ],
+     [
+      "They watch what show in the day?",
+      "Maury",
+      "Oprah",
+      "Jerry Springer"
+     ],
+     [
+      "R&B Divas at what time?",
+      "Night",
+      "Noon",
+      "Dawn"
+     ],
+     [
+      "He can't even see the game or whose fight?",
+      "Mayweather",
+      "Pacquiao",
+      "Tyson"
+     ],
+     [
+      "His son's what?",
+      "Education",
+      "Allowance",
+      "Future"
+     ],
+     [
+      "No time to be what?",
+      "Wasting",
+      "Playing",
+      "Sleeping"
+     ],
+     [
+      "The city's loaded with silly what?",
+      "Cats",
+      "Kids",
+      "Rules"
+     ],
+     [
+      "Man up, switch what?",
+      "Things",
+      "Sides",
+      "Gears"
+     ],
+     [
+      "He salutes who?",
+      "Grandmaster Flash",
+      "Afrika Bambaataa",
+      "Kool Herc"
+     ],
+     [
+      "And the Furious what?",
+      "Five",
+      "Four",
+      "Crew"
+     ],
+     [
+      "Who shouts his name at the end?",
+      "Prince Po",
+      "Pharoahe Monch",
+      "Oh No"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "The Slickness",
+   "id": "TxEhbqIc7Zw",
+   "start": 20.6,
+   "cuts": [
+    44.7,
+    81.2,
+    130.3
+   ],
+   "qs": [
+    [
+     [
+      "They're mad at him 'cause he can't what them?",
+      "Smell",
+      "Hear",
+      "See"
+     ],
+     [
+      "He's still smashing up the what?",
+      "Cerebellum",
+      "Competition",
+      "Speakers"
+     ],
+     [
+      "He spits rhymes like what?",
+      "Sitcoms",
+      "Sermons",
+      "Cartoons"
+     ],
+     [
+      "Sitcoms to whom?",
+      "Aaron Spelling",
+      "Norman Lear",
+      "Bill Cosby"
+     ],
+     [
+      "It's like he's standing on the what, yelling?",
+      "Moon",
+      "Roof",
+      "Stage"
+     ],
+     [
+      "His ultra-what?",
+      "Magnetic",
+      "Violent",
+      "Sonic"
+     ],
+     [
+      "Jungle what?",
+      "Boogies",
+      "Brothers",
+      "Fever"
+     ],
+     [
+      "Crispy like what?",
+      "Popeyes",
+      "KFC",
+      "Bacon"
+     ],
+     [
+      "Fresh what?",
+      "Tims",
+      "Kicks",
+      "Jordans"
+     ],
+     [
+      "Fresh Tims in the what?",
+      "Hoodie",
+      "Rain",
+      "Winter"
+     ]
+    ],
+    [
+     [
+      "You're still what?",
+      "Sleeping",
+      "Talking",
+      "Hating"
+     ],
+     [
+      "Ghetto what?",
+      "Navy",
+      "Army",
+      "Fabulous"
+     ],
+     [
+      "Ghetto Navy is still what?",
+      "Creeping",
+      "Crying",
+      "Running"
+     ],
+     [
+      "By the grace of what?",
+      "God",
+      "Luck",
+      "Time"
+     ],
+     [
+      "We here, still what?",
+      "Eating",
+      "Breathing",
+      "Grinding"
+     ],
+     [
+      "Still eating, still what?",
+      "Hot",
+      "Fresh",
+      "Cold"
+     ],
+     [
+      "Hardcore head still what?",
+      "Seeking",
+      "Nodding",
+      "Rocking"
+     ],
+     [
+      "The slickness, how we what?",
+      "Move",
+      "Live",
+      "Groove"
+     ]
+    ],
+    [
+     [
+      "Before the hood crocodile line, he's still what?",
+      "Hungry",
+      "Humble",
+      "Hustling"
+     ],
+     [
+      "The hood crocodile who?",
+      "Dundee",
+      "Hunter",
+      "Jones"
+     ],
+     [
+      "Your head's hard like a what?",
+      "Rock",
+      "Brick",
+      "Wall"
+     ],
+     [
+      "But your heart is what?",
+      "Spongy",
+      "Cold",
+      "Soft"
+     ],
+     [
+      "He's been on the grind since what day?",
+      "Sunday",
+      "Monday",
+      "Friday"
+     ],
+     [
+      "Swift with it like bullet what?",
+      "Trains",
+      "Proof",
+      "Time"
+     ],
+     [
+      "A lot of cats move what?",
+      "Clumsy",
+      "Slow",
+      "Sneaky"
+     ],
+     [
+      "They talk behind his back like who?",
+      "Al Bundy",
+      "Archie Bunker",
+      "Homer Simpson"
+     ],
+     [
+      "Fools love him where?",
+      "Worldwide",
+      "Uptown",
+      "Overseas"
+     ],
+     [
+      "Suitcasing, shoes what?",
+      "Muddy",
+      "Shined",
+      "Untied"
+     ],
+     [
+      "He's riding the mini what?",
+      "Scooter",
+      "Cooper",
+      "Bike"
+     ],
+     [
+      "For his true fans he keeps the what live?",
+      "Jam",
+      "Party",
+      "Show"
+     ],
+     [
+      "Hold it down, keep your what up?",
+      "Head",
+      "Hands",
+      "Guard"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Right 2 Know",
+   "id": "LF_8YvX95T4",
+   "start": 23.4,
+   "cuts": [
+    57.3,
+    120,
+    189.5
+   ],
+   "qs": [
+    [
+     [
+      "This is a what?",
+      "Discussion",
+      "Lesson",
+      "Warning"
+     ],
+     [
+      "He has to say he's African-American on an what?",
+      "Application",
+      "Envelope",
+      "ID"
+     ],
+     [
+      "Why does he got to have a what?",
+      "Reputation",
+      "Gun",
+      "Job"
+     ],
+     [
+      "Why are you getting what, still hating?",
+      "Paper",
+      "Older",
+      "Famous"
+     ],
+     [
+      "Why aren't you getting that pretty what?",
+      "Girl",
+      "Ride",
+      "House"
+     ],
+     [
+      "He's flying what?",
+      "High",
+      "Solo",
+      "Home"
+     ],
+     [
+      "Why can't we love the what and let it do what it do?",
+      "Love",
+      "Music",
+      "Money"
+     ],
+     [
+      "Why can't he spread some hood what to you and your crew?",
+      "Luck",
+      "Love",
+      "Peace"
+     ],
+     [
+      "Why can't you come to the party and just have a good what?",
+      "Time",
+      "Drink",
+      "Dance"
+     ],
+     [
+      "You're a baller on the what?",
+      "Grind",
+      "Court",
+      "Block"
+     ],
+     [
+      "Why can't some choose to live what?",
+      "Color blind",
+      "Free",
+      "Quiet"
+     ],
+     [
+      "Why can't she let the next chick what?",
+      "Shine",
+      "Speak",
+      "Win"
+     ]
+    ],
+    [
+     [
+      "Let's take a trip into another what?",
+      "World",
+      "Time",
+      "Zone"
+     ],
+     [
+      "Real, with just a couple of what?",
+      "Questions",
+      "Rhymes",
+      "Friends"
+     ],
+     [
+      "How folks really what?",
+      "Feel",
+      "Live",
+      "Think"
+     ],
+     [
+      "It's just a what?",
+      "Test",
+      "Game",
+      "Phase"
+     ],
+     [
+      "Which leader wasn't aware?",
+      "Tony Blair",
+      "Gordon Brown",
+      "Margaret Thatcher"
+     ],
+     [
+      "Them hitting which country?",
+      "The UK",
+      "France",
+      "Spain"
+     ],
+     [
+      "Why does he get out and travel the what?",
+      "Earth",
+      "States",
+      "Coast"
+     ],
+     [
+      "Why do shows make people feel it in their what?",
+      "Soul",
+      "Bones",
+      "Heart"
+     ],
+     [
+      "Why can't you make real hip-hop with what?",
+      "Rock and roll",
+      "Jazz",
+      "Country"
+     ]
+    ],
+    [
+     [
+      "Why can't he be from what city?",
+      "New York",
+      "Chicago",
+      "LA"
+     ],
+     [
+      "Why aren't his parents aware of his what?",
+      "Grades",
+      "Friends",
+      "Girl"
+     ],
+     [
+      "Why does keeping it real sometimes go what?",
+      "Wrong",
+      "Viral",
+      "Bad"
+     ],
+     [
+      "Why didn't you visit your fam up where?",
+      "North",
+      "State",
+      "Top"
+     ],
+     [
+      "Why do you eat so much what?",
+      "Pork",
+      "Candy",
+      "Sugar"
+     ],
+     [
+      "Why did you never show your brother what?",
+      "Support",
+      "Love",
+      "Respect"
+     ],
+     [
+      "Why ain't you saying nothing in your what?",
+      "Rhymes",
+      "Songs",
+      "Letters"
+     ],
+     [
+      "Why are you still on the what?",
+      "Court",
+      "Corner",
+      "Couch"
+     ],
+     [
+      "Why are you wasting time reaching for what?",
+      "Mine",
+      "Gold",
+      "Fame"
+     ],
+     [
+      "Why can't men respect what?",
+      "Mankind",
+      "Women",
+      "Elders"
+     ],
+     [
+      "He's got a right to what?",
+      "Know",
+      "Speak",
+      "Vote"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "The Message",
+   "id": "ap-sGfsnQM8",
+   "start": 18.5,
+   "cuts": [
+    50.5,
+    108.8,
+    176.8
+   ],
+   "qs": [
+    [
+     [
+      "\"This is the\" what?",
+      "Jungle",
+      "Struggle",
+      "City"
+     ],
+     [
+      "Sometimes he's got to what?",
+      "Wonder",
+      "Pray",
+      "Leave"
+     ],
+     [
+      "Will they see another what?",
+      "Summer",
+      "Birthday",
+      "Morning"
+     ],
+     [
+      "Folks are chasing what everywhere?",
+      "Cash",
+      "Dreams",
+      "Girls"
+     ],
+     [
+      "When your back's against the what?",
+      "Wall",
+      "Ropes",
+      "Door"
+     ],
+     [
+      "You just don't what?",
+      "Care",
+      "Stop",
+      "Sleep"
+     ],
+     [
+      "Refusing to what?",
+      "Fail",
+      "Fold",
+      "Quit"
+     ],
+     [
+      "It's time to make what?",
+      "Noise",
+      "Moves",
+      "Money"
+     ],
+     [
+      "The hood's trapped by the what?",
+      "Law",
+      "Fence",
+      "Rent"
+     ],
+     [
+      "Cops toss the back of an unlocked what?",
+      "Car",
+      "Door",
+      "Truck"
+     ]
+    ],
+    [
+     [
+      "Don't push him, 'cause he's already on the what?",
+      "Edge",
+      "Floor",
+      "Brink"
+     ],
+     [
+      "Babies are having what?",
+      "Babies",
+      "Problems",
+      "Birthdays"
+     ],
+     [
+      "Some are digging in the what?",
+      "Garbage can",
+      "Couch",
+      "Sand"
+     ],
+     [
+      "Man's trying to get what?",
+      "Right",
+      "Rich",
+      "Home"
+     ],
+     [
+      "Hungry and can't sit what?",
+      "Tight",
+      "Still",
+      "Down"
+     ],
+     [
+      "Begging for what?",
+      "Change",
+      "Food",
+      "Help"
+     ],
+     [
+      "She's got two babies to what?",
+      "Feed",
+      "Raise",
+      "Dress"
+     ],
+     [
+      "And no food at what?",
+      "Home",
+      "School",
+      "All"
+     ],
+     [
+      "It's hot in the what?",
+      "City",
+      "Summer",
+      "Kitchen"
+     ],
+     [
+      "The predicament is not what?",
+      "Pretty",
+      "Pleasant",
+      "Fair"
+     ],
+     [
+      "They can't make it on their what?",
+      "Own",
+      "Pay",
+      "Block"
+     ],
+     [
+      "\"On my job, hard body\" what?",
+      "Getting my bread",
+      "Every day",
+      "Night and day"
+     ],
+     [
+      "\"This is the jungle\" — will they see another what?",
+      "Summer",
+      "Spring",
+      "Sunrise"
+     ]
+    ],
+    [
+     [
+      "His brother's doing what?",
+      "Bad",
+      "Good",
+      "Time"
+     ],
+     [
+      "She still lets him back what?",
+      "In",
+      "Home",
+      "Out"
+     ],
+     [
+      "That's not what?",
+      "Healthy",
+      "Right",
+      "Fair"
+     ],
+     [
+      "They watch what show in the day?",
+      "Maury",
+      "Oprah",
+      "Jerry Springer"
+     ],
+     [
+      "R&B Divas at what time?",
+      "Night",
+      "Noon",
+      "Dawn"
+     ],
+     [
+      "He can't even see the game or whose fight?",
+      "Mayweather",
+      "Pacquiao",
+      "Tyson"
+     ],
+     [
+      "His son's what?",
+      "Education",
+      "Allowance",
+      "Future"
+     ],
+     [
+      "No time to be what?",
+      "Wasting",
+      "Playing",
+      "Sleeping"
+     ],
+     [
+      "The city's loaded with silly what?",
+      "Cats",
+      "Kids",
+      "Rules"
+     ],
+     [
+      "Man up, switch what?",
+      "Things",
+      "Sides",
+      "Gears"
+     ],
+     [
+      "He salutes who?",
+      "Grandmaster Flash",
+      "Afrika Bambaataa",
+      "Kool Herc"
+     ],
+     [
+      "And the Furious what?",
+      "Five",
+      "Four",
+      "Crew"
+     ],
+     [
+      "Who shouts his name at the end?",
+      "Prince Po",
+      "Pharoahe Monch",
+      "Oh No"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
