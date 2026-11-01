@@ -270,6 +270,28 @@ html, body { height: 100%; overflow: hidden; }
 @keyframes st-ann { 0% { opacity: 0; } 8% { opacity: 1; } 45% { opacity: .35; } 55% { opacity: 1; } 100% { opacity: 1; } }
 .mcstats { display: grid; gap: 10px; text-align: left; } .mcstats .row { display: flex; justify-content: space-between; font: 700 14px Helvetica, Arial, sans-serif; color: #fff; border-bottom: 1px solid #2a2f55; padding-bottom: 6px; }
 .mcstats .row b { color: #f2c14e; }
+
+/* ---------- badges, streak, mystery door, celebrations, next stop ---------- */
+.bwall h5 { margin: 12px 0 6px; font: 900 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .14em; color: #f2c14e; text-align: left; }
+.bgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.bdg { display: grid; justify-items: center; gap: 3px; padding: 7px 2px; border-radius: 10px; border: 2px solid #2a2f55; background: #10132a; color: #fff; font: 800 8.5px/1.1 Helvetica, Arial, sans-serif; letter-spacing: .04em; text-align: center; }
+.bdg i { font-style: normal; font-size: 18px; line-height: 1; filter: grayscale(1) brightness(.75); }
+.bdg.on { border-color: #000; background: linear-gradient(160deg, #f7d774, #e0aa25); color: #000; box-shadow: 0 2px 0 #000; }
+.bdg.on i { filter: none; }
+.bdg .bl { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font: 900 11px/1 Helvetica, Arial, sans-serif; color: #fff; }
+.tile.mystery, .srow.mystery { box-shadow: 0 0 0 2px #b933ad, 0 0 14px rgba(185,51,173,.8); animation: mys 1.6s ease-in-out infinite; border-radius: 12px; }
+@keyframes mys { 50% { box-shadow: 0 0 0 2px #ff7af0, 0 0 22px rgba(255,122,240,.9); } }
+.mystag { display: inline-block; margin-left: 6px; padding: 2px 6px; border-radius: 99px; background: #b933ad; color: #fff; font: 900 9px/1.2 Helvetica, Arial, sans-serif; letter-spacing: .08em; vertical-align: middle; }
+.leaflet-marker-icon.mmys { font: 900 14px/22px Helvetica, Arial, sans-serif; color: #fff; background: #b933ad; border: 2px solid #000; border-radius: 50%; text-align: center; box-shadow: 0 0 12px #ff7af0; }
+.ogtoast { position: fixed; left: 50%; bottom: calc(86px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 2600; width: min(92vw, 420px); display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center;
+  background: #111; border: 3px solid #f2c14e; border-radius: 14px; padding: 10px 12px; box-shadow: 0 10px 24px rgba(0,0,0,.6); color: #fff; animation: tin .35s cubic-bezier(.2,1.4,.4,1); }
+.ogtoast small { display: block; font: 900 10px/1 Helvetica, Arial, sans-serif; letter-spacing: .14em; color: #f2c14e; margin-bottom: 4px; }
+.ogtoast b { font: 800 15px/1.2 Helvetica, Arial, sans-serif; }
+.ogtoast button { border: 2px solid #000; border-radius: 10px; background: #f2c14e; color: #000; font: 900 12px/1 Helvetica, Arial, sans-serif; padding: 9px 10px; cursor: pointer; box-shadow: 0 2px 0 #000; }
+.ogtoast .tx { background: none; border: 0; color: #fff; box-shadow: none; font-size: 16px; padding: 4px; }
+@keyframes tin { from { transform: translate(-50%, 30px); opacity: 0; } }
+.confetti { position: fixed; top: -12px; z-index: 2700; width: 9px; height: 14px; border-radius: 2px; pointer-events: none; animation: cfall linear forwards; }
+@keyframes cfall { to { transform: translateY(105vh) rotate(720deg); } }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -1159,7 +1181,8 @@ function askExplicit(then) {
   $("exYes").onclick = () => { try { localStorage.setItem("ogfan99explicit", "1"); } catch (e) {} closeCard(); paintEx(); drawList(); if (then) then(); };
 }
 function goArtist(i) {
-  const a = ARTISTS[i];
+  const a = ARTISTS[i]; try { sessionStorage.setItem("ogfan99last", String(i)); } catch (e) {}
+  if (window.OGX && OGX.mysteryIdx() === i && a.url) { location.href = a.url + "?from=ogfan99&mystery=1"; return; }
   if (a.ex === 2 && !EXPL()) { openCard(i); return; }
   if (a.url && (a.status === "live" || (a.status === "demo" && isOwner()))) location.href = a.url + "?from=ogfan99";
   else openCard(i);
@@ -1198,6 +1221,102 @@ $("keyBtn").onclick = () => { moreOpen(true); $("key").open = true; setTimeout((
   apply();
 })();
 
+
+/* ---------- OGX: streaks, badges, achievements, mystery door, next stop, celebrations ---------- */
+window.OGX = (function () {
+  const LS = (k, v) => { try { if (v === undefined) return JSON.parse(localStorage.getItem(k) || "null"); localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } };
+  const dkey = d => d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+  const playable = a => a.url && (a.status === "live" || (a.status === "demo" && isOwner())) && !(a.ex === 2 && !EXPL());
+  const prog = a => progress(a) || { stops: 0, cleared: 0 };
+  const done = a => prog(a).cleared >= 1;
+  const totals = () => { let st = 0, ep = 0, played = 0; ARTISTS.forEach(a => { const p = prog(a); st += p.stops; ep += p.cleared; if (p.stops || p.cleared) played++; }); return { st, ep, played }; };
+  /* daily log: which days you played, plus today's episode count (for EXPRESS) */
+  function log() {
+    const t = totals(), now = new Date(), today = dkey(now);
+    let L = LS("ogfan99days") || { snap: t.st + t.ep, days: [], epDay: today, epBase: t.ep, flags: {} };
+    if (t.st + t.ep > L.snap && !L.days.includes(today)) L.days.push(today);
+    L.snap = t.st + t.ep;
+    if (L.epDay !== today) { L.epDay = today; L.epBase = t.ep; }
+    if (t.ep - L.epBase >= 9) L.flags.express = 1;
+    if (now.getHours() < 4 && L.days.includes(today)) L.flags.night = 1;
+    L.days = L.days.slice(-400); LS("ogfan99days", L); return L;
+  }
+  function streak() {
+    const L = log(), set = new Set(L.days); let n = 0; const d = new Date();
+    if (!set.has(dkey(d))) d.setDate(d.getDate() - 1);
+    while (set.has(dkey(d))) { n++; d.setDate(d.getDate() - 1); }
+    return n;
+  }
+  function badges() {
+    const L = log(), out = [], pl = ARTISTS.filter(playable);
+    BOROS.forEach(b => { const here = pl.filter(a => boroOf(a) === b);
+      out.push({ g: "BOROUGHS", id: "b:" + b, name: ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()), icon: "&#127961;", on: here.length > 0 && here.every(done), hint: "Clear an episode with every artist in " + b.replace("the ", "") }); });
+    out.push({ g: "BOROUGHS", id: "king", name: "5 BORO KING", icon: "&#128081;", on: out.filter(x => x.g === "BOROUGHS").every(x => x.on), hint: "Earn every borough badge" });
+    KEY.forEach(([k, ls]) => { const here = pl.filter(a => a.trains.some(t => ls.includes(t[0])));
+      out.push({ g: "LINES", id: "l:" + k, name: ls.join(" "), line: LINECOL[k], txt: k === "N" ? "#000" : "#fff", on: here.length > 0 && here.every(done), hint: "Play every artist on the " + ls.join(" ") }); });
+    const t = totals(), legends = ARTISTS.filter(a => tierOf(a) === "legend" && done(a)).length, full = ARTISTS.some(a => prog(a).cleared >= 9), st = streak();
+    [["first", "FIRST RIDE", "&#127915;", t.played >= 1, "Play your first artist"], ["express", "EXPRESS", "&#9889;", !!L.flags.express, "Clear 9 episodes in one day"],
+     ["night", "NIGHT RIDER", "&#127769;", !!L.flags.night, "Play after midnight"], ["old", "OLD SCHOOL", "&#128251;", legends >= 5, "Clear an episode with 5 Legends"],
+     ["full", "LAST STOP", "&#127942;", full, "Finish all 9 episodes of an artist"], ["wk", "7-DAY STREAK", "&#128293;", st >= 7, "Play 7 days in a row"],
+     ["ten", "10 ARTISTS", "&#127908;", t.played >= 10, "Play 10 different artists"], ["pts", "500 PTS", "&#11088;", stats0().pts >= 500, "Reach 500 ride points"]]
+      .forEach(([id, name, icon, on, hint]) => out.push({ g: "ACHIEVEMENTS", id: "a:" + id, name, icon, on, hint }));
+    return out;
+  }
+  let stats0 = () => ({ pts: totals().st });
+  function wallHTML() {
+    const B = badges(); let h = '<div class="bwall">';
+    ["BOROUGHS", "LINES", "ACHIEVEMENTS"].forEach(g => { const xs = B.filter(b => b.g === g);
+      h += '<h5>' + g + ' · ' + xs.filter(b => b.on).length + '/' + xs.length + '</h5><div class="bgrid">' + xs.map(b => '<div class="bdg' + (b.on ? " on" : "") + '" title="' + esc(b.hint) + '">' +
+        (b.line ? '<span class="bl" style="background:' + b.line + ';color:' + b.txt + '">' + b.name.split(" ")[0] + '</span>' : '<i>' + b.icon + '</i>') + '<span>' + b.name + '</span></div>').join("") + '</div>'; });
+    return h + '</div>';
+  }
+  /* the Mystery Door: one locked artist a week you can sneak into */
+  function mysteryIdx() {
+    const c = ARTISTS.map((a, i) => i).filter(i => { const a = ARTISTS[i]; return a.url && a.status !== "live" && !playable(a) && a.ex !== 2; });
+    const pool = c.length ? c : ARTISTS.map((a, i) => i).filter(i => ARTISTS[i].url && ARTISTS[i].status !== "live" && !(prog(ARTISTS[i]).stops));
+    if (!pool.length) return -1; const d = new Date(), wk = Math.floor((d - new Date(d.getFullYear(), 0, 1)) / 6048e5) + d.getFullYear() * 53;
+    return pool[(wk * 7919) % pool.length];
+  }
+  /* celebrations: train horn + confetti */
+  function horn() { try { const ac = new (window.AudioContext || window.webkitAudioContext)(); [[220, 0], [277, 0], [330, 0]].forEach(([f]) => { const o = ac.createOscillator(), g = ac.createGain(); o.type = "sawtooth"; o.frequency.value = f; g.gain.setValueAtTime(.0001, ac.currentTime); g.gain.exponentialRampToValueAtTime(.08, ac.currentTime + .05); g.gain.setValueAtTime(.08, ac.currentTime + .7); g.gain.exponentialRampToValueAtTime(.0001, ac.currentTime + 1.1); o.connect(g).connect(ac.destination); o.start(); o.stop(ac.currentTime + 1.15); }); } catch (e) {} }
+  function confetti() { const C = ["#f2c14e", "#d62828", "#35b867", "#0039a6", "#ff6319", "#b933ad", "#fff"];
+    for (let k = 0; k < 70; k++) { const c = document.createElement("i"); c.className = "confetti"; c.style.left = Math.random() * 100 + "vw"; c.style.background = C[k % C.length]; c.style.animationDuration = 1.6 + Math.random() * 1.6 + "s"; c.style.animationDelay = Math.random() * .5 + "s"; document.body.appendChild(c); setTimeout(() => c.remove(), 4000); } }
+  function toast(kicker, text, btn, fn, ms) {
+    const old = document.querySelector(".ogtoast"); if (old) old.remove();
+    const t = document.createElement("div"); t.className = "ogtoast"; t.innerHTML = '<div><small>' + kicker + '</small><b>' + text + '</b></div><div>' + (btn ? '<button type="button" class="tb">' + btn + '</button>' : '') + '<button type="button" class="tx" aria-label="Close">✕</button></div>';
+    document.body.appendChild(t); t.querySelector(".tx").onclick = () => t.remove(); if (btn) t.querySelector(".tb").onclick = () => { t.remove(); fn(); };
+    if (ms) setTimeout(() => t.remove(), ms);
+  }
+  function celebrate(rankNow) {
+    const B = badges().filter(b => b.on).map(b => b.id), F = ARTISTS.filter(a => prog(a).cleared >= 9).map(a => a.who);
+    const seen = LS("ogfan99seen"); LS("ogfan99seen", { rank: rankNow, b: B, f: F });
+    if (!seen) return false;
+    const newB = B.filter(x => !seen.b.includes(x)), newF = F.filter(x => !seen.f.includes(x)), up = seen.rank !== rankNow;
+    if (!up && !newB.length && !newF.length) return false;
+    const msg = up ? ["RANK UP", rankNow] : newF.length ? ["LAST STOP", "You finished " + newF[0] + "!"] : ["NEW BADGE", badges().find(b => b.id === newB[0]).name];
+    setTimeout(() => { horn(); confetti(); toast(msg[0], msg[1], "SEE BADGES", () => $("metro").click(), 6000); }, 900);
+    return true;
+  }
+  /* next stop: after a ride, suggest the closest artist on the same line you haven't played yet */
+  function nextStop() {
+    let li; try { li = sessionStorage.getItem("ogfan99last"); sessionStorage.removeItem("ogfan99last"); } catch (e) {}
+    if (li == null) return; const a = ARTISTS[+li]; if (!a || !(prog(a).stops || prog(a).cleared)) return;
+    const lines = a.trains.map(t => t[0]);
+    const c = ARTISTS.map((b, i) => [b, i]).filter(([b, i]) => i !== +li && playable(b) && !done(b) && b.lat != null && a.lat != null)
+      .map(([b, i]) => [b, i, miles(a.lat, a.lng, b.lat, b.lng), b.trains.some(t => lines.includes(t[0])) ? 0 : 1]).sort((x, y) => x[3] - y[3] || x[2] - y[2]);
+    if (!c.length) return; const [b, i] = c[0], ln = b.trains.find(t => lines.includes(t[0]));
+    setTimeout(() => toast("NEXT STOP" + (ln ? " · " + ln[0] + " TRAIN" : ""), esc(b.who) + " · " + esc(b.stop), "RIDE &#9654;", () => goArtist(i)), 1400);
+  }
+  function mapMarks() {
+    if (!window.__map || !window.L) return; const i = mysteryIdx(); if (i < 0) return; const c = (window.__pins || []).find(p => p.__i === i); if (!c) return;
+    L.marker(c.getLatLng(), { icon: L.divIcon({ className: "mmys", html: "?", iconSize: [22, 22], iconAnchor: [11, 30] }), interactive: false, pane: "artists" }).addTo(window.__map);
+  }
+  function marks() {
+    const i = mysteryIdx(); if (i < 0) return; const el = $("list").querySelector('[data-i="' + i + '"]'); if (!el) return;
+    el.classList.add("mystery"); const w = el.querySelector(".who,.snm"); if (w && !w.querySelector(".mystag")) w.insertAdjacentHTML("beforeend", '<span class="mystag">MYSTERY DOOR</span>');
+  }
+  return { streak, badges, wallHTML, mysteryIdx, celebrate, nextStop, marks, mapMarks, toast, setStats: f => { stats0 = f; }, horn, confetti };
+})();
 /* ---------- game feel: MetroCard player card, Today's Train (2X), stars, one SORT button ---------- */
 (function () {
   const RANKS = [[0, "NEW RIDER"], [10, "STRAPHANGER"], [40, "LOCAL RIDER"], [100, "EXPRESS RIDER"], [250, "CONDUCTOR"], [500, "MOTORMAN"], [1000, "KING OF THE LINE"]];
@@ -1224,7 +1343,7 @@ $("keyBtn").onclick = () => { moreOpen(true); $("key").open = true; setTimeout((
   }
   function paintMetro() {
     const s = stats();
-    $("metro").innerHTML = '<span class="mc-l">OG<b>METRO</b></span><span class="mc-r"><span class="mc-rank">' + s.rank + '</span><span class="mc-st">' + s.played + ' ARTISTS · ' + s.pts + ' PTS · ' + s.eps + ' EPS</span><span class="mc-bar"><i style="width:' + s.pct + '%"></i></span></span>';
+    $("metro").innerHTML = '<span class="mc-l">OG<b>METRO</b></span><span class="mc-r"><span class="mc-rank">' + s.rank + '</span><span class="mc-st">' + s.played + ' ARTISTS · ' + s.pts + ' PTS' + (OGX.streak() ? ' · &#128293;' + OGX.streak() : '') + ' · &#127941;' + OGX.badges().filter(b => b.on).length + '</span><span class="mc-bar"><i style="width:' + s.pct + '%"></i></span></span>';
     const i = todayIdx(); $("today").hidden = i < 0;
     if (i >= 0) { $("today").innerHTML = '<small>&#9733; TODAY\'S TRAIN 2X</small><b>' + esc(ARTISTS[i].who) + '</b>'; $("today").onclick = () => goArtist(i); }
   }
@@ -1233,7 +1352,8 @@ $("keyBtn").onclick = () => { moreOpen(true); $("key").open = true; setTimeout((
       '<div class="row"><span>Rank</span><b>' + s.rank + '</b></div><div class="row"><span>Ride points</span><b>' + s.pts + '</b></div>' +
       '<div class="row"><span>Artists played</span><b>' + s.played + '</b></div><div class="row"><span>Stops cleared</span><b>' + s.stops + '</b></div><div class="row"><span>Episodes cleared</span><b>' + s.eps + '</b></div>' +
       (s.next ? '<div class="row"><span>Next rank</span><b>' + s.next[1] + ' at ' + s.next[0] + '</b></div>' : '') +
-      '<p style="margin:4px 0 0">Every stop you clear is a ride point. Stops on <b>Today\'s Train</b> count double.</p></div>';
+      '<div class="row"><span>Ride streak</span><b>&#128293; ' + OGX.streak() + (OGX.streak() === 1 ? ' day' : ' days') + '</b></div>' +
+      '<p style="margin:4px 0 0">Every stop you clear is a ride point. Stops on <b>Today\'s Train</b> count double. Play every day to keep your streak.</p></div>' + OGX.wallHTML();
     $("card").hidden = false; $("scrim").hidden = false; $("cx").onclick = closeCard; };
   /* gold stars on the map for artists you've played */
   function stars() {
@@ -1253,8 +1373,12 @@ $("keyBtn").onclick = () => { moreOpen(true); $("key").open = true; setTimeout((
   }
   $("sortBtn").onclick = e => { e.stopPropagation(); $("sortPop").hidden = !$("sortPop").hidden; };
   document.addEventListener("click", e => { if (!$("sortPop").hidden && !$("sortPop").contains(e.target) && e.target !== $("sortBtn")) $("sortPop").hidden = true; });
-  const _dl = drawList; drawList = function () { _dl(); afterList(); };
-  drawList(); stars();
+  OGX.setStats(stats);
+  const _dl = drawList; drawList = function () { _dl(); afterList(); OGX.marks(); };
+  const _oc = openCard; openCard = function (i) { _oc(i); if (OGX.mysteryIdx() === i && ARTISTS[i].url && !($("card").querySelector("a.go"))) {
+    $("card").insertAdjacentHTML("beforeend", '<p class="vnote" style="color:#ff7af0">&#10067; MYSTERY DOOR · OPEN THIS WEEK ONLY</p><a class="go" style="background:#b933ad" href="' + ARTISTS[i].url + '?from=ogfan99&mystery=1">SNEAK PREVIEW</a>'); } };
+  drawList(); stars(); OGX.mapMarks();
+  if (!OGX.celebrate(stats().rank)) OGX.nextStop();
   addEventListener("pageshow", () => { drawList(); stars(); });
 })();
 /* start screen: every line's bullet hops, tap and the doors open */
