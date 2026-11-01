@@ -232,6 +232,44 @@ html, body { height: 100%; overflow: hidden; }
 .srow .sdot{width:10px;height:10px;border-radius:50%;border:1.5px solid #000}.srow small{display:block;font:400 12px/1.3 Helvetica,Arial,sans-serif;color:#fff;opacity:.85}
 .srow .sst{font:700 11px Helvetica,Arial,sans-serif;letter-spacing:.06em;color:#f2c14e}
 .srow .sst{display:flex;flex-direction:column;align-items:flex-end;gap:4px}.srow .sst .tier{font-size:9px}
+
+/* ---------- game feel: MetroCard, Today's Train, sort button, borough signs, stars ---------- */
+.metrorow { flex: none; display: grid; grid-template-columns: 1fr auto; gap: 6px; }
+.metro { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 8px; text-align: left; border: 2px solid #000; border-radius: 10px; padding: 5px 9px; cursor: pointer;
+  background: linear-gradient(100deg, #f7d774 0%, #f2c14e 55%, #e0aa25 100%); color: #000; box-shadow: 0 3px 0 #000; min-width: 0; }
+.metro .mc-l { font: 900 10px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; background: #0039a6; color: #fff; padding: 4px 5px; border-radius: 4px; text-align: center; }
+.metro .mc-l b { display: block; font-size: 8px; letter-spacing: .14em; margin-top: 2px; }
+.metro .mc-r { min-width: 0; display: grid; gap: 2px; }
+.metro .mc-rank { font-family: var(--display); font-size: 15px; letter-spacing: .06em; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.metro .mc-st { font: 800 9.5px/1 Helvetica, Arial, sans-serif; letter-spacing: .05em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.metro .mc-bar { height: 4px; background: rgba(0,0,0,.25); border-radius: 2px; overflow: hidden; } .metro .mc-bar i { display: block; height: 100%; background: #000; }
+.today { display: grid; align-content: center; gap: 2px; max-width: 128px; border: 2px solid #000; border-radius: 10px; padding: 5px 8px; background: #d62828; color: #fff; box-shadow: 0 3px 0 #000; cursor: pointer; text-align: left; animation: td-glow 2.4s ease-in-out infinite; }
+.today small { font: 900 8.5px/1 Helvetica, Arial, sans-serif; letter-spacing: .1em; color: #ffd23f; }
+.today b { font: 800 12px/1.1 Helvetica, Arial, sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@keyframes td-glow { 50% { box-shadow: 0 3px 0 #000, 0 0 14px rgba(255,210,63,.7); } }
+.today[hidden] { display: none; }
+.wrap.app .bhead { position: relative; justify-content: space-between; }
+.sortbtn { background: #111; color: #fff; border: 2px solid #fff; border-radius: 99px; padding: 6px 12px; font: 800 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .06em; cursor: pointer; box-shadow: 0 2px 0 #000; }
+.vtog { display: flex; gap: 4px; }
+.vtog button { background: #111; color: #fff; border: 1.5px solid #3a3f48; border-radius: 99px; padding: 5px 10px; font: 800 11px/1 Helvetica, Arial, sans-serif; cursor: pointer; }
+.vtog button[aria-pressed="true"] { background: #fff; color: #000; border-color: #fff; }
+.sortpop { position: absolute; top: calc(100% + 6px); left: 0; z-index: 1200; background: #111; border: 2px solid #fff; border-radius: 12px; padding: 10px; box-shadow: 0 10px 24px rgba(0,0,0,.6); }
+.sortpop[hidden] { display: none; }
+.sortpop .sorts { display: grid !important; gap: 6px; overflow: visible !important; }
+.sortpop .sorts button { font-size: .72rem !important; padding: 8px 12px !important; text-align: left; }
+.sortpop .sorts .vsep, .sortpop .sorts .vbtn { display: none; }
+.wrap.app .boros { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: visible; gap: 5px; }
+.wrap.app .boro { padding: 6px 2px 5px; font: 900 .74rem/1 Helvetica, Arial, sans-serif; letter-spacing: .04em; border-top: 5px solid #fff; display: grid; justify-items: center; gap: 4px; }
+.wrap.app .boro small { margin: 0; min-width: 26px; padding: 2px 6px; border-radius: 99px; background: #000; color: #f2c14e; font: 900 .7rem/1.1 Helvetica, Arial, sans-serif; box-shadow: 0 0 0 1.5px #f2c14e, 0 0 8px rgba(242,193,78,.55); }
+.wrap.app .boro[aria-selected="true"] small { background: #000; color: #f2c14e; }
+.pstar { color: #f2c14e; text-shadow: 0 0 6px rgba(242,193,78,.8); margin-left: 4px; }
+.leaflet-marker-icon.mstar { font-size: 15px; line-height: 15px; color: #f2c14e; text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 6px rgba(242,193,78,.9); text-align: center; pointer-events: none; }
+.start.ann .st-in { opacity: 0; transform: scale(.94); }
+.st-ann { position: relative; z-index: 3; display: grid; gap: 6px; padding: 16px 18px; background: #000; border: 3px solid #333; border-radius: 10px; box-shadow: 0 0 0 3px #c9cfd6;
+  font: 800 1rem/1.15 "Courier New", monospace; letter-spacing: .08em; color: #ff8a1f; text-shadow: 0 0 8px rgba(255,138,31,.85); text-align: center; animation: st-ann 1.35s steps(1) both; }
+@keyframes st-ann { 0% { opacity: 0; } 8% { opacity: 1; } 45% { opacity: .35; } 55% { opacity: 1; } 100% { opacity: 1; } }
+.mcstats { display: grid; gap: 10px; text-align: left; } .mcstats .row { display: flex; justify-content: space-between; font: 700 14px Helvetica, Arial, sans-serif; color: #fff; border-bottom: 1px solid #2a2f55; padding-bottom: 6px; }
+.mcstats .row b { color: #f2c14e; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -252,11 +290,12 @@ html, body { height: 100%; overflow: hidden; }
 </div>
 <main class="wrap app">
   <header class="appbar"><div class="og">OG FAN <b>99</b></div><span class="demo">PRIVATE PREVIEW</span></header>
+  <div class="metrorow"><button class="metro" id="metro" type="button"></button><button class="today" id="today" type="button"></button></div>
 
   <div class="mapbox" id="mapbox"><div class="map" id="map" aria-label="Subway map of the artists"></div><button class="keybtn" id="keyBtn" type="button">SUBWAY KEY</button></div>
 
   <div class="boros" id="boros" role="tablist"></div>
-  <div class="bhead"><h3 id="bname"></h3><div class="sorts" id="sorts"></div></div>
+  <div class="bhead"><h3 id="bname"></h3><button class="sortbtn" id="sortBtn" type="button"></button><div class="vtog" id="vtog"></div><div class="sortpop" id="sortPop" hidden><div class="sorts" id="sorts"></div></div></div>
   <div class="listwrap" id="listwrap"><div class="steel"><i class="rv tl"></i><i class="rv tr"></i><i class="rv bl"></i><i class="rv br"></i><ul class="tiles" id="list"></ul></div></div>
 
   <nav class="dock2">
@@ -1158,6 +1197,66 @@ $("keyBtn").onclick = () => { moreOpen(true); $("key").open = true; setTimeout((
   addEventListener("resize", () => { last = -1; apply(); });
   apply();
 })();
+
+/* ---------- game feel: MetroCard player card, Today's Train (2X), stars, one SORT button ---------- */
+(function () {
+  const RANKS = [[0, "NEW RIDER"], [10, "STRAPHANGER"], [40, "LOCAL RIDER"], [100, "EXPRESS RIDER"], [250, "CONDUCTOR"], [500, "MOTORMAN"], [1000, "KING OF THE LINE"]];
+  const today = () => { const d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); };
+  const playable = a => a.url && (a.status === "live" || (a.status === "demo" && isOwner())) && !(a.ex === 2 && !EXPL());
+  const LS = (k, v) => { try { if (v === undefined) return JSON.parse(localStorage.getItem(k) || "null"); localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } };
+  function todayIdx() {
+    const list = ARTISTS.map((a, i) => i).filter(i => playable(ARTISTS[i])); if (!list.length) return -1;
+    let h = 0; const t = today(); for (const c of t) h = (h * 31 + c.charCodeAt(0)) >>> 0; return list[h % list.length];
+  }
+  /* 2X: stops earned today on Today's Train count twice toward your MetroCard rank */
+  function bonus() {
+    const i = todayIdx(), t = today(); let b = LS("ogfan99bonus") || { date: "", who: "", base: 0, total: 0 };
+    const cur = i >= 0 ? ((progress(ARTISTS[i]) || {}).stops || 0) : 0;
+    if (b.date !== t) { if (b.who) { const k = ARTISTS.find(a => a.who === b.who); const was = k ? ((progress(k) || {}).stops || 0) : b.base; b.total += Math.max(0, was - b.base); } b = { date: t, who: i >= 0 ? ARTISTS[i].who : "", base: cur, total: b.total }; LS("ogfan99bonus", b); }
+    return b.total + Math.max(0, cur - b.base);
+  }
+  function stats() {
+    let stops = 0, eps = 0, played = 0;
+    ARTISTS.forEach(a => { const p = progress(a); if (p && (p.stops || p.cleared)) { played++; stops += p.stops; eps += p.cleared; } });
+    const pts = stops + bonus(); let r = 0; RANKS.forEach((x, k) => { if (pts >= x[0]) r = k; });
+    const nx = RANKS[r + 1], pct = nx ? Math.round((pts - RANKS[r][0]) / (nx[0] - RANKS[r][0]) * 100) : 100;
+    return { stops, eps, played, pts, rank: RANKS[r][1], next: nx, pct };
+  }
+  function paintMetro() {
+    const s = stats();
+    $("metro").innerHTML = '<span class="mc-l">OG<b>METRO</b></span><span class="mc-r"><span class="mc-rank">' + s.rank + '</span><span class="mc-st">' + s.played + ' ARTISTS · ' + s.pts + ' RIDE PTS · ' + s.eps + ' EPISODES</span><span class="mc-bar"><i style="width:' + s.pct + '%"></i></span></span>';
+    const i = todayIdx(); $("today").hidden = i < 0;
+    if (i >= 0) { $("today").innerHTML = '<small>&#9733; TODAY\'S TRAIN · 2X</small><b>' + esc(ARTISTS[i].who) + '</b>'; $("today").onclick = () => goArtist(i); }
+  }
+  $("metro").onclick = () => { const s = stats();
+    $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="who" style="color:#f2c14e">YOUR METROCARD</div><div class="mcstats">' +
+      '<div class="row"><span>Rank</span><b>' + s.rank + '</b></div><div class="row"><span>Ride points</span><b>' + s.pts + '</b></div>' +
+      '<div class="row"><span>Artists played</span><b>' + s.played + '</b></div><div class="row"><span>Stops cleared</span><b>' + s.stops + '</b></div><div class="row"><span>Episodes cleared</span><b>' + s.eps + '</b></div>' +
+      (s.next ? '<div class="row"><span>Next rank</span><b>' + s.next[1] + ' at ' + s.next[0] + '</b></div>' : '') +
+      '<p style="margin:4px 0 0">Every stop you clear is a ride point. Stops on <b>Today\'s Train</b> count double.</p></div>';
+    $("card").hidden = false; $("scrim").hidden = false; $("cx").onclick = closeCard; };
+  /* gold stars on the map for artists you've played */
+  function stars() {
+    if (!window.__map || !window.L) return; (window.__stars || []).forEach(m => m.remove()); window.__stars = [];
+    (window.__pins || []).forEach(c => { const p = progress(ARTISTS[c.__i]); if (p && (p.stops || p.cleared)) {
+      const m = L.marker(c.getLatLng(), { icon: L.divIcon({ className: "mstar", html: "&#9733;", iconSize: [15, 15], iconAnchor: [7, 20] }), interactive: false, pane: "artists" }).addTo(window.__map); window.__stars.push(m); } });
+  }
+  /* one SORT button instead of a row of choices; TILES / LIST stay out front */
+  const LBL = { az: "A–Z", games: "READY GAMES", line: "BY LINE" };
+  function afterList() {
+    $("sortBtn").innerHTML = "SORT: " + (LBL[sortBy] || "A–Z") + (tierDir && isOwner() ? (tierDir === "top" ? " · TIER &#9660;" : " · TIER &#9650;") : "") + " &#9662;";
+    $("vtog").innerHTML = [["tiles", "&#9638; TILES"], ["simple", "&#9776; LIST"]].map(([k, t]) => '<button type="button" data-v="' + k + '" aria-pressed="' + (k === listView) + '">' + t + '</button>').join("");
+    $("vtog").querySelectorAll("button").forEach(b => b.onclick = () => { listView = b.dataset.v; try { localStorage.setItem("ogfan99view", listView); } catch (e) {} drawList(); });
+    $("sorts").querySelectorAll("button[data-s],button[data-t]").forEach(b => { const f = b.onclick; b.onclick = () => { f(); $("sortPop").hidden = true; }; });
+    $("list").querySelectorAll("[data-i]").forEach(b => { const p = progress(ARTISTS[+b.dataset.i]); if (p && (p.stops || p.cleared)) { const w = b.querySelector(".who,.snm"); if (w && !w.querySelector(".pstar")) w.insertAdjacentHTML("beforeend", '<span class="pstar" title="You played this one">&#9733;</span>'); } });
+    paintMetro();
+  }
+  $("sortBtn").onclick = e => { e.stopPropagation(); $("sortPop").hidden = !$("sortPop").hidden; };
+  document.addEventListener("click", e => { if (!$("sortPop").hidden && !$("sortPop").contains(e.target) && e.target !== $("sortBtn")) $("sortPop").hidden = true; });
+  const _dl = drawList; drawList = function () { _dl(); afterList(); };
+  drawList(); stars();
+  addEventListener("pageshow", () => { drawList(); stars(); });
+})();
 /* start screen: every line's bullet hops, tap and the doors open */
 (function () {
   const seen = {}, b = [];
@@ -1166,7 +1265,8 @@ $("keyBtn").onclick = () => { moreOpen(true); $("key").open = true; setTimeout((
   const go = () => {
     const st = $("start"); if (st.classList.contains("open")) return;
     try { const ac = new (window.AudioContext || window.webkitAudioContext)(); [[659, 0], [523, .32]].forEach(([f, d]) => { const o = ac.createOscillator(), g = ac.createGain(); o.frequency.value = f; o.type = "sine"; g.gain.setValueAtTime(.0001, ac.currentTime + d); g.gain.exponentialRampToValueAtTime(.25, ac.currentTime + d + .02); g.gain.exponentialRampToValueAtTime(.0001, ac.currentTime + d + .6); o.connect(g).connect(ac.destination); o.start(ac.currentTime + d); o.stop(ac.currentTime + d + .65); }); } catch (e) {}
-    st.classList.add("open"); setTimeout(() => st.remove(), 800);
+    st.classList.add("ann"); const sa = document.createElement("div"); sa.className = "st-ann"; sa.innerHTML = "<span>STAND CLEAR OF THE</span><span>CLOSING DOORS, PLEASE</span>"; st.appendChild(sa);
+    setTimeout(() => { st.classList.add("open"); setTimeout(() => st.remove(), 800); }, 1350);
   };
   $("start").addEventListener("click", go);
   $("start").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(); });
