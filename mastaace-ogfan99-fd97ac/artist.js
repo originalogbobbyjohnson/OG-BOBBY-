@@ -109,173 +109,653 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Good Ol' Love",
-   "id": "Wjc_gPObZqQ",
+   "title": "Together",
+   "id": "lzqgZ8HWsW8",
    "cuts": [
-    83.7,
-    143.4,
-    187
+    41.7,
+    131.6,
+    252.9
    ],
    "qs": [
     [
      [
-      "The world gonna show him some what?",
-      "Love",
-      "Respect",
+      "\"The name of this one here is...\"?",
+      "Together",
+      "Forever",
+      "Tomorrow"
+     ],
+     [
+      "This goes out to those who reach that fork in the...?",
+      "Road",
+      "River",
+      "Night"
+     ],
+     [
+      "\"We all have the ___ to get there together\"?",
+      "Potential",
+      "Power",
+      "Patience"
+     ],
+     [
+      "\"Physically I'm fit as a...\"?",
+      "Fiddle",
+      "Fighter",
+      "Feather"
+     ],
+     [
+      "\"I got a problem, the Ace is...\"?",
+      "Bubblin'",
+      "Stumblin'",
+      "Rumblin'"
+     ],
+     [
+      "\"A style that's designed just for this...\"?",
+      "Kind",
+      "Time",
+      "Rhyme"
+     ],
+     [
+      "\"It's a must to get...\"?",
+      "Paid",
+      "Famous",
+      "Ahead"
+     ],
+     [
+      "\"Or fade into the wack...\"?",
+      "Parade",
+      "Brigade",
+      "Crusade"
+     ],
+     [
+      "\"This groove, it's as deep as a ___ goes\"?",
+      "Diver",
+      "Miner",
+      "River"
+     ],
+     [
+      "\"Steady pace by my...\"?",
+      "Side",
+      "Ride",
+      "Pride"
+     ],
+     [
+      "\"Ace and...\"?",
+      "Action",
+      "Company",
+      "Friends"
+     ]
+    ],
+    [
+     [
+      "\"Where it should be, to each his...\"?",
+      "Share",
+      "Own",
+      "Prayer"
+     ],
+     [
+      "\"Unadulterated, dope, I made it to...\"?",
+      "Cope",
+      "Hope",
+      "Vote"
+     ],
+     [
+      "\"I'm still on the...\"?",
+      "Scene",
+      "Team",
+      "Screen"
+     ],
+     [
+      "\"Something attainable, something more...\"?",
+      "Gainable",
+      "Trainable",
+      "Sustainable"
+     ],
+     [
+      "\"I build and I'm filled with knowledge...\"?",
+      "Undrainable",
+      "Unchangeable",
+      "Unexplainable"
+     ],
+     [
+      "\"Only things with wings and a...\"?",
+      "Halo",
+      "Crown",
+      "Harp"
+     ],
+     [
+      "\"You're not a ___, but you try to paint\"?",
+      "Saint",
+      "Star",
+      "King"
+     ],
+     [
+      "\"It ain't how large you're living, or what you're...\"?",
+      "Driving",
+      "Wearing",
+      "Spending"
+     ],
+     [
+      "\"But what your goals are, so keep on...\"?",
+      "Strivin'",
+      "Drivin'",
+      "Survivin'"
+     ],
+     [
+      "\"We'll take a drink from the fountain of...\"?",
+      "Success",
+      "Youth",
+      "Knowledge"
+     ],
+     [
+      "\"Let's all climb the...\"?",
+      "Mountain",
+      "Ladder",
+      "Stairs"
+     ]
+    ],
+    [
+     [
+      "\"Who's with me now, raise your...\"?",
+      "Hand",
+      "Voice",
+      "Glass"
+     ],
+     [
+      "\"I'll inspire you to strive a little...\"?",
+      "Higher",
+      "Harder",
+      "Longer"
+     ],
+     [
+      "\"Not even ___ will obstruct your progress\"?",
+      "Barbwire",
+      "A wall",
+      "A fence"
+     ],
+     [
+      "\"You wanna succeed? ___ is what you need\"?",
+      "Determination",
+      "Education",
       "Money"
      ],
      [
-      "How many years does he mention?",
-      "15",
-      "20",
-      "10"
+      "\"Face your fears and place your ___ aside\"?",
+      "Tears",
+      "Pride",
+      "Doubts"
      ],
      [
-      "He won't wait till he's what?",
-      "Old",
-      "Gone",
-      "Rich"
+      "\"Try and swallow my food for...\"?",
+      "Thought",
+      "Words",
+      "Life"
      ],
      [
-      "They think he's washed up like he got in the what?",
-      "Tub",
-      "Pool",
-      "Rain"
+      "\"There's no...\"?",
+      "Excuses",
+      "Limits",
+      "Shortcuts"
      ],
      [
-      "Ain't nothing like what kind of music?",
-      "Hip hop",
-      "Soul",
-      "Jazz"
+      "\"I get looser than mice in a...\"?",
+      "Basement",
+      "Kitchen",
+      "Cellar"
      ],
      [
-      "The world just can't what it?",
-      "Refuse",
-      "Ignore",
-      "Stop"
+      "\"Across the stage like a beast in a...\"?",
+      "Cage",
+      "Zoo",
+      "Jungle"
      ],
      [
-      "Got to be the real thing, something you can what?",
-      "Feel",
-      "Hear",
-      "See"
-     ]
-    ],
-    [
-     [
-      "He'll put y'all on like a bulb in a what?",
-      "Socket",
-      "Lamp",
-      "Window"
+      "\"I don't yell, I don't swell, I tell...\"?",
+      "Facts",
+      "Lies",
+      "Tales"
      ],
      [
-      "He makes other rappers struggle to what?",
-      "Top it",
-      "Stop it",
-      "Drop it"
-     ],
-     [
-      "He never did care about the what?",
-      "Haters",
-      "Money",
-      "Charts"
-     ],
-     [
-      "Where did he stay?",
-      "Overseas",
-      "Uptown",
-      "Down South"
-     ],
-     [
-      "Now he's got a what?",
-      "Wife",
-      "House",
-      "Daughter"
-     ],
-     [
-      "Fans sit at home sad and what?",
-      "Pouty",
-      "Lonely",
-      "Moody"
-     ],
-     [
-      "Show him some love, he'll show it right what?",
-      "Back",
-      "Now",
-      "Here"
-     ]
-    ],
-    [
-     [
-      "Uptown, the Bronx and which borough?",
-      "Queens",
-      "Staten Island",
-      "Harlem"
-     ],
-     [
-      "Like a maid when she cooks and what?",
-      "Cleans",
-      "Sweeps",
-      "Sews"
-     ],
-     [
-      "The game is changed, the game is what?",
-      "Strange",
-      "Done",
-      "Fair"
-     ],
-     [
-      "You can ask Kid, you can ask who?",
-      "Biz",
-      "Rakim",
-      "Kane"
-     ],
-     [
-      "They did it for the what?",
-      "Kids",
-      "Money",
-      "Fame"
-     ],
-     [
-      "He says he won't what?",
-      "Disappear",
-      "Retire",
-      "Slow down"
-     ],
-     [
-      "Down to earth and close to the what?",
-      "Ground",
-      "Street",
-      "People"
+      "\"I got my eyes in an upward glance, and I see us all...\"?",
+      "Risin'",
+      "Winnin'",
+      "Shinin'"
      ]
     ]
    ]
   },
   {
-   "title": "Born to Roll",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Beautiful",
+   "id": "JbxJvW_VkDw",
+   "start": 9.2,
+   "cuts": [
+    50.7,
+    142,
+    191.9
+   ],
+   "qs": [
+    [
+     [
+      "\"BK, Uptown, Boogie Down,...\"?",
+      "Queens",
+      "Harlem",
+      "Staten"
+     ],
+     [
+      "Which place comes first in his shout-out?",
+      "BK",
+      "Uptown",
+      "Queens"
+     ],
+     [
+      "\"It's...\"?",
+      "Beautiful",
+      "Wonderful",
+      "Magical"
+     ],
+     [
+      "\"Listen, I got a lot to...\"?",
+      "Say",
+      "Give",
+      "Prove"
+     ],
+     [
+      "\"Usually my ___ stay locked away\"?",
+      "Smile",
+      "Heart",
+      "Pen"
+     ],
+     [
+      "\"But not today, I have to...\"?",
+      "Laugh",
+      "Cry",
+      "Speak"
+     ],
+     [
+      "\"The Aftermath's kind of ill like I'm...\"?",
+      "Dr. Dre",
+      "Snoop Dogg",
+      "Eminem"
+     ],
+     [
+      "\"It's funny how you get ___, I just hate it\"?",
+      "Jaded",
+      "Hated",
+      "Rated"
+     ],
+     [
+      "\"This song gives a different kind of...\"?",
+      "Feelin'",
+      "Rhythm",
+      "Sound"
+     ],
+     [
+      "\"It's a new kind of...\"?",
+      "Dealin'",
+      "Thinking",
+      "Living"
+     ],
+     [
+      "\"It's a special kind of...\"?",
+      "Healin'",
+      "Story",
+      "Moment"
+     ]
+    ],
+    [
+     [
+      "\"Best flow in the...\"?",
+      "Biz",
+      "City",
+      "Game"
+     ],
+     [
+      "\"Positive over...\"?",
+      "Negative",
+      "Nothing",
+      "Pressure"
+     ],
+     [
+      "\"Even when I face...\"?",
+      "Disaster",
+      "A challenge",
+      "The haters"
+     ],
+     [
+      "\"People still showin' me...\"?",
+      "Love",
+      "Props",
+      "Money"
+     ],
+     [
+      "\"Get the respect without droppin' a...\"?",
+      "Check",
+      "Dime",
+      "Beat"
+     ],
+     [
+      "\"This brand new ish, you can pop in the...\"?",
+      "Deck",
+      "Car",
+      "Box"
+     ],
+     [
+      "\"This is brand new Uptown still in the...\"?",
+      "Box",
+      "Store",
+      "Bag"
+     ],
+     [
+      "The Yankees are up 10-nothin' on the...?",
+      "Sox",
+      "Mets",
+      "Orioles"
+     ],
+     [
+      "\"With the sun beaming down while you sat in the...\"?",
+      "Sand",
+      "Shade",
+      "Grass"
+     ],
+     [
+      "\"I feel like I'm more than a cat with a...\"?",
+      "Plan",
+      "Hat",
+      "Van"
+     ],
+     [
+      "\"This is a warm coat on the coldest...\"?",
+      "Night",
+      "Day",
+      "Winter"
+     ]
+    ],
+    [
+     [
+      "\"The most beautiful thing...\"?",
+      "Ever",
+      "Alive",
+      "Today"
+     ],
+     [
+      "\"Even when you got to get down and...\"?",
+      "Gritty",
+      "Dirty",
+      "Busy"
+     ],
+     [
+      "\"You can feel it in your...\"?",
+      "Inner",
+      "Soul",
+      "Bones"
+     ],
+     [
+      "\"It's like Grandma's house,...\"?",
+      "Thanksgiving dinner",
+      "Sunday brunch",
+      "Christmas morning"
+     ],
+     [
+      "\"It's like a day in the...\"?",
+      "Park",
+      "Sun",
+      "City"
+     ],
+     [
+      "At night you get the ball and you play in the...?",
+      "Dark",
+      "Rain",
+      "Gym"
+     ],
+     [
+      "\"It's that street corner...\"?",
+      "Music",
+      "Magic",
+      "Feeling"
+     ],
+     [
+      "\"You know the sound is...\"?",
+      "Pretty",
+      "Heavy",
+      "Loud"
+     ],
+     [
+      "\"This is money in the bank like you down with...\"?",
+      "Diddy",
+      "Jay-Z",
+      "Russell"
+     ],
+     [
+      "\"This a ___ ride around the city\"?",
+      "Helicopter",
+      "Limo",
+      "Carriage"
+     ],
+     [
+      "\"It's like a young mother braidin' her daughter's...\"?",
+      "Hair",
+      "Ribbon",
+      "Doll"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Sittin' on Chrome",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Me and the Biz",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Take a Walk",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Soda & Soap",
+   "id": "SkY1oAPb5xs",
+   "start": 20.8,
+   "cuts": [
+    52,
+    112.7,
+    183.3
+   ],
+   "qs": [
+    [
+     [
+      "\"I met this girl named ___ on Wall Street\"?",
+      "Fantasy",
+      "Destiny",
+      "Harmony"
+     ],
+     [
+      "Where did he meet her?",
+      "Wall Street",
+      "Canal Street",
+      "Main Street"
+     ],
+     [
+      "Where is she from?",
+      "Tahiti",
+      "Hawaii",
+      "Jamaica"
+     ],
+     [
+      "\"A real Tahitian...\"?",
+      "Treat",
+      "Queen",
+      "Dream"
+     ],
+     [
+      "She liked his smile like which singer?",
+      "Shanice",
+      "Brandy",
+      "Monica"
+     ],
+     [
+      "\"In a minute made like a thousand...\"?",
+      "Dollars",
+      "Fans",
+      "Records"
+     ],
+     [
+      "Who ran the club?",
+      "Mr. Schweppes",
+      "Mr. Pibb",
+      "Mr. Fanta"
+     ],
+     [
+      "\"Everybody watched they...\"?",
+      "Step",
+      "Back",
+      "Mouth"
+     ],
+     [
+      "Word on the street, he was no...?",
+      "Joke",
+      "Fool",
+      "Friend"
+     ],
+     [
+      "\"Later at the club saw this guy named...\"?",
+      "Wayne",
+      "Shane",
+      "Dwayne"
+     ],
+     [
+      "Wayne always bets money on which team?",
+      "The Giants",
+      "The Jets",
+      "The Knicks"
+     ]
+    ],
+    [
+     [
+      "Wayne's the type who ___ a bet and won't pay?",
+      "Welches",
+      "Drops",
+      "Doubles"
+     ],
+     [
+      "\"I keep tryin' to tell him be a straight...\"?",
+      "Stepper",
+      "Shooter",
+      "Talker"
+     ],
+     [
+      "He went to the bar just to check the...?",
+      "Score",
+      "Time",
+      "News"
+     ],
+     [
+      "The bartender put it on his...?",
+      "Tab",
+      "Card",
+      "Bill"
+     ],
+     [
+      "The game was tied at...?",
+      "7-up",
+      "3-up",
+      "10-up"
+     ],
+     [
+      "\"In an ___ crushed velvet dress\"?",
+      "Orange",
+      "Purple",
+      "Cherry"
+     ],
+     [
+      "Which city had a club like this?",
+      "Toronto",
+      "Montreal",
+      "Detroit"
+     ],
+     [
+      "He came back from \"Canada ___\" with no dough?",
+      "Dry",
+      "Goose",
+      "Bound"
+     ],
+     [
+      "\"You never find love in this...\"?",
+      "Atmosphere",
+      "Neighborhood",
+      "Business"
+     ],
+     [
+      "Maybe go to a mountain, do a little...?",
+      "Skiing",
+      "Hiking",
+      "Climbing"
+     ],
+     [
+      "He got home before the sun ___ the sky?",
+      "Kissed",
+      "Lit",
+      "Touched"
+     ]
+    ],
+    [
+     [
+      "\"No, it ain't Nelly but it's...\"?",
+      "Hot In Here",
+      "Ride Wit Me",
+      "Dilemma"
+     ],
+     [
+      "\"Come and drink in numbers like...\"?",
+      "H2O",
+      "7-Up",
+      "Sprite"
+     ],
+     [
+      "\"Bubble like the soda, kinda like the...\"?",
+      "Soap",
+      "Foam",
+      "Shampoo"
+     ],
+     [
+      "\"The Y2K is a brand new...\"?",
+      "Era",
+      "Year",
+      "Day"
+     ],
+     [
+      "\"I'm tryin' to make hits like...\"?",
+      "Yogi Berra",
+      "Babe Ruth",
+      "Derek Jeter"
+     ],
+     [
+      "\"I wonder how long I'll be in this...\"?",
+      "Biz",
+      "Game",
+      "City"
+     ],
+     [
+      "\"Just ask any rapper who paid...\"?",
+      "Dues",
+      "Rent",
+      "Bills"
+     ],
+     [
+      "He grabs his wife and they lay and...?",
+      "Snuggle",
+      "Struggle",
+      "Sleep"
+     ],
+     [
+      "They talk about the ___ coast?",
+      "Ivory",
+      "Gold",
+      "West"
+     ],
+     [
+      "\"Look up at the stars 'til the crack of...\"?",
+      "Dawn",
+      "Day",
+      "Noon"
+     ],
+     [
+      "\"The joy in my life is the...\"?",
+      "Microphone",
+      "Family",
+      "Music"
+     ]
+    ]
+   ]
   }
  ]
 };
