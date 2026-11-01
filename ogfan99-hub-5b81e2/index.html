@@ -298,8 +298,8 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 
 /* artist list: glides when you flick fast, then clicks onto one artist as it slows down */
 .listwrap { scroll-snap-type: y mandatory; scroll-padding-top: 4px; }
-.tiles > li { scroll-snap-align: start; scroll-snap-stop: normal; }
-.tiles.simple > li { scroll-snap-align: start; }
+.tiles > li { scroll-snap-align: none; scroll-snap-stop: normal; }
+.tiles.simple > li { scroll-snap-align: none; }
 
 /* the artist the list has clicked onto glows and pops out */
 .tiles > li > .tile, .tiles > li > .srow { transition: transform .18s ease, box-shadow .18s ease; }
@@ -1529,16 +1529,20 @@ window.OGX = (function () {
     items = [...list.children]; steel.querySelectorAll(".snapmk").forEach(m => m.remove()); stops = [];
     if (!items.length) return;
     const base = lw.getBoundingClientRect().top - lw.scrollTop + 4, simple = list.classList.contains("simple");
+    const rh = items[0].offsetHeight || 120, mid = Math.max(0, Math.round(lw.clientHeight / 2 - rh / 2));
     const rows = []; items.forEach(li => { const t = Math.round(li.getBoundingClientRect().top - base); const r = rows.find(x => Math.abs(x.t - t) < 4); if (r) r.li.push(li); else rows.push({ t, li: [li] }); });
     rows.forEach((r, k) => { const nt = k + 1 < rows.length ? rows[k + 1].t : r.t + r.li[0].offsetHeight + 8;
       /* the left tile lights up a little before the row reaches the top, the right one when it lands, so the whole row stays in view */
       /* left tile lights when its row lands at the top; a small nudge further lights the right one (the row barely moves, so it stays in view) */
       const n = r.li.length;
-      r.li.forEach((li, c) => { const y = Math.round(r.t + c * 24); stops.push([y, li]);
-        if (!simple && c > 0) { const m = document.createElement("i"); m.className = "snapmk"; m.style.top = (li.offsetTop + (y - r.t)) + "px"; steel.appendChild(m); } }); });
-    stops.sort((a, b) => a[0] - b[0]);
-    /* room at the bottom so the last artists can still reach the top spot */
-    const last = rows[rows.length - 1]; list.style.paddingBottom = Math.max(10, lw.clientHeight - (last.li[0].offsetHeight + 24)) + "px";
+      r.li.forEach((li, c) => { stops.push([Math.round(r.t - mid + c * 24), li, r.t, li.offsetTop]); }); });
+    /* the lit artist sits in the MIDDLE of the window: left, then right, then the next row down.
+       Rows near the top that can't reach the middle light up one by one as you start scrolling. */
+    let prev = -24; stops.forEach(st => { st[0] = Math.max(st[0], prev + 24); if (prev < 0 && st[0] < 0) st[0] = Math.max(0, prev + 24); prev = st[0];
+      if (st[0] > 0) { const m = document.createElement("i"); m.className = "snapmk"; m.style.top = (st[3] + (st[0] - st[2])) + "px"; steel.appendChild(m); } });
+    stops.forEach(st => st.length = 2);
+    /* room at the bottom so the last artists can still reach the middle spot */
+    const last = rows[rows.length - 1]; list.style.paddingBottom = Math.max(10, mid + 32) + "px";
     mark();
   }
   function mark() { raf = 0; if (!stops.length) return; const y = lw.scrollTop + 2; let f = stops[0][1];
