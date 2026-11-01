@@ -360,6 +360,8 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .wrap.app .bhead .vtog { flex: none; gap: 3px; }
 .wrap.app .bhead .vtog button { white-space: nowrap; padding: 6px 7px; font-size: 10px; }
 @keyframes lncue { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+.tiles > li.picked > .tile::after, .tiles.simple > li.picked .srow::after { content: "TAP AGAIN TO OPEN \25B6"; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%); white-space: nowrap; background: #f2c14e; color: #000; font: 900 9px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; padding: 4px 7px; border-radius: 99px; border: 1.5px solid #000; z-index: 3; }
+.tiles.simple > li.picked .srow { position: relative; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -1531,8 +1533,18 @@ window.OGX = (function () {
   }
   function mark() { raf = 0; if (!stops.length) return; const y = lw.scrollTop + 2; let f = stops[0][1];
     for (const [sy, li] of stops) { if (sy <= y) f = li; else break; }
-    items.forEach(li => li.classList.toggle("focus", li === f)); }
+    items.forEach(li => { li.classList.toggle("focus", li === f); li.classList.remove("picked"); }); }
   lw.addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(mark); }, { passive: true });
+  /* a tap only lights an artist up (same gold ring as scrolling); tapping the lit one again, or a firm press, opens it */
+  let downAt = 0;
+  list.addEventListener("pointerdown", () => { downAt = Date.now(); }, true);
+  list.addEventListener("click", e => {
+    const li = e.target.closest("li"); if (!li || !list.contains(li)) return;
+    const firm = downAt && Date.now() - downAt >= 450;
+    if (li.classList.contains("focus") || firm) { items.forEach(x => x.classList.remove("picked")); return; }
+    e.stopPropagation(); e.preventDefault();
+    items.forEach(x => { x.classList.toggle("focus", x === li); x.classList.toggle("picked", x === li); });
+  }, true);
   /* ▼ / ▲ step one artist at a time; AUTO walks the list until you touch it */
   const step = d => { if (!stops.length) return; const y = lw.scrollTop + 2; let k = 0; stops.forEach(([sy], j) => { if (sy <= y) k = j; });
     const n = Math.max(0, Math.min(stops.length - 1, k + d)); lw.scrollTo({ top: Math.max(0, stops[n][0] - 2), behavior: "smooth" }); return n < stops.length - 1; };
