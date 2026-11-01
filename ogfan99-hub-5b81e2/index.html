@@ -305,6 +305,8 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .tiles > li.focus > .tile { transform: scale(1.04); box-shadow: 0 0 0 3px #f2c14e, 0 0 22px rgba(242,193,78,.75); position: relative; z-index: 2; }
 .tiles.simple > li.focus { background: linear-gradient(90deg, rgba(242,193,78,.18), rgba(242,193,78,.04)); border-radius: 12px; box-shadow: inset 4px 0 0 #f2c14e, 0 0 18px rgba(242,193,78,.45); }
 .tiles.simple > li.focus .srow { transform: scale(1.03); }
+.snapmk { position: absolute; left: 0; width: 1px; height: 1px; scroll-snap-align: start; pointer-events: none; }
+.tiles > li.focus > .tile { transform: scale(1.06) !important; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -1394,17 +1396,29 @@ window.OGX = (function () {
   addEventListener("pageshow", () => { drawList(); stars(); });
 })();
 
-/* highlight the artist row the list is resting on (the snap line near the top of the list) */
+/* one artist at a time lights up as you scroll: left tile, right tile, then down to the next row, left, right...
+   the list glides when you flick fast and clicks onto the next artist (half a row at a time in tiles) as it slows down */
 (function () {
-  const lw = $("listwrap"); let raf = 0;
-  const mark = () => { raf = 0; const items = [...$("list").children]; if (!items.length) return;
-    const top = lw.getBoundingClientRect().top + 4, atEnd = lw.scrollTop + lw.clientHeight >= lw.scrollHeight - 4;
-    let best = null, bd = 1e9;
-    items.forEach(li => { const r = li.getBoundingClientRect(); const d = atEnd ? Math.abs(r.bottom - (lw.getBoundingClientRect().bottom - 14)) : Math.abs(r.top - top); if (d < bd - 2) { bd = d; best = r.top; } });
-    items.forEach(li => li.classList.toggle("focus", Math.abs(li.getBoundingClientRect().top - best) < 4)); };
+  const lw = $("listwrap"), list = $("list"), steel = list.parentNode; let raf = 0, stops = [], items = [];
+  function layout() {
+    items = [...list.children]; steel.querySelectorAll(".snapmk").forEach(m => m.remove()); stops = [];
+    if (!items.length) return;
+    const base = lw.getBoundingClientRect().top - lw.scrollTop + 4, simple = list.classList.contains("simple");
+    const rows = []; items.forEach(li => { const t = Math.round(li.getBoundingClientRect().top - base); const r = rows.find(x => Math.abs(x.t - t) < 4); if (r) r.li.push(li); else rows.push({ t, li: [li] }); });
+    rows.forEach((r, k) => { const nt = k + 1 < rows.length ? rows[k + 1].t : r.t + r.li[0].offsetHeight + 8;
+      r.li.forEach((li, c) => { const y = Math.round(r.t + (nt - r.t) * c / r.li.length); stops.push([y, li]);
+        if (!simple && c > 0) { const m = document.createElement("i"); m.className = "snapmk"; m.style.top = (li.offsetTop + (y - r.t)) + "px"; steel.appendChild(m); } }); });
+    /* room at the bottom so the last artists can still reach the top spot */
+    const last = rows[rows.length - 1]; list.style.paddingBottom = Math.max(10, lw.clientHeight - (last.li[0].offsetHeight + 24)) + "px";
+    mark();
+  }
+  function mark() { raf = 0; if (!stops.length) return; const y = lw.scrollTop + 2; let f = stops[0][1];
+    for (const [sy, li] of stops) { if (sy <= y) f = li; else break; }
+    items.forEach(li => li.classList.toggle("focus", li === f)); }
   lw.addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(mark); }, { passive: true });
-  new MutationObserver(() => requestAnimationFrame(mark)).observe($("list"), { childList: true });
-  mark();
+  new MutationObserver(() => requestAnimationFrame(layout)).observe(list, { childList: true, attributes: true, attributeFilter: ["class"] });
+  addEventListener("resize", () => requestAnimationFrame(layout));
+  layout();
 })();
 /* start screen: every line's bullet hops, tap and the doors open */
 (function () {
