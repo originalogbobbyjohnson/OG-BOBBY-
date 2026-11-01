@@ -355,6 +355,10 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .bhead .ln button.auto { width: auto; padding: 0 7px; font-size: 10px; letter-spacing: .06em; background: #d62828; color: #fff; }
 .bhead .ln button.auto.on { background: #fff; color: #d62828; }
 .bhead .ln button.cue { animation: lncue 1.2s ease-in-out 5; }
+.wrap.app .bhead { gap: 5px; }
+.wrap.app .bhead .sortbtn { white-space: nowrap; padding: 6px 9px; font-size: 10px; flex: none; }
+.wrap.app .bhead .vtog { flex: none; gap: 3px; }
+.wrap.app .bhead .vtog button { white-space: nowrap; padding: 6px 7px; font-size: 10px; }
 @keyframes lncue { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
