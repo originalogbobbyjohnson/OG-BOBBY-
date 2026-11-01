@@ -362,6 +362,8 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 @keyframes lncue { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
 .tiles > li.picked > .tile::after, .tiles.simple > li.picked .srow::after { content: "TAP AGAIN TO OPEN \25B6"; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%); white-space: nowrap; background: #f2c14e; color: #000; font: 900 9px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; padding: 4px 7px; border-radius: 99px; border: 1.5px solid #000; z-index: 3; }
 .tiles.simple > li.picked .srow { position: relative; }
+.allnyc { position: absolute; right: 10px; top: 10px; z-index: 1000; background: #e8b84a; color: #000; border: 2px solid #000; border-radius: 999px; padding: 6px 12px; font: 900 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; box-shadow: 0 2px 0 #000; cursor: pointer; }
+.allnyc[hidden] { display: none; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -1548,6 +1550,8 @@ window.OGX = (function () {
     items.forEach(x => { x.classList.toggle("focus", x === li); x.classList.toggle("picked", x === li); });
   }, true);
   /* ▼ / ▲ step one artist at a time; AUTO walks the list until you touch it */
+  /* used by the map: bring an artist's tile to the gold-ring spot */
+  window.__lfocus = li => { layout(); const st = stops.find(x => x[1] === li); if (st) lw.scrollTo({ top: Math.max(0, st[0] - 2), behavior: "smooth" }); else items.forEach(x => x.classList.toggle("focus", x === li)); };
   const step = d => { if (!stops.length) return; const y = lw.scrollTop + 2; let k = 0; stops.forEach(([sy], j) => { if (sy <= y) k = j; });
     const n = Math.max(0, Math.min(stops.length - 1, k + d)); lw.scrollTo({ top: Math.max(0, stops[n][0] - 2), behavior: "smooth" }); return n < stops.length - 1; };
   let auto = 0; const stopAuto = () => { clearInterval(auto); auto = 0; $("lnAuto").classList.remove("on"); $("lnAuto").textContent = "AUTO"; };
@@ -1601,5 +1605,64 @@ window.OGX = (function () {
 })();
 </script>
 <script src="world.js?v=8"></script>
+
+<script>
+/* ---------- map + list work together (Nov 1) ----------
+   Start: the whole map. Tap a borough or a sort/filter: the map shows only the artists in the list.
+   Light an artist up in the list (scroll, ▲▼, tap): the map zooms to them. Tap a pin: it lights that artist up in the list;
+   tap the same pin again to open them. ALL NYC puts the whole map back. */
+(function () {
+  let mode = "all", user = false, lastPin = -1, flyT = 0, gold = null;
+  const lw = $("listwrap"), list = $("list");
+  const listIdx = () => new Set([...list.querySelectorAll("[data-i]")].map(b => +b.dataset.i));
+  function sync(fit) {
+    const m = window.__map, P = window.__pins; if (!m || !P) return;
+    const keep = mode === "all" ? null : listIdx(), z = m.getZoom(), pts = [];
+    P.forEach(c => { const on = !keep || keep.has(c.__i);
+      if (on && !m.hasLayer(c)) { c.addTo(m); if (z < 12) c.closeTooltip(); }
+      if (!on && m.hasLayer(c)) m.removeLayer(c);
+      if (on) pts.push(c.getLatLng()); });
+    (window.__stars || []).forEach(s => { const ll = s.getLatLng(); const vis = !keep || P.some(c => keep.has(c.__i) && c.getLatLng().equals(ll)); s.setOpacity(vis ? 1 : 0); });
+    $("allNyc").hidden = mode === "all";
+    if (fit && pts.length) m.flyToBounds(pts, { padding: [28, 28], maxZoom: 13, duration: .6 });
+  }
+  function glow(i) {
+    const P = window.__pins || []; if (gold) gold.setStyle({ color: "#000", weight: 3 });
+    gold = P.find(c => c.__i === i) || null; if (gold) { gold.setStyle({ color: "#f2c14e", weight: 5 }); gold.bringToFront(); }
+  }
+  function flyTo(i) { const a = ARTISTS[i], m = window.__map; if (!m || a.lat == null) return; glow(i);
+    m.flyTo([a.lat, a.lng], Math.max(m.getZoom(), 14), { duration: .6 }); }
+  /* list → map */
+  const _dl = drawList; drawList = function () { _dl.apply(this, arguments); setTimeout(() => sync(false), 0); };
+  ["click"].forEach(ev => { $("boros").addEventListener(ev, e => { if (e.target.closest(".boro")) { mode = "list"; user = false; setTimeout(() => sync(false), 0); } }, true);
+    $("sortPop").addEventListener(ev, e => { if (e.target.closest("button")) { mode = "list"; setTimeout(() => sync(true), 30); } }, true); });
+  ["touchstart", "wheel", "pointerdown"].forEach(ev => lw.addEventListener(ev, () => { user = true; }, { passive: true }));
+  ["lnUp", "lnDn", "lnAuto"].forEach(id => $(id) && $(id).addEventListener("click", () => { user = true; }, true));
+  new MutationObserver(() => { if (!user) return; const f = list.querySelector("li.focus [data-i]"); if (!f) return; const i = +f.dataset.i;
+    clearTimeout(flyT); flyT = setTimeout(() => flyTo(i), 380); }).observe(list, { subtree: true, attributes: true, attributeFilter: ["class"] });
+  /* map → list */
+  function pinTap(i) {
+    const a = ARTISTS[i];
+    if (lastPin === i) { lastPin = -1; return goArtist(i); }
+    lastPin = i; user = false; glow(i);
+    if (boroOf(a) !== boroTab || !listIdx().has(i)) { boroTab = boroOf(a); try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} mode = "list"; drawList(); }
+    setTimeout(() => { const b = list.querySelector('[data-i="' + i + '"]'); if (!b) return; const li = b.closest("li");
+      window.__lfocus && window.__lfocus(li); setTimeout(() => { li.classList.add("focus", "picked"); }, 450); }, 60);
+    const m = window.__map; if (m && a.lat != null && m.getZoom() < 13) m.flyTo([a.lat, a.lng], 14, { duration: .6 });
+  }
+  const hook = () => { const P = window.__pins; if (!P || !P.length) return setTimeout(hook, 300);
+    P.forEach(c => { c.off("click"); c.on("click", e => { L.DomEvent.stopPropagation(e); pinTap(c.__i); });
+      const t = c.getTooltip && c.getTooltip(); if (t) { c.off("tooltipopen"); } });
+    /* a label tap acts like a pin tap */
+    document.getElementById("map").addEventListener("click", e => { const t = e.target.closest(".leaflet-tooltip.alab"); if (!t) return; const c = P.find(p => p.getTooltip() && p.getTooltip().getElement() === t); if (c) { e.stopPropagation(); pinTap(c.__i); } }, true);
+    window.__map.on("click", () => { lastPin = -1; });
+  };
+  hook();
+  /* ALL NYC: back to the whole map */
+  const b = document.createElement("button"); b.type = "button"; b.id = "allNyc"; b.className = "allnyc"; b.textContent = "ALL NYC"; b.hidden = true;
+  $("mapbox").appendChild(b);
+  b.onclick = () => { mode = "all"; user = false; lastPin = -1; glow(-1); sync(false); if (window.__map) window.__map.flyTo([40.735, -73.95], 10, { duration: .6 }); };
+})();
+</script>
 </body>
 </html>
