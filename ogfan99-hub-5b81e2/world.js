@@ -17,8 +17,9 @@
     ".wtabs button.on{background:#e8b84a;color:#000}",
     ".wtabs button .uc{position:absolute;top:-5px;right:-3px;background:repeating-linear-gradient(-45deg,#f2c14e 0 4px,#000 4px 8px);width:14px;height:8px;border-radius:2px;border:1px solid #000}",
     ".wrap.app.paneon>.perkbar,.wrap.app.paneon>.metrorow,.wrap.app.paneon>.mapbox,.wrap.app.paneon>.boros,.wrap.app.paneon>.bhead,.wrap.app.paneon>.listwrap{display:none!important}",
-    ".wpane{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;display:flex;flex-direction:column;gap:10px;padding:2px 0 8px}",
+    ".wpane{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;display:flex;flex-direction:column;gap:10px;padding:2px 0 8px}",
     ".wpane[hidden]{display:none}",
+    ".wpane>*{flex:none}",
     ".wp-h{text-align:center;display:grid;gap:3px}",
     ".wp-h .t{font-family:var(--tag);font-size:2rem;line-height:1;color:#fff;-webkit-text-stroke:1px #000;text-shadow:2px 2px 0 #000;transform:rotate(-2deg)}",
     ".wp-h .s{font:800 .7rem/1.3 Helvetica,Arial,sans-serif;letter-spacing:.14em;color:#e8b84a}",
@@ -73,6 +74,7 @@
     ".chat .day{align-self:center;font:800 .62rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;color:#e8b84a;padding:4px 0}",
     ".chat .cf{flex:none;display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 10px max(12px,env(safe-area-inset-bottom));background:#151726;border-top:2px solid #2c3050}",
     ".chat .cf textarea{resize:none;height:42px;border:2px solid #e8b84a;border-radius:12px;background:#0b0c14;color:#fff;padding:10px;font:15px Helvetica,Arial,sans-serif}",
+    ".chat .cf textarea::placeholder{color:#e8b84a;opacity:.85}",
     ".chat .cf button{border:2px solid #000;border-radius:12px;background:#e8b84a;color:#000;font-family:var(--display);letter-spacing:.1em;padding:0 16px;cursor:pointer}",
     ".chat .safe{flex:none;display:flex;justify-content:center;gap:14px;padding:6px;background:#151726}",
     ".chat .safe button{background:none;border:0;color:#e8b84a;font:800 .66rem Helvetica,Arial,sans-serif;letter-spacing:.12em;cursor:pointer;text-decoration:underline}"
@@ -82,10 +84,12 @@
   /* ---------- helpers ---------- */
   var BORO_C = { Brooklyn: "#d62828", Queens: "#7b3fbf", Bronx: "#00933c", Manhattan: "#0039a6", "Staten Island": "#ff6319" };
   var initials = function (n) { return String(n || "?").replace(/[^A-Za-z0-9 ]/g, "").split(/\s+/).filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join("").toUpperCase() || "?"; };
-  var avColor = function (a) { return (a && BORO_C[a.boro]) || "#e8b84a"; };
+  var boroOf = function (a) { return (a && a.boro) || "Brooklyn"; };
+  var avColor = function (a) { return BORO_C[boroOf(a)] || "#e8b84a"; };
   var A = function () { try { return ARTISTS; } catch (e) { return []; } };
   var bobby = function () { var L = A(); for (var i = 0; i < L.length; i++) if (L[i].who === "OG Bobby") return L[i]; return { who: "OG Bobby", boro: "Brooklyn", hood: "Bay Ridge" }; };
-  var meta = function (a) { return [a.hood, a.boro].filter(Boolean).join(", ") + (a.trains && a.trains.length ? " · " + a.trains.join(" ") + " TRAIN" : ""); };
+  var meta = function (a) { return [a.hood, boroOf(a)].filter(function (v, i, r) { return v && r.indexOf(v) === i; }).join(", "); };
+  var bul = function (a) { return (a.trains || []).slice(0, 4).map(function (t) { var n = Array.isArray(t) ? t[0] : t, c = Array.isArray(t) ? t[1] : "#e8b84a", y = /fccc0a/i.test(c); return '<span style="display:inline-grid;place-items:center;width:15px;height:15px;border-radius:50%;background:' + c + ';color:' + (y ? "#000" : "#fff") + ';font:900 9px/1 Helvetica,Arial,sans-serif;margin-left:3px;vertical-align:-3px">' + esc(n) + '</span>'; }).join(""); };
 
   /* ---------- tab bar ---------- */
   var TABS = [
@@ -119,8 +123,8 @@
 
   /* ---------- LOUNGE: artist to artist ---------- */
   var L = { sub: "friends", q: "", preview: false };
-  var sampleFriends = [{ who: "Sample Artist 1", boro: "Queens", hood: "Jamaica", trains: ["E"] }, { who: "Sample Artist 2", boro: "Bronx", hood: "Mott Haven", trains: ["6"] }];
-  var sampleReqs = [{ who: "Sample Artist 3", boro: "Manhattan", hood: "Harlem", trains: ["A"] }];
+  var sampleFriends = [{ who: "Sample Artist 1", boro: "Queens", hood: "Jamaica", trains: [["E", "#0039a6"]] }, { who: "Sample Artist 2", boro: "Bronx", hood: "Mott Haven", trains: [["6", "#00933c"]] }];
+  var sampleReqs = [{ who: "Sample Artist 3", boro: "Manhattan", hood: "Harlem", trains: [["A", "#0039a6"]] }];
   function pstate() { return LS("ogfan99lounge") || { sent: {}, acc: {}, chats: {} }; }
   function psave(s) { LS("ogfan99lounge", s); }
 
@@ -159,14 +163,14 @@
   }
 
   function row(a, acts, tag) {
-    return '<div class="prow"><div class="av" style="background:' + avColor(a) + '">' + esc(initials(a.who)) + '</div><div><div class="nm">' + esc(a.who) + '</div><div class="mt">' + esc(meta(a)) + (tag ? ' · ' + tag : '') + '</div></div><div class="acts">' + (acts || "") + '</div></div>';
+    return '<div class="prow"><div class="av" style="background:' + avColor(a) + '">' + esc(initials(a.who)) + '</div><div><div class="nm">' + esc(a.who) + '</div><div class="mt">' + esc(meta(a)) + bul(a) + (tag ? '<br>' + tag : '') + '</div></div><div class="acts">' + (acts || "") + '</div></div>';
   }
 
   function loungeInside() {
     var me = bobby(), s = pstate(), reqs = sampleReqs.filter(function (r) { return !s.acc[r.who]; });
     var friends = sampleFriends.concat(sampleReqs.filter(function (r) { return s.acc[r.who] === 1; }));
     var subs = [["friends", "FRIENDS", 0], ["requests", "REQUESTS", reqs.length], ["find", "FIND ARTISTS", 0], ["messages", "MESSAGES", 0]];
-    var h = '<div class="prof"><div class="av" style="background:' + avColor(me) + '">OG</div><div><div class="nm">' + esc(me.who) + '</div><div class="mt">' + esc(meta(me)) + '<br>&#129309; ' + friends.length + ' OG 99 FRIENDS</div></div></div>' +
+    var h = '<div class="prof"><div class="av" style="background:' + avColor(me) + '">OG</div><div><div class="nm">' + esc(me.who) + '</div><div class="mt">' + esc(meta(me)) + bul(me) + '<br>&#129309; ' + friends.length + ' OG 99 FRIENDS</div></div></div>' +
       '<span class="sample">PREVIEW · SAMPLE ARTISTS UNTIL THE LOUNGE GOES LIVE</span>' +
       '<div class="lsub">' + subs.map(function (x) { return '<button type="button" data-s="' + x[0] + '"' + (L.sub === x[0] ? ' class="on"' : '') + '>' + x[1] + (x[2] ? '<i>' + x[2] + '</i>' : '') + '</button>'; }).join("") + '</div><div id="lgBody" style="display:grid;gap:6px"></div>' +
       '<button class="wbtn dark" id="lgExit" type="button">EXIT PREVIEW</button>';
@@ -215,7 +219,7 @@
   var chWith = null;
   function openChat(n) {
     chWith = n; var a = find(n);
-    $("chAv").textContent = initials(n); $("chAv").style.background = avColor(a); $("chNm").textContent = n; $("chMt").textContent = meta(a) + " · OG 99 FRIENDS";
+    $("chAv").textContent = initials(n); $("chAv").style.background = avColor(a); $("chNm").textContent = n; $("chMt").innerHTML = esc(meta(a)) + bul(a);
     paintChat(); chat.hidden = false; setTimeout(function () { $("chIn").focus(); }, 50);
   }
   function paintChat() {
