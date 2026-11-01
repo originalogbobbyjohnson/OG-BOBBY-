@@ -37,6 +37,11 @@
     friends: function () { var me = uid(); return db().then(function (d) { return Promise.all([d.collection("requests").where("from", "==", me).where("status", "==", "accepted").get(), d.collection("requests").where("to", "==", me).where("status", "==", "accepted").get()]); }).then(function (r) { return rows(r[0]).map(function (x) { return x.to; }).concat(rows(r[1]).map(function (x) { return x.from; })); }); },
     send: function (to, text) { var me = uid(), id = pair(me, to); return db().then(function (d) { return d.collection("chats").doc(id).collection("msgs").add({ from: me, text: String(text).slice(0, 1000), t: now() }); }); },
     listen: function (to, cb) { var id = pair(uid(), to); return db().then(function (d) { return d.collection("chats").doc(id).collection("msgs").orderBy("t").limitToLast(200).onSnapshot(function (q) { cb(rows(q)); }); }); },
+    /* fans: a perfect game certifies you for that artist; certified 18+ fans may send that artist one short note a week */
+    certify: function (artist) { var me = uid(); return db().then(function (d) { return d.collection("certs").doc(me + "_" + String(artist).replace(/[^A-Za-z0-9]/g, "")).set({ fan: me, artist: String(artist).slice(0, 60), t: now() }); }); },
+    certFans: function (artist) { return db().then(function (d) { return d.collection("certs").where("artist", "==", artist).limit(500).get(); }).then(rows); },
+    note: function (artistUid, artist, text) { var me = uid(), wk = Math.floor(Date.now() / 6048e5); return db().then(function (d) { return d.collection("notes").doc(me + "_" + artistUid + "_" + wk).set({ fan: me, to: artistUid, artist: String(artist).slice(0, 60), text: String(text).slice(0, 280), wk: wk, t: now() }); }); },
+    notes: function () { return db().then(function (d) { return d.collection("notes").where("to", "==", uid()).limit(100).get(); }).then(rows); },
     block: function (who) { return db().then(function (d) { return d.collection("members").doc(uid()).collection("blocked").doc(String(who)).set({ t: now() }); }); },
     report: function (who) { return db().then(function (d) { return d.collection("reports").add({ by: uid(), about: String(who).slice(0, 80), t: now() }); }); }
   };

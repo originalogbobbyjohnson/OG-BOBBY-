@@ -10,9 +10,9 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
-<title>OG FAN 99</title>
-<meta property="og:title" content="OG FAN 99">
-<meta property="og:description" content="New York's independent artists. 99 questions. Prove you're a true fan.">
+<title>OG FAN 99 – The Social Gaming Platform for Musicians &amp; Fans</title>
+<meta property="og:title" content="OG FAN 99 – The Social Gaming Platform for Musicians &amp; Fans">
+<meta property="og:description" content="The social gaming platform for musicians and fans. 99 questions per artist. Prove you're a true fan and connect with the artists.">
 <meta property="og:image" content="https://ogbobbybrooklyn.com/ogfan99-hub-5b81e2/share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -347,7 +347,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <meta name="copyright" content="© 2026 OG Bobby · OG FAN 99. All rights reserved.">
 <script src="/brand/guard.js?v=13"></script>
-<script src="/brand/ogfb.js?v=3"></script>
+<script src="/brand/ogfb.js?v=4"></script>
 </head>
 <body>
 <div class="start" id="start" role="button" tabindex="0" aria-label="Tap to start">
@@ -355,7 +355,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
   <div class="st-in">
     <div class="st-sign"><span>NOW BOARDING</span><span>NYC + METRO</span></div>
     <div class="st-logo">OG FAN <b>99</b></div>
-    <p class="st-sub">NEW YORK'S INDEPENDENT ARTISTS</p>
+    <p class="st-sub">THE SOCIAL GAMING PLATFORM<br>FOR MUSICIANS &amp; FANS</p>
     <div class="st-buls" id="stBuls"></div>
     <button class="st-go" type="button">TAP TO START</button>
     <div class="st-small">PRIVATE PREVIEW</div>
@@ -400,6 +400,8 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 const ARTISTS = [
   { who: "OG Bobby", hood: "Bay Ridge", stop: "Bay Ridge Av", trains: [["R", "#fccc0a", 1]], color: "#ffffff",
     url: "../", status: "live", line: "The man who started it all. Brooklyn story raps, '99." , save: null, lat: 40.6346, lng: -74.0235 },
+  { who: "Lordz of Brooklyn", aka: "The Lordz", hood: "Bay Ridge", stop: "77 St", trains: [["R", "#fccc0a"]], color: "#7fd1ff",
+    url: null, status: "vault", line: "The Lordz. Bay Ridge's own, since All in the Family ('95).", save: null, lat: 40.6292, lng: -74.0255 },
   { who: "Cold Sholda", hood: "Gravesend", stop: "Avenue U", trains: [["F", "#ff6319"]], color: "#9fe3ff",
     url: "../coldsholda-ogfan99-0f4c9d/", status: "demo", line: "New Rome. Coffee shop social club. Cold heart, cold chain.", save: "ogfan99cold1", lat: 40.5960, lng: -73.9733 },
   { who: "NEMS", hood: "Coney Island", stop: "Stillwell Av", trains: [["D", "#ff6319"], ["F", "#ff6319"], ["N", "#fccc0a", 1], ["Q", "#fccc0a", 1]], color: "#38e8ff",
@@ -1193,7 +1195,7 @@ function findRows(list) {
 function findSearch() {
   const q = $("fq").value.trim().toLowerCase();
   let list = ARTISTS.map((a, i) => [a, i, findFrom && a.lat != null ? miles(findFrom[0], findFrom[1], a.lat, a.lng) : null]);
-  if (q && !findFrom) list = list.filter(([a]) => [a.who, a.hood, a.stop, boroOf(a)].join(" ").toLowerCase().includes(q));
+  if (q && !findFrom) list = list.filter(([a]) => [a.who, a.aka || "", a.hood, a.stop, boroOf(a)].join(" ").toLowerCase().includes(q));
   const sc = a => { const w = a.who.toLowerCase(); return !q ? 0 : w === q ? 0 : w.startsWith(q) ? 1 : w.split(/\s+/).some(x => x.startsWith(q)) ? 2 : 3; };
   if (findFrom) list.sort((x, y) => x[2] - y[2]); else list.sort((x, y) => sc(x[0]) - sc(y[0]) || x[0].who.localeCompare(y[0].who));
   $("fmsg").textContent = findFrom ? "CLOSEST ARTISTS TO " + findFrom[2] : q ? list.length + " FOUND" : ARTISTS.length + " ARTISTS · TYPE TO SEARCH";
@@ -1558,6 +1560,6 @@ window.OGX = (function () {
   $("start").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(); });
 })();
 </script>
-<script src="world.js?v=4"></script>
+<script src="world.js?v=5"></script>
 </body>
 </html>

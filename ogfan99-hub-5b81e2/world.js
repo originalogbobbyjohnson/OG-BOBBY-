@@ -47,7 +47,7 @@
     ".wtile .st.live{background:#35b867;color:#031}.wtile .st.uc{background:repeating-linear-gradient(-45deg,#f2c14e 0 6px,#e0a800 6px 12px);color:#000}",
     ".wtile.wide{grid-column:1/-1}",
     /* lounge */
-    ".lsub{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}",
+    ".lsub{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px}",
     ".lsub button{border:2px solid #000;border-radius:9px;background:#1d2033;color:#fff;font:900 9.5px/1 Helvetica,Arial,sans-serif;letter-spacing:.06em;padding:8px 2px;cursor:pointer;position:relative}",
     ".lsub button.on{background:#e8b84a;color:#000}",
     ".lsub button i{position:absolute;top:-6px;right:-4px;background:#d62828;color:#fff;font:900 9px/16px Helvetica,Arial,sans-serif;min-width:16px;height:16px;border-radius:8px;border:1.5px solid #000;font-style:normal}",
@@ -82,7 +82,7 @@
   var st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
 
   /* ---------- helpers ---------- */
-  var BORO_C = { Brooklyn: "#d62828", Queens: "#7b3fbf", Bronx: "#00933c", Manhattan: "#0039a6", "Staten Island": "#ff6319" };
+  var BORO_C = { Brooklyn: "#d62828", Queens: "#7b3fbf", Bronx: "#00933c", "the Bronx": "#00933c", Manhattan: "#0039a6", "Staten Island": "#ff6319" };
   var initials = function (n) { return String(n || "?").replace(/[^A-Za-z0-9 ]/g, "").split(/\s+/).filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join("").toUpperCase() || "?"; };
   var boroOf = function (a) { return (a && a.boro) || "Brooklyn"; };
   var avColor = function (a) { return BORO_C[boroOf(a)] || "#e8b84a"; };
@@ -201,7 +201,7 @@
   function loungeInside() {
     var me = bobby(), s = pstate(), reqs = sampleReqs.filter(function (r) { return !s.acc[r.who]; });
     var friends = sampleFriends.concat(sampleReqs.filter(function (r) { return s.acc[r.who] === 1; }));
-    var subs = [["friends", "FRIENDS", 0], ["requests", "REQUESTS", reqs.length], ["find", "FIND ARTISTS", 0], ["messages", "MESSAGES", 0]];
+    var subs = [["friends", "FRIENDS", 0], ["requests", "REQUESTS", reqs.length], ["find", "FIND", 0], ["fans", "MY FANS", 1], ["messages", "MESSAGES", 0]];
     var h = '<div class="prof"><div class="av" style="background:' + avColor(me) + '">OG</div><div><div class="nm">' + esc(me.who) + '</div><div class="mt">' + esc(meta(me)) + bul(me) + '<br>&#129309; ' + friends.length + ' OG 99 FRIENDS</div></div></div>' +
       '<span class="sample">PREVIEW · SAMPLE ARTISTS UNTIL THE LOUNGE GOES LIVE</span>' +
       '<div class="lsub">' + subs.map(function (x) { return '<button type="button" data-s="' + x[0] + '"' + (L.sub === x[0] ? ' class="on"' : '') + '>' + x[1] + (x[2] ? '<i>' + x[2] + '</i>' : '') + '</button>'; }).join("") + '</div><div id="lgBody" style="display:grid;gap:6px"></div>' +
@@ -220,6 +220,12 @@
     } else if (L.sub === "requests") {
       var rq = sampleReqs.filter(function (r) { return !s.acc[r.who]; });
       body.innerHTML = rq.length ? rq.map(function (a) { return row(a, '<button class="wbtn sm gold" type="button" data-acc="' + esc(a.who) + '">ACCEPT</button><button class="wbtn sm dark" type="button" data-dec="' + esc(a.who) + '">&#10005;</button>', "WANTS TO LINK"); }).join("") : '<p class="wmsg">No new friend requests.</p>';
+    } else if (L.sub === "fans") {
+      var muted = s.muted || {};
+      body.innerHTML = '<div class="wbox"><h4>CERTIFIED FANS</h4><p>Fans who got a perfect run on your game. They see your updates. You can mute or remove anyone.</p>' +
+        sampleFans.filter(function (f) { return muted[f.who] !== 2; }).map(function (f) { return row(f, muted[f.who] ? '<button class="wbtn sm dark" type="button" disabled>MUTED</button>' : '<button class="wbtn sm dark" type="button" data-mute="' + esc(f.who) + '">MUTE</button><button class="wbtn sm" type="button" data-rm="' + esc(f.who) + '">&#10005;</button>', "&#9733; CERTIFIED · " + f.n + " ARTISTS"); }).join("") + '</div>' +
+        '<div class="wbox"><h4>FAN NOTES</h4><p>One note per fan per week, 18+ only. You decide who you write back.</p>' +
+        (muted["Sample Fan 2"] ? '' : '<div class="prow" style="grid-template-columns:38px 1fr"><div class="av" style="background:#7b3fbf">SF</div><div><div class="nm">Sample Fan 2</div><div style="color:#fff;font-size:.86rem;line-height:1.3;margin:4px 0 6px">Got a perfect run on your game. Your last song is my favorite. Keep them coming!</div><div class="acts"><button class="wbtn sm gold" type="button" data-chat="Sample Fan 2">REPLY</button><button class="wbtn sm dark" type="button" data-mute="Sample Fan 2">IGNORE</button></div></div></div>') + '</div>';
     } else if (L.sub === "find") {
       body.innerHTML = '<input class="lsearch" id="lgQ" placeholder="Search artists, hoods, boroughs" autocapitalize="off" autocomplete="off" value="' + esc(L.q) + '"><div id="lgFind" style="display:grid;gap:6px"></div>';
       var draw = function () {
@@ -237,6 +243,7 @@
       if (b.dataset.chat) return openChat(b.dataset.chat);
       if (b.dataset.acc) { st2.acc[b.dataset.acc] = 1; psave(st2); L.sub = "friends"; return drawLounge(); }
       if (b.dataset.dec) { st2.acc[b.dataset.dec] = 2; psave(st2); return drawLounge(); }
+      if (b.dataset.mute || b.dataset.rm) { st2.muted = st2.muted || {}; st2.muted[b.dataset.mute || b.dataset.rm] = b.dataset.rm ? 2 : 1; psave(st2); return drawLounge(); }
       if (b.dataset.add) { st2.sent[b.dataset.add] = 1; psave(st2); b.outerHTML = '<button class="wbtn sm dark" type="button" disabled>SENT</button>'; }
     };
   }
@@ -247,7 +254,7 @@
       var mem = {}; r[0].forEach(function (x) { mem[x.id] = x; }); var inc = r[1], fr = r[2];
       var door = function (x) { var n = x && (x.door || x.name); return Object.assign({}, find(n), { who: (x && x.name) || n }); };
       var me = door(m), sent = LS("ogfan99sent") || {};
-      var subs = [["friends", "FRIENDS", 0], ["requests", "REQUESTS", inc.length], ["find", "FIND ARTISTS", 0], ["messages", "MESSAGES", 0]];
+      var subs = [["friends", "FRIENDS", 0], ["requests", "REQUESTS", inc.length], ["find", "FIND", 0], ["fans", "MY FANS", 0], ["messages", "MESSAGES", 0]];
       p.innerHTML = '<div class="wp-h"><div class="t">ARTIST LOUNGE</div><div class="s">WHERE THE ARTISTS LINK UP</div></div>' +
         '<div class="prof"><div class="av" style="background:' + avColor(me) + '">' + esc(initials(me.who)) + '</div><div><div class="nm">' + esc(me.who) + '</div><div class="mt">' + esc(meta(me)) + bul(me) + '<br>&#129309; ' + fr.length + ' OG 99 FRIENDS</div></div></div>' +
         '<div class="lsub">' + subs.map(function (x) { return '<button type="button" data-s="' + x[0] + '"' + (L.sub === x[0] ? ' class="on"' : '') + '>' + x[1] + (x[2] ? '<i>' + x[2] + '</i>' : '') + '</button>'; }).join("") + '</div><div id="lgBody" style="display:grid;gap:6px"></div>' +
@@ -258,6 +265,8 @@
       var chatBtn = function (u) { return '<button class="wbtn sm gold" type="button" data-cu="' + esc(u) + '">MESSAGE</button>'; };
       if (L.sub === "friends" || L.sub === "messages") {
         body.innerHTML = fr.map(function (u) { return row(door(mem[u] || { name: "Artist" }), chatBtn(u), "&#129309; FRIENDS"); }).join("") || '<p class="wmsg">No OG 99 friends yet. Tap FIND ARTISTS.</p>';
+      } else if (L.sub === "fans") {
+        body.innerHTML = uc("CERTIFIED FANS + FAN NOTES", "Your Certified Fans and their weekly notes show up here once fan sign-in goes live.");
       } else if (L.sub === "requests") {
         body.innerHTML = inc.map(function (q) { return row(door(mem[q.from] || { name: "Artist" }), '<button class="wbtn sm gold" type="button" data-acc="' + esc(q.id) + '">ACCEPT</button><button class="wbtn sm dark" type="button" data-dec="' + esc(q.id) + '">&#10005;</button>', "WANTS TO LINK"); }).join("") || '<p class="wmsg">No new friend requests.</p>';
       } else {
@@ -274,7 +283,7 @@
     }).catch(function () { p.innerHTML = '<p class="wmsg">Couldn\'t load the Lounge. Check your connection and try again.</p>'; });
   }
 
-  function find(n) { var all = A().concat(sampleFriends, sampleReqs); for (var i = 0; i < all.length; i++) if (all[i].who === n) return all[i]; return { who: n }; }
+  function find(n) { var all = A().concat(sampleFriends, sampleReqs, sampleFans); for (var i = 0; i < all.length; i++) if (all[i].who === n) return all[i]; return { who: n }; }
 
   /* chat window (preview keeps messages on this phone; live mode uses the online database) */
   var chat = document.createElement("div"); chat.className = "chat"; chat.hidden = true; chat.setAttribute("role", "dialog");
@@ -306,17 +315,69 @@
   $("chBlock").onclick = function () { if (chUid) OGFB.social.block(chUid); note(chUid ? "BLOCKED. THEY CAN'T MESSAGE YOU." : "PREVIEW · BLOCK WORKS WHEN THE LOUNGE GOES LIVE"); };
   $("chReport").onclick = function () { if (chUid) OGFB.social.report(chUid + " " + chWith); note(chUid ? "REPORTED. OG BOBBY WILL TAKE A LOOK." : "PREVIEW · REPORTS GO TO OG BOBBY WHEN LIVE"); };
 
-  /* ---------- FANS: the fan side (template, under construction) ---------- */
+  /* ---------- OG CERTIFIED: a perfect game connects a fan to that artist ---------- */
+  /* perfect = every one of the 9 boxes cleared with 3 stars (no misses); OG Bobby's own game = all 99 right on the 99 test */
+  var CERT_LV = [[1, "OG CERTIFIED"], [5, "TRUE FAN"], [10, "DEEP CUT"], [25, "HALL OF FAMER"], [50, "OG LEGEND"]];
+  function certInfo(a) {
+    if (a.who === "OG Bobby") { var g = LS("ogb2") || {}; var b = g.t99best || 0; return { pct: Math.min(100, Math.round(b / 99 * 100)), ok: b >= 99, played: b > 0 }; }
+    if (!a.save) return { pct: 0, ok: false, played: false };
+    var best = { pct: 0, ok: false, played: false };
+    [a.save, a.save + "x"].forEach(function (k) {
+      var v = LS(k); if (!v) return; var st = v.stars || {}, n3 = 0, any = Object.keys(st).length || Object.keys(v.cleared || {}).length;
+      Object.keys(st).forEach(function (x) { if (st[x] >= 3) n3++; });
+      var pct = Math.min(100, Math.round(n3 / 9 * 100)), ok = n3 >= 9;
+      if (ok || pct > best.pct) best = { pct: pct, ok: ok, played: best.played || !!any };
+      if (any) best.played = true;
+    });
+    return best;
+  }
+  function certs() { var out = []; A().forEach(function (a, i) { var c = certInfo(a); if (c.played) out.push({ a: a, i: i, c: c }); }); return out; }
+  function certLevel(n) { var r = null, nx = CERT_LV[0]; CERT_LV.forEach(function (x, k) { if (n >= x[0]) { r = x; nx = CERT_LV[k + 1] || null; } }); return { cur: r, next: nx }; }
+  window.OGCERT = { info: certInfo, all: certs };
+
+  /* ---------- FANS: the fan side ---------- */
+  var F = { sub: "me" };
+  var sampleFans = [{ who: "Sample Fan 1", boro: "Brooklyn", hood: "Bensonhurst", n: 4 }, { who: "Sample Fan 2", boro: "Queens", hood: "Astoria", n: 9 }, { who: "Sample Fan 3", boro: "the Bronx", hood: "Fordham", n: 1 }];
+  var RULES = ["Respect every artist and every fan. No harassment, threats, hate or bullying.",
+    "No stalking: never post or ask for an artist's home, location, schedule or family.",
+    "No links, phone numbers or addresses in notes or messages.",
+    "Fan notes to artists: 18+ only, one note per artist per week. The artist decides if a conversation starts.",
+    "Artists can mute, block or remove any fan. Removing a fan takes back that Certified badge.",
+    "Two reports from different artists locks your messages until OG Bobby reviews it. Serious cases are banned for good."];
   function drawFans() {
-    var p = panes.fans, metro = $("metro") ? $("metro").innerHTML : "";
-    var r = LS("ogfan99rider") || {};
-    p.innerHTML = '<div class="wp-h"><div class="t">FAN ZONE</div><div class="s">WHERE THE TRUE FANS RIDE TOGETHER</div></div>' +
-      '<div class="wbox"><h4>YOUR RIDER CARD</h4>' + (metro ? '<button class="metro" type="button" id="fzMetro" style="width:100%">' + metro + '</button>' : '') + '<p>' + (r.name ? "Riding as <b>" + esc(r.name) + "</b>." : "Play any game to start your rider card.") + '</p></div>' +
-      uc("FAN FRIENDS", "Add other fans, see what they're playing and race them up the Riders Board.") +
-      uc("FAN WALL", "Post your scores, call out your favorite artist and show off your badges.") +
-      uc("CREWS", "Start a crew with your block, your school or your borough and play as a team.") +
-      uc("FAN-TO-ARTIST", "Top fans earn a direct line to the artists they've proven they know best.");
-    if ($("fzMetro")) $("fzMetro").onclick = function () { go("map"); setTimeout(function () { $("metro").click(); }, 60); };
+    var p = panes.fans, list = certs(), got = list.filter(function (x) { return x.c.ok; }), lv = certLevel(got.length);
+    var subs = [["me", "MY CARD"], ["certified", "CERTIFIED"], ["friends", "FAN FRIENDS"], ["wall", "FAN WALL"]];
+    var h = '<div class="wp-h"><div class="t">FAN ZONE</div><div class="s">WHERE THE TRUE FANS RIDE TOGETHER</div></div>' +
+      '<div class="lsub">' + subs.map(function (x) { return '<button type="button" data-f="' + x[0] + '"' + (F.sub === x[0] ? ' class="on"' : '') + '>' + x[1] + (x[0] === "certified" && got.length ? '<i>' + got.length + '</i>' : '') + '</button>'; }).join("") + '</div><div id="fzBody" style="display:grid;gap:8px"></div>';
+    p.innerHTML = h;
+    p.querySelector(".lsub").onclick = function (e) { var b = e.target.closest("[data-f]"); if (!b) return; F.sub = b.dataset.f; drawFans(); };
+    var body = $("fzBody");
+    if (F.sub === "me") {
+      var metro = $("metro") ? $("metro").innerHTML : "", r = LS("ogfan99rider") || {};
+      body.innerHTML = '<div class="wbox"><h4>YOUR RIDER CARD</h4>' + (metro ? '<button class="metro" type="button" id="fzMetro" style="width:100%">' + metro + '</button>' : '') +
+        '<p>' + (r.name ? "Riding as <b>" + esc(r.name) + "</b>." : "Play any game to start your rider card.") + '</p></div>' +
+        '<div class="prof"><div class="av" style="background:#e8b84a;color:#000">&#9733;</div><div><div class="nm">' + (lv.cur ? lv.cur[1] : "NOT CERTIFIED YET") + '</div><div class="mt">' + got.length + ' ARTIST' + (got.length === 1 ? '' : 'S') + ' CERTIFIED' + (lv.next ? ' · ' + (lv.next[0] - got.length) + ' MORE FOR ' + lv.next[1] : '') + '</div></div></div>' +
+        '<div class="wbox"><h4>CONNECT WITH THE ARTISTS</h4><ol class="wsteps"><li>Play an artist\'s full game</li><li>Get a perfect run: every box, 3 stars, no misses</li><li>You\'re OG Certified. You land on that artist\'s Certified Fans wall and get their updates</li><li>18+? Send that artist one fan note a week. They choose to write back</li></ol><p>The more perfect games you finish, the more artists you\'re connected to.</p></div>' +
+        '<button class="wbtn gold" id="fzGo" type="button">SEE MY CERTIFIED ARTISTS</button>' +
+        '<div class="wbox"><h4>FAN RULES</h4><ol class="wsteps">' + RULES.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ol></div>';
+      if ($("fzMetro")) $("fzMetro").onclick = function () { go("map"); setTimeout(function () { $("metro").click(); }, 60); };
+      $("fzGo").onclick = function () { F.sub = "certified"; drawFans(); };
+    } else if (F.sub === "certified") {
+      var near = list.filter(function (x) { return !x.c.ok; }).sort(function (x, y) { return y.c.pct - x.c.pct; }).slice(0, 8);
+      body.innerHTML = '<div class="wbox"><h4>OG CERTIFIED (' + got.length + ')</h4>' + (got.length ? got.map(function (x) { return row(x.a, '<button class="wbtn sm gold" type="button" data-play="' + x.i + '">PLAY</button>', "&#9733; CERTIFIED FAN"); }).join("") : '<p>No perfect games yet. Clear every box of an artist\'s game with 3 stars to get certified.</p>') + '</div>' +
+        '<div class="wbox"><h4>ALMOST THERE</h4>' + (near.length ? near.map(function (x) { return row(x.a, '<button class="wbtn sm" type="button" data-play="' + x.i + '">GO</button>', x.c.pct + '% PERFECT'); }).join("") : '<p>Start any game on the map and it shows up here.</p>') + '</div>';
+      body.onclick = function (e) { var b = e.target.closest("[data-play]"); if (!b) return; go("map"); setTimeout(function () { try { openCard(+b.dataset.play); } catch (er) {} }, 80); };
+    } else if (F.sub === "friends") {
+      var fs = LS("ogfan99fans") || {};
+      body.innerHTML = '<span class="sample">PREVIEW · SAMPLE FANS UNTIL FAN SIGN-IN GOES LIVE</span>' +
+        sampleFans.map(function (f) { return row(f, fs[f.who] ? '<button class="wbtn sm dark" type="button" disabled>SENT</button>' : '<button class="wbtn sm" type="button" data-fan="' + esc(f.who) + '">+ ADD</button>', "&#9733; " + f.n + " CERTIFIED"); }).join("") +
+        uc("FAN MESSAGES", "Fan-to-fan chat comes next, with the same block, report and 18+ rules as the Lounge.");
+      body.onclick = function (e) { var b = e.target.closest("[data-fan]"); if (!b) return; fs[b.dataset.fan] = 1; LS("ogfan99fans", fs); b.outerHTML = '<button class="wbtn sm dark" type="button" disabled>SENT</button>'; };
+    } else {
+      body.innerHTML = uc("FAN WALL", "Post your scores, call out your favorite artist and show off your badges.") +
+        uc("CREWS", "Start a crew with your block, your school or your borough and play as a team.") +
+        uc("FAN LEADERBOARDS", "Top fans for every artist, every borough and every region.");
+    }
   }
   function uc(t, d) { return '<div class="tape"><span class="uc">UNDER CONSTRUCTION</span><h4>' + t + '</h4><p>' + d + '</p></div>'; }
 
