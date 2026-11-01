@@ -921,7 +921,7 @@ function drawList() {
     const tab = $("boros").querySelector('[data-b="' + boroTab + '"]'); if (tab && tab.scrollIntoView) tab.scrollIntoView({ inline: "center", block: "nearest" }); });
   const nb = count(boroTab);
   $("bname").innerHTML = esc(boroTab.replace("the ", "").toUpperCase()) + ' · <span>' + nb + (nb === 1 ? " ARTIST" : " ARTISTS") + '</span>';
-  $("sorts").innerHTML = [["az", "A–Z"], ["games", "GAMES FIRST"], ["line", "BY LINE"]].concat(isOwner() ? [["tier", "BY TIER"]] : []).map(([k, t]) => '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
+  $("sorts").innerHTML = [["az", "A–Z"], ["games", "READY GAMES"], ["line", "BY LINE"]].concat(isOwner() ? [["tier", "BY TIER"]] : []).map(([k, t]) => '<button type="button" data-s="' + k + '" aria-pressed="' + (k === sortBy) + '">' + t + '</button>').join("");
   $("sorts").innerHTML += '<span class="vsep"></span>' + [["tiles", "&#9638; TILES"], ["simple", "&#9776; LIST"]].map(([k, t]) => '<button type="button" class="vbtn" data-v="' + k + '" aria-pressed="' + (k === listView) + '">' + t + '</button>').join("");
   $("sorts").querySelectorAll("button[data-s]").forEach(b => b.onclick = () => { sortBy = b.dataset.s; try { localStorage.setItem("ogfan99sort", sortBy); } catch (e) {} drawList(); });
   $("sorts").querySelectorAll("button[data-v]").forEach(b => b.onclick = () => { listView = b.dataset.v; try { localStorage.setItem("ogfan99view", listView); } catch (e) {} drawList(); });
