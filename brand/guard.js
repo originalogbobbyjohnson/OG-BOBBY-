@@ -91,7 +91,7 @@
     var fit = function () { Array.prototype.forEach.call(sh.querySelectorAll(".trophy"), function (t) { var s = t.querySelector("span"); if (!s) return;
       s.style.fontSize = ""; s.style.width = "auto"; s.style.maxWidth = "100%"; var w = t.clientWidth, fs = parseFloat(getComputedStyle(s).fontSize), n = 0;
       while (s.scrollWidth > w + 1 && fs > 6 && n++ < 30) { fs -= 0.5; s.style.fontSize = fs + "px"; } }); };
-    new MutationObserver(function () { requestAnimationFrame(fit); }).observe(sh, { childList: true });
+    new MutationObserver(function () { setTimeout(fit, 30); }).observe(sh, { childList: true });
     addEventListener("resize", fit); fit(); };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fitShelf); else fitShelf();
   try { if (!document.getElementById("nycSidesJs")) { var ns = document.createElement("script"); ns.id = "nycSidesJs"; ns.src = "/brand/nycsides.js?v=1"; document.head.appendChild(ns); } } catch (e) {}
