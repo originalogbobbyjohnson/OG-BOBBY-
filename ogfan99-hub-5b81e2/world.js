@@ -11,6 +11,29 @@
 
   /* ---------- styles ---------- */
   var css = [
+    ".hbar{display:grid!important;grid-template-columns:44px 1fr 44px;align-items:center;gap:6px}",
+    ".hbar .hmid{display:flex;align-items:center;justify-content:center;gap:8px;min-width:0}",
+    ".hb,.hfind{width:42px;height:38px;border:2px solid #000;border-radius:10px;background:#1d2033;box-shadow:0 2px 0 #000;cursor:pointer;display:grid;place-items:center;padding:0;color:#fff;font-size:18px}",
+    ".hfind{background:#e8b84a;color:#000}",
+    ".hb{align-content:center;gap:4px}.hb i{display:block;width:20px;height:3px;border-radius:2px;background:#fff}",
+    ".hmenu{position:fixed;inset:0;z-index:2700;background:rgba(0,0,0,.6);display:flex}",
+    ".hmenu[hidden]{display:none}",
+    ".hm-in{width:min(84vw,340px);height:100%;overflow-y:auto;background:#151726;border-right:3px solid #d62828;padding:max(14px,env(safe-area-inset-top)) 14px max(18px,env(safe-area-inset-bottom));box-sizing:border-box;display:flex;flex-direction:column;gap:6px;animation:hmin .18s ease-out}",
+    "@keyframes hmin{from{transform:translateX(-100%)}to{transform:none}}",
+    ".hm-h{display:flex;justify-content:space-between;align-items:center}",
+    ".hm-h span{font-family:var(--tag);font-size:1.8rem;color:#fff;-webkit-text-stroke:1px #000;text-shadow:2px 2px 0 #000}.hm-h span b{color:#d62828;font-weight:400}",
+    ".hm-x{border:0;background:none;color:#fff;font-size:22px;cursor:pointer}",
+    ".hm-sub{font:800 .62rem/1.3 Helvetica,Arial,sans-serif;letter-spacing:.12em;color:#e8b84a;margin-bottom:4px}",
+    ".hm-sec{font:900 .62rem/1 Helvetica,Arial,sans-serif;letter-spacing:.16em;color:#e8b84a;margin:10px 0 2px}",
+    ".hm-list{display:grid;gap:5px}",
+    ".hm-list button{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:8px;text-align:left;border:2px solid #2c3050;border-radius:10px;background:#1d2033;color:#fff;padding:10px;font:800 .82rem/1 Helvetica,Arial,sans-serif;letter-spacing:.06em;cursor:pointer}",
+    ".hm-list button.on{border-color:#e8b84a;background:#2a2410}",
+    ".hm-list button b{font-size:18px;text-align:center}",
+    ".hm-list em{font-style:normal;font:900 .6rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;padding:4px 6px;border-radius:5px;background:repeating-linear-gradient(-45deg,#f2c14e 0 6px,#e0a800 6px 12px);color:#000}",
+    ".hm-list em.g{background:#e8b84a;color:#000;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}",
+    ".exb{display:inline-grid;place-items:center;width:20px;height:20px;border:2px solid #fff;border-radius:4px;font:900 12px/1 Helvetica,Arial,sans-serif}",
+    ".wback{flex:none;border:2px solid #e8b84a;border-radius:10px;background:#1d2033;color:#e8b84a;font:900 .72rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;padding:8px;cursor:pointer}",
+    ".wback[hidden]{display:none}",
     ".wtabs{flex:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin:-2px 0 0}",
     ".wtabs button{position:relative;border:2px solid #000;border-radius:10px;background:#1d2033;color:#fff;font:900 9.5px/1 Helvetica,Arial,sans-serif;letter-spacing:.06em;padding:6px 1px 5px;box-shadow:0 2px 0 #000;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}",
     ".wtabs button b{font-size:14px;line-height:1}",
@@ -95,30 +118,55 @@
   var TABS = [
     { id: "map", ic: "&#128647;", t: "MAP" },
     { id: "lounge", ic: "&#127908;", t: "LOUNGE" },
-    { id: "fans", ic: "&#128293;", t: "FANS", uc: 1 },
+    { id: "fans", ic: "&#128293;", t: "FANS" },
     { id: "regions", ic: "&#127758;", t: "REGIONS", uc: 1 },
     { id: "genres", ic: "&#127926;", t: "GENRES", uc: 1 }
   ];
   var app = document.querySelector(".wrap.app"), bar = document.querySelector(".appbar");
   if (!app || !bar) return;
-  var nav = document.createElement("nav"); nav.className = "wtabs"; nav.setAttribute("role", "tablist");
-  nav.innerHTML = TABS.map(function (t) { return '<button type="button" role="tab" data-w="' + t.id + '"' + (t.id === "map" ? ' class="on"' : "") + '><b>' + t.ic + '</b>' + t.t + (t.uc ? '<span class="uc" aria-hidden="true"></span>' : "") + '</button>'; }).join("");
-  bar.insertAdjacentElement("afterend", nav);
+  /* one ☰ menu holds everything that used to crowd the board; FIND stays one tap away on the right */
+  var hb = document.createElement("button"); hb.type = "button"; hb.className = "hb"; hb.setAttribute("aria-label", "Menu"); hb.innerHTML = "<i></i><i></i><i></i>";
+  var fb = document.createElement("button"); fb.type = "button"; fb.className = "hfind"; fb.setAttribute("aria-label", "Find an artist"); fb.innerHTML = "&#128269;";
+  var mid = document.createElement("div"); mid.className = "hmid"; while (bar.firstChild) mid.appendChild(bar.firstChild);
+  bar.appendChild(hb); bar.appendChild(mid); bar.appendChild(fb); bar.classList.add("hbar");
+  fb.onclick = function () { if (cur !== "map") go("map"); var f = $("findBtn2"); if (f) f.click(); };
+  var menu = document.createElement("div"); menu.className = "hmenu"; menu.hidden = true;
+  menu.innerHTML = '<div class="hm-in" role="dialog" aria-label="Menu"><div class="hm-h"><span>OG FAN <b>99</b></span><button type="button" class="hm-x" aria-label="Close">&#10005;</button></div><div class="hm-sub">THE SOCIAL GAMING PLATFORM FOR MUSICIANS &amp; FANS</div><nav class="hm-list" id="hmList"></nav></div>';
+  document.body.appendChild(menu);
+  var nav = menu.querySelector("#hmList");
   var dock = document.querySelector(".dock2");
+  var back = document.createElement("button"); back.type = "button"; back.className = "wback"; back.innerHTML = "&#9664; BACK TO THE MAP"; back.hidden = true; app.insertBefore(back, dock);
+  back.onclick = function () { go("map"); };
   var panes = {};
   TABS.forEach(function (t) { if (t.id === "map") return; var p = document.createElement("section"); p.className = "wpane"; p.id = "w-" + t.id; p.hidden = true; app.insertBefore(p, dock); panes[t.id] = p; });
+  var click = function (id) { var e = $(id); if (e) e.click(); };
+  function drawMenu() {
+    var ex = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } })();
+    var td = $("today"), tdName = td && !td.hidden ? (td.querySelector("b") || {}).textContent : "";
+    var it = function (k, ic, t, extra, on) { return '<button type="button" data-m="' + k + '"' + (on ? ' class="on"' : '') + '><b>' + ic + '</b><span>' + t + '</span>' + (extra || "") + '</button>'; };
+    nav.innerHTML = '<div class="hm-sec">GO TO</div>' + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", regions: "REGIONS", genres: "GENRES" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join("") +
+      '<div class="hm-sec">YOU</div>' + it("metro", "&#127915;", "MY RIDER CARD") + (tdName ? it("today", "&#9733;", "TODAY'S TRAIN 2X", '<em class="g">' + esc(tdName) + '</em>') : "") + it("perks", "&#127873;", "PLAY TO WIN PERKS") +
+      '<div class="hm-sec">SETTINGS</div>' + it("ex", "<span class=\"exb\">E</span>", "EXPLICIT LYRICS 18+", '<em class="' + (ex ? "g" : "") + '">' + (ex ? "ON" : "OFF") + '</em>') + it("key", "&#128647;", "SUBWAY KEY + LEGEND") + it("over", "&#8634;", "START OVER");
+  }
+  var openMenu = function (on) { if (on) drawMenu(); menu.hidden = !on; };
+  hb.onclick = function () { openMenu(true); };
+  menu.onclick = function (e) {
+    if (e.target === menu || e.target.closest(".hm-x")) return openMenu(false);
+    var b = e.target.closest("[data-m]"); if (!b) return; var m = b.dataset.m; openMenu(false);
+    if (m.indexOf("w:") === 0) return go(m.slice(2));
+    if (cur !== "map" && m !== "over") go("map");
+    setTimeout(function () { click({ metro: "metro", today: "today", perks: "perkBar", ex: "exBtn", key: "moreBtn", over: "restartAll" }[m]); }, cur === "map" ? 0 : 60);
+  };
 
   var cur = "map";
   function go(id) {
     cur = id; LS("ogfan99tab", id);
-    Array.prototype.forEach.call(nav.children, function (b) { b.classList.toggle("on", b.dataset.w === id); });
-    app.classList.toggle("paneon", id !== "map");
+    app.classList.toggle("paneon", id !== "map"); back.hidden = id === "map";
     Object.keys(panes).forEach(function (k) { panes[k].hidden = k !== id; });
     if (id === "map") { setTimeout(function () { try { window.__map && window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 30); return; }
     ({ lounge: drawLounge, fans: drawFans, regions: drawRegions, genres: drawGenres })[id]();
     panes[id].scrollTop = 0;
   }
-  nav.addEventListener("click", function (e) { var b = e.target.closest("button[data-w]"); if (b) go(b.dataset.w); });
   window.OGW = { go: go };
 
   /* ---------- LOUNGE: artist to artist ---------- */

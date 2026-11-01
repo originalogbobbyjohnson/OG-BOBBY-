@@ -342,6 +342,22 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .perks .how { font: 600 13px/1.4 Helvetica, Arial, sans-serif; color: #fff; }
 .perks .fine { font: 500 11px/1.35 Helvetica, Arial, sans-serif; color: #fff; opacity: .75; }
 .soonlbl { text-align: center; font: 900 15px/1 Helvetica, Arial, sans-serif; letter-spacing: .14em; color: #f2c14e; padding: 6px 0 2px; }
+/* clean board (Nov 1): one ☰ menu up top, FIND on the right; borough signs in one tight block; ▲ ▼ to step artist by artist */
+.wrap.app > .metrorow, .wrap.app > .dock2 { display: none !important; }
+.wrap.app { padding-bottom: max(8px, env(safe-area-inset-bottom)) !important; }
+.wrap.app .boros { gap: 4px !important; }
+.wrap.app .boro { display: flex !important; align-items: center; justify-content: center; gap: 4px; padding: 6px 2px 5px !important; border-top-width: 4px !important; font-size: .64rem !important; }
+.wrap.app .boro small { min-width: 0 !important; padding: 1px 4px !important; font-size: .6rem !important; box-shadow: 0 0 0 1px #f2c14e !important; }
+.wrap.app .boro small .bw { display: none; }
+.lnav { flex: none; position: relative; height: 0; z-index: 5; }
+.lnav .ln { position: absolute; right: 8px; display: grid; gap: 6px; bottom: 10px; }
+.lnav button { width: 42px; height: 42px; border-radius: 50%; border: 2px solid #000; background: #e8b84a; color: #000; font: 900 16px/1 Helvetica, Arial, sans-serif; box-shadow: 0 3px 0 #000, 0 0 12px rgba(232,184,74,.6); cursor: pointer; display: grid; place-items: center; padding: 0; }
+.lnav button.up { background: #1d2033; color: #e8b84a; border-color: #e8b84a; }
+.lnav button.auto { font-size: 10px; letter-spacing: .04em; background: #d62828; color: #fff; }
+.lnav button.auto.on { background: #fff; color: #d62828; }
+.lnav button.cue { animation: lncue 1.2s ease-in-out 4; }
+@keyframes lncue { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+.wrap.app.paneon > .lnav { display: none; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -371,6 +387,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
   <div class="boros" id="boros" role="tablist"></div>
   <div class="bhead"><h3 id="bname"></h3><button class="sortbtn" id="sortBtn" type="button"></button><div class="vtog" id="vtog"></div><div class="sortpop" id="sortPop" hidden><div class="sorts" id="sorts"></div></div></div>
   <div class="listwrap" id="listwrap"><div class="steel"><i class="rv tl"></i><i class="rv tr"></i><i class="rv bl"></i><i class="rv br"></i><ul class="tiles" id="list"></ul></div></div>
+  <div class="lnav" id="lnav"><div class="ln"><button type="button" class="auto" id="lnAuto" aria-label="Auto scroll">AUTO</button><button type="button" class="up" id="lnUp" aria-label="Previous artist">&#9650;</button><button type="button" class="cue" id="lnDn" aria-label="Next artist">&#9660;</button></div></div>
 
   <nav class="dock2">
     <button type="button" id="moreBtn"><b>&#9776;</b>MORE</button>
@@ -1035,7 +1052,7 @@ const pillHTML = a => (a.status === "demo" || a.status === "vault") ? '<span cla
 function drawList() {
   $("legend").innerHTML = '<span><i style="background:var(--green)"></i>LIVE</span>' + (isOwner() ? '<span><i style="background:#e8b84a"></i>READY · GAME BUILT</span>' : '') + '<span><i style="background:#d62828"></i>' + (isOwner() ? "VAULT · BEING BUILT" : "COMING SOON") + '</span>';
   const count = b => ARTISTS.filter(a => boroOf(a) === b).length;
-  $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '<small>' + (count(b) ? count(b) + (count(b) > 1 ? " ARTISTS" : " ARTIST") : "SOON") + '</small></button>').join("");
+  $("boros").innerHTML = BOROS.map(b => '<button class="boro" role="tab" type="button" data-b="' + b + '" aria-selected="' + (b === boroTab) + '">' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '<small>' + (count(b) ? count(b) + '<span class="bw">' + (count(b) > 1 ? " ARTISTS" : " ARTIST") + '</span>' : "SOON") + '</small></button>').join("");
   $("boros").querySelectorAll(".boro").forEach(t => t.onclick = () => { boroTab = t.dataset.b;
     try { const pts = ARTISTS.filter(a => boroOf(a) === t.dataset.b && a.lat != null).map(a => [a.lat, a.lng]); if (window.__map && pts.length) window.__map.flyToBounds(pts, { padding: [30, 30], maxZoom: 13, duration: .7 }); } catch (e) {} try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} drawList(); try { $("listwrap").scrollTop = 0; } catch (e) {} });
   $("tally").innerHTML = '<div class="all">' + ARTISTS.length + ' ARTISTS ON THE LINE</div>' + BOROS.map(b => '<div class="tb" role="button" tabindex="0" data-b="' + b + '"><b>' + count(b) + '</b>' + ({ "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHSTR", "New Jersey": "JERSEY" }[b] || b.replace("the ", "").toUpperCase()) + '</div>').join("");
@@ -1515,6 +1532,14 @@ window.OGX = (function () {
     for (const [sy, li] of stops) { if (sy <= y) f = li; else break; }
     items.forEach(li => li.classList.toggle("focus", li === f)); }
   lw.addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(mark); }, { passive: true });
+  /* ▼ / ▲ step one artist at a time; AUTO walks the list until you touch it */
+  const step = d => { if (!stops.length) return; const y = lw.scrollTop + 2; let k = 0; stops.forEach(([sy], j) => { if (sy <= y) k = j; });
+    const n = Math.max(0, Math.min(stops.length - 1, k + d)); lw.scrollTo({ top: Math.max(0, stops[n][0] - 2), behavior: "smooth" }); return n < stops.length - 1; };
+  let auto = 0; const stopAuto = () => { clearInterval(auto); auto = 0; $("lnAuto").classList.remove("on"); $("lnAuto").textContent = "AUTO"; };
+  $("lnDn").onclick = () => { stopAuto(); step(1); $("lnDn").classList.remove("cue"); };
+  $("lnUp").onclick = () => { stopAuto(); step(-1); };
+  $("lnAuto").onclick = () => { if (auto) return stopAuto(); $("lnAuto").classList.add("on"); $("lnAuto").textContent = "STOP"; step(1); auto = setInterval(() => { if (!step(1)) stopAuto(); }, 1600); };
+  ["touchstart", "wheel"].forEach(ev => lw.addEventListener(ev, () => { if (auto) stopAuto(); }, { passive: true }));
   new MutationObserver(() => requestAnimationFrame(layout)).observe(list, { childList: true, attributes: true, attributeFilter: ["class"] });
   addEventListener("resize", () => requestAnimationFrame(layout));
   layout();
@@ -1560,6 +1585,6 @@ window.OGX = (function () {
   $("start").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(); });
 })();
 </script>
-<script src="world.js?v=6"></script>
+<script src="world.js?v=7"></script>
 </body>
 </html>
