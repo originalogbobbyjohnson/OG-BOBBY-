@@ -93,40 +93,653 @@ window.CFG = {
   }
  ],
  "saveKey": "ogfan99afura1",
- "episodes": [
+ "songs": [
   {
-   "title": "Whirlwind Thru Cities",
-   "id": "PnKMwc4-CWA",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Defeat",
-   "id": "DW15ayNIn94",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Self Mastery",
-   "id": "oU6f0VZyAgU",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Be Strong",
+   "id": "uxJD3SNFgwE",
+   "cuts": [
+    35.7,
+    73.4,
+    90.8
+   ],
+   "qs": [
+    [
+     [
+      "Try to be what?",
+      "Strong",
+      "Brave",
+      "Patient"
+     ],
+     [
+      "Keep pushing what?",
+      "On",
+      "Through",
+      "Ahead"
+     ],
+     [
+      "Never be what?",
+      "Sorry",
+      "Scared",
+      "Silent"
+     ],
+     [
+      "Freedom is what?",
+      "Glory",
+      "Power",
+      "Golden"
+     ],
+     [
+      "Search the what?",
+      "Universe",
+      "World",
+      "Ocean"
+     ],
+     [
+      "Increasing the vibes how often?",
+      "Day by day",
+      "Night by night",
+      "Year by year"
+     ],
+     [
+      "Smash against invisible what?",
+      "Walls",
+      "Doors",
+      "Chains"
+     ],
+     [
+      "He's balancing his what?",
+      "Reality",
+      "Spirit",
+      "Budget"
+     ],
+     [
+      "He's realizing his what?",
+      "Equality",
+      "Destiny",
+      "Power"
+     ],
+     [
+      "Everything composed inside of his what?",
+      "Anatomy",
+      "Mind",
+      "Soul"
+     ],
+     [
+      "The essence of what?",
+      "Duality",
+      "Reality",
+      "Unity"
+     ]
+    ],
+    [
+     [
+      "That's the concluded what?",
+      "Consciousness",
+      "Conclusion",
+      "Science"
+     ],
+     [
+      "Sharing the same space and what?",
+      "Time",
+      "Place",
+      "Air"
+     ],
+     [
+      "Gotta get better like a what?",
+      "Fine wine",
+      "Fresh beat",
+      "New day"
+     ],
+     [
+      "Get better with what?",
+      "Time",
+      "Age",
+      "Practice"
+     ],
+     [
+      "Try to keep your feet on the what?",
+      "Ground",
+      "Floor",
+      "Path"
+     ],
+     [
+      "Never listen to the what all around?",
+      "Haters",
+      "Rumors",
+      "Noise"
+     ],
+     [
+      "Try to be yourself through the what?",
+      "Downs",
+      "Storms",
+      "Years"
+     ],
+     [
+      "Free your what?",
+      "Mind",
+      "Soul",
+      "Spirit"
+     ],
+     [
+      "Never be deceived by the what?",
+      "Looks",
+      "Lies",
+      "Words"
+     ],
+     [
+      "You can win even if you what?",
+      "Lose",
+      "Fall",
+      "Fail"
+     ],
+     [
+      "Everything happens for the what?",
+      "Good",
+      "Best",
+      "Reason"
+     ]
+    ],
+    [
+     [
+      "He keeps clearing his what?",
+      "Mind",
+      "Path",
+      "Name"
+     ],
+     [
+      "The wondrous fact that he lives in the what?",
+      "Now",
+      "City",
+      "Light"
+     ],
+     [
+      "Perfectly what?",
+      "Perfect",
+      "Placed",
+      "Planned"
+     ],
+     [
+      "Purposely what?",
+      "Painting",
+      "Planning",
+      "Praying"
+     ],
+     [
+      "Thoughts that he does what?",
+      "Gathers up",
+      "Writes down",
+      "Lets go"
+     ],
+     [
+      "He's hearing it loud, screaming and what?",
+      "Shouting",
+      "Singing",
+      "Crying"
+     ],
+     [
+      "He's playing that wondrous what sound?",
+      "Thunder",
+      "Drum",
+      "Ocean"
+     ],
+     [
+      "He strikes with his feet on the what?",
+      "Ground",
+      "Beat",
+      "Stage"
+     ],
+     [
+      "He's claiming the what?",
+      "Crown",
+      "Throne",
+      "Title"
+     ],
+     [
+      "He does it from town to what?",
+      "Town",
+      "City",
+      "Coast"
+     ],
+     [
+      "Body of the what?",
+      "Lifeforce",
+      "Universe",
+      "Spirit"
+     ]
+    ]
+   ]
   },
   {
    "title": "Why Cry",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "7WmyKbGVpeI",
+   "start": 8,
+   "cuts": [
+    40.7,
+    100.1,
+    193.9
+   ],
+   "qs": [
+    [
+     [
+      "Tell me why you want to what?",
+      "Cry",
+      "Lie",
+      "Fight"
+     ],
+     [
+      "Why cry when you hear what a what say?",
+      "Man",
+      "Child",
+      "Preacher"
+     ],
+     [
+      "Nobody's crying out for what?",
+      "Justice",
+      "Money",
+      "Fame"
+     ],
+     [
+      "Everyone is crying out for what?",
+      "Peace",
+      "Help",
+      "Love"
+     ],
+     [
+      "A hungry man is a what?",
+      "Hungry man",
+      "Angry man",
+      "Lonely man"
+     ],
+     [
+      "What does the hook keep asking you to tell him?",
+      "Why",
+      "Where",
+      "How"
+     ]
+    ],
+    [
+     [
+      "Can you show some what?",
+      "Love",
+      "Respect",
+      "Mercy"
+     ],
+     [
+      "Put your mind at what?",
+      "Ease",
+      "Rest",
+      "Work"
+     ],
+     [
+      "Too much is too what?",
+      "Much",
+      "Late",
+      "Far"
+     ],
+     [
+      "He's been all over the what?",
+      "Globe",
+      "Map",
+      "Country"
+     ],
+     [
+      "Enough is what?",
+      "Enough",
+      "Plenty",
+      "Over"
+     ],
+     [
+      "Families go to bed without a decent what?",
+      "Meal",
+      "Home",
+      "Job"
+     ],
+     [
+      "Babies crying with swollen what?",
+      "Bellies",
+      "Eyes",
+      "Feet"
+     ],
+     [
+      "The population's mind is what?",
+      "Shackled",
+      "Free",
+      "Asleep"
+     ],
+     [
+      "What kind of ballers are everywhere?",
+      "Big time",
+      "Small time",
+      "Part time"
+     ],
+     [
+      "Put five in the what?",
+      "Bum's cup",
+      "Collection plate",
+      "Tip jar"
+     ],
+     [
+      "He's not trying to what the power structure?",
+      "Scapegoat",
+      "Destroy",
+      "Join"
+     ],
+     [
+      "The power structure is headed for what?",
+      "Destruction",
+      "Change",
+      "Victory"
+     ],
+     [
+      "He looks into the eyes of his what?",
+      "Brothers",
+      "Children",
+      "Enemies"
+     ],
+     [
+      "Each one what?",
+      "Teach",
+      "Reach",
+      "Lead"
+     ]
+    ],
+    [
+     [
+      "He can rap until he's what in the face?",
+      "Blue",
+      "Red",
+      "Pale"
+     ],
+     [
+      "Every day more what spreads out there?",
+      "Wickedness",
+      "Sickness",
+      "Sadness"
+     ],
+     [
+      "Who now regrets out there?",
+      "Politicians",
+      "Preachers",
+      "Bankers"
+     ],
+     [
+      "He wants to bring a state of what?",
+      "Unity",
+      "Grace",
+      "Calm"
+     ],
+     [
+      "Selfishness plagues the mind of what?",
+      "Humanity",
+      "The youth",
+      "The city"
+     ],
+     [
+      "The media propaganda is causing what?",
+      "Insanity",
+      "Confusion",
+      "Fear"
+     ],
+     [
+      "Self-indulgence tastes sweeter than what?",
+      "Candy",
+      "Honey",
+      "Sugar"
+     ],
+     [
+      "Women and men hypnotized by what?",
+      "Vanity",
+      "Money",
+      "Television"
+     ],
+     [
+      "One race, one what?",
+      "Family",
+      "Nation",
+      "Love"
+     ],
+     [
+      "You got to be tough, be what?",
+      "Kind",
+      "Wise",
+      "Strong"
+     ],
+     [
+      "You want to be real but you got to be what?",
+      "Rough",
+      "Smart",
+      "Ready"
+     ],
+     [
+      "He doesn't pray for a what from above?",
+      "Bling",
+      "Sign",
+      "Miracle"
+     ],
+     [
+      "Working for this what?",
+      "System",
+      "Money",
+      "Company"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Revolution",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Whirlwind Thru Cities",
+   "id": "PnKMwc4-CWA",
+   "start": 47.5,
+   "cuts": [
+    85.9,
+    132.9,
+    194.2
+   ],
+   "qs": [
+    [
+     [
+      "We're born able to tell the direction of what?",
+      "Sounds",
+      "Winds",
+      "Stars"
+     ],
+     [
+      "Let us venture into new and what life?",
+      "Uncharted",
+      "Unknown",
+      "Untouched"
+     ],
+     [
+      "When he's introduced, people get what?",
+      "Shook up",
+      "Fired up",
+      "Quiet"
+     ],
+     [
+      "He's introduced as who?",
+      "God",
+      "King",
+      "Prophet"
+     ],
+     [
+      "Energetic, poetic and what?",
+      "Athletic",
+      "Prophetic",
+      "Magnetic"
+     ],
+     [
+      "He gets down and what when it's time?",
+      "Dirty",
+      "Gritty",
+      "Busy"
+     ],
+     [
+      "He cleans your scene like what?",
+      "Ammonia",
+      "Bleach",
+      "Rain"
+     ],
+     [
+      "He floods how many corners?",
+      "Four",
+      "Five",
+      "Three"
+     ],
+     [
+      "Earthquakes, bolts and what?",
+      "Lightning",
+      "Thunder",
+      "Fire"
+     ],
+     [
+      "You couldn't test the one and only who?",
+      "Mike Tyson",
+      "Ali",
+      "Holyfield"
+     ],
+     [
+      "Now you hear it, now you what?",
+      "Know it",
+      "Feel it",
+      "See it"
+     ]
+    ],
+    [
+     [
+      "The body of the what came forth?",
+      "Life force",
+      "Universe",
+      "Mind"
+     ],
+     [
+      "His lyrical style is what?",
+      "Crucial",
+      "Classic",
+      "Cosmic"
+     ],
+     [
+      "Microphone check, one, what?",
+      "Two",
+      "Three",
+      "Ten"
+     ],
+     [
+      "He hits the what?",
+      "Atmosphere",
+      "Ceiling",
+      "Ground"
+     ],
+     [
+      "Immaculate what?",
+      "Conception",
+      "Perception",
+      "Collection"
+     ],
+     [
+      "He never what?",
+      "Tires",
+      "Sleeps",
+      "Stops"
+     ],
+     [
+      "His spirit is live like a what?",
+      "Wire",
+      "Fire",
+      "Flame"
+     ],
+     [
+      "Fantasies burn like what?",
+      "Desires",
+      "Candles",
+      "Paper"
+     ],
+     [
+      "Before he goes on this mic he shows what?",
+      "Pity",
+      "Mercy",
+      "Respect"
+     ],
+     [
+      "From coast to what?",
+      "Coast",
+      "City",
+      "Shore"
+     ],
+     [
+      "Influential, scientifical what?",
+      "Power",
+      "Science",
+      "Genius"
+     ]
+    ],
+    [
+     [
+      "Enterprising, uprising, what?",
+      "Surprising",
+      "Uplifting",
+      "Unifying"
+     ],
+     [
+      "His ultrasonic mind is like what?",
+      "Bionic",
+      "Atomic",
+      "Electric"
+     ],
+     [
+      "It's what?",
+      "Ironic",
+      "Iconic",
+      "Historic"
+     ],
+     [
+      "Stadiums ripped in what?",
+      "Half",
+      "Pieces",
+      "Shreds"
+     ],
+     [
+      "Face to face, cheek to cheek, eye to what?",
+      "Eye",
+      "Sky",
+      "Hand"
+     ],
+     [
+      "They kick it about the finer things in what?",
+      "Life",
+      "Town",
+      "Time"
+     ],
+     [
+      "Knowledge and skills are what?",
+      "Priceless",
+      "Endless",
+      "Timeless"
+     ],
+     [
+      "He radiates platinum and what?",
+      "Diamonds",
+      "Gold",
+      "Silver"
+     ],
+     [
+      "His cosmic what?",
+      "Saber",
+      "Power",
+      "Energy"
+     ],
+     [
+      "The heavens cradled his what?",
+      "Birth",
+      "Soul",
+      "Name"
+     ],
+     [
+      "His friends prefer to call him just plain what?",
+      "God",
+      "King",
+      "Afu"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };

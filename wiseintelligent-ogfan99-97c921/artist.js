@@ -93,40 +93,652 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Illuminati",
-   "id": "E8-Uig2IlDw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "This Iz Love",
+   "id": "IKt_f0hiyFg",
+   "cuts": [
+    39.6,
+    72.6,
+    143.7
+   ],
+   "qs": [
+    [
+     [
+      "Who does he call out to at the very start?",
+      "Sister",
+      "Mother",
+      "Brother"
+     ],
+     [
+      "He knows she didn't think he what?",
+      "Forgot",
+      "Left",
+      "Changed"
+     ],
+     [
+      "She's still on his what?",
+      "Mind",
+      "Heart",
+      "List"
+     ],
+     [
+      "Who is this one going out to?",
+      "Queen",
+      "Princess",
+      "Lady"
+     ],
+     [
+      "She's the bridge between a scholar and his what?",
+      "Understanding",
+      "Library",
+      "Teacher"
+     ],
+     [
+      "She's the bridge between who and his understanding?",
+      "A scholar",
+      "A student",
+      "A king"
+     ],
+     [
+      "Her vibe aligns the what?",
+      "Planets",
+      "Stars",
+      "Rivers"
+     ],
+     [
+      "She brings the what to it?",
+      "Knowledge",
+      "Money",
+      "Music"
+     ],
+     [
+      "Teaching the seeds up in the what?",
+      "School",
+      "Garden",
+      "Church"
+     ],
+     [
+      "She's humming his Redemption what?",
+      "Song",
+      "Prayer",
+      "Psalm"
+     ],
+     [
+      "Black as what?",
+      "Night",
+      "Coal",
+      "Ink"
+     ]
+    ],
+    [
+     [
+      "He'd give her father how many horses?",
+      "50",
+      "20",
+      "100"
+     ],
+     [
+      "He'd give her father horses to do what?",
+      "Court her",
+      "Marry her",
+      "Thank him"
+     ],
+     [
+      "She moves his pen across the what?",
+      "Loose leaf",
+      "Notebook",
+      "Napkin"
+     ],
+     [
+      "She brings out his God-conscious what?",
+      "Mind",
+      "Soul",
+      "Spirit"
+     ],
+     [
+      "She's like a what lotus?",
+      "Egyptian",
+      "Japanese",
+      "Golden"
+     ],
+     [
+      "The lotus is taking root inside the what?",
+      "Projects",
+      "Garden",
+      "City"
+     ],
+     [
+      "She's in the world but she ain't what?",
+      "Of it",
+      "Lost",
+      "Alone"
+     ],
+     [
+      "She's in the ghetto but she ain't what?",
+      "Becoming it",
+      "Leaving it",
+      "Afraid of it"
+     ],
+     [
+      "The highest mountain couldn't match her what?",
+      "Summit",
+      "Beauty",
+      "Height"
+     ],
+     [
+      "He calls her love and what?",
+      "Devotion",
+      "Emotion",
+      "Affection"
+     ],
+     [
+      "My poetry in what?",
+      "Motion",
+      "Ocean",
+      "Notion"
+     ]
+    ],
+    [
+     [
+      "She ain't got a penny in her what?",
+      "Pocket",
+      "Purse",
+      "Hand"
+     ],
+     [
+      "She's still dancing like no one's what?",
+      "Watching",
+      "Looking",
+      "Listening"
+     ],
+     [
+      "Her reflection is in his looking what?",
+      "Glass",
+      "Pool",
+      "Window"
+     ],
+     [
+      "Rose petals and what baths?",
+      "Tangerine",
+      "Lavender",
+      "Milk"
+     ],
+     [
+      "She loves like she's never been what?",
+      "Hurt",
+      "Lost",
+      "Lied to"
+     ],
+     [
+      "He teaches the culture to the what?",
+      "Babies",
+      "Elders",
+      "Students"
+     ],
+     [
+      "He felt her presence when he built the what?",
+      "Temple",
+      "House",
+      "Bridge"
+     ],
+     [
+      "He feels her presence on this what?",
+      "Instrumental",
+      "Record",
+      "Stage"
+     ],
+     [
+      "She's the proof that his word is the what?",
+      "Law",
+      "Truth",
+      "Bond"
+     ],
+     [
+      "World scholars couldn't do what?",
+      "Teach it",
+      "Read it",
+      "Write it"
+     ],
+     [
+      "She's the perfect result of a perfect what?",
+      "Idea",
+      "Plan",
+      "Dream"
+     ]
+    ]
+   ]
   },
   {
    "title": "Stuck (A Lesson in Rhyme)",
    "id": "1EU4M6JmexQ",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Face It",
-   "id": "JHHd571Xljw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Rock Dis Funky Joint",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "cuts": [
+    41.3,
+    136.8,
+    205.5
+   ],
+   "qs": [
+    [
+     [
+      "He wishes he could save who?",
+      "Everyone",
+      "The world",
+      "His city"
+     ],
+     [
+      "Too many stuck inside a ghetto what?",
+      "Fantasy",
+      "Mentality",
+      "Nightmare"
+     ],
+     [
+      "A man without a what?",
+      "Focus",
+      "Purpose",
+      "Home"
+     ],
+     [
+      "It's about time to do what?",
+      "Regroup",
+      "Relax",
+      "Move on"
+     ],
+     [
+      "He's taking his time to what?",
+      "Recoup",
+      "Rebuild",
+      "Rewind"
+     ],
+     [
+      "He delivers the what?",
+      "Business",
+      "Message",
+      "Goods"
+     ],
+     [
+      "Proper what?",
+      "Education",
+      "Nutrition",
+      "Respect"
+     ],
+     [
+      "Always countering what?",
+      "Exploitation",
+      "Corruption",
+      "Ignorance"
+     ],
+     [
+      "The culture keeps doing what to it?",
+      "Banning it",
+      "Selling it",
+      "Hiding it"
+     ],
+     [
+      "It's too black and it's too what?",
+      "Strong",
+      "Loud",
+      "Real"
+     ],
+     [
+      "How many are stuck inside?",
+      "Too many",
+      "Just a few",
+      "Nobody"
+     ]
+    ],
+    [
+     [
+      "Maybe he's still stuck in the what?",
+      "80s",
+      "70s",
+      "90s"
+     ],
+     [
+      "What kind of schooling is inadequate?",
+      "Public",
+      "Private",
+      "Night"
+     ],
+     [
+      "What percent of the resources?",
+      "90%",
+      "50%",
+      "10%"
+     ],
+     [
+      "Which city 'makes, the world takes'?",
+      "Trenton",
+      "Newark",
+      "Camden"
+     ],
+     [
+      "This is the flow the world what?",
+      "Took",
+      "Lost",
+      "Loved"
+     ],
+     [
+      "The spit that made your girl do what?",
+      "Look twice",
+      "Smile",
+      "Call"
+     ],
+     [
+      "But that ain't even a what?",
+      "Question",
+      "Problem",
+      "Secret"
+     ],
+     [
+      "A lesson in what?",
+      "Rhyme",
+      "Life",
+      "Time"
+     ],
+     [
+      "Too many rappers are what?",
+      "Empty",
+      "Rich",
+      "Famous"
+     ],
+     [
+      "Knowledge is what?",
+      "Essential",
+      "Expensive",
+      "Optional"
+     ],
+     [
+      "He dedicates this to his what?",
+      "Home",
+      "Mother",
+      "Crew"
+     ]
+    ],
+    [
+     [
+      "If the sun shines east to west, how does it skip the what?",
+      "Projects",
+      "Rooftops",
+      "Suburbs"
+     ],
+     [
+      "Ain't no what?",
+      "Sunshine",
+      "Sleeping",
+      "Stopping"
+     ],
+     [
+      "They want to be seen in broad what?",
+      "Daylight",
+      "Avenue",
+      "Way"
+     ],
+     [
+      "He interprets the world through his what?",
+      "Eyes",
+      "Words",
+      "Music"
+     ],
+     [
+      "Low income what?",
+      "Housing",
+      "Jobs",
+      "Schools"
+     ],
+     [
+      "These days he looks back on that what?",
+      "Past",
+      "Block",
+      "Time"
+     ],
+     [
+      "No dads present for none of what?",
+      "Us",
+      "Them",
+      "Y'all"
+     ],
+     [
+      "Young black youth who grew to be what?",
+      "Men",
+      "Kings",
+      "Leaders"
+     ],
+     [
+      "Not having a point of what?",
+      "Reference",
+      "View",
+      "Return"
+     ],
+     [
+      "His resurrection, ascension into what?",
+      "God",
+      "Heaven",
+      "Glory"
+     ],
+     [
+      "His average session is a what?",
+      "Lesson",
+      "Classroom",
+      "Sermon"
+     ]
+    ]
+   ]
   },
   {
    "title": "The Last Rhyme Bender",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "BwMs-CeqiGs",
+   "start": 9.6,
+   "cuts": [
+    32.2,
+    50.9,
+    65.3
+   ],
+   "qs": [
+    [
+     [
+      "Own your what?",
+      "Masters",
+      "Music",
+      "Name"
+     ],
+     [
+      "Own your masters, no what?",
+      "Pressure",
+      "Problem",
+      "Partner"
+     ],
+     [
+      "Which word for fear of 13 does he say?",
+      "Triskaidekaphobia",
+      "Claustrophobia",
+      "Arachnophobia"
+     ],
+     [
+      "Which football star does he name?",
+      "Odell Beckham",
+      "Tom Brady",
+      "Eli Manning"
+     ],
+     [
+      "He's been the bar like who?",
+      "Beckham",
+      "Jordan",
+      "Brady"
+     ],
+     [
+      "Been the boss since before Father Allah birthed what?",
+      "Mecca",
+      "Medina",
+      "Harlem"
+     ],
+     [
+      "Since before sun, seven stars and what?",
+      "Crescent",
+      "Moon",
+      "Comet"
+     ],
+     [
+      "I'm different, I'm what?",
+      "Infinite",
+      "Invincible",
+      "Innocent"
+     ],
+     [
+      "The Lord ever what?",
+      "Present",
+      "Faithful",
+      "Loving"
+     ],
+     [
+      "Soar to the what?",
+      "Heavens",
+      "Mountains",
+      "Clouds"
+     ],
+     [
+      "Which legendary sword does he name?",
+      "Excalibur",
+      "Masamune",
+      "Durendal"
+     ]
+    ],
+    [
+     [
+      "Hammer-forged what?",
+      "Weapons",
+      "Chains",
+      "Bells"
+     ],
+     [
+      "He connects the cord to a what?",
+      "Shard",
+      "Speaker",
+      "Socket"
+     ],
+     [
+      "That might amplify the what?",
+      "Lessons",
+      "Volume",
+      "Bass"
+     ],
+     [
+      "He knew the ledge before the what?",
+      "Legend",
+      "Leap",
+      "Ledger"
+     ],
+     [
+      "Who brought the message?",
+      "Melle Mel",
+      "Grandmaster Flash",
+      "KRS-One"
+     ],
+     [
+      "He's a child of a wild style what?",
+      "War",
+      "World",
+      "Era"
+     ],
+     [
+      "The kids are too what?",
+      "Tame",
+      "Young",
+      "Loud"
+     ],
+     [
+      "He specializes in the art of what?",
+      "Facts",
+      "War",
+      "Rhyme"
+     ],
+     [
+      "It's true, we what?",
+      "Knew",
+      "Saw",
+      "Grew"
+     ],
+     [
+      "That flow ain't no what?",
+      "New new",
+      "Big deal",
+      "Secret"
+     ],
+     [
+      "People need to what?",
+      "Study",
+      "Listen",
+      "Wake up"
+     ]
+    ],
+    [
+     [
+      "I'm everything, I'm what?",
+      "Nothing",
+      "Something",
+      "Everyone"
+     ],
+     [
+      "What kind of rapper is he?",
+      "Stem cell",
+      "Battle",
+      "Backpack"
+     ],
+     [
+      "He's the last what?",
+      "Rhyme bender",
+      "Real one",
+      "MC standing"
+     ],
+     [
+      "This is the element he what?",
+      "Mastered",
+      "Created",
+      "Discovered"
+     ],
+     [
+      "No more what rappers?",
+      "Manufactured",
+      "Mumble",
+      "Industry"
+     ],
+     [
+      "Hereafter what?",
+      "Resurrection",
+      "Revolution",
+      "Redemption"
+     ],
+     [
+      "What does he give 'em?",
+      "Pure pressure",
+      "Pure knowledge",
+      "Pure fire"
+     ],
+     [
+      "Pure pressure when he's what?",
+      "Spitting",
+      "Writing",
+      "Teaching"
+     ],
+     [
+      "Burst the pipeline to what?",
+      "Prison",
+      "Riches",
+      "Hollywood"
+     ],
+     [
+      "He makes his peers burn in what?",
+      "Written",
+      "Silence",
+      "Envy"
+     ],
+     [
+      "After all it was what?",
+      "Written",
+      "Spoken",
+      "Destiny"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };

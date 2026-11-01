@@ -93,40 +93,653 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Tea Break",
-   "id": "ScdCN_-Ch28",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "The Winged People",
+   "id": "0SgE7caFeS0",
+   "start": 35,
+   "cuts": [
+    60.9,
+    100.5,
+    123.5
+   ],
+   "qs": [
+    [
+     [
+      "Where will we begin?",
+      "Genesis",
+      "Exodus",
+      "Revelation"
+     ],
+     [
+      "Genesis, where we will what?",
+      "Begin",
+      "End",
+      "Return"
+     ],
+     [
+      "They were here before who?",
+      "Adam",
+      "Moses",
+      "Noah"
+     ],
+     [
+      "They built statues in the image of whom?",
+      "Themselves",
+      "Their gods",
+      "Their kings"
+     ],
+     [
+      "Why did they build the statues?",
+      "To worship themselves",
+      "To scare enemies",
+      "To mark graves"
+     ],
+     [
+      "They built what to themselves?",
+      "Towers",
+      "Temples",
+      "Bridges"
+     ],
+     [
+      "The towers remind them of when they what?",
+      "Fell",
+      "Rose",
+      "Arrived"
+     ],
+     [
+      "They came from a station in what?",
+      "Space",
+      "The sea",
+      "The desert"
+     ],
+     [
+      "What kind of race were they?",
+      "Angelical",
+      "Ancient",
+      "Royal"
+     ],
+     [
+      "They were giant in what?",
+      "Stature",
+      "Number",
+      "Spirit"
+     ],
+     [
+      "They were visiting this planet to what?",
+      "Explore",
+      "Conquer",
+      "Rest"
+     ]
+    ],
+    [
+     [
+      "Their race had what?",
+      "War",
+      "Peace",
+      "A plague"
+     ],
+     [
+      "They were called fallen what?",
+      "Heroes",
+      "Angels",
+      "Kings"
+     ],
+     [
+      "They saw gold, saw what?",
+      "Trees",
+      "Water",
+      "Diamonds"
+     ],
+     [
+      "They crashed on what?",
+      "Rocks",
+      "Sand",
+      "Ice"
+     ],
+     [
+      "1.21 what?",
+      "Gigawatts",
+      "Megatons",
+      "Kilowatts"
+     ],
+     [
+      "Some passed over what?",
+      "Crops",
+      "Mountains",
+      "Rivers"
+     ],
+     [
+      "The legends were on a what?",
+      "Tablet",
+      "Scroll",
+      "Cave wall"
+     ],
+     [
+      "They opened the floodgates of what?",
+      "Heaven",
+      "The sea",
+      "The sky"
+     ],
+     [
+      "Now they're looking for a what?",
+      "Region",
+      "Leader",
+      "Way home"
+     ],
+     [
+      "They found the garden called what?",
+      "Eden",
+      "Babylon",
+      "Zion"
+     ],
+     [
+      "Exiled with the tribe of what?",
+      "Reptiles",
+      "Lions",
+      "Giants"
+     ]
+    ],
+    [
+     [
+      "Life begins breathing what?",
+      "Hydrogen",
+      "Oxygen",
+      "Fire"
+     ],
+     [
+      "Inside of high what?",
+      "Winds",
+      "Mountains",
+      "Towers"
+     ],
+     [
+      "Milky Way what?",
+      "Violins",
+      "Pianos",
+      "Drums"
+     ],
+     [
+      "The violins are heard by the what?",
+      "Wise men",
+      "Children",
+      "Prophets"
+     ],
+     [
+      "Observed in which constellation?",
+      "Orion",
+      "Ursa Major",
+      "Cassiopeia"
+     ],
+     [
+      "Windows with no what?",
+      "End",
+      "Glass",
+      "Light"
+     ],
+     [
+      "Black glass in the what?",
+      "Sea",
+      "Sky",
+      "Sand"
+     ],
+     [
+      "These gods were what?",
+      "Hybrids",
+      "Giants",
+      "Mortals"
+     ],
+     [
+      "It went back and forth till they what?",
+      "Mixed",
+      "Fought",
+      "Left"
+     ],
+     [
+      "Star bread and the food of what?",
+      "Thought",
+      "Heaven",
+      "Life"
+     ],
+     [
+      "Proteins, protons and what?",
+      "Atoms",
+      "Neutrons",
+      "Electrons"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "New Reality",
+   "id": "SLGdIKt7fWQ",
+   "start": 42.4,
+   "cuts": [
+    67.4,
+    114.1,
+    186
+   ],
+   "qs": [
+    [
+     [
+      "Children of the lower what?",
+      "Worlds",
+      "Streets",
+      "Classes"
+     ],
+     [
+      "The children are less what?",
+      "Fortunate",
+      "Fearful",
+      "Famous"
+     ],
+     [
+      "From the teardrop what?",
+      "Orphanage",
+      "Hospital",
+      "Village"
+     ],
+     [
+      "The upper world feels your what?",
+      "Pain",
+      "Joy",
+      "Love"
+     ],
+     [
+      "How many years of rain?",
+      "120,000",
+      "10,000",
+      "1,000,000"
+     ],
+     [
+      "Your memory lasts for what?",
+      "Centuries",
+      "Decades",
+      "A lifetime"
+     ],
+     [
+      "A tribute for what you've what?",
+      "Been through",
+      "Built",
+      "Given"
+     ],
+     [
+      "May your life what?",
+      "Continue",
+      "Be blessed",
+      "Shine"
+     ],
+     [
+      "Live on on other what?",
+      "Planets",
+      "Islands",
+      "Stars"
+     ],
+     [
+      "You see the great one doing what?",
+      "Standing",
+      "Waiting",
+      "Smiling"
+     ],
+     [
+      "Whose untold stories does he mention?",
+      "Cleveland Martin",
+      "Malcolm X",
+      "Marvin Gaye"
+     ]
+    ],
+    [
+     [
+      "The investigation found maps of what?",
+      "Vaults",
+      "Tunnels",
+      "Mines"
+     ],
+     [
+      "The maps were in his what?",
+      "Apartment",
+      "Car",
+      "Office"
+     ],
+     [
+      "FBIs and flying what?",
+      "Saucers",
+      "Machines",
+      "Carpets"
+     ],
+     [
+      "Online love what?",
+      "Affairs",
+      "Letters",
+      "Songs"
+     ],
+     [
+      "A congregation of whom?",
+      "Masons",
+      "Monks",
+      "Sailors"
+     ],
+     [
+      "The Masons are showing new what?",
+      "Signs",
+      "Faces",
+      "Rings"
+     ],
+     [
+      "Government what?",
+      "Conspiracies",
+      "Secrets",
+      "Programs"
+     ],
+     [
+      "He builds walls around his what?",
+      "Mind",
+      "Home",
+      "Heart"
+     ],
+     [
+      "He hears mystic messages in what?",
+      "Raindrops",
+      "Thunder",
+      "Seashells"
+     ],
+     [
+      "Crack the code of the what?",
+      "Crops",
+      "Stars",
+      "Streets"
+     ],
+     [
+      "Ink sprays over the what?",
+      "Paper",
+      "Canvas",
+      "Table"
+     ]
+    ],
+    [
+     [
+      "Mathematical what?",
+      "Enlightenment",
+      "Equations",
+      "Genius"
+     ],
+     [
+      "Mind travel needs no what?",
+      "License",
+      "Ticket",
+      "Passport"
+     ],
+     [
+      "Just high science and incredible what?",
+      "Rhyming",
+      "Timing",
+      "Talent"
+     ],
+     [
+      "Which boxer does he ask about?",
+      "Tyson",
+      "Ali",
+      "Holyfield"
+     ],
+     [
+      "In the early '80s the man was a what?",
+      "Giant",
+      "Legend",
+      "Champion"
+     ],
+     [
+      "The heart in his chest is the shape of what?",
+      "Africa",
+      "A diamond",
+      "A crown"
+     ],
+     [
+      "His brain is what?",
+      "Lavender",
+      "Silver",
+      "Golden"
+     ],
+     [
+      "At night the sky does what?",
+      "Ignites",
+      "Opens",
+      "Cries"
+     ],
+     [
+      "What's falling from the sky?",
+      "Fiery rings",
+      "Shooting stars",
+      "Golden rain"
+     ],
+     [
+      "He sees beyond the what clouds?",
+      "Neon",
+      "Storm",
+      "Silver"
+     ],
+     [
+      "Eternal life is in the what he writes?",
+      "Journals",
+      "Letters",
+      "Songs"
+     ]
+    ]
+   ]
   },
   {
    "title": "Grandmother's Land",
    "id": "ktWF78I8DnI",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "The Color of Ideas",
-   "id": "SFcDk-LPp3s",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "B.I.B.L.E.",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "One Step",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "cuts": [
+    35.6,
+    94.7,
+    165.7
+   ],
+   "qs": [
+    [
+     [
+      "Whose land is this story set in?",
+      "Grandmother's",
+      "Grandfather's",
+      "Mother's"
+     ],
+     [
+      "The mists of the what?",
+      "Tribes",
+      "Mountains",
+      "River"
+     ],
+     [
+      "The tribes and the wives and what?",
+      "Children",
+      "Elders",
+      "Horses"
+     ],
+     [
+      "There stood a very what man?",
+      "Brave",
+      "Wise",
+      "Quiet"
+     ],
+     [
+      "Which time did he come into the tents?",
+      "The third time",
+      "The first time",
+      "The last time"
+     ],
+     [
+      "Who did he say exists?",
+      "Little Waters",
+      "Big Thunder",
+      "Running Deer"
+     ],
+     [
+      "When was Little Waters with them?",
+      "A vision ceremony",
+      "The harvest",
+      "The hunt"
+     ],
+     [
+      "He was watching his own what?",
+      "Hand",
+      "Shadow",
+      "Feet"
+     ],
+     [
+      "What's the brave man's name?",
+      "Tall Bear",
+      "Little Wolf",
+      "Running Bear"
+     ],
+     [
+      "The chief says he's losing his what?",
+      "Wits",
+      "Way",
+      "Voice"
+     ],
+     [
+      "No Little Waters was with them at the what?",
+      "Fire pit",
+      "River",
+      "Tent"
+     ]
+    ],
+    [
+     [
+      "Little Waters shared a what with them?",
+      "Peace pipe",
+      "Meal",
+      "Horse"
+     ],
+     [
+      "He spoke wonderful and what?",
+      "Righteous",
+      "Loud",
+      "Slow"
+     ],
+     [
+      "Righteous discipline and what?",
+      "Enlightenment",
+      "Patience",
+      "Prayer"
+     ],
+     [
+      "Little Waters put a what in his hand?",
+      "Eagle feather",
+      "Arrowhead",
+      "Stone"
+     ],
+     [
+      "During the ceremony he said he felt the what?",
+      "Power",
+      "Fire",
+      "Wind"
+     ],
+     [
+      "Little Waters played the what?",
+      "Drums",
+      "Flute",
+      "Rattle"
+     ],
+     [
+      "He played the drums to bring back his what?",
+      "Health",
+      "Memory",
+      "Courage"
+     ],
+     [
+      "The chief tells Tall Bear to do what?",
+      "Relax himself",
+      "Go home",
+      "Speak up"
+     ],
+     [
+      "Maybe they should bring in some tribe what?",
+      "Women",
+      "Elders",
+      "Warriors"
+     ],
+     [
+      "Upper what?",
+      "Plains",
+      "Hills",
+      "River"
+     ],
+     [
+      "The chief knew Tall Bear for many what?",
+      "Years",
+      "Moons",
+      "Seasons"
+     ]
+    ],
+    [
+     [
+      "The chief wishes Tall Bear's what was still here?",
+      "Grandfather",
+      "Father",
+      "Brother"
+     ],
+     [
+      "Memories just don't what?",
+      "Disappear",
+      "Fade",
+      "Return"
+     ],
+     [
+      "The chief says please have a what?",
+      "Seat",
+      "Drink",
+      "Rest"
+     ],
+     [
+      "Maybe he's going what?",
+      "Crazy",
+      "Home",
+      "Blind"
+     ],
+     [
+      "Who does the chief call for?",
+      "The medicine ladies",
+      "The warriors",
+      "The elders"
+     ],
+     [
+      "They arrive with great what?",
+      "Urgency",
+      "Gifts",
+      "Fear"
+     ],
+     [
+      "Who does the chief say is sitting right there?",
+      "Tall Bear",
+      "Little Waters",
+      "A stranger"
+     ],
+     [
+      "Who walks in later?",
+      "The children",
+      "The warriors",
+      "The hunters"
+     ],
+     [
+      "Who says the chief is very sick?",
+      "The spider lady",
+      "The children",
+      "Tall Bear"
+     ],
+     [
+      "They say the chief is what?",
+      "Hallucinating",
+      "Sleeping",
+      "Lying"
+     ],
+     [
+      "When the big what run free?",
+      "Waters",
+      "Horses",
+      "Buffalo"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };
