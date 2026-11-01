@@ -1406,7 +1406,7 @@ window.OGX = (function () {
     const base = lw.getBoundingClientRect().top - lw.scrollTop + 4, simple = list.classList.contains("simple");
     const rows = []; items.forEach(li => { const t = Math.round(li.getBoundingClientRect().top - base); const r = rows.find(x => Math.abs(x.t - t) < 4); if (r) r.li.push(li); else rows.push({ t, li: [li] }); });
     rows.forEach((r, k) => { const nt = k + 1 < rows.length ? rows[k + 1].t : r.t + r.li[0].offsetHeight + 8;
-      r.li.forEach((li, c) => { const y = Math.round(r.t + (nt - r.t) * c / r.li.length); stops.push([y, li]);
+      r.li.forEach((li, c) => { const y = Math.round(r.t + c * Math.min(56, (nt - r.t) / r.li.length)); stops.push([y, li]);
         if (!simple && c > 0) { const m = document.createElement("i"); m.className = "snapmk"; m.style.top = (li.offsetTop + (y - r.t)) + "px"; steel.appendChild(m); } }); });
     /* room at the bottom so the last artists can still reach the top spot */
     const last = rows[rows.length - 1]; list.style.paddingBottom = Math.max(10, lw.clientHeight - (last.li[0].offsetHeight + 24)) + "px";
