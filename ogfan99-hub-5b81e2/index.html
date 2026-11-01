@@ -190,13 +190,15 @@ h2 { margin: 4px 0 0; font-family: var(--display); letter-spacing: .08em; font-s
 .exnote { color: #f2c14e; font-weight: 700; }
 
 /* ---------- app frame: map + boroughs + sort on top, only the artist list scrolls, buttons fixed at the bottom ---------- */
-html, body { height: 100%; overflow: hidden; }
+html, body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
+.wrap.app { overflow: hidden; }
 .wrap.app { height: 100dvh; box-sizing: border-box; display: flex; flex-direction: column; gap: 8px; padding: max(8px, env(safe-area-inset-top)) 12px 0; }
 .appbar { flex: none; display: flex; align-items: center; justify-content: center; gap: 10px; }
 .appbar .og { font-family: var(--tag); font-size: 1.9rem; line-height: 1; color: #fff; -webkit-text-stroke: 1.2px #000; text-shadow: 2px 2px 0 #000; transform: rotate(-3deg); }
 .appbar .og b { color: var(--red); font-weight: 400; }
 .appbar .demo { font-size: .6rem; }
-.mapbox { flex: none; position: relative; height: var(--mh, 46vh); }
+.mapbox { flex: none; position: relative; height: var(--mh, 22vh); }
 .mapbox .map { height: 100%; }
 .mapbox .map.live { height: 100% !important; }
 .mapbox .map:not(.live) { overflow: auto; }
@@ -1207,16 +1209,15 @@ $("moreBtn").onclick = () => moreOpen(true);
 $("moreX").onclick = () => moreOpen(false);
 $("more").onclick = e => { if (e.target === $("more")) moreOpen(false); };
 $("keyBtn").onclick = () => { moreOpen(true); $("key").open = true; setTimeout(() => $("key").scrollIntoView({ block: "start", behavior: "smooth" }), 50); };
-/* the map is big when you open the app and shrinks to about half as you scroll down the artist list */
+/* the map stays one fixed, compact size (pinch or + to zoom); only the artist list scrolls */
 (function () {
   const lw = $("listwrap"), mb = $("mapbox"); let raf = 0, last = -1;
   const apply = () => {
-    raf = 0; const vh = innerHeight, big = Math.round(vh * 0.44), small = Math.round(vh * 0.22);
-    const h = Math.max(small, big - lw.scrollTop * 0.7);
+    raf = 0; const vh = innerHeight, h = Math.round(vh * 0.22);
     if (h === last) return; last = h; mb.style.setProperty("--mh", h + "px");
     try { if (window.__map) window.__map.invalidateSize({ pan: false }); } catch (e) {}
   };
-  lw.addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(apply); }, { passive: true });
+
   addEventListener("resize", () => { last = -1; apply(); });
   apply();
 })();
@@ -1368,7 +1369,7 @@ window.OGX = (function () {
     $("vtog").innerHTML = [["tiles", "&#9638; TILES"], ["simple", "&#9776; LIST"]].map(([k, t]) => '<button type="button" data-v="' + k + '" aria-pressed="' + (k === listView) + '">' + t + '</button>').join("");
     $("vtog").querySelectorAll("button").forEach(b => b.onclick = () => { listView = b.dataset.v; try { localStorage.setItem("ogfan99view", listView); } catch (e) {} drawList(); });
     $("sorts").querySelectorAll("button[data-s],button[data-t]").forEach(b => { const f = b.onclick; b.onclick = () => { f(); $("sortPop").hidden = true; }; });
-    $("list").querySelectorAll("[data-i]").forEach(b => { const p = progress(ARTISTS[+b.dataset.i]); if (p && (p.stops || p.cleared)) { const w = b.querySelector(".who,.snm"); if (w && !w.querySelector(".pstar")) w.insertAdjacentHTML("beforeend", '<span class="pstar" title="You played this one">&#9733;</span>'); } });
+    $("list").querySelectorAll("[data-i]").forEach(b => { const p = progress(ARTISTS[+b.dataset.i]); if (p && (p.stops || p.cleared)) { const w = b.querySelector(".who,.snm"); if (w && !w.querySelector(".pstar")) (w.querySelector("small") ? w.querySelector("small").insertAdjacentHTML("beforebegin", '<span class="pstar" title="You played this one">&#9733;</span>') : 0) || w.querySelector(".pstar") || w.insertAdjacentHTML("beforeend", '<span class="pstar" title="You played this one">&#9733;</span>'); } });
     paintMetro();
   }
   $("sortBtn").onclick = e => { e.stopPropagation(); $("sortPop").hidden = !$("sortPop").hidden; };
