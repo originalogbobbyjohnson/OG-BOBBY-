@@ -94,5 +94,19 @@
     new MutationObserver(function () { setTimeout(fit, 30); }).observe(sh, { childList: true });
     addEventListener("resize", fit); fit(); };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fitShelf); else fitShelf();
+  /* the board's record: show the WHOLE record (as big as the space allows), and scratching it never drags the page */
+  var fitRec = function () {
+    var r = document.getElementById("record"); if (!r) return;
+    var go = function () { var d = r.closest(".deck") || r.parentNode; if (!d || !d.offsetParent) return;
+      r.style.removeProperty("width"); var room = d.getBoundingClientRect().height - 14, w = r.getBoundingClientRect().width;
+      if (room > 60 && w > room) r.style.setProperty("width", Math.max(110, Math.floor(room)) + "px", "important"); };
+    addEventListener("resize", function () { setTimeout(go, 50); });
+    new MutationObserver(function () { setTimeout(go, 60); }).observe(document.body, { attributes: true, subtree: true, attributeFilter: ["class", "hidden"] });
+    setTimeout(go, 100); setTimeout(go, 800);
+    var hold = function (e) { if (e.target && e.target.closest && e.target.closest("#record, .og-rec, .og-mini")) e.preventDefault(); };
+    document.addEventListener("touchmove", hold, { passive: false });
+    document.addEventListener("touchstart", function (e) { if (e.target && e.target.closest && e.target.closest("#record")) { document.documentElement.style.overscrollBehavior = "none"; document.body.style.overscrollBehavior = "none"; } }, { passive: true });
+  };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fitRec); else fitRec();
   try { if (!document.getElementById("nycSidesJs")) { var ns = document.createElement("script"); ns.id = "nycSidesJs"; ns.src = "/brand/nycsides.js?v=1"; document.head.appendChild(ns); } } catch (e) {}
 })();
