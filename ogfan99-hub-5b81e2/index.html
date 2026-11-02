@@ -397,6 +397,33 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .step3 b { color: #e8b84a; }
 .st-sign { font-size: .72rem !important; padding: 5px 10px !important; letter-spacing: .06em; }
 .st-sub { font-size: 1.02rem !important; letter-spacing: .1em !important; line-height: 1.3; font-weight: 900 !important; }
+.board { background: repeating-linear-gradient(0deg, #050505 0 3px, #0b0b0b 3px 4px); border: 3px solid #f2c14e; border-radius: 6px; box-shadow: 0 0 0 2px #000, 0 0 16px rgba(242,193,78,.35), inset 0 0 18px rgba(0,0,0,.9); padding: 6px 8px 8px; }
+.bd-h { display: flex; align-items: center; justify-content: center; gap: 8px; font: 900 .58rem/1 Helvetica, Arial, sans-serif; letter-spacing: .24em; color: #f2c14e; margin-bottom: 5px; }
+.bd-h i { width: 7px; height: 7px; border-radius: 50%; background: #35b867; box-shadow: 0 0 6px #35b867; animation: bdblink 1.4s steps(2, start) infinite; }
+@keyframes bdblink { 50% { opacity: .25; } }
+.bd-row { display: grid; grid-template-columns: 1fr 2px 1fr; align-items: stretch; }
+.bd-sep { background: #2c2c2c; }
+.bd-row button { background: none; border: 0; cursor: pointer; display: grid; justify-items: center; gap: 3px; padding: 2px; }
+.bd-row b { font: 900 1.7rem/1 "Courier New", monospace; color: #ff8a1f; text-shadow: 0 0 10px rgba(255,138,31,.85); letter-spacing: .12em; }
+.bd-row small { font: 900 .6rem/1 Helvetica, Arial, sans-serif; letter-spacing: .2em; color: #fff; }
+.bd-row em { font-style: normal; font: 900 .55rem/1 Helvetica, Arial, sans-serif; letter-spacing: .12em; color: #000; background: #f2c14e; padding: 3px 7px; border-radius: 99px; margin-top: 2px; }
+.dir { position: fixed; inset: 0; z-index: 2560; background: #0b0c14; display: flex; flex-direction: column; max-width: 460px; margin: 0 auto; }
+.dir[hidden] { display: none; }
+.dir-h { flex: none; display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 6px; padding: max(10px, env(safe-area-inset-top)) 12px 8px; background: #151726; border-bottom: 3px solid #f2c14e; }
+.dir-h button { border: 0; background: none; color: #fff; font-size: 24px; cursor: pointer; }
+.dir-h b { font-family: var(--display); font-size: 1.25rem; letter-spacing: .08em; color: #fff; }
+.dir-s { flex: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; padding: 8px 12px; background: #151726; }
+.dir-s button { border: 2px solid #000; border-radius: 9px; background: #1d2033; color: #fff; font: 900 10px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; padding: 9px 2px; cursor: pointer; }
+.dir-s button.on { background: #e8b84a; color: #000; }
+.dir-l { flex: 1 1 auto; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 4px 12px max(14px, env(safe-area-inset-bottom)); }
+.dir-l h5 { margin: 12px 0 4px; font: 900 .66rem/1 Helvetica, Arial, sans-serif; letter-spacing: .18em; color: #e8b84a; }
+.dir-l button.r { width: 100%; display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: center; text-align: left; background: none; border: 0; border-bottom: 1px solid #23283a; padding: 10px 2px; cursor: pointer; color: #fff; }
+.dir-l .r i { width: 12px; height: 12px; border-radius: 50%; }
+.dir-l .r b { font-family: var(--tag); font-size: 1.15rem; line-height: 1; -webkit-text-stroke: .5px #000; }
+.dir-l .r small { display: block; font: 700 .7rem/1.3 Helvetica, Arial, sans-serif; color: #e8b84a; margin-top: 3px; }
+.dir-l .r em { font-style: normal; font: 900 .58rem/1 Helvetica, Arial, sans-serif; letter-spacing: .1em; padding: 4px 6px; border-radius: 5px; border: 1.5px solid #e8b84a; color: #e8b84a; }
+.dir-l .r em.mainstream { border-color: #c03fbf; color: #fff; background: #c03fbf; } .dir-l .r em.indie { border-color: #35b867; color: #35b867; }
+.dir-l p { color: #fff; font: 700 .86rem/1.4 Helvetica, Arial, sans-serif; text-align: center; padding: 20px 8px; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -1735,7 +1762,7 @@ window.OGX = (function () {
   /* STEP 1 panel */
   const p = document.createElement("section"); p.className = "step1p";
   p.innerHTML = '<div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR BOROUGH</b></div>' +
-    '<div class="meter"><div><b id="mtA">' + ARTISTS.length + '</b><small>ARTISTS ON THE APP</small></div><div><b id="mtF">—</b><small>FANS ON THE APP</small></div></div>' +
+    '<div class="board"><div class="bd-h"><i></i>LIVE ON THE LINE<i></i></div><div class="bd-row"><button type="button" id="mtAb"><b id="mtA">' + ARTISTS.length + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtFb"><b id="mtF">—</b><small>FANS</small><em>SEE ALL &#9656;</em></button></div></div>' +
     '<div class="bgrid">' + BOROS.map(b => '<button type="button" data-pb="' + b + '" style="--bc:' + (COL[b] || "#fff") + '">' + (NAME[b] || b.toUpperCase()) + '<small>' + cnt(b) + ' ARTISTS</small></button>').join("") +
     '<button type="button" class="wide" data-pb="__regions">&#127758; OTHER REGIONS &amp; GENRES<small>LA · BAY AREA · CHICAGO · DOWN SOUTH</small></button>' +
     '<button type="button" class="wide" data-pb="__find">&#128269; KNOW WHO YOU WANT? SEARCH ANY ARTIST</button></div>';
@@ -1759,6 +1786,36 @@ window.OGX = (function () {
   /* anything that picks an artist from elsewhere (map pin, FIND) lands you on step 2 */
   new MutationObserver(() => { if (app.classList.contains("step1") && document.querySelector("#list li.picked")) setStep(2); }).observe($("list"), { subtree: true, attributes: true, attributeFilter: ["class"] });
   const _dl = drawList; drawList = function () { const r = _dl.apply(this, arguments); if (!app.classList.contains("step1")) $("crName").textContent = (NAME[boroTab] || boroTab.toUpperCase()) + " · " + cnt(boroTab) + " ARTISTS"; return r; };
+  /* the scoreboard opens directories: every artist (A–Z, by borough or by level) and the fans */
+  const D = document.createElement("div"); D.className = "dir"; D.hidden = true;
+  D.innerHTML = '<div class="dir-h"><button type="button" id="dirX" aria-label="Back">&#8592;</button><b id="dirT"></b></div><div class="dir-s" id="dirS"></div><div class="dir-l" id="dirL"></div>';
+  document.body.appendChild(D);
+  let dsort = "az";
+  const LV = { mainstream: "MAINSTREAM", legend: "LEGEND", indie: "INDIE" }, LVO = ["mainstream", "legend", "indie"];
+  const row = (a, i) => '<button type="button" class="r" data-i="' + i + '"><i style="background:' + pinCol(a) + '"></i><span><b style="color:' + (a.color || "#fff") + '">' + esc(a.who) + '</b><small>' + esc([a.hood, boroOf(a)].filter((v, k, r) => v && r.indexOf(v) === k).join(", ")) + '</small></span><em class="' + tierOf(a) + '">' + LV[tierOf(a)] + '</em></button>';
+  function drawDir() {
+    $("dirT").textContent = ARTISTS.length + " ARTISTS ON THE APP";
+    $("dirS").innerHTML = [["az", "A–Z"], ["boro", "BY BOROUGH"], ["lvl", "BY LEVEL"]].map(x => '<button type="button" data-s="' + x[0] + '"' + (dsort === x[0] ? ' class="on"' : '') + '>' + x[1] + '</button>').join("");
+    const L = ARTISTS.map((a, i) => [a, i]).sort((x, y) => x[0].who.localeCompare(y[0].who));
+    let h = "";
+    if (dsort === "az") { let cur = ""; L.forEach(([a, i]) => { const c = /[a-z]/i.test(a.who[0]) ? a.who[0].toUpperCase() : "#"; if (c !== cur) { cur = c; h += '<h5>' + c + '</h5>'; } h += row(a, i); }); }
+    else if (dsort === "boro") BOROS.forEach(b => { const g = L.filter(([a]) => boroOf(a) === b); if (g.length) h += '<h5>' + (NAME[b] || b.toUpperCase()) + ' · ' + g.length + '</h5>' + g.map(([a, i]) => row(a, i)).join(""); });
+    else LVO.forEach(t => { const g = L.filter(([a]) => tierOf(a) === t); if (g.length) h += '<h5>' + LV[t] + ' · ' + g.length + '</h5>' + g.map(([a, i]) => row(a, i)).join(""); });
+    $("dirL").innerHTML = h; $("dirL").scrollTop = 0;
+  }
+  $("dirS").onclick = e => { const b = e.target.closest("[data-s]"); if (b) { dsort = b.dataset.s; drawDir(); } };
+  $("dirX").onclick = () => { D.hidden = true; };
+  $("dirL").onclick = e => { const b = e.target.closest("[data-i]"); if (!b) return; const i = +b.dataset.i, a = ARTISTS[i]; D.hidden = true;
+    boroTab = boroOf(a); try { localStorage.setItem("ogfan99boro", boroTab); } catch (er) {} drawList(); setStep(2);
+    setTimeout(() => { const t = $("list").querySelector('[data-i="' + i + '"]'); if (!t) return; const li = t.closest("li"); window.__lfocus && window.__lfocus(li); setTimeout(() => window.__lpick && window.__lpick(li), 450);
+      try { if (a.lat != null) window.__map.flyTo([a.lat, a.lng], 14, { duration: .6 }); } catch (er) {} }, 300); };
+  $("mtAb").onclick = () => { D.hidden = false; drawDir(); };
+  $("mtFb").onclick = () => {
+    $("dirT").textContent = "FANS ON THE APP"; $("dirS").innerHTML = ""; D.hidden = false;
+    if (!(window.OGFB && OGFB.ready())) { $("dirL").innerHTML = '<p>The fan list goes live with fan sign-in. Every fan who signs up shows here, with their rank and how many artists they&#39;re Certified on.</p>'; return; }
+    $("dirL").innerHTML = '<p>Loading...</p>';
+    OGFB.topRiders(200).then(r => { $("dirL").innerHTML = r.length ? r.map((x, k) => '<button type="button" class="r"><i style="background:#f2c14e"></i><span><b>' + esc(x.name || "Rider") + '</b><small>' + esc(x.rank || "") + '</small></span><em>' + (x.pts || 0) + ' PTS</em></button>').join("") : '<p>No fans yet. Be the first.</p>'; }).catch(() => { $("dirL").innerHTML = '<p>Couldn&#39;t load the fans. Try again.</p>'; });
+  };
   /* first visit this session starts at STEP 1; coming back from a game keeps you on STEP 2 */
   let st = "1"; try { st = sessionStorage.getItem("ogfan99step") || "1"; } catch (e) {}
   setStep(st === "2" ? 2 : 1);
