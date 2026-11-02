@@ -1579,7 +1579,7 @@ window.OGX = (function () {
   /* tap an artist: it lights up and the map zooms in. Tap it again: it turns off and the map pulls back to the whole borough.
      To open: tap the gold ▶ OPEN tag, double-tap, or press and hold. */
   let downAt = 0, lastLi = null, lastT = 0;
-  const chip = li => { list.querySelectorAll(".openchip").forEach(c => c.remove()); if (!li) return; const t = li.querySelector(".tile,.srow"); if (t) { const c = document.createElement("span"); c.className = "openchip"; c.dataset.open = "1"; c.innerHTML = "&#9654; OPEN"; t.appendChild(c); } };
+  const chip = li => { list.querySelectorAll(".openchip").forEach(c => c.remove()); if (!li) return; const t = li.querySelector(".tile,.srow"); if (t) { const c = document.createElement("span"); c.className = "openchip"; c.dataset.open = "1"; c.innerHTML = "&#9654; DOUBLE-TAP TO PLAY"; t.appendChild(c); } };
   const pick = li => { items.forEach(x => { x.classList.toggle("focus", x === li); x.classList.toggle("picked", x === li); }); chip(li); };
   const unpick = () => { items.forEach(x => x.classList.remove("focus", "picked")); chip(null); list.dispatchEvent(new CustomEvent("ogunselect")); };
   list.addEventListener("pointerdown", () => { downAt = Date.now(); }, true);
@@ -1740,7 +1740,7 @@ window.OGX = (function () {
   mb.insertAdjacentElement("afterend", p);
   /* STEP 2 header: where you are + what to do */
   const c = document.createElement("div"); c.className = "crumb";
-  c.innerHTML = '<button type="button" id="crBack">&#9664; BOROUGHS</button><div><b id="crName"></b><small>STEP 2 OF 3 · TAP AN ARTIST · TAP AGAIN TO UNSELECT · ▶ OPEN TO PLAY</small></div>';
+  c.innerHTML = '<button type="button" id="crBack">&#9664; BOROUGHS</button><div><b id="crName"></b><small>STEP 2 OF 3 · TAP AN ARTIST · DOUBLE-TAP TO PLAY · TAP AGAIN TO UNSELECT</small></div>';
   document.querySelector(".bhead").insertAdjacentElement("beforebegin", c);
   const fix = () => setTimeout(() => { try { window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 60);
   function setStep(n) { if (mb.classList.contains("big")) { const bb = mb.querySelector(".mapbig"); if (bb) bb.click(); }
