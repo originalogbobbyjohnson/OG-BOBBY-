@@ -8,35 +8,35 @@ window.CFG = {
  "saveKey": "ogfan99fergasapferg1",
  "startRank": "Plain Jane",
  "ranks": [
-  "Shabba",
-  "Ferg Strong",
+  "New Level",
+  "Shabba Gold",
+  "Work Crew",
   "Floor Seats",
-  "Fergenstein",
-  "Hood Pope"
+  "Trap Lord"
  ],
- "topRank": "Ferg Forever",
+ "topRank": "The Hood Pope",
  "point": "Gold Ring",
  "points": "Gold Rings",
  "rankRewards": {
-  "Shabba": {
+  "New Level": {
    "bongs": 5,
-   "line": "Shabba. Gold rings on every finger."
+   "line": "New Level. You just stepped up to a new level."
   },
-  "Ferg Strong": {
+  "Shabba Gold": {
    "bongs": 10,
-   "line": "Ferg Strong. You kept going and the block saw it."
+   "line": "Shabba Gold. Gold rings on every finger."
+  },
+  "Work Crew": {
+   "bongs": 15,
+   "line": "Work Crew. You put in the work and the block saw it."
   },
   "Floor Seats": {
-   "bongs": 15,
+   "bongs": 20,
    "line": "Floor Seats. Courtside, front row, Harlem's best view."
   },
-  "Fergenstein": {
-   "bongs": 20,
-   "line": "Fergenstein. You built something brand new."
-  },
-  "Hood Pope": {
+  "Trap Lord": {
    "bongs": 25,
-   "line": "You run all of Hamilton Heights."
+   "line": "Trap Lord. You run all of Hamilton Heights."
   }
  },
  "trophyArt": [

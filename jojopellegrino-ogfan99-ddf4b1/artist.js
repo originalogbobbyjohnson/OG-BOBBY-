@@ -8,35 +8,35 @@ window.CFG = {
  "saveKey": "ogfan99jojopellegrino1",
  "startRank": "Mamaluke",
  "ranks": [
-  "Paisan",
-  "Fogedaboudid",
+  "Great Kills Paisan",
   "Mixtape Made",
-  "Where I'm From",
-  "Shaolin's Own"
+  "Where I'm From Regular",
+  "Shaolin's Own",
+  "Pelle Family Boss"
  ],
- "topRank": "Pelle Approved",
+ "topRank": "Don Pellegrino",
  "point": "Slice",
  "points": "Slices",
  "rankRewards": {
-  "Paisan": {
+  "Great Kills Paisan": {
    "bongs": 5,
-   "line": "Paisan. You got a seat at the table."
-  },
-  "Fogedaboudid": {
-   "bongs": 10,
-   "line": "You know the words? Fogedaboudid."
+   "line": "Paisan. You finally got a seat at the table."
   },
   "Mixtape Made": {
-   "bongs": 15,
-   "line": "Straight off the mixtape circuit. Mixtape Made."
+   "bongs": 10,
+   "line": "Mixtape made. Straight off the Staten Island circuit."
   },
-  "Where I'm From": {
-   "bongs": 20,
-   "line": "Now you know where he's from."
+  "Where I'm From Regular": {
+   "bongs": 15,
+   "line": "Now you know where he's from, every block of it."
   },
   "Shaolin's Own": {
+   "bongs": 20,
+   "line": "Shaolin's own. The whole island claims you now."
+  },
+  "Pelle Family Boss": {
    "bongs": 25,
-   "line": "You run all of Staten Island."
+   "line": "Family boss. Fogedaboudid, you run all of Great Kills."
   }
  },
  "trophyArt": [

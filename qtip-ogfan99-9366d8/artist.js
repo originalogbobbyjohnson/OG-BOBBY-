@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "ST. ALBANS",
  "boro": "Queens",
  "saveKey": "ogfan99qtip1",
- "startRank": "Buggin' Out",
+ "startRank": "Wallet in El Segundo",
  "ranks": [
-  "Can I Kick It",
-  "Check The Rhime",
-  "Award Tour",
-  "Electric Relaxation",
-  "Midnight Marauder"
+  "Linden Blvd Newbie",
+  "Native Tongue",
+  "Award Tour Regular",
+  "Midnight Marauder",
+  "Low End Theorist"
  ],
  "topRank": "The Abstract",
  "point": "Beat",
  "points": "Beats",
  "rankRewards": {
-  "Can I Kick It": {
+  "Linden Blvd Newbie": {
    "bongs": 5,
-   "line": "Yes, you can."
+   "line": "You found Linden Boulevard. Now let's see if you can kick it."
   },
-  "Check The Rhime": {
+  "Native Tongue": {
    "bongs": 10,
-   "line": "Linden Boulevard represent."
+   "line": "You're one of the Native Tongues now. Welcome to the family."
   },
-  "Award Tour": {
+  "Award Tour Regular": {
    "bongs": 15,
-   "line": "You're on the tour now."
-  },
-  "Electric Relaxation": {
-   "bongs": 20,
-   "line": "Smooth. Real smooth."
+   "line": "You're on the Award Tour, hitting every city with the Tribe."
   },
   "Midnight Marauder": {
+   "bongs": 20,
+   "line": "Midnight Marauder. You move with the crew after dark."
+  },
+  "Low End Theorist": {
    "bongs": 25,
-   "line": "You run all of St. Albans."
+   "line": "You mastered the low end. You run all of St. Albans."
   }
  },
  "trophyArt": [

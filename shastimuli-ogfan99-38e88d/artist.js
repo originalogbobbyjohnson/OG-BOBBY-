@@ -5,37 +5,37 @@ window.CFG = {
  "hood": "Flatbush",
  "hoodUpper": "FLATBUSH",
  "boro": "Brooklyn",
- "startRank": "Unsigned",
+ "startRank": "Unsigned Hopeful",
  "ranks": [
+  "Flatbush Newcomer",
   "Effortless",
-  "The Calling",
-  "Who I Am",
-  "Wake Up & Go",
-  "My Soul to Keep"
+  "Church Ave Regular",
+  "My Soul to Keep",
+  "Flatbush Boss"
  ],
  "topRank": "The Stimulus",
  "point": "Spark",
  "points": "Sparks",
  "rankRewards": {
-  "Effortless": {
+  "Flatbush Newcomer": {
    "bongs": 5,
+   "line": "You found Flatbush. Now keep your ears open."
+  },
+  "Effortless": {
+   "bongs": 10,
    "line": "Effortless. You make it look easy."
   },
-  "The Calling": {
-   "bongs": 10,
-   "line": "You heard the calling and you answered."
-  },
-  "Who I Am": {
+  "Church Ave Regular": {
    "bongs": 15,
-   "line": "Now you know who he is."
-  },
-  "Wake Up & Go": {
-   "bongs": 20,
-   "line": "Up with the sun, out the door, on the move."
+   "line": "Church Avenue regular. The block knows your face."
   },
   "My Soul to Keep": {
+   "bongs": 20,
+   "line": "My Soul to Keep. You hold the music close."
+  },
+  "Flatbush Boss": {
    "bongs": 25,
-   "line": "You run all of Flatbush."
+   "line": "Top of the borough. You run all of Flatbush."
   }
  },
  "trophyArt": [

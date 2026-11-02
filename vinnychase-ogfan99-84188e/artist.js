@@ -6,7 +6,7 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99vinnychase1",
- "startRank": "Rookie",
+ "startRank": "Sugar Hill Tourist",
  "ranks": [
   "Extra Fly",
   "Baby Roli",
@@ -24,7 +24,7 @@ window.CFG = {
   },
   "Baby Roli": {
    "bongs": 10,
-   "line": "Pink faces. Now you got good taste."
+   "line": "Baby Roli on your wrist. Now you got taste."
   },
   "George Lucas": {
    "bongs": 15,
@@ -36,7 +36,7 @@ window.CFG = {
   },
   "Bloomberg": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Bloomberg money. You run all of Harlem."
   }
  },
  "trophyArt": [

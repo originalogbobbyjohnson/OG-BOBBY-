@@ -6,13 +6,13 @@ window.CFG = {
  "hoodUpper": "QUEENSBRIDGE",
  "boro": "Queens",
  "saveKey": "ogfan99craigg1",
- "startRank": "Sucka MC",
+ "startRank": "Bridge Battle Bait",
  "ranks": [
   "Bridge Kid",
-  "Duck Alert",
-  "Juice Crew",
-  "Freestyle Champ",
-  "This Is Business"
+  "Juice Crew Recruit",
+  "Duck Alert Survivor",
+  "Off the Top Freestyler",
+  "Bridge Battle Champ"
  ],
  "topRank": "Battle King",
  "point": "Bar",
@@ -22,21 +22,21 @@ window.CFG = {
    "bongs": 5,
    "line": "Bridge Kid. You found your way to the Bridge."
   },
-  "Duck Alert": {
+  "Juice Crew Recruit": {
    "bongs": 10,
-   "line": "Duck Alert. You saw the bars coming."
+   "line": "Juice Crew Recruit. Marley put you on the team."
   },
-  "Juice Crew": {
+  "Duck Alert Survivor": {
    "bongs": 15,
-   "line": "Juice Crew. Marley put you on."
+   "line": "Duck Alert Survivor. You saw the bars coming and ducked."
   },
-  "Freestyle Champ": {
+  "Off the Top Freestyler": {
    "bongs": 20,
-   "line": "Freestyle Champ. Off the top, every time."
+   "line": "Off the Top Freestyler. No pen, no paper, every time."
   },
-  "This Is Business": {
+  "Bridge Battle Champ": {
    "bongs": 25,
-   "line": "You run all of Queensbridge."
+   "line": "Bridge Battle Champ. You run all of Queensbridge."
   }
  },
  "trophyArt": [

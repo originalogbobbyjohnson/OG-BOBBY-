@@ -6,13 +6,13 @@ window.CFG = {
  "hoodUpper": "STATEN ISLAND",
  "boro": "Staten Island",
  "saveKey": "ogfan99thetruth1",
- "startRank": "Lost One",
+ "startRank": "Shaolin Lost One",
  "ranks": [
   "Keep It Real",
   "Cold Winter",
-  "Winner's Win",
   "Bars Matter",
-  "BadFella"
+  "Winner's Win",
+  "Shaolin BadFella"
  ],
  "topRank": "The Truth",
  "point": "Bar",
@@ -26,17 +26,17 @@ window.CFG = {
    "bongs": 10,
    "line": "Snow on the platform and you still showed up."
   },
-  "Winner's Win": {
-   "bongs": 15,
-   "line": "Winners win. That's you."
-  },
   "Bars Matter": {
-   "bongs": 20,
+   "bongs": 15,
    "line": "You hear every bar. Bars matter."
   },
-  "BadFella": {
+  "Winner's Win": {
+   "bongs": 20,
+   "line": "Winners win. That's you, every single time."
+  },
+  "Shaolin BadFella": {
    "bongs": 25,
-   "line": "You run all of Staten Island."
+   "line": "BadFella status. You run all of Staten Island."
   }
  },
  "trophyArt": [

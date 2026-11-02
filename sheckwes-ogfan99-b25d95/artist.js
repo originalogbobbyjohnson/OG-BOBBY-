@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99sheckwes1",
- "startRank": "Benchwarmer",
+ "startRank": "Sheck's Waterboy",
  "ranks": [
+  "Muddy Sneakers",
   "Mudboy",
-  "Chippi Chippi",
-  "Mo Bamba",
-  "Young Sheck",
-  "Cactus Jack"
+  "Chippi Chippi Crew",
+  "Cactus Jack Signee",
+  "Mo Bamba Champ"
  ],
  "topRank": "Live Sheck Wes",
  "point": "Bucket",
  "points": "Buckets",
  "rankRewards": {
-  "Mudboy": {
+  "Muddy Sneakers": {
    "bongs": 5,
-   "line": "Mudboy. Muddy sneakers, clean game."
+   "line": "Muddy sneakers on the court. You just got picked."
   },
-  "Chippi Chippi": {
+  "Mudboy": {
    "bongs": 10,
+   "line": "Mudboy. Muddy sneakers, clean game, real talent."
+  },
+  "Chippi Chippi Crew": {
+   "bongs": 15,
    "line": "Chippi Chippi. The whole court is moving."
   },
-  "Mo Bamba": {
-   "bongs": 15,
-   "line": "Mo Bamba. Big man, big shot."
-  },
-  "Young Sheck": {
+  "Cactus Jack Signee": {
    "bongs": 20,
-   "line": "Young Sheck. Harlem knows the name now."
+   "line": "Cactus Jack signed you. You're on the label now."
   },
-  "Cactus Jack": {
+  "Mo Bamba Champ": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Mo Bamba champ. You run all of Harlem."
   }
  },
  "trophyArt": [

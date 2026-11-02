@@ -6,15 +6,15 @@ window.CFG = {
  "hoodUpper": "FLUSHING",
  "boro": "Queens",
  "saveKey": "ogfan99largeprofessor1",
- "startRank": "Funk Faker",
+ "startRank": "Flushing Funk Faker",
  "ranks": [
   "Just Hangin' Out",
+  "Main Source Regular",
   "Live at the Barbeque",
   "Breaking Atoms",
-  "Live Guy with Glasses",
   "The Mad Scientist"
  ],
- "topRank": "Extra P",
+ "topRank": "Extra P the Professor",
  "point": "Atom",
  "points": "Atoms",
  "rankRewards": {
@@ -22,21 +22,21 @@ window.CFG = {
    "bongs": 5,
    "line": "Just hangin' out. You found the record crates."
   },
-  "Live at the Barbeque": {
+  "Main Source Regular": {
    "bongs": 10,
-   "line": "Live at the Barbeque. You got a plate and a seat by the speakers."
+   "line": "Main Source regular. You're looking at the front door."
+  },
+  "Live at the Barbeque": {
+   "bongs": 15,
+   "line": "Live at the Barbeque. Plate in hand, seat by the speakers."
   },
   "Breaking Atoms": {
-   "bongs": 15,
-   "line": "Breaking Atoms. You split the beat down to the drum."
-  },
-  "Live Guy with Glasses": {
    "bongs": 20,
-   "line": "The live guy with glasses. Everybody in Flushing knows the frames."
+   "line": "Breaking atoms. You split the beat down to the drum."
   },
   "The Mad Scientist": {
    "bongs": 25,
-   "line": "You run all of Flushing."
+   "line": "Mad scientist. You run all of Flushing."
   }
  },
  "trophyArt": [

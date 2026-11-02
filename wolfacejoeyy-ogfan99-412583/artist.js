@@ -5,13 +5,13 @@ window.CFG = {
  "hood": "Stapleton",
  "hoodUpper": "STAPLETON",
  "boro": "Staten Island",
- "startRank": "Pup",
+ "startRank": "Wolface Pup",
  "ranks": [
   "All Your Fault",
   "22Joeyy",
   "Before Cupid",
   "Valentino",
-  "Cupid"
+  "Stapleton Cupid"
  ],
  "topRank": "Wolface",
  "point": "Slice",
@@ -33,9 +33,9 @@ window.CFG = {
    "bongs": 20,
    "line": "Valentino. Dressed up and on the list."
   },
-  "Cupid": {
+  "Stapleton Cupid": {
    "bongs": 25,
-   "line": "You run all of Stapleton."
+   "line": "Cupid himself. You run all of Stapleton."
   }
  },
  "trophyArt": [

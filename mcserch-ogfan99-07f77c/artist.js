@@ -6,13 +6,13 @@ window.CFG = {
  "hoodUpper": "FAR ROCKAWAY",
  "boro": "Queens",
  "saveKey": "ogfan99mcserch1",
- "startRank": "Gas Face",
+ "startRank": "Gas Face Target",
  "ranks": [
   "Steppin' to the A.M.",
-  "The Cactus Album",
+  "Cactus Album Crew",
   "Derelict of Dialect",
   "Back to the Grill",
-  "Serchlite"
+  "3rd Bass Boss"
  ],
  "topRank": "Return of the Product",
  "point": "Bass Line",
@@ -22,9 +22,9 @@ window.CFG = {
    "bongs": 5,
    "line": "Steppin' to the A.M. Up early, already rhyming."
   },
-  "The Cactus Album": {
+  "Cactus Album Crew": {
    "bongs": 10,
-   "line": "The Cactus Album. Sharp from the first track."
+   "line": "Cactus Album crew. Sharp from the first track."
   },
   "Derelict of Dialect": {
    "bongs": 15,
@@ -34,9 +34,9 @@ window.CFG = {
    "bongs": 20,
    "line": "Back to the Grill. Right back in the kitchen, cooking."
   },
-  "Serchlite": {
+  "3rd Bass Boss": {
    "bongs": 25,
-   "line": "You run all of Far Rockaway."
+   "line": "3rd Bass Boss. You run all of Far Rockaway."
   }
  },
  "trophyArt": [

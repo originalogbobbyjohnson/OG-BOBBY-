@@ -5,37 +5,37 @@ window.CFG = {
  "hood": "Morris Heights",
  "hoodUpper": "MORRIS HEIGHTS",
  "boro": "the Bronx",
- "startRank": "B-Boy",
+ "startRank": "Rhyme Book Biter",
  "ranks": [
+  "Park Jam Newcomer",
   "Casanova Fly",
-  "Scene of the Rhyme",
-  "MC Delight",
-  "Cold Crush",
-  "South Bronx Subway Rap"
+  "Cold Crush Brother",
+  "Rhyme Book Author",
+  "Bronx Mic Master"
  ],
- "topRank": "Grandmaster",
+ "topRank": "The Grandmaster",
  "point": "Rhyme",
  "points": "Rhymes",
  "rankRewards": {
-  "Casanova Fly": {
+  "Park Jam Newcomer": {
    "bongs": 5,
-   "line": "Casanova Fly. Fresh on the turntables."
+   "line": "Park jam newcomer. You plugged into the lamppost."
   },
-  "Scene of the Rhyme": {
+  "Casanova Fly": {
    "bongs": 10,
-   "line": "Back at the scene of the rhyme."
+   "line": "Casanova Fly. Smooth on the turntables and the mic."
   },
-  "MC Delight": {
+  "Cold Crush Brother": {
    "bongs": 15,
-   "line": "MC Delight. The crowd is yours."
+   "line": "Cold Crush Brother. The crew's got your back now."
   },
-  "Cold Crush": {
+  "Rhyme Book Author": {
    "bongs": 20,
-   "line": "You're in the Cold Crush now."
+   "line": "Rhyme book author. Your notebook is the original."
   },
-  "South Bronx Subway Rap": {
+  "Bronx Mic Master": {
    "bongs": 25,
-   "line": "You run all of the Bronx."
+   "line": "Mic master. You run all of Morris Heights."
   }
  },
  "trophyArt": [

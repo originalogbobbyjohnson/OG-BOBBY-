@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "SOUTH ORANGE",
  "boro": "New Jersey",
  "saveKey": "ogfan99laurynhill1",
- "startRank": "Hard Rock",
+ "startRank": "Lost One",
  "ranks": [
-  "Refugee",
+  "Refugee Camp Newcomer",
   "Ready or Not",
-  "Everything Is Everything",
   "Killing Me Softly",
-  "L Boogie"
+  "Fugees Inner Circle",
+  "Miseducation Icon"
  ],
- "topRank": "Superstar",
+ "topRank": "Queen L Boogie",
  "point": "Gem",
  "points": "Gems",
  "rankRewards": {
-  "Refugee": {
+  "Refugee Camp Newcomer": {
    "bongs": 5,
-   "line": "Welcome to the Refugee Camp."
+   "line": "Refugee Camp newcomer. Welcome in, take a seat."
   },
   "Ready or Not": {
    "bongs": 10,
-   "line": "Ready or not, here you come."
-  },
-  "Everything Is Everything": {
-   "bongs": 15,
-   "line": "Everything is everything."
+   "line": "Ready or not, here you come. They see you."
   },
   "Killing Me Softly": {
-   "bongs": 20,
-   "line": "Strumming the song with your fingers."
+   "bongs": 15,
+   "line": "Killing me softly. You know every single word."
   },
-  "L Boogie": {
+  "Fugees Inner Circle": {
+   "bongs": 20,
+   "line": "Fugees inner circle. Everything is everything now."
+  },
+  "Miseducation Icon": {
    "bongs": 25,
-   "line": "You run all of South Orange."
+   "line": "Miseducation icon. You run all of South Orange."
   }
  },
  "trophyArt": [

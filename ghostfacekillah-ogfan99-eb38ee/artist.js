@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "STAPLETON",
  "boro": "Staten Island",
  "saveKey": "ogfan99ghostfacekillah1",
- "startRank": "Lame",
+ "startRank": "Ghost Story Skeptic",
  "ranks": [
-  "Theodore Unit",
-  "Wally Champ",
+  "Theodore Unit Recruit",
   "Pretty Toney",
   "Tony Starks",
-  "Ironman"
+  "Supreme Clientele",
+  "Wally Champ"
  ],
  "topRank": "Ghostdeini the Great",
  "point": "Wallabee",
  "points": "Wallabees",
  "rankRewards": {
-  "Theodore Unit": {
+  "Theodore Unit Recruit": {
    "bongs": 5,
-   "line": "Theodore Unit. You're in the crew now."
-  },
-  "Wally Champ": {
-   "bongs": 10,
-   "line": "Wally Champ. Fresh suede, crepe soles, no creases."
+   "line": "Theodore Unit. You just got down with the crew."
   },
   "Pretty Toney": {
-   "bongs": 15,
-   "line": "Pretty Toney. Robe on, eagle bracelet shining."
+   "bongs": 10,
+   "line": "Pretty Toney. Robe on, eagle bracelet shining bright."
   },
   "Tony Starks": {
-   "bongs": 20,
+   "bongs": 15,
    "line": "Tony Starks. You know the stories word for word."
   },
-  "Ironman": {
+  "Supreme Clientele": {
+   "bongs": 20,
+   "line": "Supreme Clientele. Top shelf, front row, VIP status."
+  },
+  "Wally Champ": {
    "bongs": 25,
-   "line": "You run all of Stapleton."
+   "line": "Wally Champ. Fresh suede, and you run all of Stapleton."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HOLLIS",
  "boro": "Queens",
  "saveKey": "ogfan99dmc1",
- "startRank": "Sucka MC",
+ "startRank": "Sucker M.C. Victim",
  "ranks": [
   "Hollis Crew",
-  "Peter Piper",
+  "Peter Piper Picker",
   "Tougher Than Leather",
-  "Raising Hell",
-  "King Of Rock"
+  "Raising Hell Headliner",
+  "King of Rock"
  ],
- "topRank": "Devastating Mic Controller",
+ "topRank": "The Devastating DMC",
  "point": "Lace",
  "points": "Laces",
  "rankRewards": {
   "Hollis Crew": {
    "bongs": 5,
-   "line": "Hollis Crew. 205th Street knows your name."
+   "line": "Hollis Crew. 205th Street knows your name now."
   },
-  "Peter Piper": {
+  "Peter Piper Picker": {
    "bongs": 10,
-   "line": "Peter Piper. Jay's cuts are the magic."
+   "line": "Peter Piper Picker. Jay's cuts are the magic behind you."
   },
   "Tougher Than Leather": {
    "bongs": 15,
    "line": "Tougher Than Leather. Look Ma, no shoelaces."
   },
-  "Raising Hell": {
+  "Raising Hell Headliner": {
    "bongs": 20,
-   "line": "Raising Hell. The whole Garden's on its feet."
+   "line": "Raising Hell Headliner. The whole Garden is on its feet."
   },
-  "King Of Rock": {
+  "King of Rock": {
    "bongs": 25,
-   "line": "You run all of Hollis."
+   "line": "King of Rock. There is none higher, you run all of Hollis."
   }
  },
  "trophyArt": [

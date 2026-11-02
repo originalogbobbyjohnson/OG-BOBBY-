@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "NEWARK",
  "boro": "New Jersey",
  "saveKey": "ogfan99queenlatifah1",
- "startRank": "Princess",
+ "startRank": "Unit Wannabe",
  "ranks": [
-  "Ladies First",
-  "Flavor Unit",
+  "Flavor Unit Intern",
+  "Ladies First Crew",
+  "U.N.I.T.Y. Sister",
   "Nature of a Sista",
-  "Black Reign",
-  "Order in the Court"
+  "Brick City Royalty"
  ],
  "topRank": "All Hail the Queen",
  "point": "Jewel",
  "points": "Jewels",
  "rankRewards": {
-  "Ladies First": {
+  "Flavor Unit Intern": {
    "bongs": 5,
-   "line": "Step up front. Ladies first."
+   "line": "The Flavor Unit let you in the door. Get to work."
   },
-  "Flavor Unit": {
+  "Ladies First Crew": {
    "bongs": 10,
-   "line": "Welcome to the Flavor Unit."
+   "line": "Ladies first. You stepped up front and held your ground."
+  },
+  "U.N.I.T.Y. Sister": {
+   "bongs": 15,
+   "line": "U.N.I.T.Y. You stand with your sisters and demand respect."
   },
   "Nature of a Sista": {
-   "bongs": 15,
-   "line": "You know the nature now."
-  },
-  "Black Reign": {
    "bongs": 20,
-   "line": "Your reign has started."
+   "line": "Nature of a Sista. You know exactly who you are."
   },
-  "Order in the Court": {
+  "Brick City Royalty": {
    "bongs": 25,
-   "line": "You run all of Newark."
+   "line": "Brick City royalty. You run all of Newark."
   }
  },
  "trophyArt": [

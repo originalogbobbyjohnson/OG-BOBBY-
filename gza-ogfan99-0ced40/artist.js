@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "TOMPKINSVILLE",
  "boro": "Staten Island",
  "saveKey": "ogfan99gza1",
- "startRank": "Pawn",
+ "startRank": "Cold World Pawn",
  "ranks": [
-  "Knight",
+  "Shadowboxin' Knight",
   "Beneath the Surface",
-  "Pro Tools",
+  "Pro Tools Tactician",
   "Liquid Swordsman",
-  "Maximillion"
+  "Chess Grandmaster"
  ],
  "topRank": "The Genius",
  "point": "Sword",
  "points": "Swords",
  "rankRewards": {
-  "Knight": {
+  "Shadowboxin' Knight": {
    "bongs": 5,
-   "line": "Knight. You jump the board now, not just one square."
+   "line": "Shadowboxin' knight. You jump the board now, not one square."
   },
   "Beneath the Surface": {
    "bongs": 10,
-   "line": "Beneath the Surface. You hear the lines under the lines."
+   "line": "Beneath the Surface. You hear the lines under lines."
   },
-  "Pro Tools": {
+  "Pro Tools Tactician": {
    "bongs": 15,
    "line": "Pro Tools. Every bar measured, every word placed."
   },
   "Liquid Swordsman": {
    "bongs": 20,
-   "line": "Liquid Swordsman. Sharp mind, sharper tongue."
+   "line": "Liquid Swordsman. Sharp mind, sharper tongue, cold world."
   },
-  "Maximillion": {
+  "Chess Grandmaster": {
    "bongs": 25,
-   "line": "You run all of Tompkinsville."
+   "line": "Checkmate. You run all of Tompkinsville now."
   }
  },
  "trophyArt": [

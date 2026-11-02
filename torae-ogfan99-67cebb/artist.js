@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "CONEY ISLAND",
  "boro": "Brooklyn",
  "saveKey": "ogfan99torae1",
- "startRank": "Amateur",
+ "startRank": "Boardwalk Amateur",
  "ranks": [
-  "Spitter",
+  "Daily Bread Crew",
   "Flame Spitter",
-  "Young Vet",
+  "Double Barrel",
   "Entitled",
-  "All Praises Due"
+  "Coney Island Boss"
  ],
  "topRank": "Coney Island's Finest",
  "point": "Bar",
  "points": "Bars",
  "rankRewards": {
-  "Spitter": {
+  "Daily Bread Crew": {
    "bongs": 5,
-   "line": "They asked if you was spitting it. You let 'em know."
+   "line": "Daily bread. You showed up hungry and got fed."
   },
   "Flame Spitter": {
    "bongs": 10,
    "line": "Flame spitter. That's the type of stuff they ask for."
   },
-  "Young Vet": {
+  "Double Barrel": {
    "bongs": 15,
-   "line": "Young veteran. You been on it since the beginning."
+   "line": "Double Barrel. You're loaded with bars on both sides."
   },
   "Entitled": {
    "bongs": 20,
-   "line": "Entitled the title. You earned it, bar for bar."
+   "line": "Entitled to the title. You earned it, bar for bar."
   },
-  "All Praises Due": {
+  "Coney Island Boss": {
    "bongs": 25,
-   "line": "You run all of Coney Island."
+   "line": "Boardwalk boss. You run all of Coney Island."
   }
  },
  "trophyArt": [

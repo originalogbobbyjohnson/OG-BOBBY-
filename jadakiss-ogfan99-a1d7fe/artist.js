@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "YONKERS",
  "boro": "Westchester",
  "saveKey": "ogfan99jadakiss1",
- "startRank": "Lame",
+ "startRank": "Ha-Ha Laugh Copycat",
  "ranks": [
-  "Mr. Raspy",
-  "K.I. Double S",
-  "D-Block",
-  "The LOX",
+  "Ruff Ryders Newcomer",
+  "D-Block Regular",
+  "Kiss of Death Survivor",
+  "The LOX Inner Circle",
   "The Champ Is Here"
  ],
- "topRank": "Top 5",
+ "topRank": "Top 5 Jadakiss",
  "point": "Laugh",
  "points": "Laughs",
  "rankRewards": {
-  "Mr. Raspy": {
+  "Ruff Ryders Newcomer": {
    "bongs": 5,
-   "line": "Mr. Raspy. They already know the voice."
+   "line": "Ruff Ryders newcomer. You just hopped on the bike."
   },
-  "K.I. Double S": {
+  "D-Block Regular": {
    "bongs": 10,
-   "line": "K.I. Double S. All you do is spit flows."
+   "line": "D-Block regular. You're down with the crew now."
   },
-  "D-Block": {
+  "Kiss of Death Survivor": {
    "bongs": 15,
-   "line": "D-Block. You're down with the crew now."
+   "line": "Kiss of Death survivor. You made it through, ha-ha."
   },
-  "The LOX": {
+  "The LOX Inner Circle": {
    "bongs": 20,
-   "line": "The LOX. Locked in for life."
+   "line": "The LOX inner circle. Locked in for life."
   },
   "The Champ Is Here": {
    "bongs": 25,
-   "line": "You run all of Yonkers."
+   "line": "The champ is here. You run all of Yonkers."
   }
  },
  "trophyArt": [

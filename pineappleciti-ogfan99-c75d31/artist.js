@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "NEWARK",
  "boro": "New Jersey",
  "saveKey": "ogfan99pineappleciti1",
- "startRank": "New Face",
+ "startRank": "Newark New Face",
  "ranks": [
-  "Balance",
-  "Dance",
+  "Balance Keeper",
+  "Dance Floor Regular",
   "Lift Me Up",
-  "Believe",
-  "neonBLUE"
+  "True Believer",
+  "Neon Blue Boss"
  ],
  "topRank": "They Love CITI",
  "point": "Pineapple",
  "points": "Pineapples",
  "rankRewards": {
-  "Balance": {
+  "Balance Keeper": {
    "bongs": 5,
-   "line": "Balance. Steady on the beat."
+   "line": "Balance Keeper. Steady on the beat from day one."
   },
-  "Dance": {
+  "Dance Floor Regular": {
    "bongs": 10,
-   "line": "Dance. Now the whole room is moving."
+   "line": "Dance floor regular. Now the whole room is moving."
   },
   "Lift Me Up": {
    "bongs": 15,
-   "line": "Lift Me Up. You are rising."
+   "line": "Lift Me Up. You are rising fast."
   },
-  "Believe": {
+  "True Believer": {
    "bongs": 20,
-   "line": "Believe. Faith in every bar."
+   "line": "True Believer. Faith in every single bar."
   },
-  "neonBLUE": {
+  "Neon Blue Boss": {
    "bongs": 25,
-   "line": "You run all of Newark."
+   "line": "Neon Blue Boss. You run all of Newark."
   }
  },
  "trophyArt": [

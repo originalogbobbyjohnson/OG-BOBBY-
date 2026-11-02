@@ -6,11 +6,11 @@ window.CFG = {
  "hoodUpper": "LONG ISLAND",
  "boro": "Nassau",
  "saveKey": "ogfan99huskingpin1",
- "startRank": "Dry Land",
+ "startRank": "Dry Land Dweller",
  "ranks": [
-  "16 Waves",
-  "Official Waves",
-  "Waterworld",
+  "First Wave Swimmer",
+  "Official Waves Rider",
+  "Waterworld Diver",
   "Mind Divine",
   "Wizard of Dons"
  ],
@@ -18,25 +18,25 @@ window.CFG = {
  "point": "Wave",
  "points": "Waves",
  "rankRewards": {
-  "16 Waves": {
+  "First Wave Swimmer": {
    "bongs": 5,
-   "line": "16 waves in. You're getting wet."
+   "line": "First wave. You're getting your feet wet now."
   },
-  "Official Waves": {
+  "Official Waves Rider": {
    "bongs": 10,
-   "line": "Official waves. Now you ride with us."
+   "line": "Official waves. Now you ride with the crew."
   },
-  "Waterworld": {
+  "Waterworld Diver": {
    "bongs": 15,
-   "line": "Welcome to Waterworld. Swim deep."
+   "line": "Welcome to Waterworld. Dive deep, the tide's yours."
   },
   "Mind Divine": {
    "bongs": 20,
-   "line": "Mind divine. You see it all now."
+   "line": "Mind divine. You see every wave coming now."
   },
   "Wizard of Dons": {
    "bongs": 25,
-   "line": "You run all of Long Island."
+   "line": "Wizard of Dons. You run all of Long Island."
   }
  },
  "trophyArt": [

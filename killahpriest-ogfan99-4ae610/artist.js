@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "BROOKLYN",
  "boro": "Brooklyn",
  "saveKey": "ogfan99killahpriest1",
- "startRank": "Novice",
+ "startRank": "Outer Court Wanderer",
  "ranks": [
-  "Sun of Man",
-  "Heavy Mental",
-  "Black August",
-  "Priesthood",
-  "View from Masada"
+  "Sunz of Man Initiate",
+  "Heavy Mental Scholar",
+  "Black August Historian",
+  "Priesthood Elder",
+  "B.I.B.L.E. Master"
  ],
  "topRank": "The High Priest",
  "point": "Scroll",
  "points": "Scrolls",
  "rankRewards": {
-  "Sun of Man": {
+  "Sunz of Man Initiate": {
    "bongs": 5,
-   "line": "Sun of Man. You found the family."
+   "line": "Sunz of Man initiate. You found the family."
   },
-  "Heavy Mental": {
+  "Heavy Mental Scholar": {
    "bongs": 10,
-   "line": "Heavy Mental. Your mind is getting heavy."
+   "line": "Heavy Mental scholar. Your mind is getting heavy."
   },
-  "Black August": {
+  "Black August Historian": {
    "bongs": 15,
-   "line": "Black August. You studied the history."
+   "line": "Black August historian. You studied every page of it."
   },
-  "Priesthood": {
+  "Priesthood Elder": {
    "bongs": 20,
-   "line": "Priesthood. You're in the order now."
+   "line": "Priesthood elder. You're deep in the order now."
   },
-  "View from Masada": {
+  "B.I.B.L.E. Master": {
    "bongs": 25,
-   "line": "You run all of Brooklyn."
+   "line": "Basic instructions mastered. You run all of Brooklyn."
   }
  },
  "trophyArt": [

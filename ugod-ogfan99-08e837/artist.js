@@ -8,7 +8,7 @@ window.CFG = {
  "saveKey": "ogfan99ugod1",
  "startRank": "Baby U",
  "ranks": [
-  "Lucky Hands",
+  "Park Hill Newbie",
   "Mr. Xcitement",
   "Keynote Speaker",
   "Golden Arms",
@@ -18,9 +18,9 @@ window.CFG = {
  "point": "Gold Bar",
  "points": "Gold Bars",
  "rankRewards": {
-  "Lucky Hands": {
+  "Park Hill Newbie": {
    "bongs": 5,
-   "line": "Lucky Hands. You caught that one clean."
+   "line": "Park Hill newbie. You made it past the courtyard."
   },
   "Mr. Xcitement": {
    "bongs": 10,
@@ -28,15 +28,15 @@ window.CFG = {
   },
   "Keynote Speaker": {
    "bongs": 15,
-   "line": "Keynote Speaker. You hold the room now."
+   "line": "Keynote speaker. You hold the room now."
   },
   "Golden Arms": {
    "bongs": 20,
-   "line": "Golden Arms. Heavy voice, heavy lifting."
+   "line": "Golden arms. Heavy voice, heavy lifting."
   },
   "Universal God": {
    "bongs": 25,
-   "line": "You run all of Park Hill."
+   "line": "Universal god. You run all of Park Hill."
   }
  },
  "trophyArt": [

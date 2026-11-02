@@ -8,35 +8,35 @@ window.CFG = {
  "saveKey": "ogfan99dougefresh1",
  "startRank": "Not So Fresh",
  "ranks": [
+  "Beat Box Trainee",
+  "La-Di-Da-Di Dancer",
   "Get Fresh Crew",
-  "Beat Box Trainer",
   "Showstopper",
-  "Top Riser",
-  "Human Beat Box"
+  "Human Beat Box Master"
  ],
- "topRank": "World's Greatest Entertainer",
+ "topRank": "Greatest Entertainer",
  "point": "Beat",
  "points": "Beats",
  "rankRewards": {
-  "Get Fresh Crew": {
+  "Beat Box Trainee": {
    "bongs": 5,
-   "line": "You're down with the crew now. I-ight!"
+   "line": "Beat Box Trainee. Lips, mic, rhythm, you're in training."
   },
-  "Beat Box Trainer": {
+  "La-Di-Da-Di Dancer": {
    "bongs": 10,
-   "line": "Lips, mic, rhythm. You're in training."
+   "line": "La-Di-Da-Di Dancer. You like to party, and it shows."
+  },
+  "Get Fresh Crew": {
+   "bongs": 15,
+   "line": "Get Fresh Crew. You're down with the crew now."
   },
   "Showstopper": {
-   "bongs": 15,
-   "line": "Ladies and gentlemen... this is the show."
-  },
-  "Top Riser": {
    "bongs": 20,
-   "line": "Keep risin' to the top."
+   "line": "Showstopper. Ladies and gentlemen, this is the show."
   },
-  "Human Beat Box": {
+  "Human Beat Box Master": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Human Beat Box Master. You run all of Harlem."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "MORRISANIA",
  "boro": "the Bronx",
  "saveKey": "ogfan99diamondd1",
- "startRank": "Best Kept Secret",
+ "startRank": "Empty Crate",
  "ranks": [
   "What You Seek",
+  "Best Kept Secret",
   "Psychotic Neurotic",
-  "D.I.T.C.",
-  "Grown Man Talk",
-  "Diam Piece"
+  "D.I.T.C. Digger",
+  "Diamond Cut Master"
  ],
- "topRank": "The Diamond",
+ "topRank": "Bronx Crate King",
  "point": "Carat",
  "points": "Carats",
  "rankRewards": {
   "What You Seek": {
    "bongs": 5,
-   "line": "What You Seek. You found the crates."
+   "line": "What You Seek. You found the first crate."
+  },
+  "Best Kept Secret": {
+   "bongs": 10,
+   "line": "Best Kept Secret. Now you know the sound before everybody."
   },
   "Psychotic Neurotic": {
-   "bongs": 10,
-   "line": "Psychotic Neurotic. Down with the group."
-  },
-  "D.I.T.C.": {
    "bongs": 15,
-   "line": "D.I.T.C. Diggin' with the crew now."
+   "line": "Psychotic Neurotic. You're down with the group now."
   },
-  "Grown Man Talk": {
+  "D.I.T.C. Digger": {
    "bongs": 20,
-   "line": "Grown Man Talk. You speak with weight."
+   "line": "D.I.T.C. Digger. Diggin' in the crates with the crew."
   },
-  "Diam Piece": {
+  "Diamond Cut Master": {
    "bongs": 25,
-   "line": "You run all of Morrisania."
+   "line": "Diamond Cut Master. You run all of Morrisania."
   }
  },
  "trophyArt": [

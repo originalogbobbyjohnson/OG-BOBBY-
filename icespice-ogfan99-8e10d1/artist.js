@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "FORDHAM",
  "boro": "the Bronx",
  "saveKey": "ogfan99icespice1",
- "startRank": "Munch",
+ "startRank": "Certified Munch",
  "ranks": [
-  "Baddie",
-  "Like..?",
-  "Deli Regular",
-  "Y2K",
+  "Deli Line Newcomer",
+  "Deli Cat Regular",
+  "Bikini Bottom Baddie",
+  "Y2K It Girl",
   "Princess Diana"
  ],
- "topRank": "Bronx Princess",
+ "topRank": "Bronx Drill Queen",
  "point": "Spice",
  "points": "Spices",
  "rankRewards": {
-  "Baddie": {
+  "Deli Line Newcomer": {
    "bongs": 5,
-   "line": "Baddie. You came in looking right."
+   "line": "Deli line newcomer. You finally got your order in."
   },
-  "Like..?": {
+  "Deli Cat Regular": {
    "bongs": 10,
-   "line": "Like..? Now they all want to know."
+   "line": "Deli cat regular. The cat knows your name now."
   },
-  "Deli Regular": {
+  "Bikini Bottom Baddie": {
    "bongs": 15,
-   "line": "Deli Regular. The deli cat knows your name."
+   "line": "Bikini Bottom baddie. You came through looking right."
   },
-  "Y2K": {
+  "Y2K It Girl": {
    "bongs": 20,
-   "line": "Y2K. Back in style and on top."
+   "line": "Y2K it girl. Back in style and on top."
   },
   "Princess Diana": {
    "bongs": 25,
-   "line": "You run all of Fordham."
+   "line": "Princess Diana. You run all of Fordham."
   }
  },
  "trophyArt": [

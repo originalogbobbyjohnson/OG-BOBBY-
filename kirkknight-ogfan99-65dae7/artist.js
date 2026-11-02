@@ -5,37 +5,37 @@ window.CFG = {
  "hood": "Flatbush",
  "hoodUpper": "FLATBUSH",
  "boro": "Brooklyn",
- "startRank": "Squire",
+ "startRank": "Knightless Peasant",
  "ranks": [
-  "Downtime",
-  "Black Noise",
+  "Pro Era Squire",
+  "Downtime Grinder",
+  "Black Noise Producer",
   "Late Knight Special",
-  "Pro Era",
-  "Beast Coast"
+  "Beast Coast Champion"
  ],
- "topRank": "Sir Kirk",
+ "topRank": "Sir Kirk Knight",
  "point": "Shield",
  "points": "Shields",
  "rankRewards": {
-  "Downtime": {
+  "Pro Era Squire": {
    "bongs": 5,
-   "line": "No downtime now. You put the work in."
+   "line": "Pro Era squire. Welcome to the progressive era."
   },
-  "Black Noise": {
+  "Downtime Grinder": {
    "bongs": 10,
-   "line": "You hear the beat inside the black noise."
+   "line": "No downtime now. You're putting the work in."
+  },
+  "Black Noise Producer": {
+   "bongs": 15,
+   "line": "Black Noise producer. You hear the beat inside."
   },
   "Late Knight Special": {
-   "bongs": 15,
-   "line": "Late night, lights low, the pads are glowing."
-  },
-  "Pro Era": {
    "bongs": 20,
-   "line": "Welcome to the Pro Era."
+   "line": "Late Knight special. Lights low, the pads glowing."
   },
-  "Beast Coast": {
+  "Beast Coast Champion": {
    "bongs": 25,
-   "line": "You run all of Flatbush."
+   "line": "Beast Coast champion. You run all of Flatbush."
   }
  },
  "trophyArt": [

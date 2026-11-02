@@ -6,15 +6,15 @@ window.CFG = {
  "hoodUpper": "BRENTWOOD",
  "boro": "Long Island",
  "saveKey": "ogfan99pmd1",
- "startRank": "Intern",
+ "startRank": "Mailroom Intern",
  "ranks": [
   "Strictly Business",
   "Unfinished Business",
+  "Hit Squad Member",
   "Business as Usual",
-  "Hit Squad",
-  "Rugged-N-Raw"
+  "Brentwood Boss"
  ],
- "topRank": "Business Never Personal",
+ "topRank": "Parrish Making Dollars",
  "point": "Deal",
  "points": "Deals",
  "rankRewards": {
@@ -24,19 +24,19 @@ window.CFG = {
   },
   "Unfinished Business": {
    "bongs": 10,
-   "line": "Unfinished Business. There is more to get done."
+   "line": "Unfinished Business. There's more to get done."
+  },
+  "Hit Squad Member": {
+   "bongs": 15,
+   "line": "Hit Squad Member. Now you roll with the crew."
   },
   "Business as Usual": {
-   "bongs": 15,
-   "line": "Business as Usual. Another day, another classic."
-  },
-  "Hit Squad": {
    "bongs": 20,
-   "line": "Hit Squad. Now you roll with the crew."
+   "line": "Business as usual. Another day, another classic."
   },
-  "Rugged-N-Raw": {
+  "Brentwood Boss": {
    "bongs": 25,
-   "line": "You run all of Brentwood."
+   "line": "Brentwood Boss. You run all of Brentwood."
   }
  },
  "trophyArt": [

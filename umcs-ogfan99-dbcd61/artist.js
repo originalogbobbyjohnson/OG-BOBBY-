@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "STATEN ISLAND",
  "boro": "Staten Island",
  "saveKey": "ogfan99umcs1",
- "startRank": "Kid",
+ "startRank": "Unripe Fruit",
  "ranks": [
+  "One to Grow On",
   "Fruits of Nature",
-  "Super Duper",
-  "World Improver",
   "Blue Cheese",
-  "Unleashed"
+  "Unleashed",
+  "Island Originals"
  ],
- "topRank": "Universal MC",
+ "topRank": "Universal MC Kings",
  "point": "Fruit",
  "points": "Fruits",
  "rankRewards": {
-  "Fruits of Nature": {
+  "One to Grow On": {
    "bongs": 5,
-   "line": "Fruits of Nature. Now you're starting to grow."
+   "line": "One to grow on. Now you're starting to grow."
   },
-  "Super Duper": {
+  "Fruits of Nature": {
    "bongs": 10,
-   "line": "Super Duper. You caught the Kim maneuver."
-  },
-  "World Improver": {
-   "bongs": 15,
-   "line": "World Improver. One to grow on."
+   "line": "Fruits of nature. You're ripe and ready."
   },
   "Blue Cheese": {
-   "bongs": 20,
-   "line": "Blue Cheese. Stacking it up."
+   "bongs": 15,
+   "line": "Blue cheese. You're stacking it up now."
   },
   "Unleashed": {
+   "bongs": 20,
+   "line": "Unleashed. Nothing holds you back anymore."
+  },
+  "Island Originals": {
    "bongs": 25,
-   "line": "You run all of Staten Island."
+   "line": "Island originals. You run all of Staten Island."
   }
  },
  "trophyArt": [

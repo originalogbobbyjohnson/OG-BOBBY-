@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "FLATBUSH",
  "boro": "Brooklyn",
  "saveKey": "ogfan99medhane1",
- "startRank": "Baby Steps",
+ "startRank": "Flatbush Baby Steps",
  "ranks": [
-  "Own Pace",
-  "Steady",
+  "At Your Own Pace",
+  "Steady Hand",
   "Full Circle",
-  "Cold Water",
-  "Do The Math"
+  "Cold Water Surfer",
+  "Flatbush Math Master"
  ],
- "topRank": "Amethyst",
+ "topRank": "Amethyst Crown",
  "point": "Blessing",
  "points": "Blessings",
  "rankRewards": {
-  "Own Pace": {
+  "At Your Own Pace": {
    "bongs": 5,
-   "line": "Moving at your own pace now."
+   "line": "Moving at your own pace now. No rush."
   },
-  "Steady": {
+  "Steady Hand": {
    "bongs": 10,
-   "line": "Palm steady, eyes open."
+   "line": "Steady hand, eyes open. You're locked in."
   },
   "Full Circle": {
    "bongs": 15,
-   "line": "You came back around, wiser."
+   "line": "Full circle. You came back around, wiser."
   },
-  "Cold Water": {
+  "Cold Water Surfer": {
    "bongs": 20,
-   "line": "Deep water, and you're surfing it."
+   "line": "Deep cold water, and you're surfing it."
   },
-  "Do The Math": {
+  "Flatbush Math Master": {
    "bongs": 25,
-   "line": "You run all of Flatbush."
+   "line": "You did the math. You run all of Flatbush."
   }
  },
  "trophyArt": [

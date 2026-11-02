@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "PASSAIC COUNTY",
  "boro": "New Jersey",
  "saveKey": "ogfan99justinavalentine1",
- "startRank": "Basic",
+ "startRank": "Basic Beige",
  "ranks": [
-  "Route 80",
-  "Red Velvet",
+  "Route 80 Rider",
+  "Red Velvet Regular",
   "Scarlet Letter",
-  "Feminem",
-  "Infrared"
+  "Wild 'N Out Wildcard",
+  "Infrared Heavyweight"
  ],
- "topRank": "Bougie",
+ "topRank": "Queen Feminem",
  "point": "Heart",
  "points": "Hearts",
  "rankRewards": {
-  "Route 80": {
+  "Route 80 Rider": {
    "bongs": 5,
-   "line": "Route 80. You're on the road now."
+   "line": "Route 80 rider. You're on the road now."
   },
-  "Red Velvet": {
+  "Red Velvet Regular": {
    "bongs": 10,
-   "line": "Red Velvet. Smooth."
+   "line": "Red Velvet regular. Smooth and sweet, every bar."
   },
   "Scarlet Letter": {
    "bongs": 15,
-   "line": "Scarlet Letter. You wear it loud."
+   "line": "Scarlet Letter. You wear it loud and proud."
   },
-  "Feminem": {
+  "Wild 'N Out Wildcard": {
    "bongs": 20,
-   "line": "Feminem. Bars on bars."
+   "line": "Wild 'N Out wildcard. Nobody knows what you'll say next."
   },
-  "Infrared": {
+  "Infrared Heavyweight": {
    "bongs": 25,
-   "line": "You run all of Passaic County."
+   "line": "Infrared heat. You run all of Passaic County."
   }
  },
  "trophyArt": [

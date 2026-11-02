@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "CEDARHURST",
  "boro": "Long Island",
  "saveKey": "ogfan99liltecca1",
- "startRank": "Plan B",
+ "startRank": "Tecca's Plan B",
  "ranks": [
   "Did It Again",
   "Lot of Me",
-  "Virgo World",
-  "500lbs",
-  "Plan A"
+  "Virgo World Citizen",
+  "Ransom Collector",
+  "Plan A Champ"
  ],
- "topRank": "TEC",
+ "topRank": "We Love You Tecca",
  "point": "Ransom",
  "points": "Ransoms",
  "rankRewards": {
   "Did It Again": {
    "bongs": 5,
-   "line": "You did it again."
+   "line": "You did it again. Welcome to the climb."
   },
   "Lot of Me": {
    "bongs": 10,
-   "line": "Now they getting a lot of you."
+   "line": "Now they getting a lot of you. Keep going."
   },
-  "Virgo World": {
+  "Virgo World Citizen": {
    "bongs": 15,
-   "line": "Welcome to Virgo World."
+   "line": "Virgo World citizen. Your passport just got stamped."
   },
-  "500lbs": {
+  "Ransom Collector": {
    "bongs": 20,
-   "line": "Five hundred pounds of wins."
+   "line": "Ransom collected. Everybody's paying attention to you now."
   },
-  "Plan A": {
+  "Plan A Champ": {
    "bongs": 25,
-   "line": "You run all of Cedarhurst."
+   "line": "Plan A Champ. You run all of Cedarhurst."
   }
  },
  "trophyArt": [

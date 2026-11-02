@@ -6,15 +6,15 @@ window.CFG = {
  "hoodUpper": "STAPLETON",
  "boro": "Staten Island",
  "saveKey": "ogfan99rza1",
- "startRank": "Grasshopper",
+ "startRank": "Abbot's Grasshopper",
  "ranks": [
   "Prince Rakeem",
   "Bobby Steels",
   "Bobby Digital",
   "The RZArector",
-  "The Abbot"
+  "Shaolin Master"
  ],
- "topRank": "Shaolin Master",
+ "topRank": "The Abbot",
  "point": "Chamber",
  "points": "Chambers",
  "rankRewards": {
@@ -32,11 +32,11 @@ window.CFG = {
   },
   "The RZArector": {
    "bongs": 20,
-   "line": "The RZArector. You brought the sound back from the dead."
+   "line": "The RZArector. You raised the sound from the grave."
   },
-  "The Abbot": {
+  "Shaolin Master": {
    "bongs": 25,
-   "line": "You run all of Stapleton."
+   "line": "Shaolin master. You run all of Stapleton."
   }
  },
  "trophyArt": [

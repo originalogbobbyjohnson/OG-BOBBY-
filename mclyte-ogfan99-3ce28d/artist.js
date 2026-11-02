@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "EAST FLATBUSH",
  "boro": "Brooklyn",
  "saveKey": "ogfan99mclyte1",
- "startRank": "Pebble",
+ "startRank": "Paper Thin Excuse",
  "ranks": [
-  "Follower",
-  "Scholar",
-  "Cha Cha Cha",
-  "Boulder",
-  "Hip Hop Leader"
+  "Pebble on the Block",
+  "Cha Cha Cha Dancer",
+  "Cold Rock a Party",
+  "Brooklyn Boulder",
+  "Rap Queen of Brooklyn"
  ],
  "topRank": "Lyte as a Rock",
  "point": "Rock",
  "points": "Rocks",
  "rankRewards": {
-  "Follower": {
+  "Pebble on the Block": {
    "bongs": 5,
-   "line": "You're following the tone of her voice now."
+   "line": "A pebble on the block. Start rolling."
   },
-  "Scholar": {
+  "Cha Cha Cha Dancer": {
    "bongs": 10,
-   "line": "You can tell by the tone: a scholar."
+   "line": "Cha Cha Cha. K-Rock threw the cuts your way."
   },
-  "Cha Cha Cha": {
+  "Cold Rock a Party": {
    "bongs": 15,
-   "line": "K-Rock threw the cuts your way."
+   "line": "You cold rocked the party. Everybody felt it."
   },
-  "Boulder": {
+  "Brooklyn Boulder": {
    "bongs": 20,
-   "line": "No pebble no more. You're rolling now."
+   "line": "No pebble no more. You're a Brooklyn boulder."
   },
-  "Hip Hop Leader": {
+  "Rap Queen of Brooklyn": {
    "bongs": 25,
-   "line": "You run all of East Flatbush."
+   "line": "Rap Queen of Brooklyn. You run all of East Flatbush."
   }
  },
  "trophyArt": [
@@ -406,655 +406,655 @@ window.CFG = {
    "qs": []
   }
  ],
-  explicitSongs: [
-   {
-    "title": "Stop, Look, Listen",
-    "id": "GeAxvT62l6o",
-    "start": 53.4,
-    "cuts": [
-     91.8,
-     159.8,
-     192.8
+ "explicitSongs": [
+  {
+   "title": "Stop, Look, Listen",
+   "id": "GeAxvT62l6o",
+   "start": 53.4,
+   "cuts": [
+    91.8,
+    159.8,
+    192.8
+   ],
+   "qs": [
+    [
+     [
+      "\"I'm rhyming and ___ also\"",
+      "Designing",
+      "Dancing",
+      "Driving"
+     ],
+     [
+      "Who wants to be like her?",
+      "A sucker MC",
+      "A DJ",
+      "Her brother"
+     ],
+     [
+      "\"No trait of...\"",
+      "Originality",
+      "Loyalty",
+      "Rhythm"
+     ],
+     [
+      "\"I am not one to down...\"",
+      "Another",
+      "My crew",
+      "The DJ"
+     ],
+     [
+      "\"I'll drop a tune or maybe even...\" how many?",
+      "Two",
+      "Three",
+      "Ten"
+     ],
+     [
+      "\"...for you and your...\"",
+      "Crew",
+      "Friends",
+      "Girl"
+     ],
+     [
+      "\"So you can start shaking and...\"",
+      "Moving",
+      "Grooving",
+      "Jumping"
+     ],
+     [
+      "\"New and improved like a freshly cut...\"",
+      "Diamond",
+      "Record",
+      "Fade"
+     ],
+     [
+      "Besides a ruby, which gem does she name?",
+      "Sapphire",
+      "Emerald",
+      "Pearl"
+     ],
+     [
+      "\"This jam you are ___ to\"",
+      "Forced",
+      "Meant",
+      "Ready"
+     ]
     ],
-    "qs": [
+    [
      [
-      [
-       "\"I'm rhyming and ___ also\"",
-       "Designing",
-       "Dancing",
-       "Driving"
-      ],
-      [
-       "Who wants to be like her?",
-       "A sucker MC",
-       "A DJ",
-       "Her brother"
-      ],
-      [
-       "\"No trait of...\"",
-       "Originality",
-       "Loyalty",
-       "Rhythm"
-      ],
-      [
-       "\"I am not one to down...\"",
-       "Another",
-       "My crew",
-       "The DJ"
-      ],
-      [
-       "\"I'll drop a tune or maybe even...\" how many?",
-       "Two",
-       "Three",
-       "Ten"
-      ],
-      [
-       "\"...for you and your...\"",
-       "Crew",
-       "Friends",
-       "Girl"
-      ],
-      [
-       "\"So you can start shaking and...\"",
-       "Moving",
-       "Grooving",
-       "Jumping"
-      ],
-      [
-       "\"New and improved like a freshly cut...\"",
-       "Diamond",
-       "Record",
-       "Fade"
-      ],
-      [
-       "Besides a ruby, which gem does she name?",
-       "Sapphire",
-       "Emerald",
-       "Pearl"
-      ],
-      [
-       "\"This jam you are ___ to\"",
-       "Forced",
-       "Meant",
-       "Ready"
-      ]
+      "\"Look, look...\"",
+      "Listen",
+      "Learn",
+      "Leave"
      ],
      [
-      [
-       "\"Look, look...\"",
-       "Listen",
-       "Learn",
-       "Leave"
-      ],
-      [
-       "\"Want to battle me? Now that's strange...\"",
-       "Behavior",
-       "Thinking",
-       "Talking"
-      ],
-      [
-       "\"When I start I never give...\"",
-       "Slack",
-       "Up",
-       "In"
-      ],
-      [
-       "\"You feel like a ___ sign was put on your back\"",
-       "Kick me",
-       "For sale",
-       "Stop"
-      ],
-      [
-       "\"Yes, I'm a super...\"",
-       "Duper",
-       "Star",
-       "Trooper"
-      ],
-      [
-       "\"Come on, admit it, the Lyte is too...\"",
-       "Fly",
-       "Shy",
-       "Slow"
-      ],
-      [
-       "How much does she give it?",
-       "100%",
-       "50%",
-       "Half"
-      ],
-      [
-       "\"Tear it, repair it like your...\"",
-       "Hand-me-down",
-       "Old shoes",
-       "Bike"
-      ],
-      [
-       "\"Save all your ___ tears\"",
-       "Crocodile",
-       "Fake",
-       "Baby"
-      ],
-      [
-       "\"Be a grown man with the ___ in your hand\"",
-       "Mic",
-       "Pen",
-       "Cash"
-      ],
-      [
-       "\"Biting is not part of the...\"",
-       "Plan",
-       "Show",
-       "Deal"
-      ]
+      "\"Want to battle me? Now that's strange...\"",
+      "Behavior",
+      "Thinking",
+      "Talking"
      ],
      [
-      [
-       "\"MC, master of...\"",
-       "Creativity",
-       "Ceremonies",
-       "Rhythm"
-      ],
-      [
-       "\"Rapping is the...\"",
-       "Activity",
-       "Hobby",
-       "Job"
-      ],
-      [
-       "\"Rap is the...\"",
-       "Sport",
-       "Game",
-       "Art"
-      ],
-      [
-       "\"'88 I was great, but '89 is my...\"",
-       "Time",
-       "Year off",
-       "Last year"
-      ],
-      [
-       "\"Stop looking, listen to the right...\"",
-       "Rhyme",
-       "Radio",
-       "Beat"
-      ],
-      [
-       "Who's the DJ?",
-       "K-Rock",
-       "Red Alert",
-       "Kid Capri"
-      ],
-      [
-       "\"The DJ throws the ___ my way\"",
-       "Cuts",
-       "Beats",
-       "Records"
-      ],
-      [
-       "\"Leg one and leg two, they do the...\"",
-       "Jumping",
-       "Singing",
-       "Cooking"
-      ],
-      [
-       "\"Always up to...\"",
-       "Something",
-       "No good",
-       "Mischief"
-      ],
-      [
-       "\"In the rap category, MC Lyte...\"",
-       "Headlines",
-       "Opens",
-       "Leaves"
-      ],
-      [
-       "\"Taking no...\"",
-       "Short",
-       "Breaks",
-       "Losses"
-      ]
+      "\"When I start I never give...\"",
+      "Slack",
+      "Up",
+      "In"
+     ],
+     [
+      "\"You feel like a ___ sign was put on your back\"",
+      "Kick me",
+      "For sale",
+      "Stop"
+     ],
+     [
+      "\"Yes, I'm a super...\"",
+      "Duper",
+      "Star",
+      "Trooper"
+     ],
+     [
+      "\"Come on, admit it, the Lyte is too...\"",
+      "Fly",
+      "Shy",
+      "Slow"
+     ],
+     [
+      "How much does she give it?",
+      "100%",
+      "50%",
+      "Half"
+     ],
+     [
+      "\"Tear it, repair it like your...\"",
+      "Hand-me-down",
+      "Old shoes",
+      "Bike"
+     ],
+     [
+      "\"Save all your ___ tears\"",
+      "Crocodile",
+      "Fake",
+      "Baby"
+     ],
+     [
+      "\"Be a grown man with the ___ in your hand\"",
+      "Mic",
+      "Pen",
+      "Cash"
+     ],
+     [
+      "\"Biting is not part of the...\"",
+      "Plan",
+      "Show",
+      "Deal"
+     ]
+    ],
+    [
+     [
+      "\"MC, master of...\"",
+      "Creativity",
+      "Ceremonies",
+      "Rhythm"
+     ],
+     [
+      "\"Rapping is the...\"",
+      "Activity",
+      "Hobby",
+      "Job"
+     ],
+     [
+      "\"Rap is the...\"",
+      "Sport",
+      "Game",
+      "Art"
+     ],
+     [
+      "\"'88 I was great, but '89 is my...\"",
+      "Time",
+      "Year off",
+      "Last year"
+     ],
+     [
+      "\"Stop looking, listen to the right...\"",
+      "Rhyme",
+      "Radio",
+      "Beat"
+     ],
+     [
+      "Who's the DJ?",
+      "K-Rock",
+      "Red Alert",
+      "Kid Capri"
+     ],
+     [
+      "\"The DJ throws the ___ my way\"",
+      "Cuts",
+      "Beats",
+      "Records"
+     ],
+     [
+      "\"Leg one and leg two, they do the...\"",
+      "Jumping",
+      "Singing",
+      "Cooking"
+     ],
+     [
+      "\"Always up to...\"",
+      "Something",
+      "No good",
+      "Mischief"
+     ],
+     [
+      "\"In the rap category, MC Lyte...\"",
+      "Headlines",
+      "Opens",
+      "Leaves"
+     ],
+     [
+      "\"Taking no...\"",
+      "Short",
+      "Breaks",
+      "Losses"
      ]
     ]
-   },
-   {
-    "title": "Poor Georgie",
-    "id": "hSTzr2V4KMw",
-    "start": 10.1,
-    "cuts": [
-     41.2,
-     140.8,
-     239.9
+   ]
+  },
+  {
+   "title": "Poor Georgie",
+   "id": "hSTzr2V4KMw",
+   "start": 10.1,
+   "cuts": [
+    41.2,
+    140.8,
+    239.9
+   ],
+   "qs": [
+    [
+     [
+      "Where did she meet him?",
+      "In a club",
+      "At a party",
+      "In the park"
+     ],
+     [
+      "\"Hanging out one...\"",
+      "Night",
+      "Day",
+      "Weekend"
+     ],
+     [
+      "\"Hello, I'm George...\"",
+      "Hi Lyte",
+      "Nice to meet you",
+      "What's up"
+     ],
+     [
+      "\"Hope everything's...\"",
+      "Fine",
+      "Good",
+      "Cool"
+     ],
+     [
+      "\"Can I call you...\"",
+      "Sometimes",
+      "Tonight",
+      "Later"
+     ],
+     [
+      "\"Can I get the digits and the...\"",
+      "Address",
+      "Name",
+      "Email"
+     ],
+     [
+      "\"So I can come...\"",
+      "Visit",
+      "Over",
+      "By"
+     ],
+     [
+      "\"I gave him the digits, that wasn't a...\"",
+      "Problem",
+      "Secret",
+      "Mistake"
+     ],
+     [
+      "\"George look good, damn...\"",
+      "Good",
+      "Fine",
+      "Fly"
+     ],
+     [
+      "\"If I didn't, some other ___ would\"",
+      "Girl",
+      "Guy",
+      "Friend"
+     ],
+     [
+      "\"In my mind I hoped for the...\"",
+      "Best",
+      "Worst",
+      "Most"
+     ],
+     [
+      "\"Convincing myself that this was not a...\"",
+      "Test",
+      "Game",
+      "Dream"
+     ]
     ],
-    "qs": [
+    [
      [
-      [
-       "Where did she meet him?",
-       "In a club",
-       "At a party",
-       "In the park"
-      ],
-      [
-       "\"Hanging out one...\"",
-       "Night",
-       "Day",
-       "Weekend"
-      ],
-      [
-       "\"Hello, I'm George...\"",
-       "Hi Lyte",
-       "Nice to meet you",
-       "What's up"
-      ],
-      [
-       "\"Hope everything's...\"",
-       "Fine",
-       "Good",
-       "Cool"
-      ],
-      [
-       "\"Can I call you...\"",
-       "Sometimes",
-       "Tonight",
-       "Later"
-      ],
-      [
-       "\"Can I get the digits and the...\"",
-       "Address",
-       "Name",
-       "Email"
-      ],
-      [
-       "\"So I can come...\"",
-       "Visit",
-       "Over",
-       "By"
-      ],
-      [
-       "\"I gave him the digits, that wasn't a...\"",
-       "Problem",
-       "Secret",
-       "Mistake"
-      ],
-      [
-       "\"George look good, damn...\"",
-       "Good",
-       "Fine",
-       "Fly"
-      ],
-      [
-       "\"If I didn't, some other ___ would\"",
-       "Girl",
-       "Guy",
-       "Friend"
-      ],
-      [
-       "\"In my mind I hoped for the...\"",
-       "Best",
-       "Worst",
-       "Most"
-      ],
-      [
-       "\"Convincing myself that this was not a...\"",
-       "Test",
-       "Game",
-       "Dream"
-      ]
+      "\"This life needs ___ too\"",
+      "Love",
+      "Time",
+      "Fun"
      ],
      [
-      [
-       "\"This life needs ___ too\"",
-       "Love",
-       "Time",
-       "Fun"
-      ],
-      [
-       "\"And that ain't no...\"",
-       "Lie",
-       "Joke",
-       "Game"
-      ],
-      [
-       "\"Keep your ears...\"",
-       "Open",
-       "Clean",
-       "Up"
-      ],
-      [
-       "\"I gave him the number, I saw it in his...\"",
-       "Eyes",
-       "Smile",
-       "Face"
-      ],
-      [
-       "\"Good conversation over the...\"",
-       "Phone",
-       "Dinner",
-       "Coffee"
-      ],
-      [
-       "\"George was sweet, so nice and so...\"",
-       "Neat",
-       "Sweet",
-       "Smart"
-      ],
-      [
-       "\"With any other guy he didn't have to...\"",
-       "Compete",
-       "Worry",
-       "Fight"
-      ],
-      [
-       "\"George was...\"",
-       "Mature",
-       "Shy",
-       "Young"
-      ],
-      [
-       "George had girls spread out from state to...",
-       "State",
-       "City",
-       "Town"
-      ],
-      [
-       "\"As long as he kept his girls in...\"",
-       "Check",
-       "Line",
-       "Order"
-      ],
-      [
-       "\"Make sure I never saw them and showed me...\"",
-       "Respect",
-       "Love",
-       "Money"
-      ],
-      [
-       "\"Georgie Porgie ... making young girls...\"",
-       "Cry",
-       "Smile",
-       "Wait"
-      ]
+      "\"And that ain't no...\"",
+      "Lie",
+      "Joke",
+      "Game"
      ],
      [
-      [
-       "\"I found him there with his clothes messed up and his ___ messed up\"",
-       "Hair",
-       "Shoes",
-       "Hat"
-      ],
-      [
-       "\"Don't drive, use your...\"",
-       "Head",
-       "Phone",
-       "Brain"
-      ],
-      [
-       "Who did he get kicked out by?",
-       "A long-hair dread",
-       "The bouncer",
-       "His friend"
-      ],
-      [
-       "\"He drove off into the...\"",
-       "Night",
-       "Rain",
-       "City"
-      ],
-      [
-       "\"He was still young yet running out of...\"",
-       "Time",
-       "Luck",
-       "Money"
-      ],
-      [
-       "\"I wish I would have told him how I liked him so...\"",
-       "Much",
-       "Well",
-       "Long"
-      ],
-      [
-       "\"How he made me feel with the slightest...\"",
-       "Touch",
-       "Smile",
-       "Word"
-      ],
-      [
-       "\"This story is not to say that I'm in...\"",
-       "Sorrow",
-       "Trouble",
-       "Love"
-      ],
-      [
-       "\"No one is promised...\"",
-       "Tomorrow",
-       "Forever",
-       "Today"
-      ],
-      [
-       "\"If you love someone, just say it...\"",
-       "Often",
-       "Loud",
-       "Now"
-      ],
-      [
-       "\"Don't think that it can't happen to...\"",
-       "You",
-       "Me",
-       "Us"
-      ]
+      "\"Keep your ears...\"",
+      "Open",
+      "Clean",
+      "Up"
+     ],
+     [
+      "\"I gave him the number, I saw it in his...\"",
+      "Eyes",
+      "Smile",
+      "Face"
+     ],
+     [
+      "\"Good conversation over the...\"",
+      "Phone",
+      "Dinner",
+      "Coffee"
+     ],
+     [
+      "\"George was sweet, so nice and so...\"",
+      "Neat",
+      "Sweet",
+      "Smart"
+     ],
+     [
+      "\"With any other guy he didn't have to...\"",
+      "Compete",
+      "Worry",
+      "Fight"
+     ],
+     [
+      "\"George was...\"",
+      "Mature",
+      "Shy",
+      "Young"
+     ],
+     [
+      "George had girls spread out from state to...",
+      "State",
+      "City",
+      "Town"
+     ],
+     [
+      "\"As long as he kept his girls in...\"",
+      "Check",
+      "Line",
+      "Order"
+     ],
+     [
+      "\"Make sure I never saw them and showed me...\"",
+      "Respect",
+      "Love",
+      "Money"
+     ],
+     [
+      "\"Georgie Porgie ... making young girls...\"",
+      "Cry",
+      "Smile",
+      "Wait"
+     ]
+    ],
+    [
+     [
+      "\"I found him there with his clothes messed up and his ___ messed up\"",
+      "Hair",
+      "Shoes",
+      "Hat"
+     ],
+     [
+      "\"Don't drive, use your...\"",
+      "Head",
+      "Phone",
+      "Brain"
+     ],
+     [
+      "Who did he get kicked out by?",
+      "A long-hair dread",
+      "The bouncer",
+      "His friend"
+     ],
+     [
+      "\"He drove off into the...\"",
+      "Night",
+      "Rain",
+      "City"
+     ],
+     [
+      "\"He was still young yet running out of...\"",
+      "Time",
+      "Luck",
+      "Money"
+     ],
+     [
+      "\"I wish I would have told him how I liked him so...\"",
+      "Much",
+      "Well",
+      "Long"
+     ],
+     [
+      "\"How he made me feel with the slightest...\"",
+      "Touch",
+      "Smile",
+      "Word"
+     ],
+     [
+      "\"This story is not to say that I'm in...\"",
+      "Sorrow",
+      "Trouble",
+      "Love"
+     ],
+     [
+      "\"No one is promised...\"",
+      "Tomorrow",
+      "Forever",
+      "Today"
+     ],
+     [
+      "\"If you love someone, just say it...\"",
+      "Often",
+      "Loud",
+      "Now"
+     ],
+     [
+      "\"Don't think that it can't happen to...\"",
+      "You",
+      "Me",
+      "Us"
      ]
     ]
-   },
-   {
-    "title": "Lyte as a Rock",
-    "id": "ZGGSLyvn8YU",
-    "start": 27.4,
-    "cuts": [
-     60.1,
-     111.5,
-     180.4
+   ]
+  },
+  {
+   "title": "Lyte as a Rock",
+   "id": "ZGGSLyvn8YU",
+   "start": 27.4,
+   "cuts": [
+    60.1,
+    111.5,
+    180.4
+   ],
+   "qs": [
+    [
+     [
+      "What word repeats at the start?",
+      "Bounce",
+      "Jump",
+      "Rock"
+     ],
+     [
+      "\"Must I say it again, I said it...\"",
+      "Before",
+      "Twice",
+      "Already"
+     ],
+     [
+      "\"Move out the way when I'm coming through the...\"",
+      "Door",
+      "Park",
+      "Block"
+     ],
+     [
+      "\"Heavy, I'm light as a...\"",
+      "Rock",
+      "Feather",
+      "Cloud"
+     ],
+     [
+      "\"Guys watch, even some of the ___ clock\"",
+      "Girls",
+      "Kids",
+      "Cops"
+     ],
+     [
+      "\"Step back, it ain't that type of...\"",
+      "Party",
+      "Song",
+      "Show"
+     ],
+     [
+      "\"No reply if you ain't...\"",
+      "Somebody",
+      "Ready",
+      "Famous"
+     ],
+     [
+      "\"Get out my...\"",
+      "Face",
+      "Way",
+      "House"
+     ],
+     [
+      "\"Don't want to hear no...\"",
+      "More",
+      "Noise",
+      "Lies"
+     ]
     ],
-    "qs": [
+    [
      [
-      [
-       "What word repeats at the start?",
-       "Bounce",
-       "Jump",
-       "Rock"
-      ],
-      [
-       "\"Must I say it again, I said it...\"",
-       "Before",
-       "Twice",
-       "Already"
-      ],
-      [
-       "\"Move out the way when I'm coming through the...\"",
-       "Door",
-       "Park",
-       "Block"
-      ],
-      [
-       "\"Heavy, I'm light as a...\"",
-       "Rock",
-       "Feather",
-       "Cloud"
-      ],
-      [
-       "\"Guys watch, even some of the ___ clock\"",
-       "Girls",
-       "Kids",
-       "Cops"
-      ],
-      [
-       "\"Step back, it ain't that type of...\"",
-       "Party",
-       "Song",
-       "Show"
-      ],
-      [
-       "\"No reply if you ain't...\"",
-       "Somebody",
-       "Ready",
-       "Famous"
-      ],
-      [
-       "\"Get out my...\"",
-       "Face",
-       "Way",
-       "House"
-      ],
-      [
-       "\"Don't want to hear no...\"",
-       "More",
-       "Noise",
-       "Lies"
-      ]
+      "\"You ain't got what it...\"",
+      "Takes",
+      "Needs",
+      "Wants"
      ],
      [
-      [
-       "\"You ain't got what it...\"",
-       "Takes",
-       "Needs",
-       "Wants"
-      ],
-      [
-       "\"Your smile, your wink, your big...\"",
-       "Fake flake",
-       "Gold chain",
-       "Blue eyes"
-      ],
-      [
-       "\"You're so pathetic, you make my stomach...\"",
-       "Turn",
-       "Growl",
-       "Hurt"
-      ],
-      [
-       "\"You beg, you borrow, now you have to...\"",
-       "Learn",
-       "Pay",
-       "Leave"
-      ],
-      [
-       "\"Light as a rock, or should I say a...\"",
-       "Boulder",
-       "Pebble",
-       "Brick"
-      ],
-      [
-       "\"Rolling down your...\"",
-       "Neck",
-       "Street",
-       "Hill"
-      ],
-      [
-       "\"Pounding on your...\"",
-       "Shoulders",
-       "Door",
-       "Head"
-      ],
-      [
-       "Obstacles: \"chew them up, spit them...\"",
-       "Out",
-       "Back",
-       "Away"
-      ],
-      [
-       "\"I show stability, potential and...\"",
-       "Strength",
-       "Style",
-       "Speed"
-      ],
-      [
-       "\"On the other hand, you are weak and...\"",
-       "Unruly",
-       "Lazy",
-       "Late"
-      ],
-      [
-       "\"Suckers, suckers, out of my...\"",
-       "Way",
-       "Sight",
-       "Space"
-      ]
+      "\"Your smile, your wink, your big...\"",
+      "Fake flake",
+      "Gold chain",
+      "Blue eyes"
      ],
      [
-      [
-       "\"I'm a slave to the...\"",
-       "Rhythm",
-       "Money",
-       "Radio"
-      ],
-      [
-       "\"I am a rock and you are just a...\"",
-       "Pebble",
-       "Stone",
-       "Grain of sand"
-      ],
-      [
-       "\"Turn up the bass and rock, adjust the...\"",
-       "Levels",
-       "Volume",
-       "Speakers"
-      ],
-      [
-       "\"If a rap can paint a thousand words, I can paint a...\"",
-       "Million",
-       "Hundred",
-       "Picture"
-      ],
-      [
-       "\"Lyte is capable of painting up a...\"",
-       "Zillion",
-       "Billion",
-       "Trillion"
-      ],
-      [
-       "\"Never underestimate, like...\"",
-       "DMC",
-       "LL",
-       "Rakim"
-      ],
-      [
-       "\"By the tone of my voice you can tell I am a...\"",
-       "Scholar",
-       "Singer",
-       "Teacher"
-      ],
-      [
-       "\"I'm also the leader of the hip hop...\"",
-       "Followers",
-       "Fans",
-       "Kids"
-      ],
-      [
-       "\"Rocking it like a...\"",
-       "Checkerboard",
-       "Hurricane",
-       "Rocket"
-      ],
-      [
-       "\"The grace as I ease across the...\"",
-       "Stage",
-       "Floor",
-       "Room"
-      ],
-      [
-       "\"Bars around the audience, sort of like a...\"",
-       "Cage",
-       "Fence",
-       "Wall"
-      ],
-      [
-       "What's up to my producer...?",
-       "King of Chill",
-       "DJ K-Rock",
-       "Marley Marl"
-      ]
+      "\"You're so pathetic, you make my stomach...\"",
+      "Turn",
+      "Growl",
+      "Hurt"
+     ],
+     [
+      "\"You beg, you borrow, now you have to...\"",
+      "Learn",
+      "Pay",
+      "Leave"
+     ],
+     [
+      "\"Light as a rock, or should I say a...\"",
+      "Boulder",
+      "Pebble",
+      "Brick"
+     ],
+     [
+      "\"Rolling down your...\"",
+      "Neck",
+      "Street",
+      "Hill"
+     ],
+     [
+      "\"Pounding on your...\"",
+      "Shoulders",
+      "Door",
+      "Head"
+     ],
+     [
+      "Obstacles: \"chew them up, spit them...\"",
+      "Out",
+      "Back",
+      "Away"
+     ],
+     [
+      "\"I show stability, potential and...\"",
+      "Strength",
+      "Style",
+      "Speed"
+     ],
+     [
+      "\"On the other hand, you are weak and...\"",
+      "Unruly",
+      "Lazy",
+      "Late"
+     ],
+     [
+      "\"Suckers, suckers, out of my...\"",
+      "Way",
+      "Sight",
+      "Space"
+     ]
+    ],
+    [
+     [
+      "\"I'm a slave to the...\"",
+      "Rhythm",
+      "Money",
+      "Radio"
+     ],
+     [
+      "\"I am a rock and you are just a...\"",
+      "Pebble",
+      "Stone",
+      "Grain of sand"
+     ],
+     [
+      "\"Turn up the bass and rock, adjust the...\"",
+      "Levels",
+      "Volume",
+      "Speakers"
+     ],
+     [
+      "\"If a rap can paint a thousand words, I can paint a...\"",
+      "Million",
+      "Hundred",
+      "Picture"
+     ],
+     [
+      "\"Lyte is capable of painting up a...\"",
+      "Zillion",
+      "Billion",
+      "Trillion"
+     ],
+     [
+      "\"Never underestimate, like...\"",
+      "DMC",
+      "LL",
+      "Rakim"
+     ],
+     [
+      "\"By the tone of my voice you can tell I am a...\"",
+      "Scholar",
+      "Singer",
+      "Teacher"
+     ],
+     [
+      "\"I'm also the leader of the hip hop...\"",
+      "Followers",
+      "Fans",
+      "Kids"
+     ],
+     [
+      "\"Rocking it like a...\"",
+      "Checkerboard",
+      "Hurricane",
+      "Rocket"
+     ],
+     [
+      "\"The grace as I ease across the...\"",
+      "Stage",
+      "Floor",
+      "Room"
+     ],
+     [
+      "\"Bars around the audience, sort of like a...\"",
+      "Cage",
+      "Fence",
+      "Wall"
+     ],
+     [
+      "What's up to my producer...?",
+      "King of Chill",
+      "DJ K-Rock",
+      "Marley Marl"
      ]
     ]
-   }
-  ]
+   ]
+  }
+ ]
 };
 (function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

@@ -9,34 +9,34 @@ window.CFG = {
  "startRank": "Downtown Baby",
  "ranks": [
   "Uptown Baby",
-  "Deja Vu",
-  "We Will Ball",
-  "What's That Sound",
-  "Cross Bronx"
+  "Parkchester Regular",
+  "Deja Vu Veteran",
+  "Steely Dan Sampler",
+  "Uptown Bronx Boss"
  ],
- "topRank": "Make It Reign",
+ "topRank": "Make It Reign Kings",
  "point": "Token",
  "points": "Tokens",
  "rankRewards": {
   "Uptown Baby": {
    "bongs": 5,
-   "line": "Uptown Baby. Now you are from uptown."
+   "line": "Uptown Baby. Now you're from uptown for real."
   },
-  "Deja Vu": {
+  "Parkchester Regular": {
    "bongs": 10,
-   "line": "Deja Vu. You have heard this one before."
+   "line": "Parkchester regular. The whole complex knows your name."
   },
-  "We Will Ball": {
+  "Deja Vu Veteran": {
    "bongs": 15,
-   "line": "We Will Ball. Big things from here on."
+   "line": "Deja Vu Veteran. You've heard this one before."
   },
-  "What's That Sound": {
+  "Steely Dan Sampler": {
    "bongs": 20,
-   "line": "What's That Sound. The whole block hears you coming."
+   "line": "You know the sample. Steely Dan never sounded so uptown."
   },
-  "Cross Bronx": {
+  "Uptown Bronx Boss": {
    "bongs": 25,
-   "line": "You run all of Parkchester."
+   "line": "Uptown Bronx Boss. You run all of Parkchester."
   }
  },
  "trophyArt": [

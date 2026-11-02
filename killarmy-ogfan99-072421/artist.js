@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "STATEN ISLAND",
  "boro": "Staten Island",
  "saveKey": "ogfan99killarmy1",
- "startRank": "Recruit",
+ "startRank": "AWOL Civilian",
  "ranks": [
-  "Foot Soldier",
+  "Killarmy Recruit",
   "Camouflage Ninja",
-  "Wu-Renegade",
-  "Swinging Sword",
+  "Swinging Swordsman",
+  "Dirty Weaponry Expert",
   "Five Star General"
  ],
- "topRank": "Killarmy General",
+ "topRank": "Killarmy Field Marshal",
  "point": "Stripe",
  "points": "Stripes",
  "rankRewards": {
-  "Foot Soldier": {
+  "Killarmy Recruit": {
    "bongs": 5,
-   "line": "Foot Soldier. You made it through basic."
+   "line": "Killarmy recruit. You made it through basic training."
   },
   "Camouflage Ninja": {
    "bongs": 10,
-   "line": "Camouflage Ninja. Nobody saw you coming."
+   "line": "Camouflage ninja. Nobody saw you coming in."
   },
-  "Wu-Renegade": {
+  "Swinging Swordsman": {
    "bongs": 15,
-   "line": "Wu-Renegade. You march to your own drum."
+   "line": "Swinging swordsman. Sharp on every single verse."
   },
-  "Swinging Sword": {
+  "Dirty Weaponry Expert": {
    "bongs": 20,
-   "line": "Swinging Sword. Sharp on every verse."
+   "line": "Dirty Weaponry expert. Your arsenal is fully loaded."
   },
   "Five Star General": {
    "bongs": 25,
-   "line": "You run all of Staten Island."
+   "line": "Five star general. You run all of Staten Island."
   }
  },
  "trophyArt": [

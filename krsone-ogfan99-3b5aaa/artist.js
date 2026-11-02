@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "SOUTH BRONX",
  "boro": "the Bronx",
  "saveKey": "ogfan99krsone1",
- "startRank": "Video Rapper",
+ "startRank": "Fake Video Rapper",
  "ranks": [
-  "BDP Crew",
+  "BDP Freshman",
+  "My Philosophy Pupil",
   "Edutainer",
-  "Hiphoppa",
-  "Blastmaster",
-  "Still #1"
+  "Temple of Hip Hop",
+  "The Blastmaster"
  ],
  "topRank": "The Teacha",
  "point": "Lesson",
  "points": "Lessons",
  "rankRewards": {
-  "BDP Crew": {
+  "BDP Freshman": {
    "bongs": 5,
-   "line": "BDP Crew. You're down with Boogie Down Productions."
+   "line": "BDP freshman. You're down with Boogie Down Productions."
+  },
+  "My Philosophy Pupil": {
+   "bongs": 10,
+   "line": "My Philosophy pupil. You're learning the knowledge now."
   },
   "Edutainer": {
-   "bongs": 10,
-   "line": "Edutainer. You teach while you entertain."
-  },
-  "Hiphoppa": {
    "bongs": 15,
-   "line": "Hiphoppa. You don't just do hip hop, you live it."
+   "line": "Edutainer. You teach while you entertain the crowd."
   },
-  "Blastmaster": {
+  "Temple of Hip Hop": {
    "bongs": 20,
-   "line": "Blastmaster. Punch up the data."
+   "line": "Temple of Hip Hop. You don't do it, you live it."
   },
-  "Still #1": {
+  "The Blastmaster": {
    "bongs": 25,
-   "line": "You run all of the South Bronx."
+   "line": "Blastmaster. Still number one, you run all of the South Bronx."
   }
  },
  "trophyArt": [

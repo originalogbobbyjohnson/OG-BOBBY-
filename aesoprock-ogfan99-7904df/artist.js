@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "NORTHPORT",
  "boro": "Long Island",
  "saveKey": "ogfan99aesoprock1",
- "startRank": "Dork",
+ "startRank": "Northport Dork",
  "ranks": [
-  "Float",
-  "Labor Days",
+  "Float Swimmer",
+  "Daylight Commuter",
+  "Labor Days Foreman",
   "Bazooka Tooth",
-  "Skelethon",
-  "Impossible Kid"
+  "Skelethon Master"
  ],
  "topRank": "None Shall Pass",
  "point": "Big Word",
  "points": "Big Words",
  "rankRewards": {
-  "Float": {
+  "Float Swimmer": {
    "bongs": 5,
-   "line": "You're floating now. Keep your head above water."
+   "line": "Float Swimmer. You kept your head above the water."
   },
-  "Labor Days": {
+  "Daylight Commuter": {
    "bongs": 10,
-   "line": "Clocked in. Every day is a labor day."
+   "line": "Daylight Commuter. You clocked in and caught every word."
+  },
+  "Labor Days Foreman": {
+   "bongs": 15,
+   "line": "Labor Days Foreman. Now you run the whole shift."
   },
   "Bazooka Tooth": {
-   "bongs": 15,
-   "line": "Bazooka Tooth. Your bite got bigger."
-  },
-  "Skelethon": {
    "bongs": 20,
-   "line": "Down to the bone. Nothing gets past you."
+   "line": "Bazooka Tooth. Your bite got bigger than everybody's."
   },
-  "Impossible Kid": {
+  "Skelethon Master": {
    "bongs": 25,
-   "line": "You run all of Northport."
+   "line": "Skelethon Master. Down to the bone, you run all of Northport."
   }
  },
  "trophyArt": [

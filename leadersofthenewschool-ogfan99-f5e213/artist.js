@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "UNIONDALE",
  "boro": "Long Island",
  "saveKey": "ogfan99leadersofthenewschool1",
- "startRank": "Freshman",
+ "startRank": "Hall Pass Truant",
  "ranks": [
-  "Homeroom",
+  "LONS Freshman",
   "Case of the P.T.A.",
-  "Sobb Story",
-  "Zone Coaster",
-  "T.I.M.E."
+  "Sobb Story Survivor",
+  "Zone Coaster Rider",
+  "Dungeon Dragon Boss"
  ],
- "topRank": "Leader of the New School",
+ "topRank": "Leader of the Leaders",
  "point": "Hall Pass",
  "points": "Hall Passes",
  "rankRewards": {
-  "Homeroom": {
+  "LONS Freshman": {
    "bongs": 5,
-   "line": "Homeroom. Take your seat, class is starting."
+   "line": "LONS freshman. Take your seat, class is starting."
   },
   "Case of the P.T.A.": {
    "bongs": 10,
    "line": "Case of the P.T.A. The parents got the word."
   },
-  "Sobb Story": {
+  "Sobb Story Survivor": {
    "bongs": 15,
-   "line": "Sobb Story. No tears, you kept going."
+   "line": "Sobb story survivor. No tears, you kept going."
   },
-  "Zone Coaster": {
+  "Zone Coaster Rider": {
    "bongs": 20,
-   "line": "Zone Coaster. Hold on, this ride goes up."
+   "line": "Zone coaster rider. Hold on, this ride goes up."
   },
-  "T.I.M.E.": {
+  "Dungeon Dragon Boss": {
    "bongs": 25,
-   "line": "You run all of Uniondale."
+   "line": "Dungeon dragon boss. Rawr! You run all of Uniondale."
   }
  },
  "trophyArt": [

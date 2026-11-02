@@ -6,13 +6,13 @@ window.CFG = {
  "hoodUpper": "STATEN ISLAND",
  "boro": "Staten Island",
  "saveKey": "ogfan99solomonchilds1",
- "startRank": "Young General",
+ "startRank": "Child's Play",
  "ranks": [
   "Child Famous",
-  "Theodore Unit",
+  "Theodore Soldier",
   "First Class",
-  "Child King",
-  "King Kong of NY"
+  "Shaolin Heavyweight",
+  "Child King"
  ],
  "topRank": "Child God",
  "point": "Stripe",
@@ -20,23 +20,23 @@ window.CFG = {
  "rankRewards": {
   "Child Famous": {
    "bongs": 5,
-   "line": "Child Famous. They know your name now."
+   "line": "Child famous. They know your name now."
   },
-  "Theodore Unit": {
+  "Theodore Soldier": {
    "bongs": 10,
-   "line": "You rolled with the Theodore Unit."
+   "line": "Theodore soldier. You rolled with the Unit."
   },
   "First Class": {
    "bongs": 15,
-   "line": "First Class. You took the teachings."
+   "line": "First class. You took the teachings."
+  },
+  "Shaolin Heavyweight": {
+   "bongs": 20,
+   "line": "Shaolin heavyweight. The Island feels your weight."
   },
   "Child King": {
-   "bongs": 20,
-   "line": "Child King. Wear the crown right."
-  },
-  "King Kong of NY": {
    "bongs": 25,
-   "line": "You run all of Staten Island."
+   "line": "Child King. You run all of Staten Island."
   }
  },
  "trophyArt": [

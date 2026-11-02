@@ -5,37 +5,37 @@ window.CFG = {
  "hood": "Bed-Stuy",
  "hoodUpper": "BED-STUY",
  "boro": "Brooklyn",
- "startRank": "Walk-In",
+ "startRank": "Salon Walk-In",
  "ranks": [
-  "Wash & Set",
-  "Acrylic",
-  "Shape Up",
-  "Attitude",
-  "Miss Me"
+  "Wash & Set Client",
+  "Fresh Acrylic Set",
+  "Shape Up Regular",
+  "Ski Mask Insider",
+  "Bed-Stuy Salon Boss"
  ],
- "topRank": "Forty-Seven",
+ "topRank": "The Masked Forty-Seven",
  "point": "Nail",
  "points": "Nails",
  "rankRewards": {
-  "Wash & Set": {
+  "Wash & Set Client": {
    "bongs": 5,
-   "line": "Washed, set and ready to go."
+   "line": "Wash and set. You walked out ready to go."
   },
-  "Acrylic": {
+  "Fresh Acrylic Set": {
    "bongs": 10,
-   "line": "Acrylic. Fresh set, every finger shining."
+   "line": "Fresh acrylic set. Every finger shining bright."
   },
-  "Shape Up": {
+  "Shape Up Regular": {
    "bongs": 15,
-   "line": "Shape up. Clean lines, sharp edges."
+   "line": "Shape up regular. Clean lines and sharp edges."
   },
-  "Attitude": {
+  "Ski Mask Insider": {
    "bongs": 20,
-   "line": "All attitude. The whole block felt it."
+   "line": "Ski mask insider. You know who's under there."
   },
-  "Miss Me": {
+  "Bed-Stuy Salon Boss": {
    "bongs": 25,
-   "line": "You run all of Bed-Stuy."
+   "line": "Salon boss. All attitude, and you run all of Bed-Stuy."
   }
  },
  "trophyArt": [

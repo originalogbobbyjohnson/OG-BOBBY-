@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "PERTH AMBOY",
  "boro": "New Jersey",
  "saveKey": "ogfan99koshadillz1",
- "startRank": "Awkward",
+ "startRank": "Soggy Pickle",
  "ranks": [
-  "Kosher Dill",
-  "KD Flow",
-  "Operator",
+  "Fresh Out the Jar",
+  "Kosher Dill Regular",
+  "KD Flow Operator",
   "Beverly Dillz",
-  "Everywhere"
+  "Pickle Jar Champion"
  ],
  "topRank": "The Big Dill",
  "point": "Pickle",
  "points": "Pickles",
  "rankRewards": {
-  "Kosher Dill": {
+  "Fresh Out the Jar": {
    "bongs": 5,
-   "line": "Fresh out the jar."
+   "line": "Fresh out the jar. Crunchy and ready to go."
   },
-  "KD Flow": {
+  "Kosher Dill Regular": {
    "bongs": 10,
-   "line": "You got the flow now."
+   "line": "Kosher Dill regular. You know the brine now."
   },
-  "Operator": {
+  "KD Flow Operator": {
    "bongs": 15,
-   "line": "Operator, put me through."
+   "line": "KD flow operator. Operator, put me through."
   },
   "Beverly Dillz": {
    "bongs": 20,
-   "line": "From Jersey to the hills."
+   "line": "Beverly Dillz. From Jersey all the way to the hills."
   },
-  "Everywhere": {
+  "Pickle Jar Champion": {
    "bongs": 25,
-   "line": "You run all of Perth Amboy."
+   "line": "Pickle champion. You run all of Perth Amboy."
   }
  },
  "trophyArt": [

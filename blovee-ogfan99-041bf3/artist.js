@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "MELROSE",
  "boro": "the Bronx",
  "saveKey": "ogfan99blovee1",
- "startRank": "Lil Bro",
+ "startRank": "Melrose Lil Bro",
  "ranks": [
-  "My Everything",
-  "Talk About It",
-  "All Alone",
-  "Orange Soda",
-  "IYKYK"
+  "Melrose Newcomer",
+  "Corner Regular",
+  "Melrose Day One",
+  "Lovee's Right Hand",
+  "Bronx Drill Boss"
  ],
  "topRank": "Melrose Legend",
  "point": "Soda",
  "points": "Sodas",
  "rankRewards": {
-  "My Everything": {
+  "Melrose Newcomer": {
    "bongs": 5,
-   "line": "My Everything. You gave it all you got."
+   "line": "Melrose Newcomer. You just stepped on the block."
   },
-  "Talk About It": {
+  "Corner Regular": {
    "bongs": 10,
-   "line": "Talk About It. Now they all talk about you."
+   "line": "Corner Regular. Everybody on the corner knows your face."
   },
-  "All Alone": {
+  "Melrose Day One": {
    "bongs": 15,
-   "line": "All Alone. You made it through on your own."
+   "line": "Melrose Day One. You were here from the start."
   },
-  "Orange Soda": {
+  "Lovee's Right Hand": {
    "bongs": 20,
-   "line": "Orange Soda. Cold and sweet, just how you like it."
+   "line": "Lovee's Right Hand. You stand next to the man himself."
   },
-  "IYKYK": {
+  "Bronx Drill Boss": {
    "bongs": 25,
-   "line": "You run all of Melrose."
+   "line": "Bronx Drill Boss. You run all of Melrose."
   }
  },
  "trophyArt": [

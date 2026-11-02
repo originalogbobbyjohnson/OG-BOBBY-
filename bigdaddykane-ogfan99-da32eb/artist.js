@@ -8,35 +8,35 @@ window.CFG = {
  "saveKey": "ogfan99bigdaddykane1",
  "startRank": "Half-Stepper",
  "ranks": [
-  "Raw",
-  "Juice Crew",
+  "Raw Rhyme Writer",
   "Smooth Operator",
-  "Man of the Hour",
-  "Big Daddy"
+  "Juice Crew All-Star",
+  "Set It Off Showman",
+  "Long Live the Kane"
  ],
- "topRank": "Long Live the Kane",
+ "topRank": "King Asiatic",
  "point": "Hi-Top",
  "points": "Hi-Tops",
  "rankRewards": {
-  "Raw": {
+  "Raw Rhyme Writer": {
    "bongs": 5,
-   "line": "Raw from the jump. No more half steppin'."
-  },
-  "Juice Crew": {
-   "bongs": 10,
-   "line": "You're down with the Juice Crew all-stars."
+   "line": "Raw Rhyme Writer. No more half steppin' for you."
   },
   "Smooth Operator": {
+   "bongs": 10,
+   "line": "Smooth Operator. Mellow out, you're so smooth now."
+  },
+  "Juice Crew All-Star": {
    "bongs": 15,
-   "line": "Mellow out. You're so smooth."
+   "line": "Juice Crew All-Star. Marley's whole squad shows you love."
   },
-  "Man of the Hour": {
+  "Set It Off Showman": {
    "bongs": 20,
-   "line": "Rhymes with strength and power."
+   "line": "Set It Off Showman. The crowd is going off for you."
   },
-  "Big Daddy": {
+  "Long Live the Kane": {
    "bongs": 25,
-   "line": "You run all of Bed-Stuy."
+   "line": "Long Live the Kane. You run all of Bed-Stuy."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "STATEN ISLAND",
  "boro": "Staten Island",
  "saveKey": "ogfan99heesunlee1",
- "startRank": "Stereotype",
+ "startRank": "Stereotype Believer",
  "ranks": [
-  "Re:Defined",
-  "Life Is Too Short",
-  "Role Models",
-  "In My City",
-  "Beauty for Ashes"
+  "Re:Defined Newcomer",
+  "Role Model Trainee",
+  "In My City Hero",
+  "Beauty for Ashes",
+  "Staten Island Queen"
  ],
  "topRank": "I Break Stereotypes",
  "point": "Flow",
  "points": "Flows",
  "rankRewards": {
-  "Re:Defined": {
+  "Re:Defined Newcomer": {
    "bongs": 5,
-   "line": "You just got redefined."
+   "line": "Re:Defined. You just rewrote what they expected."
   },
-  "Life Is Too Short": {
+  "Role Model Trainee": {
    "bongs": 10,
-   "line": "Life is too short to sit this out."
+   "line": "Role model trainee. Somebody's watching you step up."
   },
-  "Role Models": {
+  "In My City Hero": {
    "bongs": 15,
-   "line": "Somebody's looking up to you now."
-  },
-  "In My City": {
-   "bongs": 20,
-   "line": "The whole city knows your name."
+   "line": "In My City hero. The whole borough knows your name."
   },
   "Beauty for Ashes": {
+   "bongs": 20,
+   "line": "Beauty for Ashes. You rose up out of the fire."
+  },
+  "Staten Island Queen": {
    "bongs": 25,
-   "line": "You run all of Staten Island."
+   "line": "Crown on. You run all of Staten Island."
   }
  },
  "trophyArt": [

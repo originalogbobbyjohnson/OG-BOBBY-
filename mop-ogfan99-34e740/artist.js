@@ -5,37 +5,37 @@ window.CFG = {
  "hood": "Brownsville",
  "hoodUpper": "BROWNSVILLE",
  "boro": "Brooklyn",
- "startRank": "Rookie",
+ "startRank": "Too Soft for Hardcore",
  "ranks": [
-  "How About Some Hardcore",
+  "Hardcore Hopeful",
+  "Firing Squad Recruit",
   "Cold as Ice",
-  "Warriorz",
-  "Ante Up",
-  "First Family"
+  "Ante Up Warrior",
+  "First Family General"
  ],
  "topRank": "Mash Out Posse",
  "point": "Stomp",
  "points": "Stomps",
  "rankRewards": {
-  "How About Some Hardcore": {
+  "Hardcore Hopeful": {
    "bongs": 5,
-   "line": "You asked for hardcore. Brownsville answered."
+   "line": "You asked for hardcore. Brownsville answered you."
+  },
+  "Firing Squad Recruit": {
+   "bongs": 10,
+   "line": "Firing Squad recruit. You stand with the crew now."
   },
   "Cold as Ice": {
-   "bongs": 10,
-   "line": "Cold as ice. Nothing shakes you now."
-  },
-  "Warriorz": {
    "bongs": 15,
-   "line": "A real warrior. You stand with the crew."
+   "line": "Cold as ice. Nothing shakes you anymore."
   },
-  "Ante Up": {
+  "Ante Up Warrior": {
    "bongs": 20,
-   "line": "You anted up. Your game just went up a level."
+   "line": "You anted up. A real warrior now."
   },
-  "First Family": {
+  "First Family General": {
    "bongs": 25,
-   "line": "You run all of Brownsville."
+   "line": "First Family General. You run all of Brownsville."
   }
  },
  "trophyArt": [

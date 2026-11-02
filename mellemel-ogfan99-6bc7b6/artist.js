@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "SOUTH BRONX",
  "boro": "the Bronx",
  "saveKey": "ogfan99mellemel1",
- "startRank": "Kid",
+ "startRank": "Block Party Bystander",
  "ranks": [
-  "Superrappin'",
-  "Freedom",
-  "Furious Five",
-  "King of the Rhyme",
-  "Grandmaster"
+  "Block Party MC",
+  "Superrappin' Crew",
+  "Freedom Fighter",
+  "Furious Five Frontman",
+  "Rhyme King Melle Mel"
  ],
  "topRank": "The Message",
  "point": "Rhyme",
  "points": "Rhymes",
  "rankRewards": {
-  "Superrappin'": {
+  "Block Party MC": {
    "bongs": 5,
-   "line": "Superrappin'. The mic is warming up."
+   "line": "Block Party MC. The mic is warming up."
   },
-  "Freedom": {
+  "Superrappin' Crew": {
    "bongs": 10,
-   "line": "Freedom. The whole park is moving."
+   "line": "Superrappin' crew. The whole park is moving now."
   },
-  "Furious Five": {
+  "Freedom Fighter": {
    "bongs": 15,
-   "line": "Furious Five. You made the crew."
+   "line": "Freedom Fighter. The crowd is chanting with you."
   },
-  "King of the Rhyme": {
+  "Furious Five Frontman": {
    "bongs": 20,
-   "line": "King of the Rhyme. Rap is a game you control."
+   "line": "Furious Five Frontman. You lead the crew now."
   },
-  "Grandmaster": {
+  "Rhyme King Melle Mel": {
    "bongs": 25,
-   "line": "You run all of the South Bronx."
+   "line": "Rhyme King. You run all of the South Bronx."
   }
  },
  "trophyArt": [

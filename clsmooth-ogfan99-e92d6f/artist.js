@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "MOUNT VERNON",
  "boro": "Westchester",
  "saveKey": "ogfan99clsmooth1",
- "startRank": "Rough Draft",
+ "startRank": "Rough Draft Rhymer",
  "ranks": [
   "Lots of Lovin'",
-  "Take You There",
-  "Mecca",
   "Straighten It Out",
-  "Reminisce"
+  "Main Ingredient",
+  "Mecca Soul Brother",
+  "T.R.O.Y. Master"
  ],
- "topRank": "American Me",
+ "topRank": "CL the Smoothest",
  "point": "Note",
  "points": "Notes",
  "rankRewards": {
   "Lots of Lovin'": {
    "bongs": 5,
-   "line": "Lots of Lovin'. The love is all around you."
-  },
-  "Take You There": {
-   "bongs": 10,
-   "line": "Take You There. Smooth ride, all the way."
-  },
-  "Mecca": {
-   "bongs": 15,
-   "line": "Mecca. You found the place where it all comes from."
+   "line": "Lots of Lovin'. The love is all around you now."
   },
   "Straighten It Out": {
-   "bongs": 20,
-   "line": "Straighten It Out. Every line in its place."
+   "bongs": 10,
+   "line": "Straighten It Out. Every line sits in its place."
   },
-  "Reminisce": {
+  "Main Ingredient": {
+   "bongs": 15,
+   "line": "Main Ingredient. The recipe doesn't work without you."
+  },
+  "Mecca Soul Brother": {
+   "bongs": 20,
+   "line": "Mecca Soul Brother. You stand right next to Pete Rock."
+  },
+  "T.R.O.Y. Master": {
    "bongs": 25,
-   "line": "You run all of Mount Vernon."
+   "line": "T.R.O.Y. Master. They reminisce, you run all of Mount Vernon."
   }
  },
  "trophyArt": [

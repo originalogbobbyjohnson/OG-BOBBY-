@@ -8,25 +8,25 @@ window.CFG = {
  "saveKey": "ogfan99flatbushzombies1",
  "startRank": "Thug Waffle",
  "ranks": [
-  "Zombie",
-  "Architect",
-  "Darko"
+  "Flatbush Undead",
+  "Architect's Apprentice",
+  "Darko Elite"
  ],
- "topRank": "Glorious Dead",
+ "topRank": "Kings of Flatbush",
  "point": "Brain",
  "points": "Brains",
  "rankRewards": {
-  "Zombie": {
+  "Flatbush Undead": {
    "bongs": 5,
-   "line": "You rose up out the dirt. Welcome to the undead."
+   "line": "Flatbush Undead. You rose up out the dirt."
   },
-  "Architect": {
+  "Architect's Apprentice": {
    "bongs": 10,
-   "line": "Now you're drawing the blueprint."
+   "line": "Architect's Apprentice. Now you're drawing the blueprint."
   },
-  "Darko": {
+  "Darko Elite": {
    "bongs": 25,
-   "line": "You run all of Flatbush."
+   "line": "Darko Elite. Eyes wide, you run all of Flatbush."
   }
  },
  "trophyArt": [
@@ -77,7 +77,7 @@ window.CFG = {
   {
    "scene": "college",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts as a Thug Waffle. Clear a row to rank up: Zombie, Architect, Darko. Beat the 99 Challenge to become Glorious Dead.",
+   "x": "Everybody starts as a Thug Waffle. Clear a row to rank up: Flatbush Undead, Architect's Apprentice, Darko Elite. Beat the 99 Challenge to become Kings of Flatbush.",
    "sfx": "crowd"
   },
   {

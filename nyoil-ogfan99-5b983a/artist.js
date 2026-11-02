@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "STATEN ISLAND",
  "boro": "Staten Island",
  "saveKey": "ogfan99nyoil1",
- "startRank": "Unemployed",
+ "startRank": "Ferry Line Waiter",
  "ranks": [
-  "Fly Guy",
-  "One to Grow On",
+  "UMC's Day One",
+  "Shaolin Regular",
+  "UMC's Inner Circle",
   "Kool Kim",
-  "Banked Up",
   "Undisputed Master"
  ],
  "topRank": "NYOIL Approved",
  "point": "Barrel",
  "points": "Barrels",
  "rankRewards": {
-  "Fly Guy": {
+  "UMC's Day One": {
    "bongs": 5,
-   "line": "Fly Guy. You came off the boat fresh."
+   "line": "Fruits of Nature. You just got your first taste."
   },
-  "One to Grow On": {
+  "Shaolin Regular": {
    "bongs": 10,
    "line": "That's one to grow on. Keep building."
   },
-  "Kool Kim": {
+  "UMC's Inner Circle": {
    "bongs": 15,
-   "line": "Cool, calm, and you know the words. Kool Kim status."
+   "line": "UMC's inner circle. The crew knows your name."
   },
-  "Banked Up": {
+  "Kool Kim": {
    "bongs": 20,
-   "line": "From bankrupt to banked up. You filled the tank."
+   "line": "Kool Kim status. Cool, calm, and you know the words."
   },
   "Undisputed Master": {
    "bongs": 25,
-   "line": "You run all of Staten Island."
+   "line": "Undisputed Master. You run all of Staten Island."
   }
  },
  "trophyArt": [

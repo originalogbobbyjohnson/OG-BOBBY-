@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "PARK HILL",
  "boro": "Staten Island",
  "saveKey": "ogfan99cappadonna1",
- "startRank": "Passenger",
+ "startRank": "Back Seat Passenger",
  "ranks": [
   "Slang Editor",
-  "Winter Warrior",
-  "Pillager",
+  "Winter Warz Soldier",
+  "Park Hill Pillager",
   "Ultimate Rush",
-  "Cappachino"
+  "Killa Bee Commander"
  ],
- "topRank": "The Tenth Man",
+ "topRank": "Cappachino Supreme",
  "point": "Fare",
  "points": "Fares",
  "rankRewards": {
   "Slang Editor": {
    "bongs": 5,
-   "line": "Slang Editor. You read the paper and caught every word."
+   "line": "Slang Editor. You caught every word in the paper."
   },
-  "Winter Warrior": {
+  "Winter Warz Soldier": {
    "bongs": 10,
-   "line": "Winter Warrior. Cold out, but you came through."
+   "line": "Winter Warz Soldier. Cold out, but you came through."
   },
-  "Pillager": {
+  "Park Hill Pillager": {
    "bongs": 15,
-   "line": "Pillager. You took the whole tape home."
+   "line": "Park Hill Pillager. You took the whole tape home."
   },
   "Ultimate Rush": {
    "bongs": 20,
-   "line": "Ultimate Rush. No brakes now."
+   "line": "Ultimate Rush. No brakes now, full speed ahead."
   },
-  "Cappachino": {
+  "Killa Bee Commander": {
    "bongs": 25,
-   "line": "You run all of Park Hill."
+   "line": "Killa Bee Commander. You run all of Park Hill."
   }
  },
  "trophyArt": [

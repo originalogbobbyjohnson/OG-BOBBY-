@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "THE BRONX",
  "boro": "the Bronx",
  "saveKey": "ogfan99dnice1",
- "startRank": "New Listener",
+ "startRank": "Off-Beat Listener",
  "ranks": [
+  "Bronx Party Guest",
   "Call Me D-Nice",
-  "Human Beatbox",
-  "BDP",
-  "Club Quarantine",
-  "Homeroom"
+  "BDP Beatboxer",
+  "Stop the Violence",
+  "Boogie Down Selector"
  ],
- "topRank": "Boogie Down Selector",
+ "topRank": "Club Quarantine King",
  "point": "Vibe",
  "points": "Vibes",
  "rankRewards": {
-  "Call Me D-Nice": {
+  "Bronx Party Guest": {
    "bongs": 5,
+   "line": "Bronx Party Guest. You got through the door."
+  },
+  "Call Me D-Nice": {
+   "bongs": 10,
    "line": "Call Me D-Nice. Now you know the name."
   },
-  "Human Beatbox": {
-   "bongs": 10,
-   "line": "Human Beatbox. You keep the beat with your mouth."
-  },
-  "BDP": {
+  "BDP Beatboxer": {
    "bongs": 15,
-   "line": "BDP. Boogie Down Productions, in the house."
+   "line": "BDP Beatboxer. You keep the beat for Boogie Down Productions."
   },
-  "Club Quarantine": {
+  "Stop the Violence": {
    "bongs": 20,
-   "line": "Club Quarantine. The whole world tuned in to the party."
+   "line": "Stop the Violence. You stand for the whole movement."
   },
-  "Homeroom": {
+  "Boogie Down Selector": {
    "bongs": 25,
-   "line": "You run all of the Bronx."
+   "line": "Boogie Down Selector. You run all of the Bronx."
   }
  },
  "trophyArt": [

@@ -7,27 +7,27 @@ window.CFG = {
  "hoodUpper": "ROCKAWAY",
  "boro": "Queens",
  "saveKey": "ogfan99bobbyj1",
- "startRank": "Beer Money",
+ "startRank": "Beer Money Rookie",
  "ranks": [
-  "Breakfast Bars",
-  "Hometown Hero",
-  "Summer Classic"
+  "Breakfast Bars Regular",
+  "Rockaway Hometown Hero",
+  "Summer Classic Boss"
  ],
- "topRank": "Endless Summer",
+ "topRank": "King of Endless Summer",
  "point": "Wave",
  "points": "Waves",
  "rankRewards": {
-  "Breakfast Bars": {
+  "Breakfast Bars Regular": {
    "bongs": 5,
-   "line": "Every Monday, come hell or high water. You showed up."
+   "line": "Breakfast Bars Regular. Every Monday, you showed up hungry."
   },
-  "Hometown Hero": {
+  "Rockaway Hometown Hero": {
    "bongs": 10,
-   "line": "If you build it, they will come. Rockaway came."
+   "line": "Rockaway Hometown Hero. If you build it, Rockaway comes."
   },
-  "Summer Classic": {
+  "Summer Classic Boss": {
    "bongs": 25,
-   "line": "You run all of Rockaway."
+   "line": "Summer Classic Boss. Sun out, you run all of Rockaway."
   }
  },
  "trophyArt": [
@@ -88,7 +88,7 @@ window.CFG = {
   {
    "scene": "riis",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts on Beer Money. Clear a row to rank up: Breakfast Bars, Hometown Hero, Summer Classic. Beat the 99 Challenge to become Endless Summer.",
+   "x": "Everybody starts as a Beer Money Rookie. Clear a row to rank up: Breakfast Bars Regular, Rockaway Hometown Hero, Summer Classic Boss. Beat the 99 Challenge to become King of Endless Summer.",
    "sfx": "bell"
   },
   {

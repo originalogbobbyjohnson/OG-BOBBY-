@@ -6,13 +6,13 @@ window.CFG = {
  "hoodUpper": "BROWNSVILLE",
  "boro": "Brooklyn",
  "saveKey": "ogfan99mastaace1",
- "startRank": "Disposable",
+ "startRank": "Disposable Rapper",
  "ranks": [
   "Crooklyn Dodger",
-  "Juice Crew",
   "Sittin' on Chrome",
-  "The I.N.C.",
-  "Born to Roll"
+  "Long Hot Summer Vet",
+  "Masta Ace Inc. Partner",
+  "Juice Crew General"
  ],
  "topRank": "The Masta",
  "point": "Rim",
@@ -20,23 +20,23 @@ window.CFG = {
  "rankRewards": {
   "Crooklyn Dodger": {
    "bongs": 5,
-   "line": "Repping Crooklyn with the Dodgers."
-  },
-  "Juice Crew": {
-   "bongs": 10,
-   "line": "You made the Symphony roll call."
+   "line": "Repping Crooklyn with the Dodgers. You just got in."
   },
   "Sittin' on Chrome": {
+   "bongs": 10,
+   "line": "Sittin' on chrome. Rims shining, windows down."
+  },
+  "Long Hot Summer Vet": {
    "bongs": 15,
-   "line": "Rims shining, windows down."
+   "line": "Long Hot Summer vet. You survived the whole season."
   },
-  "The I.N.C.": {
+  "Masta Ace Inc. Partner": {
    "bongs": 20,
-   "line": "Welcome to Masta Ace Incorporated."
+   "line": "Masta Ace Incorporated partner. Your name's on the door."
   },
-  "Born to Roll": {
+  "Juice Crew General": {
    "bongs": 25,
-   "line": "You run all of Brownsville."
+   "line": "Juice Crew General. You run all of Brownsville."
   }
  },
  "trophyArt": [

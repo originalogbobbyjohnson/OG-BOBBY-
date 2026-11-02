@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99freekeyzekey1",
- "startRank": "Rookie",
+ "startRank": "Sideline Hater",
  "ranks": [
-  "Diplomat",
-  "Dat's Me",
-  "Hype Man",
-  "My Life",
-  "Dipset Captain"
+  "Dipset Recruit",
+  "Crowd Hyper",
+  "Dipset Hype Man",
+  "Uptown Hype Captain",
+  "Dipset Founder"
  ],
- "topRank": "Freekey",
+ "topRank": "Freekey Zekey",
  "point": "Hype",
  "points": "Hypes",
  "rankRewards": {
-  "Diplomat": {
+  "Dipset Recruit": {
    "bongs": 5,
-   "line": "Diplomat. Welcome to the team."
+   "line": "Dipset Recruit. Welcome to the team, Harlem."
   },
-  "Dat's Me": {
+  "Crowd Hyper": {
    "bongs": 10,
-   "line": "Dat's Me. Point at the camera, own it."
+   "line": "Crowd Hyper. You got the first row jumping."
   },
-  "Hype Man": {
+  "Dipset Hype Man": {
    "bongs": 15,
-   "line": "Hype Man. The whole crowd is jumping."
+   "line": "Dipset Hype Man. The whole crowd is jumping for you."
   },
-  "My Life": {
+  "Uptown Hype Captain": {
    "bongs": 20,
-   "line": "My Life. Harlem story, all the way."
+   "line": "Uptown Hype Captain. You lead the energy uptown now."
   },
-  "Dipset Captain": {
+  "Dipset Founder": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Dipset Founder. You run all of Harlem."
   }
  },
  "trophyArt": [

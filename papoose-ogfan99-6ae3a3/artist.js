@@ -6,27 +6,27 @@ window.CFG = {
  "hoodUpper": "BED-STUY",
  "boro": "Brooklyn",
  "saveKey": "ogfan99papoose1",
- "startRank": "Ghostwriter",
+ "startRank": "Alphabet Dropout",
  "ranks": [
-  "Sweeper",
-  "Hoodie Vet",
-  "Nacirema"
+  "Streetsweeper Rookie",
+  "Alphabetical Scholar",
+  "Nacirema Boss"
  ],
- "topRank": "Mixtape King",
+ "topRank": "The Mixtape King",
  "point": "Bar",
  "points": "Bars",
  "rankRewards": {
-  "Sweeper": {
+  "Streetsweeper Rookie": {
    "bongs": 5,
    "line": "You made the Streetsweepers cut. Now write your own bars."
   },
-  "Hoodie Vet": {
+  "Alphabetical Scholar": {
    "bongs": 10,
-   "line": "Hood up. You've been here every season."
+   "line": "Alphabetical Scholar. A to Z, you know every letter."
   },
-  "Nacirema": {
+  "Nacirema Boss": {
    "bongs": 25,
-   "line": "You run all of Bed-Stuy."
+   "line": "Nacirema Boss. You run all of Bed-Stuy."
   }
  },
  "trophyArt": [
@@ -77,7 +77,7 @@ window.CFG = {
   {
    "scene": "park",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts as a Ghostwriter. Clear a row to rank up: Sweeper, Hoodie Vet, Nacirema. Beat the 99 Challenge to become Mixtape King.",
+   "x": "Everybody starts as a Alphabet Dropout. Clear a row to rank up: Streetsweeper Rookie, Alphabetical Scholar, Nacirema Boss. Beat the 99 Challenge to become The Mixtape King.",
    "sfx": "crowd"
   },
   {

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99lilmama1",
- "startRank": "Lil One",
+ "startRank": "Chapstick Only",
  "ranks": [
-  "Lip Gloss",
-  "G-Slide",
-  "Shawty Get Loose",
-  "Young People",
-  "L.I.F.E."
+  "Lip Gloss Poppin'",
+  "G-Slide Steppin'",
+  "Shawty Got Loose",
+  "Tour Bus Headliner",
+  "Harlem Dance Boss"
  ],
- "topRank": "Lil Mama",
+ "topRank": "Queen of Lip Gloss",
  "point": "Lip Gloss",
  "points": "Lip Glosses",
  "rankRewards": {
-  "Lip Gloss": {
+  "Lip Gloss Poppin'": {
    "bongs": 5,
-   "line": "Lip Gloss. And it's poppin'."
+   "line": "Your lip gloss is poppin'. You just got in."
   },
-  "G-Slide": {
+  "G-Slide Steppin'": {
    "bongs": 10,
-   "line": "G-Slide. Tour bus rolling down 125th."
+   "line": "G-Slide steppin'. The tour bus slowed down for you."
   },
-  "Shawty Get Loose": {
+  "Shawty Got Loose": {
    "bongs": 15,
-   "line": "Shawty Get Loose. Everybody dance."
+   "line": "Shawty got loose. Now the whole floor is watching."
   },
-  "Young People": {
+  "Tour Bus Headliner": {
    "bongs": 20,
-   "line": "Young People. You speak for the block."
+   "line": "Headlining the tour bus. Harlem's got your back now."
   },
-  "L.I.F.E.": {
+  "Harlem Dance Boss": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Harlem Dance Boss. You run all of Harlem."
   }
  },
  "trophyArt": [

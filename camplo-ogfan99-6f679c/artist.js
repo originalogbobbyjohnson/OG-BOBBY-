@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "THE BRONX",
  "boro": "the Bronx",
  "saveKey": "ogfan99camplo1",
- "startRank": "Square",
+ "startRank": "Bell-Bottom Square",
  "ranks": [
-  "Coolie High",
-  "Say Word",
+  "Coolie High Freshman",
+  "Say Word Talker",
   "Black Nostaljack",
-  "Sparkle",
-  "Luchini"
+  "Sparkle Star",
+  "Luchini Kingpin"
  ],
  "topRank": "Uptown Saturday Night",
  "point": "Luchini",
  "points": "Luchinis",
  "rankRewards": {
-  "Coolie High": {
+  "Coolie High Freshman": {
    "bongs": 5,
-   "line": "Coolie High. You made the class picture."
+   "line": "Coolie High Freshman. You made the class picture."
   },
-  "Say Word": {
+  "Say Word Talker": {
    "bongs": 10,
-   "line": "Say word. Now you're talking the talk."
+   "line": "Say Word Talker. Now you're talking that seventies talk."
   },
   "Black Nostaljack": {
    "bongs": 15,
-   "line": "Black Nostaljack. Seventies cool, all day."
+   "line": "Black Nostaljack. Seventies cool, all day long."
   },
-  "Sparkle": {
+  "Sparkle Star": {
    "bongs": 20,
-   "line": "Sparkle. You shine on the floor."
+   "line": "Sparkle Star. You shine brightest on the dance floor."
   },
-  "Luchini": {
+  "Luchini Kingpin": {
    "bongs": 25,
-   "line": "You run all of the Bronx."
+   "line": "Luchini Kingpin. This is it, you run all of the Bronx."
   }
  },
  "trophyArt": [

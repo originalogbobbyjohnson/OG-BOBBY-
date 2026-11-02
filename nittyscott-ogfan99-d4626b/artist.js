@@ -5,15 +5,15 @@ window.CFG = {
  "hood": "Bushwick",
  "hoodUpper": "BUSHWICK",
  "boro": "Brooklyn",
- "startRank": "Seedling",
+ "startRank": "Bushwick Seedling",
  "ranks": [
   "Flower Child",
-  "Skippin' Clouds",
-  "The Art of Chill",
-  "Kaleidoscopes",
-  "Creature"
+  "Cloud Skipper",
+  "Art of Chill",
+  "Kaleidoscope Mind",
+  "Creature Supreme"
  ],
- "topRank": "La Diaspora",
+ "topRank": "Queen of La Diaspora",
  "point": "Petal",
  "points": "Petals",
  "rankRewards": {
@@ -21,21 +21,21 @@ window.CFG = {
    "bongs": 5,
    "line": "Flower child. You just started to bloom."
   },
-  "Skippin' Clouds": {
+  "Cloud Skipper": {
    "bongs": 10,
-   "line": "Skipping clouds. Head up, feet light."
+   "line": "Cloud Skipper. Head up, feet light, still rising."
   },
-  "The Art of Chill": {
+  "Art of Chill": {
    "bongs": 15,
-   "line": "You mastered the art of chill."
+   "line": "You mastered the art of chill. Respect."
   },
-  "Kaleidoscopes": {
+  "Kaleidoscope Mind": {
    "bongs": 20,
-   "line": "Every color at once. Kaleidoscopes."
+   "line": "Kaleidoscope mind. Every color at once."
   },
-  "Creature": {
+  "Creature Supreme": {
    "bongs": 25,
-   "line": "You run all of Bushwick."
+   "line": "Creature Supreme. You run all of Bushwick."
   }
  },
  "trophyArt": [

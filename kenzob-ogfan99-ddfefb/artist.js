@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "MORRIS HEIGHTS",
  "boro": "Bronx",
  "saveKey": "ogfan99kenzob1",
- "startRank": "Bum",
+ "startRank": "Tweakin' Outsider",
  "ranks": [
-  "No Tweakin",
-  "Bump It",
-  "Make It Lit",
-  "The Facts",
-  "Top Dawg"
+  "Bump It Newbie",
+  "No Tweakin' Regular",
+  "Make It Lit Crew",
+  "Facts Only Insider",
+  "Kenzo's Bronx Boss"
  ],
- "topRank": "Top 2 Not 2",
+ "topRank": "Top Dawg Kenzo",
  "point": "Fact",
  "points": "Facts",
  "rankRewards": {
-  "No Tweakin": {
+  "Bump It Newbie": {
    "bongs": 5,
-   "line": "Stay calm. You're not tweakin'."
+   "line": "Bump it. You turned the volume up on arrival."
   },
-  "Bump It": {
+  "No Tweakin' Regular": {
    "bongs": 10,
-   "line": "Turn it up. Now you bump it."
+   "line": "No tweakin'. Stay calm, you belong here now."
   },
-  "Make It Lit": {
+  "Make It Lit Crew": {
    "bongs": 15,
-   "line": "You made it lit. The block heard you."
+   "line": "Make it lit. The block heard you loud and clear."
   },
-  "The Facts": {
+  "Facts Only Insider": {
    "bongs": 20,
-   "line": "Facts only. You know the music."
+   "line": "Facts only. You know the music front to back."
   },
-  "Top Dawg": {
+  "Kenzo's Bronx Boss": {
    "bongs": 25,
-   "line": "You run all of Morris Heights."
+   "line": "Drill boss. You run all of Morris Heights."
   }
  },
  "trophyArt": [

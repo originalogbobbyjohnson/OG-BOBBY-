@@ -6,9 +6,9 @@ window.CFG = {
  "hoodUpper": "STATEN ISLAND",
  "boro": "Staten Island",
  "saveKey": "ogfan99streetlife1",
- "startRank": "Sleepwalker",
+ "startRank": "Shaolin Sleepwalker",
  "ranks": [
-  "Student",
+  "Block Student",
   "Street Educated",
   "Back to Back",
   "Deadly Melody",
@@ -18,17 +18,17 @@ window.CFG = {
  "point": "Credit",
  "points": "Credits",
  "rankRewards": {
-  "Student": {
+  "Block Student": {
    "bongs": 5,
-   "line": "Student. Class is in session."
+   "line": "Block student. Class is in session on the Island."
   },
   "Street Educated": {
    "bongs": 10,
-   "line": "Street Educated. You learned it the real way."
+   "line": "Street educated. You learned it the real way."
   },
   "Back to Back": {
    "bongs": 15,
-   "line": "Back to Back. Raw and uncut."
+   "line": "Back to back. Raw and uncut, no breaks."
   },
   "Deadly Melody": {
    "bongs": 20,
@@ -36,7 +36,7 @@ window.CFG = {
   },
   "Shaolin Worldwide": {
    "bongs": 25,
-   "line": "You run all of Staten Island."
+   "line": "Shaolin worldwide. You run all of Staten Island."
   }
  },
  "trophyArt": [

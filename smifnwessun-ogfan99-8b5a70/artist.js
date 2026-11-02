@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "BED-STUY",
  "boro": "Brooklyn",
  "saveKey": "ogfan99smifnwessun1",
- "startRank": "Recruit",
+ "startRank": "Bucktown Outsider",
  "ranks": [
   "Real Head",
-  "Stand Strong",
-  "Boot Camp",
+  "Bucktown Resident",
+  "Wrekonize",
   "Dah Shinin'",
-  "Bucktown"
+  "Boot Camp General"
  ],
- "topRank": "Monumental",
+ "topRank": "Kings of Bucktown",
  "point": "Dog Tag",
  "points": "Dog Tags",
  "rankRewards": {
   "Real Head": {
    "bongs": 5,
-   "line": "Real heads recognize real heads."
+   "line": "Real heads recognize real heads. You're one of them."
   },
-  "Stand Strong": {
+  "Bucktown Resident": {
    "bongs": 10,
-   "line": "Standing strong on your own."
+   "line": "Bucktown resident. You got a key to the block."
   },
-  "Boot Camp": {
+  "Wrekonize": {
    "bongs": 15,
-   "line": "You made it through Boot Camp."
+   "line": "Wrekonize. Now everybody knows who you are."
   },
   "Dah Shinin'": {
    "bongs": 20,
    "line": "Sun's up over the rooftops. You're shinin'."
   },
-  "Bucktown": {
+  "Boot Camp General": {
    "bongs": 25,
-   "line": "You run all of Bed-Stuy."
+   "line": "Boot Camp general. You run all of Bed-Stuy."
   }
  },
  "trophyArt": [

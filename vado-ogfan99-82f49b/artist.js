@@ -6,11 +6,11 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99vado1",
- "startRank": "Underrated",
+ "startRank": "Harlem Sleeper",
  "ranks": [
-  "Big Dog",
-  "Slime",
-  "U.N.",
+  "Slime Flu",
+  "U.N. Member",
+  "Uptown Big Dog",
   "Sinatra",
   "Movado"
  ],
@@ -18,25 +18,25 @@ window.CFG = {
  "point": "Chain",
  "points": "Chains",
  "rankRewards": {
-  "Big Dog": {
+  "Slime Flu": {
    "bongs": 5,
-   "line": "A big dog with a different growl."
+   "line": "You caught the Slime Flu. No cure."
   },
-  "Slime": {
+  "U.N. Member": {
    "bongs": 10,
-   "line": "You caught the Slime Flu."
-  },
-  "U.N.": {
-   "bongs": 15,
    "line": "Us Now. Welcome to the U.N."
+  },
+  "Uptown Big Dog": {
+   "bongs": 15,
+   "line": "A big dog with a different growl."
   },
   "Sinatra": {
    "bongs": 20,
-   "line": "Smooth like Sinatra, uptown style."
+   "line": "Smooth like Sinatra, uptown style, every single time."
   },
   "Movado": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Movado time. You run all of Harlem."
   }
  },
  "trophyArt": [

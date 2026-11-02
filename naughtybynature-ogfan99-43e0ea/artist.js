@@ -6,11 +6,11 @@ window.CFG = {
  "hoodUpper": "EAST ORANGE",
  "boro": "New Jersey",
  "saveKey": "ogfan99naughtybynature1",
- "startRank": "New Style",
+ "startRank": "Not Down Yet",
  "ranks": [
-  "Illtown",
+  "Illtown Rookie",
   "Feel Me Flow",
-  "Jamboree",
+  "Jamboree Regular",
   "19 Naughty III",
   "Poverty's Paradise"
  ],
@@ -18,25 +18,25 @@ window.CFG = {
  "point": "Wave",
  "points": "Waves",
  "rankRewards": {
-  "Illtown": {
+  "Illtown Rookie": {
    "bongs": 5,
-   "line": "Welcome to Illtown."
+   "line": "Illtown Rookie. Welcome to the town, you're down."
   },
   "Feel Me Flow": {
    "bongs": 10,
-   "line": "Now you feel the flow."
+   "line": "Feel Me Flow. Now you really feel the flow."
   },
-  "Jamboree": {
+  "Jamboree Regular": {
    "bongs": 15,
-   "line": "The jamboree is on."
+   "line": "Jamboree regular. The party never starts without you."
   },
   "19 Naughty III": {
    "bongs": 20,
-   "line": "Three times naughty."
+   "line": "19 Naughty III. Three times naughty, all respect."
   },
   "Poverty's Paradise": {
    "bongs": 25,
-   "line": "You run all of East Orange."
+   "line": "Poverty's Paradise. You run all of East Orange."
   }
  },
  "trophyArt": [

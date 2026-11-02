@@ -9,10 +9,10 @@ window.CFG = {
  "startRank": "Player 2",
  "ranks": [
   "Got Potential",
-  "High Score",
   "In My Bag",
   "Dear Diary",
-  "Never Smile"
+  "Never Smile",
+  "Yonkers High Score"
  ],
  "topRank": "The Moxberg",
  "point": "Score",
@@ -20,23 +20,23 @@ window.CFG = {
  "rankRewards": {
   "Got Potential": {
    "bongs": 5,
-   "line": "Got Potential. They see it in you now."
-  },
-  "High Score": {
-   "bongs": 10,
-   "line": "High Score. Your name is at the top of the board."
+   "line": "Got potential. They see it in you now."
   },
   "In My Bag": {
-   "bongs": 15,
-   "line": "In My Bag. Locked in and focused."
+   "bongs": 10,
+   "line": "In my bag. Locked in and focused."
   },
   "Dear Diary": {
-   "bongs": 20,
-   "line": "Dear Diary. You wrote it all down."
+   "bongs": 15,
+   "line": "Dear diary. You wrote it all down."
   },
   "Never Smile": {
+   "bongs": 20,
+   "line": "Never smile. All business, no distractions."
+  },
+  "Yonkers High Score": {
    "bongs": 25,
-   "line": "You run all of Yonkers."
+   "line": "High score. You run all of Yonkers."
   }
  },
  "trophyArt": [

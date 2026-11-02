@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "PARK SLOPE",
  "boro": "Brooklyn",
  "saveKey": "ogfan99talibkweli1",
- "startRank": "Get By",
+ "startRank": "Missed the Train",
  "ranks": [
+  "Get By",
   "Train of Thought",
   "Quality",
-  "Eardrum",
-  "Beautiful Struggle",
-  "Reflection Eternal"
+  "Reflection Eternal",
+  "Brooklyn Poet Laureate"
  ],
  "topRank": "Black Star",
  "point": "Book",
  "points": "Books",
  "rankRewards": {
-  "Train of Thought": {
+  "Get By": {
    "bongs": 5,
+   "line": "Get By. You're just getting by, but you're in."
+  },
+  "Train of Thought": {
+   "bongs": 10,
    "line": "Train of Thought. Stand clear of the closing doors."
   },
   "Quality": {
-   "bongs": 10,
-   "line": "Quality. Not quantity."
-  },
-  "Eardrum": {
    "bongs": 15,
-   "line": "Eardrum. You hear everything now."
-  },
-  "Beautiful Struggle": {
-   "bongs": 20,
-   "line": "Beautiful Struggle. Keep pushing."
+   "line": "Quality, not quantity. You know the difference."
   },
   "Reflection Eternal": {
+   "bongs": 20,
+   "line": "Reflection Eternal. Your rhymes will last forever."
+  },
+  "Brooklyn Poet Laureate": {
    "bongs": 25,
-   "line": "You run all of Park Slope."
+   "line": "Poet laureate. You run all of Park Slope."
   }
  },
  "trophyArt": [
@@ -394,6 +394,671 @@ window.CFG = {
    "qs": []
   }
  ],
-  explicitSongs: [{"title":"Move Somethin'","id":"gahYzHv_nek","cuts":[38.6,89,158],"qs":[[["\"What's with the...\"?","Melodrama","Commotion","Attitude"],["They wanna hover in his cypher like a...?","Helicopter","Hummingbird","Spaceship"],["\"Like it's a special...\"?","Honor","Moment","Occasion"],["\"Stealth bomber, gem dropper, make the ghetto...\"?","Holler","Party","Bounce"],["\"Inter-...\"?","Continental","National","Galactic"],["\"Taking you high like sky...\"?","Divers","Rockets","Scrapers"],["\"When we spark with live...\"?","Wires","Shows","Crowds"],["\"Original cavemen quest for my...\"?","Fire","Food","Throne"]],[["\"We gonna make y'all feel this, break your...\"?","Spirit","Silence","Habit"],["\"Bringing it in from the new...\"?","Millennium","Century","Decade"],["He calls these cats Reynolds because they...?","Plastic wrap","Paper thin","Tinfoil"],["\"You cats ain't real, you just a...\"?","Re-enactment","Rerun","Remix"],["\"Better yet,...\"?","Dramatization","Imitation","Exaggeration"],["\"Soon as the director say ___ you start faking\"?","Action","Cut","Roll"],["\"The whole joint start...\"?","Shaking","Rocking","Jumping"],["\"This ain't the time or place for you to prove...\"?","Something","Yourself","Nothing"],["\"Cut the stargazing, yo...\"?","Move somethin'","Wake up","Get loose"]],[["\"To be continued, let's see what's next up on the...\"?","Menu","Agenda","Schedule"],["\"Pick any mental: instru-, funda-,...\"?","Detri-","Experi-","Monu-"],["\"Extra extra large like the borough of...\"?","Brooklyn","Queens","The Bronx"],["\"Like Sly Stone with my poem and fly...\"?","Song","Style","Sound"],["\"We gonna rock till nothing else...\"?","Matters","Remains","Happens"],["\"Cotton mouth and we peppermint...\"?","Altoids","Patties","Tic Tacs"],["\"Stepping in, repping the spot called...\"?","Flatbush","Bed-Stuy","Crown Heights"],["\"The abstract then becomes the...\"?","Reality","Picture","Story"]]]},{"title":"I Try","id":"MvmvXgdu8E4","start":16.9,"cuts":[55.5,109.9,200.6],"qs":[[["\"I try, I try, that's all we can...\"?","Do","Say","Give"],["\"K. West!...\"?","Kweli!","Hi-Tek!","Mos Def!"],["Where did he get searched?","On the plane","At the club","At the border"],["\"Got searched on the plane, Arabic first...\"?","Name","Look","Bag"],["\"Disturbed by the fame just like...\"?","Kurt Cobain","Jimi Hendrix","Bob Marley"],["\"Daughters of the...\"?","Dust","Dawn","Sun"],["\"Something to take in vain like the Lord's...\"?","Name","Word","Day"],["\"Put your ___ together\"?","Hands","Heads","Hearts"]],[["\"I try to navigate the treacherous...\"?","Waters","Streets","Roads"],["Those treacherous waters belong to America's...?","Ghettos","Cities","Highways"],["\"Although we speak in different...\"?","Languages","Accents","Voices"],["\"We all pretty familiar with what ___ is\"?","Anger","Hunger","Love"],["\"Our uniforms is white sneakers and white...\"?","T-shirts","Socks","Hats"],["\"The 'hood need us for rappers, just ain't the right...\"?","Leaders","Teachers","Writers"],["\"This is my product and I gotta...\"?","Move it","Sell it","Prove it"],["\"Stop the industry but you can't stop the...\"?","Music","People","Movement"]],[["Mary sings about an upside down...?","Kingdom","World","Nation"],["\"Where life is just not...\"?","Fair","Easy","Free"],["\"Fear pumped into their veins to keep them from their...\"?","Destiny","Dreams","Family"],["\"The things I'm seeing on the news is...\"?","Insane","Strange","The same"],["\"The label want a song about a ___ life\"?","Bubbly","Lovely","Flashy"],["\"Life is a beautiful...\"?","Struggle","Journey","Mystery"],["\"People search through the...\"?","Rubble","Ruins","Trouble"],["\"Some people using the noodle, some people using the...\"?","Muscle","Hustle","Money"]]]},{"title":"Never Been In Love","id":"jyqkw0z6Shs","start":77.4,"cuts":[118,178.2,243.2],"qs":[[["\"I know there's the first time for...\"?","Everything","Anything","Something"],["\"Better than the perfect...\"?","Storm","Day","Song"],["\"Ever considered wedding...\"?","Rings","Bells","Plans"],["Where did he meet her?","At the bar","At the show","At the park"],["\"Like I follow the...\"?","Star","Map","Crowd"],["\"Jewel of the Nile, so I'm romancing the...\"?","Stone","Night","Moon"],["\"I watched her dance to my...\"?","Poem","Song","Beat"],["\"I pictured it like ___ when she answered the phone\"?","Paris Hilton","Halle Berry","Lauryn Hill"],["\"I got a good look so I catch her...\"?","Eye","Hand","Smile"]],[["\"I don't care what people...\"?","Say","Think","Do"],["\"As long as you and me...\"?","Okay","Together","Alright"],["\"See I used to be a...\"?","Player","Rolling stone","Loner"],["\"You running back to the kid like this was home...\"?","Base","Run","Team"],["\"Or a marathon, I let you set your own...\"?","Pace","Rules","Time"],["\"I never thought I'd feel like this, it's like a...\"?","Miracle","Movie","Dream"],["\"You stole my heart like a...\"?","Crook","Thief","Pirate"],["\"Till the walls come tumbling down like...\"?","Jericho","Dominoes","Babylon"]],[["\"Every time I think I got my feet...\"?","Upright","Planted","Steady"],["\"You looked so good when I tried you on, so I had to write a...\"?","Song","Letter","Poem"],["\"No cable or no hard line...\"?","Phone","Number","Address"],["\"Scared of commitment, ready to forever...\"?","Roam","Run","Ride"],["\"We at war like...\"?","Sister Souljah","Public Enemy","Malcolm X"],["\"She welcome to my terror...\"?","Dome","Zone","Home"],["\"They want to spit on my name and tarnish my...\"?","Image","Game","Fame"],["\"Put it in a rhyme because it feels so...\"?","Musical","Magical","Special"]]]},{"title":"Get By","id":"r071djbotkQ","cuts":[36.4,106.3,181],"qs":[[["\"We smell the musk at the dusk in the crack of the...\"?","Dawn","Day","Night"],["\"We go through Episode II like Attack of the...\"?","Clones","Drones","Throne"],["\"Work 'til we break our...\"?","Back","Bank","Bread"],["\"We commute to...\"?","Computers","Cubicles","Corners"],["\"Spirits stay...\"?","Mute","Lifted","Moving"],["\"While you eagles spread...\"?","Rumors","Wings","News"],["\"We survivalists, turned to...\"?","Consumers","Customers","Commuters"],["\"To get by, just to...\"?","Get by","Get fly","Get paid"]],[["\"Ask Him why some people got to live in a...\"?","Trailer","Castle","Basement"],["\"I paint a picture with the pen like...\"?","Norman Mailer","Norman Rockwell","Langston Hughes"],["\"Mi abuela raised ___ daughters all by herself\"?","Three","Two","Five"],["\"I think about the struggle and I find the ___ in myself\"?","Strength","Peace","Fire"],["\"These words melt in my...\"?","Mouth","Hand","Heart"],["\"We do or die like Bed-Stuy through the...\"?","Red sky","Night sky","Rain"],["\"This morning, I woke up feeling brand...\"?","New","Free","Strong"],["\"I've been thinking, I've got my...\"?","Reasons","Answers","Doubts"]],[["\"Our activism attacking the...\"?","System","Station","Silence"],["\"The love is unconditional, even when the condition is...\"?","Critical","Typical","Physical"],["\"Your position is...\"?","Pivotal","Personal","Powerful"],["\"The TV got us reaching for...\"?","Stars","Cars","Bars"],["\"Not the ones between Venus and...\"?","Mars","Jupiter","Saturn"],["\"The ones that be reading for...\"?","Parts","Books","Scripts"],["\"Saturday sinners, Sunday morning at the feet of the...\"?","Father","Preacher","Altar"],["\"When all you really need is...\"?","Love","Hope","Faith"],["\"Our parents sing like...\"?","John Lennon","Paul Simon","Marvin Gaye"]]]}]
+ "explicitSongs": [
+  {
+   "title": "Move Somethin'",
+   "id": "gahYzHv_nek",
+   "cuts": [
+    38.6,
+    89,
+    158
+   ],
+   "qs": [
+    [
+     [
+      "\"What's with the...\"?",
+      "Melodrama",
+      "Commotion",
+      "Attitude"
+     ],
+     [
+      "They wanna hover in his cypher like a...?",
+      "Helicopter",
+      "Hummingbird",
+      "Spaceship"
+     ],
+     [
+      "\"Like it's a special...\"?",
+      "Honor",
+      "Moment",
+      "Occasion"
+     ],
+     [
+      "\"Stealth bomber, gem dropper, make the ghetto...\"?",
+      "Holler",
+      "Party",
+      "Bounce"
+     ],
+     [
+      "\"Inter-...\"?",
+      "Continental",
+      "National",
+      "Galactic"
+     ],
+     [
+      "\"Taking you high like sky...\"?",
+      "Divers",
+      "Rockets",
+      "Scrapers"
+     ],
+     [
+      "\"When we spark with live...\"?",
+      "Wires",
+      "Shows",
+      "Crowds"
+     ],
+     [
+      "\"Original cavemen quest for my...\"?",
+      "Fire",
+      "Food",
+      "Throne"
+     ]
+    ],
+    [
+     [
+      "\"We gonna make y'all feel this, break your...\"?",
+      "Spirit",
+      "Silence",
+      "Habit"
+     ],
+     [
+      "\"Bringing it in from the new...\"?",
+      "Millennium",
+      "Century",
+      "Decade"
+     ],
+     [
+      "He calls these cats Reynolds because they...?",
+      "Plastic wrap",
+      "Paper thin",
+      "Tinfoil"
+     ],
+     [
+      "\"You cats ain't real, you just a...\"?",
+      "Re-enactment",
+      "Rerun",
+      "Remix"
+     ],
+     [
+      "\"Better yet,...\"?",
+      "Dramatization",
+      "Imitation",
+      "Exaggeration"
+     ],
+     [
+      "\"Soon as the director say ___ you start faking\"?",
+      "Action",
+      "Cut",
+      "Roll"
+     ],
+     [
+      "\"The whole joint start...\"?",
+      "Shaking",
+      "Rocking",
+      "Jumping"
+     ],
+     [
+      "\"This ain't the time or place for you to prove...\"?",
+      "Something",
+      "Yourself",
+      "Nothing"
+     ],
+     [
+      "\"Cut the stargazing, yo...\"?",
+      "Move somethin'",
+      "Wake up",
+      "Get loose"
+     ]
+    ],
+    [
+     [
+      "\"To be continued, let's see what's next up on the...\"?",
+      "Menu",
+      "Agenda",
+      "Schedule"
+     ],
+     [
+      "\"Pick any mental: instru-, funda-,...\"?",
+      "Detri-",
+      "Experi-",
+      "Monu-"
+     ],
+     [
+      "\"Extra extra large like the borough of...\"?",
+      "Brooklyn",
+      "Queens",
+      "The Bronx"
+     ],
+     [
+      "\"Like Sly Stone with my poem and fly...\"?",
+      "Song",
+      "Style",
+      "Sound"
+     ],
+     [
+      "\"We gonna rock till nothing else...\"?",
+      "Matters",
+      "Remains",
+      "Happens"
+     ],
+     [
+      "\"Cotton mouth and we peppermint...\"?",
+      "Altoids",
+      "Patties",
+      "Tic Tacs"
+     ],
+     [
+      "\"Stepping in, repping the spot called...\"?",
+      "Flatbush",
+      "Bed-Stuy",
+      "Crown Heights"
+     ],
+     [
+      "\"The abstract then becomes the...\"?",
+      "Reality",
+      "Picture",
+      "Story"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "I Try",
+   "id": "MvmvXgdu8E4",
+   "start": 16.9,
+   "cuts": [
+    55.5,
+    109.9,
+    200.6
+   ],
+   "qs": [
+    [
+     [
+      "\"I try, I try, that's all we can...\"?",
+      "Do",
+      "Say",
+      "Give"
+     ],
+     [
+      "\"K. West!...\"?",
+      "Kweli!",
+      "Hi-Tek!",
+      "Mos Def!"
+     ],
+     [
+      "Where did he get searched?",
+      "On the plane",
+      "At the club",
+      "At the border"
+     ],
+     [
+      "\"Got searched on the plane, Arabic first...\"?",
+      "Name",
+      "Look",
+      "Bag"
+     ],
+     [
+      "\"Disturbed by the fame just like...\"?",
+      "Kurt Cobain",
+      "Jimi Hendrix",
+      "Bob Marley"
+     ],
+     [
+      "\"Daughters of the...\"?",
+      "Dust",
+      "Dawn",
+      "Sun"
+     ],
+     [
+      "\"Something to take in vain like the Lord's...\"?",
+      "Name",
+      "Word",
+      "Day"
+     ],
+     [
+      "\"Put your ___ together\"?",
+      "Hands",
+      "Heads",
+      "Hearts"
+     ]
+    ],
+    [
+     [
+      "\"I try to navigate the treacherous...\"?",
+      "Waters",
+      "Streets",
+      "Roads"
+     ],
+     [
+      "Those treacherous waters belong to America's...?",
+      "Ghettos",
+      "Cities",
+      "Highways"
+     ],
+     [
+      "\"Although we speak in different...\"?",
+      "Languages",
+      "Accents",
+      "Voices"
+     ],
+     [
+      "\"We all pretty familiar with what ___ is\"?",
+      "Anger",
+      "Hunger",
+      "Love"
+     ],
+     [
+      "\"Our uniforms is white sneakers and white...\"?",
+      "T-shirts",
+      "Socks",
+      "Hats"
+     ],
+     [
+      "\"The 'hood need us for rappers, just ain't the right...\"?",
+      "Leaders",
+      "Teachers",
+      "Writers"
+     ],
+     [
+      "\"This is my product and I gotta...\"?",
+      "Move it",
+      "Sell it",
+      "Prove it"
+     ],
+     [
+      "\"Stop the industry but you can't stop the...\"?",
+      "Music",
+      "People",
+      "Movement"
+     ]
+    ],
+    [
+     [
+      "Mary sings about an upside down...?",
+      "Kingdom",
+      "World",
+      "Nation"
+     ],
+     [
+      "\"Where life is just not...\"?",
+      "Fair",
+      "Easy",
+      "Free"
+     ],
+     [
+      "\"Fear pumped into their veins to keep them from their...\"?",
+      "Destiny",
+      "Dreams",
+      "Family"
+     ],
+     [
+      "\"The things I'm seeing on the news is...\"?",
+      "Insane",
+      "Strange",
+      "The same"
+     ],
+     [
+      "\"The label want a song about a ___ life\"?",
+      "Bubbly",
+      "Lovely",
+      "Flashy"
+     ],
+     [
+      "\"Life is a beautiful...\"?",
+      "Struggle",
+      "Journey",
+      "Mystery"
+     ],
+     [
+      "\"People search through the...\"?",
+      "Rubble",
+      "Ruins",
+      "Trouble"
+     ],
+     [
+      "\"Some people using the noodle, some people using the...\"?",
+      "Muscle",
+      "Hustle",
+      "Money"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Never Been In Love",
+   "id": "jyqkw0z6Shs",
+   "start": 77.4,
+   "cuts": [
+    118,
+    178.2,
+    243.2
+   ],
+   "qs": [
+    [
+     [
+      "\"I know there's the first time for...\"?",
+      "Everything",
+      "Anything",
+      "Something"
+     ],
+     [
+      "\"Better than the perfect...\"?",
+      "Storm",
+      "Day",
+      "Song"
+     ],
+     [
+      "\"Ever considered wedding...\"?",
+      "Rings",
+      "Bells",
+      "Plans"
+     ],
+     [
+      "Where did he meet her?",
+      "At the bar",
+      "At the show",
+      "At the park"
+     ],
+     [
+      "\"Like I follow the...\"?",
+      "Star",
+      "Map",
+      "Crowd"
+     ],
+     [
+      "\"Jewel of the Nile, so I'm romancing the...\"?",
+      "Stone",
+      "Night",
+      "Moon"
+     ],
+     [
+      "\"I watched her dance to my...\"?",
+      "Poem",
+      "Song",
+      "Beat"
+     ],
+     [
+      "\"I pictured it like ___ when she answered the phone\"?",
+      "Paris Hilton",
+      "Halle Berry",
+      "Lauryn Hill"
+     ],
+     [
+      "\"I got a good look so I catch her...\"?",
+      "Eye",
+      "Hand",
+      "Smile"
+     ]
+    ],
+    [
+     [
+      "\"I don't care what people...\"?",
+      "Say",
+      "Think",
+      "Do"
+     ],
+     [
+      "\"As long as you and me...\"?",
+      "Okay",
+      "Together",
+      "Alright"
+     ],
+     [
+      "\"See I used to be a...\"?",
+      "Player",
+      "Rolling stone",
+      "Loner"
+     ],
+     [
+      "\"You running back to the kid like this was home...\"?",
+      "Base",
+      "Run",
+      "Team"
+     ],
+     [
+      "\"Or a marathon, I let you set your own...\"?",
+      "Pace",
+      "Rules",
+      "Time"
+     ],
+     [
+      "\"I never thought I'd feel like this, it's like a...\"?",
+      "Miracle",
+      "Movie",
+      "Dream"
+     ],
+     [
+      "\"You stole my heart like a...\"?",
+      "Crook",
+      "Thief",
+      "Pirate"
+     ],
+     [
+      "\"Till the walls come tumbling down like...\"?",
+      "Jericho",
+      "Dominoes",
+      "Babylon"
+     ]
+    ],
+    [
+     [
+      "\"Every time I think I got my feet...\"?",
+      "Upright",
+      "Planted",
+      "Steady"
+     ],
+     [
+      "\"You looked so good when I tried you on, so I had to write a...\"?",
+      "Song",
+      "Letter",
+      "Poem"
+     ],
+     [
+      "\"No cable or no hard line...\"?",
+      "Phone",
+      "Number",
+      "Address"
+     ],
+     [
+      "\"Scared of commitment, ready to forever...\"?",
+      "Roam",
+      "Run",
+      "Ride"
+     ],
+     [
+      "\"We at war like...\"?",
+      "Sister Souljah",
+      "Public Enemy",
+      "Malcolm X"
+     ],
+     [
+      "\"She welcome to my terror...\"?",
+      "Dome",
+      "Zone",
+      "Home"
+     ],
+     [
+      "\"They want to spit on my name and tarnish my...\"?",
+      "Image",
+      "Game",
+      "Fame"
+     ],
+     [
+      "\"Put it in a rhyme because it feels so...\"?",
+      "Musical",
+      "Magical",
+      "Special"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Get By",
+   "id": "r071djbotkQ",
+   "cuts": [
+    36.4,
+    106.3,
+    181
+   ],
+   "qs": [
+    [
+     [
+      "\"We smell the musk at the dusk in the crack of the...\"?",
+      "Dawn",
+      "Day",
+      "Night"
+     ],
+     [
+      "\"We go through Episode II like Attack of the...\"?",
+      "Clones",
+      "Drones",
+      "Throne"
+     ],
+     [
+      "\"Work 'til we break our...\"?",
+      "Back",
+      "Bank",
+      "Bread"
+     ],
+     [
+      "\"We commute to...\"?",
+      "Computers",
+      "Cubicles",
+      "Corners"
+     ],
+     [
+      "\"Spirits stay...\"?",
+      "Mute",
+      "Lifted",
+      "Moving"
+     ],
+     [
+      "\"While you eagles spread...\"?",
+      "Rumors",
+      "Wings",
+      "News"
+     ],
+     [
+      "\"We survivalists, turned to...\"?",
+      "Consumers",
+      "Customers",
+      "Commuters"
+     ],
+     [
+      "\"To get by, just to...\"?",
+      "Get by",
+      "Get fly",
+      "Get paid"
+     ]
+    ],
+    [
+     [
+      "\"Ask Him why some people got to live in a...\"?",
+      "Trailer",
+      "Castle",
+      "Basement"
+     ],
+     [
+      "\"I paint a picture with the pen like...\"?",
+      "Norman Mailer",
+      "Norman Rockwell",
+      "Langston Hughes"
+     ],
+     [
+      "\"Mi abuela raised ___ daughters all by herself\"?",
+      "Three",
+      "Two",
+      "Five"
+     ],
+     [
+      "\"I think about the struggle and I find the ___ in myself\"?",
+      "Strength",
+      "Peace",
+      "Fire"
+     ],
+     [
+      "\"These words melt in my...\"?",
+      "Mouth",
+      "Hand",
+      "Heart"
+     ],
+     [
+      "\"We do or die like Bed-Stuy through the...\"?",
+      "Red sky",
+      "Night sky",
+      "Rain"
+     ],
+     [
+      "\"This morning, I woke up feeling brand...\"?",
+      "New",
+      "Free",
+      "Strong"
+     ],
+     [
+      "\"I've been thinking, I've got my...\"?",
+      "Reasons",
+      "Answers",
+      "Doubts"
+     ]
+    ],
+    [
+     [
+      "\"Our activism attacking the...\"?",
+      "System",
+      "Station",
+      "Silence"
+     ],
+     [
+      "\"The love is unconditional, even when the condition is...\"?",
+      "Critical",
+      "Typical",
+      "Physical"
+     ],
+     [
+      "\"Your position is...\"?",
+      "Pivotal",
+      "Personal",
+      "Powerful"
+     ],
+     [
+      "\"The TV got us reaching for...\"?",
+      "Stars",
+      "Cars",
+      "Bars"
+     ],
+     [
+      "\"Not the ones between Venus and...\"?",
+      "Mars",
+      "Jupiter",
+      "Saturn"
+     ],
+     [
+      "\"The ones that be reading for...\"?",
+      "Parts",
+      "Books",
+      "Scripts"
+     ],
+     [
+      "\"Saturday sinners, Sunday morning at the feet of the...\"?",
+      "Father",
+      "Preacher",
+      "Altar"
+     ],
+     [
+      "\"When all you really need is...\"?",
+      "Love",
+      "Hope",
+      "Faith"
+     ],
+     [
+      "\"Our parents sing like...\"?",
+      "John Lennon",
+      "Paul Simon",
+      "Marvin Gaye"
+     ]
+    ]
+   ]
+  }
+ ]
 };
 (function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

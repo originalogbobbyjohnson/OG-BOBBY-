@@ -6,27 +6,27 @@ window.CFG = {
  "hoodUpper": "BED-STUY",
  "boro": "Brooklyn",
  "saveKey": "ogfan99maino1",
- "startRank": "Hater",
+ "startRank": "Hi Hater",
  "ranks": [
-  "Lobby Boy",
-  "Hard Hustler",
+  "Bed-Stuy Lobby Kid",
+  "Hustle Hard Soldier",
   "Black Flag Boss"
  ],
- "topRank": "King of Brooklyn",
+ "topRank": "King of Bed-Stuy",
  "point": "Buck",
  "points": "Bucks",
  "rankRewards": {
-  "Lobby Boy": {
+  "Bed-Stuy Lobby Kid": {
    "bongs": 5,
-   "line": "You made it into the lobby. Hi hater, bye hater."
+   "line": "You made it into the lobby. Bye, hater."
   },
-  "Hard Hustler": {
+  "Hustle Hard Soldier": {
    "bongs": 10,
-   "line": "Hustle hard. All the above."
+   "line": "Hustle hard. All the above, every single day."
   },
   "Black Flag Boss": {
    "bongs": 25,
-   "line": "You run all of Bed-Stuy."
+   "line": "Black Flag Boss. You run all of Bed-Stuy."
   }
  },
  "trophyArt": [
@@ -82,7 +82,7 @@ window.CFG = {
   {
    "scene": "lobby",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts as a Hater. Clear a row to rank up: Lobby Boy, Hard Hustler, Black Flag Boss. Beat the 99 Challenge to become King of Brooklyn.",
+   "x": "Everybody starts as a Hi Hater. Clear a row to rank up: Bed-Stuy Lobby Kid, Hustle Hard Soldier, Black Flag Boss. Beat the 99 Challenge to become King of Bed-Stuy.",
    "sfx": "bell"
   },
   {

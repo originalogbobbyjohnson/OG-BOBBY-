@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "MOUNT VERNON",
  "boro": "Westchester",
  "saveKey": "ogfan99nikobrim1",
- "startRank": "Rookie",
+ "startRank": "MV Benchwarmer",
  "ranks": [
-  "Two Tone",
-  "Marleys",
-  "No Lies",
+  "Two Tone Rookie",
+  "Marleys Crew",
+  "No Lies Insider",
   "Southside Sundayz",
-  "Feel Us"
+  "Mount Vernon Boss"
  ],
- "topRank": "Niko Brim",
+ "topRank": "King Niko Brim",
  "point": "Brim",
  "points": "Brims",
  "rankRewards": {
-  "Two Tone": {
+  "Two Tone Rookie": {
    "bongs": 5,
-   "line": "Two Tone. Both sides of the story."
+   "line": "Two Tone Rookie. Now you see both sides."
   },
-  "Marleys": {
+  "Marleys Crew": {
    "bongs": 10,
-   "line": "Marleys. Easy, smooth and loud."
+   "line": "Marleys crew. Easy, smooth and loud."
   },
-  "No Lies": {
+  "No Lies Insider": {
    "bongs": 15,
-   "line": "No Lies. Real talk only."
+   "line": "No Lies insider. Real talk only from here."
   },
   "Southside Sundayz": {
    "bongs": 20,
-   "line": "Southside Sundayz. The whole block is outside."
+   "line": "Southside Sundayz. The whole block is outside for you."
   },
-  "Feel Us": {
+  "Mount Vernon Boss": {
    "bongs": 25,
-   "line": "You run all of Mount Vernon."
+   "line": "Mount Vernon Boss. You run all of Mount Vernon."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "SOUTH JAMAICA",
  "boro": "Queens",
  "saveKey": "ogfan99mrcheeks1",
- "startRank": "Lost Boy",
+ "startRank": "Lost Without a Map",
  "ranks": [
-  "Get Up",
-  "Crazy World",
+  "Lost Boyz Rookie",
+  "Crazy World Resident",
+  "Lights, Camera, Action",
   "Beast from the East",
-  "Rich and Shameless",
-  "Love, Peace and Nappiness"
+  "Lost Boyz Boss"
  ],
  "topRank": "LB IV Life",
  "point": "Holla",
  "points": "Hollas",
  "rankRewards": {
-  "Get Up": {
+  "Lost Boyz Rookie": {
    "bongs": 5,
-   "line": "Get up! The party just started."
+   "line": "Lost Boyz Rookie. Get up, the party started."
   },
-  "Crazy World": {
+  "Crazy World Resident": {
    "bongs": 10,
    "line": "Me and my crazy world. You found your way in."
   },
-  "Beast from the East": {
+  "Lights, Camera, Action": {
    "bongs": 15,
+   "line": "Lights, camera, action. You're the star of the show."
+  },
+  "Beast from the East": {
+   "bongs": 20,
    "line": "Beast from the East. Queens heard you coming."
   },
-  "Rich and Shameless": {
-   "bongs": 20,
-   "line": "Lifestyles of the rich and shameless. You live it loud."
-  },
-  "Love, Peace and Nappiness": {
+  "Lost Boyz Boss": {
    "bongs": 25,
-   "line": "You run all of South Jamaica."
+   "line": "Lost Boyz Boss. You run all of South Jamaica."
   }
  },
  "trophyArt": [

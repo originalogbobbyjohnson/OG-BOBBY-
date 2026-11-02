@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "TRENTON",
  "boro": "New Jersey",
  "saveKey": "ogfan99wiseintelligent1",
- "startRank": "Student",
+ "startRank": "Unschooled Freshman",
  "ranks": [
-  "Holy Intellect",
   "Rock Dis Funky Joint",
+  "Holy Intellect",
   "Black Business",
-  "Poor Righteous Teacher",
-  "Timbuck2"
+  "Righteous Teacher",
+  "Intelligent Master"
  ],
- "topRank": "The Last Rhyme Bender",
+ "topRank": "Trenton's Wise King",
  "point": "Lesson",
  "points": "Lessons",
  "rankRewards": {
-  "Holy Intellect": {
-   "bongs": 5,
-   "line": "Holy Intellect. Class is in session."
-  },
   "Rock Dis Funky Joint": {
+   "bongs": 5,
+   "line": "Rock dis funky joint. You caught the groove."
+  },
+  "Holy Intellect": {
    "bongs": 10,
-   "line": "Rock Dis Funky Joint. You caught the groove."
+   "line": "Holy intellect. Your mind is opening up."
   },
   "Black Business": {
    "bongs": 15,
-   "line": "Black Business. Building something real."
+   "line": "Black business. You're building something real now."
   },
-  "Poor Righteous Teacher": {
+  "Righteous Teacher": {
    "bongs": 20,
    "line": "Poor Righteous Teacher. Now you teach the lesson."
   },
-  "Timbuck2": {
+  "Intelligent Master": {
    "bongs": 25,
-   "line": "You run all of Trenton."
+   "line": "Master of the mind. You run all of Trenton."
   }
  },
  "trophyArt": [

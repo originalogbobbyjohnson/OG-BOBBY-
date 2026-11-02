@@ -8,17 +8,17 @@ window.CFG = {
  "saveKey": "ogfan99koolgrap1",
  "startRank": "Corona Rookie",
  "ranks": [
-  "Juice Crew Recruit",
+  "Juice Crew Hopeful",
   "Road to the Riches",
   "Fast Lifer",
   "Ill Street Bluesman",
   "Riches Royalty Respect"
  ],
- "topRank": "The Kool Genius of Rap",
+ "topRank": "Kool Genius of Rap",
  "point": "Gold Rope",
  "points": "Gold Ropes",
  "rankRewards": {
-  "Juice Crew Recruit": {
+  "Juice Crew Hopeful": {
    "bongs": 5,
    "line": "Juice Crew recruit. Marley's got you on the roster now."
   },
@@ -28,7 +28,7 @@ window.CFG = {
   },
   "Fast Lifer": {
    "bongs": 15,
-   "line": "Living the fast life. Every bar on time."
+   "line": "Fast lifer. Living large, every bar on time."
   },
   "Ill Street Bluesman": {
    "bongs": 20,
@@ -36,7 +36,7 @@ window.CFG = {
   },
   "Riches Royalty Respect": {
    "bongs": 25,
-   "line": "You run all of Corona."
+   "line": "Riches, royalty, respect. You run all of Corona."
   }
  },
  "trophyArt": [

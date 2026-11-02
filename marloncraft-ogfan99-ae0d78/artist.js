@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HELL'S KITCHEN",
  "boro": "Manhattan",
  "saveKey": "ogfan99marloncraft1",
- "startRank": "Looked Like Nothing",
+ "startRank": "Hell's Kitchen Busboy",
  "ranks": [
-  "25 Cents",
-  "50 Cents",
-  "75 Cents",
-  "A Dollar in Quarters",
-  "Homecourt Advantage"
+  "25 Cents In",
+  "50 Cents In",
+  "75 Cents In",
+  "Dollar in Quarters",
+  "Tunnel's End Champ"
  ],
- "topRank": "The Tunnel's End",
+ "topRank": "Master Craftsman",
  "point": "Quarter",
  "points": "Quarters",
  "rankRewards": {
-  "25 Cents": {
+  "25 Cents In": {
    "bongs": 5,
-   "line": "One quarter in. Keep workin'."
+   "line": "One quarter in. Keep working, it adds up."
   },
-  "50 Cents": {
+  "50 Cents In": {
    "bongs": 10,
-   "line": "Halfway to a dollar."
+   "line": "Halfway to a dollar. The craft is showing."
   },
-  "75 Cents": {
+  "75 Cents In": {
    "bongs": 15,
-   "line": "Three quarters there. Do the work."
+   "line": "Three quarters there. Do the work, finish strong."
   },
-  "A Dollar in Quarters": {
+  "Dollar in Quarters": {
    "bongs": 20,
-   "line": "A dollar in quarters, every one earned."
+   "line": "A dollar in quarters, and every one was earned."
   },
-  "Homecourt Advantage": {
+  "Tunnel's End Champ": {
    "bongs": 25,
-   "line": "You run all of Hell's Kitchen."
+   "line": "Tunnel's End Champ. You run all of Hell's Kitchen."
   }
  },
  "trophyArt": [

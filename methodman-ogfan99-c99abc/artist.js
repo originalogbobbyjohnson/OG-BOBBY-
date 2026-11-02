@@ -6,9 +6,9 @@ window.CFG = {
  "hoodUpper": "PARK HILL",
  "boro": "Staten Island",
  "saveKey": "ogfan99methodman1",
- "startRank": "Sucka MC",
+ "startRank": "Can't Spell Method",
  "ranks": [
-  "M-E-T-H-O-D",
+  "M-E-T-H-O-D Speller",
   "Hot Nickel",
   "Iron Lung",
   "Ticallion Stallion",
@@ -18,17 +18,17 @@ window.CFG = {
  "point": "Sword",
  "points": "Swords",
  "rankRewards": {
-  "M-E-T-H-O-D": {
+  "M-E-T-H-O-D Speller": {
    "bongs": 5,
-   "line": "M-E-T-H-O-D. You can spell it now."
+   "line": "M-E-T-H-O-D. You can finally spell it."
   },
   "Hot Nickel": {
    "bongs": 10,
-   "line": "Hot Nickel. Too hot to hold."
+   "line": "Hot Nickel. Too hot for anyone to hold."
   },
   "Iron Lung": {
    "bongs": 15,
-   "line": "Iron Lung. You can run a whole verse without a breath."
+   "line": "Iron Lung. A whole verse without a breath."
   },
   "Ticallion Stallion": {
    "bongs": 20,
@@ -36,7 +36,7 @@ window.CFG = {
   },
   "Johnny Blaze": {
    "bongs": 25,
-   "line": "You run all of Park Hill."
+   "line": "Johnny Blaze. You run all of Park Hill."
   }
  },
  "trophyArt": [

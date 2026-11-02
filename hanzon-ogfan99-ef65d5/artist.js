@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "PARK HILL",
  "boro": "Staten Island",
  "saveKey": "ogfan99hanzon1",
- "startRank": "Dishwasher",
+ "startRank": "Burnt Toast Dishwasher",
  "ranks": [
-  "Line Cook",
-  "Sous Chef",
-  "Out the Kitchen",
-  "Back to Sicily",
-  "Hannibal the Great"
+  "Hanz On Line Cook",
+  "Sicilian Sous Chef",
+  "Chef's Kitchen Regular",
+  "Hannibal's Right Hand",
+  "Park Hill Kitchen Boss"
  ],
- "topRank": "Head Chef",
+ "topRank": "Hannibal the Great",
  "point": "Plate",
  "points": "Plates",
  "rankRewards": {
-  "Line Cook": {
+  "Hanz On Line Cook": {
    "bongs": 5,
-   "line": "Line Cook. You got your station."
+   "line": "Line cook. You finally got your own station."
   },
-  "Sous Chef": {
+  "Sicilian Sous Chef": {
    "bongs": 10,
-   "line": "Sous Chef. Second in the kitchen."
+   "line": "Sous chef. Second in command, straight from Sicily."
   },
-  "Out the Kitchen": {
+  "Chef's Kitchen Regular": {
    "bongs": 15,
-   "line": "Fresh out the chef's kitchen."
+   "line": "Fresh out the chef's kitchen. They know your plate."
   },
-  "Back to Sicily": {
+  "Hannibal's Right Hand": {
    "bongs": 20,
-   "line": "Back to Sicily. You know the roots."
+   "line": "Hannibal's right hand. The whole kitchen answers to you."
   },
-  "Hannibal the Great": {
+  "Park Hill Kitchen Boss": {
    "bongs": 25,
-   "line": "You run all of Park Hill."
+   "line": "Kitchen boss. You run all of Park Hill."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99smokedza1",
- "startRank": "Jobber",
+ "startRank": "Harlem Jobber",
  "ranks": [
-  "Ringside",
+  "Ringside Seat",
   "Rugby Thompson",
   "Not for Sale",
-  "Dream Zone",
-  "George Kush"
+  "Dream Zone Achiever",
+  "George Kush Champ"
  ],
  "topRank": "K.O.N.Y.",
  "point": "Belt",
  "points": "Belts",
  "rankRewards": {
-  "Ringside": {
+  "Ringside Seat": {
    "bongs": 5,
-   "line": "Ringside. You got a seat by the ropes."
+   "line": "Ringside seat. You're right by the ropes now."
   },
   "Rugby Thompson": {
    "bongs": 10,
-   "line": "Rugby Thompson. Dressed for it."
+   "line": "Rugby Thompson. Dressed for it and ready."
   },
   "Not for Sale": {
    "bongs": 15,
-   "line": "Not for Sale. Can't buy what you earned."
+   "line": "Not for sale. Can't buy what you earned."
   },
-  "Dream Zone": {
+  "Dream Zone Achiever": {
    "bongs": 20,
-   "line": "Dream. Zone. Achieve."
+   "line": "Dream. Zone. Achieve. You made it real."
   },
-  "George Kush": {
+  "George Kush Champ": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Kush champ of the world. You run all of Harlem."
   }
  },
  "trophyArt": [

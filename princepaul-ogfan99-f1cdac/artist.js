@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "AMITYVILLE",
  "boro": "Long Island",
  "saveKey": "ogfan99princepaul1",
- "startRank": "Skit Rookie",
+ "startRank": "Skit Skipper",
  "ranks": [
-  "Stetsasonic",
-  "Daisy Age",
-  "Handsome Boy",
-  "Psychoanalysis",
+  "Stetsasonic Roadie",
+  "Daisy Age Flower",
+  "Handsome Boy Model",
+  "Psychoanalyst",
   "Skit King"
  ],
- "topRank": "The Prince",
+ "topRank": "A Prince Among Thieves",
  "point": "Skit",
  "points": "Skits",
  "rankRewards": {
-  "Stetsasonic": {
+  "Stetsasonic Roadie": {
    "bongs": 5,
-   "line": "Stetsasonic. The hip-hop band, and you are in it."
+   "line": "Stetsasonic Roadie. You're carrying gear for the hip-hop band."
   },
-  "Daisy Age": {
+  "Daisy Age Flower": {
    "bongs": 10,
-   "line": "Daisy Age. Flowers up, three feet high."
+   "line": "Daisy Age flower. Three feet high and rising."
   },
-  "Handsome Boy": {
+  "Handsome Boy Model": {
    "bongs": 15,
-   "line": "Handsome Boy. Strike a pose for the cameras."
+   "line": "Handsome Boy Model. Strike a pose for the cameras."
   },
-  "Psychoanalysis": {
+  "Psychoanalyst": {
    "bongs": 20,
-   "line": "Psychoanalysis. Lie down, we need to talk about these beats."
+   "line": "Psychoanalyst. Lie down, let's talk about these beats."
   },
   "Skit King": {
    "bongs": 25,
-   "line": "You run all of Amityville."
+   "line": "Skit King. You run all of Amityville."
   }
  },
  "trophyArt": [

@@ -6,13 +6,13 @@ window.CFG = {
  "hoodUpper": "SOUTH JAMAICA",
  "boro": "Queens",
  "saveKey": "ogfan99lloydbanks1",
- "startRank": "Lame",
+ "startRank": "Starving Outsider",
  "ranks": [
   "Cold Corner Kid",
-  "Hungry Warrior",
-  "Blue Hefner"
+  "G-Unit Soldier",
+  "Hunger for More Boss"
  ],
- "topRank": "Punchline King",
+ "topRank": "The Punchline King",
  "point": "Punchline",
  "points": "Punchlines",
  "rankRewards": {
@@ -20,13 +20,13 @@ window.CFG = {
    "bongs": 5,
    "line": "You held it down on the Cold Corner."
   },
-  "Hungry Warrior": {
+  "G-Unit Soldier": {
    "bongs": 10,
-   "line": "The hunger for more. You never get full."
+   "line": "G-Unit Soldier. You're riding with the crew now."
   },
-  "Blue Hefner": {
+  "Hunger for More Boss": {
    "bongs": 25,
-   "line": "You run all of South Jamaica."
+   "line": "The hunger never stops. You run all of South Jamaica."
   }
  },
  "trophyArt": [
@@ -77,7 +77,7 @@ window.CFG = {
   {
    "scene": "station",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts as a Lame. Clear a row to rank up: Cold Corner Kid, Hungry Warrior, Blue Hefner. Beat the 99 Challenge to become Punchline King.",
+   "x": "Everybody starts as a Starving Outsider. Clear a row to rank up: Cold Corner Kid, G-Unit Soldier, Hunger for More Boss. Beat the 99 Challenge to become The Punchline King.",
    "sfx": "train"
   },
   {

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "CHELSEA",
  "boro": "Manhattan",
  "saveKey": "ogfan99jeangrae1",
- "startRank": "What What",
+ "startRank": "Bootleg Copy",
  "ranks": [
-  "Jeannie",
-  "Bootleg",
-  "This Week",
-  "Jeanius",
-  "Grae Matter"
+  "What What Era Fan",
+  "Bootleg of the Bootleg",
+  "This Week Regular",
+  "Grae Matter",
+  "Certified Jeanius"
  ],
- "topRank": "Jean Grae",
+ "topRank": "Queen Jean Grae",
  "point": "Page",
  "points": "Pages",
  "rankRewards": {
-  "Jeannie": {
+  "What What Era Fan": {
    "bongs": 5,
-   "line": "Jeannie. Pen out, notebook open."
+   "line": "What What era. You knew her from the start."
   },
-  "Bootleg": {
+  "Bootleg of the Bootleg": {
    "bongs": 10,
-   "line": "Bootleg. Rare cuts, you found them."
+   "line": "Bootleg of the Bootleg. Rare cuts, and you found them."
   },
-  "This Week": {
+  "This Week Regular": {
    "bongs": 15,
-   "line": "This Week. Every bar on time."
-  },
-  "Jeanius": {
-   "bongs": 20,
-   "line": "Jeanius. The smartest one in the room."
+   "line": "This Week regular. Every bar, every release, on time."
   },
   "Grae Matter": {
+   "bongs": 20,
+   "line": "Grae matter. Your brain is working overtime now."
+  },
+  "Certified Jeanius": {
    "bongs": 25,
-   "line": "You run all of Chelsea."
+   "line": "Certified Jeanius. You run all of Chelsea."
   }
  },
  "trophyArt": [

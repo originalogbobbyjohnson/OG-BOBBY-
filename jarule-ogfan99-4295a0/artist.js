@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HOLLIS",
  "boro": "Queens",
  "saveKey": "ogfan99jarule1",
- "startRank": "New Jack",
+ "startRank": "Never on Time",
  "ranks": [
-  "Holla Holla",
-  "Venni Vetti Vecci",
-  "Rule 3:36",
+  "Holla Holla Newcomer",
+  "Mesmerize Regular",
+  "Rule 3:36 Disciple",
   "Pain Is Love",
-  "Always on Time"
+  "Venni Vetti Vecci"
  ],
  "topRank": "The Ruler",
  "point": "Holla",
  "points": "Hollas",
  "rankRewards": {
-  "Holla Holla": {
+  "Holla Holla Newcomer": {
    "bongs": 5,
-   "line": "Holla holla. Hollis hears you now."
+   "line": "Holla holla. Hollis can finally hear you now."
   },
-  "Venni Vetti Vecci": {
+  "Mesmerize Regular": {
    "bongs": 10,
-   "line": "Venni Vetti Vecci. You came, you saw, you conquered."
+   "line": "Mesmerize regular. The whole crew's leaning on you."
   },
-  "Rule 3:36": {
+  "Rule 3:36 Disciple": {
    "bongs": 15,
-   "line": "Rule 3:36. Straight to the top of the charts."
+   "line": "Rule 3:36. You're straight up the charts now."
   },
   "Pain Is Love": {
    "bongs": 20,
-   "line": "Pain Is Love. Every hook, every line, you know it."
+   "line": "Pain Is Love. Every hook, every line, you know."
   },
-  "Always on Time": {
+  "Venni Vetti Vecci": {
    "bongs": 25,
-   "line": "You run all of Hollis."
+   "line": "Came, saw, conquered. You run all of Hollis."
   }
  },
  "trophyArt": [

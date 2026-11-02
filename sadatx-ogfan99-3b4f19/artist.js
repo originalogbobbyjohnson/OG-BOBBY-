@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "NEW ROCHELLE",
  "boro": "Westchester",
  "saveKey": "ogfan99sadatx1",
- "startRank": "Greenhorn",
+ "startRank": "Rochelle Greenhorn",
  "ranks": [
   "Derek X",
-  "Brand Nubian",
-  "Slow Down",
+  "One for All Crew",
+  "Brand Nubian Member",
   "Wild Cowboy",
-  "Stages and Lights"
+  "Nubian General"
  ],
- "topRank": "New Rochelle Legend",
+ "topRank": "Brand Nubian Legend",
  "point": "Verse",
  "points": "Verses",
  "rankRewards": {
   "Derek X": {
    "bongs": 5,
-   "line": "Derek X. Where the name started."
+   "line": "Derek X. Where the name first started."
   },
-  "Brand Nubian": {
+  "One for All Crew": {
    "bongs": 10,
-   "line": "Brand Nubian. Now you are part of the crew."
+   "line": "One for All. You're in step with the crew."
   },
-  "Slow Down": {
+  "Brand Nubian Member": {
    "bongs": 15,
-   "line": "Slow Down. You took your time and got it right."
+   "line": "Brand Nubian. Now you're part of the family."
   },
   "Wild Cowboy": {
    "bongs": 20,
-   "line": "Wild Cowboy. Saddle up and ride."
+   "line": "Wild Cowboy. Saddle up and ride with Sadat."
   },
-  "Stages and Lights": {
+  "Nubian General": {
    "bongs": 25,
-   "line": "You run all of New Rochelle."
+   "line": "Nubian general. You run all of New Rochelle."
   }
  },
  "trophyArt": [

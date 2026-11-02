@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99camron1",
- "startRank": "Lil Cam",
+ "startRank": "No-Mink Nobody",
  "ranks": [
-  "Diplomat",
-  "Hey Ma",
-  "Oh Boy",
-  "Pink Mink",
-  "Harlem Boss"
+  "Dipset Hopeful",
+  "Hey Ma Smooth Talker",
+  "Oh Boy Hitmaker",
+  "Pink Mink Stunner",
+  "Killa Season Boss"
  ],
- "topRank": "Cam'ron",
+ "topRank": "Killa Cam",
  "point": "Mink",
  "points": "Minks",
  "rankRewards": {
-  "Diplomat": {
+  "Dipset Hopeful": {
    "bongs": 5,
-   "line": "Diplomat. Dipset let you in."
+   "line": "Dipset Hopeful. The Diplomats see you knocking."
   },
-  "Hey Ma": {
+  "Hey Ma Smooth Talker": {
    "bongs": 10,
-   "line": "Hey Ma. Smooth talk, all class."
+   "line": "Hey Ma Smooth Talker. Smooth talk, all class."
   },
-  "Oh Boy": {
+  "Oh Boy Hitmaker": {
    "bongs": 15,
-   "line": "Oh Boy. Harlem is singing it back."
+   "line": "Oh Boy Hitmaker. Harlem is singing it back to you."
   },
-  "Pink Mink": {
+  "Pink Mink Stunner": {
    "bongs": 20,
-   "line": "Pink Mink. Loudest coat on Lenox."
+   "line": "Pink Mink Stunner. Loudest coat on Lenox Avenue."
   },
-  "Harlem Boss": {
+  "Killa Season Boss": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Killa Season Boss. You run all of Harlem."
   }
  },
  "trophyArt": [

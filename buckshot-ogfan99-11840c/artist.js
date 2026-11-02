@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "CROWN HEIGHTS",
  "boro": "Brooklyn",
  "saveKey": "ogfan99buckshot1",
- "startRank": "Shorty",
+ "startRank": "Shorty Without a Stage",
  "ranks": [
   "Enta Da Stage",
-  "Chemistry",
   "Survival Skills",
-  "Total Eclipse",
-  "The Formula"
+  "Boot Camp Clik",
+  "Duck Down Partner",
+  "Total Eclipse General"
  ],
- "topRank": "Black Moon",
+ "topRank": "Black Moon King",
  "point": "Prop",
  "points": "Props",
  "rankRewards": {
   "Enta Da Stage": {
    "bongs": 5,
-   "line": "You stepped on the stage. The crowd is watching."
-  },
-  "Chemistry": {
-   "bongs": 10,
-   "line": "You and the beat got chemistry now."
+   "line": "Enta Da Stage. You stepped up and the crowd is watching."
   },
   "Survival Skills": {
+   "bongs": 10,
+   "line": "Survival Skills. You know how to make it out here."
+  },
+  "Boot Camp Clik": {
    "bongs": 15,
-   "line": "Boot Camp trained. You know how to make it."
+   "line": "Boot Camp Clik. Trained up and down with the whole clik."
   },
-  "Total Eclipse": {
+  "Duck Down Partner": {
    "bongs": 20,
-   "line": "The moon is up and you're blocking out the rest."
+   "line": "Duck Down Partner. Your name is on the label now."
   },
-  "The Formula": {
+  "Total Eclipse General": {
    "bongs": 25,
-   "line": "You run all of Crown Heights."
+   "line": "Total Eclipse General. You run all of Crown Heights."
   }
  },
  "trophyArt": [

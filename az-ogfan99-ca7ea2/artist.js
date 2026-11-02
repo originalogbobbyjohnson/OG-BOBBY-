@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "EAST NEW YORK",
  "boro": "Brooklyn",
  "saveKey": "ogfan99az1",
- "startRank": "Pieces of a Man",
+ "startRank": "No Doe Nobody",
  "ranks": [
+  "Doe or Die Hopeful",
   "Rather Unique",
   "The Format",
-  "Aziatic",
-  "Undeniable",
-  "Legendary"
+  "Firm Member",
+  "Aziatic Boss"
  ],
  "topRank": "The Visualiza",
  "point": "Doe",
  "points": "Doe",
  "rankRewards": {
-  "Rather Unique": {
+  "Doe or Die Hopeful": {
    "bongs": 5,
-   "line": "One of one, straight out of East New York."
+   "line": "Doe or Die Hopeful. You're out here chasing it now."
+  },
+  "Rather Unique": {
+   "bongs": 10,
+   "line": "Rather Unique. One of one, straight from East New York."
   },
   "The Format": {
-   "bongs": 10,
-   "line": "You know the format now. Smooth and steady."
-  },
-  "Aziatic": {
    "bongs": 15,
-   "line": "Aziatic flow. Every word in its place."
+   "line": "The Format. You learned it, smooth and steady."
   },
-  "Undeniable": {
+  "Firm Member": {
    "bongs": 20,
-   "line": "Nobody can deny it. You're the real thing."
+   "line": "Firm Member. You signed in with The Firm."
   },
-  "Legendary": {
+  "Aziatic Boss": {
    "bongs": 25,
-   "line": "You run all of East New York."
+   "line": "Aziatic Boss. Every word in place, you run all of East New York."
   }
  },
  "trophyArt": [

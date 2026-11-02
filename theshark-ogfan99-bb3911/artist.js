@@ -6,9 +6,9 @@ window.CFG = {
  "hoodUpper": "BELMONT",
  "boro": "Bronx",
  "saveKey": "ogfan99theshark1",
- "startRank": "Chooch",
+ "startRank": "Belmont Chooch",
  "ranks": [
-  "Paisan",
+  "Arthur Ave Paisan",
   "Hammerhead",
   "Great White"
  ],
@@ -16,17 +16,17 @@ window.CFG = {
  "point": "Tooth",
  "points": "Teeth",
  "rankRewards": {
-  "Paisan": {
+  "Arthur Ave Paisan": {
    "bongs": 5,
-   "line": "Arthur Avenue knows your face now."
+   "line": "Paisan. Arthur Avenue knows your face now."
   },
   "Hammerhead": {
    "bongs": 10,
-   "line": "You hit the Concourse head first."
+   "line": "Hammerhead. You hit the Concourse head first."
   },
   "Great White": {
    "bongs": 25,
-   "line": "You run all of Belmont."
+   "line": "Great white of the block. You run all of Belmont."
   }
  },
  "trophyArt": [
@@ -78,7 +78,7 @@ window.CFG = {
   {
    "scene": "stadium",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts as a Chooch. Clear a row to rank up: Paisan, Hammerhead, Great White. Beat the 99 Challenge to become Lo Squalo.",
+   "x": "Everybody starts as a Belmont Chooch. Clear a row to rank up: Arthur Ave Paisan, Hammerhead, Great White. Beat the 99 Challenge to become Lo Squalo.",
    "sfx": "crowd"
   },
   {

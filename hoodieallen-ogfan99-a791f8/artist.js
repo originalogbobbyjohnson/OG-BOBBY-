@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "PLAINVIEW",
  "boro": "Long Island",
  "saveKey": "ogfan99hoodieallen1",
- "startRank": "Pep Rally",
+ "startRank": "Pep Rally Wallflower",
  "ranks": [
-  "Leap Year",
-  "Crew Cuts",
-  "All American",
-  "Happy Camper",
-  "People Keep Talking"
+  "Leap Year Freshman",
+  "Crew Cuts Regular",
+  "Happy Camper Counselor",
+  "All American Starter",
+  "Long Island Big Shot"
  ],
- "topRank": "The Hype",
+ "topRank": "Plainview Prom King",
  "point": "Hoodie",
  "points": "Hoodies",
  "rankRewards": {
-  "Leap Year": {
+  "Leap Year Freshman": {
    "bongs": 5,
-   "line": "You just took the leap."
+   "line": "Leap year freshman. You just took the leap."
   },
-  "Crew Cuts": {
+  "Crew Cuts Regular": {
    "bongs": 10,
-   "line": "You made the crew cut."
+   "line": "Crew cuts regular. You made the cut with us."
   },
-  "All American": {
+  "Happy Camper Counselor": {
    "bongs": 15,
-   "line": "First team, All American."
+   "line": "Happy camper counselor. Now you're running the cabin."
   },
-  "Happy Camper": {
+  "All American Starter": {
    "bongs": 20,
-   "line": "One happy camper."
+   "line": "All American starter. First team, every single game."
   },
-  "People Keep Talking": {
+  "Long Island Big Shot": {
    "bongs": 25,
-   "line": "You run all of Plainview."
+   "line": "Big shot status. You run all of Plainview."
   }
  },
  "trophyArt": [

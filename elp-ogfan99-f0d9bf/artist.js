@@ -5,37 +5,37 @@ window.CFG = {
  "hood": "Boerum Hill",
  "hoodUpper": "BOERUM HILL",
  "boro": "Brooklyn",
- "startRank": "Cadet",
+ "startRank": "Funcrushed Bystander",
  "ranks": [
-  "Funcrusher Plus",
-  "Fantastic Damage",
-  "Def Jux",
+  "Def Jux Intern",
   "Company Flow",
-  "Run the Jewels"
+  "Fantastic Damage",
+  "Jewel Runner",
+  "Run the Jewels Boss"
  ],
  "topRank": "El Producto",
  "point": "Laser",
  "points": "Lasers",
  "rankRewards": {
-  "Funcrusher Plus": {
+  "Def Jux Intern": {
    "bongs": 5,
-   "line": "Funcrusher Plus. The underground just opened up."
-  },
-  "Fantastic Damage": {
-   "bongs": 10,
-   "line": "Fantastic damage. The beat hits like a spaceship landing."
-  },
-  "Def Jux": {
-   "bongs": 15,
-   "line": "Signed to Def Jux. Welcome to the label."
+   "line": "Def Jux Intern. The underground just opened its doors."
   },
   "Company Flow": {
-   "bongs": 20,
-   "line": "You're in the Company now."
+   "bongs": 10,
+   "line": "Company Flow. You're in the Company now."
   },
-  "Run the Jewels": {
+  "Fantastic Damage": {
+   "bongs": 15,
+   "line": "Fantastic Damage. Your beats hit like a spaceship landing."
+  },
+  "Jewel Runner": {
+   "bongs": 20,
+   "line": "Jewel Runner. Fist and chain held high, you run with the jewels."
+  },
+  "Run the Jewels Boss": {
    "bongs": 25,
-   "line": "You run all of Boerum Hill."
+   "line": "Run the Jewels Boss. You run all of Boerum Hill."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99immortaltechnique1",
- "startRank": "Student",
+ "startRank": "Propaganda Believer",
  "ranks": [
-  "Revolutionary",
-  "Third World",
-  "Truth Seeker",
-  "No Return",
-  "The Immortal"
+  "Revolutionary Vol. 1",
+  "Harlem Streets Soldier",
+  "3rd World Truth Seeker",
+  "Point of No Return",
+  "Revolution General"
  ],
- "topRank": "Technique",
+ "topRank": "The Immortal",
  "point": "Truth",
  "points": "Truths",
  "rankRewards": {
-  "Revolutionary": {
+  "Revolutionary Vol. 1": {
    "bongs": 5,
-   "line": "Revolutionary. You opened the first book."
+   "line": "Revolutionary Vol. 1. You opened the first book."
   },
-  "Third World": {
+  "Harlem Streets Soldier": {
    "bongs": 10,
-   "line": "Third World. From Lima to Harlem, you know the map."
+   "line": "Harlem streets soldier. You know where the struggle lives."
   },
-  "Truth Seeker": {
+  "3rd World Truth Seeker": {
    "bongs": 15,
-   "line": "Truth Seeker. Every line, read twice."
+   "line": "Truth seeker. From Lima to Harlem, you know the map."
   },
-  "No Return": {
+  "Point of No Return": {
    "bongs": 20,
-   "line": "No Return. Past the point, and still going."
+   "line": "Point of no return. Past the line and still going."
   },
-  "The Immortal": {
+  "Revolution General": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Revolution general. You run all of Harlem now."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "SUGAR HILL",
  "boro": "Manhattan",
  "saveKey": "ogfan99juelzsantana1",
- "startRank": "Lil Juelz",
+ "startRank": "Lil Santana Wannabe",
  "ranks": [
-  "Back to the Crib",
-  "Mic Check",
-  "Oh Yes",
-  "Santana's Town",
-  "Diplomat"
+  "Whistle Song Newbie",
+  "Mic Check Regular",
+  "Oh Yes Crowd Favorite",
+  "Dipset Lieutenant",
+  "Sugar Hill General"
  ],
- "topRank": "Santana",
+ "topRank": "King of Santana's Town",
  "point": "Whistle",
  "points": "Whistles",
  "rankRewards": {
-  "Back to the Crib": {
+  "Whistle Song Newbie": {
    "bongs": 5,
-   "line": "Back to the Crib. Home on Sugar Hill."
+   "line": "There it go. You blew the whistle and walked in."
   },
-  "Mic Check": {
+  "Mic Check Regular": {
    "bongs": 10,
-   "line": "Mic Check. One, two, the crowd hears you."
+   "line": "Mic check, one two. The crowd hears you now."
   },
-  "Oh Yes": {
+  "Oh Yes Crowd Favorite": {
    "bongs": 15,
-   "line": "Oh Yes. The whole block says it with you."
+   "line": "Oh yes. The whole block is saying it with you."
   },
-  "Santana's Town": {
+  "Dipset Lieutenant": {
    "bongs": 20,
-   "line": "Santana's Town. Uptown is yours now."
+   "line": "Dipset lieutenant. You're running with the team now."
   },
-  "Diplomat": {
+  "Sugar Hill General": {
    "bongs": 25,
-   "line": "You run all of Sugar Hill."
+   "line": "Sugar Hill general. You run all of Sugar Hill."
   }
  },
  "trophyArt": [

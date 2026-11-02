@@ -6,11 +6,11 @@ window.CFG = {
  "hoodUpper": "YONKERS",
  "boro": "Westchester",
  "saveKey": "ogfan99sheeklouch1",
- "startRank": "Pup",
+ "startRank": "Yonkers Stray",
  "ranks": [
+  "Wolf Cub",
   "Year of the Wolf",
-  "Still a Wolf",
-  "D-Block",
+  "D-Block Soldier",
   "Beast Mode",
   "Silverback Gorilla"
  ],
@@ -18,25 +18,25 @@ window.CFG = {
  "point": "Banana",
  "points": "Bananas",
  "rankRewards": {
-  "Year of the Wolf": {
+  "Wolf Cub": {
    "bongs": 5,
-   "line": "Year of the Wolf. You found the pack."
+   "line": "Wolf cub. You just found the pack."
   },
-  "Still a Wolf": {
+  "Year of the Wolf": {
    "bongs": 10,
-   "line": "Still a Wolf. Running with the pack."
+   "line": "Year of the Wolf. Running with the pack now."
   },
-  "D-Block": {
+  "D-Block Soldier": {
    "bongs": 15,
-   "line": "D-Block. You're down with the crew now."
+   "line": "D-Block soldier. You're down with the crew."
   },
   "Beast Mode": {
    "bongs": 20,
-   "line": "Beast Mode. Let's go!"
+   "line": "Beast mode. Let's go, the whole block heard you."
   },
   "Silverback Gorilla": {
    "bongs": 25,
-   "line": "You run all of Yonkers."
+   "line": "Silverback gorilla. You run all of Yonkers."
   }
  },
  "trophyArt": [

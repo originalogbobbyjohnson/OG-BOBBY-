@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "BAY SHORE",
  "boro": "Long Island",
  "saveKey": "ogfan99ericksermon1",
- "startRank": "New Jack",
+ "startRank": "Brentwood Bystander",
  "ranks": [
-  "Strictly Business",
-  "Def Squad",
-  "Funky Technician",
+  "E-Double Apprentice",
+  "You Gots to Chill",
+  "Crossover Star",
   "Green Eyed Bandit",
-  "React"
+  "Def Squad General"
  ],
- "topRank": "E Double",
+ "topRank": "E Double Supreme",
  "point": "Groove",
  "points": "Grooves",
  "rankRewards": {
-  "Strictly Business": {
+  "E-Double Apprentice": {
    "bongs": 5,
    "line": "Strictly Business. You came here to work."
   },
-  "Def Squad": {
+  "You Gots to Chill": {
    "bongs": 10,
-   "line": "Def Squad. Now you roll with the squad."
+   "line": "You Gots to Chill. Smooth and calm, the EPMD way."
   },
-  "Funky Technician": {
+  "Crossover Star": {
    "bongs": 15,
-   "line": "Funky Technician. The funk is in the details."
+   "line": "Crossover Star. Your sound reached every crowd."
   },
   "Green Eyed Bandit": {
    "bongs": 20,
-   "line": "Green Eyed Bandit. Smooth, quick and gone."
+   "line": "Green Eyed Bandit. Smooth, quick and gone with the bag."
   },
-  "React": {
+  "Def Squad General": {
    "bongs": 25,
-   "line": "You run all of Bay Shore."
+   "line": "Def Squad General. You run all of Bay Shore."
   }
  },
  "trophyArt": [

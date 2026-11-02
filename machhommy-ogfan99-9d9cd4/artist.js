@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "NEWARK",
  "boro": "New Jersey",
  "saveKey": "ogfan99machhommy1",
- "startRank": "Duck",
+ "startRank": "No Mask, No Clue",
  "ranks": [
-  "Dollar Menu",
-  "Supertape",
-  "Dumpmeister",
-  "Hard Lemonade",
-  "Dump Gawd"
+  "Dollar Menu Regular",
+  "Balens Cho Crew",
+  "Hard Lemonade Pourer",
+  "Pray for Haiti Vet",
+  "Masked Newark Boss"
  ],
- "topRank": "Rich Haitian",
+ "topRank": "King of the Mask",
  "point": "Gourde",
  "points": "Gourdes",
  "rankRewards": {
-  "Dollar Menu": {
+  "Dollar Menu Regular": {
    "bongs": 5,
-   "line": "Dollar Menu. You're on the board now."
+   "line": "Dollar Menu regular. You're on the board now."
   },
-  "Supertape": {
+  "Balens Cho Crew": {
    "bongs": 10,
-   "line": "Supertape. Your name's on the tracklist."
+   "line": "Balens Cho crew. Your name's on the list."
   },
-  "Dumpmeister": {
+  "Hard Lemonade Pourer": {
    "bongs": 15,
-   "line": "Dumpmeister. Broad and Market know your face."
+   "line": "Mach's Hard Lemonade. Squeezed, poured and served by you."
   },
-  "Hard Lemonade": {
+  "Pray for Haiti Vet": {
    "bongs": 20,
-   "line": "Mach's Hard Lemonade. Squeezed and poured."
+   "line": "Pray for Haiti vet. You heard every bar."
   },
-  "Dump Gawd": {
+  "Masked Newark Boss": {
    "bongs": 25,
-   "line": "You run all of Newark."
+   "line": "Masked Newark Boss. You run all of Newark."
   }
  },
  "trophyArt": [

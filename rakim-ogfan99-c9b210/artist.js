@@ -6,13 +6,13 @@ window.CFG = {
  "hoodUpper": "WYANDANCH",
  "boro": "Long Island",
  "saveKey": "ogfan99rakim1",
- "startRank": "Rent-a-Rapper",
+ "startRank": "Sweats the Technique",
  "ranks": [
   "Kid Wizard",
   "Microphone Fiend",
-  "Technician",
+  "Follow the Leader",
   "Paid in Full",
-  "The 18th Letter"
+  "18th Letter Master"
  ],
  "topRank": "The God MC",
  "point": "Cut",
@@ -20,23 +20,23 @@ window.CFG = {
  "rankRewards": {
   "Kid Wizard": {
    "bongs": 5,
-   "line": "Kid Wizard. That's what they called him first."
+   "line": "Kid Wizard. That's what they called Rakim first."
   },
   "Microphone Fiend": {
    "bongs": 10,
-   "line": "Microphone Fiend. Leave his mic alone."
+   "line": "Microphone Fiend. Now you can't leave the mic alone."
   },
-  "Technician": {
+  "Follow the Leader": {
    "bongs": 15,
-   "line": "Technician. You don't sweat the technique."
+   "line": "Follow the Leader. You're right behind Ra, step for step."
   },
   "Paid in Full": {
    "bongs": 20,
-   "line": "Paid in Full. Hit the studio."
+   "line": "Paid in Full. Eric B. and Rakim cleared your path."
   },
-  "The 18th Letter": {
+  "18th Letter Master": {
    "bongs": 25,
-   "line": "You run all of Wyandanch."
+   "line": "The 18th letter is yours. You run all of Wyandanch."
   }
  },
  "trophyArt": [

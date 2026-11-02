@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "PARK HILL",
  "boro": "Staten Island",
  "saveKey": "ogfan99raekwon1",
- "startRank": "Dishwasher",
+ "startRank": "Wu Dishwasher",
  "ranks": [
-  "Purple Tape",
-  "Ice Water",
+  "Park Hill Line Cook",
+  "Ice Water Crew",
   "Lex Diamond",
-  "Cuban Linx",
-  "Wu-Gambino"
+  "Cuban Linx Made Man",
+  "Wu-Gambino Boss"
  ],
  "topRank": "The Chef",
  "point": "Plate",
  "points": "Plates",
  "rankRewards": {
-  "Purple Tape": {
+  "Park Hill Line Cook": {
    "bongs": 5,
-   "line": "Purple Tape. You pressed play on a classic."
+   "line": "You got a station in the Park Hill kitchen. Start cooking."
   },
-  "Ice Water": {
+  "Ice Water Crew": {
    "bongs": 10,
    "line": "Ice Water. Cool, calm, and you know the words."
   },
   "Lex Diamond": {
    "bongs": 15,
-   "line": "Lex Diamond. Sharp and shining."
+   "line": "Lex Diamond. Sharp, shining, and moving with the Chef."
   },
-  "Cuban Linx": {
+  "Cuban Linx Made Man": {
    "bongs": 20,
-   "line": "Cuban Linx. Only built for the real ones."
+   "line": "Only Built 4 Cuban Linx. You're a made man now."
   },
-  "Wu-Gambino": {
+  "Wu-Gambino Boss": {
    "bongs": 25,
-   "line": "You run all of Park Hill."
+   "line": "Wu-Gambino boss. You run all of Park Hill."
   }
  },
  "trophyArt": [

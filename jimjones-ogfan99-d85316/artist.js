@@ -6,27 +6,27 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99jimjones1",
- "startRank": "Lame",
+ "startRank": "Grounded Pigeon",
  "ranks": [
-  "Byrd Gang",
-  "Diplomat",
-  "Vamp Life"
+  "Byrd Gang Fledgling",
+  "Vamp Life Insider",
+  "Harlem Byrd Gang Boss"
  ],
  "topRank": "El Capo",
  "point": "Jumper",
  "points": "Jumpers",
  "rankRewards": {
-  "Byrd Gang": {
+  "Byrd Gang Fledgling": {
    "bongs": 5,
-   "line": "Welcome to the Byrd Gang. Now we fly high."
+   "line": "Byrd Gang fledgling. Now you're learning to fly high."
   },
-  "Diplomat": {
+  "Vamp Life Insider": {
    "bongs": 10,
-   "line": "Dipset. You got diplomatic status on 125th now."
+   "line": "Vamp Life insider. Up all night on 125th."
   },
-  "Vamp Life": {
+  "Harlem Byrd Gang Boss": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Byrd Gang boss. You run all of Harlem."
   }
  },
  "trophyArt": [
@@ -82,7 +82,7 @@ window.CFG = {
   {
    "scene": "coop",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts as a Lame. Clear a row to rank up: Byrd Gang, Diplomat, Vamp Life. Beat the 99 Challenge to become El Capo.",
+   "x": "Everybody starts as a Grounded Pigeon. Clear a row to rank up: Byrd Gang Fledgling, Vamp Life Insider, Harlem Byrd Gang Boss. Beat the 99 Challenge to become El Capo.",
    "sfx": "parachute"
   },
   {
@@ -232,6 +232,655 @@ window.CFG = {
    "qs": []
   }
  ],
-  explicitSongs: [{"title":"New York (with Fabolous)","id":"79BC7FbkI8I","start":42.3,"cuts":[75.4,106.6,153.8],"qs":[[["If you can make it here, you can make it where?","Anywhere","Nowhere","Home"],["The elevators don't what?","Work","Stop","Close"],["So they had to take the what?","Stairs","Train","Bus"],["Broadway what?","Plays","Lights","Parades"],["What's on his feet?","Air Ones","Vans","Jordans"],["Air Ones make his summer what?","Complete","Hot","Fly"],["They watch where they what?","Walk","Park","Eat"],["Junior's is out of which borough?","Brooklyn","Harlem","Queens"],["What dessert does he mention?","Cheesecake","Ice cream","Pie"],["\"Shout to the...\" who?","Homies","Fans","Mayor"],["Where are those homies?","In the tombs","In the club","In LA"]],[["He knows some real kings if you ever get to where?","Queens","Brooklyn","Harlem"],["Some Bronx what?","Bombers","Builders","Bankers"],["\"Stay...\" what?","Strong","Fly","Up"],["New York's the city, who is the team?","The Knicks","The Nets","The Mets"],["\"Start spreading the...\" what?","News","Word","Love"],["When is he leaving?","Today","Tomorrow","Tonight"],["He wants to be a what of it?","Part","Fan","King"],["\"New York, New...\" what?","York","Jersey","Day"],["\"That's this one for the...\" what?","Town","Crowd","Block"],["\"That's the big...\" what?","City","Apple","Time"],["Who does he call out to with \"Hey\"?","Capo","Cam","Juelz"]],[["\"Let's what about it\"?","Rap","Talk","Fight"],["That mighty NYC, we done overcame it what?","All","Twice","Before"],["So you know they came to what?","Ball","Win","Party"],["In the function, feeling like which Knick?","Brunson","Ewing","Starbury"],["What does the BX do?","Yankee it","Knick it","Met it"],["Staten Isle: cash rules and what?","Ice cream","Pizza","Ferries"],["Fresh out of where?","Far Rockaway","Far East","Flatbush"],["He laughs all the way to the what?","Bank","Club","Top"],["Bacon, egg and what?","Cheese","Toast","Hash"],["Hot sauce on their what?","Wings","Eggs","Fries"],["How long do they rock their Timbs?","All year","All winter","Never"]]]},{"title":"Pop Champagne","id":"KrG4yKAVQuM","start":8.8,"cuts":[48.1,82.9,133],"qs":[[["Where do they ball?","In the club","On the court","In the street"],["How they ball in the club, \"I know you...\" what?","Hate it","Love it","Feel it"],["What do they pop?","Champagne","Balloons","Wheelies"],["They need more what?","Bottles","Ice","Cups"],["Tell ma to do what?","Hurry up","Slow down","Sit down"],["Who's the hottest in America?","Ron Browz","Juelz","Cam'ron"],["Give him how many bars?","Sixteen","Eight","Twelve"],["With those bars, he'll what?","Tear it up","Make it rain","Mess it up"],["You know it's him when you see this what?","Fur","Car","Chain"],["What's lit up along with his neck?","His wrist","His car","His teeth"],["Drinking bottles of what?","Clicquot","Moet","Ciroc"]],[["You only get one what?","Life","Chance","Shot"],["So you gotta what?","Live it up","Slow down","Save up"],["\"Shorty we can be...\" what?","Friends","Famous","Rich"],["He wants to see you do what?","Dance","Sing","Smile"],["Where does he cop the car?","The dealer","An auction","His cousin"],["What brand new car?","'Rarri","Benz","Bentley"],["The roof does what?","Drop back","Light up","Fly off"],["He came through which neighborhood?","Harlem","Brooklyn","The Bronx"],["Like the what back?","Rooftop","Mecca","Apollo"],["Where's the money?","In the bank","In the safe","In the car"],["\"Money in the bank, you know don't...\" what?","Stop that","Drop that","Spend that"]],[["They only want what?","Tables","Booths","Seats"],["They're buying out the what?","Bottles","Bar","Kitchen"],["Ten Rose's and a few cold what?","Waters","Sodas","Beers"],["Only Patron and a couple of what?","Lemons","Limes","Glasses"],["How much is stuffed in the denims?","Ten thousand dollars","A thousand dollars","Fifty dollars"],["What are they standing on?","Couches","Tables","Chairs"],["It was just the what inning?","Ninth","First","Seventh"],["What kind of phone?","Blackberry","iPhone","Sidekick"],["Souped up cars on the what?","Thruway","Bridge","Boulevard"],["Superstars, no who?","Lupe","Kanye","Drake"],["Wait, let him dim the what?","Lights","Music","Phone"]]]},{"title":"We Fly High","id":"0QIy2jqAuXU","start":8.9,"cuts":[40.4,83.7,137.3],"qs":[[["\"We fly high, no...\" what?","Lie","Limit","Lights"],["What kind of rides are outside?","Foreign","Rented","Old school"],["It's like what?","Showbiz","A movie","A dream"],["What do you have to stay?","Focused","Humble","Hungry"],["Ya boy getting what?","Paper","Older","Famous"],["What does he buy?","Big cars","Big chains","Big houses"],["How many fly rides?","Eight","Two","Ten"],["Where does he drive them?","In my garage","On the highway","Uptown"],["He flies with the what?","Stars","Birds","Clouds"],["What kind of flights?","G4","First class","Red-eye"],["80 grand what?","Large","Cash","Each"]],[["\"So we lean with it, pop...\" what?","With it","It up","Champagne"],["What place does he shout out?","Bankhead","Bed-Stuy","Brooklyn"],["'Vertible who?","Jones","Juelz","Cam"],["Mean with the what missing?","Top","Doors","Wheels"],["He's sitting what?","Clean","Low","Pretty"],["With the bottom what?","Kitted","Lifted","Painted"],["He hopped out in what jeans?","Saggy","Skinny","Ripped"],["What glistened?","His rock","His car","His teeth"],["How much did he spend?","About 8 grand","About 80 grand","About 2 grand"],["Got his what to the floor?","Pedal","Feet","Bass"],["What ad-lib follows 'top missin''?","Flossin'","Speedin'","Twisted"]],[["Here tonight, could be gone when?","Tomorrow","By noon","Next week"],["How many chances? (ad-lib)","One","Two","Three"],["He speeds through life like there's no what?","Tomorrow","Brakes","Limit"],["How much ice is on the Audemars?","Hundred G's","Ten G's","A million"],["What watch has the ice?","Audemars","Rolex","Cartier"],["He's looking at the what while switching gears?","Bracelet","Mirror","Road"],["Flashbacks to when?","Last night","Last year","Childhood"],["Where were they at 1 AM?","The club","The garage","The studio"],["What neighborhood does he shout?","Harlem","Brooklyn","Queens"],["By 3-something, he's thinking about what?","Grub","Bed","Money"],["\"Money ain't a...\" what?","Thing","Problem","Game"]]]}]
+ "explicitSongs": [
+  {
+   "title": "New York (with Fabolous)",
+   "id": "79BC7FbkI8I",
+   "start": 42.3,
+   "cuts": [
+    75.4,
+    106.6,
+    153.8
+   ],
+   "qs": [
+    [
+     [
+      "If you can make it here, you can make it where?",
+      "Anywhere",
+      "Nowhere",
+      "Home"
+     ],
+     [
+      "The elevators don't what?",
+      "Work",
+      "Stop",
+      "Close"
+     ],
+     [
+      "So they had to take the what?",
+      "Stairs",
+      "Train",
+      "Bus"
+     ],
+     [
+      "Broadway what?",
+      "Plays",
+      "Lights",
+      "Parades"
+     ],
+     [
+      "What's on his feet?",
+      "Air Ones",
+      "Vans",
+      "Jordans"
+     ],
+     [
+      "Air Ones make his summer what?",
+      "Complete",
+      "Hot",
+      "Fly"
+     ],
+     [
+      "They watch where they what?",
+      "Walk",
+      "Park",
+      "Eat"
+     ],
+     [
+      "Junior's is out of which borough?",
+      "Brooklyn",
+      "Harlem",
+      "Queens"
+     ],
+     [
+      "What dessert does he mention?",
+      "Cheesecake",
+      "Ice cream",
+      "Pie"
+     ],
+     [
+      "\"Shout to the...\" who?",
+      "Homies",
+      "Fans",
+      "Mayor"
+     ],
+     [
+      "Where are those homies?",
+      "In the tombs",
+      "In the club",
+      "In LA"
+     ]
+    ],
+    [
+     [
+      "He knows some real kings if you ever get to where?",
+      "Queens",
+      "Brooklyn",
+      "Harlem"
+     ],
+     [
+      "Some Bronx what?",
+      "Bombers",
+      "Builders",
+      "Bankers"
+     ],
+     [
+      "\"Stay...\" what?",
+      "Strong",
+      "Fly",
+      "Up"
+     ],
+     [
+      "New York's the city, who is the team?",
+      "The Knicks",
+      "The Nets",
+      "The Mets"
+     ],
+     [
+      "\"Start spreading the...\" what?",
+      "News",
+      "Word",
+      "Love"
+     ],
+     [
+      "When is he leaving?",
+      "Today",
+      "Tomorrow",
+      "Tonight"
+     ],
+     [
+      "He wants to be a what of it?",
+      "Part",
+      "Fan",
+      "King"
+     ],
+     [
+      "\"New York, New...\" what?",
+      "York",
+      "Jersey",
+      "Day"
+     ],
+     [
+      "\"That's this one for the...\" what?",
+      "Town",
+      "Crowd",
+      "Block"
+     ],
+     [
+      "\"That's the big...\" what?",
+      "City",
+      "Apple",
+      "Time"
+     ],
+     [
+      "Who does he call out to with \"Hey\"?",
+      "Capo",
+      "Cam",
+      "Juelz"
+     ]
+    ],
+    [
+     [
+      "\"Let's what about it\"?",
+      "Rap",
+      "Talk",
+      "Fight"
+     ],
+     [
+      "That mighty NYC, we done overcame it what?",
+      "All",
+      "Twice",
+      "Before"
+     ],
+     [
+      "So you know they came to what?",
+      "Ball",
+      "Win",
+      "Party"
+     ],
+     [
+      "In the function, feeling like which Knick?",
+      "Brunson",
+      "Ewing",
+      "Starbury"
+     ],
+     [
+      "What does the BX do?",
+      "Yankee it",
+      "Knick it",
+      "Met it"
+     ],
+     [
+      "Staten Isle: cash rules and what?",
+      "Ice cream",
+      "Pizza",
+      "Ferries"
+     ],
+     [
+      "Fresh out of where?",
+      "Far Rockaway",
+      "Far East",
+      "Flatbush"
+     ],
+     [
+      "He laughs all the way to the what?",
+      "Bank",
+      "Club",
+      "Top"
+     ],
+     [
+      "Bacon, egg and what?",
+      "Cheese",
+      "Toast",
+      "Hash"
+     ],
+     [
+      "Hot sauce on their what?",
+      "Wings",
+      "Eggs",
+      "Fries"
+     ],
+     [
+      "How long do they rock their Timbs?",
+      "All year",
+      "All winter",
+      "Never"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Pop Champagne",
+   "id": "KrG4yKAVQuM",
+   "start": 8.8,
+   "cuts": [
+    48.1,
+    82.9,
+    133
+   ],
+   "qs": [
+    [
+     [
+      "Where do they ball?",
+      "In the club",
+      "On the court",
+      "In the street"
+     ],
+     [
+      "How they ball in the club, \"I know you...\" what?",
+      "Hate it",
+      "Love it",
+      "Feel it"
+     ],
+     [
+      "What do they pop?",
+      "Champagne",
+      "Balloons",
+      "Wheelies"
+     ],
+     [
+      "They need more what?",
+      "Bottles",
+      "Ice",
+      "Cups"
+     ],
+     [
+      "Tell ma to do what?",
+      "Hurry up",
+      "Slow down",
+      "Sit down"
+     ],
+     [
+      "Who's the hottest in America?",
+      "Ron Browz",
+      "Juelz",
+      "Cam'ron"
+     ],
+     [
+      "Give him how many bars?",
+      "Sixteen",
+      "Eight",
+      "Twelve"
+     ],
+     [
+      "With those bars, he'll what?",
+      "Tear it up",
+      "Make it rain",
+      "Mess it up"
+     ],
+     [
+      "You know it's him when you see this what?",
+      "Fur",
+      "Car",
+      "Chain"
+     ],
+     [
+      "What's lit up along with his neck?",
+      "His wrist",
+      "His car",
+      "His teeth"
+     ],
+     [
+      "Drinking bottles of what?",
+      "Clicquot",
+      "Moet",
+      "Ciroc"
+     ]
+    ],
+    [
+     [
+      "You only get one what?",
+      "Life",
+      "Chance",
+      "Shot"
+     ],
+     [
+      "So you gotta what?",
+      "Live it up",
+      "Slow down",
+      "Save up"
+     ],
+     [
+      "\"Shorty we can be...\" what?",
+      "Friends",
+      "Famous",
+      "Rich"
+     ],
+     [
+      "He wants to see you do what?",
+      "Dance",
+      "Sing",
+      "Smile"
+     ],
+     [
+      "Where does he cop the car?",
+      "The dealer",
+      "An auction",
+      "His cousin"
+     ],
+     [
+      "What brand new car?",
+      "'Rarri",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "The roof does what?",
+      "Drop back",
+      "Light up",
+      "Fly off"
+     ],
+     [
+      "He came through which neighborhood?",
+      "Harlem",
+      "Brooklyn",
+      "The Bronx"
+     ],
+     [
+      "Like the what back?",
+      "Rooftop",
+      "Mecca",
+      "Apollo"
+     ],
+     [
+      "Where's the money?",
+      "In the bank",
+      "In the safe",
+      "In the car"
+     ],
+     [
+      "\"Money in the bank, you know don't...\" what?",
+      "Stop that",
+      "Drop that",
+      "Spend that"
+     ]
+    ],
+    [
+     [
+      "They only want what?",
+      "Tables",
+      "Booths",
+      "Seats"
+     ],
+     [
+      "They're buying out the what?",
+      "Bottles",
+      "Bar",
+      "Kitchen"
+     ],
+     [
+      "Ten Rose's and a few cold what?",
+      "Waters",
+      "Sodas",
+      "Beers"
+     ],
+     [
+      "Only Patron and a couple of what?",
+      "Lemons",
+      "Limes",
+      "Glasses"
+     ],
+     [
+      "How much is stuffed in the denims?",
+      "Ten thousand dollars",
+      "A thousand dollars",
+      "Fifty dollars"
+     ],
+     [
+      "What are they standing on?",
+      "Couches",
+      "Tables",
+      "Chairs"
+     ],
+     [
+      "It was just the what inning?",
+      "Ninth",
+      "First",
+      "Seventh"
+     ],
+     [
+      "What kind of phone?",
+      "Blackberry",
+      "iPhone",
+      "Sidekick"
+     ],
+     [
+      "Souped up cars on the what?",
+      "Thruway",
+      "Bridge",
+      "Boulevard"
+     ],
+     [
+      "Superstars, no who?",
+      "Lupe",
+      "Kanye",
+      "Drake"
+     ],
+     [
+      "Wait, let him dim the what?",
+      "Lights",
+      "Music",
+      "Phone"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "We Fly High",
+   "id": "0QIy2jqAuXU",
+   "start": 8.9,
+   "cuts": [
+    40.4,
+    83.7,
+    137.3
+   ],
+   "qs": [
+    [
+     [
+      "\"We fly high, no...\" what?",
+      "Lie",
+      "Limit",
+      "Lights"
+     ],
+     [
+      "What kind of rides are outside?",
+      "Foreign",
+      "Rented",
+      "Old school"
+     ],
+     [
+      "It's like what?",
+      "Showbiz",
+      "A movie",
+      "A dream"
+     ],
+     [
+      "What do you have to stay?",
+      "Focused",
+      "Humble",
+      "Hungry"
+     ],
+     [
+      "Ya boy getting what?",
+      "Paper",
+      "Older",
+      "Famous"
+     ],
+     [
+      "What does he buy?",
+      "Big cars",
+      "Big chains",
+      "Big houses"
+     ],
+     [
+      "How many fly rides?",
+      "Eight",
+      "Two",
+      "Ten"
+     ],
+     [
+      "Where does he drive them?",
+      "In my garage",
+      "On the highway",
+      "Uptown"
+     ],
+     [
+      "He flies with the what?",
+      "Stars",
+      "Birds",
+      "Clouds"
+     ],
+     [
+      "What kind of flights?",
+      "G4",
+      "First class",
+      "Red-eye"
+     ],
+     [
+      "80 grand what?",
+      "Large",
+      "Cash",
+      "Each"
+     ]
+    ],
+    [
+     [
+      "\"So we lean with it, pop...\" what?",
+      "With it",
+      "It up",
+      "Champagne"
+     ],
+     [
+      "What place does he shout out?",
+      "Bankhead",
+      "Bed-Stuy",
+      "Brooklyn"
+     ],
+     [
+      "'Vertible who?",
+      "Jones",
+      "Juelz",
+      "Cam"
+     ],
+     [
+      "Mean with the what missing?",
+      "Top",
+      "Doors",
+      "Wheels"
+     ],
+     [
+      "He's sitting what?",
+      "Clean",
+      "Low",
+      "Pretty"
+     ],
+     [
+      "With the bottom what?",
+      "Kitted",
+      "Lifted",
+      "Painted"
+     ],
+     [
+      "He hopped out in what jeans?",
+      "Saggy",
+      "Skinny",
+      "Ripped"
+     ],
+     [
+      "What glistened?",
+      "His rock",
+      "His car",
+      "His teeth"
+     ],
+     [
+      "How much did he spend?",
+      "About 8 grand",
+      "About 80 grand",
+      "About 2 grand"
+     ],
+     [
+      "Got his what to the floor?",
+      "Pedal",
+      "Feet",
+      "Bass"
+     ],
+     [
+      "What ad-lib follows 'top missin''?",
+      "Flossin'",
+      "Speedin'",
+      "Twisted"
+     ]
+    ],
+    [
+     [
+      "Here tonight, could be gone when?",
+      "Tomorrow",
+      "By noon",
+      "Next week"
+     ],
+     [
+      "How many chances? (ad-lib)",
+      "One",
+      "Two",
+      "Three"
+     ],
+     [
+      "He speeds through life like there's no what?",
+      "Tomorrow",
+      "Brakes",
+      "Limit"
+     ],
+     [
+      "How much ice is on the Audemars?",
+      "Hundred G's",
+      "Ten G's",
+      "A million"
+     ],
+     [
+      "What watch has the ice?",
+      "Audemars",
+      "Rolex",
+      "Cartier"
+     ],
+     [
+      "He's looking at the what while switching gears?",
+      "Bracelet",
+      "Mirror",
+      "Road"
+     ],
+     [
+      "Flashbacks to when?",
+      "Last night",
+      "Last year",
+      "Childhood"
+     ],
+     [
+      "Where were they at 1 AM?",
+      "The club",
+      "The garage",
+      "The studio"
+     ],
+     [
+      "What neighborhood does he shout?",
+      "Harlem",
+      "Brooklyn",
+      "Queens"
+     ],
+     [
+      "By 3-something, he's thinking about what?",
+      "Grub",
+      "Bed",
+      "Money"
+     ],
+     [
+      "\"Money ain't a...\" what?",
+      "Thing",
+      "Problem",
+      "Game"
+     ]
+    ]
+   ]
+  }
+ ]
 };
 (function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

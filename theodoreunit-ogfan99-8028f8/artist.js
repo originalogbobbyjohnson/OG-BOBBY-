@@ -11,32 +11,32 @@ window.CFG = {
   "Punch In",
   "Daily Routine",
   "Pass the Mic",
-  "Smith Brothers",
-  "NY's Backbone"
+  "718 Rep",
+  "Unit Commander"
  ],
- "topRank": "The Open Door",
+ "topRank": "Pretty Toney's Crown",
  "point": "Key",
  "points": "Keys",
  "rankRewards": {
   "Punch In": {
    "bongs": 5,
-   "line": "Punch In. You showed up to work."
+   "line": "Punch in. You showed up to work."
   },
   "Daily Routine": {
    "bongs": 10,
-   "line": "Daily Routine. Every day, no days off."
+   "line": "Daily routine. Every day, no days off."
   },
   "Pass the Mic": {
    "bongs": 15,
-   "line": "Pass the Mic. The Unit let you in the cipher."
+   "line": "Pass the mic. The Unit let you in the cipher."
   },
-  "Smith Brothers": {
+  "718 Rep": {
    "bongs": 20,
-   "line": "Smith Brothers. Family now."
+   "line": "718. You rep the whole area code now."
   },
-  "NY's Backbone": {
+  "Unit Commander": {
    "bongs": 25,
-   "line": "You run all of Stapleton."
+   "line": "Unit commander. You run all of Stapleton."
   }
  },
  "trophyArt": [

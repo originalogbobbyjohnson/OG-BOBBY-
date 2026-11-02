@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "NEWARK",
  "boro": "New Jersey",
  "saveKey": "ogfan99wyclefjean1",
- "startRank": "Runaway",
+ "startRank": "Gone Till November",
  "ranks": [
+  "Refugee Camp Member",
   "Masquerade",
-  "The Carnival",
   "Perfect Gentleman",
   "Preacher's Son",
-  "Ecleftic"
+  "Carnival King"
  ],
  "topRank": "Mr. President",
  "point": "Gourde",
  "points": "Gourdes",
  "rankRewards": {
-  "Masquerade": {
+  "Refugee Camp Member": {
    "bongs": 5,
-   "line": "Mask off. You're in."
+   "line": "Refugee Camp. You're in with the crew now."
   },
-  "The Carnival": {
+  "Masquerade": {
    "bongs": 10,
-   "line": "Welcome to the Carnival."
+   "line": "Masquerade. Mask off, and you're in."
   },
   "Perfect Gentleman": {
    "bongs": 15,
-   "line": "A perfect gentleman."
+   "line": "A perfect gentleman, dressed sharp and moving right."
   },
   "Preacher's Son": {
    "bongs": 20,
    "line": "Raised right, like the preacher's son."
   },
-  "Ecleftic": {
+  "Carnival King": {
    "bongs": 25,
-   "line": "You run all of Newark."
+   "line": "Carnival king. You run all of Newark."
   }
  },
  "trophyArt": [

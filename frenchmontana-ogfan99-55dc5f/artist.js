@@ -6,27 +6,27 @@ window.CFG = {
  "hoodUpper": "SOUTH BRONX",
  "boro": "Bronx",
  "saveKey": "ogfan99frenchmontana1",
- "startRank": "Amnesia",
+ "startRank": "Lost in Amnesia",
  "ranks": [
-  "Wavy",
-  "Shot Caller",
-  "Jungle Ruler"
+  "Wavy Newcomer",
+  "Montana Shot Caller",
+  "South Bronx Boss"
  ],
- "topRank": "Unforgettable",
+ "topRank": "Unforgettable Montana",
  "point": "Haan",
  "points": "Haans",
  "rankRewards": {
-  "Wavy": {
+  "Wavy Newcomer": {
    "bongs": 5,
-   "line": "Ain't worried about nothin'. Haan!"
+   "line": "Wavy newcomer. You ain't worried about nothin' now."
   },
-  "Shot Caller": {
+  "Montana Shot Caller": {
    "bongs": 10,
-   "line": "You calling the shots now. Excuse my French."
+   "line": "Shot caller now. Excuse my French, you earned it."
   },
-  "Jungle Ruler": {
+  "South Bronx Boss": {
    "bongs": 25,
-   "line": "You run all of the South Bronx."
+   "line": "Boss status, haan! You run all of the South Bronx."
   }
  },
  "trophyArt": [
@@ -87,7 +87,7 @@ window.CFG = {
   {
    "scene": "zoo",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts out with Amnesia. Clear a row to rank up: Wavy, Shot Caller, Jungle Ruler. Beat the 99 Challenge to become Unforgettable.",
+   "x": "Everybody starts as a Lost in Amnesia. Clear a row to rank up: Wavy Newcomer, Montana Shot Caller, South Bronx Boss. Beat the 99 Challenge to become Unforgettable Montana.",
    "sfx": "crowd"
   },
   {

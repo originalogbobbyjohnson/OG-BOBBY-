@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99mase1",
- "startRank": "Young Boy",
+ "startRank": "Uptown Window Shopper",
  "ranks": [
-  "Harlem World",
-  "Shiny Suit",
-  "Lookin' At Me",
-  "Welcome Back",
-  "Bad Boy Gone Clean"
+  "Harlem World Kid",
+  "Shiny Suit Era",
+  "Lookin' at Me Star",
+  "Welcome Back Vet",
+  "Bad Boy Harlem Boss"
  ],
- "topRank": "Feel So Good",
+ "topRank": "Murda Mase",
  "point": "Shine",
  "points": "Shines",
  "rankRewards": {
-  "Harlem World": {
+  "Harlem World Kid": {
    "bongs": 5,
-   "line": "Harlem World. 116th and Lenox knows you."
+   "line": "Harlem World Kid. 116th and Lenox knows you now."
   },
-  "Shiny Suit": {
+  "Shiny Suit Era": {
    "bongs": 10,
-   "line": "Shiny Suit. Catch the light."
+   "line": "Shiny suit on. Catch the light and shine."
   },
-  "Lookin' At Me": {
+  "Lookin' at Me Star": {
    "bongs": 15,
-   "line": "Lookin' At Me. Everybody is."
+   "line": "Lookin' at me? Everybody is looking at you now."
   },
-  "Welcome Back": {
+  "Welcome Back Vet": {
    "bongs": 20,
-   "line": "Welcome Back. You know you like that."
+   "line": "Welcome back. You know you like that."
   },
-  "Bad Boy Gone Clean": {
+  "Bad Boy Harlem Boss": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Bad Boy Harlem Boss. You run all of Harlem."
   }
  },
  "trophyArt": [

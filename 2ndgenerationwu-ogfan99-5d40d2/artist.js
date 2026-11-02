@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "TOMPKINSVILLE",
  "boro": "Staten Island",
  "saveKey": "ogfan99_2ndgenerationwu1",
- "startRank": "Little Bee",
+ "startRank": "Lost Little Bee",
  "ranks": [
-  "7 O.D.",
-  "Rugged New Bap",
-  "Hereditary",
-  "New Generation",
-  "Legend of Shaolin"
+  "Shaolin Seedling",
+  "Staten Hive Worker",
+  "Second Gen Soldier",
+  "Hereditary Swordsman",
+  "Wu Bloodline Elite"
  ],
- "topRank": "Wu Forever",
+ "topRank": "Heirs of Shaolin",
  "point": "Gene",
  "points": "Genes",
  "rankRewards": {
-  "7 O.D.": {
+  "Shaolin Seedling": {
    "bongs": 5,
-   "line": "7 O.D. You heard where it started."
+   "line": "Shaolin Seedling. You just got planted in the soil."
   },
-  "Rugged New Bap": {
+  "Staten Hive Worker": {
    "bongs": 10,
-   "line": "Rugged New Bap Funk. You know the sound."
+   "line": "Staten Hive Worker. You're buzzing with the swarm now."
   },
-  "Hereditary": {
+  "Second Gen Soldier": {
    "bongs": 15,
-   "line": "Hereditary. It runs in the blood."
+   "line": "Second Gen Soldier. The next generation lines up behind you."
   },
-  "New Generation": {
+  "Hereditary Swordsman": {
    "bongs": 20,
-   "line": "New Generation. The torch is lit."
+   "line": "Hereditary Swordsman. The blade got passed down to you."
   },
-  "Legend of Shaolin": {
+  "Wu Bloodline Elite": {
    "bongs": 25,
-   "line": "You run all of Tompkinsville."
+   "line": "Wu Bloodline Elite. You run all of Tompkinsville."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "ELMHURST",
  "boro": "Queens",
  "saveKey": "ogfan99homeboysandman1",
- "startRank": "Rookie",
+ "startRank": "Lights-Out Lightweight",
  "ranks": [
-  "Good Sun",
-  "Living Breed",
-  "Actual Factual",
-  "Go Hard",
-  "Still Champion"
+  "Good Sun Riser",
+  "Living Breed Member",
+  "Actual Factual Scholar",
+  "Stones Throw Heavy",
+  "Queens Pen Champion"
  ],
  "topRank": "The Sandman",
  "point": "Grain",
  "points": "Grains",
  "rankRewards": {
-  "Good Sun": {
+  "Good Sun Riser": {
    "bongs": 5,
-   "line": "The good sun came up on you. Keep it shining."
+   "line": "The good sun came up on you. Keep shining."
   },
-  "Living Breed": {
+  "Living Breed Member": {
    "bongs": 10,
    "line": "First of a living breed. You're one of one."
   },
-  "Actual Factual": {
+  "Actual Factual Scholar": {
    "bongs": 15,
-   "line": "Actual factual. You know your facts."
+   "line": "Actual factual. You know every fact in the catalog."
   },
-  "Go Hard": {
+  "Stones Throw Heavy": {
    "bongs": 20,
-   "line": "You go hard. Harder still."
+   "line": "Stones Throw heavy. Your name carries weight now."
   },
-  "Still Champion": {
+  "Queens Pen Champion": {
    "bongs": 25,
-   "line": "You run all of Elmhurst."
+   "line": "Pen champion. You run all of Elmhurst."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "WILLIAMSBURG",
  "boro": "Brooklyn",
  "saveKey": "ogfan99joellortiz1",
- "startRank": "Free Agent",
+ "startRank": "Bodega Line Cutter",
  "ranks": [
-  "Mean Business",
-  "The Brick",
-  "House Slippers",
-  "That's Hip Hop",
-  "Autograph"
+  "Free Agent Signee",
+  "Bodega Chronicles Fan",
+  "House Slippers Guest",
+  "Mean Business Partner",
+  "Slaughterhouse Heavy"
  ],
- "topRank": "Slaughterhouse",
+ "topRank": "King of Cooper Park",
  "point": "Brick",
  "points": "Bricks",
  "rankRewards": {
-  "Mean Business": {
+  "Free Agent Signee": {
    "bongs": 5,
-   "line": "You mean business now."
+   "line": "Free agent signee. You just inked the deal."
   },
-  "The Brick": {
+  "Bodega Chronicles Fan": {
    "bongs": 10,
-   "line": "The Brick. Bodega chronicles."
+   "line": "Bodega Chronicles fan. You know every aisle by heart."
   },
-  "House Slippers": {
+  "House Slippers Guest": {
    "bongs": 15,
-   "line": "House Slippers. Comfortable in here."
+   "line": "House slippers on. You're comfortable in here now."
   },
-  "That's Hip Hop": {
+  "Mean Business Partner": {
    "bongs": 20,
-   "line": "That's hip hop. Yaowa!"
+   "line": "Mean business partner. Now we handle things together."
   },
-  "Autograph": {
+  "Slaughterhouse Heavy": {
    "bongs": 25,
-   "line": "You run all of Williamsburg."
+   "line": "Slaughterhouse heavy. Yaowa! You run all of Williamsburg."
   }
  },
  "trophyArt": [

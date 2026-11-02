@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "UNIONDALE",
  "boro": "Long Island",
  "saveKey": "ogfan99bustarhymes1",
- "startRank": "Boy Scout",
+ "startRank": "Flipmode Boy Scout",
  "ranks": [
-  "Woo-Hah",
-  "Gimme Some More",
+  "Woo-Hah Hopeful",
+  "New School Leader",
   "Flipmode Squad",
   "Dungeon Dragon",
-  "Bussa Bus"
+  "Extinction Level Boss"
  ],
- "topRank": "The Conglomerate",
+ "topRank": "Bussa Bus",
  "point": "Woo-Hah",
  "points": "Woo-Hahs",
  "rankRewards": {
-  "Woo-Hah": {
+  "Woo-Hah Hopeful": {
    "bongs": 5,
-   "line": "Woo-hah! Got you all in check."
+   "line": "Woo-Hah Hopeful. Got you all in check now."
   },
-  "Gimme Some More": {
+  "New School Leader": {
    "bongs": 10,
-   "line": "Y'all had enough? Nah. Gimme some more."
+   "line": "New School Leader. Leaders of the New School let you in."
   },
   "Flipmode Squad": {
    "bongs": 15,
-   "line": "You just made the Flipmode Squad."
+   "line": "Flipmode Squad. You just made the squad, Flipmode is here."
   },
   "Dungeon Dragon": {
    "bongs": 20,
-   "line": "The Dungeon Dragon is breathing fire."
+   "line": "Dungeon Dragon. Rawr, you're breathing fire on every track."
   },
-  "Bussa Bus": {
+  "Extinction Level Boss": {
    "bongs": 25,
-   "line": "You run all of Uniondale."
+   "line": "Extinction Level Boss. You run all of Uniondale."
   }
  },
  "trophyArt": [

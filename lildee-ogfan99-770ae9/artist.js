@@ -6,27 +6,27 @@ window.CFG = {
  "hoodUpper": "CONEY ISLAND",
  "boro": "Brooklyn",
  "saveKey": "ogfan99lildee1",
- "startRank": "Tourist",
+ "startRank": "Boardwalk Tourist",
  "ranks": [
-  "Cypher Kid",
-  "Dapper Dan",
-  "Lyricist"
+  "Cyclone Rider",
+  "Coney Cypher Vet",
+  "Boardwalk Boss"
  ],
- "topRank": "King",
+ "topRank": "King of Coney Island",
  "point": "Token",
  "points": "Tokens",
  "rankRewards": {
-  "Cypher Kid": {
+  "Cyclone Rider": {
    "bongs": 5,
-   "line": "You held your own in the 1 Train cypher."
+   "line": "You rode the Cyclone and held on tight."
   },
-  "Dapper Dan": {
+  "Coney Cypher Vet": {
    "bongs": 10,
-   "line": "Fresh on the boardwalk. They see you coming."
+   "line": "Coney cypher vet. The boardwalk knows your bars now."
   },
-  "Lyricist": {
+  "Boardwalk Boss": {
    "bongs": 25,
-   "line": "You run all of Coney Island."
+   "line": "Boardwalk Boss. You run all of Coney Island."
   }
  },
  "trophyArt": [
@@ -77,7 +77,7 @@ window.CFG = {
   {
    "scene": "cypher",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts as a Tourist. Clear a row to rank up: Cypher Kid, Dapper Dan, Lyricist. Beat the 99 Challenge to become King.",
+   "x": "Everybody starts as a Boardwalk Tourist. Clear a row to rank up: Cyclone Rider, Coney Cypher Vet, Boardwalk Boss. Beat the 99 Challenge to become King of Coney Island.",
    "sfx": "crowd"
   },
   {

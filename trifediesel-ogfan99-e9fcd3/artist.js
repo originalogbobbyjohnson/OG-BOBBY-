@@ -6,13 +6,13 @@ window.CFG = {
  "hoodUpper": "STAPLETON",
  "boro": "Staten Island",
  "saveKey": "ogfan99trifediesel1",
- "startRank": "Wanna Be a Rapper",
+ "startRank": "Stapleton Wannabe",
  "ranks": [
   "Heads or Tails",
-  "Project Leader",
   "Stronger Man",
-  "Put It on the Line",
-  "Better Late Than Never"
+  "Project Leader",
+  "On the Line",
+  "Full Diesel General"
  ],
  "topRank": "Trife Da God",
  "point": "Gallon",
@@ -20,23 +20,23 @@ window.CFG = {
  "rankRewards": {
   "Heads or Tails": {
    "bongs": 5,
-   "line": "Heads or Tails. You took the chance."
-  },
-  "Project Leader": {
-   "bongs": 10,
-   "line": "Project Leader. The block follows you."
+   "line": "Heads or tails. You took the chance."
   },
   "Stronger Man": {
+   "bongs": 10,
+   "line": "Stronger man. You came through it."
+  },
+  "Project Leader": {
    "bongs": 15,
-   "line": "Stronger Man. You came through it."
+   "line": "Project leader. The block follows you now."
   },
-  "Put It on the Line": {
+  "On the Line": {
    "bongs": 20,
-   "line": "Put It on the Line with Ghost and Trife."
+   "line": "On the line with Ghost and Trife. You put in work."
   },
-  "Better Late Than Never": {
+  "Full Diesel General": {
    "bongs": 25,
-   "line": "You run all of Stapleton."
+   "line": "Full diesel. You run all of Stapleton."
   }
  },
  "trophyArt": [

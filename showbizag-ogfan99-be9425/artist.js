@@ -6,13 +6,13 @@ window.CFG = {
  "hoodUpper": "THE BRONX",
  "boro": "the Bronx",
  "saveKey": "ogfan99showbizag1",
- "startRank": "Crate Rookie",
+ "startRank": "Dusty Crate Novice",
  "ranks": [
   "Soul Clapper",
   "Party Groover",
   "Fat Pockets",
-  "Next Level",
-  "Crate Digger"
+  "D.I.T.C. Member",
+  "Bronx Crate Boss"
  ],
  "topRank": "Diggin' in the Crates",
  "point": "Crate",
@@ -30,13 +30,13 @@ window.CFG = {
    "bongs": 15,
    "line": "Fat Pockets. You are stacking up the classics."
   },
-  "Next Level": {
+  "D.I.T.C. Member": {
    "bongs": 20,
-   "line": "Next Level. You took it up another notch."
+   "line": "D.I.T.C. Now you dig with the crew."
   },
-  "Crate Digger": {
+  "Bronx Crate Boss": {
    "bongs": 25,
-   "line": "You run all of the Bronx."
+   "line": "Crate boss. You run all of the Bronx."
   }
  },
  "trophyArt": [

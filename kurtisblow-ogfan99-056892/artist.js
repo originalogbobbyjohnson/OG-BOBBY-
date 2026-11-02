@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99kurtisblow1",
- "startRank": "Sucker Rapper",
+ "startRank": "Airball Shooter",
  "ranks": [
-  "B-Boy",
-  "Party Timer",
+  "The Breaks B-Boy",
+  "Party Time Regular",
   "Ego Tripper",
-  "Basketball Star",
+  "Rucker Basketball Star",
   "Kingdom Blow"
  ],
  "topRank": "Ruler of the World",
  "point": "Break",
  "points": "Breaks",
  "rankRewards": {
-  "B-Boy": {
+  "The Breaks B-Boy": {
    "bongs": 5,
-   "line": "You got moves now. These are the breaks."
+   "line": "These are the breaks. You got your moves now."
   },
-  "Party Timer": {
+  "Party Time Regular": {
    "bongs": 10,
-   "line": "It's party time. Harlem's rocking with you."
+   "line": "Party time regular. Harlem's rocking right along with you."
   },
   "Ego Tripper": {
    "bongs": 15,
-   "line": "Go ahead and brag. You earned it."
+   "line": "Ego tripper. Go ahead and brag, you earned it."
   },
-  "Basketball Star": {
+  "Rucker Basketball Star": {
    "bongs": 20,
-   "line": "Nothing but net at the Rucker."
+   "line": "Basketball star. Nothing but net at the Rucker."
   },
   "Kingdom Blow": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Kingdom Blow. You run all of Harlem."
   }
  },
  "trophyArt": [

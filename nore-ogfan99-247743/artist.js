@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "LEFRAK CITY",
  "boro": "Queens",
  "saveKey": "ogfan99nore1",
- "startRank": "Student",
+ "startRank": "Ya No Sabe",
  "ranks": [
-  "Ya Tú Sabe",
+  "Ya Tu Sabe",
   "Oye Mi Canto",
-  "Noreality",
-  "5E",
+  "Capone-N-Noreaga Crew",
+  "Superthug",
   "God's Favorite"
  ],
- "topRank": "P.A.P.I.",
+ "topRank": "King of LeFrak",
  "point": "What",
  "points": "Whats",
  "rankRewards": {
-  "Ya Tú Sabe": {
+  "Ya Tu Sabe": {
    "bongs": 5,
-   "line": "Ya tú sabe. Now you know."
+   "line": "Ya tu sabe. Now you know what's up."
   },
   "Oye Mi Canto": {
    "bongs": 10,
-   "line": "Oye mi canto. They hear you now."
+   "line": "Oye mi canto. Everybody hears you now."
   },
-  "Noreality": {
+  "Capone-N-Noreaga Crew": {
    "bongs": 15,
-   "line": "Pure Noreality. No faking it."
+   "line": "Capone-N-Noreaga crew. You roll with the duo now."
   },
-  "5E": {
+  "Superthug": {
    "bongs": 20,
-   "line": "You got the keys to 5E. Welcome home."
+   "line": "Superthug status. Queens is shouting your name."
   },
   "God's Favorite": {
    "bongs": 25,
-   "line": "You run all of LeFrak City."
+   "line": "God's Favorite. You run all of LeFrak City."
   }
  },
  "trophyArt": [

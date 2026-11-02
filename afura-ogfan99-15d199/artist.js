@@ -5,37 +5,37 @@ window.CFG = {
  "hood": "East New York",
  "hoodUpper": "EAST NEW YORK",
  "boro": "Brooklyn",
- "startRank": "Student",
+ "startRank": "No Chi White Belt",
  "ranks": [
-  "Self Mastery",
-  "Whirlwind Thru Cities",
-  "Body of the Life Force",
-  "Life Force Radio",
-  "State of the Arts"
+  "Self Mastery Pupil",
+  "Whirlwind Traveler",
+  "Foundation Soldier",
+  "Martial Arts Sensei",
+  "Life Force Master"
  ],
  "topRank": "Sun of Ra",
  "point": "Chi",
  "points": "Chi",
  "rankRewards": {
-  "Self Mastery": {
+  "Self Mastery Pupil": {
    "bongs": 5,
-   "line": "Self mastery. You control the breath first."
+   "line": "Self Mastery Pupil. You learned to control the breath first."
   },
-  "Whirlwind Thru Cities": {
+  "Whirlwind Traveler": {
    "bongs": 10,
-   "line": "A whirlwind through every city on the tour."
+   "line": "Whirlwind Traveler. You hit every city on the tour."
   },
-  "Body of the Life Force": {
+  "Foundation Soldier": {
    "bongs": 15,
-   "line": "Body, mind and life force, all in line."
+   "line": "Foundation Soldier. Gang Starr Foundation lets you in the room."
   },
-  "Life Force Radio": {
+  "Martial Arts Sensei": {
    "bongs": 20,
-   "line": "You're on the air. Life Force Radio."
+   "line": "Martial Arts Sensei. Your style is sharp and disciplined now."
   },
-  "State of the Arts": {
+  "Life Force Master": {
    "bongs": 25,
-   "line": "You run all of East New York."
+   "line": "Life Force Master. You run all of East New York."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HEMPSTEAD",
  "boro": "Long Island",
  "saveKey": "ogfan99rocmarciano1",
- "startRank": "Square",
+ "startRank": "Knockoff Wearer",
  "ranks": [
-  "Marcberg",
-  "Reloaded",
-  "Marci Beaucoup",
-  "Dark Horse",
-  "Mt. Marci"
+  "Marcberg Tenant",
+  "Reloaded Shooter",
+  "Dark Horse Rider",
+  "Pimpire Insider",
+  "Mt. Marci Summit"
  ],
- "topRank": "The Godfather",
+ "topRank": "King of Marcberg",
  "point": "Emerald",
  "points": "Emeralds",
  "rankRewards": {
-  "Marcberg": {
+  "Marcberg Tenant": {
    "bongs": 5,
-   "line": "Welcome to Marcberg. Now you're in."
+   "line": "Welcome to Marcberg. Now you got a key."
   },
-  "Reloaded": {
+  "Reloaded Shooter": {
    "bongs": 10,
-   "line": "Reloaded. Back for more."
+   "line": "Reloaded. You came back with more ammo."
   },
-  "Marci Beaucoup": {
+  "Dark Horse Rider": {
    "bongs": 15,
-   "line": "Marci Beaucoup. Plenty to go around."
-  },
-  "Dark Horse": {
-   "bongs": 20,
    "line": "Behold a dark horse. Nobody saw you coming."
   },
-  "Mt. Marci": {
+  "Pimpire Insider": {
+   "bongs": 20,
+   "line": "The Pimpire let you in. Dress accordingly."
+  },
+  "Mt. Marci Summit": {
    "bongs": 25,
-   "line": "You run all of Hempstead."
+   "line": "You reached the summit. You run all of Hempstead."
   }
  },
  "trophyArt": [

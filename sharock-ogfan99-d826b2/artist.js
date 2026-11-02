@@ -5,37 +5,37 @@ window.CFG = {
  "hood": "South Bronx",
  "hoodUpper": "SOUTH BRONX",
  "boro": "the Bronx",
- "startRank": "Newcomer",
+ "startRank": "Park Jam Outsider",
  "ranks": [
-  "Plus One",
-  "Rappin' and Rocking the House",
+  "Plus One Hopeful",
+  "Boogie Down MC",
+  "Rocking the House",
   "That's the Joint",
-  "Funky 4 + 1",
-  "Luminary Icon"
+  "Funky 4+1 Icon"
  ],
  "topRank": "Mother of the Mic",
  "point": "Mic",
  "points": "Mics",
  "rankRewards": {
-  "Plus One": {
+  "Plus One Hopeful": {
    "bongs": 5,
-   "line": "Plus one. You just joined the crew."
+   "line": "Plus one. You just stepped into the crew."
   },
-  "Rappin' and Rocking the House": {
+  "Boogie Down MC": {
    "bongs": 10,
-   "line": "Rapping and rocking the house all night."
+   "line": "Block party MC. The park jam is yours tonight."
+  },
+  "Rocking the House": {
+   "bongs": 15,
+   "line": "Rapping and rocking the house all night long."
   },
   "That's the Joint": {
-   "bongs": 15,
+   "bongs": 20,
    "line": "That's the joint. Everybody knows the words."
   },
-  "Funky 4 + 1": {
-   "bongs": 20,
-   "line": "Funky 4 + 1. You're on the national stage."
-  },
-  "Luminary Icon": {
+  "Funky 4+1 Icon": {
    "bongs": 25,
-   "line": "You run all of the South Bronx."
+   "line": "First lady of the mic. You run all of the South Bronx."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "WEST HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99asapnast1",
- "startRank": "Rookie",
+ "startRank": "Off-Brand Outsider",
  "ranks": [
-  "Trilla",
-  "Designer Boi",
-  "AMG",
-  "Trillmatic",
-  "A$AP Mob"
+  "Mob Hopeful",
+  "Uptown Trilla",
+  "Designer Drip",
+  "A$AP Lieutenant",
+  "Trillmatic Boss"
  ],
- "topRank": "A$AP Nast",
+ "topRank": "King Nast",
  "point": "Thread",
  "points": "Threads",
  "rankRewards": {
-  "Trilla": {
+  "Mob Hopeful": {
    "bongs": 5,
-   "line": "Trilla. Real one, uptown."
+   "line": "Mob Hopeful. You're standing outside the door, but close."
   },
-  "Designer Boi": {
+  "Uptown Trilla": {
    "bongs": 10,
-   "line": "Designer Boi. Every thread picked right."
+   "line": "Uptown Trilla. A real one from uptown."
   },
-  "AMG": {
+  "Designer Drip": {
    "bongs": 15,
-   "line": "AMG. Fast lane, all gas."
+   "line": "Designer Drip. Every thread is picked right now."
   },
-  "Trillmatic": {
+  "A$AP Lieutenant": {
    "bongs": 20,
-   "line": "Trillmatic. The classic flip, all yours."
+   "line": "A$AP Lieutenant. The Mob trusts you with the plans."
   },
-  "A$AP Mob": {
+  "Trillmatic Boss": {
    "bongs": 25,
-   "line": "You run all of West Harlem."
+   "line": "Trillmatic Boss. You run all of West Harlem."
   }
  },
  "trophyArt": [

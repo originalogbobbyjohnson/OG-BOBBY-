@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HUNTS POINT",
  "boro": "the Bronx",
  "saveKey": "ogfan99kemba1",
- "startRank": "Cynic",
+ "startRank": "Cynical Outsider",
  "ranks": [
-  "You're Welcome",
-  "Fall FWD",
-  "Already",
-  "Exhale",
-  "Gilda"
+  "You're Welcome Guest",
+  "Fall FWD Fighter",
+  "Exhale Inner Circle",
+  "Gilda's Legacy",
+  "Hunts Point Champion"
  ],
- "topRank": "Kembaland",
+ "topRank": "King of Kembaland",
  "point": "Rhyme",
  "points": "Rhymes",
  "rankRewards": {
-  "You're Welcome": {
+  "You're Welcome Guest": {
    "bongs": 5,
-   "line": "You showed up. You're welcome."
+   "line": "You showed up. You're welcome, take a seat."
   },
-  "Fall FWD": {
+  "Fall FWD Fighter": {
    "bongs": 10,
-   "line": "Even when you trip, you fall forward."
+   "line": "Fall forward. Even when you trip, you move ahead."
   },
-  "Already": {
+  "Exhale Inner Circle": {
    "bongs": 15,
-   "line": "You knew these bars already."
+   "line": "Exhale. You're inside the circle now, breathe easy."
   },
-  "Exhale": {
+  "Gilda's Legacy": {
    "bongs": 20,
-   "line": "Breathe out. You earned it."
+   "line": "Gilda's legacy. You carry the family name with pride."
   },
-  "Gilda": {
+  "Hunts Point Champion": {
    "bongs": 25,
-   "line": "You run all of Hunts Point."
+   "line": "Champion. You run all of Hunts Point now."
   }
  },
  "trophyArt": [

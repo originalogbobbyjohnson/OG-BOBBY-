@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "EAST HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99bodegabamz1",
- "startRank": "Noise",
+ "startRank": "Bodega Window Shopper",
  "ranks": [
-  "Tanboy",
-  "100 Keep It",
+  "Tanboy Initiate",
+  "Keep It 100",
   "Sidewalk Exec",
-  "P.A.P.I.",
-  "Glorious"
+  "Tanboy Lieutenant",
+  "East Harlem Don"
  ],
- "topRank": "El Rey",
+ "topRank": "El Rey del Barrio",
  "point": "Chopped Cheese",
  "points": "Chopped Cheeses",
  "rankRewards": {
-  "Tanboy": {
+  "Tanboy Initiate": {
    "bongs": 5,
-   "line": "Welcome to the Tanboys."
+   "line": "Tanboy Initiate. Welcome to the Tanboys, stay close."
   },
-  "100 Keep It": {
+  "Keep It 100": {
    "bongs": 10,
-   "line": "Keep it 100, always."
+   "line": "Keep It 100. Real with it, always, no exceptions."
   },
   "Sidewalk Exec": {
    "bongs": 15,
-   "line": "Business on the block, suit on the sidewalk."
+   "line": "Sidewalk Exec. Business on the block, suit on the sidewalk."
   },
-  "P.A.P.I.": {
+  "Tanboy Lieutenant": {
    "bongs": 20,
-   "line": "Strictly for my P.A.P.I.Z."
+   "line": "Tanboy Lieutenant. The crew looks to you for orders."
   },
-  "Glorious": {
+  "East Harlem Don": {
    "bongs": 25,
-   "line": "You run all of East Harlem."
+   "line": "East Harlem Don. You run all of East Harlem."
   }
  },
  "trophyArt": [

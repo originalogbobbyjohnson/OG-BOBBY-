@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "NEWARK",
  "boro": "New Jersey",
  "saveKey": "ogfan99eldasensei1",
- "startRank": "Toy",
+ "startRank": "Wall Writing Toy",
  "ranks": [
-  "Wrong Side of Da Tracks",
-  "C'mon Wit Da Git Down",
+  "Wrong Side Walker",
+  "Git Down Mover",
   "Crowd Pleasa",
-  "That's Them",
-  "Artifact"
+  "Art of Facts Writer",
+  "Brick City Sensei"
  ],
  "topRank": "King of the Line",
  "point": "Can",
  "points": "Cans",
  "rankRewards": {
-  "Wrong Side of Da Tracks": {
+  "Wrong Side Walker": {
    "bongs": 5,
-   "line": "Wrong side of da tracks. Now you know where it started."
+   "line": "Wrong Side Walker. Now you know where it all started."
   },
-  "C'mon Wit Da Git Down": {
+  "Git Down Mover": {
    "bongs": 10,
-   "line": "C'mon wit da git down. You're moving now."
+   "line": "Git Down Mover. C'mon wit da git down, you're moving."
   },
   "Crowd Pleasa": {
    "bongs": 15,
-   "line": "Crowd Pleasa. The whole room is with you."
+   "line": "Crowd Pleasa. The whole room is with you now."
   },
-  "That's Them": {
+  "Art of Facts Writer": {
    "bongs": 20,
-   "line": "That's them. Everybody's pointing your way."
+   "line": "Art of Facts Writer. You write with the Artifacts now."
   },
-  "Artifact": {
+  "Brick City Sensei": {
    "bongs": 25,
-   "line": "You run all of Newark."
+   "line": "Brick City Sensei. You run all of Newark."
   }
  },
  "trophyArt": [

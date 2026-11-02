@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99azealiabanks1",
- "startRank": "Broke",
+ "startRank": "Broke Without Taste",
  "ranks": [
+  "212 Newcomer",
   "Yung Rapunxel",
-  "Liquorice",
-  "Fantasea",
-  "Ice Princess",
-  "Chasing Time"
+  "Liquorice Sweet",
+  "Fantasea Mermaid",
+  "Expensive Taste"
  ],
- "topRank": "Expensive Taste",
+ "topRank": "Harlem Mermaid Queen",
  "point": "Pearl",
  "points": "Pearls",
  "rankRewards": {
-  "Yung Rapunxel": {
+  "212 Newcomer": {
    "bongs": 5,
-   "line": "Yung Rapunxel. Let the hair down, Harlem."
+   "line": "212 Newcomer. You just stepped into Harlem's spotlight."
   },
-  "Liquorice": {
+  "Yung Rapunxel": {
    "bongs": 10,
-   "line": "Liquorice. Sweet, sharp and quick."
+   "line": "Yung Rapunxel. Let your hair down, the tower is yours."
   },
-  "Fantasea": {
+  "Liquorice Sweet": {
    "bongs": 15,
-   "line": "Fantasea. Mermaid mode, deep water."
+   "line": "Liquorice Sweet. Sweet, sharp and quick on every bar."
   },
-  "Ice Princess": {
+  "Fantasea Mermaid": {
    "bongs": 20,
-   "line": "Ice Princess. Cold flow, warm crowd."
+   "line": "Fantasea Mermaid. You swim in the deep water now."
   },
-  "Chasing Time": {
+  "Expensive Taste": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Expensive Taste. Only the best, and you run all of Harlem."
   }
  },
  "trophyArt": [

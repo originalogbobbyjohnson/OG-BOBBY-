@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HIGHBRIDGE",
  "boro": "the Bronx",
  "saveKey": "ogfan99cardib1",
- "startRank": "Regular",
+ "startRank": "Degular Shmegular",
  "ranks": [
-  "Bardi Gang",
-  "Money Moves",
-  "Red Bottoms",
-  "Invasion of Privacy",
-  "Am I Dreaming"
+  "Bardi Gang Newbie",
+  "Money Mover",
+  "Red Bottom Stepper",
+  "Bodak Yellow Star",
+  "Money Bag Boss"
  ],
  "topRank": "Bronx Queen",
  "point": "Money Move",
  "points": "Money Moves",
  "rankRewards": {
-  "Bardi Gang": {
+  "Bardi Gang Newbie": {
    "bongs": 5,
-   "line": "Bardi Gang. Welcome to the gang."
+   "line": "Bardi Gang Newbie. Welcome to the gang, okurrr."
   },
-  "Money Moves": {
+  "Money Mover": {
    "bongs": 10,
-   "line": "Money Moves. You only make money moves now."
+   "line": "Money Mover. You only make money moves now."
   },
-  "Red Bottoms": {
+  "Red Bottom Stepper": {
    "bongs": 15,
-   "line": "Red Bottoms. Stepping out in style."
+   "line": "Red Bottom Stepper. Stepping out in style every time."
   },
-  "Invasion of Privacy": {
+  "Bodak Yellow Star": {
    "bongs": 20,
-   "line": "Invasion of Privacy. Now the whole world is watching."
+   "line": "Bodak Yellow Star. The whole world knows your song."
   },
-  "Am I Dreaming": {
+  "Money Bag Boss": {
    "bongs": 25,
-   "line": "You run all of Highbridge."
+   "line": "Money Bag Boss. You run all of Highbridge."
   }
  },
  "trophyArt": [

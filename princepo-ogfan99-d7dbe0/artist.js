@@ -6,15 +6,15 @@ window.CFG = {
  "hoodUpper": "SOUTH JAMAICA",
  "boro": "Queens",
  "saveKey": "ogfan99princepo1",
- "startRank": "Konfused",
+ "startRank": "Totally Konfused",
  "ranks": [
   "Fudge Pudge",
   "Walk Into the Sun",
-  "Stress Free",
+  "Extinction Agenda",
   "The Equinox",
-  "The Slickness"
+  "Master of Slickness"
  ],
- "topRank": "Prince of the Konfusion",
+ "topRank": "Prince of Konfusion",
  "point": "Crown",
  "points": "Crowns",
  "rankRewards": {
@@ -26,17 +26,17 @@ window.CFG = {
    "bongs": 10,
    "line": "Walk Into the Sun. The light is on you."
   },
-  "Stress Free": {
+  "Extinction Agenda": {
    "bongs": 15,
-   "line": "Stress free. The extinction agenda can't touch you."
+   "line": "Extinction Agenda survivor. Stress can't touch you now."
   },
   "The Equinox": {
    "bongs": 20,
    "line": "The Equinox. Day and night, perfectly balanced."
   },
-  "The Slickness": {
+  "Master of Slickness": {
    "bongs": 25,
-   "line": "You run all of South Jamaica."
+   "line": "Master of Slickness. You run all of South Jamaica."
   }
  },
  "trophyArt": [

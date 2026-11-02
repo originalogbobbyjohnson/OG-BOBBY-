@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "STATEN ISLAND",
  "boro": "Staten Island",
  "saveKey": "ogfan99remedy1",
- "startRank": "New Bee",
+ "startRank": "Stingerless Bee",
  "ranks": [
-  "Killa Bee",
-  "The Swarm",
+  "Killa Bee Larva",
+  "Wu Affiliate",
   "Genuine Article",
-  "Remedy Meets Wu",
-  "Code Red"
+  "Never Again Soldier",
+  "Code Red Commander"
  ],
  "topRank": "Shaolin's Remedy",
  "point": "Honeycomb",
  "points": "Honeycombs",
  "rankRewards": {
-  "Killa Bee": {
+  "Killa Bee Larva": {
    "bongs": 5,
-   "line": "Killa Bee. You got your stinger."
+   "line": "Killa Bee larva. You're in the hive, keep growing."
   },
-  "The Swarm": {
+  "Wu Affiliate": {
    "bongs": 10,
-   "line": "You fly with the Swarm now."
+   "line": "Wu affiliate. The Clan knows your face now."
   },
   "Genuine Article": {
    "bongs": 15,
-   "line": "The Genuine Article. No imitations."
+   "line": "The Genuine Article. No imitations, no copies."
   },
-  "Remedy Meets Wu": {
+  "Never Again Soldier": {
    "bongs": 20,
-   "line": "Remedy meets Wu. You sat at the table."
+   "line": "Never again. You stand tall and never forget."
   },
-  "Code Red": {
+  "Code Red Commander": {
    "bongs": 25,
-   "line": "You run all of Staten Island."
+   "line": "Code red commander. You run all of Staten Island."
   }
  },
  "trophyArt": [

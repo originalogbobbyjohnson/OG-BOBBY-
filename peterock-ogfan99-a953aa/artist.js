@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "MOUNT VERNON",
  "boro": "Westchester",
  "saveKey": "ogfan99peterock1",
- "startRank": "Crate Rookie",
+ "startRank": "SP-1200 Novice",
  "ranks": [
-  "Soul Brother",
-  "Main Ingredient",
-  "Mecca",
+  "Soul Brother Trainee",
+  "Mount Vernon Regular",
+  "Soul Survivor",
   "Chocolate Boy Wonder",
-  "T.R.O.Y."
+  "Mecca Beat Master"
  ],
  "topRank": "Soul Brother #1",
  "point": "Horn",
  "points": "Horns",
  "rankRewards": {
-  "Soul Brother": {
+  "Soul Brother Trainee": {
    "bongs": 5,
-   "line": "Soul Brother. The horns just came in."
+   "line": "Soul Brother Trainee. The horns just came in."
   },
-  "Main Ingredient": {
+  "Mount Vernon Regular": {
    "bongs": 10,
    "line": "Main Ingredient. You are what makes the mix."
   },
-  "Mecca": {
+  "Soul Survivor": {
    "bongs": 15,
-   "line": "Mecca. You found the place where it all comes from."
+   "line": "Soul Survivor. You made it through every season."
   },
   "Chocolate Boy Wonder": {
    "bongs": 20,
    "line": "Chocolate Boy Wonder. The beats are all yours now."
   },
-  "T.R.O.Y.": {
+  "Mecca Beat Master": {
    "bongs": 25,
-   "line": "You run all of Mount Vernon."
+   "line": "Mecca Beat Master. You run all of Mount Vernon."
   }
  },
  "trophyArt": [

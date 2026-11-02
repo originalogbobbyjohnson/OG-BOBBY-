@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "MORRISANIA",
  "boro": "the Bronx",
  "saveKey": "ogfan99cubanlink1",
- "startRank": "Lie Teller",
+ "startRank": "Morrisania Lie Teller",
  "ranks": [
   "Open Book",
-  "Chain Gang",
+  "Chain Gang Link",
   "Hijo de la Calle",
-  "Chain Reaction",
-  "24 Karat"
+  "Terror Squad Soldier",
+  "24 Karat Boss"
  ],
- "topRank": "The Real CLK",
+ "topRank": "King of the Links",
  "point": "Link",
  "points": "Links",
  "rankRewards": {
   "Open Book": {
    "bongs": 5,
-   "line": "Your life's an open book now. Everything is going to be all right."
+   "line": "Open Book. Your life's an open book now."
   },
-  "Chain Gang": {
+  "Chain Gang Link": {
    "bongs": 10,
-   "line": "You're on the chain now. Link by link."
+   "line": "Chain Gang Link. You're on the chain, link by link."
   },
   "Hijo de la Calle": {
    "bongs": 15,
-   "line": "Hijo de la calle. Son of the street."
+   "line": "Hijo de la Calle. Son of the street, the block claims you."
   },
-  "Chain Reaction": {
+  "Terror Squad Soldier": {
    "bongs": 20,
-   "line": "One link pulls the next. Chain reaction."
+   "line": "Terror Squad Soldier. You roll with the Squad now."
   },
-  "24 Karat": {
+  "24 Karat Boss": {
    "bongs": 25,
-   "line": "You run all of Morrisania."
+   "line": "24 Karat Boss. Solid gold, you run all of Morrisania."
   }
  },
  "trophyArt": [

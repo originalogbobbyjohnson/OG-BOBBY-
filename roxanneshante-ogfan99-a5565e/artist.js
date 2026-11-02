@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "QUEENSBRIDGE",
  "boro": "Queens",
  "saveKey": "ogfan99roxanneshante1",
- "startRank": "Wack MC",
+ "startRank": "Roxanne Wannabe",
  "ranks": [
-  "Def Fresh",
-  "Live On Stage",
+  "Marley Marl Student",
+  "Roxanne's Revenge",
   "Go On Girl",
-  "Juice Crew",
-  "Shanté Rox On"
+  "Roxanne Wars Victor",
+  "Juice Crew First Lady"
  ],
  "topRank": "Queen of Rox",
  "point": "Request",
  "points": "Requests",
  "rankRewards": {
-  "Def Fresh": {
+  "Marley Marl Student": {
    "bongs": 5,
-   "line": "Def Fresh. Now they're paying attention."
+   "line": "Marley Marl is showing you the ropes. Pay attention."
   },
-  "Live On Stage": {
+  "Roxanne's Revenge": {
    "bongs": 10,
-   "line": "Live On Stage. The crowd is yours."
+   "line": "Roxanne's Revenge. You answered back and the Bridge heard it."
   },
   "Go On Girl": {
    "bongs": 15,
-   "line": "Go On Girl. Watch the girl go."
+   "line": "Go on, girl. Watch you go."
   },
-  "Juice Crew": {
+  "Roxanne Wars Victor": {
    "bongs": 20,
-   "line": "Juice Crew. You're down with the Bridge."
+   "line": "You won the Roxanne Wars. Everybody else is just an answer record."
   },
-  "Shanté Rox On": {
+  "Juice Crew First Lady": {
    "bongs": 25,
-   "line": "You run all of Queensbridge."
+   "line": "Juice Crew first lady. You run all of Queensbridge."
   }
  },
  "trophyArt": [

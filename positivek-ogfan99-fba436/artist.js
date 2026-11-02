@@ -5,13 +5,13 @@ window.CFG = {
  "hood": "Tremont",
  "hoodUpper": "TREMONT",
  "boro": "the Bronx",
- "startRank": "Rookie",
+ "startRank": "Got a Man Already",
  "ranks": [
   "Step Up Front",
-  "Carhoppers",
-  "Nightshift",
-  "I Got a Man",
-  "Skills Dat Pay Da Bills"
+  "Night Shift Worker",
+  "Pickup Line Pro",
+  "Skills Dat Pay Bills",
+  "Tremont Boss"
  ],
  "topRank": "Mr. Positive",
  "point": "Plus",
@@ -21,21 +21,21 @@ window.CFG = {
    "bongs": 5,
    "line": "You stepped up front. Now the crowd sees you."
   },
-  "Carhoppers": {
+  "Night Shift Worker": {
    "bongs": 10,
-   "line": "Carhopping down the Concourse in style."
+   "line": "Working the night shift, and loving every minute."
   },
-  "Nightshift": {
+  "Pickup Line Pro": {
    "bongs": 15,
-   "line": "Working the night shift, and loving it."
+   "line": "Pickup Line Pro. Smooth talk and quick answers."
   },
-  "I Got a Man": {
+  "Skills Dat Pay Bills": {
    "bongs": 20,
-   "line": "Smooth talk and quick answers. You got it."
+   "line": "Skills that pay the bills. You're getting paid now."
   },
-  "Skills Dat Pay Da Bills": {
+  "Tremont Boss": {
    "bongs": 25,
-   "line": "You run all of Tremont."
+   "line": "Tremont Boss. You run all of Tremont."
   }
  },
  "trophyArt": [

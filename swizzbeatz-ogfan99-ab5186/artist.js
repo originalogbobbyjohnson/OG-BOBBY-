@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "THE BRONX",
  "boro": "the Bronx",
  "saveKey": "ogfan99swizzbeatz1",
- "startRank": "Freeze",
+ "startRank": "Beat Biter",
  "ranks": [
-  "Show Time",
+  "Drum Pad Newbie",
   "Ruff Ryder",
-  "One Man Band",
-  "The Monster",
-  "Verzuz"
+  "One Man Band Man",
+  "Verzuz Contender",
+  "Bronx Beat Boss"
  ],
  "topRank": "Go Swizzy",
  "point": "Beat",
  "points": "Beats",
  "rankRewards": {
-  "Show Time": {
+  "Drum Pad Newbie": {
    "bongs": 5,
-   "line": "Show Time! You're on now."
+   "line": "Drum pad newbie. Show time, you're on now."
   },
   "Ruff Ryder": {
    "bongs": 10,
    "line": "Ruff Ryder. You rolled in with the family."
   },
-  "One Man Band": {
+  "One Man Band Man": {
    "bongs": 15,
-   "line": "One Man Band. You make the whole beat yourself."
+   "line": "One Man Band Man. You make the whole beat yourself."
   },
-  "The Monster": {
+  "Verzuz Contender": {
    "bongs": 20,
-   "line": "The Monster. Every drum you touch knocks."
+   "line": "Verzuz contender. Hit for hit, you held your own."
   },
-  "Verzuz": {
+  "Bronx Beat Boss": {
    "bongs": 25,
-   "line": "You run all of the Bronx."
+   "line": "Beat boss. You run all of the Bronx."
   }
  },
  "trophyArt": [

@@ -6,7 +6,7 @@ window.CFG = {
  "hoodUpper": "MARINERS HARBOR",
  "boro": "Staten Island",
  "saveKey": "ogfan99zysmoke1",
- "startRank": "Underdog",
+ "startRank": "Harbor Underdog",
  "ranks": [
   "Choir Kid",
   "Vibey Nights",
@@ -20,23 +20,23 @@ window.CFG = {
  "rankRewards": {
   "Choir Kid": {
    "bongs": 5,
-   "line": "You found your voice."
+   "line": "Choir kid. You found your voice."
   },
   "Vibey Nights": {
    "bongs": 10,
-   "line": "The night is yours now."
+   "line": "Vibey nights. The night is yours now."
   },
   "Liquid Fire": {
    "bongs": 15,
-   "line": "You're running hot."
+   "line": "Liquid fire. You're running hot and nobody can cool you."
   },
   "Lagos Waves": {
    "bongs": 20,
-   "line": "From the blocks to the waves."
+   "line": "Lagos waves. From the blocks to the waves."
   },
   "Night Shift Halo": {
    "bongs": 25,
-   "line": "You run all of Mariners Harbor."
+   "line": "Night shift halo. You run all of Mariners Harbor."
   }
  },
  "trophyArt": [

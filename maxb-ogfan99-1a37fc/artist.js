@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99maxb1",
- "startRank": "Lame",
+ "startRank": "Seasick Outsider",
  "ranks": [
-  "Wavy",
-  "Gain Greene",
+  "Just Got Wavy",
+  "Gain Greene Crew",
   "Wavy Crockett",
   "Silver Surfer",
-  "Biggaveli"
+  "Biggaveli Boss"
  ],
- "topRank": "Wave God",
+ "topRank": "The Wave God",
  "point": "Wave",
  "points": "Waves",
  "rankRewards": {
-  "Wavy": {
+  "Just Got Wavy": {
    "bongs": 5,
-   "line": "You're wavy now. Stay wavy."
+   "line": "You just got wavy. Stay wavy from here."
   },
-  "Gain Greene": {
+  "Gain Greene Crew": {
    "bongs": 10,
-   "line": "Gain Greene. You're with the team now."
+   "line": "Gain Greene crew. You're with the team now."
   },
   "Wavy Crockett": {
    "bongs": 15,
-   "line": "Wavy Crockett. Shades on, top down."
+   "line": "Wavy Crockett. Shades on, top down, cruising."
   },
   "Silver Surfer": {
    "bongs": 20,
-   "line": "Silver Surfer. You're riding the big one."
+   "line": "Silver Surfer. You're riding the biggest wave yet."
   },
-  "Biggaveli": {
+  "Biggaveli Boss": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Biggaveli Boss. You run all of Harlem."
   }
  },
  "trophyArt": [

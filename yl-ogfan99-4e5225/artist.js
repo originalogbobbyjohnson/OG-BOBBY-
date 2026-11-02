@@ -6,15 +6,15 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99yl1",
- "startRank": "Corny",
+ "startRank": "Uptown Corny",
  "ranks": [
   "Fall In Line",
   "Igh Bet",
+  "By The Way",
   "Guest List",
-  "Cloud Nine",
-  "By The Way"
+  "Cloud Nine"
  ],
- "topRank": "Uptown",
+ "topRank": "Uptown Royalty",
  "point": "Rack",
  "points": "Racks",
  "rankRewards": {
@@ -24,19 +24,19 @@ window.CFG = {
   },
   "Igh Bet": {
    "bongs": 10,
-   "line": "Igh bet. You're moving."
-  },
-  "Guest List": {
-   "bongs": 15,
-   "line": "You're on the guest list now."
-  },
-  "Cloud Nine": {
-   "bongs": 20,
-   "line": "You're up on cloud nine."
+   "line": "Igh bet. You're moving, and they noticed."
   },
   "By The Way": {
+   "bongs": 15,
+   "line": "By the way, they know your name now."
+  },
+  "Guest List": {
+   "bongs": 20,
+   "line": "You're on the guest list now. Walk right in."
+  },
+  "Cloud Nine": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Cloud nine. You run all of Harlem."
   }
  },
  "trophyArt": [

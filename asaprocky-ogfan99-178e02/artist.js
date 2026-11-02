@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99asaprocky1",
- "startRank": "Testing",
+ "startRank": "Flacko Wannabe",
  "ranks": [
-  "Goldie",
+  "Goldie Chaser",
+  "Purple Swag",
   "Fashion Killa",
   "Pretty Flacko",
-  "Lord Flacko",
-  "AWGE"
+  "Lord Flacko"
  ],
  "topRank": "Long Live A$AP",
  "point": "Peso",
  "points": "Pesos",
  "rankRewards": {
-  "Goldie": {
+  "Goldie Chaser": {
    "bongs": 5,
-   "line": "Goldie. The chain is on and Harlem sees it."
+   "line": "Goldie Chaser. The chain is on and Harlem sees it."
+  },
+  "Purple Swag": {
+   "bongs": 10,
+   "line": "Purple Swag. You got the style the whole block copies."
   },
   "Fashion Killa": {
-   "bongs": 10,
-   "line": "Fashion Killa. Every fit is a runway now."
+   "bongs": 15,
+   "line": "Fashion Killa. Every fit you wear is a runway now."
   },
   "Pretty Flacko": {
-   "bongs": 15,
-   "line": "Pretty Flacko. Shades on, smooth all the way."
+   "bongs": 20,
+   "line": "Pretty Flacko. Shades on, smooth all the way through."
   },
   "Lord Flacko": {
-   "bongs": 20,
-   "line": "Lord Flacko. The whole Mob bows to the crown."
-  },
-  "AWGE": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Lord Flacko. The Mob bows, and you run all of Harlem."
   }
  },
  "trophyArt": [

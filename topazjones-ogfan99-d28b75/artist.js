@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "MONTCLAIR",
  "boro": "New Jersey",
  "saveKey": "ogfan99topazjones1",
- "startRank": "Coping Mechanism",
+ "startRank": "Out of Quarters",
  "ranks": [
-  "Honeymoon Suite",
-  "Arcade",
+  "Arcade Player",
+  "New Funk Academy",
   "Tropicana",
-  "Motion Sickness",
-  "New Funk Academy"
+  "Don't Go Tellin'",
+  "Montclair Headliner"
  ],
- "topRank": "Don't Go Tellin'",
+ "topRank": "Black Alphabet King",
  "point": "Token",
  "points": "Tokens",
  "rankRewards": {
-  "Honeymoon Suite": {
+  "Arcade Player": {
    "bongs": 5,
-   "line": "Honeymoon Suite. Checked in."
+   "line": "Arcade player. You dropped a quarter and stayed."
   },
-  "Arcade": {
+  "New Funk Academy": {
    "bongs": 10,
-   "line": "Arcade. You got a high score."
+   "line": "New Funk Academy. Class is open and funky."
   },
   "Tropicana": {
    "bongs": 15,
-   "line": "Tropicana. Keep it fresh."
+   "line": "Tropicana. Keep it fresh and cold."
   },
-  "Motion Sickness": {
+  "Don't Go Tellin'": {
    "bongs": 20,
-   "line": "Motion Sickness. Moving fast."
+   "line": "Don't go tellin' your momma. This one stays between us."
   },
-  "New Funk Academy": {
+  "Montclair Headliner": {
    "bongs": 25,
-   "line": "You run all of Montclair."
+   "line": "Headliner. You run all of Montclair."
   }
  },
  "trophyArt": [

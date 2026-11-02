@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "YONKERS",
  "boro": "Westchester",
  "saveKey": "ogfan99outasight1",
- "startRank": "Get It Together",
+ "startRank": "Not Tonight",
  "ranks": [
-  "Figure 8",
+  "Get It Together",
+  "Figure 8 Skater",
   "Now or Never",
   "The Wild Life",
-  "Big Trouble",
-  "Life of the Party"
+  "Yonkers Party Boss"
  ],
  "topRank": "Standing Ovation",
  "point": "Gold Star",
  "points": "Gold Stars",
  "rankRewards": {
-  "Figure 8": {
+  "Get It Together": {
    "bongs": 5,
-   "line": "You found your groove."
+   "line": "You got it together. You found your groove."
+  },
+  "Figure 8 Skater": {
+   "bongs": 10,
+   "line": "Figure 8 skater. Smooth turns, no falls."
   },
   "Now or Never": {
-   "bongs": 10,
-   "line": "No waiting. It's now."
+   "bongs": 15,
+   "line": "Now or never, and you chose now."
   },
   "The Wild Life": {
-   "bongs": 15,
-   "line": "Welcome to the wild life."
-  },
-  "Big Trouble": {
    "bongs": 20,
-   "line": "You're big trouble now."
+   "line": "Welcome to the wild life. Hold on tight."
   },
-  "Life of the Party": {
+  "Yonkers Party Boss": {
    "bongs": 25,
-   "line": "You run all of Yonkers."
+   "line": "Yonkers Party Boss. You run all of Yonkers."
   }
  },
  "trophyArt": [

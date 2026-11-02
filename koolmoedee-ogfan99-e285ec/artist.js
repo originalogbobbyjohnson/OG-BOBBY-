@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HARLEM",
  "boro": "Manhattan",
  "saveKey": "ogfan99koolmoedee1",
- "startRank": "Sucker MC",
+ "startRank": "Harlem World Heckler",
  "ranks": [
-  "Treacherous",
-  "Doctor",
-  "Architect",
-  "Wild Wild West",
+  "Treacherous Trainee",
+  "Wraparound Shades",
+  "Wild Wild West Rider",
+  "Battle Rap Pioneer",
   "Knowledge Is King"
  ],
  "topRank": "Harlem World Champ",
  "point": "Rhyme",
  "points": "Rhymes",
  "rankRewards": {
-  "Treacherous": {
+  "Treacherous Trainee": {
    "bongs": 5,
-   "line": "Welcome to the Three. Now you're treacherous."
+   "line": "Treacherous trainee. You just joined up with the Three."
   },
-  "Doctor": {
+  "Wraparound Shades": {
    "bongs": 10,
-   "line": "You go to work like a doctor now."
+   "line": "Wraparound shades on. You go to work like a doctor."
   },
-  "Architect": {
+  "Wild Wild West Rider": {
    "bongs": 15,
-   "line": "You don't write it, you build it."
+   "line": "Wild Wild West rider. Saddle up, the frontier's yours."
   },
-  "Wild Wild West": {
+  "Battle Rap Pioneer": {
    "bongs": 20,
-   "line": "Saddle up. The whole West is yours."
+   "line": "Battle rap pioneer. How ya like me now?"
   },
   "Knowledge Is King": {
    "bongs": 25,
-   "line": "You run all of Harlem."
+   "line": "Knowledge is king. You run all of Harlem."
   }
  },
  "trophyArt": [

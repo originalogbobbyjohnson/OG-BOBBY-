@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "JAMAICA",
  "boro": "Queens",
  "saveKey": "ogfan99bas1",
- "startRank": "Tourist",
+ "startRank": "Lost Luggage",
  "ranks": [
-  "Last Winter",
-  "Night Job",
-  "Milky Way",
-  "Spilled Milk",
-  "Dreamviller"
+  "Quarter Water Kid",
+  "Last Winter Survivor",
+  "Night Job Regular",
+  "Milky Way Traveler",
+  "Dreamville General"
  ],
- "topRank": "Globe Trotter",
+ "topRank": "The Globe Trotter",
  "point": "Passport Stamp",
  "points": "Passport Stamps",
  "rankRewards": {
-  "Last Winter": {
+  "Quarter Water Kid": {
    "bongs": 5,
-   "line": "Last Winter. The first tape, the first trip."
+   "line": "Quarter Water Kid. Queens raised you on the corner store."
   },
-  "Night Job": {
+  "Last Winter Survivor": {
    "bongs": 10,
-   "line": "Night Job. Clocked in after dark."
+   "line": "Last Winter Survivor. You made it through the first cold tape."
   },
-  "Milky Way": {
+  "Night Job Regular": {
    "bongs": 15,
-   "line": "Milky Way. You are floating now."
+   "line": "Night Job Regular. You clock in every night after dark."
   },
-  "Spilled Milk": {
+  "Milky Way Traveler": {
    "bongs": 20,
-   "line": "Spilled Milk. No tears, just verses."
+   "line": "Milky Way Traveler. You're floating far past the city now."
   },
-  "Dreamviller": {
+  "Dreamville General": {
    "bongs": 25,
-   "line": "You run all of Jamaica."
+   "line": "Dreamville General. You run all of Jamaica."
   }
  },
  "trophyArt": [

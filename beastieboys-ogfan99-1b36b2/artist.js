@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "GREENWICH VILLAGE",
  "boro": "Manhattan",
  "saveKey": "ogfan99beastieboys1",
- "startRank": "Cookie Puss",
+ "startRank": "Cookie Puss Caller",
  "ranks": [
-  "Sure Shot",
-  "Root Down",
-  "Check Your Head",
-  "Intergalactic",
-  "Grand Royal"
+  "Paul's Boutique Clerk",
+  "Root Down Regular",
+  "Sabotage Agent",
+  "Check Your Head Band",
+  "Intergalactic Master"
  ],
- "topRank": "Sound of Science",
+ "topRank": "Grand Royal Highness",
  "point": "Mic",
  "points": "Mics",
  "rankRewards": {
-  "Sure Shot": {
+  "Paul's Boutique Clerk": {
    "bongs": 5,
-   "line": "Sure Shot. Nothing but net."
+   "line": "Paul's Boutique Clerk. You're behind the counter now."
   },
-  "Root Down": {
+  "Root Down Regular": {
    "bongs": 10,
-   "line": "Root Down. Feet planted, beat on."
+   "line": "Root Down Regular. Feet planted, the beat keeps rolling."
   },
-  "Check Your Head": {
+  "Sabotage Agent": {
    "bongs": 15,
-   "line": "Check Your Head. Instruments out, band mode."
+   "line": "Sabotage Agent. Shades on, sirens up, mission accepted."
   },
-  "Intergalactic": {
+  "Check Your Head Band": {
    "bongs": 20,
-   "line": "Intergalactic. Planetary, all the way."
+   "line": "Check Your Head Band. Instruments out, you're in the band."
   },
-  "Grand Royal": {
+  "Intergalactic Master": {
    "bongs": 25,
-   "line": "You run all of Greenwich Village."
+   "line": "Intergalactic Master. Planetary status, you run all of Greenwich Village."
   }
  },
  "trophyArt": [

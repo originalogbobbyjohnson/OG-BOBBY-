@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "QUEENSBRIDGE",
  "boro": "Queens",
  "saveKey": "ogfan99mcshan1",
- "startRank": "Sucker DJ",
+ "startRank": "Bridge Wars Bystander",
  "ranks": [
-  "Cool Brother",
+  "QB Corner Kid",
   "Down by Law",
   "Born to Be Wild",
-  "Juice Crew",
-  "The Bridge"
+  "Juice Crew Original",
+  "Queensbridge General"
  ],
- "topRank": "Hip-Hop Pioneer",
+ "topRank": "The Bridge Pioneer",
  "point": "Jam",
  "points": "Jams",
  "rankRewards": {
-  "Cool Brother": {
+  "QB Corner Kid": {
    "bongs": 5,
-   "line": "A cool brother. They know your name now."
+   "line": "QB Corner Kid. They know your name now."
   },
   "Down by Law": {
    "bongs": 10,
-   "line": "Down by Law. Straight from the album."
+   "line": "Down by Law. You're official with the crew."
   },
   "Born to Be Wild": {
    "bongs": 15,
-   "line": "Born to Be Wild. Can't hold you down."
+   "line": "Born to Be Wild. Nobody can hold you down."
   },
-  "Juice Crew": {
+  "Juice Crew Original": {
    "bongs": 20,
-   "line": "Juice Crew. You got the juice."
+   "line": "Juice Crew original. You were there from the start."
   },
-  "The Bridge": {
+  "Queensbridge General": {
    "bongs": 25,
-   "line": "You run all of Queensbridge."
+   "line": "Queensbridge General. You run all of Queensbridge."
   }
  },
  "trophyArt": [

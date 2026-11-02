@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "NEWARK",
  "boro": "New Jersey",
  "saveKey": "ogfan99redman1",
- "startRank": "Sucka",
+ "startRank": "Funk Doc Patient",
  "ranks": [
-  "Whut?",
-  "Muddy Waters",
-  "Dare Iz a Darkside",
-  "Doc's Da Name",
-  "Funk Doc"
+  "Whut? Thee Fan",
+  "Gilla House Guest",
+  "Muddy Waters Crew",
+  "Darkside Traveler",
+  "Def Squad Funkmaster"
  ],
- "topRank": "Gilla House",
+ "topRank": "Funk Doctor Spock",
  "point": "Prescription",
  "points": "Prescriptions",
  "rankRewards": {
-  "Whut?": {
+  "Whut? Thee Fan": {
    "bongs": 5,
    "line": "Whut? Thee Fan. You're on the board now."
   },
-  "Muddy Waters": {
+  "Gilla House Guest": {
    "bongs": 10,
-   "line": "Muddy Waters. Boots dirty, head nodding."
+   "line": "The Gilla House door is open. Wipe your boots first."
   },
-  "Dare Iz a Darkside": {
+  "Muddy Waters Crew": {
    "bongs": 15,
-   "line": "Dare Iz a Darkside. The ship took you there and back."
+   "line": "Muddy Waters. Boots dirty, head nodding with the crew."
   },
-  "Doc's Da Name": {
+  "Darkside Traveler": {
    "bongs": 20,
-   "line": "Doc's Da Name. Broad Street knows yours too."
+   "line": "Dare Iz a Darkside. You went there and came back."
   },
-  "Funk Doc": {
+  "Def Squad Funkmaster": {
    "bongs": 25,
-   "line": "You run all of Newark."
+   "line": "Def Squad general. You run all of Newark."
   }
  },
  "trophyArt": [

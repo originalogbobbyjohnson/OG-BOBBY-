@@ -8,25 +8,25 @@ window.CFG = {
  "saveKey": "ogfan99chrisrivers1",
  "startRank": "One-Trick Pony",
  "ranks": [
-  "Renegade",
-  "Rhyme Slayer",
-  "Dragon"
+  "Bronx Renegade",
+  "Rivers Rhyme Slayer",
+  "South Bronx Dragon"
  ],
  "topRank": "The Good King",
  "point": "Bar",
  "points": "Bars",
  "rankRewards": {
-  "Renegade": {
+  "Bronx Renegade": {
    "bongs": 5,
-   "line": "You broke from the pack. The Bronx sees you now."
+   "line": "Bronx Renegade. You broke from the pack and they see you."
   },
-  "Rhyme Slayer": {
+  "Rivers Rhyme Slayer": {
    "bongs": 10,
-   "line": "Your pen game is golden era. Keep slayin'."
+   "line": "Rivers Rhyme Slayer. Your pen is golden era sharp."
   },
-  "Dragon": {
+  "South Bronx Dragon": {
    "bongs": 25,
-   "line": "You run all of the South Bronx."
+   "line": "South Bronx Dragon. Fire on the mic, you run all of the South Bronx."
   }
  },
  "trophyArt": [
@@ -77,7 +77,7 @@ window.CFG = {
   {
    "scene": "hub",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts as a One-Trick Pony. Clear a row to rank up: Renegade, Rhyme Slayer, Dragon. Beat the 99 Challenge to become The Good King.",
+   "x": "Everybody starts as a One-Trick Pony. Clear a row to rank up: Bronx Renegade, Rivers Rhyme Slayer, South Bronx Dragon. Beat the 99 Challenge to become The Good King.",
    "sfx": "organ"
   },
   {

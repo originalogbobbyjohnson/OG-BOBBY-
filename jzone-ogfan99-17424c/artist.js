@@ -6,13 +6,13 @@ window.CFG = {
  "hoodUpper": "QUEENS",
  "boro": "Queens",
  "saveKey": "ogfan99jzone1",
- "startRank": "Peter Pan Kid",
+ "startRank": "Peter Pan Syndrome",
  "ranks": [
   "Music for Tu Madre",
-  "Fish-n-Grits",
+  "Fish-n-Grits Regular",
   "Old Maid Billionaire",
-  "Chief Chinchilla",
-  "Wig Splitter"
+  "Wig Splitter",
+  "Chief Chinchilla"
  ],
  "topRank": "Zone for President",
  "point": "Drum Break",
@@ -22,21 +22,21 @@ window.CFG = {
    "bongs": 5,
    "line": "Music for Tu Madre. Even your mom is nodding."
   },
-  "Fish-n-Grits": {
+  "Fish-n-Grits Regular": {
    "bongs": 10,
-   "line": "Fish-n-Grits. Down home and funky."
+   "line": "Fish-n-Grits regular. Down home and funky, every plate."
   },
   "Old Maid Billionaire": {
    "bongs": 15,
-   "line": "Old Maid Billionaire. Rich in breaks."
-  },
-  "Chief Chinchilla": {
-   "bongs": 20,
-   "line": "Chief Chinchilla. The fur hat fits."
+   "line": "Old Maid Billionaire. Rich in breaks, broke in pocket."
   },
   "Wig Splitter": {
+   "bongs": 20,
+   "line": "Wig splitter. Every bar you drop splits the room."
+  },
+  "Chief Chinchilla": {
    "bongs": 25,
-   "line": "You run all of Queens."
+   "line": "Chief Chinchilla. Fur hat on, you run all of Queens."
   }
  },
  "trophyArt": [

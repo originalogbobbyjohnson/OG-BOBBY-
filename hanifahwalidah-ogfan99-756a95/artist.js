@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "YONKERS",
  "boro": "Westchester",
  "saveKey": "ogfan99hanifahwalidah1",
- "startRank": "Open Mic",
+ "startRank": "Open Mic Wallflower",
  "ranks": [
-  "Maybe",
-  "Do You Mind",
+  "Yonkers Mic Newbie",
   "Make a Move",
   "Rivers of Honey",
-  "People's Promises"
+  "People's Promises",
+  "Spoken Word Royalty"
  ],
- "topRank": "Hanifah",
+ "topRank": "Queen Hanifah",
  "point": "Verse",
  "points": "Verses",
  "rankRewards": {
-  "Maybe": {
+  "Yonkers Mic Newbie": {
    "bongs": 5,
-   "line": "Maybe. The first step on the stage."
-  },
-  "Do You Mind": {
-   "bongs": 10,
-   "line": "Do You Mind. Mic is yours now."
+   "line": "Yonkers mic newbie. You took your first step on stage."
   },
   "Make a Move": {
-   "bongs": 15,
-   "line": "Make a Move. The room follows you."
+   "bongs": 10,
+   "line": "Make a Move. The room starts following your lead."
   },
   "Rivers of Honey": {
-   "bongs": 20,
-   "line": "Rivers of Honey. Smooth as the Hudson."
+   "bongs": 15,
+   "line": "Rivers of Honey. Smooth as the Hudson at night."
   },
   "People's Promises": {
+   "bongs": 20,
+   "line": "People's Promises. You kept every one of yours."
+  },
+  "Spoken Word Royalty": {
    "bongs": 25,
-   "line": "You run all of Yonkers."
+   "line": "Spoken word royalty. You run all of Yonkers."
   }
  },
  "trophyArt": [

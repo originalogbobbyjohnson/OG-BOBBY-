@@ -6,15 +6,15 @@ window.CFG = {
  "hoodUpper": "NEWARK",
  "boro": "New Jersey",
  "saveKey": "ogfan99lordsoftheunderground1",
- "startRank": "Underground Rookie",
+ "startRank": "Surface Dweller",
  "ranks": [
   "Funky Child",
-  "Tic Toc",
+  "Tic Toc Timekeeper",
   "Keeper of the Funk",
-  "House of Lords",
+  "Here Come the Lords",
   "Chief Rocka"
  ],
- "topRank": "Lord of the Underground",
+ "topRank": "The Underground Lord",
  "point": "Groove",
  "points": "Grooves",
  "rankRewards": {
@@ -22,21 +22,21 @@ window.CFG = {
    "bongs": 5,
    "line": "Funky Child. The funk got you early."
   },
-  "Tic Toc": {
+  "Tic Toc Timekeeper": {
    "bongs": 10,
-   "line": "Tic Toc. Right on time, every beat."
+   "line": "Tic Toc Timekeeper. Right on time, every beat."
   },
   "Keeper of the Funk": {
    "bongs": 15,
    "line": "Keeper of the Funk. You hold it down now."
   },
-  "House of Lords": {
+  "Here Come the Lords": {
    "bongs": 20,
-   "line": "House of Lords. Welcome to the family."
+   "line": "Here come the Lords, and you're walking with them."
   },
   "Chief Rocka": {
    "bongs": 25,
-   "line": "You run all of Newark."
+   "line": "Chief Rocka. You run all of Newark."
   }
  },
  "trophyArt": [

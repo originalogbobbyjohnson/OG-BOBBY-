@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "CENTRAL ISLIP",
  "boro": "Long Island",
  "saveKey": "ogfan99keithmurray1",
- "startRank": "Small Word",
+ "startRank": "Small Vocabulary",
  "ranks": [
-  "Def Squad",
+  "Def Squad Trainee",
   "Get Lifted",
-  "The Rhyme",
+  "Sychosymatic",
   "Enigma",
-  "Sychosymatic"
+  "Def Squad Wordsmith"
  ],
  "topRank": "Most Beautifullest",
  "point": "Big Word",
  "points": "Big Words",
  "rankRewards": {
-  "Def Squad": {
+  "Def Squad Trainee": {
    "bongs": 5,
-   "line": "Def Squad. Now you roll with the squad."
+   "line": "Def Squad trainee. Now you roll with the squad."
   },
   "Get Lifted": {
    "bongs": 10,
-   "line": "Get Lifted. You just went up a level."
+   "line": "Get lifted. You just went up a level."
   },
-  "The Rhyme": {
+  "Sychosymatic": {
    "bongs": 15,
-   "line": "The Rhyme. Every word lands in place."
+   "line": "Sychosymatic. Your mind is on another plane now."
   },
   "Enigma": {
    "bongs": 20,
-   "line": "Enigma. Nobody can figure you out."
+   "line": "Enigma. Nobody can figure you out anymore."
   },
-  "Sychosymatic": {
+  "Def Squad Wordsmith": {
    "bongs": 25,
-   "line": "You run all of Central Islip."
+   "line": "Def Squad general. You run all of Central Islip."
   }
  },
  "trophyArt": [

@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HACKENSACK",
  "boro": "New Jersey",
  "saveKey": "ogfan99coileray1",
- "startRank": "Opp",
+ "startRank": "No-Swag Opp",
  "ranks": [
-  "Twinnem",
-  "Better Days",
+  "Twinnem Match",
   "Big Purr",
   "No More Parties",
-  "Players"
+  "Players Club VIP",
+  "Trendsetter Boss"
  ],
- "topRank": "Trendsetter",
+ "topRank": "Coi the Icon",
  "point": "Bop",
  "points": "Bops",
  "rankRewards": {
-  "Twinnem": {
+  "Twinnem Match": {
    "bongs": 5,
-   "line": "That's your twinnem now."
-  },
-  "Better Days": {
-   "bongs": 10,
-   "line": "Now we seeing better days."
+   "line": "Twinnem Match. That's your twinnem now, matching fits."
   },
   "Big Purr": {
-   "bongs": 15,
-   "line": "Big purr, you leveled up."
+   "bongs": 10,
+   "line": "Big Purr. You leveled up and everybody heard it."
   },
   "No More Parties": {
-   "bongs": 20,
-   "line": "No more parties, just wins."
+   "bongs": 15,
+   "line": "No More Parties. No more parties, just wins."
   },
-  "Players": {
+  "Players Club VIP": {
+   "bongs": 20,
+   "line": "Players Club VIP. You got the best seat in the club."
+  },
+  "Trendsetter Boss": {
    "bongs": 25,
-   "line": "You run all of Hackensack."
+   "line": "Trendsetter Boss. You run all of Hackensack."
   }
  },
  "trophyArt": [

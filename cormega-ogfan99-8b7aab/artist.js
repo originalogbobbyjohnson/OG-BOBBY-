@@ -6,27 +6,27 @@ window.CFG = {
  "hoodUpper": "QUEENSBRIDGE",
  "boro": "Queens",
  "saveKey": "ogfan99cormega1",
- "startRank": "Fronter",
+ "startRank": "Bridge Fronter",
  "ranks": [
   "Legal Hustler",
   "Born and Raised",
-  "Mega Philosopher"
+  "Mega Philosophy Boss"
  ],
- "topRank": "The Realness",
+ "topRank": "King of The Realness",
  "point": "Mega",
  "points": "Megas",
  "rankRewards": {
   "Legal Hustler": {
    "bongs": 5,
-   "line": "Rap is a hustle. You keep it legal."
+   "line": "Legal Hustler. Rap is a hustle and you keep it legal."
   },
   "Born and Raised": {
    "bongs": 10,
-   "line": "Born and raised in the Bridge. You know the true meaning."
+   "line": "Born and Raised. The Bridge knows the true meaning now."
   },
-  "Mega Philosopher": {
+  "Mega Philosophy Boss": {
    "bongs": 25,
-   "line": "You run all of Queensbridge."
+   "line": "Mega Philosophy Boss. You run all of Queensbridge."
   }
  },
  "trophyArt": [
@@ -82,7 +82,7 @@ window.CFG = {
   {
    "scene": "park",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts as a Fronter. Clear a row to rank up: Legal Hustler, Born and Raised, Mega Philosopher. Beat the 99 Challenge to become The Realness.",
+   "x": "Everybody starts as a Bridge Fronter. Clear a row to rank up: Legal Hustler, Born and Raised, Mega Philosophy Boss. Beat the 99 Challenge to become King of The Realness.",
    "sfx": "bell"
   },
   {

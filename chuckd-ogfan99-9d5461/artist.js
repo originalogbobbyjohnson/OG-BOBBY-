@@ -8,35 +8,35 @@ window.CFG = {
  "saveKey": "ogfan99chuckd1",
  "startRank": "Hype Believer",
  "ranks": [
+  "Bum Rush Crasher",
+  "Noise Bringer",
   "Rhyme Animal",
-  "Bum Rush",
-  "Hard Rhymer",
-  "Mistachuck",
-  "Rebel Without a Pause"
+  "Rebel Without a Pause",
+  "Hard Rhymer General"
  ],
  "topRank": "Public Enemy #1",
  "point": "Flyer",
  "points": "Flyers",
  "rankRewards": {
-  "Rhyme Animal": {
+  "Bum Rush Crasher": {
    "bongs": 5,
+   "line": "Bum Rush Crasher. Yo, you crashed the show."
+  },
+  "Noise Bringer": {
+   "bongs": 10,
+   "line": "Noise Bringer. You bring the noise every time."
+  },
+  "Rhyme Animal": {
+   "bongs": 15,
    "line": "Rhyme Animal. The beast is loose on the mic."
   },
-  "Bum Rush": {
-   "bongs": 10,
-   "line": "Bum Rush. Yo! You crashed the show."
-  },
-  "Hard Rhymer": {
-   "bongs": 15,
-   "line": "Hard Rhymer. That voice fills the whole room."
-  },
-  "Mistachuck": {
-   "bongs": 20,
-   "line": "Mistachuck. You read the autobiography."
-  },
   "Rebel Without a Pause": {
+   "bongs": 20,
+   "line": "Rebel Without a Pause. No breaks, no letting up."
+  },
+  "Hard Rhymer General": {
    "bongs": 25,
-   "line": "You run all of Roosevelt."
+   "line": "Hard Rhymer General. You run all of Roosevelt."
   }
  },
  "trophyArt": [

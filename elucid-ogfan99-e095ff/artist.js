@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "JAMAICA",
  "boro": "Queens",
  "saveKey": "ogfan99elucid1",
- "startRank": "Lukewarm",
+ "startRank": "Lukewarm Listener",
  "ranks": [
-  "Valley Walker",
+  "Paraffin Candle",
   "Shrine Keeper",
-  "Paraffin",
+  "Hammer Swinger",
   "Armand Hammer",
-  "I Told Bessie"
+  "Backwoodz Master"
  ],
  "topRank": "The Revelator",
  "point": "Petal",
  "points": "Petals",
  "rankRewards": {
-  "Valley Walker": {
+  "Paraffin Candle": {
    "bongs": 5,
-   "line": "Valley Walker. You made it through the dry bones."
+   "line": "Paraffin Candle. Slow burn, clear flame, you're lit."
   },
   "Shrine Keeper": {
    "bongs": 10,
-   "line": "Shrine Keeper. You light the candles now."
+   "line": "Shrine Keeper. You light the candles at the shrine now."
   },
-  "Paraffin": {
+  "Hammer Swinger": {
    "bongs": 15,
-   "line": "Paraffin. Slow burn, clear flame."
+   "line": "Hammer Swinger. You swing heavy on every verse."
   },
   "Armand Hammer": {
    "bongs": 20,
-   "line": "Armand Hammer. Two voices, one hammer."
+   "line": "Armand Hammer. Two voices, one hammer, and you're in."
   },
-  "I Told Bessie": {
+  "Backwoodz Master": {
    "bongs": 25,
-   "line": "You run all of Jamaica."
+   "line": "Backwoodz Master. You run all of Jamaica."
   }
  },
  "trophyArt": [

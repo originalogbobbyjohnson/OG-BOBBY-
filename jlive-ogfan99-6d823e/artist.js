@@ -5,37 +5,37 @@ window.CFG = {
  "hood": "Downtown Brooklyn",
  "hoodUpper": "DOWNTOWN BROOKLYN",
  "boro": "Brooklyn",
- "startRank": "Homeroom",
+ "startRank": "Late to Class",
  "ranks": [
-  "The Way That I Rhyme",
-  "The Best Part",
-  "All of the Above",
-  "The Hear After",
-  "Then What Happened"
+  "The Best Part Newcomer",
+  "Braggin' Writes Pupil",
+  "Multiple Choice Ace",
+  "Hear After Honor Roll",
+  "Brooklyn Valedictorian"
  ],
- "topRank": "The Authentic",
+ "topRank": "J-Live the Headmaster",
  "point": "Credit",
  "points": "Credits",
  "rankRewards": {
-  "The Way That I Rhyme": {
+  "The Best Part Newcomer": {
    "bongs": 5,
-   "line": "Now you know the way that he rhymes."
+   "line": "The best part. You finally showed up for class."
   },
-  "The Best Part": {
+  "Braggin' Writes Pupil": {
    "bongs": 10,
-   "line": "You found the best part."
+   "line": "Braggin' Writes pupil. Your notebook's filling up fast."
   },
-  "All of the Above": {
+  "Multiple Choice Ace": {
    "bongs": 15,
-   "line": "Every answer right. All of the above."
+   "line": "All of the above. Every answer right, no erasing."
   },
-  "The Hear After": {
+  "Hear After Honor Roll": {
    "bongs": 20,
-   "line": "You're still here after. That's real."
+   "line": "Honor roll. Then what happened? You kept on climbing."
   },
-  "Then What Happened": {
+  "Brooklyn Valedictorian": {
    "bongs": 25,
-   "line": "You run all of Downtown Brooklyn."
+   "line": "Valedictorian. You run all of Downtown Brooklyn."
   }
  },
  "trophyArt": [

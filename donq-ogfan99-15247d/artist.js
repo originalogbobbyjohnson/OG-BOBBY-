@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "HIGHBRIDGE",
  "boro": "Bronx",
  "saveKey": "ogfan99donq1",
- "startRank": "Underrated",
+ "startRank": "Highbridge Unknown",
  "ranks": [
-  "Corner Stories",
-  "Don Talk",
-  "Double or Nothing",
-  "Don Season",
-  "Corleone"
+  "HBTL Newcomer",
+  "Corner Storyteller",
+  "Highbridge Soldier",
+  "HBTL Made Man",
+  "Highbridge Boss"
  ],
- "topRank": "The Don",
+ "topRank": "The Don of Highbridge",
  "point": "Bag",
  "points": "Bags",
  "rankRewards": {
-  "Corner Stories": {
+  "HBTL Newcomer": {
    "bongs": 5,
-   "line": "Now you got corner stories."
+   "line": "HBTL Newcomer. Highbridge the Label opened the door."
   },
-  "Don Talk": {
+  "Corner Storyteller": {
    "bongs": 10,
-   "line": "You talk like a Don now."
+   "line": "Corner Storyteller. Now you got corner stories to tell."
   },
-  "Double or Nothing": {
+  "Highbridge Soldier": {
    "bongs": 15,
-   "line": "You went double. No nothing."
+   "line": "Highbridge Soldier. The block knows you stand ten toes."
   },
-  "Don Season": {
+  "HBTL Made Man": {
    "bongs": 20,
-   "line": "It's Don Season. You're in it."
+   "line": "HBTL Made Man. You're official with the label now."
   },
-  "Corleone": {
+  "Highbridge Boss": {
    "bongs": 25,
-   "line": "You run all of Highbridge."
+   "line": "Highbridge Boss. You run all of Highbridge."
   }
  },
  "trophyArt": [

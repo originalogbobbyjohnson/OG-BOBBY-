@@ -8,35 +8,35 @@ window.CFG = {
  "saveKey": "ogfan99wiki1",
  "startRank": "Lil Me",
  "ranks": [
-  "Spitter",
+  "Ratking Spitter",
   "Pretty Bull",
-  "Golden Child",
-  "Half God",
-  "14K Figaro"
+  "Oofie",
+  "No Mountains",
+  "Half God"
  ],
- "topRank": "The Mayor",
+ "topRank": "West Side Mayor",
  "point": "Token",
  "points": "Tokens",
  "rankRewards": {
-  "Spitter": {
+  "Ratking Spitter": {
    "bongs": 5,
-   "line": "You can spit in the cypher now."
+   "line": "Ratking spitter. You can hold the cypher now."
   },
   "Pretty Bull": {
    "bongs": 10,
-   "line": "Shirt off, posing on the West Side."
+   "line": "Pretty Bull. Shirt off, posing on the West Side."
   },
-  "Golden Child": {
+  "Oofie": {
    "bongs": 15,
-   "line": "Hold him down, '93."
+   "line": "Oofie. Wild, loud, and all New York."
+  },
+  "No Mountains": {
+   "bongs": 20,
+   "line": "No mountains in Manhattan, but you're climbing anyway."
   },
   "Half God": {
-   "bongs": 20,
-   "line": "Half god, all New York."
-  },
-  "14K Figaro": {
    "bongs": 25,
-   "line": "You run all of the Upper West Side."
+   "line": "Half god, all New York. You run all of the Upper West Side."
   }
  },
  "trophyArt": [

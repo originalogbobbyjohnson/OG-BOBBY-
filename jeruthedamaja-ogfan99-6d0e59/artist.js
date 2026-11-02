@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "EAST NEW YORK",
  "boro": "Brooklyn",
  "saveKey": "ogfan99jeruthedamaja1",
- "startRank": "Playin' Yaself",
+ "startRank": "Still Playin' Yaself",
  "ranks": [
-  "Come Clean",
+  "Come Clean Convert",
+  "Gang Starr Foundation",
   "Wrath of the Math",
-  "Divine Design",
-  "Heroz4Hire",
-  "D. Original"
+  "D. Original",
+  "East New York Sunrise"
  ],
- "topRank": "The Prophet",
+ "topRank": "Can't Stop the Prophet",
  "point": "Jewel",
  "points": "Jewels",
  "rankRewards": {
-  "Come Clean": {
+  "Come Clean Convert": {
    "bongs": 5,
-   "line": "You came clean. Now drip by drip, it starts."
+   "line": "You came clean. Drip by drip, it's starting now."
+  },
+  "Gang Starr Foundation": {
+   "bongs": 10,
+   "line": "Gang Starr Foundation. Premier's got you on the roster."
   },
   "Wrath of the Math": {
-   "bongs": 10,
-   "line": "You did the math. The numbers line up."
-  },
-  "Divine Design": {
    "bongs": 15,
-   "line": "Everything in its place, by design."
-  },
-  "Heroz4Hire": {
-   "bongs": 20,
-   "line": "Hero for hire. The Foundation calls on you."
+   "line": "Wrath of the math. The numbers all line up."
   },
   "D. Original": {
+   "bongs": 20,
+   "line": "D. Original. Nobody can copy what you do."
+  },
+  "East New York Sunrise": {
    "bongs": 25,
-   "line": "You run all of East New York."
+   "line": "The sun rises on you. You run all of East New York."
   }
  },
  "trophyArt": [

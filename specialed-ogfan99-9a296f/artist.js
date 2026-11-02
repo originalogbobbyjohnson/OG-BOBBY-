@@ -5,12 +5,12 @@ window.CFG = {
  "hood": "Flatbush",
  "hoodUpper": "FLATBUSH",
  "boro": "Brooklyn",
- "startRank": "Youngest in Charge",
+ "startRank": "Ed's Tag-Along",
  "ranks": [
   "Think About It",
+  "Youngest in Charge",
   "Legal",
-  "Crooklyn Dodger",
-  "Revelations",
+  "Dodgers Teammate",
   "The Magnificent"
  ],
  "topRank": "I Got It Made",
@@ -21,21 +21,21 @@ window.CFG = {
    "bongs": 5,
    "line": "You stopped and thought about it. Smart move."
   },
-  "Legal": {
+  "Youngest in Charge": {
    "bongs": 10,
+   "line": "Youngest in charge. Small, but already running things."
+  },
+  "Legal": {
+   "bongs": 15,
    "line": "Legal now. Grown and on the books."
   },
-  "Crooklyn Dodger": {
-   "bongs": 15,
-   "line": "You made the Crooklyn Dodgers roster."
-  },
-  "Revelations": {
+  "Dodgers Teammate": {
    "bongs": 20,
-   "line": "Revelations. You see the whole picture now."
+   "line": "You made the Crooklyn Dodgers roster."
   },
   "The Magnificent": {
    "bongs": 25,
-   "line": "You run all of Flatbush."
+   "line": "The magnificent one. You run all of Flatbush."
   }
  },
  "trophyArt": [

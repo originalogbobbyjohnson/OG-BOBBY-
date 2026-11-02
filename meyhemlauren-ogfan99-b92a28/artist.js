@@ -6,27 +6,27 @@ window.CFG = {
  "hoodUpper": "QUEENS",
  "boro": "Queens",
  "saveKey": "ogfan99meyhemlauren1",
- "startRank": "Mandated Participant",
+ "startRank": "Mandatory Brunch Guest",
  "ranks": [
-  "Smart Crew",
-  "Raw Cashmere",
-  "Silk Pyramids"
+  "Smart Crew Member",
+  "Silk Pyramids Insider",
+  "Raw Cashmere Boss"
  ],
- "topRank": "Piatto D’oro",
+ "topRank": "Piatto D'oro",
  "point": "Gem",
  "points": "Gems",
  "rankRewards": {
-  "Smart Crew": {
+  "Smart Crew Member": {
    "bongs": 5,
-   "line": "Welcome to the Smart Crew. Come through fresh every time."
+   "line": "Welcome to the Smart Crew. Come through fresh."
   },
-  "Raw Cashmere": {
+  "Silk Pyramids Insider": {
    "bongs": 10,
-   "line": "Raw cashmere on. Respect the fly."
+   "line": "Silk Pyramids insider. You respect the fly now."
   },
-  "Silk Pyramids": {
+  "Raw Cashmere Boss": {
    "bongs": 25,
-   "line": "You run all of Queens."
+   "line": "Raw Cashmere Boss. You run all of Queens."
   }
  },
  "trophyArt": [
@@ -77,7 +77,7 @@ window.CFG = {
   {
    "scene": "roosevelt",
    "t": "CLIMB THE RANKS",
-   "x": "Everybody starts as a Mandated Participant. Clear a row to rank up: Smart Crew, Raw Cashmere, Silk Pyramids. Beat the 99 Challenge to become Piatto D’oro.",
+   "x": "Everybody starts as a Mandatory Brunch Guest. Clear a row to rank up: Smart Crew Member, Silk Pyramids Insider, Raw Cashmere Boss. Beat the 99 Challenge to become Piatto D'oro.",
    "sfx": "espresso"
   },
   {

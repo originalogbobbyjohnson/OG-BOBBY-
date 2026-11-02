@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "BROOKLYN",
  "boro": "Brooklyn",
  "saveKey": "ogfan99nyckcaution1",
- "startRank": "City Kid",
+ "startRank": "Pro Era Wannabe",
  "ranks": [
-  "Caution Tape",
-  "Open Flame",
-  "Friend Of A Family",
-  "Nyck @ Knight",
-  "Disguise The Limit"
+  "Caution Tape Crosser",
+  "Open Flame Starter",
+  "Friend of a Family",
+  "Nyck @ Knight Crew",
+  "Pro Era General"
  ],
- "topRank": "New York City Kid",
+ "topRank": "Disguise the Limit",
  "point": "Flame",
  "points": "Flames",
  "rankRewards": {
-  "Caution Tape": {
+  "Caution Tape Crosser": {
    "bongs": 5,
-   "line": "Proceed with caution."
+   "line": "You crossed the caution tape. Proceed carefully."
   },
-  "Open Flame": {
+  "Open Flame Starter": {
    "bongs": 10,
-   "line": "You just caught fire."
+   "line": "Open flame. You just caught fire."
   },
-  "Friend Of A Family": {
+  "Friend of a Family": {
    "bongs": 15,
-   "line": "Pull up a chair, Sunday dinner."
+   "line": "Friend of a family. Pull up a chair."
   },
-  "Nyck @ Knight": {
+  "Nyck @ Knight Crew": {
    "bongs": 20,
-   "line": "Up all night with Pro Era."
+   "line": "Nyck @ Knight crew. Up all night with Pro Era."
   },
-  "Disguise The Limit": {
+  "Pro Era General": {
    "bongs": 25,
-   "line": "You run all of Brooklyn."
+   "line": "Pro Era General. You run all of Brooklyn."
   }
  },
  "trophyArt": [

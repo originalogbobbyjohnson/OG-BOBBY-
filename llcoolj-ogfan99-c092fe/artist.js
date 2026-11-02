@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "ST. ALBANS",
  "boro": "Queens",
  "saveKey": "ogfan99llcoolj1",
- "startRank": "Rookie",
+ "startRank": "Boombox Borrower",
  "ranks": [
-  "Farmers Blvd",
-  "Radio",
+  "Radio Rookie",
+  "Farmers Blvd Regular",
+  "Rock the Bells",
   "Bigger and Deffer",
-  "Mr. Smith",
-  "Ladies Love Cool James"
+  "Uncle L Knockout Champ"
  ],
- "topRank": "G.O.A.T.",
+ "topRank": "The G.O.A.T.",
  "point": "Bell",
  "points": "Bells",
  "rankRewards": {
-  "Farmers Blvd": {
+  "Radio Rookie": {
    "bongs": 5,
-   "line": "Farmers Blvd. Last seen headed east."
+   "line": "Radio Rookie. You can't live without your radio."
   },
-  "Radio": {
+  "Farmers Blvd Regular": {
    "bongs": 10,
-   "line": "Radio. You can't live without it."
+   "line": "Farmers Blvd regular. The block knows your face now."
+  },
+  "Rock the Bells": {
+   "bongs": 15,
+   "line": "You rock the bells. The whole crowd hears you."
   },
   "Bigger and Deffer": {
-   "bongs": 15,
+   "bongs": 20,
    "line": "Bigger and Deffer. The gold nameplate says it all."
   },
-  "Mr. Smith": {
-   "bongs": 20,
-   "line": "Mr. Smith. Smooth, with a rose."
-  },
-  "Ladies Love Cool James": {
+  "Uncle L Knockout Champ": {
    "bongs": 25,
-   "line": "You run all of St. Albans."
+   "line": "Mama said knock you out. You run all of St. Albans."
   }
  },
  "trophyArt": [

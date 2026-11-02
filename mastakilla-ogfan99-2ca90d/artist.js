@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "EAST NEW YORK",
  "boro": "Brooklyn",
  "saveKey": "ogfan99mastakilla1",
- "startRank": "Student",
+ "startRank": "Late to the Chamber",
  "ranks": [
-  "No Said Date",
+  "No Said Date Rookie",
   "Made in Brooklyn",
-  "Selling My Soul",
   "Loyalty Is Royalty",
-  "Jamel Irief"
+  "Killa Bee Swordsman",
+  "Wu-Tang Master Killa"
  ],
  "topRank": "The High Chief",
  "point": "Chamber",
  "points": "Chambers",
  "rankRewards": {
-  "No Said Date": {
+  "No Said Date Rookie": {
    "bongs": 5,
-   "line": "No Said Date. Patience paid off."
+   "line": "No Said Date. Your patience finally paid off."
   },
   "Made in Brooklyn": {
    "bongs": 10,
-   "line": "Made in Brooklyn. Stamped and certified."
-  },
-  "Selling My Soul": {
-   "bongs": 15,
-   "line": "Selling My Soul. You heard the soul in it."
+   "line": "Made in Brooklyn. Stamped and certified by the Wu."
   },
   "Loyalty Is Royalty": {
-   "bongs": 20,
-   "line": "Loyalty Is Royalty. You stuck with it."
+   "bongs": 15,
+   "line": "Loyalty is royalty. You stuck with it."
   },
-  "Jamel Irief": {
+  "Killa Bee Swordsman": {
+   "bongs": 20,
+   "line": "Killa Bee Swordsman. Your blade is sharp now."
+  },
+  "Wu-Tang Master Killa": {
    "bongs": 25,
-   "line": "You run all of East New York."
+   "line": "Wu-Tang Master Killa. You run all of East New York."
   }
  },
  "trophyArt": [

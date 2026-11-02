@@ -5,37 +5,37 @@ window.CFG = {
  "hood": "Crown Heights",
  "hoodUpper": "CROWN HEIGHTS",
  "boro": "Brooklyn",
- "startRank": "Rookie",
+ "startRank": "Crown Heights Tourist",
  "ranks": [
-  "How Itz Done",
+  "Eastern Pkwy Newbie",
+  "Duck Down Signee",
+  "Boot Camp Affiliate",
   "Indestructible",
-  "See You Win",
-  "Duck Down",
-  "Hardest from the Underground"
+  "Crown Heights Boss"
  ],
- "topRank": "Crown Heights King",
+ "topRank": "King Juxx",
  "point": "Bar",
  "points": "Bars",
  "rankRewards": {
-  "How Itz Done": {
+  "Eastern Pkwy Newbie": {
    "bongs": 5,
-   "line": "Now you know how it's done."
+   "line": "You found Eastern Parkway. Now learn how it's done."
+  },
+  "Duck Down Signee": {
+   "bongs": 10,
+   "line": "Duck Down signed you. You're on the roster now."
+  },
+  "Boot Camp Affiliate": {
+   "bongs": 15,
+   "line": "Boot Camp affiliate. You stand with the Clik."
   },
   "Indestructible": {
-   "bongs": 10,
+   "bongs": 20,
    "line": "Indestructible. Nothing knocks you off the track."
   },
-  "See You Win": {
-   "bongs": 15,
-   "line": "The whole block wants to see you win."
-  },
-  "Duck Down": {
-   "bongs": 20,
-   "line": "Duck Down. You're on the roster now."
-  },
-  "Hardest from the Underground": {
+  "Crown Heights Boss": {
    "bongs": 25,
-   "line": "You run all of Crown Heights."
+   "line": "Top of the block. You run all of Crown Heights."
   }
  },
  "trophyArt": [

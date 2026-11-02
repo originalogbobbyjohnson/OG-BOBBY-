@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "QUEENS",
  "boro": "Queens",
  "saveKey": "ogfan99grafh1",
- "startRank": "Off Beat",
+ "startRank": "Off-Beat Bystander",
  "ranks": [
-  "Autograf",
-  "Pain Language",
-  "Good Energy",
-  "Documented",
+  "Grafh Fan Club Newbie",
+  "Grafh Cypher Regular",
+  "Pain Language Fluent",
+  "Cypher Heavyweight",
   "Freestyle Monster"
  ],
  "topRank": "Lord of the Freestyle",
  "point": "Signature",
  "points": "Signatures",
  "rankRewards": {
-  "Autograf": {
+  "Grafh Fan Club Newbie": {
    "bongs": 5,
-   "line": "Autograf. Your name is on the wall now."
+   "line": "Fan club newbie. You just walked into the cypher."
   },
-  "Pain Language": {
+  "Grafh Cypher Regular": {
    "bongs": 10,
-   "line": "Pain Language. You speak it fluently."
+   "line": "Cypher regular. They save you a spot in the circle."
   },
-  "Good Energy": {
+  "Pain Language Fluent": {
    "bongs": 15,
-   "line": "Good Energy. Only good vibes from here."
+   "line": "Pain Language. Now you speak it fluently."
   },
-  "Documented": {
+  "Cypher Heavyweight": {
    "bongs": 20,
-   "line": "Documented. It's on the record."
+   "line": "Cypher heavyweight. Every bar you drop lands hard."
   },
   "Freestyle Monster": {
    "bongs": 25,
-   "line": "You run all of Queens."
+   "line": "Freestyle monster. You run all of Queens off the top."
   }
  },
  "trophyArt": [

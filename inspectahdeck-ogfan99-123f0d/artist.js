@@ -6,11 +6,11 @@ window.CFG = {
  "hoodUpper": "PARK HILL",
  "boro": "Staten Island",
  "saveKey": "ogfan99inspectahdeck1",
- "startRank": "Suspect",
+ "startRank": "Lineup Suspect",
  "ranks": [
   "The Movement",
   "Resident Patient",
-  "Rollie Fingers",
+  "Manifesto Writer",
   "Rebel INS",
   "Czarface"
  ],
@@ -20,23 +20,23 @@ window.CFG = {
  "rankRewards": {
   "The Movement": {
    "bongs": 5,
-   "line": "The Movement. You're on the move now."
+   "line": "The Movement. You're on the move with the Wu now."
   },
   "Resident Patient": {
    "bongs": 10,
-   "line": "Resident Patient. You took your time and caught every line."
+   "line": "Resident patient. You took your time and caught every line."
   },
-  "Rollie Fingers": {
+  "Manifesto Writer": {
    "bongs": 15,
-   "line": "Rollie Fingers. You close it out every time."
+   "line": "Manifesto writer. Your plan is down on paper."
   },
   "Rebel INS": {
    "bongs": 20,
-   "line": "Rebel INS. First verse, every time."
+   "line": "Rebel INS. First verse on Triumph, you know it."
   },
   "Czarface": {
    "bongs": 25,
-   "line": "You run all of Park Hill."
+   "line": "Czarface. You run all of Park Hill, villain style."
   }
  },
  "trophyArt": [

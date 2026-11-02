@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "SOUNDVIEW",
  "boro": "the Bronx",
  "saveKey": "ogfan99dragon1",
- "startRank": "Lightweight",
+ "startRank": "Soundview Lightweight",
  "ranks": [
-  "Spark",
+  "Spark Catcher",
   "Flame On",
-  "Double R",
-  "Hell & Back",
-  "Fireman"
+  "Ruff Ryder Rider",
+  "Down Bottom Spitter",
+  "Soundview Fire Boss"
  ],
  "topRank": "Opposite of H2O",
  "point": "Flame",
  "points": "Flames",
  "rankRewards": {
-  "Spark": {
+  "Spark Catcher": {
    "bongs": 5,
-   "line": "You caught a spark. Now keep it lit."
+   "line": "Spark Catcher. You caught a spark, now keep it lit."
   },
   "Flame On": {
    "bongs": 10,
-   "line": "Flame on, Drag-On, flame on."
+   "line": "Flame On. Flame on, Drag-On, flame on."
   },
-  "Double R": {
+  "Ruff Ryder Rider": {
    "bongs": 15,
-   "line": "Double R, right now. You ride with the crew."
+   "line": "Ruff Ryder Rider. You ride with the Double R now."
   },
-  "Hell & Back": {
+  "Down Bottom Spitter": {
    "bongs": 20,
-   "line": "You been to Hell and back and you still spitting bars."
+   "line": "Down Bottom Spitter. You spit these bars with the crew."
   },
-  "Fireman": {
+  "Soundview Fire Boss": {
    "bongs": 25,
-   "line": "You run all of Soundview."
+   "line": "Soundview Fire Boss. You run all of Soundview."
   }
  },
  "trophyArt": [

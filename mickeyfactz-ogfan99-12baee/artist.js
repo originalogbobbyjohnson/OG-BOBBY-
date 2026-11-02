@@ -6,37 +6,37 @@ window.CFG = {
  "hoodUpper": "THE BRONX",
  "boro": "the Bronx",
  "saveKey": "ogfan99mickeyfactz1",
- "startRank": "New Fact",
+ "startRank": "Fake Fact",
  "ranks": [
   "Fact Checker",
-  "Rockets",
-  "Yaowa",
+  "Rocket Rider",
+  "Yaowa Crew",
   "Wraith",
-  "Bronx Legend"
+  "Bronx Fact Master"
  ],
- "topRank": "Mickey Factz",
+ "topRank": "King of Factz",
  "point": "Fact",
  "points": "Factz",
  "rankRewards": {
   "Fact Checker": {
    "bongs": 5,
-   "line": "Fact Checker. You know what's real."
+   "line": "Fact Checker. You know what's real now."
   },
-  "Rockets": {
+  "Rocket Rider": {
    "bongs": 10,
-   "line": "Rockets. Lift off over Jerome Av."
+   "line": "Rocket Rider. Lift off over Jerome Avenue."
   },
-  "Yaowa": {
+  "Yaowa Crew": {
    "bongs": 15,
-   "line": "Yaowa. The whole Bronx says it."
+   "line": "Yaowa crew. The whole Bronx says it with you."
   },
   "Wraith": {
    "bongs": 20,
-   "line": "Wraith. Quiet, smooth, everywhere."
+   "line": "Wraith. Quiet, smooth and everywhere at once."
   },
-  "Bronx Legend": {
+  "Bronx Fact Master": {
    "bongs": 25,
-   "line": "You run all of the Bronx."
+   "line": "Bronx Fact Master. You run all of the Bronx."
   }
  },
  "trophyArt": [
