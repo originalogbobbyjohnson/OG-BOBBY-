@@ -1740,7 +1740,8 @@ window.OGX = (function () {
   p.onclick = e => { const b = e.target.closest("[data-pb]"); if (!b) return; const v = b.dataset.pb;
     if (v === "__regions") return window.OGW && OGW.go("regions");
     if (v === "__find") return $("findBtn2") && $("findBtn2").click();
-    const t = document.querySelector('.boro[data-b="' + v + '"]'); if (t) t.click(); setStep(2); };
+    const t = document.querySelector('.boro[data-b="' + v + '"]'); if (t) t.click(); setStep(2);
+    setTimeout(() => { $("listwrap").scrollTop = 0; }, 80); };
   $("crBack").onclick = () => { setStep(1); const all = $("allNyc"); if (all && !all.hidden) all.click(); };
   /* anything that picks an artist from elsewhere (map pin, FIND) lands you on step 2 */
   new MutationObserver(() => { if (app.classList.contains("step1") && document.querySelector("#list li.picked")) setStep(2); }).observe($("list"), { subtree: true, attributes: true, attributeFilter: ["class"] });
