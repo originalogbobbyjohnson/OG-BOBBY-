@@ -1737,7 +1737,9 @@ window.OGX = (function () {
   const fix = () => setTimeout(() => { try { window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 60);
   function setStep(n) { if (mb.classList.contains("big")) { const bb = mb.querySelector(".mapbig"); if (bb) bb.click(); }
     app.classList.toggle("step1", n === 1); try { sessionStorage.setItem("ogfan99step", String(n)); } catch (e) {}
-    if (n === 2) $("crName").textContent = (NAME[boroTab] || boroTab.toUpperCase()) + " · " + cnt(boroTab) + " ARTISTS"; fix(); }
+    if (n === 2) $("crName").textContent = (NAME[boroTab] || boroTab.toUpperCase()) + " · " + cnt(boroTab) + " ARTISTS"; fix();
+    /* once the map has its new size, frame it close on the borough you picked */
+    if (n === 2) setTimeout(() => { try { const pts = ARTISTS.filter(a => boroOf(a) === boroTab && a.lat != null).map(a => [a.lat, a.lng]); if (window.__map && pts.length) { window.__map.invalidateSize({ pan: false }); window.__map.fitBounds(pts, { padding: [24, 24], maxZoom: 13 }); } } catch (e) {} }, 250); }
   p.onclick = e => { const b = e.target.closest("[data-pb]"); if (!b) return; const v = b.dataset.pb;
     if (v === "__regions") return window.OGW && OGW.go("regions");
     if (v === "__find") return $("findBtn2") && $("findBtn2").click();
