@@ -69,8 +69,8 @@
       rect(0, 152, 400, 9, "#eab308") + rect(0, 161, 400, 99, "#5a5650") + '<path d="M0 161h400" stroke="#8a857a" stroke-width="2"/>' + (o.tags || ""), "");
   };
   /* 5. street corner: wall with tags, streetlight, two street blades */
-  const corner = (g, s1, s2, tags, accent, extra) => svg(
-    '<rect width="400" height="260" fill="url(#g5)"/>' + stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>' +
+  const corner = (g, s1, s2, tags, accent, extra, back) => svg(
+    '<rect width="400" height="260" fill="url(#g5)"/>' + (back !== undefined ? back : stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>') +
     brick(16, 60, 240, 160, "#4a2a24", "#5a3229") + rect(16, 56, 240, 6, "#2a1a16") + tags +
     '<rect class="drp" x="120" y="126" width="3" height="8" fill="' + accent + '"/><rect class="drp" x="186" y="114" width="3" height="8" fill="' + accent + '" style="animation-delay:-1s"/>' +
     rect(300, 56, 5, 164, "#1d2329") + '<path d="M302 58h26" stroke="#1d2329" stroke-width="5"/>' +
@@ -134,9 +134,39 @@
   }
 
   /* 5. Bergen St and Smith St, Boerum Hill */
+  /* backdrop for the corner: the Brooklyn Bridge far off over the Boerum Hill rooftops at sunset, both towers and the cable
+     sweep in silhouette against Lower Manhattan, headlights crossing */
+  function bbFar() {
+    const qb = (p0, c, p1, t) => [(1 - t) * (1 - t) * p0[0] + 2 * t * (1 - t) * c[0] + t * t * p1[0], (1 - t) * (1 - t) * p0[1] + 2 * t * (1 - t) * c[1] + t * t * p1[1]];
+    let s = '<style>@keyframes icSl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}@keyframes icSlL{from{transform:translateX(460px)}to{transform:translateX(-60px)}}@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}@keyframes icWv{0%,100%{transform:skewY(0)}50%{transform:skewY(6deg)}}@keyframes icGl{0%,100%{opacity:.12}50%{opacity:.3}}' +
+      '.icS{animation:icSl 7s linear infinite}.icS2{animation-delay:-3.5s}.icSs{animation-duration:16s}.icL{animation:icSlL 8s linear infinite}.icLs{animation-duration:15s}.icB{animation:icBl 1s steps(1) infinite}.icB2{animation-delay:-.5s}' +
+      '.icSw{animation:icSw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}.icSw2{animation-delay:-3.5s;animation-duration:9s}.icW{animation:icWv 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}.icG{animation:icGl 2.6s ease-in-out infinite}</style>' +
+      '<defs><linearGradient id="icSun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241f52"/><stop offset=".35" stop-color="#7a3f78"/><stop offset=".75" stop-color="#f0805a"/><stop offset="1" stop-color="#f7b56a"/></linearGradient></defs>' +
+      '<rect width="400" height="64" fill="url(#icSun)"/><rect y="64" width="400" height="156" fill="#1c1626"/><circle cx="292" cy="52" r="20" fill="#ffd27a" opacity=".35"/><circle cx="292" cy="52" r="13" fill="#ffe2a0"/>';
+    /* Lower Manhattan skyline */
+    [[0, 30, 26], [28, 18, 20], [50, 26, 22], [74, 36, 16], [118, 22, 18], [138, 10, 14], [154, 28, 24], [232, 24, 20], [254, 32, 26], [282, 40, 24], [308, 20, 18], [328, 30, 26], [356, 38, 20], [378, 26, 22]]
+      .forEach(b => { s += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (64 - b[1]) + '" fill="#33263f"/>';
+        for (let y = b[1] + 4; y < 58; y += 6) for (let x = b[0] + 3; x < b[0] + b[2] - 3; x += 5) if ((x * 7 + y * 3) % 5 === 0) s += '<rect x="' + x + '" y="' + y + '" width="2" height="2" fill="#ffd98a" opacity=".45"/>'; });
+    /* the bridge */
+    const P0 = [91, 12], C = [151, 52], P1 = [211, 12];
+    s += '<path d="M0 42L400 42" stroke="#4a3a40" stroke-width="4"/>' +
+      '<path d="M91 12Q151 52 211 12M91 12Q46 32 0 38M211 12Q262 30 330 42" fill="none" stroke="#2a1e2c" stroke-width="1.8"/>';
+    for (let t = 0.1; t < 0.95; t += 0.1) { const p = qb(P0, C, P1, t); s += '<path d="M' + p[0].toFixed(1) + ' ' + p[1].toFixed(1) + 'V41" stroke="#2a1e2c" stroke-width=".6"/>'; }
+    [[91, 30], [91, 60], [91, 130], [211, 160], [211, 250], [211, 290]].forEach(d => s += '<path d="M' + d[0] + ' 14L' + d[1] + ' 41" stroke="#2a1e2c" stroke-width=".5" opacity=".8"/>');
+    const tower = x => '<rect x="' + x + '" y="10" width="22" height="50" fill="#5e4a4e"/><rect x="' + (x - 2) + '" y="8" width="26" height="4" fill="#6e5a5c"/>' +
+      '<path d="M' + (x + 3) + ' 42V24Q' + (x + 3) + ' 18 ' + (x + 6.5) + ' 15Q' + (x + 10) + ' 18 ' + (x + 10) + ' 24V42ZM' + (x + 12) + ' 42V24Q' + (x + 12) + ' 18 ' + (x + 15.5) + ' 15Q' + (x + 19) + ' 18 ' + (x + 19) + ' 42Z" fill="#f2a46a" opacity=".85"/>';
+    s += tower(80) + tower(200);
+    s += '<g class="icS icSs"><circle cx="0" cy="41" r="1.3" fill="#fff6d0"/></g><g class="icS icSs icS2"><circle cx="0" cy="41" r="1.3" fill="#fff6d0"/></g><g class="icL icLs"><circle cx="0" cy="42" r="1.3" fill="#ff5a4a"/></g>';
+    /* the brownstone rooftops of Smith St in front */
+    s += '<rect x="256" y="62" width="144" height="158" fill="#3b2621"/>';
+    [256, 292, 328, 364].forEach(x => { s += '<rect x="' + x + '" y="62" width="36" height="5" fill="#241512"/><rect x="' + (x + 1) + '" y="67" width="34" height="2" fill="#5a3a30"/>';
+      for (let y = 78; y < 210; y += 26) s += '<rect x="' + (x + 7) + '" y="' + y + '" width="7" height="14" fill="' + ((x + y) % 3 ? "#ffcf7a" : "#1a1210") + '"/><rect x="' + (x + 21) + '" y="' + y + '" width="7" height="14" fill="' + ((x * y) % 4 ? "#1a1210" : "#ffcf7a") + '"/>'; });
+    return s;
+  }
+
   function block() {
     return corner(["#08081a", "#2a2a3a"], "Bergen St", "Smith St",
-      tag("EL-P", 40, 130, 60, GOLD, -7) + tag("EL PRODUCTO", 30, 160, 24, CYAN, -5) + tag("DEF JUX", 40, 192, 28, RED, -3) + tag("BOERUM HILL", 100, 212, 18, "#f6efdc", -2), GOLD);
+      tag("EL-P", 40, 130, 60, GOLD, -7) + tag("EL PRODUCTO", 30, 160, 24, CYAN, -5) + tag("DEF JUX", 40, 192, 28, RED, -3) + tag("BOERUM HILL", 100, 212, 18, "#f6efdc", -2), GOLD, "", bbFar());
   }
 
   window.SCENES = { station1, bridge, gowanus, ship, block };

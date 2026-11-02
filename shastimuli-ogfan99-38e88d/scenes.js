@@ -69,8 +69,8 @@
       rect(0, 152, 400, 9, "#eab308") + rect(0, 161, 400, 99, "#5a5650") + '<path d="M0 161h400" stroke="#8a857a" stroke-width="2"/>' + (o.tags || ""), "");
   };
   /* 5. street corner: wall with tags, streetlight, two street blades */
-  const corner = (g, s1, s2, tags, accent, extra) => svg(
-    '<rect width="400" height="260" fill="url(#g5)"/>' + stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>' +
+  const corner = (g, s1, s2, tags, accent, extra, back) => svg(
+    '<rect width="400" height="260" fill="url(#g5)"/>' + (back !== undefined ? back : stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>') +
     brick(16, 60, 240, 160, "#4a2a24", "#5a3229") + rect(16, 56, 240, 6, "#2a1a16") + tags +
     '<rect class="drp" x="120" y="126" width="3" height="8" fill="' + accent + '"/><rect class="drp" x="186" y="114" width="3" height="8" fill="' + accent + '" style="animation-delay:-1s"/>' +
     rect(300, 56, 5, 164, "#1d2329") + '<path d="M302 58h26" stroke="#1d2329" stroke-width="5"/>' +
@@ -140,9 +140,32 @@
   }
 
   /* 5. Bedford Av and Beverley Rd, at the old Sears */
+  /* backdrop for the corner: from Bedford Av, behind the Kings Theatre: the long brick back of the auditorium and the stage house
+     over the wall, the top of the KINGS blade peeking above the roof, two searchlights sweeping the night */
+  function kingsBack() {
+    let s = '<style>@keyframes icSl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}@keyframes icSlL{from{transform:translateX(460px)}to{transform:translateX(-60px)}}@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}@keyframes icWv{0%,100%{transform:skewY(0)}50%{transform:skewY(6deg)}}@keyframes icGl{0%,100%{opacity:.12}50%{opacity:.3}}' +
+      '.icS{animation:icSl 7s linear infinite}.icS2{animation-delay:-3.5s}.icSs{animation-duration:16s}.icL{animation:icSlL 8s linear infinite}.icLs{animation-duration:15s}.icB{animation:icBl 1s steps(1) infinite}.icB2{animation-delay:-.5s}' +
+      '.icSw{animation:icSw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}.icSw2{animation-delay:-3.5s;animation-duration:9s}.icW{animation:icWv 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}.icG{animation:icGl 2.6s ease-in-out infinite}</style>' +
+      stars(16) +
+      '<path class="icSw" d="M150 44L118 -200L182 -200Z" fill="#fff3c0" opacity=".22"/><path class="icSw icSw2" d="M196 44L164 -200L228 -200Z" fill="#fff3c0" opacity=".22"/>' +
+      '<circle class="icG" cx="232" cy="22" r="26" fill="#ff4a3d"/>' +
+      '<rect x="222" y="1" width="20" height="56" rx="1.5" fill="#3a0d10" stroke="#e8b84a" stroke-width="1.2"/>';
+    for (let y = 5; y < 44; y += 6) s += '<circle class="icB' + (y % 12 ? " icB2" : "") + '" cx="224.5" cy="' + y + '" r=".9" fill="#ffe7a8"/><circle class="icB' + (y % 12 ? "" : " icB2") + '" cx="239.5" cy="' + y + '" r=".9" fill="#ffe7a8"/>';
+    "KINGS".split("").forEach((c, i) => s += '<text x="232" y="' + (13 + i * 11) + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11" fill="#ff5a4a">' + c + '</text>');
+    /* the auditorium back and the taller stage house */
+    s += '<rect x="20" y="44" width="200" height="14" fill="#5a3a2e"/><rect x="18" y="42" width="204" height="3" fill="#b8956a"/>' +
+      '<rect x="40" y="18" width="76" height="40" fill="#4e3226"/><rect x="38" y="16" width="80" height="4" fill="#b8956a"/>';
+    for (let x = 48; x < 116; x += 12) s += '<rect x="' + x + '" y="22" width="3" height="34" fill="#3e271d"/>';
+    for (let x = 128; x < 220; x += 16) s += '<rect x="' + x + '" y="47" width="3" height="10" fill="#4a2f24"/>';
+    /* the lobby block on the Flatbush side, under the blade */
+    s += '<rect x="214" y="50" width="42" height="8" fill="#a8865e"/><rect x="212" y="48" width="46" height="3" fill="#c9a77a"/>';
+    s += '<circle class="icB" cx="78" cy="12" r="1.6" fill="#ff4a3d"/>';
+    return s;
+  }
+
   function block() {
     return corner(["#0a0a22", "#2a3a5a"], "Bedford Av", "Beverley Rd",
-      tag("SHA STIMULI", 22, 128, 36, ICE, -7) + tag("MY SOUL TO KEEP", 30, 158, 22, GOLD, -5) + tag("WHO I AM", 40, 190, 28, ORG, -3) + tag("FLATBUSH", 120, 212, 18, "#f6efdc", -2), ICE);
+      tag("SHA STIMULI", 22, 128, 36, ICE, -7) + tag("MY SOUL TO KEEP", 30, 158, 22, GOLD, -5) + tag("WHO I AM", 40, 190, 28, ORG, -3) + tag("FLATBUSH", 120, 212, 18, "#f6efdc", -2), ICE, "", kingsBack());
   }
 
   window.SCENES = { station1, church, boathouse, rooftop, block };

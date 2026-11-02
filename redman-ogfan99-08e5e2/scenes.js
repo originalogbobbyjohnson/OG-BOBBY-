@@ -152,10 +152,38 @@
       sky("g4", "#5aa8e0", "#cfe6f5"));
   }
 
+  /* IC: shared iconic landmark in the corner backdrop (its own little animations, prefixed ic-) */
+  const IC_CSS = '<style>' +
+    '@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}.ic-bl{animation:icBl 1s steps(1) infinite}.ic-b2{animation-delay:-.5s}' +
+    '@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}.ic-sw{animation:icSw 6s ease-in-out infinite}.ic-s2{animation-delay:-3s}' +
+    '@keyframes icPl{0%,100%{opacity:.3}50%{opacity:1}}.ic-pl{animation:icPl 2.6s ease-in-out infinite}.ic-p2{animation-delay:-.65s}.ic-p3{animation-delay:-1.3s}.ic-p4{animation-delay:-1.95s}' +
+    '@keyframes icDr{from{transform:translateX(-90px)}to{transform:translateX(320px)}}.ic-dr{animation:icDr 22s linear infinite}' +
+    '@keyframes icFl{to{stroke-dashoffset:-24}}.ic-fl{animation:icFl .7s linear infinite}' +
+    '@keyframes icMi{0%{transform:translateY(0);opacity:0}30%{opacity:.7}100%{transform:translateY(-24px);opacity:0}}.ic-mi{animation:icMi 3.2s ease-out infinite}.ic-m2{animation-delay:-1.1s}.ic-m3{animation-delay:-2.2s}' +
+    '@keyframes icCar{from{transform:translateX(0)}to{transform:translateX(300px)}}.ic-car{animation:icCar 7s linear infinite}.ic-c2{animation-delay:-3.5s}' +
+    '@keyframes icCarL{from{transform:translateX(0)}to{transform:translateX(-300px)}}.ic-carl{animation:icCarL 8.5s linear infinite}.ic-c3{animation-delay:-4s}' +
+    '@keyframes icBird{from{transform:translate(0,0)}to{transform:translate(330px,-26px)}}.ic-bird{animation:icBird 9s linear infinite}.ic-bd2{animation-delay:-4.5s}' +
+    '</style>';
+  /* Newark Symphony Hall (1925), drawn 200 wide from 0,0: lettering over the cornice, pale limestone, six tall arched windows, optional bulb marquee */
+  const icHall = (o) => { o = o || {};
+    const st = o.stone || "#dccdb0", cn = o.cornice || "#c6b796", wn = o.win || "#f2c46a", fr = o.frame || "#2a2a3a", lt = o.letter || "#f6efdc";
+    let s = '<text x="100" y="-5" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="14" letter-spacing="3" fill="' + lt + '"' + (o.lstroke ? ' stroke="' + o.lstroke + '" stroke-width="3" paint-order="stroke"' : '') + '>SYMPHONY HALL</text>' +
+      '<rect x="-6" y="0" width="212" height="8" fill="' + cn + '"/><rect x="0" y="8" width="200" height="104" fill="' + st + '"/><path d="M0 15h200" stroke="' + cn + '" stroke-width="1.5"/>';
+    for (let i = 0; i < 6; i++) { const x = 18 + i * 30; s += '<path d="M' + x + ' 66V31a8 8 0 0 1 16 0V66z" fill="' + wn + '" stroke="' + fr + '" stroke-width="2.5"/>'; }
+    if (o.bulbs) for (let x = -2; x <= 202; x += 12) s += '<circle class="ic-bl' + ((x / 12) % 2 ? " ic-b2" : "") + '" cx="' + x + '" cy="4" r="2" fill="#ffe7a8"/>';
+    if (o.marquee) { s += '<rect x="10" y="74" width="180" height="22" fill="#1a1414" stroke="#c9a24a" stroke-width="1.5"/>';
+      for (let x = 16; x < 190; x += 10) { const c = (x / 10) % 2 ? "ic-bl" : "ic-bl ic-b2"; s += '<circle class="' + c + '" cx="' + x + '" cy="78.5" r="2" fill="#ffe7a8"/><circle class="' + c + '" cx="' + x + '" cy="91.5" r="2" fill="#ffe7a8"/>'; } }
+    return s; };
+  const icBg = () => IC_CSS +
+    '<g opacity=".2"><path class="ic-sw" style="transform-origin:112px 66px" d="M112 66L98 -30h28z" fill="#fff3c4"/><path class="ic-sw ic-s2" style="transform-origin:150px 66px" d="M150 66L136 -30h28z" fill="#fff3c4"/></g>' +
+    '<g transform="translate(76 24) scale(.5)">' + icHall() + '</g>' +
+    '<path d="M14 70V60h22v-5h18v5h26v-7h14v7h36v-4h24v4h28v-6h20v6h40V70z" fill="#2a1512"/>' +
+    '<path d="M46 55v-4M186 54v-4" stroke="#2a1512" stroke-width="2"/>' + '<rect x="96" y="56" width="5" height="4" fill="#ffd98a" opacity=".8"/><rect x="150" y="59" width="5" height="4" fill="#ffd98a" opacity=".8"/>';
+
   /* 5. Lafayette St and Mulberry St, by the arena: green street signs, streetlight, the tag wall in Redman red */
   function corner() {
     return svg(
-      '<rect width="400" height="260" fill="url(#g5)"/>' + stars(12) +
+      '<rect width="400" height="260" fill="url(#g5)"/>' + stars(12) + icBg() +
       /* brick buildings behind */
       '<rect x="282" y="60" width="90" height="160" fill="#5a2a22"/>' +
       (function () { let w = ""; for (let y = 70; y < 210; y += 16) for (let x = 290; x < 366; x += 16) w += '<rect x="' + x + '" y="' + y + '" width="8" height="10" fill="' + ((x + y) % 3 ? "#2a1612" : "#ffd98a") + '"/>'; return w; })() +

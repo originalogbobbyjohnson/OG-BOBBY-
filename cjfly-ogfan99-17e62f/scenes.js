@@ -138,10 +138,28 @@
       sky("gmu", "#f3b37a", "#fde7c7"));
   }
 
+  /* backdrop for the corner: the Kings Theatre seen from the Newkirk side in daylight, over the wall: the long terracotta
+     roofline, the crest, the arched window catching the sky, the KINGS blade unlit; pigeons going by */
+  function kingsDay() {
+    let s = '<style>@keyframes icSl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}@keyframes icSlL{from{transform:translateX(460px)}to{transform:translateX(-60px)}}@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}@keyframes icWv{0%,100%{transform:skewY(0)}50%{transform:skewY(6deg)}}@keyframes icGl{0%,100%{opacity:.12}50%{opacity:.3}}' +
+      '.icS{animation:icSl 7s linear infinite}.icS2{animation-delay:-3.5s}.icSs{animation-duration:16s}.icL{animation:icSlL 8s linear infinite}.icLs{animation-duration:15s}.icB{animation:icBl 1s steps(1) infinite}.icB2{animation-delay:-.5s}' +
+      '.icSw{animation:icSw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}.icSw2{animation-delay:-3.5s;animation-duration:9s}.icW{animation:icWv 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}.icG{animation:icGl 2.6s ease-in-out infinite}</style>' +
+      '<circle cx="384" cy="14" r="16" fill="#fff6d0" opacity=".35"/><circle cx="384" cy="14" r="10" fill="#fff6d0"/>' +
+      '<rect x="168" y="36" width="168" height="36" fill="#c9a072"/><rect x="164" y="32" width="176" height="5" fill="#e0bf8e"/><rect x="168" y="44" width="168" height="2" fill="#a87a50"/>' +
+      '<path d="M222 32L252 16L282 32Z" fill="#c9a072"/><path d="M226 32L252 19L278 32" fill="none" stroke="#e0bf8e" stroke-width="1.5"/>';
+    for (let x = 172; x < 336; x += 14) s += '<circle cx="' + x + '" cy="30" r="2" fill="#e0bf8e"/>';
+    s += '<path d="M238 72V52Q252 36 266 52V72Z" fill="#7aa4cf"/><path d="M252 42V72M238 58H266" stroke="#a87a50" stroke-width="1.2"/>';
+    [184, 204, 292, 312].forEach(x => s += '<path d="M' + x + ' 70V58q5-7 10 0V70z" fill="#8a6a4a"/>');
+    s += '<rect x="340" y="2" width="16" height="66" rx="1.5" fill="#f3e6c8" stroke="#a83a2a" stroke-width="1.5"/>';
+    "KINGS".split("").forEach((c, i) => s += '<text x="348" y="' + (15 + i * 12.4) + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11" fill="#c8281e">' + c + '</text>');
+    [[0, 14], [16, 20], [-12, 22]].forEach((p, i) => s += '<g class="icS icSs' + (i ? " icS2" : "") + '"><path d="M' + (p[0] - 4) + ' ' + p[1] + 'q4-3 4 0q0-3 4 0" fill="none" stroke="#2a2d33" stroke-width="1.2"/></g>');
+    return s;
+  }
+
   /* 5. Newkirk Avenue and East 16th St: green street signs, a wall tagged up */
   function corner() {
     return svg(
-      '<rect width="400" height="260" fill="url(#gk)"/>' + stars(10) +
+      '<rect width="400" height="260" fill="url(#gk)"/>' + kingsDay() +
       '<rect x="20" y="70" width="380" height="146" fill="#3d3a52"/>' +
       (function () { let s = ""; for (let y = 78; y < 216; y += 10) s += '<path d="M20 ' + y + 'h380" stroke="#2e2b40" stroke-width="1"/>'; return s; })() +
       tag("CJ FLY", 140, 156, 40, GOLD, -5) +
@@ -156,7 +174,7 @@
       '<rect x="0" y="216" width="400" height="44" fill="#2a2d33"/><path d="M0 238h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
       '<g class="car"><rect x="0" y="222" width="70" height="20" rx="6" fill="' + TEAL + '"/><rect x="12" y="214" width="40" height="12" rx="4" fill="#9fd0f5"/><circle cx="16" cy="244" r="6" fill="#111"/><circle cx="54" cy="244" r="6" fill="#111"/></g>' +
       '<text x="390" y="254" text-anchor="end" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" fill="#cbd5e0" letter-spacing="2">FLATBUSH, BROOKLYN</text>',
-      sky("gk", "#141a33", "#3a4a78"));
+      sky("gk", "#4a8fd8", "#cfe6f7"));
   }
 
   window.SCENES = { train, plaza, victorians, museum, corner };

@@ -48,8 +48,8 @@
   const bus = (x, y, band, cls) => '<g class="' + cls + '"><rect x="' + x + '" y="' + y + '" width="110" height="38" rx="6" fill="#e9ecef" stroke="#6b7280" stroke-width="1.5"/><rect x="' + x + '" y="' + (y + 26) + '" width="110" height="5" fill="' + band + '"/><rect x="' + (x + 6) + '" y="' + (y + 6) + '" width="94" height="14" fill="#2a3440"/><circle cx="' + (x + 22) + '" cy="' + (y + 38) + '" r="6" fill="#111"/><circle cx="' + (x + 88) + '" cy="' + (y + 38) + '" r="6" fill="#111"/></g>';
   const blade = (cx, y, t) => { const w = t.length * 7 + 18; return '<rect x="' + (cx - w / 2) + '" y="' + y + '" width="' + w + '" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="' + cx + '" y="' + (y + 13) + '" text-anchor="middle" ' + FONT + ' font-size="11" fill="#fff">' + t + '</text>'; };
   /* street corner: wall with tags, streetlight, two street blades */
-  const corner = (g, s1, s2, tags, accent, wall) => svg(
-    '<rect width="400" height="260" fill="url(#g5)"/>' + stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>' +
+  const corner = (g, s1, s2, tags, accent, wall, bg) => svg(
+    '<rect width="400" height="260" fill="url(#g5)"/>' + stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>' + (bg || "") +
     brick(16, 60, 240, 160, (wall || ["#4a2a24", "#5a3229"])[0], (wall || ["#4a2a24", "#5a3229"])[1]) + '<rect x="16" y="56" width="240" height="6" fill="#2a1a16"/>' + tags +
     '<rect class="drp" x="120" y="126" width="3" height="8" fill="' + accent + '"/><rect class="drp" x="186" y="114" width="3" height="8" fill="' + accent + '" style="animation-delay:-1s"/>' +
     '<rect x="300" y="56" width="5" height="164" fill="#1d2329"/><path d="M302 58h26" stroke="#1d2329" stroke-width="5"/>' +
@@ -128,10 +128,35 @@
       '<rect x="40" y="160" width="280" height="8" fill="#8a5a2c"/>' + tag("POOR RIGHTEOUS TEACHERS", 30, 252, 20, RED, -2), "");
   }
 
+  /* IC: shared iconic landmark in the corner backdrop (its own little animations, prefixed ic-) */
+  const IC_CSS = '<style>' +
+    '@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}.ic-bl{animation:icBl 1s steps(1) infinite}.ic-b2{animation-delay:-.5s}' +
+    '@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}.ic-sw{animation:icSw 6s ease-in-out infinite}.ic-s2{animation-delay:-3s}' +
+    '@keyframes icPl{0%,100%{opacity:.3}50%{opacity:1}}.ic-pl{animation:icPl 2.6s ease-in-out infinite}.ic-p2{animation-delay:-.65s}.ic-p3{animation-delay:-1.3s}.ic-p4{animation-delay:-1.95s}' +
+    '@keyframes icDr{from{transform:translateX(-90px)}to{transform:translateX(320px)}}.ic-dr{animation:icDr 22s linear infinite}' +
+    '@keyframes icFl{to{stroke-dashoffset:-24}}.ic-fl{animation:icFl .7s linear infinite}' +
+    '@keyframes icMi{0%{transform:translateY(0);opacity:0}30%{opacity:.7}100%{transform:translateY(-24px);opacity:0}}.ic-mi{animation:icMi 3.2s ease-out infinite}.ic-m2{animation-delay:-1.1s}.ic-m3{animation-delay:-2.2s}' +
+    '@keyframes icCar{from{transform:translateX(0)}to{transform:translateX(300px)}}.ic-car{animation:icCar 7s linear infinite}.ic-c2{animation-delay:-3.5s}' +
+    '@keyframes icCarL{from{transform:translateX(0)}to{transform:translateX(-300px)}}.ic-carl{animation:icCarL 8.5s linear infinite}.ic-c3{animation-delay:-4s}' +
+    '@keyframes icBird{from{transform:translate(0,0)}to{transform:translate(330px,-26px)}}.ic-bird{animation:icBird 9s linear infinite}.ic-bd2{animation-delay:-4.5s}' +
+    '</style>';
+  const icBg = () => { let t = "";
+    for (let x = 20; x < 320; x += 12) t += '<path d="M' + x + ' 46L' + (x + 6) + ' 38L' + (x + 12) + ' 46" stroke="#6f8a76" stroke-width="1.2" fill="none"/>';
+    return IC_CSS +
+      '<path d="M20 38H320" stroke="#7f9a86" stroke-width="2"/>' + t + '<rect x="18" y="46" width="304" height="4" fill="#5f7a66"/>' +
+      '<rect x="100" y="50" width="8" height="8" fill="#6b6658"/><rect x="230" y="50" width="8" height="8" fill="#6b6658"/>' +
+      '<path d="M90 36v2M250 36v2" stroke="#7f9a86" stroke-width="1.5"/>' +
+      '<rect x="68" y="22" width="204" height="14" fill="#2a0c10"/>' +
+      '<text x="170" y="32.5" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="#ff3b3b">' +
+      '<tspan class="ic-pl">TRENTON </tspan><tspan class="ic-pl ic-p2">MAKES </tspan><tspan class="ic-pl ic-p3">THE WORLD </tspan><tspan class="ic-pl ic-p4">TAKES</tspan></text>' +
+      '<clipPath id="icWc"><rect x="20" y="40" width="300" height="8"/></clipPath><g clip-path="url(#icWc)">' +
+      '<g class="ic-car"><rect x="0" y="43" width="5" height="2.5" fill="#fff6c2"/></g><g class="ic-car ic-c2"><rect x="0" y="43" width="5" height="2.5" fill="#fff6c2"/></g>' +
+      '<g class="ic-carl"><rect x="330" y="43" width="5" height="2.5" fill="#ff5a4a"/></g></g>'; };
+
   /* 5. Clinton Av and Greenwood Av */
   function block() {
     return corner(["#07120a", "#1d3a2a"], "Clinton Av", "Greenwood Av",
-      tag("WISE", 40, 120, 56, GRN, -7) + tag("P.R.T.", 50, 156, 28, GOLD, -5) + tag("HOLY INTELLECT", 26, 188, 24, RED, -3) + tag("TRENTON", 130, 212, 22, "#f6efdc", -2), GRN);
+      tag("WISE", 40, 120, 56, GRN, -7) + tag("P.R.T.", 50, 156, 28, GOLD, -5) + tag("HOLY INTELLECT", 26, 188, 24, RED, -3) + tag("TRENTON", 130, 212, 22, "#f6efdc", -2), GRN, undefined, icBg());
   }
 
   window.SCENES = { station, bridge, statehouse, classroom, block };

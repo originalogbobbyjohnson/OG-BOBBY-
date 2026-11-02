@@ -148,12 +148,32 @@
       sky("g4", "#3a2a6b", "#e8b8c8"));
   }
 
+  /* backdrop for the corner: the Kings Theatre's terracotta crown and its big arched window glowing gold, seen across the
+     Flatbush blocks on a cold night, the blade at its edge, its bulbs chasing */
+  function kingsArch() {
+    let s = '<style>@keyframes icSl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}@keyframes icSlL{from{transform:translateX(460px)}to{transform:translateX(-60px)}}@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}@keyframes icWv{0%,100%{transform:skewY(0)}50%{transform:skewY(6deg)}}@keyframes icGl{0%,100%{opacity:.12}50%{opacity:.3}}' +
+      '.icS{animation:icSl 7s linear infinite}.icS2{animation-delay:-3.5s}.icSs{animation-duration:16s}.icL{animation:icSlL 8s linear infinite}.icLs{animation-duration:15s}.icB{animation:icBl 1s steps(1) infinite}.icB2{animation-delay:-.5s}' +
+      '.icSw{animation:icSw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}.icSw2{animation-delay:-3.5s;animation-duration:9s}.icW{animation:icWv 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}.icG{animation:icGl 2.6s ease-in-out infinite}</style>' +
+      '<rect x="312" y="18" width="88" height="202" fill="#7d6650"/><rect x="308" y="12" width="92" height="7" fill="#b8956a"/>';
+    for (let x = 314; x < 400; x += 12) s += '<circle cx="' + x + '" cy="10" r="2.6" fill="#b8956a"/>';
+    s += '<path d="M352 4L362 12H342Z" fill="#b8956a"/>';
+    for (let y = 98; y < 220; y += 20) s += '<rect x="312" y="' + y + '" width="88" height="2" fill="#5e4a3a"/>';
+    s += '<defs><linearGradient id="icAw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe2a0"/><stop offset="1" stop-color="#c0703a"/></linearGradient></defs>' +
+      '<path d="M326 88V48Q352 18 378 48V88Z" fill="#5e4a3a"/><path class="icG" d="M326 88V48Q352 18 378 48V88Z" fill="#ffd27a"/>' +
+      '<path d="M330 86V50Q352 24 374 50V86Z" fill="url(#icAw)" opacity=".9"/>' +
+      '<path d="M352 26V86M341 34V86M363 34V86M330 60H374" stroke="#5e4a3a" stroke-width="1.3"/>' +
+      '<rect x="383" y="22" width="15" height="70" rx="1.5" fill="#3a0d10" stroke="#e8b84a" stroke-width="1"/>';
+    "KINGS".split("").forEach((c, i) => s += '<text x="390.5" y="' + (36 + i * 13) + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11" fill="#ff4a3d">' + c + '</text>');
+    for (let y = 26; y < 90; y += 8) s += '<circle class="icB' + (y % 16 ? " icB2" : "") + '" cx="384.5" cy="' + y + '" r=".9" fill="#ffe7a8"/>';
+    return s;
+  }
+
   /* 5. Winthrop Street and Nostrand Avenue: subway globes, street signs, the tag wall */
   function corner() {
     let bricks = "";
     for (let y = 60; y < 220; y += 12) for (let x = (y / 12) % 2 ? 10 : 20; x < 222; x += 30) bricks += '<rect x="' + x + '" y="' + y + '" width="28" height="10" fill="#3a3a52"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g5)"/>' + stars(20) +
+      '<rect width="400" height="260" fill="url(#g5)"/>' + stars(20) + kingsArch() +
       '<rect x="20" y="60" width="230" height="160" fill="#2a2a3e"/>' + bricks +
       tag("MEDHANE", 30, 128, 36, ICE, -7) + tag("COLD WATER", 40, 176, 26, AME, -3) + tag("FLATBUSH", 120, 208, 20, MINT, -8) +
       /* water drips off the tag */

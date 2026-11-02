@@ -145,13 +145,38 @@
       sky("g4", "#8fc3e8", "#e6f2f7"));
   }
 
+  /* IC: shared iconic landmark in the corner backdrop (its own little animations, prefixed ic-) */
+  const IC_CSS = '<style>' +
+    '@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}.ic-bl{animation:icBl 1s steps(1) infinite}.ic-b2{animation-delay:-.5s}' +
+    '@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}.ic-sw{animation:icSw 6s ease-in-out infinite}.ic-s2{animation-delay:-3s}' +
+    '@keyframes icPl{0%,100%{opacity:.3}50%{opacity:1}}.ic-pl{animation:icPl 2.6s ease-in-out infinite}.ic-p2{animation-delay:-.65s}.ic-p3{animation-delay:-1.3s}.ic-p4{animation-delay:-1.95s}' +
+    '@keyframes icDr{from{transform:translateX(-90px)}to{transform:translateX(320px)}}.ic-dr{animation:icDr 22s linear infinite}' +
+    '@keyframes icFl{to{stroke-dashoffset:-24}}.ic-fl{animation:icFl .7s linear infinite}' +
+    '@keyframes icMi{0%{transform:translateY(0);opacity:0}30%{opacity:.7}100%{transform:translateY(-24px);opacity:0}}.ic-mi{animation:icMi 3.2s ease-out infinite}.ic-m2{animation-delay:-1.1s}.ic-m3{animation-delay:-2.2s}' +
+    '@keyframes icCar{from{transform:translateX(0)}to{transform:translateX(300px)}}.ic-car{animation:icCar 7s linear infinite}.ic-c2{animation-delay:-3.5s}' +
+    '@keyframes icCarL{from{transform:translateX(0)}to{transform:translateX(-300px)}}.ic-carl{animation:icCarL 8.5s linear infinite}.ic-c3{animation-delay:-4s}' +
+    '@keyframes icBird{from{transform:translate(0,0)}to{transform:translate(330px,-26px)}}.ic-bird{animation:icBird 9s linear infinite}.ic-bd2{animation-delay:-4.5s}' +
+    '</style>';
+  const icBg = () => { let b = "";
+    for (let x = 310; x < 376; x += 7) b += '<circle class="ic-bl' + ((x / 7) % 2 ? " ic-b2" : "") + '" cx="' + x + '" cy="185" r="1.6" fill="#ffe7a8"/><circle class="ic-bl' + ((x / 7) % 2 ? "" : " ic-b2") + '" cx="' + x + '" cy="195" r="1.6" fill="#ffe7a8"/>';
+    return IC_CSS +
+      '<path d="M372 132L400 139V224H372z" fill="#9a5534"/>' +
+      '<rect x="312" y="132" width="60" height="92" fill="#c97a4a"/><path d="M308 133L342 115L376 133z" fill="#b8683c"/>' +
+      '<path d="M314 137q4-3 8 0t8 0t8 0t8 0t8 0t8 0t8 0" stroke="#f0c9a0" stroke-width="1.2" fill="none"/>' +
+      '<circle cx="342" cy="126" r="5.5" fill="#f6efdc" stroke="#7a3a1a" stroke-width="1.2"/><path d="M342 126v-3.5M342 126l2.5 1.5" stroke="#3a2a1a" stroke-width="1"/>' +
+      '<path d="M339.5 115l1-8h3l1 8z" fill="#5a3020"/><circle cx="342" cy="104.5" r="2.2" fill="#5a3020"/><path d="M343.5 108l6-6" stroke="#5a3020" stroke-width="1.4"/>' +
+      '<path d="M318 172V152a6 6 0 0 1 12 0V172zM336 172V152a6 6 0 0 1 12 0V172zM354 172V152a6 6 0 0 1 12 0V172z" fill="#3a2a4a" stroke="#f0c9a0" stroke-width="1.2"/>' +
+      '<path d="M380 150v20M390 152v20" stroke="#5e2f1c" stroke-width="5"/>' +
+      '<rect x="306" y="180" width="70" height="20" fill="#1a1414" stroke="#c9a24a" stroke-width="1.2"/><path d="M376 180L394 185V204L376 200z" fill="#140f0f" stroke="#c9a24a" stroke-width="1.2"/>' + b +
+      '<rect x="326" y="204" width="26" height="20" fill="#2a1a14"/>'; };
+
   /* 5. The corner: JFK Boulevard and Sip Avenue, right on Journal Square */
   function corner() {
     let brick = "";
     for (let y = 60; y < 220; y += 12) for (let x = (y / 12) % 2 ? 0 : -18; x < 250; x += 36) brick += '<rect x="' + Math.max(0, x) + '" y="' + y + '" width="' + Math.min(34, 250 - Math.max(0, x), x + 34) + '" height="10" fill="#5a3326"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g5)"/>' +
-      skyline(130, "#3a3f55") +
+      skyline(130, "#3a3f55") + icBg() +
       '<rect x="0" y="56" width="250" height="168" fill="#40241b"/>' + brick +
       tag("RANSOM", 22, 140, 44, GOLD, -7) + tag("TAKE OVER", 40, 190, 26, RED, -3) + tag("A-TEAM", 24, 86, 20, ICE, -4) +
       '<rect x="0" y="224" width="400" height="36" fill="#2c2f36"/><rect x="0" y="224" width="400" height="4" fill="#8a8d95"/>' +

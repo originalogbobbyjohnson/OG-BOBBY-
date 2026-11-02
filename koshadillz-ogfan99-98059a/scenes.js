@@ -139,10 +139,33 @@
       sky("gw", "#e76f51", "#f9c88b"));
   }
 
+  /* IC: shared iconic landmark in the corner backdrop (its own little animations, prefixed ic-) */
+  const IC_CSS = '<style>' +
+    '@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}.ic-bl{animation:icBl 1s steps(1) infinite}.ic-b2{animation-delay:-.5s}' +
+    '@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}.ic-sw{animation:icSw 6s ease-in-out infinite}.ic-s2{animation-delay:-3s}' +
+    '@keyframes icPl{0%,100%{opacity:.3}50%{opacity:1}}.ic-pl{animation:icPl 2.6s ease-in-out infinite}.ic-p2{animation-delay:-.65s}.ic-p3{animation-delay:-1.3s}.ic-p4{animation-delay:-1.95s}' +
+    '@keyframes icDr{from{transform:translateX(-90px)}to{transform:translateX(320px)}}.ic-dr{animation:icDr 22s linear infinite}' +
+    '@keyframes icFl{to{stroke-dashoffset:-24}}.ic-fl{animation:icFl .7s linear infinite}' +
+    '@keyframes icMi{0%{transform:translateY(0);opacity:0}30%{opacity:.7}100%{transform:translateY(-24px);opacity:0}}.ic-mi{animation:icMi 3.2s ease-out infinite}.ic-m2{animation-delay:-1.1s}.ic-m3{animation-delay:-2.2s}' +
+    '@keyframes icCar{from{transform:translateX(0)}to{transform:translateX(300px)}}.ic-car{animation:icCar 7s linear infinite}.ic-c2{animation-delay:-3.5s}' +
+    '@keyframes icCarL{from{transform:translateX(0)}to{transform:translateX(-300px)}}.ic-carl{animation:icCarL 8.5s linear infinite}.ic-c3{animation-delay:-4s}' +
+    '@keyframes icBird{from{transform:translate(0,0)}to{transform:translate(330px,-26px)}}.ic-bird{animation:icBird 9s linear infinite}.ic-bd2{animation-delay:-4.5s}' +
+    '</style>';
+  const icBg = () => { let t = "";
+    const top = x => x < 220 ? 60 - (x - 140) * 0.375 : x < 275 ? 30 + (x - 220) * 0.25 : x < 330 ? 44 - (x - 275) * 0.25 : 30 + (x - 330) * 0.37;
+    for (let x = 140; x < 400; x += 10) t += '<path d="M' + x + ' 60L' + (x + 5) + ' ' + top(x + 5).toFixed(1) + 'L' + (x + 10) + ' 60" stroke="#7a8a98" stroke-width="1.1" fill="none"/>';
+    return IC_CSS +
+      '<path d="M140 60L220 30L275 44L330 30L400 56" stroke="#8e9eac" stroke-width="2.4" fill="none"/>' + t +
+      '<rect x="136" y="59" width="264" height="3.5" fill="#6a7a88"/>' +
+      '<clipPath id="icKc"><rect x="136" y="50" width="264" height="14"/></clipPath><g clip-path="url(#icKc)">' +
+      '<g class="ic-car"><rect x="110" y="56.5" width="5" height="2.5" fill="#fff6c2"/></g><g class="ic-car ic-c2"><rect x="110" y="56.5" width="5" height="2.5" fill="#fff6c2"/></g>' +
+      '<g class="ic-carl"><rect x="400" y="56.5" width="5" height="2.5" fill="#ff5a4a"/></g><g class="ic-carl ic-c3"><rect x="400" y="56.5" width="5" height="2.5" fill="#ff5a4a"/></g></g>' +
+      '<circle class="ic-bl" cx="220" cy="28" r="1.8" fill="#ff3b3b"/><circle class="ic-bl ic-b2" cx="330" cy="28" r="1.8" fill="#ff3b3b"/>'; };
+
   /* 5. Smith Street and State Street: green street signs, a wall tagged up */
   function corner() {
     return svg(
-      '<rect width="400" height="260" fill="url(#gk)"/>' + stars(10) +
+      '<rect width="400" height="260" fill="url(#gk)"/>' + stars(10) + icBg() +
       '<rect x="20" y="70" width="380" height="146" fill="#4a5568"/>' +
       (function () { let s = ""; for (let y = 86; y < 216; y += 14) s += '<path d="M20 ' + y + 'h380" stroke="#3b4556" stroke-width="1"/>'; return s; })() +
       tag("KOSHA DILLZ", 110, 156, 36, GREEN, -5) +

@@ -144,10 +144,32 @@
       sky("g4", "#1a1530", "#5a3a5a"));
   }
 
+  /* IC: shared iconic landmark in the corner backdrop (its own little animations, prefixed ic-) */
+  const IC_CSS = '<style>' +
+    '@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}.ic-bl{animation:icBl 1s steps(1) infinite}.ic-b2{animation-delay:-.5s}' +
+    '@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}.ic-sw{animation:icSw 6s ease-in-out infinite}.ic-s2{animation-delay:-3s}' +
+    '@keyframes icPl{0%,100%{opacity:.3}50%{opacity:1}}.ic-pl{animation:icPl 2.6s ease-in-out infinite}.ic-p2{animation-delay:-.65s}.ic-p3{animation-delay:-1.3s}.ic-p4{animation-delay:-1.95s}' +
+    '@keyframes icDr{from{transform:translateX(-90px)}to{transform:translateX(320px)}}.ic-dr{animation:icDr 22s linear infinite}' +
+    '@keyframes icFl{to{stroke-dashoffset:-24}}.ic-fl{animation:icFl .7s linear infinite}' +
+    '@keyframes icMi{0%{transform:translateY(0);opacity:0}30%{opacity:.7}100%{transform:translateY(-24px);opacity:0}}.ic-mi{animation:icMi 3.2s ease-out infinite}.ic-m2{animation-delay:-1.1s}.ic-m3{animation-delay:-2.2s}' +
+    '@keyframes icCar{from{transform:translateX(0)}to{transform:translateX(300px)}}.ic-car{animation:icCar 7s linear infinite}.ic-c2{animation-delay:-3.5s}' +
+    '@keyframes icCarL{from{transform:translateX(0)}to{transform:translateX(-300px)}}.ic-carl{animation:icCarL 8.5s linear infinite}.ic-c3{animation-delay:-4s}' +
+    '@keyframes icBird{from{transform:translate(0,0)}to{transform:translate(330px,-26px)}}.ic-bird{animation:icBird 9s linear infinite}.ic-bd2{animation-delay:-4.5s}' +
+    '</style>';
+  const icBg = () => { let f = "";
+    for (let x = 122; x < 190; x += 5) f += '<path class="ic-fl" d="M' + x + ' ' + (40 - (x - 118) * 0.06).toFixed(1) + 'V72" stroke="#ffffff" stroke-width="1.6" stroke-dasharray="6 6" opacity=".85" style="animation-delay:-' + ((x % 7) * 0.1).toFixed(2) + 's"/>';
+    return IC_CSS +
+      '<path d="M110 36L198 31V37L110 42z" fill="#5d7f94"/>' +
+      '<path d="M118 41L190 36V72H118z" fill="#a9c6d4"/>' + f +
+      '<path d="M14 72V46q26-8 56-2l36-12 14 8V72zM188 36l10-8 34 10q28-6 50 2V72H188z" fill="#2a2228"/>' +
+      '<path d="M30 46a8 8 0 0 1 16 0zM58 44a9 9 0 0 1 18 0zM90 38a7 7 0 0 1 14 0zM206 37a8 8 0 0 1 16 0zM244 40a9 9 0 0 1 18 0z" fill="#26402a"/>' +
+      '<path d="M108 54q46-8 92 0" stroke="#d8cfc0" stroke-width="2" fill="none"/>' +
+      '<ellipse class="ic-mi" cx="136" cy="68" rx="14" ry="5" fill="#f2f6f8"/><ellipse class="ic-mi ic-m2" cx="168" cy="68" rx="16" ry="5" fill="#f2f6f8"/><ellipse class="ic-mi ic-m3" cx="152" cy="70" rx="12" ry="4" fill="#f2f6f8"/>'; };
+
   /* 5. Market St and Main St, downtown Paterson: green street signs, a streetlight, her name on the wall in red */
   function corner() {
     return svg(
-      '<rect width="400" height="260" fill="url(#g5)"/>' + stars(12) +
+      '<rect width="400" height="260" fill="url(#g5)"/>' + stars(12) + icBg() +
       '<rect x="282" y="50" width="90" height="170" fill="#6a3e30"/>' +
       (function () { let w = ""; for (let y = 60; y < 210; y += 18) for (let x = 292; x < 366; x += 18) w += '<rect x="' + x + '" y="' + y + '" width="9" height="12" fill="' + ((x + y) % 3 ? "#2a1a16" : "#ffd98a") + '"/>'; return w; })() +
       /* tag wall */

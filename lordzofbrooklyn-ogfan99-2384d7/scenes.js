@@ -180,10 +180,36 @@
       sky("g4", "#05070d", "#1a2238"));
   }
 
-  /* 5. 4th Av and 77 St: green street signs, a streetlight, a brick wall tagged LORDZ OF BROOKLYN */
+  /* backdrop for the corner: the Verrazzano's Brooklyn tower right over 4th Av and 95th St, seen from below at night,
+     the main cable sweeping off toward mid-span, the upper deck with cars crossing */
+  function verrazzanoBelow() {
+    const qb = (p0, c, p1, t) => [(1 - t) * (1 - t) * p0[0] + 2 * t * (1 - t) * c[0] + t * t * p1[0], (1 - t) * (1 - t) * p0[1] + 2 * t * (1 - t) * c[1] + t * t * p1[1]];
+    let s = '<style>@keyframes icSl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}@keyframes icSlL{from{transform:translateX(460px)}to{transform:translateX(-60px)}}@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}@keyframes icWv{0%,100%{transform:skewY(0)}50%{transform:skewY(6deg)}}@keyframes icGl{0%,100%{opacity:.12}50%{opacity:.3}}' +
+      '.icS{animation:icSl 7s linear infinite}.icS2{animation-delay:-3.5s}.icSs{animation-duration:16s}.icL{animation:icSlL 8s linear infinite}.icLs{animation-duration:15s}.icB{animation:icBl 1s steps(1) infinite}.icB2{animation-delay:-.5s}' +
+      '.icSw{animation:icSw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}.icSw2{animation-delay:-3.5s;animation-duration:9s}.icW{animation:icWv 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}.icG{animation:icGl 2.6s ease-in-out infinite}</style>' +
+      '<ellipse cx="362" cy="110" rx="70" ry="130" fill="#9fb4d0" opacity=".07"/>';
+    const leg = x => '<rect x="' + x + '" y="2" width="12" height="218" fill="#8e98a4"/><rect x="' + (x + 8) + '" y="2" width="4" height="218" fill="#6c7682"/>';
+    s += leg(337) + leg(375) +
+      '<rect x="335" y="2" width="54" height="9" fill="#a3adb8"/><rect x="337" y="74" width="50" height="7" fill="#7d8792"/><rect x="337" y="150" width="50" height="7" fill="#7d8792"/>' +
+      '<circle class="icB" cx="343" cy="3" r="2.2" fill="#ff4a3d"/><circle class="icB icB2" cx="381" cy="3" r="2.2" fill="#ff4a3d"/>';
+    /* the main cables: down toward mid-span, and the short side span back to the anchorage */
+    const P0 = [362, 8], C = [150, 42], P1 = [0, 34];
+    s += '<path d="M362 8Q150 42 0 34" fill="none" stroke="#b4bec9" stroke-width="2.6"/><path d="M362 11Q150 45 0 37" fill="none" stroke="#7d8894" stroke-width="1.4"/>' +
+      '<path d="M362 8Q392 22 400 30" fill="none" stroke="#b4bec9" stroke-width="2.6"/>';
+    for (let t = 0.08; t < 1; t += 0.045) { const p = qb(P0, C, P1, t); s += '<path d="M' + p[0].toFixed(1) + ' ' + p[1].toFixed(1) + 'V47" stroke="#8d98a4" stroke-width=".8"/>'; }
+    /* the upper deck, its lights, and the traffic */
+    s += '<rect x="0" y="47" width="400" height="8" fill="#4d5762"/><rect x="0" y="55" width="400" height="3" fill="#2f363e"/>';
+    for (let x = 8; x < 400; x += 24) s += '<circle class="icB' + (x % 48 ? " icB2" : "") + '" cx="' + x + '" cy="51" r="1.2" fill="#ffe7a8"/>';
+    s += '<g class="icS"><rect x="0" y="42" width="14" height="5" rx="1.5" fill="#d23b2a"/><circle cx="14" cy="44.5" r="1.1" fill="#fff6c2"/></g>' +
+      '<g class="icS icS2"><rect x="0" y="42" width="12" height="5" rx="1.5" fill="#e8e8e8"/><circle cx="12" cy="44.5" r="1.1" fill="#fff6c2"/></g>' +
+      '<g class="icL"><rect x="0" y="42" width="16" height="5" rx="1.5" fill="#e8b84a"/><circle cx="0" cy="44.5" r="1.1" fill="#ff5a4a"/></g>';
+    return s;
+  }
+
+  /* 5. 4th Av and 95th St, under the Verrazzano: green street signs, a streetlight, a brick wall tagged LORDZ OF BROOKLYN */
   function corner() {
     return svg(
-      '<rect width="400" height="260" fill="url(#g5)"/>' + stars(10) +
+      '<rect width="400" height="260" fill="url(#g5)"/>' + stars(10) + verrazzanoBelow() +
       bricks(14, 62, 244, 158, "#7a3324", "#3a1a12") +
       '<rect x="14" y="62" width="244" height="158" fill="#000" opacity=".25"/>' +
       tag("LORDZ", 30, 126, 52, GREEN, -7) + tag("OF BROOKLYN", 40, 170, 28, WHITE, -4) + tag("BROOKLYN WAY", 36, 208, 18, ORANGE, -3) + tag("L.O.B.", 192, 210, 20, GOLD, -6) +

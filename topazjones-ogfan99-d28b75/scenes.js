@@ -133,10 +133,31 @@
       sky("g4", "#0e0b22", "#2c2448"));
   }
 
+  /* IC: shared iconic landmark in the corner backdrop (its own little animations, prefixed ic-) */
+  const IC_CSS = '<style>' +
+    '@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}.ic-bl{animation:icBl 1s steps(1) infinite}.ic-b2{animation-delay:-.5s}' +
+    '@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}.ic-sw{animation:icSw 6s ease-in-out infinite}.ic-s2{animation-delay:-3s}' +
+    '@keyframes icPl{0%,100%{opacity:.3}50%{opacity:1}}.ic-pl{animation:icPl 2.6s ease-in-out infinite}.ic-p2{animation-delay:-.65s}.ic-p3{animation-delay:-1.3s}.ic-p4{animation-delay:-1.95s}' +
+    '@keyframes icDr{from{transform:translateX(-90px)}to{transform:translateX(320px)}}.ic-dr{animation:icDr 22s linear infinite}' +
+    '@keyframes icFl{to{stroke-dashoffset:-24}}.ic-fl{animation:icFl .7s linear infinite}' +
+    '@keyframes icMi{0%{transform:translateY(0);opacity:0}30%{opacity:.7}100%{transform:translateY(-24px);opacity:0}}.ic-mi{animation:icMi 3.2s ease-out infinite}.ic-m2{animation-delay:-1.1s}.ic-m3{animation-delay:-2.2s}' +
+    '@keyframes icCar{from{transform:translateX(0)}to{transform:translateX(300px)}}.ic-car{animation:icCar 7s linear infinite}.ic-c2{animation-delay:-3.5s}' +
+    '@keyframes icCarL{from{transform:translateX(0)}to{transform:translateX(-300px)}}.ic-carl{animation:icCarL 8.5s linear infinite}.ic-c3{animation-delay:-4s}' +
+    '@keyframes icBird{from{transform:translate(0,0)}to{transform:translate(330px,-26px)}}.ic-bird{animation:icBird 9s linear infinite}.ic-bd2{animation-delay:-4.5s}' +
+    '</style>';
+  const icBg = () => { let b = "";
+    for (let y = 18; y < 66; y += 6) b += '<circle class="ic-bl' + ((y / 6) % 2 ? " ic-b2" : "") + '" cx="201" cy="' + y + '" r="1.5" fill="#ffe7a8"/><circle class="ic-bl' + ((y / 6) % 2 ? "" : " ic-b2") + '" cx="213" cy="' + y + '" r="1.5" fill="#ffe7a8"/>';
+    return IC_CSS +
+      '<ellipse class="ic-pl" cx="198" cy="72" rx="40" ry="12" fill="#f2a33a" opacity=".35"/>' +
+      '<rect x="150" y="58" width="92" height="14" fill="#9a7450"/><rect x="148" y="56" width="96" height="3" fill="#7a5a3e"/>' +
+      '<path d="M214 14L220 18V64L214 68z" fill="#3a2a1a"/>' +
+      '<rect x="197" y="12" width="20" height="58" rx="3" fill="#1a1414" stroke="#f2a33a" stroke-width="1.5"/>' + b +
+      '<text x="207" y="41" transform="rotate(90 207 41)" text-anchor="middle" dominant-baseline="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7.5" letter-spacing="1" fill="#f2a33a">THEATER</text>'; };
+
   /* 5. Bloomfield Ave and Park St, the middle of Montclair: green street signs, cars going by, his name on the wall */
   function corner() {
     return svg(
-      '<rect width="400" height="260" fill="url(#g5)"/>' + stars(12) +
+      '<rect width="400" height="260" fill="url(#g5)"/>' + stars(12) + icBg() +
       '<rect x="282" y="50" width="90" height="170" fill="#6a4a3a"/>' +
       (function () { let w = ""; for (let y = 60; y < 200; y += 18) for (let x = 292; x < 366; x += 18) w += '<rect x="' + x + '" y="' + y + '" width="9" height="12" fill="' + ((x + y) % 3 ? "#2a1a16" : "#ffd98a") + '"/>'; return w; })() +
       /* tag wall */

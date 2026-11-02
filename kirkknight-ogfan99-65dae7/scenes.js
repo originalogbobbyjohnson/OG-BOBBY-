@@ -69,8 +69,8 @@
       rect(0, 152, 400, 9, "#eab308") + rect(0, 161, 400, 99, "#5a5650") + '<path d="M0 161h400" stroke="#8a857a" stroke-width="2"/>' + (o.tags || ""), "");
   };
   /* 5. street corner: wall with tags, streetlight, two street blades */
-  const corner = (g, s1, s2, tags, accent, extra) => svg(
-    '<rect width="400" height="260" fill="url(#g5)"/>' + stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>' +
+  const corner = (g, s1, s2, tags, accent, extra, back) => svg(
+    '<rect width="400" height="260" fill="url(#g5)"/>' + (back !== undefined ? back : stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>') +
     brick(16, 60, 240, 160, "#4a2a24", "#5a3229") + rect(16, 56, 240, 6, "#2a1a16") + tags +
     '<rect class="drp" x="120" y="126" width="3" height="8" fill="' + accent + '"/><rect class="drp" x="186" y="114" width="3" height="8" fill="' + accent + '" style="animation-delay:-1s"/>' +
     rect(300, 56, 5, 164, "#1d2329") + '<path d="M302 58h26" stroke="#1d2329" stroke-width="5"/>' +
@@ -138,9 +138,31 @@
   }
 
   /* 5. Flatbush Av and Nostrand Av, at the Junction */
+  /* backdrop for the corner: looking up Flatbush Av from the Junction at dusk, the Kings Theatre far off over the rooftops,
+     its crest and big arched window in silhouette, the little red blade glowing */
+  function kingsFar() {
+    let s = '<style>@keyframes icSl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}@keyframes icSlL{from{transform:translateX(460px)}to{transform:translateX(-60px)}}@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}@keyframes icWv{0%,100%{transform:skewY(0)}50%{transform:skewY(6deg)}}@keyframes icGl{0%,100%{opacity:.12}50%{opacity:.3}}' +
+      '.icS{animation:icSl 7s linear infinite}.icS2{animation-delay:-3.5s}.icSs{animation-duration:16s}.icL{animation:icSlL 8s linear infinite}.icLs{animation-duration:15s}.icB{animation:icBl 1s steps(1) infinite}.icB2{animation-delay:-.5s}' +
+      '.icSw{animation:icSw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}.icSw2{animation-delay:-3.5s;animation-duration:9s}.icW{animation:icWv 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}.icG{animation:icGl 2.6s ease-in-out infinite}</style>' +
+      '<defs><linearGradient id="icDk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e1446"/><stop offset=".12" stop-color="#6a3a78"/><stop offset=".22" stop-color="#e8806a"/><stop offset=".3" stop-color="#f4b27a"/><stop offset=".5" stop-color="#3a2a5a"/><stop offset="1" stop-color="#1e1636"/></linearGradient></defs>' +
+      '<rect width="400" height="220" fill="url(#icDk)"/>';
+    [[30, 6], [90, 14], [250, 8], [330, 16], [380, 5]].forEach(p => s += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="1" fill="#fff" opacity=".8"/>');
+    s += '<g class="icL icLs"><circle class="icB" cx="0" cy="20" r="1.5" fill="#ff5a4a"/><circle cx="5" cy="20" r="1" fill="#fff"/></g>';
+    /* the rooftops along the avenue */
+    [[0, 42, 40], [40, 46, 30], [70, 40, 26], [214, 44, 34], [248, 38, 30], [278, 46, 40], [318, 40, 30], [348, 44, 52]].forEach(b => s += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (220 - b[1]) + '" fill="#2a1d42"/>');
+    for (let x = 262; x < 400; x += 14) for (let y = 70; y < 210; y += 22) if ((x + y) % 3) s += '<rect x="' + x + '" y="' + y + '" width="5" height="8" fill="#ffcf7a" opacity=".55"/>';
+    /* the theater */
+    s += '<rect x="96" y="28" width="118" height="30" fill="#3a2a4c"/><path d="M128 28L155 14L182 28Z" fill="#3a2a4c"/><rect x="94" y="26" width="122" height="3" fill="#5a4462"/>' +
+      '<path d="M140 58V40Q155 24 170 40V58Z" fill="#f2b24a" opacity=".9"/><path d="M155 30V58M146 46H164" stroke="#3a2a4c" stroke-width="1.2"/>' +
+      '<circle class="icG" cx="220" cy="28" r="18" fill="#ff4a3d"/>' +
+      '<rect x="213" y="3" width="14" height="52" rx="1.5" fill="#3a0d10" stroke="#e8b84a" stroke-width="1"/>';
+    "KINGS".split("").forEach((c, i) => s += '<text x="220" y="' + (14 + i * 9.6) + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="9" fill="#ff5a4a">' + c + '</text>');
+    return s;
+  }
+
   function block() {
     return corner(["#0d0a22", "#3a2a5a"], "Flatbush Av", "Nostrand Av",
-      tag("KIRK KNIGHT", 22, 128, 36, PINK, -7) + tag("PRO ERA", 40, 160, 28, GOLD, -5) + tag("BEAST COAST", 30, 190, 24, VIO, -3) + tag("KNIGHT TIME", 80, 212, 18, "#f6efdc", -2), PINK);
+      tag("KIRK KNIGHT", 22, 128, 36, PINK, -7) + tag("PRO ERA", 40, 160, 28, GOLD, -5) + tag("BEAST COAST", 30, 190, 24, VIO, -3) + tag("KNIGHT TIME", 80, 212, 18, "#f6efdc", -2), PINK, "", kingsFar());
   }
 
   window.SCENES = { station1, college, junction, lab, block };

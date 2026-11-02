@@ -184,13 +184,32 @@
       sky("tg4", "#050a1e", "#24406a"));
   }
 
+  /* backdrop for the corner: up Surf Av at sunset, the Parachute Jump rising over the wall: the red steel lattice and the
+     big umbrella crown with its twelve arms, the lights chasing round the ring */
+  function parachuteJump() {
+    let s = '<style>@keyframes icSl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}@keyframes icSlL{from{transform:translateX(460px)}to{transform:translateX(-60px)}}@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}@keyframes icWv{0%,100%{transform:skewY(0)}50%{transform:skewY(6deg)}}@keyframes icGl{0%,100%{opacity:.12}50%{opacity:.3}}' +
+      '.icS{animation:icSl 7s linear infinite}.icS2{animation-delay:-3.5s}.icSs{animation-duration:16s}.icL{animation:icSlL 8s linear infinite}.icLs{animation-duration:15s}.icB{animation:icBl 1s steps(1) infinite}.icB2{animation-delay:-.5s}' +
+      '.icSw{animation:icSw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}.icSw2{animation-delay:-3.5s;animation-duration:9s}.icW{animation:icWv 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}.icG{animation:icGl 2.6s ease-in-out infinite}</style>' + '';
+    /* the lattice */
+    s += '<path d="M128 64L144 20M172 64L156 20" stroke="#b8322a" stroke-width="3"/>';
+    for (let y = 24; y < 64; y += 8) { const w = 6 + (y - 20) * 0.37, w2 = 6 + (y + 8 - 20) * 0.37; s += '<path d="M' + (150 - w) + ' ' + y + 'L' + (150 + w2) + ' ' + (y + 8) + 'M' + (150 + w) + ' ' + y + 'L' + (150 - w2) + ' ' + (y + 8) + 'M' + (150 - w) + ' ' + y + 'H' + (150 + w) + '" stroke="#c94a3a" stroke-width="1.2"/>'; }
+    /* the crown: twelve arms out from the hub to the ring, cables hanging from each arm tip */
+    s += '<path d="M150 4V20" stroke="#b8322a" stroke-width="2.5"/><circle cx="150" cy="4" r="2.2" fill="#b8322a"/>';
+    let tips = "";
+    for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6, x = 150 + 46 * Math.cos(a), y = 24 + 8 * Math.sin(a);
+      s += '<path d="M150 14L' + x.toFixed(1) + ' ' + y.toFixed(1) + '" stroke="#b8322a" stroke-width="1.4"/><path d="M' + x.toFixed(1) + ' ' + y.toFixed(1) + 'v14" stroke="#7a2a22" stroke-width=".7"/>';
+      tips += '<circle class="icB' + (i % 2 ? " icB2" : "") + '" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="1.8" fill="#fff2a8"/>'; }
+    s += '<ellipse cx="150" cy="24" rx="46" ry="8" fill="none" stroke="#b8322a" stroke-width="2.4"/>' + tips;
+    return s;
+  }
+
   /* 5. Surf Av & W 21 St: street signs, the light, the tag wall, the Boardwalk a block away */
   function corner() {
     let bricks = "";
     for (let y = 64; y < 222; y += 12) { bricks += '<path d="M16 ' + y + 'h250" stroke="#5a3b2e" stroke-width="1"/>'; for (let x = (y / 12 % 2 ? 16 : 36); x < 266; x += 40) bricks += '<path d="M' + x + ' ' + y + 'v12" stroke="#5a3b2e" stroke-width="1"/>'; }
     const sign = (x, y, txt) => '<rect x="' + x + '" y="' + y + '" width="104" height="20" rx="2" fill="#0d6b3a" stroke="#fff" stroke-width="1.5"/><text x="' + (x + 52) + '" y="' + (y + 14.5) + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="12" fill="#fff">' + txt + '</text>';
     return svg(
-      '<rect width="400" height="260" fill="url(#tg5)"/>' +
+      '<rect width="400" height="260" fill="url(#tg5)"/>' + parachuteJump() +
       gull(30) +
       '<rect x="16" y="60" width="250" height="162" fill="#a0624a"/>' + bricks +
       tag("TORAE", 34, 130, 46, C1, -6) +

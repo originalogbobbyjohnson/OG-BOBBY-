@@ -126,11 +126,38 @@
       sky("g4", "#0d1022", "#2a1a3a"));
   }
 
+  /* backdrop for the corner: the Williamsburg Bridge far off over the Southside rooftops at night: the steel lattice towers,
+     the cables, the truss deck, a J train rolling across toward Manhattan, the skyline behind */
+  function willyB() {
+    const qb = (p0, c, p1, t) => [(1 - t) * (1 - t) * p0[0] + 2 * t * (1 - t) * c[0] + t * t * p1[0], (1 - t) * (1 - t) * p0[1] + 2 * t * (1 - t) * c[1] + t * t * p1[1]];
+    let s = '<style>@keyframes icSl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}@keyframes icSlL{from{transform:translateX(460px)}to{transform:translateX(-60px)}}@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}@keyframes icWv{0%,100%{transform:skewY(0)}50%{transform:skewY(6deg)}}@keyframes icGl{0%,100%{opacity:.12}50%{opacity:.3}}' +
+      '.icS{animation:icSl 7s linear infinite}.icS2{animation-delay:-3.5s}.icSs{animation-duration:16s}.icL{animation:icSlL 8s linear infinite}.icLs{animation-duration:15s}.icB{animation:icBl 1s steps(1) infinite}.icB2{animation-delay:-.5s}' +
+      '.icSw{animation:icSw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}.icSw2{animation-delay:-3.5s;animation-duration:9s}.icW{animation:icWv 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}.icG{animation:icGl 2.6s ease-in-out infinite}</style>' +
+      '<defs><clipPath id="icWbc"><rect x="0" y="0" width="234" height="60"/></clipPath></defs>';
+    [[0, 30, 20], [22, 22, 16], [40, 34, 22], [96, 26, 18], [116, 16, 12], [130, 30, 26], [214, 28, 22], [238, 36, 18]].forEach(b => { s += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (62 - b[1]) + '" fill="#262038"/>';
+      for (let y = b[1] + 4; y < 58; y += 6) for (let x = b[0] + 3; x < b[0] + b[2] - 2; x += 5) if ((x * 3 + y) % 4 === 0) s += '<rect x="' + x + '" y="' + y + '" width="2" height="2" fill="#ffd98a" opacity=".7"/>'; });
+    const P0 = [77, 10], C = [137, 40], P1 = [197, 10];
+    s += '<path d="M77 10Q137 40 197 10M77 10L0 34M197 10L236 40" fill="none" stroke="#b0656a" stroke-width="1.8"/>';
+    for (let t = 0.1; t < 0.95; t += 0.08) { const p = qb(P0, C, P1, t); s += '<path d="M' + p[0].toFixed(1) + ' ' + p[1].toFixed(1) + 'V40" stroke="#9a5a5e" stroke-width=".6"/>'; }
+    /* the truss deck */
+    s += '<rect x="0" y="40" width="232" height="7" fill="#6a3a40"/><path d="M232 40L255 58V64L232 47Z" fill="#6a3a40"/>';
+    for (let x = 0; x < 232; x += 8) s += '<path d="M' + x + ' 40L' + (x + 4) + ' 47L' + (x + 8) + ' 40" fill="none" stroke="#9a5a5e" stroke-width=".7"/>';
+    const tower = x => '<rect x="' + x + '" y="8" width="3" height="54" fill="#a65a5e"/><rect x="' + (x + 11) + '" y="8" width="3" height="54" fill="#a65a5e"/>' +
+      '<path d="M' + x + ' 10L' + (x + 14) + ' 24L' + x + ' 38L' + (x + 14) + ' 52M' + (x + 14) + ' 10L' + x + ' 24L' + (x + 14) + ' 38L' + x + ' 52M' + x + ' 9H' + (x + 14) + '" stroke="#a65a5e" stroke-width="1"/>';
+    s += tower(70) + tower(190);
+    /* the J train */
+    s += '<g clip-path="url(#icWbc)"><g class="icL icLs"><rect x="0" y="35" width="44" height="5" rx="1" fill="#c9ced6"/>';
+    for (let x = 3; x < 42; x += 6) s += '<rect x="' + x + '" y="36" width="3" height="2" fill="#fff6c2"/>';
+    s += '</g></g>';
+    for (let x = 6; x < 232; x += 20) s += '<circle class="icB' + (x % 40 ? " icB2" : "") + '" cx="' + x + '" cy="47" r=".9" fill="#ffe7a8"/>';
+    return s;
+  }
+
   /* 5. Maspeth Av and Morgan Av, by the Cooper Park Houses: green signs, the tag wall */
   function corner() {
     return svg(
       '<rect width="400" height="260" fill="url(#g5)"/>' + stars(16) +
-      '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>' +
+      '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>' + willyB() +
       (function () { let b = '<rect x="16" y="60" width="240" height="160" fill="#2e2a3a"/>'; for (let y = 62; y < 220; y += 12) for (let x = (y / 12) % 2 ? 16 : 26; x < 250; x += 30) b += '<rect x="' + x + '" y="' + y + '" width="28" height="10" fill="#3a3448"/>'; return b; })() +
       tag("JOELL", 30, 128, 50, LILAC, -7) + tag("ORTIZ", 70, 172, 40, GOLD, -4) + tag("YAOWA!", 40, 210, 26, "#f4f0e6", -2) +
       '<rect class="drip" x="64" y="130" width="3" height="16" fill="' + LILAC + '"/><rect class="drip" x="170" y="174" width="3" height="10" fill="' + GOLD + '" style="animation-delay:-1s"/>' +

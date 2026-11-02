@@ -69,8 +69,8 @@
       rect(0, 152, 400, 9, "#eab308") + rect(0, 161, 400, 99, "#5a5650") + '<path d="M0 161h400" stroke="#8a857a" stroke-width="2"/>' + (o.tags || ""), "");
   };
   /* 5. street corner: wall with tags, streetlight, two street blades */
-  const corner = (g, s1, s2, tags, accent, extra) => svg(
-    '<rect width="400" height="260" fill="url(#g5)"/>' + stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>' +
+  const corner = (g, s1, s2, tags, accent, extra, back) => svg(
+    '<rect width="400" height="260" fill="url(#g5)"/>' + (back !== undefined ? back : stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>') +
     brick(16, 60, 240, 160, "#4a2a24", "#5a3229") + rect(16, 56, 240, 6, "#2a1a16") + tags +
     '<rect class="drp" x="120" y="126" width="3" height="8" fill="' + accent + '"/><rect class="drp" x="186" y="114" width="3" height="8" fill="' + accent + '" style="animation-delay:-1s"/>' +
     rect(300, 56, 5, 164, "#1d2329") + '<path d="M302 58h26" stroke="#1d2329" stroke-width="5"/>' +
@@ -132,9 +132,29 @@
   }
 
   /* 5. Church Av and Flatbush Av, Flatbush */
+  /* backdrop for the corner: a block down Flatbush Av at night, the Kings Theatre's tall blade sign seen close from the side,
+     KINGS stacked in red, bulbs chasing down the edges, the marquee glowing below */
+  function kingsBlade() {
+    let s = '<style>@keyframes icSl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}@keyframes icSlL{from{transform:translateX(460px)}to{transform:translateX(-60px)}}@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}@keyframes icWv{0%,100%{transform:skewY(0)}50%{transform:skewY(6deg)}}@keyframes icGl{0%,100%{opacity:.12}50%{opacity:.3}}' +
+      '.icS{animation:icSl 7s linear infinite}.icS2{animation-delay:-3.5s}.icSs{animation-duration:16s}.icL{animation:icSlL 8s linear infinite}.icLs{animation-duration:15s}.icB{animation:icBl 1s steps(1) infinite}.icB2{animation-delay:-.5s}' +
+      '.icSw{animation:icSw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}.icSw2{animation-delay:-3.5s;animation-duration:9s}.icW{animation:icWv 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}.icG{animation:icGl 2.6s ease-in-out infinite}</style>' +
+      stars(16) + '<rect x="326" y="36" width="80" height="184" fill="#9a7a56"/><rect x="322" y="30" width="84" height="8" fill="#c9a77a"/>';
+    for (let y = 52; y < 160; y += 22) s += '<rect x="326" y="' + y + '" width="80" height="3" fill="#7a5c3e"/>';
+    [334, 392].forEach(x => { for (let y = 42; y < 150; y += 22) s += '<path d="M' + x + ' ' + (y + 16) + 'V' + (y + 6) + 'q4-6 8 0V' + (y + 16) + 'z" fill="#f2c26b" opacity=".75"/>'; });
+    /* the blade */
+    s += '<circle class="icG" cx="369" cy="80" r="46" fill="#ff4a3d"/>' +
+      '<rect x="352" y="6" width="34" height="150" rx="3" fill="#3a0d10" stroke="#e8b84a" stroke-width="2"/>';
+    for (let y = 12; y < 152; y += 7) s += '<circle class="icB' + (y % 14 ? " icB2" : "") + '" cx="356" cy="' + y + '" r="1.4" fill="#ffe7a8"/><circle class="icB' + (y % 14 ? "" : " icB2") + '" cx="382" cy="' + y + '" r="1.4" fill="#ffe7a8"/>';
+    "KINGS".split("").forEach((c, i) => s += '<text x="369" y="' + (38 + i * 26) + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="22" fill="#ff4a3d" stroke="#ff9a7a" stroke-width=".6">' + c + '</text>');
+    /* the marquee */
+    s += '<path d="M316 162h90v20h-90z" fill="#2a1a12"/><rect x="320" y="166" width="82" height="12" fill="#f3e6c8"/>';
+    for (let x = 318; x < 404; x += 6) s += '<circle class="icB' + (x % 12 ? " icB2" : "") + '" cx="' + x + '" cy="163" r="1.3" fill="#ffd34d"/><circle class="icB' + (x % 12 ? "" : " icB2") + '" cx="' + x + '" cy="181" r="1.3" fill="#ffd34d"/>';
+    return s;
+  }
+
   function block() {
     return corner(["#0d1022", "#2a3a4a"], "Church Av", "Flatbush Av",
-      tag("SPECIAL ED", 24, 126, 42, ICE, -7) + tag("THE MAGNIFICENT", 30, 156, 22, GOLD, -5) + tag("I GOT IT MADE", 34, 188, 26, GRN, -3) + tag("CROOKLYN", 90, 212, 20, "#f6efdc", -2), ICE);
+      tag("SPECIAL ED", 24, 126, 42, ICE, -7) + tag("THE MAGNIFICENT", 30, 156, 22, GOLD, -5) + tag("I GOT IT MADE", 34, 188, 26, GRN, -3) + tag("CROOKLYN", 90, 212, 20, "#f6efdc", -2), ICE, "", kingsBlade());
   }
 
   /* ---- redrawn landmark scenes (OG FAN 99 landmark pass): small shared helpers, prefixed L ---- */

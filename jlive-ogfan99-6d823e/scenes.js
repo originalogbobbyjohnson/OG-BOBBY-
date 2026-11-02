@@ -69,8 +69,8 @@
       rect(0, 152, 400, 9, "#eab308") + rect(0, 161, 400, 99, "#5a5650") + '<path d="M0 161h400" stroke="#8a857a" stroke-width="2"/>' + (o.tags || ""), "");
   };
   /* 5. street corner: wall with tags, streetlight, two street blades */
-  const corner = (g, s1, s2, tags, accent, extra) => svg(
-    '<rect width="400" height="260" fill="url(#g5)"/>' + stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>' +
+  const corner = (g, s1, s2, tags, accent, extra, back) => svg(
+    '<rect width="400" height="260" fill="url(#g5)"/>' + (back !== undefined ? back : stars(16) + '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>') +
     brick(16, 60, 240, 160, "#4a2a24", "#5a3229") + rect(16, 56, 240, 6, "#2a1a16") + tags +
     '<rect class="drp" x="120" y="126" width="3" height="8" fill="' + accent + '"/><rect class="drp" x="186" y="114" width="3" height="8" fill="' + accent + '" style="animation-delay:-1s"/>' +
     rect(300, 56, 5, 164, "#1d2329") + '<path d="M302 58h26" stroke="#1d2329" stroke-width="5"/>' +
@@ -141,9 +141,38 @@
   }
 
   /* 5. DeKalb Av and Flatbush Av Extension, Downtown Brooklyn */
+  /* backdrop for the corner: the Brooklyn tower of the Brooklyn Bridge looming over Flatbush Av Ext at night, floodlit granite,
+     the two pointed arches, the cable web fanning down toward the river, the flag on top */
+  function bbTower() {
+    const qb = (p0, c, p1, t) => [(1 - t) * (1 - t) * p0[0] + 2 * t * (1 - t) * c[0] + t * t * p1[0], (1 - t) * (1 - t) * p0[1] + 2 * t * (1 - t) * c[1] + t * t * p1[1]];
+    let s = '<style>@keyframes icSl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}@keyframes icSlL{from{transform:translateX(460px)}to{transform:translateX(-60px)}}@keyframes icBl{0%,49%{opacity:1}50%,100%{opacity:.2}}@keyframes icSw{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}@keyframes icWv{0%,100%{transform:skewY(0)}50%{transform:skewY(6deg)}}@keyframes icGl{0%,100%{opacity:.12}50%{opacity:.3}}' +
+      '.icS{animation:icSl 7s linear infinite}.icS2{animation-delay:-3.5s}.icSs{animation-duration:16s}.icL{animation:icSlL 8s linear infinite}.icLs{animation-duration:15s}.icB{animation:icBl 1s steps(1) infinite}.icB2{animation-delay:-.5s}' +
+      '.icSw{animation:icSw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}.icSw2{animation-delay:-3.5s;animation-duration:9s}.icW{animation:icWv 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}.icG{animation:icGl 2.6s ease-in-out infinite}</style>' +
+      stars(16) + '<defs><linearGradient id="icBBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eadbb6"/><stop offset="1" stop-color="#7d6e55"/></linearGradient></defs>' +
+      '<g class="icL icLs"><circle class="icB" cx="0" cy="34" r="1.6" fill="#ff5a4a"/><circle cx="6" cy="34" r="1" fill="#fff"/></g>';
+    /* cable web: the main cable sag, the vertical suspenders, the diagonal stays */
+    const P0 = [338, 34], C = [170, 60], P1 = [0, 44];
+    s += '<path d="M338 34Q170 60 0 44" fill="none" stroke="#dfe6ee" stroke-width="2.4"/>';
+    for (let t = 0.06; t < 1; t += 0.05) { const p = qb(P0, C, P1, t); s += '<path d="M' + p[0].toFixed(1) + ' ' + p[1].toFixed(1) + 'V60" stroke="#c9d2dc" stroke-width=".7" opacity=".7"/>'; }
+    [20, 70, 120, 170, 220, 262, 296].forEach(x => s += '<path d="M338 38L' + x + ' 60" stroke="#c9d2dc" stroke-width=".8" opacity=".75"/>');
+    /* the roadway coming in to the tower */
+    s += '<rect x="250" y="98" width="90" height="8" fill="#2c2620"/>';
+    /* the tower */
+    const arch = x => '<path d="M' + x + ' 104V58Q' + x + ' 40 ' + (x + 11) + ' 30Q' + (x + 22) + ' 40 ' + (x + 22) + ' 58V104Z" fill="#141a35"/>';
+    s += '<rect x="334" y="30" width="72" height="190" fill="url(#icBBg)"/><rect x="330" y="24" width="80" height="8" fill="#d9c9a2"/>' +
+      '<rect x="334" y="32" width="72" height="3" fill="#a8977a"/>' + arch(342) + arch(374) +
+      '<rect x="342" y="96" width="54" height="8" fill="#2c2620"/>';
+    for (let x = 344; x < 396; x += 8) s += '<circle class="icB' + (x % 16 ? " icB2" : "") + '" cx="' + x + '" cy="100" r="1.1" fill="#ffe7a8"/>';
+    for (let y = 120; y < 220; y += 14) s += '<path d="M334 ' + y + 'h72" stroke="#7d6e55" stroke-width="1" opacity=".6"/>';
+    /* the flag on top */
+    s += '<rect x="369" y="2" width="2" height="22" fill="#cfd6dd"/><g class="icW"><rect x="371" y="3" width="20" height="12" fill="#c8281e"/>' +
+      '<rect x="371" y="5.4" width="20" height="1.6" fill="#fff"/><rect x="371" y="8.6" width="20" height="1.6" fill="#fff"/><rect x="371" y="11.8" width="20" height="1.6" fill="#fff"/><rect x="371" y="3" width="8" height="6.5" fill="#1f3a8a"/></g>';
+    return s;
+  }
+
   function block() {
     return corner(["#0a0c22", "#2a3a5a"], "DeKalb Av", "Flatbush Av Ext",
-      tag("J-LIVE", 30, 128, 52, GOLD, -7) + tag("THE AUTHENTIC", 40, 158, 24, ORG, -5) + tag("ALL OF THE ABOVE", 26, 190, 22, BLUE, -3) + tag("BROOKLYN", 90, 212, 20, "#f6efdc", -2), GOLD);
+      tag("J-LIVE", 30, 128, 52, GOLD, -7) + tag("THE AUTHENTIC", 40, 158, 24, ORG, -5) + tag("ALL OF THE ABOVE", 26, 190, 22, BLUE, -3) + tag("BROOKLYN", 90, 212, 20, "#f6efdc", -2), GOLD, "", bbTower());
   }
 
   window.SCENES = { station1, tower, park, classroom, block };
