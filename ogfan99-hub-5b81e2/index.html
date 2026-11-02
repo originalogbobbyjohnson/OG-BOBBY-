@@ -360,7 +360,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .wrap.app .bhead .vtog { flex: none; gap: 3px; }
 .wrap.app .bhead .vtog button { white-space: nowrap; padding: 6px 7px; font-size: 10px; }
 @keyframes lncue { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
-.tiles > li.picked > .tile::after, .tiles.simple > li.picked .srow::after { content: "TAP AGAIN TO OPEN \25B6"; position: absolute; left: 50%; bottom: -9px; transform: translateX(-50%); white-space: nowrap; background: #f2c14e; color: #000; font: 900 9px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; padding: 4px 7px; border-radius: 99px; border: 1.5px solid #000; z-index: 3; }
+.openchip { position: absolute; left: 50%; bottom: -11px; transform: translateX(-50%); white-space: nowrap; background: #f2c14e; color: #000; font: 900 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .1em; padding: 6px 14px; border-radius: 99px; border: 2px solid #000; z-index: 3; box-shadow: 0 2px 0 #000; cursor: pointer; }
 .tiles.simple > li.picked .srow { position: relative; }
 .allnyc { position: absolute; right: 58px; top: 10px; z-index: 1000; background: #e8b84a; color: #000; border: 2px solid #000; border-radius: 999px; padding: 6px 12px; font: 900 11px/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; box-shadow: 0 2px 0 #000; cursor: pointer; }
 .allnyc[hidden] { display: none; }
@@ -1574,18 +1574,24 @@ window.OGX = (function () {
   }
   function mark() { raf = 0; if (!stops.length) return; const y = lw.scrollTop + 2; let f = stops[0][1];
     for (const [sy, li] of stops) { if (sy <= y) f = li; else break; }
-    items.forEach(li => { li.classList.toggle("focus", li === f); li.classList.remove("picked"); }); }
+    items.forEach(li => { li.classList.toggle("focus", li === f); li.classList.remove("picked"); }); list.querySelectorAll(".openchip").forEach(c => c.remove()); }
   lw.addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(mark); }, { passive: true });
-  /* a tap only lights an artist up (same gold ring as scrolling); tapping the lit one again, or a firm press, opens it */
-  let downAt = 0;
+  /* tap an artist: it lights up and the map zooms in. Tap it again: it turns off and the map pulls back to the whole borough.
+     To open: tap the gold ▶ OPEN tag, double-tap, or press and hold. */
+  let downAt = 0, lastLi = null, lastT = 0;
+  const chip = li => { list.querySelectorAll(".openchip").forEach(c => c.remove()); if (!li) return; const t = li.querySelector(".tile,.srow"); if (t) { const c = document.createElement("span"); c.className = "openchip"; c.dataset.open = "1"; c.innerHTML = "&#9654; OPEN"; t.appendChild(c); } };
+  const pick = li => { items.forEach(x => { x.classList.toggle("focus", x === li); x.classList.toggle("picked", x === li); }); chip(li); };
+  const unpick = () => { items.forEach(x => x.classList.remove("focus", "picked")); chip(null); list.dispatchEvent(new CustomEvent("ogunselect")); };
   list.addEventListener("pointerdown", () => { downAt = Date.now(); }, true);
   list.addEventListener("click", e => {
     const li = e.target.closest("li"); if (!li || !list.contains(li)) return;
-    const firm = downAt && Date.now() - downAt >= 450;
-    if (li.classList.contains("focus") || firm) { items.forEach(x => x.classList.remove("picked")); return; }
+    const now = Date.now(), firm = downAt && now - downAt >= 450, dbl = lastLi === li && now - lastT < 380;
+    lastLi = li; lastT = now;
+    if (e.target.closest("[data-open]") || firm || dbl) { chip(null); items.forEach(x => x.classList.remove("picked")); return; }   /* let it open */
     e.stopPropagation(); e.preventDefault();
-    items.forEach(x => { x.classList.toggle("focus", x === li); x.classList.toggle("picked", x === li); });
+    if (li.classList.contains("picked")) unpick(); else pick(li);
   }, true);
+  window.__lpick = pick;
   /* ▼ / ▲ step one artist at a time; AUTO walks the list until you touch it */
   /* used by the map: bring an artist's tile to the gold-ring spot */
   window.__lfocus = li => { layout(); const st = stops.find(x => x[1] === li); if (st) lw.scrollTo({ top: Math.max(0, st[0] - 2), behavior: "smooth" }); else items.forEach(x => x.classList.toggle("focus", x === li)); };
@@ -1674,6 +1680,8 @@ window.OGX = (function () {
   ["click"].forEach(ev => { $("boros").addEventListener(ev, e => { if (e.target.closest(".boro")) { mode = "list"; user = false; setTimeout(() => sync(false), 0); } }, true);
     $("sortPop").addEventListener(ev, e => { if (e.target.closest("button")) { mode = "list"; setTimeout(() => sync(true), 30); } }, true); });
   ["touchstart", "wheel", "pointerdown"].forEach(ev => lw.addEventListener(ev, () => { user = true; }, { passive: true }));
+  list.addEventListener("ogunselect", () => { clearTimeout(flyT); glow(-1); lastPin = -1; const m = window.__map, P = window.__pins; if (!m || !P) return;
+    const keep = listIdx(), pts = P.filter(c => keep.has(c.__i)).map(c => c.getLatLng()); if (pts.length) { m.stop(); m.flyToBounds(pts, { padding: [24, 24], maxZoom: 13, duration: .6 }); } });
   ["lnUp", "lnDn", "lnAuto"].forEach(id => $(id) && $(id).addEventListener("click", () => { user = true; }, true));
   new MutationObserver(() => { if (!user) return; const f = list.querySelector("li.focus [data-i]"); if (!f) return; const i = +f.dataset.i;
     clearTimeout(flyT); flyT = setTimeout(() => flyTo(i), 380); }).observe(list, { subtree: true, attributes: true, attributeFilter: ["class"] });
@@ -1684,7 +1692,7 @@ window.OGX = (function () {
     lastPin = i; user = false; glow(i);
     if (boroOf(a) !== boroTab || !listIdx().has(i)) { boroTab = boroOf(a); try { localStorage.setItem("ogfan99boro", boroTab); } catch (e) {} mode = "list"; drawList(); }
     setTimeout(() => { const b = list.querySelector('[data-i="' + i + '"]'); if (!b) return; const li = b.closest("li");
-      window.__lfocus && window.__lfocus(li); setTimeout(() => { li.classList.add("focus", "picked"); }, 450); }, 60);
+      window.__lfocus && window.__lfocus(li); setTimeout(() => { if (window.__lpick) window.__lpick(li); else li.classList.add("focus", "picked"); }, 450); }, 60);
     const m = window.__map; if (m && a.lat != null && m.getZoom() < 13) m.flyTo([a.lat, a.lng], 14, { duration: .6 });
   }
   const hook = () => { const P = window.__pins; if (!P || !P.length) return setTimeout(hook, 300);
@@ -1732,7 +1740,7 @@ window.OGX = (function () {
   mb.insertAdjacentElement("afterend", p);
   /* STEP 2 header: where you are + what to do */
   const c = document.createElement("div"); c.className = "crumb";
-  c.innerHTML = '<button type="button" id="crBack">&#9664; BOROUGHS</button><div><b id="crName"></b><small>STEP 2 OF 3 · TAP AN ARTIST · TAP AGAIN TO OPEN</small></div>';
+  c.innerHTML = '<button type="button" id="crBack">&#9664; BOROUGHS</button><div><b id="crName"></b><small>STEP 2 OF 3 · TAP AN ARTIST · TAP AGAIN TO UNSELECT · ▶ OPEN TO PLAY</small></div>';
   document.querySelector(".bhead").insertAdjacentElement("beforebegin", c);
   const fix = () => setTimeout(() => { try { window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 60);
   function setStep(n) { if (mb.classList.contains("big")) { const bb = mb.querySelector(".mapbig"); if (bb) bb.click(); }
