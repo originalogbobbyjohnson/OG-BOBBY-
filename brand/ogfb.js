@@ -59,6 +59,8 @@
   };
   window.OGFB = {
     social: social,
+    /* fans on the app = riders on the Riders Board (public); swap to a server-kept counter when it grows */
+    fanCount: function () { return db().then(function (d) { var c = d.collection("riders"); return c.count ? c.count().get().then(function (x) { return x.data().count; }) : c.get().then(function (q) { return q.size; }); }); },
     ready: function () { return !!CFG; },
     submitClaim: function (c) { return db().then(function (d) { return d.collection("claims").add({ artist: c.artist, name: c.name, role: c.role, ig: c.ig, email: c.email, phone: c.phone, note: c.note, t: now() }); }); },
     saveRider: function (id, name, pts, rank) { return db().then(function (d) { return d.collection("riders").doc(id).set({ name: name, pts: pts, rank: rank, t: now() }); }); },

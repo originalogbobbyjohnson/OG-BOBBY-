@@ -370,12 +370,37 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .mapbox.big .mapbig { top: calc(max(8px, env(safe-area-inset-top)) + 10px); right: 18px; background: #e8b84a; color: #000; border-color: #000; width: auto; padding: 0 12px; font-size: 12px; letter-spacing: .08em; }
 .mapbox.big .allnyc { top: calc(max(8px, env(safe-area-inset-top)) + 10px); right: 118px; }
 .mapbox.big .keybtn { left: 18px; bottom: calc(max(8px, env(safe-area-inset-bottom)) + 10px); }
+/* ---------- step-by-step board (Nov 1): STEP 1 pick a borough → STEP 2 pick an artist → STEP 3 press play ---------- */
+.wrap.app > .boros { display: none !important; }
+.wrap.app.step1 > .bhead, .wrap.app.step1 > .listwrap, .wrap.app.step1 > .crumb { display: none !important; }
+.wrap.app:not(.step1) > .step1p { display: none !important; }
+.wrap.app.step1 .mapbox { height: 16vh !important; }
+.step1p { flex: 1 1 auto; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding-bottom: 6px; }
+.step1p > * { flex: none; }
+.stepcap { text-align: center; display: grid; gap: 2px; }
+.stepcap small { font: 900 .62rem/1 Helvetica, Arial, sans-serif; letter-spacing: .18em; color: #e8b84a; }
+.stepcap b { font-family: var(--display); font-size: 1.35rem; letter-spacing: .08em; color: #fff; line-height: 1.05; }
+.meter { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.meter div { background: #000; border: 2px solid #2c3050; border-radius: 10px; padding: 6px 4px; text-align: center; display: grid; gap: 2px; }
+.meter b { font: 900 1.15rem/1 "Courier New", monospace; color: #ff8a1f; text-shadow: 0 0 8px rgba(255,138,31,.7); letter-spacing: .06em; }
+.meter small { font: 900 .56rem/1 Helvetica, Arial, sans-serif; letter-spacing: .16em; color: #fff; }
+.bgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.bgrid button { position: relative; border: 2px solid #000; border-top: 6px solid var(--bc, #fff); border-radius: 10px; background: #111; color: #fff; padding: 11px 6px 9px; font: 900 .9rem/1 Helvetica, Arial, sans-serif; letter-spacing: .04em; box-shadow: 0 3px 0 #000, 0 0 0 2px #3a3f48; cursor: pointer; display: grid; gap: 5px; justify-items: center; }
+.bgrid button small { font: 900 .64rem/1 Helvetica, Arial, sans-serif; color: #f2c14e; letter-spacing: .1em; }
+.bgrid button.wide { grid-column: 1 / -1; background: #1d2033; }
+.crumb { flex: none; display: grid; grid-template-columns: auto 1fr; gap: 8px; align-items: center; }
+.crumb button { border: 2px solid #e8b84a; border-radius: 10px; background: #1d2033; color: #e8b84a; font: 900 .7rem/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; padding: 8px 9px; cursor: pointer; white-space: nowrap; }
+.crumb div { min-width: 0; display: grid; gap: 2px; }
+.crumb div b { font-family: var(--display); font-size: 1.05rem; letter-spacing: .06em; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.crumb div small { font: 900 .58rem/1.2 Helvetica, Arial, sans-serif; letter-spacing: .12em; color: #e8b84a; }
+.step3 { margin: 6px 0 2px; background: #2a2410; border: 1.5px solid #e8b84a; border-radius: 10px; padding: 8px 10px; color: #fff; font: 700 .8rem/1.35 Helvetica, Arial, sans-serif; }
+.step3 b { color: #e8b84a; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <meta name="copyright" content="© 2026 OG Bobby · OG FAN 99. All rights reserved.">
 <script src="/brand/guard.js?v=13"></script>
-<script src="/brand/ogfb.js?v=6"></script>
+<script src="/brand/ogfb.js?v=7"></script>
 </head>
 <body>
 <div class="start" id="start" role="button" tabindex="0" aria-label="Tap to start">
@@ -1690,5 +1715,46 @@ window.OGX = (function () {
 })();
 </script>
 <script src="room.js?v=2"></script>
+<script>
+/* ---------- step-by-step board ---------- */
+(function () {
+  const app = document.querySelector(".wrap.app"), mb = $("mapbox");
+  const COL = { Brooklyn: "#d62828", Queens: "#7b3fbf", "the Bronx": "#00933c", Manhattan: "#0039a6", "Staten Island": "#ff6319", Westchester: "#fccc0a", "Long Island": "#8fd0ff", "New Jersey": "#e8b84a" };
+  const NAME = { "Staten Island": "STATEN IS.", "Long Island": "LONG IS.", "Westchester": "WESTCHESTER", "New Jersey": "NEW JERSEY", "the Bronx": "THE BRONX" };
+  const cnt = b => ARTISTS.filter(a => boroOf(a) === b).length;
+  /* STEP 1 panel */
+  const p = document.createElement("section"); p.className = "step1p";
+  p.innerHTML = '<div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR BOROUGH</b></div>' +
+    '<div class="meter"><div><b id="mtA">' + ARTISTS.length + '</b><small>ARTISTS ON THE APP</small></div><div><b id="mtF">—</b><small>FANS ON THE APP</small></div></div>' +
+    '<div class="bgrid">' + BOROS.map(b => '<button type="button" data-pb="' + b + '" style="--bc:' + (COL[b] || "#fff") + '">' + (NAME[b] || b.toUpperCase()) + '<small>' + cnt(b) + ' ARTISTS</small></button>').join("") +
+    '<button type="button" class="wide" data-pb="__regions">&#127758; OTHER REGIONS &amp; GENRES<small>LA · BAY AREA · CHICAGO · DOWN SOUTH</small></button>' +
+    '<button type="button" class="wide" data-pb="__find">&#128269; KNOW WHO YOU WANT? SEARCH ANY ARTIST</button></div>';
+  mb.insertAdjacentElement("afterend", p);
+  /* STEP 2 header: where you are + what to do */
+  const c = document.createElement("div"); c.className = "crumb";
+  c.innerHTML = '<button type="button" id="crBack">&#9664; BOROUGHS</button><div><b id="crName"></b><small>STEP 2 OF 3 · TAP AN ARTIST · TAP AGAIN TO OPEN</small></div>';
+  document.querySelector(".bhead").insertAdjacentElement("beforebegin", c);
+  const fix = () => setTimeout(() => { try { window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 60);
+  function setStep(n) { app.classList.toggle("step1", n === 1); try { sessionStorage.setItem("ogfan99step", String(n)); } catch (e) {}
+    if (n === 2) $("crName").textContent = (NAME[boroTab] || boroTab.toUpperCase()) + " · " + cnt(boroTab) + " ARTISTS"; fix(); }
+  p.onclick = e => { const b = e.target.closest("[data-pb]"); if (!b) return; const v = b.dataset.pb;
+    if (v === "__regions") return window.OGW && OGW.go("regions");
+    if (v === "__find") return $("findBtn2") && $("findBtn2").click();
+    const t = document.querySelector('.boro[data-b="' + v + '"]'); if (t) t.click(); setStep(2); };
+  $("crBack").onclick = () => { setStep(1); const all = $("allNyc"); if (all && !all.hidden) all.click(); };
+  /* anything that picks an artist from elsewhere (map pin, FIND) lands you on step 2 */
+  new MutationObserver(() => { if (app.classList.contains("step1") && document.querySelector("#list li.picked")) setStep(2); }).observe($("list"), { subtree: true, attributes: true, attributeFilter: ["class"] });
+  const _dl = drawList; drawList = function () { const r = _dl.apply(this, arguments); if (!app.classList.contains("step1")) $("crName").textContent = (NAME[boroTab] || boroTab.toUpperCase()) + " · " + cnt(boroTab) + " ARTISTS"; return r; };
+  /* first visit this session starts at STEP 1; coming back from a game keeps you on STEP 2 */
+  let st = "1"; try { st = sessionStorage.getItem("ogfan99step") || "1"; } catch (e) {}
+  setStep(st === "2" ? 2 : 1);
+  $("restartAll").addEventListener("click", () => { try { sessionStorage.removeItem("ogfan99step"); } catch (e) {} }, true);
+  /* STEP 3 on the artist card */
+  const _oc = openCard; openCard = function (i) { const r = _oc.apply(this, arguments); try { const cd = $("card"), a = ARTISTS[i];
+      if (cd && !cd.hidden && !cd.querySelector(".step3") && a && a.url) { const d = document.createElement("div"); d.className = "step3"; d.innerHTML = "<b>STEP 3 OF 3:</b> tap PLAY. In the game, tap the record to start the music, then answer the questions."; const x = cd.querySelector(".roombtn"); x ? cd.insertBefore(d, x) : cd.appendChild(d); } } catch (e) {} return r; };
+  /* fan count: grows from the online database once it's switched on */
+  try { if (window.OGFB && OGFB.ready() && OGFB.fanCount) OGFB.fanCount().then(n => { $("mtF").textContent = n; }).catch(() => {}); } catch (e) {}
+})();
+</script>
 </body>
 </html>
