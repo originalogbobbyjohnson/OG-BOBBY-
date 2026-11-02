@@ -85,46 +85,60 @@
     return under({ wall: "#e8e2d4", band: "#b5542a", band2: "#f2e6c8", name: "Parsons Blvd", bl: [["F", "#ff6319"]], sx: 90, sw: 220, tag: "DREAMVILLE", tc: CY, tx: 130 });
   }
 
-  /* 2. King Manor in Rufus King Park: the old white manor house, the big trees, leaves coming down */
+  /* 2. Jamaica High School up on Gothic Dr (1927): the Collegiate Gothic brick and limestone school on the hill, the square tower, leaves coming down */
   function manor() {
-    let win = ""; [130, 166, 222, 258].forEach(x => { win += '<rect x="' + x + '" y="112" width="16" height="22" fill="#2a3440"/><rect x="' + (x - 5) + '" y="112" width="4" height="22" fill="#2f5a3a"/><rect x="' + (x + 17) + '" y="112" width="4" height="22" fill="#2f5a3a"/>';
-      win += '<rect x="' + x + '" y="158" width="16" height="24" fill="#2a3440"/><rect x="' + (x - 5) + '" y="158" width="4" height="24" fill="#2f5a3a"/><rect x="' + (x + 17) + '" y="158" width="4" height="24" fill="#2f5a3a"/>'; });
+    let win = ""; [96, 124, 152, 238, 266, 294].forEach(x => { win += '<path d="M' + x + ' 150v-22l7-8 7 8v22z" fill="#2a3440"/><path d="M' + x + ' 186v-20l7-8 7 8v20z" fill="#2a3440"/>'; });
     let leaves = ""; [60, 140, 230, 300, 360].forEach((x, i) => leaves += '<path class="fall' + ["", " f2", " f3"][i % 3] + '" d="M' + x + ' 20q5-6 10 0-5 6-10 0z" fill="' + ["#e8743a", "#f2c14e", "#c0392b"][i % 3] + '"/>');
+    let cren = ""; for (let x = 172; x < 228; x += 10) cren += '<rect x="' + x + '" y="36" width="6" height="8" fill="#e6dcc4"/>';
     return svg('<rect width="400" height="260" fill="url(#g2)"/>' +
-      tree(40, 120, 1.6, "#3a7a3a") + tree(366, 110, 1.7, "#4a8a3a") +
-      /* gambrel roof, white clapboard, the columned porch */
-      '<path d="M104 100l14-34h164l14 34z" fill="#5a4a44"/><rect x="190" y="50" width="14" height="22" fill="#7a5a4a"/><rect x="110" y="100" width="180" height="96" fill="#f4f0e6"/>' +
-      [112, 124, 136, 148, 160, 172, 184].map(y => '<path d="M110 ' + y + 'h180" stroke="#d8d2c4" stroke-width="1"/>').join("") + win +
-      '<rect x="190" y="150" width="20" height="46" fill="#2f5a3a"/><path d="M176 146h48l-24-14z" fill="#f4f0e6" stroke="#bdb6a8"/><rect x="178" y="146" width="4" height="50" fill="#fff"/><rect x="218" y="146" width="4" height="50" fill="#fff"/>' +
-      '<rect x="0" y="196" width="400" height="64" fill="#5a8a3a"/><path d="M196 196l-20 64h48l-20-64z" fill="#c9b28a"/>' + leaves +
-      tag("KING PARK", 260, 240, 22, CY, -4),
-      sky("g2", "#8fc3ea", "#e6f2fa"));
+      '<path d="M0 206q200-40 400 0v54H0z" fill="#4f7f3a"/>' +
+      brick(80, 112, 240, 86, "#8a4a32", "#96553a") + '<rect x="80" y="108" width="240" height="6" fill="#e6dcc4"/><rect x="80" y="160" width="240" height="4" fill="#e6dcc4"/>' + win +
+      brick(170, 44, 60, 154, "#8a4a32", "#96553a") + cren + '<rect x="170" y="44" width="60" height="4" fill="#e6dcc4"/>' +
+      '<rect x="166" y="40" width="8" height="158" fill="#e6dcc4"/><rect x="226" y="40" width="8" height="158" fill="#e6dcc4"/>' +
+      '<path d="M190 100v-24l10-12 10 12v24z" fill="#2a3440"/><circle cx="200" cy="120" r="9" fill="#f4f0e6" stroke="#5a4a44" stroke-width="2"/><path d="M200 120v-6M200 120h4" stroke="#222" stroke-width="1.5"/>' +
+      '<path d="M186 198v-30l14-14 14 14v30z" fill="#3a2a22"/><path d="M182 168l18-18 18 18" stroke="#e6dcc4" stroke-width="3" fill="none"/>' +
+      '<rect x="252" y="8" width="2" height="36" fill="#59616e"/><path class="sway" d="M254 9h18l-3 6 3 6h-18z" fill="#c0392b" style="transform-origin:left center"/>' +
+      tree(40, 176, 1.5, "#c0682a") + tree(364, 172, 1.6, "#d08a2a") +
+      '<path d="M196 260q4-40 4-62" stroke="#c9b28a" stroke-width="16" fill="none"/>' + leaves +
+      txt("JAMAICA HIGH SCHOOL", 200, 226, 14, "#fff") + txt("GOTHIC DR · OFF HILLSIDE AV", 200, 240, 8, "#f6efdc") +
+      tag("BAS", 24, 252, 26, CY, -4),
+      sky("g2", "#8fc3ea", "#f4e2c4"));
   }
 
-  /* 3. The penthouse at night: the rooftop over Queens, string lights, a plane crossing toward JFK */
+  /* 3. Too High to Riot (2016): a Queens rooftop at night, purple smoke curling up, the big Dreamville moon */
   function penthouse() {
-    let lights = ""; for (let i = 0; i < 16; i++) lights += '<circle class="blk' + ["", " b2", " b3", " b4"][i % 4] + '" cx="' + (20 + i * 24) + '" cy="' + (60 + Math.sin(i / 2.5) * 10) + '" r="3.5" fill="' + [GOLD, CY, PINK][i % 3] + '"/>';
-    let city = ""; [[0, 120, "#1d2a44"], [50, 100, "#24304e"], [110, 130, "#1d2a44"], [170, 90, "#2a3658"], [240, 116, "#1d2a44"], [300, 96, "#24304e"], [350, 126, "#1d2a44"]].forEach(b => city += bldg(b[0], b[1], 52, 200 - b[1], b[2], "#ffe6a8"));
-    return svg('<rect width="400" height="260" fill="url(#g3)"/>' + stars(30) + '<circle cx="330" cy="40" r="14" fill="#fff3c4"/>' +
-      '<g class="fly"><path d="M40 60l30-6q6 0 4 4l-30 6z" fill="#e9ecef"/><circle class="blk" cx="42" cy="62" r="2" fill="#ff4d4d"/></g>' + city +
-      '<path d="M0 60q100 26 200 0t200 0" stroke="#59616e" stroke-width="1" fill="none"/>' + lights +
-      /* rooftop deck, glass rail, two chairs */
-      '<rect x="0" y="196" width="400" height="64" fill="#3a2e2a"/><path d="M0 204h400M0 220h400M0 236h400" stroke="#2a201c" stroke-width="2"/><rect x="0" y="178" width="400" height="18" fill="' + CY + '" opacity=".14"/><path d="M0 178h400" stroke="#cfd6de" stroke-width="2"/>' +
-      '<path d="M60 230v-26h30v26M60 214h30" stroke="#d8d2c4" stroke-width="4" fill="none"/><path d="M300 230v-26h30v26M300 214h30" stroke="#d8d2c4" stroke-width="4" fill="none"/>' +
-      tag("PENTHOUSE", 130, 248, 28, GOLD, -4),
-      sky("g3", "#070b20", "#2a2a5a"));
+    let city = ""; [[0, 132, "#1d1a3a"], [50, 112, "#241f46"], [110, 138, "#1d1a3a"], [170, 104, "#2a2450"], [240, 128, "#1d1a3a"], [300, 110, "#241f46"], [350, 136, "#1d1a3a"]].forEach(b => city += bldg(b[0], b[1], 52, 200 - b[1], b[2], "#c9a8ff"));
+    const puff = (x, y, r, c) => '<circle class="rise ' + c + '" cx="' + x + '" cy="' + y + '" r="' + r + '" fill="#a64dff" opacity=".45"/>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' + stars(26) +
+      '<circle class="pls" cx="200" cy="70" r="54" fill="#d9c2ff" opacity=".25"/><circle cx="200" cy="70" r="42" fill="#efe6ff"/><circle cx="186" cy="60" r="7" fill="#d6c8f0"/><circle cx="214" cy="82" r="5" fill="#d6c8f0"/>' +
+      txt("DREAMVILLE", 200, 75, 11, "#5a3a9a") + city +
+      /* water tower and the roof edge */
+      '<rect x="290" y="150" width="30" height="30" fill="#4a3a5a"/><path d="M286 150l19-14 19 14z" fill="#3a2a4a"/><path d="M292 180l-4 16M318 180l4 16" stroke="#3a2a4a" stroke-width="3"/>' +
+      '<rect x="0" y="196" width="400" height="64" fill="#2a2236"/><rect x="0" y="192" width="400" height="6" fill="#3e3450"/>' +
+      puff(110, 186, 14, "") + puff(126, 180, 18, "r2") + puff(96, 176, 12, "r3") + puff(260, 188, 16, "r2") + puff(240, 182, 12, "") +
+      '<rect x="98" y="196" width="40" height="14" rx="3" fill="#14181d"/><circle class="pop" cx="118" cy="203" r="4" fill="' + GOLD + '"/>' +
+      txt("TOO HIGH TO RIOT", 200, 228, 18, "#efe6ff") + txt("2016 · QUEENS ROOFTOP", 200, 244, 9, PINK) +
+      tag("BAS", 24, 254, 26, CY, -4),
+      sky("g3", "#0a0618", "#3a1a5a"));
   }
 
-  /* 4. The festival stage: lights sweeping, the crowd jumping */
+  /* 4. Dreamville Festival at Dorothea Dix Park, Raleigh: the stage on the big lawn, the downtown towers behind, the crowd jumping */
   function festival() {
-    let crowd = ""; for (let i = 0; i < 22; i++) crowd += '<g class="hop' + (i % 2 ? " h2" : "") + '"><circle cx="' + (10 + i * 18) + '" cy="' + (214 + (i % 3) * 4) + '" r="8" fill="#14181d"/><path d="M' + (4 + i * 18) + ' ' + (206 + (i % 3) * 4) + 'l-4-16M' + (16 + i * 18) + ' ' + (206 + (i % 3) * 4) + 'l4-16" stroke="#14181d" stroke-width="3"/></g>';
-    return svg('<rect width="400" height="260" fill="#0a0814"/>' + stars(14) +
-      '<g opacity=".25"><path class="pls" d="M80 30l-60 200h60z" fill="' + CY + '"/><path class="pls p2" d="M320 30l60 200h-60z" fill="' + PINK + '"/></g>' +
-      '<rect x="40" y="30" width="320" height="10" fill="#2b2b30"/><rect x="40" y="30" width="8" height="150" fill="#2b2b30"/><rect x="352" y="30" width="8" height="150" fill="#2b2b30"/>' +
-      [70, 120, 170, 230, 280, 330].map((x, i) => '<circle class="blk' + ["", " b2", " b3"][i % 3] + '" cx="' + x + '" cy="46" r="6" fill="' + [GOLD, CY, PINK][i % 3] + '"/>').join("") +
-      '<rect x="110" y="60" width="180" height="80" fill="#121a2c" stroke="' + CY + '" stroke-width="2"/>' + txt("BAS", 200, 112, 40, CY) + '<circle class="pls" cx="200" cy="100" r="60" fill="' + CY + '" opacity=".08"/>' +
-      '<rect x="40" y="170" width="320" height="16" fill="#2b2b30"/>' + crowd +
-      '<rect x="0" y="230" width="400" height="30" fill="#14181d"/>' + tag("MILKY WAY", 140, 254, 22, GOLD, -3), "");
+    let crowd = ""; for (let i = 0; i < 22; i++) crowd += '<g class="hop' + (i % 2 ? " h2" : "") + '"><circle cx="' + (10 + i * 18) + '" cy="' + (214 + (i % 3) * 4) + '" r="8" fill="#14181d"/><path d="M' + (4 + i * 18) + ' ' + (206 + (i % 3) * 4) + 'l-4-12M' + (16 + i * 18) + ' ' + (206 + (i % 3) * 4) + 'l4-12" stroke="#14181d" stroke-width="3"/></g>';
+    /* Raleigh skyline: the PNC tower with its stepped crown, the Wells Fargo tower, the rest */
+    const sk = '<g fill="#3a3a5e">' + '<rect x="70" y="70" width="28" height="80"/><rect x="100" y="88" width="22" height="62"/><rect x="250" y="80" width="26" height="70"/><rect x="280" y="96" width="30" height="54"/>' +
+      '<rect x="150" y="54" width="30" height="96"/><path d="M150 54l15-14 15 14z"/><rect x="161" y="22" width="8" height="20"/>' +
+      '<rect x="204" y="64" width="34" height="86"/><rect x="210" y="56" width="22" height="10"/></g>' +
+      '<circle class="blk" cx="165" cy="20" r="2.5" fill="#ff4d4d"/>';
+    return svg('<rect width="400" height="260" fill="url(#g4)"/>' + '<circle cx="330" cy="58" r="16" fill="#ffd9a0"/>' + sk +
+      '<path d="M0 150q200-30 400 0v110H0z" fill="#4f8a3a"/>' + tree(30, 140, 1.4, "#2f6a2f") + tree(372, 138, 1.5, "#2f6a2f") +
+      '<rect x="110" y="104" width="180" height="8" fill="#2b2b30"/><rect x="110" y="104" width="6" height="74" fill="#2b2b30"/><rect x="284" y="104" width="6" height="74" fill="#2b2b30"/>' +
+      '<rect x="122" y="116" width="156" height="40" fill="#121a2c" stroke="' + CY + '" stroke-width="2"/>' + txt("DREAMVILLE FEST", 200, 134, 13, CY) + txt("BAS", 200, 150, 13, GOLD) +
+      [130, 170, 230, 270].map((x, i) => '<circle class="blk' + ["", " b2", " b3"][i % 3] + '" cx="' + x + '" cy="110" r="3" fill="' + [GOLD, CY, PINK][i % 3] + '"/>').join("") +
+      '<rect x="110" y="170" width="180" height="12" fill="#2b2b30"/>' + crowd +
+      '<rect x="0" y="230" width="400" height="30" fill="#2f5a2a"/>' + txt("DOROTHEA DIX PARK · RALEIGH, NC", 200, 250, 11, "#fff") +
+      tag("BAS", 18, 40, 26, CY, -5),
+      sky("g4", "#f4a76a", "#f6d6a0"));
   }
 
   /* 5. Hillside Av and Parsons Blvd */

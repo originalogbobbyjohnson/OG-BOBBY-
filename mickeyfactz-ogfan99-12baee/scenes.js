@@ -257,6 +257,61 @@ function LIB(P) {
   S.glenview = () => svg('<rect width="400" height="260" fill="url(#g3)"/>' + palisades(150) + water(160, "#4a7aa0") + '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' +
     '<rect x="110" y="90" width="150" height="120" fill="#8a7e6a"/><path d="M100 90h170l-30-30h-110z" fill="#3a3a44"/><rect x="230" y="40" width="44" height="170" fill="#9a8e7a"/><path d="M224 40h56l-28-30z" fill="#3a3a44"/>' +
     wins(124, 104, 4, 2, 32, 46, 16, 28, "#ffe6a8") + wins(242, 56, 1, 3, 0, 40, 20, 26, "#ffe6a8") + '<g class="slideL"><path d="M0 178h40l-6 6H6z" fill="#fff"/><path d="M18 178v-20l12 18z" fill="#fff"/></g>' + tag("GLENVIEW", 20, 246, 22, A, -3), sky("g3", "#ff9a6a", "#8fc3ea"));
+  /* ---------- Mickey Factz: Burnside and up the 4 ---------- */
+  /* University Heights Bridge (1908): the steel swing bridge over the Harlem River at W 207th / Fordham Rd, the little control house up top, cars crossing */
+  S.uhBridge = () => {
+    let truss = ""; for (let x = 70; x < 330; x += 20) truss += '<path d="M' + x + ' 92L' + (x + 20) + ' 150M' + (x + 20) + ' 92L' + x + ' 150M' + x + ' 92V150" stroke="#6a7a82" stroke-width="2"/>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      /* Bronx bluff on the right, Inwood on the left */
+      '<path d="M260 150l20-50 40-20 80-10v80z" fill="#5a6a4a"/>' + [[290, 52], [330, 40], [362, 48]].map(b => '<rect x="' + b[0] + '" y="' + b[1] + '" width="30" height="' + (90 - b[1]) + '" fill="#9a6a4a"/>' + wins(b[0] + 4, b[1] + 6, 2, 3, 12, 12, 7, 6, "#ffe6a8", .7)).join("") +
+      '<path d="M0 150V96l60-6 20 60z" fill="#4a6a3a"/>' + [[6, 60], [36, 70]].map(b => '<rect x="' + b[0] + '" y="' + b[1] + '" width="26" height="' + (96 - b[1]) + '" fill="#8a5a44"/>').join("") +
+      water(150, "#3b6a8a") +
+      /* piers */
+      '<rect x="50" y="150" width="22" height="40" fill="#8a8478"/><rect x="186" y="150" width="28" height="44" fill="#8a8478"/><rect x="328" y="150" width="22" height="40" fill="#8a8478"/>' +
+      /* deck + swing span truss */
+      '<rect x="0" y="146" width="400" height="8" fill="#5a646c"/><rect x="0" y="118" width="70" height="4" fill="#6a7a82"/><rect x="330" y="118" width="70" height="4" fill="#6a7a82"/>' +
+      '<path d="M70 150V92h260v58" fill="none" stroke="#6a7a82" stroke-width="4"/>' + truss +
+      '<rect x="184" y="70" width="32" height="22" fill="#d8d2c0"/><path d="M180 70h40l-20-12z" fill="#7a4a3a"/><rect x="194" y="76" width="12" height="8" fill="#ffe6a8"/>' +
+      '<g transform="translate(0 49) scale(.7)">' + car(0, 110, A) + car(0, 110, C, "slideL") + '</g>' +
+      '<g class="slide" style="animation-duration:22s"><path d="M0 200h60l-8 10H8z" fill="#c8c4b8"/><rect x="14" y="190" width="26" height="10" fill="#e8e4d8"/></g>' +
+      txt("UNIVERSITY HEIGHTS BRIDGE · 1908", 200, 26, 13, "#1a1a22", ' letter-spacing="1"') + txt("W 207 ST ⇄ W FORDHAM RD", 200, 44, 11, "#2a3a4a"),
+      sky("g3", "#9fcff2", "#f2e2c8"));
+  };
+  /* St. James Park and St. James Church at Jerome Av and E 191st: the 1860s stone Episcopal church behind the courts, a ball bouncing */
+  S.stJames = () => {
+    let stone = ""; for (let y = 76; y < 176; y += 9) for (let x = (y / 9) % 2 ? 136 : 128; x < 284; x += 18) stone += '<rect x="' + x + '" y="' + y + '" width="15" height="7" rx="1" fill="' + ((x + y) % 3 ? "#9a9488" : "#8a8478") + '"/>';
+    let fence = ""; for (let x = 0; x < 400; x += 10) fence += '<path d="M' + x + ' 170l10 10M' + (x + 10) + ' 170l-10 10M' + x + ' 180l10 10M' + (x + 10) + ' 180l-10 10" stroke="#8a9098" stroke-width="1"/>';
+    const arch = (x, y) => '<path d="M' + x + ' ' + (y + 40) + 'V' + (y + 10) + 'Q' + (x + 9) + ' ' + (y - 6) + ' ' + (x + 18) + ' ' + (y + 10) + 'V' + (y + 40) + 'z" fill="#3a3a52" stroke="#d8d2c0" stroke-width="2"/>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      tree(40, 110, 36) + tree(370, 104, 34) +
+      '<path d="M120 78L210 22 300 78z" fill="#4a4e58"/>' + '<rect x="128" y="76" width="172" height="100" fill="#a49e90"/>' + stone +
+      arch(150, 104) + arch(196, 104) + arch(250, 104) +
+      /* the squat corner tower */
+      '<rect x="76" y="40" width="54" height="136" fill="#9a9488"/>' + [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map(i => '<path d="M76 ' + (48 + i * 9) + 'h54" stroke="#8a8478" stroke-width="2"/>').join("") +
+      [0, 1, 2, 3].map(i => '<rect x="' + (74 + i * 15) + '" y="30" width="10" height="12" fill="#9a9488"/>').join("") + arch(94, 58) +
+      fence + '<rect x="0" y="190" width="400" height="70" fill="#2f6a8a"/><path d="M0 226h400M200 190v70" stroke="#fff" stroke-width="2"/><ellipse cx="200" cy="226" rx="30" ry="10" stroke="#fff" stroke-width="2" fill="none"/>' +
+      '<g class="bnc"><circle cx="300" cy="236" r="8" fill="#e86a2a"/><path d="M292 236h16M300 228v16" stroke="#5a2a0a" stroke-width="1"/></g>' +
+      tag("FACTZ", 30, 252, 22, A, -4) + txt("ST. JAMES PARK · JEROME AV & E 191 ST", 200, 16, 12, "#1a1a22"),
+      sky("g3", "#9fcff2", "#f2e2c8"));
+  };
+  /* Jerome Av auto row under the 4 el, Burnside to Tremont: tire shops, body shops, hand-painted signs in the el's striped shadow, the train going over */
+  S.jeromeAuto = () => {
+    const shop = (x, w, col, sg, sc) => '<rect x="' + x + '" y="104" width="' + w + '" height="132" fill="' + col + '"/><rect x="' + (x + 4) + '" y="112" width="' + (w - 8) + '" height="26" fill="' + sc[0] + '"/>' + txt(sg, x + w / 2, 130, 12, sc[1]) +
+      '<rect x="' + (x + 8) + '" y="150" width="' + (w - 16) + '" height="86" fill="#1a1a1e"/>' + [0, 1, 2, 3, 4, 5, 6].map(i => '<path d="M' + (x + 8) + ' ' + (156 + i * 12) + 'h' + (w - 16) + '" stroke="#3a3a40" stroke-width="2"/>').join("");
+    const tire = (x, y) => '<circle cx="' + x + '" cy="' + y + '" r="10" fill="#141414"/><circle cx="' + x + '" cy="' + y + '" r="4" fill="#777"/>';
+    let ties = ""; for (let x = 0; x < 400; x += 16) ties += '<rect x="' + x + '" y="62" width="6" height="8" fill="#2a3a2a"/>';
+    let shadow = ""; for (let x = 0; x < 400; x += 26) shadow += '<rect x="' + x + '" y="86" width="12" height="150" fill="#000" opacity=".12"/>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      shop(0, 104, "#c8b48a", "TIRES", ["#ffd34d", "#111"]) + shop(106, 96, "#9a5a40", "BODY SHOP", ["#fff", "#c8102e"]) + shop(204, 96, "#5a6a7a", "AUTO GLASS", ["#5ad1e8", "#111"]) + shop(302, 98, "#a87a4a", "MUFFLERS", ["#111", "#ffd34d"]) +
+      tire(20, 226) + tire(42, 226) + tire(31, 208) + tire(86, 226) +
+      shadow +
+      /* the el structure */
+      '<rect x="0" y="70" width="400" height="16" fill="#3f5a44"/>' + ties + [100, 199, 297].map(x => '<rect x="' + x + '" y="86" width="8" height="150" fill="#3f5a44"/>').join("") +
+      '<g class="slideL"><rect x="0" y="22" width="300" height="40" rx="6" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' + [14, 60, 106, 152, 198, 244].map(x => '<rect x="' + x + '" y="30" width="30" height="14" rx="2" fill="#1b2430"/>').join("") + bullet(282, 50, "4", "#00933c", 8) + '</g>' +
+      street(236, false) + car(0, 230, B) +
+      tag("FACTZ", 14, 254, 22, A, -3) + txt("JEROME AV · BURNSIDE TO TREMONT", 270, 252, 10, "#f6efdc"),
+      sky("g3", "#9fcff2", "#f2e2c8"));
+  };
   S.corner = corner; S.tag = tag;
   return S;
 }
@@ -264,9 +319,9 @@ function LIB(P) {
   const P = {"c1":"#ffd34d","c2":"#5ad1e8","c3":"#ff4f6a"}, L = LIB(P);
   window.SCENES = {
     station: () => L.stEl("Burnside Av", [["4","#00933c"]], "FACTZ"),
-    library: () => L.gouldLib(),
-    river: () => L.clemente(),
-    rocket: () => L.rocketRoof("ROCKETS"),
+    library: () => L.uhBridge(),
+    river: () => L.stJames(),
+    rocket: () => L.jeromeAuto(),
     block: () => L.corner(["#0d1022", "#2a3a4a"], "Burnside Av", "Jerome Av", L.tag("MICKEY FACTZ", 26, 124, 28, P.c1, -7) + L.tag("YAOWA", 40, 156, 22, P.c2, -5) + L.tag("FACTZ", 30, 188, 24, P.c3, -3) + L.tag("BRONX", 120, 212, 20, "#f6efdc", -2))
   };
 })();

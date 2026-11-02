@@ -113,17 +113,22 @@
       sky("g3", "#8fc3ea", "#f6e2b0"));
   }
 
-  /* 4. Ferry St in the Ironbound: bakery windows, bunting over the street, espresso on the tables */
+  /* 4. The Dock Bridge over the Passaic by Newark Penn: the steel lift towers and the truss the trains cross, the wrong side of the tracks right by his corner */
   function ironbound() {
-    let bunt = ""; for (let i = 0; i < 20; i++) bunt += '<path class="sway' + (i % 2 ? " sw2" : "") + '" d="M' + (i * 20) + ' ' + (40 + Math.sin(i / 3) * 6) + 'l10 14 10-14z" fill="' + ["#c0392b", "#2f8f4a", GOLD][i % 3] + '"/>';
-    const shop = (x, col, awn, t) => '<rect x="' + x + '" y="60" width="130" height="150" fill="' + col + '"/>' + [x + 14, x + 52, x + 90].map(w => '<rect x="' + w + '" y="76" width="26" height="30" fill="#cfe6ff"/>').join("") +
-      '<path d="M' + x + ' 124h130l-8 16H' + (x + 8) + 'z" fill="' + awn + '"/>' + txt(t, x + 65, 136, 11, "#fff") + '<rect class="flk" x="' + (x + 10) + '" y="146" width="110" height="50" fill="#ffe6a8" opacity=".85"/>';
-    return svg('<rect width="400" height="260" fill="url(#g4)"/>' +
-      shop(0, "#e8d8b8", "#c0392b", "PADARIA") + shop(135, "#b5654a", "#2f8f4a", "CAFE") + shop(270, "#d8c4a0", "#2a5a8a", "PASTELARIA") +
-      '<path d="M0 40q100 16 200 0t200 0" stroke="#59616e" stroke-width="1.5" fill="none"/>' + bunt +
-      '<rect x="0" y="210" width="400" height="50" fill="#9a948a"/>' +
-      [80, 300].map(x => '<ellipse cx="' + x + '" cy="214" rx="26" ry="5" fill="#f4f0e6"/><rect x="' + (x - 2) + '" y="214" width="4" height="30" fill="#59616e"/><rect x="' + (x - 8) + '" y="204" width="12" height="9" rx="2" fill="#fff"/><path class="rise" d="M' + (x - 2) + ' 200q3-6 0-10" stroke="#e8e0d0" stroke-width="2" fill="none"/>').join("") +
-      tag("IRONBOUND", 130, 252, 26, ORG, -3),
+    const tower = x => { let s = '<rect x="' + (x - 12) + '" y="40" width="4" height="120" fill="#4a5a6a"/><rect x="' + (x + 8) + '" y="40" width="4" height="120" fill="#4a5a6a"/>';
+      for (let y = 44; y < 156; y += 16) s += '<path d="M' + (x - 10) + ' ' + y + 'l20 16M' + (x + 10) + ' ' + y + 'l-20 16" stroke="#4a5a6a" stroke-width="1.5"/>';
+      return s + '<rect x="' + (x - 16) + '" y="34" width="32" height="8" fill="#3a4a5a"/><g class="spin slow"><circle cx="' + x + '" cy="30" r="8" fill="none" stroke="#3a4a5a" stroke-width="3"/><path d="M' + (x - 8) + ' 30h16M' + x + ' 22v16" stroke="#3a4a5a" stroke-width="2"/></g>'; };
+    let truss = ""; for (let x = 110; x < 290; x += 18) truss += '<path d="M' + x + ' 150l9-30 9 30" stroke="#5a6a7a" stroke-width="2.5" fill="none"/>';
+    let city = ""; [[0, 60, 40], [44, 80, 36], [300, 66, 44], [348, 52, 52]].forEach(b => city += bldg(b[0], b[1], b[2], 150 - b[1], "#6a5a5a", "#ffe6a8"));
+    let win = ""; for (let x = 16; x < 220; x += 34) win += '<rect x="' + x + '" y="126" width="22" height="10" rx="2" fill="#ffe9b0" opacity=".85"/>';
+    return svg('<rect width="400" height="260" fill="url(#g4)"/>' + city +
+      tower(110) + tower(290) + '<path d="M110 120h180" stroke="#5a6a7a" stroke-width="4"/>' + truss + '<rect x="0" y="150" width="400" height="8" fill="#3a4a5a"/>' +
+      '<g class="slide" style="animation-duration:10s"><rect x="0" y="120" width="230" height="30" rx="5" fill="#c9ced6" stroke="#6b7280" stroke-width="1.5"/><rect x="0" y="140" width="230" height="4" fill="#1b3d8f"/>' + win + '</g>' +
+      /* piers and the river */
+      '<rect x="0" y="158" width="400" height="102" fill="#4a6a7a"/>' + [104, 284].map(x => '<rect x="' + x + '" y="158" width="12" height="30" fill="#7a7468"/>').join("") +
+      '<path class="wave" d="M20 196h50M150 210h60M270 194h50M60 232h70M300 236h60" stroke="#bfe0f6" stroke-width="2" opacity=".6"/>' +
+      txt("DOCK BRIDGE", 200, 18, 14, "#14202c") + txt("PASSAIC RIVER · BY NEWARK PENN", 200, 30, 7.5, "#14202c") +
+      tag("WRONG SIDE", 20, 248, 28, ORG, -4) + tag("ARTIFACTS", 250, 250, 22, CY, -3),
       sky("g4", "#7ec0ee", "#f8e7c0"));
   }
 

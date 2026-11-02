@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "block",
    "t": "WELCOME TO QUEENSBRIDGE",
-   "x": "21 St and 41 Av, by the Queensbridge Houses. This is Craig G's game.",
+   "x": "Vernon Blvd and 41 Av, on the river side of the Queensbridge Houses. This is Craig G's game.",
    "sfx": "spray"
   }
  ],

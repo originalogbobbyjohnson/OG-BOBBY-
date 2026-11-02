@@ -80,40 +80,77 @@
       (o.extra || "") + tag(o.tag, o.tx || 230, 254, 24, o.tc, -5), sky("g1", o.g[0], o.g[1]));
   const PINK = "#ff6fb5", CY = "#38e8ff", GOLD = "#f2c14e";
 
-  /* 1. Far Rockaway-Mott Av: the A rolling into the end of the line, the ocean beyond */
+  /* 1. Far Rockaway–Mott Av, the end of the A, looking south off the concrete platform: the Wavecrest towers by Beach 25 St with the ocean showing between them */
   function station() {
-    let back = '<rect x="0" y="100" width="400" height="20" fill="#3a8ac0"/>';
-    [[0, 120, "#c9b28a"], [70, 128, "#9ab0c4"], [270, 124, "#d8c4a0"], [330, 116, "#b5654a"]].forEach(b => back += bldg(b[0], b[1], 64, 116, b[2], "#ffe6a8"));
-    return elev({ g: ["#7ec0ee", "#f8e7c0"], back: back, band: "#0039a6", bl: [["A", "#0039a6"]], name: "Far Rockaway–Mott Av", size: 14, sx: 70, sw: 260, tag: "ROCKAWAY", tc: PINK, deck: "#8a8478" });
+    const { svg, sky, tag, T, bullet, wins, cloud } = LM1;
+    const tower = (x, h) => '<rect x="' + x + '" y="' + (150 - h) + '" width="40" height="' + h + '" fill="#c9b9a6"/>' + wins(x + 5, 156 - h, 4, Math.floor((h - 12) / 12), 9, 12, 5, 6, "#5a5048", "#ffe6a8");
+    return svg(
+      '<rect width="400" height="260" fill="url(#mc1)"/>' + cloud("lm-drift", 0, 26, 1) +
+      /* the ocean glimpsed between the Wavecrest towers */
+      '<rect x="0" y="110" width="400" height="40" fill="#2f86b5"/><g class="lm-rip"><path d="M10 120h40M130 126h50M250 118h40M330 128h50" stroke="#dff3ff" stroke-width="2" opacity=".7"/></g>' +
+      tower(30, 92) + tower(90, 110) + tower(232, 100) + tower(300, 120) +
+      LM1.plaque(130, 6, 140, "WAVECREST", "BEACH 25 ST \u2192", "#2a1430", "#ff6fb5") +
+      /* the concrete viaduct + bumper at the end of the line */
+      '<rect x="0" y="150" width="400" height="14" fill="#b8b2a6"/><rect x="0" y="164" width="400" height="6" fill="#8e887c"/>' +
+      '<g class="anim-train">' + LM1.subCar(-30, 92, 290, "#0039a6", bullet(232, 132, "A", "#0039a6", false, 9)) + '</g>' +
+      '<rect x="296" y="130" width="30" height="22" fill="#e8b84a"/><path d="M296 130l30 22M326 130l-30 22" stroke="#111" stroke-width="3"/>' +
+      /* platform and the black sign */
+      '<rect x="0" y="170" width="400" height="8" fill="#eab308"/><rect x="0" y="178" width="400" height="82" fill="#9a958b"/>' +
+      '<rect x="60" y="214" width="5" height="30" fill="#3a3a3a"/><rect x="250" y="214" width="5" height="30" fill="#3a3a3a"/>' +
+      '<rect x="16" y="186" width="282" height="30" rx="3" fill="#111"/><rect x="16" y="186" width="282" height="3" fill="#fff"/>' +
+      T(26, 208, "Far Rockaway\u2013Mott Av", 16, "#fff", { a: "start", f: "Helvetica, Arial, sans-serif", w: 700 }) + bullet(278, 201, "A", "#0039a6", false, 10) +
+      '<g class="lm-bob"><rect x="318" y="190" width="56" height="28" rx="4" fill="#222"/><circle cx="332" cy="204" r="9" fill="#555"/><circle cx="360" cy="204" r="9" fill="#555"/><circle cx="332" cy="204" r="4" fill="#ff6fb5"/><circle cx="360" cy="204" r="4" fill="#ff6fb5"/><rect x="336" y="182" width="20" height="4" fill="#222"/></g>' +
+      tag("3RD BASS", 80, 252, 26, "#ff6fb5", -4) + tag("SERCH", 260, 252, 28, "#38e8ff", -5),
+      sky("mc1", "#8fc8ea", "#f8dcb0"));
   }
 
-  /* 2. Rockaway Beach: the boardwalk, the waves rolling in, a surfer riding one */
+  /* 2. Bayswater Point State Park: the marsh point on Jamaica Bay behind Far Rockaway, tall grass, gold sunset water, a jet coming in low to JFK */
   function beach() {
-    let waves = ""; for (let i = 0; i < 4; i++) waves += '<path class="wave' + (i % 2 ? " w2" : "") + '" d="M-20 ' + (96 + i * 14) + 'q25-8 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0 50 0" stroke="#e6f6ff" stroke-width="2.5" fill="none"/>';
-    return svg('<rect width="400" height="260" fill="url(#g2)"/><circle cx="80" cy="44" r="22" fill="#fff3c4"/>' +
-      '<path class="slide" style="animation-duration:20s" d="M0 30q6-6 12 0q6-6 12 0" stroke="#333" stroke-width="2" fill="none"/>' +
-      '<rect x="0" y="80" width="400" height="80" fill="#2f7fb0"/>' + waves +
-      '<g class="bob"><path d="M250 112q20-4 40 0l-4 4h-32z" fill="' + GOLD + '"/><path d="M268 110l-4-16 6-8 6 8-4 16z" fill="#14181d"/><circle cx="270" cy="82" r="5" fill="#14181d"/></g>' +
-      '<rect x="0" y="160" width="400" height="40" fill="#ecd9a8"/>' +
-      /* concrete boardwalk */
-      '<rect x="0" y="196" width="400" height="20" fill="#cfcac0"/><path d="M0 216h400" stroke="#9a948a" stroke-width="3"/>' + [40, 140, 240, 340].map(x => '<rect x="' + x + '" y="216" width="10" height="44" fill="#9a948a"/>').join("") +
-      '<rect x="0" y="180" width="400" height="3" fill="#59616e"/>' + [0, 50, 100, 150, 200, 250, 300, 350].map(x => '<rect x="' + x + '" y="180" width="3" height="16" fill="#59616e"/>').join("") +
-      '<rect x="0" y="216" width="400" height="44" fill="#ecd9a8" opacity=".6"/>' + tag("BEACH 20", 220, 250, 24, PINK, -4),
-      sky("g2", "#5fa8e0", "#cfe9f7"));
+    const { svg, sky, tag, T, plaque, bird } = LM1;
+    let grass = ""; for (let x = 0; x < 400; x += 6) grass += '<path class="lm-swayb' + (x % 12 ? " lm-s2" : "") + '" d="M' + x + ' 230q' + (x % 4 - 2) + ' -' + (24 + (x * 7) % 22) + ' ' + (3 + x % 5) + ' -' + (34 + (x * 7) % 22) + '" stroke="' + (x % 18 ? "#b7a35a" : "#8a8a3a") + '" stroke-width="2" fill="none"/>';
+    return svg(
+      '<rect width="400" height="260" fill="url(#mc2)"/>' +
+      '<circle cx="290" cy="112" r="26" fill="#ffd27a"/>' +
+      /* far shore, the JFK side */
+      '<rect x="0" y="122" width="400" height="6" fill="#4a3a4a"/><rect x="120" y="114" width="6" height="8" fill="#4a3a4a"/><rect x="132" y="110" width="4" height="12" fill="#4a3a4a"/>' +
+      /* the bay */
+      '<rect x="0" y="128" width="400" height="80" fill="url(#mc2w)"/>' +
+      '<g class="lm-rip"><path d="M250 140h80M262 152h56M240 166h90M270 182h40" stroke="#ffe0a0" stroke-width="2" opacity=".8"/></g>' +
+      '<g class="lm-rip lm-r2"><path d="M30 150h60M90 172h70M20 192h50" stroke="#ffd27a" stroke-width="1.5" opacity=".5"/></g>' +
+      /* the jet on approach */
+      '<g class="lm-land"><g transform="translate(0 70)"><path d="M0 0h52l10-4h4l-6 8H2z" fill="#e8e8ee"/><path d="M22 0l-14 12h8l18-12z" fill="#c8c8d0"/><path d="M48 0l6-12h4l-2 12z" fill="#c8c8d0"/><circle class="lm-blink" cx="64" cy="0" r="1.5" fill="#ff3b30"/></g></g>' +
+      bird("lm-fly", 0, 96) +
+      /* the point: grass and a path */
+      '<path d="M0 208q120-26 230-4t170 4V260H0z" fill="#6a6a2a"/>' + grass +
+      '<path d="M120 260l30-46h14l-14 46z" fill="#d8c8a0"/>' +
+      plaque(14, 12, 180, "BAYSWATER POINT", "STATE PARK · JAMAICA BAY", "#2a1430", "#ff6fb5") +
+      tag("FAR ROCKAWAY", 210, 252, 22, "#ff6fb5", -3),
+      sky("mc2", "#3a2a5a", "#ff9a5a") + '<linearGradient id="mc2w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e88a4a"/><stop offset="1" stop-color="#4a3a6a"/></linearGradient>');
   }
 
-  /* 3. Jacob Riis Park: the Art Deco bathhouse and its clock tower, the clock hands turning */
+  /* 3. Fort Tilden's Battery Harris: the huge gray WWII gun casemate in the dunes with the observation deck on top, ocean and the Manhattan skyline far off */
   function riis() {
-    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
-      brick(40, 120, 320, 100, "#c49a6a", "#cfa676") + '<rect x="40" y="114" width="320" height="8" fill="#e8d2a0"/>' +
-      [70, 110, 150, 230, 270, 310].map(x => '<path d="M' + x + ' 210v-50a10 10 0 0 1 20 0v50z" fill="#2a3a4a" stroke="#e8d2a0" stroke-width="2"/>').join("") +
-      /* the tower */
-      brick(170, 40, 60, 180, "#b88a5a", "#c49a6a") + '<path d="M166 40h68l-8-12h-52z" fill="#e8d2a0"/><rect x="190" y="12" width="20" height="16" fill="#e8d2a0"/>' +
-      '<circle cx="200" cy="74" r="18" fill="#f4f0e6" stroke="#5a3a1a" stroke-width="3"/><g class="spin slow"><path d="M200 74v-14" stroke="#1a1a1a" stroke-width="2.5"/></g><path d="M200 74h9" stroke="#1a1a1a" stroke-width="3"/>' +
-      '<path d="M188 220v-40a12 12 0 0 1 24 0v40z" fill="#2a3a4a"/>' +
-      '<rect x="0" y="220" width="400" height="40" fill="#ecd9a8"/>' + tag("RIIS PARK", 270, 252, 22, PINK, -3) +
-      '<path class="slide" style="animation-duration:22s" d="M0 40q6-6 12 0q6-6 12 0" stroke="#333" stroke-width="2" fill="none"/>',
-      sky("g3", "#8fc3ea", "#f6e2b0"));
+    const { svg, sky, tag, T, plaque, fig, cloud, bird } = LM1;
+    let sky2 = ""; [[14, 10], [26, 18], [40, 12], [52, 26], [64, 14], [76, 20], [88, 9]].forEach(([x, h]) => sky2 += '<rect x="' + (250 + x) + '" y="' + (112 - h) + '" width="9" height="' + h + '" fill="#8a9ab0"/>');
+    return svg(
+      '<rect width="400" height="260" fill="url(#mc3)"/>' + cloud("lm-drift", 0, 30, 1.1) + cloud("lm-drift lm-d2", 0, 56, .8, .6) + bird("lm-fly", 0, 70) +
+      /* far skyline + ocean */
+      sky2 + '<rect x="0" y="112" width="400" height="34" fill="#3d86b0"/><g class="lm-rip"><path d="M10 122h40M120 130h60M240 124h50M330 134h40" stroke="#e6f6ff" stroke-width="2" opacity=".6"/></g>' +
+      /* the dunes and the casemate */
+      '<path d="M0 146q60-14 120-4t140-6 140 6V260H0z" fill="#e2cc96"/>' +
+      '<path d="M40 210q40-80 120-80h90q60 0 100 80z" fill="#7a8a5a"/>' +
+      '<rect x="90" y="138" width="230" height="74" fill="#9a9c98"/><rect x="90" y="138" width="230" height="6" fill="#b4b6b2"/>' +
+      '<path d="M120 212v-40a26 26 0 0 1 52 0v40z" fill="#2a2c2e"/><path d="M238 212v-40a26 26 0 0 1 52 0v40z" fill="#2a2c2e"/>' +
+      '<path d="M100 150h210" stroke="#86887f" stroke-width="2"/>' +
+      /* the observation deck on top */
+      '<rect x="168" y="112" width="74" height="4" fill="#5a4a3a"/><path d="M170 116v22M240 116v22M168 104h74" stroke="#5a4a3a" stroke-width="2.5"/>' +
+      '<path d="M150 138l18-22" stroke="#5a4a3a" stroke-width="3"/>' +
+      '<g class="lm-bob">' + fig(190, 112, "#2a2a2a", null, .55) + '</g><g class="lm-bob lm-b2">' + fig(222, 112, "#2a2a2a", null, .55) + '</g>' +
+      /* beach grass */
+      '<path d="M20 226q4-16 2-22M26 226q2-14 8-20M330 230q4-16 2-22M338 230q2-14 8-20" stroke="#8a9a4a" stroke-width="2" fill="none" class="lm-swayb"/>' +
+      plaque(14, 12, 170, "FORT TILDEN", "BATTERY HARRIS · ROCKAWAY", "#2a1430", "#38e8ff") +
+      tag("GAS FACE", 30, 250, 26, "#ff6fb5", -4),
+      sky("mc3", "#6fb0e0", "#e6f2f8"));
   }
 
   /* 4. The TV stage: applause sign blinking, the turntables, the lights, the Gas Face up on the screen */
@@ -127,11 +164,79 @@
       tag("3RD BASS", 130, 246, 30, CY, -3), "");
   }
 
-  /* 5. Mott Av and Beach 20 St */
+  /* 5. Beach 25 St and Seagirt Blvd, Wavecrest */
   function block() {
-    return corner(["#130a12", "#3a2a4a"], "Mott Av", "Beach 20 St",
+    return corner(["#130a12", "#3a2a4a"], "Beach 25 St", "Seagirt Blvd",
       tag("MC SERCH", 26, 122, 46, PINK, -7) + tag("3RD BASS", 60, 154, 26, CY, -5) + tag("GAS FACE", 30, 186, 28, GOLD, -3) + tag("ROCKAWAY", 120, 210, 20, "#f6efdc", -2), PINK);
   }
+
+  /* LM1 helpers for the redrawn landmark rooms: same svg / sky / tag / bullet style as above, with their own little animations */
+  const LM1 = (function () {
+    const css = '<style>' +
+      '@keyframes lmDrift{from{transform:translateX(-90px)}to{transform:translateX(490px)}}.lm-drift{animation:lmDrift 24s linear infinite}.lm-d2{animation-delay:-12s}' +
+      '@keyframes lmCar{from{transform:translateX(-110px)}to{transform:translateX(510px)}}.lm-car{animation:lmCar 6s linear infinite}.lm-c2{animation-delay:-3s}' +
+      '@keyframes lmCarL{from{transform:translateX(510px)}to{transform:translateX(-110px)}}.lm-carL{animation:lmCarL 7.5s linear infinite}' +
+      '@keyframes lmFlick{0%,100%{opacity:1}45%{opacity:.75}50%{opacity:.3}55%{opacity:.9}}.lm-flk{animation:lmFlick 2.2s infinite}.lm-f2{animation-delay:-.8s}' +
+      '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{transform-box:fill-box;transform-origin:50% 0;animation:lmSway 3s ease-in-out infinite}' +
+      '.lm-swayb{transform-box:fill-box;transform-origin:50% 100%;animation:lmSway 3.6s ease-in-out infinite}.lm-s2{animation-delay:-1.5s}' +
+      '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.lm-bob{animation:lmBob 1.4s ease-in-out infinite}.lm-b2{animation-delay:-.7s}.lm-b3{animation-delay:-.35s}' +
+      '@keyframes lmRise{0%{transform:translate(0,0);opacity:1}80%{opacity:1}100%{transform:translate(14px,-150px);opacity:0}}.lm-rise{animation:lmRise 6s ease-in infinite}' +
+      '@keyframes lmBlink{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blink{animation:lmBlink 1s steps(1) infinite}.lm-k2{animation-delay:-.5s}' +
+      '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{transform-box:fill-box;transform-origin:50% 50%;animation:lmSpin 14s linear infinite}' +
+      '@keyframes lmFly{from{transform:translate(-80px,30px)}to{transform:translate(480px,-30px)}}.lm-fly{animation:lmFly 9s linear infinite}' +
+      '@keyframes lmLand{from{transform:translate(460px,-40px)}to{transform:translate(-120px,40px)}}.lm-land{animation:lmLand 10s linear infinite}' +
+      '@keyframes lmRip{0%,100%{transform:translateX(0)}50%{transform:translateX(-14px)}}.lm-rip{animation:lmRip 3s ease-in-out infinite}.lm-r2{animation-delay:-1.5s}' +
+      '@keyframes lmBoat{0%,100%{transform:translateX(0)}50%{transform:translateX(-60px)}}.lm-boat{animation:lmBoat 12s ease-in-out infinite}' +
+      '@keyframes lmWalk{from{transform:translateX(0)}to{transform:translateX(70px)}}.lm-walk{animation:lmWalk 5s ease-in-out infinite alternate}.lm-w2{animation-delay:-2.5s}' +
+      '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(30px,250px) rotate(300deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}.lm-l2{animation-delay:-2s}.lm-l3{animation-delay:-4s}' +
+      '@keyframes lmDrop{0%{transform:translateY(0)}100%{transform:translateY(118px)}}.lm-drop{animation:lmDrop 2.6s cubic-bezier(.5,0,.9,.6) infinite}' +
+      '@keyframes lmBall{0%{transform:translate(0,0)}50%{transform:translate(-90px,-26px)}100%{transform:translate(-180px,0)}}.lm-ball{animation:lmBall 2.4s linear infinite}' +
+      '@keyframes lmSwim{0%,100%{transform:translateX(0)}50%{transform:translateX(90px)}}.lm-swim{animation:lmSwim 7s ease-in-out infinite}.lm-sw2{animation-delay:-3.5s}' +
+      '</style>';
+    const svg = (inner, defs) =>
+      '<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img">' + css + '<defs>' + (defs || "") + '</defs>' + inner + '</svg>';
+    const sky = (id, top, bottom) =>
+      '<linearGradient id="' + id + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + top + '"/><stop offset="1" stop-color="' + bottom + '"/></linearGradient>';
+    const tag = (txt, x, y, size, fill, rot) =>
+      '<text x="' + x + '" y="' + y + '" transform="rotate(' + (rot || -6) + ' ' + x + ' ' + y + ')" font-family="Sedgwick Ave Display, Permanent Marker, cursive" font-size="' + size +
+      '" fill="' + fill + '" stroke="#000" stroke-width="' + Math.max(2, size / 9) + '" paint-order="stroke" stroke-linejoin="round">' + txt + '</text>';
+    const bullet = (x, y, letter, color, dark, r) => { r = r || 11;
+      return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + color + '"/><text x="' + x + '" y="' + (y + r * .5) + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + (r * 1.36).toFixed(1) + '" fill="' + (dark ? "#000" : "#fff") + '">' + letter + '</text>'; };
+    const stars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".7"/>'; return s; };
+    const T = (x, y, txt, size, fill, o) => { o = o || {};
+      return '<text x="' + x + '" y="' + y + '" text-anchor="' + (o.a || "middle") + '" font-family="' + (o.f || "Anton, Impact, sans-serif") + '"' + (o.w ? ' font-weight="' + o.w + '"' : '') +
+        (o.ls ? ' letter-spacing="' + o.ls + '"' : '') + ' font-size="' + size + '" fill="' + fill + '"' + (o.cls ? ' class="' + o.cls + '"' : '') + '>' + txt + '</text>'; };
+    /* a name plaque: dark box, title + subtitle */
+    const plaque = (x, y, w, title, sub, bg, accent) => {
+      const ts = Math.min(12, (w - 14) / (title.length * .66)), ss = sub ? Math.min(8, (w - 12) / (sub.length * .62 + sub.length * 1.5 / 8)) : 0;
+      return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (sub ? 34 : 22) + '" rx="4" fill="' + bg + '" stroke="' + accent + '" stroke-width="2"/>' +
+        T(x + w / 2, y + 16, title, ts.toFixed(1), "#fff") + (sub ? T(x + w / 2, y + 28, sub, ss.toFixed(1), accent, { f: "Barlow, Arial, sans-serif", w: 700, ls: (ss * 1.5 / 8).toFixed(2) }) : ""); };
+    /* green NYC street sign blade */
+    const blade = (x, y, w, txt) =>
+      '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      T(x + w / 2, y + 13, txt, 11, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 });
+    const car = (cls, y, c, w) => { w = w || 44;
+      return '<g class="' + cls + '"><rect x="0" y="' + y + '" width="' + w + '" height="12" rx="4" fill="' + c + '"/><rect x="' + (w * .22) + '" y="' + (y - 7) + '" width="' + (w * .5) + '" height="8" rx="3" fill="' + c + '"/>' +
+        '<rect x="' + (w * .27) + '" y="' + (y - 5) + '" width="' + (w * .4) + '" height="5" fill="#cfe6ff" opacity=".8"/><circle cx="' + (w * .22) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/><circle cx="' + (w * .78) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/>' +
+        '<rect x="' + (w - 3) + '" y="' + (y + 3) + '" width="3" height="3" fill="#fff6c2"/></g>'; };
+    /* faceless figure (silhouette), optional sign held up */
+    const fig = (x, y, c, sign, sc) => { sc = sc || 1;
+      return '<g transform="translate(' + x + ' ' + y + ') scale(' + sc + ')"><circle cx="0" cy="-30" r="5" fill="' + c + '"/><path d="M-6 -24h12l2 16h-4l-1 14h-6l-1-14h-4z" fill="' + c + '"/>' +
+        (sign ? '<path d="M5 -22l6-14" stroke="' + c + '" stroke-width="2.5"/><rect x="' + (13 - Math.max(30, sign[0].length * 4.6 + 6) / 2) + '" y="-58" width="' + Math.max(30, sign[0].length * 4.6 + 6) + '" height="20" fill="' + sign[1] + '" stroke="#222" stroke-width="1"/>' +
+          T(13, -44, sign[0], 7, sign[2] || "#111", { f: "Barlow, Arial, sans-serif", w: 700 }) : "") + '</g>'; };
+    const wins = (x0, y0, cols, rows, dx, dy, w, h, c, lit) => { let s = "";
+      for (let r = 0; r < rows; r++) for (let k = 0; k < cols; k++) s += '<rect x="' + (x0 + k * dx) + '" y="' + (y0 + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + ((lit && (k * 7 + r * 3) % 4 === 0) ? lit : c) + '"/>';
+      return s; };
+    const brickLines = (x, y, w, h, c, step) => { let s = ""; for (let yy = y + (step || 7); yy < y + h; yy += (step || 7)) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + c + '" stroke-width=".6"/>'; return s; };
+    const cloud = (cls, x, y, s, op) => '<g class="' + cls + '"><g transform="translate(' + x + ' ' + y + ') scale(' + s + ')" opacity="' + (op || .8) + '"><ellipse cx="0" cy="0" rx="26" ry="9" fill="#fff"/><ellipse cx="12" cy="-6" rx="14" ry="9" fill="#fff"/><ellipse cx="-10" cy="-4" rx="11" ry="7" fill="#fff"/></g></g>';
+    const tree = (x, y, r, c, cls) => '<g class="' + (cls || "lm-swayb") + '"><rect x="' + (x - 2.5) + '" y="' + (y - 4) + '" width="5" height="' + (r + 6) + '" fill="#5a3a22"/><circle cx="' + x + '" cy="' + (y - r * .6) + '" r="' + r + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x - r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x + r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/></g>';
+    const bird = (cls, x, y) => '<g class="' + cls + '"><path d="M' + x + ' ' + y + 'q5-5 10 0q5-5 10 0" fill="none" stroke="#222" stroke-width="1.6"/></g>';
+    /* subway car side (R-type), for the station rooms */
+    const subCar = (x, y, w, stripe, letters) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="60" rx="7" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="' + x + '" y="' + (y + 40) + '" width="' + w + '" height="4" fill="' + stripe + '"/>';
+      for (let k = x + 14; k < x + w - 40; k += 44) s += '<rect x="' + k + '" y="' + (y + 10) + '" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
+      return s + '<rect x="' + (x + w - 22) + '" y="' + (y + 10) + '" width="14" height="22" rx="3" fill="#1d2a3a"/><circle cx="' + (x + w - 8) + '" cy="' + (y + 50) + '" r="3.5" fill="#fff6c2"/>' + (letters || ""); };
+    return { svg, sky, tag, bullet, stars, T, plaque, blade, car, fig, wins, brickLines, cloud, tree, bird, subCar };
+  })();
 
   window.SCENES = { station, beach, riis, stage, block };
 

@@ -76,7 +76,7 @@ window.CFG = {
   {
    "scene": "train",
    "t": "PRESS PLAY",
-   "x": "Take the 6 to 116 St. Tap the record. Every song is an episode.",
+   "x": "Take the 6 to 103 St. Tap the record. Every song is an episode.",
    "sfx": "train"
   },
   {

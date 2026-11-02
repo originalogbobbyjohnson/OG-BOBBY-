@@ -257,6 +257,22 @@ function LIB(P) {
   S.glenview = () => svg('<rect width="400" height="260" fill="url(#g3)"/>' + palisades(150) + water(160, "#4a7aa0") + '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' +
     '<rect x="110" y="90" width="150" height="120" fill="#8a7e6a"/><path d="M100 90h170l-30-30h-110z" fill="#3a3a44"/><rect x="230" y="40" width="44" height="170" fill="#9a8e7a"/><path d="M224 40h56l-28-30z" fill="#3a3a44"/>' +
     wins(124, 104, 4, 2, 32, 46, 16, 28, "#ffe6a8") + wins(242, 56, 1, 3, 0, 40, 20, 26, "#ffe6a8") + '<g class="slideL"><path d="M0 178h40l-6 6H6z" fill="#fff"/><path d="M18 178v-20l12 18z" fill="#fff"/></g>' + tag("GLENVIEW", 20, 246, 22, A, -3), sky("g3", "#ff9a6a", "#8fc3ea"));
+  /* Trinity Church Cemetery and the Church of the Intercession, Broadway at W 155th: the gray Gothic church and its square tower over the hillside graves, top of Sugar Hill */
+  S.intercession = () => { let stones = ""; [[30, 196], [58, 206], [86, 192], [112, 214], [300, 200], [330, 212], [360, 196], [140, 226], [270, 224]].forEach(([x, y], i) => stones += (i % 3 ? '<path d="M' + x + ' ' + y + 'v-14a7 7 0 0 1 14 0v14z" fill="#b8b4aa"/>' : '<path d="M' + (x + 6) + ' ' + y + 'v-22M' + x + ' ' + (y - 16) + 'h12" stroke="#a8a49a" stroke-width="4"/>'));
+    let course = ""; for (let y = 96; y < 190; y += 7) course += '<path d="M150 ' + y + 'h170" stroke="#6a6e74" stroke-width=".6"/>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      '<g class="fly"><path d="M0 50q6-6 12 0q6-6 12 0" stroke="#2a2a3a" stroke-width="2" fill="none"/></g>' +
+      '<path d="M0 190q100-40 200-30t200 10v90H0z" fill="#4a7a3a"/>' +
+      /* the nave, the big pointed window, the square tower */
+      '<rect x="150" y="96" width="170" height="94" fill="#8a8e94"/>' + course + '<path d="M144 98l91-40 91 40z" fill="#4a505a"/>' +
+      '<path d="M210 176v-50q25-34 50 0v50z" fill="#d8d2c2"/><path class="pls" d="M216 174v-46q19-26 38 0v46z" fill="#f2b84e"/><path d="M235 104v70M216 140h38" stroke="#4a3a2a" stroke-width="2"/>' +
+      '<rect x="96" y="40" width="54" height="150" fill="#7e8288"/>' + [56, 76, 96].map(y => '<path d="M96 ' + y + 'h54" stroke="#6a6e74" stroke-width=".8"/>').join("") +
+      '<path d="M112 92v-20q11-16 22 0v20z" fill="#2a3040"/><path d="M92 40l6-14 6 14zM142 40l6-14 6 14z" fill="#7e8288"/><rect x="92" y="38" width="62" height="6" fill="#6a6e74"/>' +
+      '<path d="M108 190v-34q15-20 30 0v34z" fill="#3a2a22"/>' +
+      stones + tree(40, 150, 20, "#3f7a3a") + tree(360, 146, 22, "#356d33") +
+      street(232) + car(0, 230, A, "slide") +
+      txt("CHURCH OF THE INTERCESSION", 260, 24, 11, "#1a1a2a") + txt("TRINITY CHURCH CEMETERY · BROADWAY &amp; W 155TH", 260, 38, 7.5, "#1a1a2a") +
+      tag("JUELZ SANTANA", 196, 222, 18, A, -4), sky("g3", "#ffb07a", "#8fb0d8")); };
   S.corner = corner; S.tag = tag;
   return S;
 }
@@ -265,7 +281,7 @@ function LIB(P) {
   window.SCENES = {
     station: () => L.stUnder("155 St", [["C","#0039a6"]], "#6a3a8a", "DIPSET"),
     sugarhill: () => L.sugarHill(),
-    towers: () => L.poloTowers(),
+    towers: () => L.intercession(),
     pool: () => L.jrPool(),
     block: () => L.corner(["#0d1022", "#2a3a4a"], "W 155 St", "St Nicholas Av", L.tag("JUELZ SANTANA", 26, 124, 25, P.c1, -7) + L.tag("SANTANA", 40, 156, 22, P.c2, -5) + L.tag("DIPSET", 30, 188, 24, P.c3, -3) + L.tag("SUGAR HILL", 120, 212, 20, "#f6efdc", -2))
   };

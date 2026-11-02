@@ -257,13 +257,31 @@ function LIB(P) {
   S.glenview = () => svg('<rect width="400" height="260" fill="url(#g3)"/>' + palisades(150) + water(160, "#4a7aa0") + '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' +
     '<rect x="110" y="90" width="150" height="120" fill="#8a7e6a"/><path d="M100 90h170l-30-30h-110z" fill="#3a3a44"/><rect x="230" y="40" width="44" height="170" fill="#9a8e7a"/><path d="M224 40h56l-28-30z" fill="#3a3a44"/>' +
     wins(124, 104, 4, 2, 32, 46, 16, 28, "#ffe6a8") + wins(242, 56, 1, 3, 0, 40, 20, 26, "#ffe6a8") + '<g class="slideL"><path d="M0 178h40l-6 6H6z" fill="#fff"/><path d="M18 178v-20l12 18z" fill="#fff"/></g>' + tag("GLENVIEW", 20, 246, 22, A, -3), sky("g3", "#ff9a6a", "#8fc3ea"));
+  /* FERG 1. 137 St–City College in cutaway: up top the Broadway stair entrance with the green globe lamps and the walk uptown toward W 143rd and Amsterdam, below the 1 sliding into the tiled platform, FERG on the stair wall */
+  S.fergStation = () => { let tiles = ""; for (let y = 150; y < 214; y += 8) tiles += '<path d="M0 ' + y + 'h400" stroke="#d8d5c8" stroke-width="1"/>';
+    const globe = x => '<rect x="' + (x - 2) + '" y="64" width="4" height="40" fill="#1f5a3a"/><circle class="pls" cx="' + x + '" cy="60" r="7" fill="#3fbf6a"/><circle cx="' + x + '" cy="60" r="7" fill="none" stroke="#1f5a3a" stroke-width="1.5"/>';
+    return svg('<rect width="400" height="260" fill="url(#g1)"/><circle cx="330" cy="30" r="14" fill="#fff3c4"/>' +
+      /* Broadway at street level */
+      brick(0, 30, 120, 74, "#7a4a36", "#6a3e2c") + wins(10, 40, 4, 2, 28, 26, 14, 16, "#ffe6a8") + brick(280, 24, 120, 80, "#9a7a5a", "#8a6a4a") + wins(290, 34, 4, 2, 28, 28, 14, 16, "#ffe6a8") +
+      '<rect x="0" y="104" width="400" height="16" fill="#8a8a86"/>' + globe(128) + globe(272) +
+      '<path d="M156 104h88l-10 16h-68z" fill="#2a2e34"/>' +
+      '<rect x="140" y="70" width="120" height="18" rx="2" fill="#111"/>' + txt("137 St–City College", 194, 82.5, 8.5, "#fff") + bullet(250, 79, "1", "#ee352e", 7) +
+      '<rect x="292" y="84" width="104" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' + txt("↑ W 143 St · Amsterdam", 344, 96.5, 7.5, "#fff") +
+      '<g class="bob"><circle cx="60" cy="92" r="5" fill="#3a2a22"/><rect x="55" y="97" width="10" height="8" rx="3" fill="' + A + '"/></g>' +
+      /* the cut: street slab, then the platform below */
+      '<rect x="0" y="120" width="400" height="22" fill="#3a3f47"/><path d="M0 142h400" stroke="#2a2e34" stroke-width="3"/>' +
+      '<rect x="0" y="142" width="400" height="72" fill="#f1efe6"/>' + tiles + '<rect x="0" y="150" width="400" height="10" fill="#b8442e"/>' +
+      tag("FERG", 30, 176, 28, A, -5) + tag("A$AP MOB", 270, 176, 20, C, -4) +
+      '<g class="anim-train">' + subCar(-60, 178, 300, "1", "#ee352e", "#b8442e") + '</g>' +
+      '<rect x="0" y="236" width="400" height="8" fill="#eab308"/><rect x="0" y="244" width="400" height="16" fill="#8a8578"/>' +
+      tag("HOOD POPE", 270, 256, 16, B, -3), sky("g1", "#8fc3ea", "#f6d9a6")); };
   S.corner = corner; S.tag = tag;
   return S;
 }
 
   const P = {"c1":"#38e8ff","c2":"#f2c14e","c3":"#ff4f6a"}, L = LIB(P);
   window.SCENES = {
-    station: () => L.stUnder("137 St–City College", [["1","#ee352e"]], "#b8442e", "FERG"),
+    station: () => L.fergStation(),
     grange: () => L.grange(),
     riverbank: () => L.riverbank(),
     convent: () => L.convent("CONVENT AV"),

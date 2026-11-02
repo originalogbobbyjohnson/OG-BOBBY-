@@ -82,12 +82,13 @@
   const house = (x, y, col, roof) => '<rect x="' + x + '" y="' + y + '" width="60" height="' + (236 - y) + '" fill="' + col + '"/><path d="M' + (x - 6) + ' ' + y + 'l36-26 36 26z" fill="' + roof + '"/>' +
     '<rect x="' + (x + 8) + '" y="' + (y + 12) + '" width="14" height="14" fill="#ffe6a8"/><rect x="' + (x + 38) + '" y="' + (y + 12) + '" width="14" height="14" fill="#ffe6a8"/><rect x="' + (x + 22) + '" y="' + (236 - 30) + '" width="16" height="30" fill="#4a3220"/><rect x="' + (x - 2) + '" y="' + (236 - 36) + '" width="64" height="5" fill="#f2efe6"/>';
 
-  /* 1. Hollis: the LIRR train pulling into the station up on the embankment */
+  /* 1. Queens Village: the LIRR train pulling into the station up on the viaduct over Springfield Blvd, the shops and houses below */
   function station() {
-    let hs = house(0, 140, "#c9b28a", "#6a3a2a") + house(80, 150, "#9ab0c4", "#3a3a4a") + house(260, 146, "#d8c4a0", "#7a3a2a") + house(340, 140, "#b5654a", "#3a2a2a");
-    return elev({ g: ["#f2a65a", "#fbe3b0"], back: hs, band: "#0039a6", bl: [["LIRR", "#0039a6"]], name: "Hollis", sx: 110, sw: 180, tag: "HOLLIS", tc: ORG, deck: "#7a7468", tx: 250 });
+    let hs = house(0, 150, "#c9b28a", "#6a3a2a") + bldg(66, 120, 70, 116, "#8a5a44", "#ffe6a8") + bldg(264, 126, 66, 110, "#7a6a5a", "#ffe6a8") + house(340, 146, "#b5654a", "#3a2a2a") +
+      '<rect x="140" y="196" width="120" height="40" fill="#3a2e2a"/><rect x="144" y="200" width="112" height="12" fill="' + RED + '"/>' + '<rect class="flk" x="150" y="216" width="100" height="18" fill="#ffe6a8" opacity=".7"/>';
+    return elev({ g: ["#6aa0d8", "#fbe3b0"], back: hs, band: "#0039a6", bl: [["LIRR", "#0039a6"]], name: "Queens Village", sx: 90, sw: 220, tag: "HOLLA HOLLA", tc: ORG, deck: "#7a7468", tx: 230,
+      extra: '<rect x="14" y="188" width="4" height="48" fill="#1d2329"/>' + blade(76, 182, "Springfield Blvd") + tag("JA", 10, 226, 26, RED, -5) });
   }
-
   /* 2. Hollis Playground: the court at sundown, the ball bouncing, chain-link fence */
   function court() {
     let fence = ""; for (let x = 0; x < 400; x += 10) fence += '<path d="M' + x + ' 120l10 10M' + (x + 10) + ' 120l-10 10" stroke="#8a949e" stroke-width=".8"/>';
@@ -101,21 +102,30 @@
       sky("g2", "#e8743a", "#fbd38a"));
   }
 
-  /* 3. The studio: platinum plaques on the wall, the board lit up, the red light on */
+  /* 3. Album world, Pain Is Love (2001): the gray sky of the cover, tattoo flash, the black-and-white rose with petals falling */
   function studio() {
-    let board = ""; for (let i = 0; i < 18; i++) board += '<rect class="blk' + ["", " b2", " b3", " b4"][i % 4] + '" x="' + (60 + i * 16) + '" y="' + (196 + (i % 3) * 6) + '" width="8" height="' + (14 - (i % 3) * 4) + '" fill="' + [ORG, "#7cf29a", RED][i % 3] + '"/>';
-    const plq = (x, c) => '<rect x="' + x + '" y="24" width="50" height="62" fill="#2a1a10" stroke="#c9a24a" stroke-width="2"/><circle cx="' + (x + 25) + '" cy="50" r="16" fill="' + c + '"/><circle cx="' + (x + 25) + '" cy="50" r="4" fill="#111"/><rect x="' + (x + 8) + '" y="72" width="34" height="6" fill="#c9a24a"/>';
-    return svg('<rect width="400" height="260" fill="#1a1414"/><rect x="0" y="0" width="400" height="160" fill="#2a2020"/>' +
-      plq(24, PLAT) + plq(86, PLAT) + plq(264, "#f2c14e") + plq(326, PLAT) +
-      /* the booth window and the mic behind it */
-      '<rect x="150" y="30" width="100" height="100" rx="4" fill="#0e1a24" stroke="#59616e" stroke-width="4"/><path d="M200 70v44" stroke="#9aa3ad" stroke-width="3"/><rect x="192" y="52" width="16" height="26" rx="8" fill="#cfd6de"/><circle cx="200" cy="66" r="14" fill="none" stroke="#2b2b30" stroke-width="2"/>' +
-      '<rect class="pls" x="170" y="8" width="60" height="16" rx="3" fill="' + RED + '"/>' + txt("RECORDING", 200, 20, 9, "#fff") +
-      /* the board */
-      '<path d="M30 170h340l20 60H10z" fill="#3a3a44"/><rect x="10" y="230" width="380" height="30" fill="#24242c"/>' + board +
-      '<rect x="40" y="140" width="34" height="34" fill="#1d1d22"/><circle class="pop" cx="57" cy="157" r="11" fill="#333"/><rect x="326" y="140" width="34" height="34" fill="#1d1d22"/><circle class="pop" cx="343" cy="157" r="11" fill="#333"/>' +
-      tag("PAIN IS LOVE", 120, 252, 24, ORG, -3), "");
+    let petals = ""; [[150, ""], [220, " f2"], [280, " f3"], [110, " f3"], [320, " f2"]].forEach((p, i) => petals += '<g class="fall' + p[1] + '"><path d="M' + p[0] + ' 30q6-8 12 0q-6 8-12 0z" fill="' + (i % 2 ? "#e8e8e8" : "#9a9a9a") + '"/></g>');
+    const petal = (rot, r, col) => '<ellipse cx="0" cy="' + (-r) + '" rx="' + r * .7 + '" ry="' + r + '" fill="' + col + '" stroke="#111" stroke-width="1.5" transform="rotate(' + rot + ')"/>';
+    let rose = '<g transform="translate(260 120)">';
+    [0, 72, 144, 216, 288].forEach(a => rose += petal(a, 30, "#d8d8d8"));
+    [36, 108, 180, 252, 324].forEach(a => rose += petal(a, 20, "#a8a8a8"));
+    [0, 120, 240].forEach(a => rose += petal(a, 11, "#5a5a5a"));
+    rose += '<circle r="5" fill="#111"/></g>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      '<g class="wave"><ellipse cx="80" cy="40" rx="70" ry="18" fill="#c8c8c8" opacity=".6"/><ellipse cx="320" cy="30" rx="80" ry="16" fill="#d8d8d8" opacity=".5"/></g>' +
+      '<g class="wave w2"><ellipse cx="200" cy="64" rx="90" ry="14" fill="#b0b0b0" opacity=".4"/></g>' +
+      /* the rose and its stem */
+      '<path d="M260 150q-10 50 10 110" stroke="#3a3a3a" stroke-width="5" fill="none"/><path d="M266 196q24-14 40-4q-20 14-40 4z" fill="#5a5a5a" stroke="#111"/>' +
+      '<g class="bob">' + rose + '</g>' +
+      /* tattoo flash on the left: an inked heart with a banner across it */
+      '<g class="bob"><path d="M90 196q-56-40-40-78q14-30 40-8q26-22 40 8q16 38-40 78z" fill="#8a8a8a" stroke="#111" stroke-width="3"/>' +
+      '<path d="M90 120l0 70" stroke="#111" stroke-width="2"/><path d="M78 108l12-18 12 18" stroke="#111" stroke-width="3" fill="none"/>' +
+      '<path d="M22 150h136l-10 12 10 12H22l10-12z" fill="#e8e8e8" stroke="#111" stroke-width="2.5"/>' + txt("PAIN · LOVE", 90, 167, 12, "#111") + '</g>' +
+      petals +
+      '<rect x="0" y="216" width="400" height="44" fill="#1a1a1a" opacity=".85"/>' +
+      '<text x="250" y="246" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-weight="700" font-size="24" letter-spacing="3" fill="#f2f2f2">Pain Is Love</text>' +
+      txt("2001", 370, 246, 12, "#9a9a9a"), sky("g3", "#5a5e66", "#c4c6ca"));
   }
-
   /* 4. Jamaica Av through Hollis at night: storefront lights, the bus rolling by */
   function avenue() {
     const shop = (x, w, awn, glow) => '<rect x="' + x + '" y="110" width="' + w + '" height="96" fill="#3a2e2a"/><path d="M' + x + ' 150h' + w + 'l-6 14H' + (x + 6) + 'z" fill="' + awn + '"/><rect class="flk" x="' + (x + 8) + '" y="168" width="' + (w - 16) + '" height="34" fill="' + glow + '" opacity=".8"/>' +

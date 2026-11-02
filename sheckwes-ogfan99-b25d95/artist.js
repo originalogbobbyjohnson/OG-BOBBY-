@@ -95,7 +95,7 @@ window.CFG = {
   {
    "scene": "block",
    "t": "WELCOME TO HARLEM",
-   "x": "W 116 St and Malcolm X Blvd. This is Sheck Wes's game.",
+   "x": "W 116 St and Adam Clayton Powell Jr Blvd, in Little Senegal. This is Sheck Wes's game.",
    "sfx": "spray"
   }
  ],

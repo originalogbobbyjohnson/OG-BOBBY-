@@ -41,10 +41,10 @@
     return s;
   };
 
-  /* 1. Tompkinsville: the open-air SIR platform by the harbor, the train rolling in */
+  /* 1. Tompkinsville, the U.M.C.'s way: the open-air SIR platform on the Upper Bay, the exit to Bay St and Hannah St, a BLUE CHEESE poster on the stair wall, the train rolling in */
   function station() {
     let windows = "";
-    for (let x = 22; x < 290; x += 44) windows += '<rect x="' + x + '" y="134" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
+    for (let x = 22; x < 270; x += 44) windows += '<rect x="' + x + '" y="134" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g1)"/>' +
       '<circle cx="330" cy="40" r="16" fill="#ffcf6b"/>' +
@@ -54,8 +54,18 @@
       '<rect x="0" y="48" width="400" height="8" fill="#d8dde3"/><rect x="0" y="56" width="400" height="3" fill="#0039a6"/>' +
       '<rect x="40" y="56" width="5" height="70" fill="#7b8794"/><rect x="200" y="56" width="5" height="70" fill="#7b8794"/><rect x="360" y="56" width="5" height="70" fill="#7b8794"/>' +
       /* black station sign */
-      '<rect x="92" y="64" width="216" height="32" rx="4" fill="#111"/><rect x="92" y="64" width="216" height="4" fill="#fff"/>' +
-      '<text x="104" y="88" ' + FONT + ' font-size="15" fill="#fff">Tompkinsville</text>' + sir(280, 81) +
+      '<rect x="62" y="64" width="216" height="32" rx="4" fill="#111"/><rect x="62" y="64" width="216" height="4" fill="#fff"/>' +
+      '<text x="74" y="88" ' + FONT + ' font-size="15" fill="#fff">Tompkinsville</text>' + sir(250, 81) +
+      '<rect x="288" y="64" width="108" height="32" rx="3" fill="#111"/>' +
+      '<text x="342" y="77" text-anchor="middle" ' + FONT + ' font-size="9" fill="#fff">EXIT → Bay St</text>' +
+      '<text x="342" y="90" text-anchor="middle" ' + FONT + ' font-size="9" fill="' + GREEN + '">&amp; Hannah St</text>' +
+      /* the stair wall at the end with the poster */
+      '<rect x="316" y="104" width="84" height="76" fill="#3a4250"/>' +
+      '<rect x="326" y="110" width="64" height="62" fill="#1d3a6a" stroke="#f2efe6" stroke-width="2"/>' +
+      '<g class="bob"><path d="M338 156l40-10v-14l-40 10z" fill="#e8d8a0"/><path d="M338 142l40-10 -6 -6 -40 10z" fill="#f2e6b8"/>' +
+      '<circle cx="350" cy="148" r="2.5" fill="#4a7ac8"/><circle cx="364" cy="142" r="2" fill="#4a7ac8"/><circle cx="372" cy="146" r="2.5" fill="#4a7ac8"/></g>' +
+      '<text x="358" y="124" text-anchor="middle" ' + FONT + ' font-size="8" fill="' + CYAN + '">BLUE CHEESE</text>' +
+      '<text x="358" y="167" text-anchor="middle" ' + FONT + ' font-size="7" fill="#f2efe6">THE U.M.C.\'S</text>' +
       /* the SIR car: stainless with the blue band */
       '<g class="anim-train">' +
         '<rect x="8" y="122" width="300" height="58" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +

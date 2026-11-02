@@ -38,41 +38,45 @@
   const RED = "#ee352e", PINK = "#ff6fb5", GOLD = "#f2c14e", SILVER = "#e6e9f0";
   const spark = (x, y, cls) => '<path class="twk ' + (cls || "") + '" d="M' + x + ' ' + (y - 6) + 'l1.5 4.5 4.5 1.5-4.5 1.5-1.5 4.5-1.5-4.5-4.5-1.5 4.5-1.5z" fill="#fff"/>';
 
-  /* 1. The 2 and 3 pulling into 135 St on the Lenox Av line, underground: white tile, the violet band, white terracotta cornice, green plaques, round cast-iron columns */
+  /* 1. 135 St (2/3) at the uptown end of the platform: the stair up to the W 137th St side toward Mother A.M.E. Zion, the violet tile band, a shiny-suit poster on the wall, the 3 sliding in */
   function train() {
     let tiles = "";
-    for (let y = 40; y < 118; y += 8) tiles += '<path d="M0 ' + y + 'h400" stroke="#dcd8cf" stroke-width=".8"/>';
-    for (let x = 0; x < 400; x += 12) tiles += '<path d="M' + x + ' 40v78" stroke="#dcd8cf" stroke-width=".6"/>';
+    for (let y = 40; y < 118; y += 8) tiles += '<path d="M0 ' + y + 'h250" stroke="#dcd8cf" stroke-width=".8"/>';
     let band = "";
-    for (let x = 0; x < 400; x += 12) band += '<rect x="' + x + '" y="40" width="6" height="6" fill="#6b3fa0"/><rect x="' + (x + 6) + '" y="40" width="6" height="6" fill="#8c63c2"/>';
-    let cols = "";
-    [22, 378].forEach(x => cols += '<rect x="' + (x - 6) + '" y="0" width="12" height="186" fill="#2a2f36"/><rect x="' + (x - 9) + '" y="0" width="18" height="8" fill="#3a414a"/><rect x="' + (x - 9) + '" y="178" width="18" height="8" fill="#3a414a"/><rect x="' + (x - 2) + '" y="8" width="3" height="170" fill="#4a525c"/>');
+    for (let x = 0; x < 250; x += 12) band += '<rect x="' + x + '" y="40" width="6" height="6" fill="#6b3fa0"/><rect x="' + (x + 6) + '" y="40" width="6" height="6" fill="#8c63c2"/>';
     let windows = "";
-    for (let x = 18; x < 300; x += 46) windows += '<rect x="' + x + '" y="134" width="30" height="22" rx="3" fill="#fff1c9" opacity=".85"/>';
+    for (let x = 18; x < 200; x += 46) windows += '<rect x="' + x + '" y="134" width="30" height="22" rx="3" fill="#fff1c9" opacity=".85"/>';
+    let steps = "";
+    for (let i = 0; i < 10; i++) steps += '<rect x="' + (256 + i * 14) + '" y="' + (182 - i * 13) + '" width="14" height="' + (13 + i * 13) + '" fill="' + (i % 2 ? "#6a6c70" : "#7a7c80") + '"/><rect x="' + (256 + i * 14) + '" y="' + (182 - i * 13) + '" width="14" height="2" fill="#eab308"/>';
     return svg(
       '<rect width="400" height="260" fill="#121212"/>' +
-      '<rect x="0" y="0" width="400" height="30" fill="#26282b"/>' +
-      '<rect x="0" y="30" width="400" height="10" fill="#f4f1ea"/><path d="M0 34h400" stroke="#d8d2c4" stroke-width="1"/>' +
-      '<rect x="0" y="40" width="400" height="78" fill="#f2efe6"/>' + tiles + band +
-      /* green terracotta plaque */
-      '<rect x="44" y="60" width="38" height="38" rx="3" fill="#3f8a6a" stroke="#2a5f48" stroke-width="2"/><text x="63" y="85" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="13" fill="#e9f3ec">135</text>' +
+      '<rect x="0" y="0" width="250" height="30" fill="#26282b"/><rect x="0" y="30" width="250" height="10" fill="#f4f1ea"/>' +
+      '<rect x="0" y="40" width="250" height="78" fill="#f2efe6"/>' + tiles + band +
+      /* the stairwell: daylight, the church tower glimpsed at the top */
+      '<rect x="250" y="0" width="150" height="196" fill="#9ab8d0"/>' +
+      '<rect x="340" y="10" width="36" height="70" fill="#8a8a86"/><path d="M336 10l22 -10 22 10z" fill="#6a6a66"/><path d="M350 40v-14a8 8 0 0 1 16 0v14z" fill="#3a3a4a"/>' +
+      steps + '<path d="M256 172L396 42" stroke="#c9ced6" stroke-width="4"/>' +
+      '<rect x="252" y="4" width="84" height="28" rx="3" fill="#111"/>' +
+      '<text x="258" y="16" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7.5" fill="#fff">EXIT ↑ W 137 St</text><text x="258" y="27" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7" fill="' + GOLD + '">Mother A.M.E. Zion</text>' +
       /* station sign */
-      '<rect x="98" y="56" width="164" height="38" rx="4" fill="#111"/><rect x="98" y="56" width="164" height="4" fill="#fff"/>' +
-      '<text x="110" y="83" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="17" fill="#fff">135 St</text>' + bullet(214, 76, "2", RED) + bullet(240, 76, "3", RED) +
-      /* a small mosaic panel: a gold trumpet, no faces */
-      '<rect x="282" y="56" width="74" height="42" fill="#2a5aa0" stroke="#e9e3d2" stroke-width="3"/>' +
-      '<path d="M292 78h36l12-9v20l-12-9h-36z" fill="' + GOLD + '"/><circle cx="346" cy="64" r="3" fill="#e8562b"/><circle cx="296" cy="64" r="2" fill="#fff"/>' +
-      '<g class="flk"><rect x="80" y="12" width="90" height="5" rx="2" fill="#fff7d6"/></g><g class="flk flk2"><rect x="240" y="12" width="90" height="5" rx="2" fill="#fff7d6"/></g>' +
-      '<rect x="0" y="118" width="400" height="68" fill="#09090a"/>' +
+      '<rect x="12" y="54" width="130" height="34" rx="4" fill="#111"/><rect x="12" y="54" width="130" height="4" fill="#fff"/>' +
+      '<text x="22" y="79" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="16" fill="#fff">135 St</text>' + bullet(96, 72, "2", RED) + bullet(122, 72, "3", RED) +
+      /* the shiny-suit poster: a silver suit on a hanger, sparkles, no face */
+      '<g transform="rotate(2 200 80)"><rect x="160" y="48" width="80" height="66" fill="#0c0a12" stroke="' + SILVER + '" stroke-width="2"/>' +
+      '<path d="M200 58l-4 6h8z" fill="' + SILVER + '"/><path d="M178 66l22 -2 22 2 6 36h-56z" fill="#cfd4dc"/><path d="M200 64l-8 20 8 18 8 -18z" fill="#9aa2ad"/>' +
+      '<rect class="shn" x="178" y="66" width="10" height="36" fill="#fff" opacity=".5"/>' +
+      '<text x="200" y="110" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7" fill="' + GOLD + '">HARLEM WORLD</text></g>' +
+      spark(168, 54, "") + spark(234, 60, "tw2") +
+      '<g class="flk"><rect x="40" y="12" width="90" height="5" rx="2" fill="#fff7d6"/></g>' +
+      '<rect x="0" y="118" width="250" height="68" fill="#09090a"/>' +
       '<g class="anim-train">' +
-        '<rect x="8" y="122" width="300" height="62" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="164" width="300" height="4" fill="' + RED + '"/>' + windows +
-        '<rect x="285" y="134" width="16" height="22" rx="3" fill="#fff1c9" opacity=".85"/>' +
-        '<circle cx="300" cy="176" r="4" fill="#fff6c2"/>' + bullet(296, 144, "2", RED) +
-      '</g>' + cols +
+        '<rect x="-60" y="122" width="300" height="62" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
+        '<rect x="-60" y="164" width="300" height="4" fill="' + RED + '"/>' + windows +
+        '<circle cx="232" cy="176" r="4" fill="#fff6c2"/>' + bullet(226, 144, "3", RED) +
+      '</g>' +
       '<rect x="0" y="186" width="400" height="10" fill="#eab308"/>' +
       '<rect x="0" y="196" width="400" height="64" fill="#26282b"/>' +
-      tag("HARLEM WORLD", 30, 244, 28, PINK, -5) + tag("MA$E", 280, 242, 32, SILVER, -7));
+      tag("MA$E", 30, 244, 34, SILVER, -6) + tag("WELCOME BACK", 170, 246, 24, PINK, -4));
   }
 
   /* 2. Mother A.M.E. Zion Church on W 137th St (George W. Foster Jr., 1925): grey neo-Gothic stone, the big pointed window glowing, the square tower, birds circling */
@@ -110,35 +114,34 @@
       sky("gz", "#1a1838", "#5a4a7a"));
   }
 
-  /* 3. Harlem World at 116th and Lenox, the club he named his crew and his album after: lighted dance floor, mirrored walls, gold carpet, the lightning-bolt bar */
+  /* 3. Manhattan Center for Science and Mathematics, E 116th St and Pleasant Av by the FDR: the big red-brick school with the white cupola, the river behind, the ball he made his name with going through the hoop */
   function club() {
-    let floor = "";
-    const cs = [PINK, "#7cf2ff", GOLD, "#9b6bff"];
-    for (let r = 0; r < 4; r++) for (let c = 0; c < 10; c++) {
-      const x = 60 + c * 28 - r * 10, y = 170 + r * 18;
-      floor += '<path class="tl t' + (1 + (r + c) % 4) + '" d="M' + (x + r * 0) + ' ' + y + 'h' + (28 + r * 2) + 'l-4 18h-' + (28 + r * 2) + 'z" fill="' + cs[(r + c) % 4] + '" stroke="#111" stroke-width="1"/>';
-    }
-    let mirrors = "";
-    for (let x = 0; x < 400; x += 40) mirrors += '<rect x="' + (x + 2) + '" y="56" width="36" height="104" fill="#3a3550" stroke="#5c5578" stroke-width="1"/><path d="M' + (x + 8) + ' 64l14 30" stroke="#8c86b0" stroke-width="2" opacity=".6"/>';
+    let wins = "";
+    for (let x = 40; x < 370; x += 24) { if (x > 172 && x < 228) continue; [120, 148].forEach(y => wins += '<rect x="' + x + '" y="' + y + '" width="12" height="18" fill="#fffbe8" stroke="#f2efe6" stroke-width="1.5"/><rect x="' + (x + 2) + '" y="' + (y + 2) + '" width="8" height="14" fill="' + ((x + y) % 3 ? "#2a3a4a" : "#ffe6a8") + '"/>'); }
     return svg(
-      '<rect width="400" height="260" fill="#0e0a16"/>' + mirrors +
-      /* neon sign */
-      '<rect x="100" y="8" width="200" height="40" rx="6" fill="#1a1024" stroke="' + PINK + '" stroke-width="2"/>' +
-      '<text class="flk" x="200" y="37" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="24" letter-spacing="2" textLength="176" lengthAdjust="spacingAndGlyphs" fill="' + PINK + '" stroke="#ffd0e6" stroke-width=".7">HARLEM WORLD</text>' +
-      /* spotlight beams */
-      '<g class="beam"><path d="M70 50l-26 120h52z" fill="#fff" opacity=".1"/></g><g class="beam bm2"><path d="M330 50l-26 120h52z" fill="#fff" opacity=".1"/></g>' +
-      /* mirror ball */
-      '<path d="M200 48v14" stroke="#aaa" stroke-width="1.5"/><circle cx="200" cy="76" r="15" fill="#c9ced6"/>' +
-      '<g class="spin"><circle cx="200" cy="76" r="15" fill="none" stroke="#7b818a" stroke-width="1" stroke-dasharray="3 2"/><path d="M186 70h28M186 82h28M194 62v28M206 62v28" stroke="#7b818a" stroke-width=".8"/></g>' +
-      spark(184, 66) + spark(214, 86, "tw2") +
-      /* lightning-bolt bar on the left */
-      
-      /* neon lightning bolt on the mirror wall, like the bar */
-      '<path class="flk flk2" d="M40 66h30l-14 30h20l-40 56 10-40h-18z" fill="none" stroke="' + GOLD + '" stroke-width="3" stroke-linejoin="round"/>' +
-      /* gold carpet edge, then the floor */
-      '<rect x="0" y="160" width="400" height="100" fill="#b8892a"/>' +
-      (function () { let s = ""; for (let i = 0; i < 80; i++) s += '<path d="M' + ((i * 37) % 400) + ' ' + (164 + (i * 23) % 92) + 'l2-4" stroke="#8a6418" stroke-width="1.2"/>'; return s; })() + floor +
-      tag("FEEL SO GOOD", 250, 252, 20, SILVER, -5));
+      '<style>@keyframes shot{0%{transform:translate(0,0)}50%{transform:translate(-22px,-46px)}100%{transform:translate(-40px,-6px);opacity:1}}.shot{animation:shot 1.8s ease-in infinite}</style>' +
+      '<rect width="400" height="260" fill="url(#g3)"/>' +
+      '<circle cx="60" cy="38" r="16" fill="#fff4c8"/>' +
+      /* the East River and Randalls Island behind */
+      '<rect x="0" y="90" width="400" height="20" fill="#3a6a8a"/><path d="M0 92h400" stroke="#9ecae8" stroke-width="1"/>' +
+      /* the school */
+      '<rect x="24" y="108" width="352" height="80" fill="#a8483a"/><rect x="24" y="104" width="352" height="6" fill="#f2efe6"/>' + wins +
+      '<rect x="172" y="88" width="56" height="100" fill="#b0503e"/><path d="M168 92l32 -16 32 16z" fill="#f2efe6"/>' +
+      /* the white cupola with the clock */
+      '<rect x="186" y="52" width="28" height="26" fill="#f2efe6"/><path d="M182 52l18 -18 18 18z" fill="#4a6a5a"/><path d="M200 34v-10" stroke="' + GOLD + '" stroke-width="2"/>' +
+      '<circle cx="200" cy="64" r="7" fill="#fff" stroke="#2a2a2a" stroke-width="1.5"/><path d="M200 64v-5M200 64h4" stroke="#2a2a2a" stroke-width="1.5"/>' +
+      '<path d="M190 188v-30a10 10 0 0 1 20 0v30z" fill="#3a2418" stroke="#f2efe6" stroke-width="2"/>' +
+      '<rect x="144" y="190" width="112" height="14" rx="2" fill="#111"/><text x="200" y="200.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7.5" fill="#fff">MANHATTAN CENTER</text>' +
+      /* the outdoor court out front: hoop + ball */
+      '<rect x="0" y="204" width="400" height="56" fill="#3a5a8a"/><path d="M0 232h400" stroke="#fff" stroke-width="1.5" opacity=".6"/>' +
+      '<rect x="338" y="150" width="4" height="70" fill="#666"/><rect x="314" y="146" width="40" height="26" fill="#fff" stroke="#c33" stroke-width="2"/><path d="M320 172h22l-3 12h-16z" fill="none" stroke="#fff" stroke-width="1.5"/>' +
+      '<g class="shot"><circle cx="372" cy="196" r="6" fill="#e8742a"/><path d="M366 196h12M372 190v12" stroke="#7a3a10" stroke-width="1"/></g>' +
+      /* FDR traffic */
+      '<g class="carr"><rect x="0" y="236" width="44" height="14" rx="4" fill="' + PINK + '"/><circle cx="10" cy="251" r="4" fill="#111"/><circle cx="34" cy="251" r="4" fill="#111"/></g>' +
+      '<rect x="8" y="8" width="84" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="50" y="21" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">E 116 St</text>' +
+      '<rect x="292" y="8" width="100" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="342" y="21" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">Pleasant Av</text>' +
+      tag("MA$E", 20, 232, 28, SILVER, -5),
+      sky("g3", "#7fb3e0", "#f6e6c0"));
   }
 
   /* 4. The shiny-suit era: a 125th St tailor window lit up at night, silver, red and gold suits on the forms, the shine sweeping across, cars going by */

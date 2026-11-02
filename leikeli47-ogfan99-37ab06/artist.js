@@ -94,7 +94,7 @@ window.CFG = {
   {
    "scene": "block",
    "t": "WELCOME TO BED-STUY",
-   "x": "Utica Av and Fulton St. This is Leikeli47's game.",
+   "x": "Fulton St and Ralph Av. This is Leikeli47's game.",
    "sfx": "spray"
   }
  ],

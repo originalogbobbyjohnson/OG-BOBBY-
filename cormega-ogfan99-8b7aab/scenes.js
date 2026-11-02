@@ -102,45 +102,40 @@
       sky("g2", "#0f1a33", "#c26a4a"));
   }
 
-  /* 3. The Queensboro Bridge's gray steel cantilever trusses and spired towers, the red Roosevelt Island Tram cabin gliding up beside it */
+  /* 3. The Roosevelt Island Tram seen from the Queensbridge side: the big red cabin gliding over the East River on its cables, the steel tram tower, the bridge small behind it, QB rooftops in front */
   function bridge() {
-    const top = (a, b, t) => 40 + 70 * 4 * (t - 0.5) * (t - 0.5) * 0 + (1 - Math.pow(2 * t - 1, 2)) * 62;
-    /* each span: top chord sags from the tower tops (y 40) to mid-span (y 102), deck chord at y 132, dense X lattice between */
-    const span = (a, b) => {
-      const n = 10; let pts = [], lat = '';
-      for (let i = 0; i <= n; i++) { const t = i / n; pts.push([a + (b - a) * t, top(a, b, t)]); }
-      let poly = 'M' + pts.map(p => p[0] + ' ' + p[1]).join(' L') + ' L' + b + ' 132 L' + a + ' 132z';
-      for (let i = 0; i < n; i++) {
-        const [x1, y1] = pts[i], [x2, y2] = pts[i + 1];
-        lat += '<path d="M' + x1 + ' ' + y1 + 'V132M' + x1 + ' ' + y1 + 'L' + x2 + ' 132M' + x2 + ' ' + y2 + 'L' + x1 + ' 132" stroke="#7d868b" stroke-width="1.6"/>';
-      }
-      return '<path d="' + poly + '" fill="#9aa3a8" opacity=".18"/>' + lat +
-        '<path d="M' + pts.map(p => p[0] + ' ' + p[1]).join(' L') + '" fill="none" stroke="#a9b1b5" stroke-width="5" stroke-linejoin="round"/>';
-    };
-    const tower = x => '<path d="M' + (x - 10) + ' 190V44h20v146z" fill="#8a9196"/>' +
-      '<path d="M' + (x - 10) + ' 60l20 20M' + (x + 10) + ' 60l-20 20M' + (x - 10) + ' 90l20 20M' + (x + 10) + ' 90l-20 20" stroke="#6d7579" stroke-width="2"/>' +
-      '<path d="M' + (x - 13) + ' 44h26l-4-6h-18z" fill="#a9b1b5"/>' +
-      '<path d="M' + (x - 8) + ' 38l2-14h4l2 14zM' + (x + 2) + ' 38l2-14h4l2 14z" fill="#a9b1b5"/>' +
-      '<path d="M' + (x - 6) + ' 24l2-8 2 8zM' + (x + 4) + ' 24l2-8 2 8z" fill="#a9b1b5"/>';
+    let lat = "";
+    for (let x = 0; x < 400; x += 16) lat += '<path d="M' + x + ' 92l8 -14 8 14" stroke="#5d666b" stroke-width="1" fill="none"/>';
+    const towerT = (x) => '<path d="M' + (x - 14) + ' 196L' + (x - 6) + ' 52h12l8 144z" fill="none" stroke="#9aa3a8" stroke-width="3"/>' +
+      (function () { let s = ""; for (let y = 60; y < 190; y += 20) s += '<path d="M' + (x - 10) + ' ' + y + 'l20 18M' + (x + 10) + ' ' + y + 'l-20 18" stroke="#8a9196" stroke-width="1.5"/>'; return s; })() +
+      '<rect x="' + (x - 16) + '" y="46" width="32" height="8" fill="#b4bcc0"/><circle class="flk" cx="' + x + '" cy="42" r="3" fill="#ff4a4a"/>';
+    let qb = "";
+    [[0, 206, 70], [74, 214, 60], [300, 210, 100]].forEach(([x, y, w]) => { qb += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (260 - y) + '" fill="' + BRICK + '"/>'; for (let xx = x + 6; xx < x + w - 8; xx += 12) qb += '<rect class="wn' + ((xx / 12) % 3 ? " wn2" : "") + '" x="' + xx + '" y="' + (y + 10) + '" width="6" height="8" fill="#ffd98a"/>'; });
     return svg(
       '<rect width="400" height="260" fill="url(#g3)"/>' + stars(20) +
-      '<path d="M0 190V170h20v-24h14v24h16v-36h12v36h20v-18h16v18h40v-10h20v10h220v20z" fill="#1c2540"/>' +
-      span(-50, 115) + span(115, 285) + span(285, 450) + tower(115) + tower(285) +
-      '<rect x="0" y="130" width="400" height="10" fill="#6d7579"/><rect x="0" y="140" width="400" height="3" fill="#4d5458"/>' +
-      '<g class="car"><rect x="0" y="125" width="16" height="6" rx="2" fill="#ffe7a8"/></g><g class="car car2"><rect x="0" y="125" width="16" height="6" rx="2" fill="#ff7a6b"/></g>' +
-      '<rect x="0" y="190" width="400" height="70" fill="#0e2236"/>' +
-      '<g class="rip"><path d="M10 206h40M120 216h50M230 204h44M320 222h50" stroke="#2d5a80" stroke-width="2"/></g>' +
-      '<g class="rip rip2"><path d="M60 232h44M180 240h40M290 236h50" stroke="#2d5a80" stroke-width="2"/></g>' +
-      '<rect x="105" y="186" width="20" height="8" fill="#5a6064"/><rect x="275" y="186" width="20" height="8" fill="#5a6064"/>' +
-      '<path d="M30 238L400 156" stroke="#c9ced6" stroke-width="1.2"/><path d="M30 242L400 160" stroke="#c9ced6" stroke-width="1"/>' +
-      '<g class="trm"><g transform="translate(40 206)">' +
-        '<path d="M14 -2v-10" stroke="#c9ced6" stroke-width="2"/><rect x="6" y="-14" width="16" height="4" fill="#c9ced6"/>' +
-        '<rect x="0" y="0" width="30" height="22" rx="3" fill="#d7262e" stroke="#7a0e12" stroke-width="1.5"/>' +
-        '<rect x="3" y="4" width="10" height="9" rx="1" fill="#dff1ff"/><rect x="16" y="4" width="10" height="9" rx="1" fill="#dff1ff"/>' +
+      /* Manhattan skyline + the bridge, small, in the back */
+      '<path d="M0 100V84h20v-20h14v20h16v-30h12v30h20v-16h16v16h40v-10h20v10h40v-26h14v26h188v16z" fill="#1c2540"/>' +
+      '<rect x="0" y="92" width="400" height="5" fill="#6d7579"/>' + lat +
+      '<path d="M120 92V60h8v32zM300 92V60h8v32z" fill="#7d868b"/>' +
+      /* Roosevelt Island strip */
+      '<rect x="0" y="118" width="400" height="12" fill="#2a3a3a"/>' + (function () { let b = ""; [20, 90, 170, 250, 330].forEach((x, i) => b += '<rect x="' + x + '" y="' + (100 - i % 2 * 8) + '" width="40" height="' + (20 + i % 2 * 8) + '" fill="#3a4250"/>'); return b; })() +
+      /* the river */
+      '<rect x="0" y="130" width="400" height="80" fill="#0e2236"/>' +
+      '<g class="rip"><path d="M10 150h40M120 170h50M230 146h44M320 176h50" stroke="#2d5a80" stroke-width="2"/></g>' +
+      '<g class="bt"><path d="M0 186h46l-6 8H6z" fill="#e8e8e8"/><rect x="12" y="178" width="18" height="8" fill="#c33"/></g>' +
+      /* the cables + tower */
+      '<path d="M0 120L400 30" stroke="#c9ced6" stroke-width="1.5"/><path d="M0 126L400 36" stroke="#c9ced6" stroke-width="1.2"/>' + towerT(300) +
+      /* the big red cabin */
+      '<g class="trm" style="animation-duration:11s;animation-delay:-4s"><g transform="translate(-40 114)">' +
+        '<path d="M44 14v-8" stroke="#c9ced6" stroke-width="3"/><rect x="28" y="2" width="32" height="6" fill="#c9ced6"/>' +
+        '<rect x="0" y="16" width="88" height="44" rx="6" fill="#d7262e" stroke="#7a0e12" stroke-width="2"/>' +
+        '<rect x="6" y="22" width="22" height="18" rx="2" fill="#dff1ff"/><rect x="33" y="22" width="22" height="18" rx="2" fill="#dff1ff"/><rect x="60" y="22" width="22" height="18" rx="2" fill="#dff1ff"/>' +
+        '<rect x="0" y="48" width="88" height="4" fill="#fff" opacity=".7"/>' +
       '</g></g>' +
-      '<rect x="300" y="226" width="92" height="26" rx="3" fill="#111" opacity=".85"/>' +
-      '<text x="346" y="237" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="9" letter-spacing="1.5" fill="' + STEEL + '">59TH STREET</text>' +
-      '<text x="346" y="248" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="9" letter-spacing="1.5" fill="' + STEEL + '">BRIDGE</text>',
+      qb +
+      '<rect x="120" y="226" width="170" height="18" rx="2" fill="#111" opacity=".9"/>' +
+      '<text x="205" y="239" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="10" letter-spacing="1.5" fill="' + STEEL + '">ROOSEVELT ISLAND TRAM</text>' +
+      tag("MEGA", 6, 204, 24, GOLD, -6),
       sky("g3", "#070d1c", "#29345a"));
   }
 

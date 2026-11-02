@@ -35,39 +35,33 @@
   const stars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".7"/>'; return s; };
   const RED = "#e8322b", GOLD = "#ffd34d", GREEN = "#38c172", BRICK = "#9c3f2c";
 
-  /* 1. Newark Broad Street: the 1903 red-brick Italianate station with its square clock tower, up on the embankment; NJ Transit train pulling in */
+  /* 1. Newark Broad Street: the NJ Transit train in on the high platform, the old station's brick clock tower, the sign pointing down Broad St to the arena */
   function train() {
-    let windows = "";
-    for (let x = 22; x < 300; x += 40) windows += '<rect x="' + x + '" y="152" width="26" height="16" rx="2" fill="#ffe9b0" opacity=".85"/>';
-    let arches = "";
-    for (let x = 30; x < 120; x += 26) arches += '<path d="M' + x + ' 104v-18a7 7 0 0 1 14 0v18z" fill="#ffd98a" opacity=".7"/>';
-    for (let x = 250; x < 380; x += 26) arches += '<path d="M' + x + ' 104v-18a7 7 0 0 1 14 0v18z" fill="#ffd98a" opacity=".7"/>';
+    const { svg, sky, tag, T, cloud, brickLines } = LM1;
+    let win = ""; for (let x = 14; x < 280; x += 36) win += '<rect x="' + x + '" y="116" width="24" height="18" rx="2" fill="#cfe6ff" opacity=".9"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g1)"/>' + stars(14) +
-      /* station building: red brick, stone trim, low hip roofs */
-      '<rect x="18" y="72" width="364" height="40" fill="' + BRICK + '"/><rect x="18" y="70" width="364" height="4" fill="#d8c7a6"/>' +
-      '<path d="M12 72l20 -12h336l20 12z" fill="#4b3a33"/>' + arches +
-      /* the clock tower */
-      '<rect x="160" y="14" width="56" height="98" fill="' + BRICK + '"/><rect x="156" y="10" width="64" height="8" fill="#d8c7a6"/>' +
-      '<path d="M154 12l34 -12 34 12z" fill="#4b3a33"/>' +
-      '<rect x="166" y="70" width="10" height="26" fill="#ffd98a" opacity=".6"/><rect x="200" y="70" width="10" height="26" fill="#ffd98a" opacity=".6"/>' +
-      '<circle cx="188" cy="40" r="17" fill="#f6efd9" stroke="#d8c7a6" stroke-width="3"/>' +
-      '<g class="hand" style="transform-origin:188px 40px"><path d="M188 40v-13" stroke="#222" stroke-width="2" stroke-linecap="round"/></g>' +
-      '<path d="M188 40h8" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><circle cx="188" cy="40" r="2" fill="#222"/>' +
-      /* platform canopy + sign */
-      '<rect x="0" y="112" width="400" height="8" fill="#2d3540"/>' +
-      '<rect x="56" y="122" width="290" height="22" rx="3" fill="#111"/><rect x="56" y="122" width="290" height="3" fill="#fff"/>' +
-      '<text x="68" y="139" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="13" fill="#fff">Newark Broad Street</text>' +
-      badge(298, 134, 40, "NJT", "#1b3d8f") +
-      '<g class="anim-train">' +
-        '<rect x="8" y="146" width="300" height="46" rx="6" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="174" width="300" height="4" fill="#1b3d8f"/><rect x="8" y="178" width="300" height="3" fill="#f58220"/><rect x="8" y="181" width="300" height="3" fill="#a3238e"/>' + windows +
-        '<rect x="290" y="152" width="14" height="18" rx="3" fill="#ffe9b0" opacity=".85"/><circle cx="300" cy="186" r="4" fill="#fff6c2"/>' +
-      '</g>' +
-      '<rect x="0" y="192" width="400" height="8" fill="#eab308"/>' +
-      '<rect x="0" y="200" width="400" height="60" fill="#2a2a2e"/>' +
-      tag("BRICK CITY", 22, 244, 28, GOLD, -4) + tag("FUNK DOC", 250, 246, 26, RED, -7),
-      sky("g1", "#0d1430", "#3a2c4a"));
+      '<rect width="400" height="260" fill="url(#rd1)"/>' + cloud("lm-drift", 0, 26, 1) +
+      /* the 1903 station and its clock tower */
+      '<rect x="250" y="56" width="150" height="56" fill="#9c4a32"/>' + brickLines(250, 56, 150, 56, "#7e3a26", 6) +
+      '<rect x="300" y="6" width="44" height="106" fill="#a8533a"/>' + brickLines(300, 6, 44, 106, "#7e3a26", 6) +
+      '<path d="M296 6h52l-6-6h-40z" fill="#5a3a2a"/><rect x="296" y="20" width="52" height="4" fill="#e8dcc4"/>' +
+      '<circle cx="322" cy="42" r="13" fill="#f6f2e6" stroke="#2a2a2a" stroke-width="2"/>' +
+      '<g class="lm-spin" style="animation-duration:60s;transform-box:view-box;transform-origin:322px 42px"><path d="M322 42V32" stroke="#111" stroke-width="2"/></g><path d="M322 42h7" stroke="#111" stroke-width="2"/>' +
+      [262, 280, 360, 378].map(x => '<path d="M' + x + ' 104v-24a6 6 0 0 1 12 0v24z" fill="#2a1a12"/>').join("") +
+      /* the high platform canopy and sign */
+      '<rect x="0" y="80" width="250" height="8" fill="#3a3e46"/><rect x="30" y="88" width="5" height="20" fill="#555"/><rect x="200" y="88" width="5" height="20" fill="#555"/>' +
+      '<rect x="20" y="40" width="210" height="28" rx="3" fill="#111"/><rect x="20" y="40" width="210" height="3" fill="#fff"/>' +
+      T(30, 61, "Newark Broad Street", 15, "#fff", { a: "start", f: "Helvetica, Arial, sans-serif", w: 700 }) +
+      /* the train: silver with the blue, orange and magenta stripes */
+      '<g class="anim-train"><rect x="-10" y="106" width="300" height="58" rx="7" fill="#d4d8de" stroke="#6b7280" stroke-width="2"/>' +
+      '<rect x="-10" y="140" width="300" height="5" fill="#1a3a8a"/><rect x="-10" y="145" width="300" height="4" fill="#f47b20"/><rect x="-10" y="149" width="300" height="3" fill="#c2185b"/>' + win +
+      '<rect x="270" y="112" width="14" height="26" rx="3" fill="#1d2a3a"/><circle cx="282" cy="156" r="4" fill="#fff6c2"/></g>' +
+      '<rect x="0" y="164" width="400" height="8" fill="#eab308"/><rect x="0" y="172" width="400" height="88" fill="#8f8a80"/>' +
+      /* the walk to the arena */
+      '<rect x="270" y="180" width="120" height="34" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      T(330, 195, "Broad St ↓", 11, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 }) + T(330, 208, "to the Arena", 10, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 }) +
+      tag("FUNK DOC", 16, 214, 36, "#ff3b30", -5) + tag("BRICK CITY", 26, 250, 24, "#ffd34d", -3) + tag("DEF SQUAD", 250, 250, 22, "#38c172", -4),
+      sky("rd1", "#8fc3ea", "#f2dcb0"));
   }
 
   /* 2. The arena on Mulberry St: red-brown brick, the tall glass atrium, the wrap-around LED screen; lights sweep the sky */
@@ -180,6 +174,74 @@
       '<rect x="0" y="220" width="400" height="40" fill="#14181d"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>',
       sky("g5", "#140a0a", "#3a1a1a"));
   }
+
+  /* LM1 helpers for the redrawn landmark rooms: same svg / sky / tag / bullet style as above, with their own little animations */
+  const LM1 = (function () {
+    const css = '<style>' +
+      '@keyframes lmDrift{from{transform:translateX(-90px)}to{transform:translateX(490px)}}.lm-drift{animation:lmDrift 24s linear infinite}.lm-d2{animation-delay:-12s}' +
+      '@keyframes lmCar{from{transform:translateX(-110px)}to{transform:translateX(510px)}}.lm-car{animation:lmCar 6s linear infinite}.lm-c2{animation-delay:-3s}' +
+      '@keyframes lmCarL{from{transform:translateX(510px)}to{transform:translateX(-110px)}}.lm-carL{animation:lmCarL 7.5s linear infinite}' +
+      '@keyframes lmFlick{0%,100%{opacity:1}45%{opacity:.75}50%{opacity:.3}55%{opacity:.9}}.lm-flk{animation:lmFlick 2.2s infinite}.lm-f2{animation-delay:-.8s}' +
+      '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{transform-box:fill-box;transform-origin:50% 0;animation:lmSway 3s ease-in-out infinite}' +
+      '.lm-swayb{transform-box:fill-box;transform-origin:50% 100%;animation:lmSway 3.6s ease-in-out infinite}.lm-s2{animation-delay:-1.5s}' +
+      '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.lm-bob{animation:lmBob 1.4s ease-in-out infinite}.lm-b2{animation-delay:-.7s}.lm-b3{animation-delay:-.35s}' +
+      '@keyframes lmRise{0%{transform:translate(0,0);opacity:1}80%{opacity:1}100%{transform:translate(14px,-150px);opacity:0}}.lm-rise{animation:lmRise 6s ease-in infinite}' +
+      '@keyframes lmBlink{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blink{animation:lmBlink 1s steps(1) infinite}.lm-k2{animation-delay:-.5s}' +
+      '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{transform-box:fill-box;transform-origin:50% 50%;animation:lmSpin 14s linear infinite}' +
+      '@keyframes lmFly{from{transform:translate(-80px,30px)}to{transform:translate(480px,-30px)}}.lm-fly{animation:lmFly 9s linear infinite}' +
+      '@keyframes lmLand{from{transform:translate(460px,-40px)}to{transform:translate(-120px,40px)}}.lm-land{animation:lmLand 10s linear infinite}' +
+      '@keyframes lmRip{0%,100%{transform:translateX(0)}50%{transform:translateX(-14px)}}.lm-rip{animation:lmRip 3s ease-in-out infinite}.lm-r2{animation-delay:-1.5s}' +
+      '@keyframes lmBoat{0%,100%{transform:translateX(0)}50%{transform:translateX(-60px)}}.lm-boat{animation:lmBoat 12s ease-in-out infinite}' +
+      '@keyframes lmWalk{from{transform:translateX(0)}to{transform:translateX(70px)}}.lm-walk{animation:lmWalk 5s ease-in-out infinite alternate}.lm-w2{animation-delay:-2.5s}' +
+      '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(30px,250px) rotate(300deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}.lm-l2{animation-delay:-2s}.lm-l3{animation-delay:-4s}' +
+      '@keyframes lmDrop{0%{transform:translateY(0)}100%{transform:translateY(118px)}}.lm-drop{animation:lmDrop 2.6s cubic-bezier(.5,0,.9,.6) infinite}' +
+      '@keyframes lmBall{0%{transform:translate(0,0)}50%{transform:translate(-90px,-26px)}100%{transform:translate(-180px,0)}}.lm-ball{animation:lmBall 2.4s linear infinite}' +
+      '@keyframes lmSwim{0%,100%{transform:translateX(0)}50%{transform:translateX(90px)}}.lm-swim{animation:lmSwim 7s ease-in-out infinite}.lm-sw2{animation-delay:-3.5s}' +
+      '</style>';
+    const svg = (inner, defs) =>
+      '<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img">' + css + '<defs>' + (defs || "") + '</defs>' + inner + '</svg>';
+    const sky = (id, top, bottom) =>
+      '<linearGradient id="' + id + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + top + '"/><stop offset="1" stop-color="' + bottom + '"/></linearGradient>';
+    const tag = (txt, x, y, size, fill, rot) =>
+      '<text x="' + x + '" y="' + y + '" transform="rotate(' + (rot || -6) + ' ' + x + ' ' + y + ')" font-family="Sedgwick Ave Display, Permanent Marker, cursive" font-size="' + size +
+      '" fill="' + fill + '" stroke="#000" stroke-width="' + Math.max(2, size / 9) + '" paint-order="stroke" stroke-linejoin="round">' + txt + '</text>';
+    const bullet = (x, y, letter, color, dark, r) => { r = r || 11;
+      return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + color + '"/><text x="' + x + '" y="' + (y + r * .5) + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + (r * 1.36).toFixed(1) + '" fill="' + (dark ? "#000" : "#fff") + '">' + letter + '</text>'; };
+    const stars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".7"/>'; return s; };
+    const T = (x, y, txt, size, fill, o) => { o = o || {};
+      return '<text x="' + x + '" y="' + y + '" text-anchor="' + (o.a || "middle") + '" font-family="' + (o.f || "Anton, Impact, sans-serif") + '"' + (o.w ? ' font-weight="' + o.w + '"' : '') +
+        (o.ls ? ' letter-spacing="' + o.ls + '"' : '') + ' font-size="' + size + '" fill="' + fill + '"' + (o.cls ? ' class="' + o.cls + '"' : '') + '>' + txt + '</text>'; };
+    /* a name plaque: dark box, title + subtitle */
+    const plaque = (x, y, w, title, sub, bg, accent) => {
+      const ts = Math.min(12, (w - 14) / (title.length * .66)), ss = sub ? Math.min(8, (w - 12) / (sub.length * .62 + sub.length * 1.5 / 8)) : 0;
+      return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (sub ? 34 : 22) + '" rx="4" fill="' + bg + '" stroke="' + accent + '" stroke-width="2"/>' +
+        T(x + w / 2, y + 16, title, ts.toFixed(1), "#fff") + (sub ? T(x + w / 2, y + 28, sub, ss.toFixed(1), accent, { f: "Barlow, Arial, sans-serif", w: 700, ls: (ss * 1.5 / 8).toFixed(2) }) : ""); };
+    /* green NYC street sign blade */
+    const blade = (x, y, w, txt) =>
+      '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      T(x + w / 2, y + 13, txt, 11, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 });
+    const car = (cls, y, c, w) => { w = w || 44;
+      return '<g class="' + cls + '"><rect x="0" y="' + y + '" width="' + w + '" height="12" rx="4" fill="' + c + '"/><rect x="' + (w * .22) + '" y="' + (y - 7) + '" width="' + (w * .5) + '" height="8" rx="3" fill="' + c + '"/>' +
+        '<rect x="' + (w * .27) + '" y="' + (y - 5) + '" width="' + (w * .4) + '" height="5" fill="#cfe6ff" opacity=".8"/><circle cx="' + (w * .22) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/><circle cx="' + (w * .78) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/>' +
+        '<rect x="' + (w - 3) + '" y="' + (y + 3) + '" width="3" height="3" fill="#fff6c2"/></g>'; };
+    /* faceless figure (silhouette), optional sign held up */
+    const fig = (x, y, c, sign, sc) => { sc = sc || 1;
+      return '<g transform="translate(' + x + ' ' + y + ') scale(' + sc + ')"><circle cx="0" cy="-30" r="5" fill="' + c + '"/><path d="M-6 -24h12l2 16h-4l-1 14h-6l-1-14h-4z" fill="' + c + '"/>' +
+        (sign ? '<path d="M5 -22l6-14" stroke="' + c + '" stroke-width="2.5"/><rect x="' + (13 - Math.max(30, sign[0].length * 4.6 + 6) / 2) + '" y="-58" width="' + Math.max(30, sign[0].length * 4.6 + 6) + '" height="20" fill="' + sign[1] + '" stroke="#222" stroke-width="1"/>' +
+          T(13, -44, sign[0], 7, sign[2] || "#111", { f: "Barlow, Arial, sans-serif", w: 700 }) : "") + '</g>'; };
+    const wins = (x0, y0, cols, rows, dx, dy, w, h, c, lit) => { let s = "";
+      for (let r = 0; r < rows; r++) for (let k = 0; k < cols; k++) s += '<rect x="' + (x0 + k * dx) + '" y="' + (y0 + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + ((lit && (k * 7 + r * 3) % 4 === 0) ? lit : c) + '"/>';
+      return s; };
+    const brickLines = (x, y, w, h, c, step) => { let s = ""; for (let yy = y + (step || 7); yy < y + h; yy += (step || 7)) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + c + '" stroke-width=".6"/>'; return s; };
+    const cloud = (cls, x, y, s, op) => '<g class="' + cls + '"><g transform="translate(' + x + ' ' + y + ') scale(' + s + ')" opacity="' + (op || .8) + '"><ellipse cx="0" cy="0" rx="26" ry="9" fill="#fff"/><ellipse cx="12" cy="-6" rx="14" ry="9" fill="#fff"/><ellipse cx="-10" cy="-4" rx="11" ry="7" fill="#fff"/></g></g>';
+    const tree = (x, y, r, c, cls) => '<g class="' + (cls || "lm-swayb") + '"><rect x="' + (x - 2.5) + '" y="' + (y - 4) + '" width="5" height="' + (r + 6) + '" fill="#5a3a22"/><circle cx="' + x + '" cy="' + (y - r * .6) + '" r="' + r + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x - r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x + r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/></g>';
+    const bird = (cls, x, y) => '<g class="' + cls + '"><path d="M' + x + ' ' + y + 'q5-5 10 0q5-5 10 0" fill="none" stroke="#222" stroke-width="1.6"/></g>';
+    /* subway car side (R-type), for the station rooms */
+    const subCar = (x, y, w, stripe, letters) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="60" rx="7" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="' + x + '" y="' + (y + 40) + '" width="' + w + '" height="4" fill="' + stripe + '"/>';
+      for (let k = x + 14; k < x + w - 40; k += 44) s += '<rect x="' + k + '" y="' + (y + 10) + '" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
+      return s + '<rect x="' + (x + w - 22) + '" y="' + (y + 10) + '" width="14" height="22" rx="3" fill="#1d2a3a"/><circle cx="' + (x + w - 8) + '" cy="' + (y + 50) + '" r="3.5" fill="#fff6c2"/>' + (letters || ""); };
+    return { svg, sky, tag, bullet, stars, T, plaque, blade, car, fig, wins, brickLines, cloud, tree, bird, subCar };
+  })();
 
   window.SCENES = { train, arena, cribs, skydive, corner };
 })();

@@ -71,7 +71,7 @@ window.CFG = {
   {
    "scene": "station",
    "t": "PRESS PLAY",
-   "x": "Take the LIRR to Hollis. Tap the record. Every song is an episode.",
+   "x": "Take the LIRR to Queens Village. Tap the record. Every song is an episode.",
    "sfx": "train"
   },
   {

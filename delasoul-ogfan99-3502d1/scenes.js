@@ -110,32 +110,30 @@
       sky("gd", "#7fd6ff", "#c9f1d6"));
   }
 
-  /* 4. Jones Beach: the brick water tower with its green copper point, the boardwalk and the ocean */
+  /* 4. Amityville Memorial High School, where Posdnuos, Dave and Maseo met: the long low brick school, the field out back, a daisy-age kite over the goalposts */
   function tower() {
-    let bricks = "";
-    for (let y = 70; y < 190; y += 10) bricks += '<path d="M182 ' + y + 'h36" stroke="#7a4a30" stroke-width="1" opacity=".5"/>';
-    let rail = "";
-    for (let x = 0; x < 400; x += 16) rail += '<rect x="' + x + '" y="196" width="3" height="14" fill="#6b4f36"/>';
+    let win = "";
+    for (let x = 40; x < 370; x += 26) { if (x > 150 && x < 230) continue; win += '<rect x="' + x + '" y="112" width="18" height="16" fill="#cfe3ef" stroke="#e8dcc0" stroke-width="1.5"/><rect x="' + x + '" y="138" width="18" height="16" fill="#cfe3ef" stroke="#e8dcc0" stroke-width="1.5"/>'; }
+    let rows = "";
+    for (let y = 104; y < 166; y += 6) rows += '<path d="M30 ' + y + 'h340" stroke="#7a3a28" stroke-width=".6" opacity=".55"/>';
+    let daisies = "";
+    [[40, 236], [96, 246], [300, 240], [356, 248], [150, 252]].forEach(([x, y]) => { for (let a = 0; a < 6; a++) daisies += '<ellipse cx="' + (x + Math.cos(a) * 5).toFixed(1) + '" cy="' + (y + Math.sin(a) * 5).toFixed(1) + '" rx="3.4" ry="2" transform="rotate(' + (a * 60) + ' ' + (x + Math.cos(a) * 5).toFixed(1) + ' ' + (y + Math.sin(a) * 5).toFixed(1) + ')" fill="#fff"/>'; daisies += '<circle cx="' + x + '" cy="' + y + '" r="2.6" fill="' + YEL + '"/>'; });
     return svg(
       '<rect width="400" height="260" fill="url(#gt)"/>' +
-      '<g class="gull"><path d="M60 50q6-6 12 0q6-6 12 0" stroke="#333" stroke-width="2" fill="none"/></g>' +
-      '<g class="gull gull2"><path d="M20 80q5-5 10 0q5-5 10 0" stroke="#333" stroke-width="2" fill="none"/></g>' +
-      /* ocean on the right, sand */
-      '<rect x="0" y="170" width="400" height="90" fill="#e8d6a8"/>' +
-      '<rect x="250" y="160" width="150" height="20" fill="#2b6fa3"/>' +
-      '<g class="wave"><path d="M240 176q12-5 24 0t24 0t24 0t24 0t24 0t24 0t24 0" stroke="#fff" stroke-width="2" fill="none"/></g>' +
-      /* the water tower: tan-brown brick shaft, arcaded top, green copper pyramid */
-      '<rect x="176" y="190" width="48" height="10" fill="#8b5a3c"/>' +
-      '<path d="M182 190L184 62h32l2 128z" fill="#b5764f" stroke="#7a4a30" stroke-width="2"/>' + bricks +
-      '<rect x="178" y="44" width="44" height="22" fill="#c9875e" stroke="#7a4a30" stroke-width="2"/>' +
-      '<rect x="184" y="48" width="6" height="14" fill="#3a2418"/><rect x="197" y="48" width="6" height="14" fill="#3a2418"/><rect x="210" y="48" width="6" height="14" fill="#3a2418"/>' +
-      '<rect x="174" y="40" width="52" height="5" fill="#e5d4b5"/>' +
-      '<path d="M176 40L200 2L224 40z" fill="#5fa88a" stroke="#2f6b55" stroke-width="2"/><path d="M200 2v-0" stroke="#333"/>' +
-      '<rect x="180" y="100" width="40" height="4" fill="#e5d4b5"/>' +
-      /* boardwalk */
-      '<rect x="0" y="208" width="400" height="12" fill="#a0784f"/>' + rail + '<rect x="0" y="194" width="400" height="3" fill="#6b4f36"/>' +
-      '<rect x="0" y="220" width="400" height="6" fill="#7a5a3a"/>' +
-      '<text x="390" y="252" text-anchor="end" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" fill="#5b4532" letter-spacing="2">JONES BEACH · SOUTH SHORE</text>',
+      '<g class="gull"><path d="M60 40q6-6 12 0q6-6 12 0" stroke="#333" stroke-width="2" fill="none"/></g>' +
+      /* the field out back with its goalposts, a kite riding up */
+      '<rect x="0" y="70" width="400" height="96" fill="#6aa84e"/><path d="M300 100V70M330 100V70M300 80h30" stroke="#f6f6f6" stroke-width="2.5"/>' +
+      '<g class="sail" style="animation-duration:20s"><path d="M80 30l10-10 10 10-10 14z" fill="' + PINK + '"/><path d="M90 44q-6 14 4 26" stroke="#333" stroke-width="1" fill="none"/></g>' +
+      /* the long low brick school */
+      '<rect x="30" y="102" width="340" height="64" fill="#9a4a32"/>' + rows + '<rect x="26" y="96" width="348" height="8" fill="#e8dcc0"/>' + win +
+      '<rect x="172" y="88" width="56" height="78" fill="#e8dcc0"/><path d="M186 166v-30h28v30z" fill="#3a2a22"/><path d="M200 136v30" stroke="#e8dcc0" stroke-width="2"/>' +
+      '<rect x="168" y="94" width="64" height="28" fill="#14181d"/><text x="200" y="107" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="6.5" fill="' + YEL + '">AMITYVILLE</text><text x="200" y="117" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="6.5" fill="' + YEL + '">MEMORIAL H.S.</text>' +
+      '<rect x="232" y="56" width="2" height="46" fill="#8a8f96"/><path class="wave" d="M234 58h16v10h-16z" fill="' + GREEN + '"/>' +
+      /* front lawn and daisies */
+      '<rect x="0" y="166" width="400" height="10" fill="#c9c1b0"/><rect x="0" y="176" width="400" height="84" fill="#5f9a46"/>' + daisies +
+      '<g class="note"><text x="120" y="200" font-size="18" fill="' + YEL + '">&#9834;</text></g><g class="note note2"><text x="270" y="204" font-size="18" fill="' + PINK + '">&#9835;</text></g>' +
+      '<text x="200" y="26" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="11" fill="#2a3a2a" letter-spacing="2">WHERE POS, DAVE &amp; MASEO MET</text>' +
+      tag("DE LA SOUL", 18, 226, 30, YEL, -5) + tag("DAISY AGE", 240, 226, 24, PINK, -4),
       sky("gt", "#5fb4ec", "#e3f3fd"));
   }
 

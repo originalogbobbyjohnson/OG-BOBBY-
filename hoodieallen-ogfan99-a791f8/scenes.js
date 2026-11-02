@@ -109,28 +109,32 @@
       '<text x="200" y="186" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" fill="#e9dcc4" letter-spacing="2">NEW YORK AVE · HUNTINGTON</text>');
   }
 
-  /* 4. Jones Beach: the tall brick water tower with its green copper cap over the boardwalk, waves rolling in, gulls overhead */
+  /* 4. Old Bethpage Village Restoration, a couple of miles from his Plainview corner: the 1800s farm village, the white clapboard church with its steeple, red barns, a horse cart on the dirt lane */
   function beach() {
-    let boards = "";
-    for (let x = 0; x < 400; x += 16) boards += '<path d="M' + x + ' 178v18" stroke="#8a6a44" stroke-width="1"/>';
+    let fence = "";
+    for (let x = 0; x < 400; x += 20) fence += '<path d="M' + x + ' 196v-16" stroke="#8a6a44" stroke-width="3"/>';
+    let clap = "";
+    for (let y = 116; y < 186; y += 6) clap += '<path d="M150 ' + y + 'h100" stroke="#d8d4c8" stroke-width="1"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#gj)"/>' +
-      '<circle cx="70" cy="50" r="22" fill="#fff3b0"/>' +
-      /* water tower */
-      '<rect x="176" y="40" width="48" height="140" fill="#b0603a"/><rect x="176" y="40" width="6" height="140" fill="#8f4a2c"/>' +
-      '<rect x="172" y="68" width="56" height="8" fill="#c97a4e"/><rect x="172" y="120" width="56" height="6" fill="#c97a4e"/>' +
-      '<rect x="188" y="84" width="8" height="26" fill="#3a2418"/><rect x="204" y="84" width="8" height="26" fill="#3a2418"/>' +
-      '<rect x="180" y="30" width="40" height="12" fill="#c97a4e"/>' +
-      '<path d="M182 30l18-26 18 26z" fill="#4fa38a"/><path d="M200 4v-4" stroke="#4fa38a" stroke-width="2"/>' +
-      /* boardwalk */
-      '<rect x="0" y="176" width="400" height="22" fill="#b98d5c"/>' + boards +
-      '<rect x="0" y="198" width="400" height="22" fill="#f1dca8"/>' +
-      '<rect x="0" y="216" width="400" height="44" fill="#2d82b7"/>' +
-      '<path class="wave" d="M-20 222q20-8 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0" stroke="#fff" stroke-width="3" fill="none" opacity=".85"/>' +
-      '<path class="wave wave2" d="M-20 240q20-8 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0" stroke="#bfe6fa" stroke-width="2" fill="none" opacity=".7"/>' +
-      '<g class="gull"><path d="M0 90q8-8 14 0q6-8 14 0" stroke="#1d2a33" stroke-width="2" fill="none"/></g>' +
-      '<g class="gull gull2"><path d="M0 120q6-6 10 0q4-6 10 0" stroke="#1d2a33" stroke-width="2" fill="none"/></g>' +
-      '<text x="330" y="168" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" fill="#18405e" letter-spacing="3">JONES BEACH</text>',
+      '<rect width="400" height="260" fill="url(#gj)"/>' + '<circle cx="340" cy="44" r="20" fill="#fff3b0"/>' +
+      '<path d="M0 150q100-30 200-10t200-6v30H0z" fill="#6aa04a"/>' +
+      /* red barn */
+      '<rect x="18" y="120" width="100" height="70" fill="#a8322a"/><path d="M10 122l58-40 58 40z" fill="#6a2018"/><path d="M48 190v-44h40v44z" fill="#7a2420"/><path d="M48 146l40 44M88 146l-40 44" stroke="#f6f3ea" stroke-width="3"/>' +
+      '<rect x="58" y="100" width="20" height="14" fill="#f6f3ea"/>' +
+      /* the white clapboard church */
+      '<rect x="150" y="112" width="100" height="78" fill="#f6f3ea"/>' + clap + '<path d="M142 114l58-34 58 34z" fill="#4a4a4a"/>' +
+      '<rect x="186" y="54" width="28" height="40" fill="#f6f3ea" stroke="#d8d4c8"/><path d="M182 54l18-40 18 40z" fill="#4a4a4a"/><path d="M200 14v-10" stroke="#4a4a4a" stroke-width="2"/>' +
+      '<path d="M194 92v-18a6 6 0 0 1 12 0v18z" fill="#2a3a4a"/>' + [162, 226].map(x => '<path d="M' + x + ' 170v-30a6 6 0 0 1 12 0v30z" fill="#2a3a4a"/>').join("") + '<path d="M190 190v-28h20v28z" fill="#3a2a1e"/>' +
+      /* farmhouse */
+      '<rect x="290" y="128" width="90" height="62" fill="#e8dcb8"/><path d="M282 130l53-30 53 30z" fill="#5a4a3a"/>' + [300, 330, 356].map(x => '<rect x="' + x + '" y="144" width="12" height="16" fill="#2a3a4a"/>').join("") +
+      '<rect x="0" y="190" width="400" height="70" fill="#5f9a3a"/><path d="M0 222q200-14 400 0v18q-200-14-400 0z" fill="#b89a6a"/>' + fence +
+      /* horse and cart on the lane */
+      '<g class="sail" style="animation-duration:20s"><g transform="translate(0 196)"><path d="M10 22h40v-14h-40z" fill="#8a5a2a"/><circle cx="18" cy="26" r="8" fill="none" stroke="#3a2418" stroke-width="3"/><circle cx="44" cy="26" r="8" fill="none" stroke="#3a2418" stroke-width="3"/>' +
+      '<g class="bob"><path d="M54 12h30v10h-30z" fill="#6a4426"/><path d="M82 12l8-10 4 4-6 8z" fill="#6a4426"/><path d="M58 22v12M80 22v12" stroke="#6a4426" stroke-width="3"/></g></g></g>' +
+      '<g class="gull"><path d="M0 70q8-8 14 0q6-8 14 0" stroke="#1d2a33" stroke-width="2" fill="none"/></g>' +
+      '<rect x="10" y="10" width="140" height="34" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="2"/>' +
+      '<text x="80" y="25" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">OLD BETHPAGE</text><text x="80" y="38" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">VILLAGE RESTORATION</text>' +
+      tag("HOODIE", 260, 252, 26, ORANGE, -5),
       sky("gj", "#7cc6f0", "#e6f5fb"));
   }
 

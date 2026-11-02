@@ -257,6 +257,22 @@ function LIB(P) {
   S.glenview = () => svg('<rect width="400" height="260" fill="url(#g3)"/>' + palisades(150) + water(160, "#4a7aa0") + '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' +
     '<rect x="110" y="90" width="150" height="120" fill="#8a7e6a"/><path d="M100 90h170l-30-30h-110z" fill="#3a3a44"/><rect x="230" y="40" width="44" height="170" fill="#9a8e7a"/><path d="M224 40h56l-28-30z" fill="#3a3a44"/>' +
     wins(124, 104, 4, 2, 32, 46, 16, 28, "#ffe6a8") + wins(242, 56, 1, 3, 0, 40, 20, 26, "#ffe6a8") + '<g class="slideL"><path d="M0 178h40l-6 6H6z" fill="#fff"/><path d="M18 178v-20l12 18z" fill="#fff"/></g>' + tag("GLENVIEW", 20, 246, 22, A, -3), sky("g3", "#ff9a6a", "#8fc3ea"));
+  /* A$AP NAST 4. Frederick Douglass Circle, Central Park West at 110th: the round granite plaza with its quilt-pattern paving, the bronze statue (a dark silhouette, no face) on its pedestal, the park trees behind, cabs circling */
+  S.nastCircle = () => { let quilt = ""; for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6, x2 = 200 + Math.cos(a) * 150, y2 = 222 + Math.sin(a) * 25; quilt += '<path d="M200 222L' + x2.toFixed(1) + ' ' + y2.toFixed(1) + '" stroke="#6a6a70" stroke-width="1.5"/>'; }
+    return svg('<rect width="400" height="260" fill="url(#g4)"/><circle cx="330" cy="40" r="16" fill="#fff3c4"/>' +
+      /* Central Park trees + the buildings along 110th */
+      brick(0, 70, 90, 110, "#8a5a44", "#7a4a36") + wins(10, 80, 3, 4, 26, 22, 14, 14, "#ffe6a8") + brick(310, 80, 90, 100, "#9a7a5a", "#8a6a4a") + wins(320, 90, 3, 4, 26, 20, 14, 14, "#ffe6a8") +
+      tree(120, 130, 30, "#2f6a2f") + tree(180, 120, 34, "#3f7a3a") + tree(240, 126, 32, "#2f6a2f") + tree(292, 136, 26, "#3f7a3a") +
+      street(156, false) +
+      /* the circle plaza */
+      car(0, 158, "#f2c14e") + car(0, 160, B, "slideL") +
+      '<ellipse cx="200" cy="222" rx="160" ry="28" fill="#a7a49c"/><ellipse cx="200" cy="222" rx="150" ry="25" fill="#c9c4b8"/>' + quilt +
+      '<ellipse cx="200" cy="222" rx="96" ry="16" fill="none" stroke="#7a7680" stroke-width="2"/><ellipse cx="200" cy="222" rx="44" ry="8" fill="#8a8680"/>' +
+      /* pedestal + statue silhouette */
+      '<rect x="186" y="172" width="28" height="48" fill="#8f8a80"/><rect x="182" y="164" width="36" height="6" fill="#a8a296"/>' +
+      '<path d="M194 164v-20q-2 -10 6 -14q8 4 6 14v20z" fill="#3a3326"/><circle cx="200" cy="124" r="6" fill="#3a3326"/><path d="M206 138l10 -6" stroke="#3a3326" stroke-width="4" stroke-linecap="round"/>' +
+      '<rect x="150" y="242" width="100" height="14" rx="2" fill="#111"/>' + txt("DOUGLASS CIRCLE", 200, 252.5, 8.5, "#fff") +
+      blade(80, 8, "Central Park W") + blade(330, 8, "W 110 St") + tag("A$AP NAST", 14, 150, 22, A, -5) + tag("UPTOWN", 300, 160, 20, C, -4), sky("g4", "#8fc3ea", "#f6e6c0")); };
   S.corner = corner; S.tag = tag;
   return S;
 }
@@ -266,7 +282,7 @@ function LIB(P) {
     station: () => L.stUnder("116 St", [["B","#ff6319"],["C","#0039a6"]], "#3a8a6a", "TRILLA"),
     morningside: () => L.morningside(),
     library: () => L.lowLibrary(),
-    cathedral: () => L.stJohn(),
+    cathedral: () => L.nastCircle(),
     block: () => L.corner(["#0d1022", "#2a3a4a"], "W 116 St", "Fred Douglass Blvd", L.tag("A$AP NAST", 26, 124, 37, P.c1, -7) + L.tag("TRILLA", 40, 156, 22, P.c2, -5) + L.tag("A$AP MOB", 30, 188, 24, P.c3, -3) + L.tag("UPTOWN", 120, 212, 20, "#f6efdc", -2))
   };
 })();

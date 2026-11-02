@@ -65,36 +65,34 @@
       sky("cg1", "#0c1424", "#3a5a7a"));
   }
 
-  /* 2. Parkchester: red-brick towers with the glazed terracotta figures, the Metropolitan Oval fountain going */
+  /* 2. The Soundview ferry landing at Clason Point: the pier at the tip of Soundview, the blue-and-white ferry pulling out, the Whitestone Bridge across the water */
   function oval() {
-    const bldg = (x, w, h) => {
-      let s = '<rect x="' + x + '" y="' + (200 - h) + '" width="' + w + '" height="' + h + '" fill="#8e3b2a"/>' +
-        '<rect x="' + x + '" y="' + (200 - h) + '" width="' + w + '" height="5" fill="#d9c8a8"/>';
-      for (let y = 200 - h + 14; y < 190; y += 14) for (let wx = x + 7; wx < x + w - 8; wx += 14) s += '<rect x="' + wx + '" y="' + y + '" width="7" height="8" fill="' + ((wx + y) % 3 ? "#ffd98a" : "#3a1a12") + '" opacity=".9"/>';
-      return s;
-    };
-    /* glazed terracotta figures on plaques: a horse, a fish, a bird, in Parkchester's colors */
-    const plaque = (x, y, inner) => '<rect x="' + (x - 14) + '" y="' + (y - 14) + '" width="28" height="28" rx="3" fill="#e9dcc0" stroke="#7a5a2a" stroke-width="1.5"/>' + inner;
+    const { svg, sky, tag, T, plaque, cloud, bird, fig } = LM1;
+    let cables = ""; for (let x = 222; x <= 378; x += 8) { const y = 50 + Math.pow((x - 300) / 78, 2) * 0 + (Math.abs(x - 300) < 1 ? 0 : 0); cables += '<path d="M' + x + ' ' + (60 + 30 * (1 - Math.pow((x - 300) / 78, 2))).toFixed(1) + 'V100" stroke="#a8b4c0" stroke-width=".8"/>'; }
     return svg(
-      '<rect width="400" height="260" fill="url(#cg2)"/>' + stars(14) +
-      bldg(0, 96, 150) + bldg(304, 96, 150) + bldg(110, 70, 120) + bldg(220, 70, 120) +
-      plaque(48, 74, '<path d="M38 80q2-10 10-10l4-4 2 4q4 2 4 8h-4v4h-3v-4h-6v4h-3z" fill="#2f7fb8"/>') +
-      plaque(352, 74, '<path d="M342 74q8-8 16 0q-8 8-16 0zM358 74l6-5v10z" fill="#e2871f"/><circle cx="346" cy="72" r="1.3" fill="#3a1a12"/>') +
-      plaque(145, 104, '<path d="M137 108q4-10 12-8l4-4v6q-4 6-12 8zM149 100l3-6" stroke="#2e8a4e" stroke-width="2" fill="#2e8a4e"/>') +
-      plaque(255, 104, '<circle cx="255" cy="104" r="7" fill="#c9372b"/><path d="M255 97v14M248 104h14" stroke="#f5c542" stroke-width="2"/>') +
-      /* lawn + oval path */
-      '<rect x="0" y="200" width="400" height="60" fill="#2d5a2e"/>' +
-      '<ellipse cx="200" cy="226" rx="170" ry="22" fill="none" stroke="#c9bfa8" stroke-width="5"/>' +
-      /* the fountain basin with jets */
-      '<ellipse cx="200" cy="224" rx="70" ry="12" fill="#5b6a74"/><ellipse cx="200" cy="222" rx="62" ry="9" fill="#5fb3dd"/>' +
-      '<rect x="194" y="188" width="12" height="34" fill="#b9b2a2"/><ellipse cx="200" cy="188" rx="22" ry="5" fill="#b9b2a2"/>' +
-      '<path class="jet" d="M200 186q-4-26 0-40q4 14 0 40z" fill="#bfe8ff"/>' +
-      '<path class="jet jet2" d="M186 214q-14-18-4-30q-2 14 6 30z" fill="#bfe8ff" opacity=".8"/>' +
-      '<path class="jet jet2" d="M214 214q14-18 4-30q2 14-6 30z" fill="#bfe8ff" opacity=".8"/>' +
-      '<circle class="drp" cx="190" cy="186" r="2" fill="#dff4ff"/><circle class="drp drp2" cx="210" cy="184" r="2" fill="#dff4ff"/><circle class="drp drp3" cx="200" cy="180" r="2" fill="#dff4ff"/>' +
-      '<rect x="128" y="24" width="144" height="30" rx="4" fill="#1b3a2a" stroke="' + GOLD + '" stroke-width="2"/>' +
-      '<text x="200" y="45" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="17" letter-spacing="2" textLength="124" lengthAdjust="spacingAndGlyphs" fill="#fff">PARKCHESTER</text>',
-      sky("cg2", "#0d1830", "#3e5f8a"));
+      '<rect width="400" height="260" fill="url(#cg2)"/>' + cloud("lm-drift", 0, 26, 1) + bird("lm-fly", 0, 40) +
+      /* the Whitestone across the East River */
+      '<rect x="0" y="100" width="400" height="6" fill="#7a8a7a"/>' +
+      '<rect x="218" y="40" width="8" height="66" fill="#8a96a2"/><rect x="374" y="40" width="8" height="66" fill="#8a96a2"/>' +
+      '<rect x="216" y="56" width="12" height="3" fill="#8a96a2"/><rect x="372" y="56" width="12" height="3" fill="#8a96a2"/>' +
+      '<path d="M140 98Q180 60 222 42Q300 90 378 42Q400 52 420 70" fill="none" stroke="#a8b4c0" stroke-width="2"/>' + cables +
+      '<rect x="120" y="96" width="300" height="5" fill="#8a96a2"/>' +
+      T(300, 34, "WHITESTONE BRIDGE", 8, "#4a5a6a", { f: "Barlow, Arial, sans-serif", w: 700, ls: 2 }) +
+      /* the water */
+      '<rect x="0" y="106" width="400" height="104" fill="url(#cg2w)"/>' +
+      '<g class="lm-rip"><path d="M20 130h50M140 150h60M260 138h50M320 170h60M60 186h50" stroke="#dff3ff" stroke-width="2" opacity=".6"/></g>' +
+      /* the ferry */
+      '<g class="lm-boat"><g transform="translate(150 128)"><path d="M0 22h130l-12 16H10z" fill="#1e4fa8"/><rect x="8" y="6" width="112" height="16" fill="#f6f6f2"/><rect x="28" y="-6" width="70" height="12" fill="#f6f6f2"/>' +
+        (function () { let s = ""; for (let x = 14; x < 116; x += 12) s += '<rect x="' + x + '" y="10" width="8" height="6" fill="#2a4a7a"/>'; return s; })() + '<rect x="40" y="-3" width="46" height="6" fill="#2a4a7a"/><rect x="0" y="20" width="130" height="3" fill="#ff8a1e"/></g></g>' +
+      /* the pier + landing */
+      '<path d="M0 196h170l10 14H0z" fill="#6a5a4a"/><rect x="0" y="210" width="400" height="50" fill="#3a3a3e"/>' +
+      '<rect x="20" y="160" width="120" height="36" fill="#e8ecef"/><path d="M14 160h132l-8-14H22z" fill="#1e4fa8"/>' +
+      T(80, 182, "SOUNDVIEW", 13, "#1e4fa8") +
+      [26, 70, 114, 158].map(x => '<rect x="' + x + '" y="196" width="4" height="20" fill="#4a3a2a"/>').join("") +
+      '<g class="lm-bob">' + fig(200, 244, "#111", null, .8) + '</g>' +
+      plaque(8, 8, 170, "SOUNDVIEW FERRY LANDING", "CLASON POINT · THE BRONX", "#1a1408", "#f5c542") +
+      tag("UPTOWN BABY", 220, 252, 22, "#f5c542", -4),
+      sky("cg2", "#8fc8ea", "#f2e2c0") + '<linearGradient id="cg2w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a8ab0"/><stop offset="1" stop-color="#2a5a7a"/></linearGradient>');
   }
 
   /* 3. Soundview Park at the mouth of the Bronx River, the Whitestone Bridge across the water */
@@ -184,6 +182,74 @@
       '<rect x="0" y="220" width="400" height="40" fill="#14181d"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>',
       sky("cg5", "#0c1424", "#26405a"));
   }
+
+  /* LM1 helpers for the redrawn landmark rooms: same svg / sky / tag / bullet style as above, with their own little animations */
+  const LM1 = (function () {
+    const css = '<style>' +
+      '@keyframes lmDrift{from{transform:translateX(-90px)}to{transform:translateX(490px)}}.lm-drift{animation:lmDrift 24s linear infinite}.lm-d2{animation-delay:-12s}' +
+      '@keyframes lmCar{from{transform:translateX(-110px)}to{transform:translateX(510px)}}.lm-car{animation:lmCar 6s linear infinite}.lm-c2{animation-delay:-3s}' +
+      '@keyframes lmCarL{from{transform:translateX(510px)}to{transform:translateX(-110px)}}.lm-carL{animation:lmCarL 7.5s linear infinite}' +
+      '@keyframes lmFlick{0%,100%{opacity:1}45%{opacity:.75}50%{opacity:.3}55%{opacity:.9}}.lm-flk{animation:lmFlick 2.2s infinite}.lm-f2{animation-delay:-.8s}' +
+      '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{transform-box:fill-box;transform-origin:50% 0;animation:lmSway 3s ease-in-out infinite}' +
+      '.lm-swayb{transform-box:fill-box;transform-origin:50% 100%;animation:lmSway 3.6s ease-in-out infinite}.lm-s2{animation-delay:-1.5s}' +
+      '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.lm-bob{animation:lmBob 1.4s ease-in-out infinite}.lm-b2{animation-delay:-.7s}.lm-b3{animation-delay:-.35s}' +
+      '@keyframes lmRise{0%{transform:translate(0,0);opacity:1}80%{opacity:1}100%{transform:translate(14px,-150px);opacity:0}}.lm-rise{animation:lmRise 6s ease-in infinite}' +
+      '@keyframes lmBlink{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blink{animation:lmBlink 1s steps(1) infinite}.lm-k2{animation-delay:-.5s}' +
+      '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{transform-box:fill-box;transform-origin:50% 50%;animation:lmSpin 14s linear infinite}' +
+      '@keyframes lmFly{from{transform:translate(-80px,30px)}to{transform:translate(480px,-30px)}}.lm-fly{animation:lmFly 9s linear infinite}' +
+      '@keyframes lmLand{from{transform:translate(460px,-40px)}to{transform:translate(-120px,40px)}}.lm-land{animation:lmLand 10s linear infinite}' +
+      '@keyframes lmRip{0%,100%{transform:translateX(0)}50%{transform:translateX(-14px)}}.lm-rip{animation:lmRip 3s ease-in-out infinite}.lm-r2{animation-delay:-1.5s}' +
+      '@keyframes lmBoat{0%,100%{transform:translateX(0)}50%{transform:translateX(-60px)}}.lm-boat{animation:lmBoat 12s ease-in-out infinite}' +
+      '@keyframes lmWalk{from{transform:translateX(0)}to{transform:translateX(70px)}}.lm-walk{animation:lmWalk 5s ease-in-out infinite alternate}.lm-w2{animation-delay:-2.5s}' +
+      '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(30px,250px) rotate(300deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}.lm-l2{animation-delay:-2s}.lm-l3{animation-delay:-4s}' +
+      '@keyframes lmDrop{0%{transform:translateY(0)}100%{transform:translateY(118px)}}.lm-drop{animation:lmDrop 2.6s cubic-bezier(.5,0,.9,.6) infinite}' +
+      '@keyframes lmBall{0%{transform:translate(0,0)}50%{transform:translate(-90px,-26px)}100%{transform:translate(-180px,0)}}.lm-ball{animation:lmBall 2.4s linear infinite}' +
+      '@keyframes lmSwim{0%,100%{transform:translateX(0)}50%{transform:translateX(90px)}}.lm-swim{animation:lmSwim 7s ease-in-out infinite}.lm-sw2{animation-delay:-3.5s}' +
+      '</style>';
+    const svg = (inner, defs) =>
+      '<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img">' + css + '<defs>' + (defs || "") + '</defs>' + inner + '</svg>';
+    const sky = (id, top, bottom) =>
+      '<linearGradient id="' + id + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + top + '"/><stop offset="1" stop-color="' + bottom + '"/></linearGradient>';
+    const tag = (txt, x, y, size, fill, rot) =>
+      '<text x="' + x + '" y="' + y + '" transform="rotate(' + (rot || -6) + ' ' + x + ' ' + y + ')" font-family="Sedgwick Ave Display, Permanent Marker, cursive" font-size="' + size +
+      '" fill="' + fill + '" stroke="#000" stroke-width="' + Math.max(2, size / 9) + '" paint-order="stroke" stroke-linejoin="round">' + txt + '</text>';
+    const bullet = (x, y, letter, color, dark, r) => { r = r || 11;
+      return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + color + '"/><text x="' + x + '" y="' + (y + r * .5) + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + (r * 1.36).toFixed(1) + '" fill="' + (dark ? "#000" : "#fff") + '">' + letter + '</text>'; };
+    const stars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".7"/>'; return s; };
+    const T = (x, y, txt, size, fill, o) => { o = o || {};
+      return '<text x="' + x + '" y="' + y + '" text-anchor="' + (o.a || "middle") + '" font-family="' + (o.f || "Anton, Impact, sans-serif") + '"' + (o.w ? ' font-weight="' + o.w + '"' : '') +
+        (o.ls ? ' letter-spacing="' + o.ls + '"' : '') + ' font-size="' + size + '" fill="' + fill + '"' + (o.cls ? ' class="' + o.cls + '"' : '') + '>' + txt + '</text>'; };
+    /* a name plaque: dark box, title + subtitle */
+    const plaque = (x, y, w, title, sub, bg, accent) => {
+      const ts = Math.min(12, (w - 14) / (title.length * .66)), ss = sub ? Math.min(8, (w - 12) / (sub.length * .62 + sub.length * 1.5 / 8)) : 0;
+      return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (sub ? 34 : 22) + '" rx="4" fill="' + bg + '" stroke="' + accent + '" stroke-width="2"/>' +
+        T(x + w / 2, y + 16, title, ts.toFixed(1), "#fff") + (sub ? T(x + w / 2, y + 28, sub, ss.toFixed(1), accent, { f: "Barlow, Arial, sans-serif", w: 700, ls: (ss * 1.5 / 8).toFixed(2) }) : ""); };
+    /* green NYC street sign blade */
+    const blade = (x, y, w, txt) =>
+      '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      T(x + w / 2, y + 13, txt, 11, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 });
+    const car = (cls, y, c, w) => { w = w || 44;
+      return '<g class="' + cls + '"><rect x="0" y="' + y + '" width="' + w + '" height="12" rx="4" fill="' + c + '"/><rect x="' + (w * .22) + '" y="' + (y - 7) + '" width="' + (w * .5) + '" height="8" rx="3" fill="' + c + '"/>' +
+        '<rect x="' + (w * .27) + '" y="' + (y - 5) + '" width="' + (w * .4) + '" height="5" fill="#cfe6ff" opacity=".8"/><circle cx="' + (w * .22) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/><circle cx="' + (w * .78) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/>' +
+        '<rect x="' + (w - 3) + '" y="' + (y + 3) + '" width="3" height="3" fill="#fff6c2"/></g>'; };
+    /* faceless figure (silhouette), optional sign held up */
+    const fig = (x, y, c, sign, sc) => { sc = sc || 1;
+      return '<g transform="translate(' + x + ' ' + y + ') scale(' + sc + ')"><circle cx="0" cy="-30" r="5" fill="' + c + '"/><path d="M-6 -24h12l2 16h-4l-1 14h-6l-1-14h-4z" fill="' + c + '"/>' +
+        (sign ? '<path d="M5 -22l6-14" stroke="' + c + '" stroke-width="2.5"/><rect x="' + (13 - Math.max(30, sign[0].length * 4.6 + 6) / 2) + '" y="-58" width="' + Math.max(30, sign[0].length * 4.6 + 6) + '" height="20" fill="' + sign[1] + '" stroke="#222" stroke-width="1"/>' +
+          T(13, -44, sign[0], 7, sign[2] || "#111", { f: "Barlow, Arial, sans-serif", w: 700 }) : "") + '</g>'; };
+    const wins = (x0, y0, cols, rows, dx, dy, w, h, c, lit) => { let s = "";
+      for (let r = 0; r < rows; r++) for (let k = 0; k < cols; k++) s += '<rect x="' + (x0 + k * dx) + '" y="' + (y0 + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + ((lit && (k * 7 + r * 3) % 4 === 0) ? lit : c) + '"/>';
+      return s; };
+    const brickLines = (x, y, w, h, c, step) => { let s = ""; for (let yy = y + (step || 7); yy < y + h; yy += (step || 7)) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + c + '" stroke-width=".6"/>'; return s; };
+    const cloud = (cls, x, y, s, op) => '<g class="' + cls + '"><g transform="translate(' + x + ' ' + y + ') scale(' + s + ')" opacity="' + (op || .8) + '"><ellipse cx="0" cy="0" rx="26" ry="9" fill="#fff"/><ellipse cx="12" cy="-6" rx="14" ry="9" fill="#fff"/><ellipse cx="-10" cy="-4" rx="11" ry="7" fill="#fff"/></g></g>';
+    const tree = (x, y, r, c, cls) => '<g class="' + (cls || "lm-swayb") + '"><rect x="' + (x - 2.5) + '" y="' + (y - 4) + '" width="5" height="' + (r + 6) + '" fill="#5a3a22"/><circle cx="' + x + '" cy="' + (y - r * .6) + '" r="' + r + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x - r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x + r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/></g>';
+    const bird = (cls, x, y) => '<g class="' + cls + '"><path d="M' + x + ' ' + y + 'q5-5 10 0q5-5 10 0" fill="none" stroke="#222" stroke-width="1.6"/></g>';
+    /* subway car side (R-type), for the station rooms */
+    const subCar = (x, y, w, stripe, letters) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="60" rx="7" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="' + x + '" y="' + (y + 40) + '" width="' + w + '" height="4" fill="' + stripe + '"/>';
+      for (let k = x + 14; k < x + w - 40; k += 44) s += '<rect x="' + k + '" y="' + (y + 10) + '" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
+      return s + '<rect x="' + (x + w - 22) + '" y="' + (y + 10) + '" width="14" height="22" rx="3" fill="#1d2a3a"/><circle cx="' + (x + w - 8) + '" cy="' + (y + 50) + '" r="3.5" fill="#fff6c2"/>' + (letters || ""); };
+    return { svg, sky, tag, bullet, stars, T, plaque, blade, car, fig, wins, brickLines, cloud, tree, bird, subCar };
+  })();
 
   window.SCENES = { train, oval, river, beach, corner };
 })();

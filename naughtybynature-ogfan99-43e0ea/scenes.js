@@ -105,20 +105,25 @@
       crowd);
   }
 
-  /* 4. The stage: Kay Gee on the decks between two mic stands for Treach and Vin Rock */
+  /* 4. Album world, Poverty's Paradise (1995): Illtown rooftops at sunset, palm trees swaying where palm trees shouldn't be, dollar bills blowing past */
   function stage() {
-    const deck = x => '<rect x="' + (x - 34) + '" y="160" width="68" height="34" rx="4" fill="#24242c" stroke="#555" stroke-width="2"/>' +
-      '<g class="spin"><circle cx="' + x + '" cy="177" r="14" fill="#111"/><circle cx="' + x + '" cy="177" r="5" fill="' + GOLD + '"/><rect x="' + (x - 1) + '" y="164" width="2" height="5" fill="#fff"/></g>';
-    const mic = x => '<path d="M' + x + ' 214v-90" stroke="#888" stroke-width="3"/><path d="M' + (x - 14) + ' 214h28" stroke="#888" stroke-width="3"/>' +
-      '<rect x="' + (x - 5) + '" y="108" width="10" height="20" rx="5" fill="#333" stroke="#bbb" stroke-width="1.5"/>';
+    let roofs = "";
+    [[0, 150, 70, "#6a3a2a"], [74, 166, 60, "#5a4a5a"], [138, 140, 80, "#7a4a32"], [222, 160, 64, "#5a3a3a"], [290, 146, 110, "#6a4a3a"]].forEach(([x, y, w, c]) => {
+      roofs += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (260 - y) + '" fill="' + c + '"/><rect x="' + (x - 2) + '" y="' + (y - 4) + '" width="' + (w + 4) + '" height="5" fill="#2a1a14"/>';
+      for (let yy = y + 12; yy < 250; yy += 20) for (let xx = x + 8; xx < x + w - 10; xx += 18) roofs += '<rect' + ((xx + yy) % 5 === 0 ? ' class="twk"' : '') + ' x="' + xx + '" y="' + yy + '" width="9" height="11" fill="' + ((xx + yy) % 3 ? "#2a1e24" : "#ffd98a") + '"/>';
+    });
+    const palm = (x, y, cls) => '<path d="M' + x + ' 260q-4 -50 4 -' + (260 - y) + '" stroke="#5a3a22" stroke-width="7" fill="none"/>' +
+      '<g class="' + cls + '"><path d="M' + (x + 4) + ' ' + y + 'q-30 -10 -44 10M' + (x + 4) + ' ' + y + 'q30 -14 46 6M' + (x + 4) + ' ' + y + 'q-20 -24 -40 -20M' + (x + 4) + ' ' + y + 'q22 -26 40 -18M' + (x + 4) + ' ' + y + 'q2 -26 -4 -36" stroke="#2f7a3a" stroke-width="6" fill="none" stroke-linecap="round"/></g>';
+    const bill = (x, y, d) => '<g style="animation:billfly 6s linear infinite;animation-delay:' + d + 's"><g transform="translate(' + x + ' ' + y + ')"><g class="spin" style="animation-duration:2.4s"><rect x="-10" y="-5" width="20" height="10" fill="#8fbf6a" stroke="#3a6a2a" stroke-width="1"/><circle cx="0" cy="0" r="2.5" fill="none" stroke="#3a6a2a"/></g></g></g>';
     return svg(
-      '<rect width="400" height="260" fill="#0f0c18"/>' + stars(10) +
-      '<g class="beam"><path d="M60 0l-50 210h100z" fill="' + RED + '" opacity=".18"/></g><g class="beam beam2"><path d="M340 0l-50 210h100z" fill="' + BLUE + '" opacity=".18"/></g>' +
-      '<rect x="0" y="214" width="400" height="46" fill="#2a2030"/><path d="M0 214h400" stroke="' + GOLD + '" stroke-width="2"/>' +
-      '<rect x="120" y="156" width="160" height="58" rx="4" fill="#1a1a22" stroke="#444" stroke-width="2"/>' + deck(160) + deck(240) +
-      mic(70) + mic(330) +
-      '<text x="200" y="60" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="24" textLength="250" lengthAdjust="spacingAndGlyphs" fill="#fff">NAUGHTY BY NATURE</text>' +
-      '<text x="200" y="244" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" fill="' + GOLD + '" letter-spacing="3">TREACH · VIN ROCK · KAY GEE</text>');
+      '<style>@keyframes billfly{0%{transform:translate(-40px,0)}100%{transform:translate(460px,-60px)}}</style>' +
+      '<rect width="400" height="260" fill="url(#g4)"/>' +
+      '<circle cx="300" cy="100" r="34" fill="#ffd36a" opacity=".9"/>' +
+      '<text x="200" y="40" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="24" fill="#fff" stroke="#2a1a14" stroke-width="2" paint-order="stroke">POVERTY\'S PARADISE</text>' +
+      roofs + palm(110, 120, "arm") + palm(330, 110, "arm arm2") +
+      bill(0, 100, 0) + bill(0, 130, -2) + bill(0, 76, -4) + bill(0, 150, -3) +
+      tag("ILLTOWN", 14, 238, 30, GOLD, -5) + tag("NAUGHTY", 250, 242, 26, RED, -6),
+      sky("g4", "#3a2a6a", "#ff9a5a"));
   }
 
   /* 5. Main St and Halsted St by the station: the wall with their name tagged, the green street signs, cars going by */

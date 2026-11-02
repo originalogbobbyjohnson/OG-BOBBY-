@@ -80,44 +80,7 @@
       sky("gh", "#6fb6ef", "#e2f1fb"));
   }
 
-  /* 3. George Washington Bridge from the Jersey side: the gray steel lattice towers, cables, traffic streaming across */
-  function bridge() {
-    const tower = x => { let s = '<rect x="' + (x - 14) + '" y="40" width="8" height="150" fill="#8f99a3"/><rect x="' + (x + 6) + '" y="40" width="8" height="150" fill="#8f99a3"/>';
-      for (let y = 46; y < 186; y += 18) s += '<path d="M' + (x - 10) + ' ' + y + 'l20 18M' + (x + 10) + ' ' + y + 'l-20 18" stroke="#8f99a3" stroke-width="2"/>'; return s; };
-    let lights = "";
-    for (let x = 0; x < 400; x += 16) lights += '<circle cx="' + x + '" cy="' + (60 + Math.pow((x - 200) / 20, 2) * 0.9) + '" r="1.6" fill="#fff6c2" class="flk"/>';
-    return svg(
-      '<rect width="400" height="260" fill="url(#gb)"/>' + stars(16) +
-      '<path d="M0 210q100-6 400 0v50H0z" fill="#1d2b44"/>' +
-      '<path d="M300 210l10-30h20v-20h14v20h22v30z" fill="#3a2f48"/>' +
-      tower(80) + tower(320) +
-      '<path d="M-20 60Q200 230 420 60" stroke="#b8c2cc" stroke-width="3" fill="none"/>' + lights +
-      '<rect x="0" y="156" width="400" height="12" fill="#6f7a86"/><rect x="0" y="168" width="400" height="6" fill="#4a535e"/>' +
-      '<g class="carR"><rect x="0" y="148" width="34" height="10" rx="3" fill="' + PINK + '"/><circle cx="32" cy="153" r="2" fill="#fff6c2"/></g>' +
-      '<g class="carR carR2"><rect x="0" y="148" width="30" height="10" rx="3" fill="' + YEL + '"/><circle cx="28" cy="153" r="2" fill="#fff6c2"/></g>' +
-      '<g class="car"><rect x="0" y="148" width="32" height="10" rx="3" fill="' + SKY + '"/><circle cx="2" cy="153" r="2" fill="#ff5a4f"/></g>' +
-      '<path d="M0 220q60-8 120 0t120 0 160 0" stroke="#4a6a9a" stroke-width="2" fill="none" opacity=".6"/>' +
-      '<text x="200" y="246" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" fill="#e6f1fa" letter-spacing="3">GEORGE WASHINGTON BRIDGE</text>',
-      sky("gb", "#120c2a", "#5a3a7a"));
-  }
 
-  /* 4. The stage: her name in pink lights, spotlights swinging, the crowd bouncing */
-  function stage() {
-    let bulbs = "";
-    for (let x = 70; x <= 330; x += 13) bulbs += '<circle class="bulb' + ((x / 13) % 2 ? " bulb2" : "") + '" cx="' + x + '" cy="58" r="3" fill="' + YEL + '"/><circle class="bulb' + ((x / 13) % 2 ? "" : " bulb2") + '" cx="' + x + '" cy="112" r="3" fill="' + YEL + '"/>';
-    let fans = "";
-    for (let i = 0; i < 13; i++) { const x = 14 + i * 31, c = [PINK, YEL, SKY, "#e8e8e8"][i % 4];
-      fans += '<g class="bob' + (i % 2 ? " bob2" : "") + '"><circle cx="' + x + '" cy="216" r="9" fill="#1b1b22"/><path d="M' + (x - 13) + ' 260v-30q13-14 26 0v30z" fill="' + c + '"/><path d="M' + (x - 8) + ' 222l-6-18M' + (x + 8) + ' 222l6-18" stroke="#1b1b22" stroke-width="4" stroke-linecap="round"/></g>'; }
-    return svg(
-      '<rect width="400" height="260" fill="#14081a"/>' +
-      '<path class="beam" d="M60 0l-30 200h60z" fill="' + PINK + '" opacity=".22"/><path class="beam beam2" d="M340 0l-30 200h60z" fill="' + SKY + '" opacity=".22"/>' +
-      '<rect x="60" y="50" width="280" height="70" rx="6" fill="#1d0f24" stroke="' + PINK + '" stroke-width="3"/>' + bulbs +
-      '<text x="200" y="100" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="34" fill="' + PINK + '" letter-spacing="4">COI LERAY</text>' +
-      '<rect x="20" y="160" width="360" height="22" fill="#2a1a30"/><rect x="20" y="158" width="360" height="4" fill="' + PINK + '"/>' +
-      '<rect x="190" y="130" width="4" height="30" fill="#999"/><circle cx="192" cy="128" r="5" fill="#333"/>' +
-      fans +
-      '<text x="200" y="176" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" fill="#ffd6ea" letter-spacing="3">GIRLS IS PLAYERS TOO</text>');
-  }
 
   /* 5. The corner: Main St and Anderson St in Hackensack, green signs, her name sprayed on the wall */
   function corner() {
@@ -140,5 +103,92 @@
       sky("gk", "#1a0b2a", "#4a2a6a"));
   }
 
-  window.SCENES = { train, courthouse, bridge, stage, corner };
+  /* ---- redrawn landmark scenes (OG FAN 99 landmark pass): small shared helpers, prefixed L ---- */
+  const Lcss = '<style>' +
+    '@keyframes lmCar{from{transform:translateX(-170px)}to{transform:translateX(480px)}}.lm-car{animation:lmCar 8s linear infinite}' +
+    '@keyframes lmCarB{from{transform:translateX(480px)}to{transform:translateX(-170px)}}.lm-carb{animation:lmCarB 10s linear infinite}' +
+    '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.lm-bob{animation:lmBob 1.6s ease-in-out infinite}' +
+    '@keyframes lmFlk{0%,100%{opacity:1}45%{opacity:.7}50%{opacity:.3}55%{opacity:.95}}.lm-flk{animation:lmFlk 2.3s infinite}' +
+    '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{animation:lmSpin 1.8s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmRise{0%{transform:translateY(0) scale(.8);opacity:0}20%{opacity:.85}100%{transform:translateY(-70px) scale(1.4);opacity:0}}.lm-rise{animation:lmRise 4s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{animation:lmSway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}' +
+    '@keyframes lmBlk{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blk{animation:lmBlk 1s steps(1) infinite}' +
+    '@keyframes lmFlag{0%,100%{transform:skewY(0)}50%{transform:skewY(-6deg)}}.lm-flag{animation:lmFlag 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}' +
+    '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(-30px,230px) rotate(280deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}' +
+    '@keyframes lmCld{from{transform:translateX(-120px)}to{transform:translateX(470px)}}.lm-cld{animation:lmCld 30s linear infinite}' +
+    '@keyframes lmPls{0%,100%{opacity:.35}50%{opacity:1}}.lm-pls{animation:lmPls 2.2s ease-in-out infinite}' +
+    '@keyframes lmWav{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}.lm-wav{animation:lmWav 3s ease-in-out infinite}' +
+    '@keyframes lmBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}.lm-beat{animation:lmBeat .7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmNote{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-60px);opacity:0}}.lm-note{animation:lmNote 3s linear infinite}' +
+    '.lmd1{animation-delay:-1s}.lmd2{animation-delay:-2s}.lmd3{animation-delay:-3s}.lmd4{animation-delay:-4.5s}.lmd5{animation-delay:-6s}' +
+    '</style>';
+  const LF = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
+  const LT = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" ' + LF + ' font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LA = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" font-family="Anton, Impact, sans-serif" font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LR = (x, y, w, h, fill, extra) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + fill + '"' + (extra || "") + '/>';
+  const Lbul = (x, y, l, col, r) => { r = r || 11; return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/>' + LT(l, x, y + r * 0.42, r * 1.22, col === "#fccc0a" ? "#000" : "#fff"); };
+  const Lpill = (x, y, l, col) => { const w = l.length * 8 + 14; return '<rect x="' + (x - w / 2) + '" y="' + (y - 10) + '" width="' + w + '" height="20" rx="10" fill="' + col + '"/>' + LT(l, x, y + 4.5, 11, "#fff"); };
+  /* black MTA-style station sign: lines = [["B","#ff6319"],...]; a long name like "MN" draws a pill */
+  const Lsign = (x, y, w, name, lines, size) => { let b = "", bx = x + w - 18; for (let i = lines.length - 1; i >= 0; i--) { const l = lines[i]; if (l[0].length > 1) { b += Lpill(bx - 10, y + 17, l[0], l[1]); bx -= l[0].length * 8 + 22; } else { b += Lbul(bx, y + 17, l[0], l[1], 10); bx -= 24; } }
+    return LR(x, y, w, 32, "#111", ' rx="3"') + LR(x, y, w, 4, "#fff") + LT(name, x + 10, y + 23, size || 15, "#fff", "start") + b; };
+  /* green NYC street sign blade */
+  const Lblade = (x, y, t, w) => { w = w || t.length * 7.2 + 20; return LR(x, y, w, 19, "#0f6b3a", ' rx="2" stroke="#fff" stroke-width="1.5"') + LT(t, x + w / 2, y + 14, 12, "#fff"); };
+  /* two green signs on a pole at x, crossing */
+  const Lpole = (x, y, a, b) => { const wa = a.length * 7.2 + 20, wb = b.length * 7.2 + 20; return LR(x, y, 6, 236 - y, "#2a3138") + Lblade(x + 3 - wa / 2, y + 6, a) + Lblade(x + 3 - wb / 2, y + 30, b) + LR(x - 2, y - 4, 10, 6, "#2a3138"); };
+  const Lbrick = (x, y, w, h, base, mortar) => { let s = LR(x, y, w, h, base); for (let yy = y + 6; yy < y + h; yy += 6) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + mortar + '" stroke-width=".8"/>'; return s; };
+  const Lwin = (x, y, cols, rows, dx, dy, w, h, lit, dark) => { let s = ""; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const on = ((r * 7 + c * 3) % 5) < 2; s += '<rect x="' + (x + c * dx) + '" y="' + (y + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + (on ? lit : dark) + '"' + (on && (r + c) % 4 === 0 ? ' class="lm-flk"' : '') + '/>'; } return s; };
+  const Lstars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".75"/>'; return s; };
+  const Lcloud = (x, y, s, cls) => '<g class="lm-cld ' + (cls || "") + '"><g transform="translate(' + x + ' ' + y + ') scale(' + (s || 1) + ')" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="22" ry="9"/><ellipse cx="14" cy="-6" rx="14" ry="9"/><ellipse cx="-12" cy="-4" rx="11" ry="7"/></g></g>';
+  const Ltree = (x, y, r, col, cls) => '<g class="lm-sway ' + (cls || "") + '">' + LR(x - 3, y, 6, r * 1.3, "#5a3d24") + '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/><circle cx="' + (x - r * .5) + '" cy="' + (y + r * .3) + '" r="' + r * .7 + '" fill="' + col + '" opacity=".85"/><circle cx="' + (x + r * .55) + '" cy="' + (y + r * .25) + '" r="' + r * .65 + '" fill="' + col + '" opacity=".9"/></g>';
+  /* faceless figure: head + body, x = centre, y = feet */
+  const Lman = (x, y, body, cls, cap) => '<g' + (cls ? ' class="' + cls + '"' : "") + '>' + '<rect x="' + (x - 7) + '" y="' + (y - 30) + '" width="14" height="22" rx="5" fill="' + body + '"/><rect x="' + (x - 6) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/><rect x="' + (x + 1) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/>' +
+    '<circle cx="' + x + '" cy="' + (y - 37) + '" r="7" fill="#5a3a26"/>' + (cap ? '<path d="M' + (x - 8) + ' ' + (y - 39) + 'q8-10 16 0z" fill="' + cap + '"/><rect x="' + (x - 1) + '" y="' + (y - 41) + '" width="12" height="3" fill="' + cap + '"/>' : '') + '</g>';
+  /* subway car (stainless) seen from the side, x,y top-left */
+  const Lcar = (x, y, w, l, col, band) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="52" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>'; for (let i = x + 16; i < x + w - 60; i += 40) s += '<rect x="' + i + '" y="' + (y + 9) + '" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    return s + LR(x, y + 33, w, 5, band || col) + Lbul(x + w - 22, y + 18, l, col, 10) + '<circle cx="' + (x + w - 8) + '" cy="' + (y + 44) + '" r="3.5" fill="#fff6c2"/>'; };
+  const Lcab = (x, y) => '<rect x="' + x + '" y="' + (y + 8) + '" width="70" height="20" rx="5" fill="#f7c600"/><path d="M' + (x + 12) + ' ' + (y + 8) + 'l8-10h28l10 10z" fill="#f7c600"/><path d="M' + (x + 22) + ' ' + y + 'h10v8h-14zM' + (x + 35) + ' ' + y + 'h10l7 8h-17z" fill="#bfe0ff"/>' +
+    LR(x + 26, y - 6, 18, 6, "#fff", ' rx="1"') + LT("TAXI", x + 35, y - 1.5, 5, "#111") + '<path d="M' + x + ' ' + (y + 17) + 'h70" stroke="#111" stroke-width="1" stroke-dasharray="3 3"/><circle cx="' + (x + 15) + '" cy="' + (y + 28) + '" r="6" fill="#111"/><circle cx="' + (x + 55) + '" cy="' + (y + 28) + '" r="6" fill="#111"/>';
+  const Lauto = (x, y, col) => '<rect x="' + x + '" y="' + (y + 6) + '" width="56" height="16" rx="5" fill="' + col + '"/><rect x="' + (x + 11) + '" y="' + (y - 2) + '" width="32" height="11" rx="3" fill="#cfe6ff"/><circle cx="' + (x + 13) + '" cy="' + (y + 22) + '" r="5" fill="#111"/><circle cx="' + (x + 43) + '" cy="' + (y + 22) + '" r="5" fill="#111"/>';
+  /* turntable from above at an angle */
+  const Ldeck = (cx, cy, r, lab) => '<rect x="' + (cx - r - 12) + '" y="' + (cy - r * .45 - 10) + '" width="' + (r * 2 + 30) + '" height="' + (r * .9 + 20) + '" rx="4" fill="#2a2a30"/><g transform="translate(' + cx + ' ' + cy + ') scale(1 .42)"><g class="lm-spin"><circle r="' + r + '" fill="#0c0c0e"/><circle r="' + r * .72 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .5 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .3 + '" fill="' + lab + '"/><rect x="-2" y="' + (-r * .3) + '" width="4" height="' + r * .2 + '" fill="#fff"/></g></g><path d="M' + (cx + r + 6) + ' ' + (cy - r * .4) + 'l-8 ' + r * .5 + '" stroke="#c9ced6" stroke-width="3"/>';
+  /* 2. The Church on the Green, Hackensack: the old brownstone Dutch church on the town green */
+  function LM_bridge() {
+    let stones = ""; for (let y = 110; y < 230; y += 10) for (let x = 120 + ((y / 10) % 2) * 8; x < 266; x += 16) stones += LR(x, y, 14, 8, ["#8a5a3c", "#7a4e34", "#946446"][(x + y) % 3], ' rx="1"');
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lcloud(60, 30) + Lcloud(300, 24, .8, "lmd3") +
+      /* tower + white steeple */
+      LR(176, 50, 48, 70, "#7a4e34") + LR(172, 46, 56, 6, "#e8e4da") + LR(184, 22, 32, 24, "#f4f2ec") + '<path d="M184 22l16-20 16 20z" fill="#f4f2ec"/>' +
+      '<path d="M192 40v-10q8-8 16 0v10z" fill="#2a3440"/>' + '<g class="lm-sway" style="transform-origin:top center"><path d="M195 34q5-6 10 0v4h-10z" fill="#c9a24a"/></g>' +
+      /* nave */
+      '<path d="M116 110l84-40 84 40z" fill="#5a3a2a"/>' + LR(120, 110, 160, 126, "#8a5a3c") + stones +
+      [146, 254].map(x => '<path d="M' + (x - 10) + ' 196v-40q10-14 20 0v40z" fill="#2a3440" stroke="#e8e4da" stroke-width="2"/>').join("") +
+      '<path d="M186 236v-44q14-18 28 0v44z" fill="#e8e4da"/><path d="M190 236v-40q10-14 20 0v40z" fill="#5a2a1a"/>' +
+      LR(176, 64, 48, 4, "#e8e4da") + '<circle cx="200" cy="88" r="9" fill="#f4f2ec" stroke="#3a2a20"/><path d="M200 88v-6M200 88l4 3" stroke="#3a2a20" stroke-width="1.5"/>' +
+      /* the green */
+      '<path d="M0 236h400v24H0z" fill="#4f8a3c"/>' + Ltree(50, 160, 34, "#3f7f3a") + Ltree(350, 160, 34, "#3f7f3a", "lmd1") + Ltree(96, 190, 20, "#4f8f45", "lmd2") +
+      [30, 330].map(x => LR(x, 196, 3, 40, "#1a1a1a") + '<circle class="lm-pls" cx="' + (x + 1.5) + '" cy="194" r="5" fill="#fff3c4"/>').join("") +
+      '<g class="lm-car" style="animation-duration:14s"><path d="M0 70q6-6 12 0q6-6 12 0" stroke="#333" stroke-width="2" fill="none"/></g>' +
+      LR(240, 6, 154, 34, "#1a1a2a", ' rx="3" opacity=".9"') + LT("CHURCH ON THE GREEN", 317, 21, 10.5, "#ffd23f") + LT("HACKENSACK · EST. 1696", 317, 34, 8.5, "#fff") +
+      tag("COI LERAY", 228, 254, 24, "#ff4fa3", -4),
+      sky("sk", "#86bde6", "#f6e2c4"));
+  }
+  /* 3. Trendsetter (2022), her debut: a pink-lit runway with TRENDSETTER in lights */
+  function LM_stage() {
+    let bulbs = ""; for (let x = 40; x <= 360; x += 16) bulbs += '<circle class="lm-blk' + ((x / 16) % 2 ? " lmd1" : "") + '" cx="' + x + '" cy="18" r="3" fill="#ffd23f"/><circle class="lm-blk' + ((x / 16) % 2 ? "" : " lmd1") + '" cx="' + x + '" cy="84" r="3" fill="#ffd23f"/>';
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' +
+      LR(30, 10, 340, 82, "#1a0a16", ' rx="6" stroke="#ff4fa3" stroke-width="3"') + bulbs + LA("TRENDSETTER", 200, 68, 40, "#ff4fa3", "middle", ' class="lm-pls" stroke="#ffd0e8" stroke-width="1"') +
+      /* spotlights */
+      '<g class="lm-sway" style="transform-origin:60px 100px;animation-duration:4s"><path d="M60 100l-40 160h80z" fill="#ffd0e8" opacity=".14"/></g><g class="lm-sway lmd2" style="transform-origin:340px 100px;animation-duration:4s"><path d="M340 100l-40 160h80z" fill="#ffd0e8" opacity=".14"/></g>' +
+      /* the runway in perspective */
+      '<path d="M170 110h60l90 150H80z" fill="#ff4fa3" opacity=".9"/><path d="M170 110h60l90 150H80z" fill="url(#rw)"/>' +
+      [0, 1, 2, 3, 4, 5].map(i => { const y = 120 + i * 24, k = (y - 110) / 150, l = 170 - 90 * k, r = 230 + 90 * k; return '<circle class="lm-blk' + (i % 2 ? " lmd1" : "") + '" cx="' + (l + 3) + '" cy="' + y + '" r="2.5" fill="#fff"/><circle class="lm-blk' + (i % 2 ? "" : " lmd1") + '" cx="' + (r - 3) + '" cy="' + y + '" r="2.5" fill="#fff"/>'; }).join("") +
+      /* the walker, faceless, coming down the runway */
+      '<g class="lm-bob"><path d="M190 196l-6 40h10l6-26 6 26h10l-6-40z" fill="#1a1a1a"/><path d="M186 160h28l4 38h-36z" fill="#ffd23f"/><circle cx="200" cy="148" r="10" fill="#5a3a26"/><path d="M188 146q12-22 26-2l2 18q-6-14-14-16-8 2-14 16z" fill="#ff4fa3"/></g>' +
+      /* crowd + flashes */
+      '<path d="M0 260v-40q20-10 40 0t40 0v40zM320 260v-40q20-10 40 0t40 0v40z" fill="#2a1a2a"/>' + [20, 50, 350, 380].map((x, i) => '<circle cx="' + x + '" cy="214" r="9" fill="#3a2a3a"/><circle class="lm-blk lmd' + (i + 1) + '" cx="' + (x + 6) + '" cy="206" r="3" fill="#fff"/>').join("") +
+      LR(8, 104, 104, 22, "#000", ' rx="3" opacity=".6"') + LT("HER DEBUT · 2022", 60, 119, 10, "#ffd23f") +
+      tag("COI", 300, 140, 34, "#3ec7ff", -6) + tag("COI LERAY", 12, 180, 20, "#ffd23f", -4),
+      sky("sk", "#12040e", "#3a0e2a") + '<linearGradient id="rw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".5"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>');
+  }
+
+  window.SCENES = { train, courthouse, bridge: LM_bridge, stage: LM_stage, corner };
 })();

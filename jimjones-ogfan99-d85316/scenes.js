@@ -33,11 +33,10 @@
     '<g class="wing"><path d="M-3 -1q4 -9 9 -1z" fill="#8795a6"/></g></g>';
   const RED = "#e0263a", GOLD = "#f2c14e", PURP = "#a46cf0";
 
-  /* 1. A train pulling into 125 St on St. Nicholas Av, underground: tiled wall, mosaic band, columns */
+  /* 1. 125 St on St. Nicholas Av, underground: the A pulling in, the green-and-gold band, the Byrd Gang poster on the wall, a pigeon strutting the platform edge and one flying the tunnel */
   function train() {
     let tiles = "";
     for (let y = 30; y < 118; y += 8) tiles += '<path d="M0 ' + y + 'h400" stroke="#cfcabc" stroke-width=".8"/>';
-    for (let x = 0; x < 400; x += 12) tiles += '<path d="M' + x + ' 30v88" stroke="#cfcabc" stroke-width=".6"/>';
     let mosaic = "";
     for (let x = 0; x < 400; x += 16) mosaic += '<rect x="' + x + '" y="30" width="8" height="8" fill="#2f5d3a"/><rect x="' + (x + 8) + '" y="30" width="8" height="8" fill="#c9a24a"/>';
     let cols = "";
@@ -46,26 +45,26 @@
     for (let x = 18; x < 300; x += 46) windows += '<rect x="' + x + '" y="134" width="30" height="22" rx="3" fill="#ffe9b0" opacity=".85"/>';
     return svg(
       '<rect width="400" height="260" fill="#14110d"/>' +
-      '<rect x="0" y="0" width="400" height="30" fill="#2a2620"/>' +
-      '<rect x="0" y="30" width="400" height="88" fill="#ece6d6"/>' + tiles + mosaic +
-      /* station sign */
-      '<rect x="56" y="54" width="288" height="36" rx="4" fill="#111"/>' +
-      '<rect x="56" y="54" width="288" height="4" fill="#fff"/>' +
-      '<text x="70" y="80" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="16" fill="#fff">125 St</text>' +
-      bullet(222, 73, "A", "#0039a6") + bullet(248, 73, "B", "#ff6319") + bullet(274, 73, "C", "#0039a6") + bullet(300, 73, "D", "#ff6319") +
+      '<rect x="0" y="0" width="400" height="30" fill="#2a2620"/><rect x="0" y="30" width="400" height="88" fill="#ece6d6"/>' + tiles + mosaic +
+      /* station sign, left */
+      '<rect x="38" y="50" width="196" height="34" rx="4" fill="#111"/><rect x="38" y="50" width="196" height="4" fill="#fff"/>' +
+      '<text x="50" y="75" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="16" fill="#fff">125 St</text>' +
+      bullet(130, 68, "A", "#0039a6") + bullet(154, 68, "B", "#ff6319") + bullet(178, 68, "C", "#0039a6") + bullet(202, 68, "D", "#ff6319") +
+      bird(80, 46, 1, "#8795a6") +
+      /* the Byrd Gang poster, right */
+      '<rect x="252" y="42" width="110" height="70" fill="#1a1020" stroke="' + PURP + '" stroke-width="3"/>' +
+      '<text x="307" y="62" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="14" fill="' + GOLD + '">BYRD GANG</text>' + bird(307, 82, 1.6, "#cfd6de") +
+      '<text x="307" y="106" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">WE FLY HIGH</text>' +
       '<g class="flk"><rect x="150" y="10" width="100" height="5" rx="2" fill="#fff7d6"/></g>' +
-      /* tunnel mouth */
       '<rect x="0" y="118" width="400" height="68" fill="#0a0907"/>' +
-      '<g class="anim-train">' +
-        '<rect x="8" y="122" width="300" height="62" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
+      '<g class="anim-train"><rect x="8" y="122" width="300" height="62" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
         '<rect x="8" y="164" width="300" height="5" fill="#0039a6"/>' + windows +
-        '<rect x="285" y="134" width="16" height="22" rx="3" fill="#ffe9b0" opacity=".85"/>' +
-        '<circle cx="300" cy="176" r="4" fill="#fff6c2"/>' +
-        bullet(296, 142, "A", "#0039a6") +
+        '<rect x="285" y="134" width="16" height="22" rx="3" fill="#ffe9b0" opacity=".85"/><circle cx="300" cy="176" r="4" fill="#fff6c2"/>' + bullet(296, 142, "A", "#0039a6") +
       '</g>' + cols +
-      '<rect x="0" y="186" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="196" width="400" height="64" fill="#2a2620"/>' +
-      tag("DIPSET", 24, 240, 30, PURP, -4) + tag("CAPO", 296, 242, 32, RED, -8));
+      '<g class="flock">' + bird(330, 132, 1.2, "#cfd6de") + '</g>' +
+      '<rect x="0" y="186" width="400" height="10" fill="#eab308"/><rect x="0" y="196" width="400" height="64" fill="#2a2620"/>' +
+      '<g class="car" style="animation-duration:14s">' + bird(0, 206, 1.4) + '</g>' +
+      tag("BYRD GANG", 24, 244, 30, PURP, -4) + tag("CAPO", 296, 246, 32, RED, -8));
   }
 
   /* 2. Strivers' Row: the red-brick and pale-stone rowhouses on W 138-139 St, and the old "walk your horses" sign */
@@ -101,30 +100,25 @@
       sky("g2", "#0c0a1e", "#3a2a55"));
   }
 
-  /* 3. The Adam Clayton Powell Jr. State Office Building on 125th: tall pale concrete slab, plaza, traffic */
+  /* 3. The Taft Houses on Madison Av, E 112th to 115th: the tall brick NYCHA towers right at his corner, windows lighting up, the courtyard trees, a bus going up Madison */
   function stateoffice() {
-    let ribs = "";
-    for (let x = 128; x < 272; x += 8) ribs += '<rect x="' + x + '" y="34" width="3" height="172" fill="#a59e90"/>';
-    let lit = "";
-    for (let y = 40; y < 200; y += 10) for (let x = 132; x < 272; x += 8) if ((x * 7 + y * 3) % 5 === 0) lit += '<rect class="flk' + ((x + y) % 2 ? " flk2" : "") + '" x="' + x + '" y="' + y + '" width="4" height="6" fill="#ffe08a"/>';
+    const tower = (x, y, w, c) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (214 - y) + '" fill="' + c + '"/><rect x="' + (x - 2) + '" y="' + (y - 6) + '" width="' + (w + 4) + '" height="6" fill="#3a2418"/>';
+      for (let yy = y + 8; yy < 206; yy += 12) for (let xx = x + 6; xx < x + w - 8; xx += 12) s += '<rect' + ((xx * 3 + yy) % 11 === 0 ? ' class="flk"' : '') + ' x="' + xx + '" y="' + yy + '" width="6" height="7" fill="' + ((xx + yy) % 5 ? "#2a1d17" : "#ffd98a") + '"/>';
+      return s; };
     const cab = (cls, c) => '<g class="' + cls + '"><rect x="0" y="226" width="44" height="14" rx="4" fill="' + c + '"/><path d="M8 226l6-8h16l6 8z" fill="' + c + '"/><circle cx="10" cy="240" r="4" fill="#111"/><circle cx="34" cy="240" r="4" fill="#111"/><rect x="40" y="229" width="4" height="3" fill="#fff6c2"/></g>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' + stars(22) +
-      '<circle cx="340" cy="70" r="16" fill="#fff4d6" opacity=".9"/>' +
-      /* neighbors */
-      '<rect x="10" y="130" width="100" height="90" fill="#4a3530"/><rect x="290" y="120" width="100" height="100" fill="#3b2c3a"/>' +
-      '<rect x="24" y="146" width="12" height="14" fill="#ffd98a"/><rect x="60" y="146" width="12" height="14" fill="#2a2018"/><rect x="306" y="140" width="12" height="14" fill="#ffd98a"/><rect x="350" y="170" width="12" height="14" fill="#ffd98a"/>' +
-      /* the tower: pale precast, vertical ribs, dark crown */
-      '<rect x="124" y="30" width="152" height="182" fill="#cfc8b8"/>' + ribs + lit +
-      '<rect x="120" y="22" width="160" height="12" fill="#8c8576"/>' +
-      '<rect x="110" y="198" width="180" height="14" fill="#b9b2a2"/>' +
-      '<text x="200" y="208" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="8" letter-spacing="1" fill="#3a352c">ADAM CLAYTON POWELL JR</text>' +
-      /* plaza */
-      '<rect x="0" y="212" width="400" height="12" fill="#8a847a"/>' +
-      '<rect x="0" y="224" width="400" height="36" fill="#1c1a1e"/><path d="M0 246h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<rect width="400" height="260" fill="url(#g3)"/>' + stars(18) + '<circle cx="360" cy="40" r="14" fill="#fff4d6" opacity=".9"/>' +
+      tower(10, 36, 110, "#8a4434") + tower(146, 20, 120, "#7a3c2e") + tower(292, 46, 100, "#8a4434") +
+      /* the courtyard trees and fence */
+      '<rect x="0" y="206" width="400" height="10" fill="#4a6a3a"/>' +
+      [70, 210, 340].map(x => '<g class="tree"><rect x="' + (x - 2) + '" y="186" width="4" height="22" fill="#3a2a1a"/><circle cx="' + x + '" cy="182" r="14" fill="#2f6b34"/></g>').join("") +
+      (function () { let f = ""; for (let x = 0; x < 400; x += 8) f += '<rect x="' + x + '" y="208" width="2" height="12" fill="#111"/>'; return f; })() +
+      '<rect x="0" y="216" width="400" height="8" fill="#8a847a"/><rect x="0" y="224" width="400" height="36" fill="#1c1a1e"/><path d="M0 246h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
       cab("car", "#f2c200") + cab("car car2", "#c4122f") +
-      '<rect x="10" y="8" width="132" height="22" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
-      '<text x="76" y="23" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">W 125 St</text>',
+      '<rect x="10" y="8" width="124" height="34" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      '<text x="72" y="22" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">TAFT HOUSES</text>' +
+      '<text x="72" y="35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">MADISON AV · E 112–115</text>' +
+      tag("BYRD GANG", 270, 30, 20, GOLD, -5),
       sky("g3", "#0a0b1e", "#3c2f5c"));
   }
 

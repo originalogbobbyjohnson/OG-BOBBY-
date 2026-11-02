@@ -34,53 +34,58 @@
   };
 
 
-  /* 1. The 4 train pulling into 167 St, up on the el over River Avenue */
+  /* 1. 167 St from the street: under the el on River Av by day, the green globes at the stair, the 4 rolling across overhead, Don Q's tags on the stair wall */
   function train() {
     let girders = "";
-    for (let x = 0; x <= W; x += 50) girders += '<rect x="' + (x - 3) + '" y="58" width="6" height="150" fill="#3a3f4a"/><path d="M' + (x + 3) + ' 196 L' + (x + 47) + ' 214 M' + (x + 47) + ' 196 L' + (x + 3) + ' 214" stroke="#3a3f4a" stroke-width="3"/>';
+    for (let x = 0; x <= W; x += 80) girders += '<rect x="' + (x - 5) + '" y="92" width="10" height="138" fill="#2f4a3a"/><path d="M' + (x - 20) + ' 96l20 22 20-22" stroke="#2f4a3a" stroke-width="5" fill="none"/>';
+    let lattice = "";
+    for (let x = 0; x < W; x += 20) lattice += '<path d="M' + x + ' 72l10 18 10-18" stroke="#3d5a48" stroke-width="2" fill="none"/>';
     let windows = "";
-    for (let x = 18; x < 280; x += 46) windows += '<rect x="' + x + '" y="128" width="30" height="22" rx="3" fill="#d6f0ff" opacity=".85"/>';
+    for (let x = 18; x < 280; x += 46) windows += '<rect x="' + x + '" y="34" width="30" height="20" rx="3" fill="#d6f0ff" opacity=".85"/>';
+    let bld = "";
+    [[0, 96, "#a8643e"], [120, 110, "#c9a070"], [260, 100, "#8a4a34"]].forEach(b => { bld += '<rect x="' + b[0] + '" y="' + b[1] + '" width="140" height="' + (230 - b[1]) + '" fill="' + b[2] + '"/>';
+      for (let y = b[1] + 34; y < 214; y += 20) for (let x = b[0] + 10; x < b[0] + 130; x += 22) bld += '<rect x="' + x + '" y="' + y + '" width="10" height="12" fill="#3a3f4a" opacity=".8"/>'; });
     return svg(
-      '<rect width="400" height="260" fill="url(#g1)"/>' + stars(18) +
-      '<circle cx="340" cy="34" r="14" fill="#fff4e0" opacity=".9"/>' +
-      '<rect x="0" y="50" width="400" height="10" fill="#3a3f4a"/>' + girders +
-      '<rect x="90" y="66" width="220" height="34" rx="4" fill="#111"/>' +
-      '<rect x="90" y="66" width="220" height="4" fill="#fff"/>' +
-      '<text x="104" y="91" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">167 St</text>' +
-      bullet(286, 84, "4", "#00933c") +
-      '<g class="anim-train">' +
-        '<rect x="8" y="118" width="300" height="62" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="158" width="300" height="5" fill="#00933c"/>' + windows +
-        '<rect x="285" y="128" width="16" height="22" rx="3" fill="#d6f0ff" opacity=".85"/>' +
-        '<circle cx="300" cy="170" r="4" fill="#fff6c2"/>' +
-        bullet(272, 139, "4", "#00933c") +
-      '</g>' +
-      '<rect x="0" y="180" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="190" width="400" height="70" fill="#15130f"/>' +
-      tag("HIGHBRIDGE", 20, 238, 28, GOLD, -4) + tag("DON Q", 300, 240, 30, RED, -8),
-      sky("g1", "#0d1424", "#3a4a6a"));
+      '<rect width="400" height="260" fill="url(#g1)"/>' + bld +
+      /* the el deck and the 4 crossing above */
+      '<g class="anim-train"><rect x="8" y="22" width="300" height="48" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="8" y="58" width="300" height="5" fill="#00933c"/>' + windows + bullet(282, 44, "4", "#00933c") + '</g>' +
+      '<rect x="0" y="70" width="400" height="22" fill="#2f4a3a"/>' + lattice + girders +
+      /* station stair with the green globes */
+      '<path d="M210 230l60-120h26l-60 120z" fill="#5a5f66"/><path d="M224 230l60-120" stroke="#3a3f4a" stroke-width="3"/>' +
+      '<rect x="198" y="186" width="6" height="44" fill="#1d2329"/><circle class="flk" cx="201" cy="182" r="8" fill="#3fbf6a"/><rect x="152" y="186" width="6" height="44" fill="#1d2329"/><circle class="flk flk2" cx="155" cy="182" r="8" fill="#3fbf6a"/>' +
+      '<rect x="88" y="100" width="150" height="30" rx="3" fill="#111"/><rect x="88" y="100" width="150" height="4" fill="#fff"/>' +
+      '<text x="100" y="123" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">167 St</text><text x="160" y="123" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#ccc">River Av</text>' + bullet(222, 116, "4", "#00933c") +
+      /* stair wall with his tags */
+      '<rect x="20" y="170" width="120" height="60" fill="#6a6a70"/>' + tag("DON Q", 26, 210, 30, GOLD, -6) + tag("DON SEASON", 40, 228, 15, RED, -3) +
+      '<rect x="0" y="230" width="400" height="30" fill="#2a2d33"/><path d="M0 246h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="boat"><rect x="0" y="234" width="46" height="12" rx="4" fill="' + ICE + '"/><circle cx="10" cy="248" r="4" fill="#111"/><circle cx="36" cy="248" r="4" fill="#111"/></g>' +
+      tag("HIGHBRIDGE", 270, 222, 20, "#f6efdc", -4),
+      sky("g1", "#7ab8e8", "#f2dcae"));
   }
 
-  /* 2. The High Bridge over the Harlem River: stone arches, the steel arch span, the granite water tower, a boat going by */
+  /* 2. The old Concourse Plaza Hotel (1923) on the Grand Concourse at E 161st: the tan-brick tower where Yankee stars once lived, green awnings, flags, the rooftop sign */
   function bridge() {
-    let stone = "";
-    for (let i = 0; i < 3; i++) stone += '<path d="M' + (i * 46) + ' 150v-56h46v56h-6a17 22 0 0 0-34 0z" fill="#9a8c78" stroke="#6e624f" stroke-width="1.5"/>';
-    for (let i = 0; i < 2; i++) stone += '<path d="M' + (308 + i * 46) + ' 150v-56h46v56h-6a17 22 0 0 0-34 0z" fill="#9a8c78" stroke="#6e624f" stroke-width="1.5"/>';
-    let ribs = "";
-    for (let x = 146; x < 306; x += 16) ribs += '<path d="M' + x + ' 94v' + (8 + Math.round(40 * (1 - Math.pow((x - 226) / 85, 2)) * 0 + Math.abs(x - 226) / 3)) + '" stroke="#5a6a74" stroke-width="2"/>';
+    let wins = "";
+    for (let y = 74; y < 190; y += 16) for (let x = 104; x < 296; x += 16) wins += '<rect class="' + ((x * 7 + y) % 9 ? "" : "flk") + '" x="' + x + '" y="' + y + '" width="8" height="10" fill="' + ((x + y) % 5 ? "#3a3f4a" : "#ffe0a0") + '"/>';
+    let awn = "";
+    for (let x = 108; x < 290; x += 30) awn += '<path d="M' + x + ' 196h22l4 10h-30z" fill="#2f7a4a"/>';
+    const flag = (x, c1, c2) => '<rect x="' + x + '" y="20" width="2" height="34" fill="#555"/><g class="flag"><rect x="' + (x + 2) + '" y="20" width="22" height="14" fill="' + c1 + '"/><rect x="' + (x + 2) + '" y="26" width="22" height="3" fill="' + c2 + '"/></g>';
+    let car = (cls, y, c) => '<g class="' + cls + '"><rect x="0" y="' + y + '" width="44" height="14" rx="4" fill="' + c + '"/><rect x="8" y="' + (y - 8) + '" width="26" height="10" rx="3" fill="' + c + '"/><circle cx="10" cy="' + (y + 14) + '" r="4" fill="#111"/><circle cx="34" cy="' + (y + 14) + '" r="4" fill="#111"/></g>';
     return svg(
       '<rect width="400" height="260" fill="url(#g2)"/>' +
-      /* water tower on the hill */
-      '<path d="M0 100q60-30 120-20v20H0z" fill="#3e5a3a"/>' +
-      '<rect x="56" y="28" width="20" height="62" fill="#b9ad98" stroke="#8a7f6a"/><path d="M52 30l14-18 14 18z" fill="#6a5a4a"/><rect x="60" y="40" width="4" height="8" fill="#3a3328"/><rect x="68" y="56" width="4" height="8" fill="#3a3328"/>' +
-      '<rect x="0" y="88" width="400" height="7" fill="#7f7362"/><path d="M0 88h400" stroke="#2a2a2a" stroke-width="2"/>' +
-      stone +
-      '<path d="M138 150q88-110 176 0" fill="none" stroke="#5a6a74" stroke-width="7"/>' + ribs +
-      '<rect x="128" y="94" width="14" height="56" fill="#9a8c78"/><rect x="304" y="94" width="14" height="56" fill="#9a8c78"/>' +
-      river(150, "#1e3a52") +
-      '<g class="boat"><path d="M0 196h50l-8 10h-36z" fill="#f2f2f2"/><rect x="12" y="186" width="20" height="10" fill="' + RED + '"/></g>' +
-      '<text x="200" y="244" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="15" letter-spacing="4" fill="' + GOLD + '">THE HIGH BRIDGE</text>',
-      sky("g2", "#203a5c", "#d89a6a"));
+      '<rect x="0" y="120" width="96" height="100" fill="#8a7a6a"/><rect x="304" y="110" width="96" height="110" fill="#b08a62"/>' +
+      '<rect x="96" y="58" width="208" height="162" fill="#d2b48a"/><rect x="92" y="54" width="216" height="8" fill="#b89a70"/>' + wins +
+      '<rect x="96" y="190" width="208" height="30" fill="#c4a578"/>' + awn + '<rect x="186" y="198" width="28" height="22" fill="#3b2a1e"/>' +
+      /* rooftop sign */
+      '<rect x="120" y="32" width="160" height="22" fill="#1d2329"/><path d="M130 54v-4M270 54v-4" stroke="#555" stroke-width="3"/>' +
+      '<text class="flk" x="200" y="48" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" letter-spacing="0" fill="' + RED + '">CONCOURSE PLAZA</text>' +
+      flag(98, "#c8102e", "#fff") + flag(278, "#0c2340", "#fff") +
+      '<rect x="0" y="220" width="400" height="40" fill="#2a2d33"/><path d="M0 240h400" stroke="#f4f1e8" stroke-width="2" stroke-dasharray="20 14"/>' +
+      car("boat", 226, RED) + car("boat bird2", 242, ICE) +
+      '<rect x="10" y="10" width="78" height="40" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="49" y="26" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">Grand</text><text x="49" y="39" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">Concourse</text>' +
+      '<text x="352" y="100" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#1d2329">E 161 ST · 1923</text>' +
+      tag("DON Q", 312, 206, 26, GOLD, -6),
+      sky("g2", "#6aa8e0", "#f0d6a8"));
   }
 
   /* 3. The stadium on River Avenue: limestone facade, arched windows, the white frieze, lights flashing */
@@ -102,29 +107,27 @@
       sky("g3", "#06101e", "#1d3354"));
   }
 
-  /* 4. The Grand Concourse: the limestone courthouse, art deco apartment houses, traffic rolling by */
+  /* 4. Highbridge Play Center (1936): the giant WPA pool and brick bathhouse on Amsterdam Av, the granite Highbridge water tower standing over it, kids splashing */
   function concourse() {
-    let deco = "";
-    const bld = (x, w, top, c) => {
-      let b = '<rect x="' + x + '" y="' + top + '" width="' + w + '" height="' + (200 - top) + '" fill="' + c + '"/>' +
-        '<path d="M' + x + ' ' + top + 'h' + w + 'v6h-' + w + 'z" fill="#7a5a3a"/>';
-      for (let y = top + 14; y < 190; y += 16) for (let i = 6; i < w - 8; i += 14) b += '<rect class="flk' + ((i + y) % 3 ? "" : " flk2") + '" x="' + (x + i) + '" y="' + y + '" width="7" height="9" fill="#ffe0a0" opacity=".85"/>';
-      return b;
-    };
-    deco = bld(0, 90, 90, "#c98a5a") + bld(310, 90, 80, "#d9a36a");
-    let cols = "";
-    for (let i = 0; i < 9; i++) cols += '<rect x="' + (122 + i * 18) + '" y="96" width="8" height="74" fill="#ece4d2"/>';
-    let car = (cls, y, c) => '<g class="' + cls + '"><rect x="0" y="' + y + '" width="44" height="14" rx="4" fill="' + c + '"/><rect x="8" y="' + (y - 8) + '" width="26" height="10" rx="3" fill="' + c + '"/><circle cx="10" cy="' + (y + 14) + '" r="4" fill="#111"/><circle cx="34" cy="' + (y + 14) + '" r="4" fill="#111"/></g>';
+    let splash = "";
+    for (let i = 0; i < 8; i++) splash += '<g class="ball" style="animation-delay:-' + (i * .13).toFixed(2) + 's"><circle cx="' + (40 + i * 44) + '" cy="' + (214 + (i % 2) * 14) + '" r="5" fill="#5a3a28"/><path d="M' + (34 + i * 44) + ' ' + (220 + (i % 2) * 14) + 'q6-10 12 0" stroke="#fff" stroke-width="2" fill="none"/></g>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g4)"/>' + deco +
-      '<rect x="104" y="60" width="192" height="140" fill="#e2d8c2"/><rect x="104" y="60" width="192" height="16" fill="#cfc3a8"/>' +
-      '<rect x="112" y="86" width="176" height="8" fill="#cfc3a8"/>' + cols +
-      '<rect x="104" y="170" width="192" height="30" fill="#d4c9b0"/><rect x="186" y="176" width="28" height="24" fill="#5a4a36"/>' +
-      '<text x="200" y="72" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="3" fill="#6a5a40">BRONX COUNTY</text>' +
-      '<rect x="0" y="200" width="400" height="60" fill="#2a2d33"/><path d="M0 230h400" stroke="#f4f1e8" stroke-width="2" stroke-dasharray="20 14"/>' +
-      car("boat", 210, RED) + car("boat bird2", 236, ICE) +
-      '<text x="200" y="40" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="15" letter-spacing="4" fill="' + GOLD + '">GRAND CONCOURSE</text>',
-      sky("g4", "#4a6a9a", "#f0c890"));
+      '<rect width="400" height="260" fill="url(#g4)"/>' +
+      '<g class="bird"><path d="M30 40q5-5 10 0q5-5 10 0" stroke="#333" stroke-width="2" fill="none"/></g>' +
+      /* the water tower: octagonal granite shaft, belvedere, pointed roof */
+      '<rect x="290" y="40" width="34" height="146" fill="#b9ad98" stroke="#8a7f6a"/><rect x="286" y="34" width="42" height="12" fill="#a89c86"/>' +
+      '<rect x="290" y="20" width="34" height="14" fill="#c9bea8"/><path d="M296 20v14M304 20v14M312 20v14M320 20v14" stroke="#6a5e4a" stroke-width="2"/><path d="M286 20l21-18 21 18z" fill="#8a4a34"/>' +
+      [60, 88, 116].map(y => '<rect x="302" y="' + y + '" width="10" height="14" rx="4" fill="#3a3328"/>').join("") +
+      /* brick bathhouse with arched openings */
+      '<rect x="20" y="120" width="250" height="60" fill="#a8543a"/><rect x="16" y="114" width="258" height="8" fill="#e6dccb"/>' +
+      [40, 80, 120, 160, 200, 240].map(x => '<path d="M' + x + ' 180v-34a10 10 0 0 1 20 0v34z" fill="#2a2a30"/>').join("") +
+      '<rect x="110" y="96" width="70" height="20" fill="#a8543a"/><text x="145" y="111" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="10" letter-spacing="0" fill="#f4f1e8">HIGHBRIDGE</text>' +
+      /* the big pool */
+      '<rect x="0" y="186" width="400" height="74" fill="#e6dccb"/><rect x="10" y="196" width="380" height="58" fill="#3aa6d8"/>' +
+      '<g class="rip"><path d="M10 210h420M10 230h420M10 248h420" stroke="#bfe9ff" stroke-width="2" stroke-dasharray="10 12" opacity=".7"/></g>' + splash +
+      '<text x="140" y="30" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="15" letter-spacing="1" fill="' + GOLD + '">HIGHBRIDGE POOL · 1936</text>' +
+      tag("DON Q", 316, 214, 22, GOLD, -6),
+      sky("g4", "#5aa8e8", "#d8f0fa"));
   }
 
   /* 5. Ogden Av and W 167 St in Highbridge: street signs, streetlight, the tag wall */

@@ -65,7 +65,7 @@ window.CFG = {
   {
    "scene": "train",
    "t": "PRESS PLAY",
-   "x": "Take the 6 to Morrison Av–Soundview. Tap the record. Every song is an episode.",
+   "x": "Take the 6 to Elder Av. Tap the record. Every song is an episode.",
    "sfx": "train"
   },
   {

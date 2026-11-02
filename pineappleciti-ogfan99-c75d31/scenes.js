@@ -80,23 +80,46 @@
       (o.extra || "") + tag(o.tag, o.tx || 230, 254, 24, o.tc, -5), sky("g1", o.g[0], o.g[1]));
   const BLU = "#9fe3ff", NEON = "#3a7bff", GOLD = "#f2c14e", PINK = "#ff8fc7";
 
-  /* 1. Newark Broad Street at night: the NJ Transit train pulling in, the city glowing neon blue */
+  /* 1. Newark Broad Street at night, her angle: the NJ Transit train up on the platform, the Newark Light Rail car gliding out underneath, a neon pineapple glowing in the window across the street */
   function station() {
-    let back = ""; [[0, 96, "#1d2a5a"], [70, 120, "#24306a"], [270, 104, "#1d2a5a"], [340, 90, "#2a3678"]].forEach(b => back += bldg(b[0], b[1], 64, 236 - b[1], b[2], BLU));
-    return elev({ g: ["#060a2a", "#3a2a7a"], back: stars(20) + back, band: NEON, bl: [["NJT", "#0039a6"]], name: "Newark Broad Street", size: 14, sx: 70, sw: 250, tag: "NEONBLUE", tc: BLU, deck: "#3a3a5a" });
+    let back = ""; [[0, 30, "#1d2a5a"], [300, 20, "#2a3678"]].forEach(b => back += bldg(b[0], b[1], 100, 120, b[2], BLU));
+    let lr = ""; for (let x = 16; x < 160; x += 30) lr += '<rect x="' + x + '" y="196" width="20" height="14" rx="2" fill="#cfe6ff" opacity=".85"/>';
+    return svg('<rect width="400" height="260" fill="url(#g1)"/>' + stars(18) + back +
+      /* neon pineapple in the window */
+      '<rect x="318" y="58" width="64" height="64" fill="#0a0d1e" stroke="' + NEON + '" stroke-width="2"/>' +
+      '<g class="pls"><path d="M350 78l-6-12 6 4 2-8 3 8 6-4-6 12z" fill="none" stroke="#7cf29a" stroke-width="2"/><ellipse cx="350" cy="96" rx="13" ry="17" fill="none" stroke="' + GOLD + '" stroke-width="2.5"/></g>' +
+      /* upper platform */
+      '<rect x="0" y="22" width="300" height="8" fill="#3a4250"/><rect x="0" y="30" width="300" height="3" fill="' + NEON + '"/>' +
+      stSign(20, 38, 270, "Newark Broad Street", [["NJT", "#0039a6"]], 14) +
+      '<g class="anim-train">' + car(10, 76, 290, NEON, ["NJT", "#0039a6"]) + '</g>' +
+      '<rect x="0" y="130" width="400" height="7" fill="#eab308"/><rect x="0" y="137" width="400" height="14" fill="#3a3a5a"/>' +
+      [60, 200, 340].map(x => '<rect x="' + (x - 6) + '" y="151" width="12" height="38" fill="#3a3a5a"/>').join("") +
+      /* light rail below, overhead wire */
+      '<path d="M0 172h400" stroke="#9aa3ad" stroke-width="1.5"/>' +
+      '<g class="slideL"><path d="M60 172l10-8h14l10 8" stroke="#9aa3ad" stroke-width="2" fill="none"/><rect x="0" y="186" width="180" height="34" rx="6" fill="#e9ecef" stroke="#6b7280" stroke-width="1.5"/><rect x="0" y="212" width="180" height="4" fill="#f26522"/>' + lr +
+      '<text x="150" y="207" text-anchor="middle" ' + FONT + ' font-size="8" fill="#0039a6">LIGHT RAIL</text></g>' +
+      '<rect x="0" y="220" width="400" height="40" fill="#1a1d28"/><path d="M0 224h400M0 232h400" stroke="#6b7280" stroke-width="2"/>' +
+      tag("PINEAPPLECITI", 14, 254, 24, BLU, -4) + tag("NEONBLUE", 250, 254, 22, PINK, -5),
+      sky("g1", "#060a2a", "#3a2a7a"));
   }
 
-  /* 2. Branch Brook Park in April: the cherry blossoms, petals drifting, the lake */
+  /* 2. The Newark Public Library on Washington St (1901): the pale-stone Renaissance palazzo, three tall arches, the deep cornice, readers going in, lamps glowing */
   function blossoms() {
-    const ct = (x, y, s) => '<path d="M' + x + ' ' + (y + 40 * s) + 'v-' + (40 * s) + 'l-12 -14M' + x + ' ' + y + 'l12 -16" stroke="#4a3220" stroke-width="' + (5 * s) + '" fill="none"/>' +
-      [[0, -20, 22], [-20, -10, 18], [20, -12, 20], [-8, -32, 16], [12, -30, 16]].map(c => '<circle cx="' + (x + c[0] * s) + '" cy="' + (y + c[1] * s) + '" r="' + (c[2] * s) + '" fill="' + PINK + '" opacity=".92"/>').join("");
-    let pet = ""; [40, 110, 170, 240, 300, 360].forEach((x, i) => pet += '<ellipse class="fall' + ["", " f2", " f3"][i % 3] + '" cx="' + x + '" cy="20" rx="4" ry="2.5" fill="#ffd0e6"/>');
+    const arch = x => '<path d="M' + x + ' 206v-46a18 18 0 0 1 36 0v46z" fill="#2a2433" stroke="#d8cfbd" stroke-width="3"/><path class="pls" d="M' + (x + 6) + ' 160a12 12 0 0 1 24 0z" fill="#ffd27a" opacity=".6"/>';
+    let wins = ""; for (let x = 92; x < 320; x += 34) wins += '<path d="M' + x + ' 116v-22a8 8 0 0 1 16 0v22z" fill="#3a3f55"/>';
+    let rust = ""; for (let y = 140; y < 206; y += 10) rust += '<path d="M70 ' + y + 'h260" stroke="#c9bfa8" stroke-width="1.5"/>';
     return svg('<rect width="400" height="260" fill="url(#g2)"/>' +
-      '<rect x="0" y="150" width="400" height="40" fill="#3a7ab0"/><path class="wave" d="M40 166h60M180 176h70M300 164h60" stroke="#cfe6ff" stroke-width="2"/>' +
-      '<rect x="0" y="190" width="400" height="70" fill="#6a9a4a"/><path d="M0 214q200 -20 400 0" stroke="#c9b28a" stroke-width="10" fill="none"/>' +
-      ct(60, 120, 1.4) + ct(170, 110, 1.2) + ct(280, 124, 1.3) + ct(370, 112, 1.1) + pet +
-      tag("BRANCH BROOK", 110, 248, 26, NEON, -3),
-      sky("g2", "#a8d8f8", "#fbe7f0"));
+      bldg(0, 110, 66, 130, "#5a4a4a", "#ffe6a8") + bldg(334, 100, 66, 140, "#4a4a5a", "#ffe6a8") +
+      '<rect x="70" y="64" width="260" height="142" fill="#e8e0cc"/>' + rust + wins +
+      '<rect x="62" y="56" width="276" height="12" fill="#d0c6ae"/><path d="M62 56h276l-8-8H70z" fill="#bfb497"/>' +
+      '<rect x="70" y="122" width="260" height="10" fill="#d8cfbd"/>' + txt("FREE PUBLIC LIBRARY", 200, 131, 8, "#6a5e48") +
+      arch(126) + arch(182) + arch(238) +
+      [100, 300].map(x => '<rect x="' + (x - 2) + '" y="180" width="4" height="30" fill="#2a2a30"/><circle class="pls p2" cx="' + x + '" cy="176" r="6" fill="#ffe6a8"/>').join("") +
+      '<rect x="60" y="206" width="280" height="8" fill="#c9bfa8"/><rect x="0" y="214" width="400" height="46" fill="#3a3d43"/>' +
+      [150, 250].map((x, i) => '<g class="bob" style="animation-delay:-' + i * .6 + 's"><circle cx="' + x + '" cy="220" r="5" fill="#2a1d17"/><rect x="' + (x - 5) + '" y="225" width="10" height="16" rx="3" fill="' + [PINK, BLU][i] + '"/></g>').join("") +
+      '<rect x="10" y="10" width="160" height="34" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="2"/>' + txt("NEWARK PUBLIC LIBRARY", 90, 25, 9, "#fff") + txt("WASHINGTON ST · 1901", 90, 38, 8, "#fff") +
+      tag("PINEAPPLECITI", 196, 34, 22, NEON, -4),
+      sky("g2", "#7ec0ee", "#f8e7c0"));
   }
 
   /* 3. NJPAC: the glass hall lit up at night, the crowd going in, the lights breathing */

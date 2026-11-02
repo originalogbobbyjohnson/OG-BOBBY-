@@ -80,57 +80,88 @@
       (o.extra || "") + tag(o.tag, o.tx || 230, 254, 24, o.tc, -5), sky("g1", o.g[0], o.g[1]));
   const GRN = "#7cf29a", GOLD = "#f2c14e", PINK = "#ff6fb5";
 
-  /* 1. Jamaica Center-Parsons/Archer: the end of the E, J and Z on the sign */
+  /* 1. Jamaica Center-Parsons/Archer from the end of the track: the bumper block, the E coming head-on out of the tunnel, Grafh's mixtape posters on the wall */
   function station() {
-    return under({ wall: "#ece4cf", band: "#3a7a4a", band2: "#c8a46a", name: "Jamaica Center–Parsons/Archer", bl: [["E", "#0039a6"], ["J", "#996633"], ["Z", "#996633"]], sx: 26, sw: 348, size: 13, tag: "AUTOGRAF", tc: GRN, tx: 140 });
+    const st = '<style>@keyframes come{0%{transform:scale(.3);opacity:.2}70%,100%{transform:scale(1);opacity:1}}.come{animation:come 5s ease-out infinite;transform-box:fill-box;transform-origin:center bottom}</style>';
+    let tiles = ""; for (let y = 64; y < 200; y += 10) tiles += '<path d="M0 ' + y + 'h120M280 ' + y + 'h120" stroke="#00000014"/>';
+    return svg(st + '<rect width="400" height="260" fill="#ece4cf"/>' + tiles + '<rect x="0" y="0" width="400" height="56" fill="#1d2329"/>' +
+      stSign(26, 12, 348, "Jamaica Center–Parsons/Archer", [["E", "#0039a6"], ["J", "#996633"], ["Z", "#996633"]], 13) +
+      '<rect x="0" y="56" width="400" height="8" fill="#3a7a4a"/><rect x="0" y="64" width="400" height="3" fill="#c8a46a"/>' +
+      /* the tunnel mouth and the rails running into it */
+      '<path d="M120 70h160v130H120z" fill="#0b0d10"/><path d="M120 70h160l-14 10H134z" fill="#1d2329"/>' +
+      '<path d="M40 260L178 200M360 260L222 200" stroke="#8a8f96" stroke-width="5"/><path d="M110 230h180M140 214h120" stroke="#3a2e24" stroke-width="5"/>' +
+      '<g class="come"><rect x="150" y="96" width="100" height="100" rx="10" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="162" y="106" width="76" height="34" rx="4" fill="#1d2329"/>' +
+      bullet("E", "#0039a6", 200, 123) + '<rect x="150" y="160" width="100" height="5" fill="#3a7a4a"/><circle class="pls" cx="168" cy="182" r="6" fill="#fff6c2"/><circle class="pls" cx="232" cy="182" r="6" fill="#fff6c2"/></g>' +
+      /* the bumper block at the end of the line */
+      '<rect x="160" y="220" width="80" height="26" fill="#d7263d"/><path d="M164 220l12 26M184 220l12 26M204 220l12 26M224 220l12 26" stroke="#f2c14e" stroke-width="5"/>' +
+      '<circle class="blk" cx="172" cy="212" r="5" fill="#ff3b3b"/><circle class="blk b3" cx="228" cy="212" r="5" fill="#ff3b3b"/>' +
+      /* platforms both sides, yellow edges */
+      '<path d="M0 200h120l-80 60H0z" fill="#8d8a84"/><path d="M120 200l-80 60" stroke="#eab308" stroke-width="6"/><path d="M400 200H280l80 60h40z" fill="#8d8a84"/><path d="M280 200l80 60" stroke="#eab308" stroke-width="6"/>' +
+      /* mixtape posters + the end-of-line sign */
+      '<rect x="14" y="80" width="46" height="62" fill="#111" stroke="' + GRN + '" stroke-width="2"/>' + txt("AUTO", 37, 102, 11, GRN) + txt("GRAF", 37, 116, 11, GRN) + txt("MIXTAPE", 37, 134, 7, "#fff") +
+      '<rect x="66" y="80" width="46" height="62" fill="#2a1420" stroke="' + PINK + '" stroke-width="2"/>' + txt("PAIN", 89, 102, 11, PINK) + txt("KILLERS", 89, 116, 10, PINK) + txt("MIXTAPE", 89, 134, 7, "#fff") +
+      '<rect x="292" y="84" width="96" height="34" fill="#111"/>' + txt("LAST STOP", 340, 99, 11, "#fff") + txt("PARSONS · ARCHER", 340, 112, 8, "#c8a46a") +
+      tag("GRAFH", 290, 170, 30, GRN, -6) + tag("QUEENS", 16, 182, 22, GOLD, -4), "");
   }
 
-  /* 2. The old Valencia Theatre on Jamaica Av: the ornate Spanish front, the arch, the marquee chasing */
+  /* 2. The old Jamaica Savings Bank at 161-02 Jamaica Av (1898, landmarked): pale limestone Beaux-Arts front, columns, carved pediment, the avenue rolling past */
   function valencia() {
-    let bulbs = ""; for (let x = 96; x <= 304; x += 12) bulbs += '<circle class="blk' + ["", " b2", " b3", " b4"][(x / 12) % 4] + '" cx="' + x + '" cy="176" r="2.6" fill="#ffe9a0"/>';
-    let orn = ""; for (let i = 0; i < 9; i++) orn += '<circle cx="' + (120 + i * 20) + '" cy="58" r="5" fill="' + [GOLD, "#3aa6a0", PINK][i % 3] + '"/>';
-    return svg('<rect width="400" height="260" fill="url(#g2)"/>' + stars(14) +
-      bldg(0, 90, 70, 150, "#4a3a3a", "#ffe6a8") + bldg(330, 100, 70, 140, "#3a3a4a", "#ffe6a8") +
-      '<rect x="70" y="40" width="260" height="200" fill="#e8a48a"/><path d="M70 40h260l-10 -14H80z" fill="#c4704a"/>' + orn +
-      /* the grand arch with colored tile */
-      '<path d="M130 166V110a70 50 0 0 1 140 0v56z" fill="#2a8a8a" stroke="' + GOLD + '" stroke-width="5"/><path d="M146 166V114a54 38 0 0 1 108 0v52z" fill="#1a2a3a"/>' +
-      '<path class="pls" d="M160 160V118a40 28 0 0 1 80 0v42z" fill="#ffd27a" opacity=".55"/>' +
-      [90, 296].map(x => '<rect x="' + x + '" y="70" width="14" height="96" fill="#c4704a"/><circle cx="' + (x + 7) + '" cy="66" r="7" fill="' + GOLD + '"/>').join("") +
-      '<path d="M84 168h232l8 8v22l-8 8H84l-8-8v-22z" fill="#1a1420" stroke="' + GOLD + '" stroke-width="2"/>' + bulbs + txt("FREESTYLE NIGHT", 200, 198, 13, GRN) +
-      '<rect x="0" y="240" width="400" height="20" fill="#2a2d33"/>' + tag("JAMAICA AV", 14, 254, 20, GOLD, -3),
-      sky("g2", "#0c0f24", "#3a2346"));
+    let cols = ""; [118, 146, 254, 282].forEach(x => cols += '<rect x="' + x + '" y="98" width="16" height="112" fill="#efe8d8"/><path d="M' + (x + 4) + ' 102v104M' + (x + 8) + ' 102v104M' + (x + 12) + ' 102v104" stroke="#cfc6b0" stroke-width="1"/><rect x="' + (x - 3) + '" y="92" width="22" height="8" fill="#ded5c0"/><rect x="' + (x - 3) + '" y="208" width="22" height="6" fill="#ded5c0"/>');
+    let pig = ""; [0, 1, 2].forEach(i => pig += '<g class="fly" style="animation-delay:-' + (i * 2.4) + 's"><path d="M' + (40 + i * 18) + ' ' + (40 + i * 8) + 'q5-5 10 0q5-5 10 0" stroke="#4a4a55" stroke-width="2" fill="none"/></g>');
+    return svg('<rect width="400" height="260" fill="url(#g2)"/>' + pig +
+      bldg(0, 90, 92, 130, "#8a4434", "#ffe6a8") + bldg(308, 80, 92, 140, "#6a6a7a", "#cfe6ff") +
+      '<rect x="96" y="70" width="208" height="150" fill="#e6dcc6"/><path d="M90 70h220v-8H90z" fill="#d3c8ae"/>' +
+      /* carved pediment with the name on the frieze */
+      '<path d="M100 62L200 22l100 40z" fill="#e6dcc6" stroke="#bfb497" stroke-width="2"/><path d="M128 58L200 30l72 28z" fill="#d6cbb0"/><circle cx="200" cy="46" r="8" fill="#c9bea2" stroke="#a89c7e"/>' +
+      '<rect x="96" y="70" width="208" height="20" fill="#d6cbb0"/>' + txt("JAMAICA SAVINGS BANK", 200, 85, 12, "#5a4e38") + cols +
+      /* the arched entry, bronze doors */
+      '<path d="M172 210v-74a28 28 0 0 1 56 0v74z" fill="#3a2e24" stroke="#bfb497" stroke-width="3"/><path d="M180 210v-60h40v60z" fill="#8a6a3a"/><path d="M200 150v60" stroke="#5a4428" stroke-width="2"/>' +
+      '<path class="pls" d="M182 136a18 18 0 0 1 36 0z" fill="#ffe6a8" opacity=".6"/>' + txt("161-02", 200, 230, 9, "#5a4e38") +
+      '<rect x="0" y="220" width="400" height="40" fill="#3a3d43"/><path d="M0 242h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      bus(-120, 214, "#0039a6", "slide") + txt("JAMAICA AV", 354, 46, 11, "#2a2d33") + txt("1898", 354, 62, 11, "#2a2d33") + tag("GRAFH", 10, 80, 22, GRN, -6),
+      sky("g2", "#8fc3ea", "#f6e2b8"));
   }
 
-  /* 3. The radio booth: ON AIR glowing, the levels jumping, the mic ready for a freestyle */
+  /* 3. The 165th Street Mall: the pedestrian street off Jamaica Av, sneaker spots, vendor umbrellas, old brick fronts, shoppers moving */
   function booth() {
-    let lv = ""; for (let i = 0; i < 12; i++) lv += '<rect class="pop" style="animation-delay:-' + (i * .13).toFixed(2) + 's" x="' + (40 + i * 12) + '" y="' + (150 - (i % 5) * 10) + '" width="8" height="' + (30 + (i % 5) * 10) + '" fill="' + (i > 8 ? PINK : GRN) + '"/>';
-    return svg('<rect width="400" height="260" fill="#0e1410"/>' +
-      [0, 1, 2, 3, 4, 5, 6, 7].map(i => '<rect x="' + (i * 50) + '" y="0" width="46" height="170" fill="#1a241c"/><path d="M' + (i * 50 + 6) + ' 10v150M' + (i * 50 + 18) + ' 10v150M' + (i * 50 + 30) + ' 10v150" stroke="#14201a" stroke-width="4"/>').join("") +
-      '<rect class="pls" x="150" y="14" width="100" height="26" rx="4" fill="#d7263d"/>' + txt("ON AIR", 200, 33, 16, "#fff") +
-      '<rect x="30" y="100" width="160" height="80" rx="4" fill="#1d1d22" stroke="#3a3a44" stroke-width="2"/>' + lv +
-      /* mic on its arm + headphones */
-      '<path d="M250 180l30-70 40-20" stroke="#9aa3ad" stroke-width="5" fill="none"/><rect x="310" y="70" width="26" height="40" rx="12" fill="#2b2b30" stroke="' + GRN + '" stroke-width="2" transform="rotate(20 323 90)"/>' +
-      '<path d="M220 170q20-30 40 0" stroke="#2b2b30" stroke-width="5" fill="none"/><rect x="214" y="166" width="12" height="16" rx="4" fill="' + GRN + '"/><rect x="254" y="166" width="12" height="16" rx="4" fill="' + GRN + '"/>' +
-      '<rect x="0" y="180" width="400" height="80" fill="#2a2a30"/>' + tag("GOOD ENERGY", 110, 236, 30, GRN, -4), "");
+    const shop = (x, w, col, sign, awn) => brick(x, 70, w, 140, col[0], col[1]) + '<rect x="' + (x + 6) + '" y="78" width="' + (w - 12) + '" height="22" fill="#111"/>' + txt(sign, x + w / 2, 94, 11, awn) +
+      '<path d="M' + x + ' 140h' + w + 'l-6 14H' + (x + 6) + 'z" fill="' + awn + '"/><rect x="' + (x + 8) + '" y="156" width="' + (w - 16) + '" height="54" fill="#cfe6ff" opacity=".8"/>';
+    const shoe = (x, y, c) => '<path d="M' + x + ' ' + y + 'h10l6 4h4v4h-20z" fill="' + c + '"/><path d="M' + x + ' ' + (y + 8) + 'h20" stroke="#fff" stroke-width="2"/>';
+    const umb = (x, c1, c2, cls) => '<g class="sway ' + cls + '"><path d="M' + (x - 24) + ' 186q24-22 48 0z" fill="' + c1 + '"/><path d="M' + x + ' 164q-8 10-12 22M' + x + ' 164q8 10 12 22" stroke="' + c2 + '" stroke-width="3" fill="none"/><rect x="' + (x - 1) + '" y="186" width="2" height="30" fill="#333"/></g><rect x="' + (x - 22) + '" y="212" width="44" height="16" fill="#6a4a2a"/>';
+    const walker = (x, c, cls) => '<g class="' + cls + '"><g class="bob"><circle cx="' + x + '" cy="200" r="6" fill="#3a2a22"/><rect x="' + (x - 6) + '" y="207" width="12" height="22" rx="4" fill="' + c + '"/><rect x="' + (x - 5) + '" y="229" width="4" height="12" fill="#222"/><rect x="' + (x + 1) + '" y="229" width="4" height="12" fill="#222"/></g></g>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      shop(0, 130, ["#8a4434", "#7a3a2c"], "KICKS", GRN) + shop(130, 140, ["#9a6a4a", "#8a5c3e"], "SNEAKERS", GOLD) + shop(270, 130, ["#6a3a34", "#5c302a"], "GOLD &amp; GEAR", PINK) +
+      shoe(26, 180, "#fff") + shoe(54, 176, GRN) + shoe(160, 180, "#d7263d") + shoe(194, 178, "#fff") + shoe(226, 182, GOLD) +
+      '<rect x="0" y="210" width="400" height="50" fill="#b8ad9a"/><path d="M0 226h400M0 244h400" stroke="#a39884"/>' +
+      umb(70, "#d7263d", "#fff", "") + umb(330, "#0039a6", "#fff", "sw2") +
+      walker(160, "#3a7a4a", "slide") + walker(120, "#c8102e", "slideL") + walker(230, "#f2c14e", "slide sd2") +
+      '<rect x="120" y="20" width="160" height="28" rx="4" fill="#1f7a3a" stroke="#fff" stroke-width="2"/>' + txt("165 ST MALL", 200, 40, 15, "#fff") +
+      tag("GRAFH", 300, 64, 22, GRN, -4), sky("g3", "#7ec0ee", "#f8e7c0"));
   }
 
-  /* 4. Jamaica Av by day: the bus rolling, the shops, the old bank clock */
+  /* 4. Grace Episcopal Church on Jamaica Av (1862): the dark brownstone Gothic church and its steeple, the old graveyard out front, leaves coming down */
   function avenue() {
-    return svg('<rect width="400" height="260" fill="url(#g4)"/>' +
-      bldg(0, 70, 90, 120, "#c49a6a", "#cfe6ff") + '<rect x="96" y="40" width="110" height="150" fill="#d8d2c4"/>' + [110, 140, 170].map(x => '<rect x="' + x + '" y="70" width="18" height="100" fill="#bdb6a8"/>').join("") +
-      '<path d="M90 40h122l-8-14h-106z" fill="#a8a08a"/><circle cx="151" cy="56" r="10" fill="#f4f0e6" stroke="#5a5040" stroke-width="2"/><g class="spin slow"><path d="M151 56v-7" stroke="#111" stroke-width="2"/></g>' +
-      bldg(212, 80, 90, 110, "#8a4434", "#ffe6a8") + bldg(302, 60, 98, 130, "#5a6a7a", "#cfe6ff") +
-      [[214, "#d7263d"], [304, "#2f8f4a"]].map(a => '<path d="M' + a[0] + ' 160h86l-6 12h-74z" fill="' + a[1] + '"/>').join("") +
-      '<rect x="0" y="190" width="400" height="70" fill="#3a3d43"/><path d="M0 226h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
-      bus(-120, 186, "#0039a6", "slide") + auto(0, 230, GOLD, "slideL") +
-      tag("QUEENS", 20, 120, 26, GRN, -6),
-      sky("g4", "#7ec0ee", "#f8e7c0"));
+    let stones = ""; [[40, 196], [70, 202], [104, 194], [290, 198], [326, 192], [356, 200]].forEach(s => stones += '<path d="M' + s[0] + ' ' + (s[1] + 22) + 'v-16a7 7 0 0 1 14 0v16z" fill="#9a9a92" stroke="#6a6a62"/>');
+    let leaves = ""; [60, 140, 250, 330].forEach((x, i) => leaves += '<rect class="fall f' + (i % 3 + 1) + '" x="' + x + '" y="40" width="5" height="4" fill="' + (i % 2 ? "#d98a2a" : "#b8442e") + '"/>');
+    return svg('<rect width="400" height="260" fill="url(#g4)"/>' + tree(30, 120, 1.6, "#6a8a3a") + tree(372, 124, 1.5, "#8a7a2a") +
+      /* the steeple + tower */
+      '<path d="M228 40l18-34 18 34z" fill="#4a3428"/><rect x="226" y="40" width="40" height="80" fill="#6a4434"/><path d="M238 60v20a8 8 0 0 1 16 0V60z" fill="#2a1a14"/><circle cx="246" cy="98" r="6" fill="#2a1a14"/>' +
+      /* the nave: brownstone, steep roof, pointed windows */
+      '<path d="M120 120l70-50 70 50z" fill="#3a3238"/><rect x="128" y="120" width="134" height="100" fill="#7a4e3a"/>' +
+      [146, 186, 226].map(x => '<path d="M' + x + ' 196v-44a9 12 0 0 1 18 0v44z" fill="#2a3a5a"/><path class="pls" d="M' + (x + 3) + ' 192v-38a6 9 0 0 1 12 0v38z" fill="#d98a2a" opacity=".45"/>').join("") +
+      '<path d="M266 220v-100l20 0v100z" fill="#6a4434"/><path d="M188 220v-20a7 7 0 0 1 14 0v20z" fill="#2a1a14"/>' +
+      /* the graveyard and the iron fence on the avenue */
+      '<rect x="0" y="216" width="400" height="14" fill="#5a7a3a"/>' + stones + '<path d="M0 214h400" stroke="#1d2329" stroke-width="2"/>' +
+      Array.from({ length: 40 }, (_, i) => '<path d="M' + (i * 10 + 4) + ' 230v-18" stroke="#1d2329" stroke-width="2"/>').join("") +
+      '<rect x="0" y="230" width="400" height="30" fill="#3a3d43"/>' + auto(0, 232, GOLD, "slideL") + leaves +
+      '<rect x="14" y="14" width="150" height="36" rx="3" fill="#2a1a14" opacity=".85"/>' + txt("GRACE CHURCH", 89, 30, 13, "#f6efdc") + txt("JAMAICA AV · 1862", 89, 44, 9, GOLD) +
+      tag("GRAFH", 300, 182, 22, GRN, -6), sky("g4", "#9ac8ea", "#f2d6a0"));
   }
 
-  /* 5. Jamaica Av and Parsons Blvd */
+  /* 5. Jamaica Av and 165th St, at the mouth of the 165th St Mall */
   function block() {
-    return corner(["#08120c", "#1d3a2a"], "Jamaica Av", "Parsons Blvd",
-      tag("GRAFH", 40, 126, 58, GRN, -7) + tag("AUTOGRAF", 70, 156, 26, GOLD, -5) + tag("GOOD ENERGY", 30, 188, 26, PINK, -3) + tag("QUEENS", 130, 212, 22, "#f6efdc", -2), GRN);
+    return corner(["#08120c", "#1d3a2a"], "Jamaica Av", "165 St",
+      tag("GRAFH", 40, 126, 58, GRN, -7) + tag("AUTOGRAF", 70, 156, 26, GOLD, -5) + tag("165 MALL", 30, 188, 26, PINK, -3) + tag("QUEENS", 130, 212, 22, "#f6efdc", -2), GRN);
   }
 
   window.SCENES = { station, valencia, booth, avenue, block };

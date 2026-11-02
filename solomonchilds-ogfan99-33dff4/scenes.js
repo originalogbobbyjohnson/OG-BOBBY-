@@ -40,53 +40,48 @@
   };
   const brick = (x, y, w, h, base, mortar) => { let b = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + mortar + '"/>'; for (let yy = y + 1; yy < y + h - 2; yy += 8) for (let xx = x + (((yy - y) / 8) % 2 ? -6 : 0); xx < x + w; xx += 16) b += '<rect x="' + Math.max(x, xx) + '" y="' + yy + '" width="' + Math.min(14, x + w - Math.max(x, xx)) + '" height="6" fill="' + base + '"/>'; return b; };
 
-  /* 1. Tompkinsville: the SIR rolling into the open-air platform by the harbor, the ferry terminal lights up the line */
+  /* 1. Tompkinsville from the Victory Blvd side: the SIR rolling in under the canopy, Victory Blvd climbing the hill behind toward Hero Park, Theodore Unit tagged on the canopy */
   function station() {
     let windows = "";
-    for (let x = 22; x < 290; x += 44) windows += '<rect x="' + x + '" y="134" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
+    for (let x = 22; x < 230; x += 40) windows += '<rect x="' + x + '" y="148" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".85"/>';
+    let houses = "";
+    [[214, 112, "#d8c8a8"], [250, 96, "#a8b8c8"], [286, 80, "#e0d0b0"], [322, 64, "#c8a888"], [358, 50, "#b8c8b0"]].forEach(h => houses += '<rect x="' + h[0] + '" y="' + h[1] + '" width="30" height="26" fill="' + h[2] + '"/><path d="M' + (h[0] - 3) + ' ' + h[1] + 'l18-12 18 12z" fill="#6a4a3a"/><rect class="flk" x="' + (h[0] + 10) + '" y="' + (h[1] + 8) + '" width="8" height="9" fill="#ffe7a8"/>');
     return svg(
-      '<rect width="400" height="260" fill="url(#g1)"/>' + stars(12) +
-      '<rect x="0" y="92" width="400" height="22" fill="#1d3550"/>' + skyline(94, "#2c3550") +
-      '<path class="shim" d="M20 104h40M250 108h60" stroke="' + PINK + '" stroke-width="2"/>' +
-      /* fare-control house and canopy */
-      '<rect x="330" y="40" width="70" height="70" fill="#b7a58a"/><rect x="340" y="54" width="18" height="24" fill="#ffe7a8" class="flk"/><rect x="368" y="54" width="18" height="24" fill="#ffe7a8"/>' +
-      '<rect x="0" y="46" width="330" height="7" fill="#c6ccd4"/><rect x="0" y="53" width="330" height="3" fill="#0039a6"/>' +
-      '<rect x="60" y="56" width="5" height="66" fill="#7b8794"/><rect x="250" y="56" width="5" height="66" fill="#7b8794"/>' +
-      /* black station sign */
-      '<rect x="86" y="62" width="216" height="32" rx="4" fill="#111"/><rect x="86" y="62" width="216" height="4" fill="#fff"/>' +
-      '<text x="98" y="86" ' + FONT + ' font-size="15" fill="#fff">Tompkinsville</text>' + sir(274, 79) +
-      /* the SIR car */
-      '<g class="anim-train">' +
-        '<rect x="8" y="122" width="300" height="58" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="160" width="300" height="6" fill="#0039a6"/>' + windows +
-        '<circle cx="300" cy="172" r="4" fill="#fff6c2"/>' + sir(262, 172) +
-      '</g>' +
-      '<rect x="0" y="180" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="190" width="400" height="70" fill="#1c232c"/>' +
-      tag("SHAOLIN", 18, 240, 28, PINK, -4) + tag("CHILD FAMOUS", 196, 242, 26, GOLD, -6),
-      sky("g1", "#0e1430", "#3a2a4a"));
+      '<rect width="400" height="260" fill="url(#g1)"/>' + stars(10) + '<circle cx="60" cy="36" r="12" fill="#fff1d6"/>' +
+      /* the hill with Victory Blvd climbing it, Hero Park trees on top */
+      '<path d="M120 140L400 30V140z" fill="#2f4a32"/>' + houses +
+      '<path d="M150 140L400 44" stroke="#3a3f47" stroke-width="10"/><path d="M150 140L400 44" stroke="#eab308" stroke-width="1" stroke-dasharray="8 8"/>' +
+      [360, 384].map(x => '<circle class="bob" cx="' + x + '" cy="30" r="14" fill="#3f7a3a"/>').join("") +
+      '<rect x="318" y="6" width="78" height="16" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1"/><text x="357" y="18" text-anchor="middle" ' + FONT + ' font-size="9" fill="#fff">HERO PARK ↑</text>' +
+      '<rect x="248" y="104" width="90" height="16" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1" transform="rotate(-21 293 112)"/><text x="293" y="116" text-anchor="middle" ' + FONT + ' font-size="9" fill="#fff" transform="rotate(-21 293 112)">Victory Blvd</text>' +
+      /* the canopy with the tag on its fascia, the sign, the train */
+      '<rect x="0" y="92" width="250" height="16" fill="#c6ccd4"/><rect x="0" y="108" width="250" height="3" fill="#0039a6"/>' + tag("THEODORE UNIT", 8, 106, 14, PINK, -2) +
+      '<rect x="30" y="111" width="5" height="40" fill="#7b8794"/><rect x="210" y="111" width="5" height="40" fill="#7b8794"/>' +
+      '<rect x="56" y="114" width="150" height="26" rx="3" fill="#111"/><rect x="56" y="114" width="150" height="3" fill="#fff"/><text x="64" y="133" ' + FONT + ' font-size="13" fill="#fff">Tompkinsville</text>' + sir(182, 128) +
+      '<g class="anim-train"><rect x="8" y="140" width="240" height="46" rx="7" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="8" y="172" width="240" height="5" fill="#0039a6"/>' + windows + '<circle cx="240" cy="180" r="4" fill="#fff6c2"/></g>' +
+      '<rect x="0" y="186" width="400" height="8" fill="#eab308"/><rect x="0" y="194" width="400" height="66" fill="#1c232c"/>' +
+      '<g class="sail"><rect x="0" y="232" width="46" height="14" rx="4" fill="' + GOLD + '"/><circle cx="10" cy="248" r="4" fill="#111"/><circle cx="36" cy="248" r="4" fill="#111"/></g>' +
+      tag("SOLOMON CHILDS", 150, 226, 24, GOLD, -4) + tag("SHAOLIN", 14, 230, 20, CYAN, -4),
+      sky("g1", "#0e1430", "#5a3a5a"));
   }
 
-  /* 2. Lyons Pool on Victory Blvd: the 1936 red-brick bathhouse with its arched entry and stone trim, the big pool, kids splashing */
+  /* 2. Hero Park on Victory Blvd at Louis St (Grymes Hill): the giant Sugar Loaf boulder with its bronze WWI plaque under the oaks, a few blocks up from his Cebra Av corner */
   function pool() {
-    let splash = "";
-    [[80, 196], [170, 210], [260, 200], [330, 214]].forEach((p, i) => splash += '<g class="bob' + (i % 2 ? " bob2" : "") + '"><circle cx="' + p[0] + '" cy="' + p[1] + '" r="5" fill="#7a4a2a"/><path d="M' + (p[0] - 12) + ' ' + (p[1] + 6) + 'q12-10 24 0" stroke="#fff" stroke-width="2" fill="none"/></g>');
+    const oak = (x, y, r, c) => '<rect x="' + (x - 4) + '" y="' + y + '" width="8" height="' + (r * 2) + '" fill="#4a3426"/><g class="bob"><circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + c + '"/><circle cx="' + (x - r * .6) + '" cy="' + (y + 8) + '" r="' + (r * .7) + '" fill="' + c + '"/><circle cx="' + (x + r * .6) + '" cy="' + (y + 6) + '" r="' + (r * .7) + '" fill="' + c + '"/></g>';
+    let leaves = "";
+    for (let i = 0; i < 6; i++) leaves += '<ellipse class="shim' + (i % 2 ? " shim2" : "") + '" cx="' + (40 + i * 64) + '" cy="' + (60 + (i * 31) % 80) + '" rx="3" ry="2" fill="#8ac04a"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g2)"/>' +
-      /* the bathhouse */
-      brick(40, 70, 320, 100, "#a5452f", "#7a3020") +
-      '<rect x="40" y="62" width="320" height="10" fill="#e6dccb"/><rect x="40" y="164" width="320" height="8" fill="#e6dccb"/>' +
-      '<rect x="160" y="40" width="80" height="132" fill="#9a3f2b"/><rect x="156" y="34" width="88" height="8" fill="#e6dccb"/>' +
-      '<path d="M176 172v-64a24 24 0 0 1 48 0v64z" fill="#2a2030" stroke="#e6dccb" stroke-width="4"/>' +
-      '<rect x="168" y="48" width="64" height="12" fill="#e6dccb"/><text x="200" y="58" text-anchor="middle" ' + FONT + ' font-size="8" fill="#7a3020">LYONS POOL</text>' +
-      (function () { let w = ""; [58, 96, 254, 292, 330].forEach(x => w += '<path d="M' + x + ' 150v-40a10 10 0 0 1 20 0v40z" fill="#3a5a6a" stroke="#e6dccb" stroke-width="2"/>'); return w; })() +
-      '<path class="flag" d="M200 34v-24" stroke="#ddd" stroke-width="2"/><path class="flag" d="M201 10h20v12h-20z" fill="#2a5aa8"/>' +
-      /* deck and pool */
-      '<rect x="0" y="172" width="400" height="14" fill="#d8d2c4"/>' +
-      '<rect x="0" y="186" width="400" height="74" fill="#2fa6d8"/>' +
-      '<path class="shim" d="M10 200h60M120 220h80M260 236h70" stroke="#c9f1ff" stroke-width="3"/>' +
-      '<path d="M0 230h400" stroke="#1f7aa8" stroke-width="2" stroke-dasharray="10 8"/>' + splash +
-      tag("VICTORY BLVD", 18, 252, 24, PINK, -3),
+      oak(50, 70, 40, "#3f7a3a") + oak(350, 64, 44, "#2f6a34") + oak(200, 40, 30, "#4a8a3e") +
+      '<rect x="0" y="180" width="400" height="80" fill="#5a9a40"/><path d="M0 222C120 210 280 236 400 216V260H0z" fill="#c8b890"/>' +
+      /* the Sugar Loaf boulder */
+      '<path d="M110 196q-6-70 60-96q60-12 100 30q30 40 18 66z" fill="#8a8a86"/><path d="M130 160q30-40 80-44M240 120q30 20 36 50" stroke="#6a6a66" stroke-width="3" fill="none"/>' +
+      '<path d="M150 110q20-10 40-8" stroke="#b0b0aa" stroke-width="4" fill="none"/>' +
+      /* bronze plaque */
+      '<rect x="176" y="140" width="56" height="38" rx="2" fill="#8a6a2a" stroke="#5a4418" stroke-width="2"/><text x="204" y="156" text-anchor="middle" ' + FONT + ' font-size="7" fill="#f2d68a">HERO PARK</text><text x="204" y="168" text-anchor="middle" ' + FONT + ' font-size="6" fill="#f2d68a">1917 · 1918</text>' +
+      leaves +
+      '<rect x="10" y="10" width="140" height="22" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="80" y="25" text-anchor="middle" ' + FONT + ' font-size="10" fill="#fff">Victory Blvd · Louis St</text>' +
+      tag("SUGAR LOAF", 238, 40, 22, GOLD, -5) + tag("SOLOMON", 18, 252, 22, PINK, -3),
       sky("g2", "#69b8f0", "#d8f0ff"));
   }
 
@@ -120,26 +115,23 @@
       sky("g3", "#05081a", "#2a1a40"));
   }
 
-  /* 4. Killa Bee Radio: the late-night booth, the ON AIR light flickering, the meters jumping */
+  /* 4. Hamilton Park Cottages in New Brighton: the 1850s Italianate villas on the hill above the North Shore, cream stucco, dark trim, the bracketed eaves, the harbor showing between them */
   function radio() {
-    let meters = "";
-    for (let i = 0; i < 10; i++) meters += '<rect class="bob' + (i % 2 ? " bob2" : "") + '" x="' + (238 + i * 12) + '" y="' + (150 - (i * 13) % 34) + '" width="8" height="' + (30 + (i * 13) % 34) + '" fill="' + (i > 7 ? "#ff5a5a" : i > 5 ? GOLD : "#7cf29a") + '"/>';
-    let foam = "";
-    for (let y = 20; y < 120; y += 20) for (let x = 0; x < 400; x += 20) foam += '<path d="M' + x + ' ' + y + 'l10 10-10 10M' + (x + 10) + ' ' + y + 'l10 10-10 10" stroke="#241a30" stroke-width="2" fill="none"/>';
+    const villa = (x, y, w, c) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (200 - y) + '" fill="' + c + '"/><path d="M' + (x - 8) + ' ' + y + 'h' + (w + 16) + 'l-' + (w / 2 + 8) + ' -18z" fill="#3a3a3a"/>' +
+      (function () { let b = ""; for (let i = x - 4; i < x + w + 4; i += 10) b += '<rect x="' + i + '" y="' + y + '" width="3" height="6" fill="#3a3a3a"/>'; return b; })() +
+      '<rect x="' + (x + w / 2 - 12) + '" y="' + (y - 34) + '" width="24" height="22" fill="' + c + '"/><path d="M' + (x + w / 2 - 16) + ' ' + (y - 34) + 'h32l-16-10z" fill="#3a3a3a"/><rect class="flk" x="' + (x + w / 2 - 5) + '" y="' + (y - 30) + '" width="10" height="14" rx="5" fill="#ffe7a8"/>' +
+      [x + 12, x + w - 26].map(wx => '<rect x="' + wx + '" y="' + (y + 16) + '" width="14" height="24" rx="7" fill="#2a3040"/><rect x="' + wx + '" y="' + (y + 56) + '" width="14" height="24" rx="7" fill="#2a3040"/>').join("") +
+      '<rect x="' + (x - 6) + '" y="' + (200 - 40) + '" width="' + (w + 12) + '" height="6" fill="#3a3a3a"/><path d="M' + (x + w / 2 - 8) + ' 200v-24h16v24z" fill="#4a3426"/>';
     return svg(
-      '<rect width="400" height="260" fill="#1a1222"/>' + foam +
-      /* on air sign */
-      '<rect x="150" y="18" width="100" height="28" rx="4" fill="#2a0a12" stroke="#555" stroke-width="2"/><text class="flk" x="200" y="38" text-anchor="middle" ' + FONT + ' font-size="16" fill="#ff3b4a">ON AIR</text>' +
-      /* the mic on its boom */
-      '<path d="M60 40l60 50" stroke="#555" stroke-width="5"/><rect x="108" y="78" width="26" height="46" rx="13" fill="#2b2b2b" stroke="#888" stroke-width="2"/>' +
-      '<circle cx="121" cy="100" r="22" fill="none" stroke="#666" stroke-width="2" opacity=".7"/>' +
-      /* the desk and mixer */
-      '<path d="M0 170h400v90H0z" fill="#2a1d14"/><rect x="0" y="164" width="400" height="8" fill="#4a3426"/>' +
-      '<rect x="40" y="176" width="150" height="50" rx="4" fill="#222" stroke="#444"/>' +
-      (function () { let k = ""; for (let i = 0; i < 8; i++) k += '<rect x="' + (50 + i * 17) + '" y="184" width="4" height="34" fill="#111"/><rect x="' + (46 + i * 17) + '" y="' + (190 + (i * 7) % 20) + '" width="12" height="6" fill="' + (i % 2 ? PINK : CYAN) + '"/>'; return k; })() +
-      '<rect x="230" y="110" width="132" height="76" rx="4" fill="#0e0e14" stroke="#444"/>' + meters +
-      tag("KILLA BEE RADIO", 20, 248, 26, PINK, -3),
-      "");
+      '<rect width="400" height="260" fill="url(#g4)"/>' +
+      '<rect x="0" y="150" width="400" height="40" fill="#3a6a8a"/><path class="shim" d="M20 162h40M180 170h50M320 160h40" stroke="#cfe6ff" stroke-width="2"/>' +
+      '<g class="sail"><path d="M0 160h44l-6 8H6z" fill="#e6a23c"/><rect x="12" y="150" width="20" height="10" fill="#e6a23c"/></g>' +
+      villa(30, 104, 110, "#efe4c8") + villa(250, 96, 120, "#e8d9b4") +
+      '<rect x="0" y="200" width="400" height="60" fill="#4a7a3a"/><path d="M150 260l40-60h20l40 60z" fill="#b8a888"/>' +
+      '<g class="bob"><circle cx="186" cy="130" r="16" fill="#3f7a3a"/><rect x="183" y="140" width="6" height="60" fill="#4a3426"/></g>' +
+      '<rect x="120" y="10" width="160" height="34" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="200" y="25" text-anchor="middle" ' + FONT + ' font-size="11" fill="#fff">HAMILTON PARK</text><text x="200" y="38" text-anchor="middle" ' + FONT + ' font-size="8" fill="#fff">NEW BRIGHTON · 1850s</text>' +
+      tag("THEODORE UNIT", 18, 248, 22, PINK, -3),
+      sky("g4", "#f2a65a", "#8fc3ea"));
   }
 
   /* 5. Victory Blvd and Cebra Av, up the hill from the Tompkinsville stop: green signs, the tag wall */

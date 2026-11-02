@@ -95,7 +95,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO BAY RIDGE",
-   "x": "4th Av and 77th St, under the Verrazzano. This is the Lordz' game.",
+   "x": "4th Av and 95th St, under the Verrazzano. This is the Lordz' game.",
    "sfx": "spray"
   }
  ],

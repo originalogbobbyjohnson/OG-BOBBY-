@@ -64,40 +64,25 @@
       "");
   }
 
-  /* 2. The Apollo on 125th St: tan brick, the tall red vertical sign with white letters, the bulb marquee chasing */
+  /* 2. Taíno Towers, E 122nd to 123rd St at 2nd Av: the four 35-story concrete towers of East Harlem, windows coming on one by one at dusk */
   function apollo() {
-    let brick = "";
-    for (let y = 30; y < 210; y += 9) brick += '<path d="M120 ' + y + 'h170" stroke="#a88a5c" stroke-width="1" opacity=".6"/>';
-    let wins = "";
-    [[136, 44], [196, 44], [256, 44]].forEach(([x, y]) => { wins += '<rect x="' + x + '" y="' + y + '" width="22" height="34" fill="#2a2030"/><rect x="' + x + '" y="' + y + '" width="22" height="34" fill="none" stroke="#e7d6b0" stroke-width="2"/>'; });
-    let bulbs = "";
-    for (let x = 96; x <= 314; x += 9) {
-      bulbs += '<circle class="bulb' + ((x / 9) % 2 ? " bulb2" : "") + '" cx="' + x + '" cy="114" r="2.2" fill="#fff6c2"/>';
-      bulbs += '<circle class="bulb' + ((x / 9) % 2 ? "" : " bulb2") + '" cx="' + x + '" cy="160" r="2.2" fill="#fff6c2"/>';
-    }
-    const letters = "APOLLO".split("").map((c, i) => '<text x="83" y="' + (52 + i * 20) + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="18" fill="#fff">' + c + '</text>').join("");
+    const sign = (x, y, w, t) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="' + (x + w / 2) + '" y="' + (y + 13) + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">' + t + '</text>';
+    let towers = "";
+    [[34, 40], [124, 28], [214, 34], [304, 46]].forEach(([x, y], k) => {
+      towers += '<rect x="' + x + '" y="' + y + '" width="66" height="' + (216 - y) + '" fill="#cbbfa8"/><rect x="' + (x + 28) + '" y="' + (y - 6) + '" width="10" height="' + (222 - y) + '" fill="#b3a68e"/>' +
+        '<rect x="' + x + '" y="' + y + '" width="66" height="5" fill="#e0d6c2"/>';
+      for (let yy = y + 12; yy < 206; yy += 9) for (let xx = x + 5; xx < x + 62; xx += 10) { if (xx > x + 24 && xx < x + 40) continue; const on = (xx * 3 + yy * 7 + k) % 5 === 0; towers += '<rect' + (on ? ' class="flk' + ((xx + yy) % 2 ? " flk2" : "") + '"' : '') + ' x="' + xx + '" y="' + yy + '" width="6" height="5" fill="' + (on ? "#ffd98a" : "#3a3440") + '"/>'; }
+    });
     return svg(
-      '<rect width="400" height="260" fill="url(#ag)"/>' + stars(22) +
-      /* neighbors: brownstone and storefront blocks */
-      '<rect x="0" y="70" width="70" height="150" fill="#3a2a22"/><rect x="300" y="60" width="100" height="160" fill="#2e2620"/>' +
-      [[10, 86], [38, 86], [10, 122], [38, 122], [316, 76], [352, 76], [316, 112], [352, 112]].map(([x, y]) => '<rect x="' + x + '" y="' + y + '" width="18" height="24" fill="#ffd27a" opacity=".55"/>').join("") +
-      /* the theater front */
-      '<rect x="110" y="28" width="190" height="192" fill="#c8a875"/>' + brick + wins +
-      '<rect x="110" y="24" width="190" height="8" fill="#e7d6b0"/>' +
-      /* the vertical sign */
-      '<g class="neon"><rect x="68" y="30" width="30" height="132" rx="3" fill="#d4202a" stroke="#fff" stroke-width="2"/>' + letters + '</g>' +
-      '<rect x="80" y="162" width="6" height="12" fill="#5a1a1a"/>' +
-      /* the marquee */
-      '<rect x="90" y="108" width="230" height="58" fill="#d4202a"/>' + bulbs +
-      '<rect x="102" y="120" width="206" height="34" fill="#fff8ec"/>' +
-      '<text x="205" y="134" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="2" fill="#111">TONIGHT ON 125TH</text>' +
-      '<text x="205" y="150" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="13" letter-spacing="3" fill="#d4202a">DAVE EAST</text>' +
-      /* doors + sidewalk + crowd */
-      '<rect x="140" y="178" width="130" height="42" fill="#1c1418"/>' +
-      [150, 184, 218, 252].map(x => '<rect x="' + x + '" y="184" width="16" height="36" fill="#ffd27a" opacity=".35"/>').join("") +
-      '<rect x="0" y="220" width="400" height="40" fill="#1a1620"/><path d="M0 236h400" stroke="#2c2634" stroke-width="2"/>' +
-      [60, 96, 316, 350].map((x, i) => '<path d="M' + x + ' 248q0-26 12-26t12 26z" fill="#0b0810"/><circle cx="' + (x + 12) + '" cy="214" r="7" fill="#0b0810"/>').join(""),
-      sky("ag", "#120a22", "#3a2350"));
+      '<rect width="400" height="260" fill="url(#g2)"/>' + stars(10) +
+      '<g class="cld"><ellipse cx="0" cy="22" rx="44" ry="7" fill="#fff" opacity=".25"/></g>' + towers +
+      /* the low base with the community center */
+      '<rect x="0" y="206" width="400" height="20" fill="#9a8e78"/><rect x="0" y="206" width="400" height="3" fill="#e0d6c2"/>' +
+      '<rect x="140" y="210" width="120" height="14" rx="2" fill="#111"/><text x="200" y="220.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff" letter-spacing="1">TAÍNO TOWERS</text>' +
+      '<rect x="0" y="226" width="400" height="34" fill="#22252b"/><path d="M0 243h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="cld" style="animation-duration:7s"><rect x="0" y="230" width="44" height="14" rx="4" fill="' + RED + '"/><circle cx="10" cy="246" r="4" fill="#111"/><circle cx="34" cy="246" r="4" fill="#111"/></g>' +
+      sign(8, 8, 64, "2 Av") + sign(318, 8, 74, "E 123 St") + tag("EAST", 280, 252, 26, RED, -5) + tag("KARMA", 14, 252, 22, ORANGE, -4),
+      sky("g2", "#1a1438", "#e0885a"));
   }
 
   /* 3. The Rucker on 155th: blue court, orange key, chain fence, a ball bouncing on the hardwood-blue */
@@ -133,38 +118,31 @@
       sky("rg", "#ff9a5a", "#5a3a6e"));
   }
 
-  /* 4. Marcus Garvey Park: the cast-iron fire watchtower on Mount Morris rock, three tiers, spiral stair, the bronze bell swinging */
+  /* 4. The RFK (Triborough) Bridge's Harlem River lift span at E 125th: the twin steel towers, the lift deck rising over the water, seen from East Harlem */
   function tower() {
-    const IRON = "#3d4148", IRON2 = "#2a2d33";
-    let cols = "";
-    [[150, 160, 100], [160, 110, 80], [170, 66, 60]].forEach(([x, y, w], t) => {
-      const h = t === 0 ? 50 : t === 1 ? 44 : 38;
-      for (let i = 0; i <= 4; i++) cols += '<rect x="' + (x + i * (w / 4) - 2) + '" y="' + (y - h) + '" width="4" height="' + h + '" fill="' + IRON + '"/>';
-      cols += '<rect x="' + (x - 6) + '" y="' + (y - 4) + '" width="' + (w + 12) + '" height="6" fill="' + IRON2 + '"/>';
-      cols += '<path d="M' + x + ' ' + (y - h) + 'l' + (w / 4) + ' ' + h + 'm0-' + h + 'l' + (w / 4) + ' ' + h + 'm0-' + h + 'l' + (w / 4) + ' ' + h + 'm0-' + h + 'l' + (w / 4) + ' ' + h + '" stroke="' + IRON + '" stroke-width="1.5" opacity=".8"/>';
-    });
-    /* spiral stair inside */
-    let stair = "";
-    for (let y = 154; y > 30; y -= 10) stair += '<path d="M188 ' + y + 'q12 -5 24 0" stroke="#6a6f78" stroke-width="2" fill="none"/>';
-    let trees = "";
-    [[40, 196, 34], [96, 206, 26], [312, 200, 32], [366, 208, 24]].forEach(([x, y, r]) => { trees += '<g class="tree"><rect x="' + (x - 3) + '" y="' + (y - 4) + '" width="6" height="30" fill="#2a1c12"/><circle cx="' + x + '" cy="' + (y - r / 2) + '" r="' + r + '" fill="#1f5a34"/><circle cx="' + (x + r / 2) + '" cy="' + (y - r) + '" r="' + (r * 0.7) + '" fill="#2a7444"/></g>'; });
+    const truss = (x) => { let s = '<rect x="' + x + '" y="40" width="34" height="150" fill="none" stroke="#5f7a74" stroke-width="5"/>'; for (let y = 40; y < 190; y += 25) s += '<path d="M' + x + ' ' + y + 'l34 25M' + (x + 34) + ' ' + y + 'l-34 25" stroke="#5f7a74" stroke-width="2.5"/>'; return s + '<rect x="' + (x - 4) + '" y="32" width="42" height="10" fill="#4e6862"/><circle class="flk" cx="' + (x + 17) + '" cy="28" r="3" fill="#ff4a4a"/>'; };
+    let lights = "";
+    for (let x = 0; x < 400; x += 26) lights += '<circle class="flk' + (x % 52 ? " flk2" : "") + '" cx="' + x + '" cy="198" r="1.6" fill="#ffe7a8"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#tg)"/>' +
-      '<circle cx="330" cy="46" r="20" fill="#ffd27a" opacity=".85"/>' +
-      '<g class="cld"><ellipse cx="60" cy="40" rx="44" ry="10" fill="#fff" opacity=".22"/></g>' +
-      /* the rock outcrop */
-      '<path d="M90 260l30-80q40-30 80-26t80 26l30 80z" fill="#5d5650"/><path d="M120 180q40-30 80-26t80 26" stroke="#7b746c" stroke-width="3" fill="none"/>' +
-      '<path d="M140 200l20-10M240 196l18 12M180 220l26-6" stroke="#4a443e" stroke-width="2"/>' +
-      stair + cols +
-      /* the octagonal lantern on top */
-      '<path d="M178 28h44l6 10h-56z" fill="' + IRON2 + '"/><path d="M182 28l18-14 18 14z" fill="' + IRON + '"/><rect x="198" y="6" width="4" height="10" fill="' + IRON + '"/>' +
-      '<g class="bell"><path d="M191 44q0-9 9-9t9 9l3 9h-24z" fill="#b8862e" stroke="#6a4a12" stroke-width="1.5"/><circle cx="200" cy="55" r="2.5" fill="#6a4a12"/></g>' +
-      trees +
-      '<rect x="0" y="236" width="400" height="24" fill="#183020"/>' +
-      '<rect x="14" y="20" width="132" height="32" rx="4" fill="#1f5a34" stroke="#fff" stroke-width="1.5"/>' +
-      '<text x="80" y="34" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1" textLength="120" lengthAdjust="spacingAndGlyphs" fill="#fff">MARCUS GARVEY PARK</text>' +
-      '<text x="80" y="46" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="8" letter-spacing="2" textLength="104" lengthAdjust="spacingAndGlyphs" fill="' + ORANGE + '">WATCHTOWER · 1856</text>',
-      sky("tg", "#1d2b52", "#d9784a"));
+      '<style>@keyframes lift{0%,30%{transform:translateY(0)}55%,75%{transform:translateY(-60px)}100%{transform:translateY(0)}}.lift{animation:lift 8s ease-in-out infinite}' +
+      '@keyframes tug{from{transform:translateX(-80px)}to{transform:translateX(480px)}}.tug{animation:tug 12s linear infinite}</style>' +
+      '<rect width="400" height="260" fill="url(#g4)"/>' + stars(14) +
+      /* Randalls Island + the Bronx low skyline */
+      '<path d="M0 186h400v-14l-40 -8 -30 6 -60 -12 -50 10 -80 -6 -60 8 -80 -4z" fill="#26323a"/>' +
+      /* the fixed approach decks */
+      '<rect x="0" y="194" width="110" height="10" fill="#4e6862"/><rect x="290" y="194" width="110" height="10" fill="#4e6862"/>' +
+      truss(84) + truss(282) +
+      /* the lift span */
+      '<g class="lift"><rect x="118" y="186" width="164" height="16" fill="#6f8a84"/><path d="M118 186l20 -14h124l20 14" stroke="#5f7a74" stroke-width="3" fill="none"/>' +
+      '<path d="M138 172v14M170 172v14M200 172v14M230 172v14M262 172v14" stroke="#5f7a74" stroke-width="2"/></g>' +
+      lights +
+      /* the river */
+      '<rect x="0" y="204" width="400" height="56" fill="#1d3a52"/><path d="M30 220h50M200 232h60M300 246h50" stroke="#9ecae8" stroke-width="2" opacity=".5"/>' +
+      '<g class="tug"><path d="M0 226h40l-6 8H6z" fill="#c33"/><rect x="12" y="216" width="14" height="10" fill="#f2f2f2"/></g>' +
+      '<rect x="110" y="236" width="180" height="16" rx="2" fill="#111"/><text x="200" y="247.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8.5" fill="#fff">RFK BRIDGE · HARLEM RIVER LIFT SPAN</text>' +
+      '<rect x="8" y="8" width="88" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="52" y="21" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">E 125 St</text>' +
+      tag("FROM THE DIRT", 160, 30, 20, ORANGE, -4),
+      sky("g4", "#0e0c24", "#3a2a5c"));
   }
 
   /* 5. E 116 St and Lexington Av: street signs, brownstone stoop, the tag wall */

@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO PARK HILL",
-   "x": "Targee St and Vanderbilt Ave, the Wu-Tang Clan District. This is Hanz On's game.",
+   "x": "Clove Rd and Victory Blvd, at the gate of Clove Lakes Park. This is Hanz On's game.",
    "sfx": "spray"
   }
  ],

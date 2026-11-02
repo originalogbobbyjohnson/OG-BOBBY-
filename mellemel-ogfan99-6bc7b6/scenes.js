@@ -53,23 +53,24 @@
     '<rect x="30" y="14" width="16" height="14" rx="1" fill="#171a20" stroke="#9aa3ad"/><rect x="28" y="4" width="20" height="5" fill="#ffd23f"/></g>';
   const GREEN = "#7cf29a", GOLD = "#ffd23f", RED = "#ff4f5e", SIX = "#00933c";
 
-  /* 1. The 6 pulling into Hunts Point Av, underground on the Pelham line under Southern Blvd: white tile, a terracotta band, I-beam columns */
+  /* 1. The 6 pulling into Longwood Av, underground on the Pelham line under Southern Blvd: white tile, a mosaic band, the Longwood Av name tablet, I-beam columns */
   function train() {
     let tiles = "";
     for (let y = 0; y < 180; y += 10) tiles += '<path d="M0 ' + y + 'H400" stroke="#d8d2c4" stroke-width="1"/>';
     for (let x = 0; x < 400; x += 20) tiles += '<path d="M' + x + ' 0V180" stroke="#d8d2c4" stroke-width="1"/>';
     let band = "";
-    for (let x = 0; x < 400; x += 16) band += '<rect x="' + x + '" y="20" width="14" height="14" fill="' + ((x / 16) % 2 ? "#b8643a" : "#3f6b4a") + '"/>';
+    for (let x = 0; x < 400; x += 16) band += '<rect x="' + x + '" y="20" width="14" height="14" fill="' + ((x / 16) % 3 ? "#2f5a8a" : "#e0b84a") + '"/>';
     let windows = "";
     for (let x = 30; x < 280; x += 46) windows += '<rect x="' + x + '" y="112" width="30" height="22" rx="3" fill="#fff4d6" opacity=".9"/>';
     let cols = "";
     [16, 384].forEach(x => { cols += '<rect x="' + (x - 6) + '" y="0" width="12" height="180" fill="#1d1d1d"/><rect x="' + (x - 10) + '" y="0" width="20" height="6" fill="#1d1d1d"/>'; });
     return svg(
       '<rect width="400" height="180" fill="#efe9db"/>' + tiles + band +
+      '<rect x="334" y="48" width="44" height="38" fill="#2f5a8a" stroke="#e0b84a" stroke-width="2"/><text x="356" y="64" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="10" fill="#fff">LONG</text><text x="356" y="78" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="10" fill="#fff">WOOD</text>' +
       '<rect x="0" y="16" width="400" height="4" fill="#7a5a3a"/><rect x="0" y="34" width="400" height="4" fill="#7a5a3a"/>' +
       /* black station sign */
       '<rect x="70" y="48" width="260" height="36" rx="4" fill="#111"/><rect x="70" y="48" width="260" height="4" fill="#fff"/>' +
-      '<text x="84" y="74" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="17" fill="#fff">Hunts Point Av</text>' + bullet(304, 67, "6", SIX) +
+      '<text x="84" y="74" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="17" fill="#fff">Longwood Av</text>' + bullet(304, 67, "6", SIX) +
       '<g class="anim-train">' +
         '<rect x="14" y="98" width="320" height="70" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
         '<rect x="14" y="146" width="320" height="4" fill="#2b2f36"/>' + windows +
@@ -80,37 +81,29 @@
       tag("FURIOUS 5", 34, 236, 30, GREEN, -4) + tag("MELLE MEL", 222, 240, 28, GOLD, -7));
   }
 
-  /* 2. A park jam in St. Mary's Park: the DJ's turntables plugged into the lamppost, speaker columns, the crowd moving under the trees */
+  /* 2. Sugar Hill Records in Englewood, NJ: the label that put out The Message and the Furious Five; low brick office, the name over the door, a gold record turning in the window */
   function park() {
-    let trees = "";
-    [[20, 96, 40], [90, 84, 46], [330, 90, 44], [390, 100, 36]].forEach(t => { trees += '<circle cx="' + t[0] + '" cy="' + t[1] + '" r="' + t[2] + '" fill="#2f6a34"/><rect x="' + (t[0] - 4) + '" y="' + t[1] + '" width="8" height="70" fill="#4a3220"/>'; });
-    let crowd = "";
-    [[150, "#ff4f5e", "hop"], [176, "#7cf29a", "hop hop2"], [204, "#ffd23f", "hop hop3"], [232, "#6fa8ff", "hop"], [258, "#ff9a2e", "hop hop2"]].forEach(c => { crowd += fig(c[0], 238, c[1], c[2]); });
+    let bricks = "";
+    for (let y = 92; y < 206; y += 10) for (let x = (y / 10) % 2 ? 40 : 52; x < 334; x += 24) bricks += '<rect x="' + x + '" y="' + y + '" width="22" height="8" fill="#8a4a34"/>';
+    const gold = (cx, cy, cls) => '<g class="' + cls + '"><circle cx="' + cx + '" cy="' + cy + '" r="17" fill="#d4a93a"/><circle cx="' + cx + '" cy="' + cy + '" r="12" fill="none" stroke="#b8902a" stroke-width="1"/><circle cx="' + cx + '" cy="' + cy + '" r="5" fill="#7a1a1a"/><rect x="' + (cx + 6) + '" y="' + (cy - 1) + '" width="8" height="2" fill="#fff6c2"/></g>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g2)"/>' + stars(10) +
-      /* tenements behind the park */
-      '<rect x="120" y="70" width="80" height="80" fill="#6a3a2c"/><rect x="204" y="80" width="70" height="70" fill="#5b3226"/>' +
-      (function () { let w = ""; for (let y = 78; y < 146; y += 14) for (let x = 126; x < 270; x += 14) w += '<rect x="' + x + '" y="' + y + '" width="7" height="8" fill="' + ((x + y) % 4 ? "#2a1d17" : "#ffd98a") + '"/>'; return w; })() +
-      '<path d="M0 150Q120 136 240 148T400 146V260H0z" fill="#3e7a36"/>' + trees +
-      '<path d="M0 196H400V260H0z" fill="#8a8478"/>' +
-      /* lamppost with the cable running down to the DJ table */
-      '<rect x="56" y="70" width="6" height="130" fill="#2f3a33"/><path d="M59 70q12 -12 26 -4" stroke="#2f3a33" stroke-width="4" fill="none"/><ellipse cx="88" cy="68" rx="9" ry="4" fill="#ffe9a8" class="flk"/>' +
-      '<rect x="54" y="150" width="10" height="12" fill="#5a5f66"/><path d="M64 156q30 0 30 28q0 14 20 12" stroke="#111" stroke-width="2.5" fill="none"/>' +
-      /* DJ table: two turntables and a mixer */
-      '<rect x="80" y="190" width="120" height="8" fill="#5a3a20"/><rect x="86" y="198" width="6" height="40" fill="#5a3a20"/><rect x="188" y="198" width="6" height="40" fill="#5a3a20"/>' +
-      '<rect x="84" y="174" width="48" height="16" rx="2" fill="#2b2b33"/><rect x="148" y="174" width="48" height="16" rx="2" fill="#2b2b33"/><rect x="134" y="176" width="12" height="14" fill="#444"/>' +
-      '<g class="spin"><ellipse cx="108" cy="178" rx="18" ry="4" fill="#111"/><rect x="104" y="176" width="6" height="2" fill="' + GOLD + '"/></g>' +
-      '<g class="spin"><ellipse cx="172" cy="178" rx="18" ry="4" fill="#111"/><rect x="168" y="176" width="6" height="2" fill="' + RED + '"/></g>' +
-      /* speaker columns */
-      '<g class="thump"><rect x="12" y="150" width="34" height="90" fill="#1d1d22" stroke="#555"/><circle cx="29" cy="172" r="11" fill="#333"/><circle cx="29" cy="210" r="14" fill="#333"/></g>' +
-      '<g class="thump"><rect x="290" y="150" width="34" height="90" fill="#1d1d22" stroke="#555"/><circle cx="307" cy="172" r="11" fill="#333"/><circle cx="307" cy="210" r="14" fill="#333"/></g>' +
-      crowd +
-      '<g class="note"><text x="120" y="160" font-size="18" fill="' + GOLD + '">&#9834;</text></g><g class="note note2"><text x="180" y="160" font-size="16" fill="' + GREEN + '">&#9835;</text></g><g class="note note3"><text x="150" y="160" font-size="16" fill="#fff">&#9834;</text></g>' +
-      '<rect x="330" y="232" width="64" height="20" rx="3" fill="#111" opacity=".8"/><text x="362" y="246" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11" fill="' + GOLD + '">PARK JAM</text>' +
-      '<rect x="118" y="6" width="164" height="18" rx="3" fill="#111" opacity=".75"/><text x="200" y="19" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">ST. MARY\'S PARK, THE BRONX</text>',
-      sky("g2", "#1b2a4a", "#e9875a"));
+      '<rect width="400" height="260" fill="url(#g2)"/>' + '<g class="cld"><ellipse cx="60" cy="40" rx="30" ry="10" fill="#fff" opacity=".8"/></g><g class="cld cld2"><ellipse cx="60" cy="26" rx="24" ry="8" fill="#fff" opacity=".7"/></g>' +
+      '<circle cx="20" cy="150" r="40" fill="#3e7a36"/><circle cx="384" cy="150" r="40" fill="#3e7a36"/>' +
+      /* the low brick office */
+      '<rect x="40" y="84" width="316" height="122" fill="#9a5a40"/>' + bricks + '<rect x="34" y="78" width="328" height="10" fill="#e8dcc0"/>' +
+      '<rect x="88" y="96" width="220" height="26" rx="3" fill="#1d1d22"/>' +
+      '<text x="198" y="115" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="2" fill="' + GOLD + '">SUGAR HILL RECORDS</text>' +
+      '<rect x="64" y="134" width="88" height="54" fill="#1a1a22" stroke="#e8dcc0" stroke-width="3"/><rect x="246" y="134" width="88" height="54" fill="#1a1a22" stroke="#e8dcc0" stroke-width="3"/>' +
+      '<rect x="80" y="142" width="54" height="40" fill="#2b2b33" stroke="' + GOLD + '"/>' + gold(107, 161, "spin") +
+      '<rect x="262" y="142" width="54" height="40" fill="#2b2b33" stroke="' + GOLD + '"/>' + gold(289, 161, "spin") +
+      '<rect x="176" y="134" width="44" height="72" fill="#3a2a22"/><circle cx="212" cy="172" r="2" fill="' + GOLD + '"/>' +
+      '<rect x="60" y="190" width="96" height="12" fill="#111"/><text x="108" y="199" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7" fill="' + GREEN + '">THE MESSAGE · 1982</text>' +
+      '<rect x="0" y="206" width="400" height="12" fill="#a8a296"/><rect x="0" y="218" width="400" height="42" fill="#3a3a3e"/><path d="M0 240H400" stroke="#eab308" stroke-width="2" stroke-dasharray="18 12"/>' +
+      '<g class="car"><rect x="0" y="226" width="64" height="18" rx="5" fill="#c23a2e"/><rect x="12" y="218" width="36" height="12" rx="4" fill="#c23a2e"/><circle cx="14" cy="246" r="6" fill="#111"/><circle cx="52" cy="246" r="6" fill="#111"/></g>' +
+      '<g class="note"><text x="200" y="74" font-size="18" fill="' + GOLD + '">&#9834;</text></g><g class="note note2"><text x="240" y="74" font-size="16" fill="' + GREEN + '">&#9835;</text></g>' +
+      '<rect x="110" y="6" width="180" height="18" rx="3" fill="#111" opacity=".75"/><text x="200" y="19" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">WEST ST · ENGLEWOOD, NJ</text>',
+      sky("g2", "#7fb0e0", "#f4dcb0"));
   }
-
   /* 3. Club night on Jerome Av under the el: chasing marquee bulbs, LIVE TONIGHT, the 4 rumbling past overhead */
   function club() {
     let bulbs = "";
@@ -166,7 +159,7 @@
       sky("g4", "#f2a65a", "#ffd9a0"));
   }
 
-  /* 5. Hunts Point Av and Southern Blvd, up top from the 6: green street signs, streetlight, the tag wall */
+  /* 5. Southern Blvd and Longwood Av, up top from the 6: green street signs, streetlight, the tag wall */
   function corner() {
     let bricks = "";
     for (let y = 96; y < 214; y += 10) for (let x = (y / 10) % 2 ? 0 : 12; x < 400; x += 24) bricks += '<rect x="' + x + '" y="' + y + '" width="22" height="8" fill="#7a4632"/>';
@@ -178,7 +171,7 @@
       /* subway entrance globe */
       '<rect x="300" y="186" width="4" height="28" fill="#2f3a33"/><circle cx="302" cy="182" r="7" fill="' + SIX + '" class="flk2"/>' +
       '<rect x="356" y="74" width="5" height="142" fill="#2f3a33"/><path d="M358 74q-14 -12 -30 -6" stroke="#2f3a33" stroke-width="4" fill="none"/><ellipse cx="326" cy="70" rx="9" ry="4" fill="#ffe9a8" class="flk"/>' +
-      '<rect x="28" y="40" width="5" height="176" fill="#5a5f66"/>' + sign(2, 34, 104, "Hunts Point Av") + sign(2, 56, 104, "Southern Blvd") +
+      '<rect x="28" y="40" width="5" height="176" fill="#5a5f66"/>' + sign(2, 34, 104, "Southern Blvd") + sign(2, 56, 104, "Longwood Av") +
       '<g class="car"><rect x="0" y="228" width="64" height="18" rx="5" fill="#2e6fc2"/><rect x="12" y="220" width="36" height="12" rx="4" fill="#2e6fc2"/><circle cx="14" cy="248" r="6" fill="#111"/><circle cx="52" cy="248" r="6" fill="#111"/></g>' +
       boombox(240, 222, .4),
       sky("g5", "#0c1622", "#2a3a4a"));

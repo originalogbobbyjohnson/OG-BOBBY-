@@ -67,33 +67,29 @@
       tag("VADO", 24, 242, 34, SLIME, -5) + tag("UPTOWN", 250, 240, 26, ORANGE, -7));
   }
 
-  /* 2. The Schomburg Center at Lenox Av and 135th: the 1905 limestone Carnegie library with arched windows beside the red-brick
-        modern building, a bus rolling down Malcolm X Blvd */
+  /* 2. The Savoy Ballroom site on Lenox Av between 140th and 141st: the Savoy Park towers where it stood, the Home of Happy Feet plaque out front, notes still in the air */
   function schomburg() {
-    let brick = "";
-    for (let y = 70; y < 200; y += 6) brick += '<path d="M150 ' + y + 'h250" stroke="#7a3322" stroke-width=".6" opacity=".6"/>';
-    let modWin = "";
-    for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++) modWin += '<rect class="' + ((r + c) % 3 ? "" : "flk") + '" x="' + (176 + c * 54) + '" y="' + (84 + r * 34) + '" width="38" height="24" fill="#ffe7a8" opacity=".9" stroke="#3a1a12" stroke-width="2"/>';
-    let arch = "";
-    [30, 76].forEach(x => arch += '<path d="M' + x + ' 150v-34a14 14 0 0 1 28 0v34z" fill="#ffe7a8" stroke="#8a7a5a" stroke-width="2"/>');
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    const tower = (x, y, w, c) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (196 - y) + '" fill="' + c + '"/>';
+      for (let yy = y + 8; yy < 188; yy += 12) for (let xx = x + 6; xx < x + w - 8; xx += 12) s += '<rect' + ((xx + yy) % 9 === 0 ? ' class="flk"' : '') + ' x="' + xx + '" y="' + yy + '" width="6" height="7" fill="' + ((xx * 7 + yy) % 5 < 2 ? "#ffd98a" : "#2a1d17") + '"/>';
+      return s; };
+    const note = (x, y, c, d) => '<text class="fly" style="animation-delay:' + d + 's" x="' + x + '" y="' + y + '" font-size="18" fill="' + c + '">&#9834;</text>';
+    const cab = (cls, y, c) => '<g class="' + cls + '"><rect x="0" y="' + y + '" width="54" height="14" rx="4" fill="' + c + '"/><rect x="12" y="' + (y - 7) + '" width="28" height="9" rx="3" fill="#cfe6ff"/><circle cx="12" cy="' + (y + 14) + '" r="4.5" fill="#111"/><circle cx="42" cy="' + (y + 14) + '" r="4.5" fill="#111"/></g>';
     return svg(
-      '<rect width="400" height="260" fill="url(#skyS)"/>' +
-      /* Carnegie building */
-      '<rect x="14" y="74" width="122" height="126" fill="#e3d8bf"/><rect x="10" y="66" width="130" height="10" fill="#cfc2a4"/>' +
-      '<rect x="14" y="160" width="122" height="4" fill="#cfc2a4"/>' + arch +
-      '<rect x="30" y="86" width="22" height="18" fill="#ffe7a8" stroke="#8a7a5a" stroke-width="2"/><rect x="82" y="86" width="22" height="18" fill="#ffe7a8" stroke="#8a7a5a" stroke-width="2"/>' +
-      '<rect x="60" y="168" width="30" height="32" fill="#3a2a1a"/>' +
-      /* modern red brick building */
-      '<rect x="150" y="58" width="250" height="142" fill="#a2492f"/>' + brick + '<rect x="150" y="52" width="250" height="8" fill="#6a2a1a"/>' + modWin +
-      '<rect x="160" y="186" width="230" height="14" fill="#2a1a14"/>' +
-      '<text x="275" y="196" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="2" fill="#f2e6c8">SCHOMBURG CENTER</text>' +
-      '<rect x="0" y="200" width="400" height="10" fill="#9a9a9a"/><rect x="0" y="210" width="400" height="50" fill="#2b2d31"/>' +
-      '<path d="M0 236h400" stroke="#eab308" stroke-width="2" stroke-dasharray="18 14"/>' +
-      '<g class="mnr"><rect x="0" y="214" width="120" height="34" rx="5" fill="#2c5fa8"/><rect x="0" y="214" width="120" height="6" fill="#f7f3ea"/>' +
-        '<rect x="8" y="222" width="18" height="12" fill="#cfe3ff"/><rect x="32" y="222" width="18" height="12" fill="#cfe3ff"/><rect x="56" y="222" width="18" height="12" fill="#cfe3ff"/><rect x="80" y="222" width="18" height="12" fill="#cfe3ff"/>' +
-        '<rect x="104" y="220" width="14" height="10" fill="#111"/><text x="111" y="228" text-anchor="middle" font-family="Helvetica" font-weight="700" font-size="7" fill="' + GOLD + '">M102</text>' +
-        '<circle cx="22" cy="249" r="6" fill="#111"/><circle cx="98" cy="249" r="6" fill="#111"/></g>',
-      sky("skyS", "#3d6fb0", "#c7dcf0"));
+      '<rect width="400" height="260" fill="url(#g2)"/>' + '<circle cx="250" cy="26" r="12" fill="#f4f1de"/>' +
+      tower(10, 40, 110, "#8a4a32") + tower(140, 60, 100, "#7a3e2c") + tower(262, 30, 120, "#8a4a32") +
+      /* the plaque on its post, the lawn */
+      '<rect x="0" y="196" width="400" height="10" fill="#5a8a3a"/>' +
+      '<rect x="146" y="170" width="6" height="30" fill="#2a2a2a"/><rect x="248" y="170" width="6" height="30" fill="#2a2a2a"/>' +
+      '<rect x="136" y="128" width="128" height="48" rx="4" fill="#1f3a5a" stroke="' + GOLD + '" stroke-width="2"/>' +
+      lbl(200, 146, "SAVOY BALLROOM", 12, GOLD) + lbl(200, 159, "HOME OF HAPPY FEET", 8, "#fff") + lbl(200, 170, "LENOX AV · 1926–1958", 7, "#cfe6ff") +
+      note(110, 120, GOLD, 0) + note(280, 110, SLIME, -3) + note(200, 100, ORANGE, -6) +
+      '<rect x="0" y="206" width="400" height="10" fill="#a8a294"/><rect x="0" y="216" width="400" height="44" fill="#1c1d22"/><path d="M0 238h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      cab("mnr", 222, GOLD) + cab("mnl", 242, RED) +
+      '<rect x="280" y="8" width="112" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.2"/>' + lbl(336, 21, "Malcolm X Blvd", 10, "#fff") +
+      '<rect x="306" y="28" width="86" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.2"/>' + lbl(349, 41, "W 141 St", 10, "#fff") +
+      tag("VADO", 18, 120, 28, SLIME, -6) + tag("U.N.", 300, 120, 22, ORANGE, -4),
+      sky("g2", "#0c1430", "#3b3f6e"));
   }
 
   /* 3. Graham Court on Adam Clayton Powell Jr Blvd at 116th: limestone base with the big arched carriage gate, buff brick floors above,

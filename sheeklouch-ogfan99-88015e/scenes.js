@@ -63,61 +63,56 @@
       sky("g1", "#120d22", "#7a4a5e"));
   }
 
-  /* 2. The Yonkers Pier at sunset, reaching into the Hudson, Palisades glowing across the water */
+  /* 2. Album world, Silverback Gorilla (2008): a silverback up on a Getty Square rooftop at night, chest-thumping, the D-Block lights and the water tower below */
   function pier() {
-    let lamps = "";
-    for (let i = 0; i < 6; i++) { const x = 70 + i * 52, h = 34 - i * 3;
-      lamps += '<rect x="' + x + '" y="' + (170 - h) + '" width="3" height="' + h + '" fill="#1b2027"/><circle class="flk' + (i % 2 ? " flk2" : "") + '" cx="' + (x + 1.5) + '" cy="' + (170 - h) + '" r="3.5" fill="#ffe7a8"/>'; }
-    let rail = "";
-    for (let x = 40; x < 400; x += 12) rail += '<path d="M' + x + ' 170v-10" stroke="#e6e1d6" stroke-width="1.5"/>';
+    let city = "";
+    [[0, 150, 54], [58, 130, 44], [106, 160, 40], [270, 140, 50], [324, 120, 40], [368, 150, 32]].forEach(b => {
+      city += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (260 - b[1]) + '" fill="#1c1a22"/>';
+      for (let y = b[1] + 8; y < 250; y += 12) for (let x = b[0] + 6; x < b[0] + b[2] - 6; x += 10) city += '<rect' + ((x + y) % 7 === 0 ? ' class="glow"' : '') + ' x="' + x + '" y="' + y + '" width="5" height="6" fill="' + ((x + y) % 4 ? "#2a2730" : ORANGE) + '"/>';
+    });
     return svg(
-      '<rect width="400" height="260" fill="url(#g2)"/>' +
-      '<circle cx="300" cy="78" r="26" fill="#ffcf6b"/><circle cx="300" cy="78" r="40" fill="#ffcf6b" opacity=".18"/>' +
-      palisades(92) +
-      '<rect x="0" y="128" width="400" height="132" fill="#24476b"/>' +
-      '<path class="shim" d="M270 140h60M260 152h80M280 166h44" stroke="#ffcf6b" stroke-width="3" opacity=".7"/>' +
-      '<path class="shim shim2" d="M20 150h50M120 190h70M30 220h90M240 230h80" stroke="#8fb6dc" stroke-width="2" opacity=".5"/>' +
-      /* the pavilion at the end of the pier */
-      '<rect x="300" y="136" width="86" height="34" fill="#e9e4da" stroke="#8b8478" stroke-width="1.5"/>' +
-      '<path d="M294 138l49-22 49 22z" fill="#3f6f6a" stroke="#2a4a47" stroke-width="1.5"/>' +
-      '<rect x="310" y="144" width="14" height="16" fill="#ffd98a"/><rect x="330" y="144" width="14" height="16" fill="#ffd98a"/><rect x="350" y="144" width="14" height="16" fill="#ffd98a"/><rect x="370" y="144" width="10" height="16" fill="#ffd98a"/>' +
-      /* the deck */
-      '<path d="M0 170h400v8H0z" fill="#8a6b4a"/>' + rail + '<path d="M40 160h360" stroke="#e6e1d6" stroke-width="2"/>' +
-      (function () { let p = ""; for (let x = 20; x < 400; x += 40) p += '<rect x="' + x + '" y="178" width="5" height="40" fill="#4a3a2a"/>'; return p; })() +
-      lamps +
-      '<g class="gull"><path d="M0 50q6-6 12 0q6-6 12 0" stroke="#1b2027" stroke-width="2" fill="none"/></g>' +
-      tag("YONKERS PIER", 24, 238, 26, ORANGE, -4),
-      sky("g2", "#3b2a5c", "#f08a5b"));
+      '<style>@keyframes thump{0%,100%{transform:translateY(0)}20%{transform:translateY(-3px)}40%{transform:translateY(0)}60%{transform:translateY(-3px)}}.thp{animation:thump 1.2s ease-in-out infinite}' +
+      '@keyframes sl{0%,100%{transform:rotate(-20deg)}50%{transform:rotate(20deg)}}.sl{transform-origin:200px 260px;animation:sl 5s ease-in-out infinite}</style>' +
+      '<rect width="400" height="260" fill="url(#g2)"/>' + stars(26) + '<circle cx="320" cy="48" r="24" fill="#f1f1e6"/><circle cx="312" cy="42" r="4" fill="#dcdcd0"/>' +
+      '<path class="sl" d="M200 260L180 0h40z" fill="' + SILVER + '" opacity=".1"/>' + city +
+      /* water tower on the next roof */
+      '<path d="M290 140v-10M318 140v-10" stroke="#3a2a22" stroke-width="3"/><rect x="286" y="104" width="36" height="28" fill="#5a3a2a"/><path d="M284 104l20 -14 20 14z" fill="#3a2a22"/>' +
+      /* the rooftop the gorilla stands on */
+      '<rect x="150" y="176" width="130" height="84" fill="#2a2630"/><rect x="146" y="172" width="138" height="6" fill="#3a3640"/>' +
+      '<rect x="160" y="198" width="110" height="18" rx="2" fill="#111"/><text x="215" y="210.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8.5" fill="' + SILVER + '">GETTY SQUARE</text>' +
+      /* silverback silhouette with the silver saddle */
+      '<g class="thp"><path d="M178 172q-4 -30 10 -44q8 -14 26 -14q22 0 30 16q14 14 10 42h-10l-2 -18 -6 18h-36l-4 -16 -4 16z" fill="#0c0b0e"/>' +
+      '<path d="M200 128q20 -4 34 10q-14 4 -34 -2z" fill="' + SILVER + '" opacity=".75"/>' +
+      '<circle cx="202" cy="108" r="12" fill="#0c0b0e"/><path d="M196 104h12" stroke="#3a3a40" stroke-width="2"/>' +
+      '<path d="M190 130q-12 10 -6 24M222 130q12 10 6 24" stroke="#0c0b0e" stroke-width="9" stroke-linecap="round" fill="none"/></g>' +
+      tag("SILVERBACK", 14, 100, 30, SILVER, -6) + tag("D-BLOCK", 24, 136, 24, ORANGE, -5) + tag("GORILLA", 290, 250, 22, GREEN, -4),
+      sky("g2", "#0a0812", "#2a1a2a"));
   }
 
-  /* 3. Untermyer Gardens: the Temple of Love on its rock, water spilling down the stone pools */
+  /* 3. The Yonkers Riverfront Library at One Larkin Center: the big old brick factory building turned library on the Hudson at the Getty Square end of downtown, river and Palisades behind */
   function temple() {
-    let cols = "";
-    for (let i = 0; i < 6; i++) cols += '<rect x="' + (166 + i * 13) + '" y="70" width="5" height="40" fill="#f3eee2" stroke="#b9b09c" stroke-width=".8"/>';
-    let lattice = "";
-    for (let i = 0; i < 9; i++) lattice += '<path d="M' + (168 + i * 8) + ' 68q' + (32 - i * 8) + ' -26 ' + (32 - i * 8) + ' -26" stroke="#3c4a3c" stroke-width="1.2" fill="none"/>';
+    let wins = "";
+    for (let r = 0; r < 4; r++) for (let c = 0; c < 9; c++) { const x = 92 + c * 26, y = 72 + r * 28; wins += '<rect' + ((r + c) % 4 === 0 ? ' class="glow"' : '') + ' x="' + x + '" y="' + y + '" width="16" height="20" fill="' + ((r * 3 + c) % 4 ? "#2a3a4a" : "#ffe6a8") + '" stroke="#e6d6b4" stroke-width="1.5"/>'; }
+    let bricks = "";
+    for (let y = 64; y < 196; y += 7) bricks += '<path d="M80 ' + y + 'h250" stroke="#7a3a2a" stroke-width="1"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g3)"/>' +
-      palisades(110, .7) +
-      '<rect x="0" y="140" width="400" height="12" fill="#3d6b8c"/>' +
-      /* trees */
-      '<circle cx="40" cy="150" r="40" fill="#2f6b38"/><circle cx="90" cy="168" r="30" fill="#3d7d43"/><circle cx="350" cy="150" r="42" fill="#2f6b38"/><circle cx="306" cy="172" r="28" fill="#3d7d43"/>' +
-      /* the rock outcrop */
-      '<path d="M110 260l20-120 40-26h68l40 30 22 116z" fill="#7c7368"/>' +
-      '<path d="M130 140l40-26h68l40 30" fill="none" stroke="#5e564d" stroke-width="3"/>' +
-      '<path d="M150 170l30 10M230 160l26 16M140 210l40 6M240 214l30-6" stroke="#5e564d" stroke-width="2"/>' +
-      /* the temple: white columns, an open iron lattice dome */
-      '<rect x="160" y="108" width="84" height="8" fill="#e8e2d3" stroke="#b9b09c"/>' + cols +
-      '<rect x="160" y="64" width="84" height="7" fill="#e8e2d3" stroke="#b9b09c"/>' +
-      '<path d="M164 64q38-42 76 0" fill="none" stroke="#3c4a3c" stroke-width="2.5"/>' + lattice +
-      '<circle cx="202" cy="40" r="3" fill="#3c4a3c"/>' +
-      /* the cascade */
-      '<path class="fall" d="M196 118v60M204 118v60M212 118v60" stroke="#cfe9ff" stroke-width="3" stroke-dasharray="8 4"/>' +
-      '<ellipse cx="204" cy="182" rx="40" ry="7" fill="#7fb4d9"/>' +
-      '<path class="fall" d="M190 188v50M218 188v50" stroke="#cfe9ff" stroke-width="3" stroke-dasharray="8 4"/>' +
-      '<ellipse cx="204" cy="240" rx="56" ry="9" fill="#7fb4d9"/>' +
-      tag("TEMPLE OF LOVE", 20, 40, 22, ORANGE, -4),
-      sky("g3", "#7fb6e0", "#e8f2f7"));
+      '<g class="gull"><path d="M0 40q5-5 10 0q5-5 10 0" stroke="#fff" stroke-width="2" fill="none"/></g>' +
+      palisades(130, .9) +
+      '<rect x="0" y="160" width="400" height="40" fill="#3b6a8a"/><path class="shim" d="M10 170h40M340 180h40" stroke="#cfe6f2" stroke-width="2"/>' +
+      /* the library building */
+      '<rect x="80" y="56" width="250" height="140" fill="#9a4a36"/>' + bricks + wins +
+      '<rect x="76" y="50" width="258" height="8" fill="#e6d6b4"/>' +
+      '<rect x="180" y="176" width="50" height="20" fill="#1d2a36"/><rect x="184" y="180" width="42" height="16" fill="#ffe6a8" opacity=".6"/>' +
+      '<rect x="120" y="158" width="170" height="14" fill="#111"/><text x="205" y="168.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8.5" fill="#fff" letter-spacing=".5">YONKERS RIVERFRONT LIBRARY</text>' +
+      /* the esplanade + a reader on the bench */
+      '<rect x="0" y="196" width="400" height="64" fill="#8a8a86"/><rect x="0" y="196" width="400" height="4" fill="#b9b9b2"/>' +
+      '<rect x="40" y="214" width="50" height="6" fill="#5a3a22"/><rect x="44" y="220" width="3" height="10" fill="#333"/><rect x="83" y="220" width="3" height="10" fill="#333"/>' +
+      '<circle cx="64" cy="200" r="5" fill="#3a2a22"/><rect x="58" y="205" width="12" height="10" rx="3" fill="' + GREEN + '"/><rect x="66" y="206" width="8" height="6" fill="#fff"/>' +
+      '<g class="car"><rect x="0" y="236" width="46" height="14" rx="4" fill="' + ORANGE + '"/><circle cx="10" cy="251" r="4" fill="#111"/><circle cx="36" cy="251" r="4" fill="#111"/></g>' +
+      '<rect x="8" y="8" width="96" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="56" y="21" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">Larkin Plz</text>' +
+      tag("DONNIE G", 260, 236, 24, SILVER, -5),
+      sky("g3", "#6aa6d8", "#f2dcc0"));
   }
 
   /* 4. Getty Square: Philipse Manor Hall, brick and white trim, with downtown traffic rolling past */

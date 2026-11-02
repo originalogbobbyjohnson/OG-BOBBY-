@@ -38,39 +38,31 @@
   const F = 'font-family="Helvetica, Arial, sans-serif"';
   const ORANGE = "#ff8a5b", GOLD = "#ffd34d", TEAL = "#7fd1c7", EBLUE = "#0039a6";
 
-  /* 1. The E pulling into Jamaica–Van Wyck: a deep underground station under the Van Wyck, cream tile and a blue band */
+  /* 1. Jamaica–Van Wyck, deep under the expressway: the long escalator climbing to the 89 Av exit toward Baisley Pond Park, the Lost Boyz banner hung over it, the E sliding in on the platform below */
   function train() {
+    const st = '<style>@keyframes esc{from{stroke-dashoffset:0}to{stroke-dashoffset:-24}}.esc{animation:esc .9s linear infinite}</style>';
     let tiles = "";
-    for (let y = 24; y < 118; y += 8) tiles += '<path d="M0 ' + y + 'h400" stroke="#d9cfb8" stroke-width=".8"/>';
-    for (let x = 0; x < 400; x += 12) tiles += '<path d="M' + x + ' 18v100" stroke="#d9cfb8" stroke-width=".6"/>';
-    let cols = "";
-    [22, 56, 344, 378].forEach(x => cols += '<rect x="' + (x - 6) + '" y="14" width="12" height="166" fill="#1f2c45"/><rect x="' + (x - 9) + '" y="14" width="18" height="8" fill="#1f2c45"/>');
+    for (let y = 0; y < 260; y += 10) tiles += '<path d="M0 ' + y + 'h400" stroke="#d9cfb8" stroke-width=".8"/>';
     let windows = "";
-    for (let x = 22; x < 260; x += 46) windows += '<rect x="' + x + '" y="128" width="30" height="22" rx="3" fill="#dff1ff" opacity=".85"/>';
-    return svg(
-      '<rect width="400" height="260" fill="#0f131c"/>' +
-      '<rect x="0" y="0" width="400" height="14" fill="#090c12"/>' +
-      '<rect class="flk" x="60" y="6" width="90" height="4" rx="2" fill="#f2fbff"/><rect class="flk flk2" x="250" y="6" width="90" height="4" rx="2" fill="#f2fbff"/>' +
-      '<rect x="0" y="14" width="400" height="106" fill="#efe6cf"/>' + tiles +
-      '<rect x="0" y="18" width="400" height="7" fill="' + EBLUE + '"/><rect x="0" y="106" width="400" height="7" fill="' + EBLUE + '"/>' +
-      /* black station sign with the E bullet */
-      '<rect x="74" y="42" width="252" height="40" rx="4" fill="#111"/>' +
-      '<rect x="74" y="42" width="252" height="4" fill="#fff"/>' +
-      '<text x="88" y="71" ' + F + ' font-weight="700" font-size="18" fill="#fff">Jamaica–Van Wyck</text>' +
-      bullet(302, 64, "E", EBLUE) +
-      '<rect x="140" y="88" width="120" height="12" rx="2" fill="#111"/><text x="200" y="97" text-anchor="middle" ' + F + ' font-size="7.5" fill="#fff">EXIT · 89 AV · VAN WYCK</text>' +
-      cols +
-      /* the E slides in */
-      '<g class="anim-train">' +
-        '<rect x="8" y="118" width="300" height="62" rx="8" fill="#c3c8cf" stroke="#6b7280" stroke-width="2"/>' +
-        '<path d="M8 160h300" stroke="#9aa1aa" stroke-width="2"/><rect x="8" y="164" width="300" height="5" fill="' + EBLUE + '"/>' + windows +
-        '<circle cx="300" cy="172" r="4" fill="#fff6c2"/>' +
-        bullet(286, 139, "E", EBLUE) +
-      '</g>' +
-      '<rect x="0" y="180" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="190" width="400" height="70" fill="#1a1f28"/>' +
-      '<path d="M0 206h400M0 226h400M0 246h400" stroke="#232a36"/>' +
-      tag("LOST BOYZ", 22, 238, 32, ORANGE, -5) + tag("LB IV LIFE", 236, 240, 26, GOLD, -7));
+    for (let x = 22; x < 200; x += 40) windows += '<rect x="' + x + '" y="196" width="26" height="18" rx="3" fill="#dff1ff" opacity=".85"/>';
+    return svg(st +
+      '<rect width="400" height="260" fill="#efe6cf"/>' + tiles + '<rect x="0" y="0" width="400" height="7" fill="' + EBLUE + '"/>' +
+      /* the escalator shaft running up to the right */
+      '<path d="M120 190L340 30h60v40L180 230z" fill="#1f2c45"/>' +
+      '<path class="esc" d="M150 200L370 40" stroke="#9aa3ad" stroke-width="22" stroke-dasharray="6 6"/>' +
+      '<path d="M134 196L354 36M166 214L386 54" stroke="#c3c8cf" stroke-width="4"/>' +
+      /* exit sign up top */
+      '<rect x="210" y="4" width="186" height="26" rx="3" fill="#111"/><text x="303" y="16" text-anchor="middle" ' + F + ' font-weight="700" font-size="9" fill="#fff">EXIT · 89 AV</text><text x="303" y="26" text-anchor="middle" ' + F + ' font-weight="700" font-size="7.5" fill="' + GOLD + '">BAISLEY POND PARK ⇢</text>' +
+      /* the station sign + banner */
+      '<rect x="16" y="20" width="190" height="34" rx="4" fill="#111"/><rect x="16" y="20" width="190" height="4" fill="#fff"/>' +
+      '<text x="26" y="45" ' + F + ' font-weight="700" font-size="15" fill="#fff">Jamaica–Van Wyck</text>' + bullet(188, 38, "E", EBLUE) +
+      '<path d="M30 62h150" stroke="#555" stroke-width="2"/><g class="wave"><rect x="34" y="64" width="142" height="46" fill="' + ORANGE + '"/><rect x="34" y="64" width="142" height="6" fill="#111"/>' +
+      '<text x="105" y="92" text-anchor="middle" ' + F + ' font-weight="700" font-size="17" fill="#111">LOST BOYZ</text><text x="105" y="104" text-anchor="middle" ' + F + ' font-weight="700" font-size="8" fill="#111">SOUTH JAMAICA · LB FAM</text></g>' +
+      /* the platform and the E */
+      '<rect x="0" y="182" width="400" height="8" fill="' + EBLUE + '"/>' +
+      '<g class="anim-train"><rect x="8" y="188" width="220" height="44" rx="7" fill="#c3c8cf" stroke="#6b7280" stroke-width="2"/><rect x="8" y="220" width="220" height="4" fill="' + EBLUE + '"/>' + windows + bullet(212, 205, "E", EBLUE) + '</g>' +
+      '<rect x="0" y="232" width="400" height="6" fill="#eab308"/><rect x="0" y="238" width="400" height="22" fill="#1a1f28"/>' +
+      tag("MR. CHEEKS", 236, 226, 24, GOLD, -6) + tag("LB IV LIFE", 250, 256, 18, TEAL, -3));
   }
 
   /* 2. Baisley Pond Park: the big pond with its aerating fountain, ducks, cattails and the fishing pier */

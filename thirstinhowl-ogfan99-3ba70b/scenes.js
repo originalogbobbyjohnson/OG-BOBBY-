@@ -70,40 +70,33 @@
       sky("g1", "#1a1030", "#c0603a"));
   }
 
-  /* 2. Betsy Head Park: the 1936 pool and its red-brick bathhouse on a summer day */
+  /* 2. The Rhinelander Mansion at Madison Av and E 72nd: the French Renaissance limestone flagship with the steep slate roof and dormers, the store the Lo-Lifes built their style around */
   function pool() {
-    let wins = "";
-    for (let x = 60; x < 340; x += 22) if (x < 170 || x > 230) wins += '<rect x="' + x + '" y="88" width="12" height="40" rx="2" fill="#a9d7e8" stroke="#e9dcc0" stroke-width="2"/>';
-    let tall = "";
-    for (let x = 178; x < 226; x += 12) tall += '<rect x="' + x + '" y="56" width="8" height="72" fill="#a9d7e8" stroke="#e9dcc0" stroke-width="1.5"/>';
-    let lanes = "";
-    for (let y = 168; y < 250; y += 18) lanes += '<path d="M10 ' + y + 'h380" stroke="#e8f7ff" stroke-width="2" stroke-dasharray="6 6" opacity=".7"/>';
-    const head = (x, y, c, k) => '<g class="bob ' + k + '"><circle cx="' + x + '" cy="' + y + '" r="6" fill="' + c + '"/><ellipse cx="' + x + '" cy="' + (y + 6) + '" rx="10" ry="3" fill="#fff" opacity=".5"/></g>';
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    let win = "";
+    for (let x = 84; x < 320; x += 34) { win += '<rect x="' + x + '" y="104" width="18" height="30" fill="#2a3440" stroke="#c9bc9c" stroke-width="2"/><rect x="' + x + '" y="148" width="18" height="30" fill="#2a3440" stroke="#c9bc9c" stroke-width="2"/>';
+      win += '<rect class="shim' + (x % 68 ? ' shim2' : '') + '" x="' + (x + 2) + '" y="190" width="14" height="30" fill="#ffe2a0" opacity=".7"/>'; }
+    let dorm = "";
+    for (let x = 96; x < 310; x += 52) dorm += '<rect x="' + x + '" y="60" width="18" height="22" fill="#e6dcc4"/><path d="M' + (x - 3) + ' 62l12-14 12 14z" fill="#e6dcc4"/><rect x="' + (x + 4) + '" y="66" width="10" height="14" fill="#2a3440"/>';
+    let rust = "";
+    for (let y = 188; y < 224; y += 6) rust += '<path d="M70 ' + y + 'h260" stroke="#c9bc9c" stroke-width="1"/>';
+    const shopper = (x, c, cls) => '<g class="' + cls + '"><circle cx="' + x + '" cy="214" r="5" fill="#2a1a10"/><rect x="' + (x - 5) + '" y="219" width="10" height="14" rx="3" fill="' + c + '"/><rect x="' + (x + 6) + '" y="222" width="7" height="8" fill="' + YEL + '"/></g>';
     return svg(
       '<rect width="400" height="260" fill="url(#g2)"/>' +
-      '<circle cx="340" cy="34" r="18" fill="#fff4b8"/>' +
-      /* trees behind */
-      '<circle cx="24" cy="110" r="30" fill="#2f7a3e"/><circle cx="380" cy="104" r="32" fill="#2f7a3e"/><circle cx="352" cy="118" r="22" fill="#3c8f4a"/>' +
-      /* bathhouse: red brick with pale stone trim, taller center block */
-      '<rect x="40" y="80" width="320" height="64" fill="#a8553a"/>' +
-      '<rect x="40" y="76" width="320" height="6" fill="#e9dcc0"/>' +
-      '<rect x="166" y="44" width="68" height="100" fill="#9a4a32"/><rect x="166" y="40" width="68" height="6" fill="#e9dcc0"/>' +
-      wins + tall +
-      '<rect x="40" y="136" width="320" height="8" fill="#e9dcc0"/>' +
-      /* flag on the center block */
-      '<rect x="199" y="12" width="2" height="30" fill="#333"/><path class="flag" d="M201 13h22v13h-22z" fill="' + RED + '"/><path class="flag" d="M201 17h22M201 21h22" stroke="#fff" stroke-width="1.5"/>' +
-      /* sign */
-      '<rect x="86" y="58" width="72" height="16" rx="2" fill="' + GRN + '"/><text x="122" y="70" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="#fff">BETSY HEAD</text>' +
-      '<rect x="242" y="58" width="72" height="16" rx="2" fill="' + GRN + '"/><text x="278" y="70" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="#fff">POOL · 1936</text>' +
-      /* pool deck + water */
-      '<rect x="0" y="144" width="400" height="16" fill="#e7e2d6"/>' +
-      '<rect x="0" y="158" width="400" height="102" fill="#2fa4dc"/>' + lanes +
-      '<g class="shim"><path d="M30 186q20-6 40 0t40 0M190 222q20-6 40 0t40 0M300 178q16-5 32 0" stroke="#bfeaff" stroke-width="2" fill="none"/></g>' +
-      '<g class="shim shim2"><path d="M110 208q20-6 40 0t40 0M260 240q20-6 40 0" stroke="#bfeaff" stroke-width="2" fill="none"/></g>' +
-      head(90, 196, "#3b2418", "") + head(232, 178, "#ffd23f", "bob2") + head(320, 214, "#e2333f", "bob3") +
-      /* lifeguard chair */
-      '<path d="M18 160l8-40h14l8 40" stroke="#fff" stroke-width="3" fill="none"/><rect x="22" y="112" width="22" height="6" fill="' + RED + '"/>',
-      sky("g2", "#4fb3ff", "#bfe6ff"));
+      '<rect x="0" y="60" width="66" height="176" fill="#9a8a7a"/><rect x="334" y="50" width="66" height="186" fill="#8a7a6a"/>' +
+      /* the slate roof, dormers, chimneys */
+      '<path d="M62 92l18-44h240l18 44z" fill="#4a505a"/>' + dorm + '<rect x="110" y="30" width="12" height="22" fill="#d8ccb0"/><rect x="278" y="30" width="12" height="22" fill="#d8ccb0"/>' +
+      /* the limestone body */
+      '<rect x="66" y="92" width="268" height="144" fill="#e6dcc4"/><rect x="62" y="90" width="276" height="6" fill="#cfc2a2"/><rect x="66" y="138" width="268" height="4" fill="#cfc2a2"/><rect x="66" y="182" width="268" height="4" fill="#cfc2a2"/>' + rust + win +
+      '<path d="M186 236v-36a14 14 0 0 1 28 0v36z" fill="#2a1a10"/>' +
+      '<rect x="0" y="236" width="400" height="24" fill="#2a2d33"/>' +
+      '<g class="bus" style="animation-duration:7s"><rect x="0" y="240" width="56" height="14" rx="4" fill="#f2c200"/><rect x="12" y="234" width="30" height="8" rx="2" fill="#cfe6ff"/></g>' +
+      shopper(40, RED, "bob") + shopper(360, BLU, "bob bob2") +
+      '<rect x="8" y="8" width="118" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.2"/>' + lbl(67, 21, "Madison Av", 10, "#fff") +
+      '<rect x="8" y="28" width="80" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.2"/>' + lbl(48, 41, "E 72 St", 10, "#fff") +
+      lbl(270, 20, "RHINELANDER MANSION", 12, "#1b2430") + lbl(270, 33, "THE FLAGSHIP THE LO-LIFES CAME UPTOWN FOR", 7, "#1b2430") +
+      tag("LO-LIFE", 24, 204, 22, YEL, -6) + tag("SKILLIONAIRE", 270, 204, 16, RED, -4),
+      sky("g2", "#8fc3ea", "#e8f2fa"));
   }
 
   /* 3. Pitkin Avenue: the old theater's cream terracotta front and the shopping strip, a bus rolling by */

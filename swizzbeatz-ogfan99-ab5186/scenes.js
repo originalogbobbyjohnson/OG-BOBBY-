@@ -87,51 +87,49 @@
       sky("g2", "#5aa0e0", "#d9ecf8"));
   }
 
-  /* 3. Co-op City, northeast Bronx: the tall brown-brick towers and the Hutch at night */
+  /* 3. The Bronx Museum of the Arts on the Grand Concourse at E 165th: the folded, sawtooth glass-and-steel front, art up in the windows (the Dean Collection's home turf) */
   function coopcity() {
-    let towers = "";
-    [[10, 40, 70], [96, 22, 80], [196, 50, 66], [282, 30, 78]].forEach(([x, y, w], i) => {
-      towers += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (210 - y) + '" fill="' + (i % 2 ? "#7a4a32" : "#8a5638") + '"/>' +
-        '<rect x="' + (x + w / 2 - 4) + '" y="' + y + '" width="8" height="' + (210 - y) + '" fill="#5e3826"/>';
-      for (let wy = y + 8; wy < 200; wy += 10) for (let wx = x + 4; wx < x + w - 6; wx += 9) if (Math.abs(wx - (x + w / 2)) > 6)
-        towers += '<rect x="' + wx + '" y="' + wy + '" width="5" height="5" fill="' + ((wx * 7 + wy * 3) % 11 < 3 ? "#ffd27a" : "#2b1d18") + '"' + ((wx + wy) % 23 === 0 ? ' class="blk"' : "") + '/>';
-    });
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    let folds = "";
+    for (let i = 0; i < 8; i++) { const x = 90 + i * 30;
+      folds += '<path d="M' + x + ' 210V' + (70 + (i % 2) * 10) + 'l15-14V210z" fill="#c9d3dc"/><path d="M' + (x + 15) + ' 210V' + (56 + (i % 2) * 10) + 'l15 14V210z" fill="#8a9aa8"/>';
+      for (let y = 90 + (i % 2) * 10; y < 200; y += 22) folds += '<path d="M' + x + ' ' + y + 'l15-6M' + (x + 15) + ' ' + (y - 6) + 'l15 6" stroke="#5a6a78" stroke-width="1"/>'; }
+    const art = [[100, 120, GOLD], [160, 150, RED], [220, 110, CYAN], [280, 140, ORANGE]].map(([x, y, c], i) => '<rect class="blk' + (i % 3 ? ' blk' + (i % 3 + 1) : '') + '" x="' + x + '" y="' + y + '" width="14" height="18" fill="' + c + '" opacity=".8"/>').join("");
     return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' + stars(30) +
-      '<circle cx="360" cy="34" r="14" fill="#f4f1de"/>' + towers +
-      '<path d="M0 214h400" stroke="#333" stroke-width="6"/><rect x="0" y="216" width="400" height="44" fill="#1e2228"/>' +
-      '<path d="M0 238h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
-      '<g class="car"><rect x="0" y="222" width="50" height="12" rx="4" fill="' + RED + '"/><circle cx="48" cy="228" r="2.5" fill="#fff6c2"/></g>' +
-      '<g class="car car2"><rect x="0" y="242" width="50" height="12" rx="4" fill="#e8e8e8"/><circle cx="48" cy="248" r="2.5" fill="#fff6c2"/></g>' +
-      tag("THE MONSTER", 110, 44, 22, GOLD, -4),
-      sky("g3", "#0a0f24", "#2a3460"));
+      '<rect width="400" height="260" fill="url(#g3)"/>' + '<g class="cld"><ellipse cx="0" cy="40" rx="44" ry="9" fill="#fff" opacity=".6"/></g>' +
+      '<rect x="0" y="80" width="86" height="130" fill="#c8b48a"/><rect x="330" y="70" width="70" height="140" fill="#b8a07a"/>' +
+      [[10, 96], [40, 96], [10, 140], [40, 140], [340, 90], [366, 90], [340, 136], [366, 136]].map(([x, y]) => '<rect x="' + x + '" y="' + y + '" width="16" height="22" fill="#2b3440"/>').join("") +
+      folds + art + '<rect x="86" y="200" width="244" height="10" fill="#4a5662"/>' +
+      '<rect x="0" y="210" width="400" height="10" fill="#b0aa9c"/><rect x="0" y="220" width="400" height="40" fill="#1e2228"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="car"><rect x="0" y="224" width="50" height="12" rx="4" fill="' + GOLD + '"/><circle cx="48" cy="230" r="2.5" fill="#fff6c2"/></g>' +
+      '<g class="car car2"><rect x="0" y="244" width="50" height="12" rx="4" fill="' + RED + '"/><circle cx="48" cy="250" r="2.5" fill="#fff6c2"/></g>' +
+      sign(286, 8, 108, "Grand Concourse") + sign(318, 30, 76, "E 165 St") +
+      lbl(150, 24, "THE BRONX MUSEUM", 15, "#14202c") + lbl(150, 38, "OF THE ARTS", 10, "#14202c") +
+      tag("SWIZZ", 14, 196, 26, GOLD, -6) + tag("SHOW TIME", 300, 256, 18, RED, -3),
+      sky("g3", "#8fc3ea", "#f2e2c4"));
   }
 
-  /* 4. The Bronx Zoo's Rainey Gates: green-bronze gates with animals, granite posts, the park trees and birds */
+  /* 4. The Andrew Freedman Home on the Grand Concourse at E 166th (1924): the pale limestone palazzo behind the iron fence, the lawn, birds over the roofline */
   function zoo() {
-    let bars = "";
-    for (let x = 108; x <= 292; x += 12) bars += '<path d="M' + x + ' 104V210" stroke="#3f6f5a" stroke-width="3"/>';
-    let trees = "";
-    [[30, 120], [70, 100], [330, 104], [372, 122]].forEach(([x, y]) => trees += '<rect x="' + (x - 4) + '" y="' + y + '" width="8" height="100" fill="#3b2a1e"/><circle cx="' + x + '" cy="' + (y - 6) + '" r="30" fill="#2f7d45"/><circle cx="' + (x + 14) + '" cy="' + (y + 10) + '" r="20" fill="#3c9455"/>');
-    const bird = cls => '<g class="bird ' + cls + '"><path class="wing" d="M0 0q6-6 12 0q6-6 12 0" stroke="#222" stroke-width="2" fill="none"/></g>';
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    let win = "";
+    for (let x = 62; x < 340; x += 30) { if (x > 176 && x < 216) continue; win += '<rect x="' + x + '" y="92" width="14" height="22" fill="#2b3440"/><path d="M' + (x - 3) + ' 92l10-8 10 8z" fill="#d8ccb0"/><rect x="' + x + '" y="134" width="14" height="24" fill="#2b3440"/>'; }
+    let fence = ""; for (let x = 0; x <= 400; x += 8) fence += '<path d="M' + x + ' 222V196" stroke="#111" stroke-width="2"/><path d="M' + (x - 2) + ' 196l2-5 2 5z" fill="#111"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g4)"/>' + trees +
-      /* granite posts with lamps */
-      '<rect x="82" y="80" width="24" height="134" fill="#b9b4a8" stroke="#8d887c" stroke-width="2"/><rect x="294" y="80" width="24" height="134" fill="#b9b4a8" stroke="#8d887c" stroke-width="2"/>' +
-      '<circle class="flk" cx="94" cy="70" r="8" fill="#fff3c2"/><circle class="flk flk2" cx="306" cy="70" r="8" fill="#fff3c2"/>' +
-      /* the arched bronze top */
-      '<path d="M106 110Q200 30 294 110" stroke="#3f6f5a" stroke-width="6" fill="none"/><path d="M106 104h188" stroke="#3f6f5a" stroke-width="4"/>' + bars +
-      /* animal silhouettes in the bronze: lion, deer, bird, bear */
-      '<g fill="#5f9a7e" stroke="#2c4f40" stroke-width="1.2">' +
-        '<path d="M150 92q8-14 22-8q10 6 6 16h-24z"/><circle cx="148" cy="88" r="9"/>' +
-        '<path d="M224 98l4-16 6 4 4-10 4 10 6-4 2 16z"/>' +
-        '<path d="M190 70q10-12 20 0q-10 6-20 0z"/>' +
-        '<rect x="128" y="150" width="34" height="18" rx="8"/><circle cx="130" cy="150" r="7"/>' +
-        '<rect x="240" y="150" width="34" height="18" rx="8"/><circle cx="272" cy="148" r="7"/>' +
-      '</g>' +
-      '<rect x="0" y="210" width="400" height="50" fill="#9b8f78"/><path d="M0 214h400" stroke="#7d725e" stroke-width="3"/>' +
-      bird("") + bird("bird2"),
-      sky("g4", "#7cc0ea", "#e0f1fa"));
+      '<rect width="400" height="260" fill="url(#g4)"/>' +
+      '<g class="bird"><path class="wing" d="M0 40q6-6 12 0q6-6 12 0" stroke="#2a2a2a" stroke-width="2" fill="none"/></g><g class="bird bird2"><path class="wing" d="M0 56q5-5 10 0q5-5 10 0" stroke="#2a2a2a" stroke-width="2" fill="none"/></g>' +
+      /* the palazzo: limestone, rusticated ground floor, cornice, center entry */
+      '<rect x="50" y="78" width="300" height="104" fill="#e8dcc0"/><rect x="44" y="70" width="312" height="10" fill="#d0c2a2"/><rect x="40" y="66" width="320" height="5" fill="#bfb090"/>' +
+      [128, 140, 152, 164, 176].map(y => '<path d="M50 ' + y + 'h300" stroke="#cdbf9e" stroke-width="1"/>').join("") + win +
+      '<rect x="176" y="120" width="48" height="62" fill="#d8ccb0"/><path d="M186 182v-38a14 14 0 0 1 28 0v38z" fill="#3a2a22"/><path d="M172 120l28-16 28 16z" fill="#d0c2a2"/>' +
+      '<path d="M120 46h160v20H120z" fill="#e8dcc0"/><path d="M116 46h168" stroke="#bfb090" stroke-width="4"/>' +
+      lbl(200, 61, "ANDREW FREEDMAN HOME", 9, "#5a4a32") +
+      '<rect x="0" y="182" width="400" height="40" fill="#5aa04e"/>' + fence + '<path d="M0 196h400M0 210h400" stroke="#111" stroke-width="1.5"/>' +
+      '<rect x="0" y="222" width="400" height="38" fill="#1e2228"/><path d="M0 242h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="car car2"><rect x="0" y="228" width="50" height="12" rx="4" fill="' + CYAN + '"/><circle cx="48" cy="234" r="2.5" fill="#fff6c2"/></g>' +
+      lbl(200, 24, "GRAND CONCOURSE AT E 166TH · 1924", 11, "#14202c") +
+      tag("RUFF RYDERS", 14, 256, 16, GOLD, -3) + tag("SWIZZ", 300, 256, 18, CYAN, -4),
+      sky("g4", "#9ed1ef", "#f6e6c8"));
   }
 
   /* 5. The Grand Concourse and E 161 St, the Bronx Walk of Fame: street signs, a banner, the tag wall */

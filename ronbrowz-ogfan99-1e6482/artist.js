@@ -100,7 +100,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO HARLEM",
-   "x": "St. Nicholas Av and W 135 St, down the hill from City College. This is Ron Browz's game.",
+   "x": "Amsterdam Av and W 135 St. This is Ron Browz's game.",
    "sfx": "spray"
   }
  ],

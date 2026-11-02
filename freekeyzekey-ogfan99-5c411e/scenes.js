@@ -257,16 +257,50 @@ function LIB(P) {
   S.glenview = () => svg('<rect width="400" height="260" fill="url(#g3)"/>' + palisades(150) + water(160, "#4a7aa0") + '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' +
     '<rect x="110" y="90" width="150" height="120" fill="#8a7e6a"/><path d="M100 90h170l-30-30h-110z" fill="#3a3a44"/><rect x="230" y="40" width="44" height="170" fill="#9a8e7a"/><path d="M224 40h56l-28-30z" fill="#3a3a44"/>' +
     wins(124, 104, 4, 2, 32, 46, 16, 28, "#ffe6a8") + wins(242, 56, 1, 3, 0, 40, 20, 26, "#ffe6a8") + '<g class="slideL"><path d="M0 178h40l-6 6H6z" fill="#fff"/><path d="M18 178v-20l12 18z" fill="#fff"/></g>' + tag("GLENVIEW", 20, 246, 22, A, -3), sky("g3", "#ff9a6a", "#8fc3ea"));
+  /* ---------- Freekey Zekey's own rooms ---------- */
+  /* 125 St (2/3) from the sidewalk: the stair down at Lenox, green globes, the State Office Building tower one block west, the train flashing under the grate */
+  S.fzStation = (lines, tg) => svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+    '<rect x="40" y="6" width="120" height="170" fill="#d8d4c8"/>' + (function () { let s = ""; for (let y = 14; y < 170; y += 12) for (let x = 46; x < 156; x += 10) s += '<rect x="' + x + '" y="' + y + '" width="6" height="8" fill="#5a6070" opacity="' + ((x + y) % 7 ? .9 : .4) + '"/>'; return s; })() +
+    txt("STATE OFFICE BLDG", 100, 190, 9, "#2a2d33") + brick(170, 70, 230, 120, "#7a4a3a", "#84523f") + wins(184, 84, 7, 3, 30, 30, 14, 18, "#ffe6a8") +
+    '<rect x="0" y="176" width="400" height="12" fill="#bdb6a6"/><rect x="0" y="188" width="400" height="72" fill="#a8a294"/>' +
+    /* the stair enclosure going down */
+    '<rect x="180" y="168" width="150" height="40" fill="#2f4a3a"/><path d="M186 168v40M324 168v40" stroke="#1d2a22" stroke-width="4"/>' + [0, 1, 2, 3].map(i => '<rect x="' + (196 + i * 8) + '" y="' + (176 + i * 8) + '" width="' + (118 - i * 16) + '" height="4" fill="#8a857a"/>').join("") +
+    '<rect x="180" y="160" width="6" height="10" fill="#1d2329"/><circle class="flk" cx="183" cy="154" r="8" fill="#3fbf6a"/><rect x="324" y="160" width="6" height="10" fill="#1d2329"/><circle class="flk flk2" cx="327" cy="154" r="8" fill="#3fbf6a"/>' +
+    stSign(255, 118, "125 St", lines) + '<rect x="200" y="150" width="110" height="14" fill="#111"/>' + txt("LENOX AV · W 125 ST", 255, 161, 8, "#fff") +
+    /* sidewalk grate with the train light running under it */
+    '<rect x="20" y="214" width="140" height="22" fill="#1b1b22"/>' + (function () { let s = ""; for (let x = 24; x < 160; x += 8) s += '<rect x="' + x + '" y="216" width="3" height="18" fill="#555"/>'; return s; })() + '<rect class="pls" x="20" y="214" width="140" height="22" fill="#ffe6a8" opacity=".35"/>' +
+    '<rect x="0" y="240" width="400" height="20" fill="#2a2d33"/>' + car(0, 232, B) +
+    tag(tg, 20, 206, 22, A, -4) + tag("DIPSET", 300, 230, 22, C, -5), sky("g3", "#9fd0f0", "#f6e6c0"));
+  /* Mart 125 on W 125th, across from the Apollo: the vendors' market hall front, kente-colored banners swaying, drums and cloth in the windows */
+  S.mart125 = tg => { const ban = (x, c1, c2, c3, i) => '<g class="sway' + (i % 2 ? " sw2" : "") + '"><rect x="' + x + '" y="62" width="30" height="58" fill="' + c1 + '"/><rect x="' + x + '" y="76" width="30" height="8" fill="' + c2 + '"/><rect x="' + x + '" y="96" width="30" height="8" fill="' + c3 + '"/><path d="M' + x + ' 120l15 10 15-10z" fill="' + c1 + '"/></g>';
+    const drum = x => '<path d="M' + x + ' 196h22l-4 30h-14z" fill="#8a4a24"/><ellipse cx="' + (x + 11) + '" cy="196" rx="11" ry="4" fill="#e8d8b0"/><path d="M' + (x + 2) + ' 202l18 18M' + (x + 20) + ' 202l-18 18" stroke="#e8d8b0" stroke-width="1"/>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' + brick(0, 30, 400, 206, "#9a7a5a", "#a4845f") +
+      '<rect x="40" y="34" width="320" height="26" fill="#111"/>' + txt("MART 125", 200, 53, 18, A, ' letter-spacing="3"') +
+      ban(56, "#f2c14e", "#d7263d", "#2f8f4a", 0) + ban(116, "#d7263d", "#111", "#f2c14e", 1) + ban(176, "#2f8f4a", "#f2c14e", "#d7263d", 0) + ban(236, "#f2c14e", "#2f8f4a", "#111", 1) + ban(296, "#d7263d", "#f2c14e", "#2f8f4a", 0) +
+      '<rect x="30" y="140" width="150" height="90" fill="#2a1f1a"/><rect x="220" y="140" width="150" height="90" fill="#2a1f1a"/>' +
+      '<rect x="40" y="150" width="40" height="46" fill="#f2c14e"/><path d="M40 162h40M40 176h40M52 150v46M66 150v46" stroke="#d7263d" stroke-width="3"/><rect x="88" y="150" width="40" height="46" fill="#2f8f4a"/><path d="M88 166h40M88 182h40" stroke="#111" stroke-width="3"/>' +
+      drum(136) + drum(236) + drum(276) + '<rect x="318" y="150" width="40" height="46" fill="#d7263d"/><path d="M318 160h40M318 184h40" stroke="#f2c14e" stroke-width="4"/>' +
+      '<rect x="180" y="140" width="40" height="90" fill="#3b2a1e"/><rect class="pls" x="184" y="146" width="32" height="40" fill="#ffe6a8" opacity=".5"/>' +
+      street(236, false) + '<g class="slideL"><circle cx="0" cy="226" r="5" fill="#3a2a22"/><rect x="-6" y="232" width="12" height="20" rx="4" fill="' + B + '"/></g>' +
+      tag(tg, 250, 254, 20, A, -3) + txt("W 125 ST · ACROSS FROM THE APOLLO", 120, 252, 8, "#fff"), sky("g3", "#9fd0f0", "#f6e6c0")); };
+  /* Diplomatic Immunity (2003): the crew on a Harlem rooftop at dusk, the giant pink-and-blue Dipset flag snapping behind them, the water tower */
+  S.dipImmunity = tg => { const fig = (x, h, c) => '<g class="bob' + (x % 2 ? " bo2" : "") + '"><circle cx="' + x + '" cy="' + (235 - h) + '" r="11" fill="#14121a"/><path d="M' + (x - 18) + ' 236v-' + (h - 20) + 'q0-10 18-10t18 10v' + (h - 20) + 'z" fill="#14121a"/><rect x="' + (x - 11) + '" y="' + (227 - h) + '" width="22" height="5" fill="' + c + '"/></g>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' + stars(10) + brick(0, 150, 400, 70, "#4a3a3a", "#55433f") +
+      '<rect x="300" y="60" width="50" height="50" rx="6" fill="#7a5a3a"/><path d="M296 60l29-22 29 22z" fill="#5a4028"/><path d="M306 110l-6 40M344 110l6 40M325 110v40" stroke="#3a2a1a" stroke-width="4"/>' +
+      '<rect x="60" y="20" width="4" height="200" fill="#ccc"/><g class="sway" style="transform-origin:left center"><rect x="64" y="22" width="190" height="56" fill="#ff6fb5"/><rect x="64" y="78" width="190" height="56" fill="#2f6fd6"/>' + txt("DIPSET", 159, 66, 30, "#fff", ' letter-spacing="4"') + txt("DIPLOMATS", 159, 102, 18, "#fff", ' letter-spacing="3"') + '</g>' +
+      '<rect x="0" y="210" width="400" height="50" fill="#2a2228"/><path d="M0 210h400" stroke="#6a5a5a" stroke-width="4"/>' +
+      fig(120, 100, A) + fig(170, 108, B) + fig(220, 104, C) + fig(268, 106, "#fff") +
+      txt("DIPLOMATIC IMMUNITY · 2003", 200, 252, 12, "#f6efdc", ' letter-spacing="2"') + tag(tg, 280, 196, 24, A, -5), sky("g3", "#2a1a4a", "#f78a6a")); };
   S.corner = corner; S.tag = tag;
   return S;
 }
 
   const P = {"c1":"#f2c14e","c2":"#c9a4ff","c3":"#ff4f6a"}, L = LIB(P);
   window.SCENES = {
-    station: () => L.stUnder("125 St", [["2","#ee352e"],["3","#ee352e"]], "#b8442e", "DIPSET"),
+    station: () => L.fzStation([["2","#ee352e"],["3","#ee352e"]], "FREEKEY ZEKEY"),
     office: () => L.stateOffice(),
-    strivers: () => L.strivers(),
-    night: () => L.harlemNight("DIPSET"),
+    strivers: () => L.mart125("FREEKEY"),
+    night: () => L.dipImmunity("FREEKEY"),
     block: () => L.corner(["#0d1022", "#2a3a4a"], "W 125 St", "Adam C Powell Blvd", L.tag("FREEKEY ZEKEY", 26, 124, 25, P.c1, -7) + L.tag("FREEKEY", 40, 156, 22, P.c2, -5) + L.tag("DIPSET", 30, 188, 24, P.c3, -3) + L.tag("HARLEM", 120, 212, 20, "#f6efdc", -2))
   };
 })();

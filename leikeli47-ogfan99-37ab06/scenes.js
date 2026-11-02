@@ -82,23 +82,46 @@
   const MINT = "#7cf29a", PINK = "#ff4fa3", GOLD = "#ffd34d";
   const AC = [["A", "#0039a6"], ["C", "#0039a6"]];
 
-  /* 1. Utica Av on the Fulton St line: the A pulling in, cream tile with the blue band */
+  /* 1. Utica Av, looking down the island platform of the express stop: the C waiting on the local track, the A coming in on the express, the stair up to Fulton St, her posters on the column */
   function station1() {
-    return station({ name: "Utica Av", bs: AC, band: "#1f3f8f", col: "#6a2a4a", sx: 100, sw: 200,
-      tags: tag("LEIKELI47", 24, 214, 32, MINT, -4) + tag("ACRYLIC", 240, 238, 30, PINK, -6) });
+    const vx = 200, vy = 104, st = '<style>@keyframes come{0%{transform:scale(.15);opacity:0}15%{opacity:1}75%,100%{transform:scale(1);opacity:1}}.come{animation:come 5s ease-out infinite;transform-box:view-box;transform-origin:200px 104px}</style>';
+    const L = (p, t) => [vx + (p[0] - vx) * t, vy + (p[1] - vy) * t];
+    /* one side's train as a quad running to the vanishing point; side = -1 left, 1 right */
+    const train = (side, col, letter) => { const nx = side < 0 ? 0 : 400, a = [nx, 58], b = [nx, 214], t = .08, a2 = L(a, t), b2 = L(b, t);
+      let s = '<path d="M' + a + 'L' + a2 + 'L' + b2 + 'L' + b + 'z" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>';
+      const band = [L([nx, 168], 1), L([nx, 168], t), L([nx, 176], t), L([nx, 176], 1)]; s += '<path d="M' + band.join("L") + 'z" fill="' + col + '"/>';
+      [1, .7, .5, .36, .26].forEach(k => { const w = [L([nx, 84], k), L([nx, 84], k * .86), L([nx, 128], k * .86), L([nx, 128], k)]; s += '<path d="M' + w.join("L") + 'z" fill="#fff4cc" opacity=".85"/>'; });
+      return s + bullet(side < 0 ? 26 : 374, 146, [letter, "#0039a6"]); };
+    let cols = ""; [.95, .62, .42, .28].forEach(k => [[132, 260], [268, 260]].forEach(p => { const f = L(p, k), c = L([p[0], -40], k); cols += '<path d="M' + (f[0] - 5 * k) + ' ' + f[1] + 'V' + c[1] + 'h' + (10 * k) + 'V' + f[1] + 'z" fill="#6a2a4a"/>'; }));
+    const poster = (x, y, w, h, bg, t1, t2, c) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + bg + '" stroke="' + c + '" stroke-width="2"/>' + txt(x + w / 2, y + 18, 11, c, t1) + txt(x + w / 2, y + h - 8, 8, "#fff", t2);
+    return svg(st + rect(0, 0, 400, 260, "#bdb6a8") + rect(0, 0, 400, 40, "#2a2d33") + '<g class="flk">' + rect(80, 4, 240, 5, "#fff8d8") + '</g>' +
+      '<path d="M0 40h400L' + vx + ' ' + vy + 'z" fill="#d8d2c4"/>' +
+      train(-1, "#0039a6", "C") + '<g class="come">' + train(1, "#0039a6", "A") + '</g>' +
+      /* the island platform, yellow edges */
+      '<path d="M120 260L' + vx + ' ' + vy + 'L280 260z" fill="#5a5650"/><path d="M120 260L' + vx + ' ' + vy + 'M280 260L' + vx + ' ' + vy + '" stroke="#eab308" stroke-width="6"/>' + cols +
+      /* the stair up to Fulton St */
+      '<path d="M170 214h60v-60h-60z" fill="#3a3f47"/>' + [0, 1, 2, 3, 4].map(i => rect(176, 160 + i * 10, 48, 4, "#8a857a")).join("") + rect(170, 150, 60, 10, "#1b1b22") + txt(200, 158, 8, "#fff", "EXIT · FULTON ST") +
+      stSign(118, 50, 164, "Utica Av", [["A", "#0039a6"], ["C", "#0039a6"]]) + txt(200, 96, 8, "#2a2d33", "EXPRESS ⇢ A  ·  LOCAL ⇠ C") +
+      poster(138, 218, 56, 40, "#1b1b22", "ACRYLIC", "LEIKELI47", PINK) + poster(206, 218, 56, 40, "#1b1b22", "WASH &amp; SET", "LK47", MINT) +
+      tag("LEIKELI47", 6, 252, 24, MINT, -4) + tag("BED-STUY", 292, 252, 20, GOLD, -4));
   }
 
-  /* 2. Weeksville: the Hunterfly Road houses, four little 1800s wood homes on the old diagonal road, the new heritage center behind */
+  /* 2. Saratoga Park (Halsey St & Saratoga Av): the little Bed-Stuy square, giant old London planes, the brownstones all around, kids on the swings */
   function weeksville() {
-    const house = (x, y, c, trim) => '<path d="M' + x + ' ' + (y + 60) + 'v-40l26-20 26 20v40z" fill="' + c + '" stroke="' + trim + '" stroke-width="2"/>' + rect(x + 8, y + 28, 10, 12, "#2a3a4a") + rect(x + 34, y + 28, 10, 12, "#2a3a4a") + rect(x + 20, y + 40, 12, 20, trim);
-    return svg('<rect width="400" height="260" fill="url(#w1)"/>' + '<circle cx="60" cy="44" r="18" fill="#fff3a8"/>' +
-      /* the modern center: dark glass + wood slats */
-      rect(220, 70, 180, 90, "#3a3a3a") + [230, 250, 270, 290, 310, 330, 350, 370, 390].map(x => rect(x, 70, 6, 90, "#a8784a")).join("") +
-      rect(0, 150, 400, 110, "#6aa84a") + '<path d="M0 240L400 150v20L20 260z" fill="#b8a888"/>' +
-      house(30, 140, "#f6f3ea", "#3a6a5a") + house(100, 126, "#e8d8b8", "#6a3a2a") + house(170, 112, "#f0e6d0", "#2a4a6a") + house(240, 98, "#e8e2d4", "#5a5a3a") +
-      tree(370, 140, 24, "#2f7a34") + tree(20, 120, 20, "#3a8a3a", "sway sw2") +
-      person(300, 236, PINK, "slideL") + person(100, 240, GOLD, "slide slw"),
-      sky("w1", "#6ab6ea", "#d8f0fa"));
+    let row = ""; for (let i = 0; i < 6; i++) { const x = i * 68; row += rect(x, 70, 66, 110, ["#7a4a34", "#8a5a3e", "#6a3a2a"][i % 3]) + rect(x, 66, 66, 6, "#3a2018");
+      [x + 10, x + 38].forEach(wx => [82, 112].forEach(wy => row += rect(wx, wy, 16, 20, "#f6e6c8", ' opacity=".85"'))); }
+    let fence = ""; for (let x = 0; x < 400; x += 8) fence += rect(x, 196, 2, 20, "#1b1b22");
+    return svg('<rect width="400" height="260" fill="url(#sp)"/>' + row +
+      rect(0, 176, 400, 84, "#5a9a40") + '<path d="M0 238C120 220 280 252 400 230V260H0z" fill="#c8b890"/>' +
+      tree(60, 110, 46, "#2f7a34") + tree(200, 96, 54, "#3a8a3a", "sway sw2") + tree(340, 112, 46, "#2f7a34") +
+      /* swing set */
+      '<path d="M250 216l14-42 14 42M310 216l-14-42-14 42M264 174h32" stroke="#d7263d" stroke-width="3" fill="none"/>' +
+      '<g class="sway"><path d="M272 176v26M282 176v26" stroke="#555" stroke-width="1.5"/>' + rect(268, 202, 18, 4, "#1b1b22") + '</g>' +
+      rect(0, 214, 400, 2, "#1b1b22") + fence +
+      person(90, 238, PINK, "slide slw") + person(150, 242, GOLD, "slideL") + '<rect class="fall f2" x="120" y="60" width="5" height="4" fill="#9ac84a"/><rect class="fall f3" x="230" y="50" width="5" height="4" fill="#9ac84a"/>' +
+      '<rect x="12" y="12" width="186" height="38" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="2"/>' + txt(105, 30, 14, "#fff", "SARATOGA PARK") + txt(105, 44, 9, "#fff", "HALSEY ST · SARATOGA AV") +
+      tag("LEIKELI47", 250, 46, 22, MINT, -6),
+      sky("sp", "#6ab6ea", "#d8f0fa"));
   }
 
   /* 3. Wash & Set on Fulton St: the salon, the dryer chairs, the wall of polish, the open sign blinking */
@@ -118,25 +141,29 @@
       tag("WASH &amp; SET", 20, 250, 26, PINK, -3));
   }
 
-  /* 4. A Bed-Stuy block in summer: brownstone stoops, double dutch going, the hydrant spraying */
+  /* 4. Album world, Acrylic (2018): the nail station under the neon ACRYLIC script, long sparkly nails getting painted, the polish wall, the lamp glowing */
   function stoop() {
-    let row = "";
-    for (let i = 0; i < 4; i++) { const x = i * 100; row += rect(x, 40, 98, 160, ["#7a4a34", "#6a3a2a", "#8a5a3e"][i % 3]) + rect(x, 36, 98, 6, "#3a2018");
-      [x + 14, x + 60].forEach(wx => [56, 100].forEach(wy => row += rect(wx, wy, 22, 28, "#f6e6c8", ' opacity=".8"')));
-      row += '<path d="M' + (x + 8) + ' 200l14-50h30l14 50z" fill="#4a2a20"/>' + rect(x + 24, 128, 24, 22, "#2a1a10"); }
-    return svg('<rect width="400" height="260" fill="url(#s1)"/>' + row + rect(0, 200, 400, 60, "#9a968c") +
-      /* double dutch */
-      '<path class="pulse pls" d="M150 236q50-60 100 0" stroke="' + GOLD + '" stroke-width="3" fill="none"/><path class="pls p2" d="M150 236q50 20 100 0" stroke="' + MINT + '" stroke-width="3" fill="none"/>' +
-      person(146, 240, PINK) + person(254, 240, MINT) + '<g class="jump">' + person(200, 226, GOLD) + '</g>' +
-      /* hydrant */
-      rect(330, 214, 16, 26, "#d7263d", ' rx="3"') + rect(326, 220, 24, 6, "#d7263d") +
-      '<path class="spl" d="M350 222q30-10 46 10" stroke="#bfe9ff" stroke-width="5" fill="none"/><path class="spl" style="animation-delay:-.6s" d="M350 222q24-24 44-6" stroke="#bfe9ff" stroke-width="3" fill="none"/>',
-      sky("s1", "#5ab0ea", "#cde8f8"));
+    let pol = ""; const cs = [PINK, MINT, GOLD, "#9fe3ff", "#c9a4ff", "#ff6a3d", "#d7263d", "#fff"];
+    for (let r = 0; r < 4; r++) for (let c = 0; c < 8; c++) pol += rect(16 + c * 22, 92 + r * 22, 10, 14, cs[(r * 3 + c) % 8], ' rx="2"') + rect(18 + c * 22, 86 + r * 22, 6, 6, "#1b1b22");
+    /* a hand from below with five long acrylic nails */
+    const nail = (x, y, h, rot, c, cls) => '<g transform="rotate(' + rot + ' ' + x + ' ' + (y + h) + ')"><rect x="' + (x - 7) + '" y="' + (y + 8) + '" width="14" height="' + (h + 30) + '" rx="7" fill="#8a5a3e"/><path d="M' + (x - 6) + ' ' + (y + 14) + 'q6-' + (h * .9) + ' 12 0z" fill="' + c + '" class="' + (cls || "") + '"/><circle cx="' + (x + 1) + '" cy="' + (y + 2) + '" r="1.4" fill="#fff" class="pls"/></g>';
+    return svg(rect(0, 0, 400, 260, "#1a1020") + rect(0, 0, 400, 260, "#2a1430", ' opacity=".6"') +
+      /* neon sign */
+      '<g class="flk"><text x="290" y="58" text-anchor="middle" font-family="Brush Script MT, cursive" font-style="italic" font-size="46" fill="none" stroke="' + PINK + '" stroke-width="3">Acrylic</text>' +
+      '<text x="290" y="58" text-anchor="middle" font-family="Brush Script MT, cursive" font-style="italic" font-size="46" fill="none" stroke="#ffd0ea" stroke-width="1">Acrylic</text></g>' + txt(290, 78, 10, MINT, "LEIKELI47 · 2018") +
+      rect(8, 78, 186, 96, "#2a2030", ' rx="4"') + pol + '<path d="M8 104h186M8 126h186M8 148h186" stroke="#4a3a50" stroke-width="2"/>' +
+      /* the nail table and the lamp */
+      rect(0, 196, 400, 64, "#f2e6ee") + rect(0, 192, 400, 6, PINK) +
+      '<path d="M330 196v-60l40-20" stroke="#c9ced6" stroke-width="5" fill="none"/><path d="M350 112h40l-6 14h-28z" fill="#c9ced6"/><path class="pls" d="M354 126h32l20 70h-72z" fill="#c9a4ff" opacity=".35"/>' +
+      '<g transform="translate(220 130)">' + nail(0, 0, 40, -24, PINK) + nail(22, -10, 46, -8, MINT) + nail(44, -12, 48, 6, GOLD) + nail(66, -4, 44, 18, "#9fe3ff") + nail(84, 20, 36, 34, PINK) + rect(-6, 40, 96, 60, "#8a5a3e", ' rx="20"') + '</g>' +
+      /* polish brush dabbing */
+      '<rect x="150" y="172" width="22" height="24" rx="5" fill="' + PINK + '"/><rect x="155" y="158" width="12" height="14" fill="#1b1b22"/><g class="bob"><path d="M196 96l14 22" stroke="#1b1b22" stroke-width="4"/><path d="M208 116l5 8 3-6z" fill="' + PINK + '"/></g>' +
+      tag("ACRYLIC", 16, 244, 34, PINK, -4) + tag("LK47", 290, 246, 26, MINT, -5));
   }
 
-  /* 5. Utica Av and Fulton St */
+  /* 5. Fulton St and Ralph Av, one stop past Utica */
   function block() {
-    return corner(["#0a0d1c", "#2a3a3a"], "Utica Av", "Fulton St",
+    return corner(["#0a0d1c", "#2a3a3a"], "Fulton St", "Ralph Av",
       tag("LEIKELI47", 26, 128, 40, MINT, -7) + tag("ACRYLIC", 40, 160, 28, PINK, -5) + tag("SHAPE UP", 40, 192, 26, GOLD, -3) + tag("BED-STUY", 130, 212, 18, "#f6efdc", -2), PINK);
   }
 

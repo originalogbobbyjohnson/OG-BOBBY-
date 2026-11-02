@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO STAPLETON",
-   "x": "Canal St and Wright St, by Tappen Park. This is Trife Diesel's game.",
+   "x": "Tompkins Av and Hill St, at the Stapleton Houses. This is Trife Diesel's game.",
    "sfx": "spray"
   }
  ],

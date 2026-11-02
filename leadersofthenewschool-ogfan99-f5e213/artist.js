@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO UNIONDALE",
-   "x": "Uniondale Av and Front St. This is Leaders of the New School's game.",
+   "x": "Uniondale Av and Jerusalem Av. This is Leaders of the New School's game.",
    "sfx": "spray"
   }
  ],

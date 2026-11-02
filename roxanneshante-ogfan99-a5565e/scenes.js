@@ -91,9 +91,12 @@
         '<rect x="8" y="158" width="304" height="4" fill="#2b2f36"/>' + windows +
         '<circle cx="304" cy="168" r="4" fill="#fff6c2"/>' + bullet(292, 138, "7", PURPLE) +
       '</g>' +
+      /* the 12-inch poster on the platform windscreen at the far end */
+      '<rect x="318" y="100" width="56" height="76" fill="#2a1f3a" stroke="#5b4a5e" stroke-width="3"/>' + '<rect x="324" y="106" width="44" height="44" fill="' + PINK + '"/>' + vinyl(358, 128, 18, GOLD, "spin") + '<rect x="324" y="106" width="28" height="44" fill="' + PINK + '"/>' +
+      '<text x="346" y="162" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7" fill="#fff">ROXANNE\'S</text><text x="346" y="171" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7" fill="' + GOLD + '">REVENGE · 1984</text>' +
       '<rect x="0" y="178" width="400" height="10" fill="#eab308"/>' + truss +
       '<rect x="0" y="206" width="400" height="54" fill="#1c1420"/>' +
-      tag("QUEEN OF ROX", 40, 244, 26, GOLD, -4) + tag("SHANTE", 268, 246, 28, PINK, -8),
+      tag("ROXANNE'S REVENGE", 22, 244, 24, GOLD, -4) + tag("SHANTE", 282, 248, 28, PINK, -8),
       sky("g1", "#3b2a5e", "#f29a6b"));
   }
 
@@ -133,39 +136,33 @@
       '<rect x="296" y="222" width="90" height="24" rx="3" fill="#111" stroke="' + GOLD + '"/><text x="341" y="239" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" fill="' + GOLD + '">REQUEST LINE</text>');
   }
 
-  /* 3. A Queensbridge block party, summer 1984: the red-brick Houses behind, the DJ table plugged into the lamppost, a boombox, double dutch turning */
+  /* 3. Album world, Roxanne's Revenge (1984): the answer record cut in Marley Marl's apartment studio in the Bridge, the reel-to-reel turning, a 14-year-old at the mic, the Houses out the window */
   function jam() {
     let houses = "";
-    [[-10, 70, 120], [120, 60, 130], [262, 74, 148]].forEach(b => {
-      houses += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (170 - b[1]) + '" fill="' + BRICK + '"/>' +
-        '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="5" fill="#7a3826"/>';
-      for (let y = b[1] + 12; y < 160; y += 16) for (let x = b[0] + 8; x < b[0] + b[2] - 10; x += 16) houses += '<rect x="' + x + '" y="' + y + '" width="8" height="9" fill="' + ((x * 3 + y) % 7 ? "#3a2420" : "#ffd98a") + '"/>';
-    });
+    [[214, 46, 60], [282, 36, 70], [356, 52, 36]].forEach(b => { houses += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (110 - b[1]) + '" fill="' + BRICK + '"/>';
+      for (let y = b[1] + 8; y < 104; y += 12) for (let x = b[0] + 6; x < b[0] + b[2] - 6; x += 12) houses += '<rect x="' + x + '" y="' + y + '" width="5" height="6" fill="' + ((x + y) % 4 ? "#3a2a2a" : GOLD) + '"/>'; });
+    let paper = ""; for (let x = 0; x < 400; x += 24) paper += '<path d="M' + x + ' 0v150" stroke="#5a3a4a" stroke-width="10" opacity=".35"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' +
-      '<circle cx="60" cy="36" r="18" fill="#fff3b0"/>' +
-      '<g class="cld"><ellipse cx="0" cy="28" rx="40" ry="7" fill="#fff" opacity=".7"/></g><g class="cld cld2"><ellipse cx="0" cy="48" rx="26" ry="5" fill="#fff" opacity=".6"/></g>' +
-      houses +
-      /* courtyard ground, trees, fence */
-      '<rect x="0" y="170" width="400" height="90" fill="#8f8a80"/><rect x="0" y="166" width="400" height="6" fill="#6c665e"/>' +
-      '<circle cx="104" cy="140" r="22" fill="#3f8a3a"/><rect x="101" y="150" width="6" height="22" fill="#5a3a20"/><circle cx="356" cy="146" r="18" fill="#3f8a3a"/><rect x="353" y="152" width="6" height="20" fill="#5a3a20"/>' +
-      /* the lamppost and the cable to the DJ table */
-      '<rect x="28" y="96" width="5" height="122" fill="#2f3a33"/><path d="M30 96q10 -10 22 -4" stroke="#2f3a33" stroke-width="4" fill="none"/><ellipse cx="54" cy="94" rx="8" ry="4" fill="#ffe9a8" class="flk"/>' +
-      '<path d="M33 200q30 30 60 10" stroke="#111" stroke-width="2" fill="none"/>' +
-      /* DJ table: two turntables, mixer, speaker stacks */
-      '<rect x="60" y="178" width="130" height="10" fill="#5a3a20"/><rect x="66" y="188" width="6" height="40" fill="#5a3a20"/><rect x="178" y="188" width="6" height="40" fill="#5a3a20"/>' +
-      '<rect x="64" y="166" width="52" height="14" rx="2" fill="#2b2b33"/><rect x="134" y="166" width="52" height="14" rx="2" fill="#2b2b33"/><rect x="118" y="166" width="14" height="14" fill="#444"/>' +
-      '<ellipse cx="90" cy="168" rx="20" ry="4" fill="#111" class="flk2"/><ellipse cx="160" cy="168" rx="20" ry="4" fill="#111"/><circle cx="90" cy="168" r="2" fill="' + GOLD + '"/><circle cx="160" cy="168" r="2" fill="' + PINK + '"/>' +
-      '<g class="thump"><rect x="200" y="148" width="34" height="80" fill="#1d1d22" stroke="#555"/><circle cx="217" cy="170" r="11" fill="#333"/><circle cx="217" cy="204" r="13" fill="#333"/></g>' +
-      /* double dutch: two rope turners and a jumper (silhouettes) */
-      fig(262, 214, PINK) + fig(352, 214, TEAL) +
-      '<g class="rope"><path d="M268 196Q307 236 346 196" stroke="#fff" stroke-width="2" fill="none"/></g>' +
-      '<g class="rope" style="animation-delay:-.45s"><path d="M268 196Q307 160 346 196" stroke="' + GOLD + '" stroke-width="2" fill="none"/></g>' +
-      fig(307, 216, GOLD, "hop") +
-      boombox(12, 222, .55) +
-      '<g class="note"><text x="140" y="150" font-size="18" fill="' + GOLD + '">&#9834;</text></g><g class="note note2"><text x="170" y="150" font-size="16" fill="' + PINK + '">&#9835;</text></g><g class="note note3"><text x="110" y="150" font-size="16" fill="#fff">&#9834;</text></g>' +
-      '<rect x="104" y="236" width="196" height="18" rx="3" fill="#111" opacity=".75"/><text x="202" y="249" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" fill="' + GOLD + '">QUEENSBRIDGE HOUSES, 1984</text>',
-      sky("g3", "#6fc3ef", "#d8f1ff"));
+      '<rect width="400" height="260" fill="#3a2440"/>' + paper +
+      /* the window onto Queensbridge */
+      '<rect x="206" y="24" width="186" height="96" fill="#1a2a50" stroke="#c9b28a" stroke-width="5"/>' + stars(6) + houses + '<path d="M299 24v96M206 72h186" stroke="#c9b28a" stroke-width="3"/>' +
+      /* the 12-inch on the wall */
+      vinyl(98, 60, 30, GOLD, "spin") + '<rect x="14" y="20" width="80" height="80" fill="' + PINK + '"/>' +
+      '<text x="54" y="48" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="10" fill="#fff">ROXANNE\'S</text><text x="54" y="62" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="10" fill="#fff">REVENGE</text><text x="54" y="90" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">1984</text>' +
+      /* the reel-to-reel on the desk */
+      '<path d="M0 170h400v90H0z" fill="#4a3426"/><rect x="0" y="166" width="400" height="6" fill="#6a4a30"/>' +
+      '<rect x="110" y="100" width="120" height="70" rx="4" fill="#b9bec6" stroke="#555" stroke-width="2"/>' +
+      '<g class="spin"><circle cx="140" cy="130" r="22" fill="#2b2b33"/><path d="M140 108v44M118 130h44" stroke="#777" stroke-width="3"/><circle cx="140" cy="130" r="5" fill="#ddd"/></g>' +
+      '<g class="spin"><circle cx="200" cy="130" r="22" fill="#2b2b33"/><path d="M200 108v44M178 130h44" stroke="#777" stroke-width="3"/><circle cx="200" cy="130" r="5" fill="#ddd"/></g>' +
+      '<path d="M140 152L170 162L200 152" stroke="#5a3a20" stroke-width="2" fill="none"/><text x="170" y="167" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="6" fill="#333">MARLEY MARL</text>' +
+      /* meters */
+      '<rect x="20" y="120" width="70" height="46" rx="3" fill="#111" stroke="#555"/>' + [0, 1, 2, 3].map(i => '<rect class="vu vu' + (i + 1) + '" x="' + (28 + i * 15) + '" y="124" width="9" height="38" fill="' + [TEAL, GOLD, PINK, TEAL][i] + '"/>').join("") +
+      /* the mic and the young MC from behind */
+      '<path d="M320 260V150" stroke="#777" stroke-width="4"/><g class="turn"><rect x="312" y="122" width="16" height="30" rx="8" fill="#9aa3ad" stroke="#333" stroke-width="2"/></g>' +
+      '<g class="hop" style="animation-duration:1.6s"><circle cx="352" cy="168" r="14" fill="#1a1020"/><path d="M340 160q-10-8-4-18" stroke="#1a1020" stroke-width="6" fill="none"/><path d="M334 260v-60q0-18 18-18t18 18v60z" fill="' + PINK + '"/>' +
+      '<path d="M338 190q-14-6-18-18" stroke="' + PINK + '" stroke-width="7" fill="none"/></g>' +
+      '<g class="note"><text x="300" y="120" font-size="16" fill="' + GOLD + '">&#9834;</text></g><g class="note note2"><text x="280" y="126" font-size="14" fill="' + TEAL + '">&#9835;</text></g>' +
+      tag("THE ANSWER", 20, 232, 28, GOLD, -4) + tag("QUEEN OF ROX", 130, 254, 20, TEAL, -3));
   }
 
   /* 4. Socrates Sculpture Park up Vernon Blvd: big painted steel sculptures on the lawn by the East River, a mobile turning in the wind */

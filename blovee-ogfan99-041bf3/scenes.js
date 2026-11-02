@@ -510,11 +510,101 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* ---- B-Lovee's Melrose ---- */
+  /* 1. Melrose on the Metro-North Harlem Line: the open cut under Park Av, the E 162 St bridge over the tracks */
+  function melroseStation() {
+    const MN = "#0039a6";
+    let win = ""; for (let i = 26; i < 330; i += 40) win += '<rect x="' + i + '" y="132" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".85"/>';
+    let stone = ""; for (let y = 96; y < 196; y += 12) for (let x = ((y / 12) % 2) ? -14 : 0; x < 400; x += 28) stone += '<rect x="' + x + '" y="' + y + '" width="26" height="10" fill="#8f8577"/>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/>' +
+      /* Melrose blocks above the cut */
+      '<rect x="0" y="20" width="90" height="66" fill="#8a4a36"/><rect x="96" y="34" width="70" height="52" fill="#a46a4a"/><rect x="250" y="14" width="80" height="72" fill="#7a3a2c"/><rect x="336" y="30" width="64" height="56" fill="#9a5440"/>' +
+      windows(8, 28, 4, 3, 20, 18, 10, 10, "#ffe6a8", "#2a2030") + windows(258, 22, 4, 3, 18, 18, 10, 10, "#ffe6a8", "#2a2030") +
+      /* the E 162 St bridge across the top */
+      '<rect x="0" y="80" width="400" height="16" fill="#5a5f66"/><rect x="0" y="76" width="400" height="5" fill="#2b2f36"/>' +
+      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => '<rect x="' + (i * 44) + '" y="70" width="3" height="8" fill="#2b2f36"/>').join("") +
+      '<g class="slide"><rect x="0" y="62" width="44" height="14" rx="4" fill="#f2c14e"/><rect x="10" y="56" width="22" height="8" rx="2" fill="#cfe6ff"/></g>' +
+      /* the cut walls */
+      '<rect x="0" y="96" width="400" height="100" fill="#a39888"/>' + stone +
+      /* station sign: Metro-North style */
+      '<rect x="230" y="100" width="160" height="26" rx="3" fill="#1d2a44"/><rect x="230" y="100" width="160" height="3" fill="' + MN + '"/>' +
+      txt("Melrose", 240, 119, 15, "#fff", "start") + pill(350, 113, "MN", MN) +
+      /* the train */
+      '<g class="anim-train"><rect x="10" y="124" width="340" height="62" rx="8" fill="#d4d8de" stroke="#6b7280" stroke-width="2"/><rect x="10" y="160" width="340" height="7" fill="' + MN + '"/>' + win +
+      '<rect x="318" y="130" width="26" height="24" rx="3" fill="#1d2a3a"/><circle cx="342" cy="176" r="4" fill="#fff6c2"/>' + txt("HARLEM LINE", 180, 181, 9, "#1d2a44") + '</g>' +
+      '<rect x="0" y="186" width="400" height="10" fill="#eab308"/><rect x="0" y="196" width="400" height="64" fill="#9e978b"/>' +
+      '<rect x="300" y="202" width="6" height="34" fill="#2b2f36"/><rect x="266" y="196" width="74" height="14" rx="2" fill="#111"/><text class="blk" x="303" y="206" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffb020">GRAND CENTRAL</text>' +
+      txt("PARK AV · E 162 ST", 110, 228, 13, "#2a2030") + tag("LOVEE", 190, 252, 30, "#c9a4ff", -5) + tag("MELROSE", 18, 254, 20, "#ff9a3d", -3),
+      sky("sk", "#7fb0e0", "#f2d6b0"));
+  }
+  /* 2. Rincón Criollo: the little red-and-white wooden casita in its garden at E 158 St and Brook Av, the barrels for bomba, the flag moving */
+  function casita() {
+    let slats = ""; for (let x = 112; x < 270; x += 8) slats += '<rect x="' + x + '" y="100" width="6" height="66" fill="' + ((x / 8) % 2 ? "#d7263d" : "#c01e34") + '"/>';
+    let rail = ""; for (let x = 112; x < 270; x += 10) rail += '<rect x="' + x + '" y="168" width="3" height="16" fill="#f6efdc"/>';
+    const drum = (x, c) => '<g class="bob' + (x % 2 ? " bo2" : "") + '"><rect x="' + x + '" y="198" width="22" height="30" rx="4" fill="' + c + '"/><ellipse cx="' + (x + 11) + '" cy="198" rx="11" ry="3.5" fill="#e8d6b0"/><path d="M' + x + ' 206h22M' + x + ' 220h22" stroke="#3a2418" stroke-width="2"/></g>';
+    const flag = '<g class="sway swt"><g transform="translate(300 54)">' +
+      [0, 1, 2, 3, 4].map(i => '<rect y="' + (i * 7) + '" width="54" height="7" fill="' + (i % 2 ? "#fff" : "#ed0a3f") + '"/>').join("") +
+      '<path d="M0 0L28 17.5 0 35z" fill="#0050f0"/><path d="M9 14l2.2 3.2 3.8-.4-2.4 3 1.3 3.6-3.4-1.6-3.2 2 .4-3.8-3-2.4 3.8-.6z" fill="#fff"/></g></g>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/><circle cx="60" cy="40" r="18" fill="#fff3c4"/>' +
+      '<rect x="0" y="70" width="70" height="120" fill="#8a4a36"/><rect x="340" y="56" width="60" height="134" fill="#7a3a2c"/>' + windows(8, 80, 3, 4, 20, 22, 10, 12, "#ffe6a8", "#2a2030") +
+      '<rect x="298" y="50" width="3" height="140" fill="#ddd"/>' + flag +
+      /* the casita on its stilts */
+      '<path d="M100 102L190 52 280 102z" fill="#f6efdc"/><path d="M106 100L190 56 274 100z" fill="#c01e34" opacity=".25"/>' +
+      slats + '<rect x="108" y="98" width="166" height="5" fill="#f6efdc"/>' +
+      '<rect x="176" y="118" width="26" height="48" fill="#f6efdc"/><rect x="128" y="118" width="26" height="20" fill="#f6efdc"/><rect x="226" y="118" width="26" height="20" fill="#f6efdc"/>' +
+      '<rect x="131" y="121" width="20" height="14" fill="#2a3a4a"/><rect x="229" y="121" width="20" height="14" fill="#2a3a4a"/>' +
+      '<rect x="104" y="166" width="174" height="4" fill="#f6efdc"/>' + rail + '<rect x="104" y="184" width="174" height="4" fill="#f6efdc"/>' +
+      [110, 150, 230, 270].map(x => '<rect x="' + x + '" y="188" width="5" height="20" fill="#6a4a32"/>').join("") +
+      '<rect x="128" y="76" width="124" height="18" rx="3" fill="#f6efdc" stroke="#c01e34" stroke-width="2"/>' + txt("RINCÓN CRIOLLO", 190, 89, 11, "#c01e34") +
+      /* garden */
+      '<rect x="0" y="206" width="400" height="54" fill="#4f7f3a"/>' + tree(50, 176, 22) + tree(358, 180, 20, "sw2") +
+      [20, 84, 300, 330].map((x, i) => '<circle cx="' + x + '" cy="214" r="5" fill="' + ["#ff6b8a", "#f2c14e", "#ff9a3d", "#fff"][i] + '"/>').join("") +
+      drum(120, "#8a5a32") + drum(150, "#a46a3a") + drum(250, "#7a4a2a") +
+      txt("E 158 ST & BROOK AV · MELROSE", 200, 252, 12, "#f6efdc"),
+      sky("sk", "#8fc3ea", "#f6e7c6"));
+  }
+  /* 3. The Melrose Houses at Courtlandt Av and E 156 St: the tall red-brick NYCHA towers in their cross shape, lights coming on */
+  function melroseHouses() {
+    const tw = (x, y, w, col) => {
+      const wing = w * .28;
+      return '<rect x="' + x + '" y="' + (y + 14) + '" width="' + wing + '" height="' + (226 - y - 14) + '" fill="#7a3a2a"/><rect x="' + (x + w - wing) + '" y="' + (y + 14) + '" width="' + wing + '" height="' + (226 - y - 14) + '" fill="#7a3a2a"/>' +
+        '<rect x="' + (x + wing) + '" y="' + y + '" width="' + (w - 2 * wing) + '" height="' + (226 - y) + '" fill="' + col + '"/>' +
+        '<rect x="' + (x + wing) + '" y="' + (y - 5) + '" width="' + (w - 2 * wing) + '" height="5" fill="#4a2018"/><rect x="' + (x + w / 2 - 7) + '" y="' + (y - 16) + '" width="14" height="11" fill="#5a3a2a"/>' +
+        windows(x + 4, y + 20, 2, 13, 12, 14, 7, 8, "#ffe6a8", "#2a2030") + windows(x + w - wing + 4, y + 20, 2, 13, 12, 14, 7, 8, "#ffe6a8", "#2a2030") +
+        windows(x + wing + 6, y + 8, Math.floor((w - 2 * wing - 8) / 14), 14, 14, 14, 8, 8, "#ffe6a8", "#2a2030");
+    };
+    return svg('<rect width="400" height="260" fill="url(#sk)"/>' + stars(16) + '<circle cx="200" cy="26" r="11" fill="#fff3c4"/>' +
+      tw(-20, 34, 130, "#9a4a34") + tw(140, 22, 120, "#a8543a") + tw(292, 40, 128, "#9a4a34") +
+      '<rect x="0" y="222" width="400" height="38" fill="#5a5a52"/><rect x="0" y="232" width="400" height="3" fill="#333"/>' +
+      [60, 340].map(x => '<rect x="' + (x - 2) + '" y="190" width="4" height="34" fill="#2b2f36"/><circle class="flk" cx="' + x + '" cy="188" r="5" fill="#ffe7a8"/>').join("") +
+      '<rect x="146" y="198" width="108" height="22" rx="2" fill="#3a4a2a" stroke="#d8cfc0" stroke-width="1.5"/>' + txt("MELROSE HOUSES", 200, 213, 11, "#f6efdc") +
+      '<rect x="0" y="244" width="400" height="16" fill="#2a2d33"/>' + tag("MELROSE", 16, 252, 24, "#c9a4ff", -3) + txt("COURTLANDT AV · E 156 ST", 300, 256, 11, "#ff9a3d"),
+      sky("sk", "#0d1022", "#3a2a4a"));
+  }
+  /* 4. Lincoln Hospital at E 149 St and Morris Av: the big brick-and-glass block, an ambulance pulling into the bay, lights spinning */
+  function lincoln() {
+    let bands = ""; for (let y = 54; y < 170; y += 22) bands += '<rect x="40" y="' + y + '" width="320" height="10" fill="#2a4a5e"/><rect x="40" y="' + y + '" width="320" height="2" fill="#7fb0d0" opacity=".6"/>';
+    const amb = '<g class="slide slw" style="animation-delay:-7s"><rect x="0" y="196" width="78" height="34" rx="3" fill="#f6f6f2"/><rect x="58" y="204" width="20" height="14" fill="#cfe6ff"/><rect x="0" y="214" width="78" height="5" fill="#d7263d"/>' +
+      '<path d="M24 202h10v4h4v8h-4v4h-10v-4h-4v-8h4z" fill="#2f6fd6"/><rect class="blk" x="6" y="190" width="10" height="6" fill="#ff3030"/><rect class="blk b3" x="56" y="190" width="10" height="6" fill="#2f6fd6"/>' +
+      '<circle cx="16" cy="232" r="6" fill="#111"/><circle cx="62" cy="232" r="6" fill="#111"/></g>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/><circle cx="350" cy="30" r="14" fill="#fff3c4"/>' +
+      brick(40, 34, 320, 150, "#a8643e", "#b8744c") + '<rect x="40" y="28" width="320" height="8" fill="#6a3a24"/>' + bands +
+      '<rect x="150" y="10" width="100" height="26" fill="#9a5a38"/>' + windows(158, 16, 6, 1, 15, 10, 9, 8, "#cfe6ff", "#2a4a5e") +
+      '<rect x="110" y="40" width="180" height="20" rx="2" fill="#f6efdc"/>' + txt("LINCOLN HOSPITAL", 200, 55, 13, "#1d3a5e") +
+      /* the emergency bay */
+      '<rect x="40" y="184" width="320" height="10" fill="#4a4e56"/><rect x="230" y="166" width="120" height="20" fill="#d7263d"/>' + txt("EMERGENCY", 290, 181, 12, "#fff") +
+      '<rect x="244" y="194" width="92" height="40" fill="#1a2a3a"/><rect class="pls" x="250" y="198" width="80" height="30" fill="#cfe6ff" opacity=".4"/>' +
+      '<rect x="0" y="234" width="400" height="26" fill="#2a2d33"/><path d="M0 244h400" stroke="#fff" stroke-width="2" stroke-dasharray="6 10"/>' + amb +
+      '<rect x="0" y="194" width="40" height="40" fill="#a9a398"/>' +
+      tag("LOVEE", 60, 176, 30, "#c9a4ff", -5) + txt("E 149 ST & MORRIS AV · MELROSE", 200, 257, 11, "#f6efdc"),
+      sky("sk", "#7fb0e0", "#f2d6b0"));
+  }
+
   window.SCENES = {
-    station: function () { return underStation({name:"3 Av-149 St", lines:[["2","#ee352e"],["5","#00933c"]], tile:["#c9a4ff","#5a3a7a","#3a2a5a"], tag:["LOVEE","#c9a4ff"]}); },
-    hub: function () { return hub({c1:"#c9a4ff", c2:"#ff9a3d", tag:["THE HUB","#ff9a3d"]}); },
-    houses: function () { return towers({tag:["MELROSE","#c9a4ff"]}); },
-    park: function () { return park({c1:"#c9a4ff", court:"#5a3a7a", tag:["ST MARY'S","#ff9a3d"]}); },
+    station: function () { return melroseStation(); },
+    hub: function () { return casita(); },
+    houses: function () { return melroseHouses(); },
+    park: function () { return lincoln(); },
     corner: function () { return corner({s1:"Courtlandt Av", s2:"E 156 St", tags:[["B-LOVEE","#c9a4ff",50],["MELROSE","#ff9a3d",28],["IYKYK","#7cf29a"],["ORANGE SODA","#f6efdc"]]}); }
   };
 })();

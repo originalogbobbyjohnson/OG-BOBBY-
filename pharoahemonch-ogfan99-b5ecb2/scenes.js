@@ -38,137 +38,140 @@
   const jet = '<g><path d="M0 10h44l10 -4h4l-6 6 6 6h-4l-10 -4H0z" fill="#e8eef4"/><path d="M18 10l-8 -12h6l14 12z" fill="#c9d3dc"/><path d="M18 14l-8 12h6l14 -12z" fill="#c9d3dc"/><circle class="flk" cx="2" cy="12" r="1.6" fill="#ff4a4a"/></g>';
   const GOLD = "#e8c547", RED = "#d6452f", BLUE = "#3fa7d6", CREAM = "#f3e6c8";
 
-  /* 1. The E pulling into Sutphin Blvd-Archer Av-JFK Airport, underground: tiled walls, steel columns, the E / J / Z */
+  /* 1. Sutphin Blvd-Archer Av-JFK Airport, looking down the platform: the E coming head-on out of the tunnel, the AirTrain JFK arrow, a SIMON SAYS wheatpaste and MONCH on the column */
   function train() {
     let tiles = "";
-    for (let y = 0; y < 104; y += 8) for (let x = (y / 8 % 2) * 6; x < 400; x += 12) tiles += '<rect x="' + x + '" y="' + y + '" width="11" height="7" fill="#e9e4d6"/>';
-    let windows = "";
-    for (let x = 18; x < 250; x += 46) windows += '<rect x="' + x + '" y="118" width="30" height="22" rx="3" fill="#ffe9b0" opacity=".85"/>';
-    let cols = "";
-    for (let x = 30; x < 400; x += 90) cols += '<rect x="' + x + '" y="178" width="10" height="82" fill="#25313d"/><rect x="' + (x - 3) + '" y="178" width="16" height="5" fill="#1a232c"/>';
+    for (let y = 40; y < 150; y += 9) tiles += '<path d="M0 ' + y + 'h400" stroke="#cfc7b4" stroke-width="1"/>';
     return svg(
-      '<rect width="400" height="260" fill="#b8b2a2"/>' + tiles +
-      '<rect x="0" y="80" width="400" height="10" fill="#7a5c9a"/><rect x="0" y="90" width="400" height="3" fill="' + GOLD + '"/>' +
-      '<rect x="0" y="0" width="400" height="14" fill="#3a3a3a"/>' +
-      '<g class="flk"><rect x="60" y="14" width="90" height="4" rx="2" fill="#fff7d6"/></g><g class="flk flk2"><rect x="250" y="14" width="90" height="4" rx="2" fill="#fff7d6"/></g>' +
+      '<style>@keyframes come{0%{transform:scale(.25);opacity:.2}70%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.come{transform-box:fill-box;transform-origin:50% 60%;animation:come 4s ease-out infinite}' +
+      '@keyframes hl{0%,100%{opacity:.5}50%{opacity:1}}.hl{animation:hl 1s infinite}</style>' +
+      '<rect width="400" height="260" fill="#ddd5c2"/>' + tiles +
+      '<rect x="0" y="0" width="400" height="30" fill="#2c2f33"/>' +
+      '<g class="flk"><rect x="40" y="26" width="110" height="4" rx="2" fill="#fff7d6"/></g><g class="flk flk2"><rect x="250" y="26" width="110" height="4" rx="2" fill="#fff7d6"/></g>' +
+      /* tunnel mouth in perspective */
+      '<path d="M120 60h160v130H120z" fill="#15171a"/><path d="M0 30L120 60M400 30L280 60M0 260L120 190M400 260L280 190" stroke="#8a8270" stroke-width="2"/>' +
+      '<path d="M120 190L0 260h400L280 190z" fill="#4a4844"/><path d="M150 190L60 260M250 190L340 260" stroke="#eab308" stroke-width="5"/>' +
+      '<path d="M175 190l-30 70M225 190l30 70" stroke="#7a7066" stroke-width="3"/>' +
+      /* the E, head-on, growing as it comes in */
+      '<g class="come"><rect x="160" y="96" width="80" height="92" rx="10" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
+      '<rect x="172" y="106" width="56" height="30" rx="3" fill="#2a3a52"/><rect x="190" y="140" width="20" height="40" fill="#9aa2ac"/>' +
+      '<circle class="hl" cx="174" cy="176" r="5" fill="#fff6c2"/><circle class="hl" cx="226" cy="176" r="5" fill="#fff6c2"/>' +
+      bullet(200, 121, "E", "#0039a6") + '</g>' +
       /* station sign */
-      '<rect x="22" y="30" width="356" height="34" rx="4" fill="#111"/><rect x="22" y="30" width="356" height="4" fill="#fff"/>' +
-      '<text x="32" y="55" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="13.5" fill="#fff">Sutphin Blvd-Archer Av-JFK Airport</text>' +
-      bullet(300, 48, "E", "#0039a6") + bullet(326, 48, "J", "#996633") + bullet(352, 48, "Z", "#996633") +
-      /* train */
-      '<rect x="0" y="100" width="400" height="6" fill="#2a2a2a"/>' +
-      '<g class="anim-train">' +
-        '<rect x="8" y="106" width="300" height="62" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="148" width="300" height="5" fill="#0039a6"/>' + windows +
-        '<circle cx="300" cy="160" r="4" fill="#fff6c2"/>' + bullet(296, 126, "E", "#0039a6") +
-      '</g>' +
-      /* platform */
-      '<rect x="0" y="170" width="400" height="8" fill="#eab308"/><rect x="0" y="178" width="400" height="82" fill="#4a4844"/>' + cols +
-      '<path d="M0 252h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
-      tag("O.K.", 70, 236, 34, GOLD, -5) + tag("MONCH", 206, 240, 32, RED, -7),
+      '<rect x="10" y="38" width="380" height="20" rx="3" fill="#111"/><rect x="10" y="38" width="380" height="3" fill="#fff"/>' +
+      '<text x="18" y="54" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11.5" fill="#fff">Sutphin Blvd-Archer Av-JFK Airport</text>' +
+      '<circle cx="330" cy="49" r="8" fill="#0039a6"/><text x="330" y="53" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">E</text>' +
+      '<circle cx="350" cy="49" r="8" fill="#996633"/><text x="350" y="53" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">J</text>' +
+      '<circle cx="370" cy="49" r="8" fill="#996633"/><text x="370" y="53" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">Z</text>' +
+      /* AirTrain JFK wayfinding arrow on the left wall */
+      '<rect x="14" y="70" width="92" height="26" rx="3" fill="#111"/><path d="M22 83h14M30 77l6 6-6 6" stroke="#fff" stroke-width="2.5" fill="none"/>' +
+      '<text x="42" y="81" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">AirTrain</text><text x="42" y="91" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">JFK</text>' +
+      /* wheatpaste poster on the right wall */
+      '<g transform="rotate(3 340 120)"><rect x="296" y="70" width="88" height="96" fill="#111"/><rect x="300" y="74" width="80" height="88" fill="' + RED + '"/>' +
+      '<text x="340" y="100" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="20" fill="#111">SIMON</text><text x="340" y="122" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="20" fill="#111">SAYS</text>' +
+      '<text x="340" y="140" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="' + CREAM + '">PHAROAHE MONCH</text><text x="340" y="153" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7" fill="' + CREAM + '">RAWKUS · 1999</text></g>' +
+      /* column with the tag */
+      '<rect x="40" y="110" width="26" height="150" fill="#25313d"/><rect x="36" y="108" width="34" height="6" fill="#1a232c"/>' +
+      tag("MONCH", 6, 214, 30, GOLD, -8) + tag("O.K.", 300, 234, 30, BLUE, -6),
       "");
   }
 
-  /* 2. AirTrain JFK over Archer Av at the Jamaica station: grey concrete guideway, the glass hall, a jet climbing out of JFK */
+  /* 2. High School of Art and Design, Midtown: where Pharoahe met Prince Po and Organized Konfusion started. Glass and terracotta front, sketchbooks in the window */
   function airtrain() {
-    let piers = "";
-    for (let x = 20; x < 400; x += 80) piers += '<path d="M' + (x - 8) + ' 260v-96h16v96z" fill="#9aa1a8"/><path d="M' + (x - 18) + ' 164h36l-6 -10h-24z" fill="#8a9198"/>';
-    let city = "";
-    [[0, 90, 50], [54, 110, 40], [300, 96, 46], [350, 120, 50]].forEach(b => {
-      city += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (200 - b[1]) + '" fill="#3c3550"/>';
-      for (let y = b[1] + 8; y < 150; y += 12) for (let x = b[0] + 6; x < b[0] + b[2] - 6; x += 12) city += '<rect x="' + x + '" y="' + y + '" width="6" height="6" fill="' + ((x + y) % 4 ? "#262033" : "#ffd98a") + '"/>';
-    });
-    let glass = "";
-    for (let x = 112; x < 290; x += 14) glass += '<path d="M' + x + ' 96v58" stroke="#c9e6f2" stroke-width="1" opacity=".6"/>';
-    let car = "";
-    for (let i = 0; i < 2; i++) car += '<rect x="' + (i * 112) + '" y="124" width="106" height="30" rx="8" fill="#eef2f5" stroke="#7a8590" stroke-width="1.5"/><rect x="' + (i * 112 + 8) + '" y="130" width="90" height="10" rx="3" fill="#2a3a52"/><rect x="' + (i * 112) + '" y="144" width="106" height="4" fill="#1f5fa8"/>';
+    let mull = "";
+    for (let x = 96; x < 304; x += 16) mull += '<path d="M' + x + ' 70v110" stroke="#dcecf2" stroke-width="1.2" opacity=".8"/>';
+    for (let y = 86; y < 180; y += 22) mull += '<path d="M90 ' + y + 'h214" stroke="#dcecf2" stroke-width="1.2" opacity=".8"/>';
+    let terra = "";
+    for (let y = 30; y < 200; y += 12) terra += '<path d="M20 ' + y + 'h66M308 ' + y + 'h72" stroke="#a24f2e" stroke-width="1"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g2)"/>' +
-      '<g class="cld"><ellipse cx="0" cy="40" rx="44" ry="8" fill="#fff" opacity=".35"/></g><g class="cld cld2"><ellipse cx="0" cy="70" rx="34" ry="6" fill="#fff" opacity=".3"/></g>' +
-      '<g class="plane" transform="translate(0,30)">' + jet + '</g>' + city +
-      /* the glass hall of the Jamaica AirTrain station */
-      '<path d="M104 96q96 -40 192 0v104H104z" fill="#7fb6cc" opacity=".55"/>' + glass + '<path d="M104 96q96 -40 192 0" stroke="#dfeef5" stroke-width="3" fill="none"/>' +
-      /* guideway */
-      '<rect x="0" y="154" width="400" height="12" fill="#b4bac0"/><rect x="0" y="166" width="400" height="4" fill="#7a8188"/>' + piers +
-      '<g class="air">' + car + '</g>' +
-      /* Archer Av below */
-      '<rect x="0" y="222" width="400" height="38" fill="#2e3136"/><path d="M0 242h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
-      '<g class="car"><rect x="0" y="226" width="44" height="14" rx="4" fill="#f2c14e"/><circle cx="10" cy="242" r="4" fill="#111"/><circle cx="34" cy="242" r="4" fill="#111"/></g>' +
-      sign(8, 8, 96, "Archer Av") + sign(292, 8, 100, "Sutphin Blvd"),
-      sky("g2", "#1a2f5a", "#e89a6a"));
+      '<g class="cld"><ellipse cx="0" cy="18" rx="44" ry="7" fill="#fff" opacity=".5"/></g>' +
+      /* terracotta side piers + glass center */
+      '<rect x="20" y="24" width="66" height="176" fill="#c4683f"/><rect x="308" y="24" width="72" height="176" fill="#c4683f"/>' + terra +
+      '<rect x="86" y="40" width="222" height="160" fill="#5f97b0"/><path d="M86 40l222 0v40L86 120z" fill="#bfe0ec" opacity=".35"/>' + mull +
+      '<rect x="86" y="50" width="222" height="16" fill="#2a2d33"/>' +
+      '<text x="197" y="62" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9.5" fill="#fff" letter-spacing=".5">HIGH SCHOOL OF ART AND DESIGN</text>' +
+      /* window display: easels + sketchbooks with doodles */
+      '<rect x="96" y="128" width="96" height="52" fill="#f2efe6" stroke="#2a2d33" stroke-width="2"/>' +
+      '<path d="M106 168q14 -26 28 -6t24 -14M168 140l12 24" stroke="#1a1a1a" stroke-width="2" fill="none"/>' + tag("O.K.", 150, 160, 16, RED, -8) +
+      '<rect x="204" y="124" width="92" height="56" fill="#f8e9b8" stroke="#2a2d33" stroke-width="2"/><path d="M250 124v56" stroke="#2a2d33" stroke-width="1.5"/>' +
+      '<text x="227" y="146" text-anchor="middle" font-family="Sedgwick Ave Display, cursive" font-size="13" fill="#1a1a1a">rhyme</text><text x="227" y="162" text-anchor="middle" font-family="Sedgwick Ave Display, cursive" font-size="13" fill="#1a1a1a">book</text>' +
+      '<path d="M258 140h30M258 150h26M258 160h30M258 170h20" stroke="#3a3a3a" stroke-width="1.5"/>' +
+      /* a pencil scribbling on the pad */
+      '<g class="swim"><path d="M262 120l18 -26 4 3 -18 26z" fill="' + GOLD + '"/><path d="M262 120l-2 6 6 -3z" fill="#3a2a1a"/></g>' +
+      /* sidewalk + kids with portfolios walking in */
+      '<rect x="0" y="200" width="400" height="60" fill="#8a8a86"/><rect x="0" y="200" width="400" height="5" fill="#bdbdb8"/>' +
+      '<g class="car" style="animation-duration:12s"><rect x="0" y="210" width="10" height="28" rx="4" fill="#3a2f5a"/><circle cx="5" cy="205" r="6" fill="#4a3424"/><rect x="10" y="218" width="16" height="12" fill="' + BLUE + '"/></g>' +
+      '<g class="car car2" style="animation-duration:12s"><rect x="0" y="212" width="10" height="26" rx="4" fill="#7a2a2a"/><circle cx="5" cy="207" r="6" fill="#2a1a10"/><rect x="-14" y="220" width="14" height="10" fill="' + GOLD + '"/></g>' +
+      sign(8, 8, 74, "2 Av") + sign(318, 8, 74, "E 56 St") + tag("ORGANIZED KONFUSION", 100, 252, 20, GOLD, -3),
+      sky("g2", "#6aa6d8", "#e6f0f4"));
   }
 
-  /* 3. King Manor in Rufus King Park on Jamaica Av: pale yellow clapboard, white trim, gambrel roof, two chimneys, columned porch */
+  /* 3. Rochdale Village, South Jamaica: the tall brick co-op towers on the old Jamaica Racetrack ground, a horse weathervane for the track that was */
   function kingmanor() {
-    let clap = "";
-    for (let y = 104; y < 200; y += 6) clap += '<path d="M90 ' + y + 'h220" stroke="#d9c27a" stroke-width="1"/>';
-    let wins = "";
-    [110, 150, 230, 270].forEach(x => [112, 156].forEach(y => { wins += '<rect x="' + x + '" y="' + y + '" width="20" height="28" fill="#2a3440" stroke="#fff" stroke-width="3"/><path d="M' + (x + 10) + ' ' + y + 'v28M' + x + ' ' + (y + 14) + 'h20" stroke="#fff" stroke-width="1.5"/><rect x="' + (x - 6) + '" y="' + y + '" width="5" height="28" fill="#2f4a3a"/><rect x="' + (x + 21) + '" y="' + y + '" width="5" height="28" fill="#2f4a3a"/>'; }));
-    const tree = (x, y, r, c) => '<rect x="' + (x - 4) + '" y="' + y + '" width="8" height="' + (210 - y) + '" fill="#4a3424"/><circle cx="' + x + '" cy="' + (y - r / 2) + '" r="' + r + '" fill="' + c + '"/>';
+    let towers = "";
+    [[18, 70, 60], [96, 44, 66], [180, 80, 58], [252, 52, 64], [330, 88, 56]].forEach((b, k) => {
+      const [x, y, w] = b;
+      towers += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (214 - y) + '" fill="' + (k % 2 ? "#9a4a32" : "#a8573a") + '"/><rect x="' + x + '" y="' + y + '" width="' + w + '" height="6" fill="#d9cfc0"/>';
+      for (let yy = y + 14; yy < 200; yy += 13) for (let xx = x + 6; xx < x + w - 8; xx += 11) towers += '<rect ' + (((xx * 7 + yy) % 9 === 0) ? 'class="flk" ' : '') + 'x="' + xx + '" y="' + yy + '" width="6" height="7" fill="' + (((xx + yy) % 5 === 0) ? "#ffd98a" : "#2e2a33") + '"/>';
+    });
     return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' +
-      '<circle cx="340" cy="40" r="20" fill="#fff2c0" opacity=".9"/>' +
-      '<g class="cld"><ellipse cx="0" cy="34" rx="44" ry="8" fill="#fff" opacity=".6"/></g>' +
-      tree(40, 110, 34, "#3f7a3a") + tree(372, 120, 30, "#4a8a40") +
-      /* gambrel roof + chimneys */
-      '<rect x="120" y="44" width="14" height="40" fill="#8a3a2a"/><rect x="266" y="44" width="14" height="40" fill="#8a3a2a"/>' +
-      '<path d="M82 102l20 -30 40 -14h116l40 14 20 30z" fill="#4a4a50"/><path d="M82 102h236" stroke="#fff" stroke-width="4"/>' +
-      '<rect x="176" y="62" width="48" height="26" fill="#efdc9a" stroke="#fff" stroke-width="3"/><rect x="190" y="66" width="20" height="20" fill="#2a3440" stroke="#fff" stroke-width="2"/>' +
-      /* body */
-      '<rect x="90" y="102" width="220" height="98" fill="#efdc9a"/>' + clap + wins +
-      '<rect x="88" y="102" width="5" height="98" fill="#fff"/><rect x="307" y="102" width="5" height="98" fill="#fff"/>' +
-      /* porch with columns */
-      '<path d="M170 132h60l-30 -14z" fill="#fff"/><rect x="170" y="132" width="60" height="5" fill="#fff"/>' +
-      '<rect x="174" y="137" width="5" height="63" fill="#fff"/><rect x="221" y="137" width="5" height="63" fill="#fff"/>' +
-      '<rect x="190" y="150" width="20" height="50" fill="#2f4a3a" stroke="#fff" stroke-width="2"/>' +
-      '<path d="M160 200h80l6 8H154z" fill="#c9c4b8"/>' +
-      /* lawn + iron fence + path */
-      '<rect x="0" y="208" width="400" height="52" fill="#4f8a3e"/><path d="M190 208l-20 52h60l-20 -52z" fill="#c9b98a"/>' +
-      (function () { let f = ""; for (let x = 0; x < 400; x += 9) if (x < 165 || x > 235) f += '<path d="M' + x + ' 238v-16" stroke="#1a1c20" stroke-width="2"/>'; return f; })() +
-      '<path d="M0 224h165M235 224h165" stroke="#1a1c20" stroke-width="2"/>' +
-      '<path class="leaf" d="M60 0q6 -6 12 0q-6 6 -12 0z" fill="#e0792a"/><path class="leaf leaf2" d="M260 0q6 -6 12 0q-6 6 -12 0z" fill="' + GOLD + '"/><path class="leaf leaf3" d="M330 0q6 -6 12 0q-6 6 -12 0z" fill="#c4401c"/>' +
-      sign(8, 8, 104, "Jamaica Av"),
-      sky("g3", "#4a86c8", "#cfe6f2"));
+      '<rect width="400" height="260" fill="url(#g3)"/>' + stars(12) +
+      '<g class="cld"><ellipse cx="0" cy="30" rx="44" ry="7" fill="#fff" opacity=".25"/></g>' + towers +
+      /* the oval walking path and lawn where the racetrack was */
+      '<rect x="0" y="214" width="400" height="46" fill="#3f7a3a"/><ellipse cx="200" cy="238" rx="170" ry="16" fill="none" stroke="#c9b98a" stroke-width="5"/>' +
+      /* a horse running the old track, for the Jamaica Racetrack */
+      '<g class="car" style="animation-duration:9s"><path d="M0 230q4 -12 18 -12h12l6 -8 4 2 -2 8q4 4 2 10l-4 0 0 -4 -14 0 -4 8h-4l2 -8 -10 0 -4 8h-4z" fill="#2a1a10"/></g>' +
+      '<rect x="128" y="196" width="146" height="18" rx="3" fill="#1d2329"/>' +
+      '<text x="201" y="209" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10.5" fill="#fff" letter-spacing="1">ROCHDALE VILLAGE</text>' +
+      sign(8, 8, 108, "Guy R Brewer Blvd") + sign(290, 8, 102, "Baisley Blvd") + tag("MONCH", 300, 250, 22, GOLD, -5),
+      sky("g3", "#1c1838", "#d7774a"));
   }
 
-  /* 4. Baisley Pond Park, South Jamaica: the pond, ducks swimming, ripples, willows, a jet low on the JFK approach */
+  /* 4. Album world, Internal Affairs (1999): the Simon Says movie-poster city, a crowd with hands up, the big W.A.R. banner */
   function baisley() {
+    let city = "";
+    [[0, 60, 46], [50, 90, 40], [94, 40, 50], [300, 70, 44], [348, 50, 52]].forEach(b => {
+      city += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (200 - b[1]) + '" fill="#1e1a24"/>';
+      for (let y = b[1] + 8; y < 190; y += 12) for (let x = b[0] + 6; x < b[0] + b[2] - 6; x += 10) city += '<rect x="' + x + '" y="' + y + '" width="5" height="6" fill="' + ((x + y) % 4 ? "#2c2633" : RED) + '"/>';
+    });
+    let crowd = "";
+    for (let x = 0; x < 410; x += 18) crowd += '<g class="' + (x % 36 ? "bob" : "bob bob2") + '"><circle cx="' + x + '" cy="' + (214 + (x % 3) * 3) + '" r="9" fill="#0d0b10"/><path d="M' + (x - 4) + ' ' + (210 + (x % 3) * 3) + 'l-6 -26M' + (x + 4) + ' ' + (210 + (x % 3) * 3) + 'l6 -24" stroke="#0d0b10" stroke-width="4" stroke-linecap="round"/></g>';
     return svg(
+      '<style>@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}.bob{animation:bob .9s ease-in-out infinite}.bob2{animation-delay:-.45s}' +
+      '@keyframes sweep{0%,100%{transform:rotate(-22deg)}50%{transform:rotate(22deg)}}.sw{transform-origin:200px 260px;animation:sweep 4s ease-in-out infinite}.sw2{animation-delay:-2s}</style>' +
       '<rect width="400" height="260" fill="url(#g4)"/>' +
-      '<circle cx="70" cy="50" r="22" fill="#ffb15c" opacity=".9"/>' +
-      '<g class="plane" transform="translate(0,40)">' + jet + '</g>' +
-      /* far tree line */
-      '<path d="M0 120q20 -26 40 -6q20 -30 46 -4q24 -24 50 0q26 -30 54 -2q24 -26 50 0q26 -28 52 -2q24 -24 52 0q26 -22 56 -2v24H0z" fill="#2f5a34"/>' +
-      '<rect x="0" y="126" width="400" height="10" fill="#5a8a44"/>' +
-      /* pond */
-      '<ellipse cx="200" cy="186" rx="210" ry="56" fill="#3f7fa0"/><ellipse cx="200" cy="180" rx="180" ry="40" fill="#5a9cbc" opacity=".6"/>' +
-      '<path d="M90 170h40M240 196h60M150 206h30" stroke="#cfe6f2" stroke-width="2" opacity=".6"/>' +
-      '<ellipse class="rip" cx="160" cy="186" rx="20" ry="5" fill="none" stroke="#e8f4fa" stroke-width="1.5"/><ellipse class="rip rip2" cx="260" cy="176" rx="20" ry="5" fill="none" stroke="#e8f4fa" stroke-width="1.5"/>' +
-      /* ducks */
-      '<g class="swim"><ellipse cx="140" cy="180" rx="12" ry="6" fill="#7a5a3a"/><circle cx="150" cy="172" r="5" fill="#2f6a3a"/><path d="M154 172l6 1-6 2z" fill="' + GOLD + '"/></g>' +
-      '<g class="swim swim2"><ellipse cx="230" cy="194" rx="12" ry="6" fill="#7a5a3a"/><circle cx="240" cy="186" r="5" fill="#2f6a3a"/><path d="M244 186l6 1-6 2z" fill="' + GOLD + '"/></g>' +
-      /* willow + reeds */
-      '<rect x="356" y="110" width="8" height="110" fill="#4a3424"/><path d="M360 110q-40 20 -36 90M360 110q-20 30 -14 96M360 110q20 30 16 96M360 110q40 20 34 90" stroke="#6a9a3a" stroke-width="6" fill="none"/>' +
-      '<path d="M10 240v-30M16 240v-36M22 240v-26M384 248v-30M390 248v-24" stroke="#4a7a2a" stroke-width="3"/>' +
-      '<rect x="0" y="236" width="400" height="24" fill="#4f8a3e"/>' +
-      sign(8, 8, 112, "Baisley Blvd") + tag("W.A.R.", 150, 252, 26, RED, -4),
-      sky("g4", "#3a2a5a", "#f0a870"));
+      '<path class="sw" d="M200 260L170 0h60z" fill="' + GOLD + '" opacity=".18"/><path class="sw sw2" d="M200 260L170 0h60z" fill="#fff" opacity=".12"/>' + city +
+      /* the big movie-poster banner across the middle */
+      '<rect x="140" y="30" width="160" height="150" fill="#0d0b10" stroke="' + GOLD + '" stroke-width="3"/>' +
+      '<text x="220" y="60" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="' + CREAM + '" letter-spacing="2">PHAROAHE MONCH</text>' +
+      '<text x="220" y="96" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="30" fill="' + RED + '">SIMON</text>' +
+      '<text x="220" y="128" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="30" fill="' + RED + '">SAYS</text>' +
+      '<text x="220" y="150" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="' + GOLD + '" letter-spacing="1">INTERNAL AFFAIRS</text>' +
+      '<text x="220" y="166" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#9a9aa2">NOW PLAYING · 1999</text>' +
+      /* hanging W.A.R. banner */
+      '<g class="flag"><rect x="22" y="100" width="100" height="40" fill="' + RED + '" stroke="#0d0b10" stroke-width="2"/><text x="72" y="130" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="26" fill="' + CREAM + '">W.A.R.</text></g>' +
+      '<path d="M22 100l-6 -20M122 100l6 -20" stroke="#888" stroke-width="1.5"/>' +
+      crowd + '<rect x="0" y="236" width="400" height="24" fill="#0d0b10"/>' +
+      tag("HANDS UP", 290, 252, 22, GOLD, -4),
+      sky("g4", "#120a18", "#4a1420"));
   }
 
-  /* 5. Guy R Brewer Blvd and Linden Blvd, South Jamaica: street signs, a corner store awning, the tag wall */
+  /* 5. Baisley Blvd and Guy R Brewer Blvd, South Jamaica: street signs, a wall by the bus stop with the tags */
   function corner() {
     return svg(
       '<rect width="400" height="260" fill="url(#g5)"/>' + stars(14) +
-      '<rect x="270" y="40" width="122" height="180" fill="#7a5a4a"/>' +
-      (function () { let w = ""; for (let y = 50; y < 160; y += 18) for (let x = 282; x < 380; x += 22) w += '<rect x="' + x + '" y="' + y + '" width="12" height="10" fill="' + ((x + y) % 3 ? "#2a1d17" : "#ffd98a") + '"/>'; return w; })() +
-      '<path d="M270 168h122l-8 14H278z" fill="' + RED + '"/><path d="M278 182h106" stroke="#fff" stroke-width="2" stroke-dasharray="8 6"/>' +
-      '<rect x="290" y="186" width="80" height="34" fill="#1d2329"/><rect class="flk" x="298" y="192" width="64" height="20" fill="#ffe7a8" opacity=".75"/>' +
-      '<rect x="14" y="110" width="236" height="110" fill="#2e2a2a"/>' +
-      tag("MONCH", 40, 172, 48, GOLD, -7) + tag("ORGANIZED KONFUSION", 24, 208, 19, BLUE, -3) +
+      '<rect x="270" y="40" width="122" height="180" fill="#6a5a6a"/>' +
+      (function () { let w = ""; for (let y = 50; y < 160; y += 18) for (let x = 282; x < 380; x += 22) w += '<rect x="' + x + '" y="' + y + '" width="12" height="10" fill="' + ((x + y) % 3 ? "#2a1d27" : "#ffd98a") + '"/>'; return w; })() +
+      /* Q bus stop flag */
+      '<rect x="380" y="150" width="3" height="70" fill="#9aa1a8"/><rect x="366" y="150" width="30" height="20" fill="#0039a6"/><text x="381" y="164" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">BUS</text>' +
+      '<rect x="14" y="110" width="236" height="110" fill="#3a3436"/>' +
+      tag("PHAROAHE", 26, 160, 34, GOLD, -7) + tag("MONCH", 120, 196, 36, RED, -6) + tag("W.A.R.", 30, 212, 18, BLUE, -3) +
       '<rect x="252" y="56" width="5" height="164" fill="#1d2329"/><path d="M254 58h26" stroke="#1d2329" stroke-width="5"/>' +
       '<path class="flk" d="M270 62h26l-6 8h-14z" fill="#ffe7a8"/>' +
-      sign(188, 64, 132, "Guy R Brewer Blvd") + sign(208, 86, 92, "Linden Blvd") +
-      '<rect x="0" y="220" width="400" height="40" fill="#14181d"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>',
+      sign(184, 64, 140, "Guy R Brewer Blvd") + sign(204, 86, 100, "Baisley Blvd") +
+      '<rect x="0" y="220" width="400" height="40" fill="#14181d"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="car"><rect x="0" y="224" width="46" height="14" rx="4" fill="#d6452f"/><circle cx="10" cy="240" r="4" fill="#111"/><circle cx="36" cy="240" r="4" fill="#111"/></g>',
       sky("g5", "#0c0a14", "#2a2040"));
   }
 

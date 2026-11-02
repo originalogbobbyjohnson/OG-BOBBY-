@@ -100,17 +100,28 @@
       sky("g2", "#1a2a5a", "#e8a07a"));
   }
 
-  /* 3. The arena show: the crowd jumping, the lights sweeping, CHIEF ROCKA on the big screen */
+  /* 3. Military Park on Broad St, a block from the Four Corners: Gutzon Borglum's big bronze Wars of America on its granite base, the park trees, the downtown towers behind */
   function arena() {
-    let crowd = ""; for (let i = 0; i < 22; i++) crowd += '<g class="hop' + (i % 2 ? " h2" : "") + '"><circle cx="' + (10 + i * 18) + '" cy="' + (220 + (i % 3) * 4) + '" r="8" fill="#0a0d14"/><path d="M' + (4 + i * 18) + ' ' + (212 + (i % 3) * 4) + 'l-4-16M' + (16 + i * 18) + ' ' + (212 + (i % 3) * 4) + 'l4-16" stroke="#0a0d14" stroke-width="3"/></g>';
-    return svg('<rect width="400" height="260" fill="#0a0f1c"/>' +
-      '<path d="M0 60q200-60 400 0v20H0z" fill="#1d2440"/>' + [40, 100, 160, 240, 300, 360].map((x, i) => '<circle class="blk' + ["", " b2", " b3"][i % 3] + '" cx="' + x + '" cy="' + (40 - Math.sin(x / 128) * 10) + '" r="4" fill="#ffe6a8"/>').join("") +
-      '<g opacity=".22"><path class="pls" d="M60 70l-50 150h100z" fill="' + CY + '"/><path class="pls p2" d="M340 70l50 150h-100z" fill="' + GOLD + '"/></g>' +
-      '<rect x="110" y="80" width="180" height="80" fill="#121a2c" stroke="' + CY + '" stroke-width="3"/>' + txt("CHIEF ROCKA", 200, 128, 26, CY) +
-      '<rect x="40" y="170" width="320" height="16" fill="#2b2b30"/>' + crowd +
-      '<rect x="0" y="236" width="400" height="24" fill="#0a0d14"/>' + tag("HERE COME THE LORDS", 60, 254, 20, GOLD, -2), "");
+    /* the bronze group: a crowd of small figures around a rearing horse, all dark patinated bronze, no faces */
+    const BZ = "#3e4a3a", BZ2 = "#55634c";
+    let figs = "";
+    for (let i = 0; i < 18; i++) { const x = 92 + i * 12 + (i % 2) * 3, h = 26 + (i * 7) % 14; figs += '<path d="M' + x + ' 170v-' + h + 'q5-6 10 0v' + h + 'z" fill="' + (i % 3 ? BZ : BZ2) + '"/><circle cx="' + (x + 5) + '" cy="' + (166 - h) + '" r="4" fill="' + BZ + '"/>'; }
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      bldg(0, 30, 70, 150, "#5a5a6a", "#ffe6a8") + bldg(320, 20, 80, 160, "#6a5a4a", "#ffe6a8") + bldg(70, 60, 60, 120, "#7a6a5a", "#ffe6a8") + bldg(270, 50, 50, 130, "#4a4a5a", "#ffe6a8") +
+      tree(24, 150, 1.6, "#2f7a3a") + tree(376, 146, 1.8, "#3a8a3a") + tree(120, 140, 1.3, "#2f7a3a") + tree(290, 138, 1.4, "#2f7a3a") +
+      '<rect x="0" y="176" width="400" height="60" fill="#4f8a3a"/>' +
+      /* granite base */
+      '<path d="M70 196h260l-10-26H80z" fill="#9a958c"/><rect x="60" y="196" width="280" height="14" fill="#8a857c"/>' +
+      figs +
+      /* the rearing horse at the center */
+      '<path d="M186 140l10-30 8-8 6 4-4 10 14 4 10 20-6 2-8-10-10 4-2 28h-8l-2-20-6 4z" fill="' + BZ + '"/>' +
+      '<path d="M200 102l-4-8" stroke="' + BZ + '" stroke-width="3"/>' +
+      '<rect x="120" y="198" width="160" height="10" fill="#7a756c"/>' + txt("WARS OF AMERICA", 200, 206, 8, "#e8e4d8") +
+      '<g class="fly"><path d="M0 60q6-6 12 0q6-6 12 0" stroke="#222" stroke-width="2" fill="none"/></g>' +
+      '<rect x="0" y="236" width="400" height="24" fill="#2a2d33"/>' + auto(0, 232, CY, "slideL") +
+      txt("MILITARY PARK · BROAD ST, NEWARK", 200, 16, 12, "#1a1a22") + tag("BRICK CITY", 10, 230, 20, GOLD, -3),
+      sky("g3", "#8fc3ea", "#f6e7c6"));
   }
-
   /* 4. Downtown Newark at dusk: the tall art deco tower with its pyramid crown, traffic on Broad St */
   function downtown() {
     return svg('<rect width="400" height="260" fill="url(#g4)"/>' + stars(10) +

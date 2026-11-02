@@ -65,29 +65,35 @@
       tag("MOE DEE", 36, 242, 32, GOLD, -5) + tag("TREACHEROUS 3", 200, 238, 22, RED, -3));
   }
 
-  /* 2. The Apollo Theater on 125th St: the tall red vertical sign with chasing bulbs, the marquee, the cream facade */
+  /* 2. Bobby's Happy House on 125th St at Frederick Douglass Blvd: Bobby Robinson's record shop, home of Enjoy Records, the label that put out the Treacherous Three. Red sign, records in the window, the music spilling out */
   function apollo() {
-    let bulbs = "";
-    for (let y = 30; y < 160; y += 10) bulbs += '<circle class="bulb' + ((y / 10) % 2 ? " bulb2" : "") + '" cx="180" cy="' + y + '" r="2" fill="#ffe27a"/><circle class="bulb' + ((y / 10) % 2 ? "" : " bulb2") + '" cx="220" cy="' + y + '" r="2" fill="#ffe27a"/>';
-    let mbulbs = "";
-    for (let x = 96; x < 306; x += 10) mbulbs += '<circle class="bulb' + ((x / 10) % 2 ? " bulb2" : "") + '" cx="' + x + '" cy="164" r="2" fill="#ffe27a"/>';
-    const letters = "APOLLO".split("").map((c, i) => '<text x="200" y="' + (52 + i * 20) + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="19" fill="#fff">' + c + '</text>').join("");
-    let wins = "";
-    for (let x = 40; x < 380; x += 34) if (x < 150 || x > 250) for (let y = 60; y < 150; y += 30) wins += '<rect x="' + x + '" y="' + y + '" width="18" height="20" fill="' + ((x + y) % 3 ? "#3a3040" : "#ffd88a") + '"/>';
+    const rec = (x, y, col) => '<circle cx="' + x + '" cy="' + y + '" r="16" fill="#111"/><circle cx="' + x + '" cy="' + y + '" r="11" fill="none" stroke="#2a2a2a" stroke-width="1.5"/><circle cx="' + x + '" cy="' + y + '" r="5" fill="' + col + '"/>';
+    let bricks = "";
+    for (let y = 30; y < 200; y += 8) bricks += '<path d="M0 ' + y + 'h400" stroke="#6e3a2a" stroke-width="1"/>';
+    let notes = "";
+    [[150, ""], [200, " n2"], [250, " n3"]].forEach(([x, c]) => notes += '<text class="nt' + c + '" x="' + x + '" y="216" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="' + GOLD + '">♪</text>');
     return svg(
-      '<rect width="400" height="260" fill="url(#ga)"/>' + stars(12) +
-      '<rect x="24" y="44" width="352" height="166" fill="#e8dcc4"/><rect x="24" y="44" width="352" height="6" fill="#c9b893"/>' + wins +
-      /* vertical sign */
-      '<rect x="172" y="18" width="56" height="148" rx="4" fill="#c8102e" stroke="#7a0a1a" stroke-width="2"/>' + letters + bulbs +
-      /* marquee */
-      '<path d="M86 166h228l-14 30H100z" fill="#c8102e" stroke="#7a0a1a" stroke-width="2"/>' +
-      '<rect x="104" y="172" width="192" height="18" fill="#fff8e0"/>' +
-      '<text x="200" y="185.5" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="13" fill="#1a1a1a" letter-spacing="2">AMATEUR NIGHT</text>' + mbulbs +
-      '<rect x="150" y="196" width="100" height="14" fill="#2a1a1a"/>' +
-      '<rect x="0" y="210" width="400" height="50" fill="#1c1f24"/><path d="M0 236h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
-      '<g class="car"><rect x="0" y="218" width="54" height="16" rx="4" fill="' + CYAN + '"/><rect x="10" y="210" width="30" height="10" rx="3" fill="#2a7d88"/><circle cx="12" cy="236" r="5" fill="#111"/><circle cx="42" cy="236" r="5" fill="#111"/></g>' +
-      '<text x="200" y="256" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" fill="#cfc6b0" letter-spacing="2">W 125 ST</text>',
-      sky("ga", "#0e1230", "#5a2a4a"));
+      '<style>@keyframes nt{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-50px);opacity:0}}.nt{animation:nt 2.6s linear infinite}.n2{animation-delay:-.9s}.n3{animation-delay:-1.8s}' +
+      '@keyframes spin{to{transform:rotate(360deg)}}.spn{transform-box:fill-box;transform-origin:center;animation:spin 1.6s linear infinite}</style>' +
+      '<rect width="400" height="260" fill="url(#g2)"/>' +
+      '<rect x="0" y="26" width="400" height="180" fill="#8a4632"/>' + bricks +
+      '<rect x="40" y="40" width="40" height="40" fill="#2a2030"/><rect x="180" y="40" width="40" height="40" fill="#ffd98a" opacity=".7"/><rect x="320" y="40" width="40" height="40" fill="#2a2030"/>' +
+      /* the red storefront sign */
+      '<rect x="30" y="92" width="340" height="36" fill="#c4161c" stroke="#fff" stroke-width="2"/>' +
+      '<text x="200" y="117" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="22" fill="#fff" letter-spacing="1">BOBBY\'S HAPPY HOUSE</text>' +
+      /* the window full of records and 45s */
+      '<rect x="30" y="134" width="210" height="72" fill="#1d2329"/><rect x="30" y="134" width="210" height="72" fill="#ffd98a" opacity=".22"/>' +
+      '<g class="spn">' + rec(64, 168, RED) + '</g>' + rec(108, 168, GOLD) + '<g class="spn">' + rec(152, 168, CYAN) + '</g>' + rec(196, 168, "#fff") +
+      '<rect x="44" y="188" width="80" height="14" fill="' + GOLD + '"/><text x="84" y="198.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#111">ENJOY RECORDS</text>' +
+      '<rect x="252" y="134" width="40" height="72" fill="#2a1a12"/><rect x="258" y="140" width="28" height="40" fill="#ffd98a" opacity=".5"/>' +
+      '<rect x="300" y="134" width="70" height="72" fill="#1d2329"/><rect x="306" y="140" width="58" height="60" fill="#ffd98a" opacity=".25"/>' +
+      '<text x="335" y="166" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">RECORDS</text><text x="335" y="178" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">45s · LPs</text>' +
+      notes +
+      '<rect x="0" y="206" width="400" height="54" fill="#3a3a40"/><rect x="0" y="206" width="400" height="5" fill="#9a9a96"/>' +
+      '<rect x="8" y="8" width="84" height="16" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="50" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">W 125 St</text>' +
+      '<rect x="248" y="8" width="144" height="16" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="320" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">Frederick Douglass Blvd</text>' +
+      tag("TREACHEROUS 3", 20, 246, 24, GOLD, -4) + tag("MOE DEE", 270, 248, 24, RED, -6),
+      sky("g2", "#7fb3e0", "#f6d9a6"));
   }
 
   /* 3. Harlem World, 116th & Lenox, Christmas 1981: the battle stage, two mics, spotlights sweeping, the crowd jumping */
@@ -114,25 +120,33 @@
       "");
   }
 
-  /* 4. Rucker Park on 155th St and 8th Av: the blacktop, the chain-link fence, the Polo Grounds towers behind, a ball bouncing */
+  /* 4. Album world, Knowledge Is King (1989): the gold throne and crown in front of the Harlem skyline, a white limo gliding past, spotlights sweeping */
   function rucker() {
-    let fence = "";
-    for (let x = 0; x < 400; x += 10) fence += '<path d="M' + x + ' 100l10 60M' + (x + 10) + ' 100l-10 60" stroke="#6c7480" stroke-width=".8"/>';
-    const tower = (x, h) => { let s = '<rect x="' + x + '" y="' + (120 - h) + '" width="44" height="' + h + '" fill="#8a4a3a"/>'; for (let y = 126 - h; y < 116; y += 10) for (let wx = x + 5; wx < x + 40; wx += 9) s += '<rect x="' + wx + '" y="' + y + '" width="5" height="5" fill="' + ((wx + y) % 4 ? "#3a2420" : "#ffd88a") + '"/>'; return s; };
+    let city = "";
+    [[0, 110, 44], [48, 80, 40], [92, 120, 36], [270, 100, 40], [314, 76, 46], [364, 116, 36]].forEach(b => {
+      city += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (210 - b[1]) + '" fill="#1c1630"/>';
+      for (let y = b[1] + 8; y < 200; y += 12) for (let x = b[0] + 6; x < b[0] + b[2] - 6; x += 10) city += '<rect x="' + x + '" y="' + y + '" width="5" height="6" fill="' + ((x + y) % 4 ? "#2a2440" : GOLD) + '"/>';
+    });
     return svg(
-      '<rect width="400" height="260" fill="url(#gr)"/>' +
-      tower(30, 92) + tower(110, 100) + tower(250, 96) + tower(330, 88) +
-      '<rect x="0" y="100" width="400" height="60" fill="none"/>' + fence + '<path d="M0 100h400" stroke="#6c7480" stroke-width="3"/>' +
-      '<rect x="0" y="160" width="400" height="100" fill="#3f6b8a"/>' +
-      '<path d="M200 160v100M120 260a80 50 0 0 1 160 0" stroke="#fff" stroke-width="2.5" fill="none"/>' +
-      /* hoop */
-      '<rect x="40" y="110" width="5" height="90" fill="#222"/><rect x="26" y="96" width="44" height="30" fill="#fff" stroke="#222" stroke-width="2"/><rect x="40" y="106" width="16" height="12" fill="none" stroke="' + RED + '" stroke-width="2"/>' +
-      '<ellipse cx="60" cy="128" rx="10" ry="3" fill="none" stroke="' + RED + '" stroke-width="2.5"/>' +
-      '<g class="ball"><circle cx="190" cy="196" r="9" fill="#e07a2a" stroke="#6b3410" stroke-width="1.5"/><path d="M181 196h18M190 187v18" stroke="#6b3410" stroke-width="1"/></g>' +
-      '<rect x="260" y="168" width="120" height="22" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
-      '<text x="320" y="183" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">Holcombe Rucker Park</text>' +
-      tag("HARLEM", 240, 236, 26, GOLD, -4),
-      sky("gr", "#2c5d8a", "#f2a65a"));
+      '<style>@keyframes limo{from{transform:translateX(-170px)}to{transform:translateX(480px)}}.limo{animation:limo 8s linear infinite}' +
+      '@keyframes gl{0%,100%{opacity:.4}50%{opacity:1}}.gl{animation:gl 1.6s ease-in-out infinite}</style>' +
+      '<rect width="400" height="260" fill="url(#g4)"/>' + stars(20) +
+      '<path class="beam" d="M120 0l-20 200h40z" fill="#fff" opacity=".1"/><path class="beam beam2" d="M280 0l-20 200h40z" fill="#fff" opacity=".1"/>' + city +
+      /* the throne */
+      '<path d="M150 210V100q0 -34 50 -40q50 6 50 40v110z" fill="#7a1a2a" stroke="' + GOLD + '" stroke-width="5"/>' +
+      '<path d="M140 210v-60h18v60zM242 210v-60h18v60z" fill="' + GOLD + '"/><rect x="158" y="160" width="84" height="24" fill="#5a1220" stroke="' + GOLD + '" stroke-width="3"/>' +
+      '<circle cx="150" cy="96" r="6" fill="' + GOLD + '"/><circle cx="250" cy="96" r="6" fill="' + GOLD + '"/>' +
+      /* the crown resting on the seat */
+      '<g class="jmp"><path d="M176 156l-4 -26 14 12 14 -20 14 20 14 -12 -4 26z" fill="' + GOLD + '" stroke="#8a6a10" stroke-width="2"/>' +
+      '<circle class="gl" cx="200" cy="146" r="3" fill="' + RED + '"/><circle class="gl" cx="186" cy="150" r="2.5" fill="' + CYAN + '"/><circle class="gl" cx="214" cy="150" r="2.5" fill="' + CYAN + '"/></g>' +
+      '<text x="200" y="88" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11.5" fill="' + GOLD + '">KNOWLEDGE</text>' +
+      '<text x="200" y="104" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11" fill="' + GOLD + '">IS KING</text>' +
+      /* the street and the white limo */
+      '<rect x="0" y="210" width="400" height="50" fill="#14111c"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="limo"><rect x="0" y="214" width="150" height="20" rx="6" fill="#f2f2f2"/><path d="M20 214l10 -10h90l10 10z" fill="#e6e6e6"/><rect x="34" y="206" width="80" height="8" fill="#2a3a52"/>' +
+      '<circle cx="24" cy="236" r="6" fill="#111"/><circle cx="126" cy="236" r="6" fill="#111"/><circle cx="148" cy="222" r="2.5" fill="#fff6c2"/></g>' +
+      tag("MOE DEE", 20, 196, 28, GOLD, -6) + tag("WILD WILD WEST", 262, 206, 15, CYAN, -4),
+      sky("g4", "#0c0a1c", "#3a1a3a"));
   }
 
   /* 5. W 116 St and Lenox Av (Malcolm X Blvd): a brick wall with his name tagged, the street signs, the streetlight */

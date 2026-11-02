@@ -111,34 +111,33 @@
       sky("gl", "#ff9e7a", "#ffe0b8"));
   }
 
-  /* 4. His world: the stage set, a grand piano under the lights, the studio crew's name on the screen, notes floating up */
+  /* 4. Sunken Meadow State Park (Kings Park, next to Smithtown): the long gray boardwalk, the sandy bluffs, Long Island Sound with the Connecticut shore in the haze */
   function stage() {
+    let boards = "";
+    for (let i = 0; i < 16; i++) { const y = 196 + i * 4; boards += '<path d="M0 ' + y + 'H400" stroke="#7a7670" stroke-width="' + (0.6 + i * .08) + '"/>'; }
+    let rail = ""; for (let x = 0; x < 400; x += 24) rail += '<rect x="' + x + '" y="178" width="3" height="18" fill="#8a8680"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#gt)"/>' + stars(14) +
-      /* light beams */
-      '<path class="beam" d="M80 0l-60 200h120z" fill="' + GOLD + '"/>' +
-      '<path class="beam beam2" d="M320 0l-60 200h120z" fill="' + BLUE + '"/>' +
-      '<path class="beam" d="M200 0l-50 200h100z" fill="#fff"/>' +
-      /* screen behind */
-      '<rect x="96" y="28" width="208" height="58" rx="4" fill="#0d1220" stroke="' + GOLD + '" stroke-width="2"/>' +
-      '<text x="200" y="56" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="18" fill="' + GOLD + '" letter-spacing="1" class="flk">BEAUTIFUL MIND</text>' +
-      '<text x="200" y="76" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" fill="#f7f3ea" letter-spacing="3">THE HUMAN CONDITION</text>' +
-      /* the piano */
-      '<path d="M130 150h140q24 0 26 -18q2-16-26-20h-60q-20-12-40-6q-40 6-40 44z" fill="#111" stroke="#444" stroke-width="2"/>' +
-      '<path d="M140 116l60-28" stroke="#111" stroke-width="4"/>' +
-      '<rect x="128" y="150" width="120" height="10" fill="#f7f3ea"/>' +
-      (function () { let s = ""; for (let x = 132; x < 248; x += 8) s += '<rect x="' + x + '" y="150" width="4" height="6" fill="#111"/>'; return s; })() +
-      '<rect x="140" y="160" width="6" height="34" fill="#111"/><rect x="236" y="160" width="6" height="34" fill="#111"/><rect x="280" y="140" width="6" height="54" fill="#111"/>' +
-      /* notes floating up */
-      '<g class="note"><text x="300" y="150" font-size="22" fill="' + GOLD + '">&#9834;</text></g>' +
-      '<g class="note note2"><text x="320" y="160" font-size="18" fill="' + BLUE + '">&#9835;</text></g>' +
-      '<g class="note note3"><text x="100" y="150" font-size="20" fill="#fff">&#9834;</text></g>' +
-      /* stage floor */
-      '<rect x="0" y="194" width="400" height="66" fill="#2a1d14"/><rect x="0" y="194" width="400" height="5" fill="' + GOLD + '"/>' +
-      (function () { let s = ""; for (let x = 0; x < 400; x += 40) s += '<path d="M' + x + ' 199v61" stroke="#3a2a1e" stroke-width="1"/>'; return s; })(),
-      sky("gt", "#0b0f1d", "#24314f"));
+      '<rect width="400" height="260" fill="url(#gs)"/>' +
+      '<circle cx="320" cy="44" r="20" fill="#fff3c4" opacity=".9"/>' +
+      /* Connecticut in the haze */
+      '<path d="M0 104q60-8 120-4t140-6 140 4v8H0z" fill="#a8b8c8" opacity=".7"/>' +
+      '<rect x="0" y="106" width="400" height="56" fill="#3f7fb0"/>' +
+      '<path class="wave" d="M-20 124q20-5 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0" stroke="#cfe8f8" stroke-width="2" fill="none" opacity=".6"/>' +
+      '<path class="wave wave2" d="M-20 142q20-5 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0" stroke="#cfe8f8" stroke-width="2" fill="none" opacity=".5"/>' +
+      '<g class="sail"><path d="M120 120h30l-4 7h-22z" fill="#f7f3ea"/><path d="M135 118v-30l14 28z" fill="#fff"/><path d="M133 118v-22l-10 20z" fill="' + BLUE + '"/></g>' +
+      /* the sandy bluff on the left, beach grass */
+      '<path d="M0 100Q50 90 80 120T140 162H0z" fill="#d9c08a"/><path d="M0 100Q40 92 70 108" stroke="#5a8a3a" stroke-width="6" fill="none"/>' +
+      '<rect x="0" y="160" width="400" height="34" fill="#e8d6a8"/>' +
+      (function () { let g = ""; for (let x = 160; x < 400; x += 18) g += '<path d="M' + x + ' 178q2-12 5-16M' + (x + 4) + ' 178q0-10-3-14" stroke="#7a9a4a" stroke-width="2" fill="none"/>'; return g; })() +
+      /* the boardwalk */
+      rail + '<rect x="0" y="176" width="400" height="4" fill="#8a8680"/>' +
+      '<rect x="0" y="194" width="400" height="66" fill="#a8a49c"/>' + boards +
+      '<g class="note"><path d="M220 70q6-6 12 0q6-6 12 0" stroke="#333" stroke-width="2" fill="none"/></g>' +
+      '<g class="car" style="animation-duration:14s"><circle cx="0" cy="214" r="5" fill="#3a2a20"/><path d="M-6 236v-16q6-5 12 0v16z" fill="' + RED + '"/></g>' +
+      tag("BELLION", 20, 250, 24, GOLD, -4) +
+      '<text x="390" y="252" text-anchor="end" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" fill="#2a2a24" letter-spacing="2">SUNKEN MEADOW · KINGS PARK</text>',
+      sky("gs", "#7fb8e8", "#e8f0f6"));
   }
-
   /* 5. The corner: East Main St and Landing Ave in Smithtown, green signs, his name sprayed on the wall, leaves blowing */
   function corner() {
     return svg(

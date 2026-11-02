@@ -510,11 +510,33 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* ---- Lord Tariq & Peter Gunz: Parkchester ---- */
+  /* Virginia Park at Parkchester station (Westchester Av & Metropolitan Av): the little triangle park under the 6 el, benches and trees, the train rolling over */
+  function virginiaPark() {
+    let el = ""; for (let x = 0; x < 400; x += 20) el += '<rect x="' + x + '" y="66" width="10" height="6" fill="#2a3a2c"/>';
+    const bench = x => '<rect x="' + x + '" y="196" width="40" height="5" fill="#2f6a3a"/><rect x="' + x + '" y="186" width="40" height="4" fill="#2f6a3a"/><rect x="' + (x + 4) + '" y="201" width="3" height="10" fill="#333"/><rect x="' + (x + 33) + '" y="201" width="3" height="10" fill="#333"/>';
+    let win = ""; for (let i = 0; i < 6; i++) win += '<rect x="' + (16 + i * 42) + '" y="34" width="28" height="14" rx="2" fill="#cfe6ff" opacity=".85"/>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/>' +
+      /* Parkchester's brick blocks beyond */
+      brick(0, 90, 120, 110, "#8a4a36", "#9a5440") + brick(290, 84, 110, 116, "#9a5440", "#a8604a") + windows(10, 100, 5, 4, 22, 22, 12, 12, "#ffe6a8", "#3a2420") + windows(300, 96, 4, 4, 24, 24, 12, 12, "#ffe6a8", "#3a2420") +
+      /* the el over Westchester Av */
+      '<rect x="0" y="72" width="400" height="16" fill="#3f5a44"/>' + el + [40, 160, 280, 380].map(x => '<rect x="' + (x - 5) + '" y="88" width="10" height="130" fill="#3f5a44"/>').join("") +
+      '<g class="slideb" style="animation-delay:-5s"><rect x="0" y="24" width="300" height="42" rx="6" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="0" y="54" width="300" height="5" fill="#00933c"/>' + win + bullet(18, 52, "6", "#00933c", 8) + '</g>' +
+      /* the triangle park */
+      '<path d="M40 218L200 150 360 218z" fill="#4f8f45"/><path d="M40 218L200 150 360 218" stroke="#2a2a2a" stroke-width="3" fill="none"/>' +
+      tree(150, 150, 22) + tree(250, 152, 20, "sw2") + tree(200, 132, 24) +
+      bench(110) + bench(250) +
+      '<rect x="170" y="196" width="60" height="16" rx="2" fill="#2f6a3a"/>' + txt("VIRGINIA PARK", 200, 208, 8, "#fff") +
+      ground("#2a2d33") + cars() +
+      '<rect x="326" y="108" width="4" height="110" fill="#1d2329"/>' + blade(328, 108, "Westchester Av") + blade(328, 130, "Metropolitan Av") +
+      tag("UPTOWN BABY", 8, 252, 22, "#ffb347", -3) + txt("PARKCHESTER", 200, 16, 12, "#1a1a22"), sky("sk", "#8fc3ea", "#f6e7c6"));
+  }
+
   window.SCENES = {
     station: function () { return elStation({name:"Parkchester", lines:[["6","#00933c"]], night:1, sky:["#0d1022","#4a3a5a"], tag:["UPTOWN","#ffb347"]}); },
     oval: function () { return towers({oval:1, tag:["PARKCHESTER","#ffb347"]}); },
     cbx: function () { return expressway({c1:"#ffb347", sign:"CROSS BRONX", tag:["CROSS BRONX EXPWY","#9fe3ff"]}); },
-    studio: function () { return studio({c1:"#ffb347", c2:"#9fe3ff", c3:"#ff5a5a", tag:["DEJA VU","#ffb347"]}); },
+    studio: function () { return virginiaPark(); },
     corner: function () { return corner({s1:"Metropolitan Av", s2:"Unionport Rd", tags:[["UPTOWN","#ffb347",48],["LORD TARIQ","#9fe3ff",24],["PETER GUNZ","#ff5a5a"],["MAKE IT REIGN","#f6efdc"]]}); }
   };
 })();

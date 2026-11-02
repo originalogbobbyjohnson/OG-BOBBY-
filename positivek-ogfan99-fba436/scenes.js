@@ -100,19 +100,28 @@
       sky("g1", "#5aaeea", "#d4ecf8"));
   }
 
-  /* 3. Poe Park: Edgar Allan Poe's little white cottage on Kingsbridge Rd, the porch, the trees, a raven on the fence */
+  /* 3. Fordham Plaza at Webster Av and E Fordham Rd: the open plaza and its canopy, the Bx buses pulling through, the Fordham Metro-North stop down in the cut, Fordham Rd crowds */
   function poe() {
-    return svg('<rect width="400" height="260" fill="url(#p1)"/>' + stars(8) + '<circle cx="320" cy="44" r="18" fill="#fff3c4"/>' +
-      bldg(0, 70, 90, 140, "#7a5a4a", "#ffe6a8", "#3a3a4a") + bldg(320, 60, 80, 150, "#6a5a6a", "#ffe6a8", "#3a3a4a") +
-      rect(0, 190, 400, 70, "#4a8a3a") +
-      /* cottage */
-      rect(130, 120, 150, 80, "#f6f3ea") + '<path d="M120 124l85-46 85 46z" fill="#4a4a52"/>' + rect(180, 70, 14, 30, "#8a4a3a") +
-      rect(140, 160, 140, 6, "#c8c4b8") + [146, 180, 214, 248, 274].map(x => rect(x, 160, 4, 40, "#f6f3ea")).join("") +
-      rect(150, 132, 22, 22, "#2a3a5a") + rect(238, 132, 22, 22, "#2a3a5a") + rect(196, 166, 20, 34, "#3a5a3a") +
-      '<path d="M0 214h400" stroke="#1b1b22" stroke-width="3"/>' + [...Array(20).keys()].map(i => rect(i * 20 + 6, 200, 3, 16, "#1b1b22")).join("") +
-      '<g class="bob"><path d="M300 200q10-14 22-10l6-4-2 6q4 6-2 10z" fill="#111"/><circle cx="324" cy="192" r="1.4" fill="#ffd34d"/></g>' +
-      tree(60, 160, 26, "#2f7a34") + tree(360, 158, 26, "#3a8a3a", "sway sw2"),
-      sky("p1", "#3a4a8a", "#f0b07a"));
+    let crowd = ""; [[60, PINK], [96, SUN], [140, BLUE], [262, "#2bb673"], [300, PINK], [338, SUN]].forEach(([x, c], i) => crowd += person(x, 174 + (i % 2) * 4, c, i % 2 ? "bob" : ""));
+    let win = ""; for (let x = 14; x < 220; x += 36) win += rect(x, 222, 22, 9, "#dfeaf5");
+    const bxbus = (cls, y) => '<g class="' + cls + '"><rect x="0" y="' + y + '" width="104" height="34" rx="6" fill="#e9ecef" stroke="#6b7280" stroke-width="1.5"/>' + rect(0, y + 22, 104, 4, BLUE) + rect(6, y + 5, 74, 12, "#2a3440") +
+      txt(43, y + 14, 8, "#ffb020", "FORDHAM PLAZA") + '<circle cx="20" cy="' + (y + 34) + '" r="5" fill="#111"/><circle cx="84" cy="' + (y + 34) + '" r="5" fill="#111"/></g>';
+    return svg('<rect width="400" height="260" fill="url(#p1)"/>' + '<circle cx="218" cy="46" r="16" fill="#fff3c4"/>' +
+      /* the office tower over the plaza */
+      rect(250, 20, 110, 150, "#c99a86") + rect(262, 8, 86, 14, "#b8887a") + '<path d="M262 8l43-6 43 6z" fill="#8a5a50"/>' +
+      [0, 1, 2, 3, 4, 5, 6, 7].map(r => rect(258, 30 + r * 17, 94, 8, "#3a4a5e", ' opacity=".85"')).join("") + rect(300, 20, 10, 150, "#e8d8c8") +
+      bldg(0, 60, 90, 110, "#7a5a4a", "#ffe6a8", "#3a3a4a") + bldg(94, 80, 70, 90, "#6a5a6a", "#ffe6a8", "#3a3a4a") +
+      /* the plaza and the canopy */
+      rect(0, 150, 400, 40, "#cfc6b4") + '<path d="M150 118q50-20 100 0v8q-50-18-100 0z" fill="#f4f4f4" stroke="#aab" stroke-width="1"/>' + rect(170, 126, 4, 30, "#59616e") + rect(226, 126, 4, 30, "#59616e") + rect(176, 132, 48, 22, "#2a7ab0", ' opacity=".7"') +
+      tree(20, 140, 16, "#3f7a3a") + tree(380, 140, 16, "#3f7a3a", "sway sw2") + crowd +
+      /* Fordham Rd and the buses */
+      road(190) + bxbus("slide", 192) +
+      /* Metro-North in the cut below */
+      rect(0, 216, 400, 44, "#3a3a3a") + '<g class="slideL"><rect x="0" y="218" width="230" height="20" rx="4" fill="#d4d8de" stroke="#6b7280"/>' + rect(0, 232, 230, 3, "#0039a6") + win + '</g>' +
+      rect(0, 238, 400, 22, "#2a2a2a") + '<rect x="290" y="240" width="36" height="16" rx="3" fill="#0039a6"/>' + txt(308, 252, 9, "#fff", "MN") + txt(360, 252, 8, "#fff", "Fordham") +
+      txt(120, 22, 13, "#1b2430", "FORDHAM PLAZA") + txt(120, 36, 8, "#1b2430", "WEBSTER AV &amp; E FORDHAM RD") +
+      tag("POSITIVE K", 14, 214, 18, SUN, -3),
+      sky("p1", "#8fc3ea", "#f6e2c4"));
   }
 
   /* 4. Nightshift on Fordham Road: the shopping strip after dark, the signs glowing, the Bx12 bus rolling */

@@ -88,21 +88,21 @@
       tags: tag("M.O.P.", 18, 252, 26, LAV, -4) + tag("BROWNSVILLE", 214, 254, 22, RED, -5) });
   }
 
-  /* 2. Loew's Pitkin on Pitkin Av: the big 1929 movie palace, tan brick and terracotta, the arched windows, shoppers going by */
+  /* 2. The Brownsville Recreation Center on Linden Blvd at Christopher Av: the brick rec center, the fenced courts out front, the ball going up */
   function pitkin() {
-    let arches = "";
-    for (let x = 110; x < 300; x += 40) arches += '<path d="M' + x + ' 130v-40q14-18 28 0v40z" fill="#3a3050"/><path d="M' + (x + 14) + ' 92v38" stroke="#e8d8b0" stroke-width="2"/>';
+    let fence = ""; for (let x = 0; x <= 400; x += 10) fence += '<path d="M' + x + ' 150l10 20M' + (x + 10) + ' 150l-10 20" stroke="#8a9098" stroke-width=".8"/>';
+    let ribbon = ""; for (let x = 66; x < 334; x += 26) ribbon += rect(x, 92, 20, 12, "#bfe0f6", ' opacity=".85"') + rect(x, 116, 20, 12, "#bfe0f6", ' opacity=".85"');
     return svg('<rect width="400" height="260" fill="url(#p1)"/>' +
-      bldg(0, 96, 80, 130, "#7a4a3a", "#ffe6a8", "#3a3a4a") + bldg(320, 104, 80, 122, "#6a5a4a", "#ffe6a8", "#3a3a4a") +
-      rect(80, 46, 240, 180, "#d8b98a") + rect(76, 38, 248, 12, "#b88a5a") + '<path d="M140 38l60-22 60 22z" fill="#b88a5a"/>' +
-      '<circle cx="200" cy="28" r="7" fill="#e8d8b0" stroke="#8a6a4a" stroke-width="2"/>' + arches +
-      [96, 304].map(x => rect(x - 6, 50, 12, 176, "#c8a878")).join("") +
-      rect(84, 140, 232, 18, "#2a1a10") + txt(200, 154, 12, GOLD, "PITKIN AVENUE") +
-      rect(84, 158, 232, 68, "#b89a6a") + [100, 150, 200, 250].map(x => rect(x, 170, 40, 56, "#2a2a3a")).join("") +
-      [110, 160, 210, 260].map(x => rect(x, 176, 20, 30, "#ffe6a8", ' opacity=".45"')).join("") +
-      rect(0, 226, 400, 34, "#5a5650") +
-      person(60, 236, RED, "slide") + person(30, 238, LAV, "slide sl2") + person(340, 236, GOLD, "slideL"),
-      sky("p1", "#4a8ad0", "#bfe0f6"));
+      bldg(0, 40, 60, 110, "#6a5a5a", "#ffe6a8", "#3a3a4a") + bldg(344, 30, 56, 120, "#5a4a5a", "#ffe6a8", "#3a3a4a") +
+      brick(56, 66, 288, 84, "#9a4a30", "#a65436") + rect(52, 60, 296, 8, "#e8dcc0") + ribbon +
+      rect(176, 112, 48, 38, "#2a3440") + rect(170, 106, 60, 6, "#e8dcc0") + rect(112, 72, 176, 16, "#14181d") + txt(200, 84, 9, GOLD, "BROWNSVILLE RECREATION CENTER") +
+      /* the courts */
+      rect(0, 150, 400, 2, "#8a9098") + fence + rect(0, 170, 400, 50, "#3a7a5a") + '<path d="M200 170v50M0 195h400" stroke="#f6efdc" stroke-width="1.5"/><circle cx="200" cy="195" r="12" fill="none" stroke="#f6efdc" stroke-width="1.5"/>' +
+      '<rect x="30" y="140" width="4" height="40" fill="#59616e"/><rect x="20" y="134" width="24" height="16" fill="#f6efdc" stroke="#59616e"/><path d="M34 150h12" stroke="' + RED + '" stroke-width="2"/>' +
+      '<g class="jump">' + '<circle cx="70" cy="182" r="7" fill="#e8743a" stroke="#7a3a0a" stroke-width="1.2"/></g>' + person(96, 214, LAV, "bob") + person(150, 210, GOLD) +
+      road(220) + car(0, 232, RED, "slide") +
+      txt(394, 20, 9, "#1b1b22", "LINDEN BLVD &amp; CHRISTOPHER AV", "end") + tag("M.O.P.", 250, 210, 24, LAV, -5),
+      sky("p1", "#7ab8e8", "#f2e2c0"));
   }
 
   /* 3. Betsy Head Pool: the 1930s brick bathhouse, the huge pool, kids splashing on a hot day */
@@ -122,21 +122,22 @@
       sky("b1", "#3a9ae0", "#c6ecff"));
   }
 
-  /* 4. A Brownsville boxing gym: the ring under the lights, the heavy bag swinging, the bell on the post */
+  /* 4. Warriorz (2000): the battle-scarred war-zone set, the torn M.O.P. banner, searchlights cutting the smoke */
   function gym() {
-    return svg(rect(0, 0, 400, 260, "#2a2228") + brick(0, 0, 400, 150, "#5a2e2a", "#64342e") +
-      '<g class="flk">' + rect(80, 0, 6, 24, "#555") + '<path d="M64 24h38l-6 8H70z" fill="#fff3c4"/>' + rect(300, 0, 6, 24, "#555") + '<path d="M284 24h38l-6 8h-26z" fill="#fff3c4"/></g>' +
-      '<g opacity=".12"><path d="M70 32h26l60 200H10zM290 32h26l60 200H230z" fill="#fff3c4"/></g>' +
-      rect(40, 40, 140, 30, "#111") + txt(110, 62, 18, GOLD, "WORK HARD") +
-      /* heavy bag */
-      '<g class="sway" style="transform-origin:top center"><path d="M330 0v40" stroke="#888" stroke-width="3"/><rect x="314" y="40" width="32" height="80" rx="12" fill="' + RED + '" stroke="#7a1a14" stroke-width="2"/><rect x="314" y="62" width="32" height="6" fill="#1b1b22"/></g>' +
-      /* ring */
-      rect(30, 150, 260, 70, "#2a5ab0") + '<path d="M30 150l20-30h220l20 30z" fill="#e8e4da"/>' +
-      [[50, 120], [270, 120], [30, 150], [290, 150]].map(([x, y]) => rect(x - 4, y - 50, 8, 52, "#c9ced6")).join("") +
-      '<path d="M50 84h220M50 96h220M50 108h220" stroke="' + RED + '" stroke-width="3"/><path d="M30 114h260M30 126h260M30 138h260" stroke="#f6efdc" stroke-width="3"/>' +
-      '<circle class="pls" cx="350" cy="170" r="14" fill="' + GOLD + '" stroke="#7a5512" stroke-width="2"/><rect x="346" y="184" width="8" height="40" fill="#555"/>' +
-      '<g class="jump"><path d="M140 112h10l4 26h-18z" fill="' + LAV + '"/><circle cx="145" cy="104" r="7" fill="#2a1a10"/><circle cx="132" cy="118" r="6" fill="' + RED + '"/><circle cx="160" cy="116" r="6" fill="' + RED + '"/></g>' +
-      rect(0, 220, 400, 40, "#3a3034") + tag("FIRST FAMILY", 110, 250, 26, GOLD, -3));
+    let wire = ""; for (let x = 0; x < 400; x += 14) wire += '<circle cx="' + x + '" cy="168" r="6" fill="none" stroke="#9a9a9a" stroke-width="1"/>';
+    let bags = ""; for (let r = 0; r < 3; r++) for (let x = (r % 2) * 14; x < 400; x += 28) bags += '<rect x="' + x + '" y="' + (196 + r * 12) + '" width="26" height="11" rx="5" fill="' + (r % 2 ? "#8a7a5a" : "#7a6a4a") + '" stroke="#4a3e2a"/>';
+    const smoke = (x, c) => '<circle class="rise ' + c + '" cx="' + x + '" cy="176" r="16" fill="#6a6268" opacity=".7"/>';
+    return svg(rect(0, 0, 400, 260, "#1a1418") +
+      '<g opacity=".22"><path class="beam" d="M80 176L40 0h50z" fill="#fff3c4"/><path class="beam bm2" d="M320 176L300 0h50z" fill="#fff3c4"/></g>' +
+      /* ruined walls */
+      '<path d="M0 176V90l20-10 14 20 26-30v106z" fill="#3a3034"/><path d="M340 176V70l18 18 22-24 20 30v82z" fill="#3a3034"/>' +
+      [[8, 110], [350, 100], [372, 130]].map(([x, y]) => rect(x, y, 12, 14, "#ff8a3a", ' class="flk"')).join("") +
+      /* the banner */
+      '<path d="M90 40h220" stroke="#555" stroke-width="3"/><g class="sway" style="transform-origin:200px 40px"><path d="M100 42h200v70l-14-8-12 10-20-6-18 8-16-6-20 8-18-8-16 6-20-6-18 8-14-8z" fill="#2a2a2a" stroke="' + RED + '" stroke-width="2"/>' +
+      txt(200, 82, 30, RED, "M.O.P.") + txt(200, 100, 10, GOLD, "WARRIORZ · 2000") + '</g>' +
+      smoke(60, "") + smoke(150, "r2") + smoke(250, "r3") + smoke(330, "") +
+      rect(0, 176, 400, 84, "#2a2224") + wire + bags +
+      tag("FIRST FAMILY", 20, 250, 24, GOLD, -3) + tag("BROWNSVILLE", 230, 250, 20, LAV, -4));
   }
 
   /* 5. Saratoga Av and Livonia Av, under the 3 */

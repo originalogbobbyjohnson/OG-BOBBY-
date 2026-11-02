@@ -510,10 +510,33 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* ICE SPICE 3. Purchase College (SUNY Purchase), Westchester: the long dark-brick campus mall in perspective, the brown brick buildings lining both sides, the big plaza, students crossing */
+  function isPurchase() {
+    let left = '<path d="M0 30L168 90V150L0 236z" fill="#5e3628"/>', right = '<path d="M400 30L232 90V150L400 236z" fill="#5e3628"/>';
+    for (let i = 0; i < 7; i++) { const t = i / 7, x = 168 * t * (2 - t) * .98, yT = 30 + 60 * x / 168, yB = 236 - 86 * x / 168, w = 10 * (1 - x / 200) + 2;
+      left += '<rect x="' + x.toFixed(1) + '" y="' + (yT + 14 * (1 - x / 168)).toFixed(1) + '" width="' + w.toFixed(1) + '" height="' + ((yB - yT) * .6).toFixed(1) + '" fill="#2a1a14" opacity=".75"/>';
+      right += '<rect x="' + (400 - x - w).toFixed(1) + '" y="' + (yT + 14 * (1 - x / 168)).toFixed(1) + '" width="' + w.toFixed(1) + '" height="' + ((yB - yT) * .6).toFixed(1) + '" fill="#2a1a14" opacity=".75"/>'; }
+    left += '<path d="M0 30L168 90" stroke="#3a2018" stroke-width="4"/>'; right += '<path d="M400 30L232 90" stroke="#3a2018" stroke-width="4"/>';
+    let paving = "";
+    for (let y = 150; y < 260; y += 12) paving += '<path d="M' + (168 - (y - 150) * 1.5) + ' ' + y + 'H' + (232 + (y - 150) * 1.5) + '" stroke="#8a5a44" stroke-width="1"/>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/><circle cx="200" cy="40" r="16" fill="#fff3c4"/>' +
+      /* the far end of the mall */
+      '<rect x="168" y="90" width="64" height="60" fill="#4a2a20"/>' + windows(174, 98, 4, 3, 15, 16, 8, 10, "#ffe6a8", "#2a1a14") +
+      left + right +
+      /* the brick plaza floor */
+      '<path d="M168 150h64l168 110H0z" fill="#9a5a42"/>' + paving +
+      '<g class="slide"><circle cx="0" cy="214" r="6" fill="#3a2a22"/><rect x="-6" y="220" width="12" height="20" rx="4" fill="#ff8a5b"/></g>' +
+      '<g class="slideb sb2"><circle cx="0" cy="200" r="5" fill="#2a1a10"/><rect x="-5" y="205" width="10" height="16" rx="4" fill="#9fe3ff"/></g>' +
+      '<g class="bob"><circle cx="300" cy="226" r="6" fill="#3a2a22"/><rect x="294" y="232" width="12" height="20" rx="4" fill="#ff8ab0"/></g>' +
+      '<rect x="128" y="236" width="144" height="16" rx="2" fill="#1d2329"/>' + txt("PURCHASE COLLEGE · SUNY", 200, 247.5, 9, "#fff") +
+      tag("GRAH", 20, 248, 26, "#ff8a5b", -5) + tag("SPICE", 300, 214, 24, "#ff8ab0", -5),
+      sky("sk", "#7fb3e0", "#f4e3c1"));
+  }
+
   window.SCENES = {
     station: function () { return elStation({name:"Fordham Rd", lines:[["4","#00933c"]], sky:["#ffb38a","#fde2c8"], tag:["GRAH","#ff8a5b"]}); },
     deli: function () { return deli({c1:"#ff8a5b", c2:"#ffd34d", sign:"BRONX DELI · GROCERY", tag:["MUNCH","#ff8ab0"]}); },
-    keating: function () { return keating({tag:["FORDHAM","#ff8a5b"]}); },
+    keating: function () { return isPurchase(); },
     garden: function () { return conservatory({tag:["SO SPICY","#ff8ab0"]}); },
     corner: function () { return corner({s1:"E Fordham Rd", s2:"Jerome Av", tags:[["ICE SPICE","#ff8a5b",46],["GRAH","#ffd34d",28],["LIKE..?","#ff8ab0"],["BRONX PRINCESS","#f6efdc"]]}); }
   };

@@ -80,9 +80,29 @@
       (o.extra || "") + tag(o.tag, o.tx || 230, 254, 24, o.tc, -5), sky("g1", o.g[0], o.g[1]));
   const GOLD = "#f2c14e", RED = "#d7263d", ICE = "#9fe3ff";
 
-  /* 1. 21 St-Queensbridge: the F pulling in deep under the Bridge */
+  /* 1. 21 St-Queensbridge, cut away: the 41 Av stair going down off the corner, a Juice Crew battle flyer on the stair wall, the F pulling in below */
   function station() {
-    return under({ wall: "#d6cfc2", band: "#8a3a2a", band2: "#e8d2a0", name: "21 St–Queensbridge", bl: [["F", "#ff6319"]], sx: 80, sw: 240, tag: "THE BRIDGE", tc: GOLD, tx: 130 });
+    let tiles = ""; for (let y = 156; y < 236; y += 10) tiles += '<path d="M0 ' + y + 'h400" stroke="#00000014"/>';
+    return svg('<rect width="400" height="260" fill="url(#g0)"/>' + stars(10) +
+      /* the Bridge in the back, the Houses on the block */
+      '<path d="M0 60q50-26 100 0t100 0 100 0 100 0" stroke="#8a826e" stroke-width="3" fill="none"/>' + [60, 160, 260, 360].map(x => '<rect x="' + (x - 5) + '" y="34" width="10" height="44" fill="#8a826e"/>').join("") + '<rect x="0" y="74" width="400" height="5" fill="#6e6858"/>' +
+      bldg(0, 50, 70, 70, "#7a3a2a", "#ffe6a8") + bldg(250, 44, 80, 76, "#8a4434", "#ffe6a8") + bldg(336, 56, 64, 64, "#7a3a2a", "#ffe6a8") +
+      /* sidewalk, the green globe lamps and the stair going down */
+      '<rect x="0" y="118" width="400" height="16" fill="#5d6068"/>' +
+      [84, 196].map(x => '<rect x="' + (x - 2) + '" y="84" width="4" height="34" fill="#1f4a2a"/><circle class="pls" cx="' + x + '" cy="82" r="6" fill="#4bd06a"/>').join("") +
+      '<rect x="84" y="104" width="112" height="14" fill="#2f6b3a"/>' + txt("SUBWAY", 140, 115, 10, "#fff") +
+      '<path d="M84 118h112v18H84z" fill="#3a3a40"/><path d="M90 120h100M92 125h96M94 130h92" stroke="#77777f" stroke-width="2"/>' +
+      /* the battle flyer on the stair wall */
+      '<g transform="rotate(-4 245 98)"><rect x="214" y="80" width="62" height="38" fill="#f6efdc"/>' + txt("JUICE CREW", 245, 92, 8, RED) + txt("BATTLE", 245, 104, 10, "#1a1612") + txt("CRAIG G", 245, 114, 8, "#1a1612") + '</g>' +
+      blade(330, 96, "41 Av") +
+      /* below ground: the platform and the train */
+      '<rect x="0" y="134" width="400" height="102" fill="#d6cfc2"/>' + tiles + '<rect x="0" y="138" width="400" height="10" fill="#8a3a2a"/>' +
+      stSign(96, 150, 208, "21 St–Queensbridge", [["F", "#ff6319"]], 13) +
+      '<rect x="0" y="186" width="400" height="38" fill="#15181c"/>' +
+      '<g class="anim-train">' + car(10, 182, 300, "#ff6319", ["F", "#ff6319"]).replace(/height="54"/g, 'height="42"') + '</g>' +
+      '<rect x="0" y="224" width="400" height="6" fill="#eab308"/><rect x="0" y="230" width="400" height="30" fill="#8d8a84"/>' +
+      tag("CRAIG G", 24, 254, 26, GOLD, -4) + tag("JUICE CREW", 230, 254, 20, ICE, -3),
+      sky("g0", "#070b20", "#2a2a5a"));
   }
 
   /* 2. The Queensboro Bridge at night: the steel cantilevers, the tram riding over the river, cars crossing */
@@ -100,39 +120,49 @@
       sky("g2", "#070b20", "#2a2a5a"));
   }
 
-  /* 3. The House of Hits: the apartment studio, sampler pads lit, the turntable spinning, Juice Crew on the wall */
+  /* 3. One Court Square: the blue-green glass tower over Long Island City, seen from the Queensbridge rooftops */
   function studio() {
-    let pads = ""; for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++) pads += '<rect class="blk' + ["", " b2", " b3", " b4"][(r + c) % 4] + '" x="' + (238 + c * 20) + '" y="' + (122 + r * 14) + '" width="16" height="10" rx="2" fill="' + [GOLD, RED, ICE][(r + c) % 3] + '"/>';
-    return svg('<rect width="400" height="260" fill="#1a1612"/>' + brick(0, 0, 400, 170, "#5a2e24", "#64362a") +
-      /* window with the projects outside */
-      '<rect x="150" y="20" width="100" height="70" fill="#1d2440" stroke="#d8d2c4" stroke-width="5"/>' + bldg(160, 40, 36, 50, "#7a3a2a", "#ffe6a8") + bldg(204, 32, 36, 58, "#8a4434", "#ffe6a8") + '<path d="M200 20v70" stroke="#d8d2c4" stroke-width="3"/>' +
-      '<rect x="30" y="24" width="90" height="60" fill="#f6efdc" transform="rotate(-3 75 54)"/>' + txt("JUICE CREW", 75, 52, 13, RED) + txt("ALL STARS", 75, 70, 11, "#1a1612") +
-      '<rect x="0" y="170" width="400" height="90" fill="#2a2018"/><rect x="20" y="164" width="360" height="10" fill="#5a3a22"/>' +
-      '<rect x="40" y="140" width="110" height="24" rx="3" fill="#2b2b30"/><g class="spin"><ellipse cx="90" cy="142" rx="40" ry="8" fill="#111"/><ellipse cx="90" cy="142" rx="10" ry="2.5" fill="' + GOLD + '"/></g>' +
-      '<rect x="228" y="112" width="96" height="52" rx="4" fill="#cfcac0" stroke="#7a756a" stroke-width="2"/>' + pads +
-      '<rect x="340" y="110" width="34" height="54" fill="#1d1d22"/><circle class="pop" cx="357" cy="144" r="11" fill="#333"/><circle cx="357" cy="122" r="5" fill="#333"/>' +
-      [30, 80].map(x => '<rect x="' + x + '" y="196" width="44" height="40" fill="#8a5a2c" stroke="#4a2e14" stroke-width="2"/>').join("") +
-      tag("HOUSE OF HITS", 140, 240, 28, GOLD, -4), "");
+    let bands = ""; for (let y = 34; y < 206; y += 8) bands += '<path d="M152 ' + y + 'h96" stroke="#0e4a52" stroke-width="1.2" opacity=".55"/>';
+    let mull = ""; for (let x = 160; x < 248; x += 11) mull += '<path d="M' + x + ' 30v176" stroke="#9ad8d0" stroke-width=".8" opacity=".5"/>';
+    return svg('<rect width="400" height="260" fill="url(#g2b)"/>' +
+      '<circle cx="330" cy="54" r="18" fill="#ffe1a8"/>' +
+      /* LIC low-rises */
+      bldg(20, 150, 60, 60, "#5a5a66", "#ffe6a8") + bldg(84, 166, 50, 44, "#6a5a4a", "#ffe6a8") + bldg(270, 154, 56, 56, "#4a5060", "#ffe6a8") + bldg(330, 170, 60, 40, "#6a4a3a", "#ffe6a8") +
+      /* the tower */
+      '<path d="M148 210V34l4-6h96l4 6v176z" fill="#2c8a86"/><path d="M200 28h48l4 6v176h-52z" fill="#1f6e6c"/>' + bands + mull +
+      '<path class="pls" d="M152 34l40 176h-40z" fill="#c9fff4" opacity=".22"/>' +
+      '<rect x="196" y="16" width="8" height="12" fill="#1f4e4c"/><circle class="blk" cx="200" cy="14" r="3" fill="#ff3b30"/>' +
+      /* plane going toward LaGuardia */
+      '<g class="fly"><path d="M0 0l22 0 6-4h4l-3 5 3 5h-4l-6-4H0z" fill="#e8ecf2" transform="translate(40 60)"/></g>' +
+      /* Queensbridge roofs in front */
+      '<rect x="0" y="206" width="400" height="54" fill="#5a2e24"/>' + bldg(0, 206, 130, 54, "#7a3a2a", "#ffe6a8") + bldg(270, 206, 130, 54, "#7a3a2a", "#ffe6a8") +
+      '<rect x="146" y="214" width="110" height="10" fill="#3a1a14"/>' + txt("ONE COURT SQUARE", 200, 248, 13, "#fff") + txt("LONG ISLAND CITY, VIEW FROM QB", 200, 236, 8, ICE) +
+      tag("CRAIG G", 18, 196, 26, GOLD, -5),
+      sky("g2b", "#f4a76a", "#8fc3ea"));
   }
 
-  /* 4. Queensbridge Park by the river: the court, the ball bouncing, the red and white stacks across the water */
+  /* 4. Four Freedoms Park at the tip of Roosevelt Island: the lawn narrowing between the linden rows to the granite room and the bronze head in its niche */
   function park() {
-    const stack = x => '<rect x="' + x + '" y="40" width="14" height="110" fill="#f4f0e6"/>' + [44, 66, 88, 110, 132].map(y => '<rect x="' + x + '" y="' + y + '" width="14" height="10" fill="' + RED + '"/>').join("");
-    return svg('<rect width="400" height="260" fill="url(#g4)"/>' +
-      '<rect x="220" y="110" width="170" height="40" fill="#7a7468"/>' + stack(240) + stack(280) + stack(320) + stack(360) +
-      '<circle class="rise" cx="247" cy="36" r="6" fill="#e8e0d0"/><circle class="rise r2" cx="327" cy="36" r="5" fill="#e8e0d0"/>' +
-      '<rect x="0" y="150" width="400" height="24" fill="#3a6a9a"/><path class="wave" d="M20 160h40M120 166h50M240 160h40" stroke="#cfe6ff" stroke-width="2"/>' +
-      '<rect x="0" y="174" width="400" height="86" fill="#2f5a3a"/><rect x="40" y="184" width="320" height="66" fill="#c0392b" opacity=".85"/><path d="M200 184v66" stroke="#fff" stroke-width="2"/><circle cx="200" cy="217" r="16" fill="none" stroke="#fff" stroke-width="2"/>' +
-      '<rect x="52" y="110" width="5" height="80" fill="#59616e"/><rect x="36" y="100" width="40" height="24" fill="#f2efe6" stroke="#59616e" stroke-width="2"/><path d="M46 124h20l-3 12h-14z" fill="none" stroke="#f2efe6" stroke-width="1.5"/>' +
-      '<g class="hop"><circle cx="110" cy="206" r="9" fill="#e8743a" stroke="#7a3a0a" stroke-width="1.5"/></g>' + tree(150, 150, .9) +
-      tag("QB", 290, 244, 30, GOLD, -4),
-      sky("g4", "#8fc3ea", "#f6e2b0"));
+    let lindens = ""; for (let i = 0; i < 6; i++) { const t = i / 5, y = 210 - t * 70, r = 18 - t * 11, dx = 150 - t * 110;
+      lindens += '<g class="sway' + (i % 2 ? ' sw2' : '') + '"><circle cx="' + (200 - dx - 20) + '" cy="' + y + '" r="' + r + '" fill="#2f7a3a"/><circle cx="' + (200 + dx + 20) + '" cy="' + y + '" r="' + r + '" fill="#2f7a3a"/></g>'; }
+    return svg('<rect width="400" height="260" fill="url(#g4b)"/>' +
+      /* Manhattan across the river, the UN slab */
+      bldg(0, 70, 40, 70, "#8a96a8", "#dfe8f2") + bldg(44, 56, 30, 84, "#7a889a", "#dfe8f2") + '<rect x="300" y="44" width="34" height="96" fill="#5e8aa8"/><path d="M300 44h34v96h-34z" fill="none" stroke="#d9e4ea" stroke-width="1"/>' +
+      bldg(340, 80, 60, 60, "#8a96a8", "#dfe8f2") + '<path d="M300 44h34" stroke="#fff" stroke-width="2"/>' +
+      '<rect x="0" y="126" width="400" height="18" fill="#4a7aa0"/><g class="slideL" style="animation-duration:16s"><path d="M0 132h34l-5 6H5z" fill="#fff"/></g>' +
+      /* the lawn and the granite steps */
+      '<path d="M40 260L176 140h48L360 260z" fill="#5f9a46"/><path d="M60 260l124-110M340 260L216 150" stroke="#cfc9bd" stroke-width="5"/>' + lindens +
+      '<rect x="164" y="118" width="72" height="28" fill="#cfc9bd"/><rect x="170" y="112" width="60" height="6" fill="#bdb6a8"/>' +
+      '<rect x="186" y="116" width="28" height="26" rx="2" fill="#a8a094"/><ellipse cx="200" cy="129" rx="8" ry="10" fill="#6a4a2a"/><ellipse cx="197" cy="126" rx="3" ry="4" fill="#8a6a3a" opacity=".6"/>' +
+      txt("FOUR FREEDOMS PARK", 200, 236, 14, "#fff") + txt("ROOSEVELT ISLAND · ACROSS FROM QB", 200, 250, 8, "#f6efdc") +
+      tag("CRAIG G", 14, 112, 26, GOLD, -6),
+      sky("g4b", "#8fc3ea", "#f6e2b0"));
   }
 
-  /* 5. 21 St and 41 Av, by the Queensbridge Houses */
+  /* 5. Vernon Blvd and 41 Av, the river side of the Queensbridge Houses */
   function block() {
-    return corner(["#0d0c08", "#3a2a1a"], "21 St", "41 Av",
-      tag("CRAIG G", 30, 122, 50, GOLD, -7) + tag("JUICE CREW", 50, 154, 26, ICE, -5) + tag("BATTLE KING", 30, 186, 28, RED, -3) + tag("QUEENSBRIDGE", 90, 210, 20, "#f6efdc", -2), GOLD);
+    return corner(["#0d0c08", "#2a3a4a"], "Vernon Blvd", "41 Av",
+      tag("CRAIG G", 30, 122, 50, GOLD, -7) + tag("JUICE CREW", 50, 154, 26, ICE, -5) + tag("BATTLE KING", 30, 186, 28, RED, -3) + tag("RIVERSIDE QB", 80, 210, 20, "#f6efdc", -2), GOLD, ["#5a2e24", "#64362a"]);
   }
 
   window.SCENES = { station, bridge, studio, park, block };

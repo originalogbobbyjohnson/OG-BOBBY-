@@ -510,10 +510,28 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* ---- D-Nice's Kingsbridge ---- */
+  /* Bronx Library Center (310 E Kingsbridge Rd, 2006): the big glass-and-steel library a block from his corner, blue glass, the reading-room lights coming on */
+  function bronxLibrary() {
+    let grid = "";
+    for (let r = 0; r < 6; r++) for (let c = 0; c < 11; c++) { const on = ((r * 5 + c * 3) % 7) < 3; grid += '<rect' + (on ? ' class="pls' + ((r + c) % 2 ? ' p2' : '') + '"' : '') + ' x="' + (66 + c * 26) + '" y="' + (52 + r * 28) + '" width="22" height="22" fill="' + (on ? "#ffe6a8" : "#5a8ac0") + '" opacity="' + (on ? .9 : .8) + '"/>'; }
+    let louv = ""; for (let r = 0; r < 6; r++) louv += '<rect x="60" y="' + (50 + r * 28) + '" width="292" height="3" fill="#c8ced6"/>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/>' + stars(16) +
+      brick(0, 80, 60, 156, "#7a4a3a", "#84523f") + brick(352, 70, 48, 166, "#6a5a5a", "#74645f") +
+      /* the glass box with its steel frame */
+      '<rect x="60" y="40" width="292" height="196" fill="#2a4a7a"/>' + grid + louv +
+      '<rect x="60" y="36" width="292" height="8" fill="#9aa4ae"/>' + [60, 164, 268, 348].map(x => '<rect x="' + x + '" y="40" width="4" height="196" fill="#9aa4ae"/>').join("") +
+      /* the slanted corner fin */
+      '<path d="M300 36L352 20V236H300z" fill="#4a7ab0" opacity=".8"/><path d="M300 36L352 20" stroke="#c8ced6" stroke-width="3"/>' +
+      '<rect x="120" y="206" width="170" height="22" fill="#1a1a22"/>' + txt("BRONX LIBRARY CENTER", 205, 222, 12, "#ffd34d") +
+      ground("#2a2d33") + cars() + txt("310 E KINGSBRIDGE RD", 200, 18, 12, "#f6efdc") +
+      tag("D-NICE", 4, 120, 20, "#ffd34d", -8), sky("sk", "#0d1022", "#3a3a6a"));
+  }
+
   window.SCENES = {
     station: function () { return underStation({name:"Kingsbridge Rd", lines:[["B","#ff6319"],["D","#ff6319"]], tile:["#7cf29a","#2a5a3a","#1d3a2a"], tag:["BDP","#7cf29a"]}); },
     armory: function () { return armory({c1:"#7cf29a", tag:["BOOGIE DOWN","#7cf29a"]}); },
-    cottage: function () { return cottage({tag:["KINGSBRIDGE","#ffd34d"]}); },
+    cottage: function () { return bronxLibrary(); },
     booth: function () { return djbooth({c1:"#7cf29a", c2:"#ffd34d", c3:"#c9a4ff", sign:"CLUB QUARANTINE", tag:["CLUB Q","#7cf29a"]}); },
     corner: function () { return corner({s1:"E Kingsbridge Rd", s2:"Grand Concourse", tags:[["D-NICE","#7cf29a",52],["BDP","#ffd34d",30],["CLUB Q","#c9a4ff"],["HOMEROOM","#f6efdc"]]}); }
   };

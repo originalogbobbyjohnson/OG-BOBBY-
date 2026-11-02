@@ -39,123 +39,153 @@
     return r + '</g>';
   };
 
-  /* 1. The 2 and 3 trains pulling into 125 St, underground under Lenox Av */
+  const FONT = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
+  const car = (cls, y, c) => '<g class="' + cls + '"><rect x="0" y="' + y + '" width="44" height="14" rx="4" fill="' + c + '"/><rect x="8" y="' + (y - 8) + '" width="26" height="10" rx="3" fill="' + c + '"/><rect x="11" y="' + (y - 6) + '" width="9" height="6" fill="#bfe3ff" opacity=".7"/><circle cx="10" cy="' + (y + 14) + '" r="4" fill="#111"/><circle cx="34" cy="' + (y + 14) + '" r="4" fill="#111"/><circle cx="43" cy="' + (y + 5) + '" r="2" fill="#fff6c2"/></g>';
+  const gsign = (cx, y, t) => { const w = t.length * 7 + 18; return '<rect x="' + (cx - w / 2) + '" y="' + y + '" width="' + w + '" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="' + cx + '" y="' + (y + 13) + '" text-anchor="middle" ' + FONT + ' font-size="11" fill="#fff">' + t + '</text>'; };
+
+  /* 1. 125 St on the 2/3, under Lenox Av: the old IRT mosaic, the uptown stair to the Lenox Av exit north toward Astor Row, IGH BET on the column */
   function train() {
     let tiles = "";
-    for (let y = 0; y < 116; y += 10) for (let x = (y / 10) % 2 ? -10 : 0; x < 400; x += 20) tiles += '<rect x="' + x + '" y="' + y + '" width="19" height="9" fill="#ece6d6"/>';
+    for (let y = 0; y < 110; y += 10) for (let x = (y / 10) % 2 ? -10 : 0; x < 400; x += 20) tiles += '<rect x="' + x + '" y="' + y + '" width="19" height="9" fill="#efe9da"/>';
     let windows = "";
-    for (let x = 18; x < 280; x += 46) windows += '<rect x="' + x + '" y="128" width="30" height="22" rx="3" fill="#d6f0ff" opacity=".85"/>';
-    let cols = "";
-    for (let x = 24; x < 400; x += 88) cols += '<rect x="' + x + '" y="0" width="10" height="182" fill="#3a3f4a"/>';
+    for (let x = 18; x < 230; x += 46) windows += '<rect x="' + x + '" y="128" width="30" height="22" rx="3" fill="#d6f0ff" opacity=".85"/>';
+    let mosaic = "";
+    for (let i = 0; i < 14; i++) mosaic += '<rect x="' + (24 + i * 8) + '" y="34" width="6" height="6" fill="' + (i % 2 ? "#2f6d4a" : "#c8a24a") + '"/><rect x="' + (24 + i * 8) + '" y="70" width="6" height="6" fill="' + (i % 2 ? "#c8a24a" : "#2f6d4a") + '"/>';
+    let steps = "";
+    for (let i = 0; i < 9; i++) steps += '<rect x="' + (290 + i * 9) + '" y="' + (176 - i * 14) + '" width="' + (110 - i * 9) + '" height="6" fill="#8d8a84"/>';
     return svg(
-      '<rect width="400" height="260" fill="#cfc6b0"/>' + tiles +
-      '<rect x="0" y="16" width="400" height="10" fill="#8a1f2a"/><rect x="0" y="100" width="400" height="8" fill="#8a1f2a"/>' +
-      '<rect x="0" y="108" width="400" height="74" fill="#1a1a1e"/>' + cols +
-      '<rect x="92" y="40" width="216" height="34" rx="4" fill="#111"/>' +
-      '<rect x="92" y="40" width="216" height="4" fill="#fff"/>' +
-      '<text x="106" y="65" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">125 St</text>' +
-      bullet(258, 58, "2", "#ee352e") + bullet(284, 58, "3", "#ee352e") +
+      '<rect width="400" height="260" fill="#d8d0bc"/>' + tiles +
+      '<rect x="0" y="100" width="400" height="8" fill="#2f6d4a"/>' +
+      /* mosaic name tablet */
+      '<rect x="18" y="28" width="122" height="54" fill="#7a2a1e"/>' + mosaic +
+      '<rect x="26" y="44" width="106" height="22" fill="#f4eedd"/>' +
+      '<text x="79" y="61" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="15" fill="#2a2a2a">125TH ST</text>' +
+      /* station sign */
+      '<rect x="150" y="38" width="128" height="30" rx="4" fill="#111"/><rect x="150" y="38" width="128" height="3" fill="#fff"/>' +
+      '<text x="160" y="60" ' + FONT + ' font-size="15" fill="#fff">125 St</text>' +
+      bullet(228, 54, "2", "#ee352e") + bullet(254, 54, "3", "#ee352e") +
+      /* stair up to the street with daylight */
+      '<rect x="288" y="20" width="112" height="162" fill="#f6e7b8"/>' + steps +
+      '<path d="M290 182L400 56" stroke="#2a2a2a" stroke-width="3"/>' +
+      '<rect x="296" y="22" width="98" height="40" rx="3" fill="#111"/>' +
+      '<text x="345" y="37" text-anchor="middle" ' + FONT + ' font-size="10" fill="#fff">EXIT ↑ Lenox Av</text>' +
+      '<text x="345" y="52" text-anchor="middle" ' + FONT + ' font-size="8" fill="#ffd23f">north to Astor Row</text>' +
+      '<rect x="0" y="108" width="288" height="74" fill="#1a1a1e"/>' +
       '<g class="anim-train">' +
-        '<rect x="8" y="118" width="300" height="62" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="158" width="300" height="5" fill="#ee352e"/>' + windows +
-        '<rect x="285" y="128" width="16" height="22" rx="3" fill="#d6f0ff" opacity=".85"/>' +
-        '<circle cx="300" cy="170" r="4" fill="#fff6c2"/>' +
-        bullet(272, 139, "2", "#ee352e") +
+        '<rect x="-40" y="118" width="300" height="62" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
+        '<rect x="-40" y="158" width="300" height="5" fill="#ee352e"/>' + windows +
+        '<circle cx="252" cy="170" r="4" fill="#fff6c2"/>' + bullet(238, 139, "3", "#ee352e") +
       '</g>' +
       '<rect x="0" y="180" width="400" height="10" fill="#eab308"/>' +
       '<rect x="0" y="190" width="400" height="70" fill="#2a2724"/>' +
-      tag("UPTOWN", 24, 240, 30, ORANGE, -4) + tag("YL", 310, 242, 40, GOLD, -8));
+      '<rect x="150" y="190" width="16" height="70" fill="#3a3f4a"/>' +
+      tag("IGH BET", 18, 236, 30, GOLD, -4) + tag("YL", 196, 244, 42, ORANGE, -8) +
+      '<text x="330" y="246" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="13" letter-spacing="2" fill="#e8e2d0">UPTOWN 2 · 3</text>');
   }
 
-  /* 2. 125th Street at night: the old theater with its red vertical sign, marquee bulbs, traffic rolling */
+  /* 2. Red Rooster on Lenox Av between 125th and 126th: red lettering over the glass front, sidewalk tables, the Lenox Av night */
   function marquee() {
     let bulbs = "";
-    for (let x = 70; x <= 250; x += 12) bulbs += '<circle class="flk' + (x % 36 === 10 ? " flk2" : x % 24 === 22 ? " flk3" : "") + '" cx="' + x + '" cy="134" r="2.6" fill="#fff2a8"/><circle class="flk' + (x % 36 === 22 ? " flk3" : "") + '" cx="' + x + '" cy="170" r="2.6" fill="#fff2a8"/>';
-    let vbulbs = "";
-    for (let y = 30; y < 118; y += 9) vbulbs += '<circle class="flk' + (y % 27 === 3 ? " flk2" : "") + '" cx="171" cy="' + y + '" r="2" fill="#fff2a8"/><circle class="flk' + (y % 27 === 12 ? " flk3" : "") + '" cx="199" cy="' + y + '" r="2" fill="#fff2a8"/>';
-    let letters = "";
-    "HARLEM".split("").forEach((c, i) => { letters += '<text x="185" y="' + (42 + i * 14) + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="13" fill="#ffd23f">' + c + '</text>'; });
-    let car = (cls, y, c) => '<g class="' + cls + '"><rect x="0" y="' + y + '" width="44" height="14" rx="4" fill="' + c + '"/><rect x="8" y="' + (y - 8) + '" width="26" height="10" rx="3" fill="' + c + '"/><circle cx="10" cy="' + (y + 14) + '" r="4" fill="#111"/><circle cx="34" cy="' + (y + 14) + '" r="4" fill="#111"/></g>';
+    for (let x = 64; x <= 300; x += 14) bulbs += '<circle class="flk' + (x % 3 ? " flk2" : "") + '" cx="' + x + '" cy="' + (150 + Math.sin(x / 22) * 3) + '" r="2.4" fill="#ffe7a0"/>';
+    let panes = "";
+    for (let x = 72; x < 300; x += 38) panes += '<rect x="' + x + '" y="98" width="32" height="56" fill="#ffcf7a" opacity=".9"/><rect x="' + x + '" y="98" width="32" height="56" fill="none" stroke="#3a1410" stroke-width="2"/>';
+    const table = x => '<ellipse cx="' + x + '" cy="186" rx="16" ry="4" fill="#e8e2d0"/><rect x="' + (x - 1.5) + '" y="186" width="3" height="16" fill="#222"/><rect x="' + (x - 26) + '" y="182" width="8" height="20" fill="#3a2a22"/><rect x="' + (x + 18) + '" y="182" width="8" height="20" fill="#3a2a22"/><circle class="flk" cx="' + x + '" cy="181" r="2" fill="#ffb347"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g2)"/>' + stars(12) +
-      '<rect x="0" y="70" width="60" height="140" fill="#3a2c2a"/><rect x="280" y="50" width="120" height="160" fill="#5a3a2c"/>' +
-      '<rect x="288" y="60" width="104" height="8" fill="#7a4a36"/>' +
-      '<rect x="300" y="80" width="12" height="16" fill="#ffd98a" class="flk"/><rect x="330" y="80" width="12" height="16" fill="#ffd98a"/><rect x="360" y="110" width="12" height="16" fill="#ffd98a" class="flk flk2"/><rect x="300" y="140" width="12" height="16" fill="#ffd98a"/><rect x="345" y="140" width="12" height="16" fill="#ffd98a" class="flk flk3"/>' +
-      '<rect x="60" y="60" width="220" height="150" fill="#d9cdb4"/><rect x="60" y="60" width="220" height="10" fill="#b7a98a"/>' +
-      '<rect x="164" y="20" width="42" height="104" rx="3" fill="#c8102e" stroke="#7a0a1a" stroke-width="2"/>' + vbulbs + letters +
-      '<rect x="62" y="124" width="196" height="54" fill="#c8102e" stroke="#7a0a1a" stroke-width="2"/>' +
-      '<rect x="74" y="140" width="172" height="22" fill="#f4f1e8"/>' +
-      '<text x="160" y="157" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="14" letter-spacing="2" fill="#111">YL  TONIGHT</text>' + bulbs +
-      '<rect x="120" y="182" width="80" height="28" fill="#2a1a12"/>' +
-      '<rect x="0" y="210" width="400" height="50" fill="#25282d"/><path d="M0 236h400" stroke="#f4f1e8" stroke-width="2" stroke-dasharray="20 14"/>' +
-      car("car", 216, BLUE) + car("car car2", 240, ORANGE) +
-      '<text x="340" y="40" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="14" letter-spacing="3" fill="' + GOLD + '">125TH ST</text>',
+      /* neighbors */
+      '<rect x="0" y="40" width="60" height="164" fill="#5a3a2c"/><rect x="310" y="30" width="90" height="174" fill="#6a4a3a"/>' +
+      '<rect x="12" y="60" width="12" height="16" fill="#ffd98a" class="flk"/><rect x="34" y="96" width="12" height="16" fill="#ffd98a"/><rect x="326" y="52" width="12" height="16" fill="#ffd98a"/><rect x="360" y="90" width="12" height="16" fill="#ffd98a" class="flk flk2"/>' +
+      /* the restaurant building */
+      '<rect x="60" y="20" width="250" height="184" fill="#7a3a2a"/>' +
+      '<rect x="74" y="30" width="20" height="26" fill="#ffd98a" opacity=".85"/><rect x="120" y="30" width="20" height="26" fill="#2a2030"/><rect x="166" y="30" width="20" height="26" fill="#ffd98a" opacity=".85"/><rect x="212" y="30" width="20" height="26" fill="#2a2030"/><rect x="258" y="30" width="20" height="26" fill="#ffd98a" opacity=".85"/>' +
+      '<rect x="64" y="64" width="242" height="30" fill="#1a1414"/>' +
+      '<text x="185" y="87" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="22" letter-spacing="3" fill="#e0262e">RED ROOSTER</text>' +
+      panes +
+      '<path d="M60 154c40 6 210 6 250 0" stroke="#3a2a22" stroke-width="1" fill="none"/>' + bulbs +
+      /* sidewalk tables */
+      '<rect x="0" y="202" width="400" height="10" fill="#8f8a84"/><rect x="0" y="180" width="400" height="22" fill="#a8a29a" opacity=".35"/>' +
+      table(110) + table(200) + table(270) +
+      '<rect x="0" y="212" width="400" height="48" fill="#25282d"/><path d="M0 236h400" stroke="#f4f1e8" stroke-width="2" stroke-dasharray="20 14"/>' +
+      car("car", 220, BLUE) + car("car car2", 242, ORANGE) +
+      gsign(355, 146, "Lenox Av") + '<rect x="353" y="164" width="4" height="40" fill="#1d2329"/>' +
+      '<text x="200" y="14" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" letter-spacing="3" fill="' + GOLD + '">LENOX AV · 125TH–126TH ST</text>',
       sky("g2", "#0b0d1c", "#2b2a4a"));
   }
 
-  /* 3. The park court on 155th: chain-link fence, the towers on the hill behind, a ball bouncing */
+  /* 3. St. Nicholas Houses: the blacktop between the 14-story brick towers, W 127th–131st St, a ball bouncing */
   function rucker() {
-    let fence = "";
-    for (let x = 0; x < 400; x += 12) fence += '<path d="M' + x + ' 90l12 12M' + (x + 12) + ' 90l-12 12" stroke="#9aa3ab" stroke-width=".8" opacity=".55"/>';
-    let fenceRows = "";
-    for (let y = 90; y < 150; y += 12) fenceRows += '<g transform="translate(0 ' + (y - 90) + ')">' + fence + '</g>';
     let towers = "";
-    [[40, 30], [110, 22], [250, 26], [330, 34]].forEach(t => {
-      towers += '<rect x="' + t[0] + '" y="' + t[1] + '" width="44" height="' + (120 - t[1]) + '" fill="#8a5a44"/>';
-      for (let y = t[1] + 8; y < 112; y += 10) for (let i = 5; i < 40; i += 10) towers += '<rect x="' + (t[0] + i) + '" y="' + y + '" width="5" height="5" fill="#f2d9a6" opacity=".7"/>';
+    [[-10, 14, 92], [120, 26, 70], [250, 10, 100], [366, 30, 60]].forEach(t => {
+      const x = t[0], y = t[1], w = t[2];
+      towers += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (150 - y) + '" fill="#8e4a36"/><rect x="' + x + '" y="' + y + '" width="' + w + '" height="5" fill="#6a3426"/>';
+      for (let r = 0; r < 14; r++) for (let c = x + 6; c < x + w - 8; c += 14) towers += '<rect x="' + c + '" y="' + (y + 10 + r * 9.4) + '" width="8" height="5" fill="' + ((r * 7 + c) % 5 ? "#e8d8b8" : "#ffd98a") + '" opacity=".75"/>';
     });
+    let fence = "";
+    for (let x = 0; x < 400; x += 10) fence += '<path d="M' + x + ' 130l10 10M' + (x + 10) + ' 130l-10 10M' + x + ' 140l10 10M' + (x + 10) + ' 140l-10 10" stroke="#9aa3ab" stroke-width=".7" opacity=".6"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g3)"/>' + towers +
-      '<path d="M0 120h400v34H0z" fill="#3c5a2a"/>' + fenceRows +
-      '<rect x="0" y="88" width="400" height="3" fill="#9aa3ab"/>' +
-      '<rect x="0" y="150" width="400" height="110" fill="#1f6b8a"/>' +
-      '<rect x="40" y="160" width="320" height="90" fill="#2a8a7a" stroke="#fff" stroke-width="2"/>' +
-      '<path d="M200 160v90" stroke="#fff" stroke-width="2"/><circle cx="200" cy="205" r="16" fill="none" stroke="#fff" stroke-width="2"/>' +
-      '<path d="M360 178h-40v54h40" fill="#c8102e" opacity=".85" stroke="#fff" stroke-width="2"/>' +
-      '<rect x="368" y="110" width="5" height="94" fill="#555"/><rect x="350" y="118" width="22" height="30" fill="#f4f1e8" stroke="#333"/><path d="M350 144h-10" stroke="' + ORANGE + '" stroke-width="3"/><path d="M340 144l2 10h-6l2-10" fill="none" stroke="#fff"/>' +
-      '<g class="ball"><circle cx="300" cy="196" r="8" fill="' + ORANGE + '" stroke="#5a2a0a"/><path d="M292 196h16M300 188v16" stroke="#5a2a0a"/></g>' +
-      '<text x="200" y="18" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="14" letter-spacing="4" fill="#3a1a0a">155TH ST COURT</text>',
+      '<rect x="0" y="128" width="400" height="2" fill="#9aa3ab"/>' + fence +
+      '<rect x="0" y="150" width="400" height="110" fill="#2d2f33"/>' +
+      '<rect x="30" y="160" width="340" height="92" fill="none" stroke="#f4f1e8" stroke-width="2"/>' +
+      '<path d="M200 160v92" stroke="#f4f1e8" stroke-width="2"/><circle cx="200" cy="206" r="16" fill="none" stroke="#f4f1e8" stroke-width="2"/>' +
+      '<path d="M370 182h-44v48h44" fill="none" stroke="#f4f1e8" stroke-width="2"/><path d="M326 182a24 24 0 0 0 0 48" fill="none" stroke="#f4f1e8" stroke-width="2"/>' +
+      '<rect x="378" y="110" width="5" height="96" fill="#555"/><rect x="358" y="116" width="22" height="28" fill="#f4f1e8" stroke="#333"/><path d="M358 140h-10" stroke="' + ORANGE + '" stroke-width="3"/><path d="M348 140l2 10h-6l2-10" fill="none" stroke="#fff"/>' +
+      '<g class="ball"><circle cx="300" cy="200" r="8" fill="' + ORANGE + '" stroke="#5a2a0a"/><path d="M292 200h16M300 192v16" stroke="#5a2a0a"/></g>' +
+      tag("YL", 60, 238, 30, GOLD, -6) +
+      '<rect x="40" y="2" width="320" height="22" rx="3" fill="#111" opacity=".75"/>' +
+      '<text x="200" y="18" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="13" letter-spacing="2" fill="' + GOLD + '">ST. NICHOLAS HOUSES · W 127–131</text>',
       sky("g3", "#f2994a", "#ffe0a0"));
   }
 
-  /* 4. A row of Harlem brownstones: brown stone, stoops, black iron rails, bay windows, a bird going by */
+  /* 4. Astor Row, W 130th St between 5th and Lenox: the 1880s brick rowhouses with wooden front porches and yards */
   function brownstones() {
     let row = "";
-    const cols = ["#7a4a34", "#8a5a3e", "#6e4230", "#85523a", "#7a4a34"];
+    const porch = ["#f4f1e8", "#5f8f6a", "#e8c36a", "#f4f1e8", "#7a9ac0"];
     for (let i = 0; i < 5; i++) {
-      const x = i * 80;
-      row += '<rect x="' + x + '" y="50" width="80" height="160" fill="' + cols[i] + '"/><rect x="' + x + '" y="46" width="80" height="8" fill="#4a2c20"/>';
-      row += '<rect x="' + (x + 10) + '" y="66" width="16" height="22" fill="#2a2030"/><rect x="' + (x + 32) + '" y="66" width="16" height="22" fill="#2a2030"/><rect x="' + (x + 54) + '" y="66" width="16" height="22" fill="#2a2030" class="flk' + (i % 2 ? " flk2" : "") + '"/>';
-      row += '<rect x="' + (x + 10) + '" y="104" width="16" height="22" fill="#2a2030"/><rect x="' + (x + 32) + '" y="104" width="16" height="22" fill="#ffd98a" opacity=".8"/>';
-      row += '<path d="M' + (x + 52) + ' 150v-24a9 10 0 0 1 18 0v24z" fill="#3a2418"/>';
-      row += '<path d="M' + (x + 50) + ' 150l-30 46h18l30-46z" fill="#9a6a4e"/>';
-      row += '<path d="M' + (x + 48) + ' 140l-32 50M' + (x + 72) + ' 140l-32 52" stroke="#111" stroke-width="2"/>';
+      const x = i * 80 + 4;
+      row += '<rect x="' + x + '" y="40" width="72" height="140" fill="#9a4a34"/><rect x="' + x + '" y="34" width="72" height="8" fill="#5a2a1e"/>';
+      row += '<rect x="' + (x + 10) + '" y="52" width="14" height="22" fill="#2a2030"/><rect x="' + (x + 30) + '" y="52" width="14" height="22" fill="#ffd98a" opacity=".8"/><rect x="' + (x + 50) + '" y="52" width="14" height="22" fill="#2a2030"/>';
+      row += '<rect x="' + (x + 10) + '" y="90" width="14" height="22" fill="#2a2030"/><rect x="' + (x + 50) + '" y="90" width="14" height="22" fill="#2a2030"/>';
+      row += '<path d="M' + (x + 30) + ' 150v-26h14v26z" fill="#3a2418"/>';
+      /* the wooden porch across the front */
+      row += '<path d="M' + (x - 2) + ' 118h76l-4 -8h-68z" fill="' + porch[i] + '"/>';
+      row += '<rect x="' + x + '" y="118" width="72" height="4" fill="' + porch[i] + '"/>';
+      for (let p = 0; p < 4; p++) row += '<rect x="' + (x + 2 + p * 22) + '" y="122" width="4" height="30" fill="' + porch[i] + '"/>';
+      row += '<rect x="' + x + '" y="140" width="72" height="3" fill="' + porch[i] + '"/>';
+      for (let b = 0; b < 12; b++) row += '<rect x="' + (x + 2 + b * 6) + '" y="143" width="2" height="9" fill="' + porch[i] + '"/>';
+      row += '<rect x="' + x + '" y="152" width="72" height="6" fill="#6a5a4a"/>';
+      row += '<path d="M' + (x + 30) + ' 158h14l4 16h-22z" fill="#8a7a6a"/>';
     }
+    let yard = "";
+    for (let x = 0; x < 400; x += 6) yard += '<rect x="' + x + '" y="186" width="2" height="16" fill="#111"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g4)"/>' + row +
-      '<rect x="0" y="196" width="400" height="18" fill="#9b9690"/>' +
-      '<rect x="0" y="214" width="400" height="46" fill="#2a2d33"/>' +
-      '<g class="bird"><path d="M0 30q6-6 12 0q6-6 12 0" stroke="#222" stroke-width="2" fill="none"/></g>' +
-      '<rect x="110" y="226" width="180" height="24" rx="4" fill="#111" opacity=".7"/>' +
-      '<text x="200" y="244" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="15" letter-spacing="4" fill="' + GOLD + '">STRIVERS ROW</text>',
+      '<rect x="0" y="174" width="400" height="22" fill="#4f7a3a"/>' +
+      '<circle cx="40" cy="176" r="10" fill="#6a9a4a"/><circle cx="200" cy="178" r="9" fill="#6a9a4a"/><circle cx="330" cy="176" r="11" fill="#6a9a4a"/>' +
+      '<rect x="0" y="184" width="400" height="2" fill="#111"/>' + yard +
+      '<rect x="0" y="202" width="400" height="14" fill="#9b9690"/>' +
+      '<rect x="0" y="216" width="400" height="44" fill="#2a2d33"/>' +
+      '<g class="bird"><path d="M0 26q6-6 12 0q6-6 12 0" stroke="#222" stroke-width="2" fill="none"/></g>' +
+      '<g class="bird bird2"><path d="M0 44q5-5 10 0q5-5 10 0" stroke="#222" stroke-width="2" fill="none"/></g>' +
+      '<rect x="90" y="224" width="220" height="26" rx="4" fill="#111" opacity=".75"/>' +
+      '<text x="200" y="243" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="15" letter-spacing="3" fill="' + GOLD + '">ASTOR ROW · W 130TH ST</text>',
       sky("g4", "#6a9ad0", "#f4d6a6"));
   }
 
-  /* 5. Malcolm X Blvd and W 125 St: green street signs, streetlight, the tag wall */
+  /* 5. Lenox Av and W 130 St, at the corner of Astor Row: green street signs, streetlight, the tag wall */
   function corner() {
     return svg(
       '<rect width="400" height="260" fill="url(#g5)"/>' + stars(14) +
-      '<rect x="20" y="70" width="230" height="150" fill="#3a3a40"/>' +
+      '<rect x="20" y="70" width="230" height="150" fill="#8a4a36"/>' +
+      '<path d="M20 70h230" stroke="#5a2a1e" stroke-width="6"/>' +
       tag("YL", 50, 150, 60, ORANGE, -7) + tag("IGH BET", 40, 204, 30, GOLD, -3) +
       '<rect x="300" y="56" width="5" height="164" fill="#1d2329"/><path d="M302 58h26" stroke="#1d2329" stroke-width="5"/>' +
       '<path class="flk" d="M318 62h26l-6 8h-14z" fill="#ffe7a8"/><g opacity=".14"><path class="flk" d="M318 70l26 0 34 150h-94z" fill="#ffe7a8"/></g>' +
-      '<rect x="252" y="88" width="100" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
-      '<text x="302" y="101" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">Malcolm X Blvd</text>' +
-      '<rect x="262" y="110" width="80" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
-      '<text x="302" y="123" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">W 125 St</text>' +
-      '<rect x="0" y="220" width="400" height="40" fill="#14181d"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>',
+      gsign(302, 88, "Lenox Av") + gsign(302, 110, "W 130 St") +
+      '<text x="302" y="142" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="10" letter-spacing="2" fill="' + GOLD + '">ASTOR ROW</text>' +
+      '<rect x="0" y="220" width="400" height="40" fill="#14181d"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      car("car", 226, BLUE),
       sky("g5", "#0d1424", "#2a3a5a"));
   }
-
   window.SCENES = { train, marquee, rucker, brownstones, corner };
 })();

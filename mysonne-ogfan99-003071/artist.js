@@ -83,7 +83,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO HIGHBRIDGE",
-   "x": "W 167 St and Ogden Av. This is Mysonne's game.",
+   "x": "Ogden Av and W 170 St. This is Mysonne's game.",
    "sfx": "spray"
   }
  ],

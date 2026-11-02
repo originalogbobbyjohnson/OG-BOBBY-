@@ -65,7 +65,7 @@ window.CFG = {
   {
    "scene": "station",
    "t": "PRESS PLAY",
-   "x": "Take the 2 or 5 to 3 Av-149 St. Tap the record. Every song is an episode.",
+   "x": "Take the Metro-North Harlem Line to Melrose. Tap the record. Every song is an episode.",
    "sfx": "train"
   },
   {

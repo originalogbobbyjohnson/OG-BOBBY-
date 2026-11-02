@@ -98,7 +98,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO HARLEM",
-   "x": "125th St and Malcolm X Blvd. This is the Jungle Brothers' game.",
+   "x": "Mount Morris Park West and W 122nd St, under the old fire watchtower. This is the Jungle Brothers' game.",
    "sfx": "spray"
   }
  ],

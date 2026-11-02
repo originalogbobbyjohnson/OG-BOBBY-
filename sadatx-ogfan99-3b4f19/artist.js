@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO NEW ROCHELLE",
-   "x": "Main St and North Av. This is Sadat X's game.",
+   "x": "North Av and Lincoln Av. This is Sadat X's game.",
    "sfx": "spray"
   }
  ],

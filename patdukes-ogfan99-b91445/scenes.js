@@ -57,101 +57,90 @@
   };
   const gull = (x, y) => '<g transform="translate(' + x + ' ' + y + ')"><path class="flap" d="M0 0q5-6 10 0q5-6 10 0" stroke="#f4f4f4" stroke-width="2" fill="none"/></g>';
 
-  /* 1. St. George: the SIR train pulls into the terminal; the harbor and a ferry slip through the big glass wall */
+  /* 1. St. George, looking up from the end of the SIR platform: the exit stair to Richmond Terrace and Wall St, Borough Hall's clock tower on the hill, the train pulling in */
   function station() {
     let windows = "";
-    for (let x = 30; x < 290; x += 40) windows += '<rect x="' + x + '" y="136" width="26" height="20" rx="3" fill="#cfe6ff" opacity=".9"/>';
-    let mull = "";
-    for (let x = 0; x <= 400; x += 40) mull += '<rect x="' + (x - 2) + '" y="0" width="4" height="116" fill="#2b333e"/>';
+    for (let x = 30; x < 290; x += 40) windows += '<rect x="' + x + '" y="150" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    let bricks = "";
+    for (let y = 48; y < 122; y += 6) bricks += '<path d="M138 ' + y + 'h96" stroke="#7a3a26" stroke-width=".6"/>';
     return svg(
-      '<rect width="400" height="260" fill="#161c24"/>' +
-      '<rect x="0" y="0" width="400" height="116" fill="url(#s1)"/>' +
-      /* Manhattan far off across the harbor */
-      '<path d="M210 86h10v-14h8v-8h6v22h10v-30h4l3-10 3 10h4v30h8v-18h10v18h12v-12h8v12h16v6H210z" fill="#2f3b58"/>' +
-      '<rect x="0" y="86" width="400" height="30" fill="#2a5a7e"/>' +
-      '<g class="sailR"><g transform="translate(0 72)">' + ferry(0.5) + '</g></g>' +
-      '<path class="shim" d="M20 104h44M280 110h56" stroke="#ffcf6b" stroke-width="2"/>' + mull +
-      '<rect x="0" y="0" width="400" height="8" fill="#2b333e"/><rect x="0" y="44" width="400" height="3" fill="#2b333e"/>' +
-      /* black station sign */
-      '<rect x="96" y="14" width="208" height="30" rx="4" fill="#111"/><rect x="96" y="14" width="208" height="4" fill="#fff"/>' +
-      '<text x="108" y="37" ' + FONT + ' font-size="15" fill="#fff">St. George</text>' + sir(278, 30) +
-      '<rect x="0" y="116" width="400" height="74" fill="#0e131a"/>' +
-      /* the SIR car: stainless with the blue band */
+      '<rect width="400" height="260" fill="url(#s1)"/>' + stars(10) +
+      /* the hill and Borough Hall: red brick, limestone trim, the clock tower */
+      '<path d="M0 120q120-30 240-24t160 10v20H0z" fill="#3a4a3a"/>' +
+      '<rect x="130" y="70" width="110" height="52" fill="#9a4a32"/>' + bricks + '<path d="M126 70l14-12h90l14 12z" fill="#4a4e58"/>' +
+      [142, 162, 202, 222].map(x => '<rect class="flk" x="' + x + '" y="84" width="8" height="14" fill="#ffd98a"/>').join("") +
+      '<rect x="176" y="20" width="22" height="102" fill="#9a4a32"/><rect x="174" y="34" width="26" height="4" fill="#e8dcc0"/><path d="M172 22l15-18 15 18z" fill="#4a4e58"/>' +
+      '<circle cx="187" cy="46" r="7" fill="#f6efdc" stroke="#3a2a22" stroke-width="1.5"/><g class="hand" style="transform-origin:187px 46px"><path d="M187 46v-5" stroke="#222" stroke-width="1.3"/></g><path d="M187 46h4" stroke="#222" stroke-width="1.3"/>' +
+      '<text x="187" y="134" text-anchor="middle" ' + FONT + ' font-size="8" fill="#e8dcc0">BOROUGH HALL</text>' +
+      /* the canopy and the exit sign */
+      '<rect x="0" y="0" width="400" height="10" fill="#2b333e"/><path d="M0 10h400" stroke="#1b222b" stroke-width="2"/>' +
+      '<rect x="268" y="18" width="124" height="38" rx="3" fill="#111"/><text x="278" y="32" ' + FONT + ' font-size="9" fill="#fff">EXIT ▸ Richmond Ter</text><text x="278" y="47" ' + FONT + ' font-size="9" fill="#fff">Wall St · Borough Hall</text>' +
+      '<rect x="8" y="18" width="150" height="30" rx="4" fill="#111"/><rect x="8" y="18" width="150" height="4" fill="#fff"/><text x="18" y="40" ' + FONT + ' font-size="15" fill="#fff">St. George</text>' + sir(132, 34) +
+      /* the stair going up */
+      '<path d="M300 140l40-40h60v40z" fill="#4a525e"/>' + [0, 1, 2, 3].map(i => '<path d="M' + (306 + i * 10) + ' ' + (134 - i * 10) + 'h' + (94 - i * 10) + '" stroke="#8a929e" stroke-width="2"/>').join("") +
+      '<rect x="0" y="140" width="400" height="44" fill="#0e131a"/>' +
       '<g class="anim-train">' +
-        '<rect x="10" y="124" width="300" height="58" rx="8" fill="#c7ccd4" stroke="#69707c" stroke-width="2"/>' +
-        '<rect x="10" y="162" width="300" height="6" fill="#0039a6"/>' + windows +
-        '<rect x="294" y="134" width="12" height="24" rx="2" fill="#cfe6ff" opacity=".9"/>' +
-        '<circle cx="302" cy="174" r="4" fill="#fff6c2"/>' + sir(262, 172) +
+        '<rect x="10" y="142" width="290" height="40" rx="7" fill="#c7ccd4" stroke="#69707c" stroke-width="2"/>' +
+        '<rect x="10" y="170" width="290" height="5" fill="#0039a6"/>' + windows.replace(/x="290"/, 'x="999"') +
+        '<circle cx="292" cy="178" r="3.5" fill="#fff6c2"/>' + sir(262, 158) +
       '</g>' +
-      '<rect x="0" y="182" width="400" height="9" fill="#eab308"/>' +
-      '<rect x="0" y="191" width="400" height="69" fill="#1b222b"/>' +
-      tag("PAT DUKES", 22, 242, 30, GREEN, -5) + tag("HORRIBLE NATURE", 196, 238, 22, GOLD, -3),
+      '<rect x="0" y="184" width="400" height="8" fill="#eab308"/>' +
+      '<rect x="0" y="192" width="400" height="68" fill="#1b222b"/>' +
+      tag("PAT DUKES", 18, 238, 32, GREEN, -5) + tag("WOWLLL PACINO", 214, 236, 20, GOLD, -4) + tag("INCITE FOREVER", 196, 256, 14, ORANGE, -2),
       sky("s1", "#26365f", "#e9925e"));
   }
 
-  /* 2. The orange ferry crossing the harbor at sunset, the statue and lower Manhattan behind, gulls overhead */
+  /* 2. Postcards, the Staten Island 9/11 memorial on the St. George esplanade: the two white curved walls framing the harbor and the gap in the Lower Manhattan skyline */
   function ferryride() {
     let city = "";
-    [[0, 12, 28], [14, 10, 42], [26, 16, 24], [44, 12, 56], [58, 18, 34], [78, 10, 48], [90, 14, 30], [106, 18, 44], [126, 12, 30], [140, 16, 52], [158, 12, 26]].forEach(b =>
-      city += '<rect x="' + (170 + b[0]) + '" y="' + (104 - b[2]) + '" width="' + b[1] + '" height="' + b[2] + '" fill="#41406a"/>');
-    /* the tall tower with its spire */
-    city += '<path d="M226 104V30l7-12 7 12v74z" fill="#41406a"/><rect x="232" y="2" width="2" height="16" fill="#41406a"/>';
-    let lit = "";
-    for (let i = 0; i < 18; i++) lit += '<rect class="tw' + (i % 3 ? " tw" + (i % 3 + 1) : "") + '" x="' + (174 + (i * 37) % 160) + '" y="' + (62 + (i * 13) % 36) + '" width="2" height="3" fill="#ffd98a"/>';
+    [[0, 12, 28], [14, 10, 42], [26, 16, 24], [44, 12, 36], [100, 14, 30], [116, 18, 44], [136, 12, 30], [150, 16, 22]].forEach(b =>
+      city += '<rect x="' + (120 + b[0]) + '" y="' + (112 - b[2]) + '" width="' + b[1] + '" height="' + b[2] + '" fill="#4a5478"/>');
     return svg(
       '<rect width="400" height="260" fill="url(#s2)"/>' +
-      '<circle cx="96" cy="80" r="26" fill="#ffb35a" opacity=".95"/>' + city + lit +
-      /* the statue far off, copper green */
-      '<rect x="58" y="96" width="24" height="8" fill="#4f8f80"/><path d="M64 96v-20l3-4v-9l3-6 3 6v9l3 4v20z" fill="#5fae9a"/><path d="M73 60l3-12" stroke="#5fae9a" stroke-width="2.5"/><circle cx="76" cy="47" r="2.5" fill="#ffd36b"/>' +
-      '<rect x="0" y="104" width="400" height="156" fill="#2c5c84"/>' +
-      '<path class="shim" d="M14 124h64M300 120h64M50 224h90M250 240h100" stroke="#ffd7a0" stroke-width="2"/>' +
-      '<path class="shim shim2" d="M150 206h50M320 200h44M40 150h40" stroke="#ffd7a0" stroke-width="2"/>' +
-      '<g class="sailR"><g class="bob"><g transform="translate(0 138)">' + ferry(1.1) + '</g><path d="M8 196q80 6 170 0" stroke="#e6f2fa" stroke-width="3" fill="none" opacity=".7"/></g></g>' +
-      '<g class="drift">' + gull(280, 40) + gull(312, 58) + gull(250, 66) + '</g>' +
-      tag("FREE RIDE", 236, 250, 26, ORANGE, -4),
-      sky("s2", "#3d3474", "#ffae78"));
+      '<circle cx="330" cy="52" r="20" fill="#fff1c8" opacity=".95"/>' + city +
+      '<path class="tw" d="M190 112V70M200 112V70" stroke="#cfe0f2" stroke-width="1" opacity=".5"/>' +
+      '<rect x="0" y="112" width="400" height="60" fill="#3a6f98"/>' +
+      '<path class="shim" d="M14 128h54M300 124h60M150 150h70" stroke="#e6f2fa" stroke-width="2"/>' +
+      '<g class="sailR"><g transform="translate(0 116)">' + ferry(0.45) + '</g></g>' +
+      /* the two wings, curving up and apart like folded postcards */
+      '<path d="M60 206C70 150 110 90 176 40L184 46C140 100 116 160 112 206z" fill="#f6f7f8" stroke="#c9cfd6" stroke-width="1.5"/>' +
+      '<path d="M340 206C330 150 290 90 224 40L216 46C260 100 284 160 288 206z" fill="#f6f7f8" stroke="#c9cfd6" stroke-width="1.5"/>' +
+      '<path d="M112 206C116 160 140 100 184 46" stroke="#dfe4ea" stroke-width="5" fill="none"/><path d="M288 206C284 160 260 100 216 46" stroke="#dfe4ea" stroke-width="5" fill="none"/>' +
+      /* the esplanade */
+      '<rect x="0" y="172" width="400" height="6" fill="#59616e"/>' + [20, 60, 340, 380].map(x => '<rect x="' + x + '" y="160" width="3" height="14" fill="#59616e"/>').join("") +
+      '<rect x="0" y="206" width="400" height="54" fill="#c9c1b0"/><rect x="0" y="178" width="400" height="28" fill="#b8b09e"/>' +
+      '<g class="drift">' + gull(60, 40) + gull(92, 58) + '</g>' +
+      '<text x="200" y="232" text-anchor="middle" ' + FONT + ' font-size="14" fill="#2a2a3a">POSTCARDS</text><text x="200" y="246" text-anchor="middle" ' + FONT + ' font-size="8" fill="#2a2a3a">ST. GEORGE ESPLANADE · 9/11 MEMORIAL</text>' +
+      tag("PAT DUKES", 14, 202, 22, GREEN, -3),
+      sky("s2", "#6a9ad0", "#f6d6b0"));
   }
 
-  /* 3. The Verrazzano from the Staten Island side at night: the gray towers, the lit cables, Brooklyn across the Narrows, a ship sliding under */
+  /* 3. Empire Outlets by the St. George ferry (2019): the long low glass storefronts on the waterfront beside the terminal, Lower Manhattan across the harbor */
   function narrows() {
-    const tower = x =>
-      '<rect x="' + (x - 9) + '" y="34" width="6" height="150" fill="#a9b3b8"/><rect x="' + (x + 3) + '" y="34" width="6" height="150" fill="#a9b3b8"/>' +
-      '<rect x="' + (x - 9) + '" y="34" width="18" height="6" fill="#a9b3b8"/><rect x="' + (x - 9) + '" y="88" width="18" height="5" fill="#a9b3b8"/><rect x="' + (x - 9) + '" y="140" width="18" height="5" fill="#a9b3b8"/>' +
-      '<circle class="tw" cx="' + x + '" cy="30" r="2.5" fill="#ff4d4d"/>';
-    let lights = "";
-    for (let i = 0; i <= 26; i++) {
-      const t = i / 26, x = 70 + t * 250;
-      const y = 40 + 92 * (1 - Math.pow(2 * t - 1, 2)) * 1;
-      lights += '<circle class="tw' + (i % 3 ? " tw" + (i % 3 + 1) : "") + '" cx="' + x.toFixed(1) + '" cy="' + (y + 0).toFixed(1) + '" r="1.6" fill="#fff4c4"/>';
-    }
-    let hangers = "";
-    for (let x = 80; x < 320; x += 12) { const t = (x - 70) / 250; const y = 40 + 92 * (1 - Math.pow(2 * t - 1, 2)); hangers += '<path d="M' + x + ' ' + y.toFixed(1) + 'V150" stroke="#8b979d" stroke-width=".6"/>'; }
-    let brooklyn = "";
-    [[0, 10, 10], [12, 14, 16], [28, 8, 12], [38, 12, 20], [52, 16, 14], [70, 10, 22], [82, 14, 12], [98, 12, 18]].forEach(b => brooklyn += '<rect x="' + (300 + b[0]) + '" y="' + (176 - b[2]) + '" width="' + b[1] + '" height="' + b[2] + '" fill="#1d2b44"/>');
+    let city = "";
+    [[0, 12, 28], [14, 10, 42], [26, 16, 24], [44, 12, 56], [58, 18, 34], [78, 10, 48], [90, 14, 30], [106, 18, 44], [126, 12, 30]].forEach(b =>
+      city += '<rect x="' + (210 + b[0]) + '" y="' + (86 - b[2]) + '" width="' + b[1] + '" height="' + b[2] + '" fill="#5a6488"/>');
+    city += '<path d="M262 86V22l6-10 6 10v64z" fill="#5a6488"/><rect x="267" y="0" width="2" height="12" fill="#5a6488"/>';
+    let shops = "";
+    for (let x = 116; x < 386; x += 30) shops += '<rect x="' + x + '" y="146" width="26" height="34" fill="#9fd0ea" opacity=".85"/><rect class="flk' + (x % 60 ? ' flk2' : '') + '" x="' + (x + 4) + '" y="150" width="18" height="6" fill="#ffe6a8" opacity=".7"/>';
+    for (let x = 116; x < 386; x += 30) shops += '<rect x="' + x + '" y="114" width="26" height="22" fill="#b8dcef" opacity=".8"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#s3)"/>' + stars(26) +
-      '<circle cx="30" cy="40" r="13" fill="#f4efd8"/><circle cx="36" cy="36" r="11" fill="#141c38"/>' +
-      brooklyn + '<rect x="290" y="174" width="110" height="6" fill="#1a273d"/>' +
-      '<rect x="0" y="176" width="400" height="84" fill="#122640"/>' +
-      '<path class="shim" d="M120 196h50M230 204h60M40 216h40" stroke="#ffe6a6" stroke-width="1.6"/>' +
-      /* main cables from tower to tower and down to the shores */
-      '<path d="M70 40Q195 224 320 40" stroke="#c9d1d4" stroke-width="2" fill="none"/>' +
-      '<path d="M-20 150Q30 100 70 40M320 40Q370 100 420 150" stroke="#c9d1d4" stroke-width="2" fill="none"/>' + hangers + lights +
-      tower(70) + tower(320) +
-      /* the deck with cars */
-      '<rect x="-10" y="148" width="420" height="8" fill="#7f8b91"/><rect x="-10" y="156" width="420" height="3" fill="#56616a"/>' +
-      '<g class="carR"><rect x="0" y="144" width="12" height="5" rx="2" fill="#ffe08a"/></g><g class="carR d1"><rect x="0" y="144" width="12" height="5" rx="2" fill="#ffe08a"/></g>' +
-      '<g class="carL d2"><rect x="0" y="144" width="12" height="5" rx="2" fill="#ff6b6b"/></g>' +
-      /* a cargo ship going under */
-      '<g class="shipL"><path d="M0 188h90l-8 12H6z" fill="#3b2a2a"/><rect x="10" y="176" width="16" height="12" fill="#c2452d"/><rect x="28" y="178" width="16" height="10" fill="#2d6bc2"/><rect x="46" y="176" width="16" height="12" fill="#e0a526"/><rect x="70" y="170" width="12" height="18" fill="#e9e9e9"/><circle cx="76" cy="168" r="1.6" fill="#fff4c4" class="tw"/></g>' +
-      /* Staten Island shore in front: the old stone fort wall and the railing */
-      '<path d="M0 214h400v46H0z" fill="#20303f"/>' +
-      '<rect x="0" y="206" width="170" height="20" fill="#8c8678"/>' +
-      (function () { let b = ""; for (let x = 0; x < 170; x += 17) b += '<path d="M' + x + ' 206v20M' + x + ' 216h17" stroke="#6b665b" stroke-width="1"/>'; return b; })() +
-      '<path d="M170 222h230" stroke="#c9d1d4" stroke-width="2"/><path d="M170 232h230" stroke="#c9d1d4" stroke-width="1.5"/>' +
-      (function () { let p = ""; for (let x = 180; x < 400; x += 28) p += '<rect x="' + x + '" y="220" width="3" height="16" fill="#c9d1d4"/>'; return p; })() +
-      tag("STATEN ISLAND BOY", 186, 254, 20, GREEN, -4) + tag("333", 20, 252, 24, GOLD, -6),
-      sky("s3", "#0b1230", "#2b3c66"));
+      '<rect width="400" height="260" fill="url(#s3)"/>' + city +
+      '<rect x="0" y="86" width="400" height="26" fill="#3a6f98"/><path class="shim" d="M20 96h40M150 102h50M330 98h40" stroke="#e6f2fa" stroke-width="2"/>' +
+      '<g class="shipL"><g transform="translate(0 76)">' + ferry(0.35) + '</g></g>' +
+      /* the ferry terminal on the left */
+      '<rect x="0" y="92" width="104" height="96" fill="#8a9aa8"/><rect x="6" y="100" width="92" height="50" fill="#bfe0f2" opacity=".8"/><path d="M0 92h104l-8-10H8z" fill="#5a6470"/>' +
+      '<text x="52" y="172" text-anchor="middle" ' + FONT + ' font-size="8" fill="#14202c">FERRY TERMINAL</text>' +
+      /* the outlets: two low levels of glass, gray and wood panels */
+      '<rect x="108" y="106" width="292" height="80" fill="#6a6a70"/><rect x="108" y="102" width="292" height="6" fill="#3a3a40"/><rect x="108" y="138" width="292" height="6" fill="#b08a5a"/>' + shops +
+      '<rect x="190" y="88" width="120" height="16" fill="#14181d"/><text x="250" y="100" text-anchor="middle" ' + FONT + ' font-size="10" fill="' + GOLD + '">EMPIRE OUTLETS</text>' +
+      /* the waterfront walk */
+      '<rect x="0" y="186" width="400" height="74" fill="#c9c1b0"/><path d="M0 200h400" stroke="#a89f8a"/>' +
+      '<g class="carR"><circle cx="0" cy="206" r="5" fill="#2a1a10"/><rect x="-5" y="211" width="10" height="16" rx="3" fill="' + ORANGE + '"/></g>' +
+      '<g class="carL d1"><circle cx="0" cy="210" r="5" fill="#2a1a10"/><rect x="-5" y="215" width="10" height="16" rx="3" fill="' + GREEN + '"/></g>' +
+      '<text x="110" y="22" text-anchor="middle" ' + FONT + ' font-size="10" fill="#14202c">ST. GEORGE WATERFRONT · 2019</text>' +
+      tag("PAT DUKES", 18, 252, 28, GREEN, -4) + tag("HORRIBLE NATURE", 196, 252, 20, GOLD, -3),
+      sky("s3", "#8fc3ea", "#f4e2c4"));
   }
 
   /* 4. St. George: Borough Hall's brick clock tower over Richmond Terrace, flag waving, traffic rolling by */

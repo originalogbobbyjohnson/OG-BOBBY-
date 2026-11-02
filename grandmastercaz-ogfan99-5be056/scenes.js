@@ -102,32 +102,53 @@
       sky("s1", "#0a0a2a", "#3a2a5a"));
   }
 
-  /* 3. The Hall of Fame for Great Americans: the curving open-air colonnade and the green-domed library on the hill */
+  /* 3. The T-Connection on White Plains Rd: the old club where Cold Crush cut the famous live tapes, the marquee lit, the 2 and 5 rattling by on the el overhead */
   function hall() {
-    let cols = "";
-    for (let i = 0; i < 13; i++) { const x = 20 + i * 30, y = 160 - Math.sin(i / 12 * Math.PI) * 20; cols += rect(x, y, 8, 60, "#efe8d8") + rect(x - 3, y - 6, 14, 6, "#d8d0bc"); }
-    return svg('<rect width="400" height="260" fill="url(#h1)"/>' + '<circle cx="340" cy="44" r="18" fill="#fff3a8"/>' +
-      /* library: buff brick drum, columns, green dome */
-      rect(130, 60, 140, 90, "#d8c8a0") + [146, 168, 190, 212, 234, 256].map(x => rect(x - 3, 74, 7, 76, "#f6f3ea")).join("") +
-      '<path d="M140 62q60-70 120 0z" fill="#5a9a7a"/><rect x="194" y="4" width="12" height="12" fill="#5a9a7a"/>' + rect(126, 56, 148, 8, "#c8b890") +
-      '<path d="M0 200q200-40 400 0" fill="none" stroke="#c8c0aa" stroke-width="10"/>' + cols +
-      '<path d="M0 220q200-42 400 0v40H0z" fill="#5a9a3a"/>' + tree(20, 120, 22, "#2f7a34") + tree(380, 120, 22, "#3a8a3a", "sway sw2") +
-      person(120, 246, GOLD, "slide slw") + person(300, 246, ICE, "slideL"),
-      sky("h1", "#6ab6ea", "#dcf0fa"));
+    const { svg, sky, tag, T, stars, bullet, fig, wins } = LM1;
+    let girders = '<rect x="14" y="30" width="8" height="190" fill="#3a4a3a"/><rect x="378" y="30" width="8" height="190" fill="#3a4a3a"/>'; for (let x = 0; x < 400; x += 40) girders += '<path d="M' + x + ' 32L' + (x + 40) + ' 46M' + (x + 40) + ' 32L' + x + ' 46" stroke="#3a4a3a" stroke-width="3"/>';
+    let win = ""; for (let x = 14; x < 300; x += 40) win += '<rect x="' + x + '" y="6" width="24" height="12" rx="2" fill="#cfe6ff" opacity=".85"/>';
+    let bulbs = ""; for (let x = 92; x <= 308; x += 12) bulbs += '<circle class="lm-blink' + (x % 24 ? " lm-k2" : "") + '" cx="' + x + '" cy="88" r="2.4" fill="#fff2b0"/>';
+    return svg(
+      '<rect width="400" height="260" fill="url(#tc1)"/>' + stars(14) +
+      /* the club front */
+      '<rect x="40" y="60" width="320" height="160" fill="#4a3a52"/>' + wins(60, 66, 9, 1, 34, 0, 20, 14, "#2a1d27", "#ffd98a") +
+      '<path d="M80 84h240v44H80z" fill="#111" stroke="#ffd34d" stroke-width="2"/>' + bulbs +
+      T(200, 112, "T-CONNECTION", 22, "#ffd34d") + T(200, 124, "TONIGHT: COLD CRUSH BROTHERS", 8, "#6fd3ff", { f: "Barlow, Arial, sans-serif", w: 700, ls: 1.2 }) +
+      '<rect x="170" y="150" width="60" height="70" fill="#2a1a2a"/><rect x="176" y="156" width="48" height="30" fill="#ffd98a" opacity=".6"/>' +
+      '<rect x="60" y="150" width="90" height="44" fill="#1a1a1a"/><rect x="250" y="150" width="90" height="44" fill="#1a1a1a"/>' +
+      '<g class="lm-flk"><circle cx="104" cy="172" r="12" fill="none" stroke="#ff4f4f" stroke-width="2"/><circle cx="104" cy="172" r="3" fill="#ff4f4f"/></g>' +
+      /* the el over White Plains Rd */
+      '<rect x="0" y="22" width="400" height="10" fill="#3a4a3a"/>' + girders +
+      '<g class="lm-car" style="animation-duration:5s"><g transform="translate(-200 0)"><rect x="0" y="2" width="300" height="20" rx="5" fill="#c9ced6" stroke="#6b7280"/>' + win + '<rect x="0" y="16" width="300" height="2" fill="#ee352e"/>' +
+        bullet(276, 12, "2", "#ee352e", false, 7) + bullet(258, 12, "5", "#00933c", false, 7) + '</g></g>' +
+      '<rect x="0" y="220" width="400" height="40" fill="#1c1c22"/>' +
+      '<g class="lm-bob">' + fig(260, 250, "#111", null, .85) + '</g><g class="lm-bob lm-b2">' + fig(290, 252, "#1a1a2a", null, .85) + '</g>' +
+      '<rect x="300" y="196" width="96" height="16" rx="2" fill="#1f7a3a" stroke="#fff"/>' + T(348, 208, "White Plains Rd", 9.5, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 }) +
+      tag("COLD CRUSH", 20, 252, 26, "#6fd3ff", -4),
+      sky("tc1", "#0a0e22", "#2a2a4a"));
   }
 
-  /* 4. High Bridge: the stone arches over the Harlem River, the old granite water tower, a boat sliding under */
+  /* 4. Featherbed Lane in Morris Heights: the steep odd-named street off Jerome, the stepped sidewalk climbing, the 4 on the el down below */
   function highbridge() {
-    let arches = "";
-    for (let x = 0; x < 400; x += 50) arches += '<path d="M' + (x + 6) + ' 210v-50q19-28 38 0v50z" fill="url(#h2)"/>';
-    return svg('<rect width="400" height="260" fill="url(#h2)"/>' +
-      rect(0, 120, 400, 20, "#a89c88") + rect(0, 140, 400, 70, "#b8ac96") + arches + rect(0, 116, 400, 6, "#8a7e6a") +
-      /* water tower on the cliff */
-      '<path d="M320 120V40h24v80z" fill="#c8bca4"/><path d="M316 40l16-22 16 22z" fill="#8a5a3a"/>' + rect(326, 56, 12, 16, "#2a3a5a") + rect(326, 84, 12, 16, "#2a3a5a") +
-      rect(0, 210, 400, 50, "#2a5a7a") + '<path class="slide" d="M0 226q20-4 40 0t40 0 40 0" stroke="#7ab0d0" stroke-width="2" fill="none"/>' +
-      '<g class="slideL" style="animation-duration:12s"><path d="M0 232h70l-10 12H8z" fill="' + RED + '"/>' + rect(20, 220, 30, 12, "#f6f3ea") + '</g>' +
-      person(80, 112, GOLD, "slide slw") + person(260, 112, ICE, "slideL"),
-      sky("h2", "#5aa8e8", "#d4ecf8"));
+    const { svg, sky, tag, T, bullet, wins, cloud, car } = LM1;
+    let houses = ""; for (let i = 0; i < 6; i++) { const x = 30 + i * 60, base = 150 - i * 18; houses += '<rect x="' + x + '" y="' + (base - 70) + '" width="58" height="70" fill="' + ["#9a5a3e", "#8a6a4e", "#a66a4a"][i % 3] + '"/>' + wins(x + 8, base - 62, 3, 3, 16, 20, 9, 11, "#2a1d17", "#ffd98a"); }
+    let steps = ""; for (let i = 0; i < 13; i++) { const x = i * 32, y = 186 - .3 * (x + 32) - 10; steps += '<rect x="' + x + '" y="' + y.toFixed(1) + '" width="33" height="' + (10 + .3 * 32 + 2).toFixed(1) + '" fill="' + (i % 2 ? "#b3ab9b" : "#c3bba9") + '"/><rect x="' + x + '" y="' + y.toFixed(1) + '" width="33" height="2" fill="#e2dccb"/>'; }
+    let girders = ""; for (let x = 0; x <= 400; x += 50) girders += '<rect x="' + x + '" y="214" width="5" height="46" fill="#3a4a3a"/>';
+    let win = ""; for (let x = 10; x < 280; x += 36) win += '<rect x="' + x + '" y="196" width="22" height="10" rx="2" fill="#cfe6ff" opacity=".85"/>';
+    return svg(
+      '<rect width="400" height="260" fill="url(#fb1)"/>' + cloud("lm-drift", 0, 26, 1) +
+      houses +
+      /* the climbing street and stepped sidewalk */
+      '<path d="M0 186L400 66V96L0 216z" fill="#4a4a4e"/><path d="M0 200L400 80" stroke="#eab308" stroke-width="2" stroke-dasharray="12 10"/>' +
+      steps +
+      '<g class="lm-walk" style="animation-duration:6s"><g transform="translate(60 170) rotate(-17)"><rect x="0" y="0" width="40" height="12" rx="4" fill="#ff4f4f"/><circle cx="9" cy="12" r="3.5" fill="#111"/><circle cx="31" cy="12" r="3.5" fill="#111"/></g></g>' +
+      /* the 4 on the Jerome Av el below */
+      '<rect x="0" y="216" width="400" height="44" fill="#2a2a30"/><rect x="0" y="208" width="400" height="8" fill="#3a4a3a"/>' + girders +
+      '<g class="lm-carL" style="animation-duration:6s"><g transform="translate(-200 0)"><rect x="0" y="190" width="300" height="20" rx="5" fill="#c9ced6" stroke="#6b7280"/>' + win + '<rect x="0" y="204" width="300" height="2" fill="#00933c"/>' + bullet(12, 200, "4", "#00933c", false, 7) + '</g></g>' +
+      '<rect x="330" y="98" width="4" height="70" fill="#2a2a2a"/><rect x="292" y="92" width="100" height="18" rx="2" fill="#1f7a3a" stroke="#fff"/>' +
+      T(342, 105, "Featherbed Ln", 11, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 }) +
+      tag("CASANOVA FLY", 14, 48, 26, "#ffd34d", -4),
+      sky("fb1", "#6fb0e0", "#f2dcb0"));
   }
 
   /* 5. Jerome Av and E 176 St, under the 4 */
@@ -135,6 +156,74 @@
     return corner(["#0b0a22", "#2a2a4a"], "Jerome Av", "E 176 St",
       tag("GRANDMASTER", 22, 124, 27, GOLD, -7) + tag("CAZ", 50, 164, 46, RED, -5) + tag("COLD CRUSH", 130, 170, 22, ICE, -3) + tag("CASANOVA FLY", 40, 206, 22, "#f6efdc", -2), GOLD);
   }
+
+  /* LM1 helpers for the redrawn landmark rooms: same svg / sky / tag / bullet style as above, with their own little animations */
+  const LM1 = (function () {
+    const css = '<style>' +
+      '@keyframes lmDrift{from{transform:translateX(-90px)}to{transform:translateX(490px)}}.lm-drift{animation:lmDrift 24s linear infinite}.lm-d2{animation-delay:-12s}' +
+      '@keyframes lmCar{from{transform:translateX(-110px)}to{transform:translateX(510px)}}.lm-car{animation:lmCar 6s linear infinite}.lm-c2{animation-delay:-3s}' +
+      '@keyframes lmCarL{from{transform:translateX(510px)}to{transform:translateX(-110px)}}.lm-carL{animation:lmCarL 7.5s linear infinite}' +
+      '@keyframes lmFlick{0%,100%{opacity:1}45%{opacity:.75}50%{opacity:.3}55%{opacity:.9}}.lm-flk{animation:lmFlick 2.2s infinite}.lm-f2{animation-delay:-.8s}' +
+      '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{transform-box:fill-box;transform-origin:50% 0;animation:lmSway 3s ease-in-out infinite}' +
+      '.lm-swayb{transform-box:fill-box;transform-origin:50% 100%;animation:lmSway 3.6s ease-in-out infinite}.lm-s2{animation-delay:-1.5s}' +
+      '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.lm-bob{animation:lmBob 1.4s ease-in-out infinite}.lm-b2{animation-delay:-.7s}.lm-b3{animation-delay:-.35s}' +
+      '@keyframes lmRise{0%{transform:translate(0,0);opacity:1}80%{opacity:1}100%{transform:translate(14px,-150px);opacity:0}}.lm-rise{animation:lmRise 6s ease-in infinite}' +
+      '@keyframes lmBlink{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blink{animation:lmBlink 1s steps(1) infinite}.lm-k2{animation-delay:-.5s}' +
+      '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{transform-box:fill-box;transform-origin:50% 50%;animation:lmSpin 14s linear infinite}' +
+      '@keyframes lmFly{from{transform:translate(-80px,30px)}to{transform:translate(480px,-30px)}}.lm-fly{animation:lmFly 9s linear infinite}' +
+      '@keyframes lmLand{from{transform:translate(460px,-40px)}to{transform:translate(-120px,40px)}}.lm-land{animation:lmLand 10s linear infinite}' +
+      '@keyframes lmRip{0%,100%{transform:translateX(0)}50%{transform:translateX(-14px)}}.lm-rip{animation:lmRip 3s ease-in-out infinite}.lm-r2{animation-delay:-1.5s}' +
+      '@keyframes lmBoat{0%,100%{transform:translateX(0)}50%{transform:translateX(-60px)}}.lm-boat{animation:lmBoat 12s ease-in-out infinite}' +
+      '@keyframes lmWalk{from{transform:translateX(0)}to{transform:translateX(70px)}}.lm-walk{animation:lmWalk 5s ease-in-out infinite alternate}.lm-w2{animation-delay:-2.5s}' +
+      '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(30px,250px) rotate(300deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}.lm-l2{animation-delay:-2s}.lm-l3{animation-delay:-4s}' +
+      '@keyframes lmDrop{0%{transform:translateY(0)}100%{transform:translateY(118px)}}.lm-drop{animation:lmDrop 2.6s cubic-bezier(.5,0,.9,.6) infinite}' +
+      '@keyframes lmBall{0%{transform:translate(0,0)}50%{transform:translate(-90px,-26px)}100%{transform:translate(-180px,0)}}.lm-ball{animation:lmBall 2.4s linear infinite}' +
+      '@keyframes lmSwim{0%,100%{transform:translateX(0)}50%{transform:translateX(90px)}}.lm-swim{animation:lmSwim 7s ease-in-out infinite}.lm-sw2{animation-delay:-3.5s}' +
+      '</style>';
+    const svg = (inner, defs) =>
+      '<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img">' + css + '<defs>' + (defs || "") + '</defs>' + inner + '</svg>';
+    const sky = (id, top, bottom) =>
+      '<linearGradient id="' + id + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + top + '"/><stop offset="1" stop-color="' + bottom + '"/></linearGradient>';
+    const tag = (txt, x, y, size, fill, rot) =>
+      '<text x="' + x + '" y="' + y + '" transform="rotate(' + (rot || -6) + ' ' + x + ' ' + y + ')" font-family="Sedgwick Ave Display, Permanent Marker, cursive" font-size="' + size +
+      '" fill="' + fill + '" stroke="#000" stroke-width="' + Math.max(2, size / 9) + '" paint-order="stroke" stroke-linejoin="round">' + txt + '</text>';
+    const bullet = (x, y, letter, color, dark, r) => { r = r || 11;
+      return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + color + '"/><text x="' + x + '" y="' + (y + r * .5) + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + (r * 1.36).toFixed(1) + '" fill="' + (dark ? "#000" : "#fff") + '">' + letter + '</text>'; };
+    const stars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".7"/>'; return s; };
+    const T = (x, y, txt, size, fill, o) => { o = o || {};
+      return '<text x="' + x + '" y="' + y + '" text-anchor="' + (o.a || "middle") + '" font-family="' + (o.f || "Anton, Impact, sans-serif") + '"' + (o.w ? ' font-weight="' + o.w + '"' : '') +
+        (o.ls ? ' letter-spacing="' + o.ls + '"' : '') + ' font-size="' + size + '" fill="' + fill + '"' + (o.cls ? ' class="' + o.cls + '"' : '') + '>' + txt + '</text>'; };
+    /* a name plaque: dark box, title + subtitle */
+    const plaque = (x, y, w, title, sub, bg, accent) => {
+      const ts = Math.min(12, (w - 14) / (title.length * .66)), ss = sub ? Math.min(8, (w - 12) / (sub.length * .62 + sub.length * 1.5 / 8)) : 0;
+      return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (sub ? 34 : 22) + '" rx="4" fill="' + bg + '" stroke="' + accent + '" stroke-width="2"/>' +
+        T(x + w / 2, y + 16, title, ts.toFixed(1), "#fff") + (sub ? T(x + w / 2, y + 28, sub, ss.toFixed(1), accent, { f: "Barlow, Arial, sans-serif", w: 700, ls: (ss * 1.5 / 8).toFixed(2) }) : ""); };
+    /* green NYC street sign blade */
+    const blade = (x, y, w, txt) =>
+      '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      T(x + w / 2, y + 13, txt, 11, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 });
+    const car = (cls, y, c, w) => { w = w || 44;
+      return '<g class="' + cls + '"><rect x="0" y="' + y + '" width="' + w + '" height="12" rx="4" fill="' + c + '"/><rect x="' + (w * .22) + '" y="' + (y - 7) + '" width="' + (w * .5) + '" height="8" rx="3" fill="' + c + '"/>' +
+        '<rect x="' + (w * .27) + '" y="' + (y - 5) + '" width="' + (w * .4) + '" height="5" fill="#cfe6ff" opacity=".8"/><circle cx="' + (w * .22) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/><circle cx="' + (w * .78) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/>' +
+        '<rect x="' + (w - 3) + '" y="' + (y + 3) + '" width="3" height="3" fill="#fff6c2"/></g>'; };
+    /* faceless figure (silhouette), optional sign held up */
+    const fig = (x, y, c, sign, sc) => { sc = sc || 1;
+      return '<g transform="translate(' + x + ' ' + y + ') scale(' + sc + ')"><circle cx="0" cy="-30" r="5" fill="' + c + '"/><path d="M-6 -24h12l2 16h-4l-1 14h-6l-1-14h-4z" fill="' + c + '"/>' +
+        (sign ? '<path d="M5 -22l6-14" stroke="' + c + '" stroke-width="2.5"/><rect x="' + (13 - Math.max(30, sign[0].length * 4.6 + 6) / 2) + '" y="-58" width="' + Math.max(30, sign[0].length * 4.6 + 6) + '" height="20" fill="' + sign[1] + '" stroke="#222" stroke-width="1"/>' +
+          T(13, -44, sign[0], 7, sign[2] || "#111", { f: "Barlow, Arial, sans-serif", w: 700 }) : "") + '</g>'; };
+    const wins = (x0, y0, cols, rows, dx, dy, w, h, c, lit) => { let s = "";
+      for (let r = 0; r < rows; r++) for (let k = 0; k < cols; k++) s += '<rect x="' + (x0 + k * dx) + '" y="' + (y0 + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + ((lit && (k * 7 + r * 3) % 4 === 0) ? lit : c) + '"/>';
+      return s; };
+    const brickLines = (x, y, w, h, c, step) => { let s = ""; for (let yy = y + (step || 7); yy < y + h; yy += (step || 7)) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + c + '" stroke-width=".6"/>'; return s; };
+    const cloud = (cls, x, y, s, op) => '<g class="' + cls + '"><g transform="translate(' + x + ' ' + y + ') scale(' + s + ')" opacity="' + (op || .8) + '"><ellipse cx="0" cy="0" rx="26" ry="9" fill="#fff"/><ellipse cx="12" cy="-6" rx="14" ry="9" fill="#fff"/><ellipse cx="-10" cy="-4" rx="11" ry="7" fill="#fff"/></g></g>';
+    const tree = (x, y, r, c, cls) => '<g class="' + (cls || "lm-swayb") + '"><rect x="' + (x - 2.5) + '" y="' + (y - 4) + '" width="5" height="' + (r + 6) + '" fill="#5a3a22"/><circle cx="' + x + '" cy="' + (y - r * .6) + '" r="' + r + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x - r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x + r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/></g>';
+    const bird = (cls, x, y) => '<g class="' + cls + '"><path d="M' + x + ' ' + y + 'q5-5 10 0q5-5 10 0" fill="none" stroke="#222" stroke-width="1.6"/></g>';
+    /* subway car side (R-type), for the station rooms */
+    const subCar = (x, y, w, stripe, letters) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="60" rx="7" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="' + x + '" y="' + (y + 40) + '" width="' + w + '" height="4" fill="' + stripe + '"/>';
+      for (let k = x + 14; k < x + w - 40; k += 44) s += '<rect x="' + k + '" y="' + (y + 10) + '" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
+      return s + '<rect x="' + (x + w - 22) + '" y="' + (y + 10) + '" width="14" height="22" rx="3" fill="#1d2a3a"/><circle cx="' + (x + w - 8) + '" cy="' + (y + 50) + '" r="3.5" fill="#fff6c2"/>' + (letters || ""); };
+    return { svg, sky, tag, bullet, stars, T, plaque, blade, car, fig, wins, brickLines, cloud, tree, bird, subCar };
+  })();
 
   window.SCENES = { station1, sedgwick, hall, highbridge, block };
 

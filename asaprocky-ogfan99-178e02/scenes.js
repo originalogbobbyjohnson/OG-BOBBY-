@@ -257,6 +257,56 @@ function LIB(P) {
   S.glenview = () => svg('<rect width="400" height="260" fill="url(#g3)"/>' + palisades(150) + water(160, "#4a7aa0") + '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' +
     '<rect x="110" y="90" width="150" height="120" fill="#8a7e6a"/><path d="M100 90h170l-30-30h-110z" fill="#3a3a44"/><rect x="230" y="40" width="44" height="170" fill="#9a8e7a"/><path d="M224 40h56l-28-30z" fill="#3a3a44"/>' +
     wins(124, 104, 4, 2, 32, 46, 16, 28, "#ffe6a8") + wins(242, 56, 1, 3, 0, 40, 20, 26, "#ffe6a8") + '<g class="slideL"><path d="M0 178h40l-6 6H6z" fill="#fff"/><path d="M18 178v-20l12 18z" fill="#fff"/></g>' + tag("GLENVIEW", 20, 246, 22, A, -3), sky("g3", "#ff9a6a", "#8fc3ea"));
+  /* ---------- A$AP Rocky: Lenox and 125th ---------- */
+  /* Dapper Dan's atelier on Lenox Av: the brownstone couture house, black-and-gold awning, gold-leaf pattern on the windows, the forms in the window */
+  S.dapperDan = () => {
+    const G = "#d4a93a";
+    let lattice = ""; for (let x = 0; x < 3; x++) for (let r = 0; r < 3; r++) lattice += '<path d="M' + (96 + x * 74 + 18) + ' ' + (60 + r * 14) + 'l7-6 7 6-7 6z" fill="none" stroke="' + G + '" stroke-width="1.2"/>';
+    const forms = [[130, "#111"], [200, G], [270, "#5a1a2a"]].map((f, i) => '<g class="bob' + (i % 2 ? " bo2" : "") + '"><circle cx="' + f[0] + '" cy="160" r="7" fill="#e8e2d6"/><path d="M' + (f[0] - 14) + ' 170h28l5 50h-38z" fill="' + f[1] + '" stroke="' + G + '" stroke-width="1"/></g>').join("");
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' + stars(10) +
+      brick(0, 40, 80, 196, "#5a3a2a", "#64432f") + brick(320, 30, 80, 206, "#4a3a3a", "#55433f") + wins(12, 56, 2, 4, 32, 36, 16, 22, "#ffe6a8", .7) + wins(334, 46, 2, 4, 32, 36, 16, 22, "#ffe6a8", .7) +
+      /* the brownstone */
+      '<rect x="80" y="30" width="240" height="206" fill="#6e4230"/><rect x="76" y="26" width="248" height="8" fill="#4a2c20"/>' +
+      [100, 174, 248].map(x => '<rect x="' + x + '" y="46" width="52" height="54" fill="#1a1414"/><rect x="' + x + '" y="46" width="52" height="54" fill="none" stroke="#c9a46a" stroke-width="2"/>').join("") + lattice +
+      /* the awning */
+      '<path d="M84 124h232l-10 22H94z" fill="#111"/>' + [0, 1, 2, 3, 4, 5, 6, 7].map(i => '<rect x="' + (98 + i * 27) + '" y="124" width="12" height="22" fill="' + G + '" opacity=".9"/>').join("") +
+      '<rect x="110" y="106" width="180" height="16" rx="2" fill="#111" stroke="' + G + '" stroke-width="1.5"/>' + txt("DAPPER DAN OF HARLEM", 200, 118, 10, G, ' letter-spacing="2"') +
+      '<rect x="96" y="148" width="208" height="76" fill="#2a1a12"/><rect class="pls" x="100" y="152" width="200" height="70" fill="#ffd98a" opacity=".5"/>' + forms +
+      street(236, false) + car(0, 230, B) +
+      txt("LENOX AV · HARLEM", 200, 20, 12, A, ' letter-spacing="3"'), sky("g3", "#0d1022", "#3a2a4a"));
+  };
+  /* Sylvia's on Malcolm X Blvd at W 126th: the red awning, the script sign, steam off the kitchen, cars rolling */
+  S.sylvias = () => {
+    const R = "#c8102e";
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' + stars(12) +
+      brick(0, 30, 400, 190, "#7a4a3a", "#84523f") + wins(30, 44, 7, 2, 52, 40, 22, 26, "#ffe6a8", .8) +
+      /* script sign */
+      '<rect x="110" y="122" width="180" height="40" rx="6" fill="#1a1414" stroke="' + R + '" stroke-width="2"/>' +
+      '<text class="flk" x="200" y="151" text-anchor="middle" font-family="Brush Script MT, Georgia, serif" font-style="italic" font-weight="700" font-size="28" fill="#ff5a6a">Sylvia\'s</text>' +
+      /* red awning */
+      '<path d="M20 166h360l-14 24H34z" fill="' + R + '"/><path d="M20 166h360" stroke="#7a0a1a" stroke-width="3"/>' + txt("SOUL FOOD · HARLEM", 200, 183, 11, "#fff", ' letter-spacing="3"') +
+      '<rect x="40" y="190" width="320" height="36" fill="#2a1a12"/>' + [60, 140, 240, 300].map(x => '<rect x="' + x + '" y="194" width="50" height="28" fill="#ffcf7a" opacity=".85"/>').join("") +
+      '<rect x="196" y="190" width="30" height="36" fill="#5a1a1a"/>' +
+      [330, 342, 354].map((x, i) => '<circle class="rise' + (i ? " r" + (i + 1) : "") + '" cx="' + x + '" cy="40" r="6" fill="#fff" opacity=".5"/>').join("") +
+      street(226) + car(0, 228, A) + car(0, 228, C, "slide sl2") +
+      '<rect x="58" y="80" width="4" height="146" fill="#1d2329"/>' + blade(60, 100, "Malcolm X Blvd") + blade(60, 78, "W 126 St"), sky("g3", "#0d1022", "#2a2a4a"));
+  };
+  /* The Studio Museum in Harlem, 144 W 125th: the dark stepped facade, the big glass front, the exhibition banner moving in the wind */
+  S.studioMuseum = () => {
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      brick(0, 60, 90, 176, "#8a4a34", "#9a5a40") + brick(310, 50, 90, 186, "#6a5a5a", "#74645f") + wins(14, 76, 2, 4, 36, 34, 18, 22, "#ffe6a8", .6) + wins(326, 66, 2, 4, 36, 34, 18, 22, "#ffe6a8", .6) +
+      /* the museum: stacked dark volumes */
+      '<path d="M90 236V52h70V34h80v26h70v176z" fill="#3a3a40"/>' +
+      [0, 1, 2, 3, 4, 5, 6, 7].map(i => '<path d="M90 ' + (70 + i * 20) + 'h220" stroke="#4a4a52" stroke-width="2"/>').join("") +
+      '<rect x="108" y="150" width="184" height="86" fill="#cfe6ff" opacity=".85"/>' + [146, 184, 222, 260].map(x => '<rect x="' + x + '" y="150" width="3" height="86" fill="#3a3a40"/>').join("") +
+      '<rect class="pls" x="112" y="186" width="176" height="46" fill="#ffe6a8" opacity=".5"/>' +
+      '<rect x="162" y="96" width="76" height="40" fill="#cfe6ff" opacity=".7"/>' +
+      txt("STUDIO MUSEUM IN HARLEM", 184, 146, 10, "#f6efdc", ' letter-spacing="1"') +
+      /* the hanging exhibition banner */
+      '<rect x="260" y="40" width="40" height="3" fill="#222"/><g class="sway"><rect x="264" y="43" width="32" height="96" fill="' + C + '"/><rect x="268" y="50" width="24" height="24" fill="' + A + '"/><circle cx="280" cy="98" r="9" fill="' + B + '"/><rect x="268" y="114" width="24" height="4" fill="#fff"/><rect x="268" y="122" width="16" height="4" fill="#fff"/></g>' +
+      street(236, false) + car(0, 228, B) + car(0, 228, A, "slideL") +
+      txt("144 W 125TH ST", 200, 22, 13, "#1a1414", ' letter-spacing="3"'), sky("g3", "#9fcff2", "#f2e2c8"));
+  };
   S.corner = corner; S.tag = tag;
   return S;
 }
@@ -264,9 +314,9 @@ function LIB(P) {
   const P = {"c1":"#ffd34d","c2":"#b07cff","c3":"#ff4f6a"}, L = LIB(P);
   window.SCENES = {
     station: () => L.stUnder("125 St", [["2","#ee352e"],["3","#ee352e"]], "#b8442e", "A$AP MOB"),
-    boutique: () => L.boutique("FASHION KILLA", "RUNWAY TONIGHT  ·  125TH ST"),
-    apollo: () => L.apollo("A$AP ROCKY", "HARLEM TONIGHT"),
-    tower: () => L.watchtower("MOUNT MORRIS"),
+    boutique: () => L.dapperDan(),
+    apollo: () => L.sylvias(),
+    tower: () => L.studioMuseum(),
     block: () => L.corner(["#0d1022", "#2a3a4a"], "W 125 St", "Malcolm X Blvd", L.tag("A$AP ROCKY", 26, 124, 33, P.c1, -7) + L.tag("FLACKO", 40, 156, 22, P.c2, -5) + L.tag("A$AP MOB", 30, 188, 24, P.c3, -3) + L.tag("HARLEM", 120, 212, 20, "#f6efdc", -2))
   };
 })();

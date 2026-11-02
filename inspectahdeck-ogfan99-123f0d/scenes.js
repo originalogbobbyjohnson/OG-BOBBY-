@@ -97,33 +97,6 @@
       sky("g2", "#6eaee0", "#e8e0c8"));
   }
 
-  /* 3. Rosebank: the Garibaldi-Meucci house, the little 1840s Gothic Revival cottage on Tompkins Ave, the Italian flag, a phone ringing (Meucci's telephone) */
-  function cottage() {
-    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
-      '<rect x="20" y="110" width="10" height="100" fill="#5a3e2a"/><circle cx="25" cy="100" r="34" fill="#3d7a33"/><circle cx="380" cy="104" r="30" fill="#4f8f3a"/><rect x="376" y="110" width="8" height="100" fill="#5a3e2a"/>' +
-      /* the house: cream clapboard, dark green trim, steep gables */
-      '<rect x="90" y="110" width="220" height="96" fill="#efe3c0" stroke="#2f4a32" stroke-width="2"/>' +
-      '<path d="M90 118h220M90 130h220M90 142h220M90 154h220M90 166h220M90 178h220M90 190h220" stroke="#d8caa0" stroke-width="1"/>' +
-      '<path d="M80 112l120-46 120 46z" fill="#4a3e3a" stroke="#2a2220" stroke-width="2" stroke-linejoin="round"/>' +
-      '<path d="M170 112l30-54 30 54z" fill="#efe3c0" stroke="#2f4a32" stroke-width="3" stroke-linejoin="round"/>' +
-      '<path d="M178 108l22-40 22 40" fill="none" stroke="#2f4a32" stroke-width="2" stroke-dasharray="3 3"/>' +
-      '<path d="M192 104v-18l8-10 8 10v18z" fill="#2c3a4a" stroke="#2f4a32" stroke-width="2"/>' +
-      '<rect x="132" y="56" width="12" height="30" fill="#8a4a3a"/><rect x="256" y="56" width="12" height="30" fill="#8a4a3a"/>' +
-      /* windows with shutters */
-      '<rect x="112" y="134" width="22" height="34" fill="#2c3a4a"/><rect x="104" y="134" width="7" height="34" fill="#2f4a32"/><rect x="135" y="134" width="7" height="34" fill="#2f4a32"/>' +
-      '<rect x="266" y="134" width="22" height="34" fill="#2c3a4a"/><rect x="258" y="134" width="7" height="34" fill="#2f4a32"/><rect x="289" y="134" width="7" height="34" fill="#2f4a32"/>' +
-      /* the porch */
-      '<rect x="150" y="124" width="100" height="6" fill="#2f4a32"/><path d="M156 130v76M196 130v76M204 130v76M244 130v76" stroke="#f6efdc" stroke-width="4"/>' +
-      '<rect x="186" y="150" width="28" height="56" fill="#3a2a1a"/><rect x="140" y="204" width="120" height="8" fill="#a8a294"/>' +
-      /* the flag */
-      '<path d="M330 210V112" stroke="#555" stroke-width="3"/><g class="sway" style="transform-box:view-box;transform-origin:330px 114px"><rect x="330" y="114" width="12" height="24" fill="#009246"/><rect x="342" y="114" width="12" height="24" fill="#f6efdc"/><rect x="354" y="114" width="12" height="24" fill="#ce2b37"/></g>' +
-      /* the old telephone ringing */
-      '<rect x="44" y="198" width="34" height="12" rx="3" fill="#2a1a10"/><path d="M48 198q13-14 26 0" fill="#2a1a10"/><rect x="42" y="190" width="38" height="6" rx="3" fill="#3a2a1a"/>' +
-      '<path class="pls" d="M36 182q-6 6 0 12M30 178q-10 10 0 20M86 182q6 6 0 12M92 178q10 10 0 20" stroke="' + PINK + '" stroke-width="2" fill="none"/>' +
-      '<rect x="0" y="210" width="400" height="50" fill="#5a8a3a"/><rect x="0" y="236" width="400" height="24" fill="#3a3e46"/>' +
-      tag("ROSEBANK", 230, 252, 24, PINK, -3),
-      sky("g3", "#86c0ea", "#f2e2c0"));
-  }
 
   /* 4. Park Hill rooftop at night, drawn like a comic book page: water tower, the towers lit up, a big KRAK! burst */
   function comic() {
@@ -153,5 +126,76 @@
       tag("DECK", 26, 116, 50, PINK, -7) + tag("INSPECTAH", 36, 154, 26, GOLD, -4) + tag("C.R.E.A.M.", 120, 190, 24, CYAN, -3) + tag("WU-TANG", 30, 214, 22, "#f6efdc", -2), PINK);
   }
 
-  window.SCENES = { station, bayley, cottage, comic, block };
+  /* ---- redrawn landmark scenes (OG FAN 99 landmark pass): small shared helpers, prefixed L ---- */
+  const Lcss = '<style>' +
+    '@keyframes lmCar{from{transform:translateX(-170px)}to{transform:translateX(480px)}}.lm-car{animation:lmCar 8s linear infinite}' +
+    '@keyframes lmCarB{from{transform:translateX(480px)}to{transform:translateX(-170px)}}.lm-carb{animation:lmCarB 10s linear infinite}' +
+    '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.lm-bob{animation:lmBob 1.6s ease-in-out infinite}' +
+    '@keyframes lmFlk{0%,100%{opacity:1}45%{opacity:.7}50%{opacity:.3}55%{opacity:.95}}.lm-flk{animation:lmFlk 2.3s infinite}' +
+    '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{animation:lmSpin 1.8s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmRise{0%{transform:translateY(0) scale(.8);opacity:0}20%{opacity:.85}100%{transform:translateY(-70px) scale(1.4);opacity:0}}.lm-rise{animation:lmRise 4s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{animation:lmSway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}' +
+    '@keyframes lmBlk{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blk{animation:lmBlk 1s steps(1) infinite}' +
+    '@keyframes lmFlag{0%,100%{transform:skewY(0)}50%{transform:skewY(-6deg)}}.lm-flag{animation:lmFlag 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}' +
+    '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(-30px,230px) rotate(280deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}' +
+    '@keyframes lmCld{from{transform:translateX(-120px)}to{transform:translateX(470px)}}.lm-cld{animation:lmCld 30s linear infinite}' +
+    '@keyframes lmPls{0%,100%{opacity:.35}50%{opacity:1}}.lm-pls{animation:lmPls 2.2s ease-in-out infinite}' +
+    '@keyframes lmWav{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}.lm-wav{animation:lmWav 3s ease-in-out infinite}' +
+    '@keyframes lmBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}.lm-beat{animation:lmBeat .7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmNote{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-60px);opacity:0}}.lm-note{animation:lmNote 3s linear infinite}' +
+    '.lmd1{animation-delay:-1s}.lmd2{animation-delay:-2s}.lmd3{animation-delay:-3s}.lmd4{animation-delay:-4.5s}.lmd5{animation-delay:-6s}' +
+    '</style>';
+  const LF = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
+  const LT = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" ' + LF + ' font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LA = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" font-family="Anton, Impact, sans-serif" font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LR = (x, y, w, h, fill, extra) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + fill + '"' + (extra || "") + '/>';
+  const Lbul = (x, y, l, col, r) => { r = r || 11; return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/>' + LT(l, x, y + r * 0.42, r * 1.22, col === "#fccc0a" ? "#000" : "#fff"); };
+  const Lpill = (x, y, l, col) => { const w = l.length * 8 + 14; return '<rect x="' + (x - w / 2) + '" y="' + (y - 10) + '" width="' + w + '" height="20" rx="10" fill="' + col + '"/>' + LT(l, x, y + 4.5, 11, "#fff"); };
+  /* black MTA-style station sign: lines = [["B","#ff6319"],...]; a long name like "MN" draws a pill */
+  const Lsign = (x, y, w, name, lines, size) => { let b = "", bx = x + w - 18; for (let i = lines.length - 1; i >= 0; i--) { const l = lines[i]; if (l[0].length > 1) { b += Lpill(bx - 10, y + 17, l[0], l[1]); bx -= l[0].length * 8 + 22; } else { b += Lbul(bx, y + 17, l[0], l[1], 10); bx -= 24; } }
+    return LR(x, y, w, 32, "#111", ' rx="3"') + LR(x, y, w, 4, "#fff") + LT(name, x + 10, y + 23, size || 15, "#fff", "start") + b; };
+  /* green NYC street sign blade */
+  const Lblade = (x, y, t, w) => { w = w || t.length * 7.2 + 20; return LR(x, y, w, 19, "#0f6b3a", ' rx="2" stroke="#fff" stroke-width="1.5"') + LT(t, x + w / 2, y + 14, 12, "#fff"); };
+  /* two green signs on a pole at x, crossing */
+  const Lpole = (x, y, a, b) => { const wa = a.length * 7.2 + 20, wb = b.length * 7.2 + 20; return LR(x, y, 6, 236 - y, "#2a3138") + Lblade(x + 3 - wa / 2, y + 6, a) + Lblade(x + 3 - wb / 2, y + 30, b) + LR(x - 2, y - 4, 10, 6, "#2a3138"); };
+  const Lbrick = (x, y, w, h, base, mortar) => { let s = LR(x, y, w, h, base); for (let yy = y + 6; yy < y + h; yy += 6) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + mortar + '" stroke-width=".8"/>'; return s; };
+  const Lwin = (x, y, cols, rows, dx, dy, w, h, lit, dark) => { let s = ""; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const on = ((r * 7 + c * 3) % 5) < 2; s += '<rect x="' + (x + c * dx) + '" y="' + (y + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + (on ? lit : dark) + '"' + (on && (r + c) % 4 === 0 ? ' class="lm-flk"' : '') + '/>'; } return s; };
+  const Lstars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".75"/>'; return s; };
+  const Lcloud = (x, y, s, cls) => '<g class="lm-cld ' + (cls || "") + '"><g transform="translate(' + x + ' ' + y + ') scale(' + (s || 1) + ')" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="22" ry="9"/><ellipse cx="14" cy="-6" rx="14" ry="9"/><ellipse cx="-12" cy="-4" rx="11" ry="7"/></g></g>';
+  const Ltree = (x, y, r, col, cls) => '<g class="lm-sway ' + (cls || "") + '">' + LR(x - 3, y, 6, r * 1.3, "#5a3d24") + '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/><circle cx="' + (x - r * .5) + '" cy="' + (y + r * .3) + '" r="' + r * .7 + '" fill="' + col + '" opacity=".85"/><circle cx="' + (x + r * .55) + '" cy="' + (y + r * .25) + '" r="' + r * .65 + '" fill="' + col + '" opacity=".9"/></g>';
+  /* faceless figure: head + body, x = centre, y = feet */
+  const Lman = (x, y, body, cls, cap) => '<g' + (cls ? ' class="' + cls + '"' : "") + '>' + '<rect x="' + (x - 7) + '" y="' + (y - 30) + '" width="14" height="22" rx="5" fill="' + body + '"/><rect x="' + (x - 6) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/><rect x="' + (x + 1) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/>' +
+    '<circle cx="' + x + '" cy="' + (y - 37) + '" r="7" fill="#5a3a26"/>' + (cap ? '<path d="M' + (x - 8) + ' ' + (y - 39) + 'q8-10 16 0z" fill="' + cap + '"/><rect x="' + (x - 1) + '" y="' + (y - 41) + '" width="12" height="3" fill="' + cap + '"/>' : '') + '</g>';
+  /* subway car (stainless) seen from the side, x,y top-left */
+  const Lcar = (x, y, w, l, col, band) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="52" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>'; for (let i = x + 16; i < x + w - 60; i += 40) s += '<rect x="' + i + '" y="' + (y + 9) + '" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    return s + LR(x, y + 33, w, 5, band || col) + Lbul(x + w - 22, y + 18, l, col, 10) + '<circle cx="' + (x + w - 8) + '" cy="' + (y + 44) + '" r="3.5" fill="#fff6c2"/>'; };
+  const Lcab = (x, y) => '<rect x="' + x + '" y="' + (y + 8) + '" width="70" height="20" rx="5" fill="#f7c600"/><path d="M' + (x + 12) + ' ' + (y + 8) + 'l8-10h28l10 10z" fill="#f7c600"/><path d="M' + (x + 22) + ' ' + y + 'h10v8h-14zM' + (x + 35) + ' ' + y + 'h10l7 8h-17z" fill="#bfe0ff"/>' +
+    LR(x + 26, y - 6, 18, 6, "#fff", ' rx="1"') + LT("TAXI", x + 35, y - 1.5, 5, "#111") + '<path d="M' + x + ' ' + (y + 17) + 'h70" stroke="#111" stroke-width="1" stroke-dasharray="3 3"/><circle cx="' + (x + 15) + '" cy="' + (y + 28) + '" r="6" fill="#111"/><circle cx="' + (x + 55) + '" cy="' + (y + 28) + '" r="6" fill="#111"/>';
+  const Lauto = (x, y, col) => '<rect x="' + x + '" y="' + (y + 6) + '" width="56" height="16" rx="5" fill="' + col + '"/><rect x="' + (x + 11) + '" y="' + (y - 2) + '" width="32" height="11" rx="3" fill="#cfe6ff"/><circle cx="' + (x + 13) + '" cy="' + (y + 22) + '" r="5" fill="#111"/><circle cx="' + (x + 43) + '" cy="' + (y + 22) + '" r="5" fill="#111"/>';
+  /* turntable from above at an angle */
+  const Ldeck = (cx, cy, r, lab) => '<rect x="' + (cx - r - 12) + '" y="' + (cy - r * .45 - 10) + '" width="' + (r * 2 + 30) + '" height="' + (r * .9 + 20) + '" rx="4" fill="#2a2a30"/><g transform="translate(' + cx + ' ' + cy + ') scale(1 .42)"><g class="lm-spin"><circle r="' + r + '" fill="#0c0c0e"/><circle r="' + r * .72 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .5 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .3 + '" fill="' + lab + '"/><rect x="-2" y="' + (-r * .3) + '" width="4" height="' + r * .2 + '" fill="#fff"/></g></g><path d="M' + (cx + r + 6) + ' ' + (cy - r * .4) + 'l-8 ' + r * .5 + '" stroke="#c9ced6" stroke-width="3"/>';
+  /* 2. Fort Wadsworth's Battery Weed: the 1860s granite fort at the water's edge, three tiers of gun ports, the Verrazzano tower overhead */
+  function LM_cottage() {
+    let ports = ""; [0, 1, 2].forEach(r => { for (let x = 92 + r * 0; x < 320; x += 22) ports += '<path d="M' + x + ' ' + (178 - r * 34) + 'v-14q6-8 12 0v14z" fill="#2a2e34"/>'; });
+    let blocks = ""; for (let y = 104; y < 200; y += 8) blocks += '<path d="M80 ' + y + 'h240" stroke="#8e9296" stroke-width=".8"/>';
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lcloud(120, 24) +
+      /* Verrazzano: tower on the right, deck across the top, main cable */
+      LR(300, 0, 14, 120, "#c9ced4") + LR(338, 0, 14, 120, "#c9ced4") + LR(300, 20, 52, 8, "#c9ced4") + LR(300, 70, 52, 6, "#c9ced4") +
+      '<path d="M0 30Q160 70 306 4" stroke="#8a96a4" stroke-width="3" fill="none"/>' + LR(0, 52, 400, 8, "#9aa4ae") + LR(0, 60, 400, 3, "#6a7480") +
+      '<g class="lm-car" style="animation-duration:6s">' + Lauto(0, 36, "#ff6fb5") + '</g>' +
+      /* the Narrows */
+      LR(0, 150, 400, 110, "#3f6f96") + '<g class="lm-wav"><path d="M0 214h400M20 240h360" stroke="#7aa8cc" stroke-width="2" stroke-dasharray="14 20"/></g>' +
+      '<g class="lm-carb" style="animation-duration:22s"><path d="M0 200h80l-10 12H10z" fill="#3a3a44"/>' + LR(46, 186, 20, 14, "#e8e8e8") + '</g>' +
+      /* the fort */
+      '<path d="M60 206l20-110h240l20 110z" fill="#a8acb0"/>' + blocks + ports + LR(76, 90, 248, 8, "#8e9296") +
+      [90, 150, 210, 270].map(x => LR(x, 82, 10, 8, "#8e9296")).join("") +
+      '<path d="M200 82v-26" stroke="#333" stroke-width="2"/><path class="lm-flag" d="M201 56h22l-4 5 4 5h-22z" fill="#c8102e"/>' +
+      /* green lawn bank on the left */
+      '<path d="M0 150q30-10 70 4l-10 52H0z" fill="#4f8a3c"/>' +
+      LR(8, 112, 150, 34, "#111", ' rx="3" opacity=".85"') + LT("BATTERY WEED", 83, 127, 12, "#f2c14e") + LT("FORT WADSWORTH · THE NARROWS", 83, 140, 7.5, "#fff") +
+      tag("REBEL INS", 30, 250, 26, "#ff6fb5", -4) + tag("WU-TANG", 260, 252, 18, "#f2c14e", -3),
+      sky("sk", "#7fb8e6", "#eaeef0"));
+  }
+
+  window.SCENES = { station, bayley, cottage: LM_cottage, comic, block };
 })();

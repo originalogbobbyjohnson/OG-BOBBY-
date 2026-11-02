@@ -101,41 +101,37 @@
       sky("m1", "#3a2a5e", "#ff9a5a") + sky("m2", "#d9785a", "#2a2a4a"));
   }
 
-  /* 3. Nonna's Pizza on Hylan Blvd (plain lettering, no logo): striped awning, giant slice sign, the oven glowing */
+  /* 3. Denino's Pizzeria Tavern on Port Richmond Av (since 1937): Staten Island's pizza landmark, the old tavern front with the neon sign glowing, a pie steaming in the window */
   function pizzeria() {
-    let stripes = ""; for (let i = 0; i < 14; i++) stripes += '<path d="M' + (60 + i * 20) + ' 112h20l-2 26h-20z" fill="' + ["#c4161c", "#f7f3ea", "#1f8a3a"][i % 3] + '"/>';
-    let scallop = ""; for (let i = 0; i < 14; i++) scallop += '<path d="M' + (58 + i * 20) + ' 138q10 10 20 0z" fill="' + ["#c4161c", "#f7f3ea", "#1f8a3a"][i % 3] + '"/>';
-    let upwin = ""; [82, 142, 230, 290].forEach(x => upwin += '<rect x="' + x + '" y="40" width="30" height="34" fill="#2c3e57" stroke="#efe6d2" stroke-width="2"/><line x1="' + (x + 15) + '" y1="40" x2="' + (x + 15) + '" y2="74" stroke="#efe6d2" stroke-width="1.5"/>');
+    let bricks = ""; for (let y = 34; y < 224; y += 9) for (let x = (y / 9) % 2 ? 56 : 64; x < 340; x += 16) bricks += '<rect x="' + x + '" y="' + y + '" width="13" height="6" fill="#8a3a24" opacity=".55"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#p1)"/>' + '<g class="dft">' + cloud(40, 18, .7) + '</g>' +
-      '<rect x="0" y="60" width="50" height="168" fill="#6b5a4a"/><rect x="350" y="50" width="50" height="178" fill="#8a7a62"/>' +
-      '<rect x="50" y="24" width="300" height="204" fill="#b5552f"/><rect x="50" y="24" width="300" height="6" fill="#efe6d2"/>' + upwin +
-      /* sign band */
-      '<rect x="56" y="82" width="288" height="28" rx="3" fill="#1a1a1a" stroke="#ffd34d" stroke-width="2"/>' +
-      '<text x="200" y="104" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="21" letter-spacing="3" fill="#ffd34d">NONNA\'S PIZZA</text>' +
-      stripes + scallop +
-      /* window with oven glow */
-      '<rect x="120" y="152" width="100" height="62" fill="#2a1a12" stroke="#efe6d2" stroke-width="2"/>' +
-      '<path d="M140 206v-20a30 22 0 0 1 60 0v20z" fill="#7a2a12"/><path d="M152 206v-14a18 14 0 0 1 36 0v14z" fill="#ff8a2a" class="flk"/>' +
-      '<rect x="126" y="200" width="88" height="5" fill="#c9a24a"/>' +
-      '<text x="170" y="166" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="2" fill="#ffd34d">SLICES · HOT</text>' +
-      /* door */
-      '<rect x="236" y="150" width="40" height="78" fill="#3a2a1e" stroke="#efe6d2" stroke-width="2"/><rect x="242" y="158" width="28" height="34" fill="#cfe6ff" opacity=".5"/><circle cx="270" cy="196" r="2" fill="#c9a24a"/>' +
-      '<rect x="288" y="152" width="52" height="62" fill="#2a1a12" stroke="#efe6d2" stroke-width="2"/>' +
-      '<text x="314" y="178" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" fill="#2fb24c">OPEN</text>' +
-      '<text x="314" y="196" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="8" fill="#f7f3ea">EST. ON</text><text x="314" y="206" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="8" fill="#f7f3ea">HYLAN</text>' +
-      /* big slice sign on a bracket */
-      '<rect x="344" y="66" width="34" height="3" fill="#333"/><line x1="350" y1="69" x2="350" y2="76" stroke="#333"/><line x1="374" y1="69" x2="374" y2="76" stroke="#333"/>' +
-      '<g class="swp" style="transform-origin:362px 69px"><path d="M340 76h44l-22 60z" fill="#ffd34d" stroke="#7a5512" stroke-width="2" stroke-linejoin="round"/><path d="M340 76h44v-1q-22 8-44 0z" fill="#c98a1a"/><rect x="340" y="74" width="44" height="6" rx="3" fill="#c98a1a"/>' +
-      '<circle cx="354" cy="90" r="4" fill="#c4161c"/><circle cx="370" cy="92" r="4" fill="#c4161c"/><circle cx="362" cy="108" r="3.5" fill="#c4161c"/></g>' +
-      /* sidewalk + Hylan Blvd */
+      '<rect width="400" height="260" fill="url(#p1)"/>' + stars(12) +
+      '<rect x="0" y="70" width="50" height="158" fill="#4a3e36"/><rect x="350" y="60" width="50" height="168" fill="#5a4a3e"/>' +
+      '<rect x="0" y="90" width="12" height="16" fill="#ffd98a" opacity=".7"/><rect x="24" y="130" width="12" height="16" fill="#ffd98a" opacity=".7"/><rect x="364" y="84" width="12" height="16" fill="#ffd98a" opacity=".7"/>' +
+      /* the old tavern building */
+      '<rect x="50" y="30" width="300" height="198" fill="#a8482c"/>' + bricks + '<rect x="46" y="26" width="308" height="8" fill="#d8cdb4"/>' +
+      [80, 150, 220, 290].map(x => '<rect x="' + x + '" y="44" width="30" height="34" fill="#ffd98a" opacity=".75" stroke="#d8cdb4" stroke-width="2"/>').join("") +
+      /* the neon sign */
+      '<rect x="80" y="88" width="240" height="44" rx="6" fill="#1a1414" stroke="#3a2a22" stroke-width="3"/>' +
+      '<text x="200" y="120" text-anchor="middle" font-family="Brush Script MT, Georgia, serif" font-style="italic" font-weight="700" font-size="30" fill="#ff4b3e" class="blk" style="animation-duration:3s">Denino\'s</text>' +
+      '<text x="200" y="120" text-anchor="middle" font-family="Brush Script MT, Georgia, serif" font-style="italic" font-weight="700" font-size="30" fill="none" stroke="#ffb0a8" stroke-width=".8">Denino\'s</text>' +
+      '<rect x="90" y="136" width="220" height="16" fill="#1f5a2a"/>' +
+      '<text x="200" y="148" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="1" fill="#f7f3ea">PIZZERIA · TAVERN · SINCE 1937</text>' +
+      /* window with a pie steaming */
+      '<rect x="72" y="160" width="130" height="58" fill="#ffcf7a" opacity=".85" stroke="#d8cdb4" stroke-width="3"/>' +
+      '<ellipse cx="137" cy="204" rx="34" ry="9" fill="#c98a3a"/><ellipse cx="137" cy="202" rx="28" ry="6" fill="#e84a2a"/>' + [122, 136, 150].map(x => '<circle cx="' + x + '" cy="202" r="2.5" fill="#f7f3ea"/>').join("") +
+      '<g class="stm"><path d="M128 190q-4-8 0-14" stroke="#fff" stroke-width="2" fill="none" opacity=".7"/></g><g class="stm stm2"><path d="M146 190q4-8 0-14" stroke="#fff" stroke-width="2" fill="none" opacity=".7"/></g>' +
+      '<rect x="222" y="158" width="44" height="70" fill="#3a2a1e" stroke="#d8cdb4" stroke-width="2"/><rect x="228" y="166" width="32" height="30" fill="#ffcf7a" opacity=".6"/>' +
+      '<rect x="280" y="160" width="58" height="58" fill="#2a1a12" stroke="#d8cdb4" stroke-width="2"/>' +
+      '<text x="309" y="194" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="13" fill="' + GRN + '" class="blk2">OPEN</text>' +
+      /* sidewalk + Port Richmond Av */
       '<rect y="228" width="400" height="8" fill="#9a9a9a"/><rect y="236" width="400" height="24" fill="#2c2c30"/>' +
       '<rect x="0" y="247" width="400" height="2" fill="#f2c200" opacity=".7"/>' +
       '<g class="cr1"><rect x="0" y="238" width="46" height="14" rx="4" fill="#3d6fb5"/><circle cx="10" cy="253" r="4" fill="#111"/><circle cx="36" cy="253" r="4" fill="#111"/></g>' +
-      '<rect x="54" y="168" width="4" height="60" fill="#4a4a4a"/>' + blade(4, 158, 104, "Hylan Blvd", 0),
-      sky("p1", "#4b93d8", "#cfe6ff"));
+      '<rect x="372" y="20" width="4" height="208" fill="#4a4a4a"/>' + blade(262, 6, 136, "Port Richmond Av", 0) +
+      tag("PELLE", 6, 224, 18, GOLD, -6),
+      sky("p1", "#141a34", "#4a3a5a"));
   }
-
   /* 4. Great Kills Park: the beach, dune grass, and Crooke's Point running out into the bay */
   function beach() {
     let grass = ""; for (let x = 4; x < 400; x += 9) grass += '<path d="M' + x + ' 206q2-12 6-18M' + (x + 3) + ' 206q-1-10-5-16" stroke="#7a8f3a" stroke-width="1.4" fill="none"/>';

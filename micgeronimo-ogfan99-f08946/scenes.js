@@ -43,31 +43,35 @@
     '<circle cx="0" cy="-20" r="20" fill="' + c + '"/><circle cx="-14" cy="-8" r="14" fill="' + c + '"/><circle cx="14" cy="-8" r="14" fill="' + c + '"/></g>';
   const GOLD = "#ffd23f", PINK = "#ff6fb5", TEAL = "#2ec4b6", PURPLE = "#b933ad";
 
-  /* 1. The 7 pulling into Flushing–Main St, underground at the end of the line: cream tile, the purple mosaic band, steel columns */
+  /* 1. Flushing–Main St from the mezzanine: the turnstiles, the stair down to the 7 at the end of the line, the 7 pulling in below, the arrow out toward the LIRR and Kissena Blvd, The Natural on the wall */
   function train() {
-    let tile = "", cols = "", windows = "";
-    for (let y = 0; y < 116; y += 10) tile += '<path d="M0 ' + y + 'H400" stroke="#d8d0bc" stroke-width="1"/>';
-    for (let x = 0; x < 400; x += 20) tile += '<path d="M' + x + ' 0V116" stroke="#d8d0bc" stroke-width="1"/>';
-    for (let x = 0; x < 400; x += 16) tile += '<rect x="' + x + '" y="20" width="8" height="8" fill="' + ((x / 16) % 2 ? "#7a3b8f" : "#c69bd6") + '"/>';
-    [30, 370].forEach(x => { cols += '<rect x="' + (x - 6) + '" y="0" width="12" height="196" fill="#3b3550"/><rect x="' + (x - 9) + '" y="0" width="18" height="6" fill="#2b2640"/>'; });
-    for (let x = 34; x < 250; x += 50) windows += '<rect x="' + x + '" y="134" width="34" height="22" rx="3" fill="#fff4d6" opacity=".9"/>';
+    let tile = "";
+    for (let y = 0; y < 150; y += 10) tile += '<path d="M0 ' + y + 'H400" stroke="#d8d0bc" stroke-width="1"/>';
+    for (let x = 0; x < 400; x += 16) tile += '<rect x="' + x + '" y="14" width="8" height="8" fill="' + ((x / 16) % 2 ? "#7a3b8f" : "#c69bd6") + '"/>';
+    const turn = x => '<rect x="' + x + '" y="166" width="16" height="40" rx="2" fill="#9aa3ad" stroke="#555"/><rect x="' + (x + 2) + '" y="170" width="12" height="6" fill="#2a2632"/><circle class="blk" cx="' + (x + 8) + '" cy="182" r="2" fill="#3fbf6a"/>' +
+      '<g class="wing" style="animation-duration:1.2s"><path d="M' + (x + 16) + ' 186h18" stroke="#c9ced6" stroke-width="3"/></g>';
+    let windows = "";
+    for (let x = 222; x < 330; x += 26) windows += '<rect x="' + x + '" y="112" width="18" height="12" rx="2" fill="#fff4d6" opacity=".9"/>';
     return svg(
-      '<rect width="400" height="260" fill="#eee6d2"/>' + tile +
-      '<rect x="0" y="0" width="400" height="10" fill="#3b3550"/>' +
-      /* station sign */
-      '<rect x="70" y="44" width="260" height="38" rx="4" fill="#111"/><rect x="70" y="44" width="260" height="4" fill="#fff"/>' +
-      '<text x="84" y="72" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="17" fill="#fff">Flushing–Main St</text>' +
-      bullet(306, 64, "7", PURPLE) +
-      '<rect x="0" y="116" width="400" height="80" fill="#2a2632"/>' +
-      '<g class="anim-train">' +
-        '<rect x="14" y="122" width="300" height="66" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="14" y="160" width="300" height="5" fill="' + PURPLE + '"/>' + windows +
-        '<rect x="294" y="132" width="14" height="26" rx="2" fill="#2b2f36"/>' + bullet(276, 175, "7", PURPLE, false, 8) +
-        '<circle cx="306" cy="176" r="4" fill="#fff6c2" class="flk"/>' +
-      '</g>' + cols +
-      '<rect x="0" y="196" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="206" width="400" height="54" fill="#8c8478"/>' +
-      '<text x="200" y="240" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="12" fill="#2a2632" letter-spacing="2">LAST STOP · FLUSHING, QUEENS</text>');
+      '<rect width="400" height="260" fill="#eee6d2"/>' + tile + '<rect x="0" y="0" width="400" height="10" fill="#3b3550"/>' +
+      /* the signs */
+      '<rect x="20" y="30" width="220" height="34" rx="4" fill="#111"/><rect x="20" y="30" width="220" height="4" fill="#fff"/>' +
+      '<text x="32" y="56" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="16" fill="#fff">Flushing–Main St</text>' + bullet(218, 48, "7", PURPLE) +
+      '<rect x="20" y="70" width="180" height="22" rx="3" fill="#111"/><text x="30" y="85" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">EXIT ⇢ LIRR · KISSENA BLVD</text>' +
+      /* the stairwell opening down to the platform, the 7 arriving below */
+      '<rect x="200" y="96" width="190" height="62" fill="#2a2632"/>' +
+      '<g class="anim-train"><rect x="210" y="104" width="150" height="40" rx="6" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="210" y="130" width="150" height="4" fill="' + PURPLE + '"/>' + windows + bullet(346, 118, "7", PURPLE, false, 8) + '</g>' +
+      '<rect x="200" y="144" width="190" height="6" fill="#eab308"/>' + [0, 1, 2, 3].map(i => '<rect x="' + (200 + i * 4) + '" y="' + (150 + i * 2) + '" width="190" height="2" fill="#8c8478"/>').join("") +
+      '<path d="M200 96h190" stroke="#3b3550" stroke-width="4"/><path d="M200 160h190" stroke="#3b3550" stroke-width="3"/>' +
+      /* the poster */
+      '<rect x="252" y="30" width="120" height="58" fill="#1a1428" stroke="' + GOLD + '" stroke-width="3"/>' +
+      '<text x="312" y="54" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="14" fill="' + GOLD + '">THE NATURAL</text>' +
+      '<text x="312" y="72" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">MIC GERONIMO · 1995</text>' +
+      /* turnstile line and the mezzanine floor */
+      '<rect x="0" y="206" width="400" height="54" fill="#8c8478"/><path d="M0 206h400" stroke="#6a6458" stroke-width="2"/>' +
+      turn(30) + turn(80) + turn(130) +
+      '<g class="car" style="animation-duration:9s"><circle cx="0" cy="176" r="6" fill="#2a1d14"/><rect x="-7" y="182" width="14" height="22" rx="4" fill="' + TEAL + '"/><path d="M-4 204v12M4 204v12" stroke="#1a1a22" stroke-width="3"/></g>' +
+      tag("MASTA I.C.", 200, 246, 26, PURPLE, -4) + tag("FLUSHING", 20, 250, 20, PINK, -3));
   }
 
   /* 2. The Old Quaker Meeting House on Northern Blvd (1694): weathered brown shingles, steep hipped roof, shuttered windows, autumn oaks */

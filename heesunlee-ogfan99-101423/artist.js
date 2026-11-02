@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO STATEN ISLAND",
-   "x": "Bay St and Victory Blvd, a walk from the ferry. This is HeeSun Lee's game.",
+   "x": "Hyatt St and Stuyvesant Pl, in front of the St. George Theatre. This is HeeSun Lee's game.",
    "sfx": "spray"
   }
  ],

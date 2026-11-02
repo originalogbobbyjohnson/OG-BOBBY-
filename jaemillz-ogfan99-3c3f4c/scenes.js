@@ -63,53 +63,49 @@
       tag("JAE MILLZ", 24, 240, 30, GREEN, -4) + tag("POTENT", 290, 242, 28, GOLD, -8));
   }
 
-  /* 2. The Hotel Theresa at 125th and Adam Clayton Powell Jr. Blvd: the white thirteen-story tower, its crown of piers, the old rooftop letters, traffic rolling */
+  /* 2. The Duke Ellington Memorial at Frawley Circle (5th Av and 110th): the bronze figure at the grand piano up on its three tall columns, the traffic circle going round */
   function theresa() {
-    let wins = "";
-    for (let r = 0; r < 11; r++) for (let c = 0; c < 9; c++) {
-      const x = 102 + c * 22, y = 58 + r * 13, lit = (r * 7 + c * 3) % 5 === 0;
-      wins += '<rect x="' + x + '" y="' + y + '" width="12" height="8" fill="' + (lit ? "#ffe39a" : "#3a4a5e") + '"' + (lit ? ' class="win wn' + ((r + c) % 3 + 1) + '"' : '') + '/>';
-    }
-    let piers = "";
-    for (let c = 0; c <= 9; c++) piers += '<rect x="' + (96 + c * 22) + '" y="30" width="6" height="176" fill="#f4f1ea"/><path d="M' + (95 + c * 22) + ' 30l4-10 4 10z" fill="#f4f1ea"/>';
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    const col = x => '<rect x="' + (x - 5) + '" y="72" width="10" height="120" fill="#6f5a3a"/><rect x="' + (x - 4) + '" y="72" width="3" height="120" fill="#9a7f52"/><rect x="' + (x - 7) + '" y="186" width="14" height="8" fill="#5a4a32"/>';
+    let trees = ""; [20, 56, 344, 380].forEach((x, i) => trees += '<rect x="' + (x - 2) + '" y="150" width="4" height="40" fill="#4a3220"/><circle cx="' + x + '" cy="140" r="20" fill="' + (i % 2 ? "#3f7a3a" : "#4f8a44") + '"/>');
     return svg(
-      '<rect width="400" height="260" fill="url(#g2)"/>' + stars(16) +
-      '<rect x="0" y="120" width="90" height="90" fill="#3b2a26"/><rect x="310" y="110" width="90" height="100" fill="#3a2d2a"/>' +
-      '<rect x="92" y="36" width="216" height="174" fill="#e8e3d8"/>' + wins + piers +
-      '<rect x="92" y="44" width="216" height="6" fill="#d4ccbc"/><rect x="92" y="200" width="216" height="10" fill="#cfc6b4"/>' +
-      '<path d="M92 36h216" stroke="#fff" stroke-width="3"/>' +
-      /* rooftop letters on a steel frame */
-      '<path d="M140 30v-12M260 30v-12M140 19h120" stroke="#666" stroke-width="2"/>' +
-      '<text class="flk" x="200" y="15" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="15" letter-spacing="3" fill="' + ROSE + '" stroke="#ffd0d8" stroke-width=".6">HOTEL THERESA</text>' +
-      '<rect x="0" y="210" width="400" height="50" fill="#1b1d21"/><path d="M0 234h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<rect width="400" height="260" fill="url(#g2)"/>' + '<circle cx="70" cy="44" r="18" fill="#fff1c8"/>' +
+      '<path d="M0 150h60v-50h40v30h200v-40h40v60h60v40H0z" fill="#8a6a5a" opacity=".5"/>' + trees +
+      /* the circle's granite plaza and the columns */
+      '<ellipse cx="200" cy="196" rx="120" ry="16" fill="#b8b0a2"/><ellipse cx="200" cy="192" rx="60" ry="8" fill="#9a9284"/>' +
+      col(170) + col(200) + col(230) + '<rect x="160" y="66" width="80" height="8" fill="#6f5a3a"/>' +
+      /* the piano and the figure, all bronze */
+      '<path d="M168 66v-10h40q24 0 26 10z" fill="#4a3a22"/><path d="M170 56l30-12 6 12z" fill="#5a4a2a"/>' +
+      '<circle cx="182" cy="40" r="5" fill="#4a3a22"/><path d="M176 58v-10q0-4 6-4t6 4v10z" fill="#4a3a22"/>' +
+      '<rect x="0" y="206" width="400" height="54" fill="#1b1d21"/><path d="M0 232h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
       car("carR", 236, "#c0392b") + car("carL", 214, "#f1c40f") +
-      '<rect x="10" y="92" width="76" height="16" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.2"/><text x="48" y="104" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">W 125 St</text>',
-      sky("g2", "#0c1430", "#3b3f6e"));
+      '<rect x="264" y="92" width="120" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.2"/>' + lbl(324, 105, "Duke Ellington Cir", 10, "#fff") +
+      lbl(300, 24, "DUKE ELLINGTON MEMORIAL", 12, "#14243a") + lbl(300, 38, "FRAWLEY CIRCLE · 5TH AV &amp; 110TH", 9, "#14243a") +
+      tag("JAE MILLZ", 14, 128, 24, GREEN, -6),
+      sky("g2", "#8fc3ea", "#f6dcb0"));
   }
 
-  /* 3. Abyssinian Baptist Church on W 138th: gray-blue Gothic stone, the big pointed window, the square tower, the bell swinging */
+  /* 3. The Conservatory Garden at 5th Av and 105th: through the black-and-gold Vanderbilt Gate to the fountain, the clipped hedges, the crabapples */
   function church() {
-    const lancet = (x, y, w, h, fill) => '<path d="M' + x + ' ' + (y + h) + 'v-' + (h - w / 2) + 'q0-' + (w * 0.8) + ' ' + (w / 2) + '-' + (w * 0.8) + 'q' + (w / 2) + ' 0 ' + (w / 2) + ' ' + (w * 0.8) + 'v' + (h - w / 2) + 'z" fill="' + fill + '"/>';
-    let crenel = "";
-    for (let x = 252; x < 336; x += 14) crenel += '<rect x="' + x + '" y="30" width="8" height="10" fill="#7d8a96"/>';
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    let bars = ""; for (let x = 104; x <= 296; x += 8) bars += '<path d="M' + x + ' 196V' + (x > 150 && x < 250 ? 74 : 92) + '" stroke="#16181c" stroke-width="2.2"/><path d="M' + (x - 2) + ' ' + (x > 150 && x < 250 ? 74 : 92) + 'l2-6 2 6z" fill="' + GOLD + '"/>';
+    let scroll = ""; for (let x = 158; x < 246; x += 16) scroll += '<circle cx="' + (x + 8) + '" cy="98" r="6" fill="none" stroke="' + GOLD + '" stroke-width="2"/>';
+    let hedge = ""; [[20, 150], [300, 150]].forEach(([x, y]) => hedge += '<rect x="' + x + '" y="' + y + '" width="80" height="22" rx="6" fill="#2f6a2f"/>');
+    let blossoms = ""; [[40, 120], [360, 118]].forEach(([x, y], i) => blossoms += '<rect x="' + (x - 3) + '" y="' + y + '" width="6" height="34" fill="#4a3220"/><circle class="win wn' + (i + 1) + '" cx="' + x + '" cy="' + (y - 6) + '" r="24" fill="#f6a8c0"/><circle cx="' + (x + 12) + '" cy="' + (y - 2) + '" r="14" fill="#f8c2d4"/>');
     return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' + stars(12) +
-      '<circle cx="60" cy="46" r="18" fill="#fff4d6" opacity=".9"/>' +
-      /* nave front gable */
-      '<path d="M50 230V110l100-62 100 62v120z" fill="#8795a2"/><path d="M50 110l100-62 100 62" fill="none" stroke="#5e6b77" stroke-width="4"/>' +
-      lancet(108, 92, 84, 92, "#5e6b77") + lancet(114, 98, 72, 84, "#e2b44c") +
-      '<path d="M138 120v62M150 104v78M162 120v62M114 150h72" stroke="#5e6b77" stroke-width="3"/>' +
-      '<rect x="114" y="132" width="72" height="6" fill="#8a3b2e" opacity=".6"/>' +
-      lancet(130, 196, 40, 34, "#4a2e1c") +
-      /* the square tower */
-      '<rect x="250" y="40" width="86" height="190" fill="#7d8a96"/>' + crenel +
-      '<rect x="250" y="40" width="86" height="190" fill="none" stroke="#5e6b77" stroke-width="2"/>' +
-      lancet(278, 56, 30, 54, "#2a2f36") +
-      '<g class="bell"><path d="M284 74q9-4 18 0l3 22h-24z" fill="' + GOLD + '" stroke="#7a5a12" stroke-width="1.5"/><circle cx="293" cy="99" r="3" fill="#7a5a12"/></g>' +
-      lancet(276, 140, 34, 56, "#e2b44c") + lancet(282, 196, 22, 34, "#4a2e1c") +
-      '<rect x="0" y="230" width="400" height="30" fill="#2a2d33"/><rect x="0" y="228" width="400" height="4" fill="#5e6b77"/>' +
-      '<rect x="340" y="186" width="5" height="44" fill="#1d2329"/><rect x="310" y="174" width="66" height="16" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.2"/><text x="343" y="186" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">W 138 St</text>',
-      sky("g3", "#1a1f3d", "#6a6f9a"));
+      '<rect width="400" height="260" fill="url(#g3)"/>' +
+      /* the garden beyond: lawn, fountain, the hedges */
+      '<rect x="0" y="140" width="400" height="80" fill="#5f9a46"/>' + hedge + blossoms +
+      '<ellipse cx="200" cy="170" rx="44" ry="10" fill="#7fbfe0"/><path d="M200 166v-24" stroke="#cfe6f8" stroke-width="3"/>' +
+      '<circle class="rip" cx="200" cy="170" r="10" fill="none" stroke="#e6f6ff" stroke-width="1.5"/><circle class="rip rp2" cx="200" cy="170" r="10" fill="none" stroke="#e6f6ff" stroke-width="1.5"/>' +
+      '<rect x="190" y="132" width="20" height="10" fill="#b8b0a2"/>' +
+      /* the gate: limestone posts, black iron, gold tips */
+      '<rect x="80" y="70" width="22" height="130" fill="#d8d0bc"/><rect x="298" y="70" width="22" height="130" fill="#d8d0bc"/><rect x="76" y="64" width="30" height="8" fill="#c8c0aa"/><rect x="294" y="64" width="30" height="8" fill="#c8c0aa"/>' +
+      bars + '<path d="M150 74q50-34 100 0" stroke="#16181c" stroke-width="4" fill="none"/>' + scroll + '<circle cx="200" cy="54" r="7" fill="' + GOLD + '"/>' +
+      '<rect x="0" y="200" width="400" height="60" fill="#b8b0a2"/><path d="M0 210h400" stroke="#9a9284"/>' +
+      lbl(200, 228, "CONSERVATORY GARDEN", 14, "#1b1d21") + lbl(200, 242, "VANDERBILT GATE · 5TH AV AT 105TH", 9, "#1b1d21") +
+      tag("JAE MILLZ", 14, 40, 26, GREEN, -5) + tag("POTENT", 300, 40, 20, GOLD, -4),
+      sky("g3", "#8fc3ea", "#e6f2fa"));
   }
 
   /* 4. The Harlem Meer at 110th: the Dana Discovery Center's brick house with its slate roof and cupola on the water, ducks gliding, willows */

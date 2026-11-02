@@ -88,33 +88,40 @@
       tags: tag("LIFE FORCE", 22, 214, 30, SUN, -4) + tag("AFU-RA", 250, 238, 30, JADE, -6) });
   }
 
-  /* 2. Highland Park: the green hill over the old Ridgewood Reservoir, the stone steps, the city far off at sunrise */
+  /* 2. Thomas Jefferson High School at Pennsylvania Av and Dumont Av (1924): the Collegiate Gothic brick front, the tall center tower with its pinnacles */
   function highland() {
-    let sky2 = "";
-    [[20, 40], [44, 56], [70, 30], [92, 50], [300, 44], [324, 26], [350, 54], [376, 38]].forEach(([x, h]) => sky2 += rect(x, 120 - h, 20, h, "#b8708a", ' opacity=".6"'));
+    let win = ""; [70, 96, 122, 254, 280, 306].forEach(x => { win += rect(x, 132, 14, 24, "#2a3440") + rect(x, 170, 14, 24, "#2a3440"); });
+    let pin = ""; [168, 186, 214, 232].forEach(x => pin += '<path d="M' + x + ' 40l-3 0 3-14 3 14z" fill="#e8dcc0"/>');
     return svg('<rect width="400" height="260" fill="url(#h1)"/>' +
-      '<g class="spin slow" style="transform-box:view-box;transform-origin:200px 90px">' + [0, 30, 60, 90, 120, 150].map(a => '<path d="M150 90h100" stroke="' + SUN + '" stroke-width="3" opacity=".5" transform="rotate(' + a + ' 200 90)"/>').join("") + '</g>' +
-      '<circle cx="200" cy="90" r="26" fill="' + SUN + '"/>' + sky2 +
-      '<path d="M0 130q100-30 200-10t200 0v140H0z" fill="#3a8a3a"/>' +
-      '<path d="M40 170q160-22 320 0v30q-160 16-320 0z" fill="#5a8ab0" opacity=".85"/><path class="slide slw" d="M60 184q20-4 40 0t40 0" stroke="#bfe0f6" stroke-width="2" fill="none"/>' +
-      /* stone steps */
-      '<path d="M170 260l10-50h40l10 50z" fill="#a8a294"/>' + [214, 226, 238, 250].map(y => '<path d="M' + (180 - (y - 210) / 5) + ' ' + y + 'h' + (40 + (y - 210) / 2.5) + '" stroke="#7a7468" stroke-width="2"/>').join("") +
-      tree(60, 130, 22, "#2f7a34") + tree(340, 128, 24, "#3a8a3a", "sway sw2") + tree(110, 220, 18, "#2a6a2a") + tree(290, 222, 18, "#2a6a2a", "sway sw2") +
-      '<g class="slide slw"><path d="M0 50q8-6 16 0 8-6 16 0" stroke="#3a2a2a" stroke-width="2" fill="none"/></g>',
-      sky("h1", "#3a2a6a", "#ffb08a"));
+      '<circle cx="62" cy="48" r="18" fill="' + SUN + '"/>' +
+      brick(54, 120, 292, 86, "#8a4a32", "#96553a") + rect(54, 116, 292, 6, "#e8dcc0") + rect(54, 160, 292, 4, "#e8dcc0") + win +
+      brick(164, 40, 72, 166, "#8a4a32", "#96553a") + rect(164, 40, 72, 5, "#e8dcc0") + rect(160, 40, 8, 166, "#e8dcc0") + rect(232, 40, 8, 166, "#e8dcc0") + pin +
+      '<path d="M186 104v-30l14-14 14 14v30z" fill="#2a3440"/><path class="pls" d="M190 102v-26l10-10 10 10v26z" fill="#ffe6a8" opacity=".5"/>' +
+      '<path d="M182 206v-40l18-16 18 16v40z" fill="#3a2a22"/><path d="M178 166l22-20 22 20" stroke="#e8dcc0" stroke-width="3" fill="none"/>' +
+      rect(320, 82, 2, 34, "#59616e") + '<path class="sway" d="M322 83h18l-3 6 3 6h-18z" fill="' + RED + '" style="transform-origin:left center"/>' +
+      tree(26, 180, 20, "#2f7a34") + tree(374, 178, 20, "#3a8a3a", "sway sw2") +
+      rect(0, 206, 400, 8, "#9a968c") + road(214) + car(0, 222, SUN, "slide") + car(0, 238, JADE, "slideL") +
+      txt(200, 22, 14, "#2a1a1a", "THOMAS JEFFERSON HIGH SCHOOL") + txt(306, 70, 8, "#2a1a1a", "PENNSYLVANIA AV &amp; DUMONT AV") +
+      tag("AFU-RA", 14, 112, 26, SUN, -5),
+      sky("h1", "#8fc3ea", "#f6e2c4"));
   }
 
-  /* 3. Fulton St in Cypress Hills: the J rumbling by on the old el, shops underneath, the light through the tracks */
+  /* 3. Liberty Av under the A el by Grant Av and City Line: the green steel el, roti and doubles shops underneath, Guyanese flags out front, the A going over */
   function fulton() {
-    let ties = ""; for (let x = 0; x < 400; x += 10) ties += rect(x, 92, 4, 8, "#2a2a2a");
+    let ties = ""; for (let x = 0; x < 400; x += 10) ties += rect(x, 92, 4, 8, "#1e3a26");
+    const gy = (x, y) => '<g class="sway" style="transform-origin:' + x + 'px ' + y + 'px">' + rect(x, y, 2, 30, "#555") +
+      '<path d="M' + (x + 2) + ' ' + y + 'h30v18h-30z" fill="#009e49"/><path d="M' + (x + 2) + ' ' + y + 'l30 9-30 9z" fill="#fff"/><path d="M' + (x + 2) + ' ' + (y + 1) + 'l27 8-27 8z" fill="#fcd116"/>' +
+      '<path d="M' + (x + 2) + ' ' + y + 'l15 9-15 9z" fill="#000"/><path d="M' + (x + 2) + ' ' + (y + 1.5) + 'l13 7.5-13 7.5z" fill="#ce1126"/></g>';
     return svg('<rect width="400" height="260" fill="url(#f1)"/>' +
-      bldg(0, 80, 130, 120, "#8a5a44", "#ffe6a8", "#3a3a4a") + bldg(136, 96, 120, 104, "#6a6a7a", "#ffe6a8", "#3a3a4a") + bldg(262, 74, 138, 126, "#7a4a3a", "#ffe6a8", "#3a3a4a") +
-      [[10, RED], [146, JADE], [272, SUN]].map(([x, c]) => rect(x, 176, 110, 14, c) ).join("") +
-      '<g class="slideL"><rect x="0" y="60" width="200" height="32" rx="4" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' + [12, 52, 92, 132].map(d => rect(d, 66, 26, 14, "#fff4cc")).join("") + rect(0, 82, 200, 4, "#996633") +
-      '<circle cx="176" cy="74" r="9" fill="#996633"/>' + txt(176, 78, 12, "#fff", "J") + '</g>' +
-      rect(0, 92, 400, 10, "#4a6a4a") + ties + [30, 130, 230, 330].map(x => rect(x, 102, 8, 98, "#4a6a4a")).join("") +
-      '<g opacity=".25">' + [50, 150, 250, 350].map(x => '<path class="pls" d="M' + x + ' 102l-14 98h28z" fill="#fff3c4"/>').join("") + '</g>' +
-      road(200) + car(0, 214, SUN, "slide") + person(80, 196, RED, "slideL"),
+      bldg(0, 60, 130, 140, "#8a5a44", "#ffe6a8", "#3a3a4a") + bldg(136, 70, 120, 130, "#b0644a", "#ffe6a8", "#3a3a4a") + bldg(262, 56, 138, 144, "#6a6a7a", "#ffe6a8", "#3a3a4a") +
+      rect(6, 160, 118, 18, "#1b1b22") + txt(65, 173, 11, SUN, "ROTI SHOP") + rect(142, 160, 108, 18, "#1b1b22") + txt(196, 173, 11, JADE, "DOUBLES") + rect(268, 160, 126, 18, "#1b1b22") + txt(331, 173, 11, RED, "BAKERY · PINE TART") +
+      '<g class="slideL"><rect x="0" y="60" width="220" height="32" rx="4" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' + [12, 52, 92, 132].map(d => rect(d, 66, 26, 14, "#fff4cc")).join("") + rect(0, 84, 220, 4, "#0039a6") +
+      '<circle cx="190" cy="74" r="9" fill="#0039a6"/>' + txt(190, 78, 12, "#fff", "A") + '</g>' +
+      rect(0, 92, 400, 10, "#2e5a3a") + ties + [0, 133, 259, 392].map(x => rect(x, 102, 8, 98, "#2e5a3a") + '<path d="M' + (x - 16) + ' 104l20 20 20-20" stroke="#2e5a3a" stroke-width="4" fill="none"/>').join("") +
+      '<g opacity=".25">' + [80, 180, 280].map(x => '<path class="pls" d="M' + x + ' 102l-14 98h28z" fill="#fff3c4"/>').join("") + '</g>' +
+      gy(54, 124) + gy(212, 120) + gy(356, 124) +
+      road(200) + car(0, 214, SUN, "slide") + person(110, 198, JADE, "bob") +
+      txt(200, 20, 12, "#14202c", "LIBERTY AV · GRANT AV / CITY LINE") + tag("AFU-RA", 300, 250, 22, SUN, -4),
       sky("f1", "#4a8ad0", "#c8e6f8"));
   }
 

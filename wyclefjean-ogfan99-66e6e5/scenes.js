@@ -37,69 +37,61 @@
   /* a plain Haitian-colors flag: blue over red (no coat of arms) */
   const hflag = (x, y, w, h) => '<g class="flag"><rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (h / 2) + '" fill="' + HBLUE + '"/><rect x="' + x + '" y="' + (y + h / 2) + '" width="' + w + '" height="' + (h / 2) + '" fill="' + HRED + '"/></g>';
 
-  /* 1. Newark Penn Station: the 1935 limestone Art Deco station with its tall windows and clock; PATH and NJ Transit trains on the raised platforms */
+  /* 1. Newark Penn Station from inside the 1935 waiting room: the Art Deco lanterns, a Haitian flag and a guitar case on the bench, the train pulling in past the big platform windows */
   function train() {
     let windows = "";
-    for (let x = 22; x < 300; x += 40) windows += '<rect x="' + x + '" y="148" width="26" height="16" rx="2" fill="#ffe9b0" opacity=".85"/>';
-    let tall = "";
-    for (let x = 70; x < 340; x += 30) tall += '<rect x="' + x + '" y="56" width="16" height="50" fill="#ffd98a" opacity=".6"/><path d="M' + (x + 8) + ' 56v50" stroke="#c9bfa6" stroke-width="1.5"/>';
+    for (let x = 52; x < 300; x += 40) windows += '<rect x="' + x + '" y="118" width="26" height="16" rx="2" fill="#ffe9b0" opacity=".85"/>';
+    let deco = "";
+    for (let x = 0; x < 400; x += 20) deco += '<path d="M' + x + ' 20l10-12 10 12z" fill="#b8955a"/>';
+    let mull = "";
+    for (let x = 30; x <= 370; x += 34) mull += '<rect x="' + (x - 2) + '" y="98" width="4" height="62" fill="#5a4a32"/>';
+    const lantern = x => '<path d="M' + x + ' 20v16" stroke="#5a4a32" stroke-width="2"/><path d="M' + (x - 12) + ' 36h24l-4 26h-16z" fill="#b8955a"/>' +
+      '<path class="flk" d="M' + (x - 8) + ' 40h16l-3 18h-10z" fill="#ffe2a0"/><circle cx="' + x + '" cy="66" r="3" fill="#b8955a"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g1)"/>' + stars(14) +
-      /* limestone station building, stepped Art Deco top */
-      '<rect x="40" y="40" width="320" height="76" fill="#e3d9c0"/><rect x="40" y="36" width="320" height="6" fill="#cfc3a6"/>' +
-      '<rect x="150" y="22" width="100" height="18" fill="#e3d9c0"/><rect x="176" y="12" width="48" height="12" fill="#e3d9c0"/>' + tall +
-      '<circle cx="200" cy="30" r="8" fill="#f6efd9" stroke="#8a7a58" stroke-width="2"/>' +
-      '<g class="hand" style="transform-origin:200px 30px"><path d="M200 30v-6" stroke="#222" stroke-width="1.6" stroke-linecap="round"/></g>' +
-      /* platform sign */
-      '<rect x="0" y="116" width="400" height="6" fill="#2d3540"/>' +
-      '<rect x="40" y="118" width="224" height="22" rx="3" fill="#111"/><rect x="40" y="118" width="224" height="3" fill="#fff"/>' +
-      '<text x="50" y="134" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="12.5" fill="#fff">Newark Penn Station</text>' +
-      badge(184, 130, 38, "PATH", "#d93a30") + badge(226, 130, 34, "NJT", "#1b3d8f") +
+      '<rect width="400" height="260" fill="#e3d9c0"/>' + '<rect x="0" y="0" width="400" height="22" fill="#6a5636"/>' + deco +
+      [[0, 26], [380, 26]].map(([x, y]) => '<rect x="' + x + '" y="' + y + '" width="20" height="140" fill="#cfc3a6"/>').join("") +
+      lantern(70) + lantern(330) +
+      /* platform sign over the windows */
+      '<rect x="88" y="66" width="224" height="24" rx="3" fill="#111"/><rect x="88" y="66" width="224" height="3" fill="#fff"/>' +
+      '<text x="98" y="83" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="12.5" fill="#fff">Newark Penn Station</text>' +
+      badge(232, 79, 38, "PATH", "#d93a30") + badge(274, 79, 34, "NJT", "#1b3d8f") +
+      /* the big platform windows with the train behind */
+      '<rect x="30" y="98" width="340" height="62" fill="url(#g1)"/>' +
       '<g class="anim-train">' +
-        '<rect x="8" y="142" width="300" height="44" rx="6" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="170" width="300" height="4" fill="#1b3d8f"/><rect x="8" y="174" width="300" height="3" fill="#f58220"/><rect x="8" y="177" width="300" height="3" fill="#a3238e"/>' + windows +
-        '<rect x="290" y="148" width="14" height="18" rx="3" fill="#ffe9b0" opacity=".85"/><circle cx="300" cy="181" r="4" fill="#fff6c2"/>' +
-      '</g>' +
-      '<rect x="0" y="186" width="400" height="8" fill="#eab308"/>' +
-      '<rect x="0" y="194" width="400" height="66" fill="#2a2a2e"/>' +
-      tag("REFUGEE CAMP", 18, 240, 24, GOLD, -4) + tag("CLEF", 290, 244, 28, HRED, -7),
+        '<rect x="30" y="112" width="300" height="40" rx="6" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
+        '<rect x="30" y="138" width="300" height="4" fill="#1b3d8f"/><rect x="30" y="142" width="300" height="3" fill="#f58220"/><rect x="30" y="145" width="300" height="3" fill="#a3238e"/>' + windows +
+        '<circle cx="322" cy="148" r="3.5" fill="#fff6c2"/>' +
+      '</g>' + mull + '<rect x="30" y="96" width="340" height="4" fill="#5a4a32"/><rect x="30" y="158" width="340" height="4" fill="#5a4a32"/>' +
+      /* the floor, the bench, the guitar case, the flag */
+      '<rect x="0" y="162" width="400" height="98" fill="#b9ab8a"/><path d="M0 190h400M0 224h400" stroke="#a3967a"/>' +
+      '<rect x="70" y="176" width="140" height="10" rx="2" fill="#6a4a2a"/><rect x="74" y="186" width="6" height="16" fill="#4a3220"/><rect x="200" y="186" width="6" height="16" fill="#4a3220"/>' +
+      '<ellipse cx="114" cy="166" rx="18" ry="10" fill="#2a2018"/><ellipse cx="140" cy="167" rx="12" ry="8" fill="#2a2018"/><rect x="146" y="163" width="48" height="8" rx="3" fill="#2a2018"/><rect x="190" y="161" width="12" height="12" rx="3" fill="#2a2018"/><circle cx="128" cy="166" r="2" fill="' + GOLD + '"/>' +
+      '<rect x="318" y="96" width="3" height="104" fill="#8a7a58"/>' + hflag(321, 98, 40, 26) +
+      '<text class="note" x="150" y="150" font-size="16" fill="' + GOLD + '">&#9834;</text>' +
+      tag("REFUGEE CAMP", 18, 244, 26, GOLD, -4) + tag("WYCLEF", 250, 246, 26, HRED, -6),
       sky("g1", "#0d1430", "#3a2c4a"));
   }
 
-  /* 2. Cathedral Basilica of the Sacred Heart: pale Rockport granite, twin towers, the giant rose window, slate roof; Branch Brook Park cherry blossoms in front */
+  /* 2. Vailsburg High School in his Vailsburg neighborhood, near South Orange Av and Sandford Av: the brick school he went to after coming up from Haiti and Brooklyn */
   function cathedral() {
-    let petals = "";
-    for (let i = 0; i < 14; i++) petals += '<ellipse class="pet" style="animation-delay:-' + (i * 0.5) + 's" cx="' + (20 + i * 29) + '" cy="' + (10 + (i * 37) % 60) + '" rx="3" ry="2" fill="#ffc6d9"/>';
-    let trees = "";
-    [[30, 196], [90, 206], [310, 206], [370, 196]].forEach(([x, y]) => {
-      trees += '<rect x="' + (x - 3) + '" y="' + y + '" width="6" height="24" fill="#4a3226"/>' +
-        '<circle cx="' + x + '" cy="' + (y - 10) + '" r="24" fill="#f7b6cc"/><circle cx="' + (x - 14) + '" cy="' + y + '" r="16" fill="#ffd0df"/><circle cx="' + (x + 14) + '" cy="' + y + '" r="16" fill="#f4a3c0"/>';
-    });
-    let pin = "";
-    [116, 140, 260, 284].forEach(x => { pin += '<path d="M' + (x - 4) + ' 44l4 -12 4 12z" fill="#b8b0a0"/>'; });
+    let win = "";
+    for (let x = 64; x < 340; x += 28) { if (x > 170 && x < 232) continue; win += '<rect x="' + x + '" y="98" width="16" height="22" fill="#2b3440"/><rect x="' + x + '" y="138" width="16" height="22" fill="#2b3440"/><rect x="' + x + '" y="178" width="16" height="22" fill="#2b3440"/>'; }
+    let rows = "";
+    for (let y = 86; y < 214; y += 6) rows += '<path d="M54 ' + y + 'h292" stroke="#7a3826" stroke-width=".6" opacity=".55"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g2)"/>' +
-      '<g class="cld"><ellipse cx="0" cy="30" rx="40" ry="8" fill="#fff" opacity=".7"/></g>' +
-      /* nave + slate roof */
-      '<path d="M150 112l50 -40 50 40z" fill="#4a505a"/><rect x="150" y="110" width="100" height="110" fill="#d6cfc0"/>' +
-      /* copper fleche over the crossing */
-      '<path d="M196 72l4 -34 4 34z" fill="#5fae8c"/>' +
-      /* twin towers */
-      '<rect x="112" y="44" width="40" height="176" fill="#cdc5b4"/><rect x="248" y="44" width="40" height="176" fill="#cdc5b4"/>' + pin +
-      '<path d="M124 80v-14a8 8 0 0 1 16 0v14zM260 80v-14a8 8 0 0 1 16 0v14z" fill="#3a3f4a"/>' +
-      '<path d="M124 130v-24a8 8 0 0 1 16 0v24zM260 130v-24a8 8 0 0 1 16 0v24z" fill="#3a3f4a"/>' +
-      /* rose window */
-      '<circle cx="200" cy="138" r="22" fill="#2a3a7a" stroke="#b8b0a0" stroke-width="4"/>' +
-      '<path d="M200 116v44M178 138h44M184 122l32 32M216 122l-32 32" stroke="#b8b0a0" stroke-width="2"/><circle cx="200" cy="138" r="7" fill="#d23a4a"/>' +
-      '<circle cx="186" cy="130" r="3" fill="#ffd23f"/><circle cx="214" cy="146" r="3" fill="#3fbf6a"/>' +
-      /* doors */
-      '<path d="M184 220v-36l16 -16 16 16v36z" fill="#3a2a22" stroke="#b8b0a0" stroke-width="3"/>' +
-      '<path d="M120 220v-26l12 -12 12 12v26zM256 220v-26l12 -12 12 12v26z" fill="#3a2a22"/>' +
-      /* park lawn + blossoms */
-      '<rect x="0" y="216" width="400" height="44" fill="#5f9a46"/><path d="M0 238q200 -10 400 0" stroke="#d8c9a6" stroke-width="8" fill="none"/>' +
-      trees + petals +
-      tag("BRANCH BROOK", 14, 30, 22, "#fff", -4),
-      sky("g2", "#7ec3ea", "#e6f3fa"));
+      '<g class="cld"><ellipse cx="0" cy="30" rx="40" ry="8" fill="#fff" opacity=".7"/></g><g class="cld cld2"><ellipse cx="0" cy="56" rx="30" ry="6" fill="#fff" opacity=".6"/></g>' +
+      '<rect x="54" y="84" width="292" height="130" fill="#9a4630"/>' + rows + '<rect x="50" y="78" width="300" height="8" fill="#e3d9c0"/>' + win +
+      /* the limestone entrance block */
+      '<rect x="176" y="70" width="48" height="144" fill="#e3d9c0"/><path d="M188 214v-36a12 12 0 0 1 24 0v36z" fill="#3a2a22"/>' +
+      '<rect x="182" y="96" width="36" height="40" fill="#2b3440"/><path d="M200 96v40M182 116h36" stroke="#e3d9c0" stroke-width="2"/>' +
+      '<rect x="120" y="50" width="160" height="18" fill="#14181d"/><text x="200" y="63" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9.5" fill="' + GOLD + '">VAILSBURG HIGH SCHOOL</text>' +
+      '<rect x="356" y="40" width="3" height="174" fill="#8a8f96"/><g class="flag"><rect x="359" y="42" width="30" height="18" fill="' + HBLUE + '"/><rect x="359" y="51" width="30" height="9" fill="' + HRED + '"/></g>' +
+      '<rect x="0" y="214" width="400" height="12" fill="#c9c1b0"/><rect x="0" y="226" width="400" height="34" fill="#2a2a2e"/><path d="M0 244h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<rect x="8" y="20" width="132" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="74" y="33" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">South Orange Av</text>' +
+      '<g class="bob"><circle cx="40" cy="196" r="5" fill="#2a1a10"/><rect x="34" y="201" width="12" height="14" rx="3" fill="' + BLUE + '"/></g>' +
+      tag("CLEF", 16, 252, 22, GOLD, -4) + tag("VAILSBURG", 250, 254, 18, HRED, -3),
+      sky("g2", "#8fc3ea", "#e6f2fa"));
   }
 
   /* 3. The Carnival (his first solo album): a Ferris wheel turning at night, string lights */

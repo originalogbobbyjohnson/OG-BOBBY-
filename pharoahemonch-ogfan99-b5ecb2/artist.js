@@ -90,7 +90,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO SOUTH JAMAICA",
-   "x": "Guy R Brewer Blvd and Linden Blvd. This is Pharoahe Monch's game.",
+   "x": "Baisley Blvd and Guy R Brewer Blvd. This is Pharoahe Monch's game.",
    "sfx": "spray"
   }
  ],

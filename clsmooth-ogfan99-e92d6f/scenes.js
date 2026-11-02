@@ -510,11 +510,152 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* LM1 helpers for the redrawn landmark rooms: same svg / sky / tag / bullet style as above, with their own little animations */
+  const LM1 = (function () {
+    const css = '<style>' +
+      '@keyframes lmDrift{from{transform:translateX(-90px)}to{transform:translateX(490px)}}.lm-drift{animation:lmDrift 24s linear infinite}.lm-d2{animation-delay:-12s}' +
+      '@keyframes lmCar{from{transform:translateX(-110px)}to{transform:translateX(510px)}}.lm-car{animation:lmCar 6s linear infinite}.lm-c2{animation-delay:-3s}' +
+      '@keyframes lmCarL{from{transform:translateX(510px)}to{transform:translateX(-110px)}}.lm-carL{animation:lmCarL 7.5s linear infinite}' +
+      '@keyframes lmFlick{0%,100%{opacity:1}45%{opacity:.75}50%{opacity:.3}55%{opacity:.9}}.lm-flk{animation:lmFlick 2.2s infinite}.lm-f2{animation-delay:-.8s}' +
+      '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{transform-box:fill-box;transform-origin:50% 0;animation:lmSway 3s ease-in-out infinite}' +
+      '.lm-swayb{transform-box:fill-box;transform-origin:50% 100%;animation:lmSway 3.6s ease-in-out infinite}.lm-s2{animation-delay:-1.5s}' +
+      '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.lm-bob{animation:lmBob 1.4s ease-in-out infinite}.lm-b2{animation-delay:-.7s}.lm-b3{animation-delay:-.35s}' +
+      '@keyframes lmRise{0%{transform:translate(0,0);opacity:1}80%{opacity:1}100%{transform:translate(14px,-150px);opacity:0}}.lm-rise{animation:lmRise 6s ease-in infinite}' +
+      '@keyframes lmBlink{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blink{animation:lmBlink 1s steps(1) infinite}.lm-k2{animation-delay:-.5s}' +
+      '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{transform-box:fill-box;transform-origin:50% 50%;animation:lmSpin 14s linear infinite}' +
+      '@keyframes lmFly{from{transform:translate(-80px,30px)}to{transform:translate(480px,-30px)}}.lm-fly{animation:lmFly 9s linear infinite}' +
+      '@keyframes lmLand{from{transform:translate(460px,-40px)}to{transform:translate(-120px,40px)}}.lm-land{animation:lmLand 10s linear infinite}' +
+      '@keyframes lmRip{0%,100%{transform:translateX(0)}50%{transform:translateX(-14px)}}.lm-rip{animation:lmRip 3s ease-in-out infinite}.lm-r2{animation-delay:-1.5s}' +
+      '@keyframes lmBoat{0%,100%{transform:translateX(0)}50%{transform:translateX(-60px)}}.lm-boat{animation:lmBoat 12s ease-in-out infinite}' +
+      '@keyframes lmWalk{from{transform:translateX(0)}to{transform:translateX(70px)}}.lm-walk{animation:lmWalk 5s ease-in-out infinite alternate}.lm-w2{animation-delay:-2.5s}' +
+      '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(30px,250px) rotate(300deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}.lm-l2{animation-delay:-2s}.lm-l3{animation-delay:-4s}' +
+      '@keyframes lmDrop{0%{transform:translateY(0)}100%{transform:translateY(118px)}}.lm-drop{animation:lmDrop 2.6s cubic-bezier(.5,0,.9,.6) infinite}' +
+      '@keyframes lmBall{0%{transform:translate(0,0)}50%{transform:translate(-90px,-26px)}100%{transform:translate(-180px,0)}}.lm-ball{animation:lmBall 2.4s linear infinite}' +
+      '@keyframes lmSwim{0%,100%{transform:translateX(0)}50%{transform:translateX(90px)}}.lm-swim{animation:lmSwim 7s ease-in-out infinite}.lm-sw2{animation-delay:-3.5s}' +
+      '</style>';
+    const svg = (inner, defs) =>
+      '<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img">' + css + '<defs>' + (defs || "") + '</defs>' + inner + '</svg>';
+    const sky = (id, top, bottom) =>
+      '<linearGradient id="' + id + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + top + '"/><stop offset="1" stop-color="' + bottom + '"/></linearGradient>';
+    const tag = (txt, x, y, size, fill, rot) =>
+      '<text x="' + x + '" y="' + y + '" transform="rotate(' + (rot || -6) + ' ' + x + ' ' + y + ')" font-family="Sedgwick Ave Display, Permanent Marker, cursive" font-size="' + size +
+      '" fill="' + fill + '" stroke="#000" stroke-width="' + Math.max(2, size / 9) + '" paint-order="stroke" stroke-linejoin="round">' + txt + '</text>';
+    const bullet = (x, y, letter, color, dark, r) => { r = r || 11;
+      return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + color + '"/><text x="' + x + '" y="' + (y + r * .5) + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + (r * 1.36).toFixed(1) + '" fill="' + (dark ? "#000" : "#fff") + '">' + letter + '</text>'; };
+    const stars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".7"/>'; return s; };
+    const T = (x, y, txt, size, fill, o) => { o = o || {};
+      return '<text x="' + x + '" y="' + y + '" text-anchor="' + (o.a || "middle") + '" font-family="' + (o.f || "Anton, Impact, sans-serif") + '"' + (o.w ? ' font-weight="' + o.w + '"' : '') +
+        (o.ls ? ' letter-spacing="' + o.ls + '"' : '') + ' font-size="' + size + '" fill="' + fill + '"' + (o.cls ? ' class="' + o.cls + '"' : '') + '>' + txt + '</text>'; };
+    /* a name plaque: dark box, title + subtitle */
+    const plaque = (x, y, w, title, sub, bg, accent) => {
+      const ts = Math.min(12, (w - 14) / (title.length * .66)), ss = sub ? Math.min(8, (w - 12) / (sub.length * .62 + sub.length * 1.5 / 8)) : 0;
+      return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (sub ? 34 : 22) + '" rx="4" fill="' + bg + '" stroke="' + accent + '" stroke-width="2"/>' +
+        T(x + w / 2, y + 16, title, ts.toFixed(1), "#fff") + (sub ? T(x + w / 2, y + 28, sub, ss.toFixed(1), accent, { f: "Barlow, Arial, sans-serif", w: 700, ls: (ss * 1.5 / 8).toFixed(2) }) : ""); };
+    /* green NYC street sign blade */
+    const blade = (x, y, w, txt) =>
+      '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      T(x + w / 2, y + 13, txt, 11, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 });
+    const car = (cls, y, c, w) => { w = w || 44;
+      return '<g class="' + cls + '"><rect x="0" y="' + y + '" width="' + w + '" height="12" rx="4" fill="' + c + '"/><rect x="' + (w * .22) + '" y="' + (y - 7) + '" width="' + (w * .5) + '" height="8" rx="3" fill="' + c + '"/>' +
+        '<rect x="' + (w * .27) + '" y="' + (y - 5) + '" width="' + (w * .4) + '" height="5" fill="#cfe6ff" opacity=".8"/><circle cx="' + (w * .22) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/><circle cx="' + (w * .78) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/>' +
+        '<rect x="' + (w - 3) + '" y="' + (y + 3) + '" width="3" height="3" fill="#fff6c2"/></g>'; };
+    /* faceless figure (silhouette), optional sign held up */
+    const fig = (x, y, c, sign, sc) => { sc = sc || 1;
+      return '<g transform="translate(' + x + ' ' + y + ') scale(' + sc + ')"><circle cx="0" cy="-30" r="5" fill="' + c + '"/><path d="M-6 -24h12l2 16h-4l-1 14h-6l-1-14h-4z" fill="' + c + '"/>' +
+        (sign ? '<path d="M5 -22l6-14" stroke="' + c + '" stroke-width="2.5"/><rect x="' + (13 - Math.max(30, sign[0].length * 4.6 + 6) / 2) + '" y="-58" width="' + Math.max(30, sign[0].length * 4.6 + 6) + '" height="20" fill="' + sign[1] + '" stroke="#222" stroke-width="1"/>' +
+          T(13, -44, sign[0], 7, sign[2] || "#111", { f: "Barlow, Arial, sans-serif", w: 700 }) : "") + '</g>'; };
+    const wins = (x0, y0, cols, rows, dx, dy, w, h, c, lit) => { let s = "";
+      for (let r = 0; r < rows; r++) for (let k = 0; k < cols; k++) s += '<rect x="' + (x0 + k * dx) + '" y="' + (y0 + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + ((lit && (k * 7 + r * 3) % 4 === 0) ? lit : c) + '"/>';
+      return s; };
+    const brickLines = (x, y, w, h, c, step) => { let s = ""; for (let yy = y + (step || 7); yy < y + h; yy += (step || 7)) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + c + '" stroke-width=".6"/>'; return s; };
+    const cloud = (cls, x, y, s, op) => '<g class="' + cls + '"><g transform="translate(' + x + ' ' + y + ') scale(' + s + ')" opacity="' + (op || .8) + '"><ellipse cx="0" cy="0" rx="26" ry="9" fill="#fff"/><ellipse cx="12" cy="-6" rx="14" ry="9" fill="#fff"/><ellipse cx="-10" cy="-4" rx="11" ry="7" fill="#fff"/></g></g>';
+    const tree = (x, y, r, c, cls) => '<g class="' + (cls || "lm-swayb") + '"><rect x="' + (x - 2.5) + '" y="' + (y - 4) + '" width="5" height="' + (r + 6) + '" fill="#5a3a22"/><circle cx="' + x + '" cy="' + (y - r * .6) + '" r="' + r + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x - r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x + r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/></g>';
+    const bird = (cls, x, y) => '<g class="' + cls + '"><path d="M' + x + ' ' + y + 'q5-5 10 0q5-5 10 0" fill="none" stroke="#222" stroke-width="1.6"/></g>';
+    /* subway car side (R-type), for the station rooms */
+    const subCar = (x, y, w, stripe, letters) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="60" rx="7" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="' + x + '" y="' + (y + 40) + '" width="' + w + '" height="4" fill="' + stripe + '"/>';
+      for (let k = x + 14; k < x + w - 40; k += 44) s += '<rect x="' + k + '" y="' + (y + 10) + '" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
+      return s + '<rect x="' + (x + w - 22) + '" y="' + (y + 10) + '" width="14" height="22" rx="3" fill="#1d2a3a"/><circle cx="' + (x + w - 8) + '" cy="' + (y + 50) + '" r="3.5" fill="#fff6c2"/>' + (letters || ""); };
+    return { svg, sky, tag, bullet, stars, T, plaque, blade, car, fig, wins, brickLines, cloud, tree, bird, subCar };
+  })();
+  /* 2. Mount Vernon Public Library on S 1st Av: the Carnegie-era Beaux-Arts library downtown, pale stone, columns, green lamps glowing */
+  function lm1_hall() {
+    const { svg, sky, tag, T, plaque, tree, cloud, fig } = LM1;
+    let cols = ""; for (let x = 140; x <= 252; x += 28) cols += '<rect x="' + x + '" y="104" width="12" height="80" fill="#efe8d8"/><rect x="' + (x - 3) + '" y="100" width="18" height="6" fill="#ddd4c0"/><rect x="' + (x - 3) + '" y="182" width="18" height="5" fill="#ddd4c0"/>';
+    const lamp = (x, cls) => '<rect x="' + (x - 2) + '" y="168" width="4" height="40" fill="#1f3a2a"/><circle class="' + cls + '" cx="' + x + '" cy="164" r="7" fill="#7cf29a" opacity=".9"/><circle cx="' + x + '" cy="164" r="12" fill="#7cf29a" opacity=".2"/>';
+    return svg(
+      '<rect width="400" height="260" fill="url(#cl1)"/>' + cloud("lm-drift", 0, 30, 1, .5) +
+      /* wings */
+      '<rect x="40" y="96" width="320" height="100" fill="#e2d9c4"/><rect x="34" y="88" width="332" height="10" fill="#d2c8b0"/>' +
+      [60, 92, 296, 328].map(x => '<path d="M' + x + ' 170v-40a10 10 0 0 1 20 0v40z" fill="#3a4a5a"/><rect x="' + x + '" y="134" width="20" height="2" fill="#e2d9c4"/>').join("") +
+      /* the portico */
+      '<path d="M124 100L200 64L276 100z" fill="#ece4d0"/><path d="M140 96L200 70L260 96z" fill="#d8ceb8"/>' + cols +
+      '<rect x="190" y="140" width="20" height="44" fill="#4a3a2a"/>' +
+      '<path d="M120 196h160v6H120zM110 202h180v6H110z" fill="#cfc6b0"/>' +
+      T(200, 96, "PUBLIC LIBRARY", 8, "#6a5e48", { ls: 2 }) +
+      lamp(118, "lm-flk") + lamp(282, "lm-flk lm-f2") +
+      tree(20, 206, 16, "#3a6a3a") + tree(382, 206, 16, "#3a6a3a", "lm-swayb lm-s2") +
+      '<rect x="0" y="208" width="400" height="52" fill="#3a3a40"/>' +
+      '<g class="lm-walk">' + fig(150, 236, "#1c1c22", null, .8) + '</g>' +
+      plaque(8, 10, 176, "MOUNT VERNON PUBLIC LIBRARY", "S 1ST AV · DOWNTOWN MT VERNON", "#10283a", "#d4af37") +
+      tag("REMINISCE", 220, 250, 24, "#38e8ff", -4),
+      sky("cl1", "#1a2a4a", "#e0a870"));
+  }
+
+  /* 3. The Bronx River Reservation at Mount Vernon West: the river path, a stone footbridge, green water and willows, Metro-North on the bank */
+  function lm1_lounge() {
+    const { svg, sky, tag, T, plaque, tree, bird } = LM1;
+    const willow = (x, cls) => '<g class="' + cls + '"><rect x="' + (x - 3) + '" y="80" width="6" height="74" fill="#5a4630"/>' +
+      (function () { let s = ""; for (let k = -5; k <= 5; k++) s += '<path d="M' + x + ' 86q' + (k * 8) + ' 4 ' + (k * 10) + ' 60" stroke="#6fa04a" stroke-width="4" fill="none"/>'; return s; })() + '<ellipse cx="' + x + '" cy="88" rx="44" ry="18" fill="#7ab24e"/></g>';
+    let win = ""; for (let i = 0; i < 6; i++) win += '<rect x="' + (8 + i * 34) + '" y="62" width="22" height="10" rx="2" fill="#cfe6ff"/>';
+    return svg(
+      '<rect width="400" height="260" fill="url(#cl2)"/>' + bird("lm-fly", 0, 30) +
+      /* Metro-North on the embankment */
+      '<rect x="0" y="80" width="400" height="10" fill="#6a6a5a"/>' +
+      '<g class="lm-car" style="animation-duration:9s"><rect x="-140" y="56" width="214" height="24" rx="4" fill="#d4d8de" stroke="#6b7280"/><rect x="-140" y="72" width="214" height="3" fill="#0039a6"/>' + win.replace(/x="(\d+)"/g, (m, v) => 'x="' + (v - 140) + '"') + '</g>' +
+      '<path d="M0 90q100 10 200 0t200 4V140H0z" fill="#4a7a3a"/>' +
+      willow(60, "lm-swayb") + willow(350, "lm-swayb lm-s2") +
+      /* the river */
+      '<path d="M0 150q100-14 200 0t200 0V220H0z" fill="#3f7a5e"/>' +
+      '<g class="lm-rip"><path d="M30 170h50M150 184h60M260 168h50M320 196h40" stroke="#bfe8c8" stroke-width="2" opacity=".6"/></g>' +
+      /* the stone footbridge */
+      '<path d="M120 150h160v12h-10a70 50 0 0 0-140 0h-10z" fill="#9a9488"/>' +
+      '<path d="M130 162a70 50 0 0 1 140 0" fill="none" stroke="#7a7468" stroke-width="3"/>' +
+      (function () { let s = ""; for (let x = 124; x < 280; x += 12) s += '<rect x="' + x + '" y="140" width="6" height="10" fill="#9a9488"/>'; return s; })() + '<rect x="120" y="138" width="160" height="4" fill="#aaa498"/>' +
+      '<g class="lm-boat"><path d="M300 200q14 6 28 0l-4 6h-20z" fill="#e8e2d2"/><path d="M314 200q4-10 0-14" stroke="#1d1d1d" stroke-width="1.2" fill="none"/></g>' +
+      /* the path */
+      '<path d="M0 220h400v40H0z" fill="#5a8a3a"/><path d="M0 236q200-14 400 0v10q-200-14-400 0z" fill="#c8b890"/>' +
+      plaque(8, 10, 196, "BRONX RIVER RESERVATION", "BY MOUNT VERNON WEST", "#10283a", "#d4af37") +
+      tag("SMOOTH", 250, 254, 24, "#38e8ff", -4),
+      sky("cl2", "#8fc8ea", "#eaf4f0"));
+  }
+
+  /* 4. Willson's Woods Park, Mount Vernon: the big outdoor pool in the woods, swimmers going, the lifeguard chair */
+  function lm1_crates() {
+    const { svg, sky, tag, T, plaque, tree, cloud } = LM1;
+    let woods = ""; for (let x = -10; x < 420; x += 28) woods += tree(x, 108 + (x % 3) * 4, 18 + (x % 5), ["#2f6a34", "#3a7a3a", "#286030"][((x + 10) / 28) % 3], "lm-swayb" + (x % 2 ? " lm-s2" : ""));
+    const swimmer = (x, y, cls, c) => '<g class="' + cls + '"><circle cx="' + x + '" cy="' + y + '" r="4" fill="' + c + '"/><path d="M' + (x - 10) + ' ' + (y + 2) + 'q5-6 10 0" stroke="#fff" stroke-width="2" fill="none"/></g>';
+    return svg(
+      '<rect width="400" height="260" fill="url(#cl3)"/>' + cloud("lm-drift", 0, 30, 1) + woods +
+      /* the deck and the pool */
+      '<rect x="0" y="118" width="400" height="142" fill="#e8dcc0"/>' +
+      '<rect x="24" y="134" width="352" height="96" rx="6" fill="#2ab0d8" stroke="#f6f2e6" stroke-width="5"/>' +
+      (function () { let s = ""; for (let y = 152; y < 230; y += 18) s += '<path d="M28 ' + y + 'h344" stroke="#e8f8ff" stroke-width="1.5" stroke-dasharray="6 6" opacity=".7"/>'; return s; })() +
+      '<g class="lm-rip"><path d="M60 170h30M200 196h40M300 160h30" stroke="#d8f6ff" stroke-width="2"/></g>' +
+      swimmer(60, 162, "lm-swim", "#d4af37") + swimmer(120, 198, "lm-swim lm-sw2", "#ff6b9a") + swimmer(230, 180, "lm-swim", "#38e8ff") +
+      /* lifeguard chair + umbrellas */
+      '<path d="M352 230l10-60M376 230l-10-60M356 206h16" stroke="#f6f2e6" stroke-width="3"/><rect x="354" y="160" width="20" height="10" fill="#d7263d"/>' +
+      '<path d="M24 248q20-16 40 0z" fill="#ff6b9a"/><rect x="43" y="248" width="2" height="12" fill="#555"/>' +
+      plaque(8, 10, 176, "WILLSON'S WOODS POOL", "MOUNT VERNON, N.Y.", "#10283a", "#d4af37") +
+      tag("T.R.O.Y.", 250, 254, 24, "#ff6b9a", -4),
+      sky("cl3", "#6fb8ea", "#e8f4fa"));
+  }
+
+
   window.SCENES = {
     station: function () { return railStation({name:"Mount Vernon West", line:"MN", sky:["#f7b267","#f6e7c6"], tag:["CL SMOOTH","#38e8ff"]}); },
-    hall: function () { return cityhall({c1:"#38e8ff", tag:["MOUNT VERNON","#d4af37"]}); },
-    lounge: function () { return lounge({c1:"#38e8ff", tag:["SMOOTH","#d4af37"]}); },
-    crates: function () { return crates({c1:"#38e8ff", c2:"#d4af37", c3:"#ff6b9a", sign:"MECCA", tag:["REMINISCE","#38e8ff"]}); },
+    hall: lm1_hall,
+    lounge: lm1_lounge,
+    crates: lm1_crates,
     corner: function () { return corner({s1:"Mount Vernon Av", s2:"W 3rd St", tags:[["CL SMOOTH","#38e8ff",44],["MECCA","#d4af37",30],["T.R.O.Y.","#ff6b9a"],["MT VERNON","#f6efdc"]]}); }
   };
 })();

@@ -257,6 +257,29 @@ function LIB(P) {
   S.glenview = () => svg('<rect width="400" height="260" fill="url(#g3)"/>' + palisades(150) + water(160, "#4a7aa0") + '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' +
     '<rect x="110" y="90" width="150" height="120" fill="#8a7e6a"/><path d="M100 90h170l-30-30h-110z" fill="#3a3a44"/><rect x="230" y="40" width="44" height="170" fill="#9a8e7a"/><path d="M224 40h56l-28-30z" fill="#3a3a44"/>' +
     wins(124, 104, 4, 2, 32, 46, 16, 28, "#ffe6a8") + wins(242, 56, 1, 3, 0, 40, 20, 26, "#ffe6a8") + '<g class="slideL"><path d="M0 178h40l-6 6H6z" fill="#fff"/><path d="M18 178v-20l12 18z" fill="#fff"/></g>' + tag("GLENVIEW", 20, 246, 22, A, -3), sky("g3", "#ff9a6a", "#8fc3ea"));
+  /* ---------- Lil Mama's own rooms ---------- */
+  /* Harlem-125th St Metro-North: the green steel viaduct over E 125th on Park Av, the station house up on the tracks, a train rolling across, a block from her Lexington corner */
+  S.harlem125MN = tg => { let truss = ""; for (let x = 0; x < 400; x += 24) truss += '<path d="M' + x + ' 128l12 22 12-22" stroke="#2f5a3a" stroke-width="3" fill="none"/>';
+    let car7 = ""; for (let i = 16; i < 330; i += 40) car7 += '<rect x="' + i + '" y="70" width="26" height="16" rx="3" fill="#1b2430"/>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' + brick(0, 60, 90, 180, "#7a4a3a", "#84523f") + brick(310, 50, 90, 190, "#5a4a5a", "#645464") + wins(10, 74, 3, 4, 26, 30, 14, 18, "#ffe6a8") + wins(320, 64, 3, 4, 26, 30, 14, 18, "#ffe6a8") +
+      /* the station house sitting on the viaduct */
+      '<rect x="150" y="44" width="120" height="16" fill="#3a5a46"/><rect x="156" y="16" width="108" height="30" fill="#e8e2d4"/><path d="M150 18l60-14 60 14z" fill="#2f5a3a"/>' + txt("HARLEM–125 ST", 210, 36, 11, "#1b2430") + mnBadge(282, 30) +
+      '<g class="slide" style="animation-duration:12s"><g transform="translate(-60 0)"><rect x="0" y="62" width="360" height="46" rx="6" fill="#d4d8de" stroke="#6b7280" stroke-width="2"/><rect x="0" y="94" width="360" height="5" fill="#0b3d91"/><rect x="0" y="99" width="360" height="3" fill="#d7263d"/>' + car7 + '</g></g>' +
+      '<rect x="0" y="108" width="400" height="20" fill="#3a6a4a"/>' + truss + '<rect x="0" y="148" width="400" height="6" fill="#2f5a3a"/>' +
+      [60, 200, 340].map(x => '<rect x="' + (x - 8) + '" y="154" width="16" height="82" fill="#3a6a4a"/><rect x="' + (x - 12) + '" y="228" width="24" height="8" fill="#2f5a3a"/>').join("") +
+      '<rect x="0" y="236" width="400" height="24" fill="#2a2d33"/><path d="M0 248h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' + car(0, 220, A) + car(0, 220, C, "slide sl2") +
+      blade(120, 170, "E 125 St") + blade(120, 192, "Park Av") + tag(tg, 230, 214, 26, B, -5), sky("g3", "#9fd0f0", "#f6e6c0")); };
+  /* America's Best Dance Crew: the judges' table under the spotlights, a crew hitting the routine on the lit floor */
+  S.danceCrew = tg => { let floor = ""; for (let i = 0; i < 8; i++) floor += '<rect class="pls' + (i % 2 ? " p2" : "") + '" x="' + (i * 50) + '" y="150" width="48" height="40" fill="' + [A, B, C, "#fff"][i % 4] + '" opacity=".35"/>';
+    const dancer = (x, c, cls) => '<g class="' + cls + '"><circle cx="' + x + '" cy="106" r="7" fill="#14121a"/><path d="M' + (x - 8) + ' 146v-28q0-6 8-6t8 6v28z" fill="' + c + '"/><path d="M' + (x - 8) + ' 120l-12-14M' + (x + 8) + ' 120l12-14" stroke="' + c + '" stroke-width="4"/><path d="M' + (x - 4) + ' 146l-6 14M' + (x + 4) + ' 146l6 14" stroke="#14121a" stroke-width="4"/></g>';
+    return svg('<rect width="400" height="260" fill="#0e0a18"/>' + stars(14) +
+      '<g class="swp" opacity=".25"><path d="M100 0l-50 160h100z" fill="' + A + '"/></g><g class="swp sp2" opacity=".25"><path d="M300 0l-50 160h100z" fill="' + B + '"/></g><g class="swp" style="animation-delay:-1s" opacity=".2"><path d="M200 0l-40 160h80z" fill="#fff"/></g>' +
+      txt("BEST DANCE CREW", 200, 40, 22, "#fff", ' letter-spacing="3" class="flk"') + floor +
+      dancer(140, A, "bnc") + dancer(180, B, "bnc") + dancer(220, C, "bnc") + dancer(260, "#fff", "bnc") +
+      /* the judges' table seen from behind */
+      '<rect x="20" y="196" width="360" height="40" rx="4" fill="#1b1424" stroke="' + B + '" stroke-width="2"/><rect x="20" y="236" width="360" height="24" fill="#120e1a"/>' +
+      txt("JUDGES", 200, 222, 13, B, ' letter-spacing="4"') + [90, 310].map(x => '<circle cx="' + x + '" cy="188" r="10" fill="#14121a"/><path d="M' + (x - 16) + ' 200q16-14 32 0z" fill="#14121a"/>').join("") +
+      '<circle cx="200" cy="186" r="11" fill="#14121a"/><path d="M182 200q18-16 36 0z" fill="' + B + '"/>' + tag(tg, 20, 256, 22, A, -3), ""); };
   S.corner = corner; S.tag = tag;
   return S;
 }
@@ -264,9 +287,9 @@ function LIB(P) {
   const P = {"c1":"#f2c14e","c2":"#ff6fb5","c3":"#9fe3ff"}, L = LIB(P);
   window.SCENES = {
     station: () => L.stUnder("125 St", [["4","#00933c"],["5","#00933c"],["6","#00933c"]], "#3a8a5a", "POPPIN"),
-    marqueta: () => L.laMarqueta(),
+    marqueta: () => L.harlem125MN("LIL MAMA"),
     gloss: () => L.lipGloss(),
-    bus: () => L.tourBus("LIL MAMA"),
+    bus: () => L.danceCrew("LIL MAMA"),
     block: () => L.corner(["#0d1022", "#2a3a4a"], "E 125 St", "Lexington Av", L.tag("LIL MAMA", 26, 124, 41, P.c1, -7) + L.tag("G-SLIDE", 40, 156, 22, P.c2, -5) + L.tag("POPPIN", 30, 188, 24, P.c3, -3) + L.tag("HARLEM", 120, 212, 20, "#f6efdc", -2))
   };
 })();

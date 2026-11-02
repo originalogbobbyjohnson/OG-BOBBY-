@@ -510,11 +510,72 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* CARDI B 2. Heritage Field at Macombs Dam Park, E 161 St: green ballfields where the old Yankee Stadium stood, the old diamond marked out, the new stadium across the street */
+  function cbHeritage() {
+    let arches = ""; for (let x = 238; x < 396; x += 20) arches += '<path d="M' + x + ' 116v-18a7 7 0 0 1 14 0v18z" fill="#4a4a50"/>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/><circle cx="70" cy="40" r="18" fill="#fff3c4"/>' +
+      /* the new stadium across 161st: limestone with arches */
+      '<rect x="228" y="70" width="172" height="62" fill="#d9d2c0"/><rect x="228" y="70" width="172" height="8" fill="#eee8da"/>' + arches +
+      txt("YANKEE STADIUM", 314, 87, 8, "#2a2a30") +
+      '<rect x="0" y="100" width="228" height="32" fill="#5a6a7a"/>' + windows(8, 106, 9, 2, 24, 12, 12, 7, "#ffe6a8", "#3a4250") +
+      '<rect x="0" y="132" width="400" height="10" fill="#6c6a66"/>' +
+      /* the fields */
+      '<rect x="0" y="142" width="400" height="118" fill="#3f8a3a"/>' +
+      '<path d="M0 160h400M0 190h400M0 222h400" stroke="#4f9a45" stroke-width="10" opacity=".6"/>' +
+      /* the old stadium outline: diamond + outfield arc */
+      '<path d="M200 242l-50 -34 50 -30 50 30z" fill="#c9a36a"/><path d="M200 242l-50 -34 50 -30 50 30z" fill="none" stroke="#fff" stroke-width="2"/>' +
+      '<path d="M200 242L40 150M200 242L360 150" stroke="#fff" stroke-width="2"/><path d="M40 150Q200 104 360 150" stroke="#fff" stroke-width="2" stroke-dasharray="6 6" fill="none"/>' +
+      '<circle cx="200" cy="210" r="5" fill="#d8b47a"/>' +
+      '<rect x="146" y="232" width="108" height="16" rx="2" fill="#1d2329"/>' + txt("HERITAGE FIELD", 200, 244, 9.5, "#fff") +
+      /* a ball arcing over */
+      '<g class="hop" style="animation-duration:2s"><circle cx="120" cy="190" r="4" fill="#fff" stroke="#c33" stroke-width="1"/></g>' +
+      '<g class="bob"><circle cx="300" cy="196" r="6" fill="#3a2a22"/><rect x="294" y="202" width="12" height="20" rx="4" fill="#ff3b6b"/></g>' +
+      blade(64, 8, "E 161 St") + blade(330, 8, "River Av") + tag("BARDI GANG", 14, 136, 20, "#ffd34d", -4),
+      sky("sk", "#7fb3e0", "#f6e6c0"));
+  }
+  /* CARDI B 3. The Lorelei Fountain in Joyce Kilmer Park, Grand Concourse at E 161 St: white marble, the mermaid on top, water spilling, the Concourse deco buildings behind */
+  function cbLorelei() {
+    let deco = ""; [[0, 60, 120, "#e8d9b0"], [280, 70, 120, "#d9c79a"]].forEach(b => { deco += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (176 - b[1]) + '" fill="' + b[3] + '"/><rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="8" fill="#c8a868"/>' + windows(b[0] + 10, b[1] + 16, 5, 5, 22, 20, 12, 12, "#ffe6a8", "#3a4250"); });
+    return svg('<rect width="400" height="260" fill="url(#sk)"/><circle cx="200" cy="34" r="16" fill="#fff3c4"/>' + deco +
+      tree(130, 150, 26, "") + tree(272, 152, 24, "sw2") +
+      '<rect x="0" y="176" width="400" height="84" fill="#4f8a3e"/><path d="M0 214h400" stroke="#c9b98a" stroke-width="8"/>' +
+      /* basin */
+      '<ellipse cx="200" cy="214" rx="96" ry="18" fill="#eeeae0"/><ellipse cx="200" cy="210" rx="86" ry="13" fill="#7fb6d8"/>' +
+      /* tiered marble base with figures as soft shapes */
+      '<path d="M160 210l8 -40h64l8 40z" fill="#f2efe8" stroke="#c9c3b6"/>' +
+      '<path d="M166 180q-10 10 -4 26M234 180q10 10 4 26" stroke="#d8d3c6" stroke-width="6" fill="none"/>' +
+      '<path d="M176 170l6 -34h36l6 34z" fill="#f7f4ee" stroke="#c9c3b6"/>' +
+      '<path d="M200 136q-14 -6 -10 -28q4 -8 10 -10q6 2 10 10q4 22 -10 28z" fill="#f7f4ee" stroke="#c9c3b6"/>' +
+      '<circle cx="200" cy="94" r="6" fill="#f7f4ee" stroke="#c9c3b6"/><path d="M194 94q-6 10 -2 20M206 94q6 10 2 20" stroke="#e6e2d8" stroke-width="3" fill="none"/>' +
+      /* water spilling */
+      '<g class="drp"><path d="M170 184q-8 8 -10 22" stroke="#bfe3f5" stroke-width="3" fill="none"/></g><g class="drp" style="animation-delay:-1.1s"><path d="M230 184q8 8 10 22" stroke="#bfe3f5" stroke-width="3" fill="none"/></g>' +
+      '<g class="pls"><ellipse cx="200" cy="210" rx="40" ry="5" fill="none" stroke="#e6f4fa" stroke-width="1.5"/></g>' +
+      '<rect x="128" y="236" width="144" height="16" rx="2" fill="#1d2329"/>' + txt("LORELEI FOUNTAIN", 200, 248, 9.5, "#fff") +
+      blade(74, 8, "Grand Concourse") + blade(334, 8, "E 161 St") + tag("OKURRR", 300, 240, 22, "#ff3b6b", -4),
+      sky("sk", "#8fc3ea", "#f6e6c0"));
+  }
+  /* CARDI B 4. Album world, Invasion of Privacy (2018): the yellow Bodak Yellow set, red-bottom heels, the Bronx skyline behind */
+  function cbInvasion() {
+    let sk = ""; [[0, 120, 40], [44, 96, 34], [82, 130, 46], [292, 110, 40], [336, 90, 30], [370, 124, 30]].forEach(b => { sk += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (190 - b[1]) + '" fill="#2a1a10"/>' + windows(b[0] + 5, b[1] + 6, 3, 4, 11, 14, 6, 7, "#ffd34d", "#3a2a18"); });
+    const heel = (x, y, cls) => '<g class="' + cls + '"><path d="M' + x + ' ' + y + 'q20 -26 44 -6l4 14h-10l-2 -6q-14 -8 -26 2z" fill="#111"/><path d="M' + (x + 40) + ' ' + (y + 2) + 'l2 20h4l2 -20z" fill="#111"/><path d="M' + x + ' ' + y + 'q12 4 30 -2" stroke="#e01b24" stroke-width="3" fill="none"/></g>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/>' +
+      '<g class="beam"><path d="M0 0L200 60v20z" fill="#fff" opacity=".18"/></g>' + sk +
+      /* the yellow set */
+      '<rect x="120" y="40" width="160" height="150" fill="#ffd34d" stroke="#111" stroke-width="3"/>' +
+      txt("INVASION", 200, 82, 26, "#111") + txt("OF PRIVACY", 200, 108, 18, "#111") + txt("CARDI B · 2018", 200, 126, 9, "#7a5a00") +
+      txt("BODAK YELLOW", 200, 184, 13, "#e01b24") +
+      heel(150, 146, "bob") + heel(206, 144, "bob bo2") +
+      '<rect x="0" y="190" width="400" height="70" fill="#ffd34d"/><path d="M0 190h400" stroke="#111" stroke-width="3"/>' +
+      '<g class="rise"><rect x="60" y="230" width="10" height="6" fill="#4caf50"/></g><g class="rise r2"><rect x="320" y="234" width="10" height="6" fill="#4caf50"/></g><g class="rise r3"><rect x="180" y="236" width="10" height="6" fill="#4caf50"/></g>' +
+      tag("BARDI GANG", 20, 236, 26, "#ff3b6b", -4) + tag("MONEY MOVES", 236, 246, 20, "#9fe3ff", -4),
+      sky("sk", "#1a0a10", "#5a2a18"));
+  }
+
   window.SCENES = {
     station: function () { return elStation({name:"170 St", lines:[["4","#00933c"]], sky:["#7fb3e0","#f6d9a6"], tag:["OKURRR","#ff3b6b"]}); },
-    bridge: function () { return highbridge({tag:["HIGHBRIDGE","#ff3b6b"]}); },
-    stadium: function () { return stadium({c1:"#ff3b6b", c2:"#ffd34d", sign:"BRONX NIGHT TONIGHT", tag:["BARDI GANG","#ffd34d"]}); },
-    stage: function () { return stage({c1:"#ff3b6b", c2:"#ffd34d", c3:"#9fe3ff", sign:"CARDI B", tag:["MONEY MOVES","#ffd34d"]}); },
+    bridge: function () { return cbHeritage(); },
+    stadium: function () { return cbLorelei(); },
+    stage: function () { return cbInvasion(); },
     corner: function () { return corner({s1:"Ogden Av", s2:"W 168 St", tags:[["CARDI B","#ff3b6b",50],["OKURRR","#ffd34d",28],["BARDI GANG","#9fe3ff"],["HIGHBRIDGE","#f6efdc"]]}); }
   };
 })();

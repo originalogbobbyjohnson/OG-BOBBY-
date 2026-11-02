@@ -510,11 +510,94 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* ---- redrawn landmark scenes (OG FAN 99 landmark pass): small shared helpers, prefixed L ---- */
+  const Lcss = '<style>' +
+    '@keyframes lmCar{from{transform:translateX(-170px)}to{transform:translateX(480px)}}.lm-car{animation:lmCar 8s linear infinite}' +
+    '@keyframes lmCarB{from{transform:translateX(480px)}to{transform:translateX(-170px)}}.lm-carb{animation:lmCarB 10s linear infinite}' +
+    '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.lm-bob{animation:lmBob 1.6s ease-in-out infinite}' +
+    '@keyframes lmFlk{0%,100%{opacity:1}45%{opacity:.7}50%{opacity:.3}55%{opacity:.95}}.lm-flk{animation:lmFlk 2.3s infinite}' +
+    '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{animation:lmSpin 1.8s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmRise{0%{transform:translateY(0) scale(.8);opacity:0}20%{opacity:.85}100%{transform:translateY(-70px) scale(1.4);opacity:0}}.lm-rise{animation:lmRise 4s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{animation:lmSway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}' +
+    '@keyframes lmBlk{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blk{animation:lmBlk 1s steps(1) infinite}' +
+    '@keyframes lmFlag{0%,100%{transform:skewY(0)}50%{transform:skewY(-6deg)}}.lm-flag{animation:lmFlag 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}' +
+    '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(-30px,230px) rotate(280deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}' +
+    '@keyframes lmCld{from{transform:translateX(-120px)}to{transform:translateX(470px)}}.lm-cld{animation:lmCld 30s linear infinite}' +
+    '@keyframes lmPls{0%,100%{opacity:.35}50%{opacity:1}}.lm-pls{animation:lmPls 2.2s ease-in-out infinite}' +
+    '@keyframes lmWav{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}.lm-wav{animation:lmWav 3s ease-in-out infinite}' +
+    '@keyframes lmBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}.lm-beat{animation:lmBeat .7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmNote{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-60px);opacity:0}}.lm-note{animation:lmNote 3s linear infinite}' +
+    '.lmd1{animation-delay:-1s}.lmd2{animation-delay:-2s}.lmd3{animation-delay:-3s}.lmd4{animation-delay:-4.5s}.lmd5{animation-delay:-6s}' +
+    '</style>';
+  const LF = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
+  const LT = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" ' + LF + ' font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LA = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" font-family="Anton, Impact, sans-serif" font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LR = (x, y, w, h, fill, extra) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + fill + '"' + (extra || "") + '/>';
+  const Lbul = (x, y, l, col, r) => { r = r || 11; return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/>' + LT(l, x, y + r * 0.42, r * 1.22, col === "#fccc0a" ? "#000" : "#fff"); };
+  const Lpill = (x, y, l, col) => { const w = l.length * 8 + 14; return '<rect x="' + (x - w / 2) + '" y="' + (y - 10) + '" width="' + w + '" height="20" rx="10" fill="' + col + '"/>' + LT(l, x, y + 4.5, 11, "#fff"); };
+  /* black MTA-style station sign: lines = [["B","#ff6319"],...]; a long name like "MN" draws a pill */
+  const Lsign = (x, y, w, name, lines, size) => { let b = "", bx = x + w - 18; for (let i = lines.length - 1; i >= 0; i--) { const l = lines[i]; if (l[0].length > 1) { b += Lpill(bx - 10, y + 17, l[0], l[1]); bx -= l[0].length * 8 + 22; } else { b += Lbul(bx, y + 17, l[0], l[1], 10); bx -= 24; } }
+    return LR(x, y, w, 32, "#111", ' rx="3"') + LR(x, y, w, 4, "#fff") + LT(name, x + 10, y + 23, size || 15, "#fff", "start") + b; };
+  /* green NYC street sign blade */
+  const Lblade = (x, y, t, w) => { w = w || t.length * 7.2 + 20; return LR(x, y, w, 19, "#0f6b3a", ' rx="2" stroke="#fff" stroke-width="1.5"') + LT(t, x + w / 2, y + 14, 12, "#fff"); };
+  /* two green signs on a pole at x, crossing */
+  const Lpole = (x, y, a, b) => { const wa = a.length * 7.2 + 20, wb = b.length * 7.2 + 20; return LR(x, y, 6, 236 - y, "#2a3138") + Lblade(x + 3 - wa / 2, y + 6, a) + Lblade(x + 3 - wb / 2, y + 30, b) + LR(x - 2, y - 4, 10, 6, "#2a3138"); };
+  const Lbrick = (x, y, w, h, base, mortar) => { let s = LR(x, y, w, h, base); for (let yy = y + 6; yy < y + h; yy += 6) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + mortar + '" stroke-width=".8"/>'; return s; };
+  const Lwin = (x, y, cols, rows, dx, dy, w, h, lit, dark) => { let s = ""; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const on = ((r * 7 + c * 3) % 5) < 2; s += '<rect x="' + (x + c * dx) + '" y="' + (y + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + (on ? lit : dark) + '"' + (on && (r + c) % 4 === 0 ? ' class="lm-flk"' : '') + '/>'; } return s; };
+  const Lstars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".75"/>'; return s; };
+  const Lcloud = (x, y, s, cls) => '<g class="lm-cld ' + (cls || "") + '"><g transform="translate(' + x + ' ' + y + ') scale(' + (s || 1) + ')" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="22" ry="9"/><ellipse cx="14" cy="-6" rx="14" ry="9"/><ellipse cx="-12" cy="-4" rx="11" ry="7"/></g></g>';
+  const Ltree = (x, y, r, col, cls) => '<g class="lm-sway ' + (cls || "") + '">' + LR(x - 3, y, 6, r * 1.3, "#5a3d24") + '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/><circle cx="' + (x - r * .5) + '" cy="' + (y + r * .3) + '" r="' + r * .7 + '" fill="' + col + '" opacity=".85"/><circle cx="' + (x + r * .55) + '" cy="' + (y + r * .25) + '" r="' + r * .65 + '" fill="' + col + '" opacity=".9"/></g>';
+  /* faceless figure: head + body, x = centre, y = feet */
+  const Lman = (x, y, body, cls, cap) => '<g' + (cls ? ' class="' + cls + '"' : "") + '>' + '<rect x="' + (x - 7) + '" y="' + (y - 30) + '" width="14" height="22" rx="5" fill="' + body + '"/><rect x="' + (x - 6) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/><rect x="' + (x + 1) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/>' +
+    '<circle cx="' + x + '" cy="' + (y - 37) + '" r="7" fill="#5a3a26"/>' + (cap ? '<path d="M' + (x - 8) + ' ' + (y - 39) + 'q8-10 16 0z" fill="' + cap + '"/><rect x="' + (x - 1) + '" y="' + (y - 41) + '" width="12" height="3" fill="' + cap + '"/>' : '') + '</g>';
+  /* subway car (stainless) seen from the side, x,y top-left */
+  const Lcar = (x, y, w, l, col, band) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="52" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>'; for (let i = x + 16; i < x + w - 60; i += 40) s += '<rect x="' + i + '" y="' + (y + 9) + '" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    return s + LR(x, y + 33, w, 5, band || col) + Lbul(x + w - 22, y + 18, l, col, 10) + '<circle cx="' + (x + w - 8) + '" cy="' + (y + 44) + '" r="3.5" fill="#fff6c2"/>'; };
+  const Lcab = (x, y) => '<rect x="' + x + '" y="' + (y + 8) + '" width="70" height="20" rx="5" fill="#f7c600"/><path d="M' + (x + 12) + ' ' + (y + 8) + 'l8-10h28l10 10z" fill="#f7c600"/><path d="M' + (x + 22) + ' ' + y + 'h10v8h-14zM' + (x + 35) + ' ' + y + 'h10l7 8h-17z" fill="#bfe0ff"/>' +
+    LR(x + 26, y - 6, 18, 6, "#fff", ' rx="1"') + LT("TAXI", x + 35, y - 1.5, 5, "#111") + '<path d="M' + x + ' ' + (y + 17) + 'h70" stroke="#111" stroke-width="1" stroke-dasharray="3 3"/><circle cx="' + (x + 15) + '" cy="' + (y + 28) + '" r="6" fill="#111"/><circle cx="' + (x + 55) + '" cy="' + (y + 28) + '" r="6" fill="#111"/>';
+  const Lauto = (x, y, col) => '<rect x="' + x + '" y="' + (y + 6) + '" width="56" height="16" rx="5" fill="' + col + '"/><rect x="' + (x + 11) + '" y="' + (y - 2) + '" width="32" height="11" rx="3" fill="#cfe6ff"/><circle cx="' + (x + 13) + '" cy="' + (y + 22) + '" r="5" fill="#111"/><circle cx="' + (x + 43) + '" cy="' + (y + 22) + '" r="5" fill="#111"/>';
+  /* turntable from above at an angle */
+  const Ldeck = (cx, cy, r, lab) => '<rect x="' + (cx - r - 12) + '" y="' + (cy - r * .45 - 10) + '" width="' + (r * 2 + 30) + '" height="' + (r * .9 + 20) + '" rx="4" fill="#2a2a30"/><g transform="translate(' + cx + ' ' + cy + ') scale(1 .42)"><g class="lm-spin"><circle r="' + r + '" fill="#0c0c0e"/><circle r="' + r * .72 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .5 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .3 + '" fill="' + lab + '"/><rect x="-2" y="' + (-r * .3) + '" width="4" height="' + r * .2 + '" fill="#fff"/></g></g><path d="M' + (cx + r + 6) + ' ' + (cy - r * .4) + 'l-8 ' + r * .5 + '" stroke="#c9ced6" stroke-width="3"/>';
+  /* 2. Heckscher State Park, East Islip: the Great South Bay beach, picnic lawn, marsh grass, Fire Island across the water */
+  function LM_studio() {
+    let grass = ""; for (let x = 4; x < 150; x += 7) grass += '<path class="lm-sway' + (x % 3 ? " lmd1" : "") + '" d="M' + x + ' 206q2-22 ' + (x % 2 ? 4 : -3) + '-34" stroke="' + (x % 2 ? "#8aa04a" : "#a8b45a") + '" stroke-width="3" fill="none"/>';
+    const sail = (c, d) => '<g class="lm-bob ' + d + '"><path d="M0 130h34l-5 7H5z" fill="#f4f0e6"/><path d="M17 130v-30l14 26z" fill="#fff"/><path d="M15 130v-22l-10 20z" fill="' + c + '"/></g>';
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + '<circle cx="320" cy="56" r="20" fill="#fff3c4"/>' + Lcloud(80, 34) + Lcloud(220, 22, .8, "lmd3") +
+      /* the bay + Fire Island's low barrier strip */
+      LR(0, 112, 400, 70, "#3f86b8") + '<path d="M0 112q100-8 200-2t200-2v6H0z" fill="#d8c89a"/><path d="M0 108q120-10 240-4t160-2" stroke="#6a8a4a" stroke-width="3" fill="none"/>' + LT("FIRE ISLAND", 330, 104, 8, "#1a3a5a") +
+      '<g class="lm-wav"><path d="M20 140h360M0 164h400" stroke="#8ac0e6" stroke-width="2" stroke-dasharray="14 20"/></g>' +
+      '<g class="lm-car" style="animation-duration:24s">' + sail("#ff6b3d", "") + '</g><g class="lm-carb" style="animation-duration:30s">' + sail("#9fe3ff", "lmd1") + '</g>' +
+      /* beach, marsh, picnic lawn */
+      '<path d="M0 182h400v20H0z" fill="#e8d8a8"/>' + '<path d="M0 200h400v60H0z" fill="#5a9a44"/>' + grass +
+      [[230, 216], [320, 226]].map(t => LR(t[0], t[1], 44, 6, "#8a5a32") + LR(t[0] + 4, t[1] + 6, 4, 14, "#6a4424") + LR(t[0] + 36, t[1] + 6, 4, 14, "#6a4424") + LR(t[0] - 6, t[1] + 12, 56, 4, "#7a4e2c")).join("") +
+      '<path d="M268 216l12-30 12 30z" fill="#ff6b3d"/><path d="M280 186v34" stroke="#555" stroke-width="2"/>' +
+      Ltree(200, 196, 18, "#3f7f3a") + Ltree(386, 200, 20, "#2f6b3a", "lmd2") + Lman(176, 240, "#ff6b3d", "lm-bob", "#9fe3ff") +
+      '<g class="lm-car" style="animation-duration:12s"><path d="M0 60q6-6 12 0q6-6 12 0" stroke="#fff" stroke-width="2" fill="none"/></g>' +
+      LR(8, 8, 190, 34, "#13324a", ' rx="3"') + LT("HECKSCHER STATE PARK", 103, 23, 11.5, "#fff") + LT("GREAT SOUTH BAY · EAST ISLIP", 103, 36, 8.5, "#9fe3ff") +
+      tag("KEITH MURRAY", 196, 254, 22, "#ff6b3d", -4),
+      sky("sk", "#7ab8e6", "#f4e8c8"));
+  }
+  /* 3. The Most Beautifullest Thing in This World (1994): his name in cloud letters over Central Islip at golden hour */
+  function LM_stage() {
+    const cloudWord = (s, y, size) => '<text x="200" y="' + y + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="' + size + '" fill="#fffaf0" stroke="#d9772a" stroke-width="3" stroke-linejoin="round" paint-order="stroke">' + s + '</text>';
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + '<circle cx="200" cy="200" r="70" fill="#ffd34d" opacity=".7"/>' +
+      [[-90, ""], [-20, "lmd2"], [50, "lmd4"]].map(c => Lcloud(c[0] + 120, 30 + (c[0] + 90) / 6, 1.2, c[1])).join("") +
+      '<g class="lm-bob">' + cloudWord("KEITH MURRAY", 92, 50) + '</g>' + '<g class="lm-bob lmd1">' + cloudWord("THE MOST BEAUTIFULLEST THING", 132, 20) + '</g>' +
+      LT("IN THIS WORLD · 1994 · OVER CENTRAL ISLIP", 200, 154, 10, "#7a3a10") +
+      /* Central Islip skyline: low houses, the water tower, trees */
+      '<path d="M0 260V206h30l14-12 14 12h40v-10l16-12 16 12h40v14h50l12-10 12 10h40l16-12 16 12h60v54z" fill="#3a1e2a"/>' + LR(340, 206, 60, 54, "#3a1e2a") +
+      LR(330, 150, 4, 50, "#3a1e2a") + LR(350, 150, 4, 50, "#3a1e2a") + '<ellipse cx="342" cy="146" rx="22" ry="14" fill="#3a1e2a"/>' + LT("C.I.", 342, 150, 9, "#ffd34d") +
+      [40, 120, 250].map((x, i) => '<g class="lm-sway' + (i ? " lmd" + i : "") + '"><circle cx="' + x + '" cy="200" r="14" fill="#2a1420"/></g>').join("") +
+      '<g class="lm-car" style="animation-duration:16s"><path d="M0 170q6-6 12 0q6-6 12 0" stroke="#3a1e2a" stroke-width="2" fill="none"/></g>' +
+      tag("DEF SQUAD", 14, 250, 18, "#ff6b3d", -3) + tag("GET LIFTED", 260, 252, 18, "#9fe3ff", -3),
+      sky("sk", "#e8702a", "#ffc860"));
+  }
+
   window.SCENES = {
     station: function () { return railStation({name:"Central Islip", line:"LIRR", sky:["#8fc3ea","#f6d9a6"], tag:["GET LIFTED","#ff6b3d"]}); },
     ballpark: function () { return ballpark({c2:"#ffe6a8", sign:"HOME 9  AWAY 3", tag:["CENTRAL ISLIP","#ff6b3d"]}); },
-    studio: function () { return studio({c1:"#f6efdc", c2:"#ff6b3d", c3:"#9fe3ff", tag:["DEF SQUAD","#ff6b3d"]}); },
-    stage: function () { return stage({c1:"#f6efdc", c2:"#ff6b3d", c3:"#9fe3ff", sign:"KEITH MURRAY", tag:["MOST BEAUTIFULLEST","#9fe3ff"]}); },
+    studio: LM_studio,
+    stage: LM_stage,
     corner: function () { return corner({s1:"Carleton Av", s2:"Suffolk Av", tags:[["KEITH MURRAY","#f6efdc",38],["DEF SQUAD","#ff6b3d",28],["GET LIFTED","#9fe3ff"],["ENIGMA","#ffd34d"]]}); }
   };
 })();

@@ -33,44 +33,41 @@
   const RED = "#ff4d3d", GOLD = "#f2c14e", BONE = "#e8e2d4";
   const BLUE = "#0039a6", BROWN = "#996633", GRAY = "#a7a9ac";
 
-  /* 1. Broadway Junction: the L pulling in up on the el, the J/Z structure crossing overhead behind it */
+  /* 1. New Lots Av: the 3 at the end of the line, up on the el over Livonia Av, the bumper block at the end of the track, East New York rooftops behind */
   function train() {
+    const R3 = "#ee352e";
     let girders = "";
     for (let x = 0; x <= W; x += 50) girders += '<rect x="' + (x - 3) + '" y="108" width="6" height="110" fill="#4a3f38"/><path d="M' + (x + 3) + ' 204 L' + (x + 47) + ' 218 M' + (x + 47) + ' 204 L' + (x + 3) + ' 218" stroke="#4a3f38" stroke-width="3"/>';
-    /* the upper el in the back, crossing on a slant */
-    let upper = '<path d="M0 34 L400 18 L400 28 L0 44z" fill="#2c2420"/>';
-    for (let x = 10; x < 400; x += 44) upper += '<rect x="' + x + '" y="' + (40 - x * 0.04) + '" width="4" height="70" fill="#2c2420"/>';
-    /* a little J/Z train parked up top */
-    let jz = '<rect x="230" y="12" width="150" height="16" rx="3" fill="#8b8f96" transform="rotate(-2.3 305 20)"/>';
-    for (let x = 236; x < 370; x += 18) jz += '<rect x="' + x + '" y="' + (16 - (x - 230) * 0.04) + '" width="11" height="6" fill="#ffe7a8" opacity=".8"/>';
-    jz += '<rect x="230" y="' + 24 + '" width="150" height="2" fill="' + BROWN + '" transform="rotate(-2.3 305 20)"/>';
+    let roofs = "";
+    [[0, 40, "#6a3a2c"], [56, 30, "#7a5a44"], [104, 52, "#5a4a3e"], [170, 34, "#6a3a2c"], [226, 46, "#7a4a34"], [290, 30, "#5a4a3e"], [340, 56, "#6a3a2c"]].forEach(r => { roofs += '<rect x="' + r[0] + '" y="' + (100 - r[1]) + '" width="50" height="' + r[1] + '" fill="' + r[2] + '"/>'; for (let x = r[0] + 6; x < r[0] + 44; x += 14) roofs += '<rect x="' + x + '" y="' + (100 - r[1] + 8) + '" width="7" height="8" fill="' + ((x + r[1]) % 3 ? "#ffd98a" : "#2a1d17") + '" opacity=".85"/>'; });
     let windows = "";
-    for (let x = 18; x < 280; x += 46) windows += '<rect x="' + x + '" y="134" width="30" height="20" rx="3" fill="#ffe9c2" opacity=".85"/>';
+    for (let x = 70; x < 300; x += 46) windows += '<rect x="' + x + '" y="134" width="30" height="20" rx="3" fill="#ffe9c2" opacity=".85"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#u1)"/>' + stars(16) +
-      '<circle cx="34" cy="18" r="11" fill="#ffd9a0" opacity=".85"/>' +
-      upper + jz +
-      /* the deck of the L platform */
+      '<circle cx="360" cy="22" r="11" fill="#ffd9a0" opacity=".85"/>' + roofs +
+      /* the canopy */
+      '<rect x="0" y="40" width="400" height="8" fill="#4a3f38"/><rect x="0" y="48" width="400" height="3" fill="' + R3 + '"/>' + [60, 200, 340].map(x => '<rect x="' + x + '" y="51" width="5" height="56" fill="#4a3f38"/>').join("") +
+      /* the deck of the platform */
       '<rect x="0" y="100" width="400" height="10" fill="#4a3f38"/>' + girders +
-      /* station sign with every line that stops here */
-      '<rect x="48" y="62" width="304" height="32" rx="4" fill="#111"/>' +
-      '<rect x="48" y="62" width="304" height="4" fill="#fff"/>' +
-      '<text x="60" y="86" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">Broadway Junction</text>' +
-      bullet(224, 80, "A", BLUE) + bullet(248, 80, "C", BLUE) + bullet(272, 80, "J", BROWN) + bullet(296, 80, "Z", BROWN) + bullet(320, 80, "L", GRAY) +
-      /* the L slides in from the right and stops */
+      /* station sign */
+      '<rect x="96" y="58" width="208" height="32" rx="4" fill="#111"/><rect x="96" y="58" width="208" height="4" fill="#fff"/>' +
+      '<text x="108" y="82" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">New Lots Av</text>' + bullet(282, 76, "3", R3) +
+      /* end of the line: the bumper block on the left */
+      '<rect x="6" y="150" width="20" height="30" fill="#c8102e"/><rect x="4" y="146" width="24" height="6" fill="#eab308"/><circle cx="16" cy="164" r="4" fill="#fff6c2" class="bl"/>' +
+      '<text x="16" y="198" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7" fill="' + BONE + '">END</text>' +
+      /* the 3 slides in and stops */
       '<g class="anim-train">' +
-        '<rect x="8" y="124" width="300" height="60" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="162" width="300" height="5" fill="#6d6f73"/>' + windows +
-        '<rect x="285" y="134" width="16" height="20" rx="3" fill="#ffe9c2" opacity=".85"/>' +
-        '<circle cx="300" cy="174" r="4" fill="#fff6c2"/>' +
-        bullet(296, 141, "L", GRAY) +
+        '<rect x="40" y="124" width="300" height="60" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
+        '<rect x="40" y="162" width="300" height="5" fill="' + R3 + '"/>' + windows +
+        '<rect x="46" y="134" width="16" height="20" rx="3" fill="#ffe9c2" opacity=".85"/>' +
+        '<circle cx="48" cy="174" r="4" fill="#ff6a5a"/>' + bullet(70, 174, "3", R3) +
       '</g>' +
       '<rect x="0" y="184" width="400" height="10" fill="#eab308"/>' +
       '<rect x="0" y="194" width="400" height="66" fill="#1c1512"/>' +
-      tag("ENY", 26, 240, 34, GOLD, -5) + tag("RAP UP", 268, 242, 30, RED, -7),
+      tag("ENY", 40, 240, 34, GOLD, -5) + tag("RAP UP", 268, 242, 30, RED, -7) +
+      '<text x="200" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="' + BONE + '">LIVONIA AV</text>',
       sky("u1", "#1a0d14", "#7a3b2a"));
   }
-
   /* 2. Highland Park on the Cypress Hills ridge: the old Ridgewood Reservoir and its stone gatehouse, geese going over */
   function reservoir() {
     let trees = "";

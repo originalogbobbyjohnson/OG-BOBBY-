@@ -30,44 +30,37 @@
   const stars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".7"/>'; return s; };
   const CORAL = "#ff8a5b", GOLD = "#f5c84a", SKY = "#7fd1ff";
 
-  /* 1. The 5 pulling into Church Av, underground on the Nostrand Av line: white tile, the platform pillars, the exit to Church Av */
+  /* 1. Church Av on the Nostrand Av line, cut away from the street: the stair down off Nostrand with its green globes, a Lyte as a Rock poster, the arrow south to Newkirk Av, the 5 pulling in below */
   function train() {
+    const lbl = (x, y, s, size, c, a) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (a || "middle") + '" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
     let tiles = "";
-    for (let y = 24; y < 116; y += 7) tiles += '<path d="M0 ' + y + 'h400" stroke="#d7d2c4" stroke-width=".7"/>';
-    for (let x = 0; x < 400; x += 14) tiles += '<path d="M' + x + ' 24v92" stroke="#d7d2c4" stroke-width=".5"/>';
-    let trim = "";
-    for (let x = 0; x < 400; x += 20) trim += '<rect x="' + x + '" y="24" width="10" height="5" fill="#6f3b2c"/>';
-    let cols = "";
-    [20, 250, 380].forEach(x => cols += '<rect x="' + (x - 6) + '" y="16" width="12" height="166" fill="#26303a"/><rect x="' + (x - 9) + '" y="16" width="18" height="5" fill="#26303a"/>');
+    for (let y = 126; y < 196; y += 7) tiles += '<path d="M0 ' + y + 'h400" stroke="#d7d2c4" stroke-width=".7"/>';
     let windows = "";
-    for (let x = 22; x < 250; x += 46) windows += '<rect x="' + x + '" y="128" width="30" height="22" rx="3" fill="#fff1c9" opacity=".85"/>';
+    for (let x = 22; x < 250; x += 46) windows += '<rect x="' + x + '" y="196" width="30" height="16" rx="3" fill="#fff1c9" opacity=".85"/>';
+    let shops = "";
+    [[0, "#7a3a3a", "BEAUTY"], [96, "#3a5a7a", "RECORDS"], [292, "#5a3a6a", "ROTI"]].forEach(([x, c, s]) => shops += '<rect x="' + x + '" y="34" width="' + (x === 292 ? 108 : 92) + '" height="74" fill="' + c + '"/><rect x="' + (x + 6) + '" y="68" width="' + (x === 292 ? 96 : 80) + '" height="30" fill="#ffe6a8" opacity=".6" class="flk' + (x ? " flk2" : "") + '"/>' + lbl(x + (x === 292 ? 54 : 46), 60, s, 10, "#fff"));
     return svg(
-      '<rect width="400" height="260" fill="#101318"/>' +
-      '<rect x="0" y="0" width="400" height="16" fill="#0a0c10"/>' +
-      '<rect class="flk" x="50" y="9" width="100" height="4" rx="2" fill="#fff6d8"/><rect class="flk flk2" x="250" y="9" width="100" height="4" rx="2" fill="#fff6d8"/>' +
-      '<rect x="0" y="16" width="400" height="102" fill="#efeadc"/>' + tiles + trim +
-      '<rect x="0" y="16" width="400" height="8" fill="#3b4652"/>' +
-      /* station sign */
-      '<rect x="40" y="44" width="200" height="38" rx="4" fill="#111"/>' +
-      '<rect x="40" y="44" width="200" height="4" fill="#fff"/>' +
-      '<text x="54" y="72" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="17" fill="#fff">Church Av</text>' +
-      bullet(190, 66, "2", "#ee352e") + bullet(216, 66, "5", "#00933c") +
-      /* exit sign */
-      '<rect x="262" y="50" width="104" height="24" rx="3" fill="#111"/>' +
-      '<text x="314" y="66" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">Exit  Church Av →</text>' +
-      cols +
-      /* the 5 slides in and stops */
+      '<rect width="400" height="260" fill="url(#ln)"/>' + stars(10) + shops +
+      /* the Lyte as a Rock poster */
+      '<g transform="rotate(-3 246 70)"><rect x="200" y="40" width="88" height="58" fill="#111"/><rect x="204" y="44" width="80" height="50" fill="' + CORAL + '"/>' + lbl(244, 64, "LYTE AS", 11, "#111") + lbl(244, 78, "A ROCK", 11, "#111") + lbl(244, 90, "MC LYTE · 1988", 6.5, "#111") + '</g>' +
+      '<rect x="0" y="108" width="400" height="12" fill="#6d6f76"/>' +
+      /* the stair with the green globes */
+      [112, 186].map(x => '<rect x="' + (x - 2) + '" y="80" width="4" height="28" fill="#1f4a2a"/><circle class="shn" cx="' + x + '" cy="78" r="6" fill="#4bd06a"/>').join("") +
+      '<rect x="112" y="98" width="74" height="10" fill="#2f6b3a"/>' + lbl(149, 106, "2 · 5", 8, "#fff") +
+      '<rect x="318" y="84" width="76" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' + lbl(356, 97, "Nostrand Av", 10, "#fff") +
+      /* below: the platform */
+      '<rect x="0" y="120" width="400" height="70" fill="#efeadc"/>' + tiles + '<rect x="0" y="120" width="400" height="6" fill="#6f3b2c"/>' +
+      '<rect x="20" y="134" width="190" height="36" rx="4" fill="#111"/><rect x="20" y="134" width="190" height="4" fill="#fff"/>' +
+      lbl(32, 161, "Church Av", 16, "#fff", "start") + bullet(160, 155, "2", "#ee352e") + bullet(186, 155, "5", "#00933c") +
+      '<rect x="234" y="138" width="152" height="28" rx="3" fill="#111"/>' + lbl(310, 150, "TO BROOKLYN COLLEGE", 8, "#fff") + lbl(310, 161, "Newkirk Av–Little Haiti ▸", 8, GOLD) +
+      '<rect x="0" y="182" width="400" height="44" fill="#101318"/>' +
       '<g class="anim-train">' +
-        '<rect x="8" y="118" width="300" height="62" rx="8" fill="#c3c8cf" stroke="#6b7280" stroke-width="2"/>' +
-        '<path d="M8 162h300" stroke="#9aa1aa" stroke-width="2"/>' + windows +
-        '<rect x="282" y="128" width="18" height="22" rx="3" fill="#fff1c9" opacity=".85"/>' +
-        '<circle cx="300" cy="170" r="4" fill="#fff6c2"/>' +
-        bullet(266, 140, "5", "#00933c") +
+        '<rect x="8" y="186" width="300" height="40" rx="7" fill="#c3c8cf" stroke="#6b7280" stroke-width="2"/>' + windows +
+        '<circle cx="300" cy="218" r="3.5" fill="#fff6c2"/>' + bullet(272, 204, "5", "#00933c") +
       '</g>' +
-      '<rect x="0" y="180" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="190" width="400" height="70" fill="#1a1d22"/>' +
-      '<path d="M0 214h400M0 238h400" stroke="#262a31" stroke-width="2"/>' +
-      tag("LYTE", 40, 240, 34, CORAL, -5) + tag("1ST PRIORITY", 196, 236, 22, GOLD, -3));
+      '<rect x="0" y="226" width="400" height="7" fill="#eab308"/><rect x="0" y="233" width="400" height="27" fill="#1a1d22"/>' +
+      tag("MC LYTE", 18, 256, 26, CORAL, -4) + tag("1ST PRIORITY", 220, 256, 20, GOLD, -3),
+      sky("ln", "#0d1430", "#3a2c5a"));
   }
 
   /* 2. Flatbush Gardens (the old Vanderveer): six-story red-brick garden blocks around a green courtyard, an ice cream truck ringing its tune */

@@ -510,11 +510,78 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* ---- Tony Moxberg's own rooms ---- */
+  /* 1. Yonkers station from the street: the 1911 Beaux-Arts station house on the river, MOXBERG on the underpass wall, the Hudson Line train sliding in behind, the Palisades across */
+  function tmStation() {
+    let arch = ""; [130, 170, 210, 250].map(x => arch += '<path d="M' + x + ' 166v-22a12 12 0 0 1 24 0v22z" fill="#2a3a4a"/><path class="pls" d="M' + (x + 3) + ' 164v-19a9 9 0 0 1 18 0v19z" fill="#ffe6a8" opacity=".5"/>');
+    return svg('<rect width="400" height="260" fill="url(#sk)"/><circle cx="62" cy="34" r="14" fill="#fff3c4"/>' +
+      /* Palisades and the river behind */
+      '<path d="M0 64l40-8 60 4 80-10 90 6 130-6v30H0z" fill="#5a5e4a"/><path d="M0 64l40-8 60 4 80-10 90 6 130-6v6l-130 6-90-6-80 10-60-4-40 8z" fill="#7a7a62"/><rect x="0" y="80" width="400" height="16" fill="#3b6a8a"/>' +
+      /* the Hudson Line train */
+      '<g class="anim-train"><rect x="0" y="70" width="380" height="30" rx="6" fill="#d4d8de" stroke="#6b7280" stroke-width="2"/><rect x="0" y="90" width="380" height="5" fill="#0039a6"/>' +
+      [20, 60, 100, 140, 180, 220, 260, 300].map(x => '<rect x="' + x + '" y="76" width="24" height="10" rx="2" fill="#cfe6ff"/>').join("") + pill(352, 82, "MN", "#0039a6") + '</g>' +
+      /* the station house: buff brick, limestone trim, arched windows, red tile roof */
+      '<rect x="100" y="96" width="200" height="72" fill="#c99a6a"/><rect x="100" y="96" width="200" height="8" fill="#e8dcc0"/><path d="M92 96l18-14h180l18 14z" fill="#a5452e"/>' + arch +
+      '<rect x="100" y="164" width="200" height="6" fill="#e8dcc0"/>' + stSign(132, 100, 136, "Yonkers", [["MN", "#0039a6"]]) +
+      /* street and the underpass wall */
+      '<rect x="0" y="170" width="400" height="8" fill="#7d7f86"/>' + brick(0, 178, 400, 58, "#4a2a24", "#5a3229") +
+      tag("MOXBERG", 26, 222, 40, "#9fe3ff", -5) + tag("HIGH SCORE", 236, 214, 22, "#ffd34d", -4) +
+      '<rect x="318" y="146" width="6" height="24" fill="#2b2f36"/><rect x="304" y="138" width="34" height="12" rx="2" fill="#111"/><text class="blk" x="321" y="147" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffb020">ON TIME</text>' +
+      ground() + '<g class="slide sl2"><rect x="0" y="236" width="56" height="16" rx="5" fill="#7a4aff"/><rect x="12" y="229" width="30" height="9" rx="3" fill="#cfe6ff"/><circle cx="12" cy="252" r="5" fill="#111"/><circle cx="44" cy="252" r="5" fill="#111"/></g>',
+      sky("sk", "#f7b267", "#9fd0ea"));
+  }
+  /* 2. Tibbetts Brook Park: the lake, the old fieldstone bathhouse with its arches, the pool in front */
+  function tibbetts() {
+    let stone = ""; for (let y = 104; y < 168; y += 8) for (let x = 96 + (y % 16 ? 0 : 7); x < 300; x += 14) stone += '<rect x="' + x + '" y="' + y + '" width="12" height="6" rx="2" fill="' + ((x + y) % 3 ? "#9a948a" : "#857f74") + '"/>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/><circle cx="340" cy="40" r="18" fill="#fff3c4"/>' +
+      '<path d="M0 100q60-24 120-12t140-8 140 10v20H0z" fill="#3f7a3a"/>' + tree(30, 92, 20) + tree(370, 90, 18, "sw2") +
+      '<rect x="0" y="110" width="400" height="20" fill="#4a86a8"/>' +
+      /* the bathhouse */
+      '<rect x="92" y="100" width="216" height="70" fill="#8f897e"/>' + stone + '<path d="M84 100l20-22h192l20 22z" fill="#5a3a2a"/>' +
+      [120, 160, 200, 240, 280].map(x => '<path d="M' + (x - 12) + ' 170v-28a12 12 0 0 1 24 0v28z" fill="#3a3028"/>').join("") +
+      '<rect x="172" y="60" width="56" height="20" fill="#7a746a"/><path d="M166 62l34-16 34 16z" fill="#5a3a2a"/>' +
+      /* the pool and the deck */
+      '<rect x="0" y="170" width="400" height="66" fill="#d9d2c0"/><rect x="40" y="180" width="320" height="46" rx="4" fill="#3fb7e0" stroke="#e8f6fb" stroke-width="3"/>' +
+      '<path class="pls" d="M70 194h40M160 210h50M250 196h40" stroke="#c9f2ff" stroke-width="2"/><path class="pls p2" d="M110 216h40M220 190h40M300 214h30" stroke="#c9f2ff" stroke-width="2"/>' +
+      '<g class="bob"><circle cx="150" cy="200" r="6" fill="#ffd34d"/><circle cx="150" cy="200" r="3" fill="#3fb7e0"/></g><g class="bob bo2"><circle cx="270" cy="212" r="6" fill="#ff8ab0"/><circle cx="270" cy="212" r="3" fill="#3fb7e0"/></g>' +
+      '<g class="slide" style="animation-duration:22s"><path d="M0 118q6-6 12 0z" fill="#fff"/><circle cx="12" cy="114" r="3" fill="#fff"/></g>' +
+      txt("TIBBETTS BROOK PARK", 200, 34, 15, "#2a1a3a") + txt("YONKERS · THE LAKE &amp; THE OLD BATHHOUSE", 200, 48, 8, "#2a1a3a") +
+      ground("#5a6a4a") + tag("MOXBERG", 24, 254, 22, "#9fe3ff", -3),
+      sky("sk", "#9fd0ea", "#fbe3b0"));
+  }
+  /* 3. The Alexander Smith Carpet Mills down in the Nepperhan Valley: long red-brick mill buildings, the smokestack */
+  function carpetMills() {
+    const mill = (x, y, w, h) => brick(x, y, w, h, "#9a3f2a", "#a8492f") + windows(x + 8, y + 10, Math.floor((w - 12) / 18), Math.floor((h - 16) / 22), 18, 22, 10, 14, "#ffe6a8", "#2a2a33") + '<rect x="' + x + '" y="' + (y - 5) + '" width="' + w + '" height="6" fill="#6a2a1a"/>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/>' +
+      '<path d="M0 90q80-30 160-10t140-6 100 4v40H0z" fill="#4a6a3a"/>' +
+      '<rect x="352" y="24" width="18" height="120" fill="#8a3a26"/><rect x="350" y="22" width="22" height="6" fill="#5a2418"/><path d="M354 40h14M354 60h14" stroke="#e8dcc0" stroke-width="3"/>' +
+      '<circle class="rise" cx="361" cy="18" r="8" fill="#d9d4cc"/><circle class="rise r2" cx="364" cy="16" r="6" fill="#d9d4cc"/><circle class="rise r3" cx="358" cy="18" r="7" fill="#d9d4cc"/>' +
+      mill(10, 100, 180, 104) + mill(196, 120, 200, 84) + '<rect x="160" y="70" width="34" height="40" fill="#9a3f2a"/><path d="M156 70l21-14 21 14z" fill="#6a2a1a"/><circle cx="177" cy="86" r="8" fill="#f6efdc"/><path class="beam" d="M177 86h0.1v-6" stroke="#111" stroke-width="1.5"/>' +
+      '<rect x="0" y="204" width="400" height="10" fill="#7d7f86"/>' + txt("ALEXANDER SMITH CARPET MILLS", 200, 32, 12, "#2a1a1a") + txt("NEPPERHAN VALLEY · YONKERS", 200, 46, 9, "#2a1a1a") +
+      ground() + cars() + tag("MOXBERG", 18, 196, 26, "#9fe3ff", -4),
+      sky("sk", "#f4b07a", "#cfe0ea"));
+  }
+  /* 4. St. Joseph's Seminary on Dunwoodie hill: the long gray-stone front, the twin towers, the green lawn */
+  function seminary() {
+    let st = ""; for (let y = 96; y < 188; y += 7) st += '<path d="M60 ' + y + 'h280" stroke="#7f8188" stroke-width=".8"/>';
+    const tw = x => '<rect x="' + (x - 14) + '" y="56" width="28" height="132" fill="#a3a5aa"/><path d="M' + (x - 18) + ' 58l18-22 18 22z" fill="#5c6a72"/>' + '<path d="M' + (x - 6) + ' 100v-12a6 6 0 0 1 12 0v12z" fill="#2a3040"/><path d="M' + (x - 6) + ' 140v-12a6 6 0 0 1 12 0v12z" fill="#2a3040"/>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/>' +
+      '<g class="fly"><path d="M0 40q6-6 12 0q6-6 12 0" stroke="#3a3a48" stroke-width="2" fill="none"/></g>' +
+      '<path d="M0 200q100-50 200-44t200 30v74H0z" fill="#4f8f45"/>' +
+      '<rect x="60" y="94" width="280" height="94" fill="#9a9ca2"/>' + st + '<path d="M54 96l12-14h268l12 14z" fill="#5c6a72"/>' +
+      windows(76, 104, 9, 3, 30, 26, 12, 16, "#ffe6a8", "#2a3040") + tw(130) + tw(270) +
+      '<path d="M180 188v-40a20 20 0 0 1 40 0v40z" fill="#3a2a22"/><path d="M176 94l24-26 24 26z" fill="#a3a5aa"/><circle cx="200" cy="84" r="5" fill="#ffe6a8"/>' +
+      '<path d="M200 188q-10 30-40 72h80q-30-42-40-72z" fill="#cfc9bd"/>' + tree(40, 176, 16) + tree(364, 172, 18, "sw2") +
+      txt("ST. JOSEPH'S SEMINARY", 200, 30, 15, "#1a2a3a") + txt("DUNWOODIE · YONKERS", 200, 44, 9, "#1a2a3a") +
+      tag("MOXBERG", 18, 246, 26, "#9fe3ff", -4) + tag("YONKERS", 270, 246, 20, "#ffd34d", -3),
+      sky("sk", "#a8c8e8", "#f2e6c8"));
+  }
+
   window.SCENES = {
-    station: function () { return railStation({name:"Yonkers", line:"MN", river:1, sky:["#f7b267","#9fd0ea"], tag:["MOXBERG","#9fe3ff"]}); },
-    pier: function () { return riverpier({c1:"#9fe3ff", tag:["HUDSON RIVER","#ffd34d"]}); },
-    manor: function () { return manorhall({tag:["GETTY SQUARE","#9fe3ff"]}); },
-    arcade: function () { return arcade({c1:"#9fe3ff", c2:"#ffd34d", c3:"#7a4aff", sign:"MOXBERG", tag:["HIGH SCORE","#ffd34d"]}); },
-    corner: function () { return corner({s1:"Main St", s2:"Warburton Av", tags:[["MOXBERG","#9fe3ff",50],["YONKERS","#ffd34d",28],["HIGH SCORE","#7a4aff"],["IN MY BAG","#f6efdc"]]}); }
+    station: function () { return tmStation(); },
+    pier: function () { return tibbetts(); },
+    manor: function () { return carpetMills(); },
+    arcade: function () { return seminary(); },
+    corner: function () { return corner({s1:"Yonkers Av", s2:"Central Park Av", tags:[["MOXBERG","#9fe3ff",50],["YONKERS","#ffd34d",28],["HIGH SCORE","#7a4aff"],["IN MY BAG","#f6efdc"]]}); }
   };
 })();

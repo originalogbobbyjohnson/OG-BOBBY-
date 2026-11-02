@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO AMITYVILLE",
-   "x": "Broadway and Merrick Rd. This is Prince Paul's game.",
+   "x": "Merrick Rd and Ocean Av. This is Prince Paul's game.",
    "sfx": "spray"
   }
  ],

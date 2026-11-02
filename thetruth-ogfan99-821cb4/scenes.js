@@ -46,7 +46,7 @@
     return s;
   };
 
-  /* 1. Winter: the SIR train pulls into St. George in the snow */
+  /* 1. Winter: the SIR train pulls into St. George in the snow; the Stuyvesant Pl exit up to Hamilton Av, Curtis High's tower on the hill */
   function station() {
     let windows = "";
     for (let x = 30; x < 290; x += 40) windows += '<rect x="' + x + '" y="134" width="26" height="20" rx="3" fill="#ffe9a8" opacity=".9"/>';
@@ -55,11 +55,18 @@
     return svg(
       '<rect width="400" height="260" fill="url(#w1)"/>' + stars(10) +
       '<path d="M0 122V100l40-8 50 10 60-14 70 12 60-10 60 12 60-6v26z" fill="#1d2a3c"/>' +
+      /* Curtis High's crenellated tower up the hill */
+      '<rect x="40" y="70" width="34" height="34" fill="#5a3a3a"/>' + [40, 49, 58, 67].map(x => '<rect x="' + x + '" y="64" width="6" height="7" fill="#5a3a3a"/>').join("") + '<rect x="16" y="88" width="82" height="16" fill="#4a3030"/>' +
+      '<rect class="flk" x="52" y="78" width="10" height="10" fill="#ffe9a8"/>' +
+      '<text x="57" y="62" text-anchor="middle" ' + FONT + ' font-size="7" fill="#c8d8f0">CURTIS H.S.</text>' +
       /* canopy roof with snow on it */
       '<rect x="0" y="48" width="400" height="10" fill="#3b4656"/><rect x="0" y="44" width="400" height="5" rx="2" fill="#f4f8ff"/>' + posts +
       /* black station sign */
-      '<rect x="92" y="64" width="216" height="32" rx="4" fill="#111"/><rect x="92" y="64" width="216" height="4" fill="#fff"/>' +
-      '<text x="106" y="88" ' + FONT + ' font-size="16" fill="#fff">St. George</text>' + sir(280, 81) +
+      '<rect x="112" y="64" width="160" height="32" rx="4" fill="#111"/><rect x="112" y="64" width="160" height="4" fill="#fff"/>' +
+      '<text x="124" y="88" ' + FONT + ' font-size="16" fill="#fff">St. George</text>' + sir(244, 81) +
+      '<rect x="282" y="62" width="112" height="36" rx="3" fill="#111"/>' +
+      '<text x="338" y="77" text-anchor="middle" ' + FONT + ' font-size="9" fill="#fff">EXIT → Stuyvesant Pl</text>' +
+      '<text x="338" y="91" text-anchor="middle" ' + FONT + ' font-size="9" fill="' + GOLD + '">up to Hamilton Av</text>' +
       '<rect x="0" y="118" width="400" height="74" fill="#121a26"/>' +
       /* the SIR car: stainless with the blue band, snow on the roof */
       '<g class="anim-train">' +
@@ -143,34 +150,30 @@
       sky("w3", "#2a1f3d", "#d9825a"));
   }
 
-  /* 4. The BadFellas show: two mics on stage, spotlights sweeping, the crowd jumping */
+  /* 4. Curtis High School (Hamilton Av & St. Marks Pl, 1904): Staten Island's first high school, Collegiate Gothic brick with the crenellated center tower, right at his corner; leaves coming down */
   function stage() {
-    let crowd = "";
-    for (let i = 0; i < 16; i++) {
-      const x = 12 + i * 25, y = 214 + (i % 3) * 5;
-      crowd += '<g class="hd' + (i % 3 ? " hd" + (i % 3 + 1) : "") + '"><circle cx="' + x + '" cy="' + y + '" r="10" fill="#0b0b10"/><rect x="' + (x - 13) + '" y="' + (y + 8) + '" width="26" height="40" rx="8" fill="#0b0b10"/>' +
-        (i % 4 === 1 ? '<path d="M' + (x + 6) + ' ' + (y - 4) + 'l10-26" stroke="#0b0b10" stroke-width="6" stroke-linecap="round"/>' : '') + '</g>';
-    }
-    const mic = x => '<rect x="' + (x - 1.5) + '" y="136" width="3" height="50" fill="#9aa3ad"/><path d="M' + (x - 14) + ' 188h28" stroke="#9aa3ad" stroke-width="3"/>' +
-      '<rect x="' + (x - 5) + '" y="120" width="10" height="18" rx="5" fill="#2b2f36" stroke="' + GOLD + '" stroke-width="1.5"/>';
+    let br = ""; for (let y = 96; y < 214; y += 8) for (let x = (y / 8) % 2 ? 20 : 28; x < 372; x += 16) br += '<rect x="' + x + '" y="' + y + '" width="13" height="5" fill="#8a3e2a" opacity=".6"/>';
+    const crenel = (x, w, y) => { let s = ""; for (let i = x; i < x + w; i += 12) s += '<rect x="' + i + '" y="' + (y - 8) + '" width="7" height="8" fill="#e8dcc0"/>'; return s; };
+    const gwin = (x, y) => '<path d="M' + x + ' ' + (y + 30) + 'V' + (y + 8) + 'l9-10 9 10V' + (y + 30) + 'z" fill="#2a3446" stroke="#e8dcc0" stroke-width="2"/><path d="M' + (x + 9) + ' ' + y + 'V' + (y + 30) + '" stroke="#e8dcc0" stroke-width="1.5"/>';
+    let wins = ""; [40, 80, 120, 262, 302, 342].forEach(x => { wins += gwin(x, 112) + gwin(x, 164); });
     return svg(
-      '<rect width="400" height="260" fill="#0d0b14"/>' +
-      /* the back wall + banner */
-      '<rect x="0" y="0" width="400" height="190" fill="url(#w4)"/>' +
-      '<rect x="90" y="30" width="220" height="44" rx="4" fill="#15121c" stroke="' + GOLD + '" stroke-width="2"/>' +
-      '<text x="200" y="62" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="28" letter-spacing="4" fill="' + GOLD + '">BADFELLAS</text>' +
-      /* spotlights */
-      '<g opacity=".22"><path class="spot" d="M120 0l-50 190h100z" fill="#fff4c2"/><path class="spot spot2" d="M280 0l-50 190h100z" fill="#cfe6ff"/></g>' +
-      /* stage */
-      '<rect x="0" y="186" width="400" height="16" fill="#3a2a1e"/><rect x="0" y="186" width="400" height="3" fill="' + GOLD + '"/>' +
-      mic(160) + mic(240) +
-      '<rect x="20" y="140" width="36" height="46" rx="3" fill="#1b1b22" stroke="#444" /><circle cx="38" cy="156" r="9" fill="#2c2c36" stroke="#666"/><circle cx="38" cy="176" r="6" fill="#2c2c36" stroke="#666"/>' +
-      '<rect x="344" y="140" width="36" height="46" rx="3" fill="#1b1b22" stroke="#444" /><circle cx="362" cy="156" r="9" fill="#2c2c36" stroke="#666"/><circle cx="362" cy="176" r="6" fill="#2c2c36" stroke="#666"/>' +
-      '<rect x="0" y="202" width="400" height="58" fill="url(#w4b)"/>' + crowd +
-      tag("BARS MATTER", 104, 112, 26, ICE, -4),
-      sky("w4", "#2b1d3f", "#120e1c") + sky("w4b", "#6a3f8f", "#2a1838"));
+      '<rect width="400" height="260" fill="url(#c4)"/>' +
+      /* wings */
+      '<rect x="20" y="92" width="360" height="122" fill="#a24a32"/>' + br + '<rect x="16" y="88" width="368" height="6" fill="#e8dcc0"/>' + crenel(18, 364, 88) + wins +
+      /* center tower */
+      '<rect x="160" y="34" width="80" height="180" fill="#a8503a"/>' + '<rect x="156" y="30" width="88" height="6" fill="#e8dcc0"/>' + crenel(158, 86, 30) +
+      '<rect x="156" y="34" width="8" height="180" fill="#e8dcc0"/><rect x="236" y="34" width="8" height="180" fill="#e8dcc0"/>' +
+      gwin(181, 52) + gwin(201, 52) +
+      '<path d="M176 214V160l24-24 24 24v54z" fill="#3a2a22" stroke="#e8dcc0" stroke-width="3"/>' +
+      '<rect x="168" y="96" width="64" height="18" fill="#e8dcc0"/><text x="200" y="109" text-anchor="middle" ' + FONT + ' font-size="10" fill="#5a2a1a">CURTIS</text>' +
+      '<rect x="198" y="2" width="3" height="22" fill="#ddd"/><g class="bob"><rect x="201" y="4" width="22" height="13" fill="#fff"/><rect x="201" y="4" width="9" height="7" fill="#3a4a8a"/><rect x="210" y="7" width="13" height="2" fill="#c8102e"/><rect x="210" y="12" width="13" height="2" fill="#c8102e"/></g>' +
+      /* lawn and street */
+      '<rect x="0" y="214" width="400" height="20" fill="#4f8a3a"/><rect x="0" y="234" width="400" height="26" fill="#2b2b30"/>' +
+      leaves() +
+      tag("TRUTH", 18, 254, 22, GOLD, -4) +
+      '<text x="250" y="251" text-anchor="middle" ' + FONT + ' font-size="10" fill="#fff">CURTIS H.S. · 1904 · HAMILTON AV &amp; ST. MARKS PL</text>',
+      sky("c4", "#f2a04a", "#fde3b0"));
   }
-
   /* 5. St. George: Stuyvesant Pl and Hamilton Av, the STATEN wall with his name on it */
   function corner() {
     let bricks = "";

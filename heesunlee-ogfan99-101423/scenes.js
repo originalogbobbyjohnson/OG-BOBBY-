@@ -31,31 +31,40 @@
   const FONT = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
   const GOLD = "#ffd166", PINK = "#ef476f", BLUE = "#4cc9f0";
 
-  /* 1. St. George: the SIR waiting under the terminal canopy at dusk, the harbor and lower Manhattan beyond */
+  /* 1. St. George, at the Richmond Terrace end: the SIR pulling in below, the stair up to Hyatt St, the St. George Theatre's vertical sign lit up over the street */
   function train() {
     let windows = "";
-    for (let x = 22; x < 260; x += 44) windows += '<rect x="' + x + '" y="134" width="28" height="20" rx="3" fill="#ffe9c2" opacity=".9"/>';
-    let city = "";
-    [[0, 12, 22], [14, 10, 34], [26, 14, 20], [42, 10, 46], [54, 16, 28], [72, 10, 40], [84, 14, 24]].forEach(b => city += '<rect x="' + (240 + b[0]) + '" y="' + (96 - b[2]) + '" width="' + b[1] + '" height="' + b[2] + '" fill="#4a3a6a"/>');
+    for (let x = 22; x < 200; x += 44) windows += '<rect x="' + x + '" y="160" width="28" height="18" rx="3" fill="#ffe9c2" opacity=".9"/>';
+    let vb = "";
+    for (let y = 26; y <= 104; y += 8) vb += '<circle class="bulb' + ((y / 8) % 2 ? " bulb2" : "") + '" cx="300" cy="' + y + '" r="1.8" fill="#fff1a8"/><circle class="bulb' + ((y / 8) % 2 ? "" : " bulb2") + '" cx="334" cy="' + y + '" r="1.8" fill="#fff1a8"/>';
+    let vt = "";
+    "STGEORGE".split("").forEach((l, i) => vt += '<text x="317" y="' + (34 + i * 10) + '" text-anchor="middle" ' + FONT + ' font-size="9" fill="' + GOLD + '">' + l + '</text>');
+    let steps = "";
+    for (let i = 0; i < 9; i++) steps += '<rect x="' + (232 + i * 13) + '" y="' + (196 - i * 12) + '" width="13" height="' + (12 + i * 12) + '" fill="' + (i % 2 ? "#8a919a" : "#9aa1aa") + '"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g1)"/>' + stars(10) +
-      '<rect x="0" y="94" width="400" height="24" fill="#2c4a78"/>' + city +
-      '<path class="shim" d="M20 104h40M150 110h50" stroke="#ffd166" stroke-width="2"/>' +
-      /* the canopy */
-      '<path d="M0 30h400v10H0z" fill="#d8dde3"/><path d="M0 40h400v3H0z" fill="#0039a6"/>' +
-      '<rect x="30" y="43" width="5" height="80" fill="#7b8794"/><rect x="200" y="43" width="5" height="80" fill="#7b8794"/><rect x="368" y="43" width="5" height="80" fill="#7b8794"/>' +
-      '<rect x="60" y="46" width="40" height="4" fill="#fff6d6" class="flk"/><rect x="290" y="46" width="40" height="4" fill="#fff6d6" class="flk flk2"/>' +
-      /* black station sign */
-      '<rect x="92" y="56" width="216" height="32" rx="4" fill="#111"/><rect x="92" y="56" width="216" height="4" fill="#fff"/>' +
-      '<text x="104" y="80" ' + FONT + ' font-size="15" fill="#fff">St. George</text>' + sir(280, 73) +
+      /* Hyatt St up top: the theatre's brick front and its vertical sign */
+      '<rect x="250" y="70" width="150" height="58" fill="#8a4a32"/><path d="M250 70h150" stroke="#e8d8b0" stroke-width="4"/>' +
+      '<path d="M266 118v-24a10 10 0 0 1 20 0v24zM350 118v-24a10 10 0 0 1 20 0v24z" fill="#ffd9a0" opacity=".8"/>' +
+      '<rect x="296" y="20" width="42" height="92" rx="4" fill="#1d1a2e" stroke="' + GOLD + '" stroke-width="2"/>' + vb + vt +
+      '<rect x="250" y="128" width="150" height="6" fill="#5a5e66"/>' +
+      /* the stair up to the street, with the exit sign */
+      steps + '<path d="M232 196l117 -108" stroke="#c9ced6" stroke-width="3"/>' +
+      '<rect x="236" y="138" width="88" height="26" rx="3" fill="#111"/>' +
+      '<text x="244" y="149" ' + FONT + ' font-size="7.5" fill="#fff">EXIT ↑ Richmond Ter</text><text x="244" y="159" ' + FONT + ' font-size="7.5" fill="#fff">Hyatt St · Theatre</text>' +
+      /* the canopy over the tracks and the black station sign */
+      '<rect x="0" y="40" width="240" height="10" fill="#d8dde3"/><rect x="0" y="50" width="240" height="3" fill="#0039a6"/>' +
+      '<rect x="20" y="53" width="5" height="90" fill="#7b8794"/><rect x="200" y="53" width="5" height="90" fill="#7b8794"/>' +
+      '<rect x="36" y="64" width="160" height="30" rx="4" fill="#111"/><rect x="36" y="64" width="160" height="4" fill="#fff"/>' +
+      '<text x="46" y="86" ' + FONT + ' font-size="14" fill="#fff">St. George</text>' + sir(168, 80) +
+      /* the train */
       '<g class="anim-train">' +
-        '<rect x="8" y="122" width="300" height="58" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="160" width="300" height="6" fill="#0039a6"/>' + windows +
-        '<circle cx="300" cy="172" r="4" fill="#fff6c2"/>' + sir(270, 144) +
+        '<rect x="0" y="148" width="226" height="52" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
+        '<rect x="0" y="184" width="226" height="6" fill="#0039a6"/>' + windows +
+        '<circle cx="218" cy="194" r="4" fill="#fff6c2"/>' + sir(196, 170) +
       '</g>' +
-      '<rect x="0" y="180" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="190" width="400" height="70" fill="#1c232c"/>' +
-      tag("STATEN ISLAND", 18, 240, 24, BLUE, -4) + tag("HEESUN", 270, 242, 30, PINK, -7),
+      '<rect x="0" y="200" width="400" height="10" fill="#eab308"/><rect x="0" y="210" width="400" height="50" fill="#1c232c"/>' +
+      tag("HEESUN", 20, 246, 32, PINK, -6) + tag("IN MY CITY", 210, 248, 24, GOLD, -4),
       sky("g1", "#1c1a44", "#d97a8a"));
   }
 
@@ -90,34 +99,36 @@
       sky("g2", "#9cc6e8", "#f6e2d0"));
   }
 
-  /* 3. The Verrazzano-Narrows Bridge from Fort Wadsworth: twin gray towers, the long sagging cables, a sailboat on the Narrows */
+  /* 3. Jacques Marchais Museum of Tibetan Art on Lighthouse Hill: little fieldstone monastery-style buildings, red doors, the terraced garden and lotus pond, prayer flags in the wind */
   function verrazzano() {
-    let hangers = "";
-    for (let x = 0; x <= 400; x += 10) {
-      let y;
-      if (x < 100) y = 40 + Math.pow((100 - x) / 100, 2) * 60;
-      else if (x <= 300) y = 40 + 80 * (1 - Math.pow((x - 200) / 100, 2));
-      else y = 40 + Math.pow((x - 300) / 100, 2) * 60;
-      hangers += '<path d="M' + x + ' ' + y.toFixed(1) + 'V136" stroke="#9aa4ae" stroke-width="1"/>';
-    }
+    const stone = (x, y, w, h) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="#b59d7a"/>'; for (let yy = y + 4; yy < y + h - 4; yy += 9) for (let xx = x + ((yy / 9) % 2 ? 2 : 8); xx < x + w - 8; xx += 14) s += '<rect x="' + xx + '" y="' + yy + '" width="11" height="6" rx="2" fill="#a38a66"/>'; return s; };
+    const flagCols = ["#3a7bd5", "#ffffff", "#d7263d", "#3fa34d", "#ffd166"];
+    let flags = "";
+    for (let i = 0; i < 12; i++) flags += '<rect class="flg' + (i % 2 ? " flg2" : "") + '" x="' + (40 + i * 26) + '" y="' + (40 + Math.abs(6 - i) * 2) + '" width="14" height="16" fill="' + flagCols[i % 5] + '"/>';
     return svg(
+      '<style>@keyframes flap{0%,100%{transform:skewX(0)}50%{transform:skewX(-14deg)}}.flg{transform-box:fill-box;transform-origin:top center;animation:flap 1.4s ease-in-out infinite}.flg2{animation-delay:-.7s}</style>' +
       '<rect width="400" height="260" fill="url(#g3)"/>' +
-      '<circle cx="330" cy="40" r="16" fill="#fff1a8"/>' +
-      '<rect x="0" y="140" width="400" height="120" fill="#2f5f86"/>' +
-      '<path class="shim" d="M20 160h60M240 170h70M140 200h50" stroke="#cfe8f6" stroke-width="2"/>' +
-      hangers +
-      /* main cables */
-      '<path d="M0 100Q50 70 100 40Q200 200 300 40Q350 70 400 100" fill="none" stroke="#7b8794" stroke-width="3"/>' +
-      /* the towers */
-      '<rect x="92" y="30" width="6" height="120" fill="#8b96a0"/><rect x="102" y="30" width="6" height="120" fill="#8b96a0"/><path d="M92 36h16M92 80h16M92 124h16" stroke="#8b96a0" stroke-width="3"/>' +
-      '<rect x="292" y="30" width="6" height="120" fill="#8b96a0"/><rect x="302" y="30" width="6" height="120" fill="#8b96a0"/><path d="M292 36h16M292 80h16M292 124h16" stroke="#8b96a0" stroke-width="3"/>' +
-      /* the double deck */
-      '<rect x="0" y="134" width="400" height="5" fill="#6f7a84"/><rect x="0" y="141" width="400" height="4" fill="#6f7a84"/>' +
-      '<g class="sail"><g class="bob"><path d="M20 182h40l-6 8H26z" fill="#f2f2f2"/><path d="M40 180V146l18 32z" fill="#fff"/><path d="M38 180V152l-14 26z" fill="#ffd166"/></g></g>' +
-      /* Fort Wadsworth's stone wall and lawn in front */
-      '<path d="M0 214h400v46H0z" fill="#5c9a46"/><rect x="0" y="204" width="180" height="14" fill="#a89a80"/>' +
-      (function () { let s = ""; for (let x = 0; x < 180; x += 20) s += '<rect x="' + x + '" y="198" width="12" height="8" fill="#a89a80"/>'; return s; })() +
-      tag("THE NARROWS", 200, 248, 24, BLUE, -3),
+      '<circle cx="340" cy="34" r="14" fill="#fff1a8"/>' +
+      /* hillside trees */
+      '<path d="M0 120q40 -40 90 -20q50 -30 100 -4q60 -30 110 0q50 -20 100 4v40H0z" fill="#3f6a3a"/>' +
+      '<path d="M36 40Q200 62 364 40" stroke="#5a5a5a" stroke-width="1" fill="none"/>' + flags +
+      /* the main temple building */
+      stone(120, 90, 130, 80) + '<path d="M112 92l14 -18h118l14 18z" fill="#4a3a2a"/><rect x="112" y="88" width="146" height="5" fill="#d7263d"/>' +
+      '<rect x="172" y="122" width="26" height="48" fill="#b0281e" stroke="#ffd166" stroke-width="2"/><circle cx="185" cy="146" r="2" fill="#ffd166"/>' +
+      '<rect x="134" y="112" width="16" height="20" fill="#2a1e14" stroke="#ffd166" stroke-width="1.5"/><rect x="220" y="112" width="16" height="20" fill="#2a1e14" stroke="#ffd166" stroke-width="1.5"/>' +
+      /* the small library building */
+      stone(270, 112, 80, 58) + '<path d="M264 114l10 -12h72l10 12z" fill="#4a3a2a"/><rect x="264" y="112" width="92" height="4" fill="#d7263d"/>' +
+      '<rect x="300" y="136" width="20" height="34" fill="#b0281e" stroke="#ffd166" stroke-width="1.5"/>' +
+      /* terraces */
+      '<rect x="0" y="170" width="400" height="16" fill="#8a9a5a"/>' + stone(0, 186, 400, 12) +
+      '<rect x="0" y="198" width="400" height="62" fill="#5c8a46"/>' +
+      /* lotus pond */
+      '<ellipse cx="120" cy="228" rx="80" ry="18" fill="#2f6a6a"/><path class="shim" d="M70 224h40M130 232h40" stroke="#cfe8e6" stroke-width="2"/>' +
+      '<ellipse cx="90" cy="228" rx="10" ry="3.5" fill="#4f8a46"/><path d="M86 226l4 -8 4 8z" fill="#ff9ac0"/>' +
+      '<ellipse cx="150" cy="234" rx="10" ry="3.5" fill="#4f8a46"/><path d="M146 232l4 -8 4 8z" fill="#ff9ac0"/>' +
+      '<rect x="218" y="210" width="176" height="18" rx="2" fill="#1d1a2e"/>' +
+      '<text x="306" y="223" text-anchor="middle" ' + FONT + ' font-size="8" fill="#fff">TIBETAN MUSEUM · LIGHTHOUSE HILL</text>' +
+      tag("HEESUN", 250, 252, 22, PINK, -4),
       sky("g3", "#86b8de", "#f6e2b8"));
   }
 
@@ -152,21 +163,26 @@
       sky("g4", "#100c26", "#3a2a5a"));
   }
 
-  /* 5. Bay St and Victory Blvd in Tompkinsville: green signs, HeeSun's wall */
+  /* 5. Hyatt St and Stuyvesant Pl, in front of the St. George Theatre: green signs, the marquee glow, HeeSun's wall */
   function corner() {
+    let bulbs = "";
+    for (let x = 274; x <= 396; x += 10) bulbs += '<circle class="bulb' + ((x / 2) % 2 ? " bulb2" : "") + '" cx="' + x + '" cy="186" r="2.2" fill="#fff1a8"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g5)"/>' + stars(16) +
       '<circle cx="364" cy="30" r="12" fill="#fff1d6"/>' +
+      /* the theatre front across the street, marquee lit */
+      '<rect x="266" y="130" width="134" height="90" fill="#8a4a32"/><path d="M266 182h134v22H266z" fill="#1d1a2e"/>' + bulbs +
+      '<text x="333" y="198" text-anchor="middle" ' + FONT + ' font-size="8" fill="' + GOLD + '">ST. GEORGE THEATRE</text>' +
       (function () { let b = '<rect x="16" y="60" width="240" height="160" fill="#2e3448"/>'; for (let y = 62; y < 220; y += 12) for (let x = (y / 12) % 2 ? 8 : 18; x < 250; x += 30) b += '<rect x="' + x + '" y="' + y + '" width="28" height="10" fill="#383f56"/>'; return b; })() +
       tag("HEESUN", 30, 128, 44, PINK, -7) + tag("IN MY CITY", 36, 172, 28, GOLD, -3) + tag("STEREOTYPES", 40, 208, 22, BLUE, -2) +
       /* streetlight */
-      '<rect x="300" y="56" width="5" height="164" fill="#1d2329"/><path d="M302 58h26" stroke="#1d2329" stroke-width="5"/>' +
-      '<path class="flk" d="M318 62h26l-6 8h-14z" fill="#ffe7a8"/><g opacity=".14"><path class="flk" d="M318 70l26 0 34 150h-94z" fill="#ffe7a8"/></g>' +
+      '<rect x="300" y="56" width="5" height="74" fill="#1d2329"/><path d="M302 58h26" stroke="#1d2329" stroke-width="5"/>' +
+      '<path class="flk" d="M318 62h26l-6 8h-14z" fill="#ffe7a8"/>' +
       /* street signs */
-      '<rect x="270" y="88" width="64" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
-      '<text x="302" y="101" text-anchor="middle" ' + FONT + ' font-size="11" fill="#fff">Bay St</text>' +
-      '<rect x="258" y="110" width="88" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
-      '<text x="302" y="123" text-anchor="middle" ' + FONT + ' font-size="11" fill="#fff">Victory Blvd</text>' +
+      '<rect x="268" y="84" width="68" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      '<text x="302" y="97" text-anchor="middle" ' + FONT + ' font-size="11" fill="#fff">Hyatt St</text>' +
+      '<rect x="252" y="106" width="100" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      '<text x="302" y="119" text-anchor="middle" ' + FONT + ' font-size="11" fill="#fff">Stuyvesant Pl</text>' +
       '<rect x="0" y="220" width="400" height="40" fill="#14181d"/><path d="M0 242h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>',
       sky("g5", "#0d1022", "#2a2a4a"));
   }

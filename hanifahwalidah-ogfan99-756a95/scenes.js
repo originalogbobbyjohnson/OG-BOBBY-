@@ -257,6 +257,37 @@ function LIB(P) {
   S.glenview = () => svg('<rect width="400" height="260" fill="url(#g3)"/>' + palisades(150) + water(160, "#4a7aa0") + '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' +
     '<rect x="110" y="90" width="150" height="120" fill="#8a7e6a"/><path d="M100 90h170l-30-30h-110z" fill="#3a3a44"/><rect x="230" y="40" width="44" height="170" fill="#9a8e7a"/><path d="M224 40h56l-28-30z" fill="#3a3a44"/>' +
     wins(124, 104, 4, 2, 32, 46, 16, 28, "#ffe6a8") + wins(242, 56, 1, 3, 0, 40, 20, 26, "#ffe6a8") + '<g class="slideL"><path d="M0 178h40l-6 6H6z" fill="#fff"/><path d="M18 178v-20l12 18z" fill="#fff"/></g>' + tag("GLENVIEW", 20, 246, 22, A, -3), sky("g3", "#ff9a6a", "#8fc3ea"));
+  /* HANIFAH 3. Old Croton Aqueduct Trail, Yonkers: the grassy path on top of the buried aqueduct along the ridge above Warburton Av, a round stone ventilator tower, a jogger and the river glinting below */
+  S.hwAqueduct = () => { let stones = ""; for (let y = 76; y < 168; y += 10) for (let x = 172 + ((y / 10) % 2 ? 0 : 6); x < 214; x += 12) stones += '<rect x="' + x + '" y="' + y + '" width="10" height="8" rx="2" fill="#8a8072"/>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/><circle cx="60" cy="40" r="16" fill="#fff3c4"/>' +
+      palisades(110) + water(118, "#4a7aa0") +
+      '<path d="M0 150q100 -24 200 -10t200 -6v126H0z" fill="#3f6a3a"/>' +
+      tree(30, 120, 22, "#2f5a2a") + tree(84, 130, 18, "#3f7a3a") + tree(330, 120, 24, "#2f5a2a") + tree(380, 132, 18, "#3f7a3a") +
+      /* the ventilator tower: round stone shaft with a conical cap */
+      '<rect x="170" y="70" width="56" height="100" fill="#9a9080"/>' + stones +
+      '<path d="M164 72l34 -30 34 30z" fill="#5a5450"/><rect x="164" y="70" width="68" height="6" fill="#b0a694"/>' +
+      '<rect x="190" y="98" width="16" height="22" rx="8" fill="#2a2a2a"/>' +
+      /* the grassy trail running into the distance */
+      '<path d="M140 260L190 170h20l50 90z" fill="#7aa85a"/><path d="M178 260l16 -90h12l16 90z" fill="#c9b98a"/>' +
+      '<g class="skt"><g transform="translate(140 196)"><circle cx="0" cy="-12" r="5" fill="#3a2a22"/><rect x="-5" y="-7" width="10" height="18" rx="3" fill="' + A + '"/><path d="M-3 11l-4 10M3 11l5 10" stroke="#222" stroke-width="3"/></g></g>' +
+      '<rect x="100" y="236" width="200" height="16" rx="2" fill="#1d2329"/>' + txt("OLD CROTON AQUEDUCT TRAIL", 200, 247.5, 9, "#fff") +
+      blade(70, 8, "Warburton Av") + tag("HUDSON", 290, 230, 22, C, -3) + tag("YONKERS", 14, 230, 20, B, -4), sky("g3", "#8fc3ea", "#f6e6c0")); };
+  /* HANIFAH 4. Lenoir Preserve, Yonkers: the old estate's stone wall and lawn, the butterfly garden in bloom with butterflies drifting, the Hudson and the Palisades across */
+  S.hwLenoir = () => { let flowers = ""; const cols = ["#ff6fb5", "#f2c14e", "#b07cff", "#ff8a5b", "#ffffff"];
+    for (let i = 0; i < 26; i++) { const x = 16 + i * 15, y = 214 + (i * 7) % 18; flowers += '<path d="M' + x + ' 250V' + y + '" stroke="#3f7a3a" stroke-width="2"/><circle cx="' + x + '" cy="' + y + '" r="4" fill="' + cols[i % 5] + '"/>'; }
+    const fly = (x, y, col, cls) => '<g class="' + cls + '"><g transform="translate(' + x + ' ' + y + ')"><g class="pop"><path d="M0 0q-8 -8 -10 0q2 8 10 0q8 -8 10 0q-2 8 -10 0z" fill="' + col + '"/></g><path d="M0 -4v8" stroke="#222" stroke-width="1.5"/></g></g>';
+    let wall = ""; for (let x = 0; x < 400; x += 16) wall += '<rect x="' + x + '" y="192" width="14" height="8" rx="2" fill="#9a9080"/><rect x="' + (x + 8) + '" y="200" width="14" height="8" rx="2" fill="#8a8072"/>';
+    return svg('<rect width="400" height="260" fill="url(#g4)"/><circle cx="330" cy="40" r="16" fill="#fff3c4"/>' +
+      palisades(110) + water(118, "#4a7aa0") +
+      '<path d="M0 160q120 -20 240 -6t160 -4v110H0z" fill="#5a8a3a"/>' +
+      tree(40, 130, 26, "#2f5a2a") + tree(360, 134, 22, "#3f7a3a") +
+      /* the estate house in the trees */
+      '<rect x="230" y="126" width="80" height="40" fill="#e8e0cc"/><path d="M224 128l46 -20 46 20z" fill="#5a4a3a"/>' + wins(238, 136, 4, 1, 18, 0, 10, 14, "#2a3550") +
+      '<rect x="0" y="192" width="400" height="16" fill="#9a9080"/>' + wall +
+      '<rect x="0" y="208" width="400" height="52" fill="#4f8a3e"/>' + flowers +
+      fly(40, 180, "#ff8a5b", "slide") + fly(60, 160, "#f2c14e", "slide sl2") + fly(120, 176, "#b07cff", "slideL") +
+      '<rect x="110" y="236" width="180" height="16" rx="2" fill="#1d2329"/>' + txt("LENOIR PRESERVE · BUTTERFLY GARDEN", 200, 247.5, 8, "#fff") +
+      blade(60, 8, "Dudley St") + tag("HANIFAH", 14, 188, 22, A, -5) + tag("OPEN MIC", 290, 188, 18, B, -4), sky("g4", "#8fc3ea", "#f6e6c0")); };
   S.corner = corner; S.tag = tag;
   return S;
 }
@@ -265,8 +296,8 @@ function LIB(P) {
   window.SCENES = {
     station: () => L.stMN("Greystone", true, "HANIFAH"),
     garden: () => L.untermyer(),
-    manor: () => L.philipse(),
-    glenview: () => L.glenview(),
+    manor: () => L.hwAqueduct(),
+    glenview: () => L.hwLenoir(),
     block: () => L.corner(["#0d1022", "#2a3a4a"], "Warburton Av", "Odell Av", L.tag("HANIFAH WALIDAH", 26, 124, 22, P.c1, -7) + L.tag("YONKERS", 40, 156, 22, P.c2, -5) + L.tag("OPEN MIC", 30, 188, 24, P.c3, -3) + L.tag("HUDSON", 120, 212, 20, "#f6efdc", -2))
   };
 })();

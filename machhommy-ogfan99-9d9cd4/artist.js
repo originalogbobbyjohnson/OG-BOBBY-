@@ -95,7 +95,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO NEWARK",
-   "x": "Broad St and Market St, the Four Corners. This is Mach-Hommy's game.",
+   "x": "Broad St and Green St, right at City Hall. This is Mach-Hommy's game.",
    "sfx": "spray"
   }
  ],

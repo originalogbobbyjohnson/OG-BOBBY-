@@ -510,11 +510,77 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* PRINCE PAUL 1. Amityville LIRR from Broadway below: the elevated Babylon Branch structure overhead, the silver train crossing, a Handsome Boy Modeling School billboard on the roof across the street */
+  function ppStation() {
+    let win = ""; for (let i = 10; i < 260; i += 34) win += '<rect x="' + i + '" y="60" width="22" height="12" rx="2" fill="#cfe6ff" opacity=".85"/>';
+    const piers = [24, 124, 276].map(x => '<rect x="' + (x - 7) + '" y="100" width="14" height="136" fill="#b9b2a4"/><rect x="' + (x - 12) + '" y="96" width="24" height="8" fill="#a39c8e"/>').join("");
+    return svg('<rect width="400" height="260" fill="url(#sk)"/><circle cx="340" cy="30" r="14" fill="#fff3c4"/>' +
+      /* village storefronts under the el */
+      brick(0, 150, 120, 86, "#9a5a44", "#8a4a36") + '<rect x="10" y="196" width="100" height="40" fill="#22323f"/><rect class="pls" x="16" y="202" width="88" height="24" fill="#ffe6a8" opacity=".5"/>' +
+      brick(280, 140, 120, 96, "#7a6a5a", "#6a5a4a") + '<rect x="290" y="196" width="100" height="40" fill="#22323f"/>' +
+      /* the billboard painted on the building across Broadway */
+      '<rect x="284" y="146" width="112" height="44" fill="#f6efdc" stroke="#111" stroke-width="2"/><rect x="284" y="146" width="112" height="10" fill="#ff8ab0"/>' +
+      txt("HANDSOME BOY", 340, 170, 11.5, "#111") + txt("MODELING SCHOOL", 340, 183, 9, "#2a5aa8") +
+      /* elevated structure + train */
+      '<rect x="0" y="86" width="400" height="14" fill="#a39c8e"/><rect x="0" y="84" width="400" height="3" fill="#eab308"/>' + piers +
+      '<g class="anim-train"><rect x="0" y="54" width="320" height="32" rx="6" fill="#d4d8de" stroke="#6b7280" stroke-width="2"/><rect x="0" y="76" width="320" height="4" fill="#0039a6"/><rect x="0" y="80" width="320" height="2" fill="#6a2c91"/>' + win + pill(290, 66, "LIRR", "#0039a6") + '</g>' +
+      /* station sign hung under the structure */
+      '<rect x="128" y="104" width="144" height="26" rx="3" fill="#111"/><rect x="128" y="104" width="144" height="3" fill="#fff"/>' + txt("Amityville", 140, 123, 14, "#fff", "start") + pill(244, 117, "LIRR", "#0039a6") +
+      /* street */
+      '<rect x="0" y="236" width="400" height="24" fill="#2a2d33"/><path d="M0 248h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="slideb"><rect x="0" y="222" width="54" height="18" rx="5" fill="#9fe3ff"/><rect x="10" y="215" width="32" height="10" rx="3" fill="#2a3a52"/><circle cx="12" cy="240" r="5" fill="#111"/><circle cx="42" cy="240" r="5" fill="#111"/></g>' +
+      '<rect x="128" y="150" width="144" height="80" fill="#4a3a3a"/>' + tag("PRINCE PAUL", 136, 190, 24, "#9fe3ff", -5) + tag("STET", 170, 220, 22, "#ffd34d", -3),
+      sky("sk", "#7fb3e0", "#f6d9a6"));
+  }
+  /* PRINCE PAUL 2. Album world, A Prince Among Thieves (1999): the hip-hop heist movie. Film-poster red and black, the getaway car, the stolen demo tape */
+  function ppThieves() {
+    let city = ""; [[0, 70, 50], [56, 100, 44], [300, 84, 46], [350, 60, 50]].forEach(b => { city += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (210 - b[1]) + '" fill="#140808"/>' + windows(b[0] + 6, b[1] + 8, 3, 6, 13, 16, 7, 8, "#d7263d", "#2a1010"); });
+    return svg('<rect width="400" height="260" fill="url(#sk)"/>' + city +
+      /* searchlight */
+      '<path class="beam" d="M200 210L420 120v40z" fill="#fff" opacity=".12"/>' +
+      /* poster frame */
+      '<rect x="110" y="18" width="180" height="150" fill="#0a0606" stroke="#d7263d" stroke-width="4"/>' +
+      txt("A PRINCE", 200, 52, 24, "#d7263d") + txt("AMONG THIEVES", 200, 78, 20, "#f6efdc") +
+      txt("A HIP HOP MOVIE ON WAX · 1999", 200, 94, 7.5, "#9a9aa2") +
+      /* the demo tape, spinning reels */
+      '<rect x="160" y="104" width="80" height="50" rx="4" fill="#f6efdc" stroke="#111" stroke-width="2"/><rect x="168" y="110" width="64" height="14" fill="#d7263d"/>' + txt("DEMO", 200, 121, 10, "#fff") +
+      '<rect x="174" y="128" width="52" height="18" rx="9" fill="#2a2a2a"/>' +
+      '<g class="spin"><circle cx="186" cy="137" r="6" fill="#ddd"/><rect x="185" y="131" width="2" height="12" fill="#111"/></g><g class="spin"><circle cx="214" cy="137" r="6" fill="#ddd"/><rect x="213" y="131" width="2" height="12" fill="#111"/></g>' +
+      /* the getaway car racing by */
+      '<rect x="0" y="210" width="400" height="50" fill="#1a1010"/><path d="M0 236h400" stroke="#f6efdc" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="slide" style="animation-duration:4s"><path d="M0 220h18l14 -12h46l16 12h20v16H0z" fill="#d7263d" stroke="#000" stroke-width="2"/><rect x="36" y="211" width="18" height="9" fill="#2a3a52"/><rect x="58" y="211" width="18" height="9" fill="#2a3a52"/>' +
+      '<circle cx="22" cy="238" r="7" fill="#111"/><circle cx="92" cy="238" r="7" fill="#111"/><path d="M-6 222h-20M-6 230h-30" stroke="#f6efdc" stroke-width="2" opacity=".6"/></g>' +
+      '<g class="blk"><circle cx="370" cy="190" r="5" fill="#d7263d"/></g><g class="blk b3"><circle cx="384" cy="190" r="5" fill="#2a5aa8"/></g>' +
+      tag("PRINCE PAUL", 10, 200, 20, "#ffd34d", -5),
+      sky("sk", "#0a0606", "#5a0e14"));
+  }
+  /* PRINCE PAUL 4. Album world, Gravediggaz 6 Feet Deep (1994), his group with RZA: a night graveyard, shovels digging, green fog */
+  function ppGrave() {
+    const stone = (x, y, w, h, t) => '<path d="M' + x + ' ' + (y + h) + 'v-' + (h - w / 2) + 'a' + (w / 2) + ' ' + (w / 2) + ' 0 0 1 ' + w + ' 0v' + (h - w / 2) + 'z" fill="#5d6470" stroke="#2a2f38" stroke-width="2"/>' + (t ? txt(t, x + w / 2, y + h / 2 + 6, 8, "#1a1d22") : '');
+    return svg('<rect width="400" height="260" fill="url(#sk)"/>' + stars(26) + '<circle cx="320" cy="50" r="26" fill="#e8ffd8"/><circle cx="312" cy="44" r="5" fill="#cfe8c0"/>' +
+      '<path d="M0 180q100 -20 200 -4t200 -6v90H0z" fill="#121a12"/>' +
+      /* dead tree */
+      '<path d="M60 182V110M60 130l-20 -18M60 120l18 -20M78 100l8 -12M40 112l-6 -14" stroke="#0a0c0a" stroke-width="5" fill="none" stroke-linecap="round"/>' +
+      stone(110, 150, 32, 40, "R.I.P.") + stone(250, 146, 36, 44, "") + stone(340, 160, 26, 30, "") +
+      /* the open grave + dirt pile */
+      '<path d="M150 214h100l-8 20h-84z" fill="#0a0806"/><path d="M252 214q30 -26 64 0z" fill="#3a2a1a"/>' +
+      /* two shovels digging */
+      '<g class="sway"><rect x="196" y="150" width="4" height="64" fill="#6a4a2a"/><path d="M190 212h16l-2 16h-12z" fill="#9aa0a8"/></g>' +
+      '<g class="sway sw2"><rect x="230" y="156" width="4" height="58" fill="#6a4a2a"/><path d="M224 210h16l-2 16h-12z" fill="#9aa0a8"/></g>' +
+      '<g class="rise"><circle cx="280" cy="200" r="3" fill="#5a4a3a"/></g><g class="rise r2"><circle cx="292" cy="204" r="2" fill="#5a4a3a"/></g>' +
+      /* green fog */
+      '<g class="slide slw"><ellipse cx="0" cy="214" rx="160" ry="14" fill="#7cf29a" opacity=".22"/></g><g class="slide slw sl2"><ellipse cx="0" cy="236" rx="140" ry="12" fill="#7cf29a" opacity=".18"/></g>' +
+      '<rect x="0" y="236" width="400" height="24" fill="#0a0e0a"/>' +
+      txt("6 FEET DEEP", 200, 40, 26, "#7cf29a") + txt("GRAVEDIGGAZ · 1994", 200, 58, 10, "#cfe8c0") +
+      tag("THE UNDERTAKER", 14, 250, 22, "#ffd34d", -3),
+      sky("sk", "#050a08", "#1c3a2a"));
+  }
+
   window.SCENES = {
-    station: function () { return railStation({name:"Amityville", line:"LIRR", sky:["#8fc3ea","#f6d9a6"], tag:["STET","#9fe3ff"]}); },
-    daisies: function () { return daisies({c1:"#ffd34d", tag:["DAISY AGE","#ff8ab0"]}); },
+    station: function () { return ppStation(); },
+    daisies: function () { return ppThieves(); },
     runway: function () { return runway({c1:"#9fe3ff", c2:"#ffd34d", sign:"HANDSOME BOY", sign2:"MODELING SCHOOL", tag:["STRIKE A POSE","#ff8ab0"]}); },
-    bay: function () { return bay({c1:"#9fe3ff", c2:"#ffd34d", c3:"#ff8ab0", tag:["AMITYVILLE","#ffd34d"]}); },
-    corner: function () { return corner({s1:"Broadway", s2:"Merrick Rd", tags:[["PRINCE PAUL","#9fe3ff",42],["STET","#ffd34d",30],["HANDSOME BOY","#ff8ab0"],["SKIT KING","#f6efdc"]]}); }
+    bay: function () { return ppGrave(); },
+    corner: function () { return corner({s1:"Merrick Rd", s2:"Ocean Av", tags:[["PRINCE PAUL","#9fe3ff",42],["STET","#ffd34d",30],["HANDSOME BOY","#ff8ab0"],["GRAVEDIGGAZ","#7cf29a"]]}); }
   };
 })();

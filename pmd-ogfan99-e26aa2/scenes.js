@@ -510,11 +510,57 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* ---- PMD's world ---- */
+  /* Album world, Business Never Personal (1992): the EPMD boardroom, long table, the briefcase, the gold record on the wall, the city lights out the window */
+  function boardroom() {
+    const chair = (x, cls) => '<g class="' + cls + '"><rect x="' + (x - 12) + '" y="150" width="24" height="34" rx="4" fill="#6a2a20" stroke="#8a4a30"/><rect x="' + (x - 14) + '" y="180" width="28" height="8" rx="3" fill="#4a1a12"/></g>';
+    return svg('<rect width="400" height="260" fill="#2a1e18"/>' +
+      /* wood panel wall */
+      [0, 1, 2, 3, 4, 5, 6, 7].map(i => '<rect x="' + (i * 50) + '" y="0" width="48" height="150" fill="' + (i % 2 ? "#4a2e20" : "#52342a") + '"/>').join("") +
+      /* window with the skyline */
+      '<rect x="220" y="20" width="160" height="96" fill="url(#sk)" stroke="#c9a24a" stroke-width="4"/>' +
+      [[228, 70], [250, 54], [272, 76], [296, 48], [318, 66], [344, 58], [362, 80]].map(b => '<rect x="' + b[0] + '" y="' + b[1] + '" width="18" height="' + (116 - b[1]) + '" fill="#1a1a2a"/>' + windows(b[0] + 3, b[1] + 4, 2, 4, 7, 9, 4, 4, "#ffe6a8", "#2a2a3a")).join("") +
+      '<path d="M300 20v96M220 68h160" stroke="#c9a24a" stroke-width="3"/>' +
+      /* gold record plaque */
+      '<rect x="40" y="20" width="76" height="96" fill="#1a120e" stroke="#c9a24a" stroke-width="3"/><g class="spin slow"><circle cx="78" cy="58" r="26" fill="#e0b84a"/><circle cx="78" cy="58" r="18" fill="none" stroke="#b8902a" stroke-width="1"/><circle cx="78" cy="58" r="7" fill="#7a1a1a"/><rect x="86" y="56" width="12" height="3" fill="#fff6c2"/></g>' +
+      '<rect x="50" y="94" width="56" height="14" fill="#c9a24a"/>' + txt("EPMD", 78, 105, 10, "#1a120e") +
+      txt("BUSINESS NEVER PERSONAL", 160, 136, 11, "#e0b84a", "middle", ' letter-spacing="1"') +
+      /* the long table and the chairs */
+      chair(90, "") + chair(160, "bob") + chair(240, "") + chair(310, "bob bo2") +
+      '<path d="M20 190h360l20 30H0z" fill="#5a2e1a"/><rect x="0" y="220" width="400" height="10" fill="#3a1a0e"/>' +
+      '<rect x="0" y="230" width="400" height="30" fill="#1a1210"/>' +
+      /* briefcase, papers, the record deal */
+      '<rect x="150" y="178" width="70" height="30" rx="3" fill="#2a1a10" stroke="#c9a24a" stroke-width="2"/><rect x="176" y="172" width="18" height="8" rx="2" fill="none" stroke="#c9a24a" stroke-width="3"/><rect x="164" y="190" width="6" height="5" fill="#c9a24a"/><rect x="200" y="190" width="6" height="5" fill="#c9a24a"/>' +
+      '<rect x="250" y="196" width="40" height="14" fill="#f6efdc" transform="rotate(-6 270 203)"/><path d="M256 200h26M256 205h18" stroke="#999" stroke-width="1" transform="rotate(-6 270 203)"/>' +
+      '<rect x="80" y="196" width="30" height="12" fill="#2a5a3a"/><rect x="84" y="193" width="30" height="12" fill="#3a7a4a"/>' +
+      tag("PMD", 30, 252, 22, "#f2c14e", -4) + txt("1992", 370, 250, 12, "#c9a24a"), sky("sk", "#0d1022", "#3a2a5a"));
+  }
+  /* Brentwood State Park: the turf ballfields and the track in his hometown, light towers, pines, runners going round */
+  function brentwoodPark() {
+    let pines = ""; for (let x = -10; x < 410; x += 26) pines += '<path d="M' + x + ' 120l14-40 14 40z" fill="' + ((x / 26) % 2 ? "#2f5a34" : "#3a6a3a") + '"/>';
+    const tower = x => '<rect x="' + (x - 2) + '" y="34" width="4" height="100" fill="#8a9098"/><rect x="' + (x - 14) + '" y="26" width="28" height="12" fill="#ddd"/>' + [0, 1, 2].map(i => '<circle class="pls' + (i % 2 ? ' p2' : '') + '" cx="' + (x - 8 + i * 8) + '" cy="32" r="3" fill="#fff6c2"/>').join("");
+    const runner = (cls, c) => '<g class="' + cls + '"><circle cx="0" cy="198" r="4" fill="#3a2418"/><path d="M-4 214v-12q4-4 8 0v12z" fill="' + c + '"/><path d="M-3 214l-4 8M3 214l4 8" stroke="#222" stroke-width="2"/></g>';
+    return svg('<rect width="400" height="260" fill="url(#sk)"/><circle cx="340" cy="40" r="16" fill="#fff3c4"/>' +
+      pines + tower(60) + tower(340) +
+      /* the turf field */
+      '<rect x="0" y="120" width="400" height="80" fill="#3f8f45"/>' + [0, 1, 2, 3, 4, 5, 6, 7].map(i => '<rect x="' + (i * 50) + '" y="120" width="25" height="80" fill="#469a4c"/>').join("") +
+      '<path d="M200 120v80" stroke="#fff" stroke-width="2"/><ellipse cx="200" cy="160" rx="34" ry="14" fill="none" stroke="#fff" stroke-width="2"/>' +
+      '<path d="M20 130h40v60H20M380 130h-40v60h40" fill="none" stroke="#fff" stroke-width="2"/>' +
+      /* backstop and diamond in the corner */
+      '<path d="M300 120q20-20 40 0" stroke="#8a9098" stroke-width="3" fill="none"/>' +
+      '<g class="hop"><circle cx="150" cy="170" r="6" fill="#fff"/><path d="M146 168l8 4M150 164v12" stroke="#333" stroke-width="1"/></g>' +
+      /* the track */
+      '<rect x="0" y="200" width="400" height="36" fill="#b5523a"/>' + [208, 216, 224].map(y => '<path d="M0 ' + y + 'h400" stroke="#f6efdc" stroke-width="1" opacity=".8"/>').join("") +
+      runner("slide", "#2a5aa8") + runner("slide sl2", "#f2c14e") +
+      ground("#5a5a52") + txt("BRENTWOOD STATE PARK · BRENTWOOD, L.I.", 200, 252, 11, "#f6efdc") +
+      tag("EPMD", 20, 108, 26, "#f2c14e", -4), sky("sk", "#8fc3ea", "#f6e7c6"));
+  }
+
   window.SCENES = {
     station: function () { return railStation({name:"Brentwood", line:"LIRR", sky:["#8fc3ea","#f6d9a6"], tag:["EPMD","#f2c14e"]}); },
     office: function () { return office({c1:"#f2c14e", sign:"EPMD ▲ STRICTLY BUSINESS ▲ UNFINISHED BUSINESS ▲ BUSINESS AS USUAL ▲", tag:["STRICTLY BUSINESS","#f2c14e"]}); },
-    stage: function () { return stage({c1:"#f2c14e", c2:"#7cf29a", c3:"#d7263d", sign:"PMD", tag:["HIT SQUAD","#7cf29a"]}); },
-    park: function () { return park({c1:"#f2c14e", court:"#2f6a8a", tag:["BRENTWOOD","#f2c14e"]}); },
+    stage: function () { return boardroom(); },
+    park: function () { return brentwoodPark(); },
     corner: function () { return corner({s1:"Brentwood Rd", s2:"Suffolk Av", tags:[["PMD","#f2c14e",56],["EPMD","#7cf29a",30],["HIT SQUAD","#d7263d"],["RUGGED-N-RAW","#f6efdc"]]}); }
   };
 })();

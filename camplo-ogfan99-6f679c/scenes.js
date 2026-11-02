@@ -100,21 +100,33 @@
       sky("g2", "#8fc3ea", "#f6e2b0"));
   }
 
-  /* 3. The Botanical Garden conservatory: the white Victorian glass dome, palms inside, the sun on the glass */
+  /* 3. Loew's Paradise on the Grand Concourse at E 188th (1929): the cream terracotta movie palace front, the tall vertical PARADISE sign chasing, the marquee lit for Uptown Saturday Night */
   function conservatory() {
-    let ribs = ""; for (let i = -4; i <= 4; i++) ribs += '<path d="M200 46Q' + (200 + i * 16) + ' 60 ' + (200 + i * 15) + ' 130" stroke="#f4f0e6" stroke-width="2" fill="none"/>';
-    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
-      /* wings */
-      '<path d="M20 200v-60q60-30 120 0v60z" fill="#cfe6e0" stroke="#f4f0e6" stroke-width="4"/><path d="M260 200v-60q60-30 120 0v60z" fill="#cfe6e0" stroke="#f4f0e6" stroke-width="4"/>' +
-      [40, 60, 80, 100, 120, 280, 300, 320, 340, 360].map(x => '<path d="M' + x + ' 200v-64" stroke="#f4f0e6" stroke-width="2"/>').join("") +
-      /* rotunda and dome */
-      '<rect x="130" y="130" width="140" height="70" fill="#cfe6e0" stroke="#f4f0e6" stroke-width="4"/><path d="M130 130q70-120 140 0z" fill="#cfe6e0" stroke="#f4f0e6" stroke-width="4"/>' + ribs +
-      '<rect x="192" y="24" width="16" height="22" fill="#f4f0e6"/><path d="M190 24l10-12 10 12z" fill="#f4f0e6"/>' +
-      [150, 175, 225, 250].map(x => '<path d="M' + x + ' 200v-40" stroke="#4a3220" stroke-width="3"/><path class="sway" d="M' + x + ' 160q-14 0-20 10M' + x + ' 160q14 0 20 10M' + x + ' 160q-4-12-14-16M' + x + ' 160q4-12 14-16" stroke="#2f7a3a" stroke-width="4" fill="none"/>').join("") +
-      '<path class="pls" d="M150 80q30-40 60-46" stroke="#fff" stroke-width="5" opacity=".6" fill="none"/>' +
-      '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' + [40, 90, 310, 360].map((x, i) => '<circle class="pop" cx="' + x + '" cy="216" r="6" fill="' + [ORG, VIO, GOLD, "#ff6fb5"][i] + '"/>').join("") +
-      tag("BOTANICAL GARDEN", 70, 250, 24, VIO, -3),
-      sky("g3", "#7ec0ee", "#f8e7c0"));
+    let vb = "", vt = "";
+    for (let y = 30; y <= 150; y += 8) vb += '<circle class="blk' + ((y / 8) % 2 ? " b3" : "") + '" cx="306" cy="' + y + '" r="1.8" fill="#fff1a8"/><circle class="blk' + ((y / 8) % 2 ? "" : " b3") + '" cx="342" cy="' + y + '" r="1.8" fill="#fff1a8"/>';
+    "PARADISE".split("").forEach((l, i) => vt += txt(l, 324, 44 + i * 14, 12, "#ff8a5b"));
+    let bulbs = "";
+    for (let x = 64; x <= 336; x += 9) bulbs += '<circle class="blk' + ((x / 9) % 2 ? " b2" : "") + '" cx="' + x + '" cy="164" r="2" fill="#fff1a8"/>';
+    let orn = "";
+    for (let x = 60; x < 290; x += 16) orn += '<circle cx="' + x + '" cy="44" r="4" fill="#e9d9b0" stroke="#c9b48a"/>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' + stars(16) +
+      /* cream terracotta facade */
+      '<rect x="40" y="40" width="250" height="124" fill="#efe2c2"/><rect x="36" y="34" width="258" height="8" fill="#d9c79a"/>' + orn +
+      '<path d="M110 150V90a55 40 0 0 1 110 0v60z" fill="#3a2a40" stroke="#c9b48a" stroke-width="4"/>' +
+      '<path d="M120 150V94a45 32 0 0 1 90 0v56z" fill="#ffd98a" opacity=".35" class="pls"/>' +
+      '<path d="M165 54v96M120 104h90" stroke="#c9b48a" stroke-width="2"/>' +
+      /* the clock over the arch */
+      '<circle cx="165" cy="70" r="12" fill="#f8f2e0" stroke="#b08a3a" stroke-width="3"/><path d="M165 70v-7M165 70h5" stroke="#3a2a40" stroke-width="1.6"/>' +
+      '<rect x="56" y="70" width="30" height="70" fill="#e4d4a8" stroke="#c9b48a" stroke-width="2"/><rect x="244" y="70" width="30" height="70" fill="#e4d4a8" stroke="#c9b48a" stroke-width="2"/>' +
+      /* vertical sign */
+      '<rect x="300" y="22" width="48" height="136" rx="4" fill="#2a0e1c" stroke="#f2c14e" stroke-width="2"/>' + vb + vt +
+      /* the marquee */
+      '<path d="M56 158h288l-10 40H66z" fill="#2a0e1c" stroke="#f2c14e" stroke-width="2"/>' + bulbs +
+      '<rect x="80" y="170" width="240" height="22" fill="#f7f3ea"/>' + txt("UPTOWN SATURDAY NIGHT", 200, 186, 12, "#b07cff") +
+      '<rect x="120" y="198" width="160" height="30" fill="#3a2418"/>' + '<rect x="128" y="202" width="40" height="26" fill="#ffd98a" opacity=".5"/><rect x="180" y="202" width="40" height="26" fill="#ffd98a" opacity=".5"/><rect x="232" y="202" width="40" height="26" fill="#ffd98a" opacity=".5"/>' +
+      '<rect x="0" y="228" width="400" height="32" fill="#2a2d33"/>' + auto(-60, 230, "#f2c14e", "slide") + bus(-120, 216, "#ff8a5b", "slideL") +
+      blade(352, 186, "E 188 St") + tag("LUCHINI", 14, 252, 22, "#f2c14e", -4) + tag("CAMP LO", 4, 30, 20, "#ff8a5b", -4),
+      sky("g3", "#12081e", "#4a2a3a"));
   }
 
   /* 4. Uptown Saturday Night: the disco ball turning, the floor lighting up, the roller skates rolling */

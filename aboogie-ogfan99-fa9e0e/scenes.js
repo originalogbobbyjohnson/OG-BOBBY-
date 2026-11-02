@@ -1,6 +1,6 @@
 /* Highbridge opening scenes for the A Boogie wit da Hoodie game: Artist, Highbridge the Label, Hoodie SZN.
-   The 4 pulling into 167 St up on the el over River Ave, the High Bridge over the Harlem River, the stadium on River Ave,
-   the booth where the melodies get made, and the corner of Nelson Ave and W 166 St (Artist "A Boogie" Dubose Drive). 400 x 260 each. */
+   The 4 pulling into 167 St up on the el over River Ave, the High Bridge over the Harlem River, Noonan Plaza on Nelson Ave,
+   Mullaly Park under the 4, and the corner of Nelson Ave and W 166 St (Artist "A Boogie" Dubose Drive). 400 x 260 each. */
 (function () {
   const W = 400, H = 260;
   const css = '<style>' +
@@ -101,58 +101,63 @@
       sky("g2", "#3b2f6b", "#ff9a6a"));
   }
 
-  /* 3. The ballpark on River Ave: pale limestone facade, tall arched openings, flags up top, fans at the gates */
+  /* 3. Noonan Plaza, Nelson Ave at W 168 St (1931): the Art Deco courtyard apartment house, buff brick, the Mayan-style stepped entry with turquoise and gold trim, the fountain in the garden court */
   function stadium() {
-    let arches = "";
-    for (let i = 0; i < 8; i++) {
-      const x = 22 + i * 46;
-      arches += '<path d="M' + x + ' 210v-74a17 17 0 0 1 34 0v74z" fill="#20262d" stroke="#eae3d2" stroke-width="2"/>' +
-        '<path class="flk' + (i % 2 ? " flk2" : "") + '" d="M' + (x + 3) + ' 210v-40h28v40z" fill="#ffe9a8" opacity=".55"/>';
-    }
-    let frieze = "";
-    for (let x = 14; x < 390; x += 20) frieze += '<path d="M' + x + ' 72l10 12 10-12" stroke="#fff" stroke-width="2" fill="none"/>';
-    let flags = "";
-    [40, 120, 200, 280, 360].forEach((x, i) => flags += '<rect x="' + x + '" y="32" width="2" height="34" fill="#333"/><rect class="flag" x="' + (x + 2) + '" y="32" width="20" height="12" fill="' + (i % 2 ? "#0c2340" : "#e8e8e8") + '" stroke="#0c2340" stroke-width=".8"/>');
-    let fans = "";
-    for (let i = 0; i < 14; i++) { const x = 14 + i * 28; fans += '<g class="fan' + (i % 3 === 1 ? " fan2" : i % 3 === 2 ? " fan3" : "") + '"><circle cx="' + x + '" cy="222" r="6" fill="#2a1d18"/><rect x="' + (x - 7) + '" y="228" width="14" height="22" rx="5" fill="' + (i % 4 === 0 ? ROSE : i % 4 === 1 ? "#0c2340" : i % 4 === 2 ? "#e8e8e8" : SKY) + '"/></g>'; }
+    let wins = "";
+    [[20, 120], [280, 120]].forEach(([x0, w]) => { for (let y = 60; y < 176; y += 22) for (let x = x0 + 10; x < x0 + w - 12; x += 22) wins += '<rect x="' + x + '" y="' + y + '" width="12" height="14" fill="' + ((x + y) % 3 ? "#2a3550" : "#ffe6a8") + '"/>'; });
+    let jets = "";
+    jets = '<path class="glow" d="M200 210q-14 -26 -24 -2M200 210q0 -30 0 -30M200 210q14 -26 24 -2" stroke="#bfe8ff" stroke-width="3" fill="none" stroke-linecap="round" style="animation-duration:1.2s"/><circle class="glow" cx="200" cy="180" r="3" fill="#e6f7ff"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g3)"/>' +
-      '<rect x="6" y="66" width="388" height="150" fill="#e9e1cc"/>' +
-      '<rect x="6" y="66" width="388" height="22" fill="#d9cfb6"/>' + frieze +
-      '<rect x="6" y="100" width="388" height="6" fill="#c9bfa5"/>' + arches + flags +
-      '<rect x="0" y="210" width="400" height="50" fill="#4d4f54"/>' + fans,
-      sky("g3", "#4f8fd6", "#cfe6f7"));
+      '<circle cx="340" cy="34" r="16" fill="#fff2c0"/>' +
+      /* side wings */
+      '<rect x="20" y="44" width="120" height="146" fill="#e2c98e"/><rect x="280" y="44" width="120" height="146" fill="#e2c98e"/>' +
+      '<rect x="20" y="44" width="120" height="8" fill="#2fb3a8"/><rect x="280" y="44" width="120" height="8" fill="#2fb3a8"/>' +
+      '<path d="M20 52h120M280 52h120" stroke="' + GOLD + '" stroke-width="2"/>' + wins +
+      /* the stepped Mayan-style entrance pavilion */
+      '<path d="M140 190V80h12V68h12V56h72v12h12v12h12v110z" fill="#d8bd80"/>' +
+      '<path d="M140 80h120M152 68h96M164 56h72" stroke="#2fb3a8" stroke-width="4"/>' +
+      '<path d="M140 84h120M152 72h96" stroke="' + GOLD + '" stroke-width="2"/>' +
+      /* zigzag deco frieze */
+      '<path d="M164 100l8 -8 8 8 8 -8 8 8 8 -8 8 8 8 -8 8 8 8 -8 8 8" stroke="#2fb3a8" stroke-width="3" fill="none"/>' +
+      '<rect x="176" y="112" width="48" height="78" fill="#1d2a36"/><path d="M176 112l24 -14 24 14z" fill="' + GOLD + '"/>' +
+      '<path d="M182 120h36v70h-36z" fill="none" stroke="' + GOLD + '" stroke-width="2"/>' +
+      '<rect x="146" y="120" width="10" height="70" fill="#2fb3a8"/><rect x="244" y="120" width="10" height="70" fill="#2fb3a8"/>' +
+      '<text x="200" y="88" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#1d2a36" letter-spacing="1">NOONAN PLAZA</text>' +
+      /* garden court + fountain */
+      '<rect x="0" y="190" width="400" height="70" fill="#4f8a3e"/><path d="M170 260l14 -50h32l14 50z" fill="#c9b98a"/>' +
+      '<ellipse cx="200" cy="214" rx="40" ry="10" fill="#e8dcc0"/><ellipse cx="200" cy="212" rx="32" ry="7" fill="#5ec8ff"/>' + jets +
+      '<g class="fan"><circle cx="80" cy="214" r="7" fill="#3a2a22"/><rect x="72" y="221" width="16" height="26" rx="5" fill="' + ROSE + '"/></g>' +
+      sign(8, 8, 90, "Nelson Av") + sign(300, 8, 92, "W 168 St") + tag("HBTL", 300, 248, 28, ROSE, -5) + tag("HOODIE SZN", 20, 250, 20, GOLD, -3),
+      sky("g3", "#4a86c8", "#f6e6c0"));
   }
 
-  /* 4. The booth: mic and pop filter, the hoodie on the hook, rain on the window, the meters moving */
+  /* 4. Mullaly Park, Jerome Ave and River Ave at E 164 St: the gray skate park bowls and the courts behind the green fence, the 4 rumbling by on the el */
   function booth() {
-    let foam = "";
-    for (let y = 16; y < 200; y += 16) for (let x = 216; x < 392; x += 16) foam += '<path d="M' + x + ' ' + y + 'l8 8 8-8" stroke="#1a1520" stroke-width="2" fill="none"/>';
-    let drops = "";
-    for (let i = 0; i < 18; i++) drops += '<path class="rain" style="animation-delay:-' + (i * 0.13).toFixed(2) + 's" d="M' + (26 + (i * 37) % 150) + ' ' + (40 + (i * 29) % 90) + 'l-3 10" stroke="#9fd4ff" stroke-width="1.5" opacity=".7"/>';
-    let mtr = "";
-    for (let i = 0; i < 12; i++) mtr += '<rect class="mtr' + (i % 3 === 1 ? " m2" : i % 3 === 2 ? " m3" : "") + '" x="' + (40 + i * 12) + '" y="200" width="7" height="22" fill="' + (i > 9 ? ROSE : i > 7 ? GOLD : "#4ade80") + '"/>';
+    let fence = "";
+    for (let x = 0; x <= 400; x += 8) fence += '<path d="M' + x + ' 150l8 8M' + (x + 8) + ' 150l-8 8" stroke="#2f7a4a" stroke-width="1" opacity=".7"/>';
+    let windows = "";
+    for (let x = 14; x < 220; x += 38) windows += '<rect x="' + x + '" y="44" width="24" height="16" rx="2" fill="#ffe9b0" opacity=".9"/>';
+    let girders = "";
+    for (let x = 20; x < 400; x += 70) girders += '<rect x="' + (x - 3) + '" y="80" width="6" height="70" fill="#2d4a3a"/>';
     return svg(
-      '<rect width="400" height="260" fill="#17121e"/>' +
-      /* window with the rain and the city lights */
-      '<rect x="16" y="28" width="176" height="120" fill="#0d1630" stroke="#3b3346" stroke-width="6"/>' +
-      '<rect x="22" y="104" width="30" height="40" fill="#22304f"/><rect x="58" y="90" width="40" height="54" fill="#1c2945"/><rect x="104" y="110" width="34" height="34" fill="#22304f"/><rect x="144" y="96" width="42" height="48" fill="#1c2945"/>' +
-      '<rect x="30" y="112" width="4" height="4" fill="#ffcf7a"/><rect x="70" y="100" width="4" height="4" fill="#ffcf7a"/><rect x="156" y="106" width="4" height="4" fill="#ffcf7a"/>' +
-      drops + '<path d="M104 28v120M16 88h176" stroke="#3b3346" stroke-width="4"/>' +
-      /* foam wall */
-      '<rect x="208" y="10" width="186" height="190" fill="#2a2233"/>' + foam +
-      /* the hoodie on a hook */
-      '<circle cx="258" cy="40" r="3" fill="#999"/><path d="M240 50q18-14 36 0l10 56h-56z" fill="' + ROSE + '"/><path d="M246 52q12 14 24 0" fill="#c23a55"/><rect x="246" y="84" width="24" height="12" rx="3" fill="#c23a55"/>' +
-      /* mic stand + pop filter */
-      '<rect x="326" y="96" width="4" height="120" fill="#888"/><path d="M308 216h40" stroke="#888" stroke-width="5"/>' +
-      '<rect x="318" y="70" width="20" height="34" rx="10" fill="#c9ced6" stroke="#555" stroke-width="2"/><path d="M322 80h12M322 86h12M322 92h12" stroke="#777"/>' +
-      '<circle cx="296" cy="88" r="14" fill="#111" opacity=".55" stroke="#555" stroke-width="2"/>' +
-      /* headphones */
-      '<path d="M352 150q16-22 32 0" stroke="#eee" stroke-width="3" fill="none"/><rect x="348" y="148" width="9" height="14" rx="3" fill="#eee"/><rect x="379" y="148" width="9" height="14" rx="3" fill="#eee"/>' +
-      /* desk with the meters + the label plaque */
-      '<rect x="0" y="190" width="400" height="70" fill="#2b2018"/><rect x="24" y="194" width="176" height="34" rx="3" fill="#0e0e12"/>' + mtr +
-      '<rect x="214" y="236" width="70" height="16" rx="2" fill="' + GOLD + '"/><text x="249" y="248" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11" fill="#2a1d0a">HBTL</text>' +
-      '<g fill="' + GOLD + '"><text class="note" x="300" y="150" font-size="18">♪</text><text class="note note2" x="238" y="140" font-size="16">♫</text><text class="note note3" x="364" y="120" font-size="14">♪</text></g>');
+      '<style>@keyframes skate{0%{transform:translate(0,0) rotate(0)}25%{transform:translate(60px,22px) rotate(10deg)}50%{transform:translate(120px,0) rotate(0)}75%{transform:translate(60px,22px) rotate(-10deg)}100%{transform:translate(0,0)}}.skt{animation:skate 4s ease-in-out infinite}</style>' +
+      '<rect width="400" height="260" fill="url(#g4)"/>' +
+      /* the 4 on the el across the back */
+      '<rect x="0" y="72" width="400" height="8" fill="#2d4a3a"/>' + girders +
+      '<g class="anim-train"><rect x="0" y="34" width="250" height="38" rx="6" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="0" y="62" width="250" height="4" fill="' + GREEN + '"/>' + windows + bullet(232, 52, "4", GREEN) + '</g>' +
+      /* courts behind the fence */
+      '<rect x="0" y="118" width="400" height="40" fill="#3a6a8a"/><path d="M60 118v40M200 118v40M340 118v40" stroke="#fff" stroke-width="1.5" opacity=".7"/>' +
+      fence + '<rect x="0" y="116" width="400" height="3" fill="#2f7a4a"/><rect x="0" y="156" width="400" height="3" fill="#2f7a4a"/>' +
+      /* the skate bowl */
+      '<rect x="0" y="158" width="400" height="102" fill="#9a9a96"/>' +
+      '<path d="M60 186q0 50 60 50h160q60 0 60 -50" fill="#7e7e7a" stroke="#c9c9c4" stroke-width="3"/>' +
+      '<path d="M120 236h160" stroke="#6a6a66" stroke-width="2"/>' +
+      '<g class="skt"><g transform="translate(110 186)"><rect x="-12" y="18" width="24" height="4" rx="2" fill="#2a2a2a"/><circle cx="-8" cy="24" r="2" fill="' + GOLD + '"/><circle cx="8" cy="24" r="2" fill="' + GOLD + '"/>' +
+      '<rect x="-5" y="-4" width="10" height="20" rx="3" fill="' + ROSE + '"/><circle cx="0" cy="-9" r="5" fill="#3a2a22"/></g></g>' +
+      '<rect x="138" y="244" width="124" height="14" rx="2" fill="#1d2329"/><text x="200" y="254.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">MULLALY PARK</text>' +
+      sign(8, 8, 84, "Jerome Av") + sign(300, 8, 92, "E 164 St") + tag("ARTIST", 290, 214, 26, SKY, -6) + tag("HBTL", 14, 220, 24, ROSE, -5),
+      sky("g4", "#7fb3e0", "#f6d9a6"));
   }
 
   /* 5. Nelson Ave and W 166 St, co-named Artist "A Boogie" Dubose Drive: walk-ups, the tag wall */

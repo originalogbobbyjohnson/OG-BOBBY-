@@ -32,33 +32,40 @@
   const stars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".7"/>'; return s; };
   const GOLD = "#ffcc00", RED = "#e8322b", GREEN = "#2fbf71";
 
-  /* 1. Hempstead LIRR terminal: street-level platform under a long canopy, the silver train with its blue stripe pulling in */
+  /* 1. Hempstead, the bus side: the LIRR train pulling in beside the Rosa Parks Hempstead Transit Center, its glass canopy and the blue-and-white buses leaving for Uniondale */
   function train() {
     let windows = "";
-    for (let x = 24; x < 260; x += 44) windows += '<rect x="' + x + '" y="122" width="28" height="20" rx="3" fill="#dfeaf5" opacity=".9"/>';
-    let posts = "";
-    for (let x = 30; x < 400; x += 90) posts += '<rect x="' + x + '" y="38" width="6" height="66" fill="#7a2e22"/>';
+    for (let x = 24; x < 220; x += 40) windows += '<rect x="' + x + '" y="124" width="26" height="18" rx="3" fill="#dfeaf5" opacity=".9"/>';
+    let glass = "";
+    for (let x = 214; x < 400; x += 18) glass += '<path d="M' + x + ' 44v38" stroke="#9fc4dc" stroke-width="1"/>';
     let bricks = "";
-    for (let y = 196; y < 260; y += 10) bricks += '<path d="M0 ' + y + 'h400" stroke="#6a2a1c" stroke-width="1" opacity=".6"/>';
+    for (let y = 186; y < 214; y += 8) bricks += '<path d="M0 ' + y + 'h400" stroke="#6a2a1c" stroke-width="1" opacity=".6"/>';
+    const nice = (x, y, sign) => '<rect x="' + x + '" y="' + y + '" width="120" height="40" rx="7" fill="#f4f6f8" stroke="#6b7280" stroke-width="1.5"/>' +
+      '<path d="M' + x + ' ' + (y + 26) + 'h120v6H' + x + 'z" fill="#1f5fbf"/><path d="M' + (x + 70) + ' ' + (y + 26) + 'q30-14 50-14v8q-20 0-44 12z" fill="#2fa7e0"/>' +
+      '<rect x="' + (x + 6) + '" y="' + (y + 6) + '" width="86" height="14" fill="#2a3440"/><rect x="' + (x + 96) + '" y="' + (y + 4) + '" width="20" height="20" rx="2" fill="#2a3440"/>' +
+      '<text x="' + (x + 48) + '" y="' + (y + 16) + '" text-anchor="middle" font-family="monospace" font-weight="700" font-size="8" fill="#ffb020">' + sign + '</text>' +
+      '<circle cx="' + (x + 22) + '" cy="' + (y + 40) + '" r="6" fill="#111"/><circle cx="' + (x + 98) + '" cy="' + (y + 40) + '" r="6" fill="#111"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#gs)"/>' +
-      /* canopy */
-      '<path d="M0 26h400v12H0z" fill="#3d4652"/><path d="M0 38h400" stroke="#1d232b" stroke-width="2"/>' + posts +
-      /* station sign */
-      '<rect x="40" y="50" width="320" height="40" rx="4" fill="#111"/>' +
-      '<text x="54" y="77" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="17" fill="#fff">Hempstead</text>' +
-      badge(160, 70, 50, "LIRR", "#0039a6") +
-      '<text x="224" y="67" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">HEMPSTEAD BRANCH</text>' +
-      '<text x="224" y="81" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">TO PENN STATION</text>' +
+      /* the transit center: curved glass canopy over the bus bays */
+      '<path d="M206 46q97-26 194-6v8q-97-20-194 6z" fill="#5f7f96"/><rect x="206" y="48" width="194" height="36" fill="#cfe6f4" opacity=".55"/>' + glass +
+      '<rect x="210" y="84" width="4" height="26" fill="#59616e"/><rect x="392" y="84" width="4" height="26" fill="#59616e"/>' +
+      '<text x="303" y="38" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8.5" fill="#1d232b">ROSA PARKS HEMPSTEAD TRANSIT CENTER</text>' +
+      '<rect x="206" y="108" width="194" height="6" fill="#8a8f96"/>' + nice(260, 68, "UNIONDALE") +
+      /* the LIRR sign */
+      '<rect x="10" y="36" width="186" height="40" rx="4" fill="#111"/><rect x="10" y="36" width="186" height="4" fill="#fff"/>' +
+      '<text x="22" y="63" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="17" fill="#fff">Hempstead</text>' + badge(130, 56, 50, "LIRR", "#0039a6") +
+      '<path d="M0 26h200v10H0z" fill="#3d4652"/>' +
       '<g class="anim-train">' +
-        '<rect x="8" y="110" width="300" height="56" rx="8" fill="#cfd5dc" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="148" width="300" height="6" fill="#0039a6"/><rect x="8" y="154" width="300" height="3" fill="#6a5acd"/>' + windows +
-        '<rect x="284" y="122" width="16" height="20" rx="3" fill="#dfeaf5" opacity=".9"/><circle cx="300" cy="160" r="4" fill="#fff6c2"/>' +
+        '<rect x="8" y="112" width="250" height="50" rx="8" fill="#cfd5dc" stroke="#6b7280" stroke-width="2"/>' +
+        '<rect x="8" y="146" width="250" height="5" fill="#0039a6"/><rect x="8" y="151" width="250" height="3" fill="#6a5acd"/>' + windows +
+        '<circle cx="250" cy="156" r="4" fill="#fff6c2"/>' +
       '</g>' +
-      /* low street-level platform + brick wall */
-      '<rect x="0" y="166" width="400" height="8" fill="#eab308"/><rect x="0" y="174" width="400" height="16" fill="#9c968a"/>' +
-      '<rect x="0" y="190" width="400" height="70" fill="#8a3a28"/>' + bricks +
-      tag("BUSTA", 30, 236, 32, GOLD, -5) + tag("FLIPMODE", 220, 232, 28, RED, -4),
+      '<rect x="0" y="162" width="400" height="7" fill="#eab308"/><rect x="0" y="169" width="400" height="11" fill="#9c968a"/>' +
+      '<rect x="0" y="180" width="400" height="36" fill="#8a3a28"/>' + bricks +
+      tag("BUSTA", 20, 212, 30, GOLD, -5) + tag("FLIPMODE", 150, 210, 26, RED, -4) + tag("WOO-HAH", 296, 210, 20, GREEN, -3) +
+      '<rect x="0" y="216" width="400" height="44" fill="#2a2d33"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="car" style="animation-duration:9s">' + nice(0, 212, "UNIONDALE") + '</g>',
       sky("gs", "#f0a35a", "#ffe0a8"));
   }
 
@@ -105,28 +112,28 @@
       '<text x="200" y="240" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="11" fill="#e9dcc4" letter-spacing="3">THE DUNGEON DRAGON</text>');
   }
 
-  /* 4. Jones Beach: the tall brick water tower with its green copper cap over the boardwalk, waves rolling in */
+  /* 4. George Westinghouse High School on Johnson St, Downtown Brooklyn: the red-brick school with the big multi-pane shop windows, before the move out to Long Island */
   function beach() {
-    let boards = "";
-    for (let x = 0; x < 400; x += 16) boards += '<path d="M' + x + ' 178v18" stroke="#8a6a44" stroke-width="1"/>';
+    let wins = "";
+    for (let x = 70; x < 330; x += 44) for (let y = 104; y < 180; y += 38) { if (y > 120 && x > 150 && x < 230) continue;
+      wins += '<rect x="' + x + '" y="' + y + '" width="32" height="28" fill="#c9d6e0" stroke="#e8dcc0" stroke-width="2"/>';
+      for (let i = 1; i < 4; i++) wins += '<path d="M' + (x + i * 8) + ' ' + y + 'v28" stroke="#5a6470" stroke-width=".8"/>';
+      wins += '<path d="M' + x + ' ' + (y + 14) + 'h32" stroke="#5a6470" stroke-width=".8"/>';
+    }
+    let bricks = "";
+    for (let y = 92; y < 200; y += 6) bricks += '<path d="M56 ' + y + 'h288" stroke="#7a3222" stroke-width=".7" opacity=".6"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#gj)"/>' +
-      '<circle cx="330" cy="54" r="24" fill="#fff3b0"/>' +
-      '<rect x="96" y="40" width="48" height="140" fill="#b0603a"/><rect x="96" y="40" width="6" height="140" fill="#8f4a2c"/>' +
-      '<rect x="92" y="68" width="56" height="8" fill="#c97a4e"/><rect x="92" y="120" width="56" height="6" fill="#c97a4e"/>' +
-      '<rect x="108" y="84" width="8" height="26" fill="#3a2418"/><rect x="124" y="84" width="8" height="26" fill="#3a2418"/>' +
-      '<rect x="100" y="30" width="40" height="12" fill="#c97a4e"/>' +
-      '<path d="M102 30l18-26 18 26z" fill="#4fa38a"/>' +
-      '<rect x="0" y="176" width="400" height="22" fill="#b98d5c"/>' + boards +
-      '<rect x="0" y="198" width="400" height="22" fill="#f1dca8"/>' +
-      '<rect x="0" y="216" width="400" height="44" fill="#2d82b7"/>' +
-      '<path class="wave" d="M-20 222q20-8 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0" stroke="#fff" stroke-width="3" fill="none" opacity=".85"/>' +
-      '<path class="wave wave2" d="M-20 240q20-8 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0" stroke="#bfe6fa" stroke-width="2" fill="none" opacity=".7"/>' +
-      '<g class="gull"><path d="M0 90q8-8 14 0q6-8 14 0" stroke="#1d2a33" stroke-width="2" fill="none"/></g>' +
-      '<g class="gull gull2"><path d="M0 120q6-6 10 0q4-6 10 0" stroke="#1d2a33" stroke-width="2" fill="none"/></g>' +
-      /* beach umbrella in his colors */
-      '<path d="M250 176v-40" stroke="#555" stroke-width="2"/><path d="M220 140q30-26 60 0z" fill="' + RED + '"/><path d="M240 140q10-24 20 0z" fill="' + GOLD + '"/>' +
-      '<text x="330" y="166" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" fill="#18405e" letter-spacing="3">JONES BEACH</text>',
+      /* Downtown Brooklyn towers behind */
+      '<rect x="0" y="40" width="44" height="160" fill="#7a8aa0"/><rect x="350" y="30" width="50" height="170" fill="#8a9ab0"/><rect x="300" y="56" width="40" height="40" fill="#6a7a90"/>' +
+      '<rect x="56" y="88" width="288" height="112" fill="#a0442e"/>' + bricks + '<rect x="52" y="82" width="296" height="8" fill="#e8dcc0"/>' + wins +
+      '<rect x="176" y="168" width="48" height="32" fill="#3a2418"/><rect x="170" y="160" width="60" height="6" fill="#e8dcc0"/>' +
+      '<rect x="126" y="62" width="148" height="18" fill="#14181d"/><text x="200" y="75" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="' + GOLD + '">GEORGE WESTINGHOUSE H.S.</text>' +
+      '<rect x="0" y="200" width="400" height="12" fill="#9c968a"/><rect x="0" y="212" width="400" height="48" fill="#2a2d33"/><path d="M0 236h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="car"><rect x="0" y="218" width="54" height="16" rx="5" fill="' + GOLD + '"/><rect x="12" y="211" width="28" height="9" rx="3" fill="#dfeaf5"/><circle cx="12" cy="236" r="5" fill="#111"/><circle cx="42" cy="236" r="5" fill="#111"/></g>' +
+      '<g class="gull"><path d="M0 40q6-6 10 0q4-6 10 0" stroke="#1d2a33" stroke-width="2" fill="none"/></g>' +
+      '<text x="200" y="22" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="11" fill="#18405e" letter-spacing="2">JOHNSON ST · DOWNTOWN BROOKLYN</text>' +
+      tag("BUSSA BUS", 18, 256, 22, GOLD, -3) + tag("FLIPMODE", 280, 256, 18, RED, -3),
       sky("gj", "#7cc6f0", "#e6f5fb"));
   }
 

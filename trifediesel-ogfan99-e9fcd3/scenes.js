@@ -46,50 +46,59 @@
     '<text x="' + (x + 14) + '" y="' + (y + 25) + '" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">' + name + '</text>' + sir(x + w - 28, y + 18);
   const ORG = "#ffb347", RED = "#ff5a36", PALE = "#ffe08a";
 
-  /* 1. Stapleton in the morning: the elevated SIR platform over Bay St, the canopy, the train pulling in, the harbor beyond */
+  /* 1. Stapleton, looking inland: the elevated SIR platform, the stair down to Bay St and up St. Paul's Av, the Victorian rooftops of Stapleton Heights on the hill behind */
   function station1() {
+    const vic = (x, y, body, roof) => '<rect x="' + x + '" y="' + y + '" width="34" height="30" fill="' + body + '"/><path d="M' + (x - 3) + ' ' + y + 'l20-16 20 16z" fill="' + roof + '"/><rect x="' + (x + 22) + '" y="' + (y - 22) + '" width="9" height="22" fill="' + body + '"/><path d="M' + (x + 20) + ' ' + (y - 22) + 'l6.5-9 6.5 9z" fill="' + roof + '"/><rect x="' + (x + 6) + '" y="' + (y + 8) + '" width="7" height="9" fill="#f7f3ea"/>';
+    let steps = ""; for (let i = 0; i < 8; i++) steps += '<rect x="' + (318 + i * 7) + '" y="' + (182 + i * 7) + '" width="40" height="3" fill="#7a828c"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#s1)"/>' + '<g class="dft">' + cloud(80, 30, .9) + cloud(300, 44, .7) + '</g>' +
-      '<rect y="96" width="400" height="30" fill="#4a7aa0"/>' +
-      '<g fill="#7f8ea0"><rect x="20" y="78" width="10" height="18"/><rect x="34" y="70" width="8" height="26"/><rect x="46" y="82" width="14" height="14"/><rect x="330" y="74" width="12" height="22"/><rect x="346" y="84" width="20" height="12"/></g>' +
-      '<rect x="0" y="48" width="400" height="10" fill="#3a4250"/><rect x="0" y="58" width="400" height="4" fill="' + ORG + '"/>' +
-      (function () { let p = ""; for (let x = 60; x < 400; x += 140) p += '<rect x="' + x + '" y="62" width="6" height="112" fill="#3a4250"/>'; return p; })() +
-      station("Stapleton", 100, 74, 200) +
-      '<g class="anim-train">' + sirCar(-30, 116, 350) + '</g>' +
-      '<rect y="178" width="400" height="10" fill="#eab308"/><rect y="188" width="400" height="12" fill="#55606a"/>' +
-      (function () { let c = ""; for (let x = 20; x < 400; x += 70) c += '<rect x="' + x + '" y="200" width="8" height="34" fill="#4a525c"/>'; return c; })() +
-      '<rect y="234" width="400" height="26" fill="#2c2c30"/>' +
+      '<rect width="400" height="260" fill="url(#s1)"/>' + '<g class="dft">' + cloud(80, 26, .9) + cloud(300, 34, .7) + '</g>' +
+      /* the hill with the Victorians */
+      '<path d="M0 120Q90 50 200 58T400 84V180H0z" fill="#4f8a3a"/>' +
+      vic(20, 92, "#7fa8c9", "#4a3a4a") + vic(78, 70, "#e6b85a", "#5a3a3a") + vic(140, 60, "#b85a6a", "#3a3a4a") + vic(210, 58, "#9ab07a", "#4a3a4a") + vic(270, 66, "#e6d6b0", "#5a3a3a") + vic(340, 80, "#c98a5a", "#3a3a4a") +
+      '<circle cx="120" cy="96" r="14" fill="#d9822b"/><circle cx="250" cy="88" r="12" fill="#3f7a3a"/>' +
+      '<rect x="0" y="40" width="400" height="10" fill="#3a4250"/><rect x="0" y="50" width="400" height="4" fill="' + ORG + '"/>' +
+      (function () { let p = ""; for (let x = 60; x < 400; x += 140) p += '<rect x="' + x + '" y="54" width="6" height="120" fill="#3a4250"/>'; return p; })() +
+      station("Stapleton", 70, 66, 200) +
+      /* exit sign toward St. Paul's Av */
+      '<rect x="284" y="66" width="108" height="34" rx="3" fill="#111"/><text x="338" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">EXIT ↓ Bay St</text><text x="338" y="93" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="' + PALE + '">↑ up St. Paul\'s Av</text>' +
+      '<g class="anim-train">' + sirCar(-60, 112, 350) + '</g>' +
+      '<rect y="174" width="400" height="10" fill="#eab308"/><rect y="184" width="310" height="12" fill="#55606a"/>' +
+      /* the stair down off the platform */
+      '<rect x="312" y="184" width="88" height="76" fill="#3a4250"/>' + steps + '<path d="M316 180L372 240" stroke="#c9ced6" stroke-width="2"/>' +
+      '<rect y="196" width="312" height="38" fill="#5a4a42"/>' +
+      (function () { let c = ""; for (let x = 20; x < 300; x += 70) c += '<rect x="' + x + '" y="196" width="8" height="38" fill="#4a525c"/>'; return c; })() +
+      '<rect y="234" width="312" height="26" fill="#2c2c30"/>' +
       '<g class="cr1"><rect x="0" y="240" width="44" height="14" rx="4" fill="' + ORG + '"/><circle cx="10" cy="254" r="4" fill="#111"/><circle cx="34" cy="254" r="4" fill="#111"/></g>' +
-      tag("TRIFE", 110, 226, 22, ORG, -4) + tag("BAY ST", 250, 226, 18, "#fff", -5),
+      tag("TRIFE", 40, 226, 26, ORG, -4) + tag("THEODORE", 150, 228, 20, PALE, -5),
       sky("s1", "#8fc4f0", "#fde7c4"));
   }
-
-  /* 2. The Paramount on Bay St: the shuttered 1930 movie palace, orange brick front, tall blade sign, pigeons lifting off the marquee */
+  /* 2. St. Paul's Episcopal on St. Paul's Av (Stapleton Heights, 1870): rough gray stone Gothic church, steep slate roof, pointed windows, leaves and a bird going by */
   function paramount() {
-    let bricks = ""; for (let y = 60; y < 200; y += 8) for (let x = (y / 8) % 2 ? 106 : 100; x < 286; x += 16) bricks += '<rect x="' + x + '" y="' + y + '" width="14" height="6" fill="#d27a3a" opacity=".55"/>';
-    const pig = (x, y) => '<path d="M' + x + ' ' + y + 'q6-6 12 0q6-6 12 0" stroke="#333" stroke-width="2" fill="none"/>';
+    let stone = ""; for (let y = 96; y < 206; y += 9) for (let x = (y / 9) % 2 ? 92 : 84; x < 300; x += 18) stone += '<rect x="' + x + '" y="' + y + '" width="15" height="7" rx="1.5" fill="' + ((x + y) % 3 ? "#8d8c86" : "#7a7973") + '"/>';
+    let tstone = ""; for (let y = 50; y < 206; y += 9) for (let x = (y / 9) % 2 ? 302 : 296; x < 344; x += 14) tstone += '<rect x="' + x + '" y="' + y + '" width="11" height="7" rx="1.5" fill="' + ((x + y) % 3 ? "#8d8c86" : "#7a7973") + '"/>';
+    const arch = (x, y, w, h) => '<path d="M' + x + ' ' + (y + h) + 'V' + (y + w / 2) + 'Q' + (x + w / 2) + ' ' + (y - w / 2) + ' ' + (x + w) + ' ' + (y + w / 2) + 'V' + (y + h) + 'z" fill="#3a3a52" stroke="#d8d2c0" stroke-width="2"/>';
     return svg(
-      '<style>@keyframes fly{0%{transform:translate(0,0);opacity:0}10%{opacity:1}100%{transform:translate(160px,-120px);opacity:0}}.pg{animation:fly 5s linear infinite}.pg2{animation-delay:1.6s}.pg3{animation-delay:3.2s}</style>' +
-      '<rect width="400" height="260" fill="url(#p1)"/>' +
-      '<rect x="0" y="90" width="100" height="120" fill="#7a6a5a"/><rect x="300" y="100" width="100" height="110" fill="#6a5a6a"/>' +
-      (function () { let w = ""; for (let y = 104; y < 190; y += 26) { w += '<rect x="16" y="' + y + '" width="20" height="16" fill="#cfd9e0"/><rect x="60" y="' + y + '" width="20" height="16" fill="#cfd9e0"/><rect x="318" y="' + (y + 8) + '" width="20" height="16" fill="#cfd9e0"/><rect x="362" y="' + (y + 8) + '" width="20" height="16" fill="#cfd9e0"/>'; } return w; })() +
-      '<rect x="100" y="56" width="200" height="154" fill="#e0883e"/>' + bricks +
-      '<rect x="96" y="52" width="208" height="8" fill="#b85a2a"/>' +
-      '<rect x="130" y="70" width="36" height="58" fill="#b85a2a"/><rect x="234" y="70" width="36" height="58" fill="#b85a2a"/>' +
-      '<path d="M134 74h28v50h-28z" fill="#3a3040"/><path d="M238 74h28v50h-28z" fill="#3a3040"/>' +
-      /* blade sign */
-      '<rect x="186" y="20" width="28" height="124" rx="3" fill="#f7f3ea" stroke="#b85a2a" stroke-width="3"/>' +
-      (function () { let t = ""; "PARAMOUNT".split("").forEach((c, i) => { t += '<text x="200" y="' + (36 + i * 13) + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" fill="#b8321f">' + c + '</text>'; }); return t; })() +
-      /* marquee */
-      '<path d="M112 144h176l-10 22H122z" fill="#3a3040"/><rect x="124" y="148" width="152" height="12" fill="#f7f3ea"/>' +
-      '<text x="200" y="158" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="3" fill="#3a3040">STAPLETON · BAY ST</text>' +
-      '<rect x="126" y="170" width="148" height="40" fill="#5a4a3a"/><path d="M150 170v40M200 170v40M250 170v40" stroke="#3a2a1a" stroke-width="3"/>' +
-      '<rect y="210" width="400" height="10" fill="#9a9a9a"/><rect y="220" width="400" height="40" fill="#2c2c30"/>' +
-      '<g class="pg">' + pig(150, 140) + '</g><g class="pg pg2">' + pig(220, 138) + '</g><g class="pg pg3">' + pig(250, 142) + '</g>' +
-      '<g class="cr2"><rect x="0" y="232" width="44" height="14" rx="4" fill="' + RED + '"/><circle cx="10" cy="246" r="4" fill="#111"/><circle cx="34" cy="246" r="4" fill="#111"/></g>',
+      '<style>@keyframes fly{0%{transform:translate(-40px,30px)}100%{transform:translate(440px,-20px)}}.pg{animation:fly 9s linear infinite}</style>' +
+      '<rect width="400" height="260" fill="url(#p1)"/>' + '<g class="dft">' + cloud(70, 34, .8) + '</g>' +
+      '<circle cx="40" cy="190" r="34" fill="#3f7a3a"/><circle cx="370" cy="186" r="30" fill="#d9822b"/>' +
+      /* nave: steep slate roof over gray stone */
+      '<path d="M76 98L188 22 300 98z" fill="#3e4652"/>' +
+      '<path d="M76 98L188 22 300 98" stroke="#2a3038" stroke-width="3" fill="none"/>' +
+      (function () { let r = ""; for (let y = 40; y < 96; y += 8) r += '<path d="M' + (188 - (y - 22) * 1.47) + ' ' + y + 'H' + (188 + (y - 22) * 1.47) + '" stroke="#55606e" stroke-width="1"/>'; return r; })() +
+      '<rect x="84" y="96" width="216" height="110" fill="#9a9993"/>' + stone +
+      arch(108, 128, 24, 52) + arch(156, 128, 24, 52) + arch(216, 128, 24, 52) +
+      '<path d="M188 40m-12 0a12 12 0 1 0 24 0a12 12 0 1 0 -24 0" fill="#5a4a7a" stroke="#d8d2c0" stroke-width="2"/><path d="M176 40h24M188 28v24" stroke="#d8d2c0" stroke-width="1.5"/>' +
+      /* the tower with its spirelet */
+      '<rect x="294" y="50" width="52" height="156" fill="#9a9993"/>' + tstone +
+      '<path d="M290 52L320 6 350 52z" fill="#3e4652"/><path d="M320 6v-10M315 -2h10" stroke="#2a3038" stroke-width="2"/>' +
+      arch(310, 70, 20, 34) + '<path d="M296 168h48v38h-48z" fill="#5a3a2a"/><path d="M304 206v-26q16-20 32 0v26z" fill="#6a2a2a" stroke="#d8d2c0" stroke-width="2"/>' +
+      '<rect y="206" width="400" height="14" fill="#9a9a9a"/><rect y="220" width="400" height="40" fill="#2c2c30"/>' +
+      '<g class="lf"><path d="M330 150l5 3-5 3-5-3z" fill="#e6b13a"/></g><g class="lf lf2"><path d="M360 150l5 3-5 3-5-3z" fill="#b8461f"/></g><g class="lf lf3"><path d="M50 160l5 3-5 3-5-3z" fill="#d9822b"/></g>' +
+      '<g class="pg"><path d="M0 60q6-6 12 0q6-6 12 0" stroke="#333" stroke-width="2" fill="none"/></g>' +
+      '<g class="cr2"><rect x="0" y="232" width="44" height="14" rx="4" fill="' + RED + '"/><circle cx="10" cy="246" r="4" fill="#111"/><circle cx="34" cy="246" r="4" fill="#111"/></g>' +
+      '<text x="200" y="256" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#fff">ST. PAUL\'S EPISCOPAL · ST. PAUL\'S AV · 1870</text>',
       sky("p1", "#9fcff2", "#f2e2c8"));
   }
-
   /* 3. Stapleton Heights: the painted Victorian houses up St. Paul's Ave, gables and porches, the harbor below, leaves coming down */
   function stpauls() {
     const house = (x, y, body, trim, roof) =>
@@ -112,42 +121,47 @@
       sky("h1", "#8fc4f0", "#f8ecd8"));
   }
 
-  /* 4. The Outerbridge Crossing at sunset: the long steel cantilever truss over the Arthur Kill, headlights rolling across */
+  /* 4. URBY on the Stapleton waterfront (2016): the boxy rental buildings with the farm up top, the harbor and Manhattan behind, the ferry going by */
   function outerbridge() {
-    let truss = "";
-    for (let x = 20; x < 380; x += 20) {
-      const h = (X) => 100 - 50 * Math.exp(-Math.pow((X - 200) / 90, 2)) - 18 * Math.exp(-Math.pow((X - 200) / 30, 2)) * 0;
-      truss += '<path d="M' + x + ' ' + h(x).toFixed(1) + 'L' + (x + 20) + ' 128M' + (x + 20) + ' ' + h(x + 20).toFixed(1) + 'L' + x + ' 128M' + x + ' ' + h(x).toFixed(1) + 'V128" stroke="#5a6470" stroke-width="2"/>';
-    }
-    let top = "M20 100"; for (let x = 20; x <= 380; x += 10) top += "L" + x + " " + (100 - 50 * Math.exp(-Math.pow((x - 200) / 90, 2))).toFixed(1);
+    const box = (x, y, w, h, body, acc) => {
+      let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + body + '"/>';
+      for (let yy = y + 8; yy < y + h - 10; yy += 16) for (let xx = x + 6; xx < x + w - 12; xx += 16) s += '<rect x="' + xx + '" y="' + yy + '" width="11" height="10" fill="' + (((xx + yy) / 16) % 4 < 1 ? acc : "#2f3f52") + '"/>';
+      return s;
+    };
+    let farm = ""; for (let x = 156; x < 248; x += 12) farm += '<rect x="' + x + '" y="98" width="8" height="6" rx="3" fill="#5aa04a"/><circle class="flk" cx="' + (x + 4) + '" cy="97" r="2" fill="#e8504a"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#o1)"/>' +
-      '<circle cx="320" cy="150" r="24" fill="#ffd27a" opacity=".9"/>' +
-      '<rect y="160" width="400" height="100" fill="#3a3a5a"/><rect y="160" width="400" height="100" fill="url(#ow)"/>' +
-      '<g class="wv"><path d="M0 190q10-3 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0" stroke="#ffb98a" stroke-width="1.5" fill="none" opacity=".6"/></g>' +
-      '<rect x="0" y="122" width="400" height="8" fill="#4a525c"/>' +
-      '<path d="' + top + '" stroke="#5a6470" stroke-width="4" fill="none"/>' + truss +
-      '<rect x="60" y="130" width="12" height="40" fill="#5a5a60"/><rect x="140" y="130" width="14" height="40" fill="#5a5a60"/><rect x="246" y="130" width="14" height="40" fill="#5a5a60"/><rect x="328" y="130" width="12" height="40" fill="#5a5a60"/>' +
-      '<g class="cr1"><circle cx="0" cy="118" r="2.5" fill="#fff6c2"/><circle cx="-10" cy="118" r="2.5" fill="#fff6c2"/></g><g class="cr2"><circle cx="0" cy="118" r="2.5" fill="#ff4a3a"/></g>' +
-      '<path d="M0 170q60-14 120 0v90H0z" fill="#2a2a3a"/><path d="M300 176q50-12 100 0v84H300z" fill="#2a2a3a"/>' +
-      '<text x="200" y="244" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#fff">OUTERBRIDGE CROSSING · ARTHUR KILL</text>',
-      sky("o1", "#4a3a6a", "#ff9a5a") + '<linearGradient id="ow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9a5a" stop-opacity=".4"/><stop offset="1" stop-color="#1a1a2a" stop-opacity="0"/></linearGradient>');
+      '<rect width="400" height="260" fill="url(#o1)"/>' + '<g class="dft">' + cloud(330, 30, .8) + '</g>' +
+      /* lower Manhattan across the harbor */
+      '<g fill="#8a9ab0">' + [[10, 62, 10, 30], [24, 48, 12, 44], [40, 66, 10, 26], [54, 30, 14, 62], [72, 58, 10, 34], [86, 70, 16, 22]].map(b => '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + b[3] + '"/>').join("") + '<path d="M58 30l3-14 3 14z"/></g>' +
+      '<rect y="92" width="400" height="44" fill="#4a7aa0"/>' +
+      '<g class="bt"><path d="M0 104h56l-6 10H6z" fill="' + ORG + '"/><rect x="10" y="96" width="36" height="8" fill="' + ORG + '"/><rect x="14" y="98" width="28" height="3" fill="#2f3f52"/></g>' +
+      '<g class="wv"><path d="M0 126q10-3 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0" stroke="#fff" stroke-width="1.2" fill="none" opacity=".4"/></g>' +
+      /* the boxy buildings */
+      box(20, 120, 120, 96, "#e8e6e0", ORG) + box(150, 104, 104, 112, "#3a4250", "#e6b85a") + box(262, 128, 118, 88, "#e8e6e0", "#7fb0d0") +
+      '<rect x="150" y="94" width="104" height="10" fill="#6a4a32"/>' + farm +
+      '<rect x="166" y="80" width="2" height="14" fill="#ccc"/>' +
+      '<rect x="0" y="216" width="400" height="12" fill="#a9a398"/><rect y="228" width="400" height="32" fill="#2c2c30"/>' +
+      '<rect x="40" y="186" width="80" height="20" rx="2" fill="#2c2c30"/><text x="80" y="200" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="12" letter-spacing="3" fill="#fff">URBY</text>' +
+      '<g class="cr1"><rect x="0" y="236" width="44" height="14" rx="4" fill="' + RED + '"/><circle cx="10" cy="250" r="4" fill="#111"/><circle cx="34" cy="250" r="4" fill="#111"/></g>' +
+      '<text x="200" y="250" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#fff">STAPLETON WATERFRONT · FRONT ST</text>',
+      sky("o1", "#8fc4f0", "#f8ecd8"));
   }
 
-  /* 5. Canal St & Wright St by Tappen Park: green signs, the tag wall, an orange drip */
+  /* 5. Tompkins Av & Hill St at the Stapleton Houses: the brick NYCHA blocks behind, green signs, the tag wall */
   function corner() {
-    let bricks = ""; for (let y = 70; y < 220; y += 12) for (let x = (y / 12) % 2 ? -12 : 0; x < 400; x += 24) bricks += '<rect x="' + x + '" y="' + y + '" width="22" height="10" fill="#7a4a30"/>';
+    let bricks = ""; for (let y = 96; y < 220; y += 12) for (let x = (y / 12) % 2 ? -12 : 0; x < 250; x += 24) bricks += '<rect x="' + x + '" y="' + y + '" width="22" height="10" fill="#7a4a30"/>';
+    let proj = ""; [[0, 26, 120], [130, 14, 130], [270, 30, 130]].forEach(b => { proj += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="80" fill="#8a4a36"/>'; for (let y = b[1] + 8; y < b[1] + 72; y += 12) for (let x = b[0] + 8; x < b[0] + b[2] - 10; x += 16) proj += '<rect x="' + x + '" y="' + y + '" width="9" height="7" fill="' + ((x + y) % 5 ? "#3a2a2a" : "#ffd98a") + '"/>'; });
     return svg(
-      '<rect width="400" height="260" fill="url(#c1)"/>' +
-      '<rect y="68" width="400" height="154" fill="#5a3422"/>' + bricks +
-      tag("TRIFE DA GOD", 18, 148, 40, ORG, -6) + tag("DIESEL", 40, 198, 32, RED, -4) + tag("THEODORE", 186, 204, 26, PALE, -7) +
-      '<g class="drp"><rect x="70" y="150" width="3" height="10" fill="' + ORG + '"/></g>' +
-      '<rect x="352" y="22" width="6" height="208" fill="#4a4a4a"/>' +
-      blade(286, 24, 112, "Canal St", 0) + blade(280, 50, 118, "Wright St", 0) +
+      '<rect width="400" height="260" fill="url(#c1)"/>' + proj +
+      '<rect y="94" width="270" height="128" fill="#5a3422"/>' + bricks +
+      tag("TRIFE DA GOD", 14, 152, 34, ORG, -6) + tag("DIESEL", 40, 198, 32, RED, -4) + tag("THEODORE", 150, 210, 22, PALE, -7) +
+      '<g class="drp"><rect x="70" y="154" width="3" height="10" fill="' + ORG + '"/></g>' +
+      '<rect x="330" y="40" width="6" height="182" fill="#4a4a4a"/>' +
+      blade(272, 44, 122, "Tompkins Av", 0) + blade(286, 70, 94, "Hill St", 0) +
+      '<text x="333" y="112" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="#fff">STAPLETON HOUSES</text>' +
       '<rect y="222" width="400" height="38" fill="#2c2c30"/><rect y="222" width="400" height="6" fill="#9a9a9a"/>' +
       '<g class="cr2"><rect x="0" y="236" width="44" height="14" rx="4" fill="' + PALE + '"/><circle cx="10" cy="250" r="4" fill="#111"/><circle cx="34" cy="250" r="4" fill="#111"/></g>',
       sky("c1", "#ffb347", "#2d1a12"));
   }
-
   window.SCENES = { station: station1, paramount, stpauls, outerbridge, corner };
 })();

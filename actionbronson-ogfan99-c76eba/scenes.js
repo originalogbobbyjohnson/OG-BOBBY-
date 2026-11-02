@@ -69,46 +69,6 @@
       tag("BAKLAVA", 22, 238, 30, GOLD, -4) + tag("BAM BAM", 262, 240, 28, CHILI, -8));
   }
 
-  /* 2. The Unisphere: the stainless-steel globe in Flushing Meadows, fountains running */
-  function unisphere() {
-    const cx = 200, cy = 104, r = 66;
-    let grid = "";
-    [-44, -22, 0, 22, 44].forEach(d => grid += '<ellipse cx="' + cx + '" cy="' + (cy + d) + '" rx="' + Math.sqrt(r * r - d * d).toFixed(1) + '" ry="' + (Math.sqrt(r * r - d * d) * 0.16).toFixed(1) + '" fill="none" stroke="#7d8894" stroke-width="1.2"/>');
-    [12, 30, 48, 62].forEach(w => grid += '<ellipse cx="' + cx + '" cy="' + cy + '" rx="' + w + '" ry="' + r + '" fill="none" stroke="#7d8894" stroke-width="1.2"/>');
-    const land = '<g fill="#eef2f6" stroke="#8a96a3" stroke-width="1">' +
-      /* North + South America on the near side */
-      '<path d="M150 58q14-12 34-8q10 6 6 16q-10 6-14 16q-2 10-10 12q-8-2-12-12q-6-12-4-24z"/>' +
-      '<path d="M176 108q10-2 14 8q2 14-6 28q-6 10-10 4q-2-12-2-20q-4-12 4-20z"/>' +
-      /* Europe + Africa curving round the right edge */
-      '<path d="M224 56q12-4 20 4q-2 8-10 8q-8 0-10-12z"/>' +
-      '<path d="M226 80q16-4 24 8q4 14-4 28q-6 12-12 6q-4-10-6-20q-6-12-2-22z"/></g>';
-    const fountain = (x, cls) => '<path class="jet ' + cls + '" d="M' + (x - 3) + ' 214q3-34 3-46q0 12 3 46z" fill="#d6f1ff" opacity=".85"/>';
-    return svg(
-      '<rect width="400" height="260" fill="url(#u1)"/>' +
-      '<g class="cld"><ellipse cx="60" cy="40" rx="36" ry="10" fill="#fff" opacity=".8"/><ellipse cx="84" cy="34" rx="22" ry="9" fill="#fff" opacity=".8"/></g>' +
-      /* trees on the horizon */
-      '<path d="M0 196q20-18 40-4q18-16 40 0q22-14 40 2q20-12 40 0v14H0z M240 196q20-16 40-2q22-14 40 0q20-16 40 0q22-12 40 2v14H240z" fill="#2f6b3a"/>' +
-      /* back half of the orbit rings */
-      '<g transform="rotate(-23.5 ' + cx + ' ' + cy + ')" class="orb">' +
-        '<ellipse cx="' + cx + '" cy="' + cy + '" rx="92" ry="22" fill="none" stroke="#aeb7c1" stroke-width="2.5"/>' +
-        '<ellipse cx="' + cx + '" cy="' + cy + '" rx="84" ry="40" fill="none" stroke="#aeb7c1" stroke-width="2" transform="rotate(48 ' + cx + ' ' + cy + ')"/>' +
-        '<ellipse cx="' + cx + '" cy="' + cy + '" rx="80" ry="30" fill="none" stroke="#aeb7c1" stroke-width="2" transform="rotate(-52 ' + cx + ' ' + cy + ')"/>' +
-      '</g>' +
-      /* the globe, tilted, steel grid with continents */
-      '<g transform="rotate(-23.5 ' + cx + ' ' + cy + ')">' +
-        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="url(#u2)" opacity=".55"/>' + grid + land +
-        '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '" fill="none" stroke="#8a96a3" stroke-width="2"/>' +
-      '</g>' +
-      '<circle cx="255" cy="44" r="4" fill="#fff"/><circle cx="128" cy="150" r="3" fill="#fff"/>' +
-      /* tripod base */
-      '<path d="M200 170l-22 40h10l12-26 12 26h10z" fill="#9aa4ae" stroke="#5b6570" stroke-width="1.5"/>' +
-      /* reflecting pool + fountains */
-      '<ellipse cx="200" cy="222" rx="196" ry="20" fill="#4aa3c9"/><ellipse cx="200" cy="222" rx="196" ry="20" fill="none" stroke="#d9d2c0" stroke-width="5"/>' +
-      fountain(60, "") + fountain(110, "jet2") + fountain(150, "jet3") + fountain(250, "jet2") + fountain(290, "") + fountain(340, "jet3") +
-      '<rect x="0" y="240" width="400" height="20" fill="#d9d2c0"/>' +
-      tag("FLUSHING", 18, 252, 22, GOLD, -3),
-      sky("u1", "#3d7fd1", "#a8d4f2") + '<radialGradient id="u2" cx=".35" cy=".35" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#7d8894"/></radialGradient>');
-  }
 
   /* 3. The New York State Pavilion: the three towers and the Tent of Tomorrow, the 7 rolling by on the el */
   function pavilion() {
@@ -145,36 +105,6 @@
       sky("p1", "#0b1030", "#3a2a66"));
   }
 
-  /* 4. Main Street food stall: red lanterns, bamboo steamers going, dumplings on the counter */
-  function dumplings() {
-    const lantern = (x, cls) => '<g class="swy ' + cls + '"><path d="M' + x + ' 26v10" stroke="#2a1410" stroke-width="2"/>' +
-      '<ellipse cx="' + x + '" cy="50" rx="16" ry="14" fill="#d7262e"/><rect x="' + (x - 8) + '" y="34" width="16" height="4" fill="' + GOLD + '"/><rect x="' + (x - 8) + '" y="62" width="16" height="4" fill="' + GOLD + '"/>' +
-      '<path d="M' + x + ' 66v10" stroke="' + GOLD + '" stroke-width="2"/></g>';
-    const steamer = (x, y) => '<rect x="' + (x - 26) + '" y="' + y + '" width="52" height="16" rx="3" fill="#d9b26b" stroke="#8a6a32" stroke-width="2"/><path d="M' + (x - 24) + ' ' + (y + 6) + 'h48" stroke="#8a6a32" stroke-width="1"/>';
-    const dump = (x, y) => '<path d="M' + (x - 8) + ' ' + y + 'q8-12 16 0z" fill="#fbf3e2" stroke="#d6c7a6" stroke-width="1"/><path d="M' + (x - 4) + ' ' + (y - 4) + 'l2-3M' + x + ' ' + (y - 5) + 'v-3M' + (x + 4) + ' ' + (y - 4) + 'l-2-3" stroke="#d6c7a6" stroke-width="1"/>';
-    return svg(
-      '<rect width="400" height="260" fill="#1b0d0b"/>' +
-      /* storefront sign */
-      '<rect x="0" y="0" width="400" height="26" fill="#2a1410"/>' +
-      '<rect x="128" y="84" width="144" height="32" rx="3" fill="#b5161f" stroke="' + GOLD + '" stroke-width="2"/>' +
-      '<text class="flk" x="200" y="107" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="19" letter-spacing="3" textLength="122" lengthAdjust="spacingAndGlyphs" fill="' + GOLD + '">DUMPLINGS</text>' +
-      lantern(40, "") + lantern(120, "swy2") + lantern(280, "swy3") + lantern(360, "") +
-      /* window glow */
-      '<rect x="30" y="122" width="340" height="70" fill="#3a1a12"/><rect x="40" y="128" width="320" height="58" fill="#ffcf8a" opacity=".22"/>' +
-      /* stacked steamers with steam */
-      steamer(84, 150) + steamer(84, 134) + '<path d="M58 134q26-14 52 0z" fill="#c99f58" stroke="#8a6a32" stroke-width="2"/>' +
-      steamer(316, 156) + steamer(316, 140) + '<path d="M290 140q26-14 52 0z" fill="#c99f58" stroke="#8a6a32" stroke-width="2"/>' +
-      '<path class="stm" d="M76 126q-5-7 0-13t0-13" stroke="#fff" stroke-width="2.5" fill="none" opacity=".7"/>' +
-      '<path class="stm stm2" d="M90 126q-5-7 0-13t0-13" stroke="#fff" stroke-width="2.5" fill="none" opacity=".7"/>' +
-      '<path class="stm stm3" d="M310 132q-5-7 0-13t0-13" stroke="#fff" stroke-width="2.5" fill="none" opacity=".7"/>' +
-      '<path class="stm" d="M324 132q-5-7 0-13t0-13" stroke="#fff" stroke-width="2.5" fill="none" opacity=".7"/>' +
-      /* counter + a plate of dumplings */
-      '<rect x="0" y="192" width="400" height="14" fill="#6b2a1a"/><rect x="0" y="206" width="400" height="54" fill="#2a1410"/>' +
-      '<ellipse cx="200" cy="190" rx="54" ry="9" fill="#f4efe6" stroke="#2f6bb3" stroke-width="3"/>' +
-      dump(176, 190) + dump(194, 189) + dump(212, 190) + dump(228, 190) + dump(186, 184) + dump(204, 183) + dump(220, 184) +
-      '<path d="M248 176l30-22M254 180l30-22" stroke="#c99f58" stroke-width="3" stroke-linecap="round"/>' +
-      tag("DELICIOUS", 120, 246, 30, GOLD, -4));
-  }
 
   /* 5. Main Street and Roosevelt Avenue: street signs, streetlight, the tag wall */
   function corner() {
@@ -203,5 +133,95 @@
       sky("c5", "#0d0d22", "#3a2048"));
   }
 
-  window.SCENES = { train, unisphere, pavilion, dumplings, corner };
+  /* ---- redrawn landmark scenes (OG FAN 99 landmark pass): small shared helpers, prefixed L ---- */
+  const Lcss = '<style>' +
+    '@keyframes lmCar{from{transform:translateX(-170px)}to{transform:translateX(480px)}}.lm-car{animation:lmCar 8s linear infinite}' +
+    '@keyframes lmCarB{from{transform:translateX(480px)}to{transform:translateX(-170px)}}.lm-carb{animation:lmCarB 10s linear infinite}' +
+    '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.lm-bob{animation:lmBob 1.6s ease-in-out infinite}' +
+    '@keyframes lmFlk{0%,100%{opacity:1}45%{opacity:.7}50%{opacity:.3}55%{opacity:.95}}.lm-flk{animation:lmFlk 2.3s infinite}' +
+    '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{animation:lmSpin 1.8s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmRise{0%{transform:translateY(0) scale(.8);opacity:0}20%{opacity:.85}100%{transform:translateY(-70px) scale(1.4);opacity:0}}.lm-rise{animation:lmRise 4s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{animation:lmSway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}' +
+    '@keyframes lmBlk{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blk{animation:lmBlk 1s steps(1) infinite}' +
+    '@keyframes lmFlag{0%,100%{transform:skewY(0)}50%{transform:skewY(-6deg)}}.lm-flag{animation:lmFlag 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}' +
+    '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(-30px,230px) rotate(280deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}' +
+    '@keyframes lmCld{from{transform:translateX(-120px)}to{transform:translateX(470px)}}.lm-cld{animation:lmCld 30s linear infinite}' +
+    '@keyframes lmPls{0%,100%{opacity:.35}50%{opacity:1}}.lm-pls{animation:lmPls 2.2s ease-in-out infinite}' +
+    '@keyframes lmWav{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}.lm-wav{animation:lmWav 3s ease-in-out infinite}' +
+    '@keyframes lmBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}.lm-beat{animation:lmBeat .7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmNote{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-60px);opacity:0}}.lm-note{animation:lmNote 3s linear infinite}' +
+    '.lmd1{animation-delay:-1s}.lmd2{animation-delay:-2s}.lmd3{animation-delay:-3s}.lmd4{animation-delay:-4.5s}.lmd5{animation-delay:-6s}' +
+    '</style>';
+  const LF = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
+  const LT = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" ' + LF + ' font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LA = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" font-family="Anton, Impact, sans-serif" font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LR = (x, y, w, h, fill, extra) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + fill + '"' + (extra || "") + '/>';
+  const Lbul = (x, y, l, col, r) => { r = r || 11; return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/>' + LT(l, x, y + r * 0.42, r * 1.22, col === "#fccc0a" ? "#000" : "#fff"); };
+  const Lpill = (x, y, l, col) => { const w = l.length * 8 + 14; return '<rect x="' + (x - w / 2) + '" y="' + (y - 10) + '" width="' + w + '" height="20" rx="10" fill="' + col + '"/>' + LT(l, x, y + 4.5, 11, "#fff"); };
+  /* black MTA-style station sign: lines = [["B","#ff6319"],...]; a long name like "MN" draws a pill */
+  const Lsign = (x, y, w, name, lines, size) => { let b = "", bx = x + w - 18; for (let i = lines.length - 1; i >= 0; i--) { const l = lines[i]; if (l[0].length > 1) { b += Lpill(bx - 10, y + 17, l[0], l[1]); bx -= l[0].length * 8 + 22; } else { b += Lbul(bx, y + 17, l[0], l[1], 10); bx -= 24; } }
+    return LR(x, y, w, 32, "#111", ' rx="3"') + LR(x, y, w, 4, "#fff") + LT(name, x + 10, y + 23, size || 15, "#fff", "start") + b; };
+  /* green NYC street sign blade */
+  const Lblade = (x, y, t, w) => { w = w || t.length * 7.2 + 20; return LR(x, y, w, 19, "#0f6b3a", ' rx="2" stroke="#fff" stroke-width="1.5"') + LT(t, x + w / 2, y + 14, 12, "#fff"); };
+  /* two green signs on a pole at x, crossing */
+  const Lpole = (x, y, a, b) => { const wa = a.length * 7.2 + 20, wb = b.length * 7.2 + 20; return LR(x, y, 6, 236 - y, "#2a3138") + Lblade(x + 3 - wa / 2, y + 6, a) + Lblade(x + 3 - wb / 2, y + 30, b) + LR(x - 2, y - 4, 10, 6, "#2a3138"); };
+  const Lbrick = (x, y, w, h, base, mortar) => { let s = LR(x, y, w, h, base); for (let yy = y + 6; yy < y + h; yy += 6) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + mortar + '" stroke-width=".8"/>'; return s; };
+  const Lwin = (x, y, cols, rows, dx, dy, w, h, lit, dark) => { let s = ""; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const on = ((r * 7 + c * 3) % 5) < 2; s += '<rect x="' + (x + c * dx) + '" y="' + (y + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + (on ? lit : dark) + '"' + (on && (r + c) % 4 === 0 ? ' class="lm-flk"' : '') + '/>'; } return s; };
+  const Lstars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".75"/>'; return s; };
+  const Lcloud = (x, y, s, cls) => '<g class="lm-cld ' + (cls || "") + '"><g transform="translate(' + x + ' ' + y + ') scale(' + (s || 1) + ')" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="22" ry="9"/><ellipse cx="14" cy="-6" rx="14" ry="9"/><ellipse cx="-12" cy="-4" rx="11" ry="7"/></g></g>';
+  const Ltree = (x, y, r, col, cls) => '<g class="lm-sway ' + (cls || "") + '">' + LR(x - 3, y, 6, r * 1.3, "#5a3d24") + '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/><circle cx="' + (x - r * .5) + '" cy="' + (y + r * .3) + '" r="' + r * .7 + '" fill="' + col + '" opacity=".85"/><circle cx="' + (x + r * .55) + '" cy="' + (y + r * .25) + '" r="' + r * .65 + '" fill="' + col + '" opacity=".9"/></g>';
+  /* faceless figure: head + body, x = centre, y = feet */
+  const Lman = (x, y, body, cls, cap) => '<g' + (cls ? ' class="' + cls + '"' : "") + '>' + '<rect x="' + (x - 7) + '" y="' + (y - 30) + '" width="14" height="22" rx="5" fill="' + body + '"/><rect x="' + (x - 6) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/><rect x="' + (x + 1) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/>' +
+    '<circle cx="' + x + '" cy="' + (y - 37) + '" r="7" fill="#5a3a26"/>' + (cap ? '<path d="M' + (x - 8) + ' ' + (y - 39) + 'q8-10 16 0z" fill="' + cap + '"/><rect x="' + (x - 1) + '" y="' + (y - 41) + '" width="12" height="3" fill="' + cap + '"/>' : '') + '</g>';
+  /* subway car (stainless) seen from the side, x,y top-left */
+  const Lcar = (x, y, w, l, col, band) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="52" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>'; for (let i = x + 16; i < x + w - 60; i += 40) s += '<rect x="' + i + '" y="' + (y + 9) + '" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    return s + LR(x, y + 33, w, 5, band || col) + Lbul(x + w - 22, y + 18, l, col, 10) + '<circle cx="' + (x + w - 8) + '" cy="' + (y + 44) + '" r="3.5" fill="#fff6c2"/>'; };
+  const Lcab = (x, y) => '<rect x="' + x + '" y="' + (y + 8) + '" width="70" height="20" rx="5" fill="#f7c600"/><path d="M' + (x + 12) + ' ' + (y + 8) + 'l8-10h28l10 10z" fill="#f7c600"/><path d="M' + (x + 22) + ' ' + y + 'h10v8h-14zM' + (x + 35) + ' ' + y + 'h10l7 8h-17z" fill="#bfe0ff"/>' +
+    LR(x + 26, y - 6, 18, 6, "#fff", ' rx="1"') + LT("TAXI", x + 35, y - 1.5, 5, "#111") + '<path d="M' + x + ' ' + (y + 17) + 'h70" stroke="#111" stroke-width="1" stroke-dasharray="3 3"/><circle cx="' + (x + 15) + '" cy="' + (y + 28) + '" r="6" fill="#111"/><circle cx="' + (x + 55) + '" cy="' + (y + 28) + '" r="6" fill="#111"/>';
+  const Lauto = (x, y, col) => '<rect x="' + x + '" y="' + (y + 6) + '" width="56" height="16" rx="5" fill="' + col + '"/><rect x="' + (x + 11) + '" y="' + (y - 2) + '" width="32" height="11" rx="3" fill="#cfe6ff"/><circle cx="' + (x + 13) + '" cy="' + (y + 22) + '" r="5" fill="#111"/><circle cx="' + (x + 43) + '" cy="' + (y + 22) + '" r="5" fill="#111"/>';
+  /* turntable from above at an angle */
+  const Ldeck = (cx, cy, r, lab) => '<rect x="' + (cx - r - 12) + '" y="' + (cy - r * .45 - 10) + '" width="' + (r * 2 + 30) + '" height="' + (r * .9 + 20) + '" rx="4" fill="#2a2a30"/><g transform="translate(' + cx + ' ' + cy + ') scale(1 .42)"><g class="lm-spin"><circle r="' + r + '" fill="#0c0c0e"/><circle r="' + r * .72 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .5 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .3 + '" fill="' + lab + '"/><rect x="-2" y="' + (-r * .3) + '" width="4" height="' + r * .2 + '" fill="#fff"/></g></g><path d="M' + (cx + r + 6) + ' ' + (cy - r * .4) + 'l-8 ' + r * .5 + '" stroke="#c9ced6" stroke-width="3"/>';
+  /* 1. The ballpark at Mets–Willets Point: brick-and-arch rotunda front, the Home Run Apple, the 7 rolling past */
+  function LM_unisphere() {
+    let arches = ""; [60, 110, 290, 340].forEach(x => { arches += '<path d="M' + (x - 18) + ' 196v-50q18-22 36 0v50z" fill="#2a3440"/><path d="M' + (x - 14) + ' 192v-44q14-17 28 0v44z" fill="#9fc3e0" opacity=".5"/>'; });
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lcloud(40, 24) + Lcloud(260, 18, .8, "lmd3") +
+      /* light towers */
+      [30, 370].map(x => LR(x - 2, 10, 4, 96, "#5a6470") + LR(x - 14, 6, 28, 12, "#d8dde4") + '<g class="lm-pls">' + LR(x - 12, 8, 24, 8, "#fff8d0") + '</g>').join("") +
+      /* brick facade */
+      Lbrick(20, 106, 360, 108, "#a4462c", "#8a3a24") + '<path d="M20 106h360" stroke="#e8e0cc" stroke-width="4"/>' + arches +
+      /* the rotunda: big central arch */
+      '<path d="M140 214V110q60-66 120 0v104z" fill="#b24e32"/><path d="M156 214V120q44-50 88 0v94z" fill="#e8e0cc"/><path d="M166 214v-90q34-40 68 0v90z" fill="#2a3440"/>' +
+      [176, 192, 208, 224].map(x => LR(x, 150, 8, 64, "#4a5a6a")).join("") + LT("JACKIE ROBINSON ROTUNDA", 120, 40, 11, "#1a2a4a") + LT("FLUSHING · ONE STOP FROM MAIN ST", 120, 54, 8, "#1a2a4a") +
+      /* Home Run Apple rising from its hat */
+      LR(320, 60, 46, 8, "#111") + LR(326, 40, 34, 22, "#111") + '<g class="lm-bob"><circle cx="343" cy="30" r="14" fill="#e8452c"/><path d="M343 16q2-6 6-8" stroke="#3a2010" stroke-width="2"/><path d="M345 14q8-4 10 2-6 2-10-2z" fill="#2f8a3a"/></g>' + LT("HOME RUN APPLE", 343, 82, 7, "#111") +
+      /* the 7 on the el in front */
+      LR(0, 214, 400, 10, "#4a5058") + '<g class="lm-carb" style="animation-duration:7s">' + Lcar(0, 162, 200, "7", "#b933ad") + '</g>' + LR(0, 224, 400, 36, "#5a8a3c") +
+      LR(8, 232, 230, 22, "#111", ' rx="3"') + LT("Mets–Willets Point", 18, 248, 13, "#fff", "start") + Lbul(226, 243, "7", "#b933ad", 9) +
+      tag("BAM BAM", 260, 250, 22, "#ffd23f", -4),
+      sky("sk", "#6fb3ea", "#e8f0f6"));
+  }
+  /* 3. Golden Shopping Mall, 41-28 Main St: down the stairs to the cramped basement stalls, hand-written signs and steam */
+  function LM_dumplings() {
+    const stall = (x, w, c, sign, price) => LR(x, 92, w, 104, "#3a2a20") + LR(x, 92, w, 22, c) + LT(sign, x + w / 2, 108, 10, "#fff", "middle", ' font-style="italic"') +
+      LR(x + 6, 120, w - 12, 30, "#fff8e6", ' rx="2"') + LT(price, x + w / 2, 140, 11, "#c0201a") + LR(x, 168, w, 28, "#c9c2b0") + '<path d="M' + x + ' 168h' + w + '" stroke="#8a847a" stroke-width="3"/>';
+    const steam = (x, d) => '<g class="lm-rise ' + d + '"><path d="M' + x + ' 166q-6-10 0-18t0-18" stroke="#fff" stroke-width="3" fill="none" opacity=".75"/></g>';
+    const basket = (x) => '<ellipse cx="' + x + '" cy="166" rx="16" ry="5" fill="#c9a26a"/>' + LR(x - 16, 158, 32, 8, "#b88a4a") + '<ellipse cx="' + x + '" cy="158" rx="16" ry="5" fill="#d8b47a"/>';
+    return svg(Lcss + '<rect width="400" height="260" fill="#2a1e18"/>' +
+      /* low ceiling with bare tubes */
+      LR(0, 0, 400, 60, "#3a3028") + '<g class="lm-flk">' + LR(40, 52, 120, 5, "#fffbe6") + '</g>' + '<g class="lm-flk lmd2">' + LR(240, 52, 120, 5, "#fffbe6") + '</g>' +
+      /* street-level sign at the top of the stairs */
+      LR(84, 8, 232, 36, "#b8201a", ' rx="3" stroke="#ffd23f" stroke-width="2"') + LT("GOLDEN SHOPPING MALL", 200, 26, 14, "#ffd23f") + LT("41-28 MAIN ST · FLUSHING · DOWNSTAIRS", 200, 39, 8, "#fff") +
+      '<path d="M0 60h400v32H0z" fill="#4a3a2e"/>' + [0, 1, 2, 3, 4, 5, 6].map(i => '<path d="M' + (i * 60 + 10) + ' 66h40v20h-40z" fill="#fff4c8" opacity=".85" transform="rotate(' + (i % 2 ? 3 : -3) + ' ' + (i * 60 + 30) + ' 76)"/>').join("") +
+      ["NOODLES", "SOUP", "SKEWERS", "BUNS", "TEA", "RICE"].map((w, i) => LT(w, i * 60 + 30, 80, 7.5, "#c0201a")).join("") +
+      stall(8, 120, "#c0201a", "HAND-PULLED", "NOODLES  $8") + stall(140, 120, "#2a6a3a", "DUMPLINGS", "12 FOR $6") + stall(272, 120, "#b933ad", "SPICY LAMB", "SKEWERS  $3") +
+      basket(48) + basket(88) + basket(180) + basket(220) + '<path d="M300 162l40-14M310 166l40-14" stroke="#7a3a1a" stroke-width="4"/>' +
+      steam(48, "") + steam(88, "lmd1") + steam(180, "lmd2") + steam(220, "lmd3") + steam(330, "lmd1") +
+      /* stools + crowd */
+      LR(0, 196, 400, 64, "#5a4a3e") + [40, 120, 200, 280, 360].map(x => LR(x - 10, 212, 20, 5, "#c0201a") + LR(x - 2, 217, 4, 20, "#222")).join("") +
+      Lman(80, 252, "#ffd23f", "lm-bob", "#b933ad") + Lman(240, 254, "#e8452c", "lm-bob lmd1") +
+      tag("ACTION BRONSON", 110, 254, 22, "#ffd23f", -3) + tag("DELICIOUS", 300, 252, 16, "#e8452c", -4),
+      "");
+  }
+
+  window.SCENES = { train, unisphere: LM_unisphere, pavilion, dumplings: LM_dumplings, corner };
 })();

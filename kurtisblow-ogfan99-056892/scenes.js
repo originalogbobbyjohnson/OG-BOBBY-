@@ -97,30 +97,39 @@
       sky("g2", "#6fa8dc", "#d8ecf8"));
   }
 
-  /* 3. Rucker Park, 155th St: blue court, orange hoop, the ball bouncing, chain-link and the bleachers */
+  /* 3. Greater Hood Memorial A.M.E. Zion Church on W 146th St: home of The Hip Hop Church he co-founded in 2004. Brick church front between the rowhouses, a banner over the doors, music rising, a boombox on the stoop */
   function rucker() {
-    let fence = "";
-    for (let x = 0; x < 400; x += 12) fence += '<path d="M' + x + ' 70l12 12M' + (x + 12) + ' 70l-12 12M' + x + ' 82l12 12M' + (x + 12) + ' 82l-12 12M' + x + ' 94l12 12M' + (x + 12) + ' 94l-12 12" stroke="#9aa3ad" stroke-width="1" opacity=".7"/>';
-    let fans = "";
-    const fc = [RED, GOLD, BLUE, "#fff", "#2ec27e"];
-    for (let i = 0; i < 18; i++) fans += '<g class="hop' + (i % 2 ? " hop2" : "") + '"><circle cx="' + (12 + i * 22) + '" cy="' + (114 + (i % 2) * 8) + '" r="5" fill="#3a2a22"/><rect x="' + (7 + i * 22) + '" y="' + (119 + (i % 2) * 8) + '" width="10" height="12" rx="3" fill="' + fc[i % 5] + '"/></g>';
+    let notes = "";
+    [[176, ""], [200, " note2"], [224, " note3"]].forEach(([x, c]) => notes += '<text class="note' + c + '" x="' + x + '" y="150" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="' + GOLD + '">♪</text>');
+    let rows = "";
+    [[0, 80, "#8a5a44"], [300, 84, "#7a6a5a"]].forEach(([x, y, c]) => { rows += '<rect x="' + x + '" y="' + y + '" width="100" height="' + (210 - y) + '" fill="' + c + '"/><rect x="' + x + '" y="' + y + '" width="100" height="6" fill="#d9cfc0"/>'; for (let yy = y + 16; yy < 196; yy += 30) for (let xx = x + 12; xx < x + 90; xx += 28) rows += '<rect x="' + xx + '" y="' + yy + '" width="14" height="20" fill="' + ((xx + yy) % 3 ? "#2a2440" : "#ffd98a") + '"/>'; });
+    let brk = "";
+    for (let y = 70; y < 210; y += 8) brk += '<path d="M100 ' + y + 'h200" stroke="#7a2e22" stroke-width="1"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g3)"/>' +
-      /* Polo Grounds towers behind */
-      '<rect x="20" y="20" width="44" height="60" fill="#8a5a48"/><rect x="80" y="10" width="44" height="70" fill="#7a4e3e"/><rect x="290" y="16" width="44" height="64" fill="#8a5a48"/><rect x="346" y="26" width="44" height="54" fill="#7a4e3e"/>' +
-      '<rect x="0" y="68" width="400" height="2" fill="#6b7480"/>' + fence +
-      /* bleachers */
-      '<rect x="0" y="108" width="400" height="34" fill="#5a6470"/><path d="M0 118h400M0 130h400" stroke="#3e4650"/>' + fans +
-      /* court */
-      '<rect x="0" y="142" width="400" height="118" fill="#2a5db0"/><rect x="0" y="142" width="400" height="118" fill="none" stroke="#fff" stroke-width="3"/>' +
-      '<path d="M130 260q0-70 70-70q70 0 70 70" fill="none" stroke="#fff" stroke-width="3"/><rect x="170" y="190" width="60" height="70" fill="#c0392b" opacity=".85" stroke="#fff" stroke-width="3"/>' +
-      /* hoop */
-      '<rect x="196" y="60" width="8" height="132" fill="#3a3f46"/><rect x="170" y="56" width="60" height="40" fill="#f4f4f4" stroke="#3a3f46" stroke-width="3"/><rect x="188" y="72" width="24" height="18" fill="none" stroke="' + RED + '" stroke-width="2"/>' +
-      '<ellipse cx="200" cy="98" rx="14" ry="3" fill="none" stroke="#ff7a1a" stroke-width="3"/><path d="M188 99l4 14h16l4-14M194 99l2 14M206 99l-2 14" stroke="#fff" stroke-width="1" fill="none"/>' +
-      /* bouncing ball */
-      '<g class="bnc"><circle cx="292" cy="236" r="12" fill="#e8742a" stroke="#6a2a0a" stroke-width="1.5"/><path d="M280 236h24M292 224v24M284 227q8 9 0 18M300 227q-8 9 0 18" stroke="#6a2a0a" stroke-width="1.3" fill="none"/></g>' +
-      '<rect x="8" y="148" width="100" height="16" rx="2" fill="#111" opacity=".8"/><text x="58" y="160" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11" fill="' + GOLD + '">BASKETBALL</text>',
-      sky("g3", "#f6a35c", "#ffe0b0"));
+      '<g class="cld"><ellipse cx="0" cy="30" rx="44" ry="8" fill="#fff" opacity=".5"/></g>' +
+      '<g class="bird"><path d="M0 50q5 -5 10 0q5 -5 10 0" stroke="#333" stroke-width="2" fill="none"/></g>' +
+      rows +
+      /* the church front: brick gable, stone trim, rose window, two towers */
+      '<rect x="100" y="70" width="200" height="140" fill="#9a3e2e"/>' + brk +
+      '<path d="M120 70l80 -46 80 46z" fill="#9a3e2e" stroke="#e6d6b4" stroke-width="3"/>' +
+      '<rect x="100" y="40" width="34" height="170" fill="#8a3428"/><rect x="266" y="40" width="34" height="170" fill="#8a3428"/>' +
+      '<path d="M98 40l19 -22 19 22zM264 40l19 -22 19 22z" fill="#4a3a3a"/>' +
+      '<path d="M200 24v-12M194 16h12" stroke="' + GOLD + '" stroke-width="2.5"/>' +
+      '<circle cx="200" cy="66" r="16" fill="#3a6ab0" stroke="#e6d6b4" stroke-width="3"/><path d="M200 50v32M184 66h32M189 55l22 22M211 55l-22 22" stroke="#e6d6b4" stroke-width="1.5"/>' +
+      '<path d="M110 120v-24a7 7 0 0 1 14 0v24zM276 120v-24a7 7 0 0 1 14 0v24z" fill="#ffd98a" opacity=".7"/>' +
+      /* banner */
+      '<g><rect x="136" y="96" width="128" height="26" fill="' + RED + '" stroke="#fff" stroke-width="2"/>' +
+      '<text x="200" y="114" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11" fill="#fff">THE HIP HOP CHURCH</text></g>' +
+      '<rect x="122" y="130" width="156" height="12" fill="#1d1a2e"/><text x="200" y="139.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7" fill="#fff">GREATER HOOD MEMORIAL A.M.E. ZION</text>' +
+      /* doors */
+      '<path d="M168 210v-48a14 14 0 0 1 28 0v48zM204 210v-48a14 14 0 0 1 28 0v48z" fill="#3a2418" stroke="#e6d6b4" stroke-width="2"/>' +
+      notes +
+      '<path d="M150 210h100l8 10H142z" fill="#bfb4a0"/>' + boombox(250, 196, .3) +
+      '<rect x="0" y="220" width="400" height="40" fill="#3a3a40"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="car"><rect x="0" y="226" width="46" height="14" rx="4" fill="' + BLUE + '"/><circle cx="10" cy="242" r="4" fill="#111"/><circle cx="36" cy="242" r="4" fill="#111"/></g>' +
+      sign(8, 8, 84, "W 146 St") + tag("KB", 330, 250, 28, GOLD, -6),
+      sky("g3", "#5a96d0", "#f2e6c8"));
   }
 
   /* 4. Riverside Church: pale limestone gothic tower, bells swinging in the belfry, Sunday light */
@@ -144,7 +153,7 @@
       (function () { let w = ""; for (let x = 56; x < 150; x += 30) w += '<path d="M' + x + ' 210v-36q7-10 14 0v36z" fill="#f2d98a" class="flk"/>'; for (let x = 262; x < 360; x += 30) w += '<path d="M' + x + ' 210v-36q7-10 14 0v36z" fill="#f2d98a" class="flk flk2"/>'; return w; })() +
       '<rect x="0" y="224" width="400" height="36" fill="#4a4a4e"/>' +
       '<g class="note"><text x="250" y="60" font-size="16" fill="' + GOLD + '">&#9834;</text></g><g class="note note2"><text x="140" y="70" font-size="14" fill="#fff">&#9835;</text></g>' +
-      '<rect x="292" y="232" width="100" height="18" rx="2" fill="#111" opacity=".85"/><text x="342" y="245" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11" fill="' + GOLD + '">HIP HOP CHURCH</text>',
+      '<rect x="292" y="232" width="100" height="18" rx="2" fill="#111" opacity=".85"/><text x="342" y="245" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="11" fill="' + GOLD + '">RIVERSIDE CHURCH</text>',
       sky("g4", "#2a2350", "#c97a6a"));
   }
 

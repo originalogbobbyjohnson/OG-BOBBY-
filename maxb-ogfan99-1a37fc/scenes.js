@@ -65,84 +65,73 @@
       tag("WAVY", 24, 242, 34, AQUA, -5) + tag("BIGGAVELI", 214, 244, 28, GOLD, -7));
   }
 
-  /* 2. The Hotel Theresa at 125th and Adam Clayton Powell Jr Blvd: white terracotta tower, the zigzag cornice bands, traffic */
+  /* 2. The Madison Avenue Bridge over the Harlem River at E 138th: the steel swing span, the little towers over the pivot, the Bronx across */
   function theresa() {
-    let wins = "";
-    for (let y = 62; y < 210; y += 14) for (let x = 112; x < 290; x += 14) wins += '<rect' + ((x * 3 + y) % 7 === 0 ? ' class="flk"' : "") + ' x="' + x + '" y="' + y + '" width="8" height="9" fill="' + ((x * 5 + y) % 4 === 0 ? "#ffe08a" : "#3a4a5c") + '"/>';
-    let zig = "";
-    for (let x = 104; x < 296; x += 12) zig += '<path d="M' + x + ' 50l6 -8 6 8" stroke="#9fb4c4" stroke-width="2" fill="none"/>';
-    const cab = (cls, c) => '<g class="' + cls + '"><rect x="0" y="226" width="44" height="14" rx="4" fill="' + c + '"/><path d="M8 226l6-8h16l6 8z" fill="' + c + '"/><circle cx="10" cy="240" r="4" fill="#111"/><circle cx="34" cy="240" r="4" fill="#111"/><rect x="40" y="229" width="4" height="3" fill="#fff6c2"/></g>';
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    let truss = ""; for (let x = 60; x < 340; x += 20) truss += '<path d="M' + x + ' 150l10-34 10 34" stroke="#5f7f8a" stroke-width="2.5" fill="none"/>';
+    const turret = x => '<rect x="' + (x - 7) + '" y="90" width="14" height="26" fill="#6f8f9a"/><path d="M' + (x - 9) + ' 90l9-14 9 14z" fill="#3f5a64"/><circle cx="' + x + '" cy="74" r="2" fill="' + GOLD + '"/>';
+    const cab = (cls, c) => '<g class="' + cls + '"><rect x="0" y="140" width="40" height="12" rx="4" fill="' + c + '"/><path d="M8 140l6-7h14l6 7z" fill="' + c + '"/><circle cx="10" cy="152" r="4" fill="#111"/><circle cx="30" cy="152" r="4" fill="#111"/></g>';
+    let bronx = ""; [[0, 70, 60], [64, 84, 50], [118, 60, 46], [250, 76, 52], [306, 64, 44], [354, 80, 46]].forEach(b => bronx += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (130 - b[1]) + '" fill="#5a4a5e"/>');
     return svg(
-      '<rect width="400" height="260" fill="url(#g2)"/>' + stars(20) +
-      '<rect x="8" y="140" width="84" height="80" fill="#4a3530"/><rect x="310" y="126" width="84" height="94" fill="#3b2c3a"/>' +
-      '<rect x="22" y="154" width="12" height="14" fill="#ffd98a"/><rect x="330" y="146" width="12" height="14" fill="#ffd98a"/><rect x="364" y="180" width="12" height="14" fill="#2a2018"/>' +
-      /* the tower: white terracotta */
-      '<rect x="102" y="40" width="196" height="172" fill="#f1eee6"/>' +
-      '<rect x="98" y="32" width="204" height="10" fill="#e3ded2"/>' + zig + wins +
-      '<rect x="102" y="104" width="196" height="4" fill="#9fb4c4"/><rect x="102" y="160" width="196" height="4" fill="#9fb4c4"/>' +
-      /* the old rooftop sign */
-      '<rect x="150" y="6" width="100" height="22" fill="#1a1a1a"/><rect x="170" y="28" width="4" height="6" fill="#1a1a1a"/><rect x="226" y="28" width="4" height="6" fill="#1a1a1a"/>' +
-      '<text class="glow" x="200" y="22" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="12" letter-spacing="2" fill="#ff5a6e">THERESA</text>' +
-      '<rect x="0" y="212" width="400" height="12" fill="#8a847a"/>' +
-      '<rect x="0" y="224" width="400" height="36" fill="#1c1a1e"/><path d="M0 246h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<rect width="400" height="260" fill="url(#g2)"/>' + '<circle cx="330" cy="40" r="16" fill="#fff1c8"/>' +
+      '<g class="cld"><ellipse cx="0" cy="34" rx="44" ry="8" fill="#fff" opacity=".5"/></g>' + bronx +
+      '<rect x="0" y="116" width="400" height="6" fill="#6a6a70"/>' +
+      /* the swing span: through truss, top chord, the turrets over the pivot */
+      '<path d="M60 116h280" stroke="#5f7f8a" stroke-width="5"/>' + truss + '<rect x="0" y="148" width="400" height="8" fill="#4f6f7a"/>' +
+      turret(176) + turret(224) + '<rect x="170" y="100" width="60" height="16" fill="#6f8f9a"/><rect x="186" y="104" width="28" height="8" fill="#ffe6a8" class="flk"/>' +
       cab("car", "#f2c200") + cab("car car2", "#2ec4b6") +
-      '<rect x="8" y="8" width="128" height="22" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
-      '<text x="72" y="23" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">W 125 St</text>',
-      sky("g2", "#0a0b1e", "#3a2f5c"));
+      /* the pier and the river */
+      '<rect x="0" y="156" width="400" height="104" fill="#2a6f8f"/><rect x="186" y="156" width="28" height="30" fill="#8a847a"/>' +
+      crest(206, "#3a86a8", "wv") + crest(228, "#2ec4b6", "wv wv2") +
+      lbl(200, 22, "MADISON AV BRIDGE", 16, "#14243a") + lbl(200, 36, "HARLEM RIVER AT E 138TH", 9, "#14243a") +
+      tag("WAVY", 22, 250, 30, AQUA, -5) + tag("MAX B", 290, 250, 26, GOLD, -4),
+      sky("g2", "#8fc3ea", "#f6d8a8"));
   }
 
-  /* 3. Abyssinian Baptist Church on W 138th: grey stone Gothic front, the big pointed window glowing, the choir going */
+  /* 3. The Lincoln Houses, E 132nd to 135th between Fifth and Park: the red-brick towers, the benches and the trees, Metro-North rolling over the Park Av viaduct */
   function church() {
-    let stones = "";
-    for (let y = 60; y < 216; y += 10) stones += '<path d="M96 ' + y + 'h208" stroke="#6f7680" stroke-width=".6"/>';
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    const tower = (x, y, w) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (190 - y) + '" fill="#8a3e2c"/><rect x="' + x + '" y="' + y + '" width="' + w + '" height="5" fill="#5a2418"/>';
+      for (let yy = y + 10; yy < 182; yy += 13) for (let xx = x + 6; xx < x + w - 8; xx += 13) s += '<rect' + ((xx + yy) % 9 === 0 ? ' class="flk"' : '') + ' x="' + xx + '" y="' + yy + '" width="7" height="8" fill="' + ((xx * 7 + yy) % 5 < 2 ? "#ffd98a" : "#2a1d17") + '"/>';
+      return s; };
+    const tree = x => '<rect x="' + (x - 2) + '" y="176" width="4" height="18" fill="#4a3220"/><circle cx="' + x + '" cy="172" r="14" fill="#3f7a3a"/>';
+    let win = ""; for (let x = 16; x < 330; x += 40) win += '<rect x="' + x + '" y="210" width="26" height="12" rx="2" fill="#cfe6ff"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' + stars(24) +
-      '<circle cx="64" cy="48" r="14" fill="#fff4d6" opacity=".9"/>' +
-      /* side rowhouses */
-      '<rect x="0" y="110" width="90" height="110" fill="#6b3528"/><rect x="310" y="104" width="90" height="116" fill="#6b3528"/>' +
-      '<rect x="14" y="126" width="14" height="20" fill="#ffd98a"/><rect x="50" y="126" width="14" height="20" fill="#2a2018"/><rect x="330" y="122" width="14" height="20" fill="#2a2018"/><rect x="366" y="122" width="14" height="20" fill="#ffd98a"/>' +
-      /* the church front: grey bluestone with pale limestone trim */
-      '<rect x="96" y="60" width="208" height="160" fill="#8a919a"/>' + stones +
-      '<path d="M92 64l108 -36 108 36z" fill="#7a818a" stroke="#d8d2c2" stroke-width="3"/>' +
-      '<rect x="90" y="60" width="14" height="160" fill="#d8d2c2"/><rect x="296" y="60" width="14" height="160" fill="#d8d2c2"/>' +
-      '<path d="M90 60l7 -16 7 16zM296 60l7 -16 7 16z" fill="#d8d2c2"/>' +
-      /* great pointed window */
-      '<path d="M160 160v-54q40 -56 80 0v54z" fill="#d8d2c2"/>' +
-      '<path class="glow" d="M166 158v-50q34 -48 68 0v50z" fill="#f2b84e"/>' +
-      '<path d="M200 70v88M183 90v68M217 90v68M166 124h68" stroke="#4a3a2a" stroke-width="2"/>' +
-      /* doors */
-      '<path d="M178 220v-34a22 22 0 0 1 44 0v34z" fill="#5a2a1a" stroke="#d8d2c2" stroke-width="3"/><path d="M200 172v48" stroke="#d8d2c2" stroke-width="2"/>' +
-      '<rect x="0" y="220" width="400" height="40" fill="#24262c"/><rect x="0" y="216" width="400" height="6" fill="#4a4c52"/>' +
-      /* music rising */
-      '<text class="note" x="128" y="150" font-size="18" fill="' + GOLD + '">♪</text><text class="note note2" x="256" y="150" font-size="18" fill="' + AQUA + '">♫</text><text class="note note3" x="200" y="56" font-size="16" fill="#fff">♪</text>' +
-      '<rect x="270" y="10" width="124" height="22" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
-      '<text x="332" y="25" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">W 138 St</text>',
-      sky("g3", "#0b0d24", "#2c2a5a"));
+      '<rect width="400" height="260" fill="url(#g3)"/>' + '<circle cx="60" cy="40" r="16" fill="#fff1c8"/>' +
+      tower(10, 60, 90) + tower(120, 40, 80) + tower(214, 54, 84) + tower(312, 70, 82) +
+      '<rect x="0" y="190" width="400" height="10" fill="#9a958a"/>' + tree(110) + tree(206) + tree(306) +
+      '<rect x="40" y="186" width="30" height="4" fill="#2f5a3a"/><rect x="260" y="186" width="30" height="4" fill="#2f5a3a"/>' +
+      /* the Park Av viaduct and the train */
+      '<rect x="0" y="200" width="400" height="60" fill="#3a3a40"/><path d="M0 252h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/><rect x="0" y="228" width="400" height="8" fill="#5a5a60"/>' + [40, 140, 240, 340].map(x => '<rect x="' + (x - 4) + '" y="236" width="8" height="24" fill="#5a5a60"/>').join("") +
+      '<g class="car" style="animation-duration:9s"><rect x="0" y="202" width="340" height="26" rx="5" fill="#d4d8de" stroke="#6b7280" stroke-width="1.5"/><rect x="0" y="222" width="340" height="4" fill="#0039a6"/>' + win + '</g>' +
+      '<rect x="138" y="8" width="124" height="22" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' + lbl(200, 23, "E 135 St", 11, "#fff") +
+      '<rect x="120" y="36" width="160" height="20" rx="3" fill="#14181d" opacity=".8"/>' + lbl(200, 50, "LINCOLN HOUSES · 5TH TO PARK", 9, "#fff") +
+      tag("MAX B", 24, 180, 28, AQUA, -6) + tag("GAIN GREENE", 230, 178, 18, GOLD, -4),
+      sky("g3", "#f2a96a", "#9fd0ea"));
   }
 
-  /* 4. The Harlem Meer at the top of Central Park: the boathouse-style Discovery Center, willows, the water in waves, a little boat drifting */
+  /* 4. Harlem River Park at E 135th: the esplanade rail, the Drive behind it, the Harlem River rolling in waves, the Bronx across */
   function meer() {
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    let rail = ""; for (let x = 0; x < 400; x += 16) rail += '<rect x="' + x + '" y="170" width="3" height="22" fill="#2b3038"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#g4)"/>' +
-      '<circle cx="320" cy="84" r="28" fill="#ffb15c" opacity=".9"/>' +
+      '<circle cx="320" cy="64" r="26" fill="#ffb15c" opacity=".9"/>' +
       '<g class="cld"><ellipse cx="0" cy="40" rx="44" ry="8" fill="#fff" opacity=".35"/></g>' +
-      /* Fifth Av skyline behind */
-      '<path d="M0 130h24v-36h30v20h26v-44h22v60h40v-24h30v24h60v-30h24v30h40v-50h22v50h82v40H0z" fill="#3a2a4a"/>' +
-      /* far bank, trees */
-      '<rect x="0" y="150" width="400" height="20" fill="#3e6b3a"/>' +
-      '<g><circle cx="30" cy="140" r="22" fill="#4f8a44"/><circle cx="380" cy="138" r="24" fill="#4f8a44"/><path d="M60 170q8 -40 20 -40q12 0 18 40z" fill="#6aa04a"/></g>' +
-      /* the Discovery Center: cream walls, grey slate roof, dark-red trim */
-      '<rect x="168" y="124" width="120" height="40" fill="#ece3cf"/><path d="M160 126l68 -28 68 28z" fill="#5a6470"/>' +
-      '<rect x="216" y="86" width="24" height="16" fill="#ece3cf"/><path d="M212 88l16 -12 16 12z" fill="#5a6470"/>' +
-      '<rect x="180" y="134" width="12" height="18" fill="#7a2a2a"/><rect x="202" y="134" width="12" height="18" fill="#7a2a2a"/><rect x="242" y="134" width="12" height="18" fill="#7a2a2a"/><rect x="264" y="134" width="12" height="18" fill="#7a2a2a"/>' +
-      '<rect x="160" y="162" width="136" height="6" fill="#6b4a2c"/>' +
-      /* the water, in waves */
-      '<rect x="0" y="168" width="400" height="92" fill="#2a6f8f"/>' +
-      '<path d="M296 176h40" stroke="#ffcf8a" stroke-width="3" opacity=".6"/><path d="M300 186h30" stroke="#ffcf8a" stroke-width="3" opacity=".45"/>' +
-      crest(200, "#3a86a8", "wv") + crest(222, "#2ec4b6", "wv wv2") + crest(244, "#1d5f7a", "wv") +
-      /* rowboat */
-      '<g class="glide"><path d="M70 190h50l-8 10h-34z" fill="#c4581c" stroke="#5a2508" stroke-width="1.5"/><path d="M90 190l14 -14" stroke="#e8dcc0" stroke-width="2"/></g>' +
-      tag("THE WAVE", 18, 34, 28, AQUA, -4),
+      /* the Bronx shore */
+      '<path d="M0 104h30v-26h36v14h40v-30h30v42h56v-20h44v20h30v-36h28v36h50v-18h56v18v14H0z" fill="#3a2a4a"/>' +
+      '<rect x="0" y="116" width="400" height="54" fill="#2a6f8f"/>' +
+      crest(132, "#3a86a8", "wv") + crest(150, "#2ec4b6", "wv wv2") +
+      '<g class="glide"><path d="M40 128h40l-6 7h-28z" fill="#e9ecef"/></g>' +
+      /* the esplanade */
+      '<rect x="0" y="168" width="400" height="4" fill="#2b3038"/>' + rail + '<rect x="0" y="190" width="400" height="22" fill="#b9b2a2"/>' +
+      '<path d="M0 200h400" stroke="#a49c8a" stroke-width="1"/>' + [80, 240].map(x => '<rect x="' + (x - 2) + '" y="140" width="4" height="50" fill="#2b3038"/><circle class="flk" cx="' + x + '" cy="138" r="5" fill="#fff1c8"/>').join("") +
+      /* the Drive */
+      '<rect x="0" y="212" width="400" height="48" fill="#1c1a1e"/><path d="M0 236h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="car"><rect x="0" y="218" width="44" height="14" rx="4" fill="#f2c200"/><circle cx="10" cy="232" r="4" fill="#111"/><circle cx="34" cy="232" r="4" fill="#111"/></g>' +
+      '<g class="car car2"><rect x="0" y="240" width="44" height="14" rx="4" fill="#d7263d"/><circle cx="10" cy="254" r="4" fill="#111"/><circle cx="34" cy="254" r="4" fill="#111"/></g>' +
+      lbl(200, 24, "HARLEM RIVER PARK", 16, "#fff") + lbl(200, 38, "THE ESPLANADE AT E 135TH", 9, "#ffe6c0") +
+      tag("THE WAVE", 18, 206, 26, AQUA, -4) + tag("MAX B", 290, 204, 22, GOLD, -3),
       sky("g4", "#1a1240", "#e0794a"));
   }
 

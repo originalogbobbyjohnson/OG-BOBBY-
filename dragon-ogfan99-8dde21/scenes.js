@@ -1,6 +1,6 @@
 /* Soundview opening scenes for the Drag-On game. Each one is a small animated SVG, 400 x 260.
    Cory Gunz's game already has Parkchester's Oval, Soundview Park and Orchard Beach, so these rooms use:
-   the 6 at Morrison Av-Soundview at sunset, the Bronxdale (Sotomayor) Houses courtyard jam, the pink silos of
+   the 6 at Elder Av at sunset (Morrison Av is Cory Gunz's stop), the Bronxdale (Sotomayor) Houses courtyard jam, the pink silos of
    Concrete Plant Park on the Bronx River, a Ruff Ryders ride-out under the Bruckner Expressway, and Soundview Av & Watson Av. */
 (function () {
   const W = 400, H = 260;
@@ -43,7 +43,7 @@
     '<path d="M0 -1c-5 0-6-5-4-9c1 2 2 3 3 2c0-4 2-6 4-8c0 4 3 6 3 9c1 4-1 6-6 6z" fill="#ffc23a"/></g></g>';
   const FIRE = "#ff5a1f", GOLD = "#ffc23a", GREEN6 = "#00933c", BRICK = "#8e3b2a", CHROME = "#c9d3dc";
 
-  /* 1. The 6 pulling into Morrison Av-Soundview, up on the el over Westchester Av, the sky burning orange */
+  /* 1. The 6 pulling into Elder Av, up on the el over Westchester Av, the Sotomayor (Bronxdale) Houses behind, the sky burning orange */
   function train() {
     let girders = "";
     for (let x = 0; x <= W; x += 50) girders += '<rect x="' + (x - 3) + '" y="58" width="6" height="128" fill="#2f3d33"/>';
@@ -53,6 +53,8 @@
     for (let x = 18; x < 280; x += 46) windows += '<rect x="' + x + '" y="128" width="30" height="22" rx="3" fill="#ffe2b8" opacity=".85"/>';
     let roofs = "";
     [[0, 30], [60, 44], [110, 22], [170, 52], [240, 34], [300, 48], [350, 28]].forEach(r => roofs += '<rect x="' + r[0] + '" y="' + (120 - r[1]) + '" width="54" height="' + r[1] + '" fill="#4a2a24"/>');
+    /* the seven-story brick blocks of the Sotomayor Houses */
+    [[-6, 62], [340, 60]].forEach(b => { roofs += '<rect x="' + b[0] + '" y="' + (120 - b[1]) + '" width="80" height="' + b[1] + '" fill="#7a3a2c"/>'; for (let r = 0; r < 4; r++) for (let c = 0; c < 5; c++) roofs += '<rect x="' + (b[0] + 6 + c * 15) + '" y="' + (120 - b[1] + 6 + r * 12) + '" width="8" height="6" fill="' + ((r + c) % 3 ? "#3a2420" : "#ffd98a") + '"/>'; });
     return svg(
       '<rect width="400" height="260" fill="url(#dg1)"/>' +
       '<circle cx="320" cy="96" r="26" fill="#ffd27a" opacity=".9"/>' +
@@ -65,7 +67,7 @@
       /* station sign */
       '<rect x="62" y="64" width="276" height="34" rx="4" fill="#111"/>' +
       '<rect x="62" y="64" width="276" height="4" fill="#fff"/>' +
-      '<text x="74" y="89" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">Morrison Av–Soundview</text>' +
+      '<text x="74" y="89" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">Elder Av</text>' +
       bullet(318, 82, "6", GREEN6) +
       '<g class="flk"><rect x="170" y="36" width="60" height="4" rx="2" fill="#fff7d6"/></g>' +
       /* the 6 train slides in and stops */
@@ -77,7 +79,7 @@
         bullet(272, 168, "6", GREEN6) +
       '</g>' +
       '<rect x="0" y="180" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="190" width="400" height="20" fill="#2f3d33"/>' + lattice +
+      '<rect x="0" y="190" width="400" height="20" fill="#2f3d33"/>' + lattice + tag("DRAG-ON", 30, 208, 20, FIRE, -3) + tag("FLAME ON", 250, 208, 16, GOLD, -4) +
       /* Westchester Av under the el, cars rolling */
       '<rect x="0" y="210" width="400" height="50" fill="#1c1512"/>' +
       '<path d="M0 236h400" stroke="#ffc23a" stroke-width="2" stroke-dasharray="14 12"/>' +

@@ -109,22 +109,26 @@
       sky("g2", "#5fa8e0", "#cfe9f7"));
   }
 
-  /* 3. The New York State Pavilion: the Tent of Tomorrow ring and the three saucer towers, the elevator riding up */
+  /* 3. The Queens Museum in the 1939 New York City Building: the long pale front with its tall square columns, and inside, the Panorama of the City of New York, the room-size model under its day-to-night lights */
   function pavilion() {
-    let posts = "";
-    for (let i = 0; i < 9; i++) posts += '<rect x="' + (184 + i * 24) + '" y="96" width="9" height="130" fill="#e9e4d6"/>';
-    const tower = (x, top, dw) => '<rect x="' + (x - 5) + '" y="' + top + '" width="10" height="' + (226 - top) + '" fill="#bdb6a8"/><rect x="' + (x + 7) + '" y="' + top + '" width="6" height="' + (226 - top) + '" fill="#a8a194"/>' +
-      '<ellipse cx="' + (x + 3) + '" cy="' + top + '" rx="' + dw + '" ry="8" fill="#d8d2c4" stroke="#8a8478" stroke-width="2"/><rect x="' + (x + 3 - dw * .7) + '" y="' + (top - 10) + '" width="' + (dw * 1.4) + '" height="8" rx="3" fill="#7fb4d8"/>';
-    return svg('<rect width="400" height="260" fill="url(#g3)"/>' + stars(8) +
-      tower(60, 40, 34) + tower(120, 78, 28) + tower(150, 116, 22) +
-      '<rect class="lift" x="66" y="200" width="8" height="12" rx="2" fill="' + GOLD + '"/>' +
-      /* the Tent of Tomorrow: ring of posts with the yellow roof rim */
-      posts + '<path d="M176 96h226" stroke="#f2c84b" stroke-width="12"/><path d="M176 104h226" stroke="#d9a62e" stroke-width="3"/>' +
-      '<path d="M182 104q100 30 220 0" stroke="#e9e4d6" stroke-width="1.5" fill="none" opacity=".6"/>' +
-      '<rect x="0" y="226" width="400" height="34" fill="#4c6b3a"/><path d="M0 230h400" stroke="#3a5a2a" stroke-width="3"/>' +
-      tree(330, 214, .8) + tree(370, 220, .7) +
-      tag("ROAD TO THE RICHES", 20, 252, 20, GOLD, -3),
-      sky("g3", "#f2a65a", "#f6d9a6"));
+    let cols = "";
+    for (let i = 0; i < 10; i++) cols += '<rect x="' + (56 + i * 30) + '" y="58" width="14" height="76" fill="#efe9da"/><path d="M' + (60 + i * 30) + ' 60v72M' + (66 + i * 30) + ' 60v72" stroke="#d8d0bc"/>';
+    /* the Panorama: a little city of blocks with the light sweeping across */
+    let model = "";
+    for (let i = 0; i < 46; i++) { const x = 30 + (i * 37) % 336, h = 8 + (i * 13) % 34; model += '<rect x="' + x + '" y="' + (228 - h) + '" width="' + (6 + i % 3 * 2) + '" height="' + h + '" fill="' + ["#d8d2c4", "#bfb8a8", "#e9e4d6"][i % 3] + '"/>'; }
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      /* the building */
+      '<rect x="40" y="48" width="320" height="96" fill="#e2dccb"/><rect x="34" y="40" width="332" height="12" fill="#cfc8b4"/>' + cols +
+      txt("QUEENS MUSEUM", 200, 50, 10, "#5a5444") + '<rect x="40" y="134" width="320" height="10" fill="#cfc8b4"/>' +
+      /* cut-away into the Panorama room */
+      '<rect x="20" y="152" width="360" height="80" fill="#34466a" stroke="#5a5444" stroke-width="4"/>' +
+      '<path d="M24 214q90-8 176 4t176-6v16H24z" fill="#4a8ab0"/>' + model +
+      '<g class="sway" style="animation-duration:6s;transform-origin:center top"><path d="M200 152l-70 80h140z" fill="#fff6c2" opacity=".3"/></g>' +
+            txt("THE PANORAMA OF NYC", 200, 166, 10, GOLD) +
+      '<rect x="0" y="232" width="400" height="28" fill="#4c6b3a"/>' + tree(16, 226, .7) + tree(384, 226, .7) +
+      '<rect x="8" y="8" width="150" height="22" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' + txt("FLUSHING MEADOWS", 83, 23, 10, "#fff") +
+      tag("KOOL G RAP", 246, 28, 22, PUR, -5) + tag("ROAD TO THE RICHES", 60, 254, 18, GOLD, -2),
+      sky("g3", "#8fc3ea", "#f6e2b8"));
   }
 
   /* 4. Corona Heights: the bocce courts of Spaghetti Park, a ball rolling, the lemon ice window */

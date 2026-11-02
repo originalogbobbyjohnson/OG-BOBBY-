@@ -88,7 +88,7 @@ window.CFG = {
   {
    "scene": "block",
    "t": "WELCOME TO FLATBUSH",
-   "x": "Church Av and Nostrand Av. This is Sha Stimuli's game.",
+   "x": "Bedford Av and Beverley Rd, by the old Sears. This is Sha Stimuli's game.",
    "sfx": "spray"
   }
  ],

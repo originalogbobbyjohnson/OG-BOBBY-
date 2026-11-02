@@ -257,15 +257,50 @@ function LIB(P) {
   S.glenview = () => svg('<rect width="400" height="260" fill="url(#g3)"/>' + palisades(150) + water(160, "#4a7aa0") + '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' +
     '<rect x="110" y="90" width="150" height="120" fill="#8a7e6a"/><path d="M100 90h170l-30-30h-110z" fill="#3a3a44"/><rect x="230" y="40" width="44" height="170" fill="#9a8e7a"/><path d="M224 40h56l-28-30z" fill="#3a3a44"/>' +
     wins(124, 104, 4, 2, 32, 46, 16, 28, "#ffe6a8") + wins(242, 56, 1, 3, 0, 40, 20, 26, "#ffe6a8") + '<g class="slideL"><path d="M0 178h40l-6 6H6z" fill="#fff"/><path d="M18 178v-20l12 18z" fill="#fff"/></g>' + tag("GLENVIEW", 20, 246, 22, A, -3), sky("g3", "#ff9a6a", "#8fc3ea"));
+  /* ---------- Azealia Banks: 125th and St. Nicholas ---------- */
+  /* 125 St on the A/B/C/D from the stair end: the St. Nicholas Av exit up to her corner, a FANTASEA mermaid poster on the wall, the train pulling in */
+  S.azStation = () => {
+    const lines = [["A", "#0039a6"], ["B", "#ff6319"], ["C", "#0039a6"], ["D", "#ff6319"]];
+    let tiles = ""; for (let y = 34; y < 140; y += 10) tiles += '<path d="M0 ' + y + 'h290" stroke="#d8d5c8" stroke-width="1"/>'; for (let x = 0; x < 290; x += 14) tiles += '<path d="M' + x + ' 30v24M' + x + ' 76v64" stroke="#d8d5c8" stroke-width="1"/>';
+    let steps = ""; for (let i = 0; i < 10; i++) steps += '<rect x="' + (296 + i * 7) + '" y="' + (182 - i * 15) + '" width="' + (104 - i * 7) + '" height="5" fill="#9a958a"/>';
+    let scales = ""; for (let r = 0; r < 3; r++) for (let c = 0; c < 2; c++) scales += '<path d="M' + (248 + c * 8 + (r % 2) * 4) + ' ' + (96 + r * 6) + 'q4 5 8 0" stroke="#bff4ff" stroke-width="1.2" fill="none"/>';
+    return svg('<rect width="400" height="260" fill="#f1efe6"/>' + tiles + '<rect x="0" y="54" width="290" height="22" fill="#6a3a8a"/><path d="M0 58h290M0 72h290" stroke="#fff" stroke-width="1.5" opacity=".6"/>' +
+      '<rect x="0" y="0" width="400" height="30" fill="#2a2e34"/>' + stSign(118, 82, "125 St", lines) +
+      /* FANTASEA poster: a mermaid tail in the waves, no face */
+      '<rect x="222" y="80" width="64" height="48" fill="#0d3a5a" stroke="#111" stroke-width="2"/>' +
+      '<g class="bob"><path d="M246 114q-8-12 2-22q10-6 14 4q2 8-4 14l8 8-10-2-4 6z" fill="#3fb8a0"/>' + scales + '<circle cx="262" cy="90" r="5" fill="' + A + '"/></g>' +
+      '<g><path d="M222 114q8-5 16 0t16 0t16 0t16 0v14h-64z" fill="#2a8ab0"/></g>' + txt("FANTASEA", 254, 125, 9, "#fff") +
+      /* the stair up with daylight */
+      '<rect x="290" y="30" width="110" height="156" fill="#f6e7b8"/>' + steps + '<path d="M292 186L400 50" stroke="#2a2a2a" stroke-width="3"/>' +
+      '<rect x="294" y="34" width="102" height="34" rx="3" fill="#111"/>' + txt("EXIT ↑ St Nicholas Av", 345, 48, 8, "#fff") + txt("& W 125 St", 345, 61, 9, C) +
+      '<g class="anim-train">' + subCar(-90, 128, 370, "A", "#0039a6", "#6a3a8a") + '</g><rect x="0" y="186" width="290" height="28" fill="#111"/>' +
+      '<rect x="0" y="214" width="400" height="8" fill="#eab308"/><rect x="0" y="222" width="400" height="38" fill="#8a8578"/>' + tag("AZEALIA", 60, 252, 24, A, -4) + tag("212", 250, 252, 26, B, -6));
+  };
+  /* LaGuardia High School, Amsterdam Av at W 65th: the long gray concrete performing-arts school behind Lincoln Center, the big glass entry, music drifting out */
+  S.laguardia = () => {
+    let ribbon = ""; for (let r = 0; r < 4; r++) ribbon += '<rect x="20" y="' + (54 + r * 30) + '" width="360" height="12" fill="#2f4050"/>' + [0, 1, 2, 3, 4, 5, 6, 7, 8].map(i => '<rect x="' + (24 + i * 40) + '" y="' + (55 + r * 30) + '" width="30" height="10" fill="' + ((i + r) % 4 ? "#7fa8c4" : "#ffe6a8") + '" opacity=".85"/>').join("");
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      '<rect x="20" y="36" width="360" height="200" fill="#b5b2aa"/>' + [0, 1, 2, 3, 4, 5, 6, 7].map(i => '<path d="M20 ' + (40 + i * 26) + 'h360" stroke="#a6a39b" stroke-width="1"/>').join("") + ribbon +
+      '<rect x="16" y="30" width="368" height="8" fill="#8f8c84"/>' +
+      /* the glass entry */
+      '<path d="M130 236V170l70-24 70 24v66z" fill="#cfe6ff" opacity=".85"/>' + [150, 175, 200, 225, 250].map(x => '<path d="M' + x + ' 236V' + (x < 200 ? 170 - (x - 130) * .34 : 146 + (x - 200) * .34) + '" stroke="#5a6070" stroke-width="2"/>').join("") +
+      '<path d="M130 170l70-24 70 24" stroke="#5a6070" stroke-width="3" fill="none"/>' +
+      '<rect x="80" y="178" width="40" height="58" fill="#9a978f"/><rect x="280" y="178" width="40" height="58" fill="#9a978f"/>' +
+      '<rect x="64" y="154" width="70" height="20" fill="#1a1a22"/>' + txt("LAGUARDIA", 99, 168, 10, "#fff") +
+      '<rect x="266" y="154" width="86" height="20" fill="#1a1a22"/>' + txt("HIGH SCHOOL", 309, 168, 10, "#fff") +
+      txt("AMSTERDAM AV · W 65 ST", 200, 14, 11, "#1a1a22") + txt("MUSIC & ART AND PERFORMING ARTS", 200, 27, 9, "#2a3a4a") +
+      [0, 1, 2].map(i => '<text class="rise r' + (i + 1) + '" x="' + (176 + i * 22) + '" y="196" font-size="16" fill="' + [A, B, C][i] + '">' + (i % 2 ? "&#9835;" : "&#9834;") + '</text>').join("") +
+      street(236, false) + car(0, 230, C) + car(0, 230, "#ffd34d", "slideL"), sky("g3", "#9fcff2", "#f2e2c8"));
+  };
   S.corner = corner; S.tag = tag;
   return S;
 }
 
   const P = {"c1":"#ff8a5b","c2":"#5ad1e8","c3":"#c9a4ff"}, L = LIB(P);
   window.SCENES = {
-    station: () => L.stUnder("125 St", [["A","#0039a6"],["B","#ff6319"],["C","#0039a6"],["D","#ff6319"]], "#6a3a8a", "212"),
+    station: () => L.azStation(),
     theresa: () => L.theresa(),
-    meer: () => L.meer(),
+    meer: () => L.laguardia(),
     rink: () => L.lasker(),
     block: () => L.corner(["#0d1022", "#2a3a4a"], "W 125 St", "St Nicholas Av", L.tag("AZEALIA BANKS", 26, 124, 25, P.c1, -7) + L.tag("FANTASEA", 40, 156, 22, P.c2, -5) + L.tag("212", 30, 188, 24, P.c3, -3) + L.tag("HARLEM", 120, 212, 20, "#f6efdc", -2))
   };

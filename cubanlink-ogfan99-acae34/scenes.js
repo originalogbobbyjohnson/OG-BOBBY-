@@ -139,36 +139,6 @@
       sky("g3", "#0e1426", "#4a4466"));
   }
 
-  /* 4. The casita: a little wooden house painted bright, the Cuban flag flying, a dominoes game on the folding table, the radio playing */
-  function casita() {
-    let lot = "";
-    for (let x = 0; x < 400; x += 8) lot += '<path d="M' + x + ' 210l3-7 3 7" fill="#3c7a32"/>';
-    return svg(
-      '<rect width="400" height="260" fill="url(#g4)"/>' + stars(12) +
-      /* tenement walls on both sides */
-      '<rect x="0" y="40" width="70" height="180" fill="#5a2e26"/><rect x="330" y="30" width="70" height="190" fill="#4a2620"/>' +
-      '<rect class="flk" x="14" y="60" width="14" height="18" fill="#ffd27a"/><rect x="40" y="96" width="14" height="18" fill="#24130f"/><rect class="flk flk2" x="350" y="70" width="14" height="18" fill="#ffd27a"/><rect x="374" y="110" width="14" height="18" fill="#24130f"/>' +
-      /* the casita */
-      '<rect x="110" y="104" width="180" height="96" fill="#f2c14e"/>' +
-      (function () { let p = ""; for (let x = 110; x < 290; x += 12) p += '<path d="M' + x + ' 104v96" stroke="#d9a33a" stroke-width="1.2"/>'; return p; })() +
-      '<path d="M98 108l102-50 102 50z" fill="#d94a3a"/><path d="M98 108h204" stroke="#8a2a1a" stroke-width="3"/>' +
-      /* porch with turquoise railing */
-      '<rect x="100" y="200" width="200" height="8" fill="#8a5a2a"/>' +
-      (function () { let r = ""; for (let x = 104; x <= 296; x += 12) r += '<rect x="' + x + '" y="176" width="3" height="24" fill="#2ab7a9"/>'; return r + '<rect x="100" y="174" width="200" height="4" fill="#2ab7a9"/>'; })() +
-      '<rect x="182" y="126" width="36" height="48" fill="#2ab7a9"/><rect x="128" y="124" width="34" height="28" fill="#ffe6a1" stroke="#2ab7a9" stroke-width="3"/><rect x="238" y="124" width="34" height="28" fill="#ffe6a1" stroke="#2ab7a9" stroke-width="3"/>' +
-      /* flagpole with the Cuban flag */
-      '<rect x="296" y="30" width="3" height="80" fill="#c9ced6"/>' + cubaFlag(299, 32, 48) +
-      '<rect x="0" y="208" width="400" height="52" fill="#3b2a1e"/>' + lot.replace(/210/g, "214").replace(/203/g, "207") +
-      /* folding table with dominoes */
-      '<rect x="40" y="214" width="120" height="8" fill="#e8e4da"/><path d="M50 222l-8 30M150 222l8 30" stroke="#7a7a80" stroke-width="3"/>' +
-      (function () { let d = ""; [[52, 206], [66, 206], [80, 206], [96, 206], [112, 206], [128, 206]].forEach(([x, y], i) => { d += '<rect x="' + x + '" y="' + y + '" width="12" height="7" rx="1" fill="#f8f6f0" stroke="#222" stroke-width=".8"/><path d="M' + (x + 6) + ' ' + y + 'v7" stroke="#222" stroke-width=".6"/><circle cx="' + (x + 3) + '" cy="' + (y + 3.5) + '" r=".9" fill="#222"/><circle cx="' + (x + 9) + '" cy="' + (y + 3.5) + '" r=".9" fill="#222"/>'; }); return d; })() +
-      '<g class="slap"><rect x="140" y="194" width="12" height="7" rx="1" fill="#f8f6f0" stroke="#222" stroke-width=".8"/><path d="M146 194v7" stroke="#222" stroke-width=".6"/></g>' +
-      /* radio with notes */
-      '<rect x="226" y="214" width="44" height="26" rx="4" fill="#222"/><circle cx="238" cy="227" r="7" fill="#555"/><circle cx="258" cy="227" r="7" fill="#555"/><rect x="232" y="208" width="32" height="4" fill="#888"/>' +
-      '<text class="nt" x="240" y="204" font-size="16" fill="' + GOLD + '">♪</text><text class="nt nt2" x="256" y="200" font-size="16" fill="' + CRED + '">♫</text><text class="nt nt3" x="226" y="202" font-size="14" fill="#9ff0ff">♪</text>' +
-      '',
-      sky("g4", "#0c1430", "#2c2a5a"));
-  }
 
   /* 5. E 167th St and Prospect Av ("167 Street between Union and Prospect"): green street signs, streetlight, the tag wall */
   function corner() {
@@ -188,5 +158,70 @@
       sky("g5", "#0a0a1c", "#3a2238"));
   }
 
-  window.SCENES = { train: train, crotona: crotona, morris: morris, casita: casita, corner: corner };
+  /* ---- redrawn landmark scenes (OG FAN 99 landmark pass): small shared helpers, prefixed L ---- */
+  const Lcss = '<style>' +
+    '@keyframes lmCar{from{transform:translateX(-170px)}to{transform:translateX(480px)}}.lm-car{animation:lmCar 8s linear infinite}' +
+    '@keyframes lmCarB{from{transform:translateX(480px)}to{transform:translateX(-170px)}}.lm-carb{animation:lmCarB 10s linear infinite}' +
+    '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.lm-bob{animation:lmBob 1.6s ease-in-out infinite}' +
+    '@keyframes lmFlk{0%,100%{opacity:1}45%{opacity:.7}50%{opacity:.3}55%{opacity:.95}}.lm-flk{animation:lmFlk 2.3s infinite}' +
+    '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{animation:lmSpin 1.8s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmRise{0%{transform:translateY(0) scale(.8);opacity:0}20%{opacity:.85}100%{transform:translateY(-70px) scale(1.4);opacity:0}}.lm-rise{animation:lmRise 4s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{animation:lmSway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}' +
+    '@keyframes lmBlk{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blk{animation:lmBlk 1s steps(1) infinite}' +
+    '@keyframes lmFlag{0%,100%{transform:skewY(0)}50%{transform:skewY(-6deg)}}.lm-flag{animation:lmFlag 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}' +
+    '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(-30px,230px) rotate(280deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}' +
+    '@keyframes lmCld{from{transform:translateX(-120px)}to{transform:translateX(470px)}}.lm-cld{animation:lmCld 30s linear infinite}' +
+    '@keyframes lmPls{0%,100%{opacity:.35}50%{opacity:1}}.lm-pls{animation:lmPls 2.2s ease-in-out infinite}' +
+    '@keyframes lmWav{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}.lm-wav{animation:lmWav 3s ease-in-out infinite}' +
+    '@keyframes lmBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}.lm-beat{animation:lmBeat .7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmNote{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-60px);opacity:0}}.lm-note{animation:lmNote 3s linear infinite}' +
+    '.lmd1{animation-delay:-1s}.lmd2{animation-delay:-2s}.lmd3{animation-delay:-3s}.lmd4{animation-delay:-4.5s}.lmd5{animation-delay:-6s}' +
+    '</style>';
+  const LF = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
+  const LT = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" ' + LF + ' font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LA = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" font-family="Anton, Impact, sans-serif" font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LR = (x, y, w, h, fill, extra) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + fill + '"' + (extra || "") + '/>';
+  const Lbul = (x, y, l, col, r) => { r = r || 11; return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/>' + LT(l, x, y + r * 0.42, r * 1.22, col === "#fccc0a" ? "#000" : "#fff"); };
+  const Lpill = (x, y, l, col) => { const w = l.length * 8 + 14; return '<rect x="' + (x - w / 2) + '" y="' + (y - 10) + '" width="' + w + '" height="20" rx="10" fill="' + col + '"/>' + LT(l, x, y + 4.5, 11, "#fff"); };
+  /* black MTA-style station sign: lines = [["B","#ff6319"],...]; a long name like "MN" draws a pill */
+  const Lsign = (x, y, w, name, lines, size) => { let b = "", bx = x + w - 18; for (let i = lines.length - 1; i >= 0; i--) { const l = lines[i]; if (l[0].length > 1) { b += Lpill(bx - 10, y + 17, l[0], l[1]); bx -= l[0].length * 8 + 22; } else { b += Lbul(bx, y + 17, l[0], l[1], 10); bx -= 24; } }
+    return LR(x, y, w, 32, "#111", ' rx="3"') + LR(x, y, w, 4, "#fff") + LT(name, x + 10, y + 23, size || 15, "#fff", "start") + b; };
+  /* green NYC street sign blade */
+  const Lblade = (x, y, t, w) => { w = w || t.length * 7.2 + 20; return LR(x, y, w, 19, "#0f6b3a", ' rx="2" stroke="#fff" stroke-width="1.5"') + LT(t, x + w / 2, y + 14, 12, "#fff"); };
+  /* two green signs on a pole at x, crossing */
+  const Lpole = (x, y, a, b) => { const wa = a.length * 7.2 + 20, wb = b.length * 7.2 + 20; return LR(x, y, 6, 236 - y, "#2a3138") + Lblade(x + 3 - wa / 2, y + 6, a) + Lblade(x + 3 - wb / 2, y + 30, b) + LR(x - 2, y - 4, 10, 6, "#2a3138"); };
+  const Lbrick = (x, y, w, h, base, mortar) => { let s = LR(x, y, w, h, base); for (let yy = y + 6; yy < y + h; yy += 6) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + mortar + '" stroke-width=".8"/>'; return s; };
+  const Lwin = (x, y, cols, rows, dx, dy, w, h, lit, dark) => { let s = ""; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const on = ((r * 7 + c * 3) % 5) < 2; s += '<rect x="' + (x + c * dx) + '" y="' + (y + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + (on ? lit : dark) + '"' + (on && (r + c) % 4 === 0 ? ' class="lm-flk"' : '') + '/>'; } return s; };
+  const Lstars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".75"/>'; return s; };
+  const Lcloud = (x, y, s, cls) => '<g class="lm-cld ' + (cls || "") + '"><g transform="translate(' + x + ' ' + y + ') scale(' + (s || 1) + ')" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="22" ry="9"/><ellipse cx="14" cy="-6" rx="14" ry="9"/><ellipse cx="-12" cy="-4" rx="11" ry="7"/></g></g>';
+  const Ltree = (x, y, r, col, cls) => '<g class="lm-sway ' + (cls || "") + '">' + LR(x - 3, y, 6, r * 1.3, "#5a3d24") + '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/><circle cx="' + (x - r * .5) + '" cy="' + (y + r * .3) + '" r="' + r * .7 + '" fill="' + col + '" opacity=".85"/><circle cx="' + (x + r * .55) + '" cy="' + (y + r * .25) + '" r="' + r * .65 + '" fill="' + col + '" opacity=".9"/></g>';
+  /* faceless figure: head + body, x = centre, y = feet */
+  const Lman = (x, y, body, cls, cap) => '<g' + (cls ? ' class="' + cls + '"' : "") + '>' + '<rect x="' + (x - 7) + '" y="' + (y - 30) + '" width="14" height="22" rx="5" fill="' + body + '"/><rect x="' + (x - 6) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/><rect x="' + (x + 1) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/>' +
+    '<circle cx="' + x + '" cy="' + (y - 37) + '" r="7" fill="#5a3a26"/>' + (cap ? '<path d="M' + (x - 8) + ' ' + (y - 39) + 'q8-10 16 0z" fill="' + cap + '"/><rect x="' + (x - 1) + '" y="' + (y - 41) + '" width="12" height="3" fill="' + cap + '"/>' : '') + '</g>';
+  /* subway car (stainless) seen from the side, x,y top-left */
+  const Lcar = (x, y, w, l, col, band) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="52" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>'; for (let i = x + 16; i < x + w - 60; i += 40) s += '<rect x="' + i + '" y="' + (y + 9) + '" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    return s + LR(x, y + 33, w, 5, band || col) + Lbul(x + w - 22, y + 18, l, col, 10) + '<circle cx="' + (x + w - 8) + '" cy="' + (y + 44) + '" r="3.5" fill="#fff6c2"/>'; };
+  const Lcab = (x, y) => '<rect x="' + x + '" y="' + (y + 8) + '" width="70" height="20" rx="5" fill="#f7c600"/><path d="M' + (x + 12) + ' ' + (y + 8) + 'l8-10h28l10 10z" fill="#f7c600"/><path d="M' + (x + 22) + ' ' + y + 'h10v8h-14zM' + (x + 35) + ' ' + y + 'h10l7 8h-17z" fill="#bfe0ff"/>' +
+    LR(x + 26, y - 6, 18, 6, "#fff", ' rx="1"') + LT("TAXI", x + 35, y - 1.5, 5, "#111") + '<path d="M' + x + ' ' + (y + 17) + 'h70" stroke="#111" stroke-width="1" stroke-dasharray="3 3"/><circle cx="' + (x + 15) + '" cy="' + (y + 28) + '" r="6" fill="#111"/><circle cx="' + (x + 55) + '" cy="' + (y + 28) + '" r="6" fill="#111"/>';
+  const Lauto = (x, y, col) => '<rect x="' + x + '" y="' + (y + 6) + '" width="56" height="16" rx="5" fill="' + col + '"/><rect x="' + (x + 11) + '" y="' + (y - 2) + '" width="32" height="11" rx="3" fill="#cfe6ff"/><circle cx="' + (x + 13) + '" cy="' + (y + 22) + '" r="5" fill="#111"/><circle cx="' + (x + 43) + '" cy="' + (y + 22) + '" r="5" fill="#111"/>';
+  /* turntable from above at an angle */
+  const Ldeck = (cx, cy, r, lab) => '<rect x="' + (cx - r - 12) + '" y="' + (cy - r * .45 - 10) + '" width="' + (r * 2 + 30) + '" height="' + (r * .9 + 20) + '" rx="4" fill="#2a2a30"/><g transform="translate(' + cx + ' ' + cy + ') scale(1 .42)"><g class="lm-spin"><circle r="' + r + '" fill="#0c0c0e"/><circle r="' + r * .72 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .5 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .3 + '" fill="' + lab + '"/><rect x="-2" y="' + (-r * .3) + '" width="4" height="' + r * .2 + '" fill="#fff"/></g></g><path d="M' + (cx + r + 6) + ' ' + (cy - r * .4) + 'l-8 ' + r * .5 + '" stroke="#c9ced6" stroke-width="3"/>';
+  /* 3. The old 41st Precinct, "Fort Apache", 1086 Simpson St: the gray stone station house by his Simpson St stop, green lamps at the door */
+  function LM_casita() {
+    let rust = ""; for (let y = 96; y < 230; y += 10) rust += '<path d="M90 ' + y + 'h220" stroke="#8a8c88" stroke-width="1"/>';
+    const lamp = (x, d) => LR(x - 2, 176, 4, 26, "#1a2a1a") + '<g class="lm-pls ' + d + '"><circle cx="' + x + '" cy="170" r="9" fill="#3fbf6a"/></g><circle cx="' + x + '" cy="170" r="9" fill="none" stroke="#1a3a1a" stroke-width="2"/>' + LT("41", x, 173, 7, "#fff");
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lstars(12) + '<circle cx="350" cy="34" r="12" fill="#fff1d6"/>' +
+      Lbrick(0, 110, 84, 126, "#7a3a2c", "#6a2e22") + Lwin(10, 122, 3, 3, 24, 32, 14, 20, "#ffd77a", "#2a1a14") + Lbrick(316, 100, 84, 136, "#8a5a44", "#7a4a36") + Lwin(326, 112, 3, 4, 24, 30, 14, 18, "#ffd77a", "#2a1a14") +
+      /* the station house */
+      LR(90, 90, 220, 146, "#a8aaa4") + rust + LR(84, 80, 232, 12, "#8a8c88") + LT("41ST PRECINCT · NYPD", 200, 90, 9, "#f4f2ea") + LR(80, 74, 240, 8, "#6a6c68") +
+      [110, 150, 230, 270].map(x => LR(x, 100, 20, 28, "#2a3440") + LR(x, 140, 20, 28, "#2a3440") + LR(x + 3, 103, 14, 12, "#ffd77a", ' opacity=".6"')).join("") +
+      [106, 146, 186, 226, 266].map(x => '<path d="M' + x + ' 236v-36q14-18 28 0v36z" fill="#2a3440" stroke="#d8d8d0" stroke-width="2"/>').join("") +
+      LR(186, 200, 28, 36, "#3a2a1a") + lamp(176, "") + lamp(224, "lmd1") +
+      LR(0, 236, 400, 24, "#2a2a30") + '<path d="M0 248h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' + '<g class="lm-car">' + Lauto(0, 226, "#3b6cff") + '</g>' +
+      LR(80, 6, 240, 34, "#111", ' rx="3"') + LT("“FORT APACHE” · THE OLD 41ST", 200, 21, 11, "#ffb347") + LT("1086 SIMPSON ST · BY THE SIMPSON ST STOP", 200, 34, 8, "#fff") +
+      tag("CUBAN LINK", 8, 104, 20, "#ffb347", -5) + tag("LA CALLE", 318, 92, 14, "#ff3b4a", -4),
+      sky("sk", "#141a36", "#4a3a5a"));
+  }
+
+  window.SCENES = { train: train, crotona: crotona, morris: morris, casita: LM_casita, corner: corner };
 })();

@@ -130,38 +130,30 @@
       sky("g3", "#5a8ac0", "#f0c890"));
   }
 
-  /* 4. Jamaica Station: the AirTrain gliding across its concrete guideway over the LIRR tracks */
+  /* 4. Prospect Cemetery at 159th St and Beaver Rd (1668): Queens' oldest burying ground, the little Chapel of the Sisters, old slate stones, leaves coming down, the LIRR going by behind */
   function station() {
-    let piers = '';
-    for (let x = 30; x < 400; x += 90) piers += '<path d="M' + (x - 8) + ' 132h16l-3 60h-10z" fill="#a9aaa4"/>';
-    let lirrWin = '';
-    for (let x = 10; x < 340; x += 22) lirrWin += '<rect x="' + x + '" y="198" width="14" height="10" rx="1" fill="#dff1ff" opacity=".85"/>';
-    let bldg = '';
-    [[0, 40, 50], [50, 60, 40], [300, 30, 46], [346, 56, 54]].forEach(([x, y, w]) => {
-      bldg += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (130 - y) + '" fill="#2a3456"/>';
-      for (let r = y + 8; r < 124; r += 12) for (let c = x + 5; c < x + w - 6; c += 10) if ((r + c) % 3) bldg += '<rect x="' + c + '" y="' + r + '" width="5" height="6" fill="#ffd98a" opacity=".85"/>';
-    });
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    let stones = ""; [[30, 206, -4], [64, 214, 3], [96, 202, -2], [292, 210, 4], [326, 200, -3], [360, 214, 2], [126, 222, 5], [270, 224, -5]].forEach(([x, y, r]) =>
+      stones += '<g transform="rotate(' + r + ' ' + x + ' ' + y + ')"><path d="M' + (x - 8) + ' ' + y + 'v-18q8-10 16 0v18z" fill="#5a6068"/><path d="M' + (x - 5) + ' ' + (y - 12) + 'h10" stroke="#454a52" stroke-width="1"/></g>');
+    let fence = ""; for (let x = 0; x <= 400; x += 8) fence += '<path d="M' + x + ' 248v-22" stroke="#1b1b22" stroke-width="2"/>';
+    let leaves = ""; [50, 140, 250, 330].forEach((x, i) => leaves += '<path class="lf' + (i % 3 ? ' lf' + (i % 3 + 1) : '') + '" d="M' + x + ' 30q5-6 10 0-5 6-10 0z" fill="' + ["#d0702a", GOLD, "#a8402a", "#d08a2a"][i] + '"/>');
+    const tree = (x, y, r, c) => '<rect x="' + (x - 4) + '" y="' + y + '" width="8" height="' + (212 - y) + '" fill="#3b2418"/><circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + c + '"/><circle cx="' + (x - r * .6) + '" cy="' + (y + 8) + '" r="' + r * .7 + '" fill="' + c + '"/>';
+    let win = ""; for (let x = 10; x < 260; x += 36) win += '<rect x="' + x + '" y="98" width="22" height="9" rx="2" fill="#dfeaf5"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g4)"/>' + stars(16) + bldg +
-      /* the glass station hall */
-      '<path d="M120 130V70l80-22 80 22v60z" fill="#4a7aa8" opacity=".55" stroke="#9ec6e8" stroke-width="2"/>' +
-      '<path d="M140 130V66M160 130V60M180 130V54M200 130V48M220 130V54M240 130V60M260 130V66" stroke="#9ec6e8" stroke-width="1" opacity=".7"/>' +
-      /* concrete guideway */
-      '<rect x="0" y="120" width="400" height="14" fill="#c9cac4"/><rect x="0" y="134" width="400" height="4" fill="#8a8b86"/>' + piers +
-      /* AirTrain car */
-      '<g class="air"><rect x="0" y="94" width="110" height="26" rx="8" fill="#eef1f4" stroke="#7a8590" stroke-width="1.5"/>' +
-        '<rect x="0" y="110" width="110" height="4" fill="#2f5d9a"/>' +
-        '<rect x="10" y="99" width="16" height="9" rx="1" fill="#2a3a4a"/><rect x="32" y="99" width="16" height="9" rx="1" fill="#2a3a4a"/><rect x="54" y="99" width="16" height="9" rx="1" fill="#2a3a4a"/><rect x="76" y="99" width="16" height="9" rx="1" fill="#2a3a4a"/>' +
-        '<circle cx="104" cy="112" r="2.5" fill="#fff6c2"/></g>' +
-      /* LIRR tracks + silver train below, heading the other way */
-      '<rect x="0" y="192" width="400" height="30" fill="#1d1f24"/>' +
-      '<g class="rr"><rect x="0" y="194" width="350" height="22" rx="4" fill="#c9ced6" stroke="#6b7280" stroke-width="1.5"/>' + lirrWin +
-        '<rect x="0" y="210" width="350" height="3" fill="#2f5d9a"/><rect x="0" y="213" width="350" height="2" fill="#6b3fa0"/></g>' +
-      '<rect x="0" y="222" width="400" height="4" fill="#4d4f54"/><rect x="0" y="226" width="400" height="34" fill="#15171c"/>' +
-      '<rect x="389" y="160" width="2" height="32" fill="#333"/><circle class="blk" cx="390" cy="158" r="3" fill="#36d97f"/>' +
-      '<rect x="20" y="232" width="150" height="20" rx="3" fill="#111"/>' +
-      '<text x="95" y="246" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">Jamaica Station</text>',
-      sky("g4", "#0a1230", "#3a4a80"));
+      '<rect width="400" height="260" fill="url(#g4)"/>' +
+      /* the LIRR embankment behind */
+      '<rect x="0" y="112" width="400" height="10" fill="#6a6a62"/><g class="rr"><rect x="0" y="92" width="300" height="20" rx="4" fill="#cfd5dc" stroke="#6b7280"/><rect x="0" y="106" width="300" height="3" fill="' + ACE + '"/>' + win + '</g>' +
+      '<rect x="0" y="122" width="400" height="138" fill="#5a8a3a"/>' +
+      tree(40, 120, 30, "#b8682a") + tree(366, 116, 32, "#c8902a") +
+      /* the Chapel of the Sisters: small brownstone chapel, steep roof, bell gable, pointed windows */
+      '<rect x="150" y="128" width="100" height="72" fill="#8a5a46"/><path d="M142 130l58-46 58 46z" fill="#3e3a3a"/>' +
+      '<rect x="192" y="66" width="16" height="22" fill="#8a5a46"/><path d="M188 68l12-12 12 12z" fill="#3e3a3a"/><path class="blk" d="M196 72h8v10h-8z" fill="#2a1a10"/>' +
+      '<path d="M188 200v-30q12-16 24 0v30z" fill="#3a2418"/>' + [162, 230].map(x => '<path d="M' + x + ' 182v-26q6-10 12 0v26z" fill="#ffd98a" class="flk"/>').join("") +
+      '<circle cx="200" cy="148" r="8" fill="#2a3a5a" stroke="#c9b28a" stroke-width="2"/>' +
+      stones + leaves +
+      '<rect x="0" y="236" width="400" height="24" fill="#4a4a4a"/>' + fence + '<path d="M0 230h400" stroke="#1b1b22" stroke-width="2"/>' +
+      lbl(200, 22, "PROSPECT CEMETERY · 1668", 14, "#1b2430") + lbl(200, 36, "CHAPEL OF THE SISTERS · 159TH ST &amp; BEAVER RD", 8, "#1b2430"),
+      sky("g4", "#9ec8ea", "#f2dcb8"));
   }
 
   /* 5. Parsons Blvd and Archer Av: street signs, the subway entrance globe, the tag wall */

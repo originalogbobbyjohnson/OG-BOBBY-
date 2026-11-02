@@ -101,21 +101,30 @@
       sky("g2", "#0e0c26", "#4a2a5a"));
   }
 
-  /* 3. The opera house on Lafayette Av in Fort Greene: cream terracotta and buff brick, tall arched windows, colored tile trim, marquee bulbs chasing */
+  /* 3. Album world, Heavy Mental (1998): the prophet's library, stained-glass light falling across the shelves, scrolls on the table, candles flickering */
   function opera() {
-    let bulbs = ""; for (let x = 108; x < 296; x += 10) bulbs += '<circle class="flk' + ((x / 10) % 2 ? " flk2" : "") + '" cx="' + x + '" cy="176" r="2.4" fill="#ffe7a8"/>';
-    let arches = ""; [128, 176, 224, 272].forEach(x => arches += '<path d="M' + (x - 16) + ' 150v-56q16-24 32 0v56z" fill="#2c3a4a" stroke="#c87a3a" stroke-width="3"/><path class="glw" d="M' + (x - 12) + ' 148v-50q12-18 24 0v50z" fill="#ffd98a" opacity=".5"/>');
+    const { svg, tag, T } = LM1;
+    let shelves = ""; for (let r = 0; r < 4; r++) { const y = 70 + r * 42; shelves += '<rect x="10" y="' + (y + 34) + '" width="110" height="5" fill="#4a2e1a"/><rect x="280" y="' + (y + 34) + '" width="110" height="5" fill="#4a2e1a"/>';
+      for (let k = 0; k < 13; k++) { const c = ["#7a2a3a", "#2a4a6a", "#5a4a1a", "#3a5a3a", "#6a3a6a"][(k + r) % 5]; shelves += '<rect x="' + (12 + k * 8.4) + '" y="' + (y + 8 + (k * 3) % 8) + '" width="7" height="' + (26 - (k * 3) % 8) + '" fill="' + c + '"/><rect x="' + (282 + k * 8.4) + '" y="' + (y + 6 + (k * 5) % 8) + '" width="7" height="' + (28 - (k * 5) % 8) + '" fill="' + c + '"/>'; } }
+    let glass = ""; const cols = ["#c9a4ff", "#f2c14e", "#5ee0d0", "#d7263d", "#2f6fdb"];
+    for (let r = 0; r < 5; r++) for (let k = 0; k < 4; k++) glass += '<rect x="' + (162 + k * 19) + '" y="' + (40 + r * 22) + '" width="18" height="21" fill="' + cols[(r + k * 2) % 5] + '" opacity=".85"/>';
+    const candle = (x, cls) => '<rect x="' + (x - 4) + '" y="196" width="8" height="18" fill="#f2ead8"/><g class="' + cls + '"><path d="M' + x + ' 182q6 8 0 14q-6-6 0-14z" fill="#ffd34d"/></g><circle cx="' + x + '" cy="190" r="14" fill="#ffd34d" opacity=".15"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' + stars(10) +
-      brick(80, 56, 240, 150, "#d8c09a", "#ccb38c") +
-      '<rect x="80" y="50" width="240" height="12" fill="#efe4cc"/><path d="M80 62h240" stroke="#3a7a8a" stroke-width="3"/><path d="M80 66h240" stroke="#c87a3a" stroke-width="2" stroke-dasharray="6 4"/>' +
-      '<path d="M150 50l50-22 50 22z" fill="#efe4cc" stroke="#b8a888" stroke-width="2"/><circle cx="200" cy="40" r="6" fill="#3a7a8a"/>' +
-      arches +
-      '<rect x="100" y="164" width="200" height="22" fill="#1d1d24"/>' + bulbs +
-      '<rect x="120" y="186" width="160" height="20" fill="#5a3a24"/><path d="M160 186v20M200 186v20M240 186v20" stroke="#efe4cc" stroke-width="2"/>' +
-      '<rect x="0" y="206" width="400" height="54" fill="#2a2a32"/><rect x="0" y="206" width="400" height="6" fill="#8a8a92"/>' +
-      tag("FORT GREENE", 14, 252, 22, PUR, -3) + tag("BLACK AUGUST", 240, 254, 20, TEAL, -5),
-      sky("g3", "#141436", "#6a3a6a"));
+      '<rect width="400" height="260" fill="#140c14"/>' +
+      /* the stained-glass window and its light */
+      '<path d="M160 140V58a40 40 0 0 1 80 0v82z" fill="#1a1020"/>' +
+      '<clipPath id="kp3c"><path d="M160 150V58a40 40 0 0 1 80 0v92z"/></clipPath><g clip-path="url(#kp3c)">' + glass + '</g>' +
+      '<path d="M160 150V58a40 40 0 0 1 80 0v92" fill="none" stroke="#2a1a1a" stroke-width="4"/><path d="M200 18v132M160 84h80" stroke="#2a1a1a" stroke-width="3"/>' +
+      '<g opacity=".14"><path class="lm-flk" d="M160 150h80l60 70H100z" fill="#c9a4ff"/></g>' +
+      shelves +
+      /* the table, scrolls and the open book */
+      '<rect x="110" y="214" width="180" height="10" fill="#5a3a22"/><rect x="120" y="224" width="8" height="36" fill="#4a2e1a"/><rect x="272" y="224" width="8" height="36" fill="#4a2e1a"/>' +
+      '<path d="M170 212q15-8 30 0q15-8 30 0v-14q-15-8-30 0q-15-8-30 0z" fill="#f2ead8"/><path d="M200 198v14" stroke="#c8b890"/>' +
+      '<rect x="240" y="204" width="34" height="9" rx="4" fill="#e2d2a8"/><circle cx="240" cy="208.5" r="5" fill="#c8a860"/><circle cx="274" cy="208.5" r="5" fill="#c8a860"/>' +
+      candle(140, "lm-flk") + candle(300, "lm-flk lm-f2") +
+      '<rect x="120" y="6" width="160" height="24" rx="3" fill="#0c060c" stroke="#f2c14e" stroke-width="2"/>' + T(200, 24, "HEAVY MENTAL · 1998", 13, "#f2c14e") +
+      tag("SUNZ OF MAN", 10, 252, 24, "#c9a4ff", -3),
+      "");
   }
 
   /* 4. Behind the stained glass: inside a Brooklyn church, the rose window glowing, light beams with dust drifting down, the pews */
@@ -147,6 +156,74 @@
       signs("Hanson Pl", "St Felix St"),
       sky("g5", "#0d0a22", "#2e2244"));
   }
+
+  /* LM1 helpers for the redrawn landmark rooms: same svg / sky / tag / bullet style as above, with their own little animations */
+  const LM1 = (function () {
+    const css = '<style>' +
+      '@keyframes lmDrift{from{transform:translateX(-90px)}to{transform:translateX(490px)}}.lm-drift{animation:lmDrift 24s linear infinite}.lm-d2{animation-delay:-12s}' +
+      '@keyframes lmCar{from{transform:translateX(-110px)}to{transform:translateX(510px)}}.lm-car{animation:lmCar 6s linear infinite}.lm-c2{animation-delay:-3s}' +
+      '@keyframes lmCarL{from{transform:translateX(510px)}to{transform:translateX(-110px)}}.lm-carL{animation:lmCarL 7.5s linear infinite}' +
+      '@keyframes lmFlick{0%,100%{opacity:1}45%{opacity:.75}50%{opacity:.3}55%{opacity:.9}}.lm-flk{animation:lmFlick 2.2s infinite}.lm-f2{animation-delay:-.8s}' +
+      '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{transform-box:fill-box;transform-origin:50% 0;animation:lmSway 3s ease-in-out infinite}' +
+      '.lm-swayb{transform-box:fill-box;transform-origin:50% 100%;animation:lmSway 3.6s ease-in-out infinite}.lm-s2{animation-delay:-1.5s}' +
+      '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.lm-bob{animation:lmBob 1.4s ease-in-out infinite}.lm-b2{animation-delay:-.7s}.lm-b3{animation-delay:-.35s}' +
+      '@keyframes lmRise{0%{transform:translate(0,0);opacity:1}80%{opacity:1}100%{transform:translate(14px,-150px);opacity:0}}.lm-rise{animation:lmRise 6s ease-in infinite}' +
+      '@keyframes lmBlink{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blink{animation:lmBlink 1s steps(1) infinite}.lm-k2{animation-delay:-.5s}' +
+      '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{transform-box:fill-box;transform-origin:50% 50%;animation:lmSpin 14s linear infinite}' +
+      '@keyframes lmFly{from{transform:translate(-80px,30px)}to{transform:translate(480px,-30px)}}.lm-fly{animation:lmFly 9s linear infinite}' +
+      '@keyframes lmLand{from{transform:translate(460px,-40px)}to{transform:translate(-120px,40px)}}.lm-land{animation:lmLand 10s linear infinite}' +
+      '@keyframes lmRip{0%,100%{transform:translateX(0)}50%{transform:translateX(-14px)}}.lm-rip{animation:lmRip 3s ease-in-out infinite}.lm-r2{animation-delay:-1.5s}' +
+      '@keyframes lmBoat{0%,100%{transform:translateX(0)}50%{transform:translateX(-60px)}}.lm-boat{animation:lmBoat 12s ease-in-out infinite}' +
+      '@keyframes lmWalk{from{transform:translateX(0)}to{transform:translateX(70px)}}.lm-walk{animation:lmWalk 5s ease-in-out infinite alternate}.lm-w2{animation-delay:-2.5s}' +
+      '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(30px,250px) rotate(300deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}.lm-l2{animation-delay:-2s}.lm-l3{animation-delay:-4s}' +
+      '@keyframes lmDrop{0%{transform:translateY(0)}100%{transform:translateY(118px)}}.lm-drop{animation:lmDrop 2.6s cubic-bezier(.5,0,.9,.6) infinite}' +
+      '@keyframes lmBall{0%{transform:translate(0,0)}50%{transform:translate(-90px,-26px)}100%{transform:translate(-180px,0)}}.lm-ball{animation:lmBall 2.4s linear infinite}' +
+      '@keyframes lmSwim{0%,100%{transform:translateX(0)}50%{transform:translateX(90px)}}.lm-swim{animation:lmSwim 7s ease-in-out infinite}.lm-sw2{animation-delay:-3.5s}' +
+      '</style>';
+    const svg = (inner, defs) =>
+      '<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img">' + css + '<defs>' + (defs || "") + '</defs>' + inner + '</svg>';
+    const sky = (id, top, bottom) =>
+      '<linearGradient id="' + id + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + top + '"/><stop offset="1" stop-color="' + bottom + '"/></linearGradient>';
+    const tag = (txt, x, y, size, fill, rot) =>
+      '<text x="' + x + '" y="' + y + '" transform="rotate(' + (rot || -6) + ' ' + x + ' ' + y + ')" font-family="Sedgwick Ave Display, Permanent Marker, cursive" font-size="' + size +
+      '" fill="' + fill + '" stroke="#000" stroke-width="' + Math.max(2, size / 9) + '" paint-order="stroke" stroke-linejoin="round">' + txt + '</text>';
+    const bullet = (x, y, letter, color, dark, r) => { r = r || 11;
+      return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + color + '"/><text x="' + x + '" y="' + (y + r * .5) + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + (r * 1.36).toFixed(1) + '" fill="' + (dark ? "#000" : "#fff") + '">' + letter + '</text>'; };
+    const stars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".7"/>'; return s; };
+    const T = (x, y, txt, size, fill, o) => { o = o || {};
+      return '<text x="' + x + '" y="' + y + '" text-anchor="' + (o.a || "middle") + '" font-family="' + (o.f || "Anton, Impact, sans-serif") + '"' + (o.w ? ' font-weight="' + o.w + '"' : '') +
+        (o.ls ? ' letter-spacing="' + o.ls + '"' : '') + ' font-size="' + size + '" fill="' + fill + '"' + (o.cls ? ' class="' + o.cls + '"' : '') + '>' + txt + '</text>'; };
+    /* a name plaque: dark box, title + subtitle */
+    const plaque = (x, y, w, title, sub, bg, accent) => {
+      const ts = Math.min(12, (w - 14) / (title.length * .66)), ss = sub ? Math.min(8, (w - 12) / (sub.length * .62 + sub.length * 1.5 / 8)) : 0;
+      return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (sub ? 34 : 22) + '" rx="4" fill="' + bg + '" stroke="' + accent + '" stroke-width="2"/>' +
+        T(x + w / 2, y + 16, title, ts.toFixed(1), "#fff") + (sub ? T(x + w / 2, y + 28, sub, ss.toFixed(1), accent, { f: "Barlow, Arial, sans-serif", w: 700, ls: (ss * 1.5 / 8).toFixed(2) }) : ""); };
+    /* green NYC street sign blade */
+    const blade = (x, y, w, txt) =>
+      '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      T(x + w / 2, y + 13, txt, 11, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 });
+    const car = (cls, y, c, w) => { w = w || 44;
+      return '<g class="' + cls + '"><rect x="0" y="' + y + '" width="' + w + '" height="12" rx="4" fill="' + c + '"/><rect x="' + (w * .22) + '" y="' + (y - 7) + '" width="' + (w * .5) + '" height="8" rx="3" fill="' + c + '"/>' +
+        '<rect x="' + (w * .27) + '" y="' + (y - 5) + '" width="' + (w * .4) + '" height="5" fill="#cfe6ff" opacity=".8"/><circle cx="' + (w * .22) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/><circle cx="' + (w * .78) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/>' +
+        '<rect x="' + (w - 3) + '" y="' + (y + 3) + '" width="3" height="3" fill="#fff6c2"/></g>'; };
+    /* faceless figure (silhouette), optional sign held up */
+    const fig = (x, y, c, sign, sc) => { sc = sc || 1;
+      return '<g transform="translate(' + x + ' ' + y + ') scale(' + sc + ')"><circle cx="0" cy="-30" r="5" fill="' + c + '"/><path d="M-6 -24h12l2 16h-4l-1 14h-6l-1-14h-4z" fill="' + c + '"/>' +
+        (sign ? '<path d="M5 -22l6-14" stroke="' + c + '" stroke-width="2.5"/><rect x="' + (13 - Math.max(30, sign[0].length * 4.6 + 6) / 2) + '" y="-58" width="' + Math.max(30, sign[0].length * 4.6 + 6) + '" height="20" fill="' + sign[1] + '" stroke="#222" stroke-width="1"/>' +
+          T(13, -44, sign[0], 7, sign[2] || "#111", { f: "Barlow, Arial, sans-serif", w: 700 }) : "") + '</g>'; };
+    const wins = (x0, y0, cols, rows, dx, dy, w, h, c, lit) => { let s = "";
+      for (let r = 0; r < rows; r++) for (let k = 0; k < cols; k++) s += '<rect x="' + (x0 + k * dx) + '" y="' + (y0 + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + ((lit && (k * 7 + r * 3) % 4 === 0) ? lit : c) + '"/>';
+      return s; };
+    const brickLines = (x, y, w, h, c, step) => { let s = ""; for (let yy = y + (step || 7); yy < y + h; yy += (step || 7)) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + c + '" stroke-width=".6"/>'; return s; };
+    const cloud = (cls, x, y, s, op) => '<g class="' + cls + '"><g transform="translate(' + x + ' ' + y + ') scale(' + s + ')" opacity="' + (op || .8) + '"><ellipse cx="0" cy="0" rx="26" ry="9" fill="#fff"/><ellipse cx="12" cy="-6" rx="14" ry="9" fill="#fff"/><ellipse cx="-10" cy="-4" rx="11" ry="7" fill="#fff"/></g></g>';
+    const tree = (x, y, r, c, cls) => '<g class="' + (cls || "lm-swayb") + '"><rect x="' + (x - 2.5) + '" y="' + (y - 4) + '" width="5" height="' + (r + 6) + '" fill="#5a3a22"/><circle cx="' + x + '" cy="' + (y - r * .6) + '" r="' + r + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x - r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x + r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/></g>';
+    const bird = (cls, x, y) => '<g class="' + cls + '"><path d="M' + x + ' ' + y + 'q5-5 10 0q5-5 10 0" fill="none" stroke="#222" stroke-width="1.6"/></g>';
+    /* subway car side (R-type), for the station rooms */
+    const subCar = (x, y, w, stripe, letters) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="60" rx="7" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="' + x + '" y="' + (y + 40) + '" width="' + w + '" height="4" fill="' + stripe + '"/>';
+      for (let k = x + 14; k < x + w - 40; k += 44) s += '<rect x="' + k + '" y="' + (y + 10) + '" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
+      return s + '<rect x="' + (x + w - 22) + '" y="' + (y + 10) + '" width="14" height="22" rx="3" fill="#1d2a3a"/><circle cx="' + (x + w - 8) + '" cy="' + (y + 50) + '" r="3.5" fill="#fff6c2"/>' + (letters || ""); };
+    return { svg, sky, tag, bullet, stars, T, plaque, blade, car, fig, wins, brickLines, cloud, tree, bird, subCar };
+  })();
 
   window.SCENES = { station, tower, opera, glass, corner };
 })();

@@ -101,19 +101,28 @@
       sky("g2", "#6fb0e8", "#e6f2fa"));
   }
 
-  /* 3. Baisley Pond Park: the fountain going, ducks bobbing, the ballfield lights */
+  /* 3. Queens General Courthouse (88-11 Sutphin Blvd, 1939): the long limestone courthouse with its row of columns, right at his Sutphin & Archer corner; flags moving, traffic on Sutphin */
   function baisley() {
+    let cols = ""; for (let x = 92; x <= 300; x += 26) cols += '<rect x="' + x + '" y="96" width="10" height="100" fill="#ece6d4"/><rect x="' + (x - 2) + '" y="94" width="14" height="4" fill="#d8d0b8"/><rect x="' + (x - 2) + '" y="194" width="14" height="4" fill="#d8d0b8"/>';
+    let wins = ""; for (let x = 104; x < 300; x += 26) wins += '<rect x="' + x + '" y="110" width="12" height="70" fill="#3a4a5a" opacity=".7"/>';
+    const flag = (x, c) => '<rect x="' + x + '" y="30" width="3" height="40" fill="#ccc"/><g class="sway"><rect x="' + (x + 3) + '" y="32" width="24" height="15" fill="' + c + '"/></g>';
     return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
-      tree(30, 120, 1.4, "#3a7a3a") + tree(100, 110, 1.2, "#4a8a3a") + tree(300, 116, 1.3, "#3a7a3a") + tree(370, 108, 1.5, "#4a8a3a") +
-      '<rect x="180" y="40" width="5" height="100" fill="#59616e"/><rect x="168" y="36" width="30" height="10" fill="#e9ecef"/><circle class="pls" cx="183" cy="41" r="16" fill="#fff6c2" opacity=".3"/>' +
-      '<rect x="0" y="140" width="400" height="30" fill="#5a8a3a"/>' +
-      '<ellipse cx="200" cy="205" rx="210" ry="50" fill="#3a7ab0"/><path class="wave" d="M40 200h50M150 220h60M260 196h50M300 232h60" stroke="#cfe6ff" stroke-width="2"/>' +
-      '<path class="pls" d="M200 196q-10-40 0-70q10 30 0 70z" fill="#e6f6ff"/><path class="pls p2" d="M196 196q-26-24-34-44q22 18 34 44zM204 196q26-24 34-44q-22 18-34 44z" fill="#e6f6ff"/>' +
-      [[90, 212], [300, 214]].map((d, i) => '<g class="bob" style="animation-delay:-' + i + 's"><ellipse cx="' + d[0] + '" cy="' + d[1] + '" rx="12" ry="6" fill="#f4f0e6"/><circle cx="' + (d[0] + 10) + '" cy="' + (d[1] - 7) + '" r="5" fill="#2f6a3a"/><path d="M' + (d[0] + 14) + ' ' + (d[1] - 7) + 'l5 1" stroke="' + GOLD + '" stroke-width="2"/></g>').join("") +
-      tag("BAISLEY POND", 110, 252, 24, ICE, -3),
-      sky("g3", "#8fc3ea", "#f6e2b0"));
+      bldg(0, 70, 50, 140, "#6a5a5a", "#ffe6a8") + bldg(350, 60, 50, 150, "#5a5a6a", "#ffe6a8") +
+      /* the long limestone block */
+      '<rect x="40" y="80" width="320" height="130" fill="#e2dbc6"/><rect x="36" y="70" width="328" height="14" fill="#d2c9b0"/>' +
+      [0, 1, 2, 3, 4, 5].map(i => '<path d="M40 ' + (90 + i * 20) + 'h320" stroke="#d6cfb8" stroke-width="1"/>').join("") +
+      wins + cols +
+      '<rect x="44" y="96" width="36" height="100" fill="#d6cfb8"/><rect x="320" y="96" width="36" height="100" fill="#d6cfb8"/>' +
+      [52, 328].map(x => '<rect x="' + x + '" y="110" width="20" height="26" fill="#3a4a5a" opacity=".7"/><rect x="' + x + '" y="150" width="20" height="26" fill="#3a4a5a" opacity=".7"/>').join("") +
+      txt("QUEENS GENERAL COURTHOUSE", 200, 82, 10, "#5a4a32") +
+      /* the steps */
+      '<rect x="80" y="198" width="240" height="6" fill="#cfc7ae"/><rect x="70" y="204" width="260" height="6" fill="#c2b9a0"/>' +
+      flag(56, "#2a4a8a") + flag(316, "#f2efe6") +
+      '<rect x="0" y="210" width="400" height="50" fill="#2a2d33"/><path d="M0 236h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      bus(-120, 200, "#0039a6", "slide") + auto(0, 232, ICE, "slideL") +
+      txt("88-11 SUTPHIN BLVD · JAMAICA", 200, 22, 12, "#1a1a22"),
+      sky("g3", "#8fc3ea", "#f6e7c6"));
   }
-
   /* 4. The equinox stage: half sun, half moon, two mics up front, spotlights breathing */
   function equinox() {
     return svg('<rect width="400" height="260" fill="#0a0d18"/>' + stars(20) +

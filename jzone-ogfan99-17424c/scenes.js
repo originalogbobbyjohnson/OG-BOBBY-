@@ -80,9 +80,13 @@
       (o.extra || "") + tag(o.tag, o.tx || 230, 254, 24, o.tc, -5), sky("g1", o.g[0], o.g[1]));
   const WHT = "#ffffff", GOLD = "#f2c14e", RED = "#e2483d";
 
-  /* 1. Jamaica-179 St: the end of the F line, the train pulling in */
+  /* 1. Jamaica-179 St, the far end of the F: an Old Maid flyer on the tile, the To Manhattan / next 169 St sign, the train pulling in */
   function station() {
-    return under({ wall: "#e6dcc8", band: "#2a6a4a", band2: "#c8a46a", name: "Jamaica–179 St", bl: [["F", "#ff6319"]], sx: 90, sw: 220, tag: "ZONE 4 PREZ", tc: GOLD, tx: 120 });
+    const flyer = '<g transform="rotate(-3 54 58)"><rect x="8" y="36" width="96" height="44" fill="#f6efdc"/><rect x="8" y="36" width="96" height="10" fill="' + RED + '"/>' +
+      txt("OLD MAID ENT.", 56, 44, 7, WHT) + txt("J-ZONE", 56, 62, 14, "#1a1612") + txt("LIVE · HILLSIDE AV", 56, 74, 7, "#1a1612") + '</g>';
+    const next = '<rect x="326" y="40" width="68" height="38" rx="3" fill="#111"/>' + txt("TO MANHATTAN", 360, 52, 6.5, WHT) + txt("NEXT STOP", 360, 63, 7, GOLD) + txt("169 St", 360, 74, 9, WHT);
+    return under({ wall: "#e6dcc8", band: "#6a3a8a", band2: "#f2c14e", name: "Jamaica–179 St", bl: [["F", "#ff6319"]], sx: 112, sw: 208, size: 14,
+      extra: flyer + next, tag: "J-ZONE", tc: WHT, tx: 60 }).replace('</svg>', tag("ZONE 4 PREZ", 220, 230, 22, GOLD, -4) + '</svg>');
   }
 
   /* 2. The Jamaica Estates gate: the old stone and timber gatehouse at Midland Pkwy, traffic rolling on Hillside Av */
@@ -101,16 +105,24 @@
       sky("g2", "#f2a65a", "#fbe3b0"));
   }
 
-  /* 3. The record spot: crates of breaks, a record flipping up, the turntable spinning */
+  /* 3. Pimps Don't Pay Taxes (1998): the record-cover cartoon world, a chinchilla coat swinging on the rack, a stack of breaks, the tax form torn up */
   function crates() {
-    let bins = ""; for (let b = 0; b < 3; b++) { const x = 30 + b * 120; bins += '<rect x="' + x + '" y="170" width="100" height="56" fill="#8a5a2c" stroke="#4a2e14" stroke-width="2"/>';
-      for (let i = 0; i < 9; i++) bins += '<rect x="' + (x + 4 + i * 10) + '" y="' + (140 + (i % 3) * 4) + '" width="9" height="32" fill="' + ["#111", RED, "#222", GOLD, "#111", "#3a6a9a", "#222", WHT, "#111"][i] + '" stroke="#333" stroke-width=".5"/>'; }
-    return svg('<rect width="400" height="260" fill="#1a1612"/>' + brick(0, 0, 400, 140, "#3a3a44", "#44444f") +
-      '<rect x="120" y="16" width="160" height="40" rx="4" fill="#111" stroke="' + GOLD + '" stroke-width="2"/>' + txt("BREAKS", 200, 44, 22, GOLD) +
-      [[40, RED], [320, "#3a6a9a"]].map(a => '<circle cx="' + a[0] + '" cy="80" r="26" fill="#111"/><circle cx="' + a[0] + '" cy="80" r="8" fill="' + a[1] + '"/>').join("") +
-      '<g class="hop"><circle cx="210" cy="104" r="26" fill="#111"/><circle cx="210" cy="104" r="9" fill="' + GOLD + '"/></g>' +
-      '<rect x="0" y="226" width="400" height="34" fill="#2a2018"/>' + bins +
-      tag("CRATE DIGGIN", 110, 252, 24, WHT, -3), "");
+    let stack = ""; for (let i = 0; i < 9; i++) stack += '<rect x="' + (40 + (i % 2) * 4) + '" y="' + (214 - i * 9) + '" width="96" height="8" rx="1" fill="' + ["#111", RED, "#222", GOLD, "#111", "#3a6a9a", "#222", WHT, "#111"][i] + '" stroke="#333" stroke-width=".5"/>';
+    let fur = ""; for (let y = 96; y < 196; y += 9) for (let x = 168 + ((y / 9) % 2) * 5; x < 236; x += 10) fur += '<circle cx="' + x + '" cy="' + y + '" r="5" fill="' + ((x + y) % 3 ? "#b9b4ae" : "#d6d1ca") + '"/>';
+    let bills = ""; [70, 150, 260, 330].forEach((x, i) => bills += '<rect class="fall' + ["", " f2", " f3", ""][i] + '" x="' + x + '" y="0" width="18" height="9" rx="1" fill="#6abf69" stroke="#2f6a2f"/>');
+    return svg('<rect width="400" height="260" fill="#2a1240"/>' +
+      '<g opacity=".35">' + [0, 1, 2, 3, 4, 5, 6, 7].map(i => '<path d="M200 120L' + (i * 60 - 20) + ' 0h30z" fill="' + (i % 2 ? "#ff4fa3" : GOLD) + '"/>').join("") + '</g>' +
+      txt("PIMPS DON'T PAY TAXES", 200, 34, 20, GOLD) + txt("J-ZONE · 1998", 200, 50, 10, WHT) +
+      /* the coat rack and the chinchilla */
+      '<path d="M200 60v170M180 230h40" stroke="#c9a24a" stroke-width="5"/><circle cx="200" cy="58" r="6" fill="#c9a24a"/>' +
+      '<g class="sway"><path d="M200 66l-12 12h24z" fill="#8a7a6a"/><path d="M168 86l-22 84h16l14-56zM232 86l22 84h-16l-14-56z" fill="#a9a39c"/><path d="M166 84q34-14 68 0l6 116h-80z" fill="#a9a39c"/><path d="M186 80l14 22 14-22" stroke="#8a847c" stroke-width="3" fill="none"/>' + fur + '<path d="M200 84v112" stroke="#8a847c" stroke-width="2"/></g>' +
+      /* the floor, the stack of breaks, the turntable */
+      '<rect x="0" y="222" width="400" height="38" fill="#14081e"/><path d="M0 222h400" stroke="#ff4fa3" stroke-width="2"/>' + stack +
+      '<rect x="270" y="190" width="110" height="32" rx="3" fill="#2b2b30"/><g class="spin"><ellipse cx="318" cy="192" rx="40" ry="8" fill="#111"/><ellipse cx="318" cy="192" rx="10" ry="2.5" fill="' + RED + '"/></g>' +
+      /* the tax form, torn */
+      '<g transform="rotate(8 320 120)"><rect x="286" y="84" width="70" height="80" fill="#f6efdc"/>' + txt("TAX FORM", 321, 100, 9, "#1a1612") + [112, 122, 132, 142].map(y => '<path d="M294 ' + y + 'h54" stroke="#8a847c"/>').join("") +
+      '<text x="321" y="140" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="20" fill="' + RED + '" transform="rotate(-18 321 134)">VOID</text></g>' +
+      bills + tag("CHINCHILLA", 18, 254, 22, WHT, -3) + tag("BREAKS", 290, 254, 18, GOLD, -3), "");
   }
 
   /* 4. The drum kit: sticks hitting, the cymbal shimmering, the funk band lights */

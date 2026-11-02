@@ -90,32 +90,34 @@
       sky("g2", "#8ecdf0", "#d8f0fb"));
   }
 
-  /* 3. The Williamsburgh Savings Bank tower: buff brick, four clocks, the gold dome; the hands keep turning */
+  /* 3. Emmanuel Baptist Church at Lafayette Av and St. James Pl: the pale stone French Gothic front, the big pointed window, the tower with its pinnacles, choir music drifting out at his corner */
   function tower() {
-    let wins = "";
-    for (let y = 150; y < 236; y += 14) for (let x = 172; x < 228; x += 14) wins += '<rect x="' + x + '" y="' + y + '" width="6" height="9" fill="#5a4a36"/>';
-    let ticks = "";
-    for (let i = 0; i < 12; i++) { const a = i * Math.PI / 6; ticks += '<circle cx="' + (200 + Math.sin(a) * 17).toFixed(1) + '" cy="' + (108 - Math.cos(a) * 17).toFixed(1) + '" r="1.3" fill="#2a1d10"/>'; }
-    let city = "";
-    [[0, 190, 60], [60, 210, 40], [100, 200, 50], [262, 196, 44], [306, 186, 50], [356, 206, 44]].forEach(([x, y, w]) => { city += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (260 - y) + '" fill="#2b2f45"/>'; for (let wy = y + 8; wy < 250; wy += 14) city += '<rect x="' + (x + 8) + '" y="' + wy + '" width="' + (w - 16) + '" height="4" fill="#f7d98a" opacity=".35"/>'; });
+    const pin = (x, y) => '<path d="M' + (x - 4) + ' ' + y + 'l4-18 4 18z" fill="#d8ccae"/>';
+    let stone = "";
+    for (let y = 70; y < 230; y += 12) stone += '<path d="M60 ' + y + 'h280" stroke="#c8bb98" stroke-width="1"/>';
+    let tracery = "";
+    for (let i = 0; i < 4; i++) tracery += '<path d="M' + (178 + i * 11) + ' 186v-56" stroke="#e9e1cc" stroke-width="2"/>';
+    let row = "";
+    [[0, "#7a4a34"], [346, "#6a3a2a"]].forEach(b => { row += '<rect x="' + b[0] + '" y="120" width="54" height="120" fill="' + b[1] + '"/>'; for (let y = 134; y < 230; y += 26) row += '<rect x="' + (b[0] + 10) + '" y="' + y + '" width="12" height="18" fill="#f6e6c8" opacity=".8"/><rect x="' + (b[0] + 32) + '" y="' + y + '" width="12" height="18" fill="#f6e6c8" opacity=".8"/>'; });
     return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' +
-      city +
-      /* setback shaft */
-      '<rect x="160" y="140" width="80" height="120" fill="#c9a87a"/><rect x="152" y="236" width="96" height="24" fill="#d8c3a0"/>' + wins +
-      '<rect x="168" y="124" width="64" height="18" fill="#bf9d6e"/>' +
-      /* clock stage */
-      '<rect x="174" y="82" width="52" height="44" fill="#d2b382" stroke="#a5835a" stroke-width="2"/>' +
-      '<circle cx="200" cy="108" r="21" fill="#f4ecd8" stroke="' + GOLD + '" stroke-width="3"/>' + ticks +
-      '<line class="hand2" x1="200" y1="108" x2="200" y2="96" stroke="#2a1d10" stroke-width="2.5" stroke-linecap="round"/>' +
-      '<line class="hand" x1="200" y1="108" x2="200" y2="91" stroke="#2a1d10" stroke-width="1.6" stroke-linecap="round"/>' +
-      /* lantern + gold dome */
-      '<rect x="182" y="66" width="36" height="18" fill="#c9a87a"/><path d="M186 70v12M194 70v12M202 70v12M210 70v12" stroke="#8a6a44" stroke-width="2"/>' +
-      '<path d="M180 68q20-44 40 0z" fill="#e8b84a" stroke="#b8862a" stroke-width="1.5"/><path class="glw" d="M190 60q10-26 18-14" stroke="#fff3c2" stroke-width="2" fill="none"/>' +
-      '<rect x="198" y="16" width="4" height="12" fill="#e8b84a"/><circle cx="200" cy="15" r="3" fill="#ffd34d"/>' +
-      '<rect x="0" y="252" width="400" height="8" fill="#1a1c2a"/>' +
-      bird("brd", 0, 46, "#1a1c2a"),
-      sky("g3", "#f2a65a", "#5c6fa8"));
+      '<rect width="400" height="260" fill="url(#g3)"/>' + row +
+      /* the tall tower on the left */
+      '<rect x="60" y="40" width="70" height="200" fill="#e2d6b8"/>' + pin(64, 40) + pin(95, 40) + pin(126, 40) + '<path d="M78 40l17-30 17 30z" fill="#d8ccae"/>' +
+      '<path d="M82 100v-30a13 13 0 0 1 26 0v30z" fill="#3a3a4a"/><path d="M84 160v-30a11 11 0 0 1 22 0v30z" fill="#3a3a4a"/>' +
+      /* the nave front with the gable */
+      '<rect x="130" y="80" width="150" height="160" fill="#eadfc4"/>' + stone.replace(/M60 /g, 'M130 ').replace(/h280/g, 'h150') + '<path d="M124 82l81-56 81 56z" fill="#e2d6b8" stroke="#c8bb98" stroke-width="2"/>' + pin(205, 26) +
+      '<path d="M170 190v-58a35 40 0 0 1 70 0v58z" fill="#3a4a7a" stroke="#c8bb98" stroke-width="4"/>' + tracery + '<circle class="glw" cx="205" cy="124" r="12" fill="#e8b84a" opacity=".7"/>' +
+      '<path d="M188 240v-30a17 17 0 0 1 34 0v30z" fill="#4a2a1e" stroke="#c8bb98" stroke-width="3"/>' +
+      /* the shorter tower on the right */
+      '<rect x="280" y="96" width="60" height="144" fill="#e2d6b8"/>' + pin(284, 96) + pin(310, 96) + pin(336, 96) +
+      '<path d="M298 150v-26a12 12 0 0 1 24 0v26z" fill="#3a3a4a"/>' +
+      '<rect x="0" y="240" width="400" height="20" fill="#2a2d33"/>' +
+      '<g class="nt"><text x="212" y="214" font-size="16" fill="' + GOLD + '">&#9834;</text></g><g class="nt nt2"><text x="196" y="214" font-size="14" fill="#fff">&#9835;</text></g>' +
+      '<rect x="244" y="8" width="150" height="34" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      '<text x="319" y="23" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">Lafayette Av</text>' +
+      '<text x="319" y="36" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">EMMANUEL BAPTIST</text>' +
+      bird("brd", 0, 60, "#1a1c2a") + tag("KOTA", 8, 236, 26, GOLD, -5),
+      sky("g3", "#7cc6e8", "#f6e2b8"));
   }
 
   /* 4. The Academy of Music on Lafayette: cream brick and colored terra cotta, big arched windows, music floating out */

@@ -257,16 +257,52 @@ function LIB(P) {
   S.glenview = () => svg('<rect width="400" height="260" fill="url(#g3)"/>' + palisades(150) + water(160, "#4a7aa0") + '<rect x="0" y="200" width="400" height="60" fill="#5a8a3a"/>' +
     '<rect x="110" y="90" width="150" height="120" fill="#8a7e6a"/><path d="M100 90h170l-30-30h-110z" fill="#3a3a44"/><rect x="230" y="40" width="44" height="170" fill="#9a8e7a"/><path d="M224 40h56l-28-30z" fill="#3a3a44"/>' +
     wins(124, 104, 4, 2, 32, 46, 16, 28, "#ffe6a8") + wins(242, 56, 1, 3, 0, 40, 20, 26, "#ffe6a8") + '<g class="slideL"><path d="M0 178h40l-6 6H6z" fill="#fff"/><path d="M18 178v-20l12 18z" fill="#fff"/></g>' + tag("GLENVIEW", 20, 246, 22, A, -3), sky("g3", "#ff9a6a", "#8fc3ea"));
+  /* SHECK WES 1. 116 St (2/3) from the stair: the 3 pulling in below, the "116" mosaic tablet, the exit sign pointing west on 116th to Little Senegal, MUDBOY on the stair wall */
+  S.swStation = () => { let tiles = ""; for (let y = 10; y < 150; y += 10) tiles += '<path d="M0 ' + y + 'h260" stroke="#d8d5c8" stroke-width="1"/>';
+    let steps = ""; for (let i = 0; i < 10; i++) steps += '<rect x="' + (262 + i * 14) + '" y="' + (204 - i * 14) + '" width="14" height="' + (14 + i * 14) + '" fill="' + (i % 2 ? "#7c7a72" : "#8e8b82") + '"/><rect x="' + (262 + i * 14) + '" y="' + (204 - i * 14) + '" width="14" height="2" fill="#eab308"/>';
+    return svg('<rect width="400" height="260" fill="#f1efe6"/>' + tiles +
+      /* street light coming down the stair from Lenox */
+      '<rect x="262" y="0" width="138" height="260" fill="#5a6a7a"/><path d="M262 0h138v80L262 210z" fill="#bcd6ea" opacity=".6"/>' + steps +
+      '<path d="M262 194L400 60" stroke="#c9ced6" stroke-width="4"/>' +
+      /* MUDBOY sprayed on the stair wall */
+      tag("MUDBOY", 274, 44, 22, B, -8) +
+      /* mosaic tablet */
+      '<rect x="18" y="20" width="76" height="48" fill="#2a8a4a"/><rect x="24" y="26" width="64" height="36" fill="#f6efdc"/>' + txt("116", 56, 52, 22, "#2a8a4a") +
+      /* exit sign */
+      '<rect x="110" y="22" width="140" height="44" rx="3" fill="#111"/>' +
+      '<text x="120" y="38" ' + FONT + ' font-size="9" fill="#fff">Exit ↑ Lenox Av</text><text x="120" y="52" ' + FONT + ' font-size="9" fill="#fff">W 116 St · west to</text><text x="120" y="62" ' + FONT + ' font-size="8" fill="' + C + '">Little Senegal ←</text>' +
+      stSign(130, 80, "116 St", [["2", "#ee352e"], ["3", "#ee352e"]]) +
+      /* the tunnel and train below */
+      '<rect x="0" y="118" width="262" height="78" fill="#111"/>' +
+      '<g class="anim-train">' + subCar(-140, 128, 360, "3", "#ee352e", "#2a8a4a") + '</g>' +
+      '<rect x="0" y="196" width="262" height="8" fill="#eab308"/><rect x="0" y="204" width="262" height="56" fill="#8a8578"/>' +
+      '<g class="bob"><circle cx="70" cy="216" r="7" fill="#3a2a22"/><rect x="62" y="223" width="16" height="30" rx="5" fill="' + A + '"/></g>' +
+      tag("GANG GANG", 110, 248, 22, A, -4)); };
+  /* SHECK WES 2. Little Senegal, W 116th St between 7th and 8th Avs: the Senegalese restaurants and shops, the green-yellow-red flag with its star, the block his family is from */
+  S.swSenegal = () => {
+    const flag = (x, y, w, cls) => '<g class="' + cls + '"><rect x="' + x + '" y="' + y + '" width="' + (w / 3) + '" height="' + (w * .66) + '" fill="#00853f"/><rect x="' + (x + w / 3) + '" y="' + y + '" width="' + (w / 3) + '" height="' + (w * .66) + '" fill="#fdef42"/><rect x="' + (x + w * 2 / 3) + '" y="' + y + '" width="' + (w / 3) + '" height="' + (w * .66) + '" fill="#e31b23"/>' +
+      '<text x="' + (x + w / 2) + '" y="' + (y + w * .44) + '" text-anchor="middle" font-size="' + (w * .3) + '" fill="#00853f">★</text></g>';
+    const shop = (x, w, awn, sign, signCol) => brick(x, 70, w, 150, "#7a4a36", "#6a3e2c") + wins(x + 10, 84, Math.floor((w - 10) / 26), 3, 26, 22, 14, 14, "#ffe6a8") +
+      '<path d="M' + x + ' 160h' + w + 'l-8 16H' + (x + 8) + 'z" fill="' + awn + '"/>' + '<rect x="' + (x + 6) + '" y="148" width="' + (w - 12) + '" height="14" fill="#111"/>' + txt(sign, x + w / 2, 158.5, 8, signCol) +
+      '<rect x="' + (x + 10) + '" y="180" width="' + (w - 20) + '" height="40" fill="#22323f"/><rect class="pls" x="' + (x + 14) + '" y="184" width="' + (w - 28) + '" height="22" fill="#ffd98a" opacity=".55"/>';
+    return svg('<rect width="400" height="260" fill="url(#g2)"/><circle cx="340" cy="34" r="14" fill="#fff3c4"/>' +
+      shop(0, 134, "#00853f", "SENEGALESE RESTAURANT", "#fdef42") + shop(134, 132, "#fdef42", "AFRICAN MARKET", "#fff") + shop(266, 134, "#e31b23", "TAILOR · FABRICS", "#fdef42") +
+      /* string of flags across the street */
+      '<path d="M0 50Q200 76 400 50" stroke="#555" stroke-width="1" fill="none"/>' +
+      flag(40, 54, 30, "sway") + flag(150, 62, 30, "sway sw2") + flag(260, 62, 30, "sway") + flag(350, 54, 30, "sway sw2") +
+      street(220) + car(0, 200, B) + car(0, 204, C, "slideL") +
+      '<rect x="146" y="226" width="108" height="14" rx="2" fill="#111"/>' + txt("LITTLE SENEGAL", 200, 236.5, 9, "#fff") +
+      blade(60, 8, "W 116 St") + tag("MUDBOY", 300, 250, 20, A, -3), sky("g2", "#8fc3ea", "#f6e6c0")); };
   S.corner = corner; S.tag = tag;
   return S;
 }
 
   const P = {"c1":"#c9a4ff","c2":"#e8742a","c3":"#5ad1a0"}, L = LIB(P);
   window.SCENES = {
-    station: () => L.stUnder("116 St", [["2","#ee352e"],["3","#ee352e"]], "#2a8a4a", "MUDBOY"),
-    court: () => L.rucker("MO BAMBA"),
+    station: () => L.swStation(),
+    court: () => L.swSenegal(),
     market: () => L.market(),
     mosque: () => L.mosque(),
-    block: () => L.corner(["#0d1022", "#2a3a4a"], "W 116 St", "Malcolm X Blvd", L.tag("SHECK WES", 26, 124, 37, P.c1, -7) + L.tag("GANG GANG", 40, 156, 22, P.c2, -5) + L.tag("MUDBOY", 30, 188, 24, P.c3, -3) + L.tag("116TH", 120, 212, 20, "#f6efdc", -2))
+    block: () => L.corner(["#0d1022", "#2a3a4a"], "W 116 St", "Adam C Powell Blvd", L.tag("SHECK WES", 26, 124, 37, P.c1, -7) + L.tag("GANG GANG", 40, 156, 22, P.c2, -5) + L.tag("MUDBOY", 30, 188, 24, P.c3, -3) + L.tag("LITTLE SENEGAL", 100, 212, 18, "#f6efdc", -2))
   };
 })();

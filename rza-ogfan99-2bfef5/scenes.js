@@ -49,24 +49,27 @@
     sky("g5", g[0], g[1]));
   const ICE = "#9fe3ff", GOLD = "#f2c14e", RED = "#d7263d";
 
-  /* 1. Stapleton: the SIR crossing its viaduct over the street in the morning, stairs down to Bay St */
+  /* 1. Stapleton: the SIR rolling in on the platform, the stair down to Canal St and Tappen Park with the old brick Village Hall under the trees, a hand-painted kung fu double feature handbill pasted on the column */
   function station() {
-    let hs = "";
-    [[0, 150, "#8a5a44"], [70, 160, "#6a7a8a"], [300, 156, "#9a6a4a"], [350, 146, "#5a6a5a"]].forEach(b => { hs += '<rect x="' + b[0] + '" y="' + b[1] + '" width="56" height="' + (236 - b[1]) + '" fill="' + b[2] + '"/>';
-      for (let y = b[1] + 10; y < 220; y += 22) hs += '<rect x="' + (b[0] + 8) + '" y="' + y + '" width="14" height="12" fill="#ffe6a8" opacity=".7"/><rect x="' + (b[0] + 32) + '" y="' + y + '" width="14" height="12" fill="#cfe6ff" opacity=".6"/>'; });
-    return svg('<rect width="400" height="260" fill="url(#g1)"/><circle cx="330" cy="40" r="18" fill="#fff3c4"/>' + hs +
-      /* the canopy over the platform */
-      '<rect x="0" y="30" width="400" height="8" fill="#3a4250"/><rect x="0" y="38" width="400" height="3" fill="#0039a6"/>' +
-      '<rect x="40" y="41" width="5" height="56" fill="#59616e"/><rect x="355" y="41" width="5" height="56" fill="#59616e"/>' +
-      stSign(110, 50, 180, "Stapleton") +
-      '<g class="anim-train">' + sirCar(10, 86, 300) + '</g>' +
-      /* platform edge + the concrete viaduct and its piers down to the street */
-      '<rect x="0" y="140" width="400" height="7" fill="#eab308"/><rect x="0" y="147" width="400" height="18" fill="#b7b0a2"/><path d="M0 165h400" stroke="#7a7468" stroke-width="3"/>' +
-      '<rect x="130" y="165" width="14" height="71" fill="#a39c8e"/><rect x="250" y="165" width="14" height="71" fill="#a39c8e"/>' +
-      /* the stairs down */
-      '<path d="M160 236l40-68h8l-40 68z" fill="#6b6f78"/><path d="M164 230h8M172 216h8M180 202h8M188 188h8M196 174h8" stroke="#3a3e46" stroke-width="2"/>' +
+    const tr = (x, y, r) => '<g class="sway sw2" style="transform-origin:center bottom"><rect x="' + (x - 3) + '" y="' + y + '" width="6" height="30" fill="#4a3220"/><circle cx="' + x + '" cy="' + (y - 6) + '" r="' + r + '" fill="#3f7a3a"/><circle cx="' + (x - r * .6) + '" cy="' + y + '" r="' + (r * .7) + '" fill="#2f6a34"/></g>';
+    return svg('<rect width="400" height="260" fill="url(#g1)"/><circle cx="60" cy="40" r="18" fill="#fff3c4"/>' +
+      /* Tappen Park below and behind: the Village Hall's brick and mansard tower */
+      '<rect x="0" y="176" width="400" height="60" fill="#5f9a3a"/>' +
+      '<rect x="250" y="176" width="110" height="60" fill="#9a4a34"/><path d="M244 178l61-24 61 24z" fill="#3a3a44"/><rect x="290" y="128" width="30" height="34" fill="#9a4a34"/><path d="M286 130l19-22 19 22z" fill="#3a3a44"/>' +
+      '<circle cx="305" cy="140" r="6" fill="#f6efdc" stroke="#3a3a44"/>' + [262, 286, 326, 348].map(x => '<rect x="' + x + '" y="190" width="10" height="16" fill="#ffe6a8" opacity=".75"/>').join("") +
+      tr(220, 200, 18) + tr(384, 196, 18) +
+      /* the canopy and the posts with the handbill */
+      '<rect x="0" y="22" width="400" height="8" fill="#3a4250"/><rect x="0" y="30" width="400" height="3" fill="#0039a6"/>' +
+      '<rect x="40" y="33" width="6" height="110" fill="#59616e"/><rect x="354" y="33" width="6" height="110" fill="#59616e"/>' +
+      '<g transform="rotate(-3 380 70)"><rect x="362" y="52" width="36" height="52" fill="#f2e6c0"/><text x="380" y="64" text-anchor="middle" ' + FONT + ' font-size="6" fill="' + RED + '">KUNG FU</text><text x="380" y="73" text-anchor="middle" ' + FONT + ' font-size="5" fill="#222">DOUBLE</text><text x="380" y="81" text-anchor="middle" ' + FONT + ' font-size="5" fill="#222">FEATURE</text><path d="M368 88l12 8 12-8" stroke="' + RED + '" stroke-width="2" fill="none"/><text x="380" y="101" text-anchor="middle" ' + FONT + ' font-size="5" fill="#222">BAY ST</text></g>' +
+      stSign(100, 40, 180, "Stapleton") +
+      '<g class="anim-train">' + sirCar(10, 78, 300) + '</g>' +
+      '<rect x="0" y="132" width="400" height="7" fill="#eab308"/><rect x="0" y="139" width="400" height="16" fill="#b7b0a2"/><path d="M0 155h400" stroke="#7a7468" stroke-width="3"/>' +
+      /* the stair down to Canal St */
+      '<path d="M120 236l50-81h22l-50 81z" fill="#6b6f78"/>' + [0, 1, 2, 3, 4, 5].map(i => '<path d="M' + (126 + i * 8) + ' ' + (226 - i * 13) + 'h18" stroke="#3a3e46" stroke-width="2"/>').join("") +
+      '<rect x="20" y="166" width="124" height="22" rx="2" fill="#111"/><text x="82" y="181" text-anchor="middle" ' + FONT + ' font-size="8" fill="#fff">CANAL ST · TAPPEN PARK</text>' +
       '<rect x="0" y="236" width="400" height="24" fill="#2a2d33"/><path d="M0 248h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
-      tag("SHAOLIN", 268, 252, 26, ICE, -5),
+      tag("RZA", 20, 230, 30, GOLD, -6) + tag("SHAOLIN", 200, 256, 22, ICE, -4),
       sky("g1", "#8fc3ea", "#f6d9a6"));
   }
 

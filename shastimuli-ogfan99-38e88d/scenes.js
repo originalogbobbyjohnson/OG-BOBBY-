@@ -82,37 +82,48 @@
   const ICE = "#9fe3ff", ORG = "#ff6a3d", GOLD = "#ffd34d";
   const T25 = [["2", "#ee352e"], ["5", "#00933c"]];
 
-  /* 1. Church Av on the Nostrand Av line: the 5 pulling in, tile and the green band */
+  /* 1. Church Av on the Nostrand Av line, the Brooklyn College-bound side: the hanging sign pointing to Beverley Rd, his My Soul to Keep poster on the tile, the 5 pulling in */
   function station1() {
-    return station({ name: "Church Av", bs: T25, front: T25[1], band: "#2a6a3a", col: "#2a3a6a", sx: 100, sw: 200,
-      tags: tag("SHA STIMULI", 22, 214, 28, ICE, -4) + tag("EFFORTLESS", 220, 238, 26, GOLD, -6) });
+    const hang = rect(150, 8, 236, 22, "#111") + txt(162, 23, 10, "#fff", "To Brooklyn College", "start") + txt(374, 23, 9, GOLD, "NEXT: BEVERLEY RD", "end");
+    const poster = '<g transform="rotate(-2 66 80)">' + rect(16, 60, 112, 40, "#1b1b22") + rect(19, 63, 106, 34, "#2a3a6a") + '<circle cx="36" cy="80" r="11" fill="' + GOLD + '" opacity=".85"/>' +
+      txt(86, 78, 8, "#fff", "MY SOUL TO KEEP") + txt(86, 90, 7, ICE, "SHA STIMULI") + '</g>';
+    return station({ name: "Church Av", bs: T25, front: T25[1], band: "#2a6a3a", col: "#2a3a6a", sx: 150, sw: 200,
+      tags: hang + poster + tag("SHA STIMULI", 22, 218, 30, ICE, -4) + tag("FLATBUSH", 240, 240, 24, GOLD, -6) + tag("EFFORTLESS", 120, 250, 16, ORG, -3) });
   }
 
-  /* 2. Church Av, East Flatbush: the West Indian shops, striped awnings, the dollar van and the B35 bus rolling */
+  /* 2. Caton Market at Caton Av and Flatbush Av: the Caribbean vendors' stalls under colored awnings, flag bunting, the B41 going by */
   function church() {
-    const aw = (x, c1, c2) => { let s = ""; for (let i = 0; i < 6; i++) s += '<path d="M' + (x + i * 16) + ' 150h16l-2 16h-12z" fill="' + (i % 2 ? c1 : c2) + '"/>'; return s; };
+    const stall = (x, c1, c2, goods) => { let s = ""; for (let i = 0; i < 4; i++) s += '<path d="M' + (x + i * 18) + ' 112h18l-3 18h-12z" fill="' + (i % 2 ? c1 : c2) + '"/>';
+      return s + rect(x + 4, 130, 64, 46, "#6a4a32") + rect(x + 2, 150, 68, 6, "#8a6a4a") + goods.map((g, i) => '<circle cx="' + (x + 12 + i * 12) + '" cy="146" r="5" fill="' + g + '"/>').join(""); };
+    const flags = ["#009b3a", "#fed100", "#00209f", "#d21034", "#ce1126", "#000", "#fed100", "#009b3a"];
+    let bunt = ""; flags.forEach((c, i) => bunt += '<path class="sway' + (i % 2 ? ' sw2' : '') + '" d="M' + (30 + i * 44) + ' 82l12 0-6 12z" fill="' + c + '"/>');
     return svg('<rect width="400" height="260" fill="url(#c1)"/>' +
-      bldg(0, 60, 130, 120, "#b0644a", "#ffe6a8", "#3a3a4a") + bldg(134, 76, 130, 104, "#6a8a7a", "#ffe6a8", "#3a3a4a") + bldg(268, 56, 132, 124, "#8a6a9a", "#ffe6a8", "#3a3a4a") +
-      rect(0, 132, 400, 18, "#1b1b22") + txt(64, 146, 12, GOLD, "ROTI · DOUBLES") + txt(198, 146, 12, ICE, "RECORDS") + txt(334, 146, 12, ORG, "BAKERY") +
-      aw(16, "#2bb673", GOLD) + aw(150, "#d7263d", "#f6f3ea") + aw(284, ORG, "#f6f3ea") +
-      rect(0, 166, 400, 14, "#9a968c") + road(180) +
-      '<g class="slide slw"><rect x="0" y="194" width="80" height="34" rx="8" fill="#f6f3ea" stroke="#6b7280" stroke-width="2"/>' + [8, 28, 48].map(d => rect(d, 200, 16, 12, "#2a3a5a")).join("") + rect(0, 216, 80, 4, "#2bb673") + '<circle cx="16" cy="230" r="6" fill="#111"/><circle cx="64" cy="230" r="6" fill="#111"/></g>' +
-      car(0, 222, ORG, "slideL") + '<g class="bob">' + person(120, 176, GOLD) + '</g>',
+      bldg(0, 30, 120, 80, "#b0644a", "#ffe6a8", "#3a3a4a") + bldg(300, 24, 100, 86, "#8a6a9a", "#ffe6a8", "#3a3a4a") +
+      rect(110, 54, 180, 26, "#1b1b22") + txt(200, 73, 16, GOLD, "CATON MARKET") + '<path d="M0 82q200 18 400 0" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>' + bunt +
+      rect(0, 110, 400, 70, "#d8cfb8") +
+      stall(10, "#2bb673", GOLD, ["#ffb020", "#d7263d", "#2bb673", "#ffd34d"]) + stall(108, "#d7263d", "#f6f3ea", ["#8a4a2a", "#ffd34d", "#ff6a3d", "#2bb673"]) +
+      stall(206, ORG, "#f6f3ea", ["#ffd34d", "#2a7a3a", "#d7263d", "#ffb020"]) + stall(304, "#2a6ad0", GOLD, ["#f6f3ea", "#d7263d", "#2bb673", "#ffd34d"]) +
+      '<g class="bob">' + person(96, 178, GOLD) + '</g>' + person(200, 178, ICE) + '<g class="bob">' + person(296, 178, ORG) + '</g>' +
+      rect(0, 180, 400, 10, "#9a968c") + road(190) +
+      '<g class="slide slw"><rect x="0" y="198" width="120" height="38" rx="6" fill="#e9ecef" stroke="#6b7280" stroke-width="1.5"/>' + rect(0, 224, 120, 5, "#0039a6") + rect(6, 204, 104, 14, "#2a3440") + txt(100, 214, 8, "#ffb020", "B41") + '<circle cx="22" cy="238" r="6" fill="#111"/><circle cx="96" cy="238" r="6" fill="#111"/></g>' +
+      txt(200, 22, 10, "#1b1b22", "CATON AV &amp; FLATBUSH AV") + tag("SHA STIMULI", 18, 254, 20, ICE, -3),
       sky("c1", "#4a9ae0", "#cce8f8"));
   }
 
-  /* 3. The Prospect Park Boathouse: the white terra-cotta front on the Lullwater, its arches mirrored in the water, a rowboat gliding */
+  /* 3. The old Sears at Beverley Rd and Bedford Av (1932): the cream Art Deco store, the stepped tower, the vertical piers */
   function boathouse() {
-    let arch = "", refl = "";
-    for (let x = 130; x < 280; x += 30) { arch += '<path d="M' + x + ' 150v-30q12-16 24 0v30z" fill="#3a5a6a"/>'; refl += '<path d="M' + x + ' 176v24q12 14 24 0v-24z" fill="#3a5a6a" opacity=".35"/>'; }
+    let piers = ""; for (let x = 66; x < 340; x += 22) piers += rect(x, 120, 6, 70, "#d8ccaa");
+    let tp = ""; for (let x = 172; x < 228; x += 12) tp += rect(x, 40, 4, 70, "#d8ccaa");
     return svg('<rect width="400" height="260" fill="url(#b1)"/>' +
-      tree(40, 100, 40, "#3a8a3a") + tree(360, 96, 40, "#2f7a34", "sway sw2") + tree(100, 110, 26, "#4a9a3a") + tree(300, 110, 26, "#4a9a3a", "sway sw2") +
-      rect(110, 96, 180, 64, "#f6f3ea") + rect(104, 88, 192, 10, "#e8e2d0") + rect(150, 74, 100, 16, "#e8e2d0") + arch +
-      '<path d="M110 160h180" stroke="#cfc8b4" stroke-width="4"/>' +
-      rect(0, 162, 400, 98, "#3a6a6a") + '<g opacity=".5">' + rect(110, 164, 180, 40, "#f6f3ea") + '</g>' + refl +
-      '<path class="slide slw" d="M0 220q20-4 40 0t40 0" stroke="#8ac8c8" stroke-width="2" fill="none"/>' +
-      '<g class="slideL" style="animation-duration:14s"><path d="M0 236h50l-8 10H8z" fill="#8a4a2a"/>' + person(26, 234, ORG) + '</g>',
-      sky("b1", "#7ac0ea", "#e0f2fa"));
+      tree(26, 168, 22, "#3a8a3a") + tree(380, 168, 22, "#2f7a34", "sway sw2") +
+      rect(50, 112, 300, 84, "#ece0c0") + piers + rect(50, 108, 300, 8, "#cdbf98") +
+      '<path d="M60 196v-30h280v30" fill="none"/>' + [76, 120, 164, 236, 280, 318].map(x => rect(x, 150, 22, 34, "#3a4a5a")).join("") +
+      rect(160, 30, 80, 166, "#efe4c6") + tp + rect(152, 104, 96, 8, "#cdbf98") + rect(168, 18, 64, 14, "#e2d6b4") + rect(180, 8, 40, 12, "#d8ccaa") + '<path d="M196 8v-6h8v6z" fill="#cdbf98"/>' +
+      '<path d="M176 196v-34a24 24 0 0 1 48 0v34z" fill="#2a3a4a"/><path class="pls" d="M180 196v-30a20 20 0 0 1 40 0v30z" fill="#ffe6a8" opacity=".35"/>' +
+      rect(150, 64, 100, 12, "#2a3a4a") + txt(200, 74, 9, GOLD, "BEVERLEY RD · 1932") +
+      rect(0, 196, 400, 10, "#9a968c") + road(206) + car(0, 214, ORG, "slide") + car(0, 228, ICE, "slideL") +
+      txt(80, 30, 10, "#1b2a3a", "BEDFORD AV &amp;") + txt(80, 44, 10, "#1b2a3a", "BEVERLEY RD") + tag("SHA STIMULI", 258, 44, 20, ICE, -5),
+      sky("b1", "#7ac0ea", "#f2e6c8"));
   }
 
   /* 4. Wake Up & Go: sunrise from a Flatbush rooftop, the water towers, pigeons lifting off */
@@ -128,9 +139,9 @@
       sky("r1", "#2a2a6a", "#ff9a5a"));
   }
 
-  /* 5. Church Av and Nostrand Av */
+  /* 5. Bedford Av and Beverley Rd, at the old Sears */
   function block() {
-    return corner(["#0a0a22", "#2a3a5a"], "Church Av", "Nostrand Av",
+    return corner(["#0a0a22", "#2a3a5a"], "Bedford Av", "Beverley Rd",
       tag("SHA STIMULI", 22, 128, 36, ICE, -7) + tag("MY SOUL TO KEEP", 30, 158, 22, GOLD, -5) + tag("WHO I AM", 40, 190, 28, ORG, -3) + tag("FLATBUSH", 120, 212, 18, "#f6efdc", -2), ICE);
   }
 

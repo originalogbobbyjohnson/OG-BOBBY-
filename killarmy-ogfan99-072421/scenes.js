@@ -58,23 +58,31 @@
   const W1 = "#ffffff", OLV = "#8a9a4a", GLD = "#e8b84a", CAMO = ["#4a5a32", "#6a7a3e", "#3a3a28", "#8a8a5a"];
   const camo = (x, y, w, h) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + CAMO[0] + '"/>'; for (let i = 0; i < 14; i++) s += '<ellipse cx="' + (x + (i * 37) % w) + '" cy="' + (y + (i * 23) % h) + '" rx="' + (10 + i % 4 * 3) + '" ry="' + (6 + i % 3 * 2) + '" fill="' + CAMO[1 + i % 3] + '"/>'; return s; };
 
-  /* 1. Grasmere at night: the SIR pulling into the open cut under the Clove Rd overpass, signals glowing */
+  /* 1. Grasmere at night, looking down from the Clove Rd bridge rail: camo netting on the fence, a searchlight sweeping, the SIR sliding into the cut below, a stenciled SILENT WEAPONS poster on the retaining wall */
   function station() {
+    let fence = "";
+    for (let x = 0; x <= 400; x += 10) fence += '<path d="M' + x + ' 196l10 12M' + (x + 10) + ' 196l-10 12" stroke="#7a828c" stroke-width="1"/>';
     return svg(
+      '<style>@keyframes srch{0%,100%{transform:rotate(-30deg)}50%{transform:rotate(30deg)}}.srch{transform-origin:200px 196px;animation:srch 5s ease-in-out infinite}</style>' +
       '<rect width="400" height="260" fill="url(#g1)"/>' + stars(22) +
-      '<circle cx="40" cy="120" r="10" fill="#f4ecff" opacity=".9"/>' +
-      '<rect x="0" y="0" width="400" height="18" fill="#3a3e46"/><path d="M0 18h400" stroke="#1d2026" stroke-width="3"/>' +
-      '<rect x="0" y="58" width="400" height="34" fill="#4a463e"/><path d="M0 66h400M0 76h400M0 86h400" stroke="#3a362e" stroke-width="1.5"/>' +
-      '<circle class="flk" cx="90" cy="30" r="3" fill="#fff4c8"/><circle class="flk flk2" cx="310" cy="30" r="3" fill="#fff4c8"/>' +
-      '<rect x="110" y="34" width="180" height="32" rx="4" fill="#111"/><rect x="110" y="34" width="180" height="4" fill="#fff"/>' +
-      '<text x="124" y="58" ' + FONT + ' font-size="16" fill="#fff">Grasmere</text>' + sir(262, 51) +
-      sirTrain(88) +
-      '<rect x="0" y="144" width="400" height="8" fill="#eab308"/><rect x="0" y="152" width="400" height="16" fill="#6a6f78"/>' +
-      '<rect x="0" y="168" width="400" height="92" fill="#22222c"/>' +
-      '<path d="M0 196h400M0 202h400M0 228h400M0 234h400" stroke="#6a6a78" stroke-width="2"/>' +
-      (function () { let t = ""; for (let x = 0; x < 400; x += 14) t += '<rect x="' + x + '" y="194" width="6" height="10" fill="#3a2e24"/><rect x="' + (x + 7) + '" y="226" width="6" height="10" fill="#3a2e24"/>'; return t; })() +
-      '<rect x="366" y="170" width="4" height="40" fill="#111"/><rect x="360" y="160" width="16" height="26" rx="4" fill="#111"/><circle class="flk" cx="368" cy="168" r="4" fill="#ff4a3a"/><circle cx="368" cy="179" r="4" fill="#1a3a1a"/>' +
-      tag("KILLARMY", 14, 252, 26, OLV, -3) + tag("WU-TANG", 290, 252, 22, GLD, -6),
+      '<path class="srch" d="M200 196L170 0h60z" fill="#f4ecff" opacity=".1"/>' +
+      /* far side of the cut: stone retaining wall with the poster */
+      '<rect x="0" y="40" width="400" height="60" fill="#4a463e"/><path d="M0 52h400M0 66h400M0 80h400M0 94h400" stroke="#3a362e" stroke-width="1.5"/>' +
+      '<rect x="292" y="44" width="96" height="50" fill="#1a1c14" stroke="' + OLV + '" stroke-width="2"/>' +
+      '<text x="340" y="62" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="10" fill="' + GLD + '">SILENT</text>' +
+      '<text x="340" y="74" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="10" fill="' + GLD + '">WEAPONS</text>' +
+      '<text x="340" y="88" text-anchor="middle" font-family="Courier New, monospace" font-weight="700" font-size="7" fill="' + W1 + '">FOR QUIET WARS</text>' +
+      /* platform with the station sign */
+      '<rect x="20" y="50" width="180" height="30" rx="4" fill="#111"/><rect x="20" y="50" width="180" height="4" fill="#fff"/>' +
+      '<text x="32" y="73" ' + FONT + ' font-size="15" fill="#fff">Grasmere</text>' + sir(172, 67) +
+      sirTrain(100) +
+      '<rect x="0" y="156" width="400" height="8" fill="#eab308"/><rect x="0" y="164" width="400" height="20" fill="#6a6f78"/>' +
+      '<circle class="flk" cx="380" cy="120" r="4" fill="#ff4a3a"/><rect x="376" y="124" width="8" height="34" fill="#111"/>' +
+      /* the bridge rail in the foreground, with camo netting draped on the chain-link */
+      '<rect x="0" y="184" width="400" height="12" fill="#3a3e46"/><rect x="0" y="194" width="400" height="3" fill="#1d2026"/>' + fence +
+      camo(30, 198, 150, 22) + camo(250, 200, 120, 20) +
+      '<rect x="0" y="220" width="400" height="40" fill="#22222c"/>' +
+      tag("KILLARMY", 14, 252, 30, OLV, -4) + tag("WU-TANG", 280, 250, 22, GLD, -6),
       sky("g1", "#0a0c18", "#2a3040"));
   }
 

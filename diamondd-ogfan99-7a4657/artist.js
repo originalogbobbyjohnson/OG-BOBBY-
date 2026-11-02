@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO MORRISANIA",
-   "x": "Trinity Av and E 163 St by the Forest Houses. This is Diamond D's game.",
+   "x": "Jackson Av and Westchester Av, under the Jackson Av el. This is Diamond D's game.",
    "sfx": "spray"
   }
  ],

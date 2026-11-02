@@ -40,7 +40,7 @@
   };
   const GOLD = "#f2c14e", PINK = "#ff5fa2", SKY = "#8be0ff", GREEN = "#00933c";
 
-  /* 1. The 6 pulling into 116 St on Lexington Av, underground: white tile, mosaic band, steel columns */
+  /* 1. The 6 pulling into 103 St on Lexington Av, underground: white tile, mosaic band, steel columns, the exit toward El Museo on Fifth */
   function train() {
     let tiles = "";
     for (let y = 30; y < 118; y += 8) tiles += '<path d="M0 ' + y + 'h400" stroke="#d4cfc2" stroke-width=".8"/>';
@@ -50,15 +50,17 @@
     let cols = "";
     [24, 376].forEach(x => cols += '<rect x="' + (x - 5) + '" y="0" width="10" height="186" fill="#1f2328"/><rect x="' + (x - 7) + '" y="0" width="14" height="6" fill="#33393f"/>');
     let windows = "";
-    for (let x = 18; x < 300; x += 46) windows += '<rect x="' + x + '" y="134" width="30" height="22" rx="3" fill="#fff1c9" opacity=".85"/>';
+    for (let x = 18; x < 260; x += 46) windows += '<rect x="' + x + '" y="134" width="30" height="22" rx="3" fill="#fff1c9" opacity=".85"/>';
     return svg(
       '<rect width="400" height="260" fill="#121212"/>' +
       '<rect x="0" y="0" width="400" height="30" fill="#26282b"/>' +
       '<rect x="0" y="30" width="400" height="88" fill="#efeadf"/>' + tiles + band +
       '<rect x="80" y="54" width="240" height="36" rx="4" fill="#111"/>' +
       '<rect x="80" y="54" width="240" height="4" fill="#fff"/>' +
-      '<text x="94" y="80" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="16" fill="#fff">116 St</text>' +
+      '<text x="94" y="80" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="16" fill="#fff">103 St</text>' +
       bullet(296, 73, "6", GREEN) +
+      '<rect x="110" y="94" width="180" height="20" rx="3" fill="#111"/>' +
+      '<text x="200" y="108" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">EXIT ↑ E 103 St · to El Museo, 5 Av</text>' +
       '<g class="flk"><rect x="150" y="10" width="100" height="5" rx="2" fill="#fff7d6"/></g>' +
       '<rect x="0" y="118" width="400" height="68" fill="#09090a"/>' +
       '<g class="anim-train">' +

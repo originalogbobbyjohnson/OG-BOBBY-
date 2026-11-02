@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO HARLEM",
-   "x": "Malcolm X Blvd and W 125 St, in Harlem. This is YL's game.",
+   "x": "Lenox Av and W 130 St, at Astor Row in Harlem. This is YL's game.",
    "sfx": "spray"
   }
  ],

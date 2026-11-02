@@ -85,50 +85,50 @@
       sky("gm", "#2b2b30", "#4a4a52"));
   }
 
-  /* 3. Addisleigh Park: the Tudor-style houses with white stucco, dark beams and steep roofs, big old trees */
+  /* 3. Murry Bergtraum High School on Pearl St by the Brooklyn Bridge: the brutalist brick fortress where he and Ali Shaheed met, the bridge's stone tower behind */
   function tudor() {
-    const house = (x, w, roof) =>
-      '<rect x="' + x + '" y="110" width="' + w + '" height="96" fill="#efe6d2"/>' +
-      '<path d="M' + (x - 8) + ' 112l' + (w / 2 + 8) + '-' + roof + ' ' + (w / 2 + 8) + ' ' + roof + 'z" fill="#5a3a2a"/>' +
-      '<path d="M' + x + ' 140h' + w + 'M' + (x + w / 3) + ' 110v96M' + (x + 2 * w / 3) + ' 110v96M' + x + ' 110l' + (w / 3) + ' 30M' + (x + w) + ' 110l-' + (w / 3) + ' 30" stroke="#4a2e1e" stroke-width="4"/>' +
-      '<rect x="' + (x + 10) + '" y="150" width="20" height="24" fill="#f4d58d" class="flk"/><rect x="' + (x + w - 30) + '" y="150" width="20" height="24" fill="#f4d58d"/>' +
-      '<rect x="' + (x + w / 2 - 10) + '" y="176" width="20" height="30" rx="8" fill="#5a3a2a"/>' +
-      '<rect x="' + (x + w - 26) + '" y="' + (112 - roof + 10) + '" width="10" height="' + (roof - 10) + '" fill="#9a4b34"/>';
+    let slits = "";
+    for (let x = 70; x < 330; x += 24) slits += '<rect x="' + x + '" y="112" width="8" height="38" fill="#2a1e1a"/>';
+    let rows = "";
+    for (let y = 72; y < 206; y += 7) rows += '<path d="M50 ' + y + 'h300" stroke="#5a2a1e" stroke-width=".7" opacity=".7"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#gt)"/>' +
-      '<circle cx="40" cy="120" r="44" fill="#3d7a3a"/><circle cx="370" cy="110" r="48" fill="#356d33"/>' +
-      house(40, 140, 70) + house(220, 150, 76) +
-      '<rect x="0" y="206" width="400" height="16" fill="#5aa04e"/><rect x="0" y="222" width="400" height="10" fill="#c9c4b8"/>' +
-      '<rect x="0" y="232" width="400" height="28" fill="#3a3d44"/>' +
-      '<g class="car car2"><rect x="0" y="236" width="66" height="16" rx="5" fill="' + GREEN + '"/><rect x="12" y="230" width="36" height="9" rx="3" fill="#bfe1f5"/><circle cx="16" cy="253" r="4.5" fill="#111"/><circle cx="52" cy="253" r="4.5" fill="#111"/></g>' +
-      '<g class="leaf"><path d="M360 40q6-6 12 0q-6 6-12 0z" fill="#e0892a"/></g><g class="leaf leaf2"><path d="M60 30q6-6 12 0q-6 6-12 0z" fill="#c9502a"/></g>' +
-      '<text x="200" y="26" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" fill="#2a2016" letter-spacing="3">ADDISLEIGH PARK</text>',
+      /* the Brooklyn Bridge tower and cables */
+      '<path d="M336 36h44v120h-44z" fill="#b8a888"/><path d="M342 60q6-14 12 0v40h-12zM360 60q6-14 12 0v40h-12z" fill="#8fc0e0"/><rect x="332" y="32" width="52" height="6" fill="#a89878"/>' +
+      '<path d="M358 38Q260 130 120 140M358 38Q390 70 420 90" stroke="#59616e" stroke-width="2" fill="none"/>' +
+      [150, 190, 230, 270].map(x => '<path d="M' + x + ' ' + (140 - (x - 120) * 0.62) + 'V150" stroke="#59616e" stroke-width=".8"/>').join("") +
+      /* the school: dark red-brown brick, deep slit windows, the stepped mass */
+      '<rect x="50" y="70" width="300" height="136" fill="#7a3426"/>' + rows + '<rect x="90" y="52" width="140" height="20" fill="#6a2c20"/>' + slits +
+      '<rect x="50" y="160" width="300" height="10" fill="#5a2418"/><rect x="160" y="170" width="80" height="36" fill="#3a2a22"/>' +
+      '<path d="M50 206l40-26h40l-40 26z" fill="#8a3e2e"/>' +
+      '<text x="200" y="196" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="7" fill="#f4d58d" letter-spacing="1">MURRY BERGTRAUM H.S.</text>' +
+      '<rect x="0" y="206" width="400" height="16" fill="#c9c4b8"/><rect x="0" y="222" width="400" height="38" fill="#3a3d44"/><path d="M0 242h400" stroke="#eab308" stroke-width="2" stroke-dasharray="18 14"/>' +
+      '<g class="car"><rect x="0" y="226" width="66" height="16" rx="5" fill="' + GOLD + '"/><rect x="12" y="220" width="36" height="9" rx="3" fill="#bfe1f5"/><circle cx="16" cy="243" r="4.5" fill="#111"/><circle cx="50" cy="243" r="4.5" fill="#111"/></g>' +
+      '<text x="160" y="26" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" fill="#2a2016" letter-spacing="2">PEARL ST · BY THE BROOKLYN BRIDGE</text>' +
+      tag("TRIBE", 16, 252, 24, GOLD, -4) + tag("THE ABSTRACT", 230, 254, 18, GREEN, -3),
       sky("gt", "#9ed1ef", "#e8f5fb"));
   }
 
-  /* 4. A Native Tongues block party: turntables on a folding table, the speaker stack thumping, red-black-green flags */
+  /* 4. Electric Lady Studios, 52 W 8th St in the Village: the curved brick front and the round door, notes floating out */
   function block() {
-    let flags = "";
-    for (let x = 0; x < 400; x += 24) { const c = [RED, "#111", GREEN][(x / 24) % 3]; flags += '<path d="M' + x + ' 26l12 16 12-16z" fill="' + c + '"/>'; }
+    const town = (x, w, c) => { let s = '<rect x="' + x + '" y="60" width="' + w + '" height="146" fill="' + c + '"/>';
+      for (let y = 76; y < 170; y += 30) for (let xx = x + 10; xx < x + w - 14; xx += 26) s += '<rect x="' + xx + '" y="' + y + '" width="14" height="20" fill="' + ((xx + y) % 3 ? "#2a2a3a" : "#f4d58d") + '"/>';
+      return s; };
+    let curve = "";
+    for (let y = 92; y < 206; y += 7) curve += '<path d="M128 ' + y + 'q72 -16 144 0" stroke="#7a3a28" stroke-width=".8" fill="none"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#gp)"/>' + stars(12) +
-      '<path d="M0 24q200 30 400 0" stroke="#ddd" stroke-width="1.5" fill="none"/>' + flags +
-      /* brick row houses behind */
-      '<rect x="0" y="70" width="400" height="120" fill="#7a3e2c"/>' +
-      (function () { let s = ""; for (let x = 20; x < 400; x += 60) s += '<rect x="' + x + '" y="86" width="22" height="30" fill="#f4d58d" class="flk"/><rect x="' + x + '" y="130" width="22" height="30" fill="#f4d58d"/>'; return s; })() +
-      /* speaker stacks */
-      '<g><rect x="20" y="110" width="70" height="90" fill="#1a1a1a"/><circle class="pump" cx="55" cy="135" r="16" fill="#333" stroke="#666" stroke-width="3"/><circle class="pump" cx="55" cy="176" r="20" fill="#333" stroke="#666" stroke-width="3"/></g>' +
-      '<g><rect x="310" y="110" width="70" height="90" fill="#1a1a1a"/><circle class="pump" cx="345" cy="135" r="16" fill="#333" stroke="#666" stroke-width="3"/><circle class="pump" cx="345" cy="176" r="20" fill="#333" stroke="#666" stroke-width="3"/></g>' +
-      /* folding table with two turntables */
-      '<rect x="110" y="160" width="180" height="10" fill="#8a8f96"/><path d="M120 170l-10 36M280 170l10 36" stroke="#6b7280" stroke-width="4"/>' +
-      '<rect x="116" y="140" width="76" height="20" rx="3" fill="#c8ccd4"/><rect x="208" y="140" width="76" height="20" rx="3" fill="#c8ccd4"/>' +
-      '<g class="spin"><ellipse cx="148" cy="148" rx="24" ry="6" fill="#111"/><ellipse cx="148" cy="148" rx="6" ry="2" fill="' + RED + '"/></g>' +
-      '<g class="spin"><ellipse cx="240" cy="148" rx="24" ry="6" fill="#111"/><ellipse cx="240" cy="148" rx="6" ry="2" fill="' + GREEN + '"/></g>' +
-      '<text x="200" y="64" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="18" fill="' + GOLD + '" letter-spacing="3">NATIVE TONGUES</text>' +
-      '<g class="note"><text x="130" y="120" font-size="20" fill="' + GOLD + '">&#9834;</text></g>' +
-      '<g class="note note2"><text x="250" y="122" font-size="18" fill="#fff">&#9835;</text></g>' +
-      '<g class="note note3"><text x="200" y="118" font-size="20" fill="' + GREEN + '">&#9834;</text></g>' +
-      '<rect x="0" y="200" width="400" height="60" fill="#3a3d44"/><path d="M0 230h400" stroke="#eab308" stroke-width="2" stroke-dasharray="18 14"/>',
+      town(0, 118, "#6a4a3a") + town(282, 118, "#5a4a5a") +
+      /* the curved brick front */
+      '<path d="M128 206V92q72-26 144 0v114z" fill="#9a4a32"/>' + curve +
+      '<path d="M128 92q72-26 144 0" stroke="#5a2a1a" stroke-width="4" fill="none"/>' +
+      '<circle cx="200" cy="168" r="26" fill="#2a2018" stroke="#d8c8a8" stroke-width="4"/><circle class="flk" cx="200" cy="168" r="18" fill="#f4d58d" opacity=".35"/><circle cx="212" cy="170" r="2" fill="#d8c8a8"/>' +
+      '<rect x="150" y="104" width="100" height="16" fill="#14102a"/><text x="200" y="116" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="8" fill="' + GOLD + '" letter-spacing="1">ELECTRIC LADY</text>' +
+      '<g class="note"><text x="170" y="140" font-size="18" fill="' + GOLD + '">&#9834;</text></g><g class="note note2"><text x="220" y="136" font-size="18" fill="#fff">&#9835;</text></g><g class="note note3"><text x="196" y="130" font-size="18" fill="' + GREEN + '">&#9834;</text></g>' +
+      '<rect x="0" y="206" width="400" height="14" fill="#8a8478"/><rect x="0" y="220" width="400" height="40" fill="#3a3d44"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="18 14"/>' +
+      '<g class="car car2"><rect x="0" y="224" width="66" height="16" rx="5" fill="#f2c200"/><rect x="12" y="218" width="36" height="9" rx="3" fill="#bfe1f5"/><circle cx="16" cy="241" r="4.5" fill="#111"/><circle cx="50" cy="241" r="4.5" fill="#111"/></g>' +
+      '<text x="200" y="30" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="16" fill="' + GOLD + '" letter-spacing="2">52 W 8TH ST · GREENWICH VILLAGE</text>' +
+      tag("Q-TIP", 16, 200, 26, GOLD, -6) + tag("CAN I KICK IT", 286, 200, 16, RED, -4),
       sky("gp", "#14102a", "#3b2a5a"));
   }
 

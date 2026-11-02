@@ -77,73 +77,7 @@
       "");
   }
 
-  /* 2. Hamilton Grange in St. Nicholas Park: the butter-yellow Federal house with white porches */
-  function grange() {
-    let rail = x => { let r = ""; for (let i = 0; i < 6; i++) r += '<rect x="' + (x + 3 + i * 7) + '" y="168" width="2" height="12" fill="#fff"/>'; return r; };
-    const tree = (x, y, r, c) => '<rect x="' + (x - 3) + '" y="' + y + '" width="6" height="44" fill="#4a3322"/><circle cx="' + x + '" cy="' + (y - 6) + '" r="' + r + '" fill="' + c + '"/><circle cx="' + (x + r / 2) + '" cy="' + (y + 4) + '" r="' + r * .7 + '" fill="' + c + '" opacity=".9"/>';
-    const leaf = (x, y, c, cls) => '<path class="leaf ' + cls + '" d="M' + x + ' ' + y + 'q4-5 8 0q-4 5-8 0z" fill="' + c + '"/>';
-    let wins = "";
-    [130, 160, 230, 260].forEach(x => { wins += '<rect x="' + x + '" y="104" width="14" height="22" fill="#2f3a3a" stroke="#fff" stroke-width="2"/><rect x="' + x + '" y="140" width="14" height="24" fill="#2f3a3a" stroke="#fff" stroke-width="2"/>'; });
-    return svg(
-      '<rect width="400" height="260" fill="url(#g2)"/>' +
-      /* schist outcrop of the park */
-      '<path d="M0 196q40-30 90-20t80 10l-170 30z" fill="#6b6a66"/>' +
-      tree(40, 150, 28, "#d9822b") + tree(360, 156, 26, "#c4502a") +
-      /* roof with chimneys and balustrade */
-      '<path d="M112 92l14-12h148l14 12z" fill="#5a4a3a"/><rect x="140" y="66" width="10" height="16" fill="#8a4a3a"/><rect x="250" y="66" width="10" height="16" fill="#8a4a3a"/>' +
-      '<rect x="160" y="74" width="80" height="6" fill="#fff"/>' +
-      /* yellow clapboard body */
-      '<rect x="118" y="92" width="164" height="92" fill="#f2d675"/>' +
-      (function () { let c = ""; for (let y = 96; y < 184; y += 6) c += '<path d="M118 ' + y + 'h164" stroke="#d9bd5e" stroke-width="1"/>'; return c; })() +
-      '<path d="M118 92h164" stroke="#fff" stroke-width="3"/><path d="M118 92v92M282 92v92" stroke="#fff" stroke-width="3"/>' + wins +
-      /* front door with fanlight */
-      '<path d="M190 184v-30a10 10 0 0 1 20 0v30z" fill="#2e4a3a" stroke="#fff" stroke-width="2"/><path d="M190 154a10 10 0 0 1 20 0" fill="#ffe7a8" opacity=".7"/>' +
-      /* side porches (piazzas) */
-      '<rect x="74" y="140" width="44" height="6" fill="#fff"/><rect x="78" y="146" width="4" height="38" fill="#fff"/><rect x="110" y="146" width="4" height="38" fill="#fff"/>' + rail(76) +
-      '<rect x="282" y="140" width="44" height="6" fill="#fff"/><rect x="286" y="146" width="4" height="38" fill="#fff"/><rect x="318" y="146" width="4" height="38" fill="#fff"/>' + rail(284) +
-      '<rect x="70" y="180" width="260" height="6" fill="#d9d4c4"/>' +
-      /* lawn and path */
-      '<rect x="0" y="186" width="400" height="74" fill="#4f8a3e"/><path d="M190 186h20l30 74h-80z" fill="#c9bfa6"/>' +
-      /* a squirrel hopping on the lawn */
-      '<g class="hop"><ellipse cx="300" cy="226" rx="8" ry="5" fill="#7a6a5a"/><circle cx="307" cy="221" r="3.5" fill="#7a6a5a"/><path d="M292 226q-8-4-4-14" stroke="#7a6a5a" stroke-width="5" fill="none" stroke-linecap="round"/></g>' +
-      leaf(46, 130, "#e8942c", "") + leaf(70, 140, "#c4502a", "lf2") + leaf(350, 140, "#e0a73a", "lf3") + leaf(372, 150, "#d97a2b", "lf4"),
-      sky("g2", "#7fb3e0", "#e3f1fa"));
-  }
 
-  /* 3. The colmado on Broadway uptown: Dominican flag, plantains, dominoes on the sidewalk, merengue on the speaker */
-  function colmado() {
-    let awn = "";
-    for (let x = 40; x < 360; x += 20) awn += '<path d="M' + x + ' 70h20l-2 22h-16z" fill="' + ((x / 20) % 2 ? "#ce1126" : "#002d62") + '"/>';
-    let fruit = "";
-    for (let i = 0; i < 6; i++) fruit += '<path d="M' + (66 + i * 8) + ' 150q4 18 14 22" stroke="#7fae3a" stroke-width="5" fill="none" stroke-linecap="round"/>';
-    for (let i = 0; i < 5; i++) fruit += '<path d="M' + (124 + i * 8) + ' 152q4 16 14 20" stroke="#e7c24a" stroke-width="5" fill="none" stroke-linecap="round"/>';
-    const n = (x, y, cls) => '<g class="note ' + cls + '"><circle cx="' + x + '" cy="' + y + '" r="4" fill="' + CYAN + '"/><path d="M' + (x + 4) + ' ' + y + 'v-14h6" stroke="' + CYAN + '" stroke-width="2" fill="none"/></g>';
-    return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' +
-      /* tenement above the store */
-      '<rect x="20" y="0" width="360" height="70" fill="#7a4a3a"/>' +
-      (function () { let w = ""; for (let x = 44; x < 360; x += 54) w += '<rect x="' + x + '" y="12" width="20" height="30" fill="#ffd98a" opacity=".7"/><path d="M' + (x - 2) + ' 44h24" stroke="#ddd" stroke-width="2"/>'; return w; })() +
-      /* sign and awning */
-      '<rect x="40" y="48" width="320" height="22" fill="#fff8e6"/><text x="200" y="65" text-anchor="middle" ' + F + ' font-weight="700" font-size="16" fill="#ce1126">COLMADO · GROCERY</text>' + awn +
-      /* storefront */
-      '<rect x="40" y="92" width="320" height="104" fill="#2a2a30"/><rect x="56" y="100" width="130" height="80" fill="#ffe7a8" opacity=".25"/>' +
-      '<rect x="200" y="100" width="44" height="96" fill="#1a1a1f" stroke="#666"/><rect x="258" y="100" width="90" height="80" fill="#ffe7a8" opacity=".25"/>' +
-      /* plantain bins */
-      '<rect x="58" y="168" width="112" height="28" fill="#8a6a3a"/>' + fruit +
-      /* the flag hanging from the awning */
-      '<rect x="256" y="88" width="2" height="16" fill="#999"/>' + flag(258, 96, 48, "wave") +
-      /* speaker with notes */
-      '<rect x="320" y="150" width="30" height="46" rx="3" fill="#111" stroke="#555"/><circle cx="335" cy="164" r="7" fill="#333" stroke="#888"/><circle cx="335" cy="184" r="9" fill="#333" stroke="#888"/>' +
-      n(336, 140, "") + n(350, 150, "n2") + n(322, 146, "n3") +
-      /* sidewalk, dominoes table, güira and tambora */
-      '<rect x="0" y="196" width="400" height="64" fill="#8a8a86"/><path d="M0 222h400" stroke="#777" stroke-width="1"/>' +
-      '<rect x="110" y="208" width="90" height="6" fill="#e9e1cf"/><rect x="118" y="214" width="4" height="30" fill="#555"/><rect x="188" y="214" width="4" height="30" fill="#555"/>' +
-      '<rect x="128" y="203" width="10" height="5" fill="#fff" stroke="#222" stroke-width=".6"/><rect x="142" y="203" width="10" height="5" fill="#fff" stroke="#222" stroke-width=".6"/><rect x="156" y="203" width="10" height="5" fill="#fff" stroke="#222" stroke-width=".6"/>' +
-      '<circle cx="133" cy="205.5" r=".9" fill="#222"/><circle cx="147" cy="205.5" r=".9" fill="#222"/><circle cx="161" cy="205.5" r=".9" fill="#222"/>' +
-      '<g class="shake"><rect x="40" y="210" width="12" height="34" rx="6" fill="#c9ced6" stroke="#6b7280"/><path d="M42 216h8M42 222h8M42 228h8M42 234h8" stroke="#6b7280"/></g>' +
-      '<g transform="translate(240 214)"><rect x="0" y="0" width="40" height="26" rx="4" fill="#a0612f" stroke="#5a3418" stroke-width="1.5"/><ellipse cx="0" cy="13" rx="4" ry="13" fill="#e9dcc0" stroke="#5a3418"/><ellipse cx="40" cy="13" rx="4" ry="13" fill="#e9dcc0" stroke="#5a3418"/><path d="M4 2l32 22M4 24l32-22" stroke="#5a3418" stroke-width="1"/></g>',
-      sky("g3", "#1b1f3a", "#3a2a4a"));
-  }
 
   /* 4. The Little Red Lighthouse under the George Washington Bridge, on the Hudson at Fort Washington Park */
   function lighthouse() {
@@ -195,5 +129,93 @@
       sky("g5", "#0d1022", "#2a1e3a"));
   }
 
-  window.SCENES = { train, grange, colmado, lighthouse, corner };
+  /* ---- redrawn landmark scenes (OG FAN 99 landmark pass): small shared helpers, prefixed L ---- */
+  const Lcss = '<style>' +
+    '@keyframes lmCar{from{transform:translateX(-170px)}to{transform:translateX(480px)}}.lm-car{animation:lmCar 8s linear infinite}' +
+    '@keyframes lmCarB{from{transform:translateX(480px)}to{transform:translateX(-170px)}}.lm-carb{animation:lmCarB 10s linear infinite}' +
+    '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.lm-bob{animation:lmBob 1.6s ease-in-out infinite}' +
+    '@keyframes lmFlk{0%,100%{opacity:1}45%{opacity:.7}50%{opacity:.3}55%{opacity:.95}}.lm-flk{animation:lmFlk 2.3s infinite}' +
+    '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{animation:lmSpin 1.8s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmRise{0%{transform:translateY(0) scale(.8);opacity:0}20%{opacity:.85}100%{transform:translateY(-70px) scale(1.4);opacity:0}}.lm-rise{animation:lmRise 4s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{animation:lmSway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}' +
+    '@keyframes lmBlk{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blk{animation:lmBlk 1s steps(1) infinite}' +
+    '@keyframes lmFlag{0%,100%{transform:skewY(0)}50%{transform:skewY(-6deg)}}.lm-flag{animation:lmFlag 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}' +
+    '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(-30px,230px) rotate(280deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}' +
+    '@keyframes lmCld{from{transform:translateX(-120px)}to{transform:translateX(470px)}}.lm-cld{animation:lmCld 30s linear infinite}' +
+    '@keyframes lmPls{0%,100%{opacity:.35}50%{opacity:1}}.lm-pls{animation:lmPls 2.2s ease-in-out infinite}' +
+    '@keyframes lmWav{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}.lm-wav{animation:lmWav 3s ease-in-out infinite}' +
+    '@keyframes lmBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}.lm-beat{animation:lmBeat .7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmNote{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-60px);opacity:0}}.lm-note{animation:lmNote 3s linear infinite}' +
+    '.lmd1{animation-delay:-1s}.lmd2{animation-delay:-2s}.lmd3{animation-delay:-3s}.lmd4{animation-delay:-4.5s}.lmd5{animation-delay:-6s}' +
+    '</style>';
+  const LF = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
+  const LT = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" ' + LF + ' font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LA = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" font-family="Anton, Impact, sans-serif" font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LR = (x, y, w, h, fill, extra) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + fill + '"' + (extra || "") + '/>';
+  const Lbul = (x, y, l, col, r) => { r = r || 11; return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/>' + LT(l, x, y + r * 0.42, r * 1.22, col === "#fccc0a" ? "#000" : "#fff"); };
+  const Lpill = (x, y, l, col) => { const w = l.length * 8 + 14; return '<rect x="' + (x - w / 2) + '" y="' + (y - 10) + '" width="' + w + '" height="20" rx="10" fill="' + col + '"/>' + LT(l, x, y + 4.5, 11, "#fff"); };
+  /* black MTA-style station sign: lines = [["B","#ff6319"],...]; a long name like "MN" draws a pill */
+  const Lsign = (x, y, w, name, lines, size) => { let b = "", bx = x + w - 18; for (let i = lines.length - 1; i >= 0; i--) { const l = lines[i]; if (l[0].length > 1) { b += Lpill(bx - 10, y + 17, l[0], l[1]); bx -= l[0].length * 8 + 22; } else { b += Lbul(bx, y + 17, l[0], l[1], 10); bx -= 24; } }
+    return LR(x, y, w, 32, "#111", ' rx="3"') + LR(x, y, w, 4, "#fff") + LT(name, x + 10, y + 23, size || 15, "#fff", "start") + b; };
+  /* green NYC street sign blade */
+  const Lblade = (x, y, t, w) => { w = w || t.length * 7.2 + 20; return LR(x, y, w, 19, "#0f6b3a", ' rx="2" stroke="#fff" stroke-width="1.5"') + LT(t, x + w / 2, y + 14, 12, "#fff"); };
+  /* two green signs on a pole at x, crossing */
+  const Lpole = (x, y, a, b) => { const wa = a.length * 7.2 + 20, wb = b.length * 7.2 + 20; return LR(x, y, 6, 236 - y, "#2a3138") + Lblade(x + 3 - wa / 2, y + 6, a) + Lblade(x + 3 - wb / 2, y + 30, b) + LR(x - 2, y - 4, 10, 6, "#2a3138"); };
+  const Lbrick = (x, y, w, h, base, mortar) => { let s = LR(x, y, w, h, base); for (let yy = y + 6; yy < y + h; yy += 6) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + mortar + '" stroke-width=".8"/>'; return s; };
+  const Lwin = (x, y, cols, rows, dx, dy, w, h, lit, dark) => { let s = ""; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const on = ((r * 7 + c * 3) % 5) < 2; s += '<rect x="' + (x + c * dx) + '" y="' + (y + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + (on ? lit : dark) + '"' + (on && (r + c) % 4 === 0 ? ' class="lm-flk"' : '') + '/>'; } return s; };
+  const Lstars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".75"/>'; return s; };
+  const Lcloud = (x, y, s, cls) => '<g class="lm-cld ' + (cls || "") + '"><g transform="translate(' + x + ' ' + y + ') scale(' + (s || 1) + ')" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="22" ry="9"/><ellipse cx="14" cy="-6" rx="14" ry="9"/><ellipse cx="-12" cy="-4" rx="11" ry="7"/></g></g>';
+  const Ltree = (x, y, r, col, cls) => '<g class="lm-sway ' + (cls || "") + '">' + LR(x - 3, y, 6, r * 1.3, "#5a3d24") + '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/><circle cx="' + (x - r * .5) + '" cy="' + (y + r * .3) + '" r="' + r * .7 + '" fill="' + col + '" opacity=".85"/><circle cx="' + (x + r * .55) + '" cy="' + (y + r * .25) + '" r="' + r * .65 + '" fill="' + col + '" opacity=".9"/></g>';
+  /* faceless figure: head + body, x = centre, y = feet */
+  const Lman = (x, y, body, cls, cap) => '<g' + (cls ? ' class="' + cls + '"' : "") + '>' + '<rect x="' + (x - 7) + '" y="' + (y - 30) + '" width="14" height="22" rx="5" fill="' + body + '"/><rect x="' + (x - 6) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/><rect x="' + (x + 1) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/>' +
+    '<circle cx="' + x + '" cy="' + (y - 37) + '" r="7" fill="#5a3a26"/>' + (cap ? '<path d="M' + (x - 8) + ' ' + (y - 39) + 'q8-10 16 0z" fill="' + cap + '"/><rect x="' + (x - 1) + '" y="' + (y - 41) + '" width="12" height="3" fill="' + cap + '"/>' : '') + '</g>';
+  /* subway car (stainless) seen from the side, x,y top-left */
+  const Lcar = (x, y, w, l, col, band) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="52" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>'; for (let i = x + 16; i < x + w - 60; i += 40) s += '<rect x="' + i + '" y="' + (y + 9) + '" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    return s + LR(x, y + 33, w, 5, band || col) + Lbul(x + w - 22, y + 18, l, col, 10) + '<circle cx="' + (x + w - 8) + '" cy="' + (y + 44) + '" r="3.5" fill="#fff6c2"/>'; };
+  const Lcab = (x, y) => '<rect x="' + x + '" y="' + (y + 8) + '" width="70" height="20" rx="5" fill="#f7c600"/><path d="M' + (x + 12) + ' ' + (y + 8) + 'l8-10h28l10 10z" fill="#f7c600"/><path d="M' + (x + 22) + ' ' + y + 'h10v8h-14zM' + (x + 35) + ' ' + y + 'h10l7 8h-17z" fill="#bfe0ff"/>' +
+    LR(x + 26, y - 6, 18, 6, "#fff", ' rx="1"') + LT("TAXI", x + 35, y - 1.5, 5, "#111") + '<path d="M' + x + ' ' + (y + 17) + 'h70" stroke="#111" stroke-width="1" stroke-dasharray="3 3"/><circle cx="' + (x + 15) + '" cy="' + (y + 28) + '" r="6" fill="#111"/><circle cx="' + (x + 55) + '" cy="' + (y + 28) + '" r="6" fill="#111"/>';
+  const Lauto = (x, y, col) => '<rect x="' + x + '" y="' + (y + 6) + '" width="56" height="16" rx="5" fill="' + col + '"/><rect x="' + (x + 11) + '" y="' + (y - 2) + '" width="32" height="11" rx="3" fill="#cfe6ff"/><circle cx="' + (x + 13) + '" cy="' + (y + 22) + '" r="5" fill="#111"/><circle cx="' + (x + 43) + '" cy="' + (y + 22) + '" r="5" fill="#111"/>';
+  /* turntable from above at an angle */
+  const Ldeck = (cx, cy, r, lab) => '<rect x="' + (cx - r - 12) + '" y="' + (cy - r * .45 - 10) + '" width="' + (r * 2 + 30) + '" height="' + (r * .9 + 20) + '" rx="4" fill="#2a2a30"/><g transform="translate(' + cx + ' ' + cy + ') scale(1 .42)"><g class="lm-spin"><circle r="' + r + '" fill="#0c0c0e"/><circle r="' + r * .72 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .5 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .3 + '" fill="' + lab + '"/><rect x="-2" y="' + (-r * .3) + '" width="4" height="' + r * .2 + '" fill="#fff"/></g></g><path d="M' + (cx + r + 6) + ' ' + (cy - r * .4) + 'l-8 ' + r * .5 + '" stroke="#c9ced6" stroke-width="3"/>';
+  /* 1. George Washington Bridge Bus Station, Fort Washington Av at W 178th: Nervi's concrete butterfly roof over the ramps */
+  function LM_grange() {
+    let roof = "", vents = ""; for (let i = 0; i < 6; i++) { const x = 30 + i * 57; roof += '<path d="M' + x + ' 72l28.5 40 28.5-40v18l-28.5 40-28.5-40z" fill="#d2cdc0" stroke="#9a9486"/>'; vents += '<path d="M' + (x + 10) + ' 84l18.5 24 18.5-24z" fill="#38e8ff" opacity=".6"/><path d="M' + (x + 28.5) + ' 112v18" stroke="#9a9486" stroke-width="3"/>'; }
+    const bus = (c) => LR(0, 0, 96, 34, "#e8eef2", ' rx="5"') + LR(0, 22, 96, 5, c) + [8, 30, 52].map(x => LR(x, 6, 18, 12, "#2a3440", ' rx="2"')).join("") + LR(76, 4, 16, 18, "#2a3440", ' rx="2"') + '<circle cx="20" cy="36" r="6" fill="#111"/><circle cx="76" cy="36" r="6" fill="#111"/>';
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lcloud(80, 26) + Lcloud(300, 40, .8, "lmd3") +
+      /* the bridge's steel tower far off */
+      '<g opacity=".45">' + LR(330, 20, 8, 76, "#5a6a7a") + LR(356, 20, 8, 76, "#5a6a7a") + '<path d="M330 30h34M330 54h34M330 78h34M334 30l26 24M360 30l-26 24" stroke="#5a6a7a" stroke-width="2"/><path d="M300 22q30 40 34 60M364 22q30 30 36 40" stroke="#5a6a7a" fill="none"/></g>' +
+      /* the folded concrete roof */
+      LR(30, 66, 342, 8, "#b8b2a4") + roof + vents + LR(30, 128, 342, 12, "#a8a294") +
+      [50, 140, 230, 320].map(x => '<path d="M' + x + ' 140l8 60h8l8-60z" fill="#b8b2a4"/>').join("") +
+      /* ramp + buses */
+      '<path d="M0 214L400 180v16L0 232z" fill="#8a8478"/><path d="M0 214L400 180" stroke="#eab308" stroke-width="2"/>' +
+      '<g class="lm-car" style="animation-duration:10s"><g transform="translate(0 168) rotate(-4.8)">' + bus("#ff3b4e") + '</g></g>' +
+      LR(0, 232, 400, 28, "#3a3a40") + '<g transform="translate(150 150)">' + bus("#38e8ff") + '</g>' + '<g class="lm-carb">' + Lauto(0, 232, "#38e8ff") + '</g>' +
+      LR(8, 8, 220, 34, "#0e2a3a", ' rx="3"') + LT("GEORGE WASHINGTON BRIDGE", 118, 22, 10.5, "#38e8ff") + LT("BUS STATION · FT WASHINGTON AV &amp; W 178", 118, 35, 8, "#fff") +
+      tag("MELII", 290, 160, 30, "#38e8ff", -5) + tag("CHUCHI", 18, 196, 16, "#ff3b4e", -6),
+      sky("sk", "#7fb8e6", "#f2e8d0"));
+  }
+  /* 2. Inwood Hill Park: the salt marsh and the last forest under the Henry Hudson Bridge's steel arch */
+  function LM_colmado() {
+    let reeds = ""; for (let x = 0; x < 400; x += 8) reeds += '<path class="lm-sway' + (x % 3 ? " lmd1" : "") + '" d="M' + x + ' 236q' + (x % 2 ? 3 : -3) + '-14 ' + (x % 2 ? 5 : -2) + '-28" stroke="' + (x % 16 ? "#9aa848" : "#c8b45a") + '" stroke-width="3" fill="none"/>';
+    let hang = ""; for (let x = 136; x <= 264; x += 16) { const y = 104 + Math.pow((x - 200) / 64, 2) * 34; hang += '<path d="M' + x + ' 70V' + y + '" stroke="#3a5a7a" stroke-width="2"/>'; }
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lcloud(60, 20) + Lcloud(320, 30, .8, "lmd2") +
+      /* forested hill on both sides */
+      '<path d="M0 160V90q40-30 90-20t60 30v60z" fill="#2f5a2e"/><path d="M400 160V80q-40-24-90-14t-60 34v60z" fill="#2a522a"/>' +
+      [20, 60, 100, 300, 340, 380].map((x, i) => Ltree(x, 92 + (i % 3) * 8, 18, i % 2 ? "#3f7a3a" : "#2f6b30", i % 2 ? "lmd1" : "")).join("") +
+      /* the Henry Hudson Bridge: steel arch with the deck on top */
+      LR(110, 62, 180, 8, "#3a5a7a") + '<path d="M120 138q80-110 160 0" stroke="#3a5a7a" stroke-width="7" fill="none"/>' + hang +
+      '<g class="lm-car" style="animation-duration:5s">' + Lauto(0, 46, "#ff3b4e") + '</g>' +
+      /* Spuyten Duyvil water + marsh */
+      LR(0, 136, 400, 72, "#3f7aa6") + '<g class="lm-wav"><path d="M20 160h360M0 186h400" stroke="#7ab0d8" stroke-width="2" stroke-dasharray="14 20"/></g>' +
+      '<g class="lm-car" style="animation-duration:26s"><path d="M0 150h30l-5 6H5z" fill="#f4f0e6"/><path d="M14 150v-20l10 18z" fill="#38e8ff"/></g>' +
+      '<path d="M0 208h400v52H0z" fill="#6a7a3a"/>' + reeds +
+      /* great egret */
+      '<g class="lm-bob"><ellipse cx="330" cy="218" rx="12" ry="6" fill="#fff"/><path d="M340 216q8-14 2-22" stroke="#fff" stroke-width="3" fill="none"/><path d="M342 194l9 2" stroke="#e8b84a" stroke-width="2"/><path d="M326 224l-2 14M332 224l0 14" stroke="#222" stroke-width="1.5"/></g>' +
+      LR(8, 214, 176, 34, "#0e2a1e", ' rx="3"') + LT("INWOOD HILL PARK", 96, 229, 12, "#fff") + LT("HENRY HUDSON BRIDGE · SALT MARSH", 96, 242, 8, "#38e8ff") +
+      tag("MELII", 220, 254, 28, "#38e8ff", -4) + tag("DOMINICANA", 296, 132, 15, "#ff3b4e", -4),
+      sky("sk", "#86c0ea", "#f0ecd6"));
+  }
+
+  window.SCENES = { train, grange: LM_grange, colmado: LM_colmado, lighthouse, corner };
 })();

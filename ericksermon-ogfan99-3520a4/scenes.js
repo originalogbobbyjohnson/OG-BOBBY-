@@ -510,11 +510,39 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* Sagtikos Manor on Montauk Hwy, West Bay Shore: the long white colonial manor (begun 1690s) where Washington slept in 1790, green shutters, the big lawn, the old trees */
+  function sagtikos(o) {
+    let clap = ""; for (let y = 108; y < 196; y += 6) clap += '<path d="M60 ' + y + 'h300" stroke="#d8d4c8" stroke-width="1"/>';
+    const win = x => '<rect x="' + (x - 7) + '" y="0" width="5" height="22" fill="#2f5a3a"/><rect x="' + x + '" y="0" width="14" height="22" fill="#3a4a5a" stroke="#fff" stroke-width="1.5"/><rect x="' + (x + 16) + '" y="0" width="5" height="22" fill="#2f5a3a"/>';
+    let wins = ""; [84, 124, 164, 236, 276, 316].forEach(x => wins += '<g transform="translate(0 116)">' + win(x) + '</g><g transform="translate(0 156)">' + win(x) + '</g>');
+    return svg(bgsky() + '<g class="slide slw"><ellipse cx="0" cy="40" rx="40" ry="9" fill="#fff" opacity=".8"/></g>' + tree(30, 110, 34) + tree(370, 104, 36, "sw2") +
+      '<rect x="60" y="104" width="300" height="92" fill="#f6f3ea"/>' + clap + '<path d="M50 106l40-34h240l40 34z" fill="#5a5a5a"/><rect x="132" y="56" width="10" height="24" fill="#a8544a"/><rect x="270" y="56" width="10" height="24" fill="#a8544a"/>' +
+      [118, 200, 282].map(x => '<rect x="' + (x - 10) + '" y="80" width="20" height="18" fill="#f6f3ea"/><path d="M' + (x - 13) + ' 80l13-10 13 10z" fill="#5a5a5a"/><rect x="' + (x - 5) + '" y="84" width="10" height="12" fill="#3a4a5a"/>').join("") +
+      wins + '<path d="M188 196v-36h24v36z" fill="#2f5a3a"/><path d="M184 160h32l-16-10z" fill="#f6f3ea" stroke="#d8d4c8"/>' +
+      '<rect x="0" y="196" width="400" height="40" fill="#5f9a3a"/><path d="M176 236l12-40h24l12 40z" fill="#c9b896"/>' + ground() + cars() +
+      '<rect x="10" y="10" width="190" height="36" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="2"/>' + txt("SAGTIKOS MANOR", 105, 27, 13, "#fff") + txt("MONTAUK HWY · WEST BAY SHORE", 105, 40, 8, "#fff") +
+      '<rect x="240" y="206" width="150" height="24" fill="#3a2a1e"/>' + txt("WASHINGTON SLEPT HERE · 1790", 315, 222, 8, "#f2d68a") +
+      (o.tag ? tag(o.tag[0], 230, 40, 24, o.tag[1], -5) : ''), sky("sk", "#7ab8e8", "#e8f4ff"));
+  }
+  /* No Pressure (1993), his solo debut: the Def Squad street at dusk, the giant E Double billboard lit up, the crew sign on the wall, the ride rolling by */
+  function noPressure(o) {
+    let bulbs = ""; for (let x = 70, i = 0; x <= 330; x += 20, i++) bulbs += '<circle class="blk' + ["", " b2", " b3", " b4"][i % 4] + '" cx="' + x + '" cy="22" r="3" fill="#ffe9a0"/>';
+    return svg(bgsky() + stars(10) +
+      brick(0, 120, 140, 116, "#5a3a2e", "#64432f") + brick(260, 110, 140, 126, "#4a3a4a", "#544454") + windows(10, 132, 4, 3, 32, 30, 16, 18, "#ffe6a8", "#2a2a33") + windows(272, 122, 4, 3, 32, 30, 16, 18, "#ffe6a8", "#2a2a33") +
+      /* the billboard */
+      '<rect x="56" y="16" width="288" height="96" fill="#1a1428" stroke="' + o.c3 + '" stroke-width="4"/>' + bulbs +
+      txt("E DOUBLE", 200, 62, 34, o.c1, "middle", ' letter-spacing="3" class="flk"') + txt("NO PRESSURE", 200, 88, 18, "#fff", "middle", ' letter-spacing="4"') + txt("1993", 200, 104, 10, o.c3) +
+      '<rect x="120" y="112" width="8" height="40" fill="#3a3a44"/><rect x="272" y="112" width="8" height="40" fill="#3a3a44"/>' +
+      '<rect x="140" y="152" width="120" height="84" fill="#2a2228"/><rect x="150" y="164" width="100" height="26" fill="#111"/>' + txt("DEF SQUAD", 200, 182, 14, o.c2, "middle", ' class="pls"') +
+      '<g class="beam" style="opacity:.25"><path d="M200 240l140 -40v24z" fill="' + o.c3 + '"/></g>' + ground() + cars() +
+      (o.tag ? tag(o.tag[0], 150, 228, 22, o.tag[1], -4) : ''), sky("sk", "#1a1438", "#d86a4a"));
+  }
+
   window.SCENES = {
     station: function () { return railStation({name:"Bay Shore", line:"LIRR", sky:["#8fc3ea","#f6d9a6"], tag:["DEF SQUAD","#c9a4ff"]}); },
     ferry: function () { return ferry({c1:"#c9a4ff", sign:"FERRIES", tag:["GREAT SOUTH BAY","#7cf29a"]}); },
-    main: function () { return mainstreet({c1:"#c9a4ff", c2:"#7cf29a", c3:"#ffd34d", sign:"MAIN ST · BAY SHORE", tag:["E DOUBLE","#c9a4ff"]}); },
-    studio: function () { return studio({beats:1, c1:"#c9a4ff", c2:"#7cf29a", c3:"#ffd34d", tag:["THE FUNK","#7cf29a"]}); },
+    main: function () { return sagtikos({tag:["E DOUBLE","#c9a4ff"]}); },
+    studio: function () { return noPressure({c1:"#c9a4ff", c2:"#7cf29a", c3:"#ffd34d", tag:["THE FUNK","#7cf29a"]}); },
     corner: function () { return corner({s1:"Main St", s2:"Maple Av", tags:[["E DOUBLE","#c9a4ff",46],["DEF SQUAD","#7cf29a",26],["EPMD","#ffd34d"],["BAY SHORE","#f6efdc"]]}); }
   };
 })();

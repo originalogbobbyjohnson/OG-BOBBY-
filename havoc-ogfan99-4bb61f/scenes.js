@@ -139,49 +139,30 @@
       sky("gy", "#0a0f1e", "#3b3550"));
   }
 
-  /* 4. The beat lab: drum machine pads lighting up in sequence, crates of records, turntable spinning, speakers thumping */
+  /* 4. Album world, Hell on Earth (1996): Manhattan across the East River from the Queensbridge shore under a burning red sky, embers drifting, the bridge black against the glow, the Houses dark in front */
   function lab() {
-    let foam = "";
-    for (let y = 0; y < 150; y += 16) for (let x = 0; x < 400; x += 16) foam += '<path d="M' + x + ' ' + (y + 16) + 'l8-16 8 16z" fill="' + ((x / 16 + y / 16) % 2 ? "#141925" : "#10141e") + '"/>';
-    let pads = "", n = 0;
-    for (let r = 0; r < 4; r++) for (let c = 0; c < 4; c++) {
-      const k = 1 + ((r * 4 + c) * 5) % 8;
-      pads += '<rect x="' + (186 + c * 17) + '" y="' + (176 + r * 13) + '" width="14" height="10" rx="2" fill="#3a3f47"/>' +
-        '<rect class="pd p' + k + '" x="' + (186 + c * 17) + '" y="' + (176 + r * 13) + '" width="14" height="10" rx="2" fill="' + (n++ % 3 ? AMBER : "#ff4f5e") + '"/>';
-    }
-    let crates = "";
-    [[18, 196], [70, 196], [18, 156]].forEach(([x, y]) => {
-      crates += '<rect x="' + x + '" y="' + y + '" width="48" height="40" fill="#1f5fa8" stroke="#123a66" stroke-width="2"/>';
-      for (let i = 0; i < 8; i++) crates += '<rect x="' + (x + 3 + i * 5.5) + '" y="' + (y - 6) + '" width="4" height="40" fill="' + ["#e9e4d8", "#c8102e", "#1a1a1a", AMBER, "#5aa9e6", "#2a2a2a", "#8a6a4a", "#f2efe6"][i] + '"/>';
-      crates += '<rect x="' + (x + 6) + '" y="' + (y + 20) + '" width="36" height="6" rx="3" fill="#123a66"/>';
-    });
-    const speaker = x => '<rect x="' + x + '" y="94" width="44" height="66" rx="3" fill="#1b1d22" stroke="#000" stroke-width="2"/>' +
-      '<circle cx="' + (x + 22) + '" cy="110" r="7" fill="#2c2f36"/>' +
-      '<g class="th"><circle cx="' + (x + 22) + '" cy="138" r="15" fill="#2c2f36" stroke="#555" stroke-width="2"/><circle cx="' + (x + 22) + '" cy="138" r="5" fill="#555"/></g>';
-    return svg(
-      '<rect width="400" height="260" fill="#0c0f16"/>' + foam +
-      /* window with the city at night */
-      '<rect x="150" y="20" width="110" height="66" fill="#16213a" stroke="#2a2f3a" stroke-width="4"/>' +
-      '<path d="M205 20v66M150 53h110" stroke="#2a2f3a" stroke-width="3"/>' +
-      '<rect x="160" y="62" width="12" height="24" fill="#3a2a2a"/><rect x="176" y="56" width="14" height="30" fill="#3a2a2a"/><rect x="216" y="60" width="12" height="26" fill="#3a2a2a"/><rect x="232" y="54" width="16" height="32" fill="#3a2a2a"/>' +
-      '<rect class="bl" x="179" y="62" width="3" height="3" fill="#ffd98a"/><rect class="bl bl3" x="236" y="60" width="3" height="3" fill="#ffd98a"/><rect class="bl bl2" x="220" y="66" width="3" height="3" fill="#ffd98a"/>' +
-      /* platinum plaque */
-      '<rect x="292" y="22" width="42" height="54" fill="#2a1d12" stroke="' + AMBER + '" stroke-width="2"/><circle cx="313" cy="46" r="15" fill="#cfd5dc"/><circle cx="313" cy="46" r="5" fill="' + BLUE + '"/>' +
-      speaker(96) + speaker(338) +
-      /* desk */
-      '<rect x="0" y="236" width="400" height="24" fill="#2a1d12"/><rect x="132" y="160" width="268" height="8" fill="#3b2a1a"/><rect x="132" y="168" width="268" height="68" fill="#24180f"/>' +
-      /* drum machine */
-      '<rect x="176" y="146" width="88" height="88" rx="5" fill="#9aa1a9" stroke="#3a3f47" stroke-width="2"/>' +
-      '<rect x="184" y="152" width="40" height="16" rx="1" fill="#22301f"/><text x="188" y="164" font-family="Courier New, monospace" font-size="9" fill="#9be07a">BPM 92</text>' +
-      '<circle cx="236" cy="160" r="5" fill="#3a3f47"/><circle cx="252" cy="160" r="5" fill="#3a3f47"/>' + pads +
-      /* turntable */
-      '<rect x="278" y="170" width="90" height="60" rx="4" fill="#1b1d22" stroke="#000" stroke-width="2"/>' +
-      '<g class="vn"><circle cx="314" cy="200" r="24" fill="#0a0a0a"/><circle cx="314" cy="200" r="18" fill="none" stroke="#222" stroke-width="1"/><circle cx="314" cy="200" r="12" fill="none" stroke="#222" stroke-width="1"/>' +
-      '<circle cx="314" cy="200" r="7" fill="' + AMBER + '"/><rect x="312" y="194" width="4" height="3" fill="#7a5512"/></g><circle cx="314" cy="200" r="1.5" fill="#ccc"/>' +
-      '<path d="M356 178l-6 26-14 6" stroke="#cfd5dc" stroke-width="3" fill="none" stroke-linecap="round"/>' +
-      crates +
-      tag("THE LAB", 20, 52, 28, AMBER, -6) + tag("HAV", 20, 92, 26, BLUE, -4),
-      "");
+    const st = '<style>@keyframes ember{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-110px);opacity:0}}.em{animation:ember 3.2s linear infinite}</style>';
+    let city = "";
+    [[20, 120, 22], [46, 96, 18], [68, 110, 26], [98, 70, 20], [122, 100, 24], [150, 84, 18], [172, 56, 22], [198, 92, 26], [228, 76, 20], [252, 104, 24], [280, 88, 18], [302, 112, 30], [336, 98, 22], [362, 118, 30]].forEach(b => {
+      city += '<rect x="' + b[0] + '" y="' + b[1] + '" width="' + b[2] + '" height="' + (170 - b[1]) + '" fill="#1a0a0a"/>';
+      for (let y = b[1] + 6; y < 166; y += 10) for (let x = b[0] + 4; x < b[0] + b[2] - 4; x += 7) if ((x * 7 + y * 3) % 6 === 0) city += '<rect class="bl' + ((x + y) % 2 ? " bl3" : "") + '" x="' + x + '" y="' + y + '" width="3" height="4" fill="#ff8a3a"/>'; });
+    let embers = "";
+    for (let i = 0; i < 12; i++) embers += '<circle class="em" style="animation-delay:-' + (i * .27).toFixed(2) + 's" cx="' + (20 + i * 33) + '" cy="' + (150 + (i % 3) * 8) + '" r="' + (1.5 + i % 2) + '" fill="#ffb24a"/>';
+    let truss = "";
+    for (let x = 0; x < 400; x += 14) truss += '<path d="M' + x + ' 150L' + (x + 7) + ' 140L' + (x + 14) + ' 150" stroke="#0a0505" stroke-width="1.5" fill="none"/>';
+    return svg(st +
+      '<rect width="400" height="260" fill="url(#hl)"/>' +
+      '<ellipse class="bl" cx="200" cy="150" rx="220" ry="70" fill="#ff5a1a" opacity=".35"/>' + city +
+      /* the bridge cutting across */
+      '<path d="M0 150H400" stroke="#0a0505" stroke-width="4"/>' + truss + [90, 300].map(x => '<rect x="' + (x - 5) + '" y="104" width="10" height="66" fill="#0a0505"/><path d="M' + (x - 5) + ' 104l5-12 5 12z" fill="#0a0505"/>').join("") +
+      /* the river catching the fire */
+      '<rect x="0" y="170" width="400" height="40" fill="#3a0e0a"/>' + [30, 120, 210, 300].map((x, i) => '<path class="bl bl' + (i + 1) + '" d="M' + x + ' ' + (180 + (i % 2) * 12) + 'h50" stroke="#ff8a3a" stroke-width="2" opacity=".7"/>').join("") +
+      /* the Queensbridge shore in front, red brick gone black */
+      '<path d="M0 210h80v-30h60v30h120v-24h60v24h80v50H0z" fill="#120606"/>' + embers +
+      '<text x="200" y="40" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="26" letter-spacing="4" fill="' + BONE + '" stroke="#000" stroke-width="3" paint-order="stroke">HELL ON EARTH</text>' +
+      '<text x="200" y="58" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="' + AMBER + '">MOBB DEEP · 1996</text>' +
+      tag("HAVOC", 18, 246, 30, BONE, -4) + tag("QBC", 300, 248, 26, AMBER, -6),
+      sky("hl", "#2a0606", "#c8341a"));
   }
 
   /* 5. Queens Plaza North and 27th St: green street signs, the clock tower down the block, the tag wall */

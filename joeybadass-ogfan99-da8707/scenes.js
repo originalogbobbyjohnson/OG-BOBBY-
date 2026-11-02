@@ -110,41 +110,28 @@
       sky("jk", "#120a1c", "#5a2a3a"));
   }
 
-  /* 3. Erasmus Hall: gray Gothic stone with the tower, and the white 1786 Academy in the courtyard with its cupola bell */
+  /* 3. The Prospect Park Parade Ground (Parkside Av and Caton Av): the ballfields at the south end of the park, the backstop, the light towers coming on at dusk */
   function erasmus() {
-    let wins = "";
-    for (let x = 14; x < 120; x += 22) for (let y = 100; y < 190; y += 34) wins += '<path d="M' + x + ' ' + (y + 24) + 'v-16l7-8 7 8v16z" fill="#2c3440"/>';
-    for (let x = 290; x < 396; x += 22) for (let y = 100; y < 190; y += 34) wins += '<path d="M' + x + ' ' + (y + 24) + 'v-16l7-8 7 8v16z" fill="#2c3440"/>';
-    let cren = "";
-    for (let x = 0; x < 132; x += 12) cren += '<rect x="' + x + '" y="84" width="7" height="8" fill="#b9b2a2"/>';
-    for (let x = 272; x < 400; x += 12) cren += '<rect x="' + x + '" y="84" width="7" height="8" fill="#b9b2a2"/>';
-    let towerCren = "";
-    for (let x = 160; x < 240; x += 12) towerCren += '<rect x="' + x + '" y="26" width="7" height="9" fill="#c7c0b0"/>';
-    let shut = "";
-    [150, 176, 222, 248].forEach(x => shut += '<rect x="' + x + '" y="176" width="14" height="20" fill="#2c3440"/><rect x="' + (x - 3) + '" y="176" width="3" height="20" fill="#2f5a3b"/><rect x="' + (x + 14) + '" y="176" width="3" height="20" fill="#2f5a3b"/>');
-    return svg(
-      '<rect width="400" height="260" fill="url(#je)"/>' +
-      '<g class="cld"><ellipse cx="60" cy="40" rx="50" ry="10" fill="#fff" opacity=".35"/><ellipse cx="90" cy="34" rx="30" ry="9" fill="#fff" opacity=".35"/></g>' +
-      /* side Gothic wings */
-      '<rect x="0" y="92" width="132" height="130" fill="#b9b2a2"/>' + '<rect x="272" y="92" width="128" height="130" fill="#b9b2a2"/>' + cren + wins +
-      /* central tower */
-      '<rect x="156" y="34" width="88" height="188" fill="#c7c0b0"/>' + towerCren +
-      '<rect x="150" y="18" width="8" height="30" fill="#c7c0b0"/><path d="M150 18l4-10 4 10z" fill="#c7c0b0"/>' +
-      '<rect x="242" y="18" width="8" height="30" fill="#c7c0b0"/><path d="M242 18l4-10 4 10z" fill="#c7c0b0"/>' +
-      '<path d="M182 92v-24l18-20 18 20v24z" fill="#2c3440"/><path d="M200 48v44M182 72h36" stroke="#c7c0b0" stroke-width="2"/>' +
-      '<path d="M186 130v-14l14-14 14 14v14z" fill="#2c3440"/>' +
-      /* the white wooden Academy, front and center */
-      '<path d="M128 166l72-26 72 26z" fill="#3f4a55"/>' +
-      '<rect x="134" y="166" width="132" height="56" fill="#f4f1ea"/>' + shut +
-      '<rect x="192" y="190" width="16" height="32" fill="#3a2a1e"/><path d="M188 190h24l-12-8z" fill="#f4f1ea" stroke="#c9c3b6"/>' +
-      /* cupola with its bell */
-      '<rect x="188" y="120" width="24" height="22" fill="#f4f1ea" stroke="#c9c3b6"/><path d="M184 120l16-14 16 14z" fill="#3f4a55"/><path d="M200 106v-10" stroke="#3f4a55" stroke-width="2"/>' +
-      '<rect x="192" y="124" width="16" height="14" fill="#2c3440"/>' +
-      '<g class="swy"><path d="M200 125l-5 10h10z" fill="' + GOLD + '"/><circle cx="200" cy="136" r="1.6" fill="' + GOLD + '"/></g>' +
-      /* lawn, path, fence */
-      '<rect x="0" y="222" width="400" height="38" fill="#2f5a3b"/><path d="M186 260l8-38h12l8 38z" fill="#d9d2c0"/>' +
-      tag("ERASMUS", 18, 250, 22, GOLD, -4),
-      sky("je", "#2a3f66", "#e9a46a"));
+    const lbl = (x, y, s, size, c) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + size + '" fill="' + c + '">' + s + '</text>';
+    let trees = ""; for (let x = 0; x < 400; x += 26) trees += '<circle cx="' + x + '" cy="' + (104 + (x % 3) * 4) + '" r="' + (18 + (x % 4) * 2) + '" fill="' + (x % 52 ? "#2f6a34" : "#3a7a3a") + '"/>';
+    let fence = ""; for (let x = 150; x <= 250; x += 6) fence += '<path d="M' + x + ' 128v34" stroke="#8a9098" stroke-width=".8"/>';
+    const light = x => '<rect x="' + (x - 2) + '" y="40" width="4" height="100" fill="#59616e"/><rect x="' + (x - 12) + '" y="34" width="24" height="10" fill="#3a3f4a"/>' +
+      [-8, 0, 8].map(d => '<circle class="flk" cx="' + (x + d) + '" cy="39" r="2.5" fill="#fff6c2"/>').join("") + '<path class="bm" d="M' + (x - 10) + ' 44l-30 120h80l-30-120z" fill="#fff6c2" opacity=".12"/>';
+    const kid = (x, y, c, cls) => '<g class="' + cls + '"><circle cx="' + x + '" cy="' + (y - 16) + '" r="4" fill="#2a1a10"/><rect x="' + (x - 4) + '" y="' + (y - 12) + '" width="8" height="12" rx="2" fill="' + c + '"/><path d="M' + (x - 2) + ' ' + y + 'v8M' + (x + 2) + ' ' + y + 'v8" stroke="#1b1b22" stroke-width="2"/></g>';
+    return svg('<rect width="400" height="260" fill="url(#g3)"/>' +
+      '<g class="cld"><ellipse cx="0" cy="30" rx="40" ry="7" fill="#fff" opacity=".4"/></g>' +
+      '<rect x="0" y="66" width="60" height="60" fill="#8a5a44"/><rect x="340" y="56" width="60" height="70" fill="#7a5a6a"/>' + trees +
+      light(60) + light(340) +
+      /* the fields */
+      '<rect x="0" y="120" width="400" height="140" fill="#5f9a46"/><path d="M0 170h400" stroke="#6aa84e" stroke-width="30" opacity=".5"/>' +
+      '<path d="M200 230l-60-50 60-46 60 46z" fill="#c8945a"/><path d="M200 222l-48-40 48-38 48 38z" fill="#5f9a46"/>' +
+      [[200, 228], [146, 182], [200, 140], [254, 182]].map(([x, y]) => '<rect x="' + (x - 3) + '" y="' + (y - 3) + '" width="6" height="6" fill="#fff"/>').join("") +
+      '<path d="M150 128h100" stroke="#59616e" stroke-width="2"/>' + fence +
+      '<path d="M20 200h30v-22h-30M380 200h-30v-22h30" stroke="#fff" stroke-width="2.5" fill="none"/>' +
+      kid(200, 186, GOLD, "") + kid(250, 210, GREEN, "swy") + kid(80, 214, TERRA, "swy swy2") + kid(320, 220, "#fff", "swy swy3") +
+      lbl(200, 22, "PROSPECT PARK PARADE GROUND", 13, "#fff") + lbl(200, 36, "PARKSIDE AV &amp; CATON AV", 9, "#ffe2b8") +
+      tag("PRO ERA", 16, 252, 26, GOLD, -4) + tag("BADMON", 290, 254, 22, GREEN, -3),
+      sky("g3", "#2a2a5a", "#f08a5a"));
   }
 
   /* 4. Little Caribbean on Church Avenue: island flags strung across the street, a steelpan ringing out */

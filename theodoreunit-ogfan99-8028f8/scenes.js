@@ -46,7 +46,7 @@
     '<text x="' + (x + 14) + '" y="' + (y + 25) + '" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">' + name + '</text>' + sir(x + w - 28, y + 18);
   const YEL = "#ffd34d", BLU = "#2fb7ff", ORG = "#ff6b3d";
 
-  /* 1. Stapleton at night: the elevated SIR platform lit up over Bay St, the train pulling in, harbor lights beyond */
+  /* 1. Stapleton at night, Theodore Unit's end: the stair down to Beach St toward Van Duzer, 718 scratched on the platform windscreen, the train pulling in, harbor lights beyond */
   function station1() {
     return svg(
       '<rect width="400" height="260" fill="url(#s1)"/>' + stars(30) +
@@ -55,13 +55,21 @@
       (function () { let l = ""; for (let x = 10; x < 400; x += 22) l += '<rect x="' + x + '" y="' + (84 + (x % 3) * 4) + '" width="10" height="' + (12 - (x % 3) * 4) + '" fill="#2a3a5a"/><circle cx="' + (x + 5) + '" cy="110" r="1.4" fill="#ffd98a" class="' + (x % 44 ? "blk" : "blk2") + '"/>'; return l; })() +
       '<rect x="0" y="48" width="400" height="10" fill="#22262e"/><rect x="0" y="58" width="400" height="4" fill="' + YEL + '"/>' +
       (function () { let p = ""; for (let x = 40; x < 400; x += 130) p += '<rect x="' + x + '" y="62" width="6" height="112" fill="#22262e"/><circle cx="' + (x + 3) + '" cy="66" r="3" fill="#fff6c2"/>'; return p; })() +
-      station("Stapleton", 96, 72, 208) +
-      '<g class="anim-train">' + sirCar(-24, 116, 344) + '</g>' +
+      station("Stapleton", 70, 72, 208) +
+      '<g class="anim-train">' + sirCar(-44, 116, 360) + '</g>' +
       '<rect y="178" width="400" height="10" fill="#eab308"/><rect y="188" width="400" height="12" fill="#3a4048"/>' +
       (function () { let c = ""; for (let x = 30; x < 400; x += 80) c += '<rect x="' + x + '" y="200" width="8" height="34" fill="#30363e"/>'; return c; })() +
       '<rect y="234" width="400" height="26" fill="#1a1a1e"/>' +
       '<g class="cr1"><rect x="0" y="240" width="44" height="14" rx="4" fill="' + YEL + '"/><circle cx="10" cy="254" r="4" fill="#111"/><circle cx="34" cy="254" r="4" fill="#111"/><circle cx="44" cy="246" r="2" fill="#fff6c2"/></g>' +
-      tag("THEODORE", 90, 228, 22, YEL, -4) + tag("718", 270, 228, 22, BLU, -5),
+      /* the windscreen at the Beach St end, 718 on the glass */
+      '<rect x="326" y="118" width="68" height="60" fill="#9fd0f0" opacity=".25" stroke="#c9ced6" stroke-width="2"/><rect x="328" y="112" width="64" height="6" fill="#22262e"/>' +
+      tag("718", 334, 160, 28, BLU, -8) +
+      '<rect x="318" y="72" width="80" height="34" rx="3" fill="#111"/>' +
+      '<text x="358" y="86" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">EXIT ↓ Beach St</text>' +
+      '<text x="358" y="99" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="' + YEL + '">to Van Duzer St</text>' +
+      /* the stair down to the street */
+      (function () { let s = ""; for (let i = 0; i < 6; i++) s += '<rect x="' + (330 + i * 10) + '" y="' + (190 + i * 8) + '" width="' + (70 - i * 10) + '" height="3" fill="#6a707a"/>'; return s; })() +
+      tag("THEODORE", 50, 228, 22, YEL, -4) + tag("OPEN DOOR", 216, 232, 18, ORG, -5),
       sky("s1", "#070b1c", "#2a2048"));
   }
 
@@ -106,22 +114,32 @@
       sky("b1", "#6fb3e6", "#e6f2ff"));
   }
 
-  /* 4. Great Kills Park: the beach and the harbor full of sailboats, dune grass, waves rolling in */
+  /* 4. Sandy Ground in Rossville: one of America's oldest free Black communities; the little white clapboard A.M.E. Zion church and the Sandy Ground museum house under old trees */
   function greatkills() {
-    const sail = (x, y, c) => '<g transform="translate(' + x + ' ' + y + ')"><path d="M0 0h30l-4 8H4z" fill="#f7f3ea"/><path d="M14 0V-34L30 -2z" fill="' + c + '"/><path d="M12 0V-28L0 -2z" fill="#f7f3ea"/></g>';
+    let clap = ""; for (let y = 120; y < 204; y += 6) clap += '<path d="M60 ' + y + 'h120" stroke="#d8d4c8" stroke-width="1"/>';
+    let clap2 = ""; for (let y = 140; y < 204; y += 6) clap2 += '<path d="M240 ' + y + 'h110" stroke="#c8b898" stroke-width="1"/>';
+    const oak = (x, y, r) => '<rect x="' + (x - 5) + '" y="' + y + '" width="10" height="' + (204 - y) + '" fill="#4a3220"/><circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="#3f6a2a"/><circle cx="' + (x - r * .6) + '" cy="' + (y + 8) + '" r="' + r * .7 + '" fill="#4a7a32"/><circle cx="' + (x + r * .6) + '" cy="' + (y + 6) + '" r="' + r * .7 + '" fill="#356024"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#k1)"/>' + '<g class="dft">' + cloud(80, 36, .9) + cloud(290, 26, .7) + '</g>' +
-      '<rect y="110" width="400" height="80" fill="#3a8ac0"/>' +
-      '<g class="bt">' + sail(0, 142, YEL) + '</g><g class="swm">' + sail(220, 128, BLU) + sail(300, 150, ORG) + '</g>' +
-      (function () { let m = ""; for (let x = 20; x < 170; x += 16) m += '<rect x="' + x + '" y="112" width="2" height="18" fill="#ddd"/>'; return m; })() +
-      '<rect x="14" y="128" width="160" height="4" fill="#9a8a6a"/>' +
-      '<g class="wv"><path d="M0 190q10-6 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0v8H0z" fill="#f7f3ea" opacity=".8"/></g>' +
-      '<rect y="196" width="400" height="64" fill="#e8d6a8"/>' +
-      (function () { let g = ""; for (let x = 0; x < 400; x += 14) if (x < 120 || x > 300) g += '<path d="M' + x + ' 236q2-18 6-22M' + (x + 4) + ' 236q0-16-4-20" stroke="#8a9a4a" stroke-width="2" fill="none"/>'; return g; })() +
-      '<text x="200" y="250" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#5a4a2a">GREAT KILLS PARK</text>',
+      '<rect width="400" height="260" fill="url(#k1)"/>' + '<g class="dft">' + cloud(90, 30, .8) + '</g>' +
+      oak(26, 90, 36) + oak(212, 70, 40) + oak(386, 96, 30) +
+      /* the A.M.E. Zion church: white clapboard, a small belfry, arched windows */
+      '<path d="M52 118L120 76 188 118z" fill="#5a5a60"/>' + '<rect x="60" y="116" width="120" height="88" fill="#f4f1e8"/>' + clap +
+      '<rect x="106" y="42" width="28" height="40" fill="#f4f1e8" stroke="#d8d4c8"/><path d="M102 44L120 18 138 44z" fill="#5a5a60"/><rect x="113" y="52" width="14" height="16" fill="#3a3a40"/>' +
+      '<path d="M120 18v-10M115 12h10" stroke="#5a5a60" stroke-width="2"/>' +
+      [76, 146].map(x => '<path d="M' + x + ' 180v-34q9-12 18 0v34z" fill="#3a5a7a" stroke="#d8d4c8" stroke-width="2"/>').join("") +
+      '<rect x="110" y="166" width="20" height="38" fill="#6a4a32"/>' +
+      '<rect x="64" y="100" width="112" height="14" fill="#f4f1e8"/><text x="120" y="111" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="8" fill="#3a3a40">A.M.E. ZION CHURCH</text>' +
+      /* the museum house */
+      '<path d="M232 140L295 104 358 140z" fill="#6a3a2a"/><rect x="240" y="138" width="110" height="66" fill="#e8d6b0"/>' + clap2 +
+      '<rect x="252" y="152" width="18" height="22" fill="#3a5a7a" stroke="#fff" stroke-width="2"/><rect x="320" y="152" width="18" height="22" fill="#3a5a7a" stroke="#fff" stroke-width="2"/><rect x="286" y="166" width="18" height="38" fill="#5a3a2a"/>' +
+      '<rect x="236" y="198" width="118" height="6" fill="#f4f1e8"/>' +
+      '<rect x="0" y="204" width="400" height="56" fill="#5a8a3a"/>' + (function () { let f = ""; for (let x = 0; x < 400; x += 10) f += '<rect x="' + x + '" y="214" width="3" height="14" fill="#f4f1e8"/>'; return f; })() + '<rect x="0" y="216" width="400" height="3" fill="#f4f1e8"/>' +
+      '<g class="lf"><path d="M200 90l5 3-5 3-5-3z" fill="#e6b13a"/></g><g class="lf lf2"><path d="M230 96l5 3-5 3-5-3z" fill="#b8461f"/></g><g class="lf lf3"><path d="M30 110l5 3-5 3-5-3z" fill="#d9822b"/></g>' +
+      '<g class="bt"><path d="M0 50q6-6 12 0q6-6 12 0" stroke="#333" stroke-width="2" fill="none"/></g>' +
+      '<rect x="80" y="234" width="240" height="20" rx="3" fill="#1a1a1e" opacity=".75"/>' +
+      '<text x="200" y="248" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#fff">SANDY GROUND · ROSSVILLE</text>',
       sky("k1", "#4f9ad8", "#d8ecff"));
   }
-
   /* 5. Beach St & Van Duzer St in Stapleton: green signs, the tag wall, the open door lit up */
   function corner() {
     let bricks = ""; for (let y = 70; y < 220; y += 12) for (let x = (y / 12) % 2 ? -12 : 0; x < 400; x += 24) bricks += '<rect x="' + x + '" y="' + y + '" width="22" height="10" fill="#6a4a30"/>';

@@ -41,54 +41,7 @@
     (function () { let w = ""; for (let x = 22; x < 130; x += 10) w += '<rect x="' + x + '" y="18" width="6" height="7" fill="#1d2a38"/>'; for (let x = 46; x < 106; x += 10) w += '<rect x="' + x + '" y="5" width="6" height="5" fill="#1d2a38"/>'; return w; })() +
     '<rect x="72" y="-8" width="6" height="10" fill="#f2f2f2"/></g>';
 
-  /* 1. St. George: the SIR pulling into the terminal, the ferry slips through the big windows */
-  function train() {
-    let windows = "";
-    for (let x = 22; x < 260; x += 44) windows += '<rect x="' + x + '" y="134" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
-    return svg(
-      '<rect width="400" height="260" fill="#1d2430"/>' +
-      /* terminal glass wall onto the harbor */
-      '<rect x="0" y="0" width="400" height="118" fill="url(#g1)"/>' +
-      '<rect x="0" y="80" width="400" height="38" fill="#2c5878"/>' +
-      '<g class="sail"><g transform="translate(0 74)">' + ferry(0.6) + '</g></g>' +
-      '<path class="shim" d="M20 104h40M260 108h60" stroke="#ffcf6b" stroke-width="2"/>' +
-      (function () { let m = ""; for (let x = 0; x <= 400; x += 50) m += '<rect x="' + (x - 2) + '" y="0" width="4" height="118" fill="#3a4450"/>'; return m; })() +
-      '<rect x="0" y="0" width="400" height="10" fill="#3a4450"/><rect x="0" y="40" width="400" height="3" fill="#3a4450"/>' +
-      /* black station sign */
-      '<rect x="92" y="16" width="216" height="32" rx="4" fill="#111"/><rect x="92" y="16" width="216" height="4" fill="#fff"/>' +
-      '<text x="104" y="40" ' + FONT + ' font-size="15" fill="#fff">St. George</text>' + sir(280, 33) +
-      '<rect x="0" y="118" width="400" height="72" fill="#11161d"/>' +
-      /* the SIR car: stainless with the blue band */
-      '<g class="anim-train">' +
-        '<rect x="8" y="122" width="300" height="58" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="160" width="300" height="6" fill="#0039a6"/>' + windows +
-        '<circle cx="300" cy="172" r="4" fill="#fff6c2"/>' + sir(270, 144) +
-      '</g>' +
-      '<rect x="0" y="180" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="190" width="400" height="70" fill="#1c232c"/>' +
-      tag("NORTH SHORE", 18, 240, 26, ORANGE, -4) + tag("ZY SMOKE", 240, 242, 28, VIOLET, -7),
-      sky("g1", "#2a3a6a", "#e88a5b"));
-  }
 
-  /* 2. The Staten Island Ferry crossing the harbor at sunset, lower Manhattan behind, gulls */
-  function boat() {
-    let city = "";
-    [[0, 14, 30], [16, 10, 44], [28, 16, 26], [46, 12, 58], [60, 18, 36], [80, 10, 50], [92, 14, 30], [108, 20, 40], [130, 12, 34], [144, 16, 48]].forEach(b =>
-      city += '<rect x="' + (150 + b[0]) + '" y="' + (100 - b[2]) + '" width="' + b[1] + '" height="' + b[2] + '" fill="#3b3a5a"/>');
-    city += '<rect x="206" y="12" width="14" height="88" fill="#3b3a5a"/><path d="M206 12l7-10 7 10z" fill="#3b3a5a"/><rect x="212" y="-8" width="2" height="12" fill="#3b3a5a"/>';
-    return svg(
-      '<rect width="400" height="260" fill="url(#g2)"/>' +
-      '<circle cx="80" cy="76" r="24" fill="#ffb35a"/>' + city +
-      /* the statue far off on the left, green copper */
-      '<path d="M36 100v-22l3-4v-8l2-6 2 6v8l3 4v22z" fill="#5fae9a"/><path d="M41 60l2-10" stroke="#5fae9a" stroke-width="2"/><rect x="30" y="98" width="22" height="4" fill="#5fae9a"/>' +
-      '<rect x="0" y="100" width="400" height="160" fill="#2f5f86"/>' +
-      '<path class="shim" d="M10 120h60M300 116h60M60 220h80M260 236h90" stroke="#ffd7a0" stroke-width="2"/>' +
-      '<path class="shim shim2" d="M140 200h50M330 196h40" stroke="#ffd7a0" stroke-width="2"/>' +
-      '<g class="sail"><g class="bob"><g transform="translate(0 132)">' + ferry(1) + '</g><path d="M10 180q70 6 140 0" stroke="#e6f2fa" stroke-width="3" fill="none" opacity=".7"/></g></g>' +
-      '<path d="M300 50q6-6 12 0q6-6 12 0M340 70q5-5 10 0q5-5 10 0" stroke="#2a2a2a" stroke-width="2" fill="none"/>' +
-      tag("FREE RIDE", 220, 248, 28, ORANGE, -4),
-      sky("g2", "#4a3a7a", "#ffb07a"));
-  }
 
   /* 3. The Bayonne Bridge: the long steel arch over the Kill Van Kull, a container ship sliding under */
   function bayonne() {
@@ -158,5 +111,92 @@
       sky("g5", "#0d1022", "#2a2a4a"));
   }
 
-  window.SCENES = { train, boat, bayonne, goethals, corner };
+  /* ---- redrawn landmark scenes (OG FAN 99 landmark pass): small shared helpers, prefixed L ---- */
+  const Lcss = '<style>' +
+    '@keyframes lmCar{from{transform:translateX(-170px)}to{transform:translateX(480px)}}.lm-car{animation:lmCar 8s linear infinite}' +
+    '@keyframes lmCarB{from{transform:translateX(480px)}to{transform:translateX(-170px)}}.lm-carb{animation:lmCarB 10s linear infinite}' +
+    '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.lm-bob{animation:lmBob 1.6s ease-in-out infinite}' +
+    '@keyframes lmFlk{0%,100%{opacity:1}45%{opacity:.7}50%{opacity:.3}55%{opacity:.95}}.lm-flk{animation:lmFlk 2.3s infinite}' +
+    '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{animation:lmSpin 1.8s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmRise{0%{transform:translateY(0) scale(.8);opacity:0}20%{opacity:.85}100%{transform:translateY(-70px) scale(1.4);opacity:0}}.lm-rise{animation:lmRise 4s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{animation:lmSway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}' +
+    '@keyframes lmBlk{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blk{animation:lmBlk 1s steps(1) infinite}' +
+    '@keyframes lmFlag{0%,100%{transform:skewY(0)}50%{transform:skewY(-6deg)}}.lm-flag{animation:lmFlag 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}' +
+    '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(-30px,230px) rotate(280deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}' +
+    '@keyframes lmCld{from{transform:translateX(-120px)}to{transform:translateX(470px)}}.lm-cld{animation:lmCld 30s linear infinite}' +
+    '@keyframes lmPls{0%,100%{opacity:.35}50%{opacity:1}}.lm-pls{animation:lmPls 2.2s ease-in-out infinite}' +
+    '@keyframes lmWav{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}.lm-wav{animation:lmWav 3s ease-in-out infinite}' +
+    '@keyframes lmBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}.lm-beat{animation:lmBeat .7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmNote{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-60px);opacity:0}}.lm-note{animation:lmNote 3s linear infinite}' +
+    '.lmd1{animation-delay:-1s}.lmd2{animation-delay:-2s}.lmd3{animation-delay:-3s}.lmd4{animation-delay:-4.5s}.lmd5{animation-delay:-6s}' +
+    '</style>';
+  const LF = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
+  const LT = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" ' + LF + ' font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LA = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" font-family="Anton, Impact, sans-serif" font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LR = (x, y, w, h, fill, extra) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + fill + '"' + (extra || "") + '/>';
+  const Lbul = (x, y, l, col, r) => { r = r || 11; return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/>' + LT(l, x, y + r * 0.42, r * 1.22, col === "#fccc0a" ? "#000" : "#fff"); };
+  const Lpill = (x, y, l, col) => { const w = l.length * 8 + 14; return '<rect x="' + (x - w / 2) + '" y="' + (y - 10) + '" width="' + w + '" height="20" rx="10" fill="' + col + '"/>' + LT(l, x, y + 4.5, 11, "#fff"); };
+  /* black MTA-style station sign: lines = [["B","#ff6319"],...]; a long name like "MN" draws a pill */
+  const Lsign = (x, y, w, name, lines, size) => { let b = "", bx = x + w - 18; for (let i = lines.length - 1; i >= 0; i--) { const l = lines[i]; if (l[0].length > 1) { b += Lpill(bx - 10, y + 17, l[0], l[1]); bx -= l[0].length * 8 + 22; } else { b += Lbul(bx, y + 17, l[0], l[1], 10); bx -= 24; } }
+    return LR(x, y, w, 32, "#111", ' rx="3"') + LR(x, y, w, 4, "#fff") + LT(name, x + 10, y + 23, size || 15, "#fff", "start") + b; };
+  /* green NYC street sign blade */
+  const Lblade = (x, y, t, w) => { w = w || t.length * 7.2 + 20; return LR(x, y, w, 19, "#0f6b3a", ' rx="2" stroke="#fff" stroke-width="1.5"') + LT(t, x + w / 2, y + 14, 12, "#fff"); };
+  /* two green signs on a pole at x, crossing */
+  const Lpole = (x, y, a, b) => { const wa = a.length * 7.2 + 20, wb = b.length * 7.2 + 20; return LR(x, y, 6, 236 - y, "#2a3138") + Lblade(x + 3 - wa / 2, y + 6, a) + Lblade(x + 3 - wb / 2, y + 30, b) + LR(x - 2, y - 4, 10, 6, "#2a3138"); };
+  const Lbrick = (x, y, w, h, base, mortar) => { let s = LR(x, y, w, h, base); for (let yy = y + 6; yy < y + h; yy += 6) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + mortar + '" stroke-width=".8"/>'; return s; };
+  const Lwin = (x, y, cols, rows, dx, dy, w, h, lit, dark) => { let s = ""; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const on = ((r * 7 + c * 3) % 5) < 2; s += '<rect x="' + (x + c * dx) + '" y="' + (y + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + (on ? lit : dark) + '"' + (on && (r + c) % 4 === 0 ? ' class="lm-flk"' : '') + '/>'; } return s; };
+  const Lstars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".75"/>'; return s; };
+  const Lcloud = (x, y, s, cls) => '<g class="lm-cld ' + (cls || "") + '"><g transform="translate(' + x + ' ' + y + ') scale(' + (s || 1) + ')" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="22" ry="9"/><ellipse cx="14" cy="-6" rx="14" ry="9"/><ellipse cx="-12" cy="-4" rx="11" ry="7"/></g></g>';
+  const Ltree = (x, y, r, col, cls) => '<g class="lm-sway ' + (cls || "") + '">' + LR(x - 3, y, 6, r * 1.3, "#5a3d24") + '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/><circle cx="' + (x - r * .5) + '" cy="' + (y + r * .3) + '" r="' + r * .7 + '" fill="' + col + '" opacity=".85"/><circle cx="' + (x + r * .55) + '" cy="' + (y + r * .25) + '" r="' + r * .65 + '" fill="' + col + '" opacity=".9"/></g>';
+  /* faceless figure: head + body, x = centre, y = feet */
+  const Lman = (x, y, body, cls, cap) => '<g' + (cls ? ' class="' + cls + '"' : "") + '>' + '<rect x="' + (x - 7) + '" y="' + (y - 30) + '" width="14" height="22" rx="5" fill="' + body + '"/><rect x="' + (x - 6) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/><rect x="' + (x + 1) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/>' +
+    '<circle cx="' + x + '" cy="' + (y - 37) + '" r="7" fill="#5a3a26"/>' + (cap ? '<path d="M' + (x - 8) + ' ' + (y - 39) + 'q8-10 16 0z" fill="' + cap + '"/><rect x="' + (x - 1) + '" y="' + (y - 41) + '" width="12" height="3" fill="' + cap + '"/>' : '') + '</g>';
+  /* subway car (stainless) seen from the side, x,y top-left */
+  const Lcar = (x, y, w, l, col, band) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="52" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>'; for (let i = x + 16; i < x + w - 60; i += 40) s += '<rect x="' + i + '" y="' + (y + 9) + '" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    return s + LR(x, y + 33, w, 5, band || col) + Lbul(x + w - 22, y + 18, l, col, 10) + '<circle cx="' + (x + w - 8) + '" cy="' + (y + 44) + '" r="3.5" fill="#fff6c2"/>'; };
+  const Lcab = (x, y) => '<rect x="' + x + '" y="' + (y + 8) + '" width="70" height="20" rx="5" fill="#f7c600"/><path d="M' + (x + 12) + ' ' + (y + 8) + 'l8-10h28l10 10z" fill="#f7c600"/><path d="M' + (x + 22) + ' ' + y + 'h10v8h-14zM' + (x + 35) + ' ' + y + 'h10l7 8h-17z" fill="#bfe0ff"/>' +
+    LR(x + 26, y - 6, 18, 6, "#fff", ' rx="1"') + LT("TAXI", x + 35, y - 1.5, 5, "#111") + '<path d="M' + x + ' ' + (y + 17) + 'h70" stroke="#111" stroke-width="1" stroke-dasharray="3 3"/><circle cx="' + (x + 15) + '" cy="' + (y + 28) + '" r="6" fill="#111"/><circle cx="' + (x + 55) + '" cy="' + (y + 28) + '" r="6" fill="#111"/>';
+  const Lauto = (x, y, col) => '<rect x="' + x + '" y="' + (y + 6) + '" width="56" height="16" rx="5" fill="' + col + '"/><rect x="' + (x + 11) + '" y="' + (y - 2) + '" width="32" height="11" rx="3" fill="#cfe6ff"/><circle cx="' + (x + 13) + '" cy="' + (y + 22) + '" r="5" fill="#111"/><circle cx="' + (x + 43) + '" cy="' + (y + 22) + '" r="5" fill="#111"/>';
+  /* turntable from above at an angle */
+  const Ldeck = (cx, cy, r, lab) => '<rect x="' + (cx - r - 12) + '" y="' + (cy - r * .45 - 10) + '" width="' + (r * 2 + 30) + '" height="' + (r * .9 + 20) + '" rx="4" fill="#2a2a30"/><g transform="translate(' + cx + ' ' + cy + ') scale(1 .42)"><g class="lm-spin"><circle r="' + r + '" fill="#0c0c0e"/><circle r="' + r * .72 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .5 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .3 + '" fill="' + lab + '"/><rect x="-2" y="' + (-r * .3) + '" width="4" height="' + r * .2 + '" fill="#fff"/></g></g><path d="M' + (cx + r + 6) + ' ' + (cy - r * .4) + 'l-8 ' + r * .5 + '" stroke="#c9ced6" stroke-width="3"/>';
+  /* 0. St. George (SIR): the terminal end of the line, and up on the ramp the S40 waiting to run out Richmond Terrace to 10303 */
+  function LM_train() {
+    const bus = '<rect x="0" y="0" width="120" height="44" rx="6" fill="#f2f4f6" stroke="#5a6470" stroke-width="1.5"/>' + LR(0, 28, 120, 6, "#0039a6") + [8, 32, 56, 80].map(x => LR(x, 8, 20, 16, "#2a3440", ' rx="2"')).join("") +
+      LR(98, 6, 18, 22, "#2a3440", ' rx="2"') + LR(8, 0, 104, 8, "#111") + '<text class="lm-blk" x="60" y="7" text-anchor="middle" ' + LF + ' font-size="7.5" fill="#ff9a2a">S40 RICHMOND TER</text>' +
+      '<circle cx="22" cy="46" r="7" fill="#111"/><circle cx="96" cy="46" r="7" fill="#111"/>';
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lcloud(60, 20) + Lcloud(300, 30, .8, "lmd3") +
+      /* terminal glass + harbor glimpse */
+      LR(220, 20, 180, 70, "#8ab8d8", ' opacity=".7"') + [240, 270, 300, 330, 360, 390].map(x => '<path d="M' + x + ' 20v70" stroke="#e8eef4" stroke-width="2"/>').join("") + LR(214, 14, 186, 8, "#e8eef4") + LT("ST. GEORGE TERMINAL", 308, 40, 10, "#1a2a3a") +
+      /* bus ramp */
+      '<path d="M0 104h400v10H0z" fill="#a8a49a"/>' + LR(0, 114, 400, 6, "#7a766c") + [40, 200, 360].map(x => LR(x, 120, 10, 30, "#8a867c")).join("") +
+      '<g class="lm-bob"><g transform="translate(150 58)">' + bus + '</g></g>' + LR(40, 70, 70, 26, "#111", ' rx="2"') + LT("BUS RAMP B", 75, 81, 8, "#fff") + LT("S40 → 10303", 75, 92, 8, "#38e8ff") +
+      /* SIR platform below */
+      Lsign(16, 128, 170, "St. George", [["SIR", "#0039a6"]]) +
+      '<g class="anim-train"><rect x="8" y="166" width="300" height="48" rx="7" fill="#e9edf2" stroke="#5a6470" stroke-width="2"/>' + LR(8, 196, 300, 6, "#0039a6") + [26, 72, 118, 164, 210].map(x => LR(x, 174, 30, 16, "#1f2a38", ' rx="3"')).join("") + LR(272, 172, 30, 22, "#2a3440", ' rx="4"') + Lpill(150, 207, "SIR", "#0039a6") + '</g>' +
+      LR(0, 214, 400, 8, "#eab308") + LR(0, 222, 400, 38, "#8f8a80") + Lman(340, 254, "#9b7bff", "lm-bob", "#ff7a1a") +
+      tag("ZY SMOKE", 196, 156, 24, "#9b7bff", -5) + tag("NORTH SHORE", 40, 252, 18, "#ff7a1a", -3),
+      sky("sk", "#7fb8e6", "#f0e4cc"));
+  }
+  /* 1. Faber Park & Pool, Richmond Terrace (Port Richmond): the 1930s brick bathhouse, the big pool, the Kill Van Kull, the Bayonne Bridge arch */
+  function LM_boat() {
+    let hang = ""; for (let x = 90; x <= 330; x += 20) { const y = 70 - Math.sin((x - 60) / 300 * Math.PI) * 44; hang += '<path d="M' + x + ' ' + y + 'V82" stroke="#5a7a7a" stroke-width="1.5"/>'; }
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + '<circle cx="70" cy="40" r="16" fill="#fff3c4"/>' +
+      /* Bayonne Bridge */
+      '<path d="M40 104Q200-20 360 104" stroke="#5a7a7a" stroke-width="7" fill="none"/>' + LR(30, 78, 340, 6, "#5a7a7a") + hang + LT("BAYONNE BRIDGE", 200, 22, 9, "#2a3a4a") +
+      '<g class="lm-car" style="animation-duration:6s">' + Lauto(0, 64, "#ff7a1a") + '</g>' +
+      /* Kill Van Kull */
+      LR(0, 104, 400, 34, "#3f6f96") + '<g class="lm-carb" style="animation-duration:24s"><path d="M0 120h70v-12h20v12h10l-8 10H8z" fill="#c43a2a"/><rect x="20" y="102" width="12" height="10" fill="#e8e8e8"/></g>' + LT("KILL VAN KULL", 340, 132, 8, "#d8e8f4") +
+      /* bathhouse */
+      Lbrick(20, 126, 190, 60, "#a8482e", "#8a3a24") + LR(16, 122, 198, 6, "#e8e0cc") + LR(90, 110, 50, 18, "#a8482e") + LR(86, 106, 58, 6, "#e8e0cc") +
+      [36, 60, 156, 180].map(x => '<path d="M' + x + ' 170v-26q8-10 16 0v26z" fill="#2a3440"/>').join("") + LR(100, 150, 30, 36, "#3a2418") + LT("FABER POOL", 115, 122, 8, "#3a2418") +
+      /* the pool */
+      LR(0, 186, 400, 74, "#e8e0cc") + LR(20, 196, 360, 54, "#38b8e8") + '<g class="lm-wav"><path d="M30 210h340M30 232h340" stroke="#a8e8ff" stroke-width="2" stroke-dasharray="12 14"/></g>' +
+      '<path d="M20 222h360" stroke="#ff7a1a" stroke-width="1.5" stroke-dasharray="4 4"/>' +
+      [[90, ""], [190, "lmd1"], [300, "lmd2"]].map(s => '<g class="lm-bob ' + s[1] + '"><circle cx="' + s[0] + '" cy="214" r="6" fill="#5a3a26"/><path d="M' + (s[0] - 12) + ' 220q12-6 24 0" stroke="#fff" stroke-width="2" fill="none"/></g>').join("") +
+      LR(230, 140, 162, 34, "#111", ' rx="3" opacity=".85"') + LT("FABER PARK &amp; POOL", 311, 155, 11, "#38e8ff") + LT("RICHMOND TERRACE · PORT RICHMOND", 311, 168, 7.5, "#fff") +
+      tag("ZY SMOKE", 26, 256, 22, "#9b7bff", -3) + tag("UNDERDOG", 270, 256, 18, "#ff7a1a", -3),
+      sky("sk", "#86c0ea", "#f6e6c4"));
+  }
+
+  window.SCENES = { train: LM_train, boat: LM_boat, bayonne, goethals, corner };
 })();

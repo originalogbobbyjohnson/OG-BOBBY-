@@ -115,37 +115,34 @@
       sky("g2", "#6fb3e6", "#d8ecf7"));
   }
 
-  /* 3. Nassau Coliseum in Uniondale at night: the round drum wrapped in silver vertical fins, glass lobby glowing,
-        searchlights sweeping, the crowd walking in */
+  /* 3. Hempstead Lake State Park, just south of Hempstead village: the big green lake under the oaks, the old brick carousel house, a fishing pier with a line out, ducks drifting */
   function coliseum() {
-    let fins = "";
-    for (let i = 0; i <= 36; i++) {
-      const x = 40 + i * 9, d = Math.abs(x - 200) / 160, h = 10 * (1 - d * d);
-      fins += '<path d="M' + x + ' ' + (82 - h).toFixed(1) + 'V' + (152 + h).toFixed(1) + '" stroke="' + (i % 2 ? "#c9ced6" : "#e8ecf0") + '" stroke-width="5"/>';
-    }
-    let crowd = "";
-    [["", "#f4f1e8"], ["wk2", WINE], ["wk3", GOLD]].forEach(([c, col]) => {
-      crowd += '<g class="wk ' + c + '"><g transform="translate(0 214)">' + person(col) + '</g></g>';
-    });
+    let oaks = "";
+    [[20, 110, 34], [70, 118, 28], [340, 112, 34], [388, 120, 26]].forEach(([x, y, r]) => oaks += '<rect x="' + (x - 4) + '" y="' + y + '" width="8" height="40" fill="#4a3424"/><circle cx="' + x + '" cy="' + (y - 6) + '" r="' + r + '" fill="#2f5a2a"/><circle cx="' + (x - r / 2) + '" cy="' + y + '" r="' + (r * .6) + '" fill="#3f7a3a"/>');
+    let ripples = "";
+    for (let i = 0; i < 6; i++) ripples += '<path d="M' + (30 + i * 60) + ' ' + (190 + (i % 3) * 14) + 'h30" stroke="#a8d8c0" stroke-width="2" opacity=".5"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' + stars(20) +
-      '<g class="sw"><path d="M90 200l-34-170h26z" fill="#fff6c2" opacity=".5"/></g>' +
-      '<g class="sw sw2"><path d="M310 200l14-170h26z" fill="#fff6c2" opacity=".5"/></g>' +
-      /* the drum */
-      '<ellipse cx="200" cy="152" rx="164" ry="22" fill="#5b6470"/>' +
-      '<rect x="36" y="82" width="328" height="70" fill="#7d8792"/>' + fins +
-      '<ellipse cx="200" cy="82" rx="164" ry="18" fill="#9aa3ad"/><ellipse cx="200" cy="80" rx="150" ry="13" fill="#3a414b"/>' +
-      /* glass lobby */
-      '<rect x="60" y="160" width="280" height="38" fill="#1c2a38"/>' +
-      (function () { let g = ""; for (let x = 64; x < 338; x += 14) g += '<rect x="' + x + '" y="164" width="10" height="30" fill="#ffd96b" opacity="' + (x % 28 ? .85 : .6) + '"/>'; return g; })() +
-      '<rect x="56" y="156" width="288" height="5" fill="#c9ced6"/>' +
-      '<text x="200" y="128" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="18" letter-spacing="5" fill="#1b2430" opacity=".75">NASSAU COLISEUM</text>' +
-      /* plaza */
-      '<rect x="0" y="198" width="400" height="62" fill="#3a3d42"/><path d="M0 222h400" stroke="#55585e" stroke-width="2"/>' +
-      crowd +
-      '<rect x="10" y="230" width="5" height="30" fill="#1d2329"/><circle class="flk" cx="12.5" cy="228" r="5" fill="#ffe7a8"/>' +
-      '<rect x="385" y="230" width="5" height="30" fill="#1d2329"/><circle class="flk flk2" cx="387.5" cy="228" r="5" fill="#ffe7a8"/>',
-      sky("g3", "#080a18", "#2b2a4f"));
+      '<style>@keyframes dk{0%,100%{transform:translateX(0)}50%{transform:translateX(50px)}}.dk{animation:dk 7s ease-in-out infinite}.dk2{animation-delay:-3.5s}' +
+      '@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}.bb{animation:bob 1.6s ease-in-out infinite}</style>' +
+      '<rect width="400" height="260" fill="url(#g3)"/>' + cloud(80, 40, 1) + '<g class="cld">' + cloud(0, 60, .8) + '</g>' +
+      '<path d="M0 150q60 -26 130 -12q70 -24 140 -4q70 -20 130 0v20H0z" fill="#2f5a2a"/>' + oaks +
+      /* the carousel house: round brick building, conical roof, flag */
+      '<rect x="150" y="104" width="100" height="48" fill="#8a4a32"/><path d="M144 106l56 -34 56 34z" fill="#3a4a3a"/>' +
+      '<path d="M200 72v-14" stroke="#555" stroke-width="2"/><path class="flk" d="M200 58l12 4 -12 4z" fill="' + WINE + '"/>' +
+      (function () { let a = ""; for (let x = 158; x < 246; x += 18) a += '<path d="M' + x + ' 152v-26a7 7 0 0 1 14 0v26z" fill="#ffd98a" opacity=".6"/>'; return a; })() +
+      '<rect x="150" y="150" width="100" height="6" fill="#d9cfc0"/>' +
+      /* the lake */
+      '<rect x="0" y="160" width="400" height="100" fill="#3f7a6a"/><rect x="0" y="160" width="400" height="6" fill="#5a9a80" opacity=".6"/>' + ripples +
+      /* fishing pier with a line out */
+      '<rect x="250" y="196" width="150" height="8" fill="#8a6a44"/>' + (function () { let p = ""; for (let x = 256; x < 400; x += 24) p += '<rect x="' + x + '" y="204" width="4" height="30" fill="#6a4a2a"/>'; return p; })() +
+      '<g transform="translate(300 196)">' + person(EMER) + '</g><path d="M310 182l40 -24" stroke="#5a3a22" stroke-width="2"/><path d="M350 158q4 30 8 56" stroke="#ddd" stroke-width=".8" fill="none"/>' +
+      '<g class="bb"><circle cx="358" cy="214" r="2.5" fill="' + WINE + '"/></g>' +
+      /* ducks */
+      '<g class="dk"><ellipse cx="60" cy="220" rx="11" ry="5" fill="#7a5a3a"/><circle cx="69" cy="213" r="4.5" fill="#2f6a3a"/><path d="M73 213l5 1-5 2z" fill="' + GOLD + '"/></g>' +
+      '<g class="dk dk2"><ellipse cx="140" cy="236" rx="11" ry="5" fill="#7a5a3a"/><circle cx="149" cy="229" r="4.5" fill="#2f6a3a"/><path d="M153 229l5 1-5 2z" fill="' + GOLD + '"/></g>' +
+      '<rect x="20" y="240" width="190" height="16" rx="2" fill="#1b2430"/><text x="115" y="251.5" text-anchor="middle" ' + F + ' font-weight="700" font-size="9" fill="#fff">HEMPSTEAD LAKE STATE PARK</text>' +
+      tag("STRONG ISLAND", 230, 252, 18, GOLD, -4),
+      sky("g3", "#7fb3e0", "#f6e6c0"));
   }
 
   /* 4. Belmont Park in Elmont: the long green grandstand roof with white trim, the infield, the white rail,

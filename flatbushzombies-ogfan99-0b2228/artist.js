@@ -83,7 +83,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO FLATBUSH",
-   "x": "Newkirk Avenue and East 16th Street. This is the Flatbush Zombies' game.",
+   "x": "Cortelyou Road and Flatbush Avenue. This is the Flatbush Zombies' game.",
    "sfx": "spray"
   }
  ],

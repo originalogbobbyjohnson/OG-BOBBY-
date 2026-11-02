@@ -267,6 +267,6 @@ function LIB(P) {
     pink: () => L.pinkRover(),
     church: () => L.abyssinian(),
     terrace: () => L.lenoxTerrace(),
-    block: () => L.corner(["#0d1022", "#2a3a4a"], "W 135 St", "Lenox Av", L.tag("CAM'RON", 26, 124, 47, P.c1, -7) + L.tag("PINK", 40, 156, 22, P.c2, -5) + L.tag("DIPSET", 30, 188, 24, P.c3, -3) + L.tag("HARLEM", 120, 212, 20, "#f6efdc", -2))
+    block: () => L.corner(["#0d1022", "#2a3a4a"], "Lenox Av", "W 140 St", L.tag("CAM'RON", 26, 124, 47, P.c1, -7) + L.tag("PINK", 40, 156, 22, P.c2, -5) + L.tag("DIPSET", 30, 188, 24, P.c3, -3) + L.tag("HARLEM", 120, 212, 20, "#f6efdc", -2))
   };
 })();

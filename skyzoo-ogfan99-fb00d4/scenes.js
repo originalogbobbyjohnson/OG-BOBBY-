@@ -127,36 +127,38 @@
       sky("g3", "#f4b26b", "#f7dcb2"));
   }
 
-  /* 4. Live from the tape deck: the writing room, cassette reels turning, crates of records, a blue fitted on the hook, the notebook open */
+  /* 4. Album world, The Salvation (2009): the tape deck and the open notebook on a Bed-Stuy brownstone window sill at night, Fulton St lit up below, headlights streaming */
   function tapes() {
-    let crates = "";
-    [[24, 168], [92, 168]].forEach(([x, y]) => {
-      crates += '<rect x="' + x + '" y="' + y + '" width="62" height="60" fill="#6b4a2a" stroke="#3a2614" stroke-width="2"/>';
-      for (let i = 0; i < 8; i++) crates += '<rect x="' + (x + 4 + i * 7) + '" y="' + (y - 14) + '" width="6" height="22" fill="' + ["#d62e3a", "#f2c14e", "#1f2937", "#6fb7ff", "#f7f3ea", "#3f8a3a", "#7a3fbf", "#111"][i] + '"/>';
-      crates += '<rect x="' + (x + 10) + '" y="' + (y + 20) + '" width="42" height="10" rx="2" fill="#3a2614"/>';
+    let shops = "";
+    [[0, "#ffd98a"], [70, "#9fd0ff"], [140, "#ffb0a0"], [210, "#ffd98a"], [280, "#b8f0b0"], [350, "#ffd98a"]].forEach(([x, c], i) => {
+      shops += '<rect x="' + x + '" y="40" width="66" height="70" fill="' + (i % 2 ? "#5a3a32" : "#4a3a4a") + '"/>';
+      for (let yy = 48; yy < 80; yy += 14) for (let xx = x + 8; xx < x + 60; xx += 16) shops += '<rect x="' + xx + '" y="' + yy + '" width="8" height="9" fill="' + ((xx + yy + i) % 3 ? "#2a2236" : "#ffd98a") + '"/>';
+      shops += '<rect x="' + (x + 4) + '" y="88" width="58" height="22" fill="' + c + '" opacity=".75" class="flk' + (i % 2 ? " flk2" : "") + '"/>';
     });
     return svg(
-      '<rect width="400" height="260" fill="#151b2a"/>' +
-      '<rect x="0" y="0" width="400" height="160" fill="#1d2640"/>' +
-      /* window with the night skyline */
-      '<rect x="250" y="18" width="128" height="96" fill="#0b1224" stroke="#3a3f4a" stroke-width="6"/>' + '<circle cx="270" cy="30" r="1.2" fill="#fff"/><circle cx="296" cy="44" r="1" fill="#fff"/><circle cx="340" cy="28" r="1.3" fill="#fff"/><circle cx="364" cy="50" r="1" fill="#fff"/>' +
-      '<path d="M254 114v-30h14v-12h12v42zM286 114v-48h16v48zM306 114v-22h20v22zM330 114v-38h14v-10h10v48z" fill="#26324d"/>' +
-      '<path d="M314 18v96M250 66h128" stroke="#3a3f4a" stroke-width="4"/>' +
-      /* fitted on the hook */
-      '<circle cx="60" cy="40" r="3" fill="#888"/><path d="M38 70q0-26 22-26t22 26z" fill="#13306b"/><path d="M34 70h52q-4 10-30 8z" fill="#0e2350"/><circle cx="60" cy="44" r="2" fill="#0e2350"/>' +
-      '<text x="60" y="66" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" fill="#f7f3ea">BK</text>' +
-      /* desk */
-      '<rect x="0" y="228" width="400" height="32" fill="#2a1d14"/><rect x="170" y="150" width="226" height="10" fill="#7a5233"/><rect x="180" y="160" width="10" height="70" fill="#5a3a22"/><rect x="376" y="160" width="10" height="70" fill="#5a3a22"/>' +
-      /* tape deck */
-      '<rect x="186" y="100" width="130" height="50" rx="4" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-      '<rect x="196" y="108" width="74" height="34" rx="3" fill="#1f2937"/><rect x="204" y="114" width="58" height="22" rx="2" fill="#f2c14e"/>' +
-      '<g class="reel"><circle cx="218" cy="125" r="7" fill="#f7f3ea"/><path d="M218 118v14M211 125h14" stroke="#444" stroke-width="2"/></g>' +
-      '<g class="reel"><circle cx="248" cy="125" r="7" fill="#f7f3ea"/><path d="M248 118v14M241 125h14" stroke="#444" stroke-width="2"/></g>' +
-      '<rect x="278" y="110" width="6" height="28" class="eq" fill="#6cbe45"/><rect x="287" y="110" width="6" height="28" class="eq eq2" fill="#6cbe45"/><rect x="296" y="110" width="6" height="28" class="eq eq3" fill="#f2c14e"/><rect x="305" y="110" width="6" height="28" class="eq eq4" fill="#d62e3a"/>' +
-      /* notebook + pen */
-      '<path d="M326 148l30-10 30 10v2h-60z" fill="#f7f3ea" stroke="#9aa3ad" stroke-width="1"/><path d="M332 146l24-6M356 140l24 6" stroke="#9aa3ad" stroke-width=".8"/><rect x="340" y="132" width="34" height="3" rx="1.5" fill="' + GOLD + '" transform="rotate(-18 357 133)"/>' +
-      crates +
-      tag("RETRO", 214, 210, 26, SKY, -5) + tag("POLITAN", 236, 238, 22, GOLD, -3));
+      '<style>@keyframes hl{from{transform:translateX(-60px)}to{transform:translateX(460px)}}.hl{animation:hl 3s linear infinite}.hl2{animation-delay:-1.5s}' +
+      '@keyframes tl{from{transform:translateX(460px)}to{transform:translateX(-60px)}}.tl{animation:tl 3.6s linear infinite}</style>' +
+      '<rect width="400" height="260" fill="#0b1224"/>' + stars(14) +
+      /* Fulton St below the window */
+      shops + '<rect x="0" y="110" width="400" height="30" fill="#2a2d33"/>' +
+      '<g class="hl"><rect x="0" y="116" width="30" height="8" rx="2" fill="#f2f2f2"/><circle cx="30" cy="120" r="3" fill="#fff6c2"/></g><g class="hl hl2"><rect x="0" y="118" width="30" height="8" rx="2" fill="' + SKY + '"/><circle cx="30" cy="122" r="3" fill="#fff6c2"/></g>' +
+      '<g class="tl"><rect x="0" y="128" width="30" height="8" rx="2" fill="#d62e3a"/><circle cx="0" cy="132" r="2.5" fill="#ff4a4a"/></g>' +
+      '<rect x="236" y="30" width="80" height="14" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1"/><text x="276" y="40.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">Fulton St</text>' +
+      /* the brownstone window frame */
+      '<path d="M0 0h400v260H0zM40 20v130h320V20z" fill="#5a3a2a" fill-rule="evenodd"/>' +
+      '<rect x="36" y="16" width="328" height="8" fill="#7a5233"/><rect x="196" y="20" width="8" height="130" fill="#7a5233"/><rect x="40" y="82" width="320" height="6" fill="#7a5233"/>' +
+      /* the sill + the deck + the notebook */
+      '<rect x="20" y="150" width="360" height="16" fill="#8a6a44"/><rect x="0" y="166" width="400" height="94" fill="#2a1d14"/>' +
+      '<rect x="40" y="110" width="140" height="42" rx="4" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
+      '<rect x="50" y="116" width="74" height="30" rx="3" fill="#1f2937"/><rect x="58" y="121" width="58" height="20" rx="2" fill="' + GOLD + '"/>' +
+      '<g class="reel"><circle cx="72" cy="131" r="6" fill="#f7f3ea"/><path d="M72 125v12M66 131h12" stroke="#444" stroke-width="2"/></g>' +
+      '<g class="reel"><circle cx="102" cy="131" r="6" fill="#f7f3ea"/><path d="M102 125v12M96 131h12" stroke="#444" stroke-width="2"/></g>' +
+      '<rect x="132" y="118" width="6" height="28" class="eq" fill="#6cbe45"/><rect x="142" y="118" width="6" height="28" class="eq eq2" fill="#6cbe45"/><rect x="152" y="118" width="6" height="28" class="eq eq3" fill="' + GOLD + '"/><rect x="162" y="118" width="6" height="28" class="eq eq4" fill="#d62e3a"/>' +
+      '<path d="M228 150l50 -14 50 14z" fill="#f7f3ea" stroke="#9aa3ad"/><path d="M240 146l38 -8M278 138l38 8M244 149l34 -8M278 141l34 8" stroke="#9aa3ad" stroke-width=".8"/>' +
+      '<rect x="292" y="128" width="40" height="3" rx="1.5" fill="' + GOLD + '" transform="rotate(-20 312 130)"/>' +
+      '<text x="200" y="196" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="26" fill="#f7f3ea" letter-spacing="3">THE SALVATION</text>' +
+      '<text x="200" y="214" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="' + SKY + '" letter-spacing="2">SKYZOO · BED-STUY</text>' +
+      tag("FIRST GEN RICH", 20, 248, 22, GOLD, -3) + tag("SKY", 300, 248, 26, SKY, -6));
   }
 
   /* 5. Fulton St and St James Pl: green street signs, a streetlight, the tag wall */

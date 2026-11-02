@@ -104,57 +104,50 @@
       sky("b2", "#5aa6e8", "#d7ecfb"));
   }
 
-  /* 3. Black Moon rising over the Crown Heights row houses: brownstone and limestone fronts, stoops, a dark moon with a blue glow */
+  /* 3. The Brooklyn Children's Museum in Brower Park (St. Marks Av & Brooklyn Av): the low curvy building in yellow tile, the park trees, clouds going by */
   function moon() {
-    const house = (x, w, h, col, trim) => {
-      let s = '<rect x="' + x + '" y="' + (206 - h) + '" width="' + w + '" height="' + h + '" fill="' + col + '"/>' +
-        '<rect x="' + (x - 2) + '" y="' + (206 - h) + '" width="' + (w + 4) + '" height="6" fill="' + trim + '"/>';
-      for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) {
-        const lit = (x + r * 7 + c * 3) % 4 === 0;
-        s += '<rect x="' + (x + 8 + c * (w - 22) / 2) + '" y="' + (206 - h + 16 + r * 30) + '" width="8" height="16" fill="' + (lit ? "#ffd98a" : "#20263a") + '"' + (lit ? ' class="flk' + (c ? " flk" + (c + 1) : "") + '"' : "") + '/>';
-      }
-      s += '<path d="M' + (x + 4) + ' 206l12-18h10v18z" fill="' + trim + '"/>';
-      return s;
-    };
-    let stars = "";
-    [[30, 30], [80, 18], [140, 40], [250, 22], [300, 50], [360, 28], [190, 14], [110, 70]].forEach((p, i) => stars += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="1.6" fill="#fff" class="tw tw' + (i % 3 + 1) + '"/>');
+    let tile = "";
+    for (let y = 120; y < 204; y += 8) for (let x = 40; x < 360; x += 8) if (((x * 3 + y) / 8) % 5 === 0) tile += '<rect x="' + x + '" y="' + y + '" width="7" height="7" fill="#f8d94a"/>';
+    const tree = (x, y, r) => '<rect x="' + (x - 3) + '" y="' + y + '" width="6" height="' + (206 - y) + '" fill="#4a3220"/><circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="#3f7a3a"/><circle cx="' + (x + r * .4) + '" cy="' + (y - r * .3) + '" r="' + r * .6 + '" fill="#4f8f45"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#b3)"/>' + stars +
-      '<g class="rise">' +
-        '<circle cx="290" cy="56" r="46" fill="' + MOON + '" class="glow" opacity=".5" filter="url(#blur)"/>' +
-        '<circle cx="290" cy="56" r="36" fill="#0a0c18" stroke="' + MOON + '" stroke-width="2.5"/>' +
-        '<path d="M268 44a26 26 0 0 1 22-14" fill="none" stroke="#c8d8ff" stroke-width="1.5" opacity=".7"/>' +
-      '</g>' +
-      house(0, 64, 110, "#6b3f2a", "#4a2a1c") + house(64, 64, 118, "#d8cdb4", "#b8ab90") + house(128, 64, 110, "#7a4a32", "#55331f") +
-      house(192, 64, 116, "#cfc3a6", "#ada183") + house(256, 64, 108, "#6b3f2a", "#4a2a1c") + house(320, 80, 114, "#d6cbb0", "#b3a689") +
-      '<rect x="0" y="206" width="400" height="54" fill="#2b2b33"/><rect x="0" y="206" width="400" height="6" fill="#55555f"/>' +
-      '<text x="200" y="240" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="22" letter-spacing="6" fill="' + MOON + '" class="glow">BLACK MOON</text>',
-      sky("b3", "#05060f", "#1a2342") + '<filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>');
+      '<rect width="400" height="260" fill="url(#b3)"/>' + cloud(80, 34, 1, "cloud") + cloud(260, 24, .8, "cloud cloud2") +
+      tree(20, 120, 28) + tree(380, 116, 30) +
+      /* curving yellow-tile body */
+      '<path d="M40 204V128Q40 104 70 104H250Q300 104 330 126Q360 150 360 180V204z" fill="#f2c230"/>' + '<g clip-path="url(#bcm)">' + tile + '</g>' +
+      '<path d="M40 128Q40 104 70 104H250Q300 104 330 126Q360 150 360 180" fill="none" stroke="#c99a1a" stroke-width="4"/>' +
+      /* glass band and entry */
+      '<path d="M60 150H250Q290 150 316 166Q336 178 340 196H60z" fill="#2a4a6a" opacity=".85"/>' +
+      [90, 130, 170, 210, 250, 290].map(x => '<path d="M' + x + ' 150V196" stroke="#f2c230" stroke-width="3"/>').join("") +
+      '<rect x="150" y="160" width="40" height="44" fill="#cfe6ff" opacity=".7"/>' +
+      '<rect x="60" y="112" width="202" height="22" rx="3" fill="#1a1a22"/>' +
+      '<text x="161" y="128" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#f8d94a">BROOKLYN CHILDREN\'S MUSEUM</text>' +
+      '<rect x="300" y="60" width="3" height="60" fill="#ddd"/><g class="flag"><rect x="303" y="62" width="26" height="16" fill="' + GRN + '"/></g>' +
+      '<rect x="0" y="204" width="400" height="56" fill="#4f8a3a"/><rect x="0" y="226" width="400" height="34" fill="#8a8578"/>' +
+      tag("BUCKSHOT", 16, 252, 20, GOLD, -3) +
+      '<text x="200" y="56" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#1a1a22">BROWER PARK · ST. MARKS AV &amp; BROOKLYN AV</text>',
+      sky("b3", "#8fc3ea", "#f6e7c6") + '<clipPath id="bcm"><path d="M40 204V128Q40 104 70 104H250Q300 104 330 126Q360 150 360 180V204z"/></clipPath>');
   }
 
-  /* 4. Enta Da Stage: the Boot Camp show, spotlights sweeping, speaker stacks, hands and heads bobbing up front */
+  /* 4. St. John's Recreation Center (Prospect Pl & Schenectady Av, Crown Heights): the brick rec center, big arched windows on the pool, the flag moving */
   function stage() {
-    let crowd = "";
-    for (let x = 10; x < 400; x += 26) crowd += '<g class="bob' + ((x / 26) % 2 ? " bob2" : "") + '"><circle cx="' + x + '" cy="226" r="11" fill="#101016"/><rect x="' + (x - 14) + '" y="234" width="28" height="30" rx="8" fill="#101016"/></g>';
-    let hands = "";
-    for (const x of [40, 120, 210, 300, 370]) hands += '<path class="bob bob2" d="M' + x + ' 222l-4-26h8z" fill="#101016"/>';
-    const stack = (x) => '<rect x="' + x + '" y="110" width="40" height="80" fill="#1b1b22" stroke="#33333d"/><circle cx="' + (x + 20) + '" cy="132" r="11" fill="#2c2c36" stroke="#4a4a56"/><circle cx="' + (x + 20) + '" cy="168" r="14" fill="#2c2c36" stroke="#4a4a56"/>';
+    let bricks = "";
+    for (let y = 60; y < 206; y += 10) for (let x = (y / 10) % 2 ? 40 : 52; x + 22 <= 360; x += 24) bricks += '<rect x="' + x + '" y="' + y + '" width="22" height="8" fill="#9a4a34"/>';
+    const arch = (x) => '<path d="M' + x + ' 186V120a26 26 0 0 1 52 0v66z" fill="#2a4a6a" stroke="#e8dcc0" stroke-width="4"/><path d="M' + (x + 26) + ' 94V186M' + x + ' 140h52" stroke="#e8dcc0" stroke-width="2"/>' +
+      '<path class="tw tw' + (x % 3 + 1) + '" d="M' + (x + 6) + ' 172q10-4 20 0t20 0" stroke="#7fd0f0" stroke-width="2" fill="none"/>';
     return svg(
-      '<rect width="400" height="260" fill="#0a0a12"/>' +
-      '<rect x="40" y="30" width="320" height="28" rx="3" fill="#15151f" stroke="' + GOLD + '" stroke-width="2"/>' +
-      '<text x="200" y="51" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="20" letter-spacing="4" fill="' + GOLD + '">ENTA DA STAGE</text>' +
-      '<g class="spotL"><path d="M60 20l-30 190h80z" fill="' + MOON + '" opacity=".22"/></g>' +
-      '<g class="spotR"><path d="M340 20l-50 190h80z" fill="' + GOLD + '" opacity=".22"/></g>' +
-      '<circle cx="60" cy="20" r="7" fill="#ddd"/><circle cx="340" cy="20" r="7" fill="#ddd"/><rect x="0" y="12" width="400" height="4" fill="#333"/>' +
-      stack(20) + stack(340) +
-      /* the stage and the mic stand */
-      '<rect x="0" y="204" width="400" height="56" fill="url(#glowfl)"/><rect x="0" y="190" width="400" height="14" fill="#3a2a1a"/><rect x="0" y="190" width="400" height="3" fill="' + GOLD + '"/>' +
-      '<rect x="198" y="118" width="4" height="72" fill="#9aa0a8"/><path d="M188 190h24" stroke="#9aa0a8" stroke-width="4"/>' +
-      '<rect x="194" y="104" width="12" height="18" rx="6" fill="#c9ced6"/>' +
-      crowd + hands,
-      sky("glowfl", "#6a5f8a", "#2a2440"));
+      '<rect width="400" height="260" fill="url(#b4)"/>' + cloud(300, 30, .9, "cloud") +
+      '<rect x="40" y="56" width="320" height="150" fill="#b0583e"/>' + bricks +
+      '<rect x="34" y="48" width="332" height="10" fill="#e8dcc0"/><rect x="34" y="200" width="332" height="6" fill="#e8dcc0"/>' +
+      arch(56) + arch(122) + arch(226) + arch(292) +
+      '<rect x="186" y="132" width="28" height="74" fill="#3a2a22"/><rect x="180" y="126" width="40" height="6" fill="#e8dcc0"/>' +
+      '<rect x="96" y="64" width="208" height="22" rx="2" fill="#1f5a3a"/>' +
+      '<text x="200" y="79" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="1" fill="#fff">ST. JOHN\'S RECREATION CENTER</text>' +
+      '<rect x="356" y="10" width="3" height="46" fill="#ddd"/><g class="flag"><rect x="359" y="12" width="28" height="17" fill="#fff"/><rect x="359" y="12" width="12" height="9" fill="#3a4a8a"/>' + [0, 1, 2, 3].map(i => '<rect x="371" y="' + (12 + i * 4.3) + '" width="16" height="2.2" fill="#c8102e"/>').join("") + '</g>' +
+      '<rect x="0" y="206" width="400" height="14" fill="#a8a296"/><rect x="0" y="220" width="400" height="40" fill="#2b2b33"/>' +
+      tag("BOOT CAMP", 14, 250, 22, GRN, -4) + tag("BUCKSHOT", 290, 252, 20, GOLD, -3) +
+      '<text x="200" y="30" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="12" fill="#1a1a22">PROSPECT PL &amp; SCHENECTADY AV</text>',
+      sky("b4", "#8fc3ea", "#f6e7c6"));
   }
-
   /* 5. Utica Av and St Johns Pl, a block off the station: green street signs, a streetlight, the tag wall */
   function corner() {
     let bricks = "";

@@ -95,7 +95,7 @@ window.CFG = {
   {
    "scene": "block",
    "t": "WELCOME TO HARLEM",
-   "x": "W 135 St and Lenox Av. This is Cam'ron's game.",
+   "x": "Lenox Av and W 140th St, the block he and Mase came up on. This is Cam'ron's game.",
    "sfx": "spray"
   }
  ],

@@ -36,34 +36,27 @@
   const finPath = (x, y, s) => 'M' + x + ' ' + y + 'q' + (6 * s) + ' -' + (30 * s) + ' ' + (30 * s) + ' -' + (38 * s) + 'q-' + (8 * s) + ' ' + (16 * s) + ' -' + (2 * s) + ' ' + (38 * s) + 'z';
   const WHITE = "#f4f1ea", RED = "#d62828", GREEN = "#2e9e4f", STEEL = "#9fb3c8";
 
-  /* 1. The D pulling into Fordham Rd, under the Grand Concourse: tiled walls, I-beam columns */
+  /* 1. Fordham Rd from the street: the stair down to the B and D in the Grand Concourse median, the Art Deco apartment houses, the Bx12 heading east to Belmont, a fin circling in the puddle */
   function train() {
-    let tiles = "";
-    for (let y = 0; y < 116; y += 10) for (let x = (y / 10) % 2 ? -10 : 0; x < 400; x += 20) tiles += '<rect x="' + x + '" y="' + y + '" width="19" height="9" fill="#ece6d6"/>';
-    let cols = "";
-    for (let x = 30; x < 400; x += 85) cols += '<rect x="' + (x - 5) + '" y="0" width="10" height="190" fill="#3e5a4a"/><rect x="' + (x - 9) + '" y="0" width="18" height="4" fill="#2c4236"/>';
-    let windows = "";
-    for (let x = 18; x < 280; x += 46) windows += '<rect x="' + x + '" y="132" width="30" height="20" rx="3" fill="#ffe9b0" opacity=".8"/>';
+    const deco = (x, w, top, c) => { let b = '<rect x="' + x + '" y="' + top + '" width="' + w + '" height="' + (176 - top) + '" fill="' + c + '"/><path d="M' + x + ' ' + (top + 6) + 'h' + w + '" stroke="#7a5a3a" stroke-width="4"/>';
+      for (let y = top + 16; y < 166; y += 18) for (let i = 8; i < w - 10; i += 18) b += '<rect class="' + ((i + y) % 4 ? "" : "flk") + '" x="' + (x + i) + '" y="' + y + '" width="9" height="11" fill="' + ((i * 3 + y) % 5 ? "#3a3f4a" : "#ffe0a0") + '"/>';
+      return b; };
+    let globes = [96, 304].map((x, i) => '<rect x="' + (x - 3) + '" y="150" width="6" height="40" fill="#1d2329"/><circle class="flk' + (i ? " flk2" : "") + '" cx="' + x + '" cy="146" r="8" fill="#3fbf6a"/>').join("");
     return svg(
-      '<rect width="400" height="260" fill="#cfc6b1"/>' + tiles +
-      /* the trim band and FORDHAM mosaic name tablet */
-      '<rect x="0" y="40" width="400" height="10" fill="#6b2a4a"/><rect x="0" y="50" width="400" height="3" fill="#d8b860"/>' +
-      '<rect x="0" y="116" width="400" height="74" fill="#141414"/>' +
-      '<g class="anim-train">' +
-        '<rect x="8" y="122" width="300" height="60" rx="8" fill="#b9bfc8" stroke="#5b6270" stroke-width="2"/>' +
-        '<rect x="8" y="160" width="300" height="5" fill="#ff6319"/>' + windows +
-        '<circle cx="300" cy="172" r="4" fill="#fff6c2"/>' +
-        bullet(294, 142, "D", "#ff6319") +
-      '</g>' + cols +
-      '<rect x="68" y="62" width="264" height="34" rx="4" fill="#111"/>' +
-      '<rect x="68" y="62" width="264" height="4" fill="#fff"/>' +
-      '<text x="82" y="87" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">Fordham Rd</text>' +
-      bullet(284, 80, "B", "#ff6319") + bullet(310, 80, "D", "#ff6319") +
-      '<rect x="0" y="182" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="192" width="400" height="68" fill="#2a2a2a"/>' +
-      '<path fill="' + STEEL + '" stroke="#000" stroke-width="2" d="' + finPath(220, 246, 0.9) + '"/>' +
-      tag("SHARK BX", 26, 240, 32, WHITE, -4) + tag("BELMONT", 270, 242, 24, RED, -6),
-      "");
+      '<rect width="400" height="260" fill="url(#g1)"/>' +
+      deco(0, 130, 60, "#d9a36a") + deco(270, 130, 50, "#c98a5a") + deco(130, 140, 84, "#e2c69a") +
+      '<rect x="0" y="176" width="400" height="84" fill="#3a3d43"/><rect x="0" y="176" width="400" height="10" fill="#9a968c"/>' +
+      /* the median entrance */
+      '<rect x="90" y="186" width="220" height="34" fill="#6a9a4a"/><path d="M120 220l20-34h120l20 34z" fill="#2c4236"/>' + [0, 1, 2].map(i => '<rect x="' + (146 + i * 6) + '" y="' + (194 + i * 8) + '" width="' + (108 - i * 12) + '" height="3" fill="#8a857a"/>').join("") + globes +
+      '<rect x="110" y="110" width="180" height="32" rx="4" fill="#111"/><rect x="110" y="110" width="180" height="4" fill="#fff"/>' +
+      '<text x="122" y="134" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">Fordham Rd</text>' + bullet(244, 127, "B", "#ff6319") + bullet(270, 127, "D", "#ff6319") +
+      '<rect x="8" y="12" width="120" height="20" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="68" y="26" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">Grand Concourse</text>' +
+      /* the bus east toward Arthur Av */
+      '<g class="el4"><rect x="0" y="222" width="120" height="30" rx="5" fill="#e9ecef" stroke="#6b7280" stroke-width="1.5"/><rect x="0" y="240" width="120" height="4" fill="#0039a6"/><rect x="6" y="226" width="96" height="10" fill="#2a3440"/>' +
+      '<text x="60" y="234" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7" fill="#ffd27a">Bx12 · ARTHUR AV</text><circle cx="22" cy="252" r="5" fill="#111"/><circle cx="98" cy="252" r="5" fill="#111"/></g>' +
+      '<ellipse cx="340" cy="232" rx="40" ry="8" fill="#5a6a7a" opacity=".6"/><g class="fin"><path fill="' + STEEL + '" stroke="#000" stroke-width="2" d="' + finPath(330, 232, 0.5) + '"/></g>' +
+      tag("SHARK BX", 268, 100, 24, WHITE, -6) + tag("BELMONT", 14, 172, 20, RED, -4),
+      sky("g1", "#8fc3ea", "#f6d9a6"));
   }
 
   /* 2. Arthur Avenue: the Retail Market's brick front, red-white-green banners over the street, espresso steaming */
@@ -131,31 +124,26 @@
       sky("g3", "#050c18", "#1e3554"));
   }
 
-  /* 4. Yankee Stadium: the limestone facade, gold letters, the white frieze, the 4 rolling by on the el */
+  /* 4. Ciccarone Park at Arthur Av and E 188th: Belmont's little park, the bocce courts, the old-timers rolling, the Italian flag on the pole, the shade trees */
   function stadium() {
-    let arches = "";
-    for (let i = 0; i < 9; i++) { const x = 24 + i * 40; arches += '<path d="M' + x + ' 196v-64a14 14 0 0 1 28 0v64z" fill="#1d2633"/><path d="M' + (x + 4) + ' 196v-60a10 10 0 0 1 20 0v60z" fill="#2c3a4f" opacity=".7"/>'; }
-    let frieze = "";
-    for (let x = 14; x < 386; x += 14) frieze += '<path d="M' + x + ' 76l7 12 7-12" fill="none" stroke="#fff" stroke-width="2"/>';
-    let el = "", wins = "";
-    for (let x = 0; x <= 400; x += 50) el += '<rect x="' + (x - 3) + '" y="214" width="6" height="46" fill="#2e3b2e"/>';
-    for (let x = 10; x < 230; x += 40) wins += '<rect x="' + x + '" y="196" width="26" height="10" rx="2" fill="#ffe9b0" opacity=".85"/>';
+    const man = (x, c, cls) => '<g class="' + (cls || "") + '"><circle cx="' + x + '" cy="150" r="6" fill="#d8c8b0"/><rect x="' + (x - 7) + '" y="144" width="14" height="3" fill="#5a4a3a"/><path d="M' + (x - 8) + ' 182v-24q0-6 8-6t8 6v24z" fill="' + c + '"/><path d="M' + (x - 4) + ' 182v14M' + (x + 4) + ' 182v14" stroke="#3a3a44" stroke-width="3"/></g>';
+    const tree = x => '<rect x="' + (x - 3) + '" y="80" width="6" height="60" fill="#4a3426"/><g class="flag"><circle cx="' + x + '" cy="70" r="26" fill="#3f7a3a"/><circle cx="' + (x - 18) + '" cy="82" r="16" fill="#2f6a34"/><circle cx="' + (x + 18) + '" cy="80" r="16" fill="#2f6a34"/></g>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g4)"/>' + stars(16) +
-      /* light towers' beams */
-      '<g opacity=".18"><path class="beam" d="M80 110l-30-110h60z" fill="#fff6d0"/><path class="beam beam2" d="M320 110l-30-110h60z" fill="#fff6d0"/></g>' +
-      /* limestone face */
-      '<rect x="10" y="74" width="380" height="140" fill="#e6dcc6"/><rect x="10" y="74" width="380" height="140" fill="none" stroke="#c9bb9c" stroke-width="2"/>' +
-      '<rect x="10" y="64" width="380" height="12" fill="#f2ead8"/>' + frieze +
-      '<rect x="80" y="96" width="240" height="22" fill="#e6dcc6"/>' +
-      '<text x="200" y="114" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="20" letter-spacing="6" textLength="230" lengthAdjust="spacing" fill="#c9a24a" stroke="#7a5512" stroke-width=".6">YANKEE STADIUM</text>' +
-      arches +
-      /* the 4 train on the River Ave el */
-      '<rect x="0" y="214" width="400" height="46" fill="#191c22"/>' +
-      '<rect x="0" y="206" width="400" height="10" fill="#2e3b2e"/>' + el +
-      '<g class="el4"><rect x="0" y="186" width="240" height="22" rx="4" fill="#c9ced6" stroke="#6b7280" stroke-width="1.5"/>' + wins + bullet(226, 197, "4", "#00933c") + '</g>' +
-      '<rect x="0" y="246" width="400" height="14" fill="#191c22"/>',
-      sky("g4", "#0a1426", "#2a3f66"));
+      '<rect width="400" height="260" fill="url(#g4)"/>' +
+      '<rect x="0" y="80" width="400" height="70" fill="#8a4a34"/>' + (function () { let w = ""; for (let x = 10; x < 400; x += 26) w += '<rect x="' + x + '" y="92" width="10" height="14" fill="#3a2a22"/><rect x="' + x + '" y="118" width="10" height="14" fill="#3a2a22"/>'; return w; })() +
+      tree(40) + tree(360) +
+      /* flag pole with the Italian flag */
+      '<rect x="300" y="24" width="3" height="170" fill="#ccc"/><g class="flag" style="transform-origin:0 50%"><rect x="303" y="26" width="14" height="28" fill="' + GREEN + '"/><rect x="317" y="26" width="14" height="28" fill="#fff"/><rect x="331" y="26" width="14" height="28" fill="' + RED + '"/></g>' +
+      /* the bocce court */
+      '<rect x="0" y="150" width="400" height="110" fill="#6a9a4a"/><rect x="40" y="190" width="320" height="50" fill="#c9a874" stroke="#6b4a2a" stroke-width="5"/>' +
+      '<circle cx="290" cy="216" r="3" fill="#fff"/><circle cx="270" cy="210" r="6" fill="' + RED + '"/><circle cx="300" cy="226" r="6" fill="' + GREEN + '"/>' +
+      '<g class="el4" style="animation-duration:4s"><circle cx="0" cy="216" r="6" fill="' + RED + '"/></g>' +
+      man(70, "#4a5a6a") + man(110, WHITE, "gl") + man(352, "#6a3a3a") +
+      '<rect x="120" y="14" width="160" height="36" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="2"/>' +
+      '<text x="200" y="30" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="12" fill="#fff">CICCARONE PARK</text>' +
+      '<text x="200" y="43" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">ARTHUR AV · E 188 ST</text>' +
+      tag("THE SHARK", 150, 182, 22, WHITE, -5),
+      sky("g4", "#7ab8e8", "#f6e2b8"));
   }
 
   /* 5. E 187th St and Arthur Ave: street signs, streetlight, the tag wall, a fin circling in the puddle */

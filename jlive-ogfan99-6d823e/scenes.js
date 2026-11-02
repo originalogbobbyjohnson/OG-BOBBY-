@@ -88,37 +88,43 @@
       tags: tag("THE BEST PART", 22, 214, 28, GOLD, -4) + tag("J-LIVE", 260, 238, 30, ORG, -6) });
   }
 
-  /* 2. The Williamsburgh Savings Bank tower: the tall tower over Atlantic and Flatbush, the four clock faces, the gold dome */
+  /* 2. Junior's at Flatbush Av Extension and DeKalb Av: the orange-and-white striped signs, the cheesecake window, right at his corner */
   function tower() {
+    let stripes = ""; for (let x = 40; x < 360; x += 16) stripes += rect(x, 92, 8, 26, "#f6efdc");
+    let cakes = ""; for (let i = 0; i < 5; i++) cakes += '<g class="bob"><path d="M' + (70 + i * 54) + ' 196h34v-12l-34 -8z" fill="#f6e2b0" stroke="#c8a060" stroke-width="1.5"/>' + rect(70 + i * 54, 192, 34, 4, "#a86a3a") + '<path d="M' + (70 + i * 54) + ' 176l34 8" stroke="#d8263a" stroke-width="3"/></g>';
     return svg('<rect width="400" height="260" fill="url(#t1)"/>' + stars(10) +
-      bldg(0, 140, 90, 90, "#6a5a6a", "#ffe6a8", "#3a3a4a") + bldg(300, 120, 100, 110, "#5a5a6a", "#ffe6a8", "#3a3a4a") +
-      /* tower body: buff limestone & brick */
-      rect(150, 90, 100, 140, "#d8c8a0") + rect(160, 70, 80, 22, "#cbb98e") + rect(166, 40, 68, 32, "#d8c8a0") +
-      [[166, 100], [190, 100], [214, 100]].map(([x, y]) => '<path d="M' + x + ' 230V' + y + '" stroke="#b8a678" stroke-width="2"/>').join("") +
-      [170, 186, 202, 218].map(x => [110, 130, 150, 170, 190, 210].map(y => rect(x, y, 10, 12, (x + y) % 3 ? "#ffe6a8" : "#3a3a4a", ' opacity=".85"')).join("")).join("") +
-      '<circle cx="200" cy="56" r="13" fill="#f6efdc" stroke="' + GOLD + '" stroke-width="3"/><path d="M200 56v-9M200 56l6 3" stroke="#111" stroke-width="2"/>' +
-      '<path d="M170 40q30-40 60 0z" fill="' + GOLD + '"/><path d="M200 2v12" stroke="' + GOLD + '" stroke-width="3"/>' +
-      '<path class="pls" d="M170 40q30-40 60 0" stroke="#fff3a8" stroke-width="2" fill="none"/>' +
-      road(230) + car(0, 230, ORG, "slide") + car(0, 230, BLUE, "slideL"),
+      bldg(0, 30, 40, 200, "#6a5a6a", "#ffe6a8", "#3a3a4a") + bldg(360, 20, 40, 210, "#5a5a6a", "#ffe6a8", "#3a3a4a") +
+      bldg(40, 20, 320, 74, "#8a5a44", "#ffe6a8", "#3a2a2a") +
+      /* the striped sign band */
+      rect(40, 92, 320, 26, ORG) + stripes + rect(120, 96, 160, 18, "#111") +
+      txt(200, 110, 14, "#ffb347", "JUNIOR'S", "middle", ' class="pls" letter-spacing="3"') +
+      rect(40, 118, 320, 112, "#2a1a14") +
+      /* the cheesecake window */
+      rect(56, 132, 288, 76, "#ffe6a8", ' opacity=".9"') + cakes + rect(56, 200, 288, 8, "#8a5a3a") +
+      txt(200, 150, 12, "#8a1a1a", "CHEESECAKE", "middle", ' letter-spacing="4"') +
+      rect(186, 208, 28, 22, "#5a2a1a") +
+      road(230) + car(0, 230, BLUE, "slide") + car(0, 230, GOLD, "slideL") +
+      txt(200, 16, 12, GOLD, "FLATBUSH AV EXT &amp; DEKALB AV", "middle", ' letter-spacing="2"'),
       sky("t1", "#1a2a5a", "#e8905a"));
   }
 
-  /* 3. Fort Greene Park: the Prison Ship Martyrs Monument, the tall granite column with the bronze urn, the wide steps */
+  /* 3. Brooklyn Technical High School on DeKalb Av at Fort Greene Pl: the huge brick school and the radio mast on the roof */
   function park() {
-    return svg('<rect width="400" height="260" fill="url(#p1)"/>' + '<circle cx="330" cy="50" r="20" fill="#fff3a8"/>' +
-      '<path d="M0 170q200-50 400 0v90H0z" fill="#4a9a3a"/>' +
-      /* steps */
-      '<path d="M60 260l40-60h200l40 60z" fill="#c8c4b8"/>' + [212, 224, 236, 248].map(y => '<path d="M' + (100 - (y - 200) * .66) + ' ' + y + 'h' + (200 + (y - 200) * 1.33) + '" stroke="#9a968a" stroke-width="2"/>').join("") +
-      rect(150, 186, 100, 16, "#b8b4a8") +
-      /* column */
-      rect(188, 34, 24, 152, "#d8d4c8") + '<path d="M194 40v140M206 40v140" stroke="#bab6aa" stroke-width="2"/>' + rect(182, 26, 36, 10, "#c8c4b8") +
-      '<path d="M190 26q0-14 10-14t10 14z" fill="#6a7a5a"/><rect x="196" y="6" width="8" height="8" fill="#6a7a5a"/>' +
-      '<g class="flk"><circle cx="200" cy="10" r="10" fill="#fff3a8" opacity=".3"/></g>' +
-      tree(40, 150, 26, "#2f7a34") + tree(360, 148, 26, "#3a8a3a", "sway sw2") + tree(100, 170, 18, "#2a6a2a") + tree(300, 170, 18, "#2a6a2a", "sway sw2") +
-      person(130, 236, ORG, "slide slw") + person(270, 236, BLUE, "slideL"),
+    let mast = ""; for (let y = 10; y < 52; y += 8) mast += '<path d="M' + (194 + (y - 10) * .08) + ' ' + y + 'L' + (206 - (y - 10) * .08) + ' ' + (y + 8) + 'M' + (206 - (y - 10) * .08) + ' ' + y + 'L' + (194 + (y - 10) * .08) + ' ' + (y + 8) + '" stroke="#5a5f66" stroke-width="1.2"/>';
+    return svg('<rect width="400" height="260" fill="url(#p1)"/>' +
+      /* the school: one long mass of brick, a taller center */
+      bldg(10, 80, 380, 150, "#9a4a34", "#cfe6ff", "#ffe6a8") + bldg(140, 56, 120, 174, "#a8543a", "#cfe6ff", "#ffe6a8") +
+      rect(6, 76, 388, 6, "#e8dcc0") + rect(136, 52, 128, 6, "#e8dcc0") +
+      /* the radio mast */
+      '<path d="M194 10L190 52h20L206 10z" fill="none" stroke="#5a5f66" stroke-width="2"/>' + mast + '<circle class="pls" cx="200" cy="8" r="3" fill="#ff4a3a"/>' +
+      '<path class="pls" d="M188 8a12 12 0 0 1 0-0M184 8q16-14 32 0" stroke="#fff" stroke-width="1.5" fill="none" opacity=".7"/>' +
+      /* entrance */
+      rect(176, 186, 48, 44, "#3a2a22") + rect(170, 180, 60, 8, "#e8dcc0") + rect(124, 160, 152, 18, "#1a1a22") + txt(200, 173, 10, "#f6efdc", "BROOKLYN TECHNICAL H.S.") +
+      tree(40, 206, 18, "#2f7a34") + tree(360, 206, 18, "#3a8a3a", "sway sw2") +
+      rect(0, 230, 400, 30, "#8a857a") + person(110, 248, ORG, "slide slw") + person(290, 248, BLUE, "slideL") +
+      tag("J-LIVE", 16, 252, 20, GOLD, -4) + txt(178, 40, 11, "#1a1a22", "DEKALB AV &amp; FORT GREENE PL", "end"),
       sky("p1", "#5ab0ea", "#d6eefa"));
   }
-
   /* 4. The classroom: the chalkboard, the wall clock ticking, the bars written out like a lesson */
   function classroom() {
     return svg(rect(0, 0, 400, 260, "#d8c8a0") + rect(0, 0, 400, 30, "#c8b890") +

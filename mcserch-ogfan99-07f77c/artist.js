@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "block",
    "t": "WELCOME TO FAR ROCKAWAY",
-   "x": "Mott Av and Beach 20 St. This is MC Serch's game.",
+   "x": "Beach 25 St and Seagirt Blvd, by the Wavecrest towers. This is MC Serch's game.",
    "sfx": "spray"
   }
  ],

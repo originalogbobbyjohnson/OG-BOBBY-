@@ -70,38 +70,34 @@
       tag("OCD", 30, 238, 32, ORANGE, -4) + tag("DRAGON", 250, 240, 30, BLUE, -8));
   }
 
-  /* 2. 1520 Sedgwick Avenue: the plain brick tower over the Harlem River where hip hop was born, the party still going */
+  /* 2. The Big Pun memorial mural at Rogers Pl and Westchester Av in Longwood: his father's giant wall under the 2/5 el, the crown, the flag, the mic, the train rolling overhead */
   function sedgwick() {
+    let el = "";
+    for (let x = 0; x <= 400; x += 50) el += '<rect x="' + (x - 4) + '" y="30" width="8" height="200" fill="#3a4a3a"/>';
     let wins = "";
-    for (let y = 40; y < 186; y += 14) for (let x = 132; x < 262; x += 16) {
-      const lit = ((x * 7 + y * 3) % 5) < 2;
-      wins += '<rect x="' + x + '" y="' + y + '" width="9" height="8" fill="' + (lit ? "#ffd98a" : "#3a2a24") + '"/>';
-    }
+    for (let x = 12; x < 250; x += 40) wins += '<rect x="' + x + '" y="10" width="26" height="12" rx="2" fill="#ffe9b0" opacity=".85"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#s2)"/>' + stars(24) +
-      /* far shore + the Major Deegan */
-      '<path d="M0 176h400v20H0z" fill="#1b2433"/><rect x="0" y="172" width="400" height="4" fill="#4b5668"/>' +
-      /* the tower: tan-brown brick, flat roof */
-      '<rect x="120" y="26" width="154" height="170" fill="#8b5a3c"/><rect x="120" y="26" width="154" height="6" fill="#6b4029"/>' +
-      '<rect x="120" y="26" width="8" height="170" fill="#6b4029"/>' + wins +
-      /* ground floor rec room with the party lights */
-      '<rect x="140" y="182" width="114" height="14" fill="#1a0f0b"/>' +
-      '<rect class="pty" x="146" y="185" width="22" height="8" fill="' + ORANGE + '"/><rect class="pty pty2" x="186" y="185" width="22" height="8" fill="' + BLUE + '"/><rect class="pty pty3" x="226" y="185" width="22" height="8" fill="' + RED + '"/>' +
-      /* speaker stacks out front */
-      '<rect x="60" y="146" width="40" height="50" rx="2" fill="#151515" stroke="#444" stroke-width="2"/><circle class="thp" cx="80" cy="162" r="10" fill="#2a2a2a" stroke="#666" stroke-width="2"/><circle cx="80" cy="186" r="5" fill="#2a2a2a" stroke="#666" stroke-width="1.5"/>' +
-      '<rect x="294" y="146" width="40" height="50" rx="2" fill="#151515" stroke="#444" stroke-width="2"/><circle class="thp" cx="314" cy="162" r="10" fill="#2a2a2a" stroke="#666" stroke-width="2"/><circle cx="314" cy="186" r="5" fill="#2a2a2a" stroke="#666" stroke-width="1.5"/>' +
-      '<text class="nt" x="74" y="140" font-family="Arial, sans-serif" font-size="18" fill="' + ORANGE + '">♪</text>' +
-      '<text class="nt nt2" x="96" y="134" font-family="Arial, sans-serif" font-size="16" fill="#fff">♫</text>' +
-      '<text class="nt nt3" x="306" y="140" font-family="Arial, sans-serif" font-size="18" fill="' + BLUE + '">♪</text>' +
-      /* the Harlem River */
-      '<rect x="0" y="196" width="400" height="64" fill="#13314f"/>' +
-      '<g class="rpl"><path d="M20 212h40M110 222h50M220 214h40M300 230h60M60 242h50M180 238h40" stroke="#5a8fc0" stroke-width="2" stroke-linecap="round" opacity=".7"/></g>' +
-      '<path d="M150 200h94" stroke="#ffd98a" stroke-width="2" opacity=".35"/>' +
-      /* the sign */
-      '<rect x="12" y="20" width="96" height="58" rx="4" fill="#0d1b3d" stroke="' + ORANGE + '" stroke-width="2"/>' +
-      '<text x="60" y="42" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="17" fill="#fff">1520</text>' +
-      '<text x="60" y="56" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="#fff">SEDGWICK AV</text>' +
-      '<text x="60" y="70" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="2" fill="' + ORANGE + '">SINCE 1973</text>',
+      '<rect width="400" height="260" fill="url(#s2)"/>' +
+      /* the el over Westchester Av with the 2 rolling by */
+      '<g class="car" style="animation-duration:9s"><rect x="0" y="4" width="270" height="24" rx="4" fill="#c9ced6" stroke="#6b7280" stroke-width="1.5"/>' + wins +
+      '<circle cx="256" cy="16" r="8" fill="#ee352e"/><text x="256" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">2</text></g>' +
+      '<rect x="0" y="28" width="400" height="10" fill="#3a4a3a"/>' + el +
+      /* the mural wall */
+      '<rect x="40" y="48" width="320" height="170" fill="#7a3a28"/><rect x="48" y="56" width="304" height="154" fill="#0d1b3d"/>' +
+      '<g class="rpl"><circle cx="200" cy="120" r="70" fill="' + ORANGE + '" opacity=".25"/></g>' +
+      '<path d="M160 84V58l16 12 24-22 24 22 16-12v26z" fill="#ffd23f" stroke="#000" stroke-width="2"/>' +
+      '<text x="200" y="140" text-anchor="middle" font-family="Sedgwick Ave Display, Permanent Marker, cursive" font-size="52" fill="#fff" stroke="#000" stroke-width="6" paint-order="stroke">BIG PUN</text>' +
+      /* Puerto Rican flag */
+      '<rect x="140" y="154" width="120" height="6" fill="' + RED + '"/><rect x="140" y="160" width="120" height="6" fill="#fff"/><rect x="140" y="166" width="120" height="6" fill="' + RED + '"/><rect x="140" y="172" width="120" height="6" fill="#fff"/><rect x="140" y="178" width="120" height="6" fill="' + RED + '"/>' +
+      '<path d="M140 154v30l30-15z" fill="#0050f0"/><circle cx="150" cy="169" r="3" fill="#fff"/>' +
+      /* the mic on each side */
+      [80, 320].map(x => '<rect x="' + (x - 7) + '" y="120" width="14" height="26" rx="7" fill="#9aa3ad" stroke="#000" stroke-width="1.5"/><rect x="' + (x - 2) + '" y="146" width="4" height="40" fill="#555"/>').join("") +
+      '<text x="200" y="202" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="' + ORANGE + '">FOREVER · THE BRONX</text>' +
+      '<g class="nt"><text x="70" y="110" font-size="16" fill="#ffd23f">&#9834;</text></g><g class="nt nt2"><text x="320" y="112" font-size="14" fill="#7fe0ff">&#9835;</text></g>' +
+      '<rect x="0" y="218" width="400" height="42" fill="#1a1c22"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<rect x="8" y="230" width="150" height="20" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      '<text x="83" y="244" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">Rogers Pl · Westchester Av</text>' +
+      tag("RIVERS", 284, 252, 24, ORANGE, -5),
       sky("s2", "#070d1f", "#24365e"));
   }
 
@@ -133,7 +129,7 @@
       sky("g3", "#f29a52", "#ffd9a0"));
   }
 
-  /* 4. The Hub, 3rd Avenue and 149th: the old Bronx Opera House marquee and the PUN tribute wall */
+  /* 4. The Hub, 3rd Avenue and 149th: the old Bronx Opera House marquee and the busy storefronts next door */
   function hub() {
     let bulbs = "";
     for (let x = 34; x < 176; x += 10) bulbs += '<circle class="bulb' + ((x / 10) % 2 ? " bulb2" : "") + '" cx="' + x + '" cy="122" r="2.2" fill="#ffe7a8"/>';
@@ -148,14 +144,13 @@
       '<rect x="26" y="112" width="158" height="30" fill="#14100c" stroke="#e6c79a" stroke-width="2"/>' + bulbs +
       '<text x="105" y="138" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="13" letter-spacing="3" fill="' + ORANGE + '">OPERA HOUSE</text>' +
       '<rect x="80" y="160" width="50" height="50" fill="#2a1a12"/><rect x="82" y="162" width="22" height="48" fill="#ffd98a" opacity=".35"/><rect x="106" y="162" width="22" height="48" fill="#ffd98a" opacity=".35"/>' +
-      /* the tribute wall: PUN in Puerto Rican flag colors under a crown */
-      '<rect x="206" y="58" width="180" height="152" fill="#2b2f3a"/>' +
-      '<rect x="214" y="66" width="164" height="136" fill="#0d1b3d"/>' +
-      '<path d="M266 100V80l12 9 18-16 18 16 12-9v20z" fill="#ffd23f" stroke="#000" stroke-width="2"/>' +
-      '<text x="296" y="160" text-anchor="middle" font-family="Sedgwick Ave Display, Permanent Marker, cursive" font-size="56" fill="#fff" stroke="#000" stroke-width="6" paint-order="stroke">PUN</text>' +
-      '<rect x="234" y="170" width="124" height="5" fill="' + RED + '"/><rect x="234" y="177" width="124" height="5" fill="#fff"/><rect x="234" y="184" width="124" height="5" fill="' + RED + '"/>' +
-      '<path d="M234 170v19l22-9.5z" fill="#0050f0"/><circle cx="242" cy="179.5" r="2.4" fill="#fff"/>' +
-      '<text x="296" y="198" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="3" fill="' + ORANGE + '">FOREVER BRONX</text>' +
+      /* the Hub next door: the busy 3rd Av storefronts under their signs */
+      '<rect x="206" y="58" width="180" height="152" fill="#6a5a7a"/><rect x="202" y="54" width="188" height="6" fill="#4a3a5a"/>' +
+      (function () { let w = ""; for (let y = 70; y < 140; y += 22) for (let x = 216; x < 380; x += 28) w += '<rect x="' + x + '" y="' + y + '" width="14" height="14" fill="' + ((x + y) % 3 ? "#2a2433" : "#ffd98a") + '"/>'; return w; })() +
+      '<rect x="206" y="150" width="88" height="20" fill="' + ORANGE + '"/><rect x="298" y="150" width="88" height="20" fill="' + BLUE + '"/>' +
+      '<text x="250" y="164" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">SNEAKERS</text><text x="342" y="164" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">RECORDS</text>' +
+      '<rect class="flk" x="214" y="174" width="72" height="36" fill="#ffd98a" opacity=".5"/><rect class="flk flk2" x="306" y="174" width="72" height="36" fill="#ffd98a" opacity=".5"/>' +
+      '<rect x="214" y="30" width="164" height="22" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="296" y="45" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="10" fill="#fff">THE HUB · 149 ST &amp; 3 AV</text>' +
       /* the street with cars rolling */
       '<rect x="0" y="210" width="400" height="50" fill="#1a1c22"/><path d="M0 236h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
       '<g class="car"><rect x="0" y="216" width="46" height="14" rx="5" fill="' + BLUE + '"/><circle cx="10" cy="231" r="4" fill="#111"/><circle cx="36" cy="231" r="4" fill="#111"/><circle cx="46" cy="222" r="2.5" fill="#fff6c2"/></g>' +

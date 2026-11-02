@@ -33,62 +33,57 @@
   const GOLD = "#f2c14e", RED = "#e0263a", HONEY = "#ffb42a";
   const FONT = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
 
-  /* 1. St. George: end of the line, the SIR rolling into the terminal at night, an orange ferry in the slip through the glass */
+  /* 1. St. George, end of the Staten Island Railway, by day: the car in at the bumper, the harbor and Manhattan off the end of the platform, a Killa Bees honeycomb piece on the wall with bees buzzing round it */
   function station() {
-    let windows = "";
-    for (let x = 22; x < 290; x += 44) windows += '<rect x="' + x + '" y="134" width="28" height="20" rx="3" fill="#fff4c9" opacity=".9"/>';
-    let mullions = "";
-    for (let x = 0; x <= 400; x += 40) mullions += '<path d="M' + x + ' 20v80" stroke="#55606c" stroke-width="3"/>';
+    const { svg, sky, tag, T, cloud } = LM1;
+    let win = ""; for (let x = 20; x < 260; x += 40) win += '<rect x="' + x + '" y="98" width="26" height="20" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    let sky2 = ""; [[0, 40], [14, 66], [30, 50], [46, 90], [62, 58], [78, 44], [94, 70], [110, 36]].forEach(([x, h]) => sky2 += '<rect x="' + (250 + x) + '" y="' + (94 - h) + '" width="13" height="' + h + '" fill="#7a8aa6"/>');
+    let comb = ""; for (let r = 0; r < 4; r++) for (let c = 0; c < 8; c++) { const x = 196 + c * 23 + (r % 2) * 12, y = 186 + r * 18; comb += '<path d="M' + x + ' ' + (y - 10) + 'l9 5v10l-9 5-9-5v-10z" fill="' + ((r + c) % 3 ? "#f2c14e" : "#ffd21a") + '" stroke="#1a1408" stroke-width="2"/>'; }
+    const bee = (x, y, cls) => '<g class="' + cls + '"><g transform="translate(' + x + ' ' + y + ')"><ellipse cx="0" cy="0" rx="6" ry="4" fill="#ffd21a" stroke="#111"/><path d="M-2 -4v8M2 -4v8" stroke="#111" stroke-width="1.6"/><ellipse cx="-1" cy="-6" rx="3" ry="2" fill="#fff" opacity=".8"/></g></g>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g1)"/>' +
-      /* the terminal glass wall onto the harbor, a ferry waiting in the slip */
-      '<rect x="0" y="20" width="400" height="80" fill="#132241"/>' + stars(10) +
-      '<rect x="0" y="78" width="400" height="22" fill="#0f2c48"/>' +
-      '<g transform="translate(230 58)"><path d="M0 22h130l-10 12H10z" fill="#f47b20"/><rect x="16" y="10" width="98" height="12" fill="#f47b20"/><rect x="34" y="2" width="62" height="8" fill="#f47b20"/>' +
-      '<path d="M20 15h90" stroke="#fff4c9" stroke-width="3" stroke-dasharray="6 4" class="flk"/><rect x="60" y="-8" width="8" height="10" fill="#333"/></g>' +
-      '<path class="shim" d="M20 92h50M150 96h60" stroke="#ffcf6b" stroke-width="2"/>' + mullions +
-      '<rect x="0" y="16" width="400" height="6" fill="#8b96a3"/><rect x="0" y="100" width="400" height="6" fill="#8b96a3"/>' +
-      /* black station sign */
-      '<rect x="100" y="34" width="190" height="32" rx="4" fill="#111"/><rect x="100" y="34" width="190" height="4" fill="#fff"/>' +
-      '<text x="112" y="58" ' + FONT + ' font-size="15" fill="#fff">St. George</text>' + sir(262, 51) +
-      /* the SIR car: stainless with the blue band */
-      '<g class="anim-train">' +
-        '<rect x="8" y="122" width="300" height="58" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>' +
-        '<rect x="8" y="160" width="300" height="6" fill="#0039a6"/>' + windows +
-        '<circle cx="300" cy="172" r="4" fill="#fff6c2"/>' + sir(262, 172) +
-      '</g>' +
-      '<rect x="0" y="106" width="400" height="16" fill="#2a3038"/>' +
-      '<rect x="0" y="180" width="400" height="10" fill="#eab308"/>' +
-      '<rect x="0" y="190" width="400" height="70" fill="#1c232c"/>' +
-      tag("SHAOLIN", 18, 240, 28, GOLD, -4) + tag("CODE RED", 236, 242, 28, RED, -7),
-      sky("g1", "#0a1024", "#1f2a44"));
+      '<rect width="400" height="260" fill="url(#rm1)"/>' + cloud("lm-drift", 0, 26, 1) +
+      sky2 + '<rect x="0" y="94" width="400" height="20" fill="#3d7aa6"/>' +
+      '<g class="lm-boat"><path d="M300 94h60l-6 6h-48z" fill="#f47b20"/><rect x="312" y="86" width="36" height="8" fill="#f47b20"/></g>' +
+      /* canopy + sign */
+      '<rect x="0" y="16" width="230" height="8" fill="#2a3a5a"/><rect x="40" y="24" width="5" height="64" fill="#444"/><rect x="190" y="24" width="5" height="64" fill="#444"/>' +
+      '<rect x="20" y="34" width="190" height="28" rx="3" fill="#111"/><rect x="20" y="34" width="190" height="3" fill="#fff"/>' +
+      T(30, 55, "St. George", 16, "#fff", { a: "start", f: "Helvetica, Arial, sans-serif", w: 700 }) +
+      '<rect x="164" y="41" width="36" height="15" rx="7" fill="#0039a6"/>' + T(182, 52, "SIR", 9, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 }) +
+      /* the car + bumper */
+      '<g class="anim-train"><rect x="-10" y="88" width="280" height="62" rx="8" fill="#e8ecf2" stroke="#4a5a7a" stroke-width="2"/>' +
+      '<rect x="-10" y="124" width="280" height="10" fill="#0039a6"/>' + win + '<circle cx="264" cy="142" r="4" fill="#fff6c2"/></g>' +
+      '<rect x="300" y="126" width="28" height="24" fill="#ffd21a"/><path d="M300 126l28 24M328 126l-28 24" stroke="#111" stroke-width="3"/>' +
+      '<rect x="0" y="150" width="400" height="8" fill="#eab308"/><rect x="0" y="158" width="400" height="102" fill="#5a5450"/>' +
+      /* the honeycomb piece + bees */
+      comb + bee(180, 170, "lm-swim") + bee(300, 176, "lm-swim lm-sw2") + bee(360, 214, "lm-bob") +
+      tag("KILLA BEES", 190, 236, 30, "#fff", -4) +
+      tag("REMEDY", 16, 214, 40, "#ffd21a", -6) + tag("CODE RED", 20, 250, 22, "#e0263a", -3),
+      sky("rm1", "#8fc3ea", "#f2e2c0"));
   }
 
-  /* 2. Snug Harbor's Temple Row: the white Greek Revival halls with their columns, the dome on the middle one, the Kill Van Kull behind */
+  /* 2. Moravian Cemetery in New Dorp: the rolling hillside of stones, the granite Vanderbilt mausoleum with its domed chapel front, leaves coming down */
   function snug() {
-    const hall = (x, w, cols, dome) => {
-      let s = '<rect x="' + x + '" y="112" width="' + w + '" height="78" fill="#f3efe4" stroke="#b8b09c" stroke-width="1.5"/>';
-      const pw = Math.min(w - 16, cols * 14 + 8), px = x + (w - pw) / 2;
-      s += '<path d="M' + (px - 4) + ' 112L' + (x + w / 2) + ' ' + (dome ? 92 : 96) + 'L' + (px + pw + 4) + ' 112z" fill="#f7f4ec" stroke="#b8b09c" stroke-width="1.5"/>';
-      for (let i = 0; i < cols; i++) { const cx = px + 6 + i * ((pw - 12) / (cols - 1)); s += '<rect x="' + (cx - 3) + '" y="114" width="6" height="70" fill="#fffdf6" stroke="#cfc8b4" stroke-width="1"/>'; }
-      s += '<rect x="' + (px - 4) + '" y="184" width="' + (pw + 8) + '" height="6" fill="#ddd6c4"/>';
-      for (let wx = x + 6; wx < x + w - 10; wx += 16) if (wx < px - 8 || wx > px + pw + 4) s += '<rect x="' + wx + '" y="124" width="8" height="14" fill="#6c7a86"/><rect x="' + wx + '" y="150" width="8" height="14" fill="#6c7a86"/>';
-      if (dome) s += '<rect x="' + (x + w / 2 - 18) + '" y="72" width="36" height="20" fill="#f3efe4" stroke="#b8b09c"/><path d="M' + (x + w / 2 - 20) + ' 72a20 18 0 0 1 40 0z" fill="#c9cfd4" stroke="#8a929a"/><rect x="' + (x + w / 2 - 1.5) + '" y="44" width="3" height="12" fill="#8a929a"/>';
-      return s;
-    };
+    const { svg, sky, tag, T, plaque, tree, cloud, bird } = LM1;
+    let stones = ""; [[30, 200], [62, 192], [96, 206], [292, 196], [326, 204], [360, 192], [130, 216], [270, 214], [56, 226], [340, 228]].forEach(([x, y], k) =>
+      stones += '<path d="M' + (x - 6) + ' ' + y + 'v-' + (12 + k % 3 * 3) + 'a6 6 0 0 1 12 0v' + (12 + k % 3 * 3) + 'z" fill="' + (k % 2 ? "#a8a49a" : "#8e8a80") + '"/>');
+    let leaves = ""; [[60, ""], [180, " lm-l2"], [320, " lm-l3"], [250, ""]].forEach(([x, c]) => leaves += '<g class="lm-fall' + c + '"><path d="M' + x + ' 60q4-6 8 0q-4 6-8 0z" fill="#d9822b"/></g>');
     return svg(
-      '<rect width="400" height="260" fill="url(#g2)"/>' +
-      '<rect x="0" y="96" width="400" height="20" fill="#4f7fa3"/>' +
-      '<g class="sail"><path d="M0 104h60l-6 6H6z" fill="#c0392b"/><rect x="10" y="96" width="34" height="8" fill="#e8e8e8"/></g>' +
-      '<path class="shim" d="M40 108h50M240 104h70" stroke="#e6f2fb" stroke-width="2"/>' +
-      /* the lawn */
-      '<rect x="0" y="186" width="400" height="74" fill="#5e9a48"/>' +
-      hall(2, 72, 4, false) + hall(80, 72, 4, false) + hall(158, 84, 6, true) + hall(248, 72, 4, false) + hall(326, 72, 4, false) +
-      /* path and trees */
-      '<path d="M170 260l20-70h20l20 70z" fill="#d9cfb2"/>' +
-      '<circle cx="110" cy="200" r="16" fill="#3f7a35"/><circle cx="300" cy="204" r="14" fill="#3f7a35"/><rect x="108" y="206" width="4" height="16" fill="#5a3a22"/><rect x="298" y="210" width="4" height="14" fill="#5a3a22"/>' +
-      tag("GENUINE ARTICLE", 16, 248, 24, GOLD, -3),
-      sky("g2", "#7fb5e0", "#f5e3bd"));
+      '<rect width="400" height="260" fill="url(#rm2)"/>' + cloud("lm-drift", 0, 30, 1, .7) + bird("lm-fly", 0, 50) +
+      /* rolling hills */
+      '<path d="M0 150q100-50 200-30t200 10V260H0z" fill="#5a7a3a"/><path d="M0 190q120-40 240-10t160 0V260H0z" fill="#6a8a42"/>' +
+      tree(30, 150, 22, "#c8622a") + tree(370, 144, 22, "#d9a02b", "lm-swayb lm-s2") + tree(90, 136, 14, "#8a5a2a") +
+      /* the Vanderbilt mausoleum: granite, arcaded front, the dome */
+      '<rect x="130" y="94" width="140" height="74" fill="#b0aca2"/><rect x="124" y="88" width="152" height="8" fill="#c6c2b8"/>' +
+      '<path d="M170 88a30 26 0 0 1 60 0z" fill="#9a968c"/><rect x="196" y="56" width="8" height="8" fill="#8a867c"/><path d="M200 50v6M196 53h8" stroke="#8a867c" stroke-width="2"/>' +
+      [146, 172, 214, 240].map(x => '<path d="M' + x + ' 160v-30a7 7 0 0 1 14 0v30z" fill="#4a4a4a"/>').join("") +
+      '<path d="M188 168v-44a12 12 0 0 1 24 0v44z" fill="#2a2a2a"/><path d="M186 124a14 14 0 0 1 28 0" stroke="#d8d4ca" stroke-width="3" fill="none"/>' +
+      T(200, 104, "VANDERBILT", 8, "#4a4842", { ls: 2 }) +
+      '<path d="M150 168h100v6H150zM140 174h120v6H140z" fill="#c6c2b8"/>' +
+      stones + leaves +
+      '<path d="M200 260q-10-40 0-80" stroke="#c8b890" stroke-width="12" fill="none"/>' +
+      plaque(8, 8, 160, "MORAVIAN CEMETERY", "NEW DORP · STATEN ISLAND", "#1a1408", "#f2c14e") +
+      tag("REMEDY", 270, 250, 28, "#ffd21a", -4),
+      sky("rm2", "#9ab8d8", "#f2dcc0"));
   }
 
   /* 3. Willowbrook Park: the Carousel for All Children, striped canopy, horses going up and down */
@@ -160,6 +155,74 @@
       '<rect x="0" y="220" width="400" height="40" fill="#14181d"/><path d="M0 242h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>',
       sky("g5", "#0d1022", "#2a2a3a"));
   }
+
+  /* LM1 helpers for the redrawn landmark rooms: same svg / sky / tag / bullet style as above, with their own little animations */
+  const LM1 = (function () {
+    const css = '<style>' +
+      '@keyframes lmDrift{from{transform:translateX(-90px)}to{transform:translateX(490px)}}.lm-drift{animation:lmDrift 24s linear infinite}.lm-d2{animation-delay:-12s}' +
+      '@keyframes lmCar{from{transform:translateX(-110px)}to{transform:translateX(510px)}}.lm-car{animation:lmCar 6s linear infinite}.lm-c2{animation-delay:-3s}' +
+      '@keyframes lmCarL{from{transform:translateX(510px)}to{transform:translateX(-110px)}}.lm-carL{animation:lmCarL 7.5s linear infinite}' +
+      '@keyframes lmFlick{0%,100%{opacity:1}45%{opacity:.75}50%{opacity:.3}55%{opacity:.9}}.lm-flk{animation:lmFlick 2.2s infinite}.lm-f2{animation-delay:-.8s}' +
+      '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{transform-box:fill-box;transform-origin:50% 0;animation:lmSway 3s ease-in-out infinite}' +
+      '.lm-swayb{transform-box:fill-box;transform-origin:50% 100%;animation:lmSway 3.6s ease-in-out infinite}.lm-s2{animation-delay:-1.5s}' +
+      '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.lm-bob{animation:lmBob 1.4s ease-in-out infinite}.lm-b2{animation-delay:-.7s}.lm-b3{animation-delay:-.35s}' +
+      '@keyframes lmRise{0%{transform:translate(0,0);opacity:1}80%{opacity:1}100%{transform:translate(14px,-150px);opacity:0}}.lm-rise{animation:lmRise 6s ease-in infinite}' +
+      '@keyframes lmBlink{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blink{animation:lmBlink 1s steps(1) infinite}.lm-k2{animation-delay:-.5s}' +
+      '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{transform-box:fill-box;transform-origin:50% 50%;animation:lmSpin 14s linear infinite}' +
+      '@keyframes lmFly{from{transform:translate(-80px,30px)}to{transform:translate(480px,-30px)}}.lm-fly{animation:lmFly 9s linear infinite}' +
+      '@keyframes lmLand{from{transform:translate(460px,-40px)}to{transform:translate(-120px,40px)}}.lm-land{animation:lmLand 10s linear infinite}' +
+      '@keyframes lmRip{0%,100%{transform:translateX(0)}50%{transform:translateX(-14px)}}.lm-rip{animation:lmRip 3s ease-in-out infinite}.lm-r2{animation-delay:-1.5s}' +
+      '@keyframes lmBoat{0%,100%{transform:translateX(0)}50%{transform:translateX(-60px)}}.lm-boat{animation:lmBoat 12s ease-in-out infinite}' +
+      '@keyframes lmWalk{from{transform:translateX(0)}to{transform:translateX(70px)}}.lm-walk{animation:lmWalk 5s ease-in-out infinite alternate}.lm-w2{animation-delay:-2.5s}' +
+      '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(30px,250px) rotate(300deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}.lm-l2{animation-delay:-2s}.lm-l3{animation-delay:-4s}' +
+      '@keyframes lmDrop{0%{transform:translateY(0)}100%{transform:translateY(118px)}}.lm-drop{animation:lmDrop 2.6s cubic-bezier(.5,0,.9,.6) infinite}' +
+      '@keyframes lmBall{0%{transform:translate(0,0)}50%{transform:translate(-90px,-26px)}100%{transform:translate(-180px,0)}}.lm-ball{animation:lmBall 2.4s linear infinite}' +
+      '@keyframes lmSwim{0%,100%{transform:translateX(0)}50%{transform:translateX(90px)}}.lm-swim{animation:lmSwim 7s ease-in-out infinite}.lm-sw2{animation-delay:-3.5s}' +
+      '</style>';
+    const svg = (inner, defs) =>
+      '<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img">' + css + '<defs>' + (defs || "") + '</defs>' + inner + '</svg>';
+    const sky = (id, top, bottom) =>
+      '<linearGradient id="' + id + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + top + '"/><stop offset="1" stop-color="' + bottom + '"/></linearGradient>';
+    const tag = (txt, x, y, size, fill, rot) =>
+      '<text x="' + x + '" y="' + y + '" transform="rotate(' + (rot || -6) + ' ' + x + ' ' + y + ')" font-family="Sedgwick Ave Display, Permanent Marker, cursive" font-size="' + size +
+      '" fill="' + fill + '" stroke="#000" stroke-width="' + Math.max(2, size / 9) + '" paint-order="stroke" stroke-linejoin="round">' + txt + '</text>';
+    const bullet = (x, y, letter, color, dark, r) => { r = r || 11;
+      return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + color + '"/><text x="' + x + '" y="' + (y + r * .5) + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="' + (r * 1.36).toFixed(1) + '" fill="' + (dark ? "#000" : "#fff") + '">' + letter + '</text>'; };
+    const stars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".7"/>'; return s; };
+    const T = (x, y, txt, size, fill, o) => { o = o || {};
+      return '<text x="' + x + '" y="' + y + '" text-anchor="' + (o.a || "middle") + '" font-family="' + (o.f || "Anton, Impact, sans-serif") + '"' + (o.w ? ' font-weight="' + o.w + '"' : '') +
+        (o.ls ? ' letter-spacing="' + o.ls + '"' : '') + ' font-size="' + size + '" fill="' + fill + '"' + (o.cls ? ' class="' + o.cls + '"' : '') + '>' + txt + '</text>'; };
+    /* a name plaque: dark box, title + subtitle */
+    const plaque = (x, y, w, title, sub, bg, accent) => {
+      const ts = Math.min(12, (w - 14) / (title.length * .66)), ss = sub ? Math.min(8, (w - 12) / (sub.length * .62 + sub.length * 1.5 / 8)) : 0;
+      return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (sub ? 34 : 22) + '" rx="4" fill="' + bg + '" stroke="' + accent + '" stroke-width="2"/>' +
+        T(x + w / 2, y + 16, title, ts.toFixed(1), "#fff") + (sub ? T(x + w / 2, y + 28, sub, ss.toFixed(1), accent, { f: "Barlow, Arial, sans-serif", w: 700, ls: (ss * 1.5 / 8).toFixed(2) }) : ""); };
+    /* green NYC street sign blade */
+    const blade = (x, y, w, txt) =>
+      '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/>' +
+      T(x + w / 2, y + 13, txt, 11, "#fff", { f: "Helvetica, Arial, sans-serif", w: 700 });
+    const car = (cls, y, c, w) => { w = w || 44;
+      return '<g class="' + cls + '"><rect x="0" y="' + y + '" width="' + w + '" height="12" rx="4" fill="' + c + '"/><rect x="' + (w * .22) + '" y="' + (y - 7) + '" width="' + (w * .5) + '" height="8" rx="3" fill="' + c + '"/>' +
+        '<rect x="' + (w * .27) + '" y="' + (y - 5) + '" width="' + (w * .4) + '" height="5" fill="#cfe6ff" opacity=".8"/><circle cx="' + (w * .22) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/><circle cx="' + (w * .78) + '" cy="' + (y + 12) + '" r="3.5" fill="#111"/>' +
+        '<rect x="' + (w - 3) + '" y="' + (y + 3) + '" width="3" height="3" fill="#fff6c2"/></g>'; };
+    /* faceless figure (silhouette), optional sign held up */
+    const fig = (x, y, c, sign, sc) => { sc = sc || 1;
+      return '<g transform="translate(' + x + ' ' + y + ') scale(' + sc + ')"><circle cx="0" cy="-30" r="5" fill="' + c + '"/><path d="M-6 -24h12l2 16h-4l-1 14h-6l-1-14h-4z" fill="' + c + '"/>' +
+        (sign ? '<path d="M5 -22l6-14" stroke="' + c + '" stroke-width="2.5"/><rect x="' + (13 - Math.max(30, sign[0].length * 4.6 + 6) / 2) + '" y="-58" width="' + Math.max(30, sign[0].length * 4.6 + 6) + '" height="20" fill="' + sign[1] + '" stroke="#222" stroke-width="1"/>' +
+          T(13, -44, sign[0], 7, sign[2] || "#111", { f: "Barlow, Arial, sans-serif", w: 700 }) : "") + '</g>'; };
+    const wins = (x0, y0, cols, rows, dx, dy, w, h, c, lit) => { let s = "";
+      for (let r = 0; r < rows; r++) for (let k = 0; k < cols; k++) s += '<rect x="' + (x0 + k * dx) + '" y="' + (y0 + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + ((lit && (k * 7 + r * 3) % 4 === 0) ? lit : c) + '"/>';
+      return s; };
+    const brickLines = (x, y, w, h, c, step) => { let s = ""; for (let yy = y + (step || 7); yy < y + h; yy += (step || 7)) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + c + '" stroke-width=".6"/>'; return s; };
+    const cloud = (cls, x, y, s, op) => '<g class="' + cls + '"><g transform="translate(' + x + ' ' + y + ') scale(' + s + ')" opacity="' + (op || .8) + '"><ellipse cx="0" cy="0" rx="26" ry="9" fill="#fff"/><ellipse cx="12" cy="-6" rx="14" ry="9" fill="#fff"/><ellipse cx="-10" cy="-4" rx="11" ry="7" fill="#fff"/></g></g>';
+    const tree = (x, y, r, c, cls) => '<g class="' + (cls || "lm-swayb") + '"><rect x="' + (x - 2.5) + '" y="' + (y - 4) + '" width="5" height="' + (r + 6) + '" fill="#5a3a22"/><circle cx="' + x + '" cy="' + (y - r * .6) + '" r="' + r + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x - r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/><circle cx="' + (x + r * .6) + '" cy="' + (y - r * .2) + '" r="' + (r * .7) + '" fill="' + (c || "#3f7a3a") + '"/></g>';
+    const bird = (cls, x, y) => '<g class="' + cls + '"><path d="M' + x + ' ' + y + 'q5-5 10 0q5-5 10 0" fill="none" stroke="#222" stroke-width="1.6"/></g>';
+    /* subway car side (R-type), for the station rooms */
+    const subCar = (x, y, w, stripe, letters) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="60" rx="7" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/><rect x="' + x + '" y="' + (y + 40) + '" width="' + w + '" height="4" fill="' + stripe + '"/>';
+      for (let k = x + 14; k < x + w - 40; k += 44) s += '<rect x="' + k + '" y="' + (y + 10) + '" width="28" height="20" rx="3" fill="#cfe6ff" opacity=".85"/>';
+      return s + '<rect x="' + (x + w - 22) + '" y="' + (y + 10) + '" width="14" height="22" rx="3" fill="#1d2a3a"/><circle cx="' + (x + w - 8) + '" cy="' + (y + 50) + '" r="3.5" fill="#fff6c2"/>' + (letters || ""); };
+    return { svg, sky, tag, bullet, stars, T, plaque, blade, car, fig, wins, brickLines, cloud, tree, bird, subCar };
+  })();
 
   window.SCENES = { station, snug, carousel, swarm, corner };
 })();

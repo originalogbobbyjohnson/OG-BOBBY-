@@ -88,20 +88,25 @@
       tags: tag("HARDEST", 24, 214, 30, RUST, -4) + tag("DUCK DOWN", 226, 238, 26, ICE, -6) });
   }
 
-  /* 2. The Brooklyn Museum on Eastern Parkway: the Beaux-Arts front with its columns, the glass entrance, the fountain jets dancing */
+  /* 2. Medgar Evers College on Bedford Av at Crown St: the CUNY campus a few blocks from his Nostrand & Eastern Pkwy corner, the brick-and-glass academic building, the banners, students crossing the plaza */
   function museum() {
-    let cols = "", jets = "";
-    for (let x = 110; x <= 290; x += 30) cols += rect(x - 5, 70, 10, 76, "#efe8d8") + rect(x - 8, 66, 16, 6, "#d8d0bc");
-    [140, 175, 210, 245, 280].forEach((x, i) => jets += '<path class="spl" style="animation-delay:-' + (i * .3) + 's" d="M' + (x - 4) + ' 228q4-30 4-34 0 4 4 34z" fill="#bfe9ff"/>');
+    let glass = "";
+    for (let y = 70; y < 180; y += 18) for (let x = 214; x < 370; x += 26) glass += rect(x, y, 22, 14, (x + y) % 3 ? "#9fd0e8" : "#cfe9f6", ' opacity=".9"');
+    const banner = (x, c, cls) => rect(x - 2, 120, 4, 90, "#333") + '<g class="sway ' + cls + '">' + rect(x + 2, 124, 18, 36, c) + rect(x + 2, 152, 18, 8, GOLD) + '</g>';
     return svg('<rect width="400" height="260" fill="url(#m1)"/>' +
-      rect(20, 60, 360, 130, "#e3dac6") + rect(16, 52, 368, 10, "#cfc6b0") + '<path d="M96 52l104-34 104 34z" fill="#e3dac6" stroke="#cfc6b0" stroke-width="3"/>' +
-      [[40, 80], [60, 80], [320, 80], [340, 80]].map(([x, y]) => rect(x, y, 14, 30, "#7a8aa0")).join("") + cols +
-      [[24, 52, "#d8d0bc"], [370, 52, "#d8d0bc"]].map(([x, y, c]) => '<circle cx="' + (x + 6) + '" cy="' + (y - 6) + '" r="5" fill="' + c + '"/>').join("") +
-      /* glass pavilion */
-      '<path d="M110 190v-36h180v36z" fill="#9fd0e8" opacity=".85"/><path d="M100 156q100-20 200 0" fill="none" stroke="#9aa3ad" stroke-width="4"/>' +
-      [130, 160, 190, 220, 250, 280].map(x => '<path d="M' + x + ' 154v36" stroke="#9aa3ad" stroke-width="2"/>').join("") +
-      rect(0, 190, 400, 70, "#b8b2a6") + rect(120, 212, 180, 20, "#2a7ab0", ' rx="4"') + jets +
-      person(60, 238, RUST, "slide") + person(340, 236, GOLD, "slideL"),
+      '<g class="slide slw"><ellipse cx="0" cy="36" rx="40" ry="9" fill="#fff" opacity=".8"/></g>' +
+      /* the brick academic building */
+      brick(20, 60, 190, 130, "#8a4a34", "#7a3e2c") + rect(16, 54, 198, 8, "#5a3024") +
+      [40, 80, 120, 160].map(x => rect(x, 74, 24, 34, "#2a3a4a") + rect(x, 124, 24, 34, "#2a3a4a")).join("") +
+      /* the glass wing */
+      rect(208, 60, 172, 130, "#3a5a7a") + glass + rect(204, 54, 180, 8, "#2a3a4a") +
+      /* the name over the entrance */
+      rect(70, 170, 260, 20, "#1b1b22") + txt(200, 184, 11, "#fff", "MEDGAR EVERS COLLEGE · CUNY") +
+      rect(0, 190, 400, 70, "#b8b2a6") + '<path d="M0 214h400" stroke="#9a948a" stroke-width="2"/>' +
+      banner(40, "#0b3d91", "") + banner(360, "#0b3d91", "sw2") +
+      person(120, 238, RUST, "slide") + person(260, 236, ICE, "slideL") + person(300, 240, GOLD, "slide sl2") +
+      '<rect x="230" y="10" width="160" height="34" rx="3" fill="#1f7a3a" stroke="#fff" stroke-width="2"/>' + txt(310, 25, 10, "#fff", "Bedford Av") + txt(310, 38, 9, "#fff", "CROWN ST · CROWN HEIGHTS") +
+      tag("RUSTE JUXX", 14, 36, 24, RUST, -5),
       sky("m1", "#5aa0e0", "#cbe6f8"));
   }
 

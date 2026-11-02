@@ -39,32 +39,36 @@
   const FONT = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
   const PUR = "#b388ff", GLD = "#ffd166", ICY = "#7fdbff";
 
-  /* 1. Clifton at night: the SIR on its embankment, the beige canopy lit up, signals glowing by the yard, the train pulling in */
+  /* 1. Clifton, and the climb: the SIR pulling in down by the tracks, Targee St going up the hill to Delford St, the Park Hill towers on top, steam off the Chef's pot on a window ledge */
   function station() {
     let windows = "";
-    for (let x = 22; x < 290; x += 44) windows += '<rect x="' + x + '" y="98" width="28" height="20" rx="3" fill="#fff1b8" opacity=".9"/>';
+    for (let x = 18; x < 200; x += 40) windows += '<rect x="' + x + '" y="186" width="26" height="16" rx="3" fill="#fff1b8" opacity=".9"/>';
+    const tower = (x, y, w) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (150 - y) + '" fill="#7a4a32"/>';
+      for (let yy = y + 8; yy < 144; yy += 12) for (let xx = x + 5; xx < x + w - 6; xx += 11) s += '<rect' + ((xx + yy) % 7 === 0 ? ' class="win w' + ((xx % 3) + 1) + '"' : '') + ' x="' + xx + '" y="' + yy + '" width="6" height="7" fill="' + ((xx * 3 + yy) % 5 < 2 ? "#ffd98a" : "#2a1d17") + '"/>';
+      return s; };
+    const blade = (cx, y, t, rot) => '<g transform="rotate(' + (rot || 0) + ' ' + cx + ' ' + y + ')"><rect x="' + (cx - t.length * 3.6 - 8) + '" y="' + y + '" width="' + (t.length * 7.2 + 16) + '" height="16" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.2"/><text x="' + cx + '" y="' + (y + 12) + '" text-anchor="middle" ' + FONT + ' font-size="10" fill="#fff">' + t + '</text></g>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g1)"/>' + stars(24) +
-      '<circle cx="356" cy="64" r="12" fill="#f4ecff"/>' +
-      '<path d="M0 18h400v10H0z" fill="#d9c9a3"/><path d="M0 28h400v3H0z" fill="#9a8a66"/>' +
-      '<circle class="flk" cx="90" cy="34" r="3" fill="#fff4c8"/><circle class="flk flk2" cx="310" cy="34" r="3" fill="#fff4c8"/>' +
-      '<rect x="60" y="31" width="5" height="58" fill="#7a6a4a"/><rect x="334" y="31" width="5" height="58" fill="#7a6a4a"/>' +
-      '<rect x="110" y="40" width="180" height="32" rx="4" fill="#111"/><rect x="110" y="40" width="180" height="4" fill="#fff"/>' +
-      '<text x="124" y="64" ' + FONT + ' font-size="16" fill="#fff">Clifton</text>' + sir(264, 57) +
+      '<rect width="400" height="260" fill="url(#g1)"/>' + stars(20) + '<circle cx="40" cy="30" r="11" fill="#f4ecff"/>' +
+      /* the hill and Park Hill on top */
+      '<path d="M120 170L400 70v100z" fill="#2e2a3e"/>' + tower(250, 34, 54) + tower(312, 22, 60) + tower(190, 60, 46) +
+      /* the Chef's window: a pot on the ledge, steam going up */
+      '<rect x="322" y="46" width="22" height="18" fill="#ffd98a"/><rect x="318" y="64" width="30" height="4" fill="#5a3a26"/><path d="M324 64v-8h18v8z" fill="#9aa3ad"/><rect x="322" y="54" width="22" height="3" fill="#6b7480"/>' +
+      '<path class="smk" d="M328 50q-4-6 0-12" stroke="#f4f4f4" stroke-width="2.5" fill="none" opacity=".8"/><path class="smk s2" d="M336 50q4-6 0-12" stroke="#f4f4f4" stroke-width="2.5" fill="none" opacity=".8"/>' +
+      /* Targee St climbing, street lamps, the signs */
+      '<path d="M120 170L400 84" stroke="#4a4a56" stroke-width="16"/><path d="M120 170L400 84" stroke="#eab308" stroke-width="1.5" stroke-dasharray="10 8"/>' +
+      [170, 250].map((x, i) => '<rect x="' + (x - 1.5) + '" y="' + (128 - i * 24) + '" width="3" height="30" fill="#1d1d24"/><circle class="flk' + (i ? ' flk2' : '') + '" cx="' + x + '" cy="' + (126 - i * 24) + '" r="4" fill="#fff4c8"/>').join("") +
+      blade(150, 132, "Targee St", -16) + blade(352, 112, "Delford St", 0) +
+      '<g class="bob"><circle cx="212" cy="130" r="4" fill="#2a1a10"/><rect x="208" y="134" width="8" height="12" rx="2" fill="' + PUR + '"/></g>' +
+      /* the station below */
+      '<rect x="0" y="146" width="230" height="8" fill="#d9c9a3"/><rect x="0" y="154" width="230" height="3" fill="#9a8a66"/>' +
+      '<rect x="10" y="150" width="140" height="26" rx="3" fill="#111"/><rect x="10" y="150" width="140" height="3" fill="#fff"/><text x="20" y="170" ' + FONT + ' font-size="14" fill="#fff">Clifton</text>' + sir(124, 164) +
+      '<rect x="0" y="176" width="400" height="38" fill="#1d1c28"/>' +
       '<g class="anim-train">' +
-        '<rect x="8" y="88" width="300" height="56" rx="8" fill="#b9bfc9" stroke="#5b6270" stroke-width="2"/>' +
-        '<rect x="8" y="124" width="300" height="6" fill="#0039a6"/>' + windows +
-        '<circle cx="300" cy="136" r="4" fill="#fff6c2"/>' + sir(262, 136) +
+        '<rect x="0" y="178" width="236" height="34" rx="6" fill="#b9bfc9" stroke="#5b6270" stroke-width="2"/>' +
+        '<rect x="0" y="204" width="236" height="4" fill="#0039a6"/>' + windows + '<circle cx="230" cy="206" r="3.5" fill="#fff6c2"/>' +
       '</g>' +
-      '<rect x="0" y="144" width="400" height="8" fill="#eab308"/><rect x="0" y="152" width="400" height="14" fill="#6a6f78"/>' +
-      /* the yard below: tracks and a signal */
-      '<rect x="0" y="166" width="400" height="70" fill="#2a2a36"/>' +
-      '<path d="M0 186h400M0 192h400M0 214h400M0 220h400" stroke="#6a6a78" stroke-width="2"/>' +
-      (function () { let t = ""; for (let x = 0; x < 400; x += 14) t += '<rect x="' + x + '" y="184" width="6" height="10" fill="#4a3a2c"/><rect x="' + (x + 7) + '" y="212" width="6" height="10" fill="#4a3a2c"/>'; return t; })() +
-      '<rect x="356" y="168" width="4" height="40" fill="#1d1d24"/><rect x="350" y="160" width="16" height="26" rx="4" fill="#111"/>' +
-      '<circle class="flk" cx="358" cy="168" r="4" fill="#4ade80"/><circle cx="358" cy="179" r="4" fill="#3a1a1a"/>' +
-      '<rect x="0" y="236" width="400" height="24" fill="#16151e"/><path d="M0 248h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
-      tag("SHAOLIN", 14, 250, 24, PUR, -3) + tag("THE CHEF", 268, 252, 24, GLD, -6),
+      '<rect x="0" y="214" width="400" height="7" fill="#eab308"/><rect x="0" y="221" width="400" height="39" fill="#16151e"/>' +
+      tag("RAEKWON", 14, 252, 26, PUR, -4) + tag("THE CHEF", 252, 254, 24, GLD, -5),
       sky("g1", "#0d0a24", "#3a2a5a"));
   }
 

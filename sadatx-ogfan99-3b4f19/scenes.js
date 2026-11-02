@@ -510,11 +510,152 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* ---- redrawn landmark scenes (OG FAN 99 landmark pass): small shared helpers, prefixed L ---- */
+  const Lcss = '<style>' +
+    '@keyframes lmCar{from{transform:translateX(-170px)}to{transform:translateX(480px)}}.lm-car{animation:lmCar 8s linear infinite}' +
+    '@keyframes lmCarB{from{transform:translateX(480px)}to{transform:translateX(-170px)}}.lm-carb{animation:lmCarB 10s linear infinite}' +
+    '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.lm-bob{animation:lmBob 1.6s ease-in-out infinite}' +
+    '@keyframes lmFlk{0%,100%{opacity:1}45%{opacity:.7}50%{opacity:.3}55%{opacity:.95}}.lm-flk{animation:lmFlk 2.3s infinite}' +
+    '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{animation:lmSpin 1.8s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmRise{0%{transform:translateY(0) scale(.8);opacity:0}20%{opacity:.85}100%{transform:translateY(-70px) scale(1.4);opacity:0}}.lm-rise{animation:lmRise 4s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{animation:lmSway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}' +
+    '@keyframes lmBlk{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blk{animation:lmBlk 1s steps(1) infinite}' +
+    '@keyframes lmFlag{0%,100%{transform:skewY(0)}50%{transform:skewY(-6deg)}}.lm-flag{animation:lmFlag 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}' +
+    '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(-30px,230px) rotate(280deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}' +
+    '@keyframes lmCld{from{transform:translateX(-120px)}to{transform:translateX(470px)}}.lm-cld{animation:lmCld 30s linear infinite}' +
+    '@keyframes lmPls{0%,100%{opacity:.35}50%{opacity:1}}.lm-pls{animation:lmPls 2.2s ease-in-out infinite}' +
+    '@keyframes lmWav{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}.lm-wav{animation:lmWav 3s ease-in-out infinite}' +
+    '@keyframes lmBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}.lm-beat{animation:lmBeat .7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmNote{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-60px);opacity:0}}.lm-note{animation:lmNote 3s linear infinite}' +
+    '.lmd1{animation-delay:-1s}.lmd2{animation-delay:-2s}.lmd3{animation-delay:-3s}.lmd4{animation-delay:-4.5s}.lmd5{animation-delay:-6s}' +
+    '</style>';
+  const LF = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
+  const LT = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" ' + LF + ' font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LA = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" font-family="Anton, Impact, sans-serif" font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LR = (x, y, w, h, fill, extra) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + fill + '"' + (extra || "") + '/>';
+  const Lbul = (x, y, l, col, r) => { r = r || 11; return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/>' + LT(l, x, y + r * 0.42, r * 1.22, col === "#fccc0a" ? "#000" : "#fff"); };
+  const Lpill = (x, y, l, col) => { const w = l.length * 8 + 14; return '<rect x="' + (x - w / 2) + '" y="' + (y - 10) + '" width="' + w + '" height="20" rx="10" fill="' + col + '"/>' + LT(l, x, y + 4.5, 11, "#fff"); };
+  /* black MTA-style station sign: lines = [["B","#ff6319"],...]; a long name like "MN" draws a pill */
+  const Lsign = (x, y, w, name, lines, size) => { let b = "", bx = x + w - 18; for (let i = lines.length - 1; i >= 0; i--) { const l = lines[i]; if (l[0].length > 1) { b += Lpill(bx - 10, y + 17, l[0], l[1]); bx -= l[0].length * 8 + 22; } else { b += Lbul(bx, y + 17, l[0], l[1], 10); bx -= 24; } }
+    return LR(x, y, w, 32, "#111", ' rx="3"') + LR(x, y, w, 4, "#fff") + LT(name, x + 10, y + 23, size || 15, "#fff", "start") + b; };
+  /* green NYC street sign blade */
+  const Lblade = (x, y, t, w) => { w = w || t.length * 7.2 + 20; return LR(x, y, w, 19, "#0f6b3a", ' rx="2" stroke="#fff" stroke-width="1.5"') + LT(t, x + w / 2, y + 14, 12, "#fff"); };
+  /* two green signs on a pole at x, crossing */
+  const Lpole = (x, y, a, b) => { const wa = a.length * 7.2 + 20, wb = b.length * 7.2 + 20; return LR(x, y, 6, 236 - y, "#2a3138") + Lblade(x + 3 - wa / 2, y + 6, a) + Lblade(x + 3 - wb / 2, y + 30, b) + LR(x - 2, y - 4, 10, 6, "#2a3138"); };
+  const Lbrick = (x, y, w, h, base, mortar) => { let s = LR(x, y, w, h, base); for (let yy = y + 6; yy < y + h; yy += 6) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + mortar + '" stroke-width=".8"/>'; return s; };
+  const Lwin = (x, y, cols, rows, dx, dy, w, h, lit, dark) => { let s = ""; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const on = ((r * 7 + c * 3) % 5) < 2; s += '<rect x="' + (x + c * dx) + '" y="' + (y + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + (on ? lit : dark) + '"' + (on && (r + c) % 4 === 0 ? ' class="lm-flk"' : '') + '/>'; } return s; };
+  const Lstars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".75"/>'; return s; };
+  const Lcloud = (x, y, s, cls) => '<g class="lm-cld ' + (cls || "") + '"><g transform="translate(' + x + ' ' + y + ') scale(' + (s || 1) + ')" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="22" ry="9"/><ellipse cx="14" cy="-6" rx="14" ry="9"/><ellipse cx="-12" cy="-4" rx="11" ry="7"/></g></g>';
+  const Ltree = (x, y, r, col, cls) => '<g class="lm-sway ' + (cls || "") + '">' + LR(x - 3, y, 6, r * 1.3, "#5a3d24") + '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/><circle cx="' + (x - r * .5) + '" cy="' + (y + r * .3) + '" r="' + r * .7 + '" fill="' + col + '" opacity=".85"/><circle cx="' + (x + r * .55) + '" cy="' + (y + r * .25) + '" r="' + r * .65 + '" fill="' + col + '" opacity=".9"/></g>';
+  /* faceless figure: head + body, x = centre, y = feet */
+  const Lman = (x, y, body, cls, cap) => '<g' + (cls ? ' class="' + cls + '"' : "") + '>' + '<rect x="' + (x - 7) + '" y="' + (y - 30) + '" width="14" height="22" rx="5" fill="' + body + '"/><rect x="' + (x - 6) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/><rect x="' + (x + 1) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/>' +
+    '<circle cx="' + x + '" cy="' + (y - 37) + '" r="7" fill="#5a3a26"/>' + (cap ? '<path d="M' + (x - 8) + ' ' + (y - 39) + 'q8-10 16 0z" fill="' + cap + '"/><rect x="' + (x - 1) + '" y="' + (y - 41) + '" width="12" height="3" fill="' + cap + '"/>' : '') + '</g>';
+  /* subway car (stainless) seen from the side, x,y top-left */
+  const Lcar = (x, y, w, l, col, band) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="52" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>'; for (let i = x + 16; i < x + w - 60; i += 40) s += '<rect x="' + i + '" y="' + (y + 9) + '" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    return s + LR(x, y + 33, w, 5, band || col) + Lbul(x + w - 22, y + 18, l, col, 10) + '<circle cx="' + (x + w - 8) + '" cy="' + (y + 44) + '" r="3.5" fill="#fff6c2"/>'; };
+  const Lcab = (x, y) => '<rect x="' + x + '" y="' + (y + 8) + '" width="70" height="20" rx="5" fill="#f7c600"/><path d="M' + (x + 12) + ' ' + (y + 8) + 'l8-10h28l10 10z" fill="#f7c600"/><path d="M' + (x + 22) + ' ' + y + 'h10v8h-14zM' + (x + 35) + ' ' + y + 'h10l7 8h-17z" fill="#bfe0ff"/>' +
+    LR(x + 26, y - 6, 18, 6, "#fff", ' rx="1"') + LT("TAXI", x + 35, y - 1.5, 5, "#111") + '<path d="M' + x + ' ' + (y + 17) + 'h70" stroke="#111" stroke-width="1" stroke-dasharray="3 3"/><circle cx="' + (x + 15) + '" cy="' + (y + 28) + '" r="6" fill="#111"/><circle cx="' + (x + 55) + '" cy="' + (y + 28) + '" r="6" fill="#111"/>';
+  const Lauto = (x, y, col) => '<rect x="' + x + '" y="' + (y + 6) + '" width="56" height="16" rx="5" fill="' + col + '"/><rect x="' + (x + 11) + '" y="' + (y - 2) + '" width="32" height="11" rx="3" fill="#cfe6ff"/><circle cx="' + (x + 13) + '" cy="' + (y + 22) + '" r="5" fill="#111"/><circle cx="' + (x + 43) + '" cy="' + (y + 22) + '" r="5" fill="#111"/>';
+  /* turntable from above at an angle */
+  const Ldeck = (cx, cy, r, lab) => '<rect x="' + (cx - r - 12) + '" y="' + (cy - r * .45 - 10) + '" width="' + (r * 2 + 30) + '" height="' + (r * .9 + 20) + '" rx="4" fill="#2a2a30"/><g transform="translate(' + cx + ' ' + cy + ') scale(1 .42)"><g class="lm-spin"><circle r="' + r + '" fill="#0c0c0e"/><circle r="' + r * .72 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .5 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .3 + '" fill="' + lab + '"/><rect x="-2" y="' + (-r * .3) + '" width="4" height="' + r * .2 + '" fill="#fff"/></g></g><path d="M' + (cx + r + 6) + ' ' + (cy - r * .4) + 'l-8 ' + r * .5 + '" stroke="#c9ced6" stroke-width="3"/>';
+  /* wanted / album poster for Wild Cowboys: a hat over a blank shadow, never a face */
+  const LMwanted = (x, y, w, s) => LR(x, y, w, w * 1.3, "#e6c98f", ' stroke="#6b4420" stroke-width="2"') + LA("WANTED", x + w / 2, y + w * .22, w * .2, "#5a2e10") +
+    '<rect x="' + (x + w * .2) + '" y="' + (y + w * .3) + '" width="' + w * .6 + '" height="' + w * .5 + '" fill="#3a2414"/><path d="M' + (x + w * .22) + ' ' + (y + w * .52) + 'q' + w * .28 + '-' + w * .08 + ' ' + w * .56 + ' 0l-' + w * .1 + '-' + w * .04 + 'q-' + w * .06 + '-' + w * .14 + '-' + w * .18 + '-' + w * .12 + 'q-' + w * .12 + '-' + w * .02 + '-' + w * .18 + ' ' + w * .12 + 'z" fill="#a8743a"/>' +
+    LA(s || "SADAT X", x + w / 2, y + w * .98, w * .17, "#5a2e10") + LT("WILD COWBOYS", x + w / 2, y + w * 1.14, w * .085, "#a02018") + LT("REWARD", x + w / 2, y + w * 1.25, w * .07, "#5a2e10");
+
+  /* 0. New Rochelle Metro-North: the high island platform, I-95 running right behind, an M8 pulling in */
+  function LM_station() {
+    let lamps = ""; [60, 170, 280].forEach(x => { lamps += LR(x, 70, 4, 96, "#3a3f47") + '<path class="lm-flk" d="M' + (x - 8) + ' 72h20l-4 6h-12z" fill="#fff3c4"/>'; });
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lcloud(60, 30, 1) + Lcloud(250, 22, .8, "lmd4") +
+      /* I-95 viaduct behind with traffic */
+      LR(0, 52, 400, 12, "#8a8f96") + LR(0, 64, 400, 4, "#5f646b") + [20, 140, 260, 380].map(x => LR(x, 68, 10, 40, "#7a7f86")).join("") + LT("I-95", 352, 62, 9, "#1d3b8a") +
+      '<g class="lm-carb">' + Lauto(0, 38, "#d7263d") + '</g><g class="lm-car lmd2">' + Lauto(0, 38, "#2f6fd1") + '</g>' +
+      /* platform canopy */
+      LR(0, 66, 400, 8, "#2a3a5a") + LR(0, 74, 400, 3, "#0039a6") + lamps +
+      /* Metro-North blue sign */
+      LR(96, 84, 208, 34, "#0b3d91", ' rx="3"') + LR(96, 84, 208, 3, "#fff") + LT("New Rochelle", 106, 108, 17, "#fff", "start") + '<circle cx="282" cy="101" r="11" fill="#fff"/>' + LT("MN", 282, 105, 10, "#0b3d91") +
+      /* M8 car: silver body, red New Haven Line stripe */
+      '<g class="anim-train"><rect x="6" y="122" width="330" height="56" rx="7" fill="#d4d8de" stroke="#7a828c" stroke-width="2"/>' + [24, 70, 116, 162, 208, 254].map(x => LR(x, 132, 30, 18, "#1f2a38", ' rx="3"')).join("") +
+      LR(6, 156, 330, 6, "#d7263d") + LR(296, 128, 34, 26, "#2a3440", ' rx="4"') + '<circle cx="326" cy="170" r="3.5" fill="#fff6c2"/>' + LT("NEW HAVEN LINE", 120, 173, 8, "#3a3f47") + '</g>' +
+      /* platform edge + Wild Cowboys poster on the windbreak */
+      LR(0, 178, 400, 7, "#eab308") + LR(0, 185, 400, 75, "#9a948a") + '<path d="M0 205h400M0 228h400" stroke="#8a847a"/>' +
+      LR(338, 96, 54, 82, "#cfd6de", ' opacity=".55" stroke="#5a6470"') + '<g class="lm-bob">' + LMwanted(344, 100, 42) + '</g>' +
+      Lman(60, 236, "#2fb36a", "lm-bob", "#ffd34d") + Lman(110, 238, "#3a4a7a", "lm-bob lmd1") +
+      tag("SADAT X", 150, 246, 30, "#ffd34d", -4) + tag("BRAND NUBIAN", 288, 204, 14, "#2fb36a", -3),
+      sky("sk", "#8fc3ea", "#f6d9a6"));
+  }
+  /* 1. Leland Castle on Castle Place: 1850s grey-stone Gothic Revival, pointed windows, crenellated tower */
+  function LM_castle() {
+    let crenel = ""; for (let x = 150; x < 300; x += 12) crenel += LR(x, 82, 7, 8, "#8d8f92");
+    let win = ""; [[170, 120], [210, 120], [250, 120], [170, 168], [250, 168]].forEach(w => { win += '<path d="M' + w[0] + ' ' + (w[1] + 30) + 'v-20l9-12 9 12v20z" fill="#2b3340" stroke="#b9b4a8" stroke-width="2"/><path class="lm-flk" d="M' + (w[0] + 3) + ' ' + (w[1] + 28) + 'v-16l6-8 6 8v16z" fill="#ffd77a" opacity=".55"/>'; });
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lcloud(40, 40, 1) + Lcloud(300, 28, .9, "lmd3") +
+      Ltree(40, 150, 30, "#2f6b3a") + Ltree(366, 150, 30, "#2f6b3a", "lmd1") + Ltree(100, 170, 22, "#3f7f45", "lmd2") +
+      /* main block */
+      LR(150, 90, 150, 146, "#8d8f92") + '<path d="M150 110h150M150 140h150M150 170h150M150 200h150" stroke="#76787c" stroke-width="1"/>' + crenel +
+      /* tower with pinnacles */
+      LR(120, 56, 40, 180, "#7e8084") + '<path d="M118 56h44v-8h-6v4h-6v-4h-8v4h-6v-4h-6v4h-6v-4h-6z" fill="#7e8084"/><path d="M118 48l4-14 4 14M154 48l4-14 4 14" fill="#6c6e72"/>' +
+      '<path d="M130 120v-18l10-12 10 12v18z" fill="#2b3340" stroke="#b9b4a8" stroke-width="2"/>' +
+      '<path d="M296 90v-8" stroke="#555"/><path d="M140 34v-16" stroke="#444" stroke-width="2"/><path class="lm-flag" d="M141 18h20l-4 5 4 5h-20z" fill="#d7263d"/>' +
+      win + '<path d="M196 236v-34l14-16 14 16v34z" fill="#4a3424" stroke="#b9b4a8" stroke-width="3"/>' +
+      '<path d="M0 236h400v24H0z" fill="#4f7f3c"/><path d="M180 260l14-24h32l14 24z" fill="#b8ad98"/>' +
+      LR(200, 6, 192, 22, "#1f2a38", ' rx="3" opacity=".85"') + LT("LELAND CASTLE · CASTLE PL", 296, 21, 11, "#ffd34d") +
+      LR(300, 206, 92, 24, "#14303a", ' rx="2"') + LT("NEW ROCHELLE", 346, 216, 8, "#fff") + LT("BUILT 1855", 346, 226, 7, "#ffd34d") +
+      tag("SADAT X", 18, 248, 22, "#ffd34d", -4),
+      sky("sk", "#7fb2e0", "#e8d9b8"));
+  }
+  /* 2. Five Islands Park: footbridges hopping out over Echo Bay to the little islands, sailboats */
+  function LM_harbor() {
+    const isle = (x, y, rx) => '<ellipse cx="' + x + '" cy="' + y + '" rx="' + rx + '" ry="12" fill="#6b5a44"/><ellipse cx="' + x + '" cy="' + (y - 6) + '" rx="' + (rx - 6) + '" ry="9" fill="#4f8a3c"/>' + Ltree(x - rx * .3, y - 26, 12, "#2f6b3a") + Ltree(x + rx * .3, y - 22, 10, "#3f7f45", "lmd2");
+    const bridge = (x1, x2, y) => '<path d="M' + x1 + ' ' + y + 'Q' + (x1 + x2) / 2 + ' ' + (y - 14) + ' ' + x2 + ' ' + y + '" stroke="#7a5a3a" stroke-width="5" fill="none"/><path d="M' + x1 + ' ' + (y - 8) + 'Q' + (x1 + x2) / 2 + ' ' + (y - 22) + ' ' + x2 + ' ' + (y - 8) + '" stroke="#f4f0e6" stroke-width="2" fill="none"/>';
+    const sail = (x, y, c, cls) => '<g class="' + cls + '"><path d="M' + x + ' ' + y + 'h40l-6 8h-28z" fill="#f4f0e6"/><path d="M' + (x + 20) + ' ' + y + 'v-34l16 30z" fill="#fff"/><path d="M' + (x + 18) + ' ' + y + 'v-26l-12 24z" fill="' + c + '"/></g>';
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lcloud(80, 30) + Lcloud(320, 46, .8, "lmd3") +
+      '<path d="M0 104h400v156H0z" fill="#2f78b5"/><path d="M0 104h400" stroke="#9ec7e6" stroke-width="2"/>' +
+      '<g class="lm-wav"><path d="M0 150h400M20 190h360M0 226h400" stroke="#6aaee0" stroke-width="2" stroke-dasharray="18 22"/></g>' +
+      '<g class="lm-car" style="animation-duration:22s">' + sail(0, 118, "#d7263d", "lm-bob") + '</g><g class="lm-carb" style="animation-duration:28s">' + sail(0, 134, "#2fb36a", "lm-bob lmd1") + '</g>' +
+      /* shore and islands chained by footbridges */
+      '<path d="M0 260V200q40-14 70 0v60z" fill="#4f8a3c"/>' + isle(150, 196, 46) + isle(280, 176, 40) + isle(370, 160, 32) +
+      bridge(62, 106, 204) + bridge(194, 242, 192) + bridge(318, 340, 170) +
+      '<path d="M0 216h66" stroke="#c9b48a" stroke-width="4"/>' + Lman(30, 214, "#ffd34d", "lm-bob") +
+      LR(8, 8, 214, 24, "#0f3b2a", ' rx="3"') + LT("FIVE ISLANDS PARK", 115, 25, 14, "#fff") + LT("ECHO BAY · NEW ROCHELLE", 312, 98, 10, "#fff") +
+      tag("SADAT X", 230, 250, 24, "#ffd34d", -3),
+      sky("sk", "#6fb3ea", "#f3e3c0"));
+  }
+  /* 3. Wild Cowboys (1996): a western saloon front dropped onto a New Ro block, his wanted poster on the post */
+  function LM_main() {
+    let boards = ""; for (let x = 80; x < 320; x += 10) boards += '<path d="M' + x + ' 60v150" stroke="#6b4420" stroke-width="1"/>';
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lstars(14) + '<circle cx="350" cy="36" r="14" fill="#ffe7b0"/>' +
+      Lbrick(0, 110, 70, 126, "#7a3e2c", "#5a2e20") + Lwin(10, 120, 2, 3, 30, 34, 18, 22, "#ffd77a", "#2a1a14") + Lbrick(330, 100, 70, 136, "#5a4a40", "#4a3a30") + Lwin(342, 112, 2, 3, 28, 34, 16, 22, "#ffd77a", "#2a1a14") +
+      /* false front saloon */
+      '<path d="M76 210V58h40l10-12h148l10 12h40v152z" fill="#a8743a"/>' + boards + LR(96, 64, 208, 30, "#3a2414", ' rx="2"') + LA("WILD COWBOYS", 200, 88, 24, "#ffd34d", "middle", ' class="lm-flk"') +
+      LR(76, 100, 248, 6, "#6b4420") + LR(76, 210, 248, 6, "#6b4420") + [90, 200, 310].map(x => LR(x - 3, 106, 6, 104, "#5a3418")).join("") +
+      /* swinging doors */
+      LR(176, 140, 48, 70, "#2a1a10") + '<g class="lm-sway" style="transform-origin:left center">' + LR(178, 150, 21, 40, "#c08850", ' stroke="#5a3418"') + '</g><g class="lm-sway lmd1">' + LR(201, 150, 21, 40, "#c08850", ' stroke="#5a3418"') + '</g>' +
+      LR(106, 126, 50, 40, "#ffd77a", ' class="lm-flk" opacity=".8"') + LR(244, 126, 50, 40, "#ffd77a", ' class="lm-flk lmd1" opacity=".8"') +
+      LMwanted(254, 132, 30) + LMwanted(116, 132, 30) +
+      LR(0, 216, 400, 20, "#8a6a4a") + '<path d="M0 216h400" stroke="#5a3418" stroke-width="3"/>' + LR(0, 236, 400, 24, "#2a2420") +
+      '<g class="lm-car">' + Lauto(0, 226, "#ffd34d") + '</g>' +
+      LR(122, 18, 156, 22, "#1f2a38", ' rx="3"') + LT("NEW RO · 1996", 200, 34, 12, "#fff") +
+      tag("SADAT X", 8, 104, 24, "#ffd34d", -6),
+      sky("sk", "#3a1a2e", "#f08a4b"));
+  }
+  /* 4. North Av & Lincoln Av, New Rochelle */
+  function LM_corner() {
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lstars(16) + '<circle cx="360" cy="30" r="12" fill="#fff1d6"/>' +
+      LR(260, 90, 140, 146, "#8a5a44") + Lwin(272, 102, 4, 4, 30, 30, 16, 18, "#ffd77a", "#2a1c18") + LR(256, 86, 148, 6, "#5a3a2c") +
+      Lbrick(10, 70, 236, 166, "#5a2e26", "#6a3a30") + LR(10, 64, 236, 6, "#2a1a16") +
+      tag("SADAT X", 22, 140, 52, "#ffd34d", -7) + tag("BRAND NUBIAN", 30, 176, 22, "#2fb36a", -4) + tag("WILD COWBOYS", 34, 206, 20, "#d7263d", -3) + tag("NEW RO", 170, 226, 16, "#f6efdc", -2) +
+      '<rect class="lm-pls" x="134" y="142" width="3" height="10" fill="#ffd34d"/>' +
+      Lpole(296, 60, "North Av", "Lincoln Av") + '<path class="lm-flk" d="M300 56h26l-5 7h-16z" fill="#ffe7a8"/>' +
+      LR(0, 236, 400, 24, "#14181d") + '<path d="M0 248h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="lm-car">' + Lauto(0, 226, "#2fb36a") + '</g>',
+      sky("sk", "#0d1022", "#2a3a4a"));
+  }
+
   window.SCENES = {
-    station: function () { return railStation({name:"New Rochelle", line:"MN", sky:["#8fc3ea","#f6d9a6"], tag:["BRAND NUBIAN","#ffd34d"]}); },
-    castle: function () { return castle({c1:"#2fb36a", tag:["GLEN ISLAND","#ffd34d"]}); },
-    harbor: function () { return bay({c1:"#ffd34d", c2:"#2fb36a", c3:"#d7263d", tag:["ECHO BAY","#2fb36a"]}); },
-    main: function () { return mainstreet({c1:"#ffd34d", c2:"#2fb36a", c3:"#d7263d", sign:"MAIN ST · NEW ROCHELLE", tag:["WILD COWBOYS","#ffd34d"]}); },
-    corner: function () { return corner({s1:"Main St", s2:"North Av", tags:[["SADAT X","#ffd34d",50],["BRAND NUBIAN","#2fb36a",22],["WILD COWBOYS","#d7263d"],["NEW RO","#f6efdc"]]}); }
+    station: LM_station,
+    castle: LM_castle,
+    harbor: LM_harbor,
+    main: LM_main,
+    corner: LM_corner,
   };
 })();

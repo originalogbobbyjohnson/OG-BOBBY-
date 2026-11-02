@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO YONKERS",
-   "x": "Main St and Warburton Av. This is Tony Moxberg's game.",
+   "x": "Yonkers Av and Central Park Av. This is Tony Moxberg's game.",
    "sfx": "spray"
   }
  ],

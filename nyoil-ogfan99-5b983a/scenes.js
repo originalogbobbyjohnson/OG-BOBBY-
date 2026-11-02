@@ -113,76 +113,55 @@
       sky("g2", "#2a1d3d", "#f08a4b"));
   }
 
-  /* 3. Snug Harbor: the white Greek Revival temple fronts, autumn leaves coming down */
+  /* 3. St. Peter's on St. Marks Pl (New Brighton, 1903): the big Romanesque church with the tall square bell tower over the North Shore, tan brick, red tile roof, leaves coming down */
   function snug() {
-    const temple = (x, w, cols) => {
-      let c = "", step = w / (cols + 1);
-      for (let i = 1; i <= cols; i++) c += '<rect x="' + (x + i * step - 4) + '" y="118" width="8" height="58" fill="#f4f1e8" stroke="#b9b2a2" stroke-width="1"/><rect x="' + (x + i * step - 6) + '" y="114" width="12" height="4" fill="#e7e1d2"/>';
-      return '<rect x="' + x + '" y="110" width="' + w + '" height="70" fill="#d9d2c0"/>' +
-        '<path d="M' + (x - 6) + ' 112L' + (x + w / 2) + ' 82L' + (x + w + 6) + ' 112z" fill="#f4f1e8" stroke="#b9b2a2" stroke-width="1.5"/>' +
-        '<rect x="' + (x - 6) + '" y="110" width="' + (w + 12) + '" height="6" fill="#ece6d6"/>' + c +
-        '<rect x="' + (x - 4) + '" y="176" width="' + (w + 8) + '" height="6" fill="#c8c0ae"/>';
-    };
+    let brick = ""; for (let y = 100; y < 212; y += 8) for (let x = (y / 8) % 2 ? 60 : 68; x < 254; x += 16) brick += '<rect x="' + x + '" y="' + y + '" width="13" height="5" fill="#c8a678" opacity=".7"/>';
+    let tb = ""; for (let y = 40; y < 212; y += 8) for (let x = (y / 8) % 2 ? 264 : 270; x < 310; x += 12) tb += '<rect x="' + x + '" y="' + y + '" width="9" height="5" fill="#c8a678" opacity=".7"/>';
+    const rarch = (x, y, w, h) => '<path d="M' + x + ' ' + (y + h) + 'V' + (y + w / 2) + 'a' + (w / 2) + ' ' + (w / 2) + ' 0 0 1 ' + w + ' 0V' + (y + h) + 'z" fill="#2a3040" stroke="#f2e6c8" stroke-width="2"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g3)"/>' +
-      /* side wings in brick-and-stucco */
-      '<rect x="0" y="122" width="400" height="60" fill="#c9b99a"/>' +
-      (function () { let w = ""; for (let x = 8; x < 400; x += 22) w += '<rect x="' + x + '" y="134" width="10" height="16" fill="#3b4a5a"/>'; return w; })() +
-      temple(30, 96, 5) + temple(158, 84, 4) + temple(274, 96, 5) +
-      /* lawn + path */
-      '<rect x="0" y="182" width="400" height="78" fill="#4f7a3a"/>' +
-      '<path d="M170 260l20-78h20l20 78z" fill="#d8ccb0"/>' +
-      /* autumn trees */
-      '<rect x="12" y="160" width="6" height="30" fill="#4a3220"/><circle cx="15" cy="150" r="22" fill="#d9822b"/><circle cx="28" cy="160" r="14" fill="#c4581f"/>' +
-      '<rect x="380" y="160" width="6" height="30" fill="#4a3220"/><circle cx="383" cy="150" r="22" fill="#e0a12b"/><circle cx="368" cy="162" r="14" fill="#c4581f"/>' +
-      '<path class="lf" d="M30 140q4-4 8 0q-4 4-8 0z" fill="#e0a12b"/>' +
-      '<path class="lf lf2" d="M376 136q4-4 8 0q-4 4-8 0z" fill="#d9822b"/>' +
-      '<path class="lf lf3" d="M200 90q4-4 8 0q-4 4-8 0z" fill="#c4581f"/>' +
-      /* sign */
-      '<rect x="110" y="18" width="180" height="44" rx="4" fill="#1f3a2e" stroke="' + GOLD + '" stroke-width="2"/>' +
-      '<text x="200" y="40" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="17" letter-spacing="1" fill="#fff">SNUG HARBOR</text>' +
-      '<text x="200" y="56" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1.5" fill="' + GOLD + '">RICHMOND TERRACE · 1833</text>',
-      sky("g3", "#7fb4dc", "#e6f0f6"));
+      '<rect width="400" height="260" fill="url(#sn)"/>' +
+      /* the harbor glimpsed below on the right */
+      '<rect x="320" y="150" width="80" height="40" fill="#4a7aa0"/><g class="fry" style="animation-duration:22s">' + '<g transform="translate(0 150)">' + ferryBoat(.25) + '</g></g>' +
+      /* nave: tan brick under a red tile roof */
+      '<path d="M50 104L156 54 262 104z" fill="#b5442a"/>' + (function () { let r = ""; for (let i = 0; i < 6; i++) { const y = 98 - i * 7, hw = (y - 54) / 50 * 106 - 6; r += '<path d="M' + (156 - hw) + ' ' + y + 'H' + (156 + hw) + '" stroke="#8a2e1a" stroke-width="1.5"/>'; } return r; })() +
+      '<rect x="56" y="100" width="204" height="112" fill="#d9b98a"/>' + brick +
+      rarch(80, 130, 26, 50) + rarch(126, 120, 34, 70) + rarch(176, 130, 26, 50) + rarch(218, 130, 26, 50) +
+      '<circle cx="143" cy="88" r="11" fill="#2a3040" stroke="#f2e6c8" stroke-width="2"/>' +
+      /* the bell tower */
+      '<rect x="262" y="34" width="58" height="178" fill="#d4b080"/>' + tb +
+      rarch(274, 52, 14, 30) + rarch(294, 52, 14, 30) + rarch(281, 120, 20, 40) +
+      '<path d="M258 36L291 6 324 36z" fill="#b5442a"/><path d="M291 6v-8M287 -2h8" stroke="#5a3a2a" stroke-width="2"/>' +
+      '<rect x="258" y="34" width="66" height="5" fill="#f2e6c8"/>' +
+      '<circle cx="34" cy="168" r="28" fill="#d9822b"/><rect x="31" y="190" width="6" height="22" fill="#5a3a2a"/>' +
+      '<rect y="212" width="400" height="12" fill="#9a9a9a"/><rect y="224" width="400" height="36" fill="#2c2c30"/>' +
+      '<g class="lf"><path d="M40 150l5 3-5 3-5-3z" fill="#e6b13a"/></g><g class="lf lf2"><path d="M60 150l5 3-5 3-5-3z" fill="#b8461f"/></g><g class="lf lf3"><path d="M20 156l5 3-5 3-5-3z" fill="#d9822b"/></g>' +
+      '<g class="cr1"><rect x="0" y="234" width="44" height="14" rx="4" fill="' + BLUE + '"/><circle cx="10" cy="248" r="4" fill="#111"/><circle cx="34" cy="248" r="4" fill="#111"/></g>' +
+      '<text x="200" y="256" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#fff">ST. PETER\'S · ST. MARKS PL · NEW BRIGHTON</text>',
+      sky("sn", "#9fcff2", "#f6e8cc"));
   }
 
-  /* 4. The Verrazzano-Narrows Bridge at night over Fort Wadsworth, cars rolling over the span */
+  /* 4. The Staten Island Lighthouse (Lighthouse Hill, 1912): the yellow-brick octagonal tower on the ridge, black lantern, the beam sweeping out toward the harbor */
   function bridge() {
-    let cables = "";
-    for (let x = 0; x <= 400; x += 10) {
-      const y = x < 110 ? 120 - (110 - x) * 0.55 + 66 : x > 290 ? 120 - (x - 290) * 0.55 + 66 : 186 - 104 * (1 - Math.pow((x - 200) / 90, 2));
-      const yy = Math.min(150, Math.max(50, y));
-      cables += '<path d="M' + x + ' ' + yy.toFixed(1) + 'V150" stroke="#9fb2c4" stroke-width=".8" opacity=".55"/>';
-    }
+    let courses = ""; for (let y = 70; y < 200; y += 6) courses += '<path d="M' + (186 - (y - 70) * .06) + ' ' + y + 'H' + (214 + (y - 70) * .06) + '" stroke="#c8a040" stroke-width="1" opacity=".6"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#g4)"/>' + stars(22) +
-      '<circle cx="340" cy="34" r="14" fill="#eaf6ff" opacity=".9"/>' +
-      /* towers: steel painted light grey, two arches each */
-      '<rect x="100" y="40" width="8" height="140" fill="#b6c0c8"/><rect x="118" y="40" width="8" height="140" fill="#b6c0c8"/>' +
-      '<rect x="100" y="40" width="26" height="6" fill="#b6c0c8"/><rect x="100" y="90" width="26" height="5" fill="#b6c0c8"/>' +
-      '<rect x="274" y="40" width="8" height="140" fill="#b6c0c8"/><rect x="292" y="40" width="8" height="140" fill="#b6c0c8"/>' +
-      '<rect x="274" y="40" width="26" height="6" fill="#b6c0c8"/><rect x="274" y="90" width="26" height="5" fill="#b6c0c8"/>' +
-      '<circle class="blk" cx="113" cy="38" r="2.5" fill="#ff4a3a"/><circle class="blk blk2" cx="287" cy="38" r="2.5" fill="#ff4a3a"/>' +
-      /* main cables */
-      '<path d="M0 132Q56 96 113 44Q200 150 287 44Q344 96 400 132" stroke="#dfe7ee" stroke-width="2.4" fill="none"/>' +
-      cables +
-      /* the necklace lights and the deck */
-      '<rect x="0" y="150" width="400" height="10" fill="#4f5b66"/>' +
-      (function () { let l = ""; for (let x = 6; x < 400; x += 14) l += '<circle cx="' + x + '" cy="149" r="1.3" fill="#fff3c4"/>'; return l; })() +
-      '<g class="cr1"><rect x="0" y="152" width="12" height="4" rx="1" fill="#ffd38a"/></g><g class="cr2"><rect x="0" y="152" width="12" height="4" rx="1" fill="#ffd38a"/></g>' +
-      '<g class="cl1"><rect x="0" y="156" width="12" height="3" rx="1" fill="#ff6a5a"/></g><g class="cl2"><rect x="0" y="156" width="12" height="3" rx="1" fill="#ff6a5a"/></g>' +
-      /* the Narrows */
-      '<rect x="0" y="180" width="400" height="80" fill="#0f2b40"/>' +
-      '<path d="M0 196h400M0 214h400" stroke="#2f5c7d" stroke-width="1" stroke-dasharray="14 10"/>' +
-      /* Fort Wadsworth: granite fort walls on the bluff at the left */
-      '<path d="M0 168h96l20 22H0z" fill="#3b5a2e"/>' +
-      '<path d="M4 196h120l10 20H0z" fill="#8a8478" stroke="#4d4840" stroke-width="1.5"/>' +
-      (function () { let w = ""; for (let x = 12; x < 126; x += 18) w += '<rect x="' + x + '" y="202" width="7" height="7" rx="3" fill="#2a2620"/>'; return w; })() +
-      '<rect x="40" y="168" width="2" height="22" fill="#222"/><rect class="flg" x="42" y="168" width="14" height="8" fill="#e8e8e8"/>' +
-      '<text x="20" y="246" font-family="Anton, Impact, sans-serif" font-size="13" letter-spacing="2" fill="#dfe7ee">FORT WADSWORTH</text>' +
-      '<text x="380" y="246" text-anchor="end" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="' + GOLD + '">THE NARROWS</text>',
-      sky("g4", "#060d1c", "#1e3a5c"));
+      '<style>@keyframes sweep{0%,100%{transform:rotate(-30deg)}50%{transform:rotate(30deg)}}.bm{transform-box:view-box;transform-origin:200px 56px;animation:sweep 5s ease-in-out infinite}</style>' +
+      '<rect width="400" height="260" fill="url(#lh)"/>' + stars(22) +
+      /* the harbor far off and the ridge */
+      '<rect y="150" width="400" height="26" fill="#1f3550"/><g class="wv"><path d="M0 162q10-3 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0" stroke="#7fb0d0" stroke-width="1" fill="none" opacity=".4"/></g>' +
+      '<g class="bm"><path d="M200 56L-40 20V92z" fill="#fff6c2" opacity=".22"/><path d="M200 56L440 20V92z" fill="#fff6c2" opacity=".12"/></g>' +
+      '<path d="M0 200Q120 168 200 184T400 196V260H0z" fill="#2a4a2a"/>' +
+      '<circle cx="80" cy="186" r="20" fill="#1f3a1f"/><circle cx="320" cy="190" r="22" fill="#1f3a1f"/><circle cx="350" cy="196" r="16" fill="#244424"/>' +
+      /* limestone base, yellow brick shaft, gallery, black lantern */
+      '<path d="M178 206h44l-4-14h-36z" fill="#d8d0bc"/>' +
+      '<path d="M182 192L188 70h24l6 122z" fill="#e8c35a"/>' + courses + '<path d="M196 70v122" stroke="#d4ae48" stroke-width="2"/>' +
+      '<rect x="196" y="100" width="8" height="12" fill="#2a2a30"/><rect x="196" y="140" width="8" height="12" fill="#2a2a30"/>' +
+      '<rect x="182" y="64" width="36" height="6" fill="#2a2a30"/><path d="M184 64v-4M190 64v-4M196 64v-4M204 64v-4M210 64v-4M216 64v-4" stroke="#2a2a30" stroke-width="1.5"/>' +
+      '<rect x="188" y="44" width="24" height="20" fill="#1a1a1a"/><rect x="191" y="48" width="18" height="12" fill="#fff6c2" class="blk"/>' +
+      '<path d="M186 44L200 32 214 44z" fill="#1a1a1a"/><circle cx="200" cy="30" r="2.5" fill="#1a1a1a"/>' +
+      '<g class="gul"><path d="M0 110q6-6 12 0q6-6 12 0" stroke="#e8e8e8" stroke-width="2" fill="none"/></g>' +
+      '<text x="200" y="244" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="1" fill="#fff">STATEN ISLAND LIGHTHOUSE · LIGHTHOUSE HILL · 1912</text>',
+      sky("lh", "#0b1530", "#3a4a7a"));
   }
-
   /* 5. Bay St & Victory Blvd: green street signs, a wall with NYOIL tagged on it, an oil drop dripping */
   function corner() {
     let bricks = "";

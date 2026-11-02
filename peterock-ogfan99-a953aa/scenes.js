@@ -510,11 +510,116 @@
       (o.tag ? tag(o.tag[0], 90, 30, 24, o.tag[1], -3) : ''), "");
   }
 
+  /* ---- redrawn landmark scenes (OG FAN 99 landmark pass): small shared helpers, prefixed L ---- */
+  const Lcss = '<style>' +
+    '@keyframes lmCar{from{transform:translateX(-170px)}to{transform:translateX(480px)}}.lm-car{animation:lmCar 8s linear infinite}' +
+    '@keyframes lmCarB{from{transform:translateX(480px)}to{transform:translateX(-170px)}}.lm-carb{animation:lmCarB 10s linear infinite}' +
+    '@keyframes lmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}.lm-bob{animation:lmBob 1.6s ease-in-out infinite}' +
+    '@keyframes lmFlk{0%,100%{opacity:1}45%{opacity:.7}50%{opacity:.3}55%{opacity:.95}}.lm-flk{animation:lmFlk 2.3s infinite}' +
+    '@keyframes lmSpin{to{transform:rotate(360deg)}}.lm-spin{animation:lmSpin 1.8s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmRise{0%{transform:translateY(0) scale(.8);opacity:0}20%{opacity:.85}100%{transform:translateY(-70px) scale(1.4);opacity:0}}.lm-rise{animation:lmRise 4s linear infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}.lm-sway{animation:lmSway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom center}' +
+    '@keyframes lmBlk{0%,49%{opacity:1}50%,100%{opacity:.25}}.lm-blk{animation:lmBlk 1s steps(1) infinite}' +
+    '@keyframes lmFlag{0%,100%{transform:skewY(0)}50%{transform:skewY(-6deg)}}.lm-flag{animation:lmFlag 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}' +
+    '@keyframes lmFall{0%{transform:translate(0,-20px) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate(-30px,230px) rotate(280deg);opacity:0}}.lm-fall{animation:lmFall 6s linear infinite}' +
+    '@keyframes lmCld{from{transform:translateX(-120px)}to{transform:translateX(470px)}}.lm-cld{animation:lmCld 30s linear infinite}' +
+    '@keyframes lmPls{0%,100%{opacity:.35}50%{opacity:1}}.lm-pls{animation:lmPls 2.2s ease-in-out infinite}' +
+    '@keyframes lmWav{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}.lm-wav{animation:lmWav 3s ease-in-out infinite}' +
+    '@keyframes lmBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}.lm-beat{animation:lmBeat .7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}' +
+    '@keyframes lmNote{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-60px);opacity:0}}.lm-note{animation:lmNote 3s linear infinite}' +
+    '.lmd1{animation-delay:-1s}.lmd2{animation-delay:-2s}.lmd3{animation-delay:-3s}.lmd4{animation-delay:-4.5s}.lmd5{animation-delay:-6s}' +
+    '</style>';
+  const LF = 'font-family="Helvetica, Arial, sans-serif" font-weight="700"';
+  const LT = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" ' + LF + ' font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LA = (s, x, y, size, fill, anchor, extra) => '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || "middle") + '" font-family="Anton, Impact, sans-serif" font-size="' + size + '" fill="' + fill + '"' + (extra || "") + '>' + s + '</text>';
+  const LR = (x, y, w, h, fill, extra) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + fill + '"' + (extra || "") + '/>';
+  const Lbul = (x, y, l, col, r) => { r = r || 11; return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/>' + LT(l, x, y + r * 0.42, r * 1.22, col === "#fccc0a" ? "#000" : "#fff"); };
+  const Lpill = (x, y, l, col) => { const w = l.length * 8 + 14; return '<rect x="' + (x - w / 2) + '" y="' + (y - 10) + '" width="' + w + '" height="20" rx="10" fill="' + col + '"/>' + LT(l, x, y + 4.5, 11, "#fff"); };
+  /* black MTA-style station sign: lines = [["B","#ff6319"],...]; a long name like "MN" draws a pill */
+  const Lsign = (x, y, w, name, lines, size) => { let b = "", bx = x + w - 18; for (let i = lines.length - 1; i >= 0; i--) { const l = lines[i]; if (l[0].length > 1) { b += Lpill(bx - 10, y + 17, l[0], l[1]); bx -= l[0].length * 8 + 22; } else { b += Lbul(bx, y + 17, l[0], l[1], 10); bx -= 24; } }
+    return LR(x, y, w, 32, "#111", ' rx="3"') + LR(x, y, w, 4, "#fff") + LT(name, x + 10, y + 23, size || 15, "#fff", "start") + b; };
+  /* green NYC street sign blade */
+  const Lblade = (x, y, t, w) => { w = w || t.length * 7.2 + 20; return LR(x, y, w, 19, "#0f6b3a", ' rx="2" stroke="#fff" stroke-width="1.5"') + LT(t, x + w / 2, y + 14, 12, "#fff"); };
+  /* two green signs on a pole at x, crossing */
+  const Lpole = (x, y, a, b) => { const wa = a.length * 7.2 + 20, wb = b.length * 7.2 + 20; return LR(x, y, 6, 236 - y, "#2a3138") + Lblade(x + 3 - wa / 2, y + 6, a) + Lblade(x + 3 - wb / 2, y + 30, b) + LR(x - 2, y - 4, 10, 6, "#2a3138"); };
+  const Lbrick = (x, y, w, h, base, mortar) => { let s = LR(x, y, w, h, base); for (let yy = y + 6; yy < y + h; yy += 6) s += '<path d="M' + x + ' ' + yy + 'h' + w + '" stroke="' + mortar + '" stroke-width=".8"/>'; return s; };
+  const Lwin = (x, y, cols, rows, dx, dy, w, h, lit, dark) => { let s = ""; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const on = ((r * 7 + c * 3) % 5) < 2; s += '<rect x="' + (x + c * dx) + '" y="' + (y + r * dy) + '" width="' + w + '" height="' + h + '" fill="' + (on ? lit : dark) + '"' + (on && (r + c) % 4 === 0 ? ' class="lm-flk"' : '') + '/>'; } return s; };
+  const Lstars = n => { let s = ""; for (let i = 0; i < n; i++) s += '<circle cx="' + ((i * 97) % 400) + '" cy="' + (8 + (i * 53) % 70) + '" r="' + (i % 3 ? 0.9 : 1.4) + '" fill="#fff" opacity=".75"/>'; return s; };
+  const Lcloud = (x, y, s, cls) => '<g class="lm-cld ' + (cls || "") + '"><g transform="translate(' + x + ' ' + y + ') scale(' + (s || 1) + ')" fill="#fff" opacity=".85"><ellipse cx="0" cy="0" rx="22" ry="9"/><ellipse cx="14" cy="-6" rx="14" ry="9"/><ellipse cx="-12" cy="-4" rx="11" ry="7"/></g></g>';
+  const Ltree = (x, y, r, col, cls) => '<g class="lm-sway ' + (cls || "") + '">' + LR(x - 3, y, 6, r * 1.3, "#5a3d24") + '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + col + '"/><circle cx="' + (x - r * .5) + '" cy="' + (y + r * .3) + '" r="' + r * .7 + '" fill="' + col + '" opacity=".85"/><circle cx="' + (x + r * .55) + '" cy="' + (y + r * .25) + '" r="' + r * .65 + '" fill="' + col + '" opacity=".9"/></g>';
+  /* faceless figure: head + body, x = centre, y = feet */
+  const Lman = (x, y, body, cls, cap) => '<g' + (cls ? ' class="' + cls + '"' : "") + '>' + '<rect x="' + (x - 7) + '" y="' + (y - 30) + '" width="14" height="22" rx="5" fill="' + body + '"/><rect x="' + (x - 6) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/><rect x="' + (x + 1) + '" y="' + (y - 10) + '" width="5" height="10" fill="#1d1d24"/>' +
+    '<circle cx="' + x + '" cy="' + (y - 37) + '" r="7" fill="#5a3a26"/>' + (cap ? '<path d="M' + (x - 8) + ' ' + (y - 39) + 'q8-10 16 0z" fill="' + cap + '"/><rect x="' + (x - 1) + '" y="' + (y - 41) + '" width="12" height="3" fill="' + cap + '"/>' : '') + '</g>';
+  /* subway car (stainless) seen from the side, x,y top-left */
+  const Lcar = (x, y, w, l, col, band) => { let s = '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="52" rx="8" fill="#c9ced6" stroke="#6b7280" stroke-width="2"/>'; for (let i = x + 16; i < x + w - 60; i += 40) s += '<rect x="' + i + '" y="' + (y + 9) + '" width="26" height="18" rx="3" fill="#cfe6ff" opacity=".9"/>';
+    return s + LR(x, y + 33, w, 5, band || col) + Lbul(x + w - 22, y + 18, l, col, 10) + '<circle cx="' + (x + w - 8) + '" cy="' + (y + 44) + '" r="3.5" fill="#fff6c2"/>'; };
+  const Lcab = (x, y) => '<rect x="' + x + '" y="' + (y + 8) + '" width="70" height="20" rx="5" fill="#f7c600"/><path d="M' + (x + 12) + ' ' + (y + 8) + 'l8-10h28l10 10z" fill="#f7c600"/><path d="M' + (x + 22) + ' ' + y + 'h10v8h-14zM' + (x + 35) + ' ' + y + 'h10l7 8h-17z" fill="#bfe0ff"/>' +
+    LR(x + 26, y - 6, 18, 6, "#fff", ' rx="1"') + LT("TAXI", x + 35, y - 1.5, 5, "#111") + '<path d="M' + x + ' ' + (y + 17) + 'h70" stroke="#111" stroke-width="1" stroke-dasharray="3 3"/><circle cx="' + (x + 15) + '" cy="' + (y + 28) + '" r="6" fill="#111"/><circle cx="' + (x + 55) + '" cy="' + (y + 28) + '" r="6" fill="#111"/>';
+  const Lauto = (x, y, col) => '<rect x="' + x + '" y="' + (y + 6) + '" width="56" height="16" rx="5" fill="' + col + '"/><rect x="' + (x + 11) + '" y="' + (y - 2) + '" width="32" height="11" rx="3" fill="#cfe6ff"/><circle cx="' + (x + 13) + '" cy="' + (y + 22) + '" r="5" fill="#111"/><circle cx="' + (x + 43) + '" cy="' + (y + 22) + '" r="5" fill="#111"/>';
+  /* turntable from above at an angle */
+  const Ldeck = (cx, cy, r, lab) => '<rect x="' + (cx - r - 12) + '" y="' + (cy - r * .45 - 10) + '" width="' + (r * 2 + 30) + '" height="' + (r * .9 + 20) + '" rx="4" fill="#2a2a30"/><g transform="translate(' + cx + ' ' + cy + ') scale(1 .42)"><g class="lm-spin"><circle r="' + r + '" fill="#0c0c0e"/><circle r="' + r * .72 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .5 + '" fill="none" stroke="#2c2c30" stroke-width="2"/><circle r="' + r * .3 + '" fill="' + lab + '"/><rect x="-2" y="' + (-r * .3) + '" width="4" height="' + r * .2 + '" fill="#fff"/></g></g><path d="M' + (cx + r + 6) + ' ' + (cy - r * .4) + 'l-8 ' + r * .5 + '" stroke="#c9ced6" stroke-width="3"/>';
+  /* 1. Soul Survivor (1998): the Soul Brother #1 at the decks under a gold SB#1 neon, records floor to ceiling */
+  function LM_church() {
+    let shelf = ""; for (let r = 0; r < 5; r++) { shelf += LR(0, 40 + r * 34, 400, 4, "#5a3a22"); for (let x = 4; x < 400; x += 5) shelf += LR(x, 12 + r * 34, 4, 28, ["#1a1a1a", "#2a2420", "#d4af37", "#1a1a1a", "#ff6b3d", "#2a2a30", "#9fe3ff", "#1a1a1a"][(x * 7 + r * 3) % 8]); }
+    return svg(Lcss + '<rect width="400" height="260" fill="#1a1210"/>' + shelf + LR(0, 0, 400, 12, "#3a2418") +
+      '<rect x="0" y="0" width="400" height="260" fill="#000" opacity=".35"/>' +
+      /* neon */
+      LR(120, 10, 160, 66, "#1a0e08", ' rx="8" stroke="#d4af37" stroke-width="2"') + LA("SB#1", 200, 66, 44, "#ffd34d", "middle", ' class="lm-pls" stroke="#fff3b0" stroke-width="1"') + LT("SOUL BROTHER", 200, 24, 9, "#d4af37") +
+      '<g class="lm-pls"><circle cx="200" cy="44" r="110" fill="#ffd34d" opacity=".1"/></g>' +
+      /* the decks */
+      LR(40, 180, 320, 80, "#2a2420") + LR(40, 176, 320, 8, "#4a3a2a") + Ldeck(110, 162, 46, "#d4af37") + Ldeck(290, 162, 46, "#ff6b3d") +
+      LR(180, 146, 40, 34, "#1a1a1a", ' rx="3"') + [188, 198, 208].map((x, i) => LR(x, 152, 4, 20, "#444") + LR(x - 2, 156 + i * 4, 8, 4, "#9fe3ff", ' class="lm-blk' + (i ? " lmd" + i : "") + '"')).join("") +
+      /* the Soul Brother from behind: cap, headphones, hands on the decks */
+      '<g class="lm-bob">' + LR(176, 112, 48, 50, "#3a3a44", ' rx="14"') + '<circle cx="200" cy="100" r="16" fill="#3a2418"/><path d="M182 96q18-26 36 0z" fill="#111"/><rect x="194" y="84" width="12" height="4" fill="#d4af37"/><path d="M184 100q16-20 32 0" stroke="#666" stroke-width="3" fill="none"/></g>' +
+      LR(110, 222, 180, 24, "#000", ' rx="3" opacity=".65"') + LT("SOUL SURVIVOR · 1998", 200, 239, 12, "#d4af37") +
+      tag("PETE ROCK", 8, 150, 22, "#9fe3ff", -6) + tag("MT VERNON", 300, 140, 16, "#ff6b3d", -4),
+      "");
+  }
+  /* 2. Mecca and the Soul Brother (1992): the T.R.O.Y. block-memorial wall, candles, and the horn line */
+  function LM_downtown() {
+    const candle = (x, y, c, d) => LR(x - 4, y, 8, 18, c, ' rx="1"') + '<path class="lm-flk ' + d + '" d="M' + x + ' ' + (y - 10) + 'q4 6 0 9q-4-3 0-9z" fill="#ffb02a"/><circle class="lm-pls ' + d + '" cx="' + x + '" cy="' + (y - 4) + '" r="9" fill="#ffd34d" opacity=".25"/>';
+    const horn = (x, y, c) => '<path d="M' + x + ' ' + y + 'h40l18-10v24l-18-10h-40z" fill="' + c + '"/><circle cx="' + (x + 12) + '" cy="' + (y - 4) + '" r="2.5" fill="' + c + '"/><circle cx="' + (x + 20) + '" cy="' + (y - 4) + '" r="2.5" fill="' + c + '"/>';
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' + Lstars(16) + '<circle cx="356" cy="30" r="12" fill="#fff1d6"/>' +
+      Lbrick(20, 50, 360, 170, "#6a3a2a", "#5a2e20") + LR(20, 46, 360, 6, "#2a1a14") +
+      /* the mural */
+      LR(46, 66, 308, 112, "#1a2a4a") + '<path d="M46 178q80-40 154-20t154-30v50z" fill="#9fe3ff" opacity=".35"/>' +
+      LA("T.R.O.Y.", 200, 120, 48, "#d4af37", "middle", ' stroke="#3a2008" stroke-width="2"') + LT("THEY REMINISCE OVER YOU", 200, 142, 12, "#fff") + LT("MT VERNON · FOREVER", 200, 160, 9, "#9fe3ff") +
+      '<path d="M190 72l10-6 10 6-10 6z" fill="#ff6b3d"/>' +
+      /* horn line drifting notes */
+      horn(60, 90, "#d4af37") + horn(290, 90, "#d4af37") +
+      '<g class="lm-note"><path d="M120 98v-14l10-3v14" stroke="#ffd34d" stroke-width="2.5" fill="none"/><circle cx="117" cy="98" r="3.5" fill="#ffd34d"/></g><g class="lm-note lmd1"><path d="M280 98v-14l10-3v14" stroke="#ffd34d" stroke-width="2.5" fill="none"/><circle cx="277" cy="98" r="3.5" fill="#ffd34d"/></g>' +
+      /* candles and flowers on the sidewalk */
+      LR(0, 220, 400, 40, "#3a3a40") + LR(0, 216, 400, 6, "#8a847a") +
+      candle(120, 200, "#fff", "") + candle(140, 204, "#ff6b3d", "lmd1") + candle(160, 200, "#9fe3ff", "lmd2") + candle(240, 200, "#fff", "lmd3") + candle(260, 204, "#d4af37", "lmd1") + candle(280, 200, "#fff", "lmd2") +
+      [190, 200, 210].map((x, i) => '<path d="M' + x + ' 218v-14" stroke="#2f6b3a" stroke-width="2"/><circle cx="' + x + '" cy="202" r="5" fill="' + ["#ff6b3d", "#ffd34d", "#e2382f"][i] + '"/>').join("") +
+      LR(80, 4, 240, 24, "#000", ' rx="3" opacity=".6"') + LT("MECCA AND THE SOUL BROTHER · 1992", 200, 21, 11, "#d4af37") +
+      tag("PETE ROCK &amp; CL SMOOTH", 40, 250, 18, "#9fe3ff", -3),
+      sky("sk", "#0d1022", "#2a2a4a"));
+  }
+  /* 3. The SP-1200: his instrument drawn big, gray body, orange buttons, filtered bass rolling out */
+  function LM_lab() {
+    let sl = ""; for (let i = 0; i < 8; i++) { const x = 64 + i * 22; sl += LR(x, 120, 4, 52, "#1a1a1a") + LR(x - 6, 130 + ((i * 13) % 30), 16, 10, "#e8e4da", ' rx="1" class="lm-bob' + (i % 2 ? " lmd1" : "") + '"'); }
+    let pads = ""; for (let i = 0; i < 8; i++) pads += LR(64 + i * 22, 190, 16, 14, "#ff7a2a", ' rx="2"' + (i % 3 === 0 ? ' class="lm-blk' + (i ? " lmd" + (i % 3 + 1) : "") + '"' : ""));
+    let keys = ""; for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++) keys += LR(254 + c * 18, 118 + r * 16, 14, 11, (r + c) % 2 ? "#ff7a2a" : "#d8d4ca", ' rx="1"');
+    return svg(Lcss + '<rect width="400" height="260" fill="url(#sk)"/>' +
+      [0, 1, 2].map(i => '<g class="lm-pls lmd' + (i + 1) + '"><circle cx="200" cy="150" r="' + (150 + i * 30) + '" fill="none" stroke="#9fe3ff" stroke-width="2" opacity=".25"/></g>').join("") +
+      /* body */
+      '<path d="M30 220l20-122h300l20 122z" fill="#8f9196"/><path d="M50 98h300l4 14H46z" fill="#a8aab0"/>' + LR(30, 216, 340, 14, "#5a5c62", ' rx="3"') +
+      LT("SP-1200", 70, 113, 12, "#1a1a1a", "start") + LT("SAMPLING PERCUSSION", 330, 113, 7, "#1a1a1a", "end") +
+      sl + pads + keys +
+      /* display + disk drive */
+      LR(254, 168, 70, 18, "#1a2a1a") + '<text class="lm-blk" x="289" y="181" text-anchor="middle" font-family="monospace" font-size="11" fill="#7cf29a">93 BPM</text>' + LR(254, 192, 70, 12, "#2a2a2e") + LR(268, 196, 42, 3, "#111") +
+      '<g class="lm-wav"><path d="M330 140q14-14 28 0t28 0" stroke="#ffd34d" stroke-width="3" fill="none"/></g>' +
+      LR(110, 6, 180, 24, "#000", ' rx="3" opacity=".6"') + LT("THE CHOCOLATE BOY WONDER", 200, 22, 10, "#d4af37") +
+      tag("PETE ROCK", 20, 70, 32, "#9fe3ff", -5) + tag("SOUL BROTHER", 236, 62, 18, "#ff6b3d", -4) + LT("filtered bass", 200, 252, 10, "#9fe3ff"),
+      sky("sk", "#1a1428", "#3a2a3a"));
+  }
+
   window.SCENES = {
     station: function () { return railStation({name:"Mount Vernon East", line:"MN", sky:["#8fc3ea","#f6d9a6"], tag:["SOUL BROTHER","#9fe3ff"]}); },
-    church: function () { return church({tag:["MOUNT VERNON","#d4af37"]}); },
-    downtown: function () { return mainstreet({c1:"#9fe3ff", c2:"#d4af37", c3:"#ff6b3d", sign:"MONEY EARNIN' MT VERNON", tag:["CBW","#9fe3ff"]}); },
-    lab: function () { return studio({beats:1, c1:"#9fe3ff", c2:"#d4af37", c3:"#ff6b3d", tag:["THE BEAT LAB","#d4af37"]}); },
+    church: LM_church,
+    downtown: LM_downtown,
+    lab: LM_lab,
     corner: function () { return corner({s1:"Gramatan Av", s2:"E 1st St", tags:[["PETE ROCK","#9fe3ff",46],["SOUL BROTHER #1","#d4af37",22],["CBW","#ff6b3d"],["MT VERNON","#f6efdc"]]}); }
   };
 })();

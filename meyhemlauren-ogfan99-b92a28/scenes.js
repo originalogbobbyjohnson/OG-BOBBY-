@@ -131,35 +131,36 @@
       sky("ml3", "#0b0e22", "#3a2f5a"));
   }
 
-  /* 4. Roosevelt Av under the 7: the purple bullet rolling overhead, food carts steaming, string lights */
+  /* 4. Austin Street, Forest Hills: the Tudor storefront strip along the LIRR, half-timber gables over the shop awnings, a train on the embankment behind, steam off the bakery */
   function roosevelt() {
-    let el = "";
-    for (let x = 10; x < 400; x += 70) el += '<rect x="' + x + '" y="62" width="8" height="130" fill="#3a4a52"/><path d="M' + (x + 4) + ' 70l18 18M' + (x + 4) + ' 70l-18 18" stroke="#3a4a52" stroke-width="4"/>';
-    let wins = "";
-    for (let x = 10; x < 300; x += 30) wins += '<rect x="' + x + '" y="34" width="18" height="12" rx="2" fill="#dff1ff"/>';
-    let bulbs = "";
-    for (let i = 0; i < 16; i++) { const x = 12 + i * 25, y = 100 + Math.sin(i * 0.9) * 4 + (i % 2) * 2; bulbs += '<circle class="bulb' + (i % 2 ? " bulb2" : "") + '" cx="' + x + '" cy="' + y + '" r="3" fill="' + ["#ffd24a", "#ff6a5a", "#7fe0a0", "#ffffff"][i % 4] + '"/>'; }
-    const cart = (x, top, label) => '<rect x="' + x + '" y="150" width="96" height="50" rx="4" fill="#d8dde3" stroke="#7a8590" stroke-width="2"/>' +
-      '<path d="M' + (x - 6) + ' 132h108l-8 18h-92z" fill="' + top + '"/>' +
-      '<rect x="' + (x + 8) + '" y="158" width="80" height="16" rx="2" fill="#1d1418"/>' +
-      '<text x="' + (x + 48) + '" y="170" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="1" fill="' + GOLD + '">' + label + '</text>' +
-      '<circle cx="' + (x + 16) + '" cy="204" r="6" fill="#222"/><circle cx="' + (x + 80) + '" cy="204" r="6" fill="#222"/>' +
-      '<path class="stm" d="M' + (x + 30) + ' 130q-5-7 0-13t0-13" stroke="#fff" stroke-width="2" fill="none" opacity=".7"/>' +
-      '<path class="stm stm2" d="M' + (x + 48) + ' 130q-5-7 0-13t0-13" stroke="#fff" stroke-width="2" fill="none" opacity=".7"/>' +
-      '<path class="stm stm3" d="M' + (x + 66) + ' 130q-5-7 0-13t0-13" stroke="#fff" stroke-width="2" fill="none" opacity=".7"/>';
+    const gable = (x, w, roof) => {
+      let s = '<rect x="' + x + '" y="96" width="' + w + '" height="58" fill="' + CREAM + '"/>';
+      for (let i = x + 6; i < x + w - 4; i += 14) s += '<rect x="' + i + '" y="96" width="3" height="58" fill="#4a2e1c"/>';
+      s += '<path d="M' + x + ' 124h' + w + '" stroke="#4a2e1c" stroke-width="3"/>';
+      s += '<path d="M' + (x - 6) + ' 98L' + (x + w / 2) + ' 62L' + (x + w + 6) + ' 98z" fill="' + roof + '"/>';
+      s += '<rect x="' + (x + w / 2 - 10) + '" y="104" width="20" height="16" fill="#ffd98a"/><path d="M' + (x + w / 2) + ' 104v16M' + (x + w / 2 - 10) + ' 112h20" stroke="#4a2e1c" stroke-width="1.2"/>';
+      return s;
+    };
+    const shop = (x, w, awn, label) => '<rect x="' + x + '" y="154" width="' + w + '" height="56" fill="#8a4a32"/>' +
+      '<path d="M' + (x - 2) + ' 160h' + (w + 4) + 'l-6 14H' + (x + 4) + 'z" fill="' + awn + '"/>' +
+      '<text x="' + (x + w / 2) + '" y="170.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">' + label + '</text>' +
+      '<rect x="' + (x + 8) + '" y="178" width="' + (w - 16) + '" height="32" fill="#2a3a4a"/><rect x="' + (x + 10) + '" y="180" width="' + (w - 20) + '" height="20" fill="#ffd98a" opacity=".45"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#ml4)"/>' + stars(12) +
-      /* storefront glow at the back */
-      '<rect x="0" y="110" width="400" height="90" fill="#2a1a2e"/>' +
-      (function () { let s = ""; for (let x = 6; x < 400; x += 66) s += '<rect x="' + x + '" y="120" width="54" height="40" fill="#ffcf7a" opacity=".25"/>'; return s; })() +
-      /* the el structure */
-      '<rect x="0" y="50" width="400" height="14" fill="#3a4a52"/>' + el +
-      '<g class="seven"><rect x="0" y="28" width="300" height="22" rx="5" fill="#c9ced6" stroke="#6b7280" stroke-width="1.5"/>' + wins + bullet(282, 39, "7", "#b933ad") + '</g>' +
-      '<path d="M0 98q100 14 200 0t200 0" stroke="#222" stroke-width="1" fill="none"/>' + bulbs +
-      cart(30, WINE, "DUMPLINGS") + cart(150, "#2f8a5a", "TACOS") + cart(270, "#d98a1a", "AREPAS") +
-      '<rect x="0" y="210" width="400" height="50" fill="#1a1a1e"/><path d="M0 232h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
-      tag("ROOSEVELT AV", 120, 252, 20, GOLD, -3),
-      sky("ml4", "#0d0b1e", "#3a2240"));
+      '<rect width="400" height="260" fill="url(#ml4)"/>' +
+      /* LIRR embankment + train behind */
+      '<rect x="0" y="70" width="400" height="20" fill="#6a5a4a"/><rect x="0" y="66" width="400" height="5" fill="#4a3a2a"/>' +
+      '<g class="lirr"><rect x="0" y="44" width="180" height="22" rx="4" fill="#c7ccd2" stroke="#6b7280" stroke-width="1.5"/><rect x="0" y="57" width="180" height="3" fill="#1a3f8f"/>' +
+      (function () { let w = ""; for (let x = 8; x < 170; x += 20) w += '<rect x="' + x + '" y="48" width="12" height="7" fill="#2a3a52"/>'; return w; })() + '</g>' +
+      gable(10, 120, "#7a2e22") + gable(140, 120, "#5a4a3a") + gable(270, 120, "#7a2e22") +
+      shop(10, 120, WINE, "BAKERY") + shop(140, 120, "#2e5a3a", "TAILOR") + shop(270, 120, BLUE, "BOOKS") +
+      '<path class="stm" d="M70 150q-6 -10 0 -18" stroke="#fff" stroke-width="3" fill="none" opacity=".7"/><path class="stm stm2" d="M80 150q6 -10 0 -18" stroke="#fff" stroke-width="3" fill="none" opacity=".7"/>' +
+      /* sidewalk + street */
+      '<rect x="0" y="210" width="400" height="12" fill="#b9b2a4"/><rect x="0" y="222" width="400" height="38" fill="#2e3136"/><path d="M0 242h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>' +
+      '<g class="lirr" style="animation-duration:6s"><rect x="0" y="226" width="50" height="14" rx="4" fill="' + GOLD + '"/><circle cx="10" cy="242" r="4" fill="#111"/><circle cx="40" cy="242" r="4" fill="#111"/></g>' +
+      '<rect x="8" y="8" width="84" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="50" y="21" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">Austin St</text>' +
+      '<rect x="308" y="8" width="84" height="18" rx="2" fill="#1f7a3a" stroke="#fff" stroke-width="1.5"/><text x="350" y="21" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#fff">71 Av</text>' +
+      tag("RESPECT THE FLY", 110, 254, 20, GOLD, -3),
+      sky("ml4", "#7fb3e0", "#f6e6c0"));
   }
 
   /* 5. Queens Blvd and 71 Av: the subway entrance globes, street signs, the tag wall */

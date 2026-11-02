@@ -60,7 +60,7 @@ window.CFG = {
   {
    "scene": "train",
    "t": "PRESS PLAY",
-   "x": "Take the L to Broadway Junction. Tap the record. Every song is an episode.",
+   "x": "Take the 3 to the end of the line, New Lots Av. Tap the record. Every song is an episode.",
    "sfx": "train"
   },
   {

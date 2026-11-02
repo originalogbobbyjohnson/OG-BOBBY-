@@ -46,24 +46,25 @@
     '<text x="' + (x + 14) + '" y="' + (y + 25) + '" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">' + name + '</text>' + sir(x + w - 28, y + 18);
   const LAV = "#c9a4ff", GOLD = "#ffd34d", SKY = "#7cd4ff";
 
-  /* 1. Clifton at sunrise: the SIR on its embankment over Bay St, the beige canopy, the train rolling in */
+  /* 1. Clifton from the Tompkins Av side: the stair down off the embankment, the SIR rolling across up top, the arrow down toward Chestnut Av and the Meucci house, Streetlife on the retaining wall */
   function station1() {
-    let rows = ""; for (let x = 0; x < 400; x += 46) rows += '<rect x="' + x + '" y="' + (78 + (x % 3) * 6) + '" width="40" height="' + (46 - (x % 3) * 6) + '" fill="' + ["#5a4a6a", "#6a5a7a", "#4a3e5e"][x % 3] + '"/>';
+    let wall = ""; for (let y = 112; y < 214; y += 12) for (let x = (y / 12) % 2 ? -14 : 0; x < 400; x += 28) wall += '<rect x="' + x + '" y="' + y + '" width="26" height="10" fill="#8a7a64"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#s1)"/>' +
-      '<circle cx="60" cy="96" r="26" fill="#ffd9a0" opacity=".9"/>' + '<g class="dft">' + cloud(250, 34, .8) + '</g>' + rows +
-      '<rect x="0" y="50" width="400" height="12" fill="#d8c8a4"/><rect x="0" y="62" width="400" height="4" fill="#a8977a"/>' +
-      (function () { let p = ""; for (let x = 20; x < 400; x += 120) p += '<rect x="' + x + '" y="66" width="6" height="108" fill="#7a6a54"/>'; return p; })() +
-      station("Clifton", 112, 78, 186) +
-      '<g class="anim-train">' + sirCar(-20, 116, 340) + '</g>' +
-      '<rect y="178" width="400" height="10" fill="#eab308"/>' +
-      '<path d="M0 188h400v42H0z" fill="#5d7a3a"/>' +
-      (function () { let g = ""; for (let x = 6; x < 400; x += 18) g += '<path d="M' + x + ' 196l4-8 4 8z" fill="#7a9a4a"/>'; return g; })() +
-      '<rect x="150" y="196" width="100" height="34" fill="#55606a"/><rect x="150" y="196" width="100" height="5" fill="#3a434c"/>' +
-      '<rect y="230" width="400" height="30" fill="#2c2c30"/>' +
-      '<g class="cr1"><rect x="0" y="238" width="44" height="14" rx="4" fill="' + LAV + '"/><circle cx="10" cy="252" r="4" fill="#111"/><circle cx="34" cy="252" r="4" fill="#111"/></g>' +
-      tag("STREETLIFE", 14, 222, 22, LAV, -3) + tag("BAY ST", 312, 222, 18, "#fff", -5),
-      sky("s1", "#6a4a9a", "#ffb98a"));
+      '<rect width="400" height="260" fill="url(#s1)"/>' + '<g class="dft">' + cloud(240, 26, .7) + '</g>' +
+      /* embankment deck with the train */
+      '<g class="anim-train">' + sirCar(-20, 40, 320) + '</g>' +
+      '<rect x="0" y="102" width="400" height="8" fill="#eab308"/><rect x="0" y="110" width="400" height="104" fill="#6e6250"/>' + wall +
+      /* the stair coming down to the sidewalk */
+      '<path d="M250 214l60-104h40l-60 104z" fill="#55606a"/>' + [0, 1, 2, 3, 4, 5, 6, 7].map(i => '<path d="M' + (256 + i * 7) + ' ' + (204 - i * 12) + 'h38" stroke="#3a434c" stroke-width="2"/>').join("") +
+      '<path d="M250 214l60-104" stroke="#d8c8a4" stroke-width="3"/><path d="M290 214l60-104" stroke="#d8c8a4" stroke-width="3"/>' +
+      station("Clifton", 40, 120, 150) + '<rect x="40" y="158" width="150" height="16" fill="#111"/><text x="115" y="170" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" fill="#fff">TOMPKINS AV EXIT</text>' +
+      tag("STREETLIFE", 20, 204, 26, LAV, -4) +
+      /* sidewalk, the street sign and the arrow toward the museum */
+      '<rect y="214" width="400" height="16" fill="#9a968c"/><rect y="230" width="400" height="30" fill="#2c2c30"/>' +
+      '<rect x="370" y="120" width="5" height="94" fill="#4a4a4a"/>' + blade(282, 124, 112, "Tompkins Av", 0) +
+      '<rect x="276" y="152" width="120" height="30" rx="3" fill="#6a3a24"/><text x="336" y="165" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="8" fill="#fff">CHESTNUT AV ↓</text><text x="336" y="176" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="7" fill="#f2d68a">GARIBALDI-MEUCCI</text>' +
+      '<g class="cr1"><rect x="0" y="238" width="44" height="14" rx="4" fill="' + GOLD + '"/><circle cx="10" cy="252" r="4" fill="#111"/><circle cx="34" cy="252" r="4" fill="#111"/></g>',
+      sky("s1", "#7ab8e8", "#ffd9a0"));
   }
 
   /* 2. Rosebank: the Garibaldi-Meucci Museum, the cream Gothic Revival cottage with its steep gables, green shutters, the Italian flag flying */
@@ -93,50 +94,45 @@
       sky("m1", "#4f9ad8", "#d8ecff"));
   }
 
-  /* 3. Silver Lake Park: the lake under fall trees, geese gliding, the path around the water */
+  /* 3. The Our Lady of Mount Carmel Grotto on Amity St, Rosebank: the hand-built 1930s stone-and-shell shrine, arches and niches, candles flickering */
   function silverlake() {
-    let trees = ""; for (let x = -8; x < 410; x += 30) trees += '<circle cx="' + x + '" cy="' + (112 - (x % 60 ? 6 : 0)) + '" r="22" fill="' + ["#d9822b", "#b8461f", "#e6b13a", "#3f7a2a"][(x / 30 | 0) % 4] + '"/>';
+    let stones = ""; for (let i = 0; i < 60; i++) stones += '<circle cx="' + (76 + (i * 137) % 250) + '" cy="' + (56 + (i * 71) % 156) + '" r="' + (2 + i % 3) + '" fill="' + ["#d8c8a8", "#a89a80", "#f2ece0", "#8a7a64"][i % 4] + '"/>';
+    const niche = (x, y, w, h) => '<path d="M' + x + ' ' + (y + h) + 'v-' + (h - w / 2) + 'a' + (w / 2) + ' ' + (w / 2) + ' 0 0 1 ' + w + ' 0v' + (h - w / 2) + 'z" fill="#2a2440" stroke="#f2ece0" stroke-width="3"/>';
+    let shells = ""; for (let i = 0; i < 14; i++) { const a = Math.PI + i * Math.PI / 13; shells += '<path d="M' + (200 + Math.cos(a) * 92).toFixed(1) + ' ' + (130 + Math.sin(a) * 92).toFixed(1) + 'l5 -6 5 6z" fill="#f6efe6" stroke="#c9a88a"/>'; }
+    const candle = (x, cls) => '<rect x="' + (x - 3) + '" y="206" width="6" height="14" fill="#f6efdc"/><path class="flk ' + cls + '" d="M' + x + ' 196q4 6 0 10q-4-4 0-10z" fill="#ffcf4d"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#l1)"/>' + '<g class="dft">' + cloud(120, 40, .8) + '</g>' +
-      '<path d="M0 118q100-30 200-6t200-10v20H0z" fill="#4a6a3a"/>' + trees +
-      '<rect y="128" width="400" height="80" fill="#6aa6c8"/>' +
-      '<g class="wv"><path d="M0 150q10-4 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0" stroke="#d8f0ff" stroke-width="1.5" fill="none" opacity=".7"/>' +
-      '<path d="M0 180q10-4 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0" stroke="#d8f0ff" stroke-width="1.5" fill="none" opacity=".5"/></g>' +
-      /* reflection of trees */
-      '<rect y="128" width="400" height="10" fill="#c9772a" opacity=".25"/>' +
-      /* geese */
-      '<g class="swm">' + [80, 116].map(x => '<g transform="translate(' + x + ' 166)"><ellipse cx="0" cy="0" rx="12" ry="5" fill="#6a5a4a"/><path d="M8 -2q4-12 8-12" stroke="#222" stroke-width="3" fill="none"/><circle cx="16" cy="-14" r="3" fill="#222"/><rect x="12" y="-12" width="4" height="2" fill="#fff"/></g>').join("") + '</g>' +
-      /* path + rail */
-      '<rect y="208" width="400" height="52" fill="#5f9a3a"/><path d="M0 222q200 14 400 0v12q-200 14-400 0z" fill="#c9b28a"/>' +
-      (function () { let r = ""; for (let x = 0; x < 400; x += 40) r += '<rect x="' + x + '" y="204" width="3" height="14" fill="#6a4a2a"/>'; return r; })() + '<rect y="206" width="400" height="3" fill="#6a4a2a"/>' +
-      '<g class="lf"><path d="M300 60l5 3-5 3-5-3z" fill="#e6b13a"/></g><g class="lf lf2"><path d="M200 50l5 3-5 3-5-3z" fill="#b8461f"/></g><g class="lf lf3"><path d="M100 70l5 3-5 3-5-3z" fill="#d9822b"/></g>' +
-      '<text x="200" y="252" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#fff">SILVER LAKE PARK</text>',
-      sky("l1", "#7ab8e8", "#f2e6d0"));
+      '<rect width="400" height="260" fill="url(#l1)"/>' + stars(14) +
+      /* the grotto mass */
+      '<path d="M60 220V120q0-90 140-90t140 90v100z" fill="#7a6a54"/>' + stones + shells +
+      niche(156, 70, 88, 140) + '<path d="M200 96l10 18h-20z" fill="#9fd0f0" opacity=".7"/><rect x="194" y="114" width="12" height="40" rx="6" fill="#9fd0f0" opacity=".55"/>' +
+      niche(84, 120, 44, 80) + niche(272, 120, 44, 80) +
+      '<rect x="182" y="40" width="36" height="6" fill="#f2ece0"/><rect x="197" y="24" width="6" height="22" fill="#f2ece0"/><rect x="190" y="30" width="20" height="5" fill="#f2ece0"/>' +
+      '<rect x="0" y="220" width="400" height="40" fill="#5a5450"/>' +
+      candle(96, "") + candle(110, "flk2") + candle(184, "flk2") + candle(200, "") + candle(216, "flk2") + candle(290, "") + candle(304, "flk2") +
+      '<text x="200" y="244" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#fff">MOUNT CARMEL GROTTO · AMITY ST</text>' +
+      tag("STREETLIFE", 8, 30, 20, LAV, -4),
+      sky("l1", "#1a1438", "#4a3a6a"));
   }
 
-  /* 4. Willowbrook Park: the Carousel for All Children, the striped canopy turning, painted horses going up and down */
+  /* 4. Album world, Street Education (2005): the Shaolin schoolroom, the chalkboard full of lessons, the brick wall, the desk with the Wu name scratched in, chalk dust drifting */
   function carousel() {
-    const horse = (x, c, cls) => '<g class="' + cls + '"><rect x="' + (x + 9) + '" y="96" width="2" height="74" fill="' + GOLD + '"/>' +
-      '<path d="M' + x + ' 138h20l6-8 6 2-4 10v8h-4v10h-4v-10h-12v10h-4v-10h-4z" fill="' + c + '" stroke="#5a3a22" stroke-width="1"/><path d="M' + (x + 26) + ' 130l2-6 4 4" fill="' + c + '"/></g>';
+    let bricks = ""; for (let y = 0; y < 200; y += 12) for (let x = (y / 12) % 2 ? -14 : 0; x < 400; x += 28) bricks += '<rect x="' + x + '" y="' + y + '" width="26" height="10" fill="#8a4a3a"/>';
+    const chalk = (t, x, y, s, c) => '<text x="' + x + '" y="' + y + '" font-family="Comic Sans MS, Chalkboard, cursive" font-size="' + s + '" fill="' + (c || "#f2f2e8") + '">' + t + '</text>';
     return svg(
-      '<style>@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}.hb1{animation:bob 1.6s ease-in-out infinite}.hb2{animation:bob 1.6s ease-in-out infinite;animation-delay:-.8s}</style>' +
-      '<rect width="400" height="260" fill="url(#k1)"/>' +
-      (function () { let t = ""; for (let x = 0; x < 400; x += 36) t += '<circle cx="' + x + '" cy="150" r="24" fill="#3f7a2a"/>'; return t; })() +
-      '<rect y="160" width="400" height="100" fill="#5f9a3a"/>' +
-      /* pavilion roof */
-      '<path d="M70 92l130-50 130 50z" fill="#d22a2a"/>' +
-      (function () { let s = ""; for (let i = 0; i < 10; i++) { const x1 = 70 + i * 26, x2 = 83 + i * 26; s += '<path d="M200 42L' + x1 + ' 92h13z" fill="#f7f3ea"/>'; } return s; })() +
-      '<rect x="64" y="90" width="272" height="10" fill="' + GOLD + '"/>' +
-      (function () { let b = ""; for (let x = 72; x < 334; x += 14) b += '<circle cx="' + x + '" cy="95" r="2.4" fill="#fff6c2" class="' + (x % 28 ? "blk" : "blk2") + '"/>'; return b; })() +
-      '<path d="M196 42v-12h8v12z" fill="' + GOLD + '"/><circle cx="200" cy="26" r="5" fill="' + GOLD + '"/>' +
-      /* platform */
-      '<rect x="72" y="100" width="256" height="76" fill="#3a2a4a"/>' +
-      '<rect x="190" y="100" width="20" height="76" fill="#6a4a8a"/>' +
-      horse(86, "#f7f3ea", "hb1") + horse(130, LAV, "hb2") + horse(222, SKY, "hb1") + horse(266, "#ffb0c8", "hb2") +
-      '<ellipse cx="200" cy="178" rx="136" ry="10" fill="#c9a24a"/><ellipse cx="200" cy="176" rx="136" ry="8" fill="' + GOLD + '"/>' +
-      '<text x="200" y="232" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="16" letter-spacing="2" fill="#fff">CAROUSEL FOR ALL CHILDREN</text>' +
-      '<text x="200" y="250" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#fff">WILLOWBROOK PARK</text>',
-      sky("k1", "#5aa6e0", "#e8f4ff"));
+      '<rect width="400" height="260" fill="#6a3a2a"/>' + bricks +
+      /* the chalkboard */
+      '<rect x="40" y="20" width="320" height="140" fill="#6a4a2a"/><rect x="48" y="28" width="304" height="124" fill="#26382c"/>' +
+      chalk("STREET EDUCATION", 62, 54, 18, GOLD) + chalk("Lesson 1: Shaolin, Staten Island", 62, 78, 12) + chalk("Lesson 2: Tompkins &amp; Chestnut", 62, 98, 12) + chalk("Lesson 3: Wu forever", 62, 118, 12) +
+      chalk("2005", 300, 140, 14, LAV) + '<path d="M62 126h120" stroke="#f2f2e8" stroke-width="1.5" opacity=".7"/>' +
+      '<rect x="40" y="160" width="320" height="8" fill="#5a3a20"/><rect x="90" y="156" width="20" height="5" fill="#f2f2e8"/><rect x="130" y="156" width="14" height="5" fill="#ffd34d"/>' +
+      /* chalk dust floating */
+      '<g class="lf"><circle cx="240" cy="120" r="2" fill="#fff" opacity=".7"/></g><g class="lf lf2"><circle cx="170" cy="110" r="1.6" fill="#fff" opacity=".7"/></g><g class="lf lf3"><circle cx="300" cy="100" r="2" fill="#fff" opacity=".7"/></g>' +
+      /* the desk */
+      '<rect x="0" y="200" width="400" height="60" fill="#3a2a22"/><path d="M60 196h280l20 24H40z" fill="#a8784a"/><rect x="60" y="220" width="8" height="40" fill="#6a4a2a"/><rect x="332" y="220" width="8" height="40" fill="#6a4a2a"/>' +
+      '<text x="200" y="214" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="11" fill="#6a4a2a" letter-spacing="1">WU · SHAOLIN · STREETLIFE</text>' +
+      '<g class="pk"><rect x="314" y="186" width="30" height="12" fill="' + GOLD + '"/><rect x="316" y="188" width="26" height="2" fill="#6a4a2a"/></g>' +
+      tag("STREETLIFE", 14, 252, 24, LAV, -3),
+      "");
   }
 
   /* 5. Tompkins Av & Chestnut Av in Rosebank, down from Clifton: green signs, the tag wall, a lavender drip */

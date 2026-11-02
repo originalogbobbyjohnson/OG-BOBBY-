@@ -65,7 +65,7 @@ window.CFG = {
   {
    "scene": "train",
    "t": "PRESS PLAY",
-   "x": "Take the 6 to Hunts Point Av. Tap the record. Every song is an episode.",
+   "x": "Take the 6 to Longwood Av. Tap the record. Every song is an episode.",
    "sfx": "train"
   },
   {
@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "corner",
    "t": "WELCOME TO THE SOUTH BRONX",
-   "x": "Hunts Point Av and Southern Blvd. This is Melle Mel's game.",
+   "x": "Southern Blvd and Longwood Av. This is Melle Mel's game.",
    "sfx": "spray"
   }
  ],

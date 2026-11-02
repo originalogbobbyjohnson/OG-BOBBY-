@@ -89,7 +89,7 @@ window.CFG = {
   {
    "scene": "block",
    "t": "WELCOME TO QUEENS",
-   "x": "Jamaica Av and Parsons Blvd. This is Grafh's game.",
+   "x": "Jamaica Av and 165th St, at the 165th St Mall. This is Grafh's game.",
    "sfx": "spray"
   }
  ],
