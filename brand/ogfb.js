@@ -1,7 +1,7 @@
 /* © OG Bobby / OG FAN 99. Small online database for the Riders Board and artist door claims (Firebase Firestore). */
 (function () {
   /* paste the web config from the Firebase console here (it is safe to be public; the database rules protect the data) */
-  var CFG = null;
+  var CFG = {"apiKey": "AIzaSyAg9hCV8wIjGNvh_rO-GWo_AvZL0PPuQdY", "authDomain": "og-fan-99.firebaseapp.com", "projectId": "og-fan-99", "storageBucket": "og-fan-99.firebasestorage.app", "messagingSenderId": "603754404534", "appId": "1:603754404534:web:58254d530ca9ee6245e417"};
   var V = "10.12.2", P = null;
   function load(src) { return new Promise(function (ok, no) { var s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = no; document.head.appendChild(s); }); }
   function db() {
