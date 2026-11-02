@@ -2,7 +2,7 @@ window.CFG = {
  "name": "JoJo Pellegrino",
  "nameUpper": "JOJO PELLEGRINO",
  "short": "JOJO",
- "hood": "Staten Island",
+ "hood": "Great Kills",
  "hoodUpper": "STATEN ISLAND",
  "boro": "Staten Island",
  "saveKey": "ogfan99jojopellegrino1",
@@ -65,31 +65,31 @@ window.CFG = {
   {
    "scene": "station",
    "t": "PRESS PLAY",
-   "x": "Take the Staten Island Railway to the end of the line, St. George. Tap the record. Every song is an episode.",
+   "x": "Take the SIR to Great Kills. Tap the record. Every song is an episode.",
    "sfx": "train"
   },
   {
-   "scene": "theatre",
+   "scene": "harbor",
    "t": "EVERY SONG STOPS",
    "x": "At the end of a verse the song stops and asks about what you just heard. Answer right and it keeps going.",
-   "sfx": "organ"
-  },
-  {
-   "scene": "hall",
-   "t": "1, THEN 2, THEN 3",
-   "x": "(auto-filled by the game)",
    "sfx": "bell"
   },
   {
-   "scene": "grotto",
+   "scene": "pizzeria",
+   "t": "1, THEN 2, THEN 3",
+   "x": "(auto-filled by the game)",
+   "sfx": "espresso"
+  },
+  {
+   "scene": "beach",
    "t": "CLIMB THE RANKS",
    "x": "(auto-filled by the game)",
    "sfx": "crowd"
   },
   {
    "scene": "corner",
-   "t": "WELCOME TO STATEN ISLAND",
-   "x": "Hyatt St and St Marks Pl, by the St. George Theatre. This is JoJo Pellegrino's game.",
+   "t": "WELCOME TO GREAT KILLS",
+   "x": "Hylan Blvd and Giffords Ln, Great Kills. This is JoJo Pellegrino's game.",
    "sfx": "spray"
   }
  ],

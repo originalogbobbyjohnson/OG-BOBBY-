@@ -45,114 +45,147 @@
     '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="34" rx="4" fill="#111"/><rect x="' + x + '" y="' + y + '" width="' + w + '" height="4" fill="#fff"/>' +
     '<text x="' + (x + 14) + '" y="' + (y + 25) + '" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">' + name + '</text>' + sir(x + w - 28, y + 18);
   const RED = "#ff4b3e", GRN = "#2fb24c", GOLD = "#ffd34d";
+  const gull = (x, y, s) => '<path d="M' + x + ' ' + y + 'q' + (5 * s) + ' ' + (-5 * s) + ' ' + (10 * s) + ' 0q' + (5 * s) + ' ' + (-5 * s) + ' ' + (10 * s) + ' 0" stroke="#f7f3ea" stroke-width="1.6" fill="none"/>';
+  const waves = (y, col, op) => { let w = ""; for (let x = -40; x < 440; x += 40) w += '<path d="M' + x + ' ' + y + 'q10-4 20 0t20 0" stroke="' + col + '" stroke-width="1.5" fill="none" opacity="' + op + '"/>'; return '<g class="wv">' + w + '</g>'; };
+  const bobCss = '<style>@keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(2px) rotate(1.2deg)}}.bob{transform-box:fill-box;transform-origin:50% 100%;animation:bob 3s ease-in-out infinite}.bob2{animation-delay:-1.4s}</style>';
+  /* moored sailboat: hull at x (center), waterline y, mast height m */
+  const sailboat = (x, y, m, hull, cls) =>
+    '<g class="bob ' + (cls || "") + '"><path d="M' + (x - 22) + ' ' + (y - 8) + 'h44l-7 10h-30z" fill="' + hull + '" stroke="#1a1a1a" stroke-width="1"/>' +
+    '<rect x="' + (x - 8) + '" y="' + (y - 13) + '" width="14" height="5" rx="1" fill="#e9e4d8"/>' +
+    '<line x1="' + x + '" y1="' + (y - 8) + '" x2="' + x + '" y2="' + (y - 8 - m) + '" stroke="#2a2a2a" stroke-width="1.6"/>' +
+    '<line x1="' + x + '" y1="' + (y - 8 - m) + '" x2="' + (x - 20) + '" y2="' + (y - 8) + '" stroke="#2a2a2a" stroke-width=".6"/>' +
+    '<line x1="' + x + '" y1="' + (y - 8 - m) + '" x2="' + (x + 20) + '" y2="' + (y - 8) + '" stroke="#2a2a2a" stroke-width=".6"/>' +
+    '<rect x="' + x + '" y="' + (y - 18) + '" width="16" height="4" rx="2" fill="#1f3c88"/></g>';
 
-  /* 1. St. George: end of the line, the SIR train pulling into the covered terminal by the ferry */
+  /* 1. Great Kills SIR station: open cut, the train pulling in under the canopy */
   function station1() {
-    let ribs = ""; for (let x = 0; x <= W; x += 40) ribs += '<rect x="' + (x - 3) + '" y="40" width="6" height="140" fill="#3a4450"/>';
+    let posts = ""; for (let x = 20; x < 400; x += 60) posts += '<rect x="' + (x - 2) + '" y="64" width="4" height="112" fill="#56606b"/>';
+    let shrubs = ""; for (let x = 0; x < 420; x += 26) shrubs += '<ellipse cx="' + x + '" cy="40" rx="16" ry="9" fill="' + (x % 52 ? "#3f7a2a" : "#4f8f34") + '"/>';
+    let blocks = ""; for (let y = 48; y < 176; y += 14) for (let x = (y / 14) % 2 ? -20 : 0; x < 400; x += 40) blocks += '<rect x="' + x + '" y="' + y + '" width="39" height="13" fill="#a8a196"/>';
     return svg(
-      '<rect width="400" height="260" fill="#121820"/>' +
-      '<rect width="400" height="44" fill="#26303b"/>' +
-      (function () { let l = ""; for (let x = 10; x < 400; x += 64) l += '<rect x="' + x + '" y="8" width="40" height="16" rx="2" fill="#7ea3bf" opacity=".55"/>'; return l; })() +
-      '<rect y="40" width="400" height="6" fill="#3a4450"/>' + ribs +
-      '<circle cx="40" cy="58" r="4" fill="#fff3c4"/><circle cx="360" cy="58" r="4" fill="#fff3c4"/>' +
-      station("St. George", 90, 62, 220) +
-      '<g class="anim-train">' + sirCar(-10, 110, 330) + '</g>' +
+      '<rect width="400" height="260" fill="url(#g1)"/>' + '<g class="dft">' + cloud(70, 16, .8) + cloud(260, 22, .6) + '</g>' +
+      '<rect y="44" width="400" height="132" fill="#8e877c"/>' + blocks + shrubs +
+      '<rect x="160" y="18" width="80" height="26" fill="#d9d2c4"/><path d="M156 18h88l-6-8h-76z" fill="#6b4a3a"/>' +
+      /* canopy */
+      '<path d="M0 58h400v8H0z" fill="#2f3a46"/><path d="M0 52h400l0 6H0z" fill="#46525f"/>' + posts +
+      '<rect x="40" y="66" width="3" height="10" fill="#333"/><rect x="357" y="66" width="3" height="10" fill="#333"/>' +
+      station("Great Kills", 90, 70, 220) +
+      '<circle cx="40" cy="80" r="3.5" fill="#fff3c4" class="blk"/><circle cx="360" cy="80" r="3.5" fill="#fff3c4" class="blk2"/>' +
+      '<g class="anim-train">' + sirCar(-10, 112, 330) + '</g>' +
       '<rect y="174" width="400" height="10" fill="#eab308"/>' +
-      '<rect y="184" width="400" height="76" fill="#1c232c"/>' +
-      '<text x="200" y="208" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#ffd38a">FERRY ↑  ·  END OF THE LINE</text>' +
-      tag("PELLE", 24, 244, 30, RED, -4) + tag("FOGEDABOUDID", 196, 248, 24, GRN, -6));
+      '<rect y="184" width="400" height="76" fill="#4a4d52"/>' +
+      '<text x="200" y="206" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#ffd38a">SIR  ·  GREAT KILLS  ·  STATEN ISLAND</text>' +
+      tag("PELLE", 20, 246, 28, RED, -5) + tag("FOGEDABOUDID", 150, 248, 26, GRN, -5),
+      sky("g1", "#5aa6e6", "#d7ecff"));
   }
 
-  /* 2. The St. George Theatre on Hyatt St: cream terracotta front, tall red blade sign, chasing marquee bulbs */
-  function theatre() {
-    let bulbs = ""; for (let x = 108; x <= 292; x += 8) bulbs += '<circle cx="' + x + '" cy="150" r="2.2" fill="#fff3b0" class="' + ((x / 8) % 2 ? "blk" : "blk2") + '"/><circle cx="' + x + '" cy="178" r="2.2" fill="#fff3b0" class="' + ((x / 8) % 2 ? "blk2" : "blk") + '"/>';
-    let letters = ""; "STGEORGE".split("").forEach((c, i) => letters += '<text x="200" y="' + (40 + i * 13) + '" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" fill="#fff" class="' + (i % 2 ? "blk" : "") + '">' + c + '</text>');
-    let windows = ""; [70, 104, 280, 314].forEach(x => windows += '<path d="M' + x + ' 128v-30a8 8 0 0 1 16 0v30z" fill="#3a2a1e" stroke="#c9a24a" stroke-width="1.5"/>');
+  /* 2. Great Kills Harbor: docks, moored sailboats, the water at sunset */
+  function harbor() {
+    let refl = ""; for (let i = 0; i < 7; i++) refl += '<rect x="' + (300 - i * 3) + '" y="' + (128 + i * 9) + '" width="' + (40 + i * 6) + '" height="3" rx="1.5" fill="#ffcf6b" opacity="' + (0.8 - i * 0.09).toFixed(2) + '"/>';
+    let piles = ""; for (let x = 18; x < 260; x += 34) piles += '<rect x="' + x + '" y="186" width="6" height="34" fill="#4a3424"/><rect x="' + (x - 1) + '" y="184" width="8" height="3" fill="#2a1d14"/>';
+    return svg(bobCss +
+      '<rect width="400" height="260" fill="url(#m1)"/>' +
+      '<circle cx="322" cy="118" r="26" fill="#ffd36b"/>' +
+      gull(80, 40, 1) + gull(112, 30, .8) + '<g class="dft">' + gull(0, 56, .9) + '</g>' +
+      /* far shore treeline */
+      '<path d="M0 120q30-10 60-4t60-2t70 2t80-6t70 4t60-2v12H0z" fill="#3a2a3a"/>' +
+      '<rect y="128" width="400" height="132" fill="url(#m2)"/>' + refl +
+      waves(150, "#ffd8a8", .5) + waves(176, "#ffd8a8", .35) +
+      /* sailboat leaving the harbor */
+      '<g class="bt"><path d="M0 150h34l-5 6H6z" fill="#f2efe6"/><path d="M16 149V112l16 36z" fill="#f7f3ea"/><path d="M15 149V118l-12 30z" fill="#e9d9c0"/></g>' +
+      sailboat(70, 170, 70, "#f2efe6") + sailboat(150, 172, 84, "#1f3c88", "bob2") + sailboat(240, 170, 64, "#f2efe6") + sailboat(330, 176, 76, "#7a1e1e", "bob2") +
+      /* main dock */
+      '<rect x="0" y="194" width="270" height="8" fill="#9a7650"/><rect x="0" y="202" width="270" height="3" fill="#5c4330"/>' + piles +
+      '<rect y="232" width="400" height="28" fill="#1d1824" opacity=".85"/>' +
+      '<text x="200" y="250" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#ffd38a">GREAT KILLS HARBOR · SUNSET</text>',
+      sky("m1", "#3a2a5e", "#ff9a5a") + sky("m2", "#d9785a", "#2a2a4a"));
+  }
+
+  /* 3. Nonna's Pizza on Hylan Blvd (plain lettering, no logo): striped awning, giant slice sign, the oven glowing */
+  function pizzeria() {
+    let stripes = ""; for (let i = 0; i < 14; i++) stripes += '<path d="M' + (60 + i * 20) + ' 112h20l-2 26h-20z" fill="' + ["#c4161c", "#f7f3ea", "#1f8a3a"][i % 3] + '"/>';
+    let scallop = ""; for (let i = 0; i < 14; i++) scallop += '<path d="M' + (58 + i * 20) + ' 138q10 10 20 0z" fill="' + ["#c4161c", "#f7f3ea", "#1f8a3a"][i % 3] + '"/>';
+    let upwin = ""; [82, 142, 230, 290].forEach(x => upwin += '<rect x="' + x + '" y="40" width="30" height="34" fill="#2c3e57" stroke="#efe6d2" stroke-width="2"/><line x1="' + (x + 15) + '" y1="40" x2="' + (x + 15) + '" y2="74" stroke="#efe6d2" stroke-width="1.5"/>');
     return svg(
-      '<rect width="400" height="260" fill="url(#t1)"/>' + stars(16) +
-      /* side brick buildings */
-      '<rect x="0" y="90" width="50" height="150" fill="#5a2f24"/><rect x="350" y="80" width="50" height="160" fill="#5a2f24"/>' +
-      /* facade */
-      '<rect x="50" y="74" width="300" height="166" fill="#e9dcc0"/>' +
-      '<path d="M50 74h300v12H50z" fill="#d6c19a"/>' +
-      '<path d="M150 74q50-26 100 0z" fill="#e9dcc0" stroke="#c9a24a" stroke-width="2"/>' +
-      '<circle cx="200" cy="66" r="6" fill="#c9a24a"/>' +
-      (function () { let o = ""; for (let x = 58; x < 345; x += 14) o += '<circle cx="' + x + '" cy="92" r="3" fill="#c9a24a"/>'; return o; })() +
-      windows +
-      /* vertical blade sign */
-      '<rect x="186" y="22" width="28" height="118" rx="4" fill="#c4161c" stroke="#fff3b0" stroke-width="2"/>' + letters +
-      /* marquee */
-      '<path d="M96 146h208l-10 36H106z" fill="#1a1a1a" stroke="#c9a24a" stroke-width="2"/>' + bulbs +
-      '<rect x="116" y="156" width="168" height="18" fill="#f7f3ea"/>' +
-      '<text x="200" y="170" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" textLength="156" lengthAdjust="spacingAndGlyphs" fill="#111">TONIGHT · LIVE HIP-HOP</text>' +
-      /* doors */
-      '<rect x="120" y="194" width="160" height="46" fill="#3a2a1e"/>' +
-      (function () { let d = ""; for (let x = 126; x < 280; x += 26) d += '<rect x="' + x + '" y="198" width="20" height="42" fill="#8a6a3e" stroke="#c9a24a" stroke-width="1"/>'; return d; })() +
-      '<rect y="240" width="400" height="20" fill="#2a2a2e"/>' +
-      '<text x="12" y="254" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#ffd38a">HYATT ST · SINCE 1929</text>',
-      sky("t1", "#151a3a", "#6b3a5a"));
+      '<rect width="400" height="260" fill="url(#p1)"/>' + '<g class="dft">' + cloud(40, 18, .7) + '</g>' +
+      '<rect x="0" y="60" width="50" height="168" fill="#6b5a4a"/><rect x="350" y="50" width="50" height="178" fill="#8a7a62"/>' +
+      '<rect x="50" y="24" width="300" height="204" fill="#b5552f"/><rect x="50" y="24" width="300" height="6" fill="#efe6d2"/>' + upwin +
+      /* sign band */
+      '<rect x="56" y="82" width="288" height="28" rx="3" fill="#1a1a1a" stroke="#ffd34d" stroke-width="2"/>' +
+      '<text x="200" y="104" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="21" letter-spacing="3" fill="#ffd34d">NONNA\'S PIZZA</text>' +
+      stripes + scallop +
+      /* window with oven glow */
+      '<rect x="120" y="152" width="100" height="62" fill="#2a1a12" stroke="#efe6d2" stroke-width="2"/>' +
+      '<path d="M140 206v-20a30 22 0 0 1 60 0v20z" fill="#7a2a12"/><path d="M152 206v-14a18 14 0 0 1 36 0v14z" fill="#ff8a2a" class="flk"/>' +
+      '<rect x="126" y="200" width="88" height="5" fill="#c9a24a"/>' +
+      '<text x="170" y="166" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="2" fill="#ffd34d">SLICES · HOT</text>' +
+      /* door */
+      '<rect x="236" y="150" width="40" height="78" fill="#3a2a1e" stroke="#efe6d2" stroke-width="2"/><rect x="242" y="158" width="28" height="34" fill="#cfe6ff" opacity=".5"/><circle cx="270" cy="196" r="2" fill="#c9a24a"/>' +
+      '<rect x="288" y="152" width="52" height="62" fill="#2a1a12" stroke="#efe6d2" stroke-width="2"/>' +
+      '<text x="314" y="178" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" fill="#2fb24c">OPEN</text>' +
+      '<text x="314" y="196" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="8" fill="#f7f3ea">EST. ON</text><text x="314" y="206" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="8" fill="#f7f3ea">HYLAN</text>' +
+      /* big slice sign on a bracket */
+      '<rect x="344" y="66" width="34" height="3" fill="#333"/><line x1="350" y1="69" x2="350" y2="76" stroke="#333"/><line x1="374" y1="69" x2="374" y2="76" stroke="#333"/>' +
+      '<g class="swp" style="transform-origin:362px 69px"><path d="M340 76h44l-22 60z" fill="#ffd34d" stroke="#7a5512" stroke-width="2" stroke-linejoin="round"/><path d="M340 76h44v-1q-22 8-44 0z" fill="#c98a1a"/><rect x="340" y="74" width="44" height="6" rx="3" fill="#c98a1a"/>' +
+      '<circle cx="354" cy="90" r="4" fill="#c4161c"/><circle cx="370" cy="92" r="4" fill="#c4161c"/><circle cx="362" cy="108" r="3.5" fill="#c4161c"/></g>' +
+      /* sidewalk + Hylan Blvd */
+      '<rect y="228" width="400" height="8" fill="#9a9a9a"/><rect y="236" width="400" height="24" fill="#2c2c30"/>' +
+      '<rect x="0" y="247" width="400" height="2" fill="#f2c200" opacity=".7"/>' +
+      '<g class="cr1"><rect x="0" y="238" width="46" height="14" rx="4" fill="#3d6fb5"/><circle cx="10" cy="253" r="4" fill="#111"/><circle cx="36" cy="253" r="4" fill="#111"/></g>' +
+      '<rect x="54" y="168" width="4" height="60" fill="#4a4a4a"/>' + blade(4, 158, 104, "Hylan Blvd", 0),
+      sky("p1", "#4b93d8", "#cfe6ff"));
   }
 
-  /* 3. Borough Hall: red brick and limestone, mansard roof, the clock tower, the flag flying */
-  function hall() {
-    let win = ""; for (let x = 92; x < 320; x += 26) { if (x > 180 && x < 220) continue; win += '<path d="M' + x + ' 170v-22a7 7 0 0 1 14 0v22z" fill="#2c3e57" stroke="#efe6d2" stroke-width="2"/><rect x="' + x + '" y="186" width="14" height="22" fill="#2c3e57" stroke="#efe6d2" stroke-width="2"/>'; }
+  /* 4. Great Kills Park: the beach, dune grass, and Crooke's Point running out into the bay */
+  function beach() {
+    let grass = ""; for (let x = 4; x < 400; x += 9) grass += '<path d="M' + x + ' 206q2-12 6-18M' + (x + 3) + ' 206q-1-10-5-16" stroke="#7a8f3a" stroke-width="1.4" fill="none"/>';
     return svg(
-      '<rect width="400" height="260" fill="url(#h1)"/>' + '<g class="dft">' + cloud(60, 40, 1) + cloud(240, 60, .8) + '</g>' +
-      /* body */
-      '<rect x="80" y="132" width="240" height="94" fill="#a8432f"/>' +
-      '<rect x="80" y="176" width="240" height="4" fill="#efe6d2"/><rect x="80" y="132" width="240" height="6" fill="#efe6d2"/>' +
-      '<path d="M72 132h256l-14-20H86z" fill="#4a5361"/>' + win +
-      /* tower */
-      '<rect x="182" y="62" width="36" height="164" fill="#a8432f"/>' +
-      '<rect x="180" y="96" width="40" height="5" fill="#efe6d2"/>' +
-      '<path d="M178 62h44l-6-22h-32z" fill="#4a5361"/><path d="M190 40l10-16 10 16z" fill="#4a5361"/>' +
-      '<line x1="200" y1="24" x2="200" y2="6" stroke="#333" stroke-width="1.5"/>' +
-      '<g class="flg"><path d="M200 7h18v11h-18z" fill="#f7f3ea"/><path d="M200 7h7v6h-7z" fill="#0039a6"/><path d="M207 9h11M207 11h11M200 15h18" stroke="#c4161c" stroke-width="1"/></g>' +
-      '<circle cx="200" cy="80" r="12" fill="#f7f3ea" stroke="#2b2b2b" stroke-width="2"/>' +
-      '<line x1="200" y1="80" x2="200" y2="72" stroke="#111" stroke-width="2"/>' +
-      '<g class="spn" style="transform-origin:200px 80px"><line x1="200" y1="80" x2="207" y2="80" stroke="#c4161c" stroke-width="1.5"/></g>' +
-      '<path d="M192 226v-26a8 8 0 0 1 16 0v26z" fill="#3a2a1e" stroke="#efe6d2" stroke-width="2"/>' +
-      /* steps + lawn */
-      '<rect x="60" y="226" width="280" height="6" fill="#cfc6b4"/><rect y="232" width="400" height="28" fill="#3f7a2a"/>' +
-      '<text x="200" y="250" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#fff">BOROUGH HALL · RICHMOND TERRACE</text>',
-      sky("h1", "#3d8fd6", "#cde9ff"));
+      '<rect width="400" height="260" fill="url(#b1)"/>' + '<circle cx="70" cy="44" r="18" fill="#fff4c2"/>' +
+      '<g class="dft">' + cloud(150, 30, .8) + cloud(330, 50, .6) + '</g>' +
+      gull(220, 60, 1) + gull(250, 52, .8) +
+      /* bay */
+      '<rect y="112" width="400" height="80" fill="url(#b2)"/>' + waves(130, "#ffffff", .4) + waves(154, "#ffffff", .3) +
+      /* Crooke\'s Point spit with a channel marker */
+      '<path d="M400 118q-60 2-110 10q-30 5-34 10q40 4 144 2z" fill="#e6d4a2"/><path d="M400 120q-50 2-92 9l8 2q40-6 84-6z" fill="#5f7a3a"/>' +
+      '<rect x="268" y="118" width="3" height="16" fill="#3a3a3a"/><rect x="264" y="112" width="11" height="8" fill="#2fa34a"/><circle cx="269.5" cy="109" r="2.5" fill="#7dff8a" class="blk"/>' +
+      /* fishing jetty */
+      '<path d="M120 192l60-56h8l-56 56z" fill="#6b6b6b"/>' +
+      '<line x1="178" y1="140" x2="190" y2="122" stroke="#222" stroke-width="1.2"/><path d="M190 122q6 10 4 20" stroke="#ddd" stroke-width=".6" fill="none"/>' +
+      /* surf line + sand */
+      '<path d="M0 186q100-8 200-2t200-4v12H0z" fill="#f4f1e8" opacity=".8"/>' +
+      '<path d="M0 190q100-6 200-2t200-4v76H0z" fill="#e6d4a2"/>' +
+      '<path d="M0 206q60-20 130-8t140-6t130 4v68H0z" fill="#d8c08a"/>' + grass +
+      /* boardwalk path and sign */
+      '<path d="M190 260l16-52h16l-6 52z" fill="#a07c52"/>' +
+      '<rect x="40" y="214" width="120" height="30" rx="3" fill="#5a3b22" stroke="#efe6d2" stroke-width="1.5"/><rect x="58" y="244" width="5" height="14" fill="#5a3b22"/><rect x="137" y="244" width="5" height="14" fill="#5a3b22"/>' +
+      '<text x="100" y="227" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="1" fill="#efe6d2">GREAT KILLS PARK</text>' +
+      '<text x="100" y="239" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="8" fill="#ffd38a">CROOKE\'S POINT →</text>' +
+      '<g class="swm"><path d="M300 236h40l-20-8z" fill="#c4161c"/><line x1="320" y1="228" x2="320" y2="252" stroke="#444" stroke-width="1.5"/><path d="M300 236q20 6 40 0" fill="#f7f3ea"/></g>',
+      sky("b1", "#4aa3e6", "#d9f0ff") + sky("b2", "#2d78a8", "#5fb0c8"));
   }
 
-  /* 4. Rosebank grotto: stone and shell arches built by Italian neighbors, candles and feast lights */
-  function grotto() {
-    let stones = ""; for (let i = 0; i < 70; i++) { const x = 60 + (i * 37) % 280, y = 60 + (i * 23) % 150; stones += '<ellipse cx="' + x + '" cy="' + y + '" rx="' + (5 + i % 4) + '" ry="' + (3 + i % 3) + '" fill="' + (i % 3 ? "#8d7f6e" : "#a99a86") + '"/>'; }
-    let shells = ""; for (let i = 0; i < 18; i++) { const a = Math.PI * (i / 17), x = 200 - Math.cos(a) * 84, y = 150 - Math.sin(a) * 84; shells += '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="3.5" fill="#f4ecdc" stroke="#b9a98f" stroke-width=".8"/>'; }
-    let lights = "", cols = [RED, "#ffffff", GRN];
-    for (let i = 0; i < 25; i++) { const x = 8 + i * 16, y = 22 + Math.sin(i / 24 * Math.PI) * 14; lights += '<circle cx="' + x + '" cy="' + y.toFixed(1) + '" r="3.2" fill="' + cols[i % 3] + '" class="' + (i % 2 ? "blk" : "blk2") + '"/>'; }
-    let candles = ""; [150, 166, 182, 218, 234, 250].forEach((x, i) => candles += '<rect x="' + (x - 4) + '" y="206" width="8" height="14" rx="1" fill="' + (i % 2 ? "#c4161c" : "#f7f3ea") + '"/><path d="M' + x + ' 196q4 6 0 10q-4-4 0-10z" fill="#ffc94d" class="flk' + (i % 2 ? " flk2" : "") + '"/>');
-    return svg(
-      '<rect width="400" height="260" fill="url(#r1)"/>' + stars(18) +
-      '<path d="M0 30q200 30 400 0" stroke="#333" stroke-width="1" fill="none"/>' + lights +
-      '<path d="M40 226V120q0-90 160-90t160 90v106z" fill="#6f6355"/>' + stones +
-      '<path d="M116 226v-76a84 84 0 0 1 168 0v76z" fill="#1e1a24"/>' + shells +
-      '<path d="M140 226v-70a60 60 0 0 1 120 0v70z" fill="#2b2433"/>' +
-      /* simple white figure in the niche, no face */
-      '<path d="M200 118a9 9 0 1 1 0 .1z" fill="#f4f1e8"/><path d="M186 186q2-50 14-56q12 6 14 56z" fill="#f4f1e8"/><path d="M190 132q10-6 20 0l-2 30h-16z" fill="#6aa2d8"/>' +
-      '<rect x="138" y="220" width="124" height="6" fill="#8d7f6e"/>' + candles +
-      '<rect y="226" width="400" height="34" fill="#2a2620"/>' +
-      '<text x="200" y="246" text-anchor="middle" font-family="Barlow, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="3" fill="#fff">ROSEBANK · THE GROTTO</text>',
-      sky("r1", "#0e1430", "#3a2c52"));
-  }
-
-  /* 5. Hyatt St & St Marks Pl, the wall tagged up */
+  /* 5. Hylan Blvd & Giffords Ln: the row of shops, the wall up top tagged */
   function corner() {
-    let bricks = ""; for (let y = 60; y < 220; y += 12) for (let x = (y / 12) % 2 ? -12 : 0; x < 400; x += 24) bricks += '<rect x="' + x + '" y="' + y + '" width="22" height="10" fill="#7a3a2c"/>';
+    let bricks = ""; for (let y = 40; y < 132; y += 12) for (let x = (y / 12) % 2 ? -12 : 0; x < 400; x += 24) bricks += '<rect x="' + x + '" y="' + y + '" width="22" height="10" fill="#7a3a2c"/>';
+    const shop = (x, w, word, awn) =>
+      '<rect x="' + x + '" y="132" width="' + w + '" height="90" fill="#d9cdb4"/>' +
+      '<rect x="' + (x + 4) + '" y="136" width="' + (w - 8) + '" height="18" fill="#1a1a1a"/>' +
+      '<text x="' + (x + w / 2) + '" y="150" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="12" letter-spacing="2" fill="#f7f3ea">' + word + '</text>' +
+      '<path d="M' + (x + 2) + ' 156h' + (w - 4) + 'l6 14h-' + (w + 8) + 'z" fill="' + awn + '"/>' +
+      '<rect x="' + (x + 8) + '" y="174" width="' + (w - 40) + '" height="40" fill="#2c3e57" opacity=".85"/>' +
+      '<rect x="' + (x + w - 26) + '" y="176" width="18" height="46" fill="#3a2a1e"/>';
     return svg(
       '<rect width="400" height="260" fill="url(#c1)"/>' +
-      '<rect y="58" width="400" height="164" fill="#5e2b20"/>' + bricks +
-      tag("JOJO", 30, 140, 46, RED, -6) + tag("PELLEGRINO", 120, 176, 40, "#fff", -5) + tag("SHAOLIN", 250, 112, 28, GRN, -8) +
-      '<g class="drp"><rect x="70" y="146" width="3" height="10" fill="' + RED + '"/></g><g class="drp" style="animation-delay:1s"><rect x="210" y="180" width="3" height="10" fill="#fff"/></g>' +
-      '<rect x="350" y="20" width="6" height="210" fill="#4a4a4a"/>' +
-      blade(286, 22, 128, "Hyatt St", 0) + blade(296, 48, 112, "St Marks Pl", 0) +
+      '<rect y="38" width="400" height="94" fill="#5e2b20"/>' + bricks +
+      tag("JOJO", 16, 96, 40, RED, -6) + tag("PELLEGRINO", 84, 122, 30, "#fff", -5) + tag("SHAOLIN", 112, 70, 24, GRN, -8) +
+      '<g class="drp"><rect x="50" y="100" width="3" height="10" fill="' + RED + '"/></g><g class="drp" style="animation-delay:1s"><rect x="160" y="124" width="3" height="8" fill="#fff"/></g>' +
+      shop(0, 96, "DELI", "#1f8a3a") + shop(96, 96, "BAKERY", "#c4161c") + shop(192, 96, "BARBER", "#1f3c88") + shop(288, 112, "PIZZERIA", "#d97a1a") +
       '<rect y="222" width="400" height="38" fill="#2c2c30"/><rect y="222" width="400" height="6" fill="#9a9a9a"/>' +
-      '<g class="cr1"><rect x="0" y="236" width="44" height="14" rx="4" fill="#f2c200"/><circle cx="10" cy="250" r="4" fill="#111"/><circle cx="34" cy="250" r="4" fill="#111"/></g>',
+      '<g class="cr1"><rect x="0" y="236" width="44" height="14" rx="4" fill="#f2c200"/><circle cx="10" cy="250" r="4" fill="#111"/><circle cx="34" cy="250" r="4" fill="#111"/></g>' +
+      '<rect x="286" y="10" width="6" height="214" fill="#4a4a4a"/>' +
+      blade(226, 12, 126, "Hylan Blvd", 0) + blade(230, 38, 118, "Giffords Ln", 0),
       sky("c1", "#f08a4b", "#2a1d3d"));
   }
 
-  window.SCENES = { station: station1, theatre, hall, grotto, corner };
+  window.SCENES = { station: station1, harbor, pizzeria, beach, corner };
 })();
