@@ -98,9 +98,9 @@ window.CFG = {
    "title": "Good Love",
    "id": "OYdr2ipU-RE",
    "cuts": [
-    29.6,
-    118.5,
-    157.9
+    15.3,
+    29.7,
+    39.3
    ],
    "qs": [
     [
@@ -117,6 +117,20 @@ window.CFG = {
       "Down South"
      ],
      [
+      "\"We gon' fight but I think that's just...\" what?",
+      "Good love",
+      "Real talk",
+      "The game"
+     ],
+     [
+      "It feels so what?",
+      "Good",
+      "Right",
+      "Nice"
+     ]
+    ],
+    [
+     [
       "What kind of flights?",
       "First class",
       "Red-eye",
@@ -127,6 +141,12 @@ window.CFG = {
       "Still",
       "Quiet",
       "Calm"
+     ],
+     [
+      "What does Sheek shout to start the verse?",
+      "Let's go",
+      "Here we go",
+      "Come on"
      ],
      [
       "Fresh off the plane and into the what?",
@@ -149,90 +169,22 @@ window.CFG = {
     ],
     [
      [
-      "Short sleeve and no what?",
-      "Cuff",
-      "Tie",
-      "Collar"
+      "Straight in the door, straight to the what?",
+      "Floor",
+      "Couch",
+      "Kitchen"
      ],
      [
-      "What car is sittin' outside?",
-      "Aston Martin",
-      "Range Rover",
-      "Cadillac"
+      "Straight in the what?",
+      "Door",
+      "Car",
+      "Club"
      ],
      [
-      "Hat low enough, and the sleeve is what?",
-      "Short",
-      "Long",
-      "Rolled"
-     ],
-     [
-      "Built big like he was down with who?",
-      "Puff",
-      "Russell",
-      "Jay"
-     ],
-     [
-      "In the club, he skips the what?",
-      "V.I.P.",
-      "Dance floor",
-      "DJ booth"
-     ],
-     [
-      "Down low where every last what be?",
-      "Hoodlum",
-      "Rapper",
-      "Baller"
-     ],
-     [
-      "He says sorry, but he's gotta what?",
-      "Disappear",
-      "Dance",
-      "Sing"
-     ]
-    ],
-    [
-     [
-      "Whose record is knocking?",
-      "Betty Wright",
-      "Aretha Franklin",
-      "Patti LaBelle"
-     ],
-     [
-      "What dance on the block?",
-      "Electric slide",
-      "Running man",
-      "The cha-cha"
-     ],
-     [
-      "Got 'em going crazy from 8 to what?",
-      "80",
-      "18",
-      "28"
-     ],
-     [
-      "It feels so good you can't do what?",
-      "Sit down",
-      "Stand up",
-      "Sleep"
-     ],
-     [
-      "You don't care who's what?",
-      "Watchin'",
-      "Talkin'",
-      "Callin'"
-     ],
-     [
-      "What does Sheek shout to start the verse?",
-      "Let's go",
-      "Here we go",
-      "Come on"
-     ],
-     [
-      "\"We gon' fight but I think that's just...\" what?",
-      "Good love",
-      "Real talk",
-      "The game"
+      "Just got home, he's trying to what?",
+      "Chill",
+      "Sleep",
+      "Eat"
      ]
     ]
    ]

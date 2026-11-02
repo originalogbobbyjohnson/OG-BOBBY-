@@ -111,8 +111,8 @@ window.CFG = {
    "start": 18,
    "cuts": [
     53.1,
-    132.9,
-    196.7
+    71.1,
+    82.8
    ],
    "qs": [
     [
@@ -145,6 +145,26 @@ window.CFG = {
       "Two of us",
       "Whole crew",
       "Three of us"
+     ],
+     [
+      "He's awake way before what?",
+      "Daybreak",
+      "Noon",
+      "Midnight"
+     ]
+    ],
+    [
+     [
+      "The hook says recognize all what?",
+      "Heads",
+      "Crews",
+      "Fans"
+     ],
+     [
+      "Which word does the hook keep repeating?",
+      "Recognize",
+      "Remember",
+      "Respect"
      ]
     ],
     [
@@ -155,96 +175,22 @@ window.CFG = {
       "Painter"
      ],
      [
-      "Living life to the fullest in that space and what?",
+      "Pounds of anger and worries of what?",
+      "Success",
+      "Money",
+      "Tomorrow"
+     ],
+     [
+      "Living life to the what?",
+      "Fullest",
+      "Limit",
+      "Maximum"
+     ],
+     [
+      "In that space and what?",
       "Time",
       "Place",
       "Room"
-     ],
-     [
-      "He's seen some blind, some what?",
-      "Dumb",
-      "Deaf",
-      "Lost"
-     ],
-     [
-      "Mass confusion caused by vast what?",
-      "Illusion",
-      "Money",
-      "Crowds"
-     ],
-     [
-      "It's not just a phrase, it's the way of what?",
-      "Life",
-      "The street",
-      "Music"
-     ],
-     [
-      "When you keep it moving, soon you get what?",
-      "News",
-      "Paid",
-      "Tired"
-     ],
-     [
-      "Get ready to move in what?",
-      "Position",
-      "Silence",
-      "Circles"
-     ],
-     [
-      "He's awake way before what?",
-      "Daybreak",
-      "Noon",
-      "Midnight"
-     ],
-     [
-      "The hook says recognize all what?",
-      "Heads",
-      "Crews",
-      "Fans"
-     ]
-    ],
-    [
-     [
-      "I shine, you shine in this what?",
-      "Day and time",
-      "City",
-      "Summer"
-     ],
-     [
-      "Same frame of what?",
-      "Mind",
-      "Mood",
-      "Picture"
-     ],
-     [
-      "Elevation, walk it up, start what?",
-      "Circulation",
-      "Running",
-      "Over"
-     ],
-     [
-      "How many degrees of rotation?",
-      "360",
-      "180",
-      "90"
-     ],
-     [
-      "Situations got him thinking about his life how?",
-      "Seriously",
-      "Slowly",
-      "Lightly"
-     ],
-     [
-      "He keeps it real how?",
-      "Continuously",
-      "Sometimes",
-      "Quietly"
-     ],
-     [
-      "He builds up his what?",
-      "Mental",
-      "Money",
-      "House"
      ]
     ]
    ]

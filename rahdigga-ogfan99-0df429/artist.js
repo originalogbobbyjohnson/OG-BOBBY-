@@ -104,10 +104,551 @@ window.CFG = {
   {
    "title": "This Ain't No Lil' Kid Rap",
    "id": "ZbAKKTL1Vj4",
+   "start": 24.9,
    "cuts": [
-    76.6,
-    114.9,
-    182
+    40.3,
+    56.6,
+    73.3
+   ],
+   "qs": [
+    [
+     [
+      "She don't study what the next what have?",
+      "Folk",
+      "Kid",
+      "Crew"
+     ],
+     [
+      "Grown-up swag, whole other what?",
+      "Vocab",
+      "Level",
+      "Style"
+     ],
+     [
+      "Even after your what, you never measure her?",
+      "Peak",
+      "Prime",
+      "Best"
+     ]
+    ],
+    [
+     [
+      "What kind of status does she claim?",
+      "Legendary",
+      "Platinum",
+      "Superstar"
+     ],
+     [
+      "Which police might come for her?",
+      "Hip Hop Police",
+      "Fashion Police",
+      "Grammar Police"
+     ],
+     [
+      "Tie your what up?",
+      "Shoelace",
+      "Hair",
+      "Boat"
+     ],
+     [
+      "Get a what?",
+      "Shape up",
+      "Haircut",
+      "Job"
+     ],
+     [
+      "You're in the presence of hip hop what?",
+      "Royalty",
+      "History",
+      "Legends"
+     ]
+    ],
+    [
+     [
+      "Some even call her the boom bap what?",
+      "Savior",
+      "Queen",
+      "Teacher"
+     ],
+     [
+      "Most rappers be what of her game?",
+      "Afraid",
+      "Jealous",
+      "Tired"
+     ],
+     [
+      "This ain't no little kid what?",
+      "Rap",
+      "Song",
+      "Game"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Imperial",
+   "locked": true,
+   "cuts": [],
+   "qs": []
+  },
+  {
+   "title": "Tight",
+   "locked": true,
+   "cuts": [],
+   "qs": []
+  },
+  {
+   "title": "Break Fool",
+   "locked": true,
+   "cuts": [],
+   "qs": []
+  },
+  {
+   "title": "Lessons of Today",
+   "locked": true,
+   "cuts": [],
+   "qs": []
+  }
+ ],
+ "explicitSongs": [
+  {
+   "title": "Tight",
+   "id": "BHqCuPAaWMQ",
+   "cuts": [
+    40.8,
+    112.7,
+    152.9
+   ],
+   "qs": [
+    [
+     [
+      "Rah Digga, Flipmode, and who?",
+      "Outsidaz",
+      "Fugees",
+      "The Lox"
+     ],
+     [
+      "A sister writes rhymes all day and all what?",
+      "Night",
+      "Week",
+      "Year"
+     ],
+     [
+      "She's dwelling south of which river?",
+      "Hudson",
+      "Harlem",
+      "Passaic"
+     ],
+     [
+      "New what?",
+      "Jerusalem",
+      "Jersey",
+      "York"
+     ],
+     [
+      "In seclusion, using fake what?",
+      "Pseudonyms",
+      "Passports",
+      "Names"
+     ],
+     [
+      "What's hanging from her pockets?",
+      "Doo rags",
+      "Bandanas",
+      "Chains"
+     ],
+     [
+      "She goes back to what?",
+      "Pediatrics",
+      "Kindergarten",
+      "Preschool"
+     ],
+     [
+      "Early lessons, rappers like you were straight what?",
+      "Vixen",
+      "Victims",
+      "Students"
+     ],
+     [
+      "Disguise the what?",
+      "Camouflage",
+      "Costume",
+      "Mask"
+     ],
+     [
+      "She shoots a virus out of her what?",
+      "Spirals",
+      "Speakers",
+      "Notebook"
+     ],
+     [
+      "She's known for taking mad what?",
+      "Titles",
+      "Belts",
+      "Spots"
+     ]
+    ],
+    [
+     [
+      "Wetter than a what?",
+      "Reservoir",
+      "River",
+      "Rainstorm"
+     ],
+     [
+      "Striking blows like who, code-name Hasana?",
+      "Chesimard",
+      "Shakur",
+      "Davis"
+     ],
+     [
+      "Warmer than a what?",
+      "Bomber",
+      "Blanket",
+      "Heater"
+     ],
+     [
+      "Hotter than the region of what?",
+      "Ghana",
+      "Kenya",
+      "Egypt"
+     ],
+     [
+      "Rah Digga's in the house and her plans is what?",
+      "Tight",
+      "Right",
+      "Set"
+     ],
+     [
+      "Peace to the ones that don't what?",
+      "Bite",
+      "Fight",
+      "Lie"
+     ],
+     [
+      "Her black jeans won't say what?",
+      "Paco",
+      "Guess",
+      "Levi's"
+     ],
+     [
+      "She swings to the Vill' for some what?",
+      "Waffles",
+      "Pancakes",
+      "Pizza"
+     ],
+     [
+      "Creme de la what?",
+      "Guttas",
+      "Crop",
+      "Cream"
+     ],
+     [
+      "She represents the feminist what?",
+      "God",
+      "Movement",
+      "Queen"
+     ],
+     [
+      "See her in the camel what?",
+      "Range Rover",
+      "Benz",
+      "Jeep"
+     ]
+    ],
+    [
+     [
+      "Who's the tightest? She rocks with what?",
+      "Laryngitis",
+      "Bronchitis",
+      "A cold"
+     ],
+     [
+      "Gold's good for who?",
+      "Midas",
+      "Mr. T",
+      "Pharaoh"
+     ],
+     [
+      "She blows up the spot like who?",
+      "Dennis Scott",
+      "Dennis Rodman",
+      "Scottie Pippen"
+     ],
+     [
+      "Your chance of defeating her is what?",
+      "Morbid",
+      "Zero",
+      "Over"
+     ],
+     [
+      "She gets you open like the coming of the what?",
+      "Pope",
+      "King",
+      "Queen"
+     ],
+     [
+      "Tighter than a how many piece suit?",
+      "Three",
+      "Two",
+      "Four"
+     ],
+     [
+      "She decomposes any rapper to the what?",
+      "Bone",
+      "Ground",
+      "Dust"
+     ],
+     [
+      "Down to the X and Y what?",
+      "Chromosome",
+      "Axis",
+      "Factor"
+     ],
+     [
+      "See her name tagged in bold or what?",
+      "Italics",
+      "Graffiti",
+      "Lights"
+     ],
+     [
+      "Number one imported like what?",
+      "Beck's",
+      "Heineken",
+      "Corona"
+     ],
+     [
+      "Tighter than three or more heads in a what?",
+      "CRX",
+      "Civic",
+      "Jetta"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Imperial",
+   "id": "YI-8Ynf7Kt4",
+   "start": 18.2,
+   "cuts": [
+    53.5,
+    87.8,
+    225.1
+   ],
+   "qs": [
+    [
+     [
+      "Flipmode the what?",
+      "Imperial",
+      "Empire",
+      "Squad"
+     ],
+     [
+      "You love it when you hear them on the what?",
+      "Radio",
+      "TV",
+      "Street"
+     ],
+     [
+      "Or in the streets up in your what?",
+      "Jeeps",
+      "Benz",
+      "Cabs"
+     ],
+     [
+      "Or in the what?",
+      "Disco",
+      "Club",
+      "Party"
+     ],
+     [
+      "It's Digga looking pretty in the what?",
+      "Video",
+      "Magazine",
+      "Window"
+     ],
+     [
+      "Who's up in the cut?",
+      "Bus-a-Bus",
+      "Spliff Star",
+      "Rampage"
+     ],
+     [
+      "We got plenty mo', what?",
+      "Boo",
+      "Yo",
+      "Go"
+     ],
+     [
+      "Lip gloss and what?",
+      "Eyeliner",
+      "Lipstick",
+      "Mascara"
+     ],
+     [
+      "Poppin' like White Castle or the what?",
+      "Diner",
+      "Deli",
+      "Corner"
+     ],
+     [
+      "She makes the joints that the who blast?",
+      "DJs",
+      "Clubs",
+      "Cars"
+     ],
+     [
+      "Ghetto diva in the Source with a how many page ad?",
+      "Three",
+      "Two",
+      "Five"
+     ]
+    ],
+    [
+     [
+      "Watch the hood rat messiah climb how?",
+      "Swiftly",
+      "Slowly",
+      "Proudly"
+     ],
+     [
+      "Send your thuggest MC and watch her what?",
+      "Son 'em",
+      "Help 'em",
+      "Hire 'em"
+     ],
+     [
+      "Joints circulating like old what flicks?",
+      "Karate",
+      "Horror",
+      "Western"
+     ],
+     [
+      "A bunch of Rah Digga what?",
+      "Shirts",
+      "Posters",
+      "Hats"
+     ],
+     [
+      "Bump it in your hoopty or your luxury what?",
+      "Trucks",
+      "Cars",
+      "Boats"
+     ],
+     [
+      "She'd still be the what if rap failed her?",
+      "Greatest",
+      "Richest",
+      "Hottest"
+     ],
+     [
+      "Back to jacking bootleg flicks from out the what?",
+      "Deli",
+      "Store",
+      "Bodega"
+     ],
+     [
+      "Living off the what?",
+      "Interest",
+      "Royalties",
+      "Savings"
+     ],
+     [
+      "Sipping on what?",
+      "Tequila",
+      "Champagne",
+      "Juice"
+     ],
+     [
+      "Her logo on the side of how many wheelers?",
+      "Eighteen",
+      "Ten",
+      "Twelve"
+     ],
+     [
+      "Labels are scared to let their artists do what with her?",
+      "Bomb",
+      "Tour",
+      "Shop"
+     ]
+    ],
+    [
+     [
+      "Harriet who of this rap?",
+      "Thugman",
+      "Tubman",
+      "Thompson"
+     ],
+     [
+      "A black chick with what?",
+      "Intellect",
+      "Attitude",
+      "Money"
+     ],
+     [
+      "Who wanna match what?",
+      "Wits",
+      "Rhymes",
+      "Steps"
+     ],
+     [
+      "She's the first lady of the what?",
+      "Squad",
+      "Label",
+      "Block"
+     ],
+     [
+      "She plays the role like who?",
+      "Ally Sheedy",
+      "Molly Ringwald",
+      "Halle Berry"
+     ],
+     [
+      "Put on your what?",
+      "Binoculars",
+      "Glasses",
+      "Headphones"
+     ],
+     [
+      "Down at which bank?",
+      "Banco Popular",
+      "Chase",
+      "Citibank"
+     ],
+     [
+      "Longest running since the Phantom of the what?",
+      "Opera",
+      "Paradise",
+      "Theater"
+     ],
+     [
+      "Bus-a-Bus is one of the great spoken what?",
+      "Philosophers",
+      "Poets",
+      "Preachers"
+     ],
+     [
+      "The first and only female unmatched by who?",
+      "Anyone",
+      "Any man",
+      "Her crew"
+     ],
+     [
+      "Rip it from old school to the next what?",
+      "Millennium",
+      "Generation",
+      "Level"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "This Ain't No Lil' Kid Rap",
+   "id": "ZbAKKTL1Vj4",
+   "cuts": [
+    40.3,
+    111.6,
+    181
    ],
    "qs": [
     [
@@ -124,6 +665,18 @@ window.CFG = {
       "Money"
      ],
      [
+      "Don't get her wrong, she loves the what?",
+      "Kids",
+      "Fans",
+      "Haters"
+     ],
+     [
+      "This ain't no little kid what?",
+      "Rap",
+      "Song",
+      "Game"
+     ],
+     [
       "To bump this you might need a colored what?",
       "Wristband",
       "Hat",
@@ -134,6 +687,44 @@ window.CFG = {
       "Word",
       "Dance",
       "Song"
+     ],
+     [
+      "Try to keep up, what?",
+      "Young",
+      "Kid",
+      "Slow"
+     ],
+     [
+      "She don't study what the next what have?",
+      "Folk",
+      "Kid",
+      "Crew"
+     ],
+     [
+      "Grown-up what?",
+      "Swag",
+      "Talk",
+      "Style"
+     ],
+     [
+      "Whole other what?",
+      "Vocab",
+      "Level",
+      "Planet"
+     ],
+     [
+      "Even after your what, you never measure her?",
+      "Peak",
+      "Prime",
+      "Best"
+     ]
+    ],
+    [
+     [
+      "What kind of status does she claim?",
+      "Legendary",
+      "Platinum",
+      "Superstar"
      ],
      [
       "Which police might come for her?",
@@ -148,13 +739,23 @@ window.CFG = {
       "Boat"
      ],
      [
+      "Get a what?",
+      "Shape up",
+      "Haircut",
+      "Job"
+     ],
+     [
       "You're in the presence of hip hop what?",
       "Royalty",
       "History",
       "Legends"
-     ]
-    ],
-    [
+     ],
+     [
+      "Some even call her the boom bap what?",
+      "Savior",
+      "Queen",
+      "Teacher"
+     ],
      [
       "You just got off of what?",
       "Work",
@@ -184,12 +785,6 @@ window.CFG = {
       "Jason",
       "Chucky",
       "Pinhead"
-     ],
-     [
-      "Her next rhyme might be about who?",
-      "You",
-      "Me",
-      "Them"
      ]
     ],
     [
@@ -200,10 +795,22 @@ window.CFG = {
       "Do-re-mi"
      ],
      [
+      "Foot what?",
+      "Soldier",
+      "Locker",
+      "Note"
+     ],
+     [
       "She calls herself a rapper's what?",
       "Rapper",
       "Teacher",
       "Favorite"
+     ],
+     [
+      "She ain't no little kid what?",
+      "Rapper",
+      "Singer",
+      "Dancer"
      ],
      [
       "Which cartoon pair does she name?",
@@ -212,10 +819,22 @@ window.CFG = {
       "Rocky and Bullwinkle"
      ],
      [
+      "Who's in the bricks?",
+      "Gucci Man",
+      "Jay-Z",
+      "Biggie"
+     ],
+     [
       "They ask what the game's been what?",
       "Missing",
       "Making",
       "Hiding"
+     ],
+     [
+      "How do they reach her?",
+      "Texted",
+      "Called",
+      "Emailed"
      ],
      [
       "She's a real what?",
@@ -237,30 +856,6 @@ window.CFG = {
      ]
     ]
    ]
-  },
-  {
-   "title": "Imperial",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Tight",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Break Fool",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Lessons of Today",
-   "locked": true,
-   "cuts": [],
-   "qs": []
   }
  ]
 };

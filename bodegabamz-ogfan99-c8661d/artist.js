@@ -109,9 +109,9 @@ window.CFG = {
    "title": "Money Changed Me",
    "id": "QiA7eAu5EM8",
    "cuts": [
-    113.8,
-    161.5,
-    212
+    42.9,
+    49.5,
+    68.9
    ],
    "qs": [
     [
@@ -132,39 +132,9 @@ window.CFG = {
       "Changed",
       "Came in",
       "Ran out"
-     ],
-     [
-      "With faith, you can move a what?",
-      "Mountain",
-      "Building",
-      "Crowd"
-     ],
-     [
-      "Which late-night host does he name?",
-      "David Letterman",
-      "Jay Leno",
-      "Conan"
-     ],
-     [
-      "He's grinding out when?",
-      "Night and day",
-      "Every weekend",
-      "All summer"
-     ],
-     [
-      "A little bit of Puff, a tad bit of who?",
-      "Pun",
-      "Big L",
-      "Nas"
      ]
     ],
     [
-     [
-      "What's switching through lanes in the hook?",
-      "Your Lambo",
-      "A taxi",
-      "The bus"
-     ],
      [
       "What's down while they're screaming?",
       "The top",
@@ -175,67 +145,25 @@ window.CFG = {
       "What do they scream out?",
       "Money just changed",
       "Keep it 100",
-      "Tanboys"
-     ],
-     [
-      "Which other car rides with the Lambo?",
-      "Ferrari",
-      "Bentley",
-      "Rolls"
-     ],
-     [
-      "He'll make you what, again and again?",
-      "Come again",
-      "Look again",
-      "Try again"
-     ],
-     [
-      "Trusting him will make you what?",
-      "Famous",
-      "Rich",
-      "Wise"
+      "Let's ride"
      ]
     ],
     [
      [
-      "Pop said walk, then what?",
-      "Run",
-      "Jump",
-      "Ride"
+      "What is he chasing at the start of the verse?",
+      "Dreams",
+      "Money",
+      "Trains"
      ],
      [
-      "Walk, then run, then what?",
-      "Grow",
-      "Fly",
-      "Stop"
-     ],
-     [
-      "Don't front, don't talk, just what?",
-      "Show",
-      "Go",
-      "Wait"
-     ],
-     [
-      "A blind man sees through his what?",
-      "Ears and nose",
-      "Hands",
-      "Heart"
-     ],
-     [
-      "The game is for what?",
-      "Keeps",
-      "Kids",
-      "Fun"
-     ],
-     [
-      "Top down, screaming out what?",
-      "Money just changed",
-      "Time just stopped",
-      "Game just started"
+      "From the state pen to the what?",
+      "Estates",
+      "Streets",
+      "Stage"
      ]
     ]
    ],
-   "start": 13
+   "start": 34.6
   },
   {
    "title": "P.A.P.I.",

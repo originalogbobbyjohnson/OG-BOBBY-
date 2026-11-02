@@ -91,98 +91,9 @@ window.CFG = {
  "episodes": [
   {
    "title": "Lean On Me",
-   "id": "RRng_-UsWzo",
-   "cuts": [
-    31.4
-   ],
-   "qs": [
-    [
-     [
-      "I see you out here getting a lot of what?",
-      "Money",
-      "Fame",
-      "Attention"
-     ],
-     [
-      "He'll make sure nobody does what to you?",
-      "Hurt you",
-      "Rob you",
-      "Find you"
-     ],
-     [
-      "You don't want no what with me?",
-      "Beef",
-      "Problems",
-      "Business"
-     ],
-     [
-      "Find a way to do what with me?",
-      "Eat",
-      "Work",
-      "Ride"
-     ],
-     [
-      "Because I do what on you?",
-      "Lean",
-      "Count",
-      "Call"
-     ],
-     [
-      "It's better to have me on your what?",
-      "Side",
-      "Team",
-      "Block"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Bro Sh*t",
-   "id": "JHL3_7P4tZ8",
-   "start": 34,
-   "cuts": [
-    67.2
-   ],
-   "qs": [
-    [
-     [
-      "Don't come around me if you don't really do what with me?",
-      "Rock",
-      "Roll",
-      "Ride"
-     ],
-     [
-      "You ain't my what?",
-      "Bro",
-      "Man",
-      "Friend"
-     ],
-     [
-      "He's too real to be around what?",
-      "Fake",
-      "Haters",
-      "Phones"
-     ],
-     [
-      "Who could see that?",
-      "Stevie Wonder",
-      "Ray Charles",
-      "Everybody"
-     ],
-     [
-      "You burned the bridge and can't do what?",
-      "Swim",
-      "Fly",
-      "Run"
-     ],
-     [
-      "With twenty dollars to his name, he would've given you how much?",
-      "Ten",
-      "Five",
-      "Twenty"
-     ]
-    ]
-   ]
+   "locked": true,
+   "cuts": [],
+   "qs": []
   },
   {
    "title": "Rap Up",
@@ -222,6 +133,12 @@ window.CFG = {
   },
   {
    "title": "Freedom",
+   "locked": true,
+   "cuts": [],
+   "qs": []
+  },
+  {
+   "title": "My Shoes",
    "locked": true,
    "cuts": [],
    "qs": []

@@ -267,5 +267,655 @@ window.CFG = {
    "cuts": [],
    "qs": []
   }
+ ],
+ "explicitSongs": [
+  {
+   "title": "SuperThug",
+   "id": "DBFakPDWJKw",
+   "start": 41,
+   "cuts": [
+    81.5,
+    161.5,
+    227.1
+   ],
+   "qs": [
+    [
+     [
+      "What word gets repeated over and over in the hook?",
+      "What",
+      "Yeah",
+      "Go"
+     ],
+     [
+      "What does the hook call him?",
+      "Superstar",
+      "Superman",
+      "Supreme"
+     ],
+     [
+      "Aiyyo, we light a what?",
+      "Candle",
+      "Fire",
+      "Torch"
+     ],
+     [
+      "They run laps around the what?",
+      "English Channel",
+      "Atlantic",
+      "Hudson River"
+     ],
+     [
+      "Which producers does he name?",
+      "The Neptunes",
+      "Trackmasters",
+      "Swizz Beatz"
+     ],
+     [
+      "What kind of dog has he got?",
+      "Cocker spaniel",
+      "Pit bull",
+      "Poodle"
+     ],
+     [
+      "We on the run now, it ain't no what?",
+      "Fun",
+      "Joke",
+      "Game"
+     ],
+     [
+      "Where he goes, you can't even what?",
+      "Come",
+      "See",
+      "Look"
+     ],
+     [
+      "You hate the law, then you what?",
+      "Break it",
+      "Change it",
+      "Leave it"
+     ],
+     [
+      "When you get caught, remember what?",
+      "I don't care",
+      "I warned you",
+      "I'm gone"
+     ],
+     [
+      "We on the run, if that ain't what?",
+      "Clear",
+      "Fair",
+      "Real"
+     ]
+    ],
+    [
+     [
+      "Where are they down in?",
+      "Vegas",
+      "Miami",
+      "Atlanta"
+     ],
+     [
+      "He's on the run but still rips what?",
+      "Stages",
+      "Mics",
+      "Shows"
+     ],
+     [
+      "Call him animal thug when he's in what?",
+      "Cages",
+      "Court",
+      "Clubs"
+     ],
+     [
+      "He rolled dice with no what?",
+      "Aces",
+      "Luck",
+      "Sixes"
+     ],
+     [
+      "No time for what?",
+      "Car races",
+      "Games",
+      "Sleep"
+     ],
+     [
+      "First he hits Louisiana, then which city?",
+      "Atlanta",
+      "Houston",
+      "Memphis"
+     ],
+     [
+      "Forget a city slicker, he got what?",
+      "Country grammar",
+      "Southern charm",
+      "City style"
+     ],
+     [
+      "He's gotta keep his mouth shut and don't say what?",
+      "What, what",
+      "Nothing",
+      "Hello"
+     ],
+     [
+      "Which highway do they take?",
+      "The I-95",
+      "Route 66",
+      "The I-80"
+     ],
+     [
+      "Then they hit what country?",
+      "The Philippines",
+      "Mexico",
+      "Jamaica"
+     ],
+     [
+      "They communicate with which brand?",
+      "Motorola",
+      "Nokia",
+      "Samsung"
+     ]
+    ],
+    [
+     [
+      "This is the life of a what?",
+      "Superstar",
+      "Hustler",
+      "Rock star"
+     ],
+     [
+      "How many cars?",
+      "A million",
+      "A hundred",
+      "Ten"
+     ],
+     [
+      "Gotta get the what?",
+      "Cash",
+      "Crown",
+      "Keys"
+     ],
+     [
+      "Who's teamed with Noreaga in the bridge?",
+      "The Neptunes",
+      "Swizz Beatz",
+      "Timbaland"
+     ],
+     [
+      "The limit is the what?",
+      "Sky",
+      "Moon",
+      "Stars"
+     ],
+     [
+      "Do it again, do it to what?",
+      "Win",
+      "Grin",
+      "Spin"
+     ],
+     [
+      "Last album was an eight, this one is a what?",
+      "Ten",
+      "Nine",
+      "Twelve"
+     ],
+     [
+      "Who's coming home?",
+      "Capone",
+      "Nas",
+      "Cormega"
+     ],
+     [
+      "When Capone comes home, they'll what the cent?",
+      "Triple",
+      "Double",
+      "Split"
+     ],
+     [
+      "Take his time, he still won't what?",
+      "Speed",
+      "Stop",
+      "Sleep"
+     ],
+     [
+      "Real, not the what?",
+      "Duplicate",
+      "Fake",
+      "Copy"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Oye Mi Canto",
+   "id": "CPcegbSf8HQ",
+   "cuts": [
+    40.1,
+    99.8,
+    158.7
+   ],
+   "qs": [
+    [
+     [
+      "If you're proud to be what, stand up?",
+      "Latino",
+      "Puerto Rican",
+      "From New York"
+     ],
+     [
+      "Which singing duo gets shouted out in the intro?",
+      "Nina Sky",
+      "Zhané",
+      "Mýa"
+     ],
+     [
+      "Who answers \"who's this?\" in the intro?",
+      "Daddy Yankee",
+      "Don Omar",
+      "Tego Calderón"
+     ],
+     [
+      "Which name gets shouted twice right after Gem Star?",
+      "Big Mato",
+      "Big Pun",
+      "Fat Joe"
+     ],
+     [
+      "What long sound starts the chorus?",
+      "Whoa",
+      "Yeah",
+      "Hey"
+     ],
+     [
+      "What's the first word of the roll call?",
+      "Boricua",
+      "Cubano",
+      "Mexicano"
+     ],
+     [
+      "What comes right after Boricua?",
+      "Morena",
+      "Dominicano",
+      "Cubano"
+     ],
+     [
+      "How does the first roll call line end?",
+      "Colombiano",
+      "Mexicano",
+      "Dominicano"
+     ],
+     [
+      "How does the second roll call line end?",
+      "Mexicano",
+      "Colombiano",
+      "Cubano"
+     ],
+     [
+      "Which phrase closes the chorus?",
+      "Oye mi canto",
+      "Dale mambo",
+      "Vamos ya"
+     ],
+     [
+      "What do they shout after \"Alive\"?",
+      "We comin' up",
+      "Let's go",
+      "Turn it up"
+     ]
+    ],
+    [
+     [
+      "What do they want?",
+      "Reggaeton",
+      "Salsa",
+      "Bachata"
+     ],
+     [
+      "\"Esto e' lo que\" what?",
+      "Quieren",
+      "Tienen",
+      "Bailan"
+     ],
+     [
+      "What does N.O.R.E. say he keeps?",
+      "My story",
+      "My money",
+      "My crown"
+     ],
+     [
+      "Fajardo, San Juan and what?",
+      "Bayamón",
+      "Ponce",
+      "Carolina"
+     ],
+     [
+      "Tabaco y what?",
+      "Ron",
+      "Café",
+      "Vino"
+     ],
+     [
+      "In Puerto Rico with Bacardí and what?",
+      "Limón",
+      "Coco",
+      "Piña"
+     ],
+     [
+      "It's the remix to the what?",
+      "Remix",
+      "Record",
+      "Hit"
+     ],
+     [
+      "Who's on the remix?",
+      "Yankee",
+      "Tego",
+      "Wisin"
+     ],
+     [
+      "What Puerto Rican dish does he name?",
+      "Mofongo",
+      "Pernil",
+      "Tostones"
+     ],
+     [
+      "A chimi with who on it?",
+      "N.O.R.E.",
+      "Big Pun",
+      "Fat Joe"
+     ],
+     [
+      "Who's on the reggaeton with Big Mato?",
+      "Gem Star",
+      "Nina Sky",
+      "Daddy Yankee"
+     ]
+    ],
+    [
+     [
+      "Who's giving it to them?",
+      "Daddy Yankee",
+      "N.O.R.E.",
+      "Big Mato"
+     ],
+     [
+      "This flow reigns where?",
+      "En la calle",
+      "En la playa",
+      "En el club"
+     ],
+     [
+      "All my latinos on the blocks, now do what?",
+      "Stand up",
+      "Sit down",
+      "Jump"
+     ],
+     [
+      "Oye mi canto con el N.O.R.E., ahora what?",
+      "Dembow",
+      "Mambo",
+      "Salsa"
+     ],
+     [
+      "Mami, don't lose your what?",
+      "Tiempo",
+      "Zapatos",
+      "Ritmo"
+     ],
+     [
+      "\"This the first time it's ever been\" what?",
+      "Done",
+      "Heard",
+      "Seen"
+     ],
+     [
+      "Never been a rapper doing a what album?",
+      "Reggaeton",
+      "Salsa",
+      "Rock"
+     ],
+     [
+      "And that rapper is a what?",
+      "Veteran",
+      "Rookie",
+      "Legend"
+     ],
+     [
+      "What does he call himself, layin' at the Cino?",
+      "Padrino",
+      "Papi",
+      "Gordo"
+     ],
+     [
+      "No matter your race, you know you're what?",
+      "Latino",
+      "Famous",
+      "Family"
+     ],
+     [
+      "Who gets named during the \"whoa, ajá\" part?",
+      "Nina Sky",
+      "Gem Star",
+      "Big Mato"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Nothin'",
+   "id": "sul16s0VSzs",
+   "start": 50.8,
+   "cuts": [
+    88.9,
+    132.7,
+    230.8
+   ],
+   "qs": [
+    [
+     [
+      "Homeboy, he came to do what?",
+      "Party",
+      "Fight",
+      "Dance"
+     ],
+     [
+      "Who was looking at him?",
+      "Your girl",
+      "Your mom",
+      "The DJ"
+     ],
+     [
+      "He's not what-ing her?",
+      "Taggin'",
+      "Callin'",
+      "Chasin'"
+     ],
+     [
+      "You don't want them boys to come over and start what?",
+      "Askin' ya",
+      "Bumpin' ya",
+      "Callin' ya"
+     ],
+     [
+      "What you wanna do?",
+      "Nothin'",
+      "Somethin'",
+      "Party"
+     ],
+     [
+      "N-O-R, who?",
+      "Papi",
+      "Daddy",
+      "Homie"
+     ],
+     [
+      "He's with his manager who?",
+      "Chris",
+      "Mike",
+      "Steve"
+     ],
+     [
+      "And the label that what?",
+      "Jams",
+      "Pays",
+      "Plays"
+     ],
+     [
+      "Still flossin', showin' your what?",
+      "Rocks",
+      "Cars",
+      "Chains"
+     ],
+     [
+      "Ain't you dudes heard which song?",
+      "Grimey",
+      "Superthug",
+      "Banned from TV"
+     ],
+     [
+      "Knees bent in a what?",
+      "Dashiki",
+      "Tuxedo",
+      "Jersey"
+     ]
+    ],
+    [
+     [
+      "She's at the bar looking good in what?",
+      "The brown dress",
+      "The red dress",
+      "The black dress"
+     ],
+     [
+      "His persona's all thugged out, loud and what?",
+      "Clear",
+      "Proud",
+      "Clean"
+     ],
+     [
+      "Just grab him a what?",
+      "Beer",
+      "Soda",
+      "Water"
+     ],
+     [
+      "You see he's what now?",
+      "Reppin'",
+      "Rich",
+      "Famous"
+     ],
+     [
+      "They what steppin' now?",
+      "High",
+      "Side",
+      "Back"
+     ],
+     [
+      "He left that what label?",
+      "Wack",
+      "Old",
+      "Big"
+     ],
+     [
+      "He's like a what that you hold in your hand?",
+      "Hammer",
+      "Phone",
+      "Mic"
+     ],
+     [
+      "He makes hits at which club?",
+      "The white boy club",
+      "The night club",
+      "The rap club"
+     ],
+     [
+      "While he's buying the what?",
+      "Bar",
+      "Club",
+      "Drinks"
+     ],
+     [
+      "They're like \"hey now, you're an\" what?",
+      "All star",
+      "Rock star",
+      "Superstar"
+     ],
+     [
+      "She's a what, but he's not taggin' her?",
+      "Haggler",
+      "Dancer",
+      "Model"
+     ]
+    ],
+    [
+     [
+      "He used to be a dancer for who?",
+      "Lionel Richie",
+      "Michael Jackson",
+      "Prince"
+     ],
+     [
+      "Only time they seen jail is watching what show?",
+      "Oz",
+      "The Wire",
+      "Cops"
+     ],
+     [
+      "They call him what?",
+      "Gordo",
+      "Flaco",
+      "Papi"
+     ],
+     [
+      "The champagne he sips is what?",
+      "Importo",
+      "Pink",
+      "Free"
+     ],
+     [
+      "What game is he playing?",
+      "Capicu",
+      "Spades",
+      "Chess"
+     ],
+     [
+      "He treats life like a what?",
+      "Fast car",
+      "Movie",
+      "Game"
+     ],
+     [
+      "He tries to sell more records than who?",
+      "Creed",
+      "Nelly",
+      "Eminem"
+     ],
+     [
+      "He's been a hustler way before who?",
+      "Melvin Flynt",
+      "Tony Montana",
+      "Nino Brown"
+     ],
+     [
+      "He doesn't leave any what?",
+      "Prints",
+      "Tips",
+      "Notes"
+     ],
+     [
+      "Had them dudes straight hopping the what?",
+      "Fence",
+      "Train",
+      "Turnstile"
+     ],
+     [
+      "What do they sing after the last hook?",
+      "La la la",
+      "Na na na",
+      "Oh oh oh"
+     ]
+    ]
+   ]
+  }
  ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

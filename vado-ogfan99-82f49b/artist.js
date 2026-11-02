@@ -101,300 +101,97 @@ window.CFG = {
  ],
  "episodes": [
   {
-   "title": "VADO Anthem",
-   "id": "LUE0e_Ho6TI",
+   "title": "My Bae",
+   "id": "pMMVJU-pRvI",
+   "start": 9.7,
    "cuts": [
-    87.7,
-    131.4,
-    184.6
+    25.6,
+    41.7,
+    50.5
    ],
    "qs": [
     [
      [
-      "The game changes like the what?",
-      "Weather",
-      "Wind",
-      "Seasons"
+      "What's the first thing sung on the hook?",
+      "Swing my way",
+      "Come my way",
+      "Ride my way"
      ],
      [
-      "\"Here's the\" what?",
-      "Forecast",
-      "Headline",
-      "Playlist"
+      "Let me take you somewhere that I'm what?",
+      "Heading",
+      "Living",
+      "Going"
      ],
      [
-      "They switched from broadcast to what?",
-      "Podcast",
-      "Livestream",
-      "Radio"
+      "Treat you like my what?",
+      "Hustler",
+      "Partner",
+      "Lady"
      ],
      [
-      "He'll put you in the friendly what?",
-      "Skies",
-      "Streets",
-      "Seats"
-     ],
-     [
-      "He doesn't want your friendly what?",
-      "Fives",
-      "Smiles",
-      "Hugs"
-     ],
-     [
-      "\"We the breakfast\" what?",
-      "Clubs",
-      "Kings",
-      "Crew"
-     ],
-     [
-      "Dress well, really what?",
-      "Fly",
-      "Sharp",
-      "Clean"
+      "He'll be on that how long?",
+      "All day",
+      "All night",
+      "All week"
      ]
     ],
     [
      [
-      "He's been in this too long to do what?",
-      "Stop now",
-      "Slow down",
-      "Look back"
+      "What does the hook call her?",
+      "Bae",
+      "Boo",
+      "Babe"
      ],
      [
-      "Does he look like he's quitting?",
-      "No, he's still spitting",
-      "Yes, he's done",
-      "Only on weekends"
+      "Vado says he's ambitious and what?",
+      "Vicious",
+      "Delicious",
+      "Suspicious"
      ],
      [
-      "He's too what for that?",
-      "Cocky",
-      "Tired",
-      "Busy"
-     ],
-     [
-      "He spits the what and lets loose?",
-      "Truth",
-      "Bars",
-      "Heat"
-     ],
-     [
-      "He lets loose without a what?",
-      "Care",
-      "Doubt",
-      "Break"
-     ],
-     [
-      "Even the blind got a what?",
-      "Stare",
-      "Clue",
-      "Ticket"
-     ],
-     [
-      "What kind of bear does he name?",
-      "Koala",
-      "Polar",
-      "Grizzly"
+      "If you're watching in the party, you can't what?",
+      "Miss us",
+      "Stop us",
+      "Catch us"
      ]
     ],
     [
      [
-      "He swears he doesn't rap no more, but he's what?",
-      "Rapping more",
-      "Singing now",
-      "Retired"
+      "Watches what?",
+      "Galore",
+      "Of gold",
+      "For sure"
      ],
      [
-      "He's still rapping how?",
-      "Raw",
-      "Slow",
-      "Soft"
+      "They're on top of the what?",
+      "Floor",
+      "World",
+      "Game"
      ],
      [
-      "Cats are waiting in what?",
-      "Line",
-      "Traffic",
-      "The lobby"
-     ],
-     [
-      "The backseat does what?",
-      "Reclines",
-      "Spins",
-      "Folds up"
-     ],
-     [
-      "These streets is what?",
-      "Mine",
-      "Ours",
-      "Quiet"
-     ],
-     [
-      "Time is what?",
-      "Money",
-      "Running",
-      "Precious"
-     ],
-     [
-      "Diamonds African like who?",
-      "Mandela",
-      "Kenyatta",
-      "Garvey"
-     ]
-    ]
-   ],
-   "start": 7.5
-  },
-  {
-   "title": "Pull Up",
-   "id": "TSgY5b1K4aI",
-   "cuts": [
-    85.1,
-    127.6,
-    180.9
-   ],
-   "qs": [
-    [
-     [
-      "He promises he's what than all these rappers?",
-      "Nicer",
-      "Colder",
-      "Faster"
-     ],
-     [
-      "He's on a different what?",
-      "Prowl",
-      "Level",
-      "Wave"
-     ],
-     [
-      "The most what rapper that they didn't crown?",
-      "Underrated",
-      "Famous",
-      "Popular"
-     ],
-     [
-      "A big dog with a different what?",
-      "Growl",
-      "Bark",
-      "Bite"
-     ],
-     [
-      "Which basketball star is he to these rappers?",
-      "LeBron",
-      "Jordan",
-      "Kobe"
-     ],
-     [
-      "When he writes, he puts his what in it?",
-      "Life",
-      "Heart",
-      "Soul"
-     ],
-     [
-      "He's got a glow like when the what hit it?",
-      "Lights",
-      "Sun",
-      "Flash"
-     ]
-    ],
-    [
-     [
-      "\"Beyonce, I'm a\" what?",
-      "Destiny's Child",
-      "Survivor",
-      "Single lady"
-     ],
-     [
-      "What kind of foul does he call?",
-      "Technical",
-      "Flagrant",
-      "Personal"
-     ],
-     [
-      "Black and white striped what?",
-      "Rugby",
-      "Jersey",
-      "Hoodie"
-     ],
-     [
-      "Throw a flag on the what?",
-      "Fit",
-      "Play",
-      "Field"
-     ],
-     [
-      "He'll make his who proud?",
-      "Oldest",
-      "Teacher",
-      "Coach"
-     ],
-     [
-      "A soldier like who?",
-      "Colin Powell",
-      "Patton",
-      "MacArthur"
-     ],
-     [
-      "No bookers, no what?",
-      "Rolling Loud",
-      "Summer Jam",
-      "Grammys"
-     ]
-    ],
-    [
-     [
-      "How does he walk through the hoods?",
-      "Color blind",
-      "Blindfolded",
-      "Barefoot"
-     ],
-     [
-      "He says he's not a what?",
-      "Millionaire",
-      "Rookie",
-      "Rapper"
-     ],
-     [
-      "He had over 100k over how many times?",
-      "100",
-      "10",
-      "1,000"
-     ],
-     [
-      "He sits with it for how many minutes?",
-      "6",
-      "16",
-      "60"
-     ],
-     [
-      "Which leader does he name?",
-      "Malcolm X",
-      "Marcus Garvey",
-      "Adam Clayton Powell"
-     ],
-     [
-      "\"I'm a\" what, \"get my director on\"?",
-      "Movie",
-      "Star",
-      "Scene"
-     ],
-     [
-      "Turn that what on?",
-      "Projector",
-      "Spotlight",
-      "Radio"
+      "They could sell out the what?",
+      "Malibu",
+      "Garden",
+      "Apollo"
      ]
     ]
    ]
   },
   {
-   "title": "NEW NEW",
+   "title": "VADO Anthem",
    "locked": true,
    "cuts": [],
    "qs": []
   },
   {
-   "title": "My Bae",
+   "title": "Pull Up",
+   "locked": true,
+   "cuts": [],
+   "qs": []
+  },
+  {
+   "title": "NEW NEW",
    "locked": true,
    "cuts": [],
    "qs": []

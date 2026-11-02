@@ -7,15 +7,28 @@
    cuts: the second each verse ends. qs: one pool per stop; every question in a pool is about
    the verse right before that stop. The first option is the right answer (shuffled on screen).
    An episode with no cuts yet is still being set up (its verse stops get marked by listening). */
+/* "songs" format: 3 or more songs fill the classic 9-box board. Row 1 plays each song to its first verse stop,
+   row 2 to its second, row 3 through all three verses, so fans go deeper into the same songs each row. */
+if (CFG.songs) {
+  const S = CFG.songs.filter(s => !s.locked), eps = [];
+  [1, 2, 3].forEach(n => { for (let i = 0; i < 3; i++) { const s = S[(eps.length) % S.length]; const seenN = eps.filter(e => e.id === s.id).length; eps.push({ title: s.title + (seenN ? " · Round " + (seenN + 1) : ""), id: s.id, start: s.start, cuts: s.cuts.slice(0, n), qs: s.qs.slice(0, n), round: n, song: S.indexOf(s) }); } });
+  CFG.episodes = eps;
+  if (CFG.ranks.length === 5) { const R = CFG.ranks, T = CFG.trophyArt; CFG.ranks = [R[0], R[2], R[4]]; if (T && T.length === 7) CFG.trophyArt = [T[0], T[1], T[3], T[5], T[6]]; }
+}
 const EPISODES = CFG.episodes;
 
 
 /* stops per row: 1, 2, 3 */
-const STOPS = [1, 1, 1, 2, 2, 2, 3, 3, 3];
-const ROWS = [[0, 1, 2], [3, 4, 5], [6, 7, 8]];
+const FIVE = EPISODES.length === 5;                    // 5-song format: every song stops 3 times (once per verse) and each song cleared is a rank up
+const STOPS = FIVE ? [3, 3, 3, 3, 3] : [1, 1, 1, 2, 2, 2, 3, 3, 3];
+const ROWS = FIVE ? [[0], [1], [2], [3], [4]] : [[0, 1, 2], [3, 4, 5], [6, 7, 8]];
+const NEP = EPISODES.length, BOSS = NEP - 1;
+const rowOf = k => ROWS.findIndex(r => r.includes(k));
+const rowLeft = k => { const r = ROWS[rowOf(k)]; return r.length - 1 - r.indexOf(k); };
+const RANGE = r => ROWS[r].length > 1 ? "Episodes " + (ROWS[r][0] + 1) + "–" + (ROWS[r][ROWS[r].length - 1] + 1) : "Episode " + (ROWS[r][0] + 1);
 const RANKS = CFG.ranks;
 const TOTAL_STOPS = STOPS.reduce((a, b) => a + b, 0);   // 18
-const JUICE_EACH = 550;                                  // 18 stops x 550 = 9,900
+const JUICE_EACH = Math.round(9900 / (FIVE ? 15 : 18));                                  // 18 stops x 550 = 9,900
 const ready = e => e.cuts.length > 0;
 
 /* Social links (front page + menu) */
@@ -82,13 +95,14 @@ document.querySelectorAll(".tab").forEach(t => t.onclick = () => goPanel(+t.data
 
 /* ---------- board: 9 episodes in 3 rows; each row shows how many stops its songs have ---------- */
 function renderMeter() {
+  if ($("qTotal")) $("qTotal").textContent = TOTAL_STOPS;
   const m = $("meter"); m.innerHTML = "";
   ROWS.forEach((row, r) => {
     const el = document.createElement("div"); el.className = "row";
     const nextUp = EPISODES.findIndex((e, k) => !isCleared(k));
     el.innerHTML = '<div class="boxes">' + row.map(k => '<button type="button" data-ep="' + k + '" aria-label="Episode ' + (k + 1) + '" class="lv' + (isCleared(k) ? " done" : k === nextUp ? " now" : "") + (isOpen(k) ? "" : " locked") + '">' + (k + 1) + '</button>').join("") + '</div>' +
       '<div class="rank' + (row.every(isCleared) ? " got" : "") + '">' + RANKS[r] + '</div>' +
-      '<div class="per">' + (r + 1) + (r ? " stops" : " stop") + ' a song</div>';
+      '<div class="per">' + (FIVE ? (r === ROWS.length - 1 ? "boss · 3 stops" : "3 stops") : (r + 1) + (r ? " stops" : " stop") + ' a song') + '</div>';
     m.append(el);
   });
   m.querySelectorAll(".lv").forEach(b => b.onclick = () => episodeInfo(+b.dataset.ep));
@@ -100,11 +114,11 @@ function renderMeter() {
 
 /* tap a number on the meter: song name, status, and a way in */
 function episodeInfo(k) {
-  const e = EPISODES[k], row = Math.floor(k / 3), open = isOpen(k), done = isCleared(k), n = STOPS[k];
+  const e = EPISODES[k], row = rowOf(k), open = isOpen(k), done = isCleared(k), n = STOPS[k];
   const status = done ? "Cleared · " + starHTML(state.stars[k])
     : gatesOf(k) ? "In progress · stop " + (gatesOf(k) + 1) + " of " + n
     : open ? "Ready to play" : isLocked(k) ? SIGN_LINE : "Locked · clear Episode " + k + " first";
-  showModal('<div class="k">EPISODE ' + (k + 1) + ' · ROW ' + (row + 1) + ' · ' + RANKS[row].toUpperCase() + '</div>' +
+  showModal('<div class="k">EPISODE ' + (k + 1) + (FIVE ? ' · ' : ' · ROW ' + (row + 1) + ' · ') + RANKS[row].toUpperCase() + '</div>' +
     '<div class="ei-title"></div>' +
     '<div class="ei-stops">' + Array.from({ length: n }, (_, i) => '<i class="' + (i < gatesOf(k) || done ? "got" : "") + '">' + (i + 1) + '</i>').join("") + '<span>' + n + (n > 1 ? " verse stops" : " verse stop") + '</span></div>' +
     '<div class="ei-status' + (done ? " done" : open ? "" : " lock") + '">' + status + '</div>' +
@@ -139,10 +153,10 @@ function renderCard() {
   const body = $("qBody");
   if (current < 0) { $("qLevel").textContent = ""; $("qNum").textContent = ""; body.innerHTML = '<div class="listen">Tap the record to start Episode 1.</div>'; return; }
   const e = EPISODES[current], g = gatesOf(current), n = STOPS[current];
-  const row = Math.floor(current / 3);
-  $("qLevel").textContent = "ROW " + (row + 1) + " · " + RANKS[row].toUpperCase();
+  const row = rowOf(current);
+  $("qLevel").textContent = (FIVE ? "SONG " + (current + 1) : "ROW " + (row + 1)) + " · " + RANKS[row].toUpperCase();
   $("qNum").textContent = isCleared(current) ? "CLEARED" : "STOP " + Math.min(g + 1, n) + " OF " + n;
-  document.querySelector("#pPlay .qcard").classList.toggle("boss", current === 8 && !isCleared(current));
+  document.querySelector("#pPlay .qcard").classList.toggle("boss", current === BOSS && !isCleared(current));
   if (!ready(e)) {
     body.innerHTML = '<div class="listen">The verse stops for this episode are being set. Enjoy the song.</div>' +
       (isCleared(current) ? "" : '<button class="next" id="skipEp" type="button">Clear this episode (pitch preview)</button>');
@@ -214,7 +228,7 @@ function rankUpScreen(k, rank) {
   SFX.cleared(); setTimeout(() => SFX.stamp(), 700);
   const finale = allDone(), next = EPISODES[k + 1];
   showModal(
-    '<div class="k">ROW ' + (Math.floor(k / 3) + 1) + ' CLEARED · RANK UP</div>' +
+    '<div class="k">' + (FIVE ? (k === BOSS ? 'BOSS SONG BEATEN' : 'SONG ' + (k + 1) + ' BEATEN') : 'ROW ' + (rowOf(k) + 1) + ' CLEARED') + ' · RANK UP</div>' +
     '<div class="rk-from">NO MORE ' + prev.toUpperCase() + '</div>' +
     '<div class="rk-name">' + rank.toUpperCase() + '</div>' +
     '<p style="margin:0">' + r.line + '</p>' +
@@ -223,7 +237,7 @@ function rankUpScreen(k, rank) {
       '<div class="rw"><b>' + rank + '</b> rank card to share</div>' +
       '<div class="rw"><b>+' + JUICE_EACH.toLocaleString() + '</b> Juice · ' + starHTML(state.stars[k]) + '</div>' +
       (finale ? '<div class="rw"><b>99 Challenge</b> unlocked: beat it to become ' + CFG.topRank + '</div>'
-              : '<div class="rw">Next row: songs stop <b>' + (STOPS[k + 1] === 2 ? "twice" : "three times") + '</b></div>') +
+              : '<div class="rw">' + (FIVE ? 'Next song' : 'Next row') + ': songs stop <b>' + (STOPS[k + 1] === 2 ? "twice" : "three times") + '</b>' + (FIVE ? ', once after every verse' : '') + '</div>') +
     '</div>' +
     '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : isLocked(k + 1) ? "BACK TO THE SONGS" : "PLAY EPISODE " + (k + 2)) + '</button>' +
     '<button class="next" id="mShare" type="button">Share my ' + rank + ' card</button></div>');
@@ -246,10 +260,10 @@ function episodeCleared(k, rankUp) {
   const finale = allDone();
   const next = EPISODES[k + 1];
   showModal(
-    '<div class="k">' + (k === 8 ? "BOSS EPISODE BEATEN" : "ROW " + (Math.floor(k / 3) + 1) + " · " + RANKS[Math.floor(k / 3)].toUpperCase()) + '</div>' +
+    '<div class="k">' + (k === BOSS ? "BOSS EPISODE BEATEN" : "ROW " + (rowOf(k) + 1) + " · " + RANKS[rowOf(k)].toUpperCase()) + '</div>' +
     '<h3>EPISODE ' + (k + 1) + ' CLEARED</h3>' +
     '<div class="stars">' + starHTML(state.stars[k]) + '</div>' +
-    '<div class="rw-line">+' + JUICE_EACH.toLocaleString() + ' JUICE · ' + (2 - (k % 3)) + ' more to rank up to ' + RANKS[Math.floor(k / 3)].toUpperCase() + '</div>' +
+    '<div class="rw-line">+' + JUICE_EACH.toLocaleString() + ' JUICE · ' + rowLeft(k) + ' more to rank up to ' + RANKS[rowOf(k)].toUpperCase() + '</div>' +
     '<p style="margin:0">' + (finale ? "You're a " + RANKS[2] + " now. Beat the 99 Challenge to become " + CFG.topRank + "." : next && isLocked(k + 1) ? "That's every song open for now. The rest unlock when " + esc(CFG.name) + " signs." : next ? "Episode " + (k + 2) + " unlocked: <b>" + esc(next.title) + "</b>" + (STOPS[k + 1] > STOPS[k] ? "<br>Heads up: songs in this row stop " + (STOPS[k + 1] === 2 ? "twice" : "three times") + "." : "") : "") + '</p>' +
     '<div style="display:grid;gap:8px"><button class="big-btn" id="mGo" type="button">' + (finale ? "TAKE THE 99 CHALLENGE" : isLocked(k + 1) ? "BACK TO THE SONGS" : "PLAY EPISODE " + (k + 2)) + '</button>' +
     (ready(EPISODES[k]) && !finale ? '<button class="next" id="mStay" type="button">Keep listening to this one</button>' : '') + '</div>',
@@ -348,7 +362,7 @@ function introEpisode(k) {
   $("doors").classList.remove("open");
   current = k; atStop = false; showEpisode(k); renderSongs(); renderCard(); goPanel(1);
   const n = STOPS[k];
-  $("ecKick").textContent = "ROW " + (Math.floor(k / 3) + 1) + " · " + RANKS[Math.floor(k / 3)].toUpperCase() + (k === 8 ? " · BOSS EPISODE" : "");
+  $("ecKick").textContent = (FIVE ? "SONG " + (k + 1) : "ROW " + (rowOf(k) + 1)) + " · " + RANKS[rowOf(k)].toUpperCase() + (k === BOSS ? " · BOSS EPISODE" : "");
   $("ecNum").textContent = "EPISODE " + (k + 1);
   $("ecTitle").textContent = EPISODES[k].title;
   $("ecStops").innerHTML = Array.from({ length: n }, (_, i) => "<i>" + (i + 1) + "</i>").join("") ;
@@ -396,13 +410,13 @@ $("doorPlay").onclick = () => { SFX.unlock(); if (current < 0) introEpisode(newe
 
 /* ---------- daily question: one a day from the verse pools, pays a Cannoli ---------- */
 const today = () => new Date().toISOString().slice(0, 10);
-const ALLQ = EPISODES.flatMap(e => e.qs.flat());
+const ALLQ = CFG.songs ? CFG.songs.filter(s => !s.locked).flatMap(s => s.qs.flat()) : EPISODES.flatMap(e => e.qs.flat());
 function renderExtras() {
   const doneToday = state.daily === today();
   $("dailyBtn").classList.toggle("ready", !doneToday);
   $("dailySub").textContent = doneToday ? "Done today · come back tomorrow" : "1 free " + CFG.point + " a day";
   $("chalBtn").classList.toggle("gold", allDone());
-  $("chalSub").textContent = allDone() ? (state.chalBest != null ? "Best: " + state.chalBest + " right" : "Unlocked · go for all 99") : "Clear all 9 to unlock";
+  $("chalSub").textContent = allDone() ? (state.chalBest != null ? "Best: " + state.chalBest + " right" : "Unlocked · go for all 99") : "Clear all " + NEP + " to unlock";
 }
 function quizModal(kicker, q, onDone) {
   showModal('<div class="k">' + kicker + '</div><div class="qtext">' + esc(q[0]) + '</div><div class="opts" id="dOpts"></div>');
@@ -438,13 +452,9 @@ $("dailyBtn").onclick = () => {
 
 /* ---------- trophy case + share card ---------- */
 /* the trophy shelf: one trophy per rank, earned ones glow */
-const TROPHIES = [
-  { name: CFG.startRank, how: "Everybody starts here.", got: () => true },
-  { name: RANKS[0], how: "Clear row 1 (Episodes 1–3).", got: () => rowsDone() >= 1 },
-  { name: RANKS[1], how: "Clear row 2 (Episodes 4–6).", got: () => rowsDone() >= 2 },
-  { name: RANKS[2], how: "Clear all 9 episodes.", got: () => rowsDone() >= 3 },
-  { name: CFG.topRank, how: "Get all 99 right in the 99 Challenge.", got: () => kong() }
-];
+const TROPHIES = [{ name: CFG.startRank, how: "Everybody starts here.", got: () => true }]
+  .concat(RANKS.map((r, i) => ({ name: r, how: i === RANKS.length - 1 ? "Clear all " + NEP + " episodes." : FIVE ? "Clear " + RANGE(i) + "." : "Clear row " + (i + 1) + " (" + RANGE(i) + ").", got: () => rowsDone() >= i + 1 })))
+  .concat([{ name: CFG.topRank, how: "Get all 99 right in the 99 Challenge.", got: () => kong() }]);
 function trophyArt(i) {
   const plinth = '<rect x="14" y="80" width="52" height="14" rx="2" fill="#3b2418"/><rect x="10" y="92" width="60" height="6" rx="2" fill="#2a170f"/><rect x="24" y="84" width="32" height="6" rx="1" fill="#c9a24a"/>';
   const face = (fill, mask) => '<ellipse cx="40" cy="44" rx="20" ry="22" fill="' + fill + '"/><path d="M22 36q18-12 36 0v4H22z" fill="' + mask + '"/>' +
@@ -455,13 +465,14 @@ function trophyArt(i) {
 }
 function trophyInfo(i) {
   const t = TROPHIES[i], got = t.got();
-  showModal('<div class="k">' + CFG.clubTitle + ' · TROPHY ' + (i + 1) + ' OF 5</div><div class="tr-big' + (got ? " got" : "") + '">' + trophyArt(i) + '</div>' +
+  showModal('<div class="k">' + CFG.clubTitle + ' · TROPHY ' + (i + 1) + ' OF ' + TROPHIES.length + '</div><div class="tr-big' + (got ? " got" : "") + '">' + trophyArt(i) + '</div>' +
     '<h3>' + t.name.toUpperCase() + '</h3><p style="margin:0">' + (got ? "Earned. " : "Locked. ") + t.how + '</p>');
 }
 function renderTrophies() {
   $("shelf").innerHTML = TROPHIES.map((t, i) => '<button type="button" class="trophy' + (t.got() ? " got" : "") + '" data-i="' + i + '" aria-label="' + t.name + (t.got() ? " trophy, earned" : " trophy, locked") + '">' +
     trophyArt(i) + '<span>' + t.name + '</span>' + (t.got() ? "" : '<em aria-hidden="true">🔒</em>') + '</button>').join("");
   $("shelf").querySelectorAll(".trophy").forEach(b => b.onclick = () => trophyInfo(+b.dataset.i));
+  $("shelf").style.gridTemplateColumns = "repeat(" + TROPHIES.length + ", minmax(0, 1fr))"; $("shelf").classList.toggle("many", TROPHIES.length > 5);
   $("starGrid").innerHTML = EPISODES.map((e, k) => '<div class="tcell">EP ' + (k + 1) + '<div class="st">' + (state.stars[k] ? starHTML(state.stars[k]) : "★★★") + '</div></div>').join("");
   $("tRank").textContent = rankName().toUpperCase();
   $("tBongs").textContent = state.bongs;
@@ -510,7 +521,7 @@ function flying99() {
   }
 }
 function startChallenge(demo) {
-  if (!demo && !allDone()) { toast("CLEAR ALL 9 EPISODES FIRST"); return; }
+  if (!demo && !allDone()) { toast("CLEAR ALL " + NEP + " EPISODES FIRST"); return; }
   if (player && player.pauseVideo) player.pauseVideo();
   ch = { order: shuffle(ALLQ.slice()), i: 0, right: 0, demo };
   $("chal").hidden = false;
@@ -590,7 +601,11 @@ $("lobbyBtn").onclick = () => { openMenu(false); toLobby(); };
 
 /* ---------- welcome + how to play (Gravesend rooms) ---------- */
 const SC = window.SCENES;
-const HOW = CFG.rooms.map(r => ({ s: SC[r.scene], t: r.t, x: r.x, snd: r.sfx }));
+const SONGS_TXT = CFG.songs ? { "1, THEN 2, THEN 3": "Row 1 stops each song once. Row 2 plays the same songs again and stops twice. Row 3 goes all the way through: three stops.", "CLIMB THE RANKS": "Everybody starts as a " + CFG.startRank + ". Clear a row to rank up: " + RANKS.join(", ") + ". Beat the 99 Challenge to become " + CFG.topRank + "." } : null;
+if (SONGS_TXT) CFG.rooms.forEach(r => { if (SONGS_TXT[r.t]) r.x = SONGS_TXT[r.t]; });
+const HOW = CFG.rooms.map(r => ({ s: SC[r.scene], t: FIVE && r.t === "1, THEN 2, THEN 3" ? "3 STOPS A SONG" : r.t, x: FIVE && r.t === "1, THEN 2, THEN 3" ? "Every song stops 3 times, once after each verse. Beat a song to rank up. Song 5 is the boss." : FIVE && r.t === "CLIMB THE RANKS" ? "Everybody starts as a " + CFG.startRank + ". Every song you beat is a rank up: " + RANKS.join(", ") + ". Beat the 99 Challenge to become " + CFG.topRank + "." : r.x, snd: r.sfx }));
+if (CFG.songs) { const ab = document.querySelector(".about"); if (ab) ab.textContent = "Every song stops at the end of a verse and asks about what you just heard. Row 1 stops once, row 2 twice, row 3 three times. Clear a row of 3 to rank up."; }
+if (FIVE) { const ab = document.querySelector(".about"); if (ab) ab.textContent = "Every song stops 3 times, once at the end of each verse, and asks about what you just heard. Every song you beat is a rank up. Song 5 is the boss."; }
 let howI = 0;
 function showHow() {
   const h = HOW[howI];

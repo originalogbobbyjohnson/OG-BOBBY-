@@ -95,144 +95,433 @@ window.CFG = {
  ],
  "episodes": [
   {
-   "title": "Good Day",
-   "id": "I42TYi0RObA",
+   "title": "I Got Cha Opin (Remix)",
+   "id": "NUhZyxK3NHc",
+   "start": 21.4,
    "cuts": [
-    33.8,
-    104.1,
-    131.9
+    62.9,
+    125.9,
+    170
    ],
    "qs": [
     [
      [
-      "Otherwise known as Buckshot what?",
-      "Shorty",
-      "Junior",
-      "Duck"
+      "He woke up in the morning and hopped on a what?",
+      "Train",
+      "Plane",
+      "Bike"
      ],
      [
-      "Your crew is a slave to what?",
-      "The sound",
-      "The money",
-      "The block"
+      "Frontin' on the good ship what?",
+      "Lollipop",
+      "Lullaby",
+      "Liberty"
      ],
      [
-      "The sound was meant for your what?",
-      "Mind",
-      "Feet",
+      "Everybody slip so he can take a trip to the what?",
+      "Dip",
+      "Ship",
+      "Top"
+     ],
+     [
+      "Dig a deeper what?",
+      "Hole",
+      "Ditch",
+      "Well"
+     ],
+     [
+      "Microphone control with what?",
+      "Soul",
+      "Style",
+      "Skill"
+     ],
+     [
+      "Look at his hot eyes, how could you be what?",
+      "Cold",
+      "Old",
+      "Bold"
+     ],
+     [
+      "He's coming to you from the what?",
+      "Underground",
+      "Rooftop",
+      "Basement"
+     ],
+     [
+      "He comes with a what sound?",
+      "Thunder",
+      "Lightning",
+      "Rumble"
+     ],
+     [
+      "What's the number one question?",
+      "How can I be down?",
+      "Where you from?",
+      "Who's the man?"
+     ],
+     [
+      "Go from left to right, then front to what?",
+      "Back",
+      "Side",
+      "Top"
+     ],
+     [
+      "React whenever he keeps your head what?",
+      "Scopin'",
+      "Noddin'",
+      "Spinnin'"
+     ]
+    ],
+    [
+     [
+      "Don't front, you know I got cha what?",
+      "Opin",
+      "Number",
+      "Back"
+     ],
+     [
+      "The original heads, me, and the original what?",
+      "Crooks",
+      "Crew",
+      "Kings"
+     ],
+     [
+      "Check the dialect from his what?",
+      "Diaphragm",
+      "Notebook",
       "Heart"
      ],
      [
-      "If you do, then you're what?",
-      "Paid",
-      "Famous",
-      "Free"
+      "What label gets shouted in the hook?",
+      "Duck Down",
+      "Def Jam",
+      "Bad Boy"
      ],
      [
-      "If not, then you're what?",
-      "Broke",
-      "Lost",
-      "Done"
+      "He and his crew walk the streets at what time?",
+      "Night",
+      "Noon",
+      "Dawn"
+     ],
+     [
+      "If it's payday, he's at your what?",
+      "Doorstep",
+      "Window",
+      "Job"
+     ],
+     [
+      "In the cypher with his what?",
+      "Boys",
+      "Fam",
+      "Girls"
+     ],
+     [
+      "Wreckin' shop, he drops the what?",
+      "Top",
+      "Mic",
+      "Beat"
+     ],
+     [
+      "He's dedicated to the moon 'cause it's what?",
+      "Black",
+      "Full",
+      "Bright"
+     ],
+     [
+      "Now we going back to which song?",
+      "Who Got The Props",
+      "Buck Em Down",
+      "Enta Da Stage"
+     ],
+     [
+      "Pressure to come back with another fat what?",
+      "Single",
+      "Album",
+      "Verse"
      ]
     ],
     [
      [
-      "What does the singer answer on the hook?",
-      "Oh, yeah",
-      "Uh huh",
-      "Alright"
+      "Not too underground to make you stop when you what?",
+      "Mingle",
+      "Dance",
+      "Talk"
      ],
      [
-      "Who is with him at the start of verse 2?",
-      "His crew",
-      "His brother",
-      "His DJ"
+      "Pay attention to which verse?",
+      "The third",
+      "The first",
+      "The second"
      ],
      [
-      "You can stay or you can what?",
-      "Dip",
-      "Sleep",
-      "Shine"
+      "He'll take you to another what?",
+      "Level",
+      "City",
+      "Planet"
      ],
      [
-      "He doesn't play with a what?",
-      "Flip",
-      "Fool",
-      "Trick"
+      "Now you're sweatin' who?",
+      "Evil Dee",
+      "DJ Premier",
+      "Mr. Walt"
      ],
      [
-      "See the tip for the what?",
-      "Ice",
-      "Gold",
-      "Bill"
+      "Evil Dee is the number one what?",
+      "DJ",
+      "MC",
+      "Producer"
      ],
      [
-      "When the price go up, you can get it how many times?",
-      "Twice",
-      "Once",
-      "Three times"
+      "When you see him at a show, better prepare for the what?",
+      "Flow",
+      "Crowd",
+      "Noise"
      ],
      [
-      "He's up and he's what?",
-      "Smiling",
-      "Shining",
-      "Rising"
+      "He's giving you a brighter what?",
+      "Day",
+      "Light",
+      "Future"
      ],
      [
-      "Same story, same plot, same what?",
-      "Coach",
+      "It's never what?",
+      "Sunny",
+      "Rainy",
+      "Easy"
+     ],
+     [
+      "He comes to the front of the what?",
+      "Stage",
+      "Line",
+      "Room"
+     ],
+     [
+      "He lets you know who's on the what?",
+      "Phone",
+      "Mic",
+      "Track"
+     ],
+     [
+      "Leave it what?",
+      "Alone",
+      "Behind",
+      "There"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Who Got Da Props?",
+   "id": "DPuCpt2kYUs",
+   "start": 15.8,
+   "cuts": [
+    42.9,
+    92.9,
+    126.6
+   ],
+   "qs": [
+    [
+     [
+      "What does he shout right at the start?",
+      "Put up, what up",
+      "Here we go",
+      "Let's go"
+     ],
+     [
+      "Suckers want to flow but they got no what?",
+      "Show",
+      "Shine",
+      "Clue"
+     ],
+     [
+      "He'll grab the mic and flip a what?",
       "Script",
-      "Block"
+      "Coin",
+      "Switch"
      ],
      [
-      "It's a good day in the what?",
-      "Hood",
-      "Park",
-      "City"
+      "He'll leave ya what?",
+      "Stunned",
+      "Shook",
+      "Done"
+     ],
+     [
+      "Buckshot's the one that gets the what done?",
+      "Job",
+      "Work",
+      "Show"
+     ],
+     [
+      "He gets paid to wreck your what?",
+      "Set",
+      "Mic",
+      "Car"
+     ],
+     [
+      "Get ready and what?",
+      "Jet",
+      "Bet",
+      "Sweat"
+     ],
+     [
+      "He's a threat to your what?",
+      "Fret",
+      "Rep",
+      "Head"
+     ],
+     [
+      "No holds what?",
+      "Barred",
+      "Back",
+      "Down"
+     ],
+     [
+      "Best to play the back and watch your what?",
+      "Girl",
+      "Step",
+      "Crew"
+     ],
+     [
+      "If she's a what, he'll diss her and slide?",
+      "Crab",
+      "Star",
+      "Snob"
      ]
     ],
     [
      [
-      "He's Coney with what?",
-      "Island",
-      "Avenue",
-      "Beach"
+      "Word to God, here he comes so make what?",
+      "Way",
+      "Room",
+      "Space"
      ],
      [
-      "You hot like a scully in which month?",
-      "June",
-      "July",
-      "August"
+      "Rugged and what, every day?",
+      "Rough",
+      "Ready",
+      "Raw"
      ],
      [
-      "Hot like a what in June?",
-      "A scully",
-      "A hoodie",
-      "A coat"
+      "Microphone check 1, 2, here we what?",
+      "Go",
+      "Come",
+      "Are"
      ],
      [
-      "It's another tune from the what?",
-      "Moon",
-      "Sun",
-      "Stars"
+      "He'll let you know who got the what?",
+      "Flow",
+      "Dough",
+      "Mic"
      ],
      [
-      "Let me ___ to it.",
-      "Step",
-      "Get",
-      "Move"
+      "He's spitting his what?",
+      "Verbs",
+      "Words",
+      "Bars"
      ],
      [
-      "What does he shout after the hook?",
-      "Let's go",
-      "Hold up",
-      "Wake up"
+      "5ft, Evil Dee, and who?",
+      "Buckshot",
+      "Mr. Walt",
+      "Sean Price"
      ],
      [
-      "What kind of day is it?",
-      "A good day",
-      "A long day",
-      "A cold day"
+      "One Mississippi, two what?",
+      "Mississippi",
+      "Missouri",
+      "Minnesota"
+     ],
+     [
+      "He played a sucker like a hippie from the what?",
+      "60's",
+      "70's",
+      "80's"
+     ],
+     [
+      "He's gonna get paid from the what?",
+      "90's",
+      "80's",
+      "2000s"
+     ],
+     [
+      "He plays you Little Rascals out like who?",
+      "Stymie",
+      "Alfalfa",
+      "Spanky"
+     ],
+     [
+      "Guaranteed to move what?",
+      "Feets",
+      "Crowds",
+      "Mountains"
+     ]
+    ],
+    [
+     [
+      "He paid his what?",
+      "Dues",
+      "Rent",
+      "Bills"
+     ],
+     [
+      "Now you can't tell him what?",
+      "Nothing",
+      "Twice",
+      "Lies"
+     ],
+     [
+      "Dedicated to the ones who kept what?",
+      "Fronting",
+      "Hating",
+      "Running"
+     ],
+     [
+      "The ones who tried to diss and play what?",
+      "High",
+      "Low",
+      "Hard"
+     ],
+     [
+      "You had low, now he got what?",
+      "Dough",
+      "Flow",
+      "Gold"
+     ],
+     [
+      "He flips a mad script to your what?",
+      "Dome",
+      "Home",
+      "Phone"
+     ],
+     [
+      "He kicks suckers like what?",
+      "Tae kwon do",
+      "Karate",
+      "Kung fu"
+     ],
+     [
+      "From head to what?",
+      "Toe",
+      "Heel",
+      "Feet"
+     ],
+     [
+      "Which DJ gets a shout in the hook?",
+      "Evil Dee",
+      "Premier",
+      "Red Alert"
+     ],
+     [
+      "Who's named first in the hook?",
+      "5ft",
+      "Evil Dee",
+      "Buckshot"
+     ],
+     [
+      "Who got the what?",
+      "Props",
+      "Crown",
+      "Keys"
      ]
     ]
    ]
@@ -244,22 +533,666 @@ window.CFG = {
    "qs": []
   },
   {
-   "title": "I Got Cha Opin",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
    "title": "How Many MC's...",
    "locked": true,
    "cuts": [],
    "qs": []
   },
   {
-   "title": "Who Got Da Props?",
+   "title": "Good Day",
    "locked": true,
    "cuts": [],
    "qs": []
+  }
+ ],
+ "explicitSongs": [
+  {
+   "title": "I Got Cha Opin (Remix)",
+   "id": "NUhZyxK3NHc",
+   "start": 21.4,
+   "cuts": [
+    62.9,
+    125.9,
+    170
+   ],
+   "qs": [
+    [
+     [
+      "He woke up in the morning and hopped on a what?",
+      "Train",
+      "Plane",
+      "Bike"
+     ],
+     [
+      "Frontin' on the good ship what?",
+      "Lollipop",
+      "Lullaby",
+      "Liberty"
+     ],
+     [
+      "Everybody slip so he can take a trip to the what?",
+      "Dip",
+      "Ship",
+      "Top"
+     ],
+     [
+      "Dig a deeper what?",
+      "Hole",
+      "Ditch",
+      "Well"
+     ],
+     [
+      "Microphone control with what?",
+      "Soul",
+      "Style",
+      "Skill"
+     ],
+     [
+      "Look at his hot eyes, how could you be what?",
+      "Cold",
+      "Old",
+      "Bold"
+     ],
+     [
+      "He's coming to you from the what?",
+      "Underground",
+      "Rooftop",
+      "Basement"
+     ],
+     [
+      "He comes with a what sound?",
+      "Thunder",
+      "Lightning",
+      "Rumble"
+     ],
+     [
+      "What's the number one question?",
+      "How can I be down?",
+      "Where you from?",
+      "Who's the man?"
+     ],
+     [
+      "Go from left to right, then front to what?",
+      "Back",
+      "Side",
+      "Top"
+     ],
+     [
+      "React whenever he keeps your head what?",
+      "Scopin'",
+      "Noddin'",
+      "Spinnin'"
+     ]
+    ],
+    [
+     [
+      "Don't front, you know I got cha what?",
+      "Opin",
+      "Number",
+      "Back"
+     ],
+     [
+      "The original heads, me, and the original what?",
+      "Crooks",
+      "Crew",
+      "Kings"
+     ],
+     [
+      "Check the dialect from his what?",
+      "Diaphragm",
+      "Notebook",
+      "Heart"
+     ],
+     [
+      "What label gets shouted in the hook?",
+      "Duck Down",
+      "Def Jam",
+      "Bad Boy"
+     ],
+     [
+      "He and his crew walk the streets at what time?",
+      "Night",
+      "Noon",
+      "Dawn"
+     ],
+     [
+      "If it's payday, he's at your what?",
+      "Doorstep",
+      "Window",
+      "Job"
+     ],
+     [
+      "In the cypher with his what?",
+      "Boys",
+      "Fam",
+      "Girls"
+     ],
+     [
+      "Wreckin' shop, he drops the what?",
+      "Top",
+      "Mic",
+      "Beat"
+     ],
+     [
+      "He's dedicated to the moon 'cause it's what?",
+      "Black",
+      "Full",
+      "Bright"
+     ],
+     [
+      "Now we going back to which song?",
+      "Who Got The Props",
+      "Buck Em Down",
+      "Enta Da Stage"
+     ],
+     [
+      "Pressure to come back with another fat what?",
+      "Single",
+      "Album",
+      "Verse"
+     ]
+    ],
+    [
+     [
+      "Not too underground to make you stop when you what?",
+      "Mingle",
+      "Dance",
+      "Talk"
+     ],
+     [
+      "Pay attention to which verse?",
+      "The third",
+      "The first",
+      "The second"
+     ],
+     [
+      "He'll take you to another what?",
+      "Level",
+      "City",
+      "Planet"
+     ],
+     [
+      "Now you're sweatin' who?",
+      "Evil Dee",
+      "DJ Premier",
+      "Mr. Walt"
+     ],
+     [
+      "Evil Dee is the number one what?",
+      "DJ",
+      "MC",
+      "Producer"
+     ],
+     [
+      "When you see him at a show, better prepare for the what?",
+      "Flow",
+      "Crowd",
+      "Noise"
+     ],
+     [
+      "He's giving you a brighter what?",
+      "Day",
+      "Light",
+      "Future"
+     ],
+     [
+      "It's never what?",
+      "Sunny",
+      "Rainy",
+      "Easy"
+     ],
+     [
+      "He comes to the front of the what?",
+      "Stage",
+      "Line",
+      "Room"
+     ],
+     [
+      "He lets you know who's on the what?",
+      "Phone",
+      "Mic",
+      "Track"
+     ],
+     [
+      "Leave it what?",
+      "Alone",
+      "Behind",
+      "There"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Who Got Da Props?",
+   "id": "DPuCpt2kYUs",
+   "start": 15.8,
+   "cuts": [
+    42.9,
+    92.9,
+    126.6
+   ],
+   "qs": [
+    [
+     [
+      "What does he shout right at the start?",
+      "Put up, what up",
+      "Here we go",
+      "Let's go"
+     ],
+     [
+      "Suckers want to flow but they got no what?",
+      "Show",
+      "Shine",
+      "Clue"
+     ],
+     [
+      "He'll grab the mic and flip a what?",
+      "Script",
+      "Coin",
+      "Switch"
+     ],
+     [
+      "He'll leave ya what?",
+      "Stunned",
+      "Shook",
+      "Done"
+     ],
+     [
+      "Buckshot's the one that gets the what done?",
+      "Job",
+      "Work",
+      "Show"
+     ],
+     [
+      "He gets paid to wreck your what?",
+      "Set",
+      "Mic",
+      "Car"
+     ],
+     [
+      "Get ready and what?",
+      "Jet",
+      "Bet",
+      "Sweat"
+     ],
+     [
+      "He's a threat to your what?",
+      "Fret",
+      "Rep",
+      "Head"
+     ],
+     [
+      "No holds what?",
+      "Barred",
+      "Back",
+      "Down"
+     ],
+     [
+      "Best to play the back and watch your what?",
+      "Girl",
+      "Step",
+      "Crew"
+     ],
+     [
+      "If she's a what, he'll diss her and slide?",
+      "Crab",
+      "Star",
+      "Snob"
+     ]
+    ],
+    [
+     [
+      "Word to God, here he comes so make what?",
+      "Way",
+      "Room",
+      "Space"
+     ],
+     [
+      "Rugged and what, every day?",
+      "Rough",
+      "Ready",
+      "Raw"
+     ],
+     [
+      "Microphone check 1, 2, here we what?",
+      "Go",
+      "Come",
+      "Are"
+     ],
+     [
+      "He'll let you know who got the what?",
+      "Flow",
+      "Dough",
+      "Mic"
+     ],
+     [
+      "He's spitting his what?",
+      "Verbs",
+      "Words",
+      "Bars"
+     ],
+     [
+      "5ft, Evil Dee, and who?",
+      "Buckshot",
+      "Mr. Walt",
+      "Sean Price"
+     ],
+     [
+      "One Mississippi, two what?",
+      "Mississippi",
+      "Missouri",
+      "Minnesota"
+     ],
+     [
+      "He played a sucker like a hippie from the what?",
+      "60's",
+      "70's",
+      "80's"
+     ],
+     [
+      "He's gonna get paid from the what?",
+      "90's",
+      "80's",
+      "2000s"
+     ],
+     [
+      "He plays you Little Rascals out like who?",
+      "Stymie",
+      "Alfalfa",
+      "Spanky"
+     ],
+     [
+      "Guaranteed to move what?",
+      "Feets",
+      "Crowds",
+      "Mountains"
+     ]
+    ],
+    [
+     [
+      "He paid his what?",
+      "Dues",
+      "Rent",
+      "Bills"
+     ],
+     [
+      "Now you can't tell him what?",
+      "Nothing",
+      "Twice",
+      "Lies"
+     ],
+     [
+      "Dedicated to the ones who kept what?",
+      "Fronting",
+      "Hating",
+      "Running"
+     ],
+     [
+      "The ones who tried to diss and play what?",
+      "High",
+      "Low",
+      "Hard"
+     ],
+     [
+      "You had low, now he got what?",
+      "Dough",
+      "Flow",
+      "Gold"
+     ],
+     [
+      "He flips a mad script to your what?",
+      "Dome",
+      "Home",
+      "Phone"
+     ],
+     [
+      "He kicks suckers like what?",
+      "Tae kwon do",
+      "Karate",
+      "Kung fu"
+     ],
+     [
+      "From head to what?",
+      "Toe",
+      "Heel",
+      "Feet"
+     ],
+     [
+      "Which DJ gets a shout in the hook?",
+      "Evil Dee",
+      "Premier",
+      "Red Alert"
+     ],
+     [
+      "Who's named first in the hook?",
+      "5ft",
+      "Evil Dee",
+      "Buckshot"
+     ],
+     [
+      "Who got the what?",
+      "Props",
+      "Crown",
+      "Keys"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "I Got Cha Opin",
+   "id": "95ZxyiqtFi4",
+   "start": 20.8,
+   "cuts": [
+    69,
+    157.6,
+    204.9
+   ],
+   "qs": [
+    [
+     [
+      "When he gets bent, he must represent, no what?",
+      "Question",
+      "Doubt",
+      "Problem"
+     ],
+     [
+      "Roots hit him off how?",
+      "Lovely",
+      "Quickly",
+      "Early"
+     ],
+     [
+      "Coming out the spot, he had to what?",
+      "Duck",
+      "Run",
+      "Hide"
+     ],
+     [
+      "Your block is locked down, so don't come any what?",
+      "Further",
+      "Closer",
+      "Later"
+     ],
+     [
+      "Fret it or what?",
+      "Forget it",
+      "Regret it",
+      "Sweat it"
+     ],
+     [
+      "He's short and fly, so he'll still get what?",
+      "Paid",
+      "Played",
+      "Famous"
+     ],
+     [
+      "Getting paid, he don't what?",
+      "Sweat it",
+      "Spend it",
+      "Save it"
+     ],
+     [
+      "He's every MC's what?",
+      "Nightmare",
+      "Hero",
+      "Teacher"
+     ],
+     [
+      "A little shorty pushing the fact that he's what?",
+      "Best in",
+      "Down with",
+      "Rich in"
+     ],
+     [
+      "This thing called hip-hop, raise the what?",
+      "Throne",
+      "Roof",
+      "Bar"
+     ],
+     [
+      "He's got you open in your what?",
+      "Dome",
+      "Zone",
+      "Home"
+     ]
+    ],
+    [
+     [
+      "Don't front, you know he got you what, kid?",
+      "Open",
+      "Covered",
+      "Shook"
+     ],
+     [
+      "Why you what?",
+      "Frontin'",
+      "Runnin'",
+      "Hidin'"
+     ],
+     [
+      "Ladies be like, \"Yo, he's who right there?\"",
+      "Buckshot",
+      "Evil Dee",
+      "5ft"
+     ],
+     [
+      "Around the what?",
+      "Way",
+      "Block",
+      "Corner"
+     ],
+     [
+      "Let's get with the what, kid?",
+      "Cipher",
+      "Party",
+      "Program"
+     ],
+     [
+      "He's too nice to ever hit what?",
+      "Skid",
+      "Rock bottom",
+      "The wall"
+     ],
+     [
+      "On the real, getting what? He never did",
+      "Played",
+      "Paid",
+      "Caught"
+     ],
+     [
+      "On the mic he's gotta what?",
+      "Represent",
+      "Relax",
+      "Perform"
+     ],
+     [
+      "He never got caught by an undercover what?",
+      "DT",
+      "Cop car",
+      "Agent"
+     ],
+     [
+      "Which phone company can't see him?",
+      "AT&T",
+      "Sprint",
+      "Verizon"
+     ],
+     [
+      "You grab mics from the ones he left what?",
+      "Broken",
+      "Behind",
+      "Burning"
+     ]
+    ],
+    [
+     [
+      "Late at night he catches a buzz, then he what?",
+      "Writes",
+      "Sleeps",
+      "Drives"
+     ],
+     [
+      "Wanting to battle every how many minutes?",
+      "Five",
+      "Ten",
+      "Two"
+     ],
+     [
+      "He's in this like what?",
+      "Guinness",
+      "A champion",
+      "A record"
+     ],
+     [
+      "You felt the pain, so what?",
+      "Maintain",
+      "Complain",
+      "Explain"
+     ],
+     [
+      "When it comes to a battle, the Buck what?",
+      "Reigns",
+      "Wins",
+      "Rules"
+     ],
+     [
+      "He overthrows the what?",
+      "Flow",
+      "Show",
+      "Crown"
+     ],
+     [
+      "He's the one you thought wouldn't what?",
+      "Make it",
+      "Fake it",
+      "Take it"
+     ],
+     [
+      "He used to make money, now he just what?",
+      "Takes it",
+      "Spends it",
+      "Counts it"
+     ],
+     [
+      "He brings you to the what?",
+      "Concrete",
+      "Basement",
+      "Corner"
+     ],
+     [
+      "Ease out, then what?",
+      "Flex",
+      "Rest",
+      "Step"
+     ],
+     [
+      "In effect like who?",
+      "Wreckx",
+      "Run-DMC",
+      "EPMD"
+     ]
+    ]
+   ]
   }
  ]
 };

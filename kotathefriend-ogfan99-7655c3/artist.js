@@ -110,18 +110,26 @@ window.CFG = {
    "title": "Dear Fear",
    "id": "xPKDqAxRfM8",
    "cuts": [
-    58,
-    142.5,
-    179.4
+    32.3,
+    38.6,
+    41.7
    ],
    "qs": [
     [
      [
-      "Where has he been with his shaker?",
+      "Where has he been chilling?",
       "Abu Dhabi",
       "Paris",
       "Tokyo"
      ],
+     [
+      "Toxic papi turned what?",
+      "Profit",
+      "Famous",
+      "Pastor"
+     ]
+    ],
+    [
      [
       "Where was his ex-girl seen chilling?",
       "The Oscars lobby",
@@ -135,119 +143,28 @@ window.CFG = {
       "Ten"
      ],
      [
+      "She was crying and looking hella what?",
+      "Sloppy",
+      "Happy",
+      "Tired"
+     ]
+    ],
+    [
+     [
       "Who does he give all his energy to?",
       "His real ones",
       "His fans",
       "His label"
      ],
      [
-      "Life reps are preparation for when what comes?",
-      "Your day",
-      "The rain",
-      "The money"
-     ],
-     [
-      "When you grow, they quick to call you a what?",
-      "Fraud",
-      "Genius",
-      "Legend"
-     ],
-     [
-      "They're attempting to steal your what?",
-      "Magic",
-      "Spot",
-      "Style"
-     ]
-    ],
-    [
-     [
-      "What kind of club does he say they should start?",
-      "A book club",
-      "A run club",
-      "A chess club"
-     ],
-     [
-      "Reading helps him learn to do what healthily?",
-      "Communicate",
-      "Eat",
-      "Sleep"
-     ],
-     [
-      "What does he say he has so much of?",
-      "Free time",
-      "Money",
-      "Stress"
-     ],
-     [
-      "On his way back home he's throwing up what?",
-      "Peace signs",
-      "Thumbs up",
-      "High fives"
-     ],
-     [
-      "He used to be a firefighter. Now what does he do?",
-      "Water his lawn",
-      "Fight fires",
-      "Drive a truck"
-     ],
-     [
-      "He tosses every snake to the what?",
-      "Birds",
-      "Dogs",
-      "River"
-     ],
-     [
-      "His actions follow his what?",
-      "Words",
-      "Heart",
-      "Friends"
-     ]
-    ],
-    [
-     [
-      "He says pain is what?",
-      "Unavoidable",
-      "Temporary",
-      "Fake"
-     ],
-     [
-      "Never let in pain and you never learn how to what?",
-      "Love",
-      "Fight",
-      "Win"
-     ],
-     [
-      "Without pain you don't experience what?",
-      "Joy",
-      "Peace",
-      "Fear"
-     ],
-     [
-      "In the back of the whip, fear can sit and what?",
-      "Relax",
-      "Sleep",
-      "Drive"
-     ],
-     [
-      "If he needs fear, what will he do?",
-      "Call",
-      "Text",
-      "Wait"
-     ],
-     [
-      "For getting him here, he's hella what?",
-      "Grateful",
-      "Angry",
-      "Tired"
-     ],
-     [
-      "They made it farther than who?",
-      "Most",
-      "Everyone",
-      "His friends"
+      "What has he been giving to his real ones?",
+      "His energy",
+      "His money",
+      "His time"
      ]
     ]
-   ]
+   ],
+   "start": 26
   },
   {
    "title": "Birdie",
@@ -272,6 +189,655 @@ window.CFG = {
    "locked": true,
    "cuts": [],
    "qs": []
+  }
+ ],
+ "explicitSongs": [
+  {
+   "title": "Birdie",
+   "id": "b02EQkcUSXE",
+   "cuts": [
+    39.6,
+    89.8,
+    200.9
+   ],
+   "qs": [
+    [
+     [
+      "We can take a what ride?",
+      "Boat",
+      "Train",
+      "Bike"
+     ],
+     [
+      "Make a milli with no what?",
+      "Cosign",
+      "Label",
+      "Deal"
+     ],
+     [
+      "We could go to Europe, or we could go to where?",
+      "Africa",
+      "Asia",
+      "Australia"
+     ],
+     [
+      "Winter in which city?",
+      "Johannesburg",
+      "Cape Town",
+      "Lagos"
+     ],
+     [
+      "We ain't in a what?",
+      "Competition",
+      "Hurry",
+      "Race"
+     ],
+     [
+      "Ain't nobody what?",
+      "Catching up",
+      "Slowing down",
+      "Giving up"
+     ],
+     [
+      "Young, free and black with a whole lotta what?",
+      "Stamina",
+      "Money",
+      "Love"
+     ],
+     [
+      "We are more than what?",
+      "Okay",
+      "Friends",
+      "Ready"
+     ],
+     [
+      "Still reminiscing on the what?",
+      "Old days",
+      "Good times",
+      "Summer"
+     ],
+     [
+      "He still takes the book with a low what?",
+      "Spade",
+      "Club",
+      "Diamond"
+     ],
+     [
+      "Everything's good as long as he's what?",
+      "With you",
+      "On time",
+      "At home"
+     ]
+    ],
+    [
+     [
+      "He was in what mode?",
+      "Survival",
+      "Party",
+      "Sleep"
+     ],
+     [
+      "Now he got a lot to what?",
+      "Lose",
+      "Prove",
+      "Give"
+     ],
+     [
+      "Now his light is what?",
+      "Shining through",
+      "Burning out",
+      "Fading"
+     ],
+     [
+      "We both could use a what?",
+      "Vacay",
+      "Nap",
+      "Raise"
+     ],
+     [
+      "Barcelona, Spain for how many days?",
+      "Eight",
+      "Five",
+      "Ten"
+     ],
+     [
+      "A horror movie like we in what grade?",
+      "Eighth",
+      "Sixth",
+      "Tenth"
+     ],
+     [
+      "There ain't nothing that you can't what?",
+      "Handle",
+      "Fix",
+      "Change"
+     ],
+     [
+      "Even when he wakes up what?",
+      "Ugly",
+      "Late",
+      "Tired"
+     ],
+     [
+      "He's by your side when the what comes?",
+      "Day",
+      "Night",
+      "Rain"
+     ],
+     [
+      "Time goes by, he's the what?",
+      "Same one",
+      "Only one",
+      "Right one"
+     ],
+     [
+      "On the wake-up, way what?",
+      "Up",
+      "Out",
+      "Back"
+     ]
+    ],
+    [
+     [
+      "Sunshine, and what on your window?",
+      "Rain",
+      "Snow",
+      "Light"
+     ],
+     [
+      "She don't got much, but more than she did when?",
+      "Last year",
+      "Yesterday",
+      "Last month"
+     ],
+     [
+      "Just get to your what?",
+      "Business",
+      "Office",
+      "Bed"
+     ],
+     [
+      "Stick to your what?",
+      "Vision",
+      "Plan",
+      "Word"
+     ],
+     [
+      "Learn how to get up as quick as you what?",
+      "Fall",
+      "Fail",
+      "Run"
+     ],
+     [
+      "If you need a what, you can call him?",
+      "Hug",
+      "Ride",
+      "Loan"
+     ],
+     [
+      "Summer in Tijuana or where?",
+      "Rio",
+      "Miami",
+      "Cancun"
+     ],
+     [
+      "They started with what?",
+      "Zero",
+      "Millions",
+      "A plan"
+     ],
+     [
+      "Assume the high position as the what?",
+      "King and queen",
+      "Boss and chief",
+      "Prince and princess"
+     ],
+     [
+      "He loves an underdog what?",
+      "Story",
+      "Team",
+      "Movie"
+     ],
+     [
+      "He's freeing what left and right?",
+      "Birdies",
+      "Doves",
+      "Fish"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Dear Fear",
+   "id": "xPKDqAxRfM8",
+   "start": 24,
+   "cuts": [
+    57.7,
+    104.1,
+    182.9
+   ],
+   "qs": [
+    [
+     [
+      "He's been with his sheikha out in where?",
+      "Abu Dhabi",
+      "Dubai",
+      "Qatar"
+     ],
+     [
+      "You saw his ex-girl chilling in which lobby?",
+      "The Oscars",
+      "The Grammys",
+      "The hotel"
+     ],
+     [
+      "Holding how many trophies?",
+      "Five",
+      "Three",
+      "Two"
+     ],
+     [
+      "Crying and looking hella what?",
+      "Sloppy",
+      "Happy",
+      "Sleepy"
+     ],
+     [
+      "He gives all his energy to his what?",
+      "Real ones",
+      "Family",
+      "Fans"
+     ],
+     [
+      "Who told him to pick his face up?",
+      "Resmaa",
+      "His mom",
+      "His coach"
+     ],
+     [
+      "\"Why is you...\" what?",
+      "Wallowing",
+      "Worrying",
+      "Waiting"
+     ],
+     [
+      "It's life what?",
+      "Reps",
+      "Lessons",
+      "Goals"
+     ],
+     [
+      "All preparation for when your what come?",
+      "Day",
+      "Time",
+      "Turn"
+     ],
+     [
+      "They quick to call you a what?",
+      "Fraud",
+      "Star",
+      "Liar"
+     ],
+     [
+      "Attempting to steal your what?",
+      "Magic",
+      "Shine",
+      "Spot"
+     ]
+    ],
+    [
+     [
+      "He's moving on, arguing every what?",
+      "Day",
+      "Night",
+      "Week"
+     ],
+     [
+      "You don't trust him and you ain't what?",
+      "Wrong",
+      "Sorry",
+      "Done"
+     ],
+     [
+      "But baby, the love is what?",
+      "Gone",
+      "Strong",
+      "Real"
+     ],
+     [
+      "We should start this what?",
+      "Book club",
+      "Band",
+      "Business"
+     ],
+     [
+      "What's been helping him?",
+      "Reading",
+      "Running",
+      "Writing"
+     ],
+     [
+      "He's learning to communicate how?",
+      "Healthily",
+      "Quietly",
+      "Clearly"
+     ],
+     [
+      "This is what for him?",
+      "Wealth",
+      "Peace",
+      "Growth"
+     ],
+     [
+      "He got so much free what?",
+      "Time",
+      "Space",
+      "Money"
+     ],
+     [
+      "He's never gon' what?",
+      "Rewind",
+      "Look back",
+      "Slow down"
+     ],
+     [
+      "He's on his way back where?",
+      "Home",
+      "Out",
+      "Up"
+     ],
+     [
+      "He's throwing up what?",
+      "Peace signs",
+      "His hands",
+      "Deuces"
+     ]
+    ],
+    [
+     [
+      "He's gotta thank you for what?",
+      "Protecting him",
+      "Raising him",
+      "Helping him"
+     ],
+     [
+      "He had to grow up and tell you, let me what?",
+      "Be",
+      "Go",
+      "Speak"
+     ],
+     [
+      "This isn't what?",
+      "Back then",
+      "Over",
+      "Real"
+     ],
+     [
+      "These demons are what?",
+      "Imaginary",
+      "Real",
+      "Hungry"
+     ],
+     [
+      "Time to start a new what?",
+      "Song",
+      "Chapter",
+      "Life"
+     ],
+     [
+      "Your water's too what?",
+      "Strong",
+      "Cold",
+      "Deep"
+     ],
+     [
+      "He used to be a what?",
+      "Firefighter",
+      "Teacher",
+      "Lifeguard"
+     ],
+     [
+      "Now he waters his what?",
+      "Lawn",
+      "Plants",
+      "Garden"
+     ],
+     [
+      "Every pothole he what?",
+      "Swerves",
+      "Hits",
+      "Fills"
+     ],
+     [
+      "Pain is what?",
+      "Unavoidable",
+      "Temporary",
+      "Optional"
+     ],
+     [
+      "He's letting love run the what?",
+      "Ship",
+      "Show",
+      "Car"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Everything",
+   "id": "cymtep-XFLo",
+   "start": 13.1,
+   "cuts": [
+    52.2,
+    110.8,
+    191.2
+   ],
+   "qs": [
+    [
+     [
+      "What does the intro keep repeating?",
+      "Everything",
+      "Anything",
+      "Something"
+     ],
+     [
+      "Wake up what morning?",
+      "Sunday",
+      "Monday",
+      "Saturday"
+     ],
+     [
+      "Clean your crib all what?",
+      "Day",
+      "Week",
+      "Night"
+     ],
+     [
+      "I love you, but it's time we what?",
+      "Separate",
+      "Celebrate",
+      "Move"
+     ],
+     [
+      "He don't hit the gym but he's been losing what?",
+      "Weight",
+      "Sleep",
+      "Friends"
+     ],
+     [
+      "What kind of tree is in his window?",
+      "Bonsai",
+      "Palm",
+      "Lemon"
+     ],
+     [
+      "Give it water, love and what?",
+      "Patience",
+      "Sunlight",
+      "Time"
+     ],
+     [
+      "Get your money how?",
+      "Independent",
+      "Quick",
+      "Early"
+     ],
+     [
+      "Do what's good for who?",
+      "You",
+      "Them",
+      "Me"
+     ],
+     [
+      "Spend a week up in the what?",
+      "Mountains",
+      "Islands",
+      "City"
+     ],
+     [
+      "Up in the mountains just to what?",
+      "Heal",
+      "Hide",
+      "Ski"
+     ]
+    ],
+    [
+     [
+      "Marry someone that goes what when the bill comes?",
+      "50-50",
+      "Dutch",
+      "First"
+     ],
+     [
+      "Love you 'cause you love him at his what?",
+      "Low",
+      "Best",
+      "Worst"
+     ],
+     [
+      "He couldn't have done it on his what?",
+      "Own",
+      "Way",
+      "Time"
+     ],
+     [
+      "All he wanted was to feel like he was what?",
+      "Home",
+      "Free",
+      "Rich"
+     ],
+     [
+      "Never take a penny from his what?",
+      "Soul",
+      "Mom",
+      "Fans"
+     ],
+     [
+      "He should retire by what age?",
+      "Thirty",
+      "Forty",
+      "Fifty"
+     ],
+     [
+      "He should be there for his what?",
+      "Children",
+      "Friends",
+      "Parents"
+     ],
+     [
+      "Get busy dyin' or get busy what?",
+      "Livin'",
+      "Workin'",
+      "Movin'"
+     ],
+     [
+      "He's finna live out his what?",
+      "Vision",
+      "Dreams",
+      "Life"
+     ],
+     [
+      "He wants that chicken and the what?",
+      "Recipe",
+      "Sauce",
+      "Rice"
+     ],
+     [
+      "He hopes you take the what of him?",
+      "Best",
+      "Rest",
+      "Most"
+     ]
+    ],
+    [
+     [
+      "Finally tired of running what?",
+      "Away",
+      "Late",
+      "Around"
+     ],
+     [
+      "Tired of fighting the what?",
+      "Flame",
+      "Feeling",
+      "Fear"
+     ],
+     [
+      "Dancing in puddles in the what?",
+      "Rain",
+      "Street",
+      "Park"
+     ],
+     [
+      "Still humble with the what?",
+      "Fame",
+      "Fans",
+      "Money"
+     ],
+     [
+      "Turning this struggle to pink what?",
+      "Lemonade",
+      "Punch",
+      "Paint"
+     ],
+     [
+      "Flat tire, that's a what?",
+      "Shame",
+      "Pain",
+      "Problem"
+     ],
+     [
+      "Reminiscing on the old days with the what?",
+      "Gold chains",
+      "Old crew",
+      "Good times"
+     ],
+     [
+      "Watching which show with the whole fam?",
+      "Rap City",
+      "106 & Park",
+      "Yo! MTV Raps"
+     ],
+     [
+      "In whose room for the whole day?",
+      "His Auntie's",
+      "His Grandma's",
+      "His cousin's"
+     ],
+     [
+      "Ramen noodles with a what?",
+      "Coke can",
+      "Hot sauce",
+      "Juice box"
+     ],
+     [
+      "Under palm trees sipping what?",
+      "Mai tais",
+      "Margaritas",
+      "Pina coladas"
+     ]
+    ]
+   ]
   }
  ]
 };

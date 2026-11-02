@@ -253,8 +253,8 @@ window.CFG = {
    "id": "MbgRHAtwPnY",
    "cuts": [
     71.2,
-    152.8,
-    215.5
+    132.5,
+    158.1
    ],
    "qs": [
     [
@@ -303,6 +303,62 @@ window.CFG = {
     ],
     [
      [
+      "Brand new what, with the roof dropped back?",
+      "'Rarri",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "He came through which neighborhood?",
+      "Harlem",
+      "Brooklyn",
+      "The Bronx"
+     ],
+     [
+      "Money in the what?",
+      "Bank",
+      "Safe",
+      "Bag"
+     ],
+     [
+      "They only want what?",
+      "Tables",
+      "Drinks",
+      "Booths"
+     ],
+     [
+      "Ten Rose's and a few cold what?",
+      "Waters",
+      "Beers",
+      "Sodas"
+     ],
+     [
+      "Balling hard, it was just the what inning?",
+      "9th",
+      "1st",
+      "7th"
+     ],
+     [
+      "Blackberry what?",
+      "Two way",
+      "Bold",
+      "Pearl"
+     ],
+     [
+      "We superstars, no who?",
+      "Lupe",
+      "Kanye",
+      "Drake"
+     ],
+     [
+      "Wait, let me dim the what?",
+      "Lights",
+      "Music",
+      "Volume"
+     ]
+    ],
+    [
+     [
       "\"How we ball in the club? I know you\" what?",
       "Hate it",
       "Love it",
@@ -343,44 +399,12 @@ window.CFG = {
       "Champagne",
       "Collars",
       "Wheelies"
-     ]
-    ],
-    [
-     [
-      "\"I wanna see you dance, see you\" what?",
-      "Dance",
-      "Move",
-      "Smile"
      ],
      [
-      "How many times in a row: \"I wanna see you dance\"?",
-      "Four",
-      "Two",
-      "Six"
-     ],
-     [
-      "Back to the hook: \"How we\" what \"in the club\"?",
-      "Ball",
-      "Move",
-      "Roll"
-     ],
-     [
-      "Who's dancing on the floor?",
-      "Mami",
-      "Shorty",
-      "Everybody"
-     ],
-     [
-      "Who gives it to him?",
-      "All the girls",
-      "The DJ",
-      "The crowd"
-     ],
-     [
-      "The last words of the song?",
-      "We pop champagne",
-      "See you dance",
-      "Ether Boy"
+      "Baby, he wanna see you what?",
+      "Work",
+      "Smile",
+      "Sing"
      ]
     ]
    ]
