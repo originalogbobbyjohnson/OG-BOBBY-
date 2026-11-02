@@ -82,7 +82,7 @@
   function open(i) {
     var a = ARTISTS[i]; if (!a) return; stop();
     R.a = a; R.id = roomId(a); R.tab = "wall"; R.me = null; R.isArtist = false; R.cert = false;
-    var h = H(); $("rmAv").textContent = h.initials ? h.initials(a.who) : "OG"; $("rmAv").style.background = h.avColor ? h.avColor(a) : "#d62828";
+    var h = H(); $("rmAv").textContent = a.who === "OG Bobby" ? "OG" : h.initials ? h.initials(a.who) : "OG"; $("rmAv").style.background = h.avColor ? h.avColor(a) : "#d62828";
     $("rmNm").textContent = a.who; $("rmMt").innerHTML = esc(h.meta ? h.meta(a) : (a.hood || "")) + (h.bul ? h.bul(a) : "") + "<br>" + esc(a.who.toUpperCase()) + "'S ROOM";
     el.hidden = false;
     if (!live()) { R.isArtist = owner() && a.who === "OG Bobby"; R.cert = H().cert ? H().cert(a).ok : false; return draw(); }
