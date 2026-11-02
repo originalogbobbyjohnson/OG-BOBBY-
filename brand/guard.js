@@ -94,6 +94,10 @@
     new MutationObserver(function () { setTimeout(fit, 30); }).observe(sh, { childList: true });
     addEventListener("resize", fit); fit(); };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fitShelf); else fitShelf();
+  /* the number 9 always has a straight stem (OG Bobby's own 9 from the album and site), on every page that uses the graffiti font */
+  try { var n9 = document.createElement("style"); n9.id = "og9";
+    n9.textContent = '@font-face{font-family:"Sedgwick Nine";src:url("/brand/sedgwick-nine.woff") format("woff");unicode-range:U+0039;font-display:swap}html:root{--tag:"Sedgwick Nine","Sedgwick Ave Display","Permanent Marker",cursive}';
+    (document.head || document.documentElement).appendChild(n9); } catch (e) {}
   /* the board's record: show the WHOLE record (as big as the space allows), and scratching it never drags the page */
   var fitRec = function () {
     var r = document.getElementById("record"); if (!r) return;
@@ -108,5 +112,5 @@
     document.addEventListener("touchstart", function (e) { if (e.target && e.target.closest && e.target.closest("#record")) { document.documentElement.style.overscrollBehavior = "none"; document.body.style.overscrollBehavior = "none"; } }, { passive: true });
   };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fitRec); else fitRec();
-  try { if (!document.getElementById("nycSidesJs")) { var ns = document.createElement("script"); ns.id = "nycSidesJs"; ns.src = "/brand/nycsides.js?v=1"; document.head.appendChild(ns); } } catch (e) {}
+  try { if (!document.getElementById("nycSidesJs")) { var ns = document.createElement("script"); ns.id = "nycSidesJs"; ns.src = "/brand/nycsides.js?v=2"; document.head.appendChild(ns); } } catch (e) {}
 })();

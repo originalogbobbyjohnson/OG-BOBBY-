@@ -6,7 +6,7 @@
     "#nycL{left:0}#nycR{right:0}" +
     "#nycL:after,#nycR:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.15),rgba(0,0,0,.55))}#nycR:after{background:linear-gradient(270deg,rgba(0,0,0,.15),rgba(0,0,0,.55))}" +
     "#nycL svg,#nycR svg{position:absolute;inset:0;width:100%;height:100%}" +
-    ".nyc-tag{font-family:'Sedgwick Ave Display','Permanent Marker',cursive;paint-order:stroke;stroke:#000;stroke-width:5px;stroke-linejoin:round}" +
+    "@font-face{font-family:'Sedgwick Nine';src:url('/brand/sedgwick-nine.woff') format('woff');unicode-range:U+0039;font-display:swap}.nyc-tag{font-family:'Sedgwick Nine','Sedgwick Ave Display','Permanent Marker',cursive;paint-order:stroke;stroke:#000;stroke-width:5px;stroke-linejoin:round}" +
     "@media (max-width:500px){#nycL,#nycR{display:none}}";
   var L = '<svg viewBox="0 0 300 900" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">' +
     /* fire escape */
