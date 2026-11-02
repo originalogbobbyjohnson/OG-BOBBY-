@@ -26,7 +26,7 @@
     signOut: function () { return auth().then(function (a) { return a.signOut(); }); },
     onUser: function (cb) { return auth().then(function (a) { return a.onAuthStateChanged(cb); }); },
     me: function () { return auth().then(function () { var u = uid(); if (!u) return null; return firebase.firestore().collection("members").doc(u).get().then(function (d) { return d.exists ? Object.assign({ id: u }, d.data()) : { id: u, none: true }; }); }); },
-    join: function (kind, name, door, adult) { return auth().then(function () { return firebase.firestore().collection("members").doc(uid()).set({ kind: kind, name: String(name).slice(0, 40), door: String(door || "").slice(0, 60), approved: false, adult: !!adult, t: now() }); }); },
+    join: function (kind, name, door, adult, room) { return auth().then(function () { return firebase.firestore().collection("members").doc(uid()).set({ kind: kind, name: String(name).slice(0, 40), door: String(door || "").slice(0, 60), room: String(room || "").slice(0, 80), approved: false, adult: !!adult, t: now() }); }); },
     member: function (id) { return db().then(function (d) { return d.collection("members").doc(id).get(); }).then(function (x) { return x.exists ? Object.assign({ id: x.id }, x.data()) : null; }); },
     certsMine: function () { return auth().then(function () { var me = uid(); if (!me) return []; return firebase.firestore().collection("certs").where("fan", "==", me).limit(500).get().then(rows); }); },
     members: function (kind) { return db().then(function (d) { return d.collection("members").where("approved", "==", true).where("kind", "==", kind).limit(500).get(); }).then(rows); },
@@ -44,6 +44,16 @@
     certFans: function (artist) { return db().then(function (d) { return d.collection("certs").where("artist", "==", artist).limit(500).get(); }).then(rows); },
     note: function (artistUid, artist, text) { var me = uid(), wk = Math.floor(Date.now() / 6048e5); return db().then(function (d) { return d.collection("notes").doc(me + "_" + artistUid + "_" + wk).set({ fan: me, to: artistUid, artist: String(artist).slice(0, 60), text: String(text).slice(0, 280), wk: wk, t: now() }); }); },
     notes: function () { return db().then(function (d) { return d.collection("notes").where("to", "==", uid()).limit(100).get(); }).then(rows); },
+    /* ARTIST ROOMS (rooms/{slug}): the artist's Wall (posts + reactions + replies) and the Platform (Certified Fans' group chat) */
+    uid: function () { return firebase.auth && firebase.auth().currentUser ? firebase.auth().currentUser.uid : null; },
+    wall: function (room, cb) { return db().then(function (d) { return d.collection("rooms").doc(room).collection("posts").orderBy("t", "desc").limit(50).onSnapshot(function (q) { cb(rows(q)); }); }); },
+    post: function (room, name, text, yt) { return db().then(function (d) { return d.collection("rooms").doc(room).collection("posts").add({ by: uid(), name: String(name).slice(0, 40), text: String(text).slice(0, 1000), yt: String(yt || "").slice(0, 20), t: now() }); }); },
+    react: function (room, pid, e) { return db().then(function (d) { return d.collection("rooms").doc(room).collection("posts").doc(pid).collection("reacts").doc(uid()).set({ e: e, t: now() }); }); },
+    reacts: function (room, pid) { return db().then(function (d) { return d.collection("rooms").doc(room).collection("posts").doc(pid).collection("reacts").get(); }).then(rows); },
+    replies: function (room, pid) { return db().then(function (d) { return d.collection("rooms").doc(room).collection("posts").doc(pid).collection("replies").orderBy("t").limit(100).get(); }).then(rows); },
+    reply: function (room, pid, name, text) { return db().then(function (d) { return d.collection("rooms").doc(room).collection("posts").doc(pid).collection("replies").add({ by: uid(), name: String(name).slice(0, 40), text: String(text).slice(0, 280), t: now() }); }); },
+    platform: function (room, cb) { return db().then(function (d) { return d.collection("rooms").doc(room).collection("platform").orderBy("t").limitToLast(150).onSnapshot(function (q) { cb(rows(q)); }); }); },
+    say: function (room, name, text) { return db().then(function (d) { return d.collection("rooms").doc(room).collection("platform").add({ by: uid(), name: String(name).slice(0, 40), text: String(text).slice(0, 500), t: now() }); }); },
     block: function (who) { return db().then(function (d) { return d.collection("members").doc(uid()).collection("blocked").doc(String(who)).set({ t: now() }); }); },
     report: function (who) { return db().then(function (d) { return d.collection("reports").add({ by: uid(), about: String(who).slice(0, 80), t: now() }); }); }
   };

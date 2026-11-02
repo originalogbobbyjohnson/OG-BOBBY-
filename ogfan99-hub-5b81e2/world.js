@@ -237,7 +237,7 @@
     };
     $("pdQ").oninput = draw; draw();
     $("pdList").onclick = function (e) { var b = e.target.closest("[data-i]"); if (!b) return;
-      if (join) { b.disabled = true; var a = A()[+b.dataset.i]; OGFB.social.join("artist", a.who, a.who).then(drawLounge); return; }
+      if (join) { b.disabled = true; var a = A()[+b.dataset.i]; OGFB.social.join("artist", a.who, a.who, true, window.OGROOM ? OGROOM.id(a) : "").then(drawLounge); return; }
       if (typeof openClaim === "function") openClaim(+b.dataset.i); };
     $("pdBack").onclick = join ? function () { OGFB.social.signOut().then(drawLounge); } : drawLounge;
   }
@@ -251,6 +251,7 @@
     var friends = sampleFriends.concat(sampleReqs.filter(function (r) { return s.acc[r.who] === 1; }));
     var subs = [["friends", "FRIENDS", 0], ["requests", "REQUESTS", reqs.length], ["find", "FIND", 0], ["fans", "MY FANS", 1], ["messages", "MESSAGES", 0]];
     var h = '<div class="prof"><div class="av" style="background:' + avColor(me) + '">OG</div><div><div class="nm">' + esc(me.who) + '</div><div class="mt">' + esc(meta(me)) + bul(me) + '<br>&#129309; ' + friends.length + ' OG 99 FRIENDS</div></div></div>' +
+      '<button class="wbtn gold" id="lgRoom" type="button">&#128682; OPEN MY ROOM</button>' +
       '<span class="sample">PREVIEW · SAMPLE ARTISTS UNTIL THE LOUNGE GOES LIVE</span>' +
       '<div class="lsub">' + subs.map(function (x) { return '<button type="button" data-s="' + x[0] + '"' + (L.sub === x[0] ? ' class="on"' : '') + '>' + x[1] + (x[2] ? '<i>' + x[2] + '</i>' : '') + '</button>'; }).join("") + '</div><div id="lgBody" style="display:grid;gap:6px"></div>' +
       '<button class="wbtn dark" id="lgExit" type="button">EXIT PREVIEW</button>';
@@ -261,6 +262,7 @@
     var p = panes.lounge;
     p.querySelector(".lsub").onclick = function (e) { var b = e.target.closest("[data-s]"); if (!b) return; L.sub = b.dataset.s; drawLounge(); };
     $("lgExit").onclick = function () { L.preview = false; drawLounge(); };
+    if ($("lgRoom")) $("lgRoom").onclick = function () { var i = A().findIndex(function (x) { return x.who === "OG Bobby"; }); if (window.OGROOM && i >= 0) OGROOM.open(i); };
     var body = $("lgBody"), s = pstate();
     if (L.sub === "friends") {
       var fr = sampleFriends.concat(sampleReqs.filter(function (r) { return s.acc[r.who] === 1; }));
@@ -306,8 +308,9 @@
       p.innerHTML = '<div class="wp-h"><div class="t">ARTIST LOUNGE</div><div class="s">WHERE THE ARTISTS LINK UP</div></div>' +
         '<div class="prof"><div class="av" style="background:' + avColor(me) + '">' + esc(initials(me.who)) + '</div><div><div class="nm">' + esc(me.who) + '</div><div class="mt">' + esc(meta(me)) + bul(me) + '<br>&#129309; ' + fr.length + ' OG 99 FRIENDS</div></div></div>' +
         '<div class="lsub">' + subs.map(function (x) { return '<button type="button" data-s="' + x[0] + '"' + (L.sub === x[0] ? ' class="on"' : '') + '>' + x[1] + (x[2] ? '<i>' + x[2] + '</i>' : '') + '</button>'; }).join("") + '</div><div id="lgBody" style="display:grid;gap:6px"></div>' +
-        '<button class="wbtn dark" id="lgOut" type="button">SIGN OUT</button>';
+        '<button class="wbtn gold" id="lgRoom" type="button">&#128682; OPEN MY ROOM</button><button class="wbtn dark" id="lgOut" type="button">SIGN OUT</button>';
       p.querySelector(".lsub").onclick = function (e) { var b = e.target.closest("[data-s]"); if (!b) return; L.sub = b.dataset.s; liveInside(m); };
+      $("lgRoom").onclick = function () { var i = A().findIndex(function (x) { return x.who === (m.door || m.name); }); if (window.OGROOM && i >= 0) OGROOM.open(i); };
       $("lgOut").onclick = function () { S.signOut().then(drawLounge); };
       var body = $("lgBody");
       var chatBtn = function (u) { return '<button class="wbtn sm gold" type="button" data-cu="' + esc(u) + '">MESSAGE</button>'; };
@@ -452,9 +455,9 @@
         OGFB.social.join("fan", n, "", $("fzAdult").checked).then(function () { FM.me = undefined; drawFans(); }).catch(function () { $("fzMsg").textContent = "Couldn't save. Try again."; }); };
     } else if (F.sub === "certified") {
       var near = list.filter(function (x) { return !x.c.ok; }).sort(function (x, y) { return y.c.pct - x.c.pct; }).slice(0, 8);
-      body.innerHTML = '<div class="wbox"><h4>OG CERTIFIED (' + got.length + ')</h4>' + (got.length ? got.map(function (x) { return row(x.a, (FM.me && FM.me.adult && FM.me.kind === "fan" ? '<button class="wbtn sm" type="button" data-note="' + x.i + '">NOTE</button>' : '') + '<button class="wbtn sm gold" type="button" data-play="' + x.i + '">PLAY</button>', "&#9733; CERTIFIED FAN"); }).join("") : '<p>No perfect games yet. Clear every box of an artist\'s game with 3 stars to get certified.</p>') + '</div>' +
+      body.innerHTML = '<div class="wbox"><h4>OG CERTIFIED (' + got.length + ')</h4>' + (got.length ? got.map(function (x) { return row(x.a, (FM.me && FM.me.adult && FM.me.kind === "fan" ? '<button class="wbtn sm" type="button" data-note="' + x.i + '">NOTE</button>' : '') + '<button class="wbtn sm gold" type="button" data-room="' + x.i + '">ROOM</button>', "&#9733; CERTIFIED FAN"); }).join("") : '<p>No perfect games yet. Clear every box of an artist\'s game with 3 stars to get certified.</p>') + '</div>' +
         '<div class="wbox"><h4>ALMOST THERE</h4>' + (near.length ? near.map(function (x) { return row(x.a, '<button class="wbtn sm" type="button" data-play="' + x.i + '">GO</button>', x.c.pct + '% PERFECT'); }).join("") : '<p>Start any game on the map and it shows up here.</p>') + '</div>';
-      body.onclick = function (e) { var nb = e.target.closest("[data-note]"); if (nb) return fanNote(A()[+nb.dataset.note]); var b = e.target.closest("[data-play]"); if (!b) return; go("map"); setTimeout(function () { try { openCard(+b.dataset.play); } catch (er) {} }, 80); };
+      body.onclick = function (e) { var nb = e.target.closest("[data-note]"); if (nb) return fanNote(A()[+nb.dataset.note]); var rb = e.target.closest("[data-room]"); if (rb && window.OGROOM) return OGROOM.open(+rb.dataset.room); var b = e.target.closest("[data-play]"); if (!b) return; go("map"); setTimeout(function () { try { openCard(+b.dataset.play); } catch (er) {} }, 80); };
     } else if (F.sub === "friends") {
       var fs = LS("ogfan99fans") || {};
       body.innerHTML = '<span class="sample">PREVIEW · SAMPLE FANS UNTIL FAN SIGN-IN GOES LIVE</span>' +
