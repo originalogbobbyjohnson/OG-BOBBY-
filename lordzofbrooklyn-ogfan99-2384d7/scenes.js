@@ -57,7 +57,7 @@
       '<rect class="flk" x="0" y="0" width="400" height="5" fill="#fffbe0" opacity=".8"/>' +
       /* black station sign */
       '<rect x="92" y="66" width="216" height="34" rx="4" fill="#111"/><rect x="92" y="66" width="216" height="4" fill="#fff"/>' +
-      '<text x="108" y="91" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="16" fill="#fff">77 St</text>' +
+      '<text x="108" y="91" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="16" fill="#fff">95 St</text>' +
       bullet(286, 84, "R", YEL, true) +
       '<text x="200" y="112" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="2" fill="#3a3326">4 AV · BAY RIDGE →</text>' +
       /* train slides in */
@@ -192,7 +192,7 @@
       '<path class="flk" d="M322 46h26l-6 8h-14z" fill="#ffe7a8"/><g opacity=".14"><path class="flk" d="M322 54h26l20 166h-66z" fill="#ffe7a8"/></g>' +
       /* sign pole */
       '<rect x="300" y="60" width="5" height="160" fill="#1d2329"/>' +
-      street(270, 64, 66, "4 Av") + street(270, 86, 66, "77 St") +
+      street(270, 64, 66, "4 Av") + street(270, 86, 66, "95 St") +
       /* subway entrance globe */
       '<circle class="flk flk2" cx="282" cy="168" r="6" fill="#3cb043"/><rect x="280" y="174" width="4" height="46" fill="#1d2329"/>' +
       '<rect x="0" y="220" width="400" height="40" fill="#14181d"/><path d="M0 240h400" stroke="#eab308" stroke-width="2" stroke-dasharray="20 14"/>',

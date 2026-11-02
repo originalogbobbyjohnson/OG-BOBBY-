@@ -37,7 +37,7 @@ window.CFG = {
     { name: "YouTube", handle: "@lordzofbrooklyn", url: "https://www.youtube.com/@lordzofbrooklyn" }
   ],
   rooms: [
-    { scene: "train", t: "PRESS PLAY", x: "Take the R to 77 St in Bay Ridge. Tap the record. Every song is an episode.", sfx: "train" },
+    { scene: "train", t: "PRESS PLAY", x: "Take the R to Bay Ridge–95 St. Tap the record. Every song is an episode.", sfx: "train" },
     { scene: "bridge", t: "EVERY SONG STOPS", x: "At the end of a verse the song stops and asks about what you just heard. Answer right and it keeps going.", sfx: "traffic" },
     { scene: "block", t: "1, THEN 2, THEN 3", x: "(auto-filled by the game)", sfx: "bell" },
     { scene: "yard", t: "CLIMB THE RANKS", x: "(auto-filled by the game)", sfx: "train" },
