@@ -373,7 +373,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 /* ---------- step-by-step board (Nov 1): STEP 1 pick a borough → STEP 2 pick an artist → STEP 3 press play ---------- */
 .wrap.app > .boros { display: none !important; }
 .wrap.app.step1 > .bhead, .wrap.app.step1 > .listwrap, .wrap.app.step1 > .crumb { display: none !important; }
-.wrap.app:not(.step1) > .step1p { display: none !important; }
+.wrap.app:not(.step1) > .step1p, .wrap.app.paneon > .step1p, .wrap.app.paneon > .crumb { display: none !important; }
 .wrap.app.step1 .mapbox:not(.big) { height: 16vh !important; }
 .step1p { flex: 1 1 auto; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding-bottom: 6px; }
 .step1p > * { flex: none; }
@@ -1678,7 +1678,7 @@ window.OGX = (function () {
   $("start").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(); });
 })();
 </script>
-<script src="world.js?v=11"></script>
+<script src="world.js?v=12"></script>
 
 <script>
 /* ---------- map + list work together (Nov 1) ----------

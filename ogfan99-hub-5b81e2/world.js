@@ -183,7 +183,7 @@
     if (live() && !L.gate) { p.innerHTML = head + '<p class="wmsg">Loading...</p>'; OGFB.social.me().then(function (m) {
         if (!m) { L.gate = 1; drawLounge(); L.gate = 0; return; }
         if (m.none) return pickDoor(true);
-        if (!m.approved) { p.innerHTML = head + '<div class="wbox"><h4>YOU\'RE ON THE LIST</h4><p>Your door is <b>' + esc(m.door) + '</b>. OG Bobby checks every artist before they get in. You\'ll be able to add OG 99 friends as soon as he approves you.</p></div><button class="wbtn dark" id="lgOut" type="button">SIGN OUT</button>'; $("lgOut").onclick = function () { OGFB.social.signOut().then(drawLounge); }; return; }
+        if (!m.approved) { p.innerHTML = head + '<div class="wbox"><h4>YOU\'RE ON THE LIST</h4><p>Your door is <b>' + esc(m.door) + '</b>. OG Bobby checks every artist before they get in. You\'ll be able to add OG 99 friends as soon as he approves you.</p></div>' + (owner() ? '<button class="wbtn gold" id="lgAdm2" type="button">OPEN APPROVALS (OWNER)</button>' : '') + '<button class="wbtn dark" id="lgOut" type="button">SIGN OUT</button>'; $("lgOut").onclick = function () { OGFB.social.signOut().then(drawLounge); }; if ($("lgAdm2")) $("lgAdm2").onclick = drawApprovals; return; }
         liveInside(m);
       }).catch(function () { L.gate = 1; drawLounge(); L.gate = 0; }); return; }
     p.innerHTML = head +
@@ -308,8 +308,9 @@
       p.innerHTML = '<div class="wp-h"><div class="t">ARTIST LOUNGE</div><div class="s">WHERE THE ARTISTS LINK UP</div></div>' +
         '<div class="prof"><div class="av" style="background:' + avColor(me) + '">' + esc(initials(me.who)) + '</div><div><div class="nm">' + esc(me.who) + '</div><div class="mt">' + esc(meta(me)) + bul(me) + '<br>&#129309; ' + fr.length + ' OG 99 FRIENDS</div></div></div>' +
         '<div class="lsub">' + subs.map(function (x) { return '<button type="button" data-s="' + x[0] + '"' + (L.sub === x[0] ? ' class="on"' : '') + '>' + x[1] + (x[2] ? '<i>' + x[2] + '</i>' : '') + '</button>'; }).join("") + '</div><div id="lgBody" style="display:grid;gap:6px"></div>' +
-        '<button class="wbtn gold" id="lgRoom" type="button">&#128682; OPEN MY ROOM</button><button class="wbtn dark" id="lgOut" type="button">SIGN OUT</button>';
+        '<button class="wbtn gold" id="lgRoom" type="button">&#128682; OPEN MY ROOM</button>' + (owner() ? '<button class="wbtn dark" id="lgAdm3" type="button">APPROVALS (OWNER)</button>' : '') + '<button class="wbtn dark" id="lgOut" type="button">SIGN OUT</button>';
       p.querySelector(".lsub").onclick = function (e) { var b = e.target.closest("[data-s]"); if (!b) return; L.sub = b.dataset.s; liveInside(m); };
+      if ($("lgAdm3")) $("lgAdm3").onclick = drawApprovals;
       $("lgRoom").onclick = function () { var i = A().findIndex(function (x) { return x.who === (m.door || m.name); }); if (window.OGROOM && i >= 0) OGROOM.open(i); };
       $("lgOut").onclick = function () { S.signOut().then(drawLounge); };
       var body = $("lgBody");
