@@ -478,14 +478,14 @@
     { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE and San Diego.", c: "#f2c14e" },
     { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond and San Jose.", c: "#0099d8" },
     { n: "CHICAGO + MIDWEST", d: "The Chi, plus Detroit, St. Louis and Milwaukee.", c: "#00a1de" },
-    { n: "DOWN SOUTH", d: "Atlanta, Houston, Memphis, New Orleans and Miami.", c: "#35b867" }
+    { n: "DOWN SOUTH", d: "Atlanta, Houston, Memphis, New Orleans and Miami.", c: "#35b867", locked: [{ who: "The real_Saddium", ig: "the_real_saddium" }] }
   ];
   function drawRegions() {
     var p = panes.regions;
     p.innerHTML = '<div class="wp-h"><div class="t">REGIONS</div><div class="s">EVERY CITY GETS ITS OWN MAP</div></div>' +
-      '<div class="wgrid">' + REGIONS.map(function (r, i) { return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-r="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small><span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO RIDE" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
+      '<div class="wgrid">' + REGIONS.map(function (r, i) { return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-r="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small>' + (r.locked ? '<small style="color:#e8b84a;font-weight:800">&#128274; LOCKED IN: ' + r.locked.map(function (x) { return esc(x.who); }).join(", ") + '</small>' : '') + '<span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO RIDE" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
       '<div class="wmsg" id="rgMsg"></div>';
-    p.querySelector(".wgrid").onclick = function (e) { var b = e.target.closest("[data-r]"); if (!b) return; var r = REGIONS[+b.dataset.r]; if (r.live) return go("map"); $("rgMsg").textContent = r.n + " is under construction. Its map is coming."; };
+    p.querySelector(".wgrid").onclick = function (e) { var b = e.target.closest("[data-r]"); if (!b) return; var r = REGIONS[+b.dataset.r]; if (r.live) return go("map"); $("rgMsg").innerHTML = esc(r.n) + " is under construction. Its map is coming." + (r.locked ? "<br>LOCKED IN: " + r.locked.map(function (x) { return esc(x.who); }).join(", ") : ""); };
   }
 
   /* ---------- GENRES: beyond rap ---------- */
