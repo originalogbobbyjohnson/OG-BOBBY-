@@ -137,21 +137,27 @@ window.PRODUCERS = [
   "slug": "p-djpremier",
   "tier": "legend",
   "home": "Houston, TX (made his name in Brooklyn)",
-  "knownFor": "Gang Starr's chopped-and-scratched boom-bap blueprint"
+  "knownFor": "Gang Starr's chopped-and-scratched boom-bap blueprint",
+  "url": "../p-djpremier-ogfan99-764e5b/",
+  "ex": 1
  },
  {
   "name": "Pete Rock",
   "slug": "p-peterock",
   "tier": "legend",
   "home": "Mount Vernon, NY",
-  "knownFor": "The Chocolate Boy Wonder of horn-laden soul loops"
+  "knownFor": "The Chocolate Boy Wonder of horn-laden soul loops",
+  "url": "../p-peterock-ogfan99-ebd7e9/",
+  "ex": 2
  },
  {
   "name": "RZA",
   "slug": "p-rza",
   "tier": "legend",
   "home": "Staten Island, NY",
-  "knownFor": "Wu-Tang Clan's kung-fu soul architect"
+  "knownFor": "Wu-Tang Clan's kung-fu soul architect",
+  "url": "../p-rza-ogfan99-5837ba/",
+  "ex": 2
  },
  {
   "name": "J Dilla",
