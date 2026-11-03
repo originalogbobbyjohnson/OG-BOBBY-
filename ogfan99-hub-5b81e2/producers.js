@@ -5,14 +5,18 @@ window.PRODUCERS = [
   "slug": "p-kanyewest",
   "tier": "mainstream",
   "home": "Chicago, IL (South Shore)",
-  "knownFor": "Chipmunk-soul sampler who built the Roc-A-Fella sound before going solo"
+  "knownFor": "Chipmunk-soul sampler who built the Roc-A-Fella sound before going solo",
+  "url": "../p-kanyewest-ogfan99-f47ec1/",
+  "ex": 1
  },
  {
   "name": "Dr. Dre",
   "slug": "p-drdre",
   "tier": "mainstream",
   "home": "Compton, CA",
-  "knownFor": "G-funk architect behind Death Row and Aftermath"
+  "knownFor": "G-funk architect behind Death Row and Aftermath",
+  "url": "../p-drdre-ogfan99-fa525c/",
+  "ex": 1
  },
  {
   "name": "DJ Khaled",
