@@ -383,19 +383,29 @@
   $("chBlock").onclick = function () { if (chUid) OGFB.social.block(chUid); note(chUid ? "BLOCKED. THEY CAN'T MESSAGE YOU." : "PREVIEW · BLOCK WORKS WHEN THE LOUNGE GOES LIVE"); };
   $("chReport").onclick = function () { if (chUid) OGFB.social.report(chUid + " " + chWith); note(chUid ? "REPORTED. OG BOBBY WILL TAKE A LOOK." : "PREVIEW · REPORTS GO TO OG BOBBY WHEN LIVE"); };
 
-  /* ---------- OG CERTIFIED: a perfect game connects a fan to that artist ---------- */
-  /* perfect = every one of the 9 boxes cleared with 3 stars (no misses); OG Bobby's own game = all 99 right on the 99 test */
+  /* ---------- OG CERTIFIED: beat the game, then all 99 in a row on the 99 Challenge ---------- */
+  /* Rule set (Bobby, Nov 2 2026). One place for every number so the server rules can copy it later. */
+  var CERT_RULES = {
+    unlock: "Beat the artist's full game (all 9 boxes) to unlock their 99 Challenge.",
+    pass: 99,                 /* all 99 right, in a row */
+    retryDays: 7,             /* miss one = wait a week to retake */
+    fanMsgPerWeek: 1,         /* fan -> artist: one message a week */
+    fanMsgChars: 280,         /* owner range 100-500; 280 to start */
+    artistMsg: "anytime",     /* artist -> fan: no limit, like any platform */
+    credits: { live: false, perRetry: 1, maxPaidRetriesPerWeek: 2, rollover: "VIP Lounge perks after you pass", note: "Optional. Never needed to play." }
+  };
+  window.OG_CERT_RULES = CERT_RULES;
   var CERT_LV = [[1, "OG CERTIFIED"], [5, "TRUE FAN"], [10, "DEEP CUT"], [25, "HALL OF FAMER"], [50, "OG LEGEND"]];
   function certInfo(a) {
     if (a.who === "OG Bobby") { var g = LS("ogPlus") || {}; var b = g.t99best || 0; return { pct: Math.min(100, Math.round(b / 99 * 100)), ok: b >= 99, played: b > 0 }; }
     if (!a.save) return { pct: 0, ok: false, played: false };
     var best = { pct: 0, ok: false, played: false };
     [a.save, a.save + "x"].forEach(function (k) {
-      var v = LS(k); if (!v) return; var st = v.stars || {}, n3 = 0, any = Object.keys(st).length || Object.keys(v.cleared || {}).length;
-      Object.keys(st).forEach(function (x) { if (st[x] >= 3) n3++; });
-      var pct = Math.min(100, Math.round(n3 / 9 * 100)), ok = n3 >= 9;
-      if (ok || pct > best.pct) best = { pct: pct, ok: ok, played: best.played || !!any };
-      if (any) best.played = true;
+      var v = LS(k); if (!v) return; var any = Object.keys(v.stars || {}).length || Object.keys(v.cleared || {}).length;
+      var cb = typeof v.chalBest === "number" ? v.chalBest : null, ok = cb != null && cb >= CERT_RULES.pass;
+      var pct = cb != null ? Math.min(100, Math.round(cb / 99 * 100)) : Math.min(99, Math.round(Object.keys(v.cleared || {}).length / 9 * 50));
+      if (ok || pct > best.pct) best = { pct: pct, ok: ok, played: best.played || !!any || cb != null };
+      if (any || cb != null) best.played = true;
     });
     return best;
   }
@@ -409,7 +419,9 @@
   var RULES = ["Respect every artist and every fan. No harassment, threats, hate or bullying.",
     "No stalking: never post or ask for an artist's home, location, schedule or family.",
     "No links, phone numbers or addresses in notes or messages.",
-    "Fan notes to artists: 18+ only, one note per artist per week. The artist decides if a conversation starts.",
+    "OG Certified means follow-for-follow with that artist. The artist can message you anytime.",
+    "Fan messages to an artist: 18+ only, one a week, up to 280 characters.",
+    "Missed the 99 Challenge? You can retake it in a week.",
     "Artists can mute, block or remove any fan. Removing a fan takes back that Certified badge.",
     "Two reports from different artists locks your messages until OG Bobby reviews it. Serious cases are banned for good."];
   var FM = { me: undefined, certs: null };
@@ -453,7 +465,7 @@
       body.innerHTML = acct + '<div class="wbox"><h4>YOUR RIDER CARD</h4>' + (metro ? '<button class="metro" type="button" id="fzMetro" style="width:100%">' + metro + '</button>' : '') +
         '<p>' + (r.name ? "Riding as <b>" + esc(r.name) + "</b>." : "Play any game to start your rider card.") + '</p></div>' +
         '<div class="prof"><div class="av" style="background:#e8b84a;color:#000">&#9733;</div><div><div class="nm">' + (lv.cur ? lv.cur[1] : "NOT CERTIFIED YET") + '</div><div class="mt">' + got.length + ' ARTIST' + (got.length === 1 ? '' : 'S') + ' CERTIFIED' + (lv.next ? ' · ' + (lv.next[0] - got.length) + ' MORE FOR ' + lv.next[1] : '') + '</div></div></div>' +
-        '<div class="wbox"><h4>CONNECT WITH THE ARTISTS</h4><ol class="wsteps"><li>Play an artist\'s full game</li><li>Get a perfect run: every box, 3 stars, no misses</li><li>You\'re OG Certified. You land on that artist\'s Certified Fans wall and get their updates</li><li>18+? Send that artist one fan note a week. They choose to write back</li></ol><p>The more perfect games you finish, the more artists you\'re connected to.</p></div>' +
+        '<div class="wbox"><h4>CONNECT WITH THE ARTISTS</h4><ol class="wsteps"><li>Beat the artist\'s full game. That unlocks their 99 Challenge</li><li>Get all 99 right, in a row</li><li>You\'re OG Certified: an automatic follow-for-follow with that artist, and a spot on their Certified Fans wall</li><li>The artist can message you anytime. You can message them once a week, up to 280 characters (18+)</li><li>Missed one? Retake the 99 Challenge in a week. Retry Credits to go again sooner are coming soon, and any you don\'t use roll into VIP Lounge perks once you\'re Certified</li></ol><p>The more artists you master, the higher your OG rank.</p></div>' +
         '<button class="wbtn gold" id="fzGo" type="button">SEE MY CERTIFIED ARTISTS</button>' +
         '<div class="wbox"><h4>FAN RULES</h4><ol class="wsteps">' + RULES.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ol></div>';
       if ($("fzMetro")) $("fzMetro").onclick = function () { go("map"); setTimeout(function () { $("metro").click(); }, 60); };
