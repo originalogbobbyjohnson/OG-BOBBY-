@@ -182,7 +182,9 @@ window.PRODUCERS = [
   "slug": "p-qtip",
   "tier": "legend",
   "home": "St. Albans, Queens, NY",
-  "knownFor": "A Tribe Called Quest's jazz-sampling Abstract"
+  "knownFor": "A Tribe Called Quest's jazz-sampling Abstract",
+  "url": "../p-qtip-ogfan99-9c0ac1/",
+  "ex": 2
  },
  {
   "name": "Rick Rubin",
@@ -226,7 +228,9 @@ window.PRODUCERS = [
   "slug": "p-princepaul",
   "tier": "legend",
   "home": "Amityville, Long Island, NY",
-  "knownFor": "Inventor of the hip-hop skit and De La Soul's daisy-age sound"
+  "knownFor": "Inventor of the hip-hop skit and De La Soul's daisy-age sound",
+  "url": "../p-princepaul-ogfan99-a1486f/",
+  "ex": 2
  },
  {
   "name": "Diamond D",
@@ -240,7 +244,9 @@ window.PRODUCERS = [
   "slug": "p-ericksermon",
   "tier": "legend",
   "home": "Brentwood, Long Island, NY",
-  "knownFor": "EPMD's funk-loving Green Eyed Bandit"
+  "knownFor": "EPMD's funk-loving Green Eyed Bandit",
+  "url": "../p-ericksermon-ogfan99-797b11/",
+  "ex": 2
  },
  {
   "name": "DJ Quik",
