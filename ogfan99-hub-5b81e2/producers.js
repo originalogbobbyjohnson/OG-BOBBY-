@@ -419,14 +419,18 @@ window.PRODUCERS = [
   "slug": "p-bigghostltd",
   "tier": "indie",
   "home": "Anonymous (tied to the Buffalo/Griselda wave)",
-  "knownFor": "Masked producer who makes full albums with underground MCs"
+  "knownFor": "Masked producer who makes full albums with underground MCs",
+  "url": "../p-bigghostltd-ogfan99-2d5d92/",
+  "ex": 2
  },
  {
   "name": "Jansport J",
   "slug": "p-jansportj",
   "tier": "indie",
   "home": "Covina, CA",
-  "knownFor": "West Coast soul producer who landed on Nas's King's Disease II"
+  "knownFor": "West Coast soul producer who landed on Nas's King's Disease II",
+  "url": "../p-jansportj-ogfan99-8ba20f/",
+  "ex": 2
  },
  {
   "name": "Kenny Beats",
@@ -451,7 +455,9 @@ window.PRODUCERS = [
   "slug": "p-illmind",
   "tier": "indie",
   "home": "Newark / Bloomfield, NJ",
-  "knownFor": "Jersey sample flipper who went from Skyzoo to Drake and J. Cole"
+  "knownFor": "Jersey sample flipper who went from Skyzoo to Drake and J. Cole",
+  "url": "../p-illmind-ogfan99-022a48/",
+  "ex": 2
  },
  {
   "name": "Ayatollah",
