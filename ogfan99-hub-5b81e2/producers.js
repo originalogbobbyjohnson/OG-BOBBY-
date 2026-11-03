@@ -205,14 +205,18 @@ window.PRODUCERS = [
   "slug": "p-djmuggs",
   "tier": "legend",
   "home": "Queens, NY (raised in South Gate, CA)",
-  "knownFor": "Cypress Hill's smoky, eerie Soul Assassin"
+  "knownFor": "Cypress Hill's smoky, eerie Soul Assassin",
+  "url": "../p-djmuggs-ogfan99-387c03/",
+  "ex": 2
  },
  {
   "name": "Hank Shocklee & The Bomb Squad",
   "slug": "p-hankshockleethebombsquad",
   "tier": "legend",
   "home": "Roosevelt, Long Island, NY",
-  "knownFor": "Public Enemy's wall-of-noise production team"
+  "knownFor": "Public Enemy's wall-of-noise production team",
+  "url": "../p-hankshockleethebombsquad-ogfan99-4d5ef6/",
+  "ex": 2
  },
  {
   "name": "Easy Mo Bee",
@@ -237,7 +241,9 @@ window.PRODUCERS = [
   "slug": "p-diamondd",
   "tier": "legend",
   "home": "The Bronx, NY",
-  "knownFor": "D.I.T.C. crate-digger behind the Fugees' title track"
+  "knownFor": "D.I.T.C. crate-digger behind the Fugees' title track",
+  "url": "../p-diamondd-ogfan99-158bf6/",
+  "ex": 2
  },
  {
   "name": "Erick Sermon",
