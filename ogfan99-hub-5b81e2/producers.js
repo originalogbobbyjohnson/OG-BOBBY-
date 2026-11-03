@@ -362,7 +362,9 @@ window.PRODUCERS = [
   "slug": "p-beatbutcha",
   "tier": "indie",
   "home": "Southeast London, UK",
-  "knownFor": "Griselda co-architect with credits from Benny to Brent Faiyaz"
+  "knownFor": "Griselda co-architect with credits from Benny to Brent Faiyaz",
+  "url": "../p-beatbutcha-ogfan99-6c0c1c/",
+  "ex": 2
  },
  {
   "name": "Buckwild",
@@ -387,7 +389,9 @@ window.PRODUCERS = [
   "slug": "p-rocmarciano",
   "tier": "indie",
   "home": "Hempstead, Long Island, NY",
-  "knownFor": "Drumless, luxurious loops that launched the new underground"
+  "knownFor": "Drumless, luxurious loops that launched the new underground",
+  "url": "../p-rocmarciano-ogfan99-680d91/",
+  "ex": 2
  },
  {
   "name": "DJ Green Lantern",
@@ -438,7 +442,9 @@ window.PRODUCERS = [
   "slug": "p-ayatollah",
   "tier": "indie",
   "home": "Queens, NY",
-  "knownFor": "Rawkus-era soul chopper behind Ms. Fat Booty"
+  "knownFor": "Rawkus-era soul chopper behind Ms. Fat Booty",
+  "url": "../p-ayatollah-ogfan99-ca5753/",
+  "ex": 2
  },
  {
   "name": "The Heatmakerz",
