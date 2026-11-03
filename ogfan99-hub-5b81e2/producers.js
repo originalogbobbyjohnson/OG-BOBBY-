@@ -252,14 +252,18 @@ window.PRODUCERS = [
   "slug": "p-daringer",
   "tier": "indie",
   "home": "Buffalo, NY",
-  "knownFor": "Griselda's in-house sound alongside Beat Butcha"
+  "knownFor": "Griselda's in-house sound alongside Beat Butcha",
+  "url": "../p-daringer-ogfan99-c0b019/",
+  "ex": 2
  },
  {
   "name": "Conductor Williams",
   "slug": "p-conductorwilliams",
   "tier": "indie",
   "home": "Kansas City, MO",
-  "knownFor": "Soulful loops for Griselda that led to Drake"
+  "knownFor": "Soulful loops for Griselda that led to Drake",
+  "url": "../p-conductorwilliams-ogfan99-98cd66/",
+  "ex": 2
  },
  {
   "name": "Statik Selektah",
@@ -284,7 +288,9 @@ window.PRODUCERS = [
   "slug": "p-blackmilk",
   "tier": "indie",
   "home": "Detroit, MI",
-  "knownFor": "Detroit beatsmith who carried Dilla's torch"
+  "knownFor": "Detroit beatsmith who carried Dilla's torch",
+  "url": "../p-blackmilk-ogfan99-68e800/",
+  "ex": 2
  },
  {
   "name": "Nottz",
