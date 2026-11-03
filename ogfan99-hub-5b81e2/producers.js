@@ -337,7 +337,9 @@ window.PRODUCERS = [
   "slug": "p-skibeatz",
   "tier": "indie",
   "home": "Greensboro, NC (came up in Brooklyn)",
-  "knownFor": "Built early Jay-Z and Camp Lo, later Curren$y's Pilot Talk"
+  "knownFor": "Built early Jay-Z and Camp Lo, later Curren$y's Pilot Talk",
+  "url": "../p-skibeatz-ogfan99-a5c57a/",
+  "ex": 2
  },
  {
   "name": "Beat Butcha",
@@ -351,7 +353,9 @@ window.PRODUCERS = [
   "slug": "p-buckwild",
   "tier": "indie",
   "home": "The Bronx, NY",
-  "knownFor": "D.I.T.C. soul-digger behind 90s East Coast classics"
+  "knownFor": "D.I.T.C. soul-digger behind 90s East Coast classics",
+  "url": "../p-buckwild-ogfan99-c64f59/",
+  "ex": 2
  },
  {
   "name": "Showbiz",
@@ -400,7 +404,9 @@ window.PRODUCERS = [
   "slug": "p-marcopolo",
   "tier": "indie",
   "home": "Toronto, ON (Brooklyn-based)",
-  "knownFor": "Boom-bap specialist for NYC veterans"
+  "knownFor": "Boom-bap specialist for NYC veterans",
+  "url": "../p-marcopolo-ogfan99-35f002/",
+  "ex": 2
  },
  {
   "name": "Illmind",
