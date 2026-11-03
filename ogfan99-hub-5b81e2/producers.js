@@ -410,7 +410,9 @@ window.PRODUCERS = [
   "slug": "p-djgreenlantern",
   "tier": "indie",
   "home": "Rochester, NY",
-  "knownFor": "Mixtape king who produced club hits for Ludacris and Busta"
+  "knownFor": "Mixtape king who produced club hits for Ludacris and Busta",
+  "url": "../p-djgreenlantern-ogfan99-1f7689/",
+  "ex": 2
  },
  {
   "name": "Big Ghost Ltd",
@@ -431,7 +433,9 @@ window.PRODUCERS = [
   "slug": "p-kennybeats",
   "tier": "indie",
   "home": "Greenwich, CT",
-  "knownFor": "The Cave's genre-hopping beatmaker for Vince, Denzel and Rico"
+  "knownFor": "The Cave's genre-hopping beatmaker for Vince, Denzel and Rico",
+  "url": "../p-kennybeats-ogfan99-15016a/",
+  "ex": 2
  },
  {
   "name": "Marco Polo",
@@ -463,6 +467,8 @@ window.PRODUCERS = [
   "slug": "p-theheatmakerz",
   "tier": "indie",
   "home": "The Bronx / Harlem, NY",
-  "knownFor": "Dipset's sped-up soul sound"
+  "knownFor": "Dipset's sped-up soul sound",
+  "url": "../p-theheatmakerz-ogfan99-418c5b/",
+  "ex": 2
  }
 ];
