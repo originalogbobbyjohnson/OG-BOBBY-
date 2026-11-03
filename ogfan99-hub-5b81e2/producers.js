@@ -95,21 +95,27 @@ window.PRODUCERS = [
   "slug": "p-mustard",
   "tier": "mainstream",
   "home": "Los Angeles, CA",
-  "knownFor": "Ratchet-era West Coast club sound, from Rack City to Not Like Us"
+  "knownFor": "Ratchet-era West Coast club sound, from Rack City to Not Like Us",
+  "url": "../p-mustard-ogfan99-b4f82e/",
+  "ex": 2
  },
  {
   "name": "Hit-Boy",
   "slug": "p-hitboy",
   "tier": "mainstream",
   "home": "Fontana, CA",
-  "knownFor": "G.O.O.D. Music beatmaker who later revived Nas on King's Disease"
+  "knownFor": "G.O.O.D. Music beatmaker who later revived Nas on King's Disease",
+  "url": "../p-hitboy-ogfan99-a1fb9e/",
+  "ex": 2
  },
  {
   "name": "DJ Khalil",
   "slug": "p-djkhalil",
   "tier": "mainstream",
   "home": "Los Angeles, CA",
-  "knownFor": "Live-instrument heavy hitter for Dre, Eminem and Clipse"
+  "knownFor": "Live-instrument heavy hitter for Dre, Eminem and Clipse",
+  "url": "../p-djkhalil-ogfan99-d74ee0/",
+  "ex": 2
  },
  {
   "name": "Marley Marl",
