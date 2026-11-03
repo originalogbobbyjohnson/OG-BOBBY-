@@ -98,12 +98,42 @@ window.CFG = {
    "title": "The Bridge",
    "id": "dS4RpBR0Zn0",
    "cuts": [
-    119.7,
-    235.5,
-    331.5
+    59.8,
+    94.8,
+    134.4
    ],
    "qs": [
     [
+     [
+      "Who's in the house with MC Shan?",
+      "Marley Marl",
+      "Mr. Magic",
+      "Biz Markie"
+     ],
+     [
+      "They just came from off what?",
+      "Tour",
+      "The block",
+      "The radio"
+     ],
+     [
+      "They want to tell you a little what?",
+      "Story",
+      "Secret",
+      "Joke"
+     ],
+     [
+      "You love to hear the story how?",
+      "Again and again",
+      "Late at night",
+      "On the radio"
+     ],
+     [
+      "It's about how it all got what?",
+      "Started",
+      "Famous",
+      "Big"
+     ],
      [
       "The monument is right in your what?",
       "Face",
@@ -111,11 +141,13 @@ window.CFG = {
       "Town"
      ],
      [
-      "\"Sit and listen for a while to the name of the...\" what?",
+      "Sit and listen to the name of the what?",
       "Place",
       "Song",
       "Crew"
-     ],
+     ]
+    ],
+    [
      [
       "Hip-hop was set out in the what?",
       "Dark",
@@ -129,6 +161,24 @@ window.CFG = {
       "Yard"
      ],
      [
+      "A cool brother by the name of what?",
+      "Gas",
+      "Gus",
+      "Chaz"
+     ],
+     [
+      "These brothers made you get what?",
+      "Loose",
+      "Up",
+      "Paid"
+     ],
+     [
+      "They were down with a brother called Cousin who?",
+      "Bruce",
+      "Ben",
+      "Bobby"
+     ],
+     [
       "They used to jam in the what?",
       "Center",
       "Basement",
@@ -139,100 +189,50 @@ window.CFG = {
       "Pay",
       "Dance",
       "Sign in"
+     ]
+    ],
+    [
+     [
+      "If you weren't from this town, you couldn't fight and what?",
+      "Win",
+      "Run",
+      "Stay"
      ],
      [
       "Every time they had a jam, they couldn't get no what?",
       "Peace",
       "Sleep",
       "Help"
-     ]
-    ],
-    [
-     [
-      "Who cut a plate?",
-      "Marley Marl",
-      "Mr. Magic",
-      "Biz Markie"
      ],
      [
-      "What was the title of that record?",
-      "Sucker DJs",
-      "Sucker MCs",
-      "Def Jam"
+      "The jams in the parks had to what?",
+      "Cease",
+      "Grow",
+      "Move"
      ],
      [
-      "He walked into a girl named who?",
-      "Shanté",
-      "Lyte",
-      "Salt"
+      "'Cause you was in the what?",
+      "The Bridge",
+      "The Bronx",
+      "The center"
      ],
      [
-      "MC Shan is in the place to what?",
-      "Be",
-      "Go",
-      "Stay"
+      "Show all the people in the what?",
+      "Place",
+      "Park",
+      "Crowd"
      ],
      [
-      "The newest member is down with us and he got the what?",
-      "Juice",
-      "Crown",
-      "Keys"
+      "Make this one jam that you do not start no what?",
+      "Fight",
+      "Trouble",
+      "Beef"
      ],
      [
-      "This is a place where what are born?",
-      "Stars",
-      "Kings",
-      "Legends"
-     ],
-     [
-      "While he's out on tour, keep your hand off his what?",
-      "Girl",
-      "Mic",
-      "Car"
-     ]
-    ],
-    [
-     [
-      "Don't never listen to what who say?",
-      "Nobody",
-      "Your crew",
-      "The radio"
-     ],
-     [
-      "You got to go by what your what feel?",
-      "Heart",
-      "Head",
-      "Gut"
-     ],
-     [
-      "Rich people are always trying to what?",
-      "Restrain",
-      "Explain",
-      "Complain"
-     ],
-     [
-      "They always pull you back when you want to get what?",
-      "Ahead",
-      "Paid",
-      "Out"
-     ],
-     [
-      "You talk about school, they're talking about what?",
-      "Quitting",
-      "Partying",
-      "Sleeping"
-     ],
-     [
-      "The story was made to inspire you to reach your what?",
-      "Goals",
-      "Dreams",
-      "Peak"
-     ],
-     [
-      "Stop walking through life as if you are what?",
-      "Blind",
-      "Lost",
-      "Asleep"
+      "That is one thing that we all must see what?",
+      "Done",
+      "Through",
+      "Now"
      ]
     ]
    ],

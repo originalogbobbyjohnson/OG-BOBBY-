@@ -538,216 +538,216 @@ window.CFG = {
    "start": 28
   },
   {
-   "title": "Ain't No Half-Steppin'",
-   "id": "RNVefp-SxvE",
+   "title": "Set It Off",
+   "id": "4JYMD2lyWzo",
    "cuts": [
-    30.4,
-    190.5,
-    248.8
+    36.9,
+    68.6,
+    149.3
    ],
    "qs": [
     [
      [
-      "It ain't no what?",
-      "Half stepping",
-      "Slowing down",
-      "Stopping"
+      "He just can't hold back or what?",
+      "Fold",
+      "Stop",
+      "Slow"
      ],
      [
-      "What letters get spelled out at the start?",
-      "R A W",
-      "B I G",
-      "K A N E"
+      "He's a man with what?",
+      "Soul",
+      "Style",
+      "Class"
      ],
      [
-      "Lay back to this nice mellow what?",
-      "Beat",
-      "Groove",
-      "Song"
+      "What does he rock?",
+      "The discotheques",
+      "The parties",
+      "The block"
      ],
      [
-      "Drop some smooth what?",
-      "Lyrics",
-      "Rhymes",
-      "Beats"
+      "This groove is what's what?",
+      "Next",
+      "Hot",
+      "New"
      ],
      [
-      "Time to set it what?",
-      "Straight",
-      "Right",
-      "Off"
+      "He keeps the crowd what?",
+      "Loud",
+      "Quiet",
+      "Seated"
+     ],
+     [
+      "Where does he do damage?",
+      "Onstage",
+      "Downtown",
+      "In the booth"
+     ],
+     [
+      "His rhymes stick like Skippy and what?",
+      "Jif",
+      "Jelly",
+      "Glue"
+     ],
+     [
+      "What does he call himself?",
+      "The rap soloist",
+      "The rap teacher",
+      "The DJ"
+     ],
+     [
+      "He's supreme in this what?",
+      "Era",
+      "Game",
+      "City"
+     ],
+     [
+      "Let's all sing the Big Daddy what?",
+      "Anthem",
+      "Song",
+      "Tune"
+     ],
+     [
+      "His rhymes grow like an what?",
+      "Afro",
+      "Oak tree",
+      "Garden"
      ]
     ],
     [
      [
-      "Soon he'll have to open a school of what?",
-      "MCs",
-      "DJs",
-      "Dancers"
+      "He can sneeze, sniffle and what?",
+      "Cough",
+      "Yawn",
+      "Laugh"
      ],
      [
-      "What does he hate?",
-      "A perpetrator",
-      "A hater",
-      "A liar"
+      "Even if he does what, he'll still come off?",
+      "Stutter",
+      "Stumble",
+      "Whisper"
      ],
      [
-      "It's confusing to remember the what?",
-      "Originator",
-      "Creator",
-      "Inventor"
+      "Rappers can't understand the what he rips?",
+      "Mics",
+      "Beats",
+      "Stages"
      ],
      [
-      "Climax, relax and what?",
-      "Chill",
-      "Breathe",
-      "Rest"
+      "They sure enough ain't what?",
+      "Equipped",
+      "Awake",
+      "Invited"
      ],
      [
-      "At the table he sits, making it what?",
-      "Legit",
-      "Fit",
-      "Lit"
+      "What of his is up to status?",
+      "His apparatus",
+      "His attitude",
+      "His records"
      ],
      [
-      "Perfect ease like which strong man?",
-      "Samson",
-      "Hercules",
-      "Atlas"
+      "Don't ask who's the what?",
+      "Baddest",
+      "Coolest",
+      "Oldest"
      ],
      [
-      "Sleeping on your arm till you start to what?",
-      "Snore",
-      "Dream",
-      "Drool"
+      "The maker, breaker and what?",
+      "Taker",
+      "Shaker",
+      "Baker"
      ],
      [
-      "Ideas start to what?",
-      "Hit",
-      "Flow",
-      "Fade"
+      "His rhymes ache the what?",
+      "Head",
+      "Heart",
+      "Ear"
      ],
      [
-      "The formation of words that what?",
-      "Fit",
-      "Rhyme",
-      "Flow"
+      "Take a loss and be forced in the what zone?",
+      "Danger",
+      "Twilight",
+      "End"
      ],
      [
-      "When his pen hit the what?",
-      "Paper",
-      "Page",
-      "Pad"
+      "He's teaching a skill that's what?",
+      "Real",
+      "Rare",
+      "Raw"
      ],
      [
-      "The giving gift of what?",
-      "Gab",
-      "Song",
-      "Rhyme"
+      "What does he drill until his rhymes fill your head?",
+      "Science",
+      "Lessons",
+      "Facts"
+     ]
+    ],
+    [
+     [
+      "\"I can't hold it...\" what?",
+      "Back",
+      "Down",
+      "In"
      ],
      [
-      "He says he's the what?",
-      "King",
-      "Prince",
-      "Boss"
+      "Set it what?",
+      "Off",
+      "Up",
+      "Out"
      ],
      [
-      "He's up for what?",
-      "Victory",
-      "Battle",
-      "Glory"
+      "Now break what?",
+      "Loose",
+      "Down",
+      "Out"
      ],
      [
-      "He's the authentic what?",
-      "Poet",
-      "Writer",
+      "Who's the DJ?",
+      "Mister Cee",
+      "Marley Marl",
+      "Red Alert"
+     ],
+     [
+      "Who keeps his flat-top trim?",
+      "Smooth the barber",
+      "Scoob Lover",
+      "Mister Cee"
+     ],
+     [
+      "What haircut does he keep trim?",
+      "Flat-top",
+      "Fade",
+      "Caesar"
+     ],
+     [
+      "Scoob Lover is his what?",
+      "Brother",
+      "Cousin",
       "DJ"
      ],
      [
-      "To beat him it's gonna take a what?",
-      "Miracle",
-      "Lifetime",
-      "Million"
+      "He calls himself the microphone what?",
+      "Lord",
+      "Wizard",
+      "Master"
      ],
      [
-      "The name is Big Daddy: yes Big, not what?",
-      "Little",
-      "Small",
-      "Baby"
+      "Which way does he send sucker MCs heading?",
+      "North",
+      "South",
+      "Home"
      ],
      [
-      "Here's your walking what?",
-      "Papers",
-      "Shoes",
-      "Orders"
-     ]
-    ],
-    [
-     [
-      "Big Daddy, as in your what?",
-      "Father",
-      "Uncle",
-      "Brother"
+      "Kane is a perfect what?",
+      "Fit",
+      "Ten",
+      "Match"
      ],
      [
-      "The party people say that rap was what?",
-      "Great",
-      "Fresh",
-      "Long"
-     ],
-     [
-      "The creator, conductor of what?",
-      "Poetry",
-      "Music",
-      "Rhythm"
-     ],
-     [
-      "Put words together like a what?",
-      "Letterman",
-      "Teacher",
-      "Typist"
-     ],
-     [
-      "Other MCs are an what?",
-      "Imitation",
-      "Invitation",
-      "Inspiration"
-     ],
-     [
-      "Be like Mr. Rogers and what?",
-      "Slow down",
-      "Sit down",
-      "Calm down"
-     ],
-     [
-      "The peace sign on the what?",
-      "Lawn",
-      "Wall",
-      "Block"
-     ],
-     [
-      "He speaks clearly so you can what?",
-      "Understand",
-      "Hear",
-      "Follow"
-     ],
-     [
-      "It ain't easy being what?",
-      "Me",
-      "Free",
-      "Green"
-     ],
-     [
-      "Now that's what?",
-      "Innovation",
-      "Inspiration",
-      "Imagination"
-     ],
-     [
-      "He puts his what in your face?",
-      "Title",
-      "Name",
-      "Crown"
+      "The groove won't cease till Kane says what?",
+      "Peace",
+      "Stop",
+      "Goodbye"
      ]
     ]
    ]
