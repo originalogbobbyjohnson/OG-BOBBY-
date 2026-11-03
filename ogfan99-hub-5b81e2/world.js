@@ -42,6 +42,13 @@
     ".wrap.app.paneon>.perkbar,.wrap.app.paneon>.metrorow,.wrap.app.paneon>.mapbox,.wrap.app.paneon>.boros,.wrap.app.paneon>.bhead,.wrap.app.paneon>.listwrap{display:none!important}",
     ".wpane{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;display:flex;flex-direction:column;gap:10px;padding:2px 0 8px}",
     ".wpane[hidden]{display:none}",
+    ".prh{display:flex;justify-content:space-between;align-items:center;border-left:5px solid;padding:8px 12px;margin-top:6px;background:#0d1426;border-radius:6px}",
+    ".prh b{font:900 20px/1 Anton,Impact,sans-serif;letter-spacing:2px;color:#fff}.prh span{font:800 12px Barlow,sans-serif;color:#fff;background:#24304d;border-radius:20px;padding:3px 9px}",
+    ".prl{display:flex;flex-direction:column;gap:6px}",
+    ".prr{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:#111a30;border:1px solid #24304d;border-radius:10px;padding:10px 12px;color:#fff;cursor:pointer}",
+    ".prr .st{font:900 .6rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;padding:5px 7px;border-radius:5px;border:1.5px solid #000;flex:none}.prr .st.live{background:#35b867;color:#031}.prr .st.uc{background:repeating-linear-gradient(-45deg,#f2c14e 0 6px,#e0a800 6px 12px);color:#000}",
+    ".prdot{width:10px;height:10px;border-radius:50%;flex:none}.prn{flex:1;display:flex;flex-direction:column}.prn b{font:800 15px Barlow,sans-serif;color:#fff}.prn small{font:600 12px Barlow,sans-serif;color:#e8e8e8}",
+
     ".wpane>*{flex:none}",
     ".wp-h{text-align:center;display:grid;gap:3px}",
     ".wp-h .t{font-family:var(--tag);font-size:2rem;line-height:1;color:#fff;-webkit-text-stroke:1px #000;text-shadow:2px 2px 0 #000;transform:rotate(-2deg)}",
@@ -119,6 +126,7 @@
     { id: "map", ic: "&#128647;", t: "MAP" },
     { id: "lounge", ic: "&#127908;", t: "LOUNGE" },
     { id: "fans", ic: "&#128293;", t: "FANS" },
+    { id: "producers", ic: "&#127899;", t: "PRODUCERS" },
     { id: "regions", ic: "&#127758;", t: "REGIONS", uc: 1 },
     { id: "genres", ic: "&#127926;", t: "GENRES", uc: 1 }
   ];
@@ -144,7 +152,7 @@
     var ex = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } })();
     var td = $("today"), tdName = td && !td.hidden ? (td.querySelector("b") || {}).textContent : "";
     var it = function (k, ic, t, extra, on) { return '<button type="button" data-m="' + k + '"' + (on ? ' class="on"' : '') + '><b>' + ic + '</b><span>' + t + '</span>' + (extra || "") + '</button>'; };
-    nav.innerHTML = '<div class="hm-sec">GO TO</div>' + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", regions: "REGIONS", genres: "GENRES" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join("") +
+    nav.innerHTML = '<div class="hm-sec">GO TO</div>' + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "REGIONS", genres: "GENRES" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join("") +
       '<div class="hm-sec">YOU</div>' + it("metro", "&#127915;", "MY RIDER CARD") + (tdName ? it("today", "&#9733;", "TODAY'S TRAIN 2X", '<em class="g">' + esc(tdName) + '</em>') : "") + it("perks", "&#127873;", "PLAY TO WIN PERKS") +
       '<div class="hm-sec">SETTINGS</div>' + it("ex", "<span class=\"exb\">E</span>", "EXPLICIT LYRICS 18+", '<em class="' + (ex ? "g" : "") + '">' + (ex ? "ON" : "OFF") + '</em>') + it("key", "&#128647;", "SUBWAY KEY + LEGEND") + it("over", "&#8634;", "START OVER");
   }
@@ -164,7 +172,7 @@
     app.classList.toggle("paneon", id !== "map"); back.hidden = id === "map";
     Object.keys(panes).forEach(function (k) { panes[k].hidden = k !== id; });
     if (id === "map") { setTimeout(function () { try { window.__map && window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 30); return; }
-    ({ lounge: drawLounge, fans: drawFans, regions: drawRegions, genres: drawGenres })[id]();
+    ({ lounge: drawLounge, fans: drawFans, producers: drawProducers, regions: drawRegions, genres: drawGenres })[id]();
     panes[id].scrollTop = 0;
   }
   window.OGW = { go: go, h: { row: function () { return row.apply(null, arguments); }, initials: initials, avColor: avColor, meta: meta, bul: bul, owner: owner, live: live, LS: LS, cert: function (a) { return certInfo(a); } } };
@@ -487,6 +495,20 @@
       '<div class="wgrid">' + REGIONS.map(function (r, i) { return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-r="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small>' + (r.locked ? '<small style="color:#e8b84a;font-weight:800">&#128274; LOCKED IN: ' + r.locked.map(function (x) { return esc(x.who); }).join(", ") + '</small>' : '') + '<span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO RIDE" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
       '<div class="wmsg" id="rgMsg"></div>';
     p.querySelector(".wgrid").onclick = function (e) { var b = e.target.closest("[data-r]"); if (!b) return; var r = REGIONS[+b.dataset.r]; if (r.live) return go("map"); $("rgMsg").innerHTML = esc(r.n) + " is under construction. Its map is coming." + (r.locked ? "<br>LOCKED IN: " + r.locked.map(function (x) { return esc(x.who); }).join(", ") : ""); };
+  }
+
+
+  /* ---------- PRODUCERS: the beatmakers, their own category (hip-hop only) ---------- */
+  var PROD_TIERS = [["mainstream", "MAINSTREAM", "#e8b84a"], ["legend", "LEGENDS", "#d62828"], ["indie", "INDIE", "#35b867"]];
+  function drawProducers() {
+    var p = panes.producers, L = window.PRODUCERS || [];
+    p.innerHTML = '<div class="wp-h"><div class="t">PRODUCERS</div><div class="s">THE BEATMAKERS · EVERY SONG A DIFFERENT ARTIST</div></div>' +
+      PROD_TIERS.map(function (t) {
+        var list = L.filter(function (x) { return x.tier === t[0]; });
+        return '<div class="prh" style="border-color:' + t[2] + '"><b>' + t[1] + '</b><span>' + list.length + '</span></div>' +
+          '<div class="prl">' + list.map(function (x, i) { return '<button type="button" class="prr" data-p="' + esc(x.slug) + '"><span class="prdot" style="background:' + t[2] + '"></span><span class="prn"><b>' + esc(x.name) + '</b><small>' + esc(x.home || "") + '</small></span><span class="st ' + (x.url ? "live" : "uc") + '">' + (x.url ? "PLAY" : "BUILDING") + '</span></button>'; }).join("") + '</div>';
+      }).join("") + '<div class="wmsg" id="prMsg"></div>';
+    p.onclick = function (e) { var b = e.target.closest("[data-p]"); if (!b) return; var x = L.filter(function (y) { return y.slug === b.dataset.p; })[0]; if (!x) return; if (x.url) { location.href = x.url; return; } $("prMsg").textContent = x.name + "'s game is being built: " + (x.knownFor || "beats for many artists") + "."; };
   }
 
   /* ---------- GENRES: beyond rap ---------- */
