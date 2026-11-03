@@ -518,9 +518,9 @@
       PROD_TIERS.map(function (t) {
         var list = L.filter(function (x) { return x.tier === t[0]; });
         return '<div class="prh" style="border-color:' + t[2] + '"><b>' + t[1] + '</b><span>' + list.length + '</span></div>' +
-          '<div class="prl">' + list.map(function (x, i) { return '<button type="button" class="prr" data-p="' + esc(x.slug) + '"><span class="prdot" style="background:' + t[2] + '"></span><span class="prn"><b>' + esc(x.name) + '</b><small>' + esc(x.home || "") + '</small></span><span class="st ' + (x.url ? "live" : "uc") + '">' + (x.url ? "PLAY" : "BUILDING") + '</span></button>'; }).join("") + '</div>';
+          '<div class="prl">' + list.map(function (x, i) { return '<button type="button" class="prr" data-p="' + esc(x.slug) + '"><span class="prdot" style="background:' + t[2] + '"></span><span class="prn"><b>' + esc(x.name) + '</b><small>' + esc(x.home || "") + '</small></span><span class="st ' + (x.url ? "live" : "uc") + '">' + (x.url ? (x.ex === 2 ? "PLAY 18+" : "PLAY") : "BUILDING") + '</span></button>'; }).join("") + '</div>';
       }).join("") + '<div class="wmsg" id="prMsg"></div>';
-    p.onclick = function (e) { var b = e.target.closest("[data-p]"); if (!b) return; var x = L.filter(function (y) { return y.slug === b.dataset.p; })[0]; if (!x) return; if (x.url) { location.href = x.url; return; } $("prMsg").textContent = x.name + "'s game is being built: " + (x.knownFor || "beats for many artists") + "."; };
+    p.onclick = function (e) { var b = e.target.closest("[data-p]"); if (!b) return; var x = L.filter(function (y) { return y.slug === b.dataset.p; })[0]; if (!x) return; if (x.url) { var exOn = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } })(); if (x.ex === 2 && !exOn) { $("prMsg").innerHTML = esc(x.name) + "'s game is 18+ (explicit lyrics). Turn on <b>EXPLICIT LYRICS 18+</b> in the &#9776; menu to play it."; return; } location.href = x.url; return; } $("prMsg").textContent = x.name + "'s game is being built: " + (x.knownFor || "beats for many artists") + "."; };
   }
 
   /* ---------- GENRES: beyond rap ---------- */
