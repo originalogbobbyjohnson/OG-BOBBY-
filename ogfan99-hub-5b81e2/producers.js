@@ -191,14 +191,18 @@ window.PRODUCERS = [
   "slug": "p-rickrubin",
   "tier": "legend",
   "home": "Long Beach, NY (Def Jam started in his NYU dorm)",
-  "knownFor": "Def Jam co-founder who fused rap with rock"
+  "knownFor": "Def Jam co-founder who fused rap with rock",
+  "url": "../p-rickrubin-ogfan99-7b903b/",
+  "ex": 1
  },
  {
   "name": "Mannie Fresh",
   "slug": "p-manniefresh",
   "tier": "legend",
   "home": "New Orleans, LA",
-  "knownFor": "Cash Money's bounce-driven hit factory"
+  "knownFor": "Cash Money's bounce-driven hit factory",
+  "url": "../p-manniefresh-ogfan99-ae0ac6/",
+  "ex": 2
  },
  {
   "name": "DJ Muggs",
@@ -259,7 +263,9 @@ window.PRODUCERS = [
   "slug": "p-djquik",
   "tier": "legend",
   "home": "Compton, CA",
-  "knownFor": "Funk-soaked West Coast talk-box virtuoso"
+  "knownFor": "Funk-soaked West Coast talk-box virtuoso",
+  "url": "../p-djquik-ogfan99-35cbba/",
+  "ex": 2
  },
  {
   "name": "Madlib",
