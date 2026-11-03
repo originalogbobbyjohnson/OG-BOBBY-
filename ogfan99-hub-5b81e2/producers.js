@@ -236,7 +236,9 @@ window.PRODUCERS = [
   "slug": "p-madlib",
   "tier": "indie",
   "home": "Oxnard, CA",
-  "knownFor": "Stones Throw's endlessly prolific Beat Konducta"
+  "knownFor": "Stones Throw's endlessly prolific Beat Konducta",
+  "url": "../p-madlib-ogfan99-705395/",
+  "ex": 2
  },
  {
   "name": "Apollo Brown",
@@ -304,14 +306,18 @@ window.PRODUCERS = [
   "slug": "p-hitek",
   "tier": "indie",
   "home": "Cincinnati, OH (West End)",
-  "knownFor": "Reflection Eternal's soulful half who later worked with G-Unit"
+  "knownFor": "Reflection Eternal's soulful half who later worked with G-Unit",
+  "url": "../p-hitek-ogfan99-76a9f8/",
+  "ex": 2
  },
  {
   "name": "9th Wonder",
   "slug": "p-9thwonder",
   "tier": "indie",
   "home": "Winston-Salem / Durham, NC",
-  "knownFor": "Little Brother's soul-sample producer and Jamla founder"
+  "knownFor": "Little Brother's soul-sample producer and Jamla founder",
+  "url": "../p-9thwonder-ogfan99-eac2a9/",
+  "ex": 2
  },
  {
   "name": "Exile",
