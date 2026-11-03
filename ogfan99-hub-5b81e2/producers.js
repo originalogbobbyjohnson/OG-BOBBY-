@@ -152,14 +152,18 @@ window.PRODUCERS = [
   "slug": "p-jdilla",
   "tier": "legend",
   "home": "Detroit, MI (Conant Gardens)",
-  "knownFor": "Off-kilter swing that rewired hip-hop drums"
+  "knownFor": "Off-kilter swing that rewired hip-hop drums",
+  "url": "../p-jdilla-ogfan99-1302ee/",
+  "ex": 2
  },
  {
   "name": "Large Professor",
   "slug": "p-largeprofessor",
   "tier": "legend",
   "home": "Flushing, Queens, NY",
-  "knownFor": "Main Source leader who mentored a young Nas"
+  "knownFor": "Main Source leader who mentored a young Nas",
+  "url": "../p-largeprofessor-ogfan99-d2d193/",
+  "ex": 2
  },
  {
   "name": "Q-Tip",
@@ -201,7 +205,9 @@ window.PRODUCERS = [
   "slug": "p-easymobee",
   "tier": "legend",
   "home": "Bed-Stuy, Brooklyn, NY",
-  "knownFor": "Built Biggie's Ready to Die sound and Miles Davis's last album"
+  "knownFor": "Built Biggie's Ready to Die sound and Miles Davis's last album",
+  "url": "../p-easymobee-ogfan99-a7e82d/",
+  "ex": 2
  },
  {
   "name": "Prince Paul",
