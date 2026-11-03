@@ -41,14 +41,18 @@ window.PRODUCERS = [
   "slug": "p-timbaland",
   "tier": "mainstream",
   "home": "Virginia Beach, VA",
-  "knownFor": "Stuttering futuristic drums for Missy, Aaliyah and Jay-Z"
+  "knownFor": "Stuttering futuristic drums for Missy, Aaliyah and Jay-Z",
+  "url": "../p-timbaland-ogfan99-1fa68d/",
+  "ex": 2
  },
  {
   "name": "Pharrell Williams (The Neptunes)",
   "slug": "p-pharrellwilliamstheneptunes",
   "tier": "mainstream",
   "home": "Virginia Beach, VA",
-  "knownFor": "Neptunes half whose minimalist bounce owned the early 2000s"
+  "knownFor": "Neptunes half whose minimalist bounce owned the early 2000s",
+  "url": "../p-pharrellwilliamstheneptunes-ogfan99-4f119f/",
+  "ex": 2
  },
  {
   "name": "Metro Boomin",
@@ -76,7 +80,9 @@ window.PRODUCERS = [
   "slug": "p-justblaze",
   "tier": "mainstream",
   "home": "Paterson, NJ",
-  "knownFor": "Roc-A-Fella's horn-blasting, stadium-sized soul sampler"
+  "knownFor": "Roc-A-Fella's horn-blasting, stadium-sized soul sampler",
+  "url": "../p-justblaze-ogfan99-408eb6/",
+  "ex": 2
  },
  {
   "name": "Mustard",
