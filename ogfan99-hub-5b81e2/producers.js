@@ -317,7 +317,9 @@ window.PRODUCERS = [
   "slug": "p-nottz",
   "tier": "indie",
   "home": "Norfolk, VA",
-  "knownFor": "Virginia soul-chopper trusted by Kanye and Pusha T"
+  "knownFor": "Virginia soul-chopper trusted by Kanye and Pusha T",
+  "url": "../p-nottz-ogfan99-cd9047/",
+  "ex": 2
  },
  {
   "name": "Hi-Tek",
@@ -342,7 +344,9 @@ window.PRODUCERS = [
   "slug": "p-exile",
   "tier": "indie",
   "home": "Los Angeles, CA",
-  "knownFor": "Soul-chopping half of Blu & Exile"
+  "knownFor": "Soul-chopping half of Blu & Exile",
+  "url": "../p-exile-ogfan99-4daa0e/",
+  "ex": 2
  },
  {
   "name": "Ski Beatz",
@@ -374,7 +378,9 @@ window.PRODUCERS = [
   "slug": "p-showbiz",
   "tier": "indie",
   "home": "The Bronx, NY",
-  "knownFor": "D.I.T.C. co-founder, half of Showbiz & A.G."
+  "knownFor": "D.I.T.C. co-founder, half of Showbiz & A.G.",
+  "url": "../p-showbiz-ogfan99-dc5d37/",
+  "ex": 2
  },
  {
   "name": "Roc Marciano",
