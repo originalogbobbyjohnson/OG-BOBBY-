@@ -59,21 +59,27 @@ window.PRODUCERS = [
   "slug": "p-metroboomin",
   "tier": "mainstream",
   "home": "St. Louis, MO (made his name in Atlanta)",
-  "knownFor": "Dark, cinematic trap for Future, Migos and 21 Savage"
+  "knownFor": "Dark, cinematic trap for Future, Migos and 21 Savage",
+  "url": "../p-metroboomin-ogfan99-b9e9ee/",
+  "ex": 2
  },
  {
   "name": "Mike WiLL Made-It",
   "slug": "p-mikewillmadeit",
   "tier": "mainstream",
   "home": "Marietta / Atlanta, GA",
-  "knownFor": "Ear Drummers boss behind Kendrick, Rae Sremmurd and Beyoncé hits"
+  "knownFor": "Ear Drummers boss behind Kendrick, Rae Sremmurd and Beyoncé hits",
+  "url": "../p-mikewillmadeit-ogfan99-cb15e7/",
+  "ex": 2
  },
  {
   "name": "Swizz Beatz",
   "slug": "p-swizzbeatz",
   "tier": "mainstream",
   "home": "The Bronx, NY",
-  "knownFor": "Ruff Ryders' in-house hitmaker with booming keyboard anthems"
+  "knownFor": "Ruff Ryders' in-house hitmaker with booming keyboard anthems",
+  "url": "../p-swizzbeatz-ogfan99-959356/",
+  "ex": 2
  },
  {
   "name": "Just Blaze",
