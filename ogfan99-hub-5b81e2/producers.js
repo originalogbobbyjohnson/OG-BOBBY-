@@ -239,7 +239,9 @@ window.PRODUCERS = [
   "slug": "p-apollobrown",
   "tier": "indie",
   "home": "Detroit, MI (raised in Grand Rapids)",
-  "knownFor": "Mello Music Group's go-to for full albums with veteran MCs"
+  "knownFor": "Mello Music Group's go-to for full albums with veteran MCs",
+  "url": "../p-apollobrown-ogfan99-8bed3a/",
+  "ex": 1
  },
  {
   "name": "Daringer",
@@ -260,14 +262,18 @@ window.PRODUCERS = [
   "slug": "p-statikselektah",
   "tier": "indie",
   "home": "Boston, MA (NYC-based since 2004)",
-  "knownFor": "Showoff Radio DJ producing for East Coast MCs old and new"
+  "knownFor": "Showoff Radio DJ producing for East Coast MCs old and new",
+  "url": "../p-statikselektah-ogfan99-336cb3/",
+  "ex": 2
  },
  {
   "name": "Harry Fraud",
   "slug": "p-harryfraud",
   "tier": "indie",
   "home": "New York, NY (studio in Brooklyn)",
-  "knownFor": "Hazy, luxurious loops for French Montana and Action Bronson"
+  "knownFor": "Hazy, luxurious loops for French Montana and Action Bronson",
+  "url": "../p-harryfraud-ogfan99-6083ef/",
+  "ex": 2
  },
  {
   "name": "Black Milk",
