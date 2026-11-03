@@ -1625,7 +1625,10 @@ window.OGX = (function () {
   window.__lpick = pick;
   /* ▼ / ▲ step one artist at a time; AUTO walks the list until you touch it */
   /* used by the map: bring an artist's tile to the gold-ring spot */
-  window.__lfocus = li => { layout(); const st = stops.find(x => x[1] === li); if (st) lw.scrollTo({ top: Math.max(0, st[0] - 2), behavior: "smooth" }); else items.forEach(x => x.classList.toggle("focus", x === li)); };
+  /* waits until the list is on screen (it is hidden on the first map tap), then checks again once it settles so the tile always lands */
+  window.__lfocus = li => { let n = 0; const go = smooth => { if ((!lw.clientHeight || !li.offsetHeight) && n++ < 40) return setTimeout(() => go(smooth), 50);
+      layout(); const st = stops.find(x => x[1] === li); if (st) lw.scrollTo({ top: Math.max(0, st[0] - 2), behavior: smooth ? "smooth" : "auto" }); else items.forEach(x => x.classList.toggle("focus", x === li)); };
+    go(true); setTimeout(() => { const r = li.getBoundingClientRect(), w = lw.getBoundingClientRect(); if (r.top < w.top || r.bottom > w.bottom) go(false); }, 900); };
   const step = d => { if (!stops.length) return; const y = lw.scrollTop + 2; let k = 0; stops.forEach(([sy], j) => { if (sy <= y) k = j; });
     const n = Math.max(0, Math.min(stops.length - 1, k + d)); lw.scrollTo({ top: Math.max(0, stops[n][0] - 2), behavior: "smooth" }); return n < stops.length - 1; };
   let auto = 0; const stopAuto = () => { clearInterval(auto); auto = 0; $("lnAuto").classList.remove("on"); $("lnAuto").textContent = "AUTO"; };
