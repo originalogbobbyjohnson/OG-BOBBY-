@@ -12,4 +12,7 @@ window.OG_REGION_GAMES = {
   "Blu": { url: "../blu-ogfan99-822fce/", ex: 0 },
   "Busdriver": { url: "../busdriver-ogfan99-d30a4e/", ex: 0 },
   "Open Mike Eagle": { url: "../openmikeeagle-ogfan99-ce8ee9/", ex: 2 },
+  "Sage Francis": { url: "../sagefrancis-ogfan99-424f31/", ex: 0 },
+  "Apathy": { url: "../apathy-ogfan99-dc32b4/", ex: 2 },
+  "Vinnie Paz": { url: "../vinniepaz-ogfan99-377809/", ex: 2 },
 };
