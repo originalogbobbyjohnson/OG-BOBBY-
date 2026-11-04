@@ -93,40 +93,1373 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "explicitSongs": [
   {
    "title": "Tribe",
    "id": "OA8aw07dpg0",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "cuts": [
+    36.6,
+    74.6,
+    117.4
+   ],
+   "qs": [
+    [
+     [
+      "\"This one's for\" who?",
+      "You",
+      "Me",
+      "Them"
+     ],
+     [
+      "\"I think I\" what?",
+      "Made it",
+      "Got it",
+      "Lost it"
+     ],
+     [
+      "Why? 'Cause he's always what?",
+      "Smiling",
+      "Shining",
+      "Grinding"
+     ],
+     [
+      "She is the what, now?",
+      "Reason",
+      "Problem",
+      "Answer"
+     ],
+     [
+      "Girl, I can't what?",
+      "Explain it",
+      "Escape it",
+      "Replace it"
+     ],
+     [
+      "It's all in the what?",
+      "Timing",
+      "Rhyming",
+      "Mind"
+     ],
+     [
+      "\"I had to get\" what? (said twice)",
+      "Low",
+      "Rich",
+      "Gone"
+     ]
+    ],
+    [
+     [
+      "Can't spoil time on nickeling and what?",
+      "Diming",
+      "Dining",
+      "Rhyming"
+     ],
+     [
+      "His girl don't want no what?",
+      "Diamonds",
+      "Money",
+      "Roses"
+     ],
+     [
+      "A daily reminder to holler at who?",
+      "God",
+      "Mom",
+      "Home"
+     ],
+     [
+      "She's more what?",
+      "Top echelon",
+      "Top shelf",
+      "Top dollar"
+     ],
+     [
+      "In drama, they used to be the best what?",
+      "Actors",
+      "Writers",
+      "Players"
+     ],
+     [
+      "He's done with all that tough what?",
+      "Acting",
+      "Talking",
+      "Living"
+     ],
+     [
+      "Which football coach does he name?",
+      "John Madden",
+      "Bill Parcells",
+      "Vince Lombardi"
+     ]
+    ],
+    [
+     [
+      "I had to get back, I had to what?",
+      "Report",
+      "Resort",
+      "Restart"
+     ],
+     [
+      "Had to get facts 'cause you are just what?",
+      "That",
+      "Mine",
+      "Right"
+     ],
+     [
+      "Girl, you share your what with me?",
+      "Truths",
+      "Dreams",
+      "Secrets"
+     ],
+     [
+      "You in the what with me?",
+      "Booth",
+      "Coupe",
+      "Room"
+     ],
+     [
+      "I find them true and what?",
+      "Amused",
+      "Confused",
+      "Approved"
+     ],
+     [
+      "What gets sung over and over after the hook?",
+      "La, la, la",
+      "Na, na, na",
+      "Da, da, da"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Light of My Soul",
-   "id": "ipJrBZfyr9w",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Designer",
+   "id": "NqoSGzWEDGQ",
+   "start": 9.6,
+   "cuts": [
+    48,
+    80.95,
+    131.7
+   ],
+   "qs": [
+    [
+     [
+      "In a what that I hold you in?",
+      "Vault",
+      "Room",
+      "Heart"
+     ],
+     [
+      "\"Open and\" what?",
+      "Close",
+      "Shut",
+      "Go"
+     ],
+     [
+      "Safe as what that I hold you in?",
+      "Thoughts",
+      "Arms",
+      "Walls"
+     ],
+     [
+      "He flew to Japan and seen a what?",
+      "Panda",
+      "Tiger",
+      "Dragon"
+     ],
+     [
+      "Where did he buy some designer pants?",
+      "France",
+      "Italy",
+      "Spain"
+     ],
+     [
+      "\"Did that by\" what?",
+      "Designer",
+      "Myself",
+      "Accident"
+     ],
+     [
+      "Way too often ain't no what?",
+      "Hero",
+      "Saint",
+      "Joke"
+     ]
+    ],
+    [
+     [
+      "Get a cake made, can never what?",
+      "Overstate",
+      "Overrate",
+      "Overpay"
+     ],
+     [
+      "He's dedicated to his what?",
+      "Pay-grade",
+      "Grind",
+      "Family"
+     ],
+     [
+      "They play it safe so they never be what?",
+      "Afraid",
+      "Alone",
+      "Late"
+     ],
+     [
+      "His fears make him what?",
+      "Great",
+      "Weak",
+      "Strong"
+     ],
+     [
+      "Make me feel alive and what?",
+      "Levitate",
+      "Elevate",
+      "Celebrate"
+     ],
+     [
+      "\"Let my wings\" what?",
+      "Grow",
+      "Fly",
+      "Spread"
+     ],
+     [
+      "Platinum chain, but the what grows easy?",
+      "Ego",
+      "Hate",
+      "Fame"
+     ]
+    ],
+    [
+     [
+      "Be faithful, it's harder to what?",
+      "Stay in",
+      "Get in",
+      "Give in"
+     ],
+     [
+      "The wonders of all the what?",
+      "Mosaics",
+      "Mansions",
+      "Paintings"
+     ],
+     [
+      "Cave dwellings on their first day smelling what?",
+      "Pine",
+      "Rain",
+      "Smoke"
+     ],
+     [
+      "\"Happy\" what day?",
+      "Earth Day",
+      "Birthday",
+      "New Year's Day"
+     ],
+     [
+      "The world is what?",
+      "Mine",
+      "Yours",
+      "Ours"
+     ],
+     [
+      "He's collecting bags 'cause the tape a what?",
+      "Classic",
+      "Banger",
+      "Hit"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Clouds Never Get Old",
+   "id": "xT5tyQ9cYWQ",
+   "start": 8,
+   "cuts": [
+    46.3,
+    93.5,
+    149.9
+   ],
+   "qs": [
+    [
+     [
+      "Momma, I think I just met me a who?",
+      "Madonna",
+      "Rihanna",
+      "Beyoncé"
+     ],
+     [
+      "Everything glowing ain't a what?",
+      "Diamond",
+      "Star",
+      "Gold"
+     ],
+     [
+      "\"Girl, you\" what?",
+      "Shining",
+      "Glowing",
+      "Lying"
+     ],
+     [
+      "He ain't felt love in a what?",
+      "Long time",
+      "Minute",
+      "Lifetime"
+     ],
+     [
+      "He told her that when they what?",
+      "Woke up",
+      "Broke up",
+      "Met up"
+     ],
+     [
+      "That might have been the wrong what?",
+      "Time",
+      "Place",
+      "Girl"
+     ]
+    ],
+    [
+     [
+      "He's straight out the what?",
+      "Borough",
+      "Bronx",
+      "Block"
+     ],
+     [
+      "She lives way up in what?",
+      "Harlem",
+      "Queens",
+      "Brooklyn"
+     ],
+     [
+      "She comes to him when he does what?",
+      "Calls her",
+      "Texts her",
+      "Needs her"
+     ],
+     [
+      "She's working for which magazine?",
+      "Vogue",
+      "Elle",
+      "Vibe"
+     ],
+     [
+      "He's all about his what?",
+      "Stacking",
+      "Fashion",
+      "Music"
+     ],
+     [
+      "He be working the what?",
+      "Road",
+      "Room",
+      "Phone"
+     ],
+     [
+      "What never gets old?",
+      "Clouds",
+      "Gold",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "So focused on making the dopest what?",
+      "Song",
+      "Beat",
+      "Album"
+     ],
+     [
+      "She was lit, he was what?",
+      "Milk",
+      "Cool",
+      "Ice"
+     ],
+     [
+      "Girl, don't let that milk what?",
+      "Spoil",
+      "Spill",
+      "Sour"
+     ],
+     [
+      "You got some friends that what?",
+      "Stress you",
+      "Love you",
+      "Hate you"
+     ],
+     [
+      "Don't let 'em what for you?",
+      "Think",
+      "Speak",
+      "Choose"
+     ],
+     [
+      "He pulls up the what for you?",
+      "Whip",
+      "Jet",
+      "Bike"
+     ],
+     [
+      "718 to your state, 212 to your what?",
+      "City",
+      "Block",
+      "Crib"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Barack Obama Special",
+   "id": "4RnNZgEn9Q8",
+   "cuts": [
+    37.4,
+    80.7,
+    141.8
+   ],
+   "qs": [
+    [
+     [
+      "\"Biggie, it's\" what?",
+      "Queens",
+      "Brooklyn",
+      "Harlem"
+     ],
+     [
+      "Everything over here is what special?",
+      "Barack Obama",
+      "Michelle Obama",
+      "Joe Biden"
+     ],
+     [
+      "\"He lets it\" what?",
+      "Fly",
+      "Go",
+      "Ride"
+     ],
+     [
+      "He's living what now?",
+      "Better",
+      "Bigger",
+      "Faster"
+     ],
+     [
+      "He had to move 'cause the neighbors were so what?",
+      "Racist",
+      "Nosy",
+      "Loud"
+     ],
+     [
+      "His new crib looks like the 4th of what?",
+      "July",
+      "June",
+      "Street"
+     ],
+     [
+      "Looking like a frosted what?",
+      "Gelato",
+      "Cupcake",
+      "Donut"
+     ]
+    ],
+    [
+     [
+      "He is on a whole 'nother what?",
+      "Level",
+      "Planet",
+      "Wave"
+     ],
+     [
+      "He got up out the street and ran up in the what?",
+      "Industry",
+      "Building",
+      "Game"
+     ],
+     [
+      "His whip is what?",
+      "European",
+      "Japanese",
+      "American"
+     ],
+     [
+      "But the kid is what?",
+      "Sudanese",
+      "Ethiopian",
+      "Nigerian"
+     ],
+     [
+      "Them cats is prone to acting what?",
+      "Phony",
+      "Funny",
+      "Tough"
+     ],
+     [
+      "We miles ahead, the what's dead?",
+      "Matrimony",
+      "Competition",
+      "Party"
+     ],
+     [
+      "Heard it all, the what's dead?",
+      "Commentary",
+      "Story",
+      "Rumor"
+     ]
+    ],
+    [
+     [
+      "He prays to God and calls in his what?",
+      "Request",
+      "Favors",
+      "Blessings"
+     ],
+     [
+      "He tells Him his what?",
+      "Regrets",
+      "Secrets",
+      "Dreams"
+     ],
+     [
+      "He cannot share the what he's feeling?",
+      "Stress",
+      "Love",
+      "Pain"
+     ],
+     [
+      "He's like fireworks in the what sky?",
+      "Baghdad",
+      "Brooklyn",
+      "Midnight"
+     ],
+     [
+      "He might be the second what?",
+      "Coming",
+      "Chance",
+      "Wind"
+     ],
+     [
+      "They gon' leave an ocean of what?",
+      "Salt",
+      "Gold",
+      "Tears"
+     ],
+     [
+      "Ten toes holding the what?",
+      "Floor",
+      "Line",
+      "Door"
+     ]
+    ]
+   ]
   },
   {
    "title": "Penthouse",
-   "id": "STV0qqb4_rg",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Night Job",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Decent",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "thkuyGmpQVM",
+   "start": 29.9,
+   "cuts": [
+    64.5,
+    138,
+    198.3
+   ],
+   "qs": [
+    [
+     [
+      "\"Lately I got this\" what?",
+      "Feeling",
+      "Vision",
+      "Problem"
+     ],
+     [
+      "It's written up in the what?",
+      "Stars",
+      "Sky",
+      "Book"
+     ],
+     [
+      "He's spitting it from the what?",
+      "Heart",
+      "Soul",
+      "Gut"
+     ],
+     [
+      "\"I'm no angel, I got an\" what?",
+      "Angle",
+      "Answer",
+      "Anchor"
+     ],
+     [
+      "She said he caught her eye and her what?",
+      "Ears",
+      "Heart",
+      "Mind"
+     ],
+     [
+      "Cross your t's and dot your what?",
+      "I's",
+      "J's",
+      "Lines"
+     ]
+    ],
+    [
+     [
+      "We can take this leap of what?",
+      "Faith",
+      "Fate",
+      "Love"
+     ],
+     [
+      "I don't wanna feel the what?",
+      "Bottom",
+      "Pressure",
+      "Fall"
+     ],
+     [
+      "He just called up his what?",
+      "Mama",
+      "Brother",
+      "Girl"
+     ],
+     [
+      "He's pulling all-nighters and missing the what?",
+      "Sun",
+      "Fun",
+      "Bus"
+     ],
+     [
+      "He wishes heaven had visiting what?",
+      "Hours",
+      "Days",
+      "Rooms"
+     ],
+     [
+      "Call me for NASCAR, Bassy a track what?",
+      "Star",
+      "Team",
+      "Car"
+     ]
+    ],
+    [
+     [
+      "Gotta thank mom dukes, and who too?",
+      "Pops",
+      "Grandma",
+      "Unc"
+     ],
+     [
+      "They say anything is what?",
+      "Possible",
+      "Over",
+      "Easy"
+     ],
+     [
+      "His squad is like what?",
+      "Apostles",
+      "Soldiers",
+      "Family"
+     ],
+     [
+      "Pray for the rain, gotta deal with what too?",
+      "Mud",
+      "Snow",
+      "Pain"
+     ],
+     [
+      "They wear their faces what?",
+      "Backwards",
+      "Painted",
+      "Masked"
+     ],
+     [
+      "Going through the changes, he's still the what?",
+      "Same",
+      "Man",
+      "King"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Tribe",
+   "id": "OA8aw07dpg0",
+   "cuts": [
+    36.6,
+    74.6,
+    117.4
+   ],
+   "qs": [
+    [
+     [
+      "\"This one's for\" who?",
+      "You",
+      "Me",
+      "Them"
+     ],
+     [
+      "\"I think I\" what?",
+      "Made it",
+      "Got it",
+      "Lost it"
+     ],
+     [
+      "Why? 'Cause he's always what?",
+      "Smiling",
+      "Shining",
+      "Grinding"
+     ],
+     [
+      "She is the what, now?",
+      "Reason",
+      "Problem",
+      "Answer"
+     ],
+     [
+      "Girl, I can't what?",
+      "Explain it",
+      "Escape it",
+      "Replace it"
+     ],
+     [
+      "It's all in the what?",
+      "Timing",
+      "Rhyming",
+      "Mind"
+     ],
+     [
+      "\"I had to get\" what? (said twice)",
+      "Low",
+      "Rich",
+      "Gone"
+     ]
+    ],
+    [
+     [
+      "Can't spoil time on nickeling and what?",
+      "Diming",
+      "Dining",
+      "Rhyming"
+     ],
+     [
+      "His girl don't want no what?",
+      "Diamonds",
+      "Money",
+      "Roses"
+     ],
+     [
+      "A daily reminder to holler at who?",
+      "God",
+      "Mom",
+      "Home"
+     ],
+     [
+      "She's more what?",
+      "Top echelon",
+      "Top shelf",
+      "Top dollar"
+     ],
+     [
+      "In drama, they used to be the best what?",
+      "Actors",
+      "Writers",
+      "Players"
+     ],
+     [
+      "He's done with all that tough what?",
+      "Acting",
+      "Talking",
+      "Living"
+     ],
+     [
+      "Which football coach does he name?",
+      "John Madden",
+      "Bill Parcells",
+      "Vince Lombardi"
+     ]
+    ],
+    [
+     [
+      "I had to get back, I had to what?",
+      "Report",
+      "Resort",
+      "Restart"
+     ],
+     [
+      "Had to get facts 'cause you are just what?",
+      "That",
+      "Mine",
+      "Right"
+     ],
+     [
+      "Girl, you share your what with me?",
+      "Truths",
+      "Dreams",
+      "Secrets"
+     ],
+     [
+      "You in the what with me?",
+      "Booth",
+      "Coupe",
+      "Room"
+     ],
+     [
+      "I find them true and what?",
+      "Amused",
+      "Confused",
+      "Approved"
+     ],
+     [
+      "What gets sung over and over after the hook?",
+      "La, la, la",
+      "Na, na, na",
+      "Da, da, da"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Designer",
+   "id": "NqoSGzWEDGQ",
+   "start": 9.6,
+   "cuts": [
+    48,
+    80.95,
+    131.7
+   ],
+   "qs": [
+    [
+     [
+      "In a what that I hold you in?",
+      "Vault",
+      "Room",
+      "Heart"
+     ],
+     [
+      "\"Open and\" what?",
+      "Close",
+      "Shut",
+      "Go"
+     ],
+     [
+      "Safe as what that I hold you in?",
+      "Thoughts",
+      "Arms",
+      "Walls"
+     ],
+     [
+      "He flew to Japan and seen a what?",
+      "Panda",
+      "Tiger",
+      "Dragon"
+     ],
+     [
+      "Where did he buy some designer pants?",
+      "France",
+      "Italy",
+      "Spain"
+     ],
+     [
+      "\"Did that by\" what?",
+      "Designer",
+      "Myself",
+      "Accident"
+     ],
+     [
+      "Way too often ain't no what?",
+      "Hero",
+      "Saint",
+      "Joke"
+     ]
+    ],
+    [
+     [
+      "Get a cake made, can never what?",
+      "Overstate",
+      "Overrate",
+      "Overpay"
+     ],
+     [
+      "He's dedicated to his what?",
+      "Pay-grade",
+      "Grind",
+      "Family"
+     ],
+     [
+      "They play it safe so they never be what?",
+      "Afraid",
+      "Alone",
+      "Late"
+     ],
+     [
+      "His fears make him what?",
+      "Great",
+      "Weak",
+      "Strong"
+     ],
+     [
+      "Make me feel alive and what?",
+      "Levitate",
+      "Elevate",
+      "Celebrate"
+     ],
+     [
+      "\"Let my wings\" what?",
+      "Grow",
+      "Fly",
+      "Spread"
+     ],
+     [
+      "Platinum chain, but the what grows easy?",
+      "Ego",
+      "Hate",
+      "Fame"
+     ]
+    ],
+    [
+     [
+      "Be faithful, it's harder to what?",
+      "Stay in",
+      "Get in",
+      "Give in"
+     ],
+     [
+      "The wonders of all the what?",
+      "Mosaics",
+      "Mansions",
+      "Paintings"
+     ],
+     [
+      "Cave dwellings on their first day smelling what?",
+      "Pine",
+      "Rain",
+      "Smoke"
+     ],
+     [
+      "\"Happy\" what day?",
+      "Earth Day",
+      "Birthday",
+      "New Year's Day"
+     ],
+     [
+      "The world is what?",
+      "Mine",
+      "Yours",
+      "Ours"
+     ],
+     [
+      "He's collecting bags 'cause the tape a what?",
+      "Classic",
+      "Banger",
+      "Hit"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Clouds Never Get Old",
+   "id": "xT5tyQ9cYWQ",
+   "start": 8,
+   "cuts": [
+    46.3,
+    93.5,
+    149.9
+   ],
+   "qs": [
+    [
+     [
+      "Momma, I think I just met me a who?",
+      "Madonna",
+      "Rihanna",
+      "Beyoncé"
+     ],
+     [
+      "Everything glowing ain't a what?",
+      "Diamond",
+      "Star",
+      "Gold"
+     ],
+     [
+      "\"Girl, you\" what?",
+      "Shining",
+      "Glowing",
+      "Lying"
+     ],
+     [
+      "He ain't felt love in a what?",
+      "Long time",
+      "Minute",
+      "Lifetime"
+     ],
+     [
+      "He told her that when they what?",
+      "Woke up",
+      "Broke up",
+      "Met up"
+     ],
+     [
+      "That might have been the wrong what?",
+      "Time",
+      "Place",
+      "Girl"
+     ]
+    ],
+    [
+     [
+      "He's straight out the what?",
+      "Borough",
+      "Bronx",
+      "Block"
+     ],
+     [
+      "She lives way up in what?",
+      "Harlem",
+      "Queens",
+      "Brooklyn"
+     ],
+     [
+      "She comes to him when he does what?",
+      "Calls her",
+      "Texts her",
+      "Needs her"
+     ],
+     [
+      "She's working for which magazine?",
+      "Vogue",
+      "Elle",
+      "Vibe"
+     ],
+     [
+      "He's all about his what?",
+      "Stacking",
+      "Fashion",
+      "Music"
+     ],
+     [
+      "He be working the what?",
+      "Road",
+      "Room",
+      "Phone"
+     ],
+     [
+      "What never gets old?",
+      "Clouds",
+      "Gold",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "So focused on making the dopest what?",
+      "Song",
+      "Beat",
+      "Album"
+     ],
+     [
+      "She was lit, he was what?",
+      "Milk",
+      "Cool",
+      "Ice"
+     ],
+     [
+      "Girl, don't let that milk what?",
+      "Spoil",
+      "Spill",
+      "Sour"
+     ],
+     [
+      "You got some friends that what?",
+      "Stress you",
+      "Love you",
+      "Hate you"
+     ],
+     [
+      "Don't let 'em what for you?",
+      "Think",
+      "Speak",
+      "Choose"
+     ],
+     [
+      "He pulls up the what for you?",
+      "Whip",
+      "Jet",
+      "Bike"
+     ],
+     [
+      "718 to your state, 212 to your what?",
+      "City",
+      "Block",
+      "Crib"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Barack Obama Special",
+   "id": "4RnNZgEn9Q8",
+   "cuts": [
+    37.4,
+    80.7,
+    141.8
+   ],
+   "qs": [
+    [
+     [
+      "\"Biggie, it's\" what?",
+      "Queens",
+      "Brooklyn",
+      "Harlem"
+     ],
+     [
+      "Everything over here is what special?",
+      "Barack Obama",
+      "Michelle Obama",
+      "Joe Biden"
+     ],
+     [
+      "\"He lets it\" what?",
+      "Fly",
+      "Go",
+      "Ride"
+     ],
+     [
+      "He's living what now?",
+      "Better",
+      "Bigger",
+      "Faster"
+     ],
+     [
+      "He had to move 'cause the neighbors were so what?",
+      "Racist",
+      "Nosy",
+      "Loud"
+     ],
+     [
+      "His new crib looks like the 4th of what?",
+      "July",
+      "June",
+      "Street"
+     ],
+     [
+      "Looking like a frosted what?",
+      "Gelato",
+      "Cupcake",
+      "Donut"
+     ]
+    ],
+    [
+     [
+      "He is on a whole 'nother what?",
+      "Level",
+      "Planet",
+      "Wave"
+     ],
+     [
+      "He got up out the street and ran up in the what?",
+      "Industry",
+      "Building",
+      "Game"
+     ],
+     [
+      "His whip is what?",
+      "European",
+      "Japanese",
+      "American"
+     ],
+     [
+      "But the kid is what?",
+      "Sudanese",
+      "Ethiopian",
+      "Nigerian"
+     ],
+     [
+      "Them cats is prone to acting what?",
+      "Phony",
+      "Funny",
+      "Tough"
+     ],
+     [
+      "We miles ahead, the what's dead?",
+      "Matrimony",
+      "Competition",
+      "Party"
+     ],
+     [
+      "Heard it all, the what's dead?",
+      "Commentary",
+      "Story",
+      "Rumor"
+     ]
+    ],
+    [
+     [
+      "He prays to God and calls in his what?",
+      "Request",
+      "Favors",
+      "Blessings"
+     ],
+     [
+      "He tells Him his what?",
+      "Regrets",
+      "Secrets",
+      "Dreams"
+     ],
+     [
+      "He cannot share the what he's feeling?",
+      "Stress",
+      "Love",
+      "Pain"
+     ],
+     [
+      "He's like fireworks in the what sky?",
+      "Baghdad",
+      "Brooklyn",
+      "Midnight"
+     ],
+     [
+      "He might be the second what?",
+      "Coming",
+      "Chance",
+      "Wind"
+     ],
+     [
+      "They gon' leave an ocean of what?",
+      "Salt",
+      "Gold",
+      "Tears"
+     ],
+     [
+      "Ten toes holding the what?",
+      "Floor",
+      "Line",
+      "Door"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Penthouse",
+   "id": "thkuyGmpQVM",
+   "start": 29.9,
+   "cuts": [
+    64.5,
+    138,
+    198.3
+   ],
+   "qs": [
+    [
+     [
+      "\"Lately I got this\" what?",
+      "Feeling",
+      "Vision",
+      "Problem"
+     ],
+     [
+      "It's written up in the what?",
+      "Stars",
+      "Sky",
+      "Book"
+     ],
+     [
+      "He's spitting it from the what?",
+      "Heart",
+      "Soul",
+      "Gut"
+     ],
+     [
+      "\"I'm no angel, I got an\" what?",
+      "Angle",
+      "Answer",
+      "Anchor"
+     ],
+     [
+      "She said he caught her eye and her what?",
+      "Ears",
+      "Heart",
+      "Mind"
+     ],
+     [
+      "Cross your t's and dot your what?",
+      "I's",
+      "J's",
+      "Lines"
+     ]
+    ],
+    [
+     [
+      "We can take this leap of what?",
+      "Faith",
+      "Fate",
+      "Love"
+     ],
+     [
+      "I don't wanna feel the what?",
+      "Bottom",
+      "Pressure",
+      "Fall"
+     ],
+     [
+      "He just called up his what?",
+      "Mama",
+      "Brother",
+      "Girl"
+     ],
+     [
+      "He's pulling all-nighters and missing the what?",
+      "Sun",
+      "Fun",
+      "Bus"
+     ],
+     [
+      "He wishes heaven had visiting what?",
+      "Hours",
+      "Days",
+      "Rooms"
+     ],
+     [
+      "Call me for NASCAR, Bassy a track what?",
+      "Star",
+      "Team",
+      "Car"
+     ]
+    ],
+    [
+     [
+      "Gotta thank mom dukes, and who too?",
+      "Pops",
+      "Grandma",
+      "Unc"
+     ],
+     [
+      "They say anything is what?",
+      "Possible",
+      "Over",
+      "Easy"
+     ],
+     [
+      "His squad is like what?",
+      "Apostles",
+      "Soldiers",
+      "Family"
+     ],
+     [
+      "Pray for the rain, gotta deal with what too?",
+      "Mud",
+      "Snow",
+      "Pain"
+     ],
+     [
+      "They wear their faces what?",
+      "Backwards",
+      "Painted",
+      "Masked"
+     ],
+     [
+      "Going through the changes, he's still the what?",
+      "Same",
+      "Man",
+      "King"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
