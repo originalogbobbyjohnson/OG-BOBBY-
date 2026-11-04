@@ -93,40 +93,1341 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Good Energy",
-   "id": "IAZmXhSRJ4Y",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Anonymous",
+   "id": "41By8j7mf4c",
+   "start": 23.4,
+   "cuts": [
+    63,
+    95.7,
+    137.6
+   ],
+   "qs": [
+    [
+     [
+      "Grafh is the strong friend that provides but is never what?",
+      "Checked on",
+      "Thanked",
+      "Paid back"
+     ],
+     [
+      "Why? 'Cause his body is what?",
+      "Teflon",
+      "Steel",
+      "Tired"
+     ],
+     [
+      "Grafh was surprised that he was what?",
+      "Slept on",
+      "Signed",
+      "Famous"
+     ],
+     [
+      "A vacation from what would be nice?",
+      "This life",
+      "The block",
+      "New York"
+     ],
+     [
+      "Which island are they getting left on?",
+      "Rikers",
+      "Staten",
+      "Coney"
+     ],
+     [
+      "Grafh's deuces are covered in what?",
+      "Diamonds",
+      "Gold",
+      "Pearls"
+     ],
+     [
+      "There's no jet or no what?",
+      "Pilot",
+      "Plane",
+      "Wings"
+     ],
+     [
+      "Grafh's phone never goes what?",
+      "Silent",
+      "Dead",
+      "Off"
+     ]
+    ],
+    [
+     [
+      "Grafh could feel the what around him?",
+      "Spirits",
+      "Haters",
+      "Cameras"
+     ],
+     [
+      "Grafh says his body is what?",
+      "Haunted",
+      "Blessed",
+      "Tired"
+     ],
+     [
+      "Grafh is styling without a what?",
+      "Coffin",
+      "Stylist",
+      "Mirror"
+     ],
+     [
+      "Grafh is about it without the what?",
+      "Talking",
+      "Money",
+      "Crew"
+     ],
+     [
+      "There's loads of common sense below the what?",
+      "Confidence",
+      "Surface",
+      "Swagger"
+     ],
+     [
+      "Grafh will die with every what he was told in confidence?",
+      "Secret",
+      "Story",
+      "Promise"
+     ],
+     [
+      "Grafh refuses to beef with someone with no what?",
+      "Accomplishments",
+      "Money",
+      "Respect"
+     ],
+     [
+      "In front of the cops, Grafh goes what?",
+      "Anonymous",
+      "Silent",
+      "Missing"
+     ]
+    ],
+    [
+     [
+      "Grafh's been cashing out for how many summers?",
+      "Eleven",
+      "Seven",
+      "Twenty"
+     ],
+     [
+      "Forever what?",
+      "Hunger",
+      "Hustling",
+      "Young"
+     ],
+     [
+      "Which city is this?",
+      "New York",
+      "Chicago",
+      "Atlanta"
+     ],
+     [
+      "How does Grafh describe it?",
+      "Ugly",
+      "Pretty",
+      "Easy"
+     ],
+     [
+      "More loyal to customers instead of what?",
+      "Brothers",
+      "Friends",
+      "Family"
+     ],
+     [
+      "Who never loved Grafh back?",
+      "The streets",
+      "The fans",
+      "The labels"
+     ],
+     [
+      "Grafh was hugging the what?",
+      "Block",
+      "Corner",
+      "Bottle"
+     ],
+     [
+      "What does Grafh keep asking?",
+      "Where the love at",
+      "What's the plan",
+      "Who's next"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Language",
-   "id": "sxtXjKqgwlA",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Good Die Young",
+   "id": "JrMk2a72WGk",
+   "start": 14.3,
+   "cuts": [
+    49.7,
+    107.6,
+    153.9
+   ],
+   "qs": [
+    [
+     [
+      "Going back and forth to court made Grafh comfortable in a what?",
+      "Suit",
+      "Tie",
+      "Courtroom"
+     ],
+     [
+      "In the coupe, Grafh is uncomfortable with the what?",
+      "Roof",
+      "Seats",
+      "Speed"
+     ],
+     [
+      "You can't expose a real one who's comfortable with the what?",
+      "Truth",
+      "Spotlight",
+      "Cameras"
+     ],
+     [
+      "Grafh calls himself a black what?",
+      "Sheep",
+      "Cat",
+      "Swan"
+     ],
+     [
+      "Grafh's ego is too big to be in a what?",
+      "Group",
+      "Room",
+      "Team"
+     ],
+     [
+      "The sheep is uncomfortable with the what?",
+      "Wolf",
+      "Shepherd",
+      "Dog"
+     ],
+     [
+      "A cold machine, Grafh's soul bleeds what?",
+      "Mechanical",
+      "Cold",
+      "Ice"
+     ],
+     [
+      "The note reads, 'Don't feed the' what?",
+      "Animals",
+      "Birds",
+      "Fans"
+     ]
+    ],
+    [
+     [
+      "If you ain't got it, Grafh's gon' need what?",
+      "Collateral",
+      "Cash",
+      "Interest"
+     ],
+     [
+      "What doesn't Grafh read?",
+      "The manual",
+      "The news",
+      "The contract"
+     ],
+     [
+      "Grafh doesn't listen to no what?",
+      "Teacher",
+      "Preacher",
+      "Critic"
+     ],
+     [
+      "Grafh needs forty acres, one whole zebra and a what?",
+      "Mule",
+      "Horse",
+      "Goat"
+     ],
+     [
+      "Grafh can't wear old sneakers for what?",
+      "Back to school",
+      "The club",
+      "Church"
+     ],
+     [
+      "What can't he share with no heater?",
+      "Cold pizza",
+      "Hot soup",
+      "Old bread"
+     ],
+     [
+      "The hood is where Grafh was born, but he plans to what?",
+      "Move",
+      "Stay",
+      "Return"
+     ],
+     [
+      "Grafh doesn't forget, but he tries to what?",
+      "Forgive",
+      "Ignore",
+      "Move on"
+     ]
+    ],
+    [
+     [
+      "Grafh pays his what?",
+      "Dues",
+      "Bills",
+      "Rent"
+     ],
+     [
+      "Grafh is trying to raise his what?",
+      "Son",
+      "Daughter",
+      "Crew"
+     ],
+     [
+      "Grafh breaks the what?",
+      "Rules",
+      "Records",
+      "Bank"
+     ],
+     [
+      "Grafh thinks he should've stayed in what?",
+      "School",
+      "Church",
+      "Bed"
+     ],
+     [
+      "Grafh plays it what?",
+      "Cool",
+      "Safe",
+      "Smart"
+     ],
+     [
+      "You should've parked if your car couldn't what?",
+      "Start",
+      "Stop",
+      "Turn"
+     ],
+     [
+      "We were hungry and could've what?",
+      "Starved",
+      "Quit",
+      "Cried"
+     ],
+     [
+      "Grafh's heart is frozen, full of what?",
+      "Frost",
+      "Ice",
+      "Pain"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Documented",
-   "id": "UFkzrJiH8Tw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "God Must Love Me",
+   "id": "HYFiTZgqZ5g",
+   "start": 11.6,
+   "cuts": [
+    53.2,
+    102.3,
+    152.8
+   ],
+   "qs": [
+    [
+     [
+      "Grafh could talk about what over and over?",
+      "Flossing",
+      "Money",
+      "Cars"
+     ],
+     [
+      "Grafh is complaining about over-what?",
+      "Exposure",
+      "Spending",
+      "Thinking"
+     ],
+     [
+      "Who is Grafh shoulder to shoulder with for now?",
+      "The Devil",
+      "His brother",
+      "His crew"
+     ],
+     [
+      "Grafh's ex-girl is working what all over his poster?",
+      "Voodoo",
+      "Graffiti",
+      "Lipstick"
+     ],
+     [
+      "So fly and what?",
+      "Carefree",
+      "Clean",
+      "Fresh"
+     ],
+     [
+      "Grafh wears designer shirts to cover up the what?",
+      "Scars",
+      "Tattoos",
+      "Bruises"
+     ],
+     [
+      "Can't break even coming up with what?",
+      "Odds",
+      "Money",
+      "Plans"
+     ],
+     [
+      "Getting your money up is a blessing, so Grafh tells God to do what?",
+      "Hurry up",
+      "Slow down",
+      "Listen"
+     ]
+    ],
+    [
+     [
+      "In the club, Grafh's fronting like he's a what?",
+      "Star",
+      "King",
+      "Boss"
+     ],
+     [
+      "Grafh is going to pose for this what?",
+      "Flick",
+      "Magazine",
+      "Painting"
+     ],
+     [
+      "With insecurities, Grafh's ego is what?",
+      "Gigantic",
+      "Fragile",
+      "Hidden"
+     ],
+     [
+      "They say nothing's promised, so why what?",
+      "Panic",
+      "Worry",
+      "Wait"
+     ],
+     [
+      "Grafh walks around like it's his what?",
+      "Planet",
+      "Kingdom",
+      "City"
+     ],
+     [
+      "Who did Grafh hand it all to?",
+      "God",
+      "His mom",
+      "The streets"
+     ],
+     [
+      "What must God do?",
+      "Love me",
+      "Forgive me",
+      "Hear me"
+     ],
+     [
+      "How many times does Grafh say 'amen'?",
+      "Three",
+      "Two",
+      "Five"
+     ]
+    ],
+    [
+     [
+      "They say that boy's style is what?",
+      "Flossy",
+      "Fresh",
+      "Fake"
+     ],
+     [
+      "Does he still struggle with his what payments?",
+      "Mortgage",
+      "Car",
+      "Phone"
+     ],
+     [
+      "Grafh has been more than what?",
+      "Patient",
+      "Grateful",
+      "Humble"
+     ],
+     [
+      "Grafh was born and raised on a what?",
+      "Corner",
+      "Farm",
+      "Rooftop"
+     ],
+     [
+      "God never let Grafh fall on the what?",
+      "Pavement",
+      "Stage",
+      "Floor"
+     ],
+     [
+      "Grafh says his son is what?",
+      "Incredible",
+      "A genius",
+      "A star"
+     ],
+     [
+      "And Grafh says his daughter's what?",
+      "Amazing",
+      "Beautiful",
+      "Brilliant"
+     ],
+     [
+      "He made lemons out of what?",
+      "Lemonade",
+      "Sugar",
+      "Water"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Lord of Mercy",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Rocafella Chain",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "My Blessing",
+   "id": "AR0XaZKJTEI",
+   "start": 15.5,
+   "cuts": [
+    49.8,
+    139.1,
+    205.3
+   ],
+   "qs": [
+    [
+     [
+      "We need something to what?",
+      "Believe in",
+      "Live for",
+      "Hold on to"
+     ],
+     [
+      "Grafh feels emotionally what?",
+      "Unavailable",
+      "Drained",
+      "Numb"
+     ],
+     [
+      "Something's broken and nothing's what?",
+      "Healing",
+      "Working",
+      "Changing"
+     ],
+     [
+      "Grafh is trying to stay what?",
+      "Balanced",
+      "Focused",
+      "Humble"
+     ],
+     [
+      "Grafh meditated and went what?",
+      "Vegan",
+      "Broke",
+      "Away"
+     ],
+     [
+      "What did Grafh eat?",
+      "Salad",
+      "Steak",
+      "Pizza"
+     ],
+     [
+      "They faked what online?",
+      "Happy",
+      "Rich",
+      "Love"
+     ],
+     [
+      "Grafh was searching for what from people who ain't valid?",
+      "Validation",
+      "Love",
+      "Money"
+     ],
+     [
+      "We're all kinda mentally what?",
+      "Confused",
+      "Tired",
+      "Strong"
+     ]
+    ],
+    [
+     [
+      "Grafh learned how to tie a tie where?",
+      "Online",
+      "From Dad",
+      "At school"
+     ],
+     [
+      "Grafh relies on his what?",
+      "Intuition",
+      "Friends",
+      "Luck"
+     ],
+     [
+      "If the shoe fits, what?",
+      "Wear it",
+      "Buy it",
+      "Keep it"
+     ],
+     [
+      "Grafh is more afraid of what?",
+      "Heartbreak",
+      "Failure",
+      "Losing"
+     ],
+     [
+      "Grafh is too generous to what?",
+      "Cheat",
+      "Quit",
+      "Steal"
+     ],
+     [
+      "Grafh is too brave to what?",
+      "Lie",
+      "Run",
+      "Hide"
+     ],
+     [
+      "If it costs your inner peace, it's too what?",
+      "Expensive",
+      "Late",
+      "Much"
+     ],
+     [
+      "Grafh would rather hold a grudge than hold a what?",
+      "Conversation",
+      "Meeting",
+      "Hand"
+     ],
+     [
+      "Grafh is the padlock without the what?",
+      "Combination",
+      "Key",
+      "Door"
+     ]
+    ],
+    [
+     [
+      "Grafh asks: is what forgotten?",
+      "Happiness",
+      "Love",
+      "Respect"
+     ],
+     [
+      "Grafh forgot that happiness is actually an what?",
+      "Option",
+      "Illusion",
+      "Answer"
+     ],
+     [
+      "How dare you give Grafh your heart and do what?",
+      "Trust me with it",
+      "Walk away",
+      "Break it"
+     ],
+     [
+      "Grafh prays he's never what with it?",
+      "Clumsy",
+      "Careless",
+      "Selfish"
+     ],
+     [
+      "What from every relationship has Grafh never told?",
+      "Secrets",
+      "Stories",
+      "Names"
+     ],
+     [
+      "Grafh wishes he could love so what?",
+      "Freely",
+      "Deeply",
+      "Long"
+     ],
+     [
+      "Grafh wants to be what?",
+      "Incredible",
+      "Famous",
+      "Rich"
+     ],
+     [
+      "Now Grafh wants to teach his kids things he never what?",
+      "Knew",
+      "Said",
+      "Did"
+     ],
+     [
+      "Wake up tomorrow and try to be a better what?",
+      "You",
+      "Man",
+      "Friend"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Anonymous",
+   "id": "41By8j7mf4c",
+   "start": 23.4,
+   "cuts": [
+    63,
+    95.7,
+    137.6
+   ],
+   "qs": [
+    [
+     [
+      "Grafh is the strong friend that provides but is never what?",
+      "Checked on",
+      "Thanked",
+      "Paid back"
+     ],
+     [
+      "Why? 'Cause his body is what?",
+      "Teflon",
+      "Steel",
+      "Tired"
+     ],
+     [
+      "Grafh was surprised that he was what?",
+      "Slept on",
+      "Signed",
+      "Famous"
+     ],
+     [
+      "A vacation from what would be nice?",
+      "This life",
+      "The block",
+      "New York"
+     ],
+     [
+      "Which island are they getting left on?",
+      "Rikers",
+      "Staten",
+      "Coney"
+     ],
+     [
+      "Grafh's deuces are covered in what?",
+      "Diamonds",
+      "Gold",
+      "Pearls"
+     ],
+     [
+      "There's no jet or no what?",
+      "Pilot",
+      "Plane",
+      "Wings"
+     ],
+     [
+      "Grafh's phone never goes what?",
+      "Silent",
+      "Dead",
+      "Off"
+     ]
+    ],
+    [
+     [
+      "Grafh could feel the what around him?",
+      "Spirits",
+      "Haters",
+      "Cameras"
+     ],
+     [
+      "Grafh says his body is what?",
+      "Haunted",
+      "Blessed",
+      "Tired"
+     ],
+     [
+      "Grafh is styling without a what?",
+      "Coffin",
+      "Stylist",
+      "Mirror"
+     ],
+     [
+      "Grafh is about it without the what?",
+      "Talking",
+      "Money",
+      "Crew"
+     ],
+     [
+      "There's loads of common sense below the what?",
+      "Confidence",
+      "Surface",
+      "Swagger"
+     ],
+     [
+      "Grafh will die with every what he was told in confidence?",
+      "Secret",
+      "Story",
+      "Promise"
+     ],
+     [
+      "Grafh refuses to beef with someone with no what?",
+      "Accomplishments",
+      "Money",
+      "Respect"
+     ],
+     [
+      "In front of the cops, Grafh goes what?",
+      "Anonymous",
+      "Silent",
+      "Missing"
+     ]
+    ],
+    [
+     [
+      "Grafh's been cashing out for how many summers?",
+      "Eleven",
+      "Seven",
+      "Twenty"
+     ],
+     [
+      "Forever what?",
+      "Hunger",
+      "Hustling",
+      "Young"
+     ],
+     [
+      "Which city is this?",
+      "New York",
+      "Chicago",
+      "Atlanta"
+     ],
+     [
+      "How does Grafh describe it?",
+      "Ugly",
+      "Pretty",
+      "Easy"
+     ],
+     [
+      "More loyal to customers instead of what?",
+      "Brothers",
+      "Friends",
+      "Family"
+     ],
+     [
+      "Who never loved Grafh back?",
+      "The streets",
+      "The fans",
+      "The labels"
+     ],
+     [
+      "Grafh was hugging the what?",
+      "Block",
+      "Corner",
+      "Bottle"
+     ],
+     [
+      "What does Grafh keep asking?",
+      "Where the love at",
+      "What's the plan",
+      "Who's next"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Good Die Young",
+   "id": "JrMk2a72WGk",
+   "start": 14.3,
+   "cuts": [
+    49.7,
+    107.6,
+    153.9
+   ],
+   "qs": [
+    [
+     [
+      "Going back and forth to court made Grafh comfortable in a what?",
+      "Suit",
+      "Tie",
+      "Courtroom"
+     ],
+     [
+      "In the coupe, Grafh is uncomfortable with the what?",
+      "Roof",
+      "Seats",
+      "Speed"
+     ],
+     [
+      "You can't expose a real one who's comfortable with the what?",
+      "Truth",
+      "Spotlight",
+      "Cameras"
+     ],
+     [
+      "Grafh calls himself a black what?",
+      "Sheep",
+      "Cat",
+      "Swan"
+     ],
+     [
+      "Grafh's ego is too big to be in a what?",
+      "Group",
+      "Room",
+      "Team"
+     ],
+     [
+      "The sheep is uncomfortable with the what?",
+      "Wolf",
+      "Shepherd",
+      "Dog"
+     ],
+     [
+      "A cold machine, Grafh's soul bleeds what?",
+      "Mechanical",
+      "Cold",
+      "Ice"
+     ],
+     [
+      "The note reads, 'Don't feed the' what?",
+      "Animals",
+      "Birds",
+      "Fans"
+     ]
+    ],
+    [
+     [
+      "If you ain't got it, Grafh's gon' need what?",
+      "Collateral",
+      "Cash",
+      "Interest"
+     ],
+     [
+      "What doesn't Grafh read?",
+      "The manual",
+      "The news",
+      "The contract"
+     ],
+     [
+      "Grafh doesn't listen to no what?",
+      "Teacher",
+      "Preacher",
+      "Critic"
+     ],
+     [
+      "Grafh needs forty acres, one whole zebra and a what?",
+      "Mule",
+      "Horse",
+      "Goat"
+     ],
+     [
+      "Grafh can't wear old sneakers for what?",
+      "Back to school",
+      "The club",
+      "Church"
+     ],
+     [
+      "What can't he share with no heater?",
+      "Cold pizza",
+      "Hot soup",
+      "Old bread"
+     ],
+     [
+      "The hood is where Grafh was born, but he plans to what?",
+      "Move",
+      "Stay",
+      "Return"
+     ],
+     [
+      "Grafh doesn't forget, but he tries to what?",
+      "Forgive",
+      "Ignore",
+      "Move on"
+     ]
+    ],
+    [
+     [
+      "Grafh pays his what?",
+      "Dues",
+      "Bills",
+      "Rent"
+     ],
+     [
+      "Grafh is trying to raise his what?",
+      "Son",
+      "Daughter",
+      "Crew"
+     ],
+     [
+      "Grafh breaks the what?",
+      "Rules",
+      "Records",
+      "Bank"
+     ],
+     [
+      "Grafh thinks he should've stayed in what?",
+      "School",
+      "Church",
+      "Bed"
+     ],
+     [
+      "Grafh plays it what?",
+      "Cool",
+      "Safe",
+      "Smart"
+     ],
+     [
+      "You should've parked if your car couldn't what?",
+      "Start",
+      "Stop",
+      "Turn"
+     ],
+     [
+      "We were hungry and could've what?",
+      "Starved",
+      "Quit",
+      "Cried"
+     ],
+     [
+      "Grafh's heart is frozen, full of what?",
+      "Frost",
+      "Ice",
+      "Pain"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "God Must Love Me",
+   "id": "HYFiTZgqZ5g",
+   "start": 11.6,
+   "cuts": [
+    53.2,
+    102.3,
+    152.8
+   ],
+   "qs": [
+    [
+     [
+      "Grafh could talk about what over and over?",
+      "Flossing",
+      "Money",
+      "Cars"
+     ],
+     [
+      "Grafh is complaining about over-what?",
+      "Exposure",
+      "Spending",
+      "Thinking"
+     ],
+     [
+      "Who is Grafh shoulder to shoulder with for now?",
+      "The Devil",
+      "His brother",
+      "His crew"
+     ],
+     [
+      "Grafh's ex-girl is working what all over his poster?",
+      "Voodoo",
+      "Graffiti",
+      "Lipstick"
+     ],
+     [
+      "So fly and what?",
+      "Carefree",
+      "Clean",
+      "Fresh"
+     ],
+     [
+      "Grafh wears designer shirts to cover up the what?",
+      "Scars",
+      "Tattoos",
+      "Bruises"
+     ],
+     [
+      "Can't break even coming up with what?",
+      "Odds",
+      "Money",
+      "Plans"
+     ],
+     [
+      "Getting your money up is a blessing, so Grafh tells God to do what?",
+      "Hurry up",
+      "Slow down",
+      "Listen"
+     ]
+    ],
+    [
+     [
+      "In the club, Grafh's fronting like he's a what?",
+      "Star",
+      "King",
+      "Boss"
+     ],
+     [
+      "Grafh is going to pose for this what?",
+      "Flick",
+      "Magazine",
+      "Painting"
+     ],
+     [
+      "With insecurities, Grafh's ego is what?",
+      "Gigantic",
+      "Fragile",
+      "Hidden"
+     ],
+     [
+      "They say nothing's promised, so why what?",
+      "Panic",
+      "Worry",
+      "Wait"
+     ],
+     [
+      "Grafh walks around like it's his what?",
+      "Planet",
+      "Kingdom",
+      "City"
+     ],
+     [
+      "Who did Grafh hand it all to?",
+      "God",
+      "His mom",
+      "The streets"
+     ],
+     [
+      "What must God do?",
+      "Love me",
+      "Forgive me",
+      "Hear me"
+     ],
+     [
+      "How many times does Grafh say 'amen'?",
+      "Three",
+      "Two",
+      "Five"
+     ]
+    ],
+    [
+     [
+      "They say that boy's style is what?",
+      "Flossy",
+      "Fresh",
+      "Fake"
+     ],
+     [
+      "Does he still struggle with his what payments?",
+      "Mortgage",
+      "Car",
+      "Phone"
+     ],
+     [
+      "Grafh has been more than what?",
+      "Patient",
+      "Grateful",
+      "Humble"
+     ],
+     [
+      "Grafh was born and raised on a what?",
+      "Corner",
+      "Farm",
+      "Rooftop"
+     ],
+     [
+      "God never let Grafh fall on the what?",
+      "Pavement",
+      "Stage",
+      "Floor"
+     ],
+     [
+      "Grafh says his son is what?",
+      "Incredible",
+      "A genius",
+      "A star"
+     ],
+     [
+      "And Grafh says his daughter's what?",
+      "Amazing",
+      "Beautiful",
+      "Brilliant"
+     ],
+     [
+      "He made lemons out of what?",
+      "Lemonade",
+      "Sugar",
+      "Water"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "My Blessing",
+   "id": "AR0XaZKJTEI",
+   "start": 15.5,
+   "cuts": [
+    49.8,
+    139.1,
+    205.3
+   ],
+   "qs": [
+    [
+     [
+      "We need something to what?",
+      "Believe in",
+      "Live for",
+      "Hold on to"
+     ],
+     [
+      "Grafh feels emotionally what?",
+      "Unavailable",
+      "Drained",
+      "Numb"
+     ],
+     [
+      "Something's broken and nothing's what?",
+      "Healing",
+      "Working",
+      "Changing"
+     ],
+     [
+      "Grafh is trying to stay what?",
+      "Balanced",
+      "Focused",
+      "Humble"
+     ],
+     [
+      "Grafh meditated and went what?",
+      "Vegan",
+      "Broke",
+      "Away"
+     ],
+     [
+      "What did Grafh eat?",
+      "Salad",
+      "Steak",
+      "Pizza"
+     ],
+     [
+      "They faked what online?",
+      "Happy",
+      "Rich",
+      "Love"
+     ],
+     [
+      "Grafh was searching for what from people who ain't valid?",
+      "Validation",
+      "Love",
+      "Money"
+     ],
+     [
+      "We're all kinda mentally what?",
+      "Confused",
+      "Tired",
+      "Strong"
+     ]
+    ],
+    [
+     [
+      "Grafh learned how to tie a tie where?",
+      "Online",
+      "From Dad",
+      "At school"
+     ],
+     [
+      "Grafh relies on his what?",
+      "Intuition",
+      "Friends",
+      "Luck"
+     ],
+     [
+      "If the shoe fits, what?",
+      "Wear it",
+      "Buy it",
+      "Keep it"
+     ],
+     [
+      "Grafh is more afraid of what?",
+      "Heartbreak",
+      "Failure",
+      "Losing"
+     ],
+     [
+      "Grafh is too generous to what?",
+      "Cheat",
+      "Quit",
+      "Steal"
+     ],
+     [
+      "Grafh is too brave to what?",
+      "Lie",
+      "Run",
+      "Hide"
+     ],
+     [
+      "If it costs your inner peace, it's too what?",
+      "Expensive",
+      "Late",
+      "Much"
+     ],
+     [
+      "Grafh would rather hold a grudge than hold a what?",
+      "Conversation",
+      "Meeting",
+      "Hand"
+     ],
+     [
+      "Grafh is the padlock without the what?",
+      "Combination",
+      "Key",
+      "Door"
+     ]
+    ],
+    [
+     [
+      "Grafh asks: is what forgotten?",
+      "Happiness",
+      "Love",
+      "Respect"
+     ],
+     [
+      "Grafh forgot that happiness is actually an what?",
+      "Option",
+      "Illusion",
+      "Answer"
+     ],
+     [
+      "How dare you give Grafh your heart and do what?",
+      "Trust me with it",
+      "Walk away",
+      "Break it"
+     ],
+     [
+      "Grafh prays he's never what with it?",
+      "Clumsy",
+      "Careless",
+      "Selfish"
+     ],
+     [
+      "What from every relationship has Grafh never told?",
+      "Secrets",
+      "Stories",
+      "Names"
+     ],
+     [
+      "Grafh wishes he could love so what?",
+      "Freely",
+      "Deeply",
+      "Long"
+     ],
+     [
+      "Grafh wants to be what?",
+      "Incredible",
+      "Famous",
+      "Rich"
+     ],
+     [
+      "Now Grafh wants to teach his kids things he never what?",
+      "Knew",
+      "Said",
+      "Did"
+     ],
+     [
+      "Wake up tomorrow and try to be a better what?",
+      "You",
+      "Man",
+      "Friend"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
