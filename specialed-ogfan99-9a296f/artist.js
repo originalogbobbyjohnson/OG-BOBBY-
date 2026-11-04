@@ -93,40 +93,671 @@ window.CFG = {
   }
  ],
  "saveKey": "ogfan99specialed1",
- "episodes": [
+ "songs": [
   {
    "title": "I Got It Made",
-   "id": "N_9GuiE5Fck",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "id": "VhsmR28DvL8",
+   "start": 8.2,
+   "cuts": [
+    40,
+    79.8,
+    138.9
+   ],
+   "qs": [
+    [
+     [
+      "Special Ed says he's your idol, numero what?",
+      "Uno",
+      "Dos",
+      "Tres"
+     ],
+     [
+      "What nationality does he say he's NOT?",
+      "Puerto Rican",
+      "Jamaican",
+      "Dominican"
+     ],
+     [
+      "What gift does he say he's got?",
+      "The gift of speech",
+      "The gift of gab",
+      "The gift of song"
+     ],
+     [
+      "Listen to the lesson he does what?",
+      "Preach",
+      "Teach",
+      "Reach"
+     ],
+     [
+      "He talks sense condensed into the form of a what?",
+      "Poem",
+      "Song",
+      "Story"
+     ],
+     [
+      "He's full of knowledge from his toes to the top of his what?",
+      "Dome",
+      "Head",
+      "Hat"
+     ],
+     [
+      "He's kinda young but his tongue speaks what?",
+      "Maturity",
+      "Wisdom",
+      "Truth"
+     ],
+     [
+      "He's not a child, so he doesn't need anything for what?",
+      "Security",
+      "Protection",
+      "Comfort"
+     ],
+     [
+      "He gets paid when his what is played?",
+      "Record",
+      "Video",
+      "Tape"
+     ]
+    ],
+    [
+     [
+      "His language is broken into a what?",
+      "Slang",
+      "Code",
+      "Rhyme"
+     ],
+     [
+      "He says the slang is just a what he selects?",
+      "Dialect",
+      "Style",
+      "Accent"
+     ],
+     [
+      "What does he say he plays it?",
+      "Cool",
+      "Smooth",
+      "Safe"
+     ],
+     [
+      "He says he's creatively what?",
+      "Superior",
+      "Gifted",
+      "Unique"
+     ],
+     [
+      "Why has he never lost?",
+      "He's the boss",
+      "He's the king",
+      "He's lucky"
+     ],
+     [
+      "He calls himself the champion, chief what?",
+      "One",
+      "Rocker",
+      "MC"
+     ],
+     [
+      "What does he say he doesn't do?",
+      "Retreat",
+      "Repeat",
+      "Compete"
+     ],
+     [
+      "He calls himself a what that you're inviting to a battle?",
+      "Titan",
+      "Giant",
+      "Legend"
+     ]
+    ],
+    [
+     [
+      "How many dollars does he make every record he cuts?",
+      "A million",
+      "A thousand",
+      "A billion"
+     ],
+     [
+      "How often does he get a brand new car?",
+      "Every other month",
+      "Every week",
+      "Every year"
+     ],
+     [
+      "How many cars has he got?",
+      "Twenty",
+      "Ten",
+      "Fifty"
+     ],
+     [
+      "How many Honda scooters does he have?",
+      "Seventy-four",
+      "Forty-seven",
+      "Twenty-four"
+     ],
+     [
+      "Where does he have land in the sand?",
+      "West Indies",
+      "Hawaii",
+      "Bahamas"
+     ],
+     [
+      "What does his dog have?",
+      "A solid gold bone",
+      "A diamond collar",
+      "A silver bowl"
+     ],
+     [
+      "He has a treaty with which island?",
+      "Tahiti",
+      "Jamaica",
+      "Fiji"
+     ],
+     [
+      "His boutiques go from France to the what?",
+      "U.S.A.",
+      "U.K.",
+      "Italy"
+     ]
+    ]
+   ]
   },
   {
    "title": "I'm the Magnificent",
-   "id": "vEMDWdhyrz0",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "id": "NoT-BrinYzE",
+   "cuts": [
+    31.8,
+    81,
+    142
+   ],
+   "qs": [
+    [
+     [
+      "What kind of style does he have?",
+      "Sensational",
+      "Smooth",
+      "Original"
+     ],
+     [
+      "He can go on and on for like a what?",
+      "Mile",
+      "Day",
+      "Year"
+     ],
+     [
+      "He gets in it like a car and does what?",
+      "Drive",
+      "Ride",
+      "Race"
+     ],
+     [
+      "If the record is smashed, he can still what?",
+      "Survive",
+      "Rhyme",
+      "Win"
+     ],
+     [
+      "He's the man of what?",
+      "Steel",
+      "Style",
+      "Gold"
+     ],
+     [
+      "Who does he tell to put it in reverse?",
+      "Action Love",
+      "Howie Tee",
+      "Mr. Magic"
+     ],
+     [
+      "He says this is just a what?",
+      "Conversation",
+      "Lecture",
+      "Battle"
+     ],
+     [
+      "He's Special Ed with the special what?",
+      "Presentation",
+      "Delivery",
+      "Edition"
+     ]
+    ],
+    [
+     [
+      "He likes to play, so for him it's what?",
+      "Recreation",
+      "Vacation",
+      "Relaxation"
+     ],
+     [
+      "It's not just a job, it's an what?",
+      "Adventure",
+      "Education",
+      "Art"
+     ],
+     [
+      "If worse comes to worse, he's got your thirst what?",
+      "Quencher",
+      "Drink",
+      "Water"
+     ],
+     [
+      "He doesn't rhyme for what?",
+      "Free",
+      "Fame",
+      "Fun"
+     ],
+     [
+      "He gets paid before the show and again when he does what?",
+      "Jets",
+      "Rests",
+      "Bows"
+     ],
+     [
+      "He says he's financially what?",
+      "Secure",
+      "Stable",
+      "Free"
+     ],
+     [
+      "He can't stand mice because he's like a what?",
+      "Cat",
+      "Dog",
+      "Hawk"
+     ],
+     [
+      "You'll play hooky on which day?",
+      "Friday",
+      "Monday",
+      "Sunday"
+     ]
+    ],
+    [
+     [
+      "He's dynamite, super dope, outta what?",
+      "Sight",
+      "Mind",
+      "Line"
+     ],
+     [
+      "Who does he call his trusty pal?",
+      "Action Love",
+      "Howie Tee",
+      "Biz Markie"
+     ],
+     [
+      "He says this is not a what?",
+      "Game",
+      "Joke",
+      "Test"
+     ],
+     [
+      "What does he say he hates?",
+      "Rumors",
+      "Liars",
+      "Haters"
+     ],
+     [
+      "Their jams get what?",
+      "Grammys",
+      "Platinum",
+      "Spins"
+     ],
+     [
+      "He says he's not an what?",
+      "Actor",
+      "Singer",
+      "Athlete"
+     ],
+     [
+      "He bets what you want is just what?",
+      "Attention",
+      "Money",
+      "Fame"
+     ],
+     [
+      "Look at all the time and the what they spent?",
+      "Money",
+      "Love",
+      "Energy"
+     ],
+     [
+      "They're famous, so don't blame them for what?",
+      "Nothin'",
+      "Everything",
+      "Tryin'"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Come On, Let's Move It",
+   "id": "-KG_irp8CR0",
+   "start": 16.3,
+   "cuts": [
+    50.8,
+    96,
+    155.1
+   ],
+   "qs": [
+    [
+     [
+      "He was proven effective by a what?",
+      "Clinical test",
+      "Blood test",
+      "Lab report"
+     ],
+     [
+      "Some couldn't believe he was the what?",
+      "Best",
+      "Boss",
+      "Man"
+     ],
+     [
+      "Where are the testers now?",
+      "In the clinic",
+      "In court",
+      "At home"
+     ],
+     [
+      "They almost what him?",
+      "Arrested",
+      "Signed",
+      "Fired"
+     ],
+     [
+      "He says that's the way you what?",
+      "Bounce the ball",
+      "Play the game",
+      "Roll the dice"
+     ],
+     [
+      "He gets extra cheese like what?",
+      "Pizza",
+      "Nachos",
+      "Burgers"
+     ],
+     [
+      "Don't get mad because you don't get what?",
+      "G's",
+      "Fame",
+      "Hits"
+     ],
+     [
+      "He says let me prove it, come on, let's what?",
+      "Move it",
+      "Lose it",
+      "Groove it"
+     ]
+    ],
+    [
+     [
+      "He spent time with the rhyme like a what?",
+      "Person",
+      "Teacher",
+      "Lover"
+     ],
+     [
+      "He's rehearsin' like a verse in a chapter of a what?",
+      "Play",
+      "Book",
+      "Bible"
+     ],
+     [
+      "Why does he say he does it?",
+      "He likes it",
+      "He needs it",
+      "He's bored"
+     ],
+     [
+      "He says it's mentally what?",
+      "Productive",
+      "Draining",
+      "Healthy"
+     ],
+     [
+      "He seeks special what?",
+      "Education",
+      "Attention",
+      "Treatment"
+     ],
+     [
+      "His mother, brother and father are from what land?",
+      "Jamaica",
+      "Haiti",
+      "Trinidad"
+     ],
+     [
+      "His residence is run by dead what?",
+      "Presidents",
+      "Kings",
+      "Leaders"
+     ],
+     [
+      "You make yourself what you are when?",
+      "Today",
+      "Tomorrow",
+      "Forever"
+     ]
+    ],
+    [
+     [
+      "He thanks everybody buying records by the what?",
+      "Carton",
+      "Dozen",
+      "Crate"
+     ],
+     [
+      "Thanks to the banks and thanks to the what?",
+      "Label",
+      "Fans",
+      "Station"
+     ],
+     [
+      "He thanks everybody with his record on their what?",
+      "Turntable",
+      "Radio",
+      "Walkman"
+     ],
+     [
+      "Thanks to the sellers and the what?",
+      "Distributors",
+      "Producers",
+      "Promoters"
+     ],
+     [
+      "On and on to what?",
+      "Victory",
+      "Glory",
+      "Freedom"
+     ],
+     [
+      "Each day he's reachin' out to pay his what?",
+      "Respects",
+      "Bills",
+      "Dues"
+     ],
+     [
+      "Suckers he be scorchin' and what?",
+      "Torchin'",
+      "Burnin'",
+      "Roastin'"
+     ],
+     [
+      "From the hand on the pen and then flaunt the what?",
+      "Fame",
+      "Cash",
+      "Chain"
+     ]
+    ]
+   ]
   },
   {
    "title": "Think About It",
    "id": "l-Vs0gYDN20",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Come On, Let's Move It",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "The Mission",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "start": 74.8,
+   "cuts": [
+    105.6,
+    143,
+    171.5
+   ],
+   "qs": [
+    [
+     [
+      "He waits for the approaching of a what?",
+      "Toy",
+      "Rival",
+      "Crowd"
+     ],
+     [
+      "Who wants to battle him?",
+      "Sucker MC's",
+      "DJs",
+      "Rookies"
+     ],
+     [
+      "He's the lord of the what?",
+      "Rhyme",
+      "Ring",
+      "Mic"
+     ],
+     [
+      "He calls himself exciting, pleasurable what?",
+      "Listening",
+      "Reading",
+      "Dancing"
+     ],
+     [
+      "He shows you what your records keep on what?",
+      "Missing",
+      "Skipping",
+      "Playing"
+     ],
+     [
+      "He's only trying to help out your what?",
+      "Crew",
+      "Career",
+      "Style"
+     ],
+     [
+      "What does he know he must do to ya?",
+      "Forgive ya",
+      "Teach ya",
+      "Sign ya"
+     ],
+     [
+      "Because you don't know what you're what?",
+      "Doin'",
+      "Sayin'",
+      "Missin'"
+     ]
+    ],
+    [
+     [
+      "Sucker MC's, please think what?",
+      "Twice",
+      "Fast",
+      "Again"
+     ],
+     [
+      "Would you join the what?",
+      "Navy",
+      "Army",
+      "Circus"
+     ],
+     [
+      "If you didn't like the gravy and what?",
+      "Rice",
+      "Beans",
+      "Bread"
+     ],
+     [
+      "Think about that, then think about what?",
+      "This",
+      "Me",
+      "Life"
+     ],
+     [
+      "He's a funkadelic relic of the what?",
+      "Ages",
+      "Stages",
+      "Past"
+     ],
+     [
+      "If you like this, he's got what?",
+      "Pages and pages",
+      "Tapes and tapes",
+      "Hits and hits"
+     ],
+     [
+      "What kind of gum are the chumps chewin'?",
+      "Bubblegum",
+      "Spearmint",
+      "Licorice"
+     ],
+     [
+      "Which gum brand does he name before bubblegum?",
+      "Bubble Yum",
+      "Big Red",
+      "Trident"
+     ]
+    ],
+    [
+     [
+      "He's high-post, higher than what?",
+      "Most",
+      "Mountains",
+      "Clouds"
+     ],
+     [
+      "He's not from France, but he eats what?",
+      "French toast",
+      "French fries",
+      "Croissants"
+     ],
+     [
+      "He says he's what?",
+      "International",
+      "Local",
+      "Underground"
+     ],
+     [
+      "He's got dollars where?",
+      "In his pocket",
+      "In the bank",
+      "In his shoe"
+     ],
+     [
+      "He turns his art into an what?",
+      "Empire",
+      "Business",
+      "Fortune"
+     ],
+     [
+      "He grows and grows, so he never what?",
+      "Tires",
+      "Sleeps",
+      "Stops"
+     ],
+     [
+      "He's got the status and the what?",
+      "Clout",
+      "Cash",
+      "Crown"
+     ],
+     [
+      "His rap is like a what that you fall into?",
+      "Trap",
+      "Hole",
+      "River"
+     ],
+     [
+      "What's the reason for the what?",
+      "Treason",
+      "Season",
+      "Beef"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };
