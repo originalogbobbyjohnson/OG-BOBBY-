@@ -93,40 +93,672 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Put the Next Man On",
-   "id": "-02dIeIfhQw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Just Say Stet (Stetsasonic)",
+   "id": "pgJF05xvc40",
+   "start": 19.5,
+   "cuts": [
+    59.6,
+    117.7,
+    221.5
+   ],
+   "qs": [
+    [
+     [
+      "They came here to do what?",
+      "Rock",
+      "Rest",
+      "Rob"
+     ],
+     [
+      "They make you shake and what?",
+      "Shiver",
+      "Shout",
+      "Sweat"
+     ],
+     [
+      "What kind of rhymes can they deliver?",
+      "Devastatin'",
+      "Delicate",
+      "Dangerous"
+     ],
+     [
+      "To them, sucker MCs are a what?",
+      "Minus",
+      "Plus",
+      "Zero"
+     ],
+     [
+      "They dominate the what?",
+      "Charts",
+      "Clubs",
+      "Streets"
+     ],
+     [
+      "They say they are the world's what?",
+      "Finest",
+      "Fastest",
+      "Freshest"
+     ],
+     [
+      "Which rapper did the kings sit and hear?",
+      "Doug E. Fresh",
+      "Kurtis Blow",
+      "Big Daddy Kane"
+     ],
+     [
+      "If you can't say it all, just say what?",
+      "Stet",
+      "Sonic",
+      "Stop"
+     ]
+    ],
+    [
+     [
+      "They were never meant to be what?",
+      "Ordinary",
+      "Famous",
+      "Quiet"
+     ],
+     [
+      "Their way of rapping is unique and what?",
+      "Legendary",
+      "Lucky",
+      "Lazy"
+     ],
+     [
+      "Who is named along with Delite and Daddy-O?",
+      "The D.B.C.",
+      "The Fat Boys",
+      "The Furious Five"
+     ],
+     [
+      "Frukwan and Paul are named with the Mix what?",
+      "Machine",
+      "Master",
+      "Maker"
+     ],
+     [
+      "He won't fret if you take it as a what?",
+      "Threat",
+      "Joke",
+      "Gift"
+     ],
+     [
+      "Their diction is strictly what?",
+      "Scientific",
+      "Simple",
+      "Southern"
+     ],
+     [
+      "What does 'Stetsa' mean?",
+      "Loud",
+      "Fast",
+      "Cool"
+     ],
+     [
+      "And what does 'Sonic' mean?",
+      "Sound",
+      "Speed",
+      "Style"
+     ]
+    ],
+    [
+     [
+      "Precision on the mix is the kid named what?",
+      "Prince",
+      "Frukwan",
+      "Daddy"
+     ],
+     [
+      "He's slicker than slick and fresher than what?",
+      "Fresh",
+      "Ice",
+      "Mint"
+     ],
+     [
+      "Who's the Mix Machine that's sure to bless?",
+      "Wise",
+      "Delite",
+      "Frukwan"
+     ],
+     [
+      "Where do these MCs hail from?",
+      "The East",
+      "The West",
+      "The South"
+     ],
+     [
+      "Go straight to the floor and get off the what?",
+      "Wall",
+      "Couch",
+      "Stage"
+     ],
+     [
+      "Rock with Wise and the one and only who?",
+      "Prince Paul",
+      "Daddy-O",
+      "Doug E. Fresh"
+     ],
+     [
+      "If the name's hard to pronounce, learn how to what?",
+      "Say it",
+      "Spell it",
+      "Sing it"
+     ],
+     [
+      "Pay to get in and you won't be what?",
+      "Upset",
+      "Late",
+      "Alone"
+     ]
+    ]
+   ]
   },
   {
-   "title": "More Than U Know",
-   "id": "NU25K1tgmEY",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "The Truth (Handsome Boy Modeling School)",
+   "id": "gjEmwvsIhuE",
+   "start": 96.8,
+   "cuts": [
+    133,
+    192.1,
+    219.4
+   ],
+   "qs": [
+    [
+     [
+      "Happy times are too few and far what?",
+      "Between",
+      "Behind",
+      "Away"
+     ],
+     [
+      "It's a pity we can't erase the things we've what?",
+      "Seen",
+      "Said",
+      "Done"
+     ],
+     [
+      "Disappear, and do what if you wish?",
+      "Vanish",
+      "Run",
+      "Cry"
+     ],
+     [
+      "Go before you're swallowed up by what?",
+      "Bitterness",
+      "Darkness",
+      "Sadness"
+     ],
+     [
+      "You can't hide from the what?",
+      "Truth",
+      "Past",
+      "Pain"
+     ],
+     [
+      "Because the truth is what?",
+      "All there is",
+      "Never told",
+      "Hard to find"
+     ],
+     [
+      "What does the truth do?",
+      "Hurts",
+      "Heals",
+      "Hides"
+     ],
+     [
+      "'It's a pity...' what does she call him?",
+      "Dear",
+      "Baby",
+      "Honey"
+     ]
+    ],
+    [
+     [
+      "She realized she would have to let you what?",
+      "Go",
+      "Stay",
+      "Down"
+     ],
+     [
+      "She hoped you would return when?",
+      "One day",
+      "Tonight",
+      "Never"
+     ],
+     [
+      "In your present state you may as well not be what?",
+      "Here at all",
+      "In love",
+      "Awake"
+     ],
+     [
+      "What kind of disguise do you wear?",
+      "Thin",
+      "Thick",
+      "Clever"
+     ],
+     [
+      "Who are you hiding from?",
+      "Yourself",
+      "Her",
+      "The law"
+     ],
+     [
+      "Look at us, we are heading for a what?",
+      "Fall",
+      "Fight",
+      "Change"
+     ],
+     [
+      "J-Live's rap forte is what?",
+      "Justice",
+      "Comedy",
+      "Poetry"
+     ],
+     [
+      "Which Latin phrase does he use?",
+      "Carpe diem",
+      "Et tu",
+      "Veni vidi"
+     ]
+    ],
+    [
+     [
+      "He grabs you with the long arm of the what?",
+      "Law",
+      "Lord",
+      "Night"
+     ],
+     [
+      "He shoots dope lines first and asks what later?",
+      "Questions",
+      "Favors",
+      "Names"
+     ],
+     [
+      "He closes the case tighter than the jaws of a what?",
+      "'Gator",
+      "Shark",
+      "Lion"
+     ],
+     [
+      "Who does he tell to study law again?",
+      "The stenographer",
+      "The judge",
+      "The jury"
+     ],
+     [
+      "The counselors are barking in hopes of a what?",
+      "Plea bargain",
+      "New trial",
+      "Big payday"
+     ],
+     [
+      "When you read it back, you read it back how?",
+      "Verbatim",
+      "Slowly",
+      "Loudly"
+     ],
+     [
+      "They realize exactly how he's what them?",
+      "Played",
+      "Paid",
+      "Saved"
+     ],
+     [
+      "The truth, the whole truth and what?",
+      "Nothing but",
+      "Nothing less",
+      "Nothing more"
+     ]
+    ]
+   ]
   },
   {
-   "title": "The Men in Blue",
-   "id": "s6-vIz7h8Wc",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Go Stetsa I (Stetsasonic)",
+   "id": "g56q5-1th5M",
+   "start": 20.8,
+   "cuts": [
+    49.3,
+    117.2,
+    163.7
+   ],
+   "qs": [
+    [
+     [
+      "Brace yourself for the awesome and what?",
+      "Rare",
+      "Loud",
+      "New"
+     ],
+     [
+      "What's in the atmosphere?",
+      "Dynamite",
+      "Thunder",
+      "Smoke"
+     ],
+     [
+      "There's a time and place for everything under the what?",
+      "Sun",
+      "Moon",
+      "Stars"
+     ],
+     [
+      "This is the time and place to have some what?",
+      "Fun",
+      "Food",
+      "Peace"
+     ],
+     [
+      "Take a look and check the what?",
+      "Pedigree",
+      "Paperwork",
+      "Playlist"
+     ],
+     [
+      "The band's name is spelled with which letters?",
+      "S-T-E-T",
+      "S-T-A-T",
+      "S-E-T"
+     ],
+     [
+      "Who's on the keys?",
+      "D-P-C",
+      "Delite",
+      "Frukwan"
+     ],
+     [
+      "Wise, Frukwan and the DJ named who?",
+      "Paul",
+      "Scratch",
+      "Red Alert"
+     ],
+     [
+      "They put the competition back against the what?",
+      "Wall",
+      "Ropes",
+      "Door"
+     ]
+    ],
+    [
+     [
+      "So def, listen to the what?",
+      "Structure",
+      "Sermon",
+      "Story"
+     ],
+     [
+      "Formulate your own, but please don't what?",
+      "Touch",
+      "Talk",
+      "Stop"
+     ],
+     [
+      "Slowly but surely, they will do what?",
+      "Defeat you",
+      "Greet you",
+      "Meet you"
+     ],
+     [
+      "A hip-hop band of America, London and even where?",
+      "Japan",
+      "Jamaica",
+      "Germany"
+     ],
+     [
+      "Nobody else does it like who?",
+      "We can",
+      "They can",
+      "You can"
+     ],
+     [
+      "To battle them is truly a what?",
+      "Gamble",
+      "Game",
+      "Mistake"
+     ],
+     [
+      "Excellence is proven by what?",
+      "Example",
+      "Experience",
+      "Effort"
+     ],
+     [
+      "Who is told to back off?",
+      "Puba",
+      "Rakim",
+      "Ice-T"
+     ],
+     [
+      "Grab your girl and start the what?",
+      "Jam",
+      "Car",
+      "Show"
+     ]
+    ],
+    [
+     [
+      "What word is chanted over and over?",
+      "Go",
+      "Stop",
+      "Jump"
+     ],
+     [
+      "The rhyme is equipped as a what?",
+      "Barricade",
+      "Weapon",
+      "Ladder"
+     ],
+     [
+      "He's cool and what?",
+      "Clever",
+      "Calm",
+      "Crazy"
+     ],
+     [
+      "With his crew he will never what?",
+      "Sever",
+      "Settle",
+      "Sleep"
+     ],
+     [
+      "What is their home town?",
+      "Brooklyn",
+      "Queens",
+      "The Bronx"
+     ],
+     [
+      "What goes down every night?",
+      "A party",
+      "The sun",
+      "A battle"
+     ],
+     [
+      "When it starts, it never does what?",
+      "Slows down",
+      "Gets crowded",
+      "Moves uptown"
+     ],
+     [
+      "They boogie to the DJs how?",
+      "Non-stop",
+      "All alone",
+      "Real slow"
+     ],
+     [
+      "They boogie to the sound of Brooklyn what?",
+      "Hip-hop",
+      "Jazz",
+      "Soul"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Wish",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Beautiful Night",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Sally (Stetsasonic)",
+   "id": "0eEsaoXu_hg",
+   "start": 1,
+   "cuts": [
+    43,
+    88.7,
+    176.4
+   ],
+   "qs": [
+    [
+     [
+      "What's the girl's name?",
+      "Sally",
+      "Sandy",
+      "Shelly"
+     ],
+     [
+      "She don't eat pork with a spoon or what?",
+      "Fork",
+      "Knife",
+      "Cup"
+     ],
+     [
+      "Some people don't like the way Sally does what?",
+      "Walk",
+      "Talk",
+      "Dance"
+     ],
+     [
+      "He met this girl and she had what?",
+      "Money",
+      "A car",
+      "A man"
+     ],
+     [
+      "She had money in vast what?",
+      "Abundance",
+      "Amounts",
+      "Accounts"
+     ],
+     [
+      "What color were her eyes?",
+      "Hazel",
+      "Green",
+      "Brown"
+     ],
+     [
+      "Her dress was made of what?",
+      "Suede",
+      "Silk",
+      "Leather"
+     ],
+     [
+      "How did her voice sound?",
+      "Nasal",
+      "Deep",
+      "Sweet"
+     ]
+    ],
+    [
+     [
+      "Who says 'Now here's what took place'?",
+      "Delite",
+      "Daddy-O",
+      "Frukwan"
+     ],
+     [
+      "Who rented the space for the jam?",
+      "She did",
+      "Delite",
+      "Daddy-O"
+     ],
+     [
+      "It was a nice place to do what?",
+      "Party",
+      "Study",
+      "Eat"
+     ],
+     [
+      "But wouldn't you know, it turned out what?",
+      "Sorry",
+      "Great",
+      "Packed"
+     ],
+     [
+      "He says it's so what?",
+      "Confusin'",
+      "Crazy",
+      "Cold"
+     ],
+     [
+      "And sometimes he says it's what?",
+      "Amusin'",
+      "Annoyin'",
+      "Amazin'"
+     ],
+     [
+      "How was the jam?",
+      "Okay",
+      "Wack",
+      "Packed"
+     ],
+     [
+      "The jam was fine until who walked in?",
+      "Sally",
+      "Delite",
+      "The cops"
+     ]
+    ],
+    [
+     [
+      "She doesn't live in Manhattan, the Bronx, Queens or which island?",
+      "Staten",
+      "Long",
+      "Coney"
+     ],
+     [
+      "She's a Brooklyn what?",
+      "Swinga",
+      "Singer",
+      "Dancer"
+     ],
+     [
+      "What night might he ring her?",
+      "Friday",
+      "Sunday",
+      "Monday"
+     ],
+     [
+      "When he called, she was what?",
+      "All alone",
+      "Asleep",
+      "Out"
+     ],
+     [
+      "He's still with Sally, and now they're both feelin' what?",
+      "Cali",
+      "Tired",
+      "Rich"
+     ],
+     [
+      "Frukwan says he thinks he what?",
+      "Loves her",
+      "Lost her",
+      "Knows her"
+     ],
+     [
+      "He thinks very what of her?",
+      "Highly",
+      "Little",
+      "Often"
+     ],
+     [
+      "Believe it or not, he even thought of tying the what?",
+      "Knot",
+      "Shoes",
+      "Rope"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };
