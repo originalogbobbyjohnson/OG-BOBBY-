@@ -99,40 +99,654 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Wild Wild West",
-   "id": "auhwI00iKWg",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Do You Know What Time It Is?",
+   "id": "TfvCzk0t2U8",
+   "start": 10.5,
+   "cuts": [
+    50.4,
+    168.2,
+    219.4
+   ],
+   "qs": [
+    [
+     [
+      "What's the big question?",
+      "Do you know what time it is?",
+      "Where's the party at?",
+      "Who's the man?"
+     ],
+     [
+      "Who is partying at the start?",
+      "The girlies",
+      "The rappers",
+      "The teachers"
+     ],
+     [
+      "They talk to him like he's in what?",
+      "Kindergarten",
+      "High school",
+      "Church"
+     ],
+     [
+      "Today she's on his, tomorrow she's on whose?",
+      "His",
+      "Mine",
+      "Yours"
+     ],
+     [
+      "Don't worry about him, because he knows what?",
+      "What time it is",
+      "Where you live",
+      "Your name"
+     ],
+     [
+      "Time to get his while you try to get what?",
+      "Yours",
+      "Paid",
+      "Famous"
+     ],
+     [
+      "He'll take you to the what?",
+      "Cleaners",
+      "Movies",
+      "Bank"
+     ],
+     [
+      "He says he's got a what?",
+      "Trick",
+      "Plan",
+      "Secret"
+     ],
+     [
+      "It's easy to come, but harder to what?",
+      "Go",
+      "Stay",
+      "Win"
+     ],
+     [
+      "Hope you got a good heart and you're a good what?",
+      "Sport",
+      "Friend",
+      "Cook"
+     ],
+     [
+      "What kind of court does he mention?",
+      "Basketball",
+      "Tennis",
+      "Supreme"
+     ]
+    ],
+    [
+     [
+      "He'll leave you in the what?",
+      "Lost and found",
+      "Rain",
+      "Back seat"
+     ],
+     [
+      "Most girlies like to play with your what?",
+      "Mind",
+      "Heart",
+      "Phone"
+     ],
+     [
+      "They like sporting new what?",
+      "Gold",
+      "Sneakers",
+      "Dresses"
+     ],
+     [
+      "They're materialistic and what?",
+      "Unrealistic",
+      "Unfaithful",
+      "Unhappy"
+     ],
+     [
+      "To most of them you're just another what?",
+      "Statistic",
+      "Number",
+      "Stranger"
+     ],
+     [
+      "You can save it for whom?",
+      "David",
+      "Daniel",
+      "Michael"
+     ],
+     [
+      "Put your Gucci watch on and do what to the time?",
+      "Synchronize",
+      "Wind it up",
+      "Show it off"
+     ],
+     [
+      "Girls come a dime a what?",
+      "Dozen",
+      "Day",
+      "Minute"
+     ],
+     [
+      "Want his money? You must be a what?",
+      "Fool",
+      "Joker",
+      "Clown"
+     ],
+     [
+      "Who said he's 'gigolo cool'?",
+      "Billy Idol",
+      "Billy Joel",
+      "Billy Ocean"
+     ],
+     [
+      "You don't know him from a can of what?",
+      "Paint",
+      "Soup",
+      "Soda"
+     ]
+    ],
+    [
+     [
+      "It's time to get money, time to get what?",
+      "Paid",
+      "Famous",
+      "Going"
+     ],
+     [
+      "It's time to have what?",
+      "Fun",
+      "Lunch",
+      "A talk"
+     ],
+     [
+      "He likes to front like he's what?",
+      "Poor",
+      "Rich",
+      "Lost"
+     ],
+     [
+      "What car does he chill in?",
+      "A Jetta",
+      "A Benz",
+      "A Jeep"
+     ],
+     [
+      "His man in the car is called what?",
+      "Red",
+      "Blue",
+      "Black"
+     ],
+     [
+      "They ride around the city and half the what?",
+      "World",
+      "Night",
+      "State"
+     ],
+     [
+      "All the ladies sing the same old what?",
+      "Song",
+      "Story",
+      "Line"
+     ],
+     [
+      "It's hard on him when a what comes along?",
+      "Real girl",
+      "Fake friend",
+      "Bill collector"
+     ],
+     [
+      "He calls himself a what?",
+      "Veteran",
+      "Rookie",
+      "Legend"
+     ],
+     [
+      "He's a girl all-what?",
+      "Pro",
+      "Star",
+      "American"
+     ],
+     [
+      "He made a little what so he can tell?",
+      "System",
+      "List",
+      "Song"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Pump Your Fist",
+   "id": "z2uRo96s1rI",
+   "start": 38.2,
+   "cuts": [
+    71.4,
+    178.9,
+    263.8
+   ],
+   "qs": [
+    [
+     [
+      "Can you what?",
+      "Feel it",
+      "Hear it",
+      "See it"
+     ],
+     [
+      "What's in the air?",
+      "Tension",
+      "Music",
+      "Smoke"
+     ],
+     [
+      "What's the first problem he names?",
+      "Racism",
+      "Poverty",
+      "Greed"
+     ],
+     [
+      "It does what to him?",
+      "Appalls him",
+      "Bores him",
+      "Confuses him"
+     ],
+     [
+      "Really racial what?",
+      "Justice",
+      "Pride",
+      "Unity"
+     ],
+     [
+      "It's time that we what?",
+      "Discussed this",
+      "Moved on",
+      "Fought back"
+     ],
+     [
+      "He's disgusted and doesn't what?",
+      "Trust it",
+      "Believe it",
+      "Accept it"
+     ],
+     [
+      "New what brings doubt?",
+      "Evidence",
+      "Witnesses",
+      "Leaders"
+     ],
+     [
+      "Witness stories do what?",
+      "Contradict",
+      "Match",
+      "Disappear"
+     ],
+     [
+      "It won't happen what?",
+      "Again",
+      "Today",
+      "Here"
+     ],
+     [
+      "Black men say it had to what?",
+      "End",
+      "Change",
+      "Stop"
+     ]
+    ],
+    [
+     [
+      "What does he tell you to pump?",
+      "Your fist",
+      "Your chest",
+      "The volume"
+     ],
+     [
+      "Can you hear him hittin' what?",
+      "Home",
+      "Hard",
+      "Back"
+     ],
+     [
+      "What is the danger zone?",
+      "Knowledge",
+      "The street",
+      "Money"
+     ],
+     [
+      "Liars, bigots and who start to panic?",
+      "Hypocrites",
+      "Politicians",
+      "Cowards"
+     ],
+     [
+      "They get what?",
+      "Frantic",
+      "Quiet",
+      "Angry"
+     ],
+     [
+      "Power generated by the what?",
+      "Truth",
+      "People",
+      "Music"
+     ],
+     [
+      "Time to educate the what?",
+      "Youth",
+      "Nation",
+      "Leaders"
+     ],
+     [
+      "The lust for what is out of control?",
+      "Money",
+      "Power",
+      "Fame"
+     ],
+     [
+      "What is bliss?",
+      "Ignorance",
+      "Knowledge",
+      "Love"
+     ],
+     [
+      "We lost our what, our source of power?",
+      "Unity",
+      "Leaders",
+      "Money"
+     ],
+     [
+      "He says he's from a stronger what?",
+      "Breed",
+      "Nation",
+      "Family"
+     ]
+    ],
+    [
+     [
+      "Let's talk what?",
+      "Reality",
+      "Business",
+      "History"
+     ],
+     [
+      "What mentality does he warn about?",
+      "Slave",
+      "Gangster",
+      "Money"
+     ],
+     [
+      "It eats you up like what?",
+      "Cancer",
+      "Fire",
+      "Termites"
+     ],
+     [
+      "What's not the answer?",
+      "Money",
+      "Prayer",
+      "Religion"
+     ],
+     [
+      "You got the chains on your what?",
+      "Brain",
+      "Wrist",
+      "Feet"
+     ],
+     [
+      "God's forgiving, but you got to what?",
+      "Work with him",
+      "Pray every day",
+      "Go to church"
+     ],
+     [
+      "Equality is a what?",
+      "Illusion",
+      "Promise",
+      "Dream"
+     ],
+     [
+      "History did what to it?",
+      "Erased it",
+      "Wrote it",
+      "Sold it"
+     ],
+     [
+      "Which system does he name?",
+      "Educational",
+      "Political",
+      "Banking"
+     ],
+     [
+      "Voice loud, black what?",
+      "Proud",
+      "Strong",
+      "Power"
+     ],
+     [
+      "What's not allowed?",
+      "Sellouts",
+      "Cameras",
+      "Excuses"
+     ]
+    ]
+   ]
   },
   {
    "title": "I Go to Work",
    "id": "VDFx8hJY5x8",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "They Want Money",
-   "id": "yFyEC-ycswc",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "No Respect",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Rise 'N' Shine",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "start": 29.4,
+   "cuts": [
+    63.3,
+    152.6,
+    244.1
+   ],
+   "qs": [
+    [
+     [
+      "He goes to work like a what?",
+      "Doctor",
+      "Lawyer",
+      "Teacher"
+     ],
+     [
+      "When he rocks the mic, you like the way he does what?",
+      "Operate",
+      "Communicate",
+      "Celebrate"
+     ],
+     [
+      "He makes what happen just from rappin'?",
+      "Miracles",
+      "Money",
+      "Magic"
+     ],
+     [
+      "He's so lyrically what?",
+      "Potent",
+      "Gifted",
+      "Dangerous"
+     ],
+     [
+      "He's got the potential and the what?",
+      "Credentials",
+      "Connections",
+      "Confidence"
+     ],
+     [
+      "He wants to make a couple of what?",
+      "Mill",
+      "Hits",
+      "Friends"
+     ],
+     [
+      "He builds a guild for all the rappers and what?",
+      "Skills",
+      "Fans",
+      "DJs"
+     ],
+     [
+      "Who is his right-hand man?",
+      "His mic stand",
+      "His DJ",
+      "His brother"
+     ],
+     [
+      "His game plan is keeping a steady what?",
+      "Pace",
+      "Flow",
+      "Beat"
+     ],
+     [
+      "There ain't no reason to what?",
+      "Rush",
+      "Stop",
+      "Worry"
+     ],
+     [
+      "It ain't no what?",
+      "Race",
+      "Game",
+      "Joke"
+     ]
+    ],
+    [
+     [
+      "He'll hit the top just when he what?",
+      "Wants to",
+      "Gets paid",
+      "Feels ready"
+     ],
+     [
+      "You look at your man and give him a what?",
+      "High five",
+      "Hug",
+      "Handshake"
+     ],
+     [
+      "It's time to wake up and check the what?",
+      "Clock",
+      "Mail",
+      "Score"
+     ],
+     [
+      "Now he goes to work like a what?",
+      "Architect",
+      "Carpenter",
+      "Plumber"
+     ],
+     [
+      "Next to his rhymes, skyscrapers look like what?",
+      "Atoms",
+      "Ants",
+      "Toys"
+     ],
+     [
+      "Cars become what, rolling in patterns?",
+      "Electrons",
+      "Planets",
+      "Marbles"
+     ],
+     [
+      "His foundation built a nation of what?",
+      "Rappers",
+      "Fans",
+      "Kings"
+     ],
+     [
+      "He's back, and who's home?",
+      "Daddy",
+      "Mommy",
+      "The champ"
+     ],
+     [
+      "Open the door, what time is over?",
+      "Playtime",
+      "Bedtime",
+      "Showtime"
+     ],
+     [
+      "Rappers can't capture Moe Dee's what?",
+      "Rapture",
+      "Style",
+      "Crown"
+     ],
+     [
+      "He doesn't write a rhyme, he does what?",
+      "Builds it",
+      "Sings it",
+      "Steals it"
+     ]
+    ],
+    [
+     [
+      "Now he goes to work like a what?",
+      "Boxer",
+      "Pilot",
+      "Chef"
+     ],
+     [
+      "He trains the brain and aims to do what?",
+      "Outfox ya",
+      "Outrun ya",
+      "Outlast ya"
+     ],
+     [
+      "What is an antidote?",
+      "Knowledge",
+      "Music",
+      "Laughter"
+     ],
+     [
+      "He's writing at the speed of what?",
+      "Light",
+      "Sound",
+      "Thunder"
+     ],
+     [
+      "You can't relate unless you're what?",
+      "Intelligent",
+      "Rich",
+      "From Harlem"
+     ],
+     [
+      "This time it's a native what?",
+      "New Yorker",
+      "Texan",
+      "Californian"
+     ],
+     [
+      "He's riding a crescendo what?",
+      "Wave",
+      "Train",
+      "Horse"
+     ],
+     [
+      "Saying rap is not work is what?",
+      "Ludicrous",
+      "Ignorant",
+      "Hilarious"
+     ],
+     [
+      "You'll compare him to a what for profit?",
+      "Prophet",
+      "Preacher",
+      "Poet"
+     ],
+     [
+      "Each rhyme's a what?",
+      "Dissertation",
+      "Masterpiece",
+      "Sermon"
+     ],
+     [
+      "He gets paid to rock the what?",
+      "Nation",
+      "Party",
+      "Stadium"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };

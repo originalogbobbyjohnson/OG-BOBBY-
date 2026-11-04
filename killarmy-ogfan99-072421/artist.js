@@ -93,40 +93,1377 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "explicitSongs": [
   {
-   "title": "Wu-Renegades",
-   "id": "DSCQdWgVI-s",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Day One",
+   "id": "UKgYzcSJvyQ",
+   "start": 20.4,
+   "cuts": [
+    59.6,
+    116.2,
+    160
+   ],
+   "qs": [
+    [
+     [
+      "He's his momma's only what?",
+      "Boy",
+      "Child",
+      "Hope"
+     ],
+     [
+      "He says he's self-what?",
+      "Employed",
+      "Taught",
+      "Made"
+     ],
+     [
+      "Catch him in the day room on the big what?",
+      "TV",
+      "Couch",
+      "Screen"
+     ],
+     [
+      "Which channel is on?",
+      "BET",
+      "MTV",
+      "ESPN"
+     ],
+     [
+      "Keep your money on your what?",
+      "Mind",
+      "Hand",
+      "Plate"
+     ],
+     [
+      "You wanna wine and what?",
+      "Dine",
+      "Shine",
+      "Grind"
+     ],
+     [
+      "These be the signs of the what?",
+      "Times",
+      "Streets",
+      "Gods"
+     ]
+    ],
+    [
+     [
+      "You my son since when?",
+      "Day one",
+      "Birth",
+      "Forever"
+     ],
+     [
+      "My comrade, my what?",
+      "Soldier",
+      "Brother",
+      "Partner"
+     ],
+     [
+      "We the day and the what?",
+      "Night",
+      "Sun",
+      "Light"
+     ],
+     [
+      "His mind flashed back to what year?",
+      "'86",
+      "'92",
+      "'79"
+     ],
+     [
+      "He ran to which big brother?",
+      "Kane",
+      "Ben",
+      "Mo"
+     ],
+     [
+      "He didn't cry, he just held his what high?",
+      "Head",
+      "Hands",
+      "Fist"
+     ],
+     [
+      "What kept him on the rise?",
+      "Mathematics",
+      "Music",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "Back then, he was his only what?",
+      "Friend",
+      "Brother",
+      "Fan"
+     ],
+     [
+      "They played cowboys and what?",
+      "Indians",
+      "Robbers",
+      "Aliens"
+     ],
+     [
+      "He was always misunderstood in his what?",
+      "Neighborhood",
+      "School",
+      "Family"
+     ],
+     [
+      "They were building what?",
+      "Club houses",
+      "Tree houses",
+      "Go-karts"
+     ],
+     [
+      "He ran into the red store for a what?",
+      "Chico stick",
+      "Soda",
+      "Hero"
+     ],
+     [
+      "They played football in the what?",
+      "Snow",
+      "Street",
+      "Rain"
+     ],
+     [
+      "Where was his little crush?",
+      "On the sidelines",
+      "In the bleachers",
+      "On the stoop"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Nonchalantly",
-   "id": "Sh3Cap6sm9c",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Feel It",
+   "id": "6LRun7O4uds",
+   "start": 26,
+   "cuts": [
+    63.6,
+    100.3,
+    142.2
+   ],
+   "qs": [
+    [
+     [
+      "Have you ever seen a grown man what?",
+      "Cry",
+      "Laugh",
+      "Dance"
+     ],
+     [
+      "Sometimes he had to swallow his what?",
+      "Pride",
+      "Words",
+      "Anger"
+     ],
+     [
+      "Moms, you're what?",
+      "Incredible",
+      "Beautiful",
+      "A queen"
+     ],
+     [
+      "There was always food on the what?",
+      "Shelf",
+      "Table",
+      "Stove"
+     ],
+     [
+      "What's his sister's name?",
+      "Candie",
+      "Tanya",
+      "Keisha"
+     ],
+     [
+      "Pops, you did what?",
+      "Abandoned me",
+      "Raised me",
+      "Taught me"
+     ],
+     [
+      "His sister never turned her what on him?",
+      "Back",
+      "Face",
+      "Heart"
+     ]
+    ],
+    [
+     [
+      "He's been blessed with how many little girls?",
+      "Two",
+      "Three",
+      "One"
+     ],
+     [
+      "They're more precious than diamonds or what?",
+      "Pearls",
+      "Gold",
+      "Rubies"
+     ],
+     [
+      "Any woman he's dealing with has to what?",
+      "Respect it",
+      "Ignore it",
+      "Pay for it"
+     ],
+     [
+      "What's on the outside?",
+      "Negativity",
+      "Sunshine",
+      "Danger"
+     ],
+     [
+      "Every day it's a what?",
+      "Struggle",
+      "Party",
+      "Blessing"
+     ],
+     [
+      "It's like floating in a what?",
+      "Bubble",
+      "Cloud",
+      "River"
+     ],
+     [
+      "Burning on the rocks, sticks and what?",
+      "Stones",
+      "Bones",
+      "Bricks"
+     ]
+    ],
+    [
+     [
+      "He tells Mom he's what from school?",
+      "Suspended",
+      "Graduating",
+      "Home sick"
+     ],
+     [
+      "She was driving the what?",
+      "Mothership",
+      "Minivan",
+      "School bus"
+     ],
+     [
+      "She told him he was what?",
+      "Handsome",
+      "Smart",
+      "Special"
+     ],
+     [
+      "Her son, the ninth what?",
+      "Prince",
+      "King",
+      "Wonder"
+     ],
+     [
+      "Who got a new Range?",
+      "RZA",
+      "GZA",
+      "Ghostface"
+     ],
+     [
+      "Fake cats should stay in their what?",
+      "Lane",
+      "Place",
+      "Zone"
+     ],
+     [
+      "What's her granddaughter's name?",
+      "Angelica",
+      "Angela",
+      "Annie"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Red Dawn",
+   "id": "cJ1tekHa6jM",
+   "start": 4,
+   "cuts": [
+    44.6,
+    119.4,
+    188.7
+   ],
+   "qs": [
+    [
+     [
+      "Red dawn, war what?",
+      "Pawns",
+      "Kings",
+      "Drums"
+     ],
+     [
+      "Who's back at it?",
+      "Latifa",
+      "Lauryn",
+      "Lil' Kim"
+     ],
+     [
+      "Dirty what?",
+      "Weaponry",
+      "Money",
+      "Laundry"
+     ],
+     [
+      "He'll administrate an what?",
+      "Earthquake",
+      "Avalanche",
+      "Eclipse"
+     ],
+     [
+      "The earth does what?",
+      "Shake",
+      "Crack",
+      "Spin"
+     ],
+     [
+      "Your lyrics ain't holding no what?",
+      "Weight",
+      "Water",
+      "Heat"
+     ]
+    ],
+    [
+     [
+      "He'll paralyze your what?",
+      "Enterprise",
+      "Business",
+      "Crew"
+     ],
+     [
+      "Knowledge and understanding are what?",
+      "One and the same",
+      "Worlds apart",
+      "Hard to find"
+     ],
+     [
+      "Nothing to lose, all to what?",
+      "Gain",
+      "Prove",
+      "Give"
+     ],
+     [
+      "Which pirates does he name?",
+      "Pirates of Dark Water",
+      "Pirates of the Caribbean",
+      "Treasure Island"
+     ],
+     [
+      "He built a home on which planet?",
+      "Uranus",
+      "Mars",
+      "Saturn"
+     ],
+     [
+      "The stage is his what?",
+      "Gymnasium",
+      "Playground",
+      "Living room"
+     ],
+     [
+      "Some call him the human what?",
+      "Titanic",
+      "Torch",
+      "Tornado"
+     ]
+    ],
+    [
+     [
+      "They form like who?",
+      "Voltron",
+      "Megazord",
+      "Transformers"
+     ],
+     [
+      "Arm, leg, leg, what?",
+      "Arm",
+      "Head",
+      "Foot"
+     ],
+     [
+      "Supreme head, what kind of red?",
+      "Infrared",
+      "Bright red",
+      "Deep red"
+     ],
+     [
+      "Which Norse warriors does he name?",
+      "Vikings",
+      "Spartans",
+      "Samurai"
+     ],
+     [
+      "Which Mexican empire does he name?",
+      "Aztecs",
+      "Mayans",
+      "Incas"
+     ],
+     [
+      "He strikes with strength and what?",
+      "Agility",
+      "Speed",
+      "Power"
+     ]
+    ]
+   ]
   },
   {
    "title": "Fair, Love & War",
    "id": "ycH6vd1TNas",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 14.2,
+   "cuts": [
+    52.9,
+    151.6,
+    193.7
+   ],
+   "qs": [
+    [
+     [
+      "All is fair in love and what?",
+      "War",
+      "Life",
+      "Hate"
+     ],
+     [
+      "The saga carries on, it's military what?",
+      "Time",
+      "Style",
+      "Zone"
+     ],
+     [
+      "They share a giggle and a what?",
+      "Heineken",
+      "Corona",
+      "Snapple"
+     ],
+     [
+      "Killa, kick the rhyme what?",
+      "Again",
+      "Louder",
+      "Faster"
+     ],
+     [
+      "He busts 'em down with verbs and what?",
+      "Nouns",
+      "Adjectives",
+      "Rhymes"
+     ],
+     [
+      "Words attacking like a what?",
+      "German hound",
+      "Pit bull",
+      "Wild wolf"
+     ],
+     [
+      "Full moon, yeah kid, no what?",
+      "Question",
+      "Doubt",
+      "Problem"
+     ]
+    ],
+    [
+     [
+      "They mosey down to where?",
+      "Tarjay",
+      "Kmart",
+      "Macy's"
+     ],
+     [
+      "This is an ordinary what around his way?",
+      "Day",
+      "Night",
+      "Week"
+     ],
+     [
+      "It's his nature, he's a Killarmy what?",
+      "Legislator",
+      "Senator",
+      "Professor"
+     ],
+     [
+      "His platoon wears black what?",
+      "Berets",
+      "Masks",
+      "Boots"
+     ],
+     [
+      "Temperatures that make what burst?",
+      "Barometers",
+      "Thermometers",
+      "Pipes"
+     ],
+     [
+      "Who came first, God or the what?",
+      "Universe",
+      "Earth",
+      "Man"
+     ]
+    ],
+    [
+     [
+      "You've been to whose realm?",
+      "Shogun's",
+      "Killa Sin's",
+      "RZA's"
+     ],
+     [
+      "He stands as a military what?",
+      "Helm",
+      "Tank",
+      "Base"
+     ],
+     [
+      "He's gone on a World War what?",
+      "Tour",
+      "Mission",
+      "Trip"
+     ],
+     [
+      "He catches a flashback from where?",
+      "Iraq",
+      "Vietnam",
+      "Korea"
+     ],
+     [
+      "His swords chop like the blade of what?",
+      "Excalibur",
+      "Zorro",
+      "Conan"
+     ],
+     [
+      "He's the executioner of whom?",
+      "Lucifer",
+      "Pharaoh",
+      "Goliath"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Swinging Swords",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Camouflage Ninjas",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Wu-Renegades",
+   "id": "DSCQdWgVI-s",
+   "start": 10.6,
+   "cuts": [
+    44.4,
+    90.5,
+    165.4
+   ],
+   "qs": [
+    [
+     [
+      "Killarmy, we the last what?",
+      "Armageddon",
+      "Dynasty",
+      "Kingdom"
+     ],
+     [
+      "In the streets or in the what, war is on?",
+      "Sand",
+      "Jungle",
+      "Snow"
+     ],
+     [
+      "You can't persuade this what?",
+      "Brigade",
+      "Platoon",
+      "Parade"
+     ],
+     [
+      "He drills more heat than whom?",
+      "Black Suede",
+      "Black Sheep",
+      "Black Moon"
+     ],
+     [
+      "He's the sun beaming on your what?",
+      "Dome",
+      "Block",
+      "Window"
+     ],
+     [
+      "The sound makes your what pound?",
+      "Eardrum",
+      "Heart",
+      "Head"
+     ],
+     [
+      "They criticize while he revises his what?",
+      "Enterprise",
+      "Rhymes",
+      "Plans"
+     ]
+    ],
+    [
+     [
+      "Strong soldiers build with what?",
+      "Boulders",
+      "Bricks",
+      "Steel"
+     ],
+     [
+      "His brain pattern holds weight like a what?",
+      "Freight",
+      "Truck",
+      "Crane"
+     ],
+     [
+      "He's sharp like what?",
+      "Ice skates",
+      "Thumbtacks",
+      "Scissors"
+     ],
+     [
+      "He dedicates his life to his what?",
+      "Poetry",
+      "Family",
+      "Music"
+     ],
+     [
+      "They march across which bridge?",
+      "Golden Gate",
+      "Brooklyn",
+      "Verrazzano"
+     ],
+     [
+      "His Clan's doing tours in Japan and where?",
+      "San Francisco",
+      "London",
+      "Paris"
+     ]
+    ],
+    [
+     [
+      "They meet at what degree angle?",
+      "Ninety",
+      "Forty-five",
+      "One-eighty"
+     ],
+     [
+      "Universal star what?",
+      "Angels",
+      "Soldiers",
+      "Children"
+     ],
+     [
+      "They form the tip of a what?",
+      "Triangle",
+      "Star",
+      "Spear"
+     ],
+     [
+      "Wu-Tang scientist, label him the last what?",
+      "Lyricist",
+      "Samurai",
+      "Emperor"
+     ],
+     [
+      "He moves in what?",
+      "Submarines",
+      "Helicopters",
+      "Tanks"
+     ],
+     [
+      "He held his sword with both hands like who?",
+      "Voltron",
+      "Thundercats",
+      "He-Man"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Day One",
+   "id": "UKgYzcSJvyQ",
+   "start": 20.4,
+   "cuts": [
+    59.6,
+    116.2,
+    160
+   ],
+   "qs": [
+    [
+     [
+      "He's his momma's only what?",
+      "Boy",
+      "Child",
+      "Hope"
+     ],
+     [
+      "He says he's self-what?",
+      "Employed",
+      "Taught",
+      "Made"
+     ],
+     [
+      "Catch him in the day room on the big what?",
+      "TV",
+      "Couch",
+      "Screen"
+     ],
+     [
+      "Which channel is on?",
+      "BET",
+      "MTV",
+      "ESPN"
+     ],
+     [
+      "Keep your money on your what?",
+      "Mind",
+      "Hand",
+      "Plate"
+     ],
+     [
+      "You wanna wine and what?",
+      "Dine",
+      "Shine",
+      "Grind"
+     ],
+     [
+      "These be the signs of the what?",
+      "Times",
+      "Streets",
+      "Gods"
+     ]
+    ],
+    [
+     [
+      "You my son since when?",
+      "Day one",
+      "Birth",
+      "Forever"
+     ],
+     [
+      "My comrade, my what?",
+      "Soldier",
+      "Brother",
+      "Partner"
+     ],
+     [
+      "We the day and the what?",
+      "Night",
+      "Sun",
+      "Light"
+     ],
+     [
+      "His mind flashed back to what year?",
+      "'86",
+      "'92",
+      "'79"
+     ],
+     [
+      "He ran to which big brother?",
+      "Kane",
+      "Ben",
+      "Mo"
+     ],
+     [
+      "He didn't cry, he just held his what high?",
+      "Head",
+      "Hands",
+      "Fist"
+     ],
+     [
+      "What kept him on the rise?",
+      "Mathematics",
+      "Music",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "Back then, he was his only what?",
+      "Friend",
+      "Brother",
+      "Fan"
+     ],
+     [
+      "They played cowboys and what?",
+      "Indians",
+      "Robbers",
+      "Aliens"
+     ],
+     [
+      "He was always misunderstood in his what?",
+      "Neighborhood",
+      "School",
+      "Family"
+     ],
+     [
+      "They were building what?",
+      "Club houses",
+      "Tree houses",
+      "Go-karts"
+     ],
+     [
+      "He ran into the red store for a what?",
+      "Chico stick",
+      "Soda",
+      "Hero"
+     ],
+     [
+      "They played football in the what?",
+      "Snow",
+      "Street",
+      "Rain"
+     ],
+     [
+      "Where was his little crush?",
+      "On the sidelines",
+      "In the bleachers",
+      "On the stoop"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Feel It",
+   "id": "6LRun7O4uds",
+   "start": 26,
+   "cuts": [
+    63.6,
+    100.3,
+    142.2
+   ],
+   "qs": [
+    [
+     [
+      "Have you ever seen a grown man what?",
+      "Cry",
+      "Laugh",
+      "Dance"
+     ],
+     [
+      "Sometimes he had to swallow his what?",
+      "Pride",
+      "Words",
+      "Anger"
+     ],
+     [
+      "Moms, you're what?",
+      "Incredible",
+      "Beautiful",
+      "A queen"
+     ],
+     [
+      "There was always food on the what?",
+      "Shelf",
+      "Table",
+      "Stove"
+     ],
+     [
+      "What's his sister's name?",
+      "Candie",
+      "Tanya",
+      "Keisha"
+     ],
+     [
+      "Pops, you did what?",
+      "Abandoned me",
+      "Raised me",
+      "Taught me"
+     ],
+     [
+      "His sister never turned her what on him?",
+      "Back",
+      "Face",
+      "Heart"
+     ]
+    ],
+    [
+     [
+      "He's been blessed with how many little girls?",
+      "Two",
+      "Three",
+      "One"
+     ],
+     [
+      "They're more precious than diamonds or what?",
+      "Pearls",
+      "Gold",
+      "Rubies"
+     ],
+     [
+      "Any woman he's dealing with has to what?",
+      "Respect it",
+      "Ignore it",
+      "Pay for it"
+     ],
+     [
+      "What's on the outside?",
+      "Negativity",
+      "Sunshine",
+      "Danger"
+     ],
+     [
+      "Every day it's a what?",
+      "Struggle",
+      "Party",
+      "Blessing"
+     ],
+     [
+      "It's like floating in a what?",
+      "Bubble",
+      "Cloud",
+      "River"
+     ],
+     [
+      "Burning on the rocks, sticks and what?",
+      "Stones",
+      "Bones",
+      "Bricks"
+     ]
+    ],
+    [
+     [
+      "He tells Mom he's what from school?",
+      "Suspended",
+      "Graduating",
+      "Home sick"
+     ],
+     [
+      "She was driving the what?",
+      "Mothership",
+      "Minivan",
+      "School bus"
+     ],
+     [
+      "She told him he was what?",
+      "Handsome",
+      "Smart",
+      "Special"
+     ],
+     [
+      "Her son, the ninth what?",
+      "Prince",
+      "King",
+      "Wonder"
+     ],
+     [
+      "Who got a new Range?",
+      "RZA",
+      "GZA",
+      "Ghostface"
+     ],
+     [
+      "Fake cats should stay in their what?",
+      "Lane",
+      "Place",
+      "Zone"
+     ],
+     [
+      "What's her granddaughter's name?",
+      "Angelica",
+      "Angela",
+      "Annie"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Red Dawn",
+   "id": "cJ1tekHa6jM",
+   "start": 4,
+   "cuts": [
+    44.6,
+    119.4,
+    188.7
+   ],
+   "qs": [
+    [
+     [
+      "Red dawn, war what?",
+      "Pawns",
+      "Kings",
+      "Drums"
+     ],
+     [
+      "Who's back at it?",
+      "Latifa",
+      "Lauryn",
+      "Lil' Kim"
+     ],
+     [
+      "Dirty what?",
+      "Weaponry",
+      "Money",
+      "Laundry"
+     ],
+     [
+      "He'll administrate an what?",
+      "Earthquake",
+      "Avalanche",
+      "Eclipse"
+     ],
+     [
+      "The earth does what?",
+      "Shake",
+      "Crack",
+      "Spin"
+     ],
+     [
+      "Your lyrics ain't holding no what?",
+      "Weight",
+      "Water",
+      "Heat"
+     ]
+    ],
+    [
+     [
+      "He'll paralyze your what?",
+      "Enterprise",
+      "Business",
+      "Crew"
+     ],
+     [
+      "Knowledge and understanding are what?",
+      "One and the same",
+      "Worlds apart",
+      "Hard to find"
+     ],
+     [
+      "Nothing to lose, all to what?",
+      "Gain",
+      "Prove",
+      "Give"
+     ],
+     [
+      "Which pirates does he name?",
+      "Pirates of Dark Water",
+      "Pirates of the Caribbean",
+      "Treasure Island"
+     ],
+     [
+      "He built a home on which planet?",
+      "Uranus",
+      "Mars",
+      "Saturn"
+     ],
+     [
+      "The stage is his what?",
+      "Gymnasium",
+      "Playground",
+      "Living room"
+     ],
+     [
+      "Some call him the human what?",
+      "Titanic",
+      "Torch",
+      "Tornado"
+     ]
+    ],
+    [
+     [
+      "They form like who?",
+      "Voltron",
+      "Megazord",
+      "Transformers"
+     ],
+     [
+      "Arm, leg, leg, what?",
+      "Arm",
+      "Head",
+      "Foot"
+     ],
+     [
+      "Supreme head, what kind of red?",
+      "Infrared",
+      "Bright red",
+      "Deep red"
+     ],
+     [
+      "Which Norse warriors does he name?",
+      "Vikings",
+      "Spartans",
+      "Samurai"
+     ],
+     [
+      "Which Mexican empire does he name?",
+      "Aztecs",
+      "Mayans",
+      "Incas"
+     ],
+     [
+      "He strikes with strength and what?",
+      "Agility",
+      "Speed",
+      "Power"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Fair, Love & War",
+   "id": "ycH6vd1TNas",
+   "start": 14.2,
+   "cuts": [
+    52.9,
+    151.6,
+    193.7
+   ],
+   "qs": [
+    [
+     [
+      "All is fair in love and what?",
+      "War",
+      "Life",
+      "Hate"
+     ],
+     [
+      "The saga carries on, it's military what?",
+      "Time",
+      "Style",
+      "Zone"
+     ],
+     [
+      "They share a giggle and a what?",
+      "Heineken",
+      "Corona",
+      "Snapple"
+     ],
+     [
+      "Killa, kick the rhyme what?",
+      "Again",
+      "Louder",
+      "Faster"
+     ],
+     [
+      "He busts 'em down with verbs and what?",
+      "Nouns",
+      "Adjectives",
+      "Rhymes"
+     ],
+     [
+      "Words attacking like a what?",
+      "German hound",
+      "Pit bull",
+      "Wild wolf"
+     ],
+     [
+      "Full moon, yeah kid, no what?",
+      "Question",
+      "Doubt",
+      "Problem"
+     ]
+    ],
+    [
+     [
+      "They mosey down to where?",
+      "Tarjay",
+      "Kmart",
+      "Macy's"
+     ],
+     [
+      "This is an ordinary what around his way?",
+      "Day",
+      "Night",
+      "Week"
+     ],
+     [
+      "It's his nature, he's a Killarmy what?",
+      "Legislator",
+      "Senator",
+      "Professor"
+     ],
+     [
+      "His platoon wears black what?",
+      "Berets",
+      "Masks",
+      "Boots"
+     ],
+     [
+      "Temperatures that make what burst?",
+      "Barometers",
+      "Thermometers",
+      "Pipes"
+     ],
+     [
+      "Who came first, God or the what?",
+      "Universe",
+      "Earth",
+      "Man"
+     ]
+    ],
+    [
+     [
+      "You've been to whose realm?",
+      "Shogun's",
+      "Killa Sin's",
+      "RZA's"
+     ],
+     [
+      "He stands as a military what?",
+      "Helm",
+      "Tank",
+      "Base"
+     ],
+     [
+      "He's gone on a World War what?",
+      "Tour",
+      "Mission",
+      "Trip"
+     ],
+     [
+      "He catches a flashback from where?",
+      "Iraq",
+      "Vietnam",
+      "Korea"
+     ],
+     [
+      "His swords chop like the blade of what?",
+      "Excalibur",
+      "Zorro",
+      "Conan"
+     ],
+     [
+      "He's the executioner of whom?",
+      "Lucifer",
+      "Pharaoh",
+      "Goliath"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Wu-Renegades",
+   "id": "DSCQdWgVI-s",
+   "start": 10.6,
+   "cuts": [
+    44.4,
+    90.5,
+    165.4
+   ],
+   "qs": [
+    [
+     [
+      "Killarmy, we the last what?",
+      "Armageddon",
+      "Dynasty",
+      "Kingdom"
+     ],
+     [
+      "In the streets or in the what, war is on?",
+      "Sand",
+      "Jungle",
+      "Snow"
+     ],
+     [
+      "You can't persuade this what?",
+      "Brigade",
+      "Platoon",
+      "Parade"
+     ],
+     [
+      "He drills more heat than whom?",
+      "Black Suede",
+      "Black Sheep",
+      "Black Moon"
+     ],
+     [
+      "He's the sun beaming on your what?",
+      "Dome",
+      "Block",
+      "Window"
+     ],
+     [
+      "The sound makes your what pound?",
+      "Eardrum",
+      "Heart",
+      "Head"
+     ],
+     [
+      "They criticize while he revises his what?",
+      "Enterprise",
+      "Rhymes",
+      "Plans"
+     ]
+    ],
+    [
+     [
+      "Strong soldiers build with what?",
+      "Boulders",
+      "Bricks",
+      "Steel"
+     ],
+     [
+      "His brain pattern holds weight like a what?",
+      "Freight",
+      "Truck",
+      "Crane"
+     ],
+     [
+      "He's sharp like what?",
+      "Ice skates",
+      "Thumbtacks",
+      "Scissors"
+     ],
+     [
+      "He dedicates his life to his what?",
+      "Poetry",
+      "Family",
+      "Music"
+     ],
+     [
+      "They march across which bridge?",
+      "Golden Gate",
+      "Brooklyn",
+      "Verrazzano"
+     ],
+     [
+      "His Clan's doing tours in Japan and where?",
+      "San Francisco",
+      "London",
+      "Paris"
+     ]
+    ],
+    [
+     [
+      "They meet at what degree angle?",
+      "Ninety",
+      "Forty-five",
+      "One-eighty"
+     ],
+     [
+      "Universal star what?",
+      "Angels",
+      "Soldiers",
+      "Children"
+     ],
+     [
+      "They form the tip of a what?",
+      "Triangle",
+      "Star",
+      "Spear"
+     ],
+     [
+      "Wu-Tang scientist, label him the last what?",
+      "Lyricist",
+      "Samurai",
+      "Emperor"
+     ],
+     [
+      "He moves in what?",
+      "Submarines",
+      "Helicopters",
+      "Tanks"
+     ],
+     [
+      "He held his sword with both hands like who?",
+      "Voltron",
+      "Thundercats",
+      "He-Man"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
