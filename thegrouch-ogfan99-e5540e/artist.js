@@ -11,7 +11,7 @@ window.CFG = {
  "ranks": [
   "Artsy Kid",
   "Highwire Walker",
-  "All These Lights",
+  "Bay Lights Kid",
   "People of the Sun",
   "Living Legend"
  ],
@@ -27,7 +27,7 @@ window.CFG = {
    "bongs": 10,
    "line": "Highwire Walker. Balance in life and hip-hop."
   },
-  "All These Lights": {
+  "Bay Lights Kid": {
    "bongs": 15,
    "line": "All These Lights. One night to live like kids, and you lit it up."
   },
@@ -372,7 +372,7 @@ window.CFG = {
    ]
   },
   {
-   "title": "All These Lights",
+   "title": "Bay Lights Kid",
    "id": "WL-1P5cbZCs",
    "start": 18.9,
    "cuts": [
