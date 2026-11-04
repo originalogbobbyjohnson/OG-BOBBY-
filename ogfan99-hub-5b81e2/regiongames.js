@@ -8,4 +8,5 @@ window.OG_REGION_GAMES = {
   "Aceyalone": { url: "../aceyalone-ogfan99-83bf05/", ex: 0 },
   "Gift of Gab": { url: "../giftofgab-ogfan99-f338b0/", ex: 0 },
   "Evidence": { url: "../evidence-ogfan99-76b14d/", ex: 2 },
+  "The Grouch": { url: "../thegrouch-ogfan99-e5540e/", ex: 0 },
 };
