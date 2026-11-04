@@ -93,40 +93,1375 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Old Man",
-   "id": "IBQV1qUqtJo",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "The Day After",
+   "id": "QTdIvjLRSH4",
+   "start": 22.2,
+   "cuts": [
+    54.3,
+    89.1,
+    116.3
+   ],
+   "qs": [
+    [
+     [
+      "He awoke from what?",
+      "Oppression",
+      "A dream",
+      "A long sleep"
+     ],
+     [
+      "Truth from a speck of what?",
+      "Light",
+      "Dust",
+      "Gold"
+     ],
+     [
+      "Those that hunger for the food of what?",
+      "Thought",
+      "Life",
+      "Soul"
+     ],
+     [
+      "This is the life we what?",
+      "Chose",
+      "Live",
+      "Love"
+     ],
+     [
+      "Fool's what led many astray?",
+      "Gold",
+      "Game",
+      "Paradise"
+     ],
+     [
+      "Some never recovered from the mental what?",
+      "Enslavement",
+      "Breakdown",
+      "Prison"
+     ],
+     [
+      "The world wasn't ready to what him?",
+      "Face",
+      "Hear",
+      "Know"
+     ]
+    ],
+    [
+     [
+      "What's the wicked brother's name?",
+      "Cal",
+      "Cain",
+      "Carl"
+     ],
+     [
+      "Their faces were painted with what?",
+      "Smiles",
+      "Tears",
+      "Masks"
+     ],
+     [
+      "They came from air, land and what?",
+      "Oceans",
+      "Mountains",
+      "Skies"
+     ],
+     [
+      "Everything seemed to move in what?",
+      "Slow motion",
+      "Circles",
+      "Silence"
+     ],
+     [
+      "People ran frantic as herds of wild what?",
+      "Steed",
+      "Buffalo",
+      "Cattle"
+     ],
+     [
+      "Their minds were like what?",
+      "Rabbits",
+      "Foxes",
+      "Sheep"
+     ],
+     [
+      "Which selection was played by RZA?",
+      "Triumph",
+      "Protect Ya Neck",
+      "C.R.E.A.M."
+     ]
+    ],
+    [
+     [
+      "Trees buckled like what?",
+      "Knees",
+      "Branches",
+      "Paper"
+     ],
+     [
+      "Build and break which seal?",
+      "The seventh",
+      "The first",
+      "The third"
+     ],
+     [
+      "From the sky came fiery what?",
+      "Hail",
+      "Rain",
+      "Stars"
+     ],
+     [
+      "What happened to the trains?",
+      "Derailed",
+      "Stopped",
+      "Disappeared"
+     ],
+     [
+      "War of the what?",
+      "Lion",
+      "Worlds",
+      "Roses"
+     ],
+     [
+      "Thunder comes when he what?",
+      "Speaks",
+      "Sleeps",
+      "Walks"
+     ],
+     [
+      "Jail cell broken by the wise what?",
+      "Words",
+      "Men",
+      "Owl"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Glad to Meet You",
-   "id": "E_pje6GonP8",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Food",
+   "id": "kEAiUEnYMLE",
+   "start": 22.5,
+   "cuts": [
+    53.3,
+    102,
+    136.5
+   ],
+   "qs": [
+    [
+     [
+      "His writing is so quenching to the what?",
+      "Thirst",
+      "Soul",
+      "Mind"
+     ],
+     [
+      "Stimulating what growth?",
+      "Brain",
+      "Plant",
+      "Money"
+     ],
+     [
+      "It's relevant for the youth what?",
+      "Development",
+      "Program",
+      "Center"
+     ],
+     [
+      "He drops musical notes for you to then what?",
+      "Quote",
+      "Sing",
+      "Play"
+     ],
+     [
+      "He gave the thought time to what?",
+      "Soak",
+      "Grow",
+      "Rest"
+     ],
+     [
+      "For years, months and what?",
+      "Days",
+      "Weeks",
+      "Hours"
+     ],
+     [
+      "He tests the climate of the what?",
+      "People",
+      "Streets",
+      "City"
+     ]
+    ],
+    [
+     [
+      "Emcees wonder how he does it with which producer?",
+      "9th Wonder",
+      "Pete Rock",
+      "DJ Premier"
+     ],
+     [
+      "The ladies shake it in the club like what?",
+      "Thunder",
+      "Lightning",
+      "Crazy"
+     ],
+     [
+      "His rhymes beat fire out of something, no what?",
+      "Question",
+      "Doubt",
+      "Problem"
+     ],
+     [
+      "His winds blow how strong?",
+      "EF5",
+      "F3",
+      "Cat 4"
+     ],
+     [
+      "There's nowhere to what?",
+      "Hide",
+      "Run",
+      "Go"
+     ],
+     [
+      "The slowest he can go is what?",
+      "Knowledge",
+      "Thirty",
+      "Steady"
+     ]
+    ],
+    [
+     [
+      "The hundred grand in the rubberband won't what?",
+      "Fold",
+      "Break",
+      "Bend"
+     ],
+     [
+      "Sun ray showers of what?",
+      "Gold",
+      "Rain",
+      "Light"
+     ],
+     [
+      "Some things are better what?",
+      "Untold",
+      "Forgotten",
+      "Unsaid"
+     ],
+     [
+      "The God black ain't what?",
+      "Cold",
+      "Old",
+      "Done"
+     ],
+     [
+      "Yellow Bally's with what color soles?",
+      "White",
+      "Red",
+      "Black"
+     ],
+     [
+      "\"My brother...\" what?",
+      "Wonderful",
+      "Beautiful",
+      "Powerful"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Hip Hop Forever",
-   "id": "t-tK6dfA67c",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Ringing Bells",
+   "id": "oAAGiI-4daU",
+   "start": 10.3,
+   "cuts": [
+    51,
+    73.2,
+    135.4
+   ],
+   "qs": [
+    [
+     [
+      "Take on face value how fast the what travels?",
+      "Light",
+      "Sound",
+      "Word"
+     ],
+     [
+      "It's a Heaven sent gift from the what?",
+      "Universe",
+      "Sky",
+      "Angels"
+     ],
+     [
+      "Blessings, tithe and what?",
+      "Offerings",
+      "Prayers",
+      "Praise"
+     ],
+     [
+      "There's no compromising the what?",
+      "Truth",
+      "Rules",
+      "Code"
+     ],
+     [
+      "Rising above the what?",
+      "Mist",
+      "Clouds",
+      "Crowd"
+     ],
+     [
+      "Which section of Brooklyn?",
+      "East New York",
+      "Flatbush",
+      "Bushwick"
+     ],
+     [
+      "Each sentence is like a what?",
+      "Timeline",
+      "Story",
+      "Puzzle"
+     ]
+    ],
+    [
+     [
+      "Say it loud, I'm black and what?",
+      "Proud",
+      "Strong",
+      "Free"
+     ],
+     [
+      "To his nation seeds he's what?",
+      "Raising",
+      "Feeding",
+      "Teaching"
+     ],
+     [
+      "Paper what?",
+      "Chasing",
+      "Stacking",
+      "Folding"
+     ],
+     [
+      "He'll disassemble any MC stepping in the place to what?",
+      "Be",
+      "Rock",
+      "Shine"
+     ],
+     [
+      "Off the head he wrote this one in what color?",
+      "Red",
+      "Black",
+      "Gold"
+     ],
+     [
+      "The microphone ripped so what?",
+      "Swift",
+      "Loud",
+      "Hard"
+     ],
+     [
+      "He did it for the what?",
+      "Cause",
+      "Money",
+      "Fame"
+     ]
+    ],
+    [
+     [
+      "He swore to make the crowd what?",
+      "Roar",
+      "Jump",
+      "Scream"
+     ],
+     [
+      "He came up through the what?",
+      "Floor",
+      "Ground",
+      "Crowd"
+     ],
+     [
+      "He drew his mic from his what?",
+      "Hip",
+      "Pocket",
+      "Bag"
+     ],
+     [
+      "First born built the weather to what?",
+      "Storm",
+      "Rain",
+      "Snow"
+     ],
+     [
+      "Bees swarm like a hundred women what?",
+      "Scorned",
+      "Screaming",
+      "Dancing"
+     ],
+     [
+      "Ring bells throughout the what?",
+      "City",
+      "World",
+      "Block"
+     ]
+    ]
+   ]
   },
   {
-   "title": "No Said Date",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Masta Killa",
+   "id": "E4LQagySo_M",
+   "cuts": [
+    41.4,
+    95.4,
+    152
+   ],
+   "qs": [
+    [
+     [
+      "\"It's the principal, don't get it...\" what?",
+      "Wrong",
+      "Twisted",
+      "Lost"
+     ],
+     [
+      "He has to defend the what?",
+      "Castle",
+      "Kingdom",
+      "Crown"
+     ],
+     [
+      "Pass the keys to the what?",
+      "Coupe",
+      "Jeep",
+      "Benz"
+     ],
+     [
+      "Which highway does he scoot off on?",
+      "95 North",
+      "87 South",
+      "The BQE"
+     ],
+     [
+      "Cut from the cloth of what?",
+      "King",
+      "Gold",
+      "Silk"
+     ],
+     [
+      "Theology of what?",
+      "Time",
+      "Life",
+      "Space"
+     ],
+     [
+      "Light exists in the what?",
+      "Darkness",
+      "Morning",
+      "Sky"
+     ]
+    ],
+    [
+     [
+      "See the God light gleam so what?",
+      "Bright",
+      "Gold",
+      "Clear"
+     ],
+     [
+      "A shiny bald head like who?",
+      "Lou Gossett",
+      "Mr. Clean",
+      "Telly Savalas"
+     ],
+     [
+      "He's walking with the shining lamp of what?",
+      "Knowledge",
+      "Wisdom",
+      "Truth"
+     ],
+     [
+      "Glory be the law, with the justice what?",
+      "Sword",
+      "Scale",
+      "Shield"
+     ],
+     [
+      "Imperishable absolute, y'all what?",
+      "Salute",
+      "Bow down",
+      "Stand up"
+     ],
+     [
+      "Lesson number one, for the what?",
+      "Dumb",
+      "Young",
+      "Lost"
+     ]
+    ],
+    [
+     [
+      "No what allowed?",
+      "Colors",
+      "Phones",
+      "Cameras"
+     ],
+     [
+      "Give him a few, just what?",
+      "Listen",
+      "Wait",
+      "Watch"
+     ],
+     [
+      "The dominant what will always attract?",
+      "Magnetic",
+      "Energy",
+      "Planet"
+     ],
+     [
+      "Everything that has been always will what?",
+      "Be",
+      "Stay",
+      "Shine"
+     ],
+     [
+      "He's thankful for the what?",
+      "Blessing",
+      "Struggle",
+      "Money"
+     ],
+     [
+      "Trials and what?",
+      "Tribulations",
+      "Errors",
+      "Triumphs"
+     ],
+     [
+      "It's clear as what to him?",
+      "Day",
+      "Glass",
+      "Water"
+     ]
+    ]
+   ]
   },
   {
    "title": "Grab the Mic",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "15eXUqQ3BM0",
+   "start": 19.2,
+   "cuts": [
+    58.2,
+    106.3,
+    131.5
+   ],
+   "qs": [
+    [
+     [
+      "Ladies and gents, good what?",
+      "Evening",
+      "Morning",
+      "Night"
+     ],
+     [
+      "Get up out your what?",
+      "Chair",
+      "Car",
+      "Bed"
+     ],
+     [
+      "Throw your hands in the what?",
+      "Air",
+      "Sky",
+      "Crowd"
+     ],
+     [
+      "The drinks are on who?",
+      "Him",
+      "The house",
+      "The DJ"
+     ],
+     [
+      "The headline read, shall he what?",
+      "Proceed",
+      "Begin",
+      "Continue"
+     ],
+     [
+      "Let the turntable what?",
+      "Spin",
+      "Play",
+      "Rock"
+     ],
+     [
+      "When he grabs the microphone, he can't what?",
+      "Stop",
+      "Lose",
+      "Wait"
+     ]
+    ],
+    [
+     [
+      "His guys are from the what?",
+      "Boulevard",
+      "Avenue",
+      "Projects"
+     ],
+     [
+      "Which Brooklyn squad?",
+      "East New York",
+      "Bed-Stuy",
+      "Brownsville"
+     ],
+     [
+      "The wolves are what?",
+      "Barking",
+      "Howling",
+      "Hungry"
+     ],
+     [
+      "Iron Mic Duel held down by the what?",
+      "Poolside",
+      "Seaside",
+      "Roadside"
+     ],
+     [
+      "Along came a what?",
+      "Spider",
+      "Stranger",
+      "Storm"
+     ],
+     [
+      "Flow gold like water off the what when it rains?",
+      "Brim",
+      "Roof",
+      "Leaves"
+     ]
+    ],
+    [
+     [
+      "So terrifying, so what?",
+      "Electrifying",
+      "Satisfying",
+      "Mystifying"
+     ],
+     [
+      "So much heat on the turntable what?",
+      "Wax",
+      "Deck",
+      "Needle"
+     ],
+     [
+      "Drop something in the collection what?",
+      "Cup",
+      "Plate",
+      "Box"
+     ],
+     [
+      "Of the sixteen bars, fast cars and what?",
+      "Jewelry",
+      "Money",
+      "Clothes"
+     ],
+     [
+      "Bright on the seven what?",
+      "Continents",
+      "Seas",
+      "Days"
+     ],
+     [
+      "Take it to the fullest what?",
+      "Extent",
+      "Degree",
+      "Level"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "The Day After",
+   "id": "QTdIvjLRSH4",
+   "start": 22.2,
+   "cuts": [
+    54.3,
+    89.1,
+    116.3
+   ],
+   "qs": [
+    [
+     [
+      "He awoke from what?",
+      "Oppression",
+      "A dream",
+      "A long sleep"
+     ],
+     [
+      "Truth from a speck of what?",
+      "Light",
+      "Dust",
+      "Gold"
+     ],
+     [
+      "Those that hunger for the food of what?",
+      "Thought",
+      "Life",
+      "Soul"
+     ],
+     [
+      "This is the life we what?",
+      "Chose",
+      "Live",
+      "Love"
+     ],
+     [
+      "Fool's what led many astray?",
+      "Gold",
+      "Game",
+      "Paradise"
+     ],
+     [
+      "Some never recovered from the mental what?",
+      "Enslavement",
+      "Breakdown",
+      "Prison"
+     ],
+     [
+      "The world wasn't ready to what him?",
+      "Face",
+      "Hear",
+      "Know"
+     ]
+    ],
+    [
+     [
+      "What's the wicked brother's name?",
+      "Cal",
+      "Cain",
+      "Carl"
+     ],
+     [
+      "Their faces were painted with what?",
+      "Smiles",
+      "Tears",
+      "Masks"
+     ],
+     [
+      "They came from air, land and what?",
+      "Oceans",
+      "Mountains",
+      "Skies"
+     ],
+     [
+      "Everything seemed to move in what?",
+      "Slow motion",
+      "Circles",
+      "Silence"
+     ],
+     [
+      "People ran frantic as herds of wild what?",
+      "Steed",
+      "Buffalo",
+      "Cattle"
+     ],
+     [
+      "Their minds were like what?",
+      "Rabbits",
+      "Foxes",
+      "Sheep"
+     ],
+     [
+      "Which selection was played by RZA?",
+      "Triumph",
+      "Protect Ya Neck",
+      "C.R.E.A.M."
+     ]
+    ],
+    [
+     [
+      "Trees buckled like what?",
+      "Knees",
+      "Branches",
+      "Paper"
+     ],
+     [
+      "Build and break which seal?",
+      "The seventh",
+      "The first",
+      "The third"
+     ],
+     [
+      "From the sky came fiery what?",
+      "Hail",
+      "Rain",
+      "Stars"
+     ],
+     [
+      "What happened to the trains?",
+      "Derailed",
+      "Stopped",
+      "Disappeared"
+     ],
+     [
+      "War of the what?",
+      "Lion",
+      "Worlds",
+      "Roses"
+     ],
+     [
+      "Thunder comes when he what?",
+      "Speaks",
+      "Sleeps",
+      "Walks"
+     ],
+     [
+      "Jail cell broken by the wise what?",
+      "Words",
+      "Men",
+      "Owl"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Food",
+   "id": "kEAiUEnYMLE",
+   "start": 22.5,
+   "cuts": [
+    53.3,
+    102,
+    136.5
+   ],
+   "qs": [
+    [
+     [
+      "His writing is so quenching to the what?",
+      "Thirst",
+      "Soul",
+      "Mind"
+     ],
+     [
+      "Stimulating what growth?",
+      "Brain",
+      "Plant",
+      "Money"
+     ],
+     [
+      "It's relevant for the youth what?",
+      "Development",
+      "Program",
+      "Center"
+     ],
+     [
+      "He drops musical notes for you to then what?",
+      "Quote",
+      "Sing",
+      "Play"
+     ],
+     [
+      "He gave the thought time to what?",
+      "Soak",
+      "Grow",
+      "Rest"
+     ],
+     [
+      "For years, months and what?",
+      "Days",
+      "Weeks",
+      "Hours"
+     ],
+     [
+      "He tests the climate of the what?",
+      "People",
+      "Streets",
+      "City"
+     ]
+    ],
+    [
+     [
+      "Emcees wonder how he does it with which producer?",
+      "9th Wonder",
+      "Pete Rock",
+      "DJ Premier"
+     ],
+     [
+      "The ladies shake it in the club like what?",
+      "Thunder",
+      "Lightning",
+      "Crazy"
+     ],
+     [
+      "His rhymes beat fire out of something, no what?",
+      "Question",
+      "Doubt",
+      "Problem"
+     ],
+     [
+      "His winds blow how strong?",
+      "EF5",
+      "F3",
+      "Cat 4"
+     ],
+     [
+      "There's nowhere to what?",
+      "Hide",
+      "Run",
+      "Go"
+     ],
+     [
+      "The slowest he can go is what?",
+      "Knowledge",
+      "Thirty",
+      "Steady"
+     ]
+    ],
+    [
+     [
+      "The hundred grand in the rubberband won't what?",
+      "Fold",
+      "Break",
+      "Bend"
+     ],
+     [
+      "Sun ray showers of what?",
+      "Gold",
+      "Rain",
+      "Light"
+     ],
+     [
+      "Some things are better what?",
+      "Untold",
+      "Forgotten",
+      "Unsaid"
+     ],
+     [
+      "The God black ain't what?",
+      "Cold",
+      "Old",
+      "Done"
+     ],
+     [
+      "Yellow Bally's with what color soles?",
+      "White",
+      "Red",
+      "Black"
+     ],
+     [
+      "\"My brother...\" what?",
+      "Wonderful",
+      "Beautiful",
+      "Powerful"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Ringing Bells",
+   "id": "oAAGiI-4daU",
+   "start": 10.3,
+   "cuts": [
+    51,
+    73.2,
+    135.4
+   ],
+   "qs": [
+    [
+     [
+      "Take on face value how fast the what travels?",
+      "Light",
+      "Sound",
+      "Word"
+     ],
+     [
+      "It's a Heaven sent gift from the what?",
+      "Universe",
+      "Sky",
+      "Angels"
+     ],
+     [
+      "Blessings, tithe and what?",
+      "Offerings",
+      "Prayers",
+      "Praise"
+     ],
+     [
+      "There's no compromising the what?",
+      "Truth",
+      "Rules",
+      "Code"
+     ],
+     [
+      "Rising above the what?",
+      "Mist",
+      "Clouds",
+      "Crowd"
+     ],
+     [
+      "Which section of Brooklyn?",
+      "East New York",
+      "Flatbush",
+      "Bushwick"
+     ],
+     [
+      "Each sentence is like a what?",
+      "Timeline",
+      "Story",
+      "Puzzle"
+     ]
+    ],
+    [
+     [
+      "Say it loud, I'm black and what?",
+      "Proud",
+      "Strong",
+      "Free"
+     ],
+     [
+      "To his nation seeds he's what?",
+      "Raising",
+      "Feeding",
+      "Teaching"
+     ],
+     [
+      "Paper what?",
+      "Chasing",
+      "Stacking",
+      "Folding"
+     ],
+     [
+      "He'll disassemble any MC stepping in the place to what?",
+      "Be",
+      "Rock",
+      "Shine"
+     ],
+     [
+      "Off the head he wrote this one in what color?",
+      "Red",
+      "Black",
+      "Gold"
+     ],
+     [
+      "The microphone ripped so what?",
+      "Swift",
+      "Loud",
+      "Hard"
+     ],
+     [
+      "He did it for the what?",
+      "Cause",
+      "Money",
+      "Fame"
+     ]
+    ],
+    [
+     [
+      "He swore to make the crowd what?",
+      "Roar",
+      "Jump",
+      "Scream"
+     ],
+     [
+      "He came up through the what?",
+      "Floor",
+      "Ground",
+      "Crowd"
+     ],
+     [
+      "He drew his mic from his what?",
+      "Hip",
+      "Pocket",
+      "Bag"
+     ],
+     [
+      "First born built the weather to what?",
+      "Storm",
+      "Rain",
+      "Snow"
+     ],
+     [
+      "Bees swarm like a hundred women what?",
+      "Scorned",
+      "Screaming",
+      "Dancing"
+     ],
+     [
+      "Ring bells throughout the what?",
+      "City",
+      "World",
+      "Block"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Masta Killa",
+   "id": "E4LQagySo_M",
+   "cuts": [
+    41.4,
+    95.4,
+    152
+   ],
+   "qs": [
+    [
+     [
+      "\"It's the principal, don't get it...\" what?",
+      "Wrong",
+      "Twisted",
+      "Lost"
+     ],
+     [
+      "He has to defend the what?",
+      "Castle",
+      "Kingdom",
+      "Crown"
+     ],
+     [
+      "Pass the keys to the what?",
+      "Coupe",
+      "Jeep",
+      "Benz"
+     ],
+     [
+      "Which highway does he scoot off on?",
+      "95 North",
+      "87 South",
+      "The BQE"
+     ],
+     [
+      "Cut from the cloth of what?",
+      "King",
+      "Gold",
+      "Silk"
+     ],
+     [
+      "Theology of what?",
+      "Time",
+      "Life",
+      "Space"
+     ],
+     [
+      "Light exists in the what?",
+      "Darkness",
+      "Morning",
+      "Sky"
+     ]
+    ],
+    [
+     [
+      "See the God light gleam so what?",
+      "Bright",
+      "Gold",
+      "Clear"
+     ],
+     [
+      "A shiny bald head like who?",
+      "Lou Gossett",
+      "Mr. Clean",
+      "Telly Savalas"
+     ],
+     [
+      "He's walking with the shining lamp of what?",
+      "Knowledge",
+      "Wisdom",
+      "Truth"
+     ],
+     [
+      "Glory be the law, with the justice what?",
+      "Sword",
+      "Scale",
+      "Shield"
+     ],
+     [
+      "Imperishable absolute, y'all what?",
+      "Salute",
+      "Bow down",
+      "Stand up"
+     ],
+     [
+      "Lesson number one, for the what?",
+      "Dumb",
+      "Young",
+      "Lost"
+     ]
+    ],
+    [
+     [
+      "No what allowed?",
+      "Colors",
+      "Phones",
+      "Cameras"
+     ],
+     [
+      "Give him a few, just what?",
+      "Listen",
+      "Wait",
+      "Watch"
+     ],
+     [
+      "The dominant what will always attract?",
+      "Magnetic",
+      "Energy",
+      "Planet"
+     ],
+     [
+      "Everything that has been always will what?",
+      "Be",
+      "Stay",
+      "Shine"
+     ],
+     [
+      "He's thankful for the what?",
+      "Blessing",
+      "Struggle",
+      "Money"
+     ],
+     [
+      "Trials and what?",
+      "Tribulations",
+      "Errors",
+      "Triumphs"
+     ],
+     [
+      "It's clear as what to him?",
+      "Day",
+      "Glass",
+      "Water"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Grab the Mic",
+   "id": "15eXUqQ3BM0",
+   "start": 19.2,
+   "cuts": [
+    58.2,
+    106.3,
+    131.5
+   ],
+   "qs": [
+    [
+     [
+      "Ladies and gents, good what?",
+      "Evening",
+      "Morning",
+      "Night"
+     ],
+     [
+      "Get up out your what?",
+      "Chair",
+      "Car",
+      "Bed"
+     ],
+     [
+      "Throw your hands in the what?",
+      "Air",
+      "Sky",
+      "Crowd"
+     ],
+     [
+      "The drinks are on who?",
+      "Him",
+      "The house",
+      "The DJ"
+     ],
+     [
+      "The headline read, shall he what?",
+      "Proceed",
+      "Begin",
+      "Continue"
+     ],
+     [
+      "Let the turntable what?",
+      "Spin",
+      "Play",
+      "Rock"
+     ],
+     [
+      "When he grabs the microphone, he can't what?",
+      "Stop",
+      "Lose",
+      "Wait"
+     ]
+    ],
+    [
+     [
+      "His guys are from the what?",
+      "Boulevard",
+      "Avenue",
+      "Projects"
+     ],
+     [
+      "Which Brooklyn squad?",
+      "East New York",
+      "Bed-Stuy",
+      "Brownsville"
+     ],
+     [
+      "The wolves are what?",
+      "Barking",
+      "Howling",
+      "Hungry"
+     ],
+     [
+      "Iron Mic Duel held down by the what?",
+      "Poolside",
+      "Seaside",
+      "Roadside"
+     ],
+     [
+      "Along came a what?",
+      "Spider",
+      "Stranger",
+      "Storm"
+     ],
+     [
+      "Flow gold like water off the what when it rains?",
+      "Brim",
+      "Roof",
+      "Leaves"
+     ]
+    ],
+    [
+     [
+      "So terrifying, so what?",
+      "Electrifying",
+      "Satisfying",
+      "Mystifying"
+     ],
+     [
+      "So much heat on the turntable what?",
+      "Wax",
+      "Deck",
+      "Needle"
+     ],
+     [
+      "Drop something in the collection what?",
+      "Cup",
+      "Plate",
+      "Box"
+     ],
+     [
+      "Of the sixteen bars, fast cars and what?",
+      "Jewelry",
+      "Money",
+      "Clothes"
+     ],
+     [
+      "Bright on the seven what?",
+      "Continents",
+      "Seas",
+      "Days"
+     ],
+     [
+      "Take it to the fullest what?",
+      "Extent",
+      "Degree",
+      "Level"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
