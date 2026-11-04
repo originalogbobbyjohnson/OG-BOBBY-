@@ -128,7 +128,8 @@
     { id: "fans", ic: "&#128293;", t: "FANS" },
     { id: "producers", ic: "&#127899;", t: "PRODUCERS" },
     { id: "regions", ic: "&#127758;", t: "REGIONS", uc: 1 },
-    { id: "genres", ic: "&#127926;", t: "GENRES", uc: 1 }
+    { id: "genres", ic: "&#127926;", t: "GENRES", uc: 1 },
+    { id: "rip", ic: "&#128330;", t: "REST IN POWER" }
   ];
   var app = document.querySelector(".wrap.app"), bar = document.querySelector(".appbar");
   if (!app || !bar) return;
@@ -152,7 +153,7 @@
     var ex = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } })();
     var td = $("today"), tdName = td && !td.hidden ? (td.querySelector("b") || {}).textContent : "";
     var it = function (k, ic, t, extra, on) { return '<button type="button" data-m="' + k + '"' + (on ? ' class="on"' : '') + '><b>' + ic + '</b><span>' + t + '</span>' + (extra || "") + '</button>'; };
-    nav.innerHTML = '<div class="hm-sec">GO TO</div>' + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "REGIONS", genres: "GENRES" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join("") +
+    nav.innerHTML = '<div class="hm-sec">GO TO</div>' + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "REGIONS", genres: "GENRES", rip: "REST IN POWER" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join("") +
       '<div class="hm-sec">YOU</div>' + it("metro", "&#127915;", "MY RIDER CARD") + (tdName ? it("today", "&#9733;", "TODAY'S TRAIN 2X", '<em class="g">' + esc(tdName) + '</em>') : "") + it("perks", "&#127873;", "PLAY TO WIN PERKS") +
       '<div class="hm-sec">SETTINGS</div>' + it("ex", "<span class=\"exb\">E</span>", "EXPLICIT LYRICS 18+", '<em class="' + (ex ? "g" : "") + '">' + (ex ? "ON" : "OFF") + '</em>') + it("key", "&#128647;", "SUBWAY KEY + LEGEND") + it("over", "&#8634;", "START OVER");
   }
@@ -172,7 +173,7 @@
     app.classList.toggle("paneon", id !== "map"); back.hidden = id === "map";
     Object.keys(panes).forEach(function (k) { panes[k].hidden = k !== id; });
     if (id === "map") { setTimeout(function () { try { window.__map && window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 30); return; }
-    ({ lounge: drawLounge, fans: drawFans, producers: drawProducers, regions: drawRegions, genres: drawGenres })[id]();
+    ({ lounge: drawLounge, fans: drawFans, producers: drawProducers, regions: drawRegions, genres: drawGenres, rip: drawRip })[id]();
     panes[id].scrollTop = 0;
   }
   window.OGW = { go: go, h: { row: function () { return row.apply(null, arguments); }, initials: initials, avColor: avColor, meta: meta, bul: bul, owner: owner, live: live, LS: LS, cert: function (a) { return certInfo(a); } } };
@@ -574,5 +575,30 @@
       '<div class="wgrid">' + GENRES.map(function (r, i) { return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-g="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small><span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO PLAY" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
       '<div class="wmsg" id="gnMsg"></div>';
     p.querySelector(".wgrid").onclick = function (e) { var b = e.target.closest("[data-g]"); if (!b) return; var g = GENRES[+b.dataset.g]; if (g.live) return go("map"); $("gnMsg").textContent = g.n + " is under construction."; };
+  }
+
+  /* ---------- REST IN POWER: the legends we lost, their own category ---------- */
+  var RIP = [
+    { who: "MF DOOM", d: "All caps when you spell the man name. Long Island's villain.", home: "Long Beach, Long Island" },
+    { who: "Sean Price", d: "Ruck from Heltah Skeltah. Brownsville's funniest killer bars.", home: "Brownsville, Brooklyn" },
+    { who: "Tame One", d: "The Artifacts. Brick City graffiti and bars.", home: "Newark, New Jersey" },
+    { who: "Chino XL", d: "Punchline king. Bronx-born, East Orange raised.", home: "East Orange, New Jersey" },
+    { who: "Eyedea", d: "Battle champ and freestyle genius. Rhymesayers.", home: "St. Paul, Minnesota", rg: 1 },
+    { who: "Gift of Gab", d: "Blackalicious. The fastest, smoothest tongue in the Bay.", home: "Sacramento, Northern California", rg: 1 }
+  ];
+  function drawRip() {
+    var p = panes.rip, RG = window.OG_REGION_GAMES || {};
+    p.innerHTML = '<div class="wp-h"><div class="t">REST IN POWER</div><div class="s">THE LEGENDS WE LOST · THEIR MUSIC LIVES ON</div></div>' +
+      '<div class="prh" style="border-color:#e8b84a"><b>&#128330; LEGENDS</b><span>' + RIP.length + '</span></div>' +
+      '<div class="prl">' + RIP.map(function (x, i) { return '<button type="button" class="prr" data-rip="' + i + '"><span class="prdot" style="background:#e8b84a"></span><span class="prn"><b>Rest in Power, ' + esc(x.who) + '</b><small>' + esc(x.d) + '<br>' + esc(x.home) + '</small></span><span class="st live">PLAY</span></button>'; }).join("") + '</div>' +
+      '<div class="wmsg" id="ripMsg"></div>';
+    p.onclick = function (e) {
+      var b = e.target.closest("[data-rip]"); if (!b) return; var x = RIP[+b.dataset.rip];
+      if (x.rg) { var g = RG[x.who]; if (!g) return; var exOn = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (er) { return false; } })();
+        if (g.ex === 2 && !exOn) { $("ripMsg").innerHTML = esc(x.who) + "'s game is 18+ (explicit lyrics). Turn on <b>EXPLICIT LYRICS 18+</b> in the &#9776; menu to play it."; return; }
+        location.href = g.url + "?from=ogfan99"; return; }
+      var L = A(), k = -1; for (var j = 0; j < L.length; j++) if (L[j].who === x.who) { k = j; break; }
+      if (k < 0) return; go("map"); setTimeout(function () { try { openCard(k); } catch (er) {} }, 80);
+    };
   }
 })();
