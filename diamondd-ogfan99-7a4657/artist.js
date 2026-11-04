@@ -93,40 +93,1303 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "explicitSongs": [
   {
-   "title": "Best Kept Secret",
-   "id": "TQpUhDiTuXQ",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Feel the Vibe",
+   "id": "HA5Sdio7W6c",
+   "cuts": [
+    39.4,
+    78.6,
+    181
+   ],
+   "qs": [
+    [
+     [
+      "Feel the vibe, everybody gather what?",
+      "Round",
+      "Up",
+      "Close"
+     ],
+     [
+      "He pulls the plug, and still his sound's what?",
+      "Profound",
+      "Loud",
+      "Around"
+     ],
+     [
+      "He had to take hip-hop back to the what?",
+      "Essence",
+      "Future",
+      "Radio"
+     ],
+     [
+      "Try to go commercial, and you gotta learn a what?",
+      "Lesson",
+      "Language",
+      "Trick"
+     ],
+     [
+      "You gotta get your fingers what?",
+      "Dusty",
+      "Dirty",
+      "Ready"
+     ],
+     [
+      "Keep your ear to the street so you won't get what?",
+      "Rusty",
+      "Lost",
+      "Lazy"
+     ],
+     [
+      "Concentrate on the what vibe?",
+      "Funk",
+      "Soul",
+      "Jazz"
+     ],
+     [
+      "Learn your roots and put on your what?",
+      "Timberland boots",
+      "Shell-toes",
+      "Fitted cap"
+     ],
+     [
+      "He's true to his art, he never fakes a what?",
+      "Move",
+      "Rhyme",
+      "Smile"
+     ],
+     [
+      "He keeps your head bobbing to what kind of groove?",
+      "Psychotic",
+      "Jazzy",
+      "Smooth"
+     ],
+     [
+      "He loves beats so much he's near what?",
+      "Neurotic",
+      "Exotic",
+      "Hypnotic"
+     ]
+    ],
+    [
+     [
+      "He samples beats they used to do what way back then?",
+      "Cut",
+      "Buy",
+      "Play"
+     ],
+     [
+      "But now the game has what?",
+      "Changed",
+      "Ended",
+      "Grown"
+     ],
+     [
+      "Artists are selling out just to make a what?",
+      "Name",
+      "Mill",
+      "Hit"
+     ],
+     [
+      "Who can't stand it?",
+      "Underground hip-hop fans",
+      "The labels",
+      "The DJs"
+     ],
+     [
+      "Play like which TV cowboy?",
+      "Chuck Connors",
+      "John Wayne",
+      "Clint Eastwood"
+     ],
+     [
+      "Now you're branded a what?",
+      "Sellout",
+      "Legend",
+      "Rookie"
+     ],
+     [
+      "We took a dive because you couldn't what?",
+      "Feel the vibe",
+      "Pay the price",
+      "Find the beat"
+     ],
+     [
+      "Is this the vibe you what?",
+      "Desire",
+      "Require",
+      "Admire"
+     ],
+     [
+      "Diamond is running down the what?",
+      "Line",
+      "Street",
+      "Block"
+     ],
+     [
+      "Let him continue with what's on the what?",
+      "Menu",
+      "Record",
+      "Agenda"
+     ],
+     [
+      "Where did he dig?",
+      "In the crate",
+      "In the yard",
+      "In the vault"
+     ]
+    ],
+    [
+     [
+      "The kid he knew was nice on the what?",
+      "Mic",
+      "Court",
+      "Block"
+     ],
+     [
+      "He had a record deal, but the deal wasn't what?",
+      "Real",
+      "Signed",
+      "Fair"
+     ],
+     [
+      "The record label wouldn't spend any what?",
+      "Loot",
+      "Time",
+      "Effort"
+     ],
+     [
+      "He knew a lot of old what?",
+      "Beats",
+      "Songs",
+      "People"
+     ],
+     [
+      "The label had other ideas for the what?",
+      "Platter",
+      "Album",
+      "Video"
+     ],
+     [
+      "When he heard the song, what did he have to do?",
+      "Scream",
+      "Laugh",
+      "Leave"
+     ],
+     [
+      "They had him rhyming over what?",
+      "Hype drum machines",
+      "Live bands",
+      "Old records"
+     ],
+     [
+      "He didn't like it, but he had no what?",
+      "Say",
+      "Choice",
+      "Money"
+     ],
+     [
+      "Who played the junk anyway?",
+      "The radio",
+      "MTV",
+      "The mixtapes"
+     ],
+     [
+      "Who does he hold a grudge against?",
+      "His ex-label",
+      "His manager",
+      "His crew"
+     ],
+     [
+      "Stick to your roots like a what?",
+      "Troop",
+      "Plant",
+      "Soldier"
+     ]
+    ]
+   ]
   },
   {
-   "title": "The Hiatus",
-   "id": "lGfOq0w7vEI",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Life Is What You Make It",
-   "id": "AYzRDLWZUyo",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "This One",
+   "id": "HNF2oeDxTIA",
+   "start": 22.4,
+   "cuts": [
+    62,
+    130.4,
+    193.7
+   ],
+   "qs": [
+    [
+     [
+      "He loves the way your hair blows in the what?",
+      "Breeze",
+      "Sun",
+      "Rain"
+     ],
+     [
+      "After how many days is he digging on your steez?",
+      "30",
+      "10",
+      "100"
+     ],
+     [
+      "By next year, he'll be down on his what?",
+      "Knees",
+      "Luck",
+      "Feet"
+     ],
+     [
+      "By when will he be down on his knees?",
+      "Next year",
+      "Next week",
+      "Tonight"
+     ],
+     [
+      "He feels like he knew you when he was rockin' what?",
+      "Leaves",
+      "Kangols",
+      "Shell-toes"
+     ],
+     [
+      "He's doing needle drops on which record?",
+      "Pass the Peas",
+      "Funky Drummer",
+      "Impeach the President"
+     ],
+     [
+      "They go together like whom?",
+      "George and Louise",
+      "Bonnie and Clyde",
+      "Ike and Tina"
+     ],
+     [
+      "Gift certificates from where?",
+      "Tiffany's",
+      "Macy's",
+      "Gucci"
+     ],
+     [
+      "He even showed you the what?",
+      "Safe",
+      "Studio",
+      "Car"
+     ],
+     [
+      "He used to toss and turn, now he does what with ease?",
+      "Doze",
+      "Breathe",
+      "Smile"
+     ],
+     [
+      "He wants to grow old within your what?",
+      "Squeeze",
+      "Arms",
+      "House"
+     ]
+    ],
+    [
+     [
+      "Sails at night on which seas?",
+      "Caribbean",
+      "Mediterranean",
+      "Pacific"
+     ],
+     [
+      "Coastal trips in drop-top what?",
+      "Z's",
+      "Benz",
+      "Jeeps"
+     ],
+     [
+      "Eatin' at charities at how much a plate?",
+      "A thousand",
+      "A hundred",
+      "Ten thousand"
+     ],
+     [
+      "She even had him on a pair of what?",
+      "Ice skates",
+      "Roller skates",
+      "Skis"
+     ],
+     [
+      "She turned him on to snackin' on what?",
+      "Rice cakes",
+      "Pancakes",
+      "Cupcakes"
+     ],
+     [
+      "When it comes to lovin', there's no what?",
+      "Debate",
+      "Doubt",
+      "Limit"
+     ],
+     [
+      "He takes it slow like he's on a what?",
+      "Blind date",
+      "First date",
+      "Long drive"
+     ],
+     [
+      "Who did she have set some bait?",
+      "Her girlfriend",
+      "Her sister",
+      "Her mother"
+     ],
+     [
+      "She wanted to see if his love would do what?",
+      "Disintegrate",
+      "Grow",
+      "Last"
+     ],
+     [
+      "He stays up late, hits the crates and does what?",
+      "Creates",
+      "Celebrates",
+      "Meditates"
+     ],
+     [
+      "He makes an atmosphere where they can what?",
+      "Contemplate",
+      "Celebrate",
+      "Relax"
+     ]
+    ],
+    [
+     [
+      "He likes to reminisce about your soft what?",
+      "Embrace",
+      "Voice",
+      "Smile"
+     ],
+     [
+      "No more shorts, now you're rollin' with a what?",
+      "Ace",
+      "King",
+      "Queen"
+     ],
+     [
+      "She's got him listening to Monica and whom?",
+      "Case",
+      "Brandy",
+      "Usher"
+     ],
+     [
+      "How big is the place they're living in now?",
+      "Six thousand square feet",
+      "Two bedrooms",
+      "A penthouse"
+     ],
+     [
+      "The memories can't be what?",
+      "Erased",
+      "Replaced",
+      "Repeated"
+     ],
+     [
+      "Which street was it when he first threw base?",
+      "125",
+      "116",
+      "145"
+     ],
+     [
+      "He was a little what, but still gave chase?",
+      "Shy",
+      "Late",
+      "Broke"
+     ],
+     [
+      "He was mesmerized by your what?",
+      "Exotic taste",
+      "Pretty smile",
+      "Fancy style"
+     ],
+     [
+      "She said she'd be there if he falls from what?",
+      "Grace",
+      "The top",
+      "The sky"
+     ],
+     [
+      "Till the day he dies, he'll stay in the what?",
+      "Race",
+      "Game",
+      "Booth"
+     ],
+     [
+      "Who does he put it on at the end?",
+      "Black Stace",
+      "Big Mike",
+      "Lord Finesse"
+     ]
+    ]
+   ]
   },
   {
    "title": "Sally Got a One Track Mind",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "My DJ Spits Betta Than U",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "JDNspO6BMkU",
+   "start": 8.5,
+   "cuts": [
+    49.1,
+    122,
+    178.8
+   ],
+   "qs": [
+    [
+     [
+      "Sally got a one track what?",
+      "Mind",
+      "Heart",
+      "Life"
+     ],
+     [
+      "It doesn't matter if it's yours or what?",
+      "Mine",
+      "His",
+      "Theirs"
+     ],
+     [
+      "In the hook, what do you have to be gettin'?",
+      "Doe",
+      "Famous",
+      "Food"
+     ],
+     [
+      "What was the girl's name?",
+      "Sally",
+      "Susie",
+      "Sandy"
+     ],
+     [
+      "Her tastes were what?",
+      "Exquisite",
+      "Simple",
+      "Strange"
+     ],
+     [
+      "Which store does he mention?",
+      "Saks Fifth Avenue",
+      "Macy's",
+      "Bloomingdale's"
+     ],
+     [
+      "When she was a child, her parents had what?",
+      "Money",
+      "Problems",
+      "A store"
+     ],
+     [
+      "She was spoiled what?",
+      "Rotten",
+      "Silly",
+      "Sweet"
+     ],
+     [
+      "How things had gotten what?",
+      "Worse",
+      "Better",
+      "Strange"
+     ],
+     [
+      "She'll start to switch if her what begins to itch?",
+      "Palms",
+      "Feet",
+      "Nose"
+     ],
+     [
+      "It was quite amusing, but little did she what?",
+      "Know",
+      "Care",
+      "Show"
+     ]
+    ],
+    [
+     [
+      "She was sweet sixteen but looked how old?",
+      "21",
+      "18",
+      "25"
+     ],
+     [
+      "She dissed her friends for a man in a what?",
+      "Benz",
+      "Jeep",
+      "Cab"
+     ],
+     [
+      "The next one drives a what?",
+      "Beamer",
+      "Jaguar",
+      "Lexus"
+     ],
+     [
+      "Wake up girl, don't be a what?",
+      "Day dreamer",
+      "Heartbreaker",
+      "Sleepwalker"
+     ],
+     [
+      "How old is Sally in the second verse?",
+      "19",
+      "21",
+      "17"
+     ],
+     [
+      "Where does he see her?",
+      "At the clubs",
+      "At the mall",
+      "At church"
+     ],
+     [
+      "Whose mink is she wearing?",
+      "Her girlfriend's",
+      "Her mother's",
+      "Her own"
+     ],
+     [
+      "What does she wonder if he has?",
+      "Any loot",
+      "A car",
+      "A girl"
+     ],
+     [
+      "The lights are dim and the mood is what?",
+      "Mellow",
+      "Hype",
+      "Tense"
+     ],
+     [
+      "What did she grab when she left?",
+      "Her coat",
+      "Her purse",
+      "Her drink"
+     ],
+     [
+      "She told her girlfriends don't rock the what?",
+      "Boat",
+      "Boot",
+      "Party"
+     ]
+    ],
+    [
+     [
+      "At 21, what does she have?",
+      "A son",
+      "A daughter",
+      "A car"
+     ],
+     [
+      "There's no shame in her what?",
+      "Game",
+      "Walk",
+      "Life"
+     ],
+     [
+      "People know her name from her neighborhood what?",
+      "Fame",
+      "Crew",
+      "Block"
+     ],
+     [
+      "Bronx, Manhattan, Brooklyn, and what?",
+      "Staten",
+      "Queens",
+      "Jersey"
+     ],
+     [
+      "Black, Jamaican, Italian, and what?",
+      "Latin",
+      "Irish",
+      "Haitian"
+     ],
+     [
+      "Now she's getting older, she cares about her what?",
+      "Rep",
+      "Weight",
+      "Money"
+     ],
+     [
+      "She's still a hottie, but tries to watch her what?",
+      "Step",
+      "Mouth",
+      "Back"
+     ],
+     [
+      "Where did she grow up?",
+      "The projects",
+      "The suburbs",
+      "Uptown"
+     ],
+     [
+      "Where did she used to play?",
+      "In the grass",
+      "On the stoop",
+      "In the park"
+     ],
+     [
+      "She became a slave to what?",
+      "Material things",
+      "The streets",
+      "The club"
+     ],
+     [
+      "How many chicken wings does she snack on now?",
+      "Four",
+      "Two",
+      "Six"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Feel the Vibe",
+   "id": "HA5Sdio7W6c",
+   "cuts": [
+    39.4,
+    78.6,
+    181
+   ],
+   "qs": [
+    [
+     [
+      "Feel the vibe, everybody gather what?",
+      "Round",
+      "Up",
+      "Close"
+     ],
+     [
+      "He pulls the plug, and still his sound's what?",
+      "Profound",
+      "Loud",
+      "Around"
+     ],
+     [
+      "He had to take hip-hop back to the what?",
+      "Essence",
+      "Future",
+      "Radio"
+     ],
+     [
+      "Try to go commercial, and you gotta learn a what?",
+      "Lesson",
+      "Language",
+      "Trick"
+     ],
+     [
+      "You gotta get your fingers what?",
+      "Dusty",
+      "Dirty",
+      "Ready"
+     ],
+     [
+      "Keep your ear to the street so you won't get what?",
+      "Rusty",
+      "Lost",
+      "Lazy"
+     ],
+     [
+      "Concentrate on the what vibe?",
+      "Funk",
+      "Soul",
+      "Jazz"
+     ],
+     [
+      "Learn your roots and put on your what?",
+      "Timberland boots",
+      "Shell-toes",
+      "Fitted cap"
+     ],
+     [
+      "He's true to his art, he never fakes a what?",
+      "Move",
+      "Rhyme",
+      "Smile"
+     ],
+     [
+      "He keeps your head bobbing to what kind of groove?",
+      "Psychotic",
+      "Jazzy",
+      "Smooth"
+     ],
+     [
+      "He loves beats so much he's near what?",
+      "Neurotic",
+      "Exotic",
+      "Hypnotic"
+     ]
+    ],
+    [
+     [
+      "He samples beats they used to do what way back then?",
+      "Cut",
+      "Buy",
+      "Play"
+     ],
+     [
+      "But now the game has what?",
+      "Changed",
+      "Ended",
+      "Grown"
+     ],
+     [
+      "Artists are selling out just to make a what?",
+      "Name",
+      "Mill",
+      "Hit"
+     ],
+     [
+      "Who can't stand it?",
+      "Underground hip-hop fans",
+      "The labels",
+      "The DJs"
+     ],
+     [
+      "Play like which TV cowboy?",
+      "Chuck Connors",
+      "John Wayne",
+      "Clint Eastwood"
+     ],
+     [
+      "Now you're branded a what?",
+      "Sellout",
+      "Legend",
+      "Rookie"
+     ],
+     [
+      "We took a dive because you couldn't what?",
+      "Feel the vibe",
+      "Pay the price",
+      "Find the beat"
+     ],
+     [
+      "Is this the vibe you what?",
+      "Desire",
+      "Require",
+      "Admire"
+     ],
+     [
+      "Diamond is running down the what?",
+      "Line",
+      "Street",
+      "Block"
+     ],
+     [
+      "Let him continue with what's on the what?",
+      "Menu",
+      "Record",
+      "Agenda"
+     ],
+     [
+      "Where did he dig?",
+      "In the crate",
+      "In the yard",
+      "In the vault"
+     ]
+    ],
+    [
+     [
+      "The kid he knew was nice on the what?",
+      "Mic",
+      "Court",
+      "Block"
+     ],
+     [
+      "He had a record deal, but the deal wasn't what?",
+      "Real",
+      "Signed",
+      "Fair"
+     ],
+     [
+      "The record label wouldn't spend any what?",
+      "Loot",
+      "Time",
+      "Effort"
+     ],
+     [
+      "He knew a lot of old what?",
+      "Beats",
+      "Songs",
+      "People"
+     ],
+     [
+      "The label had other ideas for the what?",
+      "Platter",
+      "Album",
+      "Video"
+     ],
+     [
+      "When he heard the song, what did he have to do?",
+      "Scream",
+      "Laugh",
+      "Leave"
+     ],
+     [
+      "They had him rhyming over what?",
+      "Hype drum machines",
+      "Live bands",
+      "Old records"
+     ],
+     [
+      "He didn't like it, but he had no what?",
+      "Say",
+      "Choice",
+      "Money"
+     ],
+     [
+      "Who played the junk anyway?",
+      "The radio",
+      "MTV",
+      "The mixtapes"
+     ],
+     [
+      "Who does he hold a grudge against?",
+      "His ex-label",
+      "His manager",
+      "His crew"
+     ],
+     [
+      "Stick to your roots like a what?",
+      "Troop",
+      "Plant",
+      "Soldier"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "This One",
+   "id": "HNF2oeDxTIA",
+   "start": 22.4,
+   "cuts": [
+    62,
+    130.4,
+    193.7
+   ],
+   "qs": [
+    [
+     [
+      "He loves the way your hair blows in the what?",
+      "Breeze",
+      "Sun",
+      "Rain"
+     ],
+     [
+      "After how many days is he digging on your steez?",
+      "30",
+      "10",
+      "100"
+     ],
+     [
+      "By next year, he'll be down on his what?",
+      "Knees",
+      "Luck",
+      "Feet"
+     ],
+     [
+      "By when will he be down on his knees?",
+      "Next year",
+      "Next week",
+      "Tonight"
+     ],
+     [
+      "He feels like he knew you when he was rockin' what?",
+      "Leaves",
+      "Kangols",
+      "Shell-toes"
+     ],
+     [
+      "He's doing needle drops on which record?",
+      "Pass the Peas",
+      "Funky Drummer",
+      "Impeach the President"
+     ],
+     [
+      "They go together like whom?",
+      "George and Louise",
+      "Bonnie and Clyde",
+      "Ike and Tina"
+     ],
+     [
+      "Gift certificates from where?",
+      "Tiffany's",
+      "Macy's",
+      "Gucci"
+     ],
+     [
+      "He even showed you the what?",
+      "Safe",
+      "Studio",
+      "Car"
+     ],
+     [
+      "He used to toss and turn, now he does what with ease?",
+      "Doze",
+      "Breathe",
+      "Smile"
+     ],
+     [
+      "He wants to grow old within your what?",
+      "Squeeze",
+      "Arms",
+      "House"
+     ]
+    ],
+    [
+     [
+      "Sails at night on which seas?",
+      "Caribbean",
+      "Mediterranean",
+      "Pacific"
+     ],
+     [
+      "Coastal trips in drop-top what?",
+      "Z's",
+      "Benz",
+      "Jeeps"
+     ],
+     [
+      "Eatin' at charities at how much a plate?",
+      "A thousand",
+      "A hundred",
+      "Ten thousand"
+     ],
+     [
+      "She even had him on a pair of what?",
+      "Ice skates",
+      "Roller skates",
+      "Skis"
+     ],
+     [
+      "She turned him on to snackin' on what?",
+      "Rice cakes",
+      "Pancakes",
+      "Cupcakes"
+     ],
+     [
+      "When it comes to lovin', there's no what?",
+      "Debate",
+      "Doubt",
+      "Limit"
+     ],
+     [
+      "He takes it slow like he's on a what?",
+      "Blind date",
+      "First date",
+      "Long drive"
+     ],
+     [
+      "Who did she have set some bait?",
+      "Her girlfriend",
+      "Her sister",
+      "Her mother"
+     ],
+     [
+      "She wanted to see if his love would do what?",
+      "Disintegrate",
+      "Grow",
+      "Last"
+     ],
+     [
+      "He stays up late, hits the crates and does what?",
+      "Creates",
+      "Celebrates",
+      "Meditates"
+     ],
+     [
+      "He makes an atmosphere where they can what?",
+      "Contemplate",
+      "Celebrate",
+      "Relax"
+     ]
+    ],
+    [
+     [
+      "He likes to reminisce about your soft what?",
+      "Embrace",
+      "Voice",
+      "Smile"
+     ],
+     [
+      "No more shorts, now you're rollin' with a what?",
+      "Ace",
+      "King",
+      "Queen"
+     ],
+     [
+      "She's got him listening to Monica and whom?",
+      "Case",
+      "Brandy",
+      "Usher"
+     ],
+     [
+      "How big is the place they're living in now?",
+      "Six thousand square feet",
+      "Two bedrooms",
+      "A penthouse"
+     ],
+     [
+      "The memories can't be what?",
+      "Erased",
+      "Replaced",
+      "Repeated"
+     ],
+     [
+      "Which street was it when he first threw base?",
+      "125",
+      "116",
+      "145"
+     ],
+     [
+      "He was a little what, but still gave chase?",
+      "Shy",
+      "Late",
+      "Broke"
+     ],
+     [
+      "He was mesmerized by your what?",
+      "Exotic taste",
+      "Pretty smile",
+      "Fancy style"
+     ],
+     [
+      "She said she'd be there if he falls from what?",
+      "Grace",
+      "The top",
+      "The sky"
+     ],
+     [
+      "Till the day he dies, he'll stay in the what?",
+      "Race",
+      "Game",
+      "Booth"
+     ],
+     [
+      "Who does he put it on at the end?",
+      "Black Stace",
+      "Big Mike",
+      "Lord Finesse"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Sally Got a One Track Mind",
+   "id": "JDNspO6BMkU",
+   "start": 8.5,
+   "cuts": [
+    49.1,
+    122,
+    178.8
+   ],
+   "qs": [
+    [
+     [
+      "Sally got a one track what?",
+      "Mind",
+      "Heart",
+      "Life"
+     ],
+     [
+      "It doesn't matter if it's yours or what?",
+      "Mine",
+      "His",
+      "Theirs"
+     ],
+     [
+      "In the hook, what do you have to be gettin'?",
+      "Doe",
+      "Famous",
+      "Food"
+     ],
+     [
+      "What was the girl's name?",
+      "Sally",
+      "Susie",
+      "Sandy"
+     ],
+     [
+      "Her tastes were what?",
+      "Exquisite",
+      "Simple",
+      "Strange"
+     ],
+     [
+      "Which store does he mention?",
+      "Saks Fifth Avenue",
+      "Macy's",
+      "Bloomingdale's"
+     ],
+     [
+      "When she was a child, her parents had what?",
+      "Money",
+      "Problems",
+      "A store"
+     ],
+     [
+      "She was spoiled what?",
+      "Rotten",
+      "Silly",
+      "Sweet"
+     ],
+     [
+      "How things had gotten what?",
+      "Worse",
+      "Better",
+      "Strange"
+     ],
+     [
+      "She'll start to switch if her what begins to itch?",
+      "Palms",
+      "Feet",
+      "Nose"
+     ],
+     [
+      "It was quite amusing, but little did she what?",
+      "Know",
+      "Care",
+      "Show"
+     ]
+    ],
+    [
+     [
+      "She was sweet sixteen but looked how old?",
+      "21",
+      "18",
+      "25"
+     ],
+     [
+      "She dissed her friends for a man in a what?",
+      "Benz",
+      "Jeep",
+      "Cab"
+     ],
+     [
+      "The next one drives a what?",
+      "Beamer",
+      "Jaguar",
+      "Lexus"
+     ],
+     [
+      "Wake up girl, don't be a what?",
+      "Day dreamer",
+      "Heartbreaker",
+      "Sleepwalker"
+     ],
+     [
+      "How old is Sally in the second verse?",
+      "19",
+      "21",
+      "17"
+     ],
+     [
+      "Where does he see her?",
+      "At the clubs",
+      "At the mall",
+      "At church"
+     ],
+     [
+      "Whose mink is she wearing?",
+      "Her girlfriend's",
+      "Her mother's",
+      "Her own"
+     ],
+     [
+      "What does she wonder if he has?",
+      "Any loot",
+      "A car",
+      "A girl"
+     ],
+     [
+      "The lights are dim and the mood is what?",
+      "Mellow",
+      "Hype",
+      "Tense"
+     ],
+     [
+      "What did she grab when she left?",
+      "Her coat",
+      "Her purse",
+      "Her drink"
+     ],
+     [
+      "She told her girlfriends don't rock the what?",
+      "Boat",
+      "Boot",
+      "Party"
+     ]
+    ],
+    [
+     [
+      "At 21, what does she have?",
+      "A son",
+      "A daughter",
+      "A car"
+     ],
+     [
+      "There's no shame in her what?",
+      "Game",
+      "Walk",
+      "Life"
+     ],
+     [
+      "People know her name from her neighborhood what?",
+      "Fame",
+      "Crew",
+      "Block"
+     ],
+     [
+      "Bronx, Manhattan, Brooklyn, and what?",
+      "Staten",
+      "Queens",
+      "Jersey"
+     ],
+     [
+      "Black, Jamaican, Italian, and what?",
+      "Latin",
+      "Irish",
+      "Haitian"
+     ],
+     [
+      "Now she's getting older, she cares about her what?",
+      "Rep",
+      "Weight",
+      "Money"
+     ],
+     [
+      "She's still a hottie, but tries to watch her what?",
+      "Step",
+      "Mouth",
+      "Back"
+     ],
+     [
+      "Where did she grow up?",
+      "The projects",
+      "The suburbs",
+      "Uptown"
+     ],
+     [
+      "Where did she used to play?",
+      "In the grass",
+      "On the stoop",
+      "In the park"
+     ],
+     [
+      "She became a slave to what?",
+      "Material things",
+      "The streets",
+      "The club"
+     ],
+     [
+      "How many chicken wings does she snack on now?",
+      "Four",
+      "Two",
+      "Six"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
