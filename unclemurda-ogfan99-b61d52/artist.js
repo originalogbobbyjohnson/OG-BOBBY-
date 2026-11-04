@@ -88,60 +88,1373 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Lean On Me",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Happy to Be Here",
+   "id": "E-CROrmGANQ",
+   "start": 13.5,
+   "cuts": [
+    55.35,
+    74.24,
+    101.69
+   ],
+   "qs": [
+    [
+     [
+      "\"Always ___, it's lit\"",
+      "Shining",
+      "Grinding",
+      "Winning"
+     ],
+     [
+      "He's got the what, and he's drippin'?",
+      "Sauce",
+      "Juice",
+      "Swag"
+     ],
+     [
+      "Where does he say he came from?",
+      "The bottom",
+      "The top",
+      "The middle"
+     ],
+     [
+      "\"From the bottom but I'm ___ now\"",
+      "Up",
+      "Rich",
+      "Out"
+     ],
+     [
+      "What does everybody wanna say to him now?",
+      "What's up",
+      "Congrats",
+      "Hello"
+     ],
+     [
+      "What did his old crib have in it?",
+      "Roaches",
+      "Mice",
+      "Leaks"
+     ],
+     [
+      "\"We ain't even ___ to be here\"",
+      "Supposed",
+      "Allowed",
+      "Invited"
+     ]
+    ],
+    [
+     [
+      "What did the old crib do for him?",
+      "Motivated him",
+      "Scared him",
+      "Slowed him down"
+     ],
+     [
+      "He didn't grow up with a silver what?",
+      "Spoon",
+      "Chain",
+      "Plate"
+     ],
+     [
+      "Where did he grow up?",
+      "The projects",
+      "The suburbs",
+      "A mansion"
+     ],
+     [
+      "As a kid he was watching what kind of movies?",
+      "Gangsta movies",
+      "Kung fu movies",
+      "Horror movies"
+     ],
+     [
+      "What wasn't he really into watching?",
+      "Cartoons",
+      "Sports",
+      "The news"
+     ],
+     [
+      "What father figure did he have growing up?",
+      "Never had one",
+      "His uncle",
+      "His coach"
+     ],
+     [
+      "How was he always as a kid?",
+      "Upset",
+      "Happy",
+      "Quiet"
+     ]
+    ],
+    [
+     [
+      "\"Dub that, where the ___ at?\"",
+      "Bag",
+      "Party",
+      "Car"
+     ],
+     [
+      "He caught cases and did what?",
+      "Beat them",
+      "Lost them",
+      "Paid them"
+     ],
+     [
+      "He's lucky he ain't where who's at?",
+      "Big Meech",
+      "Gotti",
+      "Nicky Barnes"
+     ],
+     [
+      "He went from ashy to what?",
+      "Classy",
+      "Flashy",
+      "Cashy"
+     ],
+     [
+      "He calls himself a skinny who?",
+      "Biggie",
+      "Pun",
+      "Nas"
+     ],
+     [
+      "He got away with a lot, so he says he's what?",
+      "Lucky",
+      "Blessed",
+      "Smart"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Rap Up",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Bro Shit",
+   "id": "JHL3_7P4tZ8",
+   "start": 35,
+   "cuts": [
+    67.1,
+    141.3,
+    170.9
+   ],
+   "qs": [
+    [
+     [
+      "He's too what to be around fake stuff?",
+      "Real",
+      "Rich",
+      "Busy"
+     ],
+     [
+      "What ain't gotta be cut for him to see the snakes?",
+      "Grass",
+      "Hair",
+      "Trees"
+     ],
+     [
+      "Who does he say could see that?",
+      "Stevie Wonder",
+      "Ray Charles",
+      "Helen Keller"
+     ],
+     [
+      "He expects others to switch up on him, but not who?",
+      "You",
+      "His mom",
+      "His crew"
+     ],
+     [
+      "You burned the bridge and can't do what?",
+      "Swim",
+      "Fly",
+      "Run"
+     ],
+     [
+      "If all he had was twenty dollars, how much would he give you?",
+      "Ten",
+      "Five",
+      "Twenty"
+     ],
+     [
+      "\"You ain't my ___\"",
+      "Bro",
+      "Friend",
+      "Dog"
+     ]
+    ],
+    [
+     [
+      "He ain't with all the second what?",
+      "Guessing",
+      "Chances",
+      "Opinions"
+     ],
+     [
+      "He's only loyal to people whose loyalty he ain't gotta what?",
+      "Question",
+      "Buy",
+      "Earn"
+     ],
+     [
+      "The fake stuff is at an all-time what?",
+      "High",
+      "Low",
+      "Record"
+     ],
+     [
+      "He's just keeping it a what, fam?",
+      "Hunnid",
+      "Secret",
+      "Thousand"
+     ],
+     [
+      "What kind of stuff does he say to miss him with?",
+      "Phony",
+      "Petty",
+      "Loud"
+     ],
+     [
+      "Doing a bid would've been time away from his what?",
+      "Kids",
+      "Wife",
+      "Money"
+     ],
+     [
+      "He thought they were on some real what stuff?",
+      "Homie",
+      "Business",
+      "Family"
+     ]
+    ],
+    [
+     [
+      "They used to hold each other what?",
+      "Down",
+      "Up",
+      "Close"
+     ],
+     [
+      "\"You know, ___ and Bobby\"",
+      "Rowdy",
+      "Rocky",
+      "Ricky"
+     ],
+     [
+      "He's Michael Jordan, and you're who?",
+      "Scotty",
+      "Magic",
+      "Kobe"
+     ],
+     [
+      "Growing up, the closest thing they had to a father was who?",
+      "Bill Cosby",
+      "Uncle Phil",
+      "Their coach"
+     ],
+     [
+      "The only thing they didn't have was the same what?",
+      "Mommy",
+      "Block",
+      "Last name"
+     ],
+     [
+      "When he pulled up, where were you?",
+      "Right behind him",
+      "Across the street",
+      "At home"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Use To Be",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Dead or Broke",
+   "id": "69ORDWaQ30Y",
+   "start": 24.7,
+   "cuts": [
+    50.5,
+    67.9,
+    81.4
+   ],
+   "qs": [
+    [
+     [
+      "He's done everything they said he what?",
+      "Can't do",
+      "Should do",
+      "Would do"
+     ],
+     [
+      "People thought he'd be gone before turning what age?",
+      "22",
+      "21",
+      "25"
+     ],
+     [
+      "\"I was in the ___ for real\"",
+      "Field",
+      "Game",
+      "Studio"
+     ],
+     [
+      "He ain't never ducked what?",
+      "Smoke",
+      "Work",
+      "Calls"
+     ],
+     [
+      "The song title: Dead or what?",
+      "Broke",
+      "Alive",
+      "Gone"
+     ],
+     [
+      "They thought he would've been doing what?",
+      "Life",
+      "Ten years",
+      "Shows"
+     ]
+    ],
+    [
+     [
+      "He's what, ain't no disputing?",
+      "Official",
+      "Famous",
+      "Rich"
+     ],
+     [
+      "When they see him they start what?",
+      "Saluting",
+      "Running",
+      "Clapping"
+     ],
+     [
+      "\"We was livin' in the ___ when that happened\"",
+      "Projects",
+      "Suburbs",
+      "Bronx"
+     ],
+     [
+      "The projects were like the what?",
+      "Carter",
+      "Marcy",
+      "Queensbridge"
+     ],
+     [
+      "Who told his pops he's not the father?",
+      "Maury",
+      "Jerry Springer",
+      "Judge Judy"
+     ],
+     [
+      "What did his pops do?",
+      "Left",
+      "Stayed",
+      "Called"
+     ]
+    ],
+    [
+     [
+      "\"These facts, no ___\"",
+      "Punchlines",
+      "Lies",
+      "Cap"
+     ],
+     [
+      "He gets too what sometimes?",
+      "In-depth",
+      "Emotional",
+      "Loud"
+     ],
+     [
+      "Taking food off the table like who?",
+      "Bullies",
+      "Kids",
+      "Teachers"
+     ],
+     [
+      "Like bullies during what?",
+      "Lunchtime",
+      "Recess",
+      "Class"
+     ],
+     [
+      "He never claims to be what?",
+      "Innocent",
+      "Perfect",
+      "Famous"
+     ],
+     [
+      "He says he's from a broken what?",
+      "Home",
+      "Block",
+      "Heart"
+     ],
+     [
+      "He grew up in which decade?",
+      "The '90s",
+      "The '80s",
+      "The 2000s"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Money",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Live From Romania",
+   "id": "uGlIT-HItD8",
+   "cuts": [
+    36.65,
+    72.4,
+    117.8
+   ],
+   "qs": [
+    [
+     [
+      "How many people were screaming while they were on stage?",
+      "A hundred thousand",
+      "Ten thousand",
+      "A million"
+     ],
+     [
+      "Who's paying him to be there?",
+      "50",
+      "Diddy",
+      "Jay"
+     ],
+     [
+      "Who's gonna get to spend this paper?",
+      "His grandkids",
+      "His kids",
+      "His crew"
+     ],
+     [
+      "He got rich off Get Rich or Die Tryin' how many years later?",
+      "20",
+      "10",
+      "15"
+     ],
+     [
+      "He sleeps in the best hotels and eats what kind of breakfast?",
+      "Complimentary",
+      "Room service",
+      "Continental"
+     ],
+     [
+      "They should put his life on what?",
+      "Cable",
+      "Netflix",
+      "Broadway"
+     ],
+     [
+      "They perform in little clubs, but he's in what?",
+      "Arenas",
+      "Stadiums",
+      "Theaters"
+     ]
+    ],
+    [
+     [
+      "The world tour felt like a paid what?",
+      "Vacation",
+      "Workout",
+      "Lesson"
+     ],
+     [
+      "He just bought a new what?",
+      "House",
+      "Car",
+      "Chain"
+     ],
+     [
+      "He came a long way from the what?",
+      "Trenches",
+      "Corner",
+      "Bottom"
+     ],
+     [
+      "He smiles like he just came from the what?",
+      "Dentist",
+      "Bank",
+      "Barber"
+     ],
+     [
+      "Give him his what now?",
+      "Flowers",
+      "Money",
+      "Respect"
+     ],
+     [
+      "Who said he reminds him of Biggie?",
+      "Nas",
+      "Jay-Z",
+      "Diddy"
+     ],
+     [
+      "Where did Nas say it?",
+      "Twitter",
+      "Instagram",
+      "On the radio"
+     ]
+    ],
+    [
+     [
+      "His lawyer won't take his money if he can't beat the what?",
+      "Charge",
+      "Odds",
+      "Clock"
+     ],
+     [
+      "Cop out or go to what?",
+      "Trial",
+      "Church",
+      "Sleep"
+     ],
+     [
+      "Or do the what man, on the run?",
+      "Gingerbread",
+      "Invisible",
+      "Iron"
+     ],
+     [
+      "They'll put your picture up in every what?",
+      "Precinct",
+      "Store",
+      "Paper"
+     ],
+     [
+      "The statute of limitations holds how many years?",
+      "Seven",
+      "Five",
+      "Ten"
+     ],
+     [
+      "They be in the club thinking we don't what?",
+      "See 'em",
+      "Hear 'em",
+      "Know 'em"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Don't Talk About It",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Money (feat. Jadakiss)",
+   "id": "TL7WtDZHVYQ",
+   "cuts": [
+    41.8,
+    67.75,
+    83.45
+   ],
+   "qs": [
+    [
+     [
+      "\"Money isn't real,\" who?",
+      "George",
+      "Jimmy",
+      "Frank"
+     ],
+     [
+      "Money is pieces of paper with what on it?",
+      "Pictures",
+      "Numbers",
+      "Names"
+     ],
+     [
+      "Who's on the beat?",
+      "Great John",
+      "Metro",
+      "Cre Charmin'"
+     ],
+     [
+      "He'll marry the money and never do what?",
+      "Cheat on it",
+      "Spend it",
+      "Lose it"
+     ],
+     [
+      "They say all money ain't what?",
+      "Good money",
+      "Real money",
+      "Easy money"
+     ],
+     [
+      "He wishes Tupac never took whose money?",
+      "Suge's",
+      "Diddy's",
+      "Death Row's"
+     ],
+     [
+      "Giving quality time, never what the money?",
+      "Neglectin'",
+      "Spendin'",
+      "Countin'"
+     ]
+    ],
+    [
+     [
+      "Money ain't everything, but it's what?",
+      "Everything",
+      "Nothing",
+      "Something"
+     ],
+     [
+      "You can buy whatever you want, like what?",
+      "Anything",
+      "Diamonds",
+      "Cars"
+     ],
+     [
+      "You can't buy what when it's time to ride?",
+      "Heart",
+      "Time",
+      "Friends"
+     ],
+     [
+      "Money don't make the what?",
+      "Man",
+      "Team",
+      "Boss"
+     ],
+     [
+      "You can buy all kinds of what?",
+      "Designer",
+      "Jewelry",
+      "Sneakers"
+     ],
+     [
+      "She's bouncin', she's not a what?",
+      "Rider",
+      "Keeper",
+      "Wifey"
+     ],
+     [
+      "Money can't buy you what?",
+      "Loyalty",
+      "Love",
+      "Time"
+     ]
+    ],
+    [
+     [
+      "Getting money don't mean he's what?",
+      "Tough",
+      "Smart",
+      "Real"
+     ],
+     [
+      "He'll be telling as soon as police put on the what?",
+      "Cuffs",
+      "Lights",
+      "Sirens"
+     ],
+     [
+      "He's scared to go where?",
+      "Jail",
+      "Court",
+      "Home"
+     ],
+     [
+      "You gotta earn your what?",
+      "Reputation",
+      "Money",
+      "Respect"
+     ],
+     [
+      "Real make money, money make what?",
+      "Fake",
+      "Friends",
+      "Enemies"
+     ],
+     [
+      "\"But y'all don't ___ me though\"",
+      "Hear",
+      "See",
+      "Feel"
+     ]
+    ]
+   ]
+  }
+ ],
+ "explicitSongs": [
+  {
+   "title": "Happy to Be Here",
+   "id": "E-CROrmGANQ",
+   "start": 13.5,
+   "cuts": [
+    55.35,
+    74.24,
+    101.69
+   ],
+   "qs": [
+    [
+     [
+      "\"Always ___, it's lit\"",
+      "Shining",
+      "Grinding",
+      "Winning"
+     ],
+     [
+      "He's got the what, and he's drippin'?",
+      "Sauce",
+      "Juice",
+      "Swag"
+     ],
+     [
+      "Where does he say he came from?",
+      "The bottom",
+      "The top",
+      "The middle"
+     ],
+     [
+      "\"From the bottom but I'm ___ now\"",
+      "Up",
+      "Rich",
+      "Out"
+     ],
+     [
+      "What does everybody wanna say to him now?",
+      "What's up",
+      "Congrats",
+      "Hello"
+     ],
+     [
+      "What did his old crib have in it?",
+      "Roaches",
+      "Mice",
+      "Leaks"
+     ],
+     [
+      "\"We ain't even ___ to be here\"",
+      "Supposed",
+      "Allowed",
+      "Invited"
+     ]
+    ],
+    [
+     [
+      "What did the old crib do for him?",
+      "Motivated him",
+      "Scared him",
+      "Slowed him down"
+     ],
+     [
+      "He didn't grow up with a silver what?",
+      "Spoon",
+      "Chain",
+      "Plate"
+     ],
+     [
+      "Where did he grow up?",
+      "The projects",
+      "The suburbs",
+      "A mansion"
+     ],
+     [
+      "As a kid he was watching what kind of movies?",
+      "Gangsta movies",
+      "Kung fu movies",
+      "Horror movies"
+     ],
+     [
+      "What wasn't he really into watching?",
+      "Cartoons",
+      "Sports",
+      "The news"
+     ],
+     [
+      "What father figure did he have growing up?",
+      "Never had one",
+      "His uncle",
+      "His coach"
+     ],
+     [
+      "How was he always as a kid?",
+      "Upset",
+      "Happy",
+      "Quiet"
+     ]
+    ],
+    [
+     [
+      "\"Dub that, where the ___ at?\"",
+      "Bag",
+      "Party",
+      "Car"
+     ],
+     [
+      "He caught cases and did what?",
+      "Beat them",
+      "Lost them",
+      "Paid them"
+     ],
+     [
+      "He's lucky he ain't where who's at?",
+      "Big Meech",
+      "Gotti",
+      "Nicky Barnes"
+     ],
+     [
+      "He went from ashy to what?",
+      "Classy",
+      "Flashy",
+      "Cashy"
+     ],
+     [
+      "He calls himself a skinny who?",
+      "Biggie",
+      "Pun",
+      "Nas"
+     ],
+     [
+      "He got away with a lot, so he says he's what?",
+      "Lucky",
+      "Blessed",
+      "Smart"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Brother & Sister",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Bro Shit",
+   "id": "JHL3_7P4tZ8",
+   "start": 35,
+   "cuts": [
+    67.1,
+    141.3,
+    170.9
+   ],
+   "qs": [
+    [
+     [
+      "He's too what to be around fake stuff?",
+      "Real",
+      "Rich",
+      "Busy"
+     ],
+     [
+      "What ain't gotta be cut for him to see the snakes?",
+      "Grass",
+      "Hair",
+      "Trees"
+     ],
+     [
+      "Who does he say could see that?",
+      "Stevie Wonder",
+      "Ray Charles",
+      "Helen Keller"
+     ],
+     [
+      "He expects others to switch up on him, but not who?",
+      "You",
+      "His mom",
+      "His crew"
+     ],
+     [
+      "You burned the bridge and can't do what?",
+      "Swim",
+      "Fly",
+      "Run"
+     ],
+     [
+      "If all he had was twenty dollars, how much would he give you?",
+      "Ten",
+      "Five",
+      "Twenty"
+     ],
+     [
+      "\"You ain't my ___\"",
+      "Bro",
+      "Friend",
+      "Dog"
+     ]
+    ],
+    [
+     [
+      "He ain't with all the second what?",
+      "Guessing",
+      "Chances",
+      "Opinions"
+     ],
+     [
+      "He's only loyal to people whose loyalty he ain't gotta what?",
+      "Question",
+      "Buy",
+      "Earn"
+     ],
+     [
+      "The fake stuff is at an all-time what?",
+      "High",
+      "Low",
+      "Record"
+     ],
+     [
+      "He's just keeping it a what, fam?",
+      "Hunnid",
+      "Secret",
+      "Thousand"
+     ],
+     [
+      "What kind of stuff does he say to miss him with?",
+      "Phony",
+      "Petty",
+      "Loud"
+     ],
+     [
+      "Doing a bid would've been time away from his what?",
+      "Kids",
+      "Wife",
+      "Money"
+     ],
+     [
+      "He thought they were on some real what stuff?",
+      "Homie",
+      "Business",
+      "Family"
+     ]
+    ],
+    [
+     [
+      "They used to hold each other what?",
+      "Down",
+      "Up",
+      "Close"
+     ],
+     [
+      "\"You know, ___ and Bobby\"",
+      "Rowdy",
+      "Rocky",
+      "Ricky"
+     ],
+     [
+      "He's Michael Jordan, and you're who?",
+      "Scotty",
+      "Magic",
+      "Kobe"
+     ],
+     [
+      "Growing up, the closest thing they had to a father was who?",
+      "Bill Cosby",
+      "Uncle Phil",
+      "Their coach"
+     ],
+     [
+      "The only thing they didn't have was the same what?",
+      "Mommy",
+      "Block",
+      "Last name"
+     ],
+     [
+      "When he pulled up, where were you?",
+      "Right behind him",
+      "Across the street",
+      "At home"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Change Gone Come",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Dead or Broke",
+   "id": "69ORDWaQ30Y",
+   "start": 24.7,
+   "cuts": [
+    50.5,
+    67.9,
+    81.4
+   ],
+   "qs": [
+    [
+     [
+      "He's done everything they said he what?",
+      "Can't do",
+      "Should do",
+      "Would do"
+     ],
+     [
+      "People thought he'd be gone before turning what age?",
+      "22",
+      "21",
+      "25"
+     ],
+     [
+      "\"I was in the ___ for real\"",
+      "Field",
+      "Game",
+      "Studio"
+     ],
+     [
+      "He ain't never ducked what?",
+      "Smoke",
+      "Work",
+      "Calls"
+     ],
+     [
+      "The song title: Dead or what?",
+      "Broke",
+      "Alive",
+      "Gone"
+     ],
+     [
+      "They thought he would've been doing what?",
+      "Life",
+      "Ten years",
+      "Shows"
+     ]
+    ],
+    [
+     [
+      "He's what, ain't no disputing?",
+      "Official",
+      "Famous",
+      "Rich"
+     ],
+     [
+      "When they see him they start what?",
+      "Saluting",
+      "Running",
+      "Clapping"
+     ],
+     [
+      "\"We was livin' in the ___ when that happened\"",
+      "Projects",
+      "Suburbs",
+      "Bronx"
+     ],
+     [
+      "The projects were like the what?",
+      "Carter",
+      "Marcy",
+      "Queensbridge"
+     ],
+     [
+      "Who told his pops he's not the father?",
+      "Maury",
+      "Jerry Springer",
+      "Judge Judy"
+     ],
+     [
+      "What did his pops do?",
+      "Left",
+      "Stayed",
+      "Called"
+     ]
+    ],
+    [
+     [
+      "\"These facts, no ___\"",
+      "Punchlines",
+      "Lies",
+      "Cap"
+     ],
+     [
+      "He gets too what sometimes?",
+      "In-depth",
+      "Emotional",
+      "Loud"
+     ],
+     [
+      "Taking food off the table like who?",
+      "Bullies",
+      "Kids",
+      "Teachers"
+     ],
+     [
+      "Like bullies during what?",
+      "Lunchtime",
+      "Recess",
+      "Class"
+     ],
+     [
+      "He never claims to be what?",
+      "Innocent",
+      "Perfect",
+      "Famous"
+     ],
+     [
+      "He says he's from a broken what?",
+      "Home",
+      "Block",
+      "Heart"
+     ],
+     [
+      "He grew up in which decade?",
+      "The '90s",
+      "The '80s",
+      "The 2000s"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Freedom",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Live From Romania",
+   "id": "uGlIT-HItD8",
+   "cuts": [
+    36.65,
+    72.4,
+    117.8
+   ],
+   "qs": [
+    [
+     [
+      "How many people were screaming while they were on stage?",
+      "A hundred thousand",
+      "Ten thousand",
+      "A million"
+     ],
+     [
+      "Who's paying him to be there?",
+      "50",
+      "Diddy",
+      "Jay"
+     ],
+     [
+      "Who's gonna get to spend this paper?",
+      "His grandkids",
+      "His kids",
+      "His crew"
+     ],
+     [
+      "He got rich off Get Rich or Die Tryin' how many years later?",
+      "20",
+      "10",
+      "15"
+     ],
+     [
+      "He sleeps in the best hotels and eats what kind of breakfast?",
+      "Complimentary",
+      "Room service",
+      "Continental"
+     ],
+     [
+      "They should put his life on what?",
+      "Cable",
+      "Netflix",
+      "Broadway"
+     ],
+     [
+      "They perform in little clubs, but he's in what?",
+      "Arenas",
+      "Stadiums",
+      "Theaters"
+     ]
+    ],
+    [
+     [
+      "The world tour felt like a paid what?",
+      "Vacation",
+      "Workout",
+      "Lesson"
+     ],
+     [
+      "He just bought a new what?",
+      "House",
+      "Car",
+      "Chain"
+     ],
+     [
+      "He came a long way from the what?",
+      "Trenches",
+      "Corner",
+      "Bottom"
+     ],
+     [
+      "He smiles like he just came from the what?",
+      "Dentist",
+      "Bank",
+      "Barber"
+     ],
+     [
+      "Give him his what now?",
+      "Flowers",
+      "Money",
+      "Respect"
+     ],
+     [
+      "Who said he reminds him of Biggie?",
+      "Nas",
+      "Jay-Z",
+      "Diddy"
+     ],
+     [
+      "Where did Nas say it?",
+      "Twitter",
+      "Instagram",
+      "On the radio"
+     ]
+    ],
+    [
+     [
+      "His lawyer won't take his money if he can't beat the what?",
+      "Charge",
+      "Odds",
+      "Clock"
+     ],
+     [
+      "Cop out or go to what?",
+      "Trial",
+      "Church",
+      "Sleep"
+     ],
+     [
+      "Or do the what man, on the run?",
+      "Gingerbread",
+      "Invisible",
+      "Iron"
+     ],
+     [
+      "They'll put your picture up in every what?",
+      "Precinct",
+      "Store",
+      "Paper"
+     ],
+     [
+      "The statute of limitations holds how many years?",
+      "Seven",
+      "Five",
+      "Ten"
+     ],
+     [
+      "They be in the club thinking we don't what?",
+      "See 'em",
+      "Hear 'em",
+      "Know 'em"
+     ]
+    ]
+   ]
   },
   {
-   "title": "My Shoes",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Money (feat. Jadakiss)",
+   "id": "TL7WtDZHVYQ",
+   "cuts": [
+    41.8,
+    67.75,
+    83.45
+   ],
+   "qs": [
+    [
+     [
+      "\"Money isn't real,\" who?",
+      "George",
+      "Jimmy",
+      "Frank"
+     ],
+     [
+      "Money is pieces of paper with what on it?",
+      "Pictures",
+      "Numbers",
+      "Names"
+     ],
+     [
+      "Who's on the beat?",
+      "Great John",
+      "Metro",
+      "Cre Charmin'"
+     ],
+     [
+      "He'll marry the money and never do what?",
+      "Cheat on it",
+      "Spend it",
+      "Lose it"
+     ],
+     [
+      "They say all money ain't what?",
+      "Good money",
+      "Real money",
+      "Easy money"
+     ],
+     [
+      "He wishes Tupac never took whose money?",
+      "Suge's",
+      "Diddy's",
+      "Death Row's"
+     ],
+     [
+      "Giving quality time, never what the money?",
+      "Neglectin'",
+      "Spendin'",
+      "Countin'"
+     ]
+    ],
+    [
+     [
+      "Money ain't everything, but it's what?",
+      "Everything",
+      "Nothing",
+      "Something"
+     ],
+     [
+      "You can buy whatever you want, like what?",
+      "Anything",
+      "Diamonds",
+      "Cars"
+     ],
+     [
+      "You can't buy what when it's time to ride?",
+      "Heart",
+      "Time",
+      "Friends"
+     ],
+     [
+      "Money don't make the what?",
+      "Man",
+      "Team",
+      "Boss"
+     ],
+     [
+      "You can buy all kinds of what?",
+      "Designer",
+      "Jewelry",
+      "Sneakers"
+     ],
+     [
+      "She's bouncin', she's not a what?",
+      "Rider",
+      "Keeper",
+      "Wifey"
+     ],
+     [
+      "Money can't buy you what?",
+      "Loyalty",
+      "Love",
+      "Time"
+     ]
+    ],
+    [
+     [
+      "Getting money don't mean he's what?",
+      "Tough",
+      "Smart",
+      "Real"
+     ],
+     [
+      "He'll be telling as soon as police put on the what?",
+      "Cuffs",
+      "Lights",
+      "Sirens"
+     ],
+     [
+      "He's scared to go where?",
+      "Jail",
+      "Court",
+      "Home"
+     ],
+     [
+      "You gotta earn your what?",
+      "Reputation",
+      "Money",
+      "Respect"
+     ],
+     [
+      "Real make money, money make what?",
+      "Fake",
+      "Friends",
+      "Enemies"
+     ],
+     [
+      "\"But y'all don't ___ me though\"",
+      "Hear",
+      "See",
+      "Feel"
+     ]
+    ]
+   ]
   }
  ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
