@@ -19,4 +19,6 @@ window.OG_REGION_GAMES = {
   "Esoteric": { url: "../esoteric-ogfan99-2c439c/", ex: 2 },
   "Rasco": { url: "../rasco-ogfan99-05cd6b/", ex: 2 },
   "Slaine": { url: "../slaine-ogfan99-ab1fa1/", ex: 2 },
+  "Planet Asia": { url: "../planetasia-ogfan99-c7c2b0/", ex: 2 },
+  "Tech N9ne": { url: "../technine-ogfan99-4dc3c6/", ex: 0 },
 };
