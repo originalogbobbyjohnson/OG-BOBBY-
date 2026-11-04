@@ -99,40 +99,1303 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "explicitSongs": [
   {
-   "title": "Quantum Leap",
-   "id": "87Z2Kds4KPo",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Pistolier",
+   "id": "cn2FDCCZaQ0",
+   "cuts": [
+    41.3,
+    97.5,
+    141.5
+   ],
+   "qs": [
+    [
+     [
+      "Truth or what?",
+      "Dare",
+      "Consequence",
+      "Lie"
+     ],
+     [
+      "Gortex — he got a few what?",
+      "Pair",
+      "Coats",
+      "Boots"
+     ],
+     [
+      "Bust a move, make a what tear?",
+      "Shoe",
+      "Shirt",
+      "Sock"
+     ],
+     [
+      "Swing from the what?",
+      "Chandelier",
+      "Ceiling",
+      "Rafters"
+     ],
+     [
+      "Richard Gere with the gear of which wrestler?",
+      "Ric Flair",
+      "Hulk Hogan",
+      "Macho Man"
+     ],
+     [
+      "Yo, diamond what?",
+      "Choker",
+      "Chain",
+      "Ring"
+     ],
+     [
+      "We binded up the what?",
+      "Ponderosa",
+      "Penthouse",
+      "Hacienda"
+     ],
+     [
+      "What culture does he name?",
+      "Islamic",
+      "Italian",
+      "Jamaican"
+     ],
+     [
+      "Push the what?",
+      "Rover",
+      "Range",
+      "Benz"
+     ],
+     [
+      "...with the what motor?",
+      "Silent",
+      "Loud",
+      "Turbo"
+     ],
+     [
+      "His persona got the fly what?",
+      "Aroma",
+      "Charisma",
+      "Diploma"
+     ]
+    ],
+    [
+     [
+      "Catch him on what?",
+      "Stage",
+      "TV",
+      "Tour"
+     ],
+     [
+      "Rapping in what accent?",
+      "Jamaican",
+      "British",
+      "French"
+     ],
+     [
+      "From Moreno to what?",
+      "Anglo Saxon",
+      "Italian",
+      "Latino"
+     ],
+     [
+      "The rainbow roll is what?",
+      "Radioactive",
+      "Hyperactive",
+      "Attractive"
+     ],
+     [
+      "With a tramp, daddy does what?",
+      "Gallivant",
+      "Celebrate",
+      "Hesitate"
+     ],
+     [
+      "We came gallant in the what?",
+      "Caravan",
+      "Cadillac",
+      "Convoy"
+     ],
+     [
+      "You tend to extend the what?",
+      "Olive branch",
+      "Helping hand",
+      "Peace sign"
+     ],
+     [
+      "Lift the veil where the what sail?",
+      "Pelicans",
+      "Seagulls",
+      "Ships"
+     ],
+     [
+      "In the hook, which movie star has the gear?",
+      "Richard Gere",
+      "Richard Pryor",
+      "Robert De Niro"
+     ],
+     [
+      "In the hook, bust a what?",
+      "Move",
+      "Groove",
+      "Rhyme"
+     ],
+     [
+      "In the hook, he got a few pair of what?",
+      "Gortex",
+      "Suede",
+      "Leather"
+     ]
+    ],
+    [
+     [
+      "Tighten the what?",
+      "Knot",
+      "Belt",
+      "Laces"
+     ],
+     [
+      "Nights at the what?",
+      "Dock",
+      "Club",
+      "Park"
+     ],
+     [
+      "The top of the what pops?",
+      "Thermometer",
+      "Bottle",
+      "Kettle"
+     ],
+     [
+      "One monkey don't make the what stop?",
+      "Show",
+      "Party",
+      "Music"
+     ],
+     [
+      "Sip what beer?",
+      "Coronas",
+      "Heinekens",
+      "Budweisers"
+     ],
+     [
+      "Feeding at the garden of what?",
+      "Eden",
+      "Babylon",
+      "Paradise"
+     ],
+     [
+      "He calls himself a what?",
+      "Heathen",
+      "Hermit",
+      "Hero"
+     ],
+     [
+      "He's sitting by the what?",
+      "Pool",
+      "Sea",
+      "Fire"
+     ],
+     [
+      "Plant the what?",
+      "Seed",
+      "Tree",
+      "Flag"
+     ],
+     [
+      "He's limping like which Knicks legend?",
+      "Willis Reed",
+      "Walt Frazier",
+      "Patrick Ewing"
+     ],
+     [
+      "Got him ducking a what?",
+      "Ten speed",
+      "Ten-four",
+      "Six speed"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Emeralds",
-   "id": "-F54LoInUkc",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Whateva Whateva",
+   "id": "tDIuaLRp8SI",
+   "start": 13,
+   "cuts": [
+    54.9,
+    120.5,
+    214.9
+   ],
+   "qs": [
+    [
+     [
+      "Get to the what, just to live better?",
+      "Cheddar",
+      "Money",
+      "Bread"
+     ],
+     [
+      "Get to the cheddar just to live what?",
+      "Better",
+      "Longer",
+      "Large"
+     ],
+     [
+      "It felt like a what?",
+      "Set up",
+      "Dream",
+      "Movie"
+     ],
+     [
+      "When it's on, he won't what?",
+      "Let up",
+      "Back down",
+      "Give up"
+     ],
+     [
+      "With us it's forever and what?",
+      "Ever",
+      "Always",
+      "Now"
+     ],
+     [
+      "Scramble for what?",
+      "Loot",
+      "Cash",
+      "Gold"
+     ],
+     [
+      "What color is the Phantom?",
+      "Maroon",
+      "Black",
+      "White"
+     ],
+     [
+      "His hands are groomed like a pampered what?",
+      "Jewel",
+      "Poodle",
+      "Prince"
+     ],
+     [
+      "Not to mention he's one handsome what?",
+      "Dude",
+      "Man",
+      "Devil"
+     ],
+     [
+      "You're just a can of what?",
+      "Food",
+      "Soup",
+      "Beans"
+     ],
+     [
+      "Hold a what to who?",
+      "Candle",
+      "Torch",
+      "Light"
+     ]
+    ],
+    [
+     [
+      "Turn the tube to channel what?",
+      "Two",
+      "Five",
+      "Seven"
+     ],
+     [
+      "He stares at the what?",
+      "View",
+      "Moon",
+      "Wall"
+     ],
+     [
+      "Hearin' the what?",
+      "Blues",
+      "Jazz",
+      "Sirens"
+     ],
+     [
+      "It's more than rap — he's wearing the what?",
+      "Shoes",
+      "Crown",
+      "Chain"
+     ],
+     [
+      "Who's wearing the what?",
+      "Jewels",
+      "Pants",
+      "Crown"
+     ],
+     [
+      "He pops the air out your what?",
+      "Balloon",
+      "Tires",
+      "Ball"
+     ],
+     [
+      "...and the what too?",
+      "Spare",
+      "Wheel",
+      "Tube"
+     ],
+     [
+      "He's through being what?",
+      "Nice",
+      "Polite",
+      "Patient"
+     ],
+     [
+      "You leave the fight like fleeing what?",
+      "Mice",
+      "Rats",
+      "Birds"
+     ],
+     [
+      "You're walking on a thin sheet of what?",
+      "Ice",
+      "Glass",
+      "Paper"
+     ],
+     [
+      "From ten speed bikes to white what?",
+      "G5s",
+      "Jaguars",
+      "Range Rovers"
+     ]
+    ],
+    [
+     [
+      "Time is what?",
+      "Money",
+      "Precious",
+      "Short"
+     ],
+     [
+      "Your enemies come disguised as your what?",
+      "Peeps",
+      "Lovers",
+      "Neighbors"
+     ],
+     [
+      "Put the pain on a what?",
+      "Track",
+      "Page",
+      "Tape"
+     ],
+     [
+      "Put the name on the what?",
+      "Map",
+      "Wall",
+      "Chain"
+     ],
+     [
+      "Is it the thrill of the chase or the what?",
+      "Catch",
+      "Win",
+      "Race"
+     ],
+     [
+      "The Range or the what?",
+      "Jag",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "That's skippy — what on the dash?",
+      "Woodgrain",
+      "Leather",
+      "Chrome"
+     ],
+     [
+      "What sneakers does he name?",
+      "Nike Airs",
+      "Jordans",
+      "Reeboks"
+     ],
+     [
+      "Flash paper — that's a what?",
+      "Gladiator",
+      "Gangster",
+      "Hustler"
+     ],
+     [
+      "Daddy, rock that what?",
+      "Alligator",
+      "Crocodile",
+      "Snakeskin"
+     ],
+     [
+      "Rock that alligator — that's what?",
+      "Flavor",
+      "Fashion",
+      "Paper"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Didn't Know",
-   "id": "_98-KiEKC-o",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Period Blood",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Rosebudd's Revenge",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Ridin' Around",
+   "id": "MCdUI3C_nDg",
+   "start": 46.1,
+   "cuts": [
+    78.1,
+    137.1,
+    220.6
+   ],
+   "qs": [
+    [
+     [
+      "Hustle for what?",
+      "Loot",
+      "Fame",
+      "Gold"
+     ],
+     [
+      "Hundred dollar sneakers and what?",
+      "Boots",
+      "Suits",
+      "Shoes"
+     ],
+     [
+      "Bon appetit, let's what?",
+      "Eat",
+      "Go",
+      "Ride"
+     ],
+     [
+      "Read it and what?",
+      "Weep",
+      "Sleep",
+      "Keep"
+     ],
+     [
+      "Too many what wanna be the chief?",
+      "Indians",
+      "Soldiers",
+      "Rappers"
+     ],
+     [
+      "He kisses his mom on the what?",
+      "Cheek",
+      "Forehead",
+      "Hand"
+     ],
+     [
+      "Don't be out showin' your what?",
+      "Teeth",
+      "Cash",
+      "Jewels"
+     ],
+     [
+      "So keep it low and what?",
+      "Discreet",
+      "Quiet",
+      "Sweet"
+     ],
+     [
+      "He learned this from an OG on the what?",
+      "Street",
+      "Block",
+      "Corner"
+     ],
+     [
+      "You either wolf or you what?",
+      "Sheep",
+      "Lamb",
+      "Fox"
+     ],
+     [
+      "He just spits truth on a what?",
+      "Beat",
+      "Track",
+      "Mic"
+     ]
+    ],
+    [
+     [
+      "Inspire what?",
+      "Children",
+      "Others",
+      "Rappers"
+     ],
+     [
+      "Till then, just admire the what?",
+      "Realness",
+      "Greatness",
+      "Fineness"
+     ],
+     [
+      "Take 'em where?",
+      "Uptown",
+      "Downtown",
+      "Crosstown"
+     ],
+     [
+      "Take 'em uptown, ridin' what?",
+      "Around",
+      "Slow",
+      "Low"
+     ],
+     [
+      "All the way from Sugar Hill to where?",
+      "Brazil",
+      "Belize",
+      "Bermuda"
+     ],
+     [
+      "We on the strip with a new what?",
+      "Whip",
+      "Chain",
+      "Crew"
+     ],
+     [
+      "Seen us cruisin' up what street?",
+      "125th",
+      "116th",
+      "145th"
+     ],
+     [
+      "Who could resist the what?",
+      "Wrist",
+      "Kiss",
+      "Twist"
+     ],
+     [
+      "Slippery like what?",
+      "Fish",
+      "Ice",
+      "Soap"
+     ],
+     [
+      "In his what kicks?",
+      "FILA",
+      "Puma",
+      "Adidas"
+     ],
+     [
+      "To him, you're like which boxer?",
+      "Leon Spinks",
+      "Michael Spinks",
+      "Larry Holmes"
+     ]
+    ],
+    [
+     [
+      "Strike a chord like a what lick?",
+      "Guitar",
+      "Piano",
+      "Bass"
+     ],
+     [
+      "Sit and relax to this beat for a what?",
+      "Sec",
+      "Minute",
+      "Night"
+     ],
+     [
+      "Then he's out like a green what?",
+      "Corvette",
+      "Mustang",
+      "Camaro"
+     ],
+     [
+      "He stays on the what?",
+      "Down low",
+      "Low key",
+      "Up and up"
+     ],
+     [
+      "Fronting like they rugged, but throwin' in the what?",
+      "Towel",
+      "Flag",
+      "Ring"
+     ],
+     [
+      "We got the city on what?",
+      "Lock",
+      "Fire",
+      "Hold"
+     ],
+     [
+      "He's hot as a pot of what?",
+      "Chili",
+      "Soup",
+      "Coffee"
+     ],
+     [
+      "Papa who?",
+      "Willy",
+      "Joe",
+      "Bear"
+     ],
+     [
+      "Mom, what?",
+      "Feel me",
+      "Need me",
+      "Hear me"
+     ],
+     [
+      "Cash money, keep a bag what?",
+      "Plenty",
+      "Heavy",
+      "Ready"
+     ],
+     [
+      "Inspire children, drop a what and chill?",
+      "Sapphire",
+      "Diamond",
+      "Ruby"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Pistolier",
+   "id": "cn2FDCCZaQ0",
+   "cuts": [
+    41.3,
+    97.5,
+    141.5
+   ],
+   "qs": [
+    [
+     [
+      "Truth or what?",
+      "Dare",
+      "Consequence",
+      "Lie"
+     ],
+     [
+      "Gortex — he got a few what?",
+      "Pair",
+      "Coats",
+      "Boots"
+     ],
+     [
+      "Bust a move, make a what tear?",
+      "Shoe",
+      "Shirt",
+      "Sock"
+     ],
+     [
+      "Swing from the what?",
+      "Chandelier",
+      "Ceiling",
+      "Rafters"
+     ],
+     [
+      "Richard Gere with the gear of which wrestler?",
+      "Ric Flair",
+      "Hulk Hogan",
+      "Macho Man"
+     ],
+     [
+      "Yo, diamond what?",
+      "Choker",
+      "Chain",
+      "Ring"
+     ],
+     [
+      "We binded up the what?",
+      "Ponderosa",
+      "Penthouse",
+      "Hacienda"
+     ],
+     [
+      "What culture does he name?",
+      "Islamic",
+      "Italian",
+      "Jamaican"
+     ],
+     [
+      "Push the what?",
+      "Rover",
+      "Range",
+      "Benz"
+     ],
+     [
+      "...with the what motor?",
+      "Silent",
+      "Loud",
+      "Turbo"
+     ],
+     [
+      "His persona got the fly what?",
+      "Aroma",
+      "Charisma",
+      "Diploma"
+     ]
+    ],
+    [
+     [
+      "Catch him on what?",
+      "Stage",
+      "TV",
+      "Tour"
+     ],
+     [
+      "Rapping in what accent?",
+      "Jamaican",
+      "British",
+      "French"
+     ],
+     [
+      "From Moreno to what?",
+      "Anglo Saxon",
+      "Italian",
+      "Latino"
+     ],
+     [
+      "The rainbow roll is what?",
+      "Radioactive",
+      "Hyperactive",
+      "Attractive"
+     ],
+     [
+      "With a tramp, daddy does what?",
+      "Gallivant",
+      "Celebrate",
+      "Hesitate"
+     ],
+     [
+      "We came gallant in the what?",
+      "Caravan",
+      "Cadillac",
+      "Convoy"
+     ],
+     [
+      "You tend to extend the what?",
+      "Olive branch",
+      "Helping hand",
+      "Peace sign"
+     ],
+     [
+      "Lift the veil where the what sail?",
+      "Pelicans",
+      "Seagulls",
+      "Ships"
+     ],
+     [
+      "In the hook, which movie star has the gear?",
+      "Richard Gere",
+      "Richard Pryor",
+      "Robert De Niro"
+     ],
+     [
+      "In the hook, bust a what?",
+      "Move",
+      "Groove",
+      "Rhyme"
+     ],
+     [
+      "In the hook, he got a few pair of what?",
+      "Gortex",
+      "Suede",
+      "Leather"
+     ]
+    ],
+    [
+     [
+      "Tighten the what?",
+      "Knot",
+      "Belt",
+      "Laces"
+     ],
+     [
+      "Nights at the what?",
+      "Dock",
+      "Club",
+      "Park"
+     ],
+     [
+      "The top of the what pops?",
+      "Thermometer",
+      "Bottle",
+      "Kettle"
+     ],
+     [
+      "One monkey don't make the what stop?",
+      "Show",
+      "Party",
+      "Music"
+     ],
+     [
+      "Sip what beer?",
+      "Coronas",
+      "Heinekens",
+      "Budweisers"
+     ],
+     [
+      "Feeding at the garden of what?",
+      "Eden",
+      "Babylon",
+      "Paradise"
+     ],
+     [
+      "He calls himself a what?",
+      "Heathen",
+      "Hermit",
+      "Hero"
+     ],
+     [
+      "He's sitting by the what?",
+      "Pool",
+      "Sea",
+      "Fire"
+     ],
+     [
+      "Plant the what?",
+      "Seed",
+      "Tree",
+      "Flag"
+     ],
+     [
+      "He's limping like which Knicks legend?",
+      "Willis Reed",
+      "Walt Frazier",
+      "Patrick Ewing"
+     ],
+     [
+      "Got him ducking a what?",
+      "Ten speed",
+      "Ten-four",
+      "Six speed"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Whateva Whateva",
+   "id": "tDIuaLRp8SI",
+   "start": 13,
+   "cuts": [
+    54.9,
+    120.5,
+    214.9
+   ],
+   "qs": [
+    [
+     [
+      "Get to the what, just to live better?",
+      "Cheddar",
+      "Money",
+      "Bread"
+     ],
+     [
+      "Get to the cheddar just to live what?",
+      "Better",
+      "Longer",
+      "Large"
+     ],
+     [
+      "It felt like a what?",
+      "Set up",
+      "Dream",
+      "Movie"
+     ],
+     [
+      "When it's on, he won't what?",
+      "Let up",
+      "Back down",
+      "Give up"
+     ],
+     [
+      "With us it's forever and what?",
+      "Ever",
+      "Always",
+      "Now"
+     ],
+     [
+      "Scramble for what?",
+      "Loot",
+      "Cash",
+      "Gold"
+     ],
+     [
+      "What color is the Phantom?",
+      "Maroon",
+      "Black",
+      "White"
+     ],
+     [
+      "His hands are groomed like a pampered what?",
+      "Jewel",
+      "Poodle",
+      "Prince"
+     ],
+     [
+      "Not to mention he's one handsome what?",
+      "Dude",
+      "Man",
+      "Devil"
+     ],
+     [
+      "You're just a can of what?",
+      "Food",
+      "Soup",
+      "Beans"
+     ],
+     [
+      "Hold a what to who?",
+      "Candle",
+      "Torch",
+      "Light"
+     ]
+    ],
+    [
+     [
+      "Turn the tube to channel what?",
+      "Two",
+      "Five",
+      "Seven"
+     ],
+     [
+      "He stares at the what?",
+      "View",
+      "Moon",
+      "Wall"
+     ],
+     [
+      "Hearin' the what?",
+      "Blues",
+      "Jazz",
+      "Sirens"
+     ],
+     [
+      "It's more than rap — he's wearing the what?",
+      "Shoes",
+      "Crown",
+      "Chain"
+     ],
+     [
+      "Who's wearing the what?",
+      "Jewels",
+      "Pants",
+      "Crown"
+     ],
+     [
+      "He pops the air out your what?",
+      "Balloon",
+      "Tires",
+      "Ball"
+     ],
+     [
+      "...and the what too?",
+      "Spare",
+      "Wheel",
+      "Tube"
+     ],
+     [
+      "He's through being what?",
+      "Nice",
+      "Polite",
+      "Patient"
+     ],
+     [
+      "You leave the fight like fleeing what?",
+      "Mice",
+      "Rats",
+      "Birds"
+     ],
+     [
+      "You're walking on a thin sheet of what?",
+      "Ice",
+      "Glass",
+      "Paper"
+     ],
+     [
+      "From ten speed bikes to white what?",
+      "G5s",
+      "Jaguars",
+      "Range Rovers"
+     ]
+    ],
+    [
+     [
+      "Time is what?",
+      "Money",
+      "Precious",
+      "Short"
+     ],
+     [
+      "Your enemies come disguised as your what?",
+      "Peeps",
+      "Lovers",
+      "Neighbors"
+     ],
+     [
+      "Put the pain on a what?",
+      "Track",
+      "Page",
+      "Tape"
+     ],
+     [
+      "Put the name on the what?",
+      "Map",
+      "Wall",
+      "Chain"
+     ],
+     [
+      "Is it the thrill of the chase or the what?",
+      "Catch",
+      "Win",
+      "Race"
+     ],
+     [
+      "The Range or the what?",
+      "Jag",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "That's skippy — what on the dash?",
+      "Woodgrain",
+      "Leather",
+      "Chrome"
+     ],
+     [
+      "What sneakers does he name?",
+      "Nike Airs",
+      "Jordans",
+      "Reeboks"
+     ],
+     [
+      "Flash paper — that's a what?",
+      "Gladiator",
+      "Gangster",
+      "Hustler"
+     ],
+     [
+      "Daddy, rock that what?",
+      "Alligator",
+      "Crocodile",
+      "Snakeskin"
+     ],
+     [
+      "Rock that alligator — that's what?",
+      "Flavor",
+      "Fashion",
+      "Paper"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Ridin' Around",
+   "id": "MCdUI3C_nDg",
+   "start": 46.1,
+   "cuts": [
+    78.1,
+    137.1,
+    220.6
+   ],
+   "qs": [
+    [
+     [
+      "Hustle for what?",
+      "Loot",
+      "Fame",
+      "Gold"
+     ],
+     [
+      "Hundred dollar sneakers and what?",
+      "Boots",
+      "Suits",
+      "Shoes"
+     ],
+     [
+      "Bon appetit, let's what?",
+      "Eat",
+      "Go",
+      "Ride"
+     ],
+     [
+      "Read it and what?",
+      "Weep",
+      "Sleep",
+      "Keep"
+     ],
+     [
+      "Too many what wanna be the chief?",
+      "Indians",
+      "Soldiers",
+      "Rappers"
+     ],
+     [
+      "He kisses his mom on the what?",
+      "Cheek",
+      "Forehead",
+      "Hand"
+     ],
+     [
+      "Don't be out showin' your what?",
+      "Teeth",
+      "Cash",
+      "Jewels"
+     ],
+     [
+      "So keep it low and what?",
+      "Discreet",
+      "Quiet",
+      "Sweet"
+     ],
+     [
+      "He learned this from an OG on the what?",
+      "Street",
+      "Block",
+      "Corner"
+     ],
+     [
+      "You either wolf or you what?",
+      "Sheep",
+      "Lamb",
+      "Fox"
+     ],
+     [
+      "He just spits truth on a what?",
+      "Beat",
+      "Track",
+      "Mic"
+     ]
+    ],
+    [
+     [
+      "Inspire what?",
+      "Children",
+      "Others",
+      "Rappers"
+     ],
+     [
+      "Till then, just admire the what?",
+      "Realness",
+      "Greatness",
+      "Fineness"
+     ],
+     [
+      "Take 'em where?",
+      "Uptown",
+      "Downtown",
+      "Crosstown"
+     ],
+     [
+      "Take 'em uptown, ridin' what?",
+      "Around",
+      "Slow",
+      "Low"
+     ],
+     [
+      "All the way from Sugar Hill to where?",
+      "Brazil",
+      "Belize",
+      "Bermuda"
+     ],
+     [
+      "We on the strip with a new what?",
+      "Whip",
+      "Chain",
+      "Crew"
+     ],
+     [
+      "Seen us cruisin' up what street?",
+      "125th",
+      "116th",
+      "145th"
+     ],
+     [
+      "Who could resist the what?",
+      "Wrist",
+      "Kiss",
+      "Twist"
+     ],
+     [
+      "Slippery like what?",
+      "Fish",
+      "Ice",
+      "Soap"
+     ],
+     [
+      "In his what kicks?",
+      "FILA",
+      "Puma",
+      "Adidas"
+     ],
+     [
+      "To him, you're like which boxer?",
+      "Leon Spinks",
+      "Michael Spinks",
+      "Larry Holmes"
+     ]
+    ],
+    [
+     [
+      "Strike a chord like a what lick?",
+      "Guitar",
+      "Piano",
+      "Bass"
+     ],
+     [
+      "Sit and relax to this beat for a what?",
+      "Sec",
+      "Minute",
+      "Night"
+     ],
+     [
+      "Then he's out like a green what?",
+      "Corvette",
+      "Mustang",
+      "Camaro"
+     ],
+     [
+      "He stays on the what?",
+      "Down low",
+      "Low key",
+      "Up and up"
+     ],
+     [
+      "Fronting like they rugged, but throwin' in the what?",
+      "Towel",
+      "Flag",
+      "Ring"
+     ],
+     [
+      "We got the city on what?",
+      "Lock",
+      "Fire",
+      "Hold"
+     ],
+     [
+      "He's hot as a pot of what?",
+      "Chili",
+      "Soup",
+      "Coffee"
+     ],
+     [
+      "Papa who?",
+      "Willy",
+      "Joe",
+      "Bear"
+     ],
+     [
+      "Mom, what?",
+      "Feel me",
+      "Need me",
+      "Hear me"
+     ],
+     [
+      "Cash money, keep a bag what?",
+      "Plenty",
+      "Heavy",
+      "Ready"
+     ],
+     [
+      "Inspire children, drop a what and chill?",
+      "Sapphire",
+      "Diamond",
+      "Ruby"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
