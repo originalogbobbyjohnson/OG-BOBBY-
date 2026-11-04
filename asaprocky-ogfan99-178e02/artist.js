@@ -99,40 +99,1371 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
-  {
-   "title": "Fashion Killa (Clean)",
-   "id": "XsVe-fnSD_k",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Praise the Lord (Da Shine)",
-   "id": "Kbj2Zss-5GY",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Tailor Swif",
-   "id": "5URefVYaJrA",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
+ "explicitSongs": [
   {
    "title": "Sundress",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "xre-oQn1DhY",
+   "cuts": [
+    37.2,
+    84,
+    115.5
+   ],
+   "qs": [
+    [
+     [
+      "What does he say to adjust to at the start?",
+      "Pain",
+      "Love",
+      "Change"
+     ],
+     [
+      "It hurt too bad to what?",
+      "Say",
+      "Stay",
+      "Pray"
+     ],
+     [
+      "Ever since she did what?",
+      "Left me",
+      "Called me",
+      "Found me"
+     ],
+     [
+      "She fell into the wrong what?",
+      "Hands",
+      "Crowd",
+      "Place"
+     ],
+     [
+      "She took some time away from who?",
+      "Me",
+      "Him",
+      "Us"
+     ],
+     [
+      "\"I see you made your\" what?",
+      "Mind",
+      "Choice",
+      "Move"
+     ]
+    ],
+    [
+     [
+      "Just read the what?",
+      "Signs",
+      "Lines",
+      "Stars"
+     ],
+     [
+      "Read the signs, it's clear to what?",
+      "See",
+      "Me",
+      "Be"
+     ],
+     [
+      "He's trying to make her what?",
+      "Mine",
+      "Shine",
+      "Smile"
+     ],
+     [
+      "Love is what?",
+      "Blind",
+      "Kind",
+      "Gold"
+     ],
+     [
+      "Her hurt is what?",
+      "Fine",
+      "Gone",
+      "Real"
+     ],
+     [
+      "To heal, it takes some what?",
+      "Time",
+      "Love",
+      "Work"
+     ]
+    ],
+    [
+     [
+      "What kind of trips does he remember?",
+      "Tokyo trips",
+      "Paris trips",
+      "London trips"
+     ],
+     [
+      "Shopping sprees full of what?",
+      "Gifts",
+      "Bags",
+      "Clothes"
+     ],
+     [
+      "They would dream about what?",
+      "Kids",
+      "Cars",
+      "Fame"
+     ],
+     [
+      "You gotta give a little to what?",
+      "Get",
+      "Win",
+      "Live"
+     ],
+     [
+      "He's been thinking 'bout her and what?",
+      "Rebuilding",
+      "Rewinding",
+      "Running"
+     ],
+     [
+      "When she passes by with that guy, what does he do?",
+      "Laugh",
+      "Cry",
+      "Wave"
+     ]
+    ]
+   ]
   },
   {
    "title": "Everyday",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "7YoWrz8YmZE",
+   "cuts": [
+    33,
+    81.7,
+    162.7
+   ],
+   "qs": [
+    [
+     [
+      "Every day I spend my what?",
+      "Time",
+      "Money",
+      "Life"
+     ],
+     [
+      "Drinking wine, feeling what?",
+      "Fine",
+      "Free",
+      "Good"
+     ],
+     [
+      "Waiting here to find the what?",
+      "Sign",
+      "Light",
+      "Line"
+     ],
+     [
+      "The sign that I can what?",
+      "Understand",
+      "Hold on to",
+      "Live with"
+     ],
+     [
+      "\"Yes, I\" what?",
+      "Am",
+      "Can",
+      "Will"
+     ],
+     [
+      "That I should take it what?",
+      "Slow",
+      "Easy",
+      "Back"
+     ],
+     [
+      "\"Here I\" what?",
+      "Go",
+      "Come",
+      "Stand"
+     ]
+    ],
+    [
+     [
+      "Off again, there he go to another what?",
+      "Dimension",
+      "Planet",
+      "Level"
+     ],
+     [
+      "His mind, body, soul are what?",
+      "Imprisoned",
+      "Uplifted",
+      "Untouched"
+     ],
+     [
+      "He's missing a couple of what?",
+      "Screws",
+      "Teeth",
+      "Friends"
+     ],
+     [
+      "You been sipping away at the what?",
+      "Truth",
+      "Juice",
+      "Night"
+     ],
+     [
+      "A double shot of what'll do?",
+      "Wisdom",
+      "Whiskey",
+      "Coffee"
+     ],
+     [
+      "What's the business? Beat the what?",
+      "System",
+      "Clock",
+      "Odds"
+     ],
+     [
+      "Only who can judge me?",
+      "God",
+      "Mama",
+      "Time"
+     ]
+    ],
+    [
+     [
+      "A message to the what?",
+      "Bosses",
+      "Haters",
+      "Fans"
+     ],
+     [
+      "The Misfits' new outfit is on the what?",
+      "Bloglist",
+      "Billboard",
+      "Runway"
+     ],
+     [
+      "He hopes they show him in his good what?",
+      "Shoes",
+      "Clothes",
+      "Light"
+     ],
+     [
+      "Papa got the brand new what?",
+      "Bag",
+      "Car",
+      "Coat"
+     ],
+     [
+      "Flacko got the brand new what?",
+      "Rag",
+      "Ride",
+      "Chain"
+     ],
+     [
+      "\"That's good\" what?",
+      "News",
+      "Times",
+      "Vibes"
+     ],
+     [
+      "The key to survive is getting a piece of the what?",
+      "Pie",
+      "Cake",
+      "Pizza"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Goldie",
+   "id": "Q8XhuFs5ZXs",
+   "cuts": [
+    41.3,
+    119.7,
+    167.9
+   ],
+   "qs": [
+    [
+     [
+      "His mouth is full of what?",
+      "Gold",
+      "Diamonds",
+      "Silver"
+     ],
+     [
+      "Let's take it to the what?",
+      "Basis",
+      "Bank",
+      "Max"
+     ],
+     [
+      "You're in the midst of what?",
+      "Greatness",
+      "Madness",
+      "Darkness"
+     ],
+     [
+      "His Martin was a what?",
+      "Maison",
+      "Mansion",
+      "Mercedes"
+     ],
+     [
+      "He rocked Margielas with no what?",
+      "Laces",
+      "Socks",
+      "Tags"
+     ],
+     [
+      "Cristal go by the what?",
+      "Cases",
+      "Bottles",
+      "Dozens"
+     ],
+     [
+      "Instead he would prefer the what?",
+      "Aces",
+      "Kings",
+      "Queens"
+     ]
+    ],
+    [
+     [
+      "He's early to the what?",
+      "Party",
+      "Show",
+      "Club"
+     ],
+     [
+      "What of his is the latest?",
+      "His 'Rari",
+      "His chain",
+      "His Benz"
+     ],
+     [
+      "He tells them to their face they ain't no what?",
+      "G",
+      "King",
+      "Boss"
+     ],
+     [
+      "It feels good waking up to money in the what?",
+      "Bank",
+      "Safe",
+      "Mail"
+     ],
+     [
+      "He might roll up in a what?",
+      "Tank",
+      "Truck",
+      "Limo"
+     ],
+     [
+      "His chain came from where?",
+      "Cuba",
+      "Miami",
+      "Italy"
+     ]
+    ],
+    [
+     [
+      "You could call him Billy who?",
+      "Gates",
+      "Bob",
+      "Jean"
+     ],
+     [
+      "He's got a crib in every what?",
+      "State",
+      "City",
+      "Country"
+     ],
+     [
+      "\"Man on the\" what?",
+      "Moon",
+      "Run",
+      "Stage"
+     ],
+     [
+      "He's got a condo out in what?",
+      "Space",
+      "Miami",
+      "Paris"
+     ],
+     [
+      "Party like a cowboy or a what?",
+      "Rockstar",
+      "Pop star",
+      "Movie star"
+     ],
+     [
+      "What kind of swag does he have?",
+      "Extraordinary",
+      "Ordinary",
+      "Secret"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Fashion Killa",
+   "id": "snY-MhPcPg0",
+   "start": 12.6,
+   "cuts": [
+    54.45,
+    81.9,
+    150.4
+   ],
+   "qs": [
+    [
+     [
+      "Rockin', rollin', swaggin' to the what?",
+      "Max",
+      "Top",
+      "Sky"
+     ],
+     [
+      "Rockin', rollin' and what?",
+      "Swaggin'",
+      "Ballin'",
+      "Shinin'"
+     ],
+     [
+      "She got a lotta what?",
+      "Prada",
+      "Gucci",
+      "Fendi"
+     ],
+     [
+      "Dolce and what?",
+      "Gabbana",
+      "Versace",
+      "Armani"
+     ],
+     [
+      "What brand can't he forget?",
+      "Escada",
+      "Chanel",
+      "Hermès"
+     ],
+     [
+      "Escada and that what?",
+      "Balenciaga",
+      "Valentino",
+      "Givenchy"
+     ]
+    ],
+    [
+     [
+      "If you're a rider, we'll go shopping like what?",
+      "Mañana",
+      "Pronto",
+      "Tomorrow"
+     ],
+     [
+      "Her attitude is who?",
+      "Rihanna",
+      "Beyoncé",
+      "Ciara"
+     ],
+     [
+      "She gets it from her what?",
+      "Mama",
+      "Sister",
+      "Papa"
+     ],
+     [
+      "She's jiggy like who?",
+      "Madonna",
+      "Cher",
+      "Britney"
+     ],
+     [
+      "She's trippy like who?",
+      "Nirvana",
+      "Metallica",
+      "Coldplay"
+     ],
+     [
+      "Her jeans is what?",
+      "Helmut Lang",
+      "Calvin Klein",
+      "Levi's"
+     ],
+     [
+      "Her shoes is who?",
+      "Alexander Wang",
+      "Jimmy Choo",
+      "Manolo Blahnik"
+     ]
+    ],
+    [
+     [
+      "\"I see your Jil\" what?",
+      "Sanders",
+      "Stuart",
+      "Lauren"
+     ],
+     [
+      "What brand is the sneaker?",
+      "Visvim",
+      "Nike",
+      "Vans"
+     ],
+     [
+      "Lanvin or what?",
+      "Balmain",
+      "Chanel",
+      "Celine"
+     ],
+     [
+      "Goyard by the what?",
+      "Trunk",
+      "Bag",
+      "Box"
+     ],
+     [
+      "He adores your what?",
+      "Dior",
+      "Prada",
+      "Gucci"
+     ],
+     [
+      "Mami in that Tom Ford, Papi in that what?",
+      "Thom Browne",
+      "Ralph Lauren",
+      "Tom Tailor"
+     ],
+     [
+      "She shop 'til she what?",
+      "Drop",
+      "Stop",
+      "Fall"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Praise the Lord (Da Shine)",
+   "id": "wnyKQ2WAw08",
+   "start": 10.6,
+   "cuts": [
+    51,
+    84.4,
+    167.6
+   ],
+   "qs": [
+    [
+     [
+      "He got a text message but doesn't know the what?",
+      "Number",
+      "Name",
+      "Address"
+     ],
+     [
+      "20 bands and a what?",
+      "Rain dance",
+      "Slow dance",
+      "Line dance"
+     ],
+     [
+      "We can keep the rain check or make what?",
+      "Plans",
+      "Moves",
+      "Money"
+     ],
+     [
+      "Pockets loaded and what else loaded?",
+      "Rocket",
+      "Wallet",
+      "Jacket"
+     ],
+     [
+      "Okay, let's rock and what?",
+      "Roll",
+      "Ride",
+      "Rise"
+     ],
+     [
+      "Diamonds glowing and what?",
+      "Chart-climbing",
+      "Star-shining",
+      "Money-growing"
+     ],
+     [
+      "There's a line around the what?",
+      "Corner",
+      "Block",
+      "Building"
+     ]
+    ],
+    [
+     [
+      "His shades are what?",
+      "Dior",
+      "Gucci",
+      "Prada"
+     ],
+     [
+      "His pants are what?",
+      "Velour",
+      "Velvet",
+      "Leather"
+     ],
+     [
+      "Create, explore, expand, what?",
+      "Conquer",
+      "Control",
+      "Command"
+     ],
+     [
+      "\"I came, I\" what?",
+      "Saw",
+      "Won",
+      "Went"
+     ],
+     [
+      "I praise the Lord, then break the what?",
+      "Law",
+      "Bread",
+      "Rules"
+     ],
+     [
+      "I take what's mine, then take some what?",
+      "More",
+      "Less",
+      "Time"
+     ],
+     [
+      "\"It rains, it\" what?",
+      "Pours",
+      "Storms",
+      "Shines"
+     ]
+    ],
+    [
+     [
+      "She came, I came, now what's my what?",
+      "Name",
+      "Game",
+      "Fame"
+     ],
+     [
+      "My chain, my pants, my pants with the what?",
+      "Chain",
+      "Belt",
+      "Stripes"
+     ],
+     [
+      "They know it's me, the hat and the what?",
+      "Shades",
+      "Braids",
+      "Coat"
+     ],
+     [
+      "They heard his voice and ran to the what?",
+      "Stage",
+      "Car",
+      "Door"
+     ],
+     [
+      "The way he stepped out the car is a what?",
+      "Flex",
+      "Show",
+      "Move"
+     ],
+     [
+      "Give thanks, get what?",
+      "Fresh",
+      "Rich",
+      "Paid"
+     ],
+     [
+      "Praise the Lord then what?",
+      "Finesse",
+      "Confess",
+      "Progress"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Sundress",
+   "id": "xre-oQn1DhY",
+   "cuts": [
+    37.2,
+    84,
+    115.5
+   ],
+   "qs": [
+    [
+     [
+      "What does he say to adjust to at the start?",
+      "Pain",
+      "Love",
+      "Change"
+     ],
+     [
+      "It hurt too bad to what?",
+      "Say",
+      "Stay",
+      "Pray"
+     ],
+     [
+      "Ever since she did what?",
+      "Left me",
+      "Called me",
+      "Found me"
+     ],
+     [
+      "She fell into the wrong what?",
+      "Hands",
+      "Crowd",
+      "Place"
+     ],
+     [
+      "She took some time away from who?",
+      "Me",
+      "Him",
+      "Us"
+     ],
+     [
+      "\"I see you made your\" what?",
+      "Mind",
+      "Choice",
+      "Move"
+     ]
+    ],
+    [
+     [
+      "Just read the what?",
+      "Signs",
+      "Lines",
+      "Stars"
+     ],
+     [
+      "Read the signs, it's clear to what?",
+      "See",
+      "Me",
+      "Be"
+     ],
+     [
+      "He's trying to make her what?",
+      "Mine",
+      "Shine",
+      "Smile"
+     ],
+     [
+      "Love is what?",
+      "Blind",
+      "Kind",
+      "Gold"
+     ],
+     [
+      "Her hurt is what?",
+      "Fine",
+      "Gone",
+      "Real"
+     ],
+     [
+      "To heal, it takes some what?",
+      "Time",
+      "Love",
+      "Work"
+     ]
+    ],
+    [
+     [
+      "What kind of trips does he remember?",
+      "Tokyo trips",
+      "Paris trips",
+      "London trips"
+     ],
+     [
+      "Shopping sprees full of what?",
+      "Gifts",
+      "Bags",
+      "Clothes"
+     ],
+     [
+      "They would dream about what?",
+      "Kids",
+      "Cars",
+      "Fame"
+     ],
+     [
+      "You gotta give a little to what?",
+      "Get",
+      "Win",
+      "Live"
+     ],
+     [
+      "He's been thinking 'bout her and what?",
+      "Rebuilding",
+      "Rewinding",
+      "Running"
+     ],
+     [
+      "When she passes by with that guy, what does he do?",
+      "Laugh",
+      "Cry",
+      "Wave"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Everyday",
+   "id": "7YoWrz8YmZE",
+   "cuts": [
+    33,
+    81.7,
+    162.7
+   ],
+   "qs": [
+    [
+     [
+      "Every day I spend my what?",
+      "Time",
+      "Money",
+      "Life"
+     ],
+     [
+      "Drinking wine, feeling what?",
+      "Fine",
+      "Free",
+      "Good"
+     ],
+     [
+      "Waiting here to find the what?",
+      "Sign",
+      "Light",
+      "Line"
+     ],
+     [
+      "The sign that I can what?",
+      "Understand",
+      "Hold on to",
+      "Live with"
+     ],
+     [
+      "\"Yes, I\" what?",
+      "Am",
+      "Can",
+      "Will"
+     ],
+     [
+      "That I should take it what?",
+      "Slow",
+      "Easy",
+      "Back"
+     ],
+     [
+      "\"Here I\" what?",
+      "Go",
+      "Come",
+      "Stand"
+     ]
+    ],
+    [
+     [
+      "Off again, there he go to another what?",
+      "Dimension",
+      "Planet",
+      "Level"
+     ],
+     [
+      "His mind, body, soul are what?",
+      "Imprisoned",
+      "Uplifted",
+      "Untouched"
+     ],
+     [
+      "He's missing a couple of what?",
+      "Screws",
+      "Teeth",
+      "Friends"
+     ],
+     [
+      "You been sipping away at the what?",
+      "Truth",
+      "Juice",
+      "Night"
+     ],
+     [
+      "A double shot of what'll do?",
+      "Wisdom",
+      "Whiskey",
+      "Coffee"
+     ],
+     [
+      "What's the business? Beat the what?",
+      "System",
+      "Clock",
+      "Odds"
+     ],
+     [
+      "Only who can judge me?",
+      "God",
+      "Mama",
+      "Time"
+     ]
+    ],
+    [
+     [
+      "A message to the what?",
+      "Bosses",
+      "Haters",
+      "Fans"
+     ],
+     [
+      "The Misfits' new outfit is on the what?",
+      "Bloglist",
+      "Billboard",
+      "Runway"
+     ],
+     [
+      "He hopes they show him in his good what?",
+      "Shoes",
+      "Clothes",
+      "Light"
+     ],
+     [
+      "Papa got the brand new what?",
+      "Bag",
+      "Car",
+      "Coat"
+     ],
+     [
+      "Flacko got the brand new what?",
+      "Rag",
+      "Ride",
+      "Chain"
+     ],
+     [
+      "\"That's good\" what?",
+      "News",
+      "Times",
+      "Vibes"
+     ],
+     [
+      "The key to survive is getting a piece of the what?",
+      "Pie",
+      "Cake",
+      "Pizza"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Goldie",
+   "id": "Q8XhuFs5ZXs",
+   "cuts": [
+    41.3,
+    119.7,
+    167.9
+   ],
+   "qs": [
+    [
+     [
+      "His mouth is full of what?",
+      "Gold",
+      "Diamonds",
+      "Silver"
+     ],
+     [
+      "Let's take it to the what?",
+      "Basis",
+      "Bank",
+      "Max"
+     ],
+     [
+      "You're in the midst of what?",
+      "Greatness",
+      "Madness",
+      "Darkness"
+     ],
+     [
+      "His Martin was a what?",
+      "Maison",
+      "Mansion",
+      "Mercedes"
+     ],
+     [
+      "He rocked Margielas with no what?",
+      "Laces",
+      "Socks",
+      "Tags"
+     ],
+     [
+      "Cristal go by the what?",
+      "Cases",
+      "Bottles",
+      "Dozens"
+     ],
+     [
+      "Instead he would prefer the what?",
+      "Aces",
+      "Kings",
+      "Queens"
+     ]
+    ],
+    [
+     [
+      "He's early to the what?",
+      "Party",
+      "Show",
+      "Club"
+     ],
+     [
+      "What of his is the latest?",
+      "His 'Rari",
+      "His chain",
+      "His Benz"
+     ],
+     [
+      "He tells them to their face they ain't no what?",
+      "G",
+      "King",
+      "Boss"
+     ],
+     [
+      "It feels good waking up to money in the what?",
+      "Bank",
+      "Safe",
+      "Mail"
+     ],
+     [
+      "He might roll up in a what?",
+      "Tank",
+      "Truck",
+      "Limo"
+     ],
+     [
+      "His chain came from where?",
+      "Cuba",
+      "Miami",
+      "Italy"
+     ]
+    ],
+    [
+     [
+      "You could call him Billy who?",
+      "Gates",
+      "Bob",
+      "Jean"
+     ],
+     [
+      "He's got a crib in every what?",
+      "State",
+      "City",
+      "Country"
+     ],
+     [
+      "\"Man on the\" what?",
+      "Moon",
+      "Run",
+      "Stage"
+     ],
+     [
+      "He's got a condo out in what?",
+      "Space",
+      "Miami",
+      "Paris"
+     ],
+     [
+      "Party like a cowboy or a what?",
+      "Rockstar",
+      "Pop star",
+      "Movie star"
+     ],
+     [
+      "What kind of swag does he have?",
+      "Extraordinary",
+      "Ordinary",
+      "Secret"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Fashion Killa",
+   "id": "snY-MhPcPg0",
+   "start": 12.6,
+   "cuts": [
+    54.45,
+    81.9,
+    150.4
+   ],
+   "qs": [
+    [
+     [
+      "Rockin', rollin', swaggin' to the what?",
+      "Max",
+      "Top",
+      "Sky"
+     ],
+     [
+      "Rockin', rollin' and what?",
+      "Swaggin'",
+      "Ballin'",
+      "Shinin'"
+     ],
+     [
+      "She got a lotta what?",
+      "Prada",
+      "Gucci",
+      "Fendi"
+     ],
+     [
+      "Dolce and what?",
+      "Gabbana",
+      "Versace",
+      "Armani"
+     ],
+     [
+      "What brand can't he forget?",
+      "Escada",
+      "Chanel",
+      "Hermès"
+     ],
+     [
+      "Escada and that what?",
+      "Balenciaga",
+      "Valentino",
+      "Givenchy"
+     ]
+    ],
+    [
+     [
+      "If you're a rider, we'll go shopping like what?",
+      "Mañana",
+      "Pronto",
+      "Tomorrow"
+     ],
+     [
+      "Her attitude is who?",
+      "Rihanna",
+      "Beyoncé",
+      "Ciara"
+     ],
+     [
+      "She gets it from her what?",
+      "Mama",
+      "Sister",
+      "Papa"
+     ],
+     [
+      "She's jiggy like who?",
+      "Madonna",
+      "Cher",
+      "Britney"
+     ],
+     [
+      "She's trippy like who?",
+      "Nirvana",
+      "Metallica",
+      "Coldplay"
+     ],
+     [
+      "Her jeans is what?",
+      "Helmut Lang",
+      "Calvin Klein",
+      "Levi's"
+     ],
+     [
+      "Her shoes is who?",
+      "Alexander Wang",
+      "Jimmy Choo",
+      "Manolo Blahnik"
+     ]
+    ],
+    [
+     [
+      "\"I see your Jil\" what?",
+      "Sanders",
+      "Stuart",
+      "Lauren"
+     ],
+     [
+      "What brand is the sneaker?",
+      "Visvim",
+      "Nike",
+      "Vans"
+     ],
+     [
+      "Lanvin or what?",
+      "Balmain",
+      "Chanel",
+      "Celine"
+     ],
+     [
+      "Goyard by the what?",
+      "Trunk",
+      "Bag",
+      "Box"
+     ],
+     [
+      "He adores your what?",
+      "Dior",
+      "Prada",
+      "Gucci"
+     ],
+     [
+      "Mami in that Tom Ford, Papi in that what?",
+      "Thom Browne",
+      "Ralph Lauren",
+      "Tom Tailor"
+     ],
+     [
+      "She shop 'til she what?",
+      "Drop",
+      "Stop",
+      "Fall"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Praise the Lord (Da Shine)",
+   "id": "wnyKQ2WAw08",
+   "start": 10.6,
+   "cuts": [
+    51,
+    84.4,
+    167.6
+   ],
+   "qs": [
+    [
+     [
+      "He got a text message but doesn't know the what?",
+      "Number",
+      "Name",
+      "Address"
+     ],
+     [
+      "20 bands and a what?",
+      "Rain dance",
+      "Slow dance",
+      "Line dance"
+     ],
+     [
+      "We can keep the rain check or make what?",
+      "Plans",
+      "Moves",
+      "Money"
+     ],
+     [
+      "Pockets loaded and what else loaded?",
+      "Rocket",
+      "Wallet",
+      "Jacket"
+     ],
+     [
+      "Okay, let's rock and what?",
+      "Roll",
+      "Ride",
+      "Rise"
+     ],
+     [
+      "Diamonds glowing and what?",
+      "Chart-climbing",
+      "Star-shining",
+      "Money-growing"
+     ],
+     [
+      "There's a line around the what?",
+      "Corner",
+      "Block",
+      "Building"
+     ]
+    ],
+    [
+     [
+      "His shades are what?",
+      "Dior",
+      "Gucci",
+      "Prada"
+     ],
+     [
+      "His pants are what?",
+      "Velour",
+      "Velvet",
+      "Leather"
+     ],
+     [
+      "Create, explore, expand, what?",
+      "Conquer",
+      "Control",
+      "Command"
+     ],
+     [
+      "\"I came, I\" what?",
+      "Saw",
+      "Won",
+      "Went"
+     ],
+     [
+      "I praise the Lord, then break the what?",
+      "Law",
+      "Bread",
+      "Rules"
+     ],
+     [
+      "I take what's mine, then take some what?",
+      "More",
+      "Less",
+      "Time"
+     ],
+     [
+      "\"It rains, it\" what?",
+      "Pours",
+      "Storms",
+      "Shines"
+     ]
+    ],
+    [
+     [
+      "She came, I came, now what's my what?",
+      "Name",
+      "Game",
+      "Fame"
+     ],
+     [
+      "My chain, my pants, my pants with the what?",
+      "Chain",
+      "Belt",
+      "Stripes"
+     ],
+     [
+      "They know it's me, the hat and the what?",
+      "Shades",
+      "Braids",
+      "Coat"
+     ],
+     [
+      "They heard his voice and ran to the what?",
+      "Stage",
+      "Car",
+      "Door"
+     ],
+     [
+      "The way he stepped out the car is a what?",
+      "Flex",
+      "Show",
+      "Move"
+     ],
+     [
+      "Give thanks, get what?",
+      "Fresh",
+      "Rich",
+      "Paid"
+     ],
+     [
+      "Praise the Lord then what?",
+      "Finesse",
+      "Confess",
+      "Progress"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
