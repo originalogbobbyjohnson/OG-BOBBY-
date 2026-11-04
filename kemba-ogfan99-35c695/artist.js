@@ -99,40 +99,1303 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Nobody I Can Trust",
-   "id": "KsIGJ3FrrTo",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Caesar's Rise",
-   "id": "cnbmvGmS0qc",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Deadass",
+   "id": "nJuZzftDRPw",
+   "cuts": [
+    32.4,
+    100.05,
+    134.6
+   ],
+   "qs": [
+    [
+     [
+      "Where is he from in the first verse?",
+      "New York",
+      "Chicago",
+      "Atlanta"
+     ],
+     [
+      "What did his teacher bet he'd be?",
+      "A hoodlum",
+      "A lawyer",
+      "A dropout"
+     ],
+     [
+      "He bet that he what?",
+      "Wouldn't",
+      "Would",
+      "Could"
+     ],
+     [
+      "He saw a way out and what?",
+      "Took it",
+      "Lost it",
+      "Shook it"
+     ],
+     [
+      "Back then they were doing what?",
+      "Numbers",
+      "Business",
+      "Nothing"
+     ],
+     [
+      "He sweeps the board like he's with which team?",
+      "The Thunder",
+      "The Knicks",
+      "The Heat"
+     ],
+     [
+      "Some from his hood never leave the what?",
+      "Jungle",
+      "Block",
+      "Corner"
+     ],
+     [
+      "They say they're trying to see the world, but they're who?",
+      "Stevie Wonder",
+      "Ray Charles",
+      "Lost"
+     ],
+     [
+      "What time is the meeting?",
+      "Four",
+      "Two",
+      "Nine"
+     ],
+     [
+      "What did he blame being late on?",
+      "The MTA",
+      "Traffic",
+      "The weather"
+     ],
+     [
+      "What word does he say after each of those lines?",
+      "Deadass",
+      "Facts",
+      "No cap"
+     ]
+    ],
+    [
+     [
+      "Who called him?",
+      "Ozzy",
+      "Rocky",
+      "Ziggy"
+     ],
+     [
+      "Ozzy hit him with the what?",
+      "Yurt",
+      "Text",
+      "Call"
+     ],
+     [
+      "They're about to break the what?",
+      "Curse",
+      "Bank",
+      "Rules"
+     ],
+     [
+      "Debit or cash or whatever you what?",
+      "Prefer",
+      "Want",
+      "Need"
+     ],
+     [
+      "He gets money on the what?",
+      "First",
+      "Fifth",
+      "Weekend"
+     ],
+     [
+      "Where is he from in the second verse?",
+      "The Bronx",
+      "Harlem",
+      "Brooklyn"
+     ],
+     [
+      "Everything he wanted is coming to what?",
+      "Fruition",
+      "Life",
+      "Town"
+     ],
+     [
+      "He lets nothing in his path like he's what?",
+      "Superstitious",
+      "Suspicious",
+      "Ambitious"
+     ],
+     [
+      "It's just like they what?",
+      "Envisioned",
+      "Planned",
+      "Dreamed"
+     ],
+     [
+      "He might battle whose estate?",
+      "B.I.G.'s",
+      "Pac's",
+      "Prince's"
+     ],
+     [
+      "He thought his future's set in what?",
+      "Stone",
+      "Gold",
+      "Motion"
+     ]
+    ],
+    [
+     [
+      "Where is he from in the last verse?",
+      "The Point",
+      "Queens",
+      "The Heights"
+     ],
+     [
+      "Who bet he'd be a hoodlum?",
+      "His teacher",
+      "His uncle",
+      "His coach"
+     ],
+     [
+      "What did he see and take?",
+      "A way out",
+      "A chance",
+      "The train"
+     ],
+     [
+      "What does he say they do to him?",
+      "Overlook him",
+      "Love him",
+      "Fear him"
+     ],
+     [
+      "He caught them doing what?",
+      "Looking",
+      "Talking",
+      "Leaving"
+     ],
+     [
+      "Which Oklahoma team does he mention?",
+      "The Thunder",
+      "The Sooners",
+      "The Spurs"
+     ],
+     [
+      "Who never leaves the jungle?",
+      "Some from his hood",
+      "His crew",
+      "The cops"
+     ],
+     [
+      "They say they're trying to see what?",
+      "The world",
+      "The light",
+      "The money"
+     ],
+     [
+      "Which famous singer does he compare them to?",
+      "Stevie Wonder",
+      "Marvin Gaye",
+      "Ray Charles"
+     ],
+     [
+      "They can only what?",
+      "Wonder",
+      "Dream",
+      "Wait"
+     ],
+     [
+      "What does he keep repeating at the end?",
+      "Hold up",
+      "Slow down",
+      "Let's go"
+     ]
+    ]
+   ]
   },
   {
    "title": "Already",
    "id": "gSDb_wnKZnA",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 23.4,
+   "cuts": [
+    50.5,
+    94.8,
+    166.8
+   ],
+   "qs": [
+    [
+     [
+      "He's been gone for a what?",
+      "Minute",
+      "Year",
+      "Season"
+     ],
+     [
+      "He came back what?",
+      "Reinvented",
+      "Refreshed",
+      "Rich"
+     ],
+     [
+      "He's turning down what?",
+      "Deals",
+      "Shows",
+      "Offers"
+     ],
+     [
+      "Guess he's still what?",
+      "Independent",
+      "Hungry",
+      "Humble"
+     ],
+     [
+      "What boots have they been wearing?",
+      "Timbs",
+      "Jordans",
+      "Nikes"
+     ],
+     [
+      "How long have they been wearing them?",
+      "20 years",
+      "10 years",
+      "Forever"
+     ],
+     [
+      "They're still in the what?",
+      "Trenches",
+      "Streets",
+      "Projects"
+     ],
+     [
+      "He's built the same as the what?",
+      "Sun",
+      "Moon",
+      "Stars"
+     ],
+     [
+      "Like the sun, he's what?",
+      "Re-energized",
+      "Recharged",
+      "Reloaded"
+     ],
+     [
+      "He's been what?",
+      "Offline",
+      "Overseas",
+      "On tour"
+     ],
+     [
+      "They came a long way from the what?",
+      "Dollar fries",
+      "Corner store",
+      "Bottom"
+     ]
+    ],
+    [
+     [
+      "He's wiping tears from whose eyes?",
+      "His mama's",
+      "His daughter's",
+      "His fans'"
+     ],
+     [
+      "Who did he tell he's the wrong one to idolize?",
+      "His fans",
+      "His kids",
+      "His crew"
+     ],
+     [
+      "He's gonna right the what?",
+      "Ship",
+      "Wrong",
+      "Path"
+     ],
+     [
+      "He says this is what?",
+      "Outrageous",
+      "Crazy",
+      "Dangerous"
+     ],
+     [
+      "Look at the what?",
+      "Times",
+      "Signs",
+      "News"
+     ],
+     [
+      "Run for your what?",
+      "Lives",
+      "Money",
+      "Homes"
+     ],
+     [
+      "Who's gonna be who when sea level rises?",
+      "Moses",
+      "Noah",
+      "Jesus"
+     ],
+     [
+      "Who's gonna be Moses when what rises?",
+      "Sea level",
+      "The sun",
+      "The rent"
+     ],
+     [
+      "Like who, they don't meet us in time?",
+      "FEMA",
+      "The cops",
+      "The mayor"
+     ],
+     [
+      "You done said a whole what?",
+      "Lot",
+      "Thing",
+      "Book"
+     ],
+     [
+      "You ain't doing nothing what?",
+      "New",
+      "Right",
+      "Real"
+     ]
+    ],
+    [
+     [
+      "Hold the what?",
+      "Phone",
+      "Door",
+      "Line"
+     ],
+     [
+      "He passed them on the what pole?",
+      "Totem",
+      "Flag",
+      "Telephone"
+     ],
+     [
+      "Who's singing 'on and on'?",
+      "Erykah Badu",
+      "Lauryn Hill",
+      "Jill Scott"
+     ],
+     [
+      "He mingles with the what?",
+      "Rich",
+      "Stars",
+      "Bosses"
+     ],
+     [
+      "He's like a rolling what?",
+      "Stone",
+      "Thunder",
+      "Train"
+     ],
+     [
+      "Which borough's living got him pumping?",
+      "Bronx",
+      "Brooklyn",
+      "Queens"
+     ],
+     [
+      "Mama told him always hit the what?",
+      "Lights",
+      "Books",
+      "Gym"
+     ],
+     [
+      "It's about time for the what?",
+      "Maker",
+      "Payment",
+      "Party"
+     ],
+     [
+      "Look up in the sky for a sign from the what?",
+      "Savior",
+      "Stars",
+      "Moon"
+     ],
+     [
+      "We done said the same thing what?",
+      "Already",
+      "Again",
+      "Before"
+     ],
+     [
+      "We done did the same what?",
+      "Thing",
+      "Moves",
+      "Songs"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Hallelujah",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Work In Progress",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Last Year Being Broke",
+   "id": "SlC26oc037Q",
+   "start": 12.8,
+   "cuts": [
+    44.8,
+    118.7,
+    157
+   ],
+   "qs": [
+    [
+     [
+      "This gon' be his last year being what?",
+      "Broke",
+      "Lost",
+      "Home"
+     ],
+     [
+      "No lie, no what?",
+      "Joke",
+      "Cap",
+      "Doubt"
+     ],
+     [
+      "He said it a million times what?",
+      "Before",
+      "Already",
+      "Today"
+     ],
+     [
+      "Boy, look how he's what?",
+      "Grown",
+      "Changed",
+      "Flown"
+     ],
+     [
+      "Nobody called his what?",
+      "Phone",
+      "Name",
+      "House"
+     ],
+     [
+      "He did this on his what?",
+      "Own",
+      "Way",
+      "Time"
+     ],
+     [
+      "Who started running errands, pushing papers?",
+      "Diddy",
+      "Jay-Z",
+      "Dre"
+     ],
+     [
+      "He made a fool of you what?",
+      "Haters",
+      "Doubters",
+      "Clowns"
+     ],
+     [
+      "He made friends with a few of your what?",
+      "Favorites",
+      "Idols",
+      "Exes"
+     ],
+     [
+      "He wouldn't say that he's what?",
+      "Famous",
+      "Rich",
+      "Done"
+     ],
+     [
+      "He had a few what?",
+      "Reservations",
+      "Problems",
+      "Questions"
+     ]
+    ],
+    [
+     [
+      "He'll be on every artist's album in the what?",
+      "Liner notes",
+      "Credits",
+      "Booklet"
+     ],
+     [
+      "These royalties are fit for what?",
+      "Royalty",
+      "Kings",
+      "Legends"
+     ],
+     [
+      "He's King who?",
+      "Jaffe Jo'",
+      "Kong",
+      "James"
+     ],
+     [
+      "All these restaurants are on what now?",
+      "Comp",
+      "Lock",
+      "Point"
+     ],
+     [
+      "You need your fruit what?",
+      "Organic",
+      "Fresh",
+      "Sliced"
+     ],
+     [
+      "He's been couch to couch since the first of the what?",
+      "Month",
+      "Year",
+      "Week"
+     ],
+     [
+      "He's trying to use this EBT to buy a what?",
+      "Burger deluxe",
+      "Pizza",
+      "Chopped cheese"
+     ],
+     [
+      "Who came in firm in the clutch?",
+      "His local akhi",
+      "His barber",
+      "His cousin"
+     ],
+     [
+      "He's bonding with who?",
+      "Obama",
+      "Biden",
+      "Oprah"
+     ],
+     [
+      "He's bugging who to drop a bomb on this?",
+      "Flex",
+      "Khaled",
+      "Clue"
+     ],
+     [
+      "They thought he was stupid 'cause he didn't get no what?",
+      "College",
+      "Deal",
+      "Diploma"
+     ]
+    ],
+    [
+     [
+      "This gon' be the last year his fam ain't what?",
+      "Ballin'",
+      "Eatin'",
+      "Shinin'"
+     ],
+     [
+      "He hears the cameras what?",
+      "Callin'",
+      "Flashin'",
+      "Rollin'"
+     ],
+     [
+      "He's on your what often?",
+      "Campus",
+      "Block",
+      "Radio"
+     ],
+     [
+      "He's out at South by what?",
+      "Southwest",
+      "Southeast",
+      "Midwest"
+     ],
+     [
+      "He's the man in what city?",
+      "Austin",
+      "Dallas",
+      "Houston"
+     ],
+     [
+      "He's the man in which state?",
+      "Texas",
+      "Florida",
+      "Georgia"
+     ],
+     [
+      "This been what?",
+      "Manifested",
+      "Promised",
+      "Planned"
+     ],
+     [
+      "He's the answer and the man in what?",
+      "Question",
+      "Charge",
+      "Demand"
+     ],
+     [
+      "This a jamming what?",
+      "Session",
+      "Party",
+      "Moment"
+     ],
+     [
+      "He walks right up to the what?",
+      "Mirror",
+      "Mic",
+      "Stage"
+     ],
+     [
+      "Nobody called his phone, he did this how?",
+      "On his own",
+      "With help",
+      "For fun"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Deadass",
+   "id": "nJuZzftDRPw",
+   "cuts": [
+    32.4,
+    100.05,
+    134.6
+   ],
+   "qs": [
+    [
+     [
+      "Where is he from in the first verse?",
+      "New York",
+      "Chicago",
+      "Atlanta"
+     ],
+     [
+      "What did his teacher bet he'd be?",
+      "A hoodlum",
+      "A lawyer",
+      "A dropout"
+     ],
+     [
+      "He bet that he what?",
+      "Wouldn't",
+      "Would",
+      "Could"
+     ],
+     [
+      "He saw a way out and what?",
+      "Took it",
+      "Lost it",
+      "Shook it"
+     ],
+     [
+      "Back then they were doing what?",
+      "Numbers",
+      "Business",
+      "Nothing"
+     ],
+     [
+      "He sweeps the board like he's with which team?",
+      "The Thunder",
+      "The Knicks",
+      "The Heat"
+     ],
+     [
+      "Some from his hood never leave the what?",
+      "Jungle",
+      "Block",
+      "Corner"
+     ],
+     [
+      "They say they're trying to see the world, but they're who?",
+      "Stevie Wonder",
+      "Ray Charles",
+      "Lost"
+     ],
+     [
+      "What time is the meeting?",
+      "Four",
+      "Two",
+      "Nine"
+     ],
+     [
+      "What did he blame being late on?",
+      "The MTA",
+      "Traffic",
+      "The weather"
+     ],
+     [
+      "What word does he say after each of those lines?",
+      "Deadass",
+      "Facts",
+      "No cap"
+     ]
+    ],
+    [
+     [
+      "Who called him?",
+      "Ozzy",
+      "Rocky",
+      "Ziggy"
+     ],
+     [
+      "Ozzy hit him with the what?",
+      "Yurt",
+      "Text",
+      "Call"
+     ],
+     [
+      "They're about to break the what?",
+      "Curse",
+      "Bank",
+      "Rules"
+     ],
+     [
+      "Debit or cash or whatever you what?",
+      "Prefer",
+      "Want",
+      "Need"
+     ],
+     [
+      "He gets money on the what?",
+      "First",
+      "Fifth",
+      "Weekend"
+     ],
+     [
+      "Where is he from in the second verse?",
+      "The Bronx",
+      "Harlem",
+      "Brooklyn"
+     ],
+     [
+      "Everything he wanted is coming to what?",
+      "Fruition",
+      "Life",
+      "Town"
+     ],
+     [
+      "He lets nothing in his path like he's what?",
+      "Superstitious",
+      "Suspicious",
+      "Ambitious"
+     ],
+     [
+      "It's just like they what?",
+      "Envisioned",
+      "Planned",
+      "Dreamed"
+     ],
+     [
+      "He might battle whose estate?",
+      "B.I.G.'s",
+      "Pac's",
+      "Prince's"
+     ],
+     [
+      "He thought his future's set in what?",
+      "Stone",
+      "Gold",
+      "Motion"
+     ]
+    ],
+    [
+     [
+      "Where is he from in the last verse?",
+      "The Point",
+      "Queens",
+      "The Heights"
+     ],
+     [
+      "Who bet he'd be a hoodlum?",
+      "His teacher",
+      "His uncle",
+      "His coach"
+     ],
+     [
+      "What did he see and take?",
+      "A way out",
+      "A chance",
+      "The train"
+     ],
+     [
+      "What does he say they do to him?",
+      "Overlook him",
+      "Love him",
+      "Fear him"
+     ],
+     [
+      "He caught them doing what?",
+      "Looking",
+      "Talking",
+      "Leaving"
+     ],
+     [
+      "Which Oklahoma team does he mention?",
+      "The Thunder",
+      "The Sooners",
+      "The Spurs"
+     ],
+     [
+      "Who never leaves the jungle?",
+      "Some from his hood",
+      "His crew",
+      "The cops"
+     ],
+     [
+      "They say they're trying to see what?",
+      "The world",
+      "The light",
+      "The money"
+     ],
+     [
+      "Which famous singer does he compare them to?",
+      "Stevie Wonder",
+      "Marvin Gaye",
+      "Ray Charles"
+     ],
+     [
+      "They can only what?",
+      "Wonder",
+      "Dream",
+      "Wait"
+     ],
+     [
+      "What does he keep repeating at the end?",
+      "Hold up",
+      "Slow down",
+      "Let's go"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Already",
+   "id": "gSDb_wnKZnA",
+   "start": 23.4,
+   "cuts": [
+    50.5,
+    94.8,
+    166.8
+   ],
+   "qs": [
+    [
+     [
+      "He's been gone for a what?",
+      "Minute",
+      "Year",
+      "Season"
+     ],
+     [
+      "He came back what?",
+      "Reinvented",
+      "Refreshed",
+      "Rich"
+     ],
+     [
+      "He's turning down what?",
+      "Deals",
+      "Shows",
+      "Offers"
+     ],
+     [
+      "Guess he's still what?",
+      "Independent",
+      "Hungry",
+      "Humble"
+     ],
+     [
+      "What boots have they been wearing?",
+      "Timbs",
+      "Jordans",
+      "Nikes"
+     ],
+     [
+      "How long have they been wearing them?",
+      "20 years",
+      "10 years",
+      "Forever"
+     ],
+     [
+      "They're still in the what?",
+      "Trenches",
+      "Streets",
+      "Projects"
+     ],
+     [
+      "He's built the same as the what?",
+      "Sun",
+      "Moon",
+      "Stars"
+     ],
+     [
+      "Like the sun, he's what?",
+      "Re-energized",
+      "Recharged",
+      "Reloaded"
+     ],
+     [
+      "He's been what?",
+      "Offline",
+      "Overseas",
+      "On tour"
+     ],
+     [
+      "They came a long way from the what?",
+      "Dollar fries",
+      "Corner store",
+      "Bottom"
+     ]
+    ],
+    [
+     [
+      "He's wiping tears from whose eyes?",
+      "His mama's",
+      "His daughter's",
+      "His fans'"
+     ],
+     [
+      "Who did he tell he's the wrong one to idolize?",
+      "His fans",
+      "His kids",
+      "His crew"
+     ],
+     [
+      "He's gonna right the what?",
+      "Ship",
+      "Wrong",
+      "Path"
+     ],
+     [
+      "He says this is what?",
+      "Outrageous",
+      "Crazy",
+      "Dangerous"
+     ],
+     [
+      "Look at the what?",
+      "Times",
+      "Signs",
+      "News"
+     ],
+     [
+      "Run for your what?",
+      "Lives",
+      "Money",
+      "Homes"
+     ],
+     [
+      "Who's gonna be who when sea level rises?",
+      "Moses",
+      "Noah",
+      "Jesus"
+     ],
+     [
+      "Who's gonna be Moses when what rises?",
+      "Sea level",
+      "The sun",
+      "The rent"
+     ],
+     [
+      "Like who, they don't meet us in time?",
+      "FEMA",
+      "The cops",
+      "The mayor"
+     ],
+     [
+      "You done said a whole what?",
+      "Lot",
+      "Thing",
+      "Book"
+     ],
+     [
+      "You ain't doing nothing what?",
+      "New",
+      "Right",
+      "Real"
+     ]
+    ],
+    [
+     [
+      "Hold the what?",
+      "Phone",
+      "Door",
+      "Line"
+     ],
+     [
+      "He passed them on the what pole?",
+      "Totem",
+      "Flag",
+      "Telephone"
+     ],
+     [
+      "Who's singing 'on and on'?",
+      "Erykah Badu",
+      "Lauryn Hill",
+      "Jill Scott"
+     ],
+     [
+      "He mingles with the what?",
+      "Rich",
+      "Stars",
+      "Bosses"
+     ],
+     [
+      "He's like a rolling what?",
+      "Stone",
+      "Thunder",
+      "Train"
+     ],
+     [
+      "Which borough's living got him pumping?",
+      "Bronx",
+      "Brooklyn",
+      "Queens"
+     ],
+     [
+      "Mama told him always hit the what?",
+      "Lights",
+      "Books",
+      "Gym"
+     ],
+     [
+      "It's about time for the what?",
+      "Maker",
+      "Payment",
+      "Party"
+     ],
+     [
+      "Look up in the sky for a sign from the what?",
+      "Savior",
+      "Stars",
+      "Moon"
+     ],
+     [
+      "We done said the same thing what?",
+      "Already",
+      "Again",
+      "Before"
+     ],
+     [
+      "We done did the same what?",
+      "Thing",
+      "Moves",
+      "Songs"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Last Year Being Broke",
+   "id": "SlC26oc037Q",
+   "start": 12.8,
+   "cuts": [
+    44.8,
+    118.7,
+    157
+   ],
+   "qs": [
+    [
+     [
+      "This gon' be his last year being what?",
+      "Broke",
+      "Lost",
+      "Home"
+     ],
+     [
+      "No lie, no what?",
+      "Joke",
+      "Cap",
+      "Doubt"
+     ],
+     [
+      "He said it a million times what?",
+      "Before",
+      "Already",
+      "Today"
+     ],
+     [
+      "Boy, look how he's what?",
+      "Grown",
+      "Changed",
+      "Flown"
+     ],
+     [
+      "Nobody called his what?",
+      "Phone",
+      "Name",
+      "House"
+     ],
+     [
+      "He did this on his what?",
+      "Own",
+      "Way",
+      "Time"
+     ],
+     [
+      "Who started running errands, pushing papers?",
+      "Diddy",
+      "Jay-Z",
+      "Dre"
+     ],
+     [
+      "He made a fool of you what?",
+      "Haters",
+      "Doubters",
+      "Clowns"
+     ],
+     [
+      "He made friends with a few of your what?",
+      "Favorites",
+      "Idols",
+      "Exes"
+     ],
+     [
+      "He wouldn't say that he's what?",
+      "Famous",
+      "Rich",
+      "Done"
+     ],
+     [
+      "He had a few what?",
+      "Reservations",
+      "Problems",
+      "Questions"
+     ]
+    ],
+    [
+     [
+      "He'll be on every artist's album in the what?",
+      "Liner notes",
+      "Credits",
+      "Booklet"
+     ],
+     [
+      "These royalties are fit for what?",
+      "Royalty",
+      "Kings",
+      "Legends"
+     ],
+     [
+      "He's King who?",
+      "Jaffe Jo'",
+      "Kong",
+      "James"
+     ],
+     [
+      "All these restaurants are on what now?",
+      "Comp",
+      "Lock",
+      "Point"
+     ],
+     [
+      "You need your fruit what?",
+      "Organic",
+      "Fresh",
+      "Sliced"
+     ],
+     [
+      "He's been couch to couch since the first of the what?",
+      "Month",
+      "Year",
+      "Week"
+     ],
+     [
+      "He's trying to use this EBT to buy a what?",
+      "Burger deluxe",
+      "Pizza",
+      "Chopped cheese"
+     ],
+     [
+      "Who came in firm in the clutch?",
+      "His local akhi",
+      "His barber",
+      "His cousin"
+     ],
+     [
+      "He's bonding with who?",
+      "Obama",
+      "Biden",
+      "Oprah"
+     ],
+     [
+      "He's bugging who to drop a bomb on this?",
+      "Flex",
+      "Khaled",
+      "Clue"
+     ],
+     [
+      "They thought he was stupid 'cause he didn't get no what?",
+      "College",
+      "Deal",
+      "Diploma"
+     ]
+    ],
+    [
+     [
+      "This gon' be the last year his fam ain't what?",
+      "Ballin'",
+      "Eatin'",
+      "Shinin'"
+     ],
+     [
+      "He hears the cameras what?",
+      "Callin'",
+      "Flashin'",
+      "Rollin'"
+     ],
+     [
+      "He's on your what often?",
+      "Campus",
+      "Block",
+      "Radio"
+     ],
+     [
+      "He's out at South by what?",
+      "Southwest",
+      "Southeast",
+      "Midwest"
+     ],
+     [
+      "He's the man in what city?",
+      "Austin",
+      "Dallas",
+      "Houston"
+     ],
+     [
+      "He's the man in which state?",
+      "Texas",
+      "Florida",
+      "Georgia"
+     ],
+     [
+      "This been what?",
+      "Manifested",
+      "Promised",
+      "Planned"
+     ],
+     [
+      "He's the answer and the man in what?",
+      "Question",
+      "Charge",
+      "Demand"
+     ],
+     [
+      "This a jamming what?",
+      "Session",
+      "Party",
+      "Moment"
+     ],
+     [
+      "He walks right up to the what?",
+      "Mirror",
+      "Mic",
+      "Stage"
+     ],
+     [
+      "Nobody called his phone, he did this how?",
+      "On his own",
+      "With help",
+      "For fun"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
