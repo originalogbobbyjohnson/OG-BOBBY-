@@ -1682,7 +1682,7 @@ window.OGX = (function () {
 })();
 </script>
 <script src="producers.js?v=19"></script>
-<script src="world.js?v=15"></script>
+<script src="world.js?v=16"></script>
 
 <script>
 /* ---------- map + list work together (Nov 1) ----------
@@ -1770,7 +1770,7 @@ window.OGX = (function () {
   p.innerHTML = '<div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR BOROUGH</b></div>' +
     '<div class="board"><div class="bd-h"><i></i>LIVE ON THE LINE<i></i></div><div class="bd-row"><button type="button" id="mtAb"><b id="mtA">' + ARTISTS.length + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtFb"><b id="mtF">—</b><small>FANS</small><em>SEE ALL &#9656;</em></button></div></div>' +
     '<div class="bgrid">' + BOROS.map(b => '<button type="button" data-pb="' + b + '" style="--bc:' + (COL[b] || "#fff") + '">' + (NAME[b] || b.toUpperCase()) + '<small>' + cnt(b) + ' ARTISTS</small></button>').join("") +
-    '<button type="button" class="wide" data-pb="__regions">&#127758; OTHER REGIONS &amp; GENRES<small>LA · BAY AREA · CHICAGO · DOWN SOUTH</small></button>' +
+    '<button type="button" class="wide" data-pb="__regions">&#127758; OTHER REGIONS &amp; GENRES<small>SOUTH FLORIDA · ATLANTA · LA · CHICAGO + MORE</small></button>' +
     '<button type="button" class="wide" data-pb="__find">&#128269; KNOW WHO YOU WANT? SEARCH ANY ARTIST</button></div>';
   mb.insertAdjacentElement("afterend", p);
   /* STEP 2 header: where you are + what to do */

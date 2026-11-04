@@ -68,7 +68,7 @@
     ".tape .uc{justify-self:center;background:#f2c14e;color:#000;font:900 .72rem/1 Helvetica,Arial,sans-serif;letter-spacing:.14em;padding:6px 10px;border:2px solid #000;border-radius:6px;box-shadow:0 2px 0 #000}",
     ".tape h4{margin:0;font-family:var(--display);letter-spacing:.1em;font-size:1.05rem;text-align:center}",
     ".tape p{margin:0;font-size:.84rem;line-height:1.35;text-align:center}",
-    ".wgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}",
+    ".wgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}", ".rg-h{grid-column:1/-1;font-family:var(--display);letter-spacing:.14em;font-size:.85rem;color:#e8b84a;margin:8px 0 0;border-bottom:2px solid #e8b84a;padding-bottom:3px}",
     ".wtile{position:relative;border:2px solid #000;border-radius:12px;padding:12px 10px 10px;background:#1d2033;color:#fff;text-align:left;box-shadow:0 3px 0 #000;display:grid;gap:4px;cursor:pointer;font:inherit}",
     ".wtile .bar{position:absolute;left:0;right:0;top:0;height:6px;border-radius:10px 10px 0 0}",
     ".wtile b{font-family:var(--display);letter-spacing:.06em;font-size:1rem;line-height:1.05}",
@@ -495,18 +495,35 @@
 
   /* ---------- REGIONS: beyond NYC ---------- */
   var REGIONS = [
-    { n: "NEW YORK CITY + METRO", d: "The five boroughs and the metro area. Riding now.", c: "#d62828", live: 1, wide: 1 },
-    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE and San Diego.", c: "#f2c14e" },
-    { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond and San Jose.", c: "#0099d8" },
-    { n: "CHICAGO + MIDWEST", d: "The Chi, plus Detroit, St. Louis and Milwaukee.", c: "#00a1de" },
-    { n: "DOWN SOUTH", d: "Atlanta, Houston, Memphis, New Orleans and Miami.", c: "#35b867", locked: [{ who: "The real_Saddium", ig: "the_real_saddium" }] }
+    { n: "NEW YORK CITY + METRO", d: "The five boroughs, Westchester, Long Island and Jersey. Riding now.", c: "#d62828", live: 1, wide: 1 },
+    { g: "THE SOUTH" },
+    { n: "SOUTH FLORIDA", d: "Miami, Fort Lauderdale, West Palm Beach.", c: "#ff4fa3", locked: [{ who: "Sevin Soprano", ig: "sevinsoprano" }] },
+    { n: "ATLANTA", d: "The A, Decatur, College Park, East Point.", c: "#d62828" },
+    { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6" },
+    { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf" },
+    { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a" },
+    { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c" },
+    { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8" },
+    { n: "MORE OF THE SOUTH", d: "Every other Southern city.", c: "#35b867", locked: [{ who: "The real_Saddium", ig: "the_real_saddium" }] },
+    { g: "EAST COAST" },
+    { n: "PHILADELPHIA", d: "North Philly, West Philly, South Philly.", c: "#004c54" },
+    { n: "THE DMV", d: "D.C., Maryland, Northern Virginia.", c: "#e81828" },
+    { n: "BOSTON + NEW ENGLAND", d: "Boston, Providence, Hartford.", c: "#0b3d91" },
+    { g: "MIDWEST" },
+    { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de" },
+    { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319" },
+    { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e" },
+    { g: "WEST COAST" },
+    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e" },
+    { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8" },
+    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867" }
   ];
   function drawRegions() {
     var p = panes.regions;
     p.innerHTML = '<div class="wp-h"><div class="t">REGIONS</div><div class="s">EVERY CITY GETS ITS OWN MAP</div></div>' +
-      '<div class="wgrid">' + REGIONS.map(function (r, i) { return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-r="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small>' + (r.locked ? '<small style="color:#e8b84a;font-weight:800">&#128274; LOCKED IN: ' + r.locked.map(function (x) { return esc(x.who); }).join(", ") + '</small>' : '') + '<span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO RIDE" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
+      '<div class="wgrid">' + REGIONS.map(function (r, i) { if (r.g) return '<div class="rg-h">' + r.g + '</div>'; return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-r="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small>' + (r.locked ? '<small style="color:#e8b84a;font-weight:800">&#128274; LOCKED IN: ' + r.locked.map(function (x) { return esc(x.who); }).join(", ") + '</small>' : '') + '<span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO RIDE" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
       '<div class="wmsg" id="rgMsg"></div>';
-    p.querySelector(".wgrid").onclick = function (e) { var b = e.target.closest("[data-r]"); if (!b) return; var r = REGIONS[+b.dataset.r]; if (r.live) return go("map"); $("rgMsg").innerHTML = esc(r.n) + " is under construction. Its map is coming." + (r.locked ? "<br>LOCKED IN: " + r.locked.map(function (x) { return esc(x.who); }).join(", ") : ""); };
+    p.querySelector(".wgrid").onclick = function (e) { var b = e.target.closest("[data-r]"); if (!b) return; var r = REGIONS[+b.dataset.r]; if (r.live) return go("map"); $("rgMsg").innerHTML = esc(r.n) + " is under construction. Its map is coming." + (r.locked ? "<br>LOCKED IN: " + r.locked.map(function (x) { return esc(x.who) + (x.ig ? ' <a href="https://www.instagram.com/' + encodeURIComponent(x.ig) + '/" target="_blank" rel="noopener" style="color:#e8b84a">@' + esc(x.ig) + '</a>' : ""); }).join(", ") : ""); };
   }
 
 
