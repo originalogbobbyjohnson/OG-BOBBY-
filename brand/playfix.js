@@ -42,7 +42,7 @@
       var stop = false; try { stop = typeof atStop !== "undefined" && atStop; } catch (er) {}
       cue.hidden = on; mini.classList.toggle("cue", !on && !stop);
       cue.querySelector(".arr").style.display = stop ? "none" : "";
-      document.getElementById("cueBig").textContent = stop ? "ANSWER THE QUESTION BELOW" : "TAP THE RECORD TO PLAY";
+      var isBig = scr.classList.contains("big"); document.getElementById("cueBig").textContent = stop ? "ANSWER THE QUESTION BELOW" : (isBig ? "TAP TO PLAY" : "TAP THE RECORD TO PLAY");
       document.getElementById("cueSm").textContent = stop ? "GET IT RIGHT TO KEEP THE SONG GOING" : "THE SONG STARTS RIGHT HERE";
     }
     setInterval(function () { sync(); try { if (scr.classList.contains("big") && ((typeof atStop !== "undefined" && atStop) || (track && track.style.transform && track.style.transform !== "none"))) { var fs = document.fullscreenElement || document.webkitFullscreenElement; if (fs) (document.exitFullscreen || document.webkitExitFullscreen).call(document); setBig(false); } } catch (e) {} }, 400);

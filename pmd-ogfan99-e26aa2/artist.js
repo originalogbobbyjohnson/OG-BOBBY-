@@ -93,40 +93,1305 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "I Saw It Comin'",
-   "id": "ucdj_zC3IyQ",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Let the Funk Flow (EPMD)",
+   "id": "OOx_NH8UVAM",
+   "start": 28.1,
+   "cuts": [
+    60.8,
+    154.7,
+    196.2
+   ],
+   "qs": [
+    [
+     [
+      "He says relax while he does what?",
+      "Tax",
+      "Talk",
+      "Rap"
+     ],
+     [
+      "Poppin' much what?",
+      "Junk",
+      "Noise",
+      "Gum"
+     ],
+     [
+      "He picked your card, and your name has been what?",
+      "Chosen",
+      "Called",
+      "Crossed"
+     ],
+     [
+      "What does he say, you know what he means?",
+      "Let it flow",
+      "Let it go",
+      "Let it play"
+     ],
+     [
+      "Who's in the place to be?",
+      "The PMD",
+      "The E",
+      "DJ Scratch"
+     ],
+     [
+      "He does clock what?",
+      "Rhymin'",
+      "Watchin'",
+      "Workin'"
+     ],
+     [
+      "He locks you around the what?",
+      "Tick-tocker",
+      "Block",
+      "Corner"
+     ],
+     [
+      "Suckers are steady clockin' and at the same time what?",
+      "Jockin'",
+      "Talkin'",
+      "Walkin'"
+     ],
+     [
+      "A brother like MD takes a chill and does what?",
+      "Lays low",
+      "Goes home",
+      "Speeds up"
+     ],
+     [
+      "Whose girl does he hypnotize?",
+      "Yours",
+      "His",
+      "E's"
+     ],
+     [
+      "He hypnotizes her while the what flows?",
+      "Funk",
+      "Beat",
+      "Cash"
+     ]
+    ],
+    [
+     [
+      "The bass is steady doing what?",
+      "Pumpin'",
+      "Drippin'",
+      "Droppin'"
+     ],
+     [
+      "And the beat be like what?",
+      "Thumpin'",
+      "Knockin'",
+      "Bumpin'"
+     ],
+     [
+      "You lose your cool, then you start doing what?",
+      "Jumpin'",
+      "Yellin'",
+      "Runnin'"
+     ],
+     [
+      "You're out of control and he's right on what?",
+      "Track",
+      "Time",
+      "Point"
+     ],
+     [
+      "To mess with the two is to mess with what?",
+      "Hot water",
+      "Fire",
+      "The law"
+     ],
+     [
+      "What did E say?",
+      "Let 'em slide",
+      "Let 'em know",
+      "Let 'em go"
+     ],
+     [
+      "He's in the mood for dishin' and what?",
+      "Dismissin'",
+      "Dissin'",
+      "Kissin'"
+     ],
+     [
+      "He reels them in as if they was what?",
+      "Fishin'",
+      "Wishin'",
+      "Swimmin'"
+     ],
+     [
+      "Which year does he say, 'no wait, I think it's too late'?",
+      "'88",
+      "'89",
+      "'86"
+     ],
+     [
+      "In which year did you bite on the old bait?",
+      "'87",
+      "'85",
+      "'90"
+     ],
+     [
+      "What did you bite on?",
+      "The old bait",
+      "The new beat",
+      "A hook"
+     ]
+    ],
+    [
+     [
+      "Lounge homeboy, you're in the what?",
+      "Danger zone",
+      "End zone",
+      "Twilight zone"
+     ],
+     [
+      "Who's on the microphone?",
+      "PMD",
+      "E-Double",
+      "Scratch"
+     ],
+     [
+      "The slow momentum of his rhymes is what?",
+      "Divine",
+      "Fine",
+      "Mine"
+     ],
+     [
+      "His rhymes go off beat and come back how?",
+      "On time",
+      "Too late",
+      "Too fast"
+     ],
+     [
+      "He maintains and explains but never sounds the what?",
+      "Same",
+      "Lame",
+      "Tame"
+     ],
+     [
+      "When it comes to doing this, how many remain?",
+      "Very few",
+      "Not one",
+      "Too many"
+     ],
+     [
+      "People are on his jock for the rhymes he does what?",
+      "Invents",
+      "Steals",
+      "Sells"
+     ],
+     [
+      "He dips in a phone booth just like who?",
+      "Clark Kent",
+      "Peter Parker",
+      "Bruce Wayne"
+     ],
+     [
+      "He steps out dressed to what?",
+      "Impress",
+      "Win",
+      "Chill"
+     ],
+     [
+      "What letter is on his chest?",
+      "P",
+      "E",
+      "S"
+     ],
+     [
+      "MCs fetch his rhyme like who?",
+      "Freddy",
+      "Fido",
+      "Rover"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Rugged-N-Raw",
-   "id": "zOyk8uxQaI4",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Back to Work",
+   "id": "-2kCe8QbUUg",
+   "start": 7.4,
+   "cuts": [
+    29.4,
+    56.2,
+    101
+   ],
+   "qs": [
+    [
+     [
+      "He never spit a rhyme that he didn't feel from the what?",
+      "Heart",
+      "Soul",
+      "Street"
+     ],
+     [
+      "He never dropped an album that didn't climb the what?",
+      "Charts",
+      "Walls",
+      "Ladder"
+     ],
+     [
+      "He spits it rugged with tight what?",
+      "Precision",
+      "Production",
+      "Pressure"
+     ],
+     [
+      "Which cartoon kid does he compare himself to?",
+      "Jimmy Neutron",
+      "Johnny Bravo",
+      "Dexter"
+     ],
+     [
+      "He sees the world through what kind of vision?",
+      "X-ray",
+      "Night",
+      "Tunnel"
+     ],
+     [
+      "Play PMD? Don't even what?",
+      "Try",
+      "Lie",
+      "Cry"
+     ],
+     [
+      "Which actor does he mention?",
+      "Tom Cruise",
+      "Tom Hanks",
+      "Will Smith"
+     ],
+     [
+      "Which movie does he name?",
+      "Vanilla Sky",
+      "Top Gun",
+      "Cocktail"
+     ],
+     [
+      "He's Big Max what?",
+      "Supersized",
+      "Superstar",
+      "Supreme"
+     ],
+     [
+      "A lot of you cats are what?",
+      "Small fries",
+      "Big fish",
+      "Top dogs"
+     ],
+     [
+      "Fix your grill and don't look what?",
+      "Surprised",
+      "Away",
+      "Back"
+     ]
+    ],
+    [
+     [
+      "P stays in the basement like a what?",
+      "Headbanger",
+      "Hustler",
+      "Hermit"
+     ],
+     [
+      "Who's hollerin' his name, speakin' in what?",
+      "Foul tongue",
+      "Sign language",
+      "Spanish"
+     ],
+     [
+      "He's got the power to move his people like who?",
+      "Malcolm",
+      "Martin",
+      "Marcus"
+     ],
+     [
+      "Save your souls or stay stuck frozen in what?",
+      "Time",
+      "Ice",
+      "Place"
+     ],
+     [
+      "Basic instructions before leavin' where?",
+      "Earth",
+      "Home",
+      "Town"
+     ],
+     [
+      "What name is on the back of his jersey?",
+      "Smith",
+      "PMD",
+      "Parrish"
+     ],
+     [
+      "Which way is he goin' on the court?",
+      "Baseline",
+      "Downtown",
+      "Coast to coast"
+     ],
+     [
+      "In the two-minute drill, how many yards to go?",
+      "Ninety-nine",
+      "Fifty",
+      "Ten"
+     ],
+     [
+      "How many timeouts does he have left?",
+      "None",
+      "One",
+      "Three"
+     ],
+     [
+      "It's shotgun, air-assault, and no what?",
+      "Puntin'",
+      "Passin'",
+      "Runnin'"
+     ],
+     [
+      "Which QB does he name with Joe Montana?",
+      "Elway",
+      "Marino",
+      "Kelly"
+     ]
+    ],
+    [
+     [
+      "What color bandana is he rockin'?",
+      "Black",
+      "Red",
+      "Blue"
+     ],
+     [
+      "What kind of hat does he wear?",
+      "Fisherman",
+      "Cowboy",
+      "Baseball"
+     ],
+     [
+      "Whether he's up in NY or down in where?",
+      "'Bama",
+      "Miami",
+      "Texas"
+     ],
+     [
+      "He dances to his own what?",
+      "Drum",
+      "Song",
+      "Tune"
+     ],
+     [
+      "He's strictly what?",
+      "Biz",
+      "Raw",
+      "Street"
+     ],
+     [
+      "Where did he come up?",
+      "In the street",
+      "In the suburbs",
+      "In the studio"
+     ],
+     [
+      "He rocked every spot from the Latin Quarters to the what?",
+      "Rooftop",
+      "Basement",
+      "Garden"
+     ],
+     [
+      "Which famous Harlem theater does he name?",
+      "Apollo",
+      "Cotton Club",
+      "Savoy"
+     ],
+     [
+      "Group Five, Apollo and which other theater?",
+      "Beacon",
+      "Paramount",
+      "Radio City"
+     ],
+     [
+      "He lives underground in the what?",
+      "Rap zone",
+      "Twilight zone",
+      "War zone"
+     ],
+     [
+      "What is he back to?",
+      "Work",
+      "School",
+      "Basics"
+     ]
+    ]
+   ]
   },
   {
-   "title": "It's on You",
-   "id": "ucjfiTtYL0M",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "You Gots to Chill",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "On a Roll",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Gold Digger (EPMD)",
+   "id": "4LoG-S-kIqg",
+   "start": 101,
+   "cuts": [
+    127.3,
+    170.4,
+    234.4
+   ],
+   "qs": [
+    [
+     [
+      "The P had a close what?",
+      "Call",
+      "Friend",
+      "Shave"
+     ],
+     [
+      "He dated this what kind of girl?",
+      "Fly",
+      "Shy",
+      "Rich"
+     ],
+     [
+      "He almost got what?",
+      "Vicked",
+      "Married",
+      "Kicked"
+     ],
+     [
+      "What color were her eyes?",
+      "Green",
+      "Hazel",
+      "Brown"
+     ],
+     [
+      "What car did she drive?",
+      "Black Maserati",
+      "Red Ferrari",
+      "White Jaguar"
+     ],
+     [
+      "It had a chrome what?",
+      "Kit",
+      "Grill",
+      "Bumper"
+     ],
+     [
+      "What couldn't he resist?",
+      "Her smile",
+      "Her car",
+      "Her voice"
+     ],
+     [
+      "Who did he tap on the shoulder?",
+      "E",
+      "Scratch",
+      "Her"
+     ],
+     [
+      "He was told to be cool, she could be a what?",
+      "Gold digger",
+      "Cop",
+      "Married"
+     ],
+     [
+      "How much did she spend on Levi's?",
+      "Ten G's",
+      "Five G's",
+      "A grand"
+     ],
+     [
+      "She spent the crazy what?",
+      "Dough",
+      "Time",
+      "Gas"
+     ]
+    ],
+    [
+     [
+      "What did she give him?",
+      "A back massage",
+      "A kiss",
+      "A ring"
+     ],
+     [
+      "She gassed his head up: 'Oh P, you're so' what?",
+      "Large",
+      "Smart",
+      "Fine"
+     ],
+     [
+      "Like a jerk, he went for the line like a what?",
+      "Fish",
+      "Fool",
+      "Kid"
+     ],
+     [
+      "She was far from a dream girl and more like a what?",
+      "Death wish",
+      "Nightmare",
+      "Bad dream"
+     ],
+     [
+      "She likes to walk on what?",
+      "Plush rugs",
+      "Marble floors",
+      "Red carpets"
+     ],
+     [
+      "Which of his cars does she whip?",
+      "Five-sixty",
+      "Jaguar",
+      "Maserati"
+     ],
+     [
+      "He tried to flip, but she did what?",
+      "Cut me off",
+      "Walked out",
+      "Called E"
+     ],
+     [
+      "She said the child is whose?",
+      "His",
+      "E's",
+      "Nobody's"
+     ],
+     [
+      "The warning is for fellas who wanna keep their what?",
+      "Cash",
+      "Cars",
+      "Girls"
+     ],
+     [
+      "She likes to sit back and do what?",
+      "Lamp",
+      "Shop",
+      "Dance"
+     ],
+     [
+      "'Cause she's a what?",
+      "Gold digger",
+      "Good girl",
+      "Go-getter"
+     ]
+    ],
+    [
+     [
+      "Ladies of which decade got hip and went for self?",
+      "The '80s",
+      "The '70s",
+      "The '90s"
+     ],
+     [
+      "In the split, P says what goes?",
+      "The car",
+      "The boat",
+      "The dog"
+     ],
+     [
+      "What a price to pay, but if you play you what?",
+      "Pay",
+      "Lose",
+      "Stay"
+     ],
+     [
+      "Women of the world got what today?",
+      "Smart",
+      "Rich",
+      "Tough"
+     ],
+     [
+      "You try to move in and get stuck with what payments?",
+      "Alimony",
+      "Car",
+      "Rent"
+     ],
+     [
+      "She smiles because she what?",
+      "Gotcha",
+      "Loves you",
+      "Won"
+     ],
+     [
+      "You get a flashback to the what?",
+      "Wedding",
+      "First date",
+      "Prom"
+     ],
+     [
+      "Now you're eatin' what kind of dinners?",
+      "TV dinners",
+      "Cold pizza",
+      "Fast food"
+     ],
+     [
+      "In what kind of apartment?",
+      "One bedroom",
+      "Studio",
+      "Basement"
+     ],
+     [
+      "She wheels the Benz and you ride what?",
+      "Greyhound",
+      "The train",
+      "A bike"
+     ],
+     [
+      "Take off the wedding band, put out the thumb and do what?",
+      "Hitch-hike",
+      "Walk home",
+      "Wave goodbye"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Let the Funk Flow (EPMD)",
+   "id": "OOx_NH8UVAM",
+   "start": 28.1,
+   "cuts": [
+    60.8,
+    154.7,
+    196.2
+   ],
+   "qs": [
+    [
+     [
+      "He says relax while he does what?",
+      "Tax",
+      "Talk",
+      "Rap"
+     ],
+     [
+      "Poppin' much what?",
+      "Junk",
+      "Noise",
+      "Gum"
+     ],
+     [
+      "He picked your card, and your name has been what?",
+      "Chosen",
+      "Called",
+      "Crossed"
+     ],
+     [
+      "What does he say, you know what he means?",
+      "Let it flow",
+      "Let it go",
+      "Let it play"
+     ],
+     [
+      "Who's in the place to be?",
+      "The PMD",
+      "The E",
+      "DJ Scratch"
+     ],
+     [
+      "He does clock what?",
+      "Rhymin'",
+      "Watchin'",
+      "Workin'"
+     ],
+     [
+      "He locks you around the what?",
+      "Tick-tocker",
+      "Block",
+      "Corner"
+     ],
+     [
+      "Suckers are steady clockin' and at the same time what?",
+      "Jockin'",
+      "Talkin'",
+      "Walkin'"
+     ],
+     [
+      "A brother like MD takes a chill and does what?",
+      "Lays low",
+      "Goes home",
+      "Speeds up"
+     ],
+     [
+      "Whose girl does he hypnotize?",
+      "Yours",
+      "His",
+      "E's"
+     ],
+     [
+      "He hypnotizes her while the what flows?",
+      "Funk",
+      "Beat",
+      "Cash"
+     ]
+    ],
+    [
+     [
+      "The bass is steady doing what?",
+      "Pumpin'",
+      "Drippin'",
+      "Droppin'"
+     ],
+     [
+      "And the beat be like what?",
+      "Thumpin'",
+      "Knockin'",
+      "Bumpin'"
+     ],
+     [
+      "You lose your cool, then you start doing what?",
+      "Jumpin'",
+      "Yellin'",
+      "Runnin'"
+     ],
+     [
+      "You're out of control and he's right on what?",
+      "Track",
+      "Time",
+      "Point"
+     ],
+     [
+      "To mess with the two is to mess with what?",
+      "Hot water",
+      "Fire",
+      "The law"
+     ],
+     [
+      "What did E say?",
+      "Let 'em slide",
+      "Let 'em know",
+      "Let 'em go"
+     ],
+     [
+      "He's in the mood for dishin' and what?",
+      "Dismissin'",
+      "Dissin'",
+      "Kissin'"
+     ],
+     [
+      "He reels them in as if they was what?",
+      "Fishin'",
+      "Wishin'",
+      "Swimmin'"
+     ],
+     [
+      "Which year does he say, 'no wait, I think it's too late'?",
+      "'88",
+      "'89",
+      "'86"
+     ],
+     [
+      "In which year did you bite on the old bait?",
+      "'87",
+      "'85",
+      "'90"
+     ],
+     [
+      "What did you bite on?",
+      "The old bait",
+      "The new beat",
+      "A hook"
+     ]
+    ],
+    [
+     [
+      "Lounge homeboy, you're in the what?",
+      "Danger zone",
+      "End zone",
+      "Twilight zone"
+     ],
+     [
+      "Who's on the microphone?",
+      "PMD",
+      "E-Double",
+      "Scratch"
+     ],
+     [
+      "The slow momentum of his rhymes is what?",
+      "Divine",
+      "Fine",
+      "Mine"
+     ],
+     [
+      "His rhymes go off beat and come back how?",
+      "On time",
+      "Too late",
+      "Too fast"
+     ],
+     [
+      "He maintains and explains but never sounds the what?",
+      "Same",
+      "Lame",
+      "Tame"
+     ],
+     [
+      "When it comes to doing this, how many remain?",
+      "Very few",
+      "Not one",
+      "Too many"
+     ],
+     [
+      "People are on his jock for the rhymes he does what?",
+      "Invents",
+      "Steals",
+      "Sells"
+     ],
+     [
+      "He dips in a phone booth just like who?",
+      "Clark Kent",
+      "Peter Parker",
+      "Bruce Wayne"
+     ],
+     [
+      "He steps out dressed to what?",
+      "Impress",
+      "Win",
+      "Chill"
+     ],
+     [
+      "What letter is on his chest?",
+      "P",
+      "E",
+      "S"
+     ],
+     [
+      "MCs fetch his rhyme like who?",
+      "Freddy",
+      "Fido",
+      "Rover"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Back to Work",
+   "id": "-2kCe8QbUUg",
+   "start": 7.4,
+   "cuts": [
+    29.4,
+    56.2,
+    101
+   ],
+   "qs": [
+    [
+     [
+      "He never spit a rhyme that he didn't feel from the what?",
+      "Heart",
+      "Soul",
+      "Street"
+     ],
+     [
+      "He never dropped an album that didn't climb the what?",
+      "Charts",
+      "Walls",
+      "Ladder"
+     ],
+     [
+      "He spits it rugged with tight what?",
+      "Precision",
+      "Production",
+      "Pressure"
+     ],
+     [
+      "Which cartoon kid does he compare himself to?",
+      "Jimmy Neutron",
+      "Johnny Bravo",
+      "Dexter"
+     ],
+     [
+      "He sees the world through what kind of vision?",
+      "X-ray",
+      "Night",
+      "Tunnel"
+     ],
+     [
+      "Play PMD? Don't even what?",
+      "Try",
+      "Lie",
+      "Cry"
+     ],
+     [
+      "Which actor does he mention?",
+      "Tom Cruise",
+      "Tom Hanks",
+      "Will Smith"
+     ],
+     [
+      "Which movie does he name?",
+      "Vanilla Sky",
+      "Top Gun",
+      "Cocktail"
+     ],
+     [
+      "He's Big Max what?",
+      "Supersized",
+      "Superstar",
+      "Supreme"
+     ],
+     [
+      "A lot of you cats are what?",
+      "Small fries",
+      "Big fish",
+      "Top dogs"
+     ],
+     [
+      "Fix your grill and don't look what?",
+      "Surprised",
+      "Away",
+      "Back"
+     ]
+    ],
+    [
+     [
+      "P stays in the basement like a what?",
+      "Headbanger",
+      "Hustler",
+      "Hermit"
+     ],
+     [
+      "Who's hollerin' his name, speakin' in what?",
+      "Foul tongue",
+      "Sign language",
+      "Spanish"
+     ],
+     [
+      "He's got the power to move his people like who?",
+      "Malcolm",
+      "Martin",
+      "Marcus"
+     ],
+     [
+      "Save your souls or stay stuck frozen in what?",
+      "Time",
+      "Ice",
+      "Place"
+     ],
+     [
+      "Basic instructions before leavin' where?",
+      "Earth",
+      "Home",
+      "Town"
+     ],
+     [
+      "What name is on the back of his jersey?",
+      "Smith",
+      "PMD",
+      "Parrish"
+     ],
+     [
+      "Which way is he goin' on the court?",
+      "Baseline",
+      "Downtown",
+      "Coast to coast"
+     ],
+     [
+      "In the two-minute drill, how many yards to go?",
+      "Ninety-nine",
+      "Fifty",
+      "Ten"
+     ],
+     [
+      "How many timeouts does he have left?",
+      "None",
+      "One",
+      "Three"
+     ],
+     [
+      "It's shotgun, air-assault, and no what?",
+      "Puntin'",
+      "Passin'",
+      "Runnin'"
+     ],
+     [
+      "Which QB does he name with Joe Montana?",
+      "Elway",
+      "Marino",
+      "Kelly"
+     ]
+    ],
+    [
+     [
+      "What color bandana is he rockin'?",
+      "Black",
+      "Red",
+      "Blue"
+     ],
+     [
+      "What kind of hat does he wear?",
+      "Fisherman",
+      "Cowboy",
+      "Baseball"
+     ],
+     [
+      "Whether he's up in NY or down in where?",
+      "'Bama",
+      "Miami",
+      "Texas"
+     ],
+     [
+      "He dances to his own what?",
+      "Drum",
+      "Song",
+      "Tune"
+     ],
+     [
+      "He's strictly what?",
+      "Biz",
+      "Raw",
+      "Street"
+     ],
+     [
+      "Where did he come up?",
+      "In the street",
+      "In the suburbs",
+      "In the studio"
+     ],
+     [
+      "He rocked every spot from the Latin Quarters to the what?",
+      "Rooftop",
+      "Basement",
+      "Garden"
+     ],
+     [
+      "Which famous Harlem theater does he name?",
+      "Apollo",
+      "Cotton Club",
+      "Savoy"
+     ],
+     [
+      "Group Five, Apollo and which other theater?",
+      "Beacon",
+      "Paramount",
+      "Radio City"
+     ],
+     [
+      "He lives underground in the what?",
+      "Rap zone",
+      "Twilight zone",
+      "War zone"
+     ],
+     [
+      "What is he back to?",
+      "Work",
+      "School",
+      "Basics"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Gold Digger (EPMD)",
+   "id": "4LoG-S-kIqg",
+   "start": 101,
+   "cuts": [
+    127.3,
+    170.4,
+    234.4
+   ],
+   "qs": [
+    [
+     [
+      "The P had a close what?",
+      "Call",
+      "Friend",
+      "Shave"
+     ],
+     [
+      "He dated this what kind of girl?",
+      "Fly",
+      "Shy",
+      "Rich"
+     ],
+     [
+      "He almost got what?",
+      "Vicked",
+      "Married",
+      "Kicked"
+     ],
+     [
+      "What color were her eyes?",
+      "Green",
+      "Hazel",
+      "Brown"
+     ],
+     [
+      "What car did she drive?",
+      "Black Maserati",
+      "Red Ferrari",
+      "White Jaguar"
+     ],
+     [
+      "It had a chrome what?",
+      "Kit",
+      "Grill",
+      "Bumper"
+     ],
+     [
+      "What couldn't he resist?",
+      "Her smile",
+      "Her car",
+      "Her voice"
+     ],
+     [
+      "Who did he tap on the shoulder?",
+      "E",
+      "Scratch",
+      "Her"
+     ],
+     [
+      "He was told to be cool, she could be a what?",
+      "Gold digger",
+      "Cop",
+      "Married"
+     ],
+     [
+      "How much did she spend on Levi's?",
+      "Ten G's",
+      "Five G's",
+      "A grand"
+     ],
+     [
+      "She spent the crazy what?",
+      "Dough",
+      "Time",
+      "Gas"
+     ]
+    ],
+    [
+     [
+      "What did she give him?",
+      "A back massage",
+      "A kiss",
+      "A ring"
+     ],
+     [
+      "She gassed his head up: 'Oh P, you're so' what?",
+      "Large",
+      "Smart",
+      "Fine"
+     ],
+     [
+      "Like a jerk, he went for the line like a what?",
+      "Fish",
+      "Fool",
+      "Kid"
+     ],
+     [
+      "She was far from a dream girl and more like a what?",
+      "Death wish",
+      "Nightmare",
+      "Bad dream"
+     ],
+     [
+      "She likes to walk on what?",
+      "Plush rugs",
+      "Marble floors",
+      "Red carpets"
+     ],
+     [
+      "Which of his cars does she whip?",
+      "Five-sixty",
+      "Jaguar",
+      "Maserati"
+     ],
+     [
+      "He tried to flip, but she did what?",
+      "Cut me off",
+      "Walked out",
+      "Called E"
+     ],
+     [
+      "She said the child is whose?",
+      "His",
+      "E's",
+      "Nobody's"
+     ],
+     [
+      "The warning is for fellas who wanna keep their what?",
+      "Cash",
+      "Cars",
+      "Girls"
+     ],
+     [
+      "She likes to sit back and do what?",
+      "Lamp",
+      "Shop",
+      "Dance"
+     ],
+     [
+      "'Cause she's a what?",
+      "Gold digger",
+      "Good girl",
+      "Go-getter"
+     ]
+    ],
+    [
+     [
+      "Ladies of which decade got hip and went for self?",
+      "The '80s",
+      "The '70s",
+      "The '90s"
+     ],
+     [
+      "In the split, P says what goes?",
+      "The car",
+      "The boat",
+      "The dog"
+     ],
+     [
+      "What a price to pay, but if you play you what?",
+      "Pay",
+      "Lose",
+      "Stay"
+     ],
+     [
+      "Women of the world got what today?",
+      "Smart",
+      "Rich",
+      "Tough"
+     ],
+     [
+      "You try to move in and get stuck with what payments?",
+      "Alimony",
+      "Car",
+      "Rent"
+     ],
+     [
+      "She smiles because she what?",
+      "Gotcha",
+      "Loves you",
+      "Won"
+     ],
+     [
+      "You get a flashback to the what?",
+      "Wedding",
+      "First date",
+      "Prom"
+     ],
+     [
+      "Now you're eatin' what kind of dinners?",
+      "TV dinners",
+      "Cold pizza",
+      "Fast food"
+     ],
+     [
+      "In what kind of apartment?",
+      "One bedroom",
+      "Studio",
+      "Basement"
+     ],
+     [
+      "She wheels the Benz and you ride what?",
+      "Greyhound",
+      "The train",
+      "A bike"
+     ],
+     [
+      "Take off the wedding band, put out the thumb and do what?",
+      "Hitch-hike",
+      "Walk home",
+      "Wave goodbye"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

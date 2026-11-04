@@ -104,40 +104,1337 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
+  {
+   "title": "All My Shots",
+   "id": "VTU7ZbtDciU",
+   "start": 63,
+   "cuts": [
+    85.9,
+    107.8,
+    128.9
+   ],
+   "qs": [
+    [
+     [
+      "They came to ball for what?",
+      "It all",
+      "The crown",
+      "The cash"
+     ],
+     [
+      "It's no what?",
+      "Limit",
+      "Problem",
+      "Joke"
+     ],
+     [
+      "In this game you go hard till you fall or you what?",
+      "Finish",
+      "Quit",
+      "Win"
+     ],
+     [
+      "He's taking all his what?",
+      "Shots",
+      "Chances",
+      "Calls"
+     ],
+     [
+      "He passes the rock if they need what?",
+      "Assistance",
+      "A break",
+      "A ride"
+     ],
+     [
+      "Then he passes that what?",
+      "Rock",
+      "Mic",
+      "Torch"
+     ],
+     [
+      "And they're doing what with it?",
+      "Swishing it",
+      "Dunking it",
+      "Dribbling it"
+     ],
+     [
+      "In this what do you go hard?",
+      "Game",
+      "Life",
+      "Gym"
+     ]
+    ],
+    [
+     [
+      "What kind of vision does the top shotta have?",
+      "Tunnel",
+      "Night",
+      "X-ray"
+     ],
+     [
+      "He takes them to the what?",
+      "Rack",
+      "Rim",
+      "Bench"
+     ],
+     [
+      "His shots are smoking like the block is what?",
+      "Hot",
+      "Cold",
+      "Locked"
+     ],
+     [
+      "All they get is what?",
+      "Wiggles",
+      "Buckets",
+      "Fouls"
+     ],
+     [
+      "He's gonna take it to the what?",
+      "Top",
+      "House",
+      "Hole"
+     ],
+     [
+      "Watch him make it what on 'em?",
+      "Rain",
+      "Snow",
+      "Shine"
+     ],
+     [
+      "They're gonna get these what now?",
+      "Dimes",
+      "Bricks",
+      "Bills"
+     ],
+     [
+      "He hoops it like which painter?",
+      "Picasso",
+      "Van Gogh",
+      "Basquiat"
+     ]
+    ],
+    [
+     [
+      "He's going out as what?",
+      "Legendary",
+      "A champion",
+      "A rookie"
+     ],
+     [
+      "Hoop is the what?",
+      "Halo",
+      "Heaven",
+      "Habit"
+     ],
+     [
+      "The ball is his what?",
+      "Sanctuary",
+      "Best friend",
+      "Weapon"
+     ],
+     [
+      "Label him the what one?",
+      "Chosen",
+      "Only",
+      "Golden"
+     ],
+     [
+      "Which TV show does he name?",
+      "Game of Thrones",
+      "The Wire",
+      "Power"
+     ],
+     [
+      "He's the baddest kid of the what?",
+      "Playground",
+      "Block",
+      "School"
+     ],
+     [
+      "He runs the court and calls the what?",
+      "Shots",
+      "Plays",
+      "Fouls"
+     ],
+     [
+      "He's gotta make it 'cause that's the only what?",
+      "Way out",
+      "Way up",
+      "Choice"
+     ]
+    ]
+   ]
+  },
   {
    "title": "Lift Me Up",
    "id": "t0YSWvcrcjE",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "cuts": [
+    42,
+    68.5,
+    148.5
+   ],
+   "qs": [
+    [
+     [
+      "What does he need sometimes?",
+      "A pick me up",
+      "A day off",
+      "A drink"
+     ],
+     [
+      "Sometimes he's feeling what?",
+      "Down",
+      "Lost",
+      "Cold"
+     ],
+     [
+      "He needs something to get him what?",
+      "By",
+      "High",
+      "Home"
+     ],
+     [
+      "Something for when no one's what?",
+      "Around",
+      "Awake",
+      "Calling"
+     ],
+     [
+      "What does he ask the girl to fill?",
+      "My cup",
+      "My glass",
+      "My tank"
+     ],
+     [
+      "There's too much on his what?",
+      "Mind",
+      "Plate",
+      "Back"
+     ],
+     [
+      "He learned to take his wins and cut the what?",
+      "Losses",
+      "Ties",
+      "Line"
+     ],
+     [
+      "What does he ask her to do?",
+      "Lift me up",
+      "Let me go",
+      "Hold me down"
+     ]
+    ],
+    [
+     [
+      "It took a lot of what to weather it?",
+      "Guts",
+      "Time",
+      "Cash"
+     ],
+     [
+      "He's way too locked in to ever what?",
+      "Lock up",
+      "Give up",
+      "Slow down"
+     ],
+     [
+      "He's working what?",
+      "Overtime",
+      "Part time",
+      "Nights"
+     ],
+     [
+      "He's got to what?",
+      "Overshine",
+      "Overthink",
+      "Overdo"
+     ],
+     [
+      "This time he knows it's what?",
+      "Mine",
+      "Over",
+      "Real"
+     ],
+     [
+      "He's got the coldest what in the game?",
+      "Rhymes",
+      "Chains",
+      "Cars"
+     ],
+     [
+      "He's like the golden what?",
+      "Child",
+      "Boy",
+      "Era"
+     ],
+     [
+      "What is all that pressure going to make?",
+      "Diamonds",
+      "Gold",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "They used to laugh; he was in the kitchen with big what?",
+      "Sauce",
+      "Pots",
+      "Dreams"
+     ],
+     [
+      "Why shake hands if you ain't what?",
+      "Friends",
+      "Family",
+      "Even"
+     ],
+     [
+      "Which year does he mention?",
+      "2020",
+      "2010",
+      "2019"
+     ],
+     [
+      "He used to ask mama for the what?",
+      "Rent",
+      "Car",
+      "Keys"
+     ],
+     [
+      "Now who does he help with the rent?",
+      "Mama",
+      "His sister",
+      "His girl"
+     ],
+     [
+      "Which restaurant does he name?",
+      "Red Lobster",
+      "Olive Garden",
+      "Applebee's"
+     ],
+     [
+      "His baby is holding him for what?",
+      "Ransom",
+      "Hours",
+      "Life"
+     ],
+     [
+      "That's why he doesn't do what anymore?",
+      "The club",
+      "The parties",
+      "The mall"
+     ]
+    ]
+   ]
   },
   {
    "title": "Balance",
-   "id": "bd4GHwCLo4o",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Rose Colored",
-   "id": "-W7OW83ar0M",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Recognize",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "Hq6cxLC3N-4",
+   "cuts": [
+    23.4,
+    46,
+    90.7
+   ],
+   "qs": [
+    [
+     [
+      "What has he been tryna find?",
+      "Balance",
+      "Peace",
+      "Love"
+     ],
+     [
+      "How much of him is good?",
+      "Half",
+      "All",
+      "None"
+     ],
+     [
+      "The other half of him knows what?",
+      "Malice",
+      "Money",
+      "Madness"
+     ],
+     [
+      "His head's so big he's been looking for a what?",
+      "Challenge",
+      "Hat",
+      "Crown"
+     ],
+     [
+      "He was in the trenches, now he's in a what?",
+      "Palace",
+      "Mansion",
+      "Penthouse"
+     ],
+     [
+      "What's in their mouths along with his name?",
+      "Hate",
+      "Lies",
+      "Food"
+     ],
+     [
+      "He calls them all who?",
+      "Ricki Lake",
+      "Oprah",
+      "Maury"
+     ],
+     [
+      "What's on his list today?",
+      "Getting money",
+      "Getting sleep",
+      "Getting even"
+     ],
+     [
+      "Before the palace, where was he?",
+      "The trenches",
+      "The suburbs",
+      "The studio"
+     ]
+    ],
+    [
+     [
+      "He's got a what to get?",
+      "Bag",
+      "Job",
+      "Plan"
+     ],
+     [
+      "He's gotta floss and gotta what?",
+      "Boss",
+      "Toss",
+      "Cross"
+     ],
+     [
+      "What's shining?",
+      "His wrist",
+      "His teeth",
+      "His car"
+     ],
+     [
+      "He's out here taking what?",
+      "Chances",
+      "Pictures",
+      "Orders"
+     ],
+     [
+      "He's counting what up?",
+      "Bands",
+      "Days",
+      "Points"
+     ],
+     [
+      "He just might cop him a what?",
+      "Mansion",
+      "Benz",
+      "Boat"
+     ],
+     [
+      "What's dancing on him?",
+      "Diamonds",
+      "Lights",
+      "Girls"
+     ],
+     [
+      "Which basketball player does he mention?",
+      "Harden",
+      "LeBron",
+      "Curry"
+     ],
+     [
+      "What kind of greens is he making in the kitchen?",
+      "Collard",
+      "Mustard",
+      "Turnip"
+     ]
+    ],
+    [
+     [
+      "He was lost like who?",
+      "Alice",
+      "Dorothy",
+      "Peter Pan"
+     ],
+     [
+      "He says he's got what on him?",
+      "Plenty",
+      "Nothing",
+      "Change"
+     ],
+     [
+      "He was in a rut; they told him he would never what?",
+      "Make it out",
+      "Make a hit",
+      "Grow up"
+     ],
+     [
+      "He's back at it like a what?",
+      "Jack rabbit",
+      "Busy bee",
+      "Wild horse"
+     ],
+     [
+      "He's got what on him now?",
+      "Racks",
+      "Chains",
+      "Bills"
+     ],
+     [
+      "He calls himself a cash what?",
+      "Addict",
+      "Machine",
+      "King"
+     ],
+     [
+      "It's a bad what?",
+      "Habit",
+      "Day",
+      "Sign"
+     ],
+     [
+      "He likes to what money?",
+      "Stack",
+      "Spend",
+      "Burn"
+     ],
+     [
+      "He was rich even when he was what?",
+      "Broke",
+      "Young",
+      "Lost"
+     ]
+    ]
+   ]
   },
   {
    "title": "Believe",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "q_9sFj5zCGI",
+   "start": 15,
+   "cuts": [
+    50.3,
+    81.7,
+    138.6
+   ],
+   "qs": [
+    [
+     [
+      "What does he say you gotta do?",
+      "Watch this",
+      "Catch this",
+      "Stop this"
+     ],
+     [
+      "Anyone who says they don't like this is just what?",
+      "Toxic",
+      "Jealous",
+      "Lying"
+     ],
+     [
+      "How many steps ahead is he?",
+      "Ten",
+      "Two",
+      "Five"
+     ],
+     [
+      "He might go like who and chart all these records?",
+      "Michael",
+      "Prince",
+      "Drake"
+     ],
+     [
+      "What would he chart, like Michael?",
+      "Records",
+      "Maps",
+      "Courses"
+     ],
+     [
+      "Even if you think you're doing what, you couldn't stop this?",
+      "Crossing me",
+      "Copying me",
+      "Cutting me"
+     ],
+     [
+      "With money, now he's got what?",
+      "Options",
+      "Problems",
+      "Friends"
+     ],
+     [
+      "What place did he come in?",
+      "Last",
+      "First",
+      "Second"
+     ]
+    ],
+    [
+     [
+      "Everybody wants to know how he does what?",
+      "What he does",
+      "His hair",
+      "His dance"
+     ],
+     [
+      "Who was he before he even knew who he was?",
+      "Me",
+      "Nobody",
+      "A star"
+     ],
+     [
+      "Ever since which table?",
+      "The lunch room",
+      "The kitchen",
+      "The card"
+     ],
+     [
+      "At the lunch room table, he can't do what?",
+      "Sit where y'all sit",
+      "Eat with y'all",
+      "Talk to y'all"
+     ],
+     [
+      "Could it be what that made you believe?",
+      "Faith",
+      "Fear",
+      "Love"
+     ],
+     [
+      "He wouldn't be here just for what?",
+      "Nothing",
+      "Money",
+      "Fun"
+     ],
+     [
+      "Or was it the what that made you believe?",
+      "Fame",
+      "Game",
+      "Name"
+     ],
+     [
+      "He knew he would be what?",
+      "Something",
+      "Famous",
+      "Rich"
+     ]
+    ],
+    [
+     [
+      "He's feeling like Michael in the what?",
+      "Ring",
+      "Paint",
+      "Air"
+     ],
+     [
+      "He's feeling like Jackie with the what?",
+      "Swing",
+      "Ring",
+      "Kicks"
+     ],
+     [
+      "He's feeling like which big man in the paint?",
+      "Shaquille",
+      "Kareem",
+      "Patrick"
+     ],
+     [
+      "'You know exactly what it...' what?",
+      "Mean",
+      "Takes",
+      "Costs"
+     ],
+     [
+      "He's in the upper what?",
+      "Echelon",
+      "Level",
+      "Class"
+     ],
+     [
+      "He's colder than drop tops in what?",
+      "Winter",
+      "Snow",
+      "December"
+     ],
+     [
+      "If you turn away from him, there is no what?",
+      "Coming back",
+      "Second chance",
+      "Going home"
+     ],
+     [
+      "What does he say at the very end?",
+      "Aye",
+      "Yeah",
+      "Uh"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "All My Shots",
+   "id": "VTU7ZbtDciU",
+   "start": 63,
+   "cuts": [
+    85.9,
+    107.8,
+    128.9
+   ],
+   "qs": [
+    [
+     [
+      "They came to ball for what?",
+      "It all",
+      "The crown",
+      "The cash"
+     ],
+     [
+      "It's no what?",
+      "Limit",
+      "Problem",
+      "Joke"
+     ],
+     [
+      "In this game you go hard till you fall or you what?",
+      "Finish",
+      "Quit",
+      "Win"
+     ],
+     [
+      "He's taking all his what?",
+      "Shots",
+      "Chances",
+      "Calls"
+     ],
+     [
+      "He passes the rock if they need what?",
+      "Assistance",
+      "A break",
+      "A ride"
+     ],
+     [
+      "Then he passes that what?",
+      "Rock",
+      "Mic",
+      "Torch"
+     ],
+     [
+      "And they're doing what with it?",
+      "Swishing it",
+      "Dunking it",
+      "Dribbling it"
+     ],
+     [
+      "In this what do you go hard?",
+      "Game",
+      "Life",
+      "Gym"
+     ]
+    ],
+    [
+     [
+      "What kind of vision does the top shotta have?",
+      "Tunnel",
+      "Night",
+      "X-ray"
+     ],
+     [
+      "He takes them to the what?",
+      "Rack",
+      "Rim",
+      "Bench"
+     ],
+     [
+      "His shots are smoking like the block is what?",
+      "Hot",
+      "Cold",
+      "Locked"
+     ],
+     [
+      "All they get is what?",
+      "Wiggles",
+      "Buckets",
+      "Fouls"
+     ],
+     [
+      "He's gonna take it to the what?",
+      "Top",
+      "House",
+      "Hole"
+     ],
+     [
+      "Watch him make it what on 'em?",
+      "Rain",
+      "Snow",
+      "Shine"
+     ],
+     [
+      "They're gonna get these what now?",
+      "Dimes",
+      "Bricks",
+      "Bills"
+     ],
+     [
+      "He hoops it like which painter?",
+      "Picasso",
+      "Van Gogh",
+      "Basquiat"
+     ]
+    ],
+    [
+     [
+      "He's going out as what?",
+      "Legendary",
+      "A champion",
+      "A rookie"
+     ],
+     [
+      "Hoop is the what?",
+      "Halo",
+      "Heaven",
+      "Habit"
+     ],
+     [
+      "The ball is his what?",
+      "Sanctuary",
+      "Best friend",
+      "Weapon"
+     ],
+     [
+      "Label him the what one?",
+      "Chosen",
+      "Only",
+      "Golden"
+     ],
+     [
+      "Which TV show does he name?",
+      "Game of Thrones",
+      "The Wire",
+      "Power"
+     ],
+     [
+      "He's the baddest kid of the what?",
+      "Playground",
+      "Block",
+      "School"
+     ],
+     [
+      "He runs the court and calls the what?",
+      "Shots",
+      "Plays",
+      "Fouls"
+     ],
+     [
+      "He's gotta make it 'cause that's the only what?",
+      "Way out",
+      "Way up",
+      "Choice"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Lift Me Up",
+   "id": "t0YSWvcrcjE",
+   "cuts": [
+    42,
+    68.5,
+    148.5
+   ],
+   "qs": [
+    [
+     [
+      "What does he need sometimes?",
+      "A pick me up",
+      "A day off",
+      "A drink"
+     ],
+     [
+      "Sometimes he's feeling what?",
+      "Down",
+      "Lost",
+      "Cold"
+     ],
+     [
+      "He needs something to get him what?",
+      "By",
+      "High",
+      "Home"
+     ],
+     [
+      "Something for when no one's what?",
+      "Around",
+      "Awake",
+      "Calling"
+     ],
+     [
+      "What does he ask the girl to fill?",
+      "My cup",
+      "My glass",
+      "My tank"
+     ],
+     [
+      "There's too much on his what?",
+      "Mind",
+      "Plate",
+      "Back"
+     ],
+     [
+      "He learned to take his wins and cut the what?",
+      "Losses",
+      "Ties",
+      "Line"
+     ],
+     [
+      "What does he ask her to do?",
+      "Lift me up",
+      "Let me go",
+      "Hold me down"
+     ]
+    ],
+    [
+     [
+      "It took a lot of what to weather it?",
+      "Guts",
+      "Time",
+      "Cash"
+     ],
+     [
+      "He's way too locked in to ever what?",
+      "Lock up",
+      "Give up",
+      "Slow down"
+     ],
+     [
+      "He's working what?",
+      "Overtime",
+      "Part time",
+      "Nights"
+     ],
+     [
+      "He's got to what?",
+      "Overshine",
+      "Overthink",
+      "Overdo"
+     ],
+     [
+      "This time he knows it's what?",
+      "Mine",
+      "Over",
+      "Real"
+     ],
+     [
+      "He's got the coldest what in the game?",
+      "Rhymes",
+      "Chains",
+      "Cars"
+     ],
+     [
+      "He's like the golden what?",
+      "Child",
+      "Boy",
+      "Era"
+     ],
+     [
+      "What is all that pressure going to make?",
+      "Diamonds",
+      "Gold",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "They used to laugh; he was in the kitchen with big what?",
+      "Sauce",
+      "Pots",
+      "Dreams"
+     ],
+     [
+      "Why shake hands if you ain't what?",
+      "Friends",
+      "Family",
+      "Even"
+     ],
+     [
+      "Which year does he mention?",
+      "2020",
+      "2010",
+      "2019"
+     ],
+     [
+      "He used to ask mama for the what?",
+      "Rent",
+      "Car",
+      "Keys"
+     ],
+     [
+      "Now who does he help with the rent?",
+      "Mama",
+      "His sister",
+      "His girl"
+     ],
+     [
+      "Which restaurant does he name?",
+      "Red Lobster",
+      "Olive Garden",
+      "Applebee's"
+     ],
+     [
+      "His baby is holding him for what?",
+      "Ransom",
+      "Hours",
+      "Life"
+     ],
+     [
+      "That's why he doesn't do what anymore?",
+      "The club",
+      "The parties",
+      "The mall"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Balance",
+   "id": "Hq6cxLC3N-4",
+   "cuts": [
+    23.4,
+    46,
+    90.7
+   ],
+   "qs": [
+    [
+     [
+      "What has he been tryna find?",
+      "Balance",
+      "Peace",
+      "Love"
+     ],
+     [
+      "How much of him is good?",
+      "Half",
+      "All",
+      "None"
+     ],
+     [
+      "The other half of him knows what?",
+      "Malice",
+      "Money",
+      "Madness"
+     ],
+     [
+      "His head's so big he's been looking for a what?",
+      "Challenge",
+      "Hat",
+      "Crown"
+     ],
+     [
+      "He was in the trenches, now he's in a what?",
+      "Palace",
+      "Mansion",
+      "Penthouse"
+     ],
+     [
+      "What's in their mouths along with his name?",
+      "Hate",
+      "Lies",
+      "Food"
+     ],
+     [
+      "He calls them all who?",
+      "Ricki Lake",
+      "Oprah",
+      "Maury"
+     ],
+     [
+      "What's on his list today?",
+      "Getting money",
+      "Getting sleep",
+      "Getting even"
+     ],
+     [
+      "Before the palace, where was he?",
+      "The trenches",
+      "The suburbs",
+      "The studio"
+     ]
+    ],
+    [
+     [
+      "He's got a what to get?",
+      "Bag",
+      "Job",
+      "Plan"
+     ],
+     [
+      "He's gotta floss and gotta what?",
+      "Boss",
+      "Toss",
+      "Cross"
+     ],
+     [
+      "What's shining?",
+      "His wrist",
+      "His teeth",
+      "His car"
+     ],
+     [
+      "He's out here taking what?",
+      "Chances",
+      "Pictures",
+      "Orders"
+     ],
+     [
+      "He's counting what up?",
+      "Bands",
+      "Days",
+      "Points"
+     ],
+     [
+      "He just might cop him a what?",
+      "Mansion",
+      "Benz",
+      "Boat"
+     ],
+     [
+      "What's dancing on him?",
+      "Diamonds",
+      "Lights",
+      "Girls"
+     ],
+     [
+      "Which basketball player does he mention?",
+      "Harden",
+      "LeBron",
+      "Curry"
+     ],
+     [
+      "What kind of greens is he making in the kitchen?",
+      "Collard",
+      "Mustard",
+      "Turnip"
+     ]
+    ],
+    [
+     [
+      "He was lost like who?",
+      "Alice",
+      "Dorothy",
+      "Peter Pan"
+     ],
+     [
+      "He says he's got what on him?",
+      "Plenty",
+      "Nothing",
+      "Change"
+     ],
+     [
+      "He was in a rut; they told him he would never what?",
+      "Make it out",
+      "Make a hit",
+      "Grow up"
+     ],
+     [
+      "He's back at it like a what?",
+      "Jack rabbit",
+      "Busy bee",
+      "Wild horse"
+     ],
+     [
+      "He's got what on him now?",
+      "Racks",
+      "Chains",
+      "Bills"
+     ],
+     [
+      "He calls himself a cash what?",
+      "Addict",
+      "Machine",
+      "King"
+     ],
+     [
+      "It's a bad what?",
+      "Habit",
+      "Day",
+      "Sign"
+     ],
+     [
+      "He likes to what money?",
+      "Stack",
+      "Spend",
+      "Burn"
+     ],
+     [
+      "He was rich even when he was what?",
+      "Broke",
+      "Young",
+      "Lost"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Believe",
+   "id": "q_9sFj5zCGI",
+   "start": 15,
+   "cuts": [
+    50.3,
+    81.7,
+    138.6
+   ],
+   "qs": [
+    [
+     [
+      "What does he say you gotta do?",
+      "Watch this",
+      "Catch this",
+      "Stop this"
+     ],
+     [
+      "Anyone who says they don't like this is just what?",
+      "Toxic",
+      "Jealous",
+      "Lying"
+     ],
+     [
+      "How many steps ahead is he?",
+      "Ten",
+      "Two",
+      "Five"
+     ],
+     [
+      "He might go like who and chart all these records?",
+      "Michael",
+      "Prince",
+      "Drake"
+     ],
+     [
+      "What would he chart, like Michael?",
+      "Records",
+      "Maps",
+      "Courses"
+     ],
+     [
+      "Even if you think you're doing what, you couldn't stop this?",
+      "Crossing me",
+      "Copying me",
+      "Cutting me"
+     ],
+     [
+      "With money, now he's got what?",
+      "Options",
+      "Problems",
+      "Friends"
+     ],
+     [
+      "What place did he come in?",
+      "Last",
+      "First",
+      "Second"
+     ]
+    ],
+    [
+     [
+      "Everybody wants to know how he does what?",
+      "What he does",
+      "His hair",
+      "His dance"
+     ],
+     [
+      "Who was he before he even knew who he was?",
+      "Me",
+      "Nobody",
+      "A star"
+     ],
+     [
+      "Ever since which table?",
+      "The lunch room",
+      "The kitchen",
+      "The card"
+     ],
+     [
+      "At the lunch room table, he can't do what?",
+      "Sit where y'all sit",
+      "Eat with y'all",
+      "Talk to y'all"
+     ],
+     [
+      "Could it be what that made you believe?",
+      "Faith",
+      "Fear",
+      "Love"
+     ],
+     [
+      "He wouldn't be here just for what?",
+      "Nothing",
+      "Money",
+      "Fun"
+     ],
+     [
+      "Or was it the what that made you believe?",
+      "Fame",
+      "Game",
+      "Name"
+     ],
+     [
+      "He knew he would be what?",
+      "Something",
+      "Famous",
+      "Rich"
+     ]
+    ],
+    [
+     [
+      "He's feeling like Michael in the what?",
+      "Ring",
+      "Paint",
+      "Air"
+     ],
+     [
+      "He's feeling like Jackie with the what?",
+      "Swing",
+      "Ring",
+      "Kicks"
+     ],
+     [
+      "He's feeling like which big man in the paint?",
+      "Shaquille",
+      "Kareem",
+      "Patrick"
+     ],
+     [
+      "'You know exactly what it...' what?",
+      "Mean",
+      "Takes",
+      "Costs"
+     ],
+     [
+      "He's in the upper what?",
+      "Echelon",
+      "Level",
+      "Class"
+     ],
+     [
+      "He's colder than drop tops in what?",
+      "Winter",
+      "Snow",
+      "December"
+     ],
+     [
+      "If you turn away from him, there is no what?",
+      "Coming back",
+      "Second chance",
+      "Going home"
+     ],
+     [
+      "What does he say at the very end?",
+      "Aye",
+      "Yeah",
+      "Uh"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
