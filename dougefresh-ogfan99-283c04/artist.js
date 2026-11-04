@@ -104,40 +104,654 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
-  {
-   "title": "The Show",
-   "id": "HTvXI9PpJ8U",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
+ "songs": [
   {
    "title": "Keep Risin' To The Top",
    "id": "19RQYMJTd0Q",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 28.2,
+   "cuts": [
+    57.4,
+    90.6,
+    159.8
+   ],
+   "qs": [
+    [
+     [
+      "Doug wanted this to be special, something what?",
+      "More",
+      "New",
+      "Fresh"
+     ],
+     [
+      "More than any other what you felt before?",
+      "Feeling",
+      "Party",
+      "Night"
+     ],
+     [
+      "Pushin' through the doors, what does Doug see?",
+      "Girls",
+      "Lights",
+      "The DJ"
+     ],
+     [
+      "The girls are havin' a what?",
+      "Good time",
+      "Dance off",
+      "Birthday"
+     ],
+     [
+      "What might Doug say?",
+      "A rhyme",
+      "Hello",
+      "Goodnight"
+     ],
+     [
+      "Old school, new school, what school rule?",
+      "No school",
+      "High school",
+      "Hip-hop school"
+     ],
+     [
+      "Other than that, everything is what?",
+      "Cool",
+      "Fresh",
+      "Fine"
+     ],
+     [
+      "The guys and girls are doin' the new what?",
+      "Dances",
+      "Songs",
+      "Styles"
+     ],
+     [
+      "What is Doug doing over here?",
+      "Romancin'",
+      "Dancin'",
+      "Rhymin'"
+     ],
+     [
+      "Ask Doug who she is and he'll tell you when?",
+      "First",
+      "Later",
+      "Tomorrow"
+     ],
+     [
+      "Slow down, be cool and don't act what?",
+      "Ill",
+      "Wild",
+      "Tough"
+     ]
+    ],
+    [
+     [
+      "Doug came to have a good time, party and what?",
+      "Chill",
+      "Dance",
+      "Rhyme"
+     ],
+     [
+      "Who does Doug tell not to worry?",
+      "Sweetheart",
+      "Mama",
+      "The crowd"
+     ],
+     [
+      "Doug says he's still what?",
+      "With you",
+      "The man",
+      "Fresh"
+     ],
+     [
+      "After they leave, what will they continue with?",
+      "Their plans",
+      "The party",
+      "The show"
+     ],
+     [
+      "Plans are made to be what?",
+      "Broken",
+      "Followed",
+      "Changed"
+     ],
+     [
+      "Try to diss Doug and he'll give you a what?",
+      "Token",
+      "Dollar",
+      "Record"
+     ],
+     [
+      "Doug is the type of brother that can't be what?",
+      "Stopped",
+      "Beat",
+      "Copied"
+     ],
+     [
+      "No matter what, Doug's gonna keep risin' to the what?",
+      "Top",
+      "Sky",
+      "Stage"
+     ],
+     [
+      "Give it all you what?",
+      "Got",
+      "Can",
+      "Have"
+     ],
+     [
+      "Ain't no half what?",
+      "Steppin'",
+      "Stoppin'",
+      "Rappin'"
+     ],
+     [
+      "They're the Get Fresh what?",
+      "Crew",
+      "Gang",
+      "Squad"
+     ]
+    ],
+    [
+     [
+      "Now the music is what?",
+      "Pumpin'",
+      "Slow",
+      "Loud"
+     ],
+     [
+      "The place has a good what?",
+      "Atmosphere",
+      "Crowd",
+      "Sound system"
+     ],
+     [
+      "Who must have beat Doug there with Barry Bee?",
+      "Chill Will",
+      "Slick Rick",
+      "Ricky D"
+     ],
+     [
+      "The booth is all what?",
+      "Sound proof",
+      "Glass",
+      "Gold"
+     ],
+     [
+      "They're playin' dope jams to rock the what?",
+      "Youth",
+      "House",
+      "Block"
+     ],
+     [
+      "The MC said the Get Fresh Crew what are in the house?",
+      "Stars",
+      "Kings",
+      "Legends"
+     ],
+     [
+      "The only stars Doug knows are where?",
+      "In the sky",
+      "On TV",
+      "In Hollywood"
+     ],
+     [
+      "Doug didn't pretend to be nothin' but who?",
+      "Doug E.",
+      "A star",
+      "Slick Rick"
+     ],
+     [
+      "When asked to rock the mic, what did Doug say?",
+      "Shalom",
+      "Peace",
+      "Thank you"
+     ],
+     [
+      "Doug is sharp as a harp played by a what?",
+      "Musician",
+      "Angel",
+      "DJ"
+     ],
+     [
+      "What cologne is Doug wearin'?",
+      "Calvin Klein Obsession",
+      "Old Spice",
+      "Drakkar Noir"
+     ]
+    ]
+   ]
   },
   {
    "title": "All The Way To Heaven",
-   "id": "DMbja5q4BnA",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "id": "Ihq-GONCoiU",
+   "start": 26,
+   "cuts": [
+    67.8,
+    135.6,
+    284.3
+   ],
+   "qs": [
+    [
+     [
+      "What do they ask right at the start?",
+      "Why",
+      "Who",
+      "When"
+     ],
+     [
+      "What are they on?",
+      "A mission",
+      "A tour",
+      "The radio"
+     ],
+     [
+      "They're on a mission all the way to where?",
+      "Heaven",
+      "The top",
+      "Harlem"
+     ],
+     [
+      "What number Heaven do they shout?",
+      "Seven",
+      "Five",
+      "Nine"
+     ],
+     [
+      "What does Doug love to do?",
+      "Perform",
+      "Travel",
+      "Sing"
+     ],
+     [
+      "Who's new around the block?",
+      "The corporation",
+      "The DJ",
+      "The police"
+     ],
+     [
+      "The legend did not want which crew to rock?",
+      "Get Fresh Crew",
+      "Fat Boys",
+      "Cold Crush"
+     ],
+     [
+      "Once they're together they can't be what?",
+      "Stopped",
+      "Beat",
+      "Found"
+     ],
+     [
+      "What is it they've got?",
+      "Talent to rock",
+      "Money",
+      "Gold records"
+     ],
+     [
+      "What do people want them to do?",
+      "Break up",
+      "Slow down",
+      "Go home"
+     ],
+     [
+      "Can the crew break up?",
+      "We cannot",
+      "Maybe later",
+      "Next year"
+     ]
+    ],
+    [
+     [
+      "Do the ziggy-ziggy what?",
+      "Top",
+      "Hop",
+      "Stop"
+     ],
+     [
+      "What does the crew keep shouting back?",
+      "What up",
+      "Ho",
+      "Say what"
+     ],
+     [
+      "This is the first time in history for what?",
+      "A rap song",
+      "A beatbox",
+      "A movie"
+     ],
+     [
+      "The rap song is dedicated to who?",
+      "G-O-D",
+      "The crowd",
+      "Mama"
+     ],
+     [
+      "It's highly advanced to make you what?",
+      "Dance",
+      "Sing",
+      "Think"
+     ],
+     [
+      "If you're doin' what Doug's doin', girls are bound to what?",
+      "Glance",
+      "Scream",
+      "Leave"
+     ],
+     [
+      "After the sneeze, what does Doug say?",
+      "God bless you",
+      "Excuse me",
+      "Gesundheit"
+     ],
+     [
+      "Who wanna rock with the Get Fresh Crew?",
+      "We do",
+      "Nobody",
+      "The DJ"
+     ],
+     [
+      "When Doug asks, people come in a what?",
+      "Mob",
+      "Line",
+      "Hurry"
+     ],
+     [
+      "Like they had applications for a summer youth what?",
+      "Job",
+      "Camp",
+      "League"
+     ],
+     [
+      "What kind of break did Doug make by mistake?",
+      "Beatbox break",
+      "Lunch break",
+      "Dance break"
+     ]
+    ],
+    [
+     [
+      "Doug is asked what his what is again?",
+      "Name",
+      "Number",
+      "Song"
+     ],
+     [
+      "The entertaining Doug E. Fresh is his claim to what?",
+      "Fame",
+      "Glory",
+      "Money"
+     ],
+     [
+      "Not many people know the what of his name?",
+      "Meaning",
+      "Spelling",
+      "Story"
+     ],
+     [
+      "D stands for what?",
+      "Dedication",
+      "Dancing",
+      "Determination"
+     ],
+     [
+      "O is for what?",
+      "Odd",
+      "Original",
+      "Only"
+     ],
+     [
+      "U is for what?",
+      "Unique",
+      "United",
+      "Universal"
+     ],
+     [
+      "You can't spell Doug E without the what?",
+      "Fresh",
+      "Crew",
+      "Beat"
+     ],
+     [
+      "Doug is the human beatbox rhymin' what?",
+      "Specialist",
+      "Machine",
+      "Champion"
+     ],
+     [
+      "In the mornin' Doug brushes his teeth with what?",
+      "Crest",
+      "Colgate",
+      "Baking soda"
+     ],
+     [
+      "Doug put his hand on the what to make a vow?",
+      "Bible",
+      "Mic",
+      "Heart"
+     ],
+     [
+      "Doug says he's just like who?",
+      "Moses",
+      "Noah",
+      "David"
+     ]
+    ]
+   ]
   },
   {
-   "title": "La Di Da Di",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Play This Only At Nite",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "The Show",
+   "id": "HTvXI9PpJ8U",
+   "start": 17.5,
+   "cuts": [
+    42.3,
+    117.4,
+    269.9
+   ],
+   "qs": [
+    [
+     [
+      "Who does Rick say \"excuse me\" to?",
+      "Doug E Fresh",
+      "Chill Will",
+      "Barry B"
+     ],
+     [
+      "What does Doug answer?",
+      "Yes",
+      "What",
+      "Huh"
+     ],
+     [
+      "The fellas on the mic have how long of rhymes?",
+      "One minute",
+      "Five minutes",
+      "Ten seconds"
+     ],
+     [
+      "Those rhymes don't come out what?",
+      "Right",
+      "Loud",
+      "Fresh"
+     ],
+     [
+      "What do those fellas do to rhymes?",
+      "Bite",
+      "Write",
+      "Sing"
+     ],
+     [
+      "Doug says they never what?",
+      "Write",
+      "Rest",
+      "Practice"
+     ],
+     [
+      "Rick says that's not what?",
+      "Polite",
+      "Right",
+      "Fair"
+     ],
+     [
+      "Doug says Rick is quite what?",
+      "Right",
+      "Wrong",
+      "Funny"
+     ],
+     [
+      "They swear they're the best darn rappers of the what?",
+      "Year",
+      "Block",
+      "City"
+     ],
+     [
+      "What British goodbye does Rick say?",
+      "Cheerio",
+      "Ta-ta",
+      "Cheers mate"
+     ],
+     [
+      "What is this called?",
+      "The Show",
+      "The Party",
+      "The Jam"
+     ]
+    ],
+    [
+     [
+      "Rick tells Doug to put his what on?",
+      "Bally's",
+      "Kangol",
+      "Jacket"
+     ],
+     [
+      "What does Doug need for his shoes?",
+      "A shoehorn",
+      "New laces",
+      "A shine"
+     ],
+     [
+      "The shoes always hurt Doug's what?",
+      "Corns",
+      "Toes",
+      "Heels"
+     ],
+     [
+      "How many minutes until Doug is on?",
+      "Six",
+      "Two",
+      "Ten"
+     ],
+     [
+      "Here we go, come what?",
+      "On",
+      "Back",
+      "Through"
+     ],
+     [
+      "Who is Doug looking for besides Barr?",
+      "Will",
+      "Rick",
+      "Russell"
+     ],
+     [
+      "Rick says they're what?",
+      "Late",
+      "Lost",
+      "Sick"
+     ],
+     [
+      "Rick told them the time but forgot the what?",
+      "Date",
+      "Place",
+      "Name"
+     ],
+     [
+      "Doug says Rick did it what?",
+      "Again",
+      "On purpose",
+      "Right"
+     ],
+     [
+      "The crew asks, did we miss the what?",
+      "Show",
+      "Train",
+      "Party"
+     ],
+     [
+      "Rick says, well don't get us what?",
+      "Wrong",
+      "Mad",
+      "Started"
+     ]
+    ],
+    [
+     [
+      "Where did it all start up?",
+      "8th Avenue",
+      "125th Street",
+      "Broadway"
+     ],
+     [
+      "Doug made up the name called the what?",
+      "Get Fresh Crew",
+      "Fresh Fest",
+      "Fat Boys"
+     ],
+     [
+      "Doug had how many DJs?",
+      "Two",
+      "One",
+      "Three"
+     ],
+     [
+      "Who is Doug's right hand man?",
+      "Ricky D",
+      "Barry B",
+      "Chill Will"
+     ],
+     [
+      "Doug used to rap and sing and make what?",
+      "Sounds",
+      "Beats",
+      "Money"
+     ],
+     [
+      "What ring does Doug imitate?",
+      "Telephone",
+      "Doorbell",
+      "Alarm clock"
+     ],
+     [
+      "Is Doug E Fresh in right now?",
+      "No",
+      "Yes",
+      "Maybe"
+     ],
+     [
+      "Doug is the human beatbox or the what?",
+      "Entertainer",
+      "Superstar",
+      "Magician"
+     ],
+     [
+      "Doug is also known as the beatbox what?",
+      "Trainer",
+      "King",
+      "Master"
+     ],
+     [
+      "Rick stepped on the D-train at what street?",
+      "205th",
+      "125th",
+      "42nd"
+     ],
+     [
+      "Rick says his name's Slick Rick, not what?",
+      "Frostie Flakes",
+      "Tony the Tiger",
+      "Captain Crunch"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };

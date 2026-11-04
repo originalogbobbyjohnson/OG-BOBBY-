@@ -93,40 +93,672 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Music",
-   "id": "hcpTXCv0nk8",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "You're A Customer",
+   "id": "wh_dZmn7U3A",
+   "start": 9,
+   "cuts": [
+    35.2,
+    103,
+    173
+   ],
+   "qs": [
+    [
+     [
+      "Knick knack patty whack, give a dog a what?",
+      "Bone",
+      "Treat",
+      "Ball"
+     ],
+     [
+      "Don't give him nothing but a what?",
+      "Microphone",
+      "Record",
+      "Dollar"
+     ],
+     [
+      "Don't stop, Erick's not what yet?",
+      "Finished",
+      "Started",
+      "Tired"
+     ],
+     [
+      "You said he's not the E, so you wanna make a what?",
+      "Bet",
+      "Deal",
+      "Record"
+     ],
+     [
+      "You're in the what zone?",
+      "Danger",
+      "End",
+      "Twilight"
+     ],
+     [
+      "Erick figured you would, now leave him what?",
+      "Alone",
+      "Behind",
+      "Some money"
+     ],
+     [
+      "You wish on a four-leaf what?",
+      "Clover",
+      "Coin",
+      "Star"
+     ],
+     [
+      "Erick picks up the mic high and makes it what?",
+      "Swing",
+      "Sing",
+      "Shake"
+     ]
+    ],
+    [
+     [
+      "PMD has the capability to rap and what?",
+      "Chill",
+      "Sing",
+      "Dance"
+     ],
+     [
+      "PMD gets what when the bassline thumps?",
+      "Goosebumps",
+      "Chills",
+      "Headaches"
+     ],
+     [
+      "When a sucker MC arrives, it's time for what?",
+      "Lunch",
+      "Bed",
+      "Battle"
+     ],
+     [
+      "PMD considers himself better than what?",
+      "Average",
+      "Everybody",
+      "Erick"
+     ],
+     [
+      "Erick makes a move like chess and yells what?",
+      "Checkmate",
+      "Check",
+      "Game over"
+     ],
+     [
+      "Erick gets zanier because of EPMD what?",
+      "Mania",
+      "Money",
+      "Music"
+     ],
+     [
+      "What do the voices in the crowd say?",
+      "That's Erick Sermon",
+      "That's PMD",
+      "Here comes EPMD"
+     ],
+     [
+      "Like lotto, you have to be in it to what?",
+      "Win it",
+      "Get it",
+      "Love it"
+     ]
+    ],
+    [
+     [
+      "Erick is praying like a prey when the what is in action?",
+      "Fox",
+      "Wolf",
+      "Hawk"
+     ],
+     [
+      "Erick is camouflaged in the what?",
+      "Green",
+      "Dark",
+      "Grass"
+     ],
+     [
+      "You're in trouble because it's after what?",
+      "Dark",
+      "Midnight",
+      "School"
+     ],
+     [
+      "Erick's eyes close like who?",
+      "Steve Austin",
+      "Bruce Lee",
+      "Superman"
+     ],
+     [
+      "PMD's rhymes are hungry and haven't been what?",
+      "Fed",
+      "Heard",
+      "Written"
+     ],
+     [
+      "PMD will slice you like what?",
+      "Lettuce",
+      "Bread",
+      "Cheese"
+     ],
+     [
+      "Erick lit it up like the what?",
+      "Fourth of July",
+      "Christmas tree",
+      "New Year's Eve"
+     ],
+     [
+      "Erick floats like a butterfly and stings like a what?",
+      "Bee",
+      "Wasp",
+      "Scorpion"
+     ]
+    ]
+   ]
   },
   {
-   "title": "React",
-   "id": "ynxVs2aB80M",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Crossover",
+   "id": "GTtWOhC8lOo",
+   "start": 16.3,
+   "cuts": [
+    47.1,
+    63.2,
+    97.4
+   ],
+   "qs": [
+    [
+     [
+      "Who's in the house?",
+      "Erick Sermon",
+      "PMD",
+      "Redman"
+     ],
+     [
+      "Roll with the hardcore funk and the hardcore what?",
+      "Sound",
+      "Crew",
+      "Beat"
+     ],
+     [
+      "What kind of funk material is it?",
+      "Mackadocious",
+      "Funkadelic",
+      "Ferocious"
+     ],
+     [
+      "What's Erick's nickname, E-D the Green Eyed what?",
+      "Bandit",
+      "Monster",
+      "Bandleader"
+     ],
+     [
+      "Erick controls his what so he never gets stranded?",
+      "Career",
+      "Money",
+      "Mic"
+     ],
+     [
+      "The rest changed up their style from jeans to what?",
+      "Suits",
+      "Sweats",
+      "Leather"
+     ],
+     [
+      "They're thinkin' about a pop record made for the what?",
+      "Station",
+      "Club",
+      "Movies"
+     ],
+     [
+      "They want to go what and clock mad green?",
+      "Platinum",
+      "Gold",
+      "Pop"
+     ]
+    ],
+    [
+     [
+      "AKA a what, by the rap definition?",
+      "Sellout",
+      "Superstar",
+      "Rookie"
+     ],
+     [
+      "Get off that, boy, and change your what?",
+      "Mission",
+      "Name",
+      "Style"
+     ],
+     [
+      "Come back around the what?",
+      "Block",
+      "Corner",
+      "Way"
+     ],
+     [
+      "Which group do they pump on the radio?",
+      "Color Me Badd",
+      "New Edition",
+      "Boyz II Men"
+     ],
+     [
+      "What sound follows Color Me Badd?",
+      "Tick tock",
+      "Ding dong",
+      "Boom bap"
+     ],
+     [
+      "Let them know your what, not a black thing?",
+      "Logo",
+      "Name",
+      "Label"
+     ],
+     [
+      "What does Erick's background do?",
+      "Sing",
+      "Dance",
+      "Clap"
+     ],
+     [
+      "What is the song warning about?",
+      "The Crossover",
+      "The Sellout",
+      "The Fake"
+     ]
+    ],
+    [
+     [
+      "The rap era's outta what?",
+      "Control",
+      "Style",
+      "Business"
+     ],
+     [
+      "Brothers are sellin' their what?",
+      "Soul",
+      "Records",
+      "Chains"
+     ],
+     [
+      "They do it to go what?",
+      "Gold",
+      "Platinum",
+      "Pop"
+     ],
+     [
+      "They sell out to pop and what?",
+      "R&B",
+      "Rock",
+      "Country"
+     ],
+     [
+      "PMD is strictly what?",
+      "Hip-hop",
+      "Underground",
+      "Business"
+     ],
+     [
+      "Which DJ does PMD stick to?",
+      "Kid Capri",
+      "Funkmaster Flex",
+      "Red Alert"
+     ],
+     [
+      "That's how which crew rolls?",
+      "The Squad",
+      "The Mob",
+      "The Clan"
+     ],
+     [
+      "Your head is bobbin' because the what knows?",
+      "Neck",
+      "Body",
+      "Crowd"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Focus",
-   "id": "ETRYy39zPek",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "So Whatcha Sayin'",
+   "id": "UDFoIj9YI5s",
+   "start": 19.7,
+   "cuts": [
+    51.8,
+    88,
+    209.4
+   ],
+   "qs": [
+    [
+     [
+      "They're the employees of the what?",
+      "Year",
+      "Month",
+      "Week"
+     ],
+     [
+      "Yeah, they're back to what?",
+      "Work",
+      "School",
+      "Business"
+     ],
+     [
+      "What did they take while other rappers got jerked?",
+      "Time off",
+      "A vacation",
+      "A break"
+     ],
+     [
+      "The other rappers are wack in their what?",
+      "Track",
+      "Rhymes",
+      "Style"
+     ],
+     [
+      "Which DJ cuts and scratches?",
+      "DJ Scratch",
+      "Kid Capri",
+      "Diamond J"
+     ],
+     [
+      "Who is the microphone doctor?",
+      "MD",
+      "The E",
+      "DJ Scratch"
+     ],
+     [
+      "One wrecks and the other what?",
+      "Destroys",
+      "Builds",
+      "Rocks"
+     ],
+     [
+      "They wait for a sucker to jump and then what?",
+      "Attack",
+      "Laugh",
+      "Leave"
+     ]
+    ],
+    [
+     [
+      "PMD is known as the master in the MC what?",
+      "Field",
+      "Game",
+      "League"
+     ],
+     [
+      "What year got no respect?",
+      "Eighty-seven",
+      "Eighty-five",
+      "Ninety"
+     ],
+     [
+      "What cleaner does PMD wax a sucker like?",
+      "Mop & Glo",
+      "Windex",
+      "Pledge"
+     ],
+     [
+      "They're back a second time on a different what?",
+      "Assignment",
+      "Album",
+      "Label"
+     ],
+     [
+      "PMD is the cream of the what?",
+      "Crop",
+      "Top",
+      "Block"
+     ],
+     [
+      "Girlies love PMD's dope what?",
+      "Intro",
+      "Outfit",
+      "Ride"
+     ],
+     [
+      "What does PMD turn on to say mic checka?",
+      "Cordless",
+      "Speaker",
+      "Amp"
+     ],
+     [
+      "What's the question in the hook?",
+      "So what you sayin",
+      "Who you playin",
+      "What you prayin"
+     ]
+    ],
+    [
+     [
+      "MCs are jumpin' out of their shoes and what?",
+      "Socks",
+      "Shirts",
+      "Hats"
+     ],
+     [
+      "They're takin' no shorts, showin' vital what?",
+      "Signs",
+      "Stats",
+      "Skills"
+     ],
+     [
+      "In ninety-nine they're fine as what?",
+      "Wine",
+      "Gold",
+      "Silk"
+     ],
+     [
+      "Sit back and recline and watch the what shine?",
+      "Sun",
+      "Stars",
+      "Gold"
+     ],
+     [
+      "They're kin not blood related, but call them what?",
+      "Cousins",
+      "Brothers",
+      "Twins"
+     ],
+     [
+      "Thirty days later, the LP went what?",
+      "Gold",
+      "Platinum",
+      "Number one"
+     ],
+     [
+      "Erick is called the boy what?",
+      "Wonder",
+      "Genius",
+      "Wizard"
+     ],
+     [
+      "Which singer does Erick borrow \"so amazing\" from?",
+      "Luther Vandross",
+      "Marvin Gaye",
+      "Barry White"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Hostile",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Sidewalk Executives",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "You Gots To Chill",
+   "id": "VoFNeFx_ZUU",
+   "start": 19.1,
+   "cuts": [
+    48.5,
+    79.5,
+    193.3
+   ],
+   "qs": [
+    [
+     [
+      "Relax your mind, let your what be free?",
+      "Conscience",
+      "Body",
+      "Soul"
+     ],
+     [
+      "Get down to the sounds of who?",
+      "EPMD",
+      "Run-DMC",
+      "Eric B."
+     ],
+     [
+      "What should you do while the MC raps?",
+      "Keep quiet",
+      "Dance",
+      "Clap"
+     ],
+     [
+      "If you're tired, go take a what?",
+      "Nap",
+      "Walk",
+      "Seat"
+     ],
+     [
+      "Right now Erick's 'bout to shake and what?",
+      "Bake",
+      "Break",
+      "Quake"
+     ],
+     [
+      "How does Erick spell his name?",
+      "E-R-I-C-K",
+      "E-R-I-C",
+      "E-R-I-K"
+     ],
+     [
+      "Erick thanks the what?",
+      "Clientele",
+      "Crowd",
+      "DJ"
+     ],
+     [
+      "Erick's not an MC talkin' all that what?",
+      "Junk",
+      "Noise",
+      "Trash"
+     ],
+     [
+      "What does Erick say before running down the line?",
+      "Check one-two",
+      "Hit it",
+      "Let's go"
+     ]
+    ],
+    [
+     [
+      "To the average MC, Erick is known as the what?",
+      "Terminator",
+      "Exterminator",
+      "Dictator"
+     ],
+     [
+      "Erick is a funky beat what?",
+      "Maker",
+      "Breaker",
+      "Taker"
+     ],
+     [
+      "When Erick's on the scene he always rocks the what?",
+      "Spot",
+      "Block",
+      "House"
+     ],
+     [
+      "He grabs the steel with the what on top?",
+      "Crown",
+      "Ball",
+      "Star"
+     ],
+     [
+      "In the beginning Erick likes to let his rhymes what?",
+      "Flow",
+      "Go",
+      "Grow"
+     ],
+     [
+      "At 12, what does Erick press?",
+      "Cruise control",
+      "Rewind",
+      "Play"
+     ],
+     [
+      "Sit back and relax, let my rhymes what?",
+      "Tax",
+      "Max",
+      "Relax"
+     ],
+     [
+      "Erick is always calm under what?",
+      "Pressure",
+      "The lights",
+      "Fire"
+     ],
+     [
+      "Listen when he tells you boy, you gots to what?",
+      "Chill",
+      "Go",
+      "Stop"
+     ]
+    ],
+    [
+     [
+      "PMD is the personal what information on rap?",
+      "Computer",
+      "Phone",
+      "Radio"
+     ],
+     [
+      "Like who says, PMD'll make your toes tap?",
+      "Biz Markie",
+      "Kool Moe Dee",
+      "Big Daddy Kane"
+     ],
+     [
+      "PMD can turn the party out just by what?",
+      "Standin' still",
+      "Smilin'",
+      "Showin' up"
+     ],
+     [
+      "One thing PMD hates is a what MC?",
+      "Bitin'",
+      "Wack",
+      "Fake"
+     ],
+     [
+      "What does M-D stand for?",
+      "Microphone doctor",
+      "Master dancer",
+      "Music director"
+     ],
+     [
+      "Erick asks, you catch my what?",
+      "Drift",
+      "Rhyme",
+      "Beat"
+     ],
+     [
+      "Erick is like who, marking an E on your back?",
+      "Zorro",
+      "Batman",
+      "Robin Hood"
+     ],
+     [
+      "Erick's only weapon is his rappin' what?",
+      "Sword",
+      "Mic",
+      "Shield"
+     ],
+     [
+      "Erick keeps their hands clappin', fingers snappin', feet what?",
+      "Tappin'",
+      "Steppin'",
+      "Stompin'"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };

@@ -93,40 +93,1339 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "explicitSongs": [
   {
-   "title": "Plain Jane",
-   "id": "meXPbvp3ldg",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Harlem Anthem",
+   "id": "rNXpkB78qdc",
+   "start": 10.6,
+   "cuts": [
+    51.6,
+    84.9,
+    102.4
+   ],
+   "qs": [
+    [
+     [
+      "What neighborhood does Ferg chant at the start?",
+      "Harlem",
+      "Brooklyn",
+      "The Bronx"
+     ],
+     [
+      "Ferg is causing ruckus in the what?",
+      "Rucker",
+      "Garden",
+      "Park"
+     ],
+     [
+      "Ferg is like which giant ape?",
+      "King Kong",
+      "Mighty Joe",
+      "Godzilla"
+     ],
+     [
+      "Ferg scrapes y'all off his feet like what?",
+      "Fungus",
+      "Gum",
+      "Mud"
+     ],
+     [
+      "What's on the backboard?",
+      "Bricks",
+      "Chalk",
+      "Paint"
+     ],
+     [
+      "Which duo makes 'em jump?",
+      "Kris Kross",
+      "Kid 'n Play",
+      "Outkast"
+     ],
+     [
+      "It's all wet just like a what?",
+      "Laker",
+      "Knick",
+      "Rain storm"
+     ],
+     [
+      "Ferginator is like which movie robot?",
+      "Terminator",
+      "RoboCop",
+      "Transformer"
+     ],
+     [
+      "Which baller is known to dye his hair?",
+      "Dennis Rodman",
+      "Allen Iverson",
+      "Kevin Durant"
+     ]
+    ],
+    [
+     [
+      "Ferg does a crossover and stays what?",
+      "Sober",
+      "Cool",
+      "Calm"
+     ],
+     [
+      "Welcome to Harlem, where the what are born?",
+      "Legacies",
+      "Rappers",
+      "Ballers"
+     ],
+     [
+      "What kind of roses grow in Harlem?",
+      "Concrete roses",
+      "Red roses",
+      "Wild roses"
+     ],
+     [
+      "The concrete roses come with the what?",
+      "Thorns",
+      "Stems",
+      "Petals"
+     ],
+     [
+      "Come to see where what are born?",
+      "Stars",
+      "Legends",
+      "Kings"
+     ],
+     [
+      "Where are the kids?",
+      "On the gates",
+      "On the court",
+      "On the stoop"
+     ],
+     [
+      "Ferg's opponent is staring at his what?",
+      "Face",
+      "Chain",
+      "Shoes"
+     ],
+     [
+      "Ferg's opponent can't keep up with his what?",
+      "Pace",
+      "Moves",
+      "Style"
+     ],
+     [
+      "Ferg is finna make a what?",
+      "Movie",
+      "Record",
+      "Million"
+     ]
+    ],
+    [
+     [
+      "Ferg names Harlem as where Cam and who play?",
+      "Ma$e",
+      "Jim Jones",
+      "Big L"
+     ],
+     [
+      "Which Harlem streetball legend does Ferg mention?",
+      "Pee Wee Kirkland",
+      "Earl Manigault",
+      "Joe Hammond"
+     ],
+     [
+      "Ferg snaps like a what?",
+      "Serpent",
+      "Crocodile",
+      "Shark"
+     ],
+     [
+      "Hooh-ha, more what?",
+      "Fire",
+      "Money",
+      "Smoke"
+     ],
+     [
+      "Ferg has been the what?",
+      "Truth",
+      "Best",
+      "King"
+     ],
+     [
+      "Who does Ferg call a liar?",
+      "The devil",
+      "The haters",
+      "The press"
+     ],
+     [
+      "Who's going crazy?",
+      "The fans",
+      "The kids",
+      "The crowd"
+     ],
+     [
+      "Harlem is the what?",
+      "Livest",
+      "Coldest",
+      "Realest"
+     ]
+    ]
+   ]
   },
   {
    "title": "Ferg Strong",
-   "id": "8gLRum3Dvl8",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "id": "0O4tfL29vNE",
+   "cuts": [
+    35.2,
+    85.5,
+    129.4
+   ],
+   "qs": [
+    [
+     [
+      "Whoop, whoop, there it what?",
+      "Is",
+      "Goes",
+      "Was"
+     ],
+     [
+      "What did Ferg buy at the top of the verse?",
+      "A new whip",
+      "A new chain",
+      "A new house"
+     ],
+     [
+      "Who's got a plan for Ferg?",
+      "God",
+      "His manager",
+      "His mama"
+     ],
+     [
+      "God ain't done with Ferg's what?",
+      "Life",
+      "Career",
+      "Story"
+     ],
+     [
+      "What doesn't Ferg want?",
+      "Features",
+      "Interviews",
+      "Haters"
+     ],
+     [
+      "Most of y'all are what?",
+      "Hype",
+      "Fake",
+      "Broke"
+     ],
+     [
+      "In what city is Ferg's suite?",
+      "Paris",
+      "London",
+      "Milan"
+     ],
+     [
+      "If they ain't flyin' you out, it ain't what?",
+      "Right",
+      "Real",
+      "Worth it"
+     ]
+    ],
+    [
+     [
+      "She's a good girl, but no time for the what?",
+      "Cuffing",
+      "Drama",
+      "Dinner"
+     ],
+     [
+      "Ferg said this would be his last what?",
+      "Chain",
+      "Album",
+      "Tour"
+     ],
+     [
+      "What kind of diamond is incrusted?",
+      "Unicorn",
+      "Pink",
+      "Black"
+     ],
+     [
+      "Ferg's videos are out of your what?",
+      "Budget",
+      "League",
+      "Range"
+     ],
+     [
+      "Hang with the billi', better hope you get what?",
+      "Crumbs",
+      "Paid",
+      "Lucky"
+     ],
+     [
+      "Don't put Ferg with what?",
+      "Bums",
+      "Clowns",
+      "Rookies"
+     ],
+     [
+      "Where did Ferg buy some land?",
+      "Tulum",
+      "Cancun",
+      "Miami"
+     ],
+     [
+      "Ferg is in the A gettin' what with Tweek Tune?",
+      "Brunch",
+      "Beats",
+      "Haircuts"
+     ],
+     [
+      "Ferg runs it like the what?",
+      "Olympics",
+      "Marathon",
+      "NBA"
+     ]
+    ],
+    [
+     [
+      "When you talk, what does Ferg do?",
+      "Chuckle",
+      "Leave",
+      "Shout"
+     ],
+     [
+      "What don't Ferg's uncles do besides internet?",
+      "Scuffles",
+      "Parties",
+      "Photos"
+     ],
+     [
+      "Ferg gives shout-outs to Duwap, Nitty and who?",
+      "T",
+      "Dust",
+      "Jim Boy"
+     ],
+     [
+      "Ferg says his family is too what?",
+      "Deep",
+      "Big",
+      "Loud"
+     ],
+     [
+      "Ferg is too in the streets to know the what?",
+      "Industry",
+      "Rules",
+      "Neighbors"
+     ],
+     [
+      "Who should you ask about Ferg layin' it strong?",
+      "Jay-Z",
+      "Diddy",
+      "Nas"
+     ],
+     [
+      "Y'all run and get it, like what?",
+      "Ozempic",
+      "Gatorade",
+      "Nike"
+     ],
+     [
+      "Stand right there and stop what?",
+      "Flinchin'",
+      "Talkin'",
+      "Runnin'"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Shabba",
-   "id": "iXZxipry6kE",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Hood Pope",
+   "id": "Qfs1L_w5tIQ",
+   "start": 7.1,
+   "cuts": [
+    36.7,
+    79.3,
+    167.4
+   ],
+   "qs": [
+    [
+     [
+      "Ferg says let me sing my what?",
+      "Song",
+      "Hymn",
+      "Prayer"
+     ],
+     [
+      "If you feel this, what should you do?",
+      "Sing along",
+      "Clap along",
+      "Pray along"
+     ],
+     [
+      "What does Ferg call himself?",
+      "The Hood Pope",
+      "The Hood King",
+      "The Trap God"
+     ],
+     [
+      "How does the chain hang?",
+      "Low",
+      "Long",
+      "Heavy"
+     ],
+     [
+      "What red stones are with the gold?",
+      "Rubies",
+      "Garnets",
+      "Diamonds"
+     ],
+     [
+      "Young trap lord, I feel your what?",
+      "Pain",
+      "Love",
+      "Fire"
+     ],
+     [
+      "Ferg is down for his what?",
+      "People",
+      "City",
+      "Crew"
+     ],
+     [
+      "What kind of juice is Ferg drinking?",
+      "Jesus juice",
+      "Orange juice",
+      "Apple juice"
+     ]
+    ],
+    [
+     [
+      "We sick, 'cause we what?",
+      "Hurting",
+      "Working",
+      "Winning"
+     ],
+     [
+      "What Ford truck do they ride off in?",
+      "Excursion",
+      "Explorer",
+      "Expedition"
+     ],
+     [
+      "A bunch of hooligans need what?",
+      "Churching",
+      "Schooling",
+      "Feeding"
+     ],
+     [
+      "The Hood Pope says these are his what?",
+      "Children",
+      "Soldiers",
+      "Brothers"
+     ],
+     [
+      "Ferg will be their which gospel singer?",
+      "Donnie McClurkin",
+      "Kirk Franklin",
+      "CeCe Winans"
+     ],
+     [
+      "What shows when Ferg is smirking?",
+      "Gold teeth",
+      "Dimples",
+      "Diamonds"
+     ],
+     [
+      "Little kids running 'round need what?",
+      "Nurturing",
+      "Sneakers",
+      "Teachers"
+     ],
+     [
+      "The Lord knows Ferg ain't really what?",
+      "Perfect",
+      "Holy",
+      "Rich"
+     ]
+    ],
+    [
+     [
+      "God say, \"Son, you don't wanna go\" where?",
+      "Down",
+      "Home",
+      "Back"
+     ],
+     [
+      "He promises it won't happen ever what?",
+      "Again",
+      "Twice",
+      "Later"
+     ],
+     [
+      "Ferg told you how many times?",
+      "Time again",
+      "Just once",
+      "Never"
+     ],
+     [
+      "The people you're riding with ain't your what?",
+      "Friends",
+      "Family",
+      "Fans"
+     ],
+     [
+      "Who is crying in the verse?",
+      "Momma",
+      "Grandma",
+      "Sister"
+     ],
+     [
+      "He was a good kid for a what?",
+      "While",
+      "Year",
+      "Summer"
+     ],
+     [
+      "What did he find, and then it got wild?",
+      "The streets",
+      "The money",
+      "The block"
+     ],
+     [
+      "She says he is her only what?",
+      "Child",
+      "Son",
+      "Hope"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Work",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "The Mattress",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Plain Jane",
+   "id": "BwmuvqFzfLI",
+   "start": 9.7,
+   "cuts": [
+    33.6,
+    91.2,
+    158.9
+   ],
+   "qs": [
+    [
+     [
+      "Who does Ferg ride with?",
+      "The mob",
+      "The gang",
+      "The squad"
+     ],
+     [
+      "Check in with Ferg and do your what?",
+      "Job",
+      "Thing",
+      "Best"
+     ],
+     [
+      "Who did the chain?",
+      "Ben Baller",
+      "Jacob",
+      "Elliot Eliantte"
+     ],
+     [
+      "Ferg's watch is from where?",
+      "Tourneau",
+      "Rolex store",
+      "Cartier"
+     ],
+     [
+      "What kind of chain does Ferg rock for his late friend?",
+      "Yamborghini",
+      "Cuban link",
+      "Rope chain"
+     ],
+     [
+      "Ferg's Hermès link could feed a village in where?",
+      "Liberia",
+      "Ghana",
+      "Haiti"
+     ],
+     [
+      "Who is taking pictures?",
+      "TMZ",
+      "Paparazzi",
+      "The Shade Room"
+     ],
+     [
+      "Momma saw Ferg on which channel?",
+      "BET",
+      "MTV",
+      "VH1"
+     ]
+    ],
+    [
+     [
+      "What kind of picnics did Ferg attend?",
+      "Harlem picnics",
+      "Church picnics",
+      "Block parties"
+     ],
+     [
+      "How old was Ferg?",
+      "8 years old",
+      "12 years old",
+      "5 years old"
+     ],
+     [
+      "What show was young Ferg watching at night?",
+      "Nick at Nite",
+      "Saturday Night Live",
+      "Showtime at the Apollo"
+     ],
+     [
+      "In the hook, what should you do with Ferg?",
+      "Check in",
+      "Roll out",
+      "Link up"
+     ],
+     [
+      "Grandma had arthritis in her what?",
+      "Hands",
+      "Knees",
+      "Back"
+     ],
+     [
+      "Ferg is the what, in the hook?",
+      "Name",
+      "Man",
+      "Boss"
+     ],
+     [
+      "What's the watch, in the hook?",
+      "Presi Plain Jane",
+      "Gold Rolex",
+      "Iced out"
+     ],
+     [
+      "What does Ferg say with the mob?",
+      "Alhamdulillah",
+      "Hallelujah",
+      "Amen"
+     ]
+    ],
+    [
+     [
+      "Ferg explains why you probably never what?",
+      "Seen me",
+      "Heard me",
+      "Met me"
+     ],
+     [
+      "What kind of place is Ferg in?",
+      "Sunken place",
+      "Dark place",
+      "Happy place"
+     ],
+     [
+      "What doesn't Ferg have in the sunken place?",
+      "Instagram",
+      "A phone",
+      "A TV"
+     ],
+     [
+      "What is Ferg watchin'?",
+      "TV",
+      "The game",
+      "The news"
+     ],
+     [
+      "Ferg goes crazy in his what?",
+      "Yeezy",
+      "Jordans",
+      "Foamposites"
+     ],
+     [
+      "Who's on the beat?",
+      "Kirk Kneezy",
+      "Mike Will",
+      "Metro Boomin"
+     ],
+     [
+      "Rappers talk what but not to Ferg?",
+      "Subliminal",
+      "Trash",
+      "Loud"
+     ],
+     [
+      "Ferg puts 'em in a Jersey Shore like who?",
+      "Pauly D",
+      "The Situation",
+      "Vinny"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Harlem Anthem",
+   "id": "rNXpkB78qdc",
+   "start": 10.6,
+   "cuts": [
+    51.6,
+    84.9,
+    102.4
+   ],
+   "qs": [
+    [
+     [
+      "What neighborhood does Ferg chant at the start?",
+      "Harlem",
+      "Brooklyn",
+      "The Bronx"
+     ],
+     [
+      "Ferg is causing ruckus in the what?",
+      "Rucker",
+      "Garden",
+      "Park"
+     ],
+     [
+      "Ferg is like which giant ape?",
+      "King Kong",
+      "Mighty Joe",
+      "Godzilla"
+     ],
+     [
+      "Ferg scrapes y'all off his feet like what?",
+      "Fungus",
+      "Gum",
+      "Mud"
+     ],
+     [
+      "What's on the backboard?",
+      "Bricks",
+      "Chalk",
+      "Paint"
+     ],
+     [
+      "Which duo makes 'em jump?",
+      "Kris Kross",
+      "Kid 'n Play",
+      "Outkast"
+     ],
+     [
+      "It's all wet just like a what?",
+      "Laker",
+      "Knick",
+      "Rain storm"
+     ],
+     [
+      "Ferginator is like which movie robot?",
+      "Terminator",
+      "RoboCop",
+      "Transformer"
+     ],
+     [
+      "Which baller is known to dye his hair?",
+      "Dennis Rodman",
+      "Allen Iverson",
+      "Kevin Durant"
+     ]
+    ],
+    [
+     [
+      "Ferg does a crossover and stays what?",
+      "Sober",
+      "Cool",
+      "Calm"
+     ],
+     [
+      "Welcome to Harlem, where the what are born?",
+      "Legacies",
+      "Rappers",
+      "Ballers"
+     ],
+     [
+      "What kind of roses grow in Harlem?",
+      "Concrete roses",
+      "Red roses",
+      "Wild roses"
+     ],
+     [
+      "The concrete roses come with the what?",
+      "Thorns",
+      "Stems",
+      "Petals"
+     ],
+     [
+      "Come to see where what are born?",
+      "Stars",
+      "Legends",
+      "Kings"
+     ],
+     [
+      "Where are the kids?",
+      "On the gates",
+      "On the court",
+      "On the stoop"
+     ],
+     [
+      "Ferg's opponent is staring at his what?",
+      "Face",
+      "Chain",
+      "Shoes"
+     ],
+     [
+      "Ferg's opponent can't keep up with his what?",
+      "Pace",
+      "Moves",
+      "Style"
+     ],
+     [
+      "Ferg is finna make a what?",
+      "Movie",
+      "Record",
+      "Million"
+     ]
+    ],
+    [
+     [
+      "Ferg names Harlem as where Cam and who play?",
+      "Ma$e",
+      "Jim Jones",
+      "Big L"
+     ],
+     [
+      "Which Harlem streetball legend does Ferg mention?",
+      "Pee Wee Kirkland",
+      "Earl Manigault",
+      "Joe Hammond"
+     ],
+     [
+      "Ferg snaps like a what?",
+      "Serpent",
+      "Crocodile",
+      "Shark"
+     ],
+     [
+      "Hooh-ha, more what?",
+      "Fire",
+      "Money",
+      "Smoke"
+     ],
+     [
+      "Ferg has been the what?",
+      "Truth",
+      "Best",
+      "King"
+     ],
+     [
+      "Who does Ferg call a liar?",
+      "The devil",
+      "The haters",
+      "The press"
+     ],
+     [
+      "Who's going crazy?",
+      "The fans",
+      "The kids",
+      "The crowd"
+     ],
+     [
+      "Harlem is the what?",
+      "Livest",
+      "Coldest",
+      "Realest"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Ferg Strong",
+   "id": "0O4tfL29vNE",
+   "cuts": [
+    35.2,
+    85.5,
+    129.4
+   ],
+   "qs": [
+    [
+     [
+      "Whoop, whoop, there it what?",
+      "Is",
+      "Goes",
+      "Was"
+     ],
+     [
+      "What did Ferg buy at the top of the verse?",
+      "A new whip",
+      "A new chain",
+      "A new house"
+     ],
+     [
+      "Who's got a plan for Ferg?",
+      "God",
+      "His manager",
+      "His mama"
+     ],
+     [
+      "God ain't done with Ferg's what?",
+      "Life",
+      "Career",
+      "Story"
+     ],
+     [
+      "What doesn't Ferg want?",
+      "Features",
+      "Interviews",
+      "Haters"
+     ],
+     [
+      "Most of y'all are what?",
+      "Hype",
+      "Fake",
+      "Broke"
+     ],
+     [
+      "In what city is Ferg's suite?",
+      "Paris",
+      "London",
+      "Milan"
+     ],
+     [
+      "If they ain't flyin' you out, it ain't what?",
+      "Right",
+      "Real",
+      "Worth it"
+     ]
+    ],
+    [
+     [
+      "She's a good girl, but no time for the what?",
+      "Cuffing",
+      "Drama",
+      "Dinner"
+     ],
+     [
+      "Ferg said this would be his last what?",
+      "Chain",
+      "Album",
+      "Tour"
+     ],
+     [
+      "What kind of diamond is incrusted?",
+      "Unicorn",
+      "Pink",
+      "Black"
+     ],
+     [
+      "Ferg's videos are out of your what?",
+      "Budget",
+      "League",
+      "Range"
+     ],
+     [
+      "Hang with the billi', better hope you get what?",
+      "Crumbs",
+      "Paid",
+      "Lucky"
+     ],
+     [
+      "Don't put Ferg with what?",
+      "Bums",
+      "Clowns",
+      "Rookies"
+     ],
+     [
+      "Where did Ferg buy some land?",
+      "Tulum",
+      "Cancun",
+      "Miami"
+     ],
+     [
+      "Ferg is in the A gettin' what with Tweek Tune?",
+      "Brunch",
+      "Beats",
+      "Haircuts"
+     ],
+     [
+      "Ferg runs it like the what?",
+      "Olympics",
+      "Marathon",
+      "NBA"
+     ]
+    ],
+    [
+     [
+      "When you talk, what does Ferg do?",
+      "Chuckle",
+      "Leave",
+      "Shout"
+     ],
+     [
+      "What don't Ferg's uncles do besides internet?",
+      "Scuffles",
+      "Parties",
+      "Photos"
+     ],
+     [
+      "Ferg gives shout-outs to Duwap, Nitty and who?",
+      "T",
+      "Dust",
+      "Jim Boy"
+     ],
+     [
+      "Ferg says his family is too what?",
+      "Deep",
+      "Big",
+      "Loud"
+     ],
+     [
+      "Ferg is too in the streets to know the what?",
+      "Industry",
+      "Rules",
+      "Neighbors"
+     ],
+     [
+      "Who should you ask about Ferg layin' it strong?",
+      "Jay-Z",
+      "Diddy",
+      "Nas"
+     ],
+     [
+      "Y'all run and get it, like what?",
+      "Ozempic",
+      "Gatorade",
+      "Nike"
+     ],
+     [
+      "Stand right there and stop what?",
+      "Flinchin'",
+      "Talkin'",
+      "Runnin'"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Hood Pope",
+   "id": "Qfs1L_w5tIQ",
+   "start": 7.1,
+   "cuts": [
+    36.7,
+    79.3,
+    167.4
+   ],
+   "qs": [
+    [
+     [
+      "Ferg says let me sing my what?",
+      "Song",
+      "Hymn",
+      "Prayer"
+     ],
+     [
+      "If you feel this, what should you do?",
+      "Sing along",
+      "Clap along",
+      "Pray along"
+     ],
+     [
+      "What does Ferg call himself?",
+      "The Hood Pope",
+      "The Hood King",
+      "The Trap God"
+     ],
+     [
+      "How does the chain hang?",
+      "Low",
+      "Long",
+      "Heavy"
+     ],
+     [
+      "What red stones are with the gold?",
+      "Rubies",
+      "Garnets",
+      "Diamonds"
+     ],
+     [
+      "Young trap lord, I feel your what?",
+      "Pain",
+      "Love",
+      "Fire"
+     ],
+     [
+      "Ferg is down for his what?",
+      "People",
+      "City",
+      "Crew"
+     ],
+     [
+      "What kind of juice is Ferg drinking?",
+      "Jesus juice",
+      "Orange juice",
+      "Apple juice"
+     ]
+    ],
+    [
+     [
+      "We sick, 'cause we what?",
+      "Hurting",
+      "Working",
+      "Winning"
+     ],
+     [
+      "What Ford truck do they ride off in?",
+      "Excursion",
+      "Explorer",
+      "Expedition"
+     ],
+     [
+      "A bunch of hooligans need what?",
+      "Churching",
+      "Schooling",
+      "Feeding"
+     ],
+     [
+      "The Hood Pope says these are his what?",
+      "Children",
+      "Soldiers",
+      "Brothers"
+     ],
+     [
+      "Ferg will be their which gospel singer?",
+      "Donnie McClurkin",
+      "Kirk Franklin",
+      "CeCe Winans"
+     ],
+     [
+      "What shows when Ferg is smirking?",
+      "Gold teeth",
+      "Dimples",
+      "Diamonds"
+     ],
+     [
+      "Little kids running 'round need what?",
+      "Nurturing",
+      "Sneakers",
+      "Teachers"
+     ],
+     [
+      "The Lord knows Ferg ain't really what?",
+      "Perfect",
+      "Holy",
+      "Rich"
+     ]
+    ],
+    [
+     [
+      "God say, \"Son, you don't wanna go\" where?",
+      "Down",
+      "Home",
+      "Back"
+     ],
+     [
+      "He promises it won't happen ever what?",
+      "Again",
+      "Twice",
+      "Later"
+     ],
+     [
+      "Ferg told you how many times?",
+      "Time again",
+      "Just once",
+      "Never"
+     ],
+     [
+      "The people you're riding with ain't your what?",
+      "Friends",
+      "Family",
+      "Fans"
+     ],
+     [
+      "Who is crying in the verse?",
+      "Momma",
+      "Grandma",
+      "Sister"
+     ],
+     [
+      "He was a good kid for a what?",
+      "While",
+      "Year",
+      "Summer"
+     ],
+     [
+      "What did he find, and then it got wild?",
+      "The streets",
+      "The money",
+      "The block"
+     ],
+     [
+      "She says he is her only what?",
+      "Child",
+      "Son",
+      "Hope"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Plain Jane",
+   "id": "BwmuvqFzfLI",
+   "start": 9.7,
+   "cuts": [
+    33.6,
+    91.2,
+    158.9
+   ],
+   "qs": [
+    [
+     [
+      "Who does Ferg ride with?",
+      "The mob",
+      "The gang",
+      "The squad"
+     ],
+     [
+      "Check in with Ferg and do your what?",
+      "Job",
+      "Thing",
+      "Best"
+     ],
+     [
+      "Who did the chain?",
+      "Ben Baller",
+      "Jacob",
+      "Elliot Eliantte"
+     ],
+     [
+      "Ferg's watch is from where?",
+      "Tourneau",
+      "Rolex store",
+      "Cartier"
+     ],
+     [
+      "What kind of chain does Ferg rock for his late friend?",
+      "Yamborghini",
+      "Cuban link",
+      "Rope chain"
+     ],
+     [
+      "Ferg's Hermès link could feed a village in where?",
+      "Liberia",
+      "Ghana",
+      "Haiti"
+     ],
+     [
+      "Who is taking pictures?",
+      "TMZ",
+      "Paparazzi",
+      "The Shade Room"
+     ],
+     [
+      "Momma saw Ferg on which channel?",
+      "BET",
+      "MTV",
+      "VH1"
+     ]
+    ],
+    [
+     [
+      "What kind of picnics did Ferg attend?",
+      "Harlem picnics",
+      "Church picnics",
+      "Block parties"
+     ],
+     [
+      "How old was Ferg?",
+      "8 years old",
+      "12 years old",
+      "5 years old"
+     ],
+     [
+      "What show was young Ferg watching at night?",
+      "Nick at Nite",
+      "Saturday Night Live",
+      "Showtime at the Apollo"
+     ],
+     [
+      "In the hook, what should you do with Ferg?",
+      "Check in",
+      "Roll out",
+      "Link up"
+     ],
+     [
+      "Grandma had arthritis in her what?",
+      "Hands",
+      "Knees",
+      "Back"
+     ],
+     [
+      "Ferg is the what, in the hook?",
+      "Name",
+      "Man",
+      "Boss"
+     ],
+     [
+      "What's the watch, in the hook?",
+      "Presi Plain Jane",
+      "Gold Rolex",
+      "Iced out"
+     ],
+     [
+      "What does Ferg say with the mob?",
+      "Alhamdulillah",
+      "Hallelujah",
+      "Amen"
+     ]
+    ],
+    [
+     [
+      "Ferg explains why you probably never what?",
+      "Seen me",
+      "Heard me",
+      "Met me"
+     ],
+     [
+      "What kind of place is Ferg in?",
+      "Sunken place",
+      "Dark place",
+      "Happy place"
+     ],
+     [
+      "What doesn't Ferg have in the sunken place?",
+      "Instagram",
+      "A phone",
+      "A TV"
+     ],
+     [
+      "What is Ferg watchin'?",
+      "TV",
+      "The game",
+      "The news"
+     ],
+     [
+      "Ferg goes crazy in his what?",
+      "Yeezy",
+      "Jordans",
+      "Foamposites"
+     ],
+     [
+      "Who's on the beat?",
+      "Kirk Kneezy",
+      "Mike Will",
+      "Metro Boomin"
+     ],
+     [
+      "Rappers talk what but not to Ferg?",
+      "Subliminal",
+      "Trash",
+      "Loud"
+     ],
+     [
+      "Ferg puts 'em in a Jersey Shore like who?",
+      "Pauly D",
+      "The Situation",
+      "Vinny"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
