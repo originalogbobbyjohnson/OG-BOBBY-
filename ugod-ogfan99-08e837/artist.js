@@ -93,40 +93,1375 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Bizarre",
-   "id": "G2Ysx7qkEKo",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Stop (Carry On)",
+   "id": "qnHkTbxrS8U",
+   "start": 42.6,
+   "cuts": [
+    74,
+    128.3,
+    166.5
+   ],
+   "qs": [
+    [
+     [
+      "Life's so short, so sit back, relax and enjoy what?",
+      "The view",
+      "The show",
+      "The ride"
+     ],
+     [
+      "What does he tell you to smell?",
+      "The fresh air",
+      "The roses",
+      "The coffee"
+     ],
+     [
+      "What should come beaming through?",
+      "The sunshine",
+      "The moonlight",
+      "The spotlight"
+     ],
+     [
+      "We're all whose creatures?",
+      "God's",
+      "Nature's",
+      "The city's"
+     ],
+     [
+      "The streets is whose?",
+      "Mine",
+      "Ours",
+      "Yours"
+     ],
+     [
+      "We all got problems, flaws, heartaches and what else?",
+      "Sores",
+      "Scars",
+      "Bills"
+     ],
+     [
+      "Make sure you take care of you and who?",
+      "Yours",
+      "Your crew",
+      "Your mom"
+     ]
+    ],
+    [
+     [
+      "What does he have for the mind?",
+      "Jewels",
+      "Gifts",
+      "Pictures"
+     ],
+     [
+      "He's got more of what to eat?",
+      "Fruit",
+      "Bread",
+      "Rice"
+     ],
+     [
+      "You are exceptional, you are what?",
+      "Unique",
+      "Unreal",
+      "Unbeatable"
+     ],
+     [
+      "Hear his what roar?",
+      "Lion's",
+      "Tiger's",
+      "Engine's"
+     ],
+     [
+      "Reach for your dreams and try to do what?",
+      "Soar",
+      "Run",
+      "Win"
+     ],
+     [
+      "The Lord's thy what?",
+      "Shepherd",
+      "Savior",
+      "Keeper"
+     ],
+     [
+      "What does the baby need?",
+      "Pampers",
+      "A bottle",
+      "A blanket"
+     ]
+    ],
+    [
+     [
+      "He composed this lyric for your what?",
+      "Self-esteem",
+      "Birthday",
+      "Peace of mind"
+     ],
+     [
+      "The lyric is meant to uplift your what?",
+      "Spirit",
+      "Mood",
+      "Day"
+     ],
+     [
+      "People take his kindness for what?",
+      "Weakness",
+      "Fear",
+      "Money"
+     ],
+     [
+      "Dumb, deaf and what?",
+      "Blind",
+      "Mute",
+      "Lost"
+     ],
+     [
+      "Jealousy, envy, lust and what?",
+      "Greed",
+      "Pride",
+      "Hate"
+     ],
+     [
+      "It's hard to have faith in what?",
+      "People",
+      "Money",
+      "Luck"
+     ],
+     [
+      "Stuck in a battle over good and what?",
+      "Evil",
+      "Bad",
+      "Wrong"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Wu-Tang",
-   "id": "Pr6o6J6Zw6s",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Climate",
+   "id": "mALuqtBWvq8",
+   "start": 19.7,
+   "cuts": [
+    54.5,
+    106.6,
+    140.4
+   ],
+   "qs": [
+    [
+     [
+      "Hip hop should be respected and what?",
+      "Cherished",
+      "Protected",
+      "Celebrated"
+     ],
+     [
+      "Keep it in your pocket for the next one to do what?",
+      "Inherit",
+      "Discover",
+      "Borrow"
+     ],
+     [
+      "It's a rough path to where?",
+      "Heaven",
+      "The top",
+      "Success"
+     ],
+     [
+      "He earned a button with what number?",
+      "Seven",
+      "Five",
+      "Nine"
+     ],
+     [
+      "He's a father figure like Mr. who?",
+      "James Evans",
+      "Cliff Huxtable",
+      "Phil Banks"
+     ],
+     [
+      "What will still remain?",
+      "The art and the bars",
+      "The beats and rhymes",
+      "The fans and fame"
+     ],
+     [
+      "Champagne salute to those who did what to the game?",
+      "Weathered",
+      "Changed",
+      "Played"
+     ]
+    ],
+    [
+     [
+      "Don't let them filter the what?",
+      "Spirit",
+      "Sound",
+      "Truth"
+     ],
+     [
+      "Rap glaciers of what have been melting for years?",
+      "Ice",
+      "Snow",
+      "Gold"
+     ],
+     [
+      "Hip hop is the master, what's constant?",
+      "Evolution",
+      "Change",
+      "Revolution"
+     ],
+     [
+      "They say New York really did what?",
+      "Lost it",
+      "Found it",
+      "Ran it"
+     ],
+     [
+      "They sat at the table with the top heads and who?",
+      "Bosses",
+      "Rappers",
+      "Lawyers"
+     ],
+     [
+      "They sat down to save the what?",
+      "Def Jams",
+      "Bad Boys",
+      "Roc-A-Fellas"
+     ],
+     [
+      "Pass the torch, get on his grind and he does what?",
+      "Endorses it",
+      "Ignores it",
+      "Records it"
+     ]
+    ],
+    [
+     [
+      "Cats wanna peel back a what?",
+      "Vocalist",
+      "Producer",
+      "Label"
+     ],
+     [
+      "Triple XL on the Dell on his what?",
+      "Poker chip",
+      "Laptop",
+      "Dog tag"
+     ],
+     [
+      "His thought process has depth for a what?",
+      "Scholarship",
+      "Diploma",
+      "Record deal"
+     ],
+     [
+      "He buys a hoodie but never copped what?",
+      "German",
+      "Gucci",
+      "Prada"
+     ],
+     [
+      "He used to run through life like a what?",
+      "Blind man",
+      "Madman",
+      "Track star"
+     ],
+     [
+      "Now he walks like he's stepping on what?",
+      "Quicksand",
+      "Eggshells",
+      "Glass"
+     ],
+     [
+      "How many steps ahead is he?",
+      "Two",
+      "Three",
+      "Ten"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Skyscraper",
-   "id": "Mp8fMrtehm8",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Elegance",
+   "id": "unZZSOwGrMM",
+   "start": 24.2,
+   "cuts": [
+    48.6,
+    70.3,
+    131.7
+   ],
+   "qs": [
+    [
+     [
+      "Love is the what?",
+      "Message",
+      "Answer",
+      "Reason"
+     ],
+     [
+      "What does she keep on doing?",
+      "Texting",
+      "Calling",
+      "Smiling"
+     ],
+     [
+      "Her tastes are what?",
+      "Expensive",
+      "Simple",
+      "Sweet"
+     ],
+     [
+      "She's on his what?",
+      "Guest list",
+      "Phone",
+      "Mind"
+     ],
+     [
+      "He introduced you to who?",
+      "Biz",
+      "Rakim",
+      "Kane"
+     ],
+     [
+      "Two step in the club, put your what in?",
+      "Request",
+      "Order",
+      "Number"
+     ],
+     [
+      "Outstanding, can he take you where?",
+      "Home",
+      "Out",
+      "Uptown"
+     ]
+    ],
+    [
+     [
+      "How many minutes after the show?",
+      "Six",
+      "Ten",
+      "Five"
+     ],
+     [
+      "You're in the what zone?",
+      "Red",
+      "End",
+      "Twilight"
+     ],
+     [
+      "His new joint is queued up on the what?",
+      "Headphones",
+      "Radio",
+      "Jukebox"
+     ],
+     [
+      "Strobe lights on his what?",
+      "Gemstones",
+      "Chain",
+      "Sneakers"
+     ],
+     [
+      "What car is outside?",
+      "Jag",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "The car is sitting on a pair of what?",
+      "Bridgestones",
+      "Pirellis",
+      "Michelins"
+     ],
+     [
+      "Classic New York with a what?",
+      "Fork",
+      "Knife",
+      "Spoon"
+     ]
+    ],
+    [
+     [
+      "Can he get a soul what?",
+      "Clap",
+      "Train",
+      "Food"
+     ],
+     [
+      "Hit him on the what?",
+      "App",
+      "Phone",
+      "Beeper"
+     ],
+     [
+      "It's like dinner in the park after what?",
+      "Dark",
+      "Work",
+      "Church"
+     ],
+     [
+      "Watching really deep talk, what movie?",
+      "Star Wars",
+      "Star Trek",
+      "Rocky"
+     ],
+     [
+      "Central Park with a what?",
+      "Barbecue",
+      "Picnic",
+      "Bike ride"
+     ],
+     [
+      "Horse drawn carriage, and he's looking for the what?",
+      "Marriage",
+      "Ring",
+      "Exit"
+     ],
+     [
+      "Which street does he name?",
+      "Delancey Street",
+      "Canal Street",
+      "Bleecker Street"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Dat's Gangsta",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Wisdom",
+   "id": "rBAiNuje1o8",
+   "start": 42.6,
+   "cuts": [
+    83.2,
+    124.9,
+    158.9
+   ],
+   "qs": [
+    [
+     [
+      "He wishes he could find his first book of what?",
+      "Rhymes",
+      "Poems",
+      "Songs"
+     ],
+     [
+      "What year did he rip out that page?",
+      "'89",
+      "'93",
+      "'85"
+     ],
+     [
+      "What color ink was it written in?",
+      "Red",
+      "Blue",
+      "Black"
+     ],
+     [
+      "He got kicked out the booth after how many tries?",
+      "15",
+      "5",
+      "50"
+     ],
+     [
+      "Olympic torch flaming, how many sold?",
+      "10 million",
+      "1 million",
+      "5 million"
+     ],
+     [
+      "Making Ma proud was the initial what?",
+      "Goal",
+      "Dream",
+      "Plan"
+     ]
+    ],
+    [
+     [
+      "Look Ma, I'm on top of the what?",
+      "World",
+      "Charts",
+      "Game"
+     ],
+     [
+      "His cohorts are out front the old what?",
+      "Building",
+      "Store",
+      "School"
+     ],
+     [
+      "What's on the ceiling?",
+      "Stickers",
+      "Posters",
+      "Stars"
+     ],
+     [
+      "Late night, helping baby girl with her what?",
+      "Homework",
+      "Hair",
+      "Bedtime story"
+     ],
+     [
+      "What just won't work?",
+      "Magic marker",
+      "Crayon",
+      "Pen"
+     ],
+     [
+      "He'll be home in which quarter?",
+      "4th",
+      "1st",
+      "3rd"
+     ]
+    ],
+    [
+     [
+      "Tears shed in the back of the what?",
+      "Tour bus",
+      "Limo",
+      "Studio"
+     ],
+     [
+      "Which city does the footage show?",
+      "Tokyo",
+      "London",
+      "Paris"
+     ],
+     [
+      "What a wild what?",
+      "Rodeo",
+      "Ride",
+      "Night"
+     ],
+     [
+      "Who's the first of the Hawkins to graduate film school?",
+      "Meek",
+      "Donte",
+      "Malik"
+     ],
+     [
+      "Who's on his way to the air force?",
+      "Flex",
+      "Malik",
+      "Meek"
+     ],
+     [
+      "He'll cherish the moment till he walks her down the what?",
+      "Aisle",
+      "Street",
+      "Stairs"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Golden Arms Redemption",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Turbulence",
+   "id": "O-k2hlDETUc",
+   "cuts": [
+    41.3,
+    103.4,
+    164.6
+   ],
+   "qs": [
+    [
+     [
+      "Mama told him he's the what?",
+      "Giant",
+      "Chosen one",
+      "King"
+     ],
+     [
+      "They stole the science from the who?",
+      "O.G.",
+      "Teacher",
+      "Scientist"
+     ],
+     [
+      "Carbon what?",
+      "Copies",
+      "Fiber",
+      "Dating"
+     ],
+     [
+      "They can't get it past the what?",
+      "Goalie mask",
+      "Referee",
+      "Defense"
+     ],
+     [
+      "Which card game does he name?",
+      "Gin rummy",
+      "Spades",
+      "Poker"
+     ],
+     [
+      "Low stamina, but still what?",
+      "Hungry",
+      "Standing",
+      "Winning"
+     ]
+    ],
+    [
+     [
+      "He's a black panther on a what?",
+      "Mission",
+      "Prowl",
+      "Throne"
+     ],
+     [
+      "Robotron golden arms, what kind of brain cell?",
+      "Pentagon",
+      "Genius",
+      "Robot"
+     ],
+     [
+      "Wolfgang hunters, field goal what?",
+      "Punters",
+      "Kickers",
+      "Holders"
+     ],
+     [
+      "Flying what?",
+      "Saucers",
+      "Carpets",
+      "Squirrels"
+     ],
+     [
+      "May the what not be with you?",
+      "Force",
+      "Luck",
+      "Lord"
+     ],
+     [
+      "Who does he slow dance with in the club?",
+      "Halle Berry",
+      "Janet Jackson",
+      "Beyonce"
+     ]
+    ],
+    [
+     [
+      "Whose movements does he have?",
+      "Jackie Chan's",
+      "Bruce Lee's",
+      "Jet Li's"
+     ],
+     [
+      "A ruthless, butter what flow?",
+      "Roll",
+      "Cream",
+      "Pecan"
+     ],
+     [
+      "Eight ball in the side what?",
+      "Pocket",
+      "Corner",
+      "Hole"
+     ],
+     [
+      "Give him his what?",
+      "Poolstick",
+      "Mic",
+      "Pen"
+     ],
+     [
+      "Fans, read the what?",
+      "Blueprints",
+      "Headlines",
+      "Liner notes"
+     ],
+     [
+      "He was the apprentice under whose training?",
+      "RZA's",
+      "GZA's",
+      "Ghost's"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Stop (Carry On)",
+   "id": "qnHkTbxrS8U",
+   "start": 42.6,
+   "cuts": [
+    74,
+    128.3,
+    166.5
+   ],
+   "qs": [
+    [
+     [
+      "Life's so short, so sit back, relax and enjoy what?",
+      "The view",
+      "The show",
+      "The ride"
+     ],
+     [
+      "What does he tell you to smell?",
+      "The fresh air",
+      "The roses",
+      "The coffee"
+     ],
+     [
+      "What should come beaming through?",
+      "The sunshine",
+      "The moonlight",
+      "The spotlight"
+     ],
+     [
+      "We're all whose creatures?",
+      "God's",
+      "Nature's",
+      "The city's"
+     ],
+     [
+      "The streets is whose?",
+      "Mine",
+      "Ours",
+      "Yours"
+     ],
+     [
+      "We all got problems, flaws, heartaches and what else?",
+      "Sores",
+      "Scars",
+      "Bills"
+     ],
+     [
+      "Make sure you take care of you and who?",
+      "Yours",
+      "Your crew",
+      "Your mom"
+     ]
+    ],
+    [
+     [
+      "What does he have for the mind?",
+      "Jewels",
+      "Gifts",
+      "Pictures"
+     ],
+     [
+      "He's got more of what to eat?",
+      "Fruit",
+      "Bread",
+      "Rice"
+     ],
+     [
+      "You are exceptional, you are what?",
+      "Unique",
+      "Unreal",
+      "Unbeatable"
+     ],
+     [
+      "Hear his what roar?",
+      "Lion's",
+      "Tiger's",
+      "Engine's"
+     ],
+     [
+      "Reach for your dreams and try to do what?",
+      "Soar",
+      "Run",
+      "Win"
+     ],
+     [
+      "The Lord's thy what?",
+      "Shepherd",
+      "Savior",
+      "Keeper"
+     ],
+     [
+      "What does the baby need?",
+      "Pampers",
+      "A bottle",
+      "A blanket"
+     ]
+    ],
+    [
+     [
+      "He composed this lyric for your what?",
+      "Self-esteem",
+      "Birthday",
+      "Peace of mind"
+     ],
+     [
+      "The lyric is meant to uplift your what?",
+      "Spirit",
+      "Mood",
+      "Day"
+     ],
+     [
+      "People take his kindness for what?",
+      "Weakness",
+      "Fear",
+      "Money"
+     ],
+     [
+      "Dumb, deaf and what?",
+      "Blind",
+      "Mute",
+      "Lost"
+     ],
+     [
+      "Jealousy, envy, lust and what?",
+      "Greed",
+      "Pride",
+      "Hate"
+     ],
+     [
+      "It's hard to have faith in what?",
+      "People",
+      "Money",
+      "Luck"
+     ],
+     [
+      "Stuck in a battle over good and what?",
+      "Evil",
+      "Bad",
+      "Wrong"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Climate",
+   "id": "mALuqtBWvq8",
+   "start": 19.7,
+   "cuts": [
+    54.5,
+    106.6,
+    140.4
+   ],
+   "qs": [
+    [
+     [
+      "Hip hop should be respected and what?",
+      "Cherished",
+      "Protected",
+      "Celebrated"
+     ],
+     [
+      "Keep it in your pocket for the next one to do what?",
+      "Inherit",
+      "Discover",
+      "Borrow"
+     ],
+     [
+      "It's a rough path to where?",
+      "Heaven",
+      "The top",
+      "Success"
+     ],
+     [
+      "He earned a button with what number?",
+      "Seven",
+      "Five",
+      "Nine"
+     ],
+     [
+      "He's a father figure like Mr. who?",
+      "James Evans",
+      "Cliff Huxtable",
+      "Phil Banks"
+     ],
+     [
+      "What will still remain?",
+      "The art and the bars",
+      "The beats and rhymes",
+      "The fans and fame"
+     ],
+     [
+      "Champagne salute to those who did what to the game?",
+      "Weathered",
+      "Changed",
+      "Played"
+     ]
+    ],
+    [
+     [
+      "Don't let them filter the what?",
+      "Spirit",
+      "Sound",
+      "Truth"
+     ],
+     [
+      "Rap glaciers of what have been melting for years?",
+      "Ice",
+      "Snow",
+      "Gold"
+     ],
+     [
+      "Hip hop is the master, what's constant?",
+      "Evolution",
+      "Change",
+      "Revolution"
+     ],
+     [
+      "They say New York really did what?",
+      "Lost it",
+      "Found it",
+      "Ran it"
+     ],
+     [
+      "They sat at the table with the top heads and who?",
+      "Bosses",
+      "Rappers",
+      "Lawyers"
+     ],
+     [
+      "They sat down to save the what?",
+      "Def Jams",
+      "Bad Boys",
+      "Roc-A-Fellas"
+     ],
+     [
+      "Pass the torch, get on his grind and he does what?",
+      "Endorses it",
+      "Ignores it",
+      "Records it"
+     ]
+    ],
+    [
+     [
+      "Cats wanna peel back a what?",
+      "Vocalist",
+      "Producer",
+      "Label"
+     ],
+     [
+      "Triple XL on the Dell on his what?",
+      "Poker chip",
+      "Laptop",
+      "Dog tag"
+     ],
+     [
+      "His thought process has depth for a what?",
+      "Scholarship",
+      "Diploma",
+      "Record deal"
+     ],
+     [
+      "He buys a hoodie but never copped what?",
+      "German",
+      "Gucci",
+      "Prada"
+     ],
+     [
+      "He used to run through life like a what?",
+      "Blind man",
+      "Madman",
+      "Track star"
+     ],
+     [
+      "Now he walks like he's stepping on what?",
+      "Quicksand",
+      "Eggshells",
+      "Glass"
+     ],
+     [
+      "How many steps ahead is he?",
+      "Two",
+      "Three",
+      "Ten"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Elegance",
+   "id": "unZZSOwGrMM",
+   "start": 24.2,
+   "cuts": [
+    48.6,
+    70.3,
+    131.7
+   ],
+   "qs": [
+    [
+     [
+      "Love is the what?",
+      "Message",
+      "Answer",
+      "Reason"
+     ],
+     [
+      "What does she keep on doing?",
+      "Texting",
+      "Calling",
+      "Smiling"
+     ],
+     [
+      "Her tastes are what?",
+      "Expensive",
+      "Simple",
+      "Sweet"
+     ],
+     [
+      "She's on his what?",
+      "Guest list",
+      "Phone",
+      "Mind"
+     ],
+     [
+      "He introduced you to who?",
+      "Biz",
+      "Rakim",
+      "Kane"
+     ],
+     [
+      "Two step in the club, put your what in?",
+      "Request",
+      "Order",
+      "Number"
+     ],
+     [
+      "Outstanding, can he take you where?",
+      "Home",
+      "Out",
+      "Uptown"
+     ]
+    ],
+    [
+     [
+      "How many minutes after the show?",
+      "Six",
+      "Ten",
+      "Five"
+     ],
+     [
+      "You're in the what zone?",
+      "Red",
+      "End",
+      "Twilight"
+     ],
+     [
+      "His new joint is queued up on the what?",
+      "Headphones",
+      "Radio",
+      "Jukebox"
+     ],
+     [
+      "Strobe lights on his what?",
+      "Gemstones",
+      "Chain",
+      "Sneakers"
+     ],
+     [
+      "What car is outside?",
+      "Jag",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "The car is sitting on a pair of what?",
+      "Bridgestones",
+      "Pirellis",
+      "Michelins"
+     ],
+     [
+      "Classic New York with a what?",
+      "Fork",
+      "Knife",
+      "Spoon"
+     ]
+    ],
+    [
+     [
+      "Can he get a soul what?",
+      "Clap",
+      "Train",
+      "Food"
+     ],
+     [
+      "Hit him on the what?",
+      "App",
+      "Phone",
+      "Beeper"
+     ],
+     [
+      "It's like dinner in the park after what?",
+      "Dark",
+      "Work",
+      "Church"
+     ],
+     [
+      "Watching really deep talk, what movie?",
+      "Star Wars",
+      "Star Trek",
+      "Rocky"
+     ],
+     [
+      "Central Park with a what?",
+      "Barbecue",
+      "Picnic",
+      "Bike ride"
+     ],
+     [
+      "Horse drawn carriage, and he's looking for the what?",
+      "Marriage",
+      "Ring",
+      "Exit"
+     ],
+     [
+      "Which street does he name?",
+      "Delancey Street",
+      "Canal Street",
+      "Bleecker Street"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Wisdom",
+   "id": "rBAiNuje1o8",
+   "start": 42.6,
+   "cuts": [
+    83.2,
+    124.9,
+    158.9
+   ],
+   "qs": [
+    [
+     [
+      "He wishes he could find his first book of what?",
+      "Rhymes",
+      "Poems",
+      "Songs"
+     ],
+     [
+      "What year did he rip out that page?",
+      "'89",
+      "'93",
+      "'85"
+     ],
+     [
+      "What color ink was it written in?",
+      "Red",
+      "Blue",
+      "Black"
+     ],
+     [
+      "He got kicked out the booth after how many tries?",
+      "15",
+      "5",
+      "50"
+     ],
+     [
+      "Olympic torch flaming, how many sold?",
+      "10 million",
+      "1 million",
+      "5 million"
+     ],
+     [
+      "Making Ma proud was the initial what?",
+      "Goal",
+      "Dream",
+      "Plan"
+     ]
+    ],
+    [
+     [
+      "Look Ma, I'm on top of the what?",
+      "World",
+      "Charts",
+      "Game"
+     ],
+     [
+      "His cohorts are out front the old what?",
+      "Building",
+      "Store",
+      "School"
+     ],
+     [
+      "What's on the ceiling?",
+      "Stickers",
+      "Posters",
+      "Stars"
+     ],
+     [
+      "Late night, helping baby girl with her what?",
+      "Homework",
+      "Hair",
+      "Bedtime story"
+     ],
+     [
+      "What just won't work?",
+      "Magic marker",
+      "Crayon",
+      "Pen"
+     ],
+     [
+      "He'll be home in which quarter?",
+      "4th",
+      "1st",
+      "3rd"
+     ]
+    ],
+    [
+     [
+      "Tears shed in the back of the what?",
+      "Tour bus",
+      "Limo",
+      "Studio"
+     ],
+     [
+      "Which city does the footage show?",
+      "Tokyo",
+      "London",
+      "Paris"
+     ],
+     [
+      "What a wild what?",
+      "Rodeo",
+      "Ride",
+      "Night"
+     ],
+     [
+      "Who's the first of the Hawkins to graduate film school?",
+      "Meek",
+      "Donte",
+      "Malik"
+     ],
+     [
+      "Who's on his way to the air force?",
+      "Flex",
+      "Malik",
+      "Meek"
+     ],
+     [
+      "He'll cherish the moment till he walks her down the what?",
+      "Aisle",
+      "Street",
+      "Stairs"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Turbulence",
+   "id": "O-k2hlDETUc",
+   "cuts": [
+    41.3,
+    103.4,
+    164.6
+   ],
+   "qs": [
+    [
+     [
+      "Mama told him he's the what?",
+      "Giant",
+      "Chosen one",
+      "King"
+     ],
+     [
+      "They stole the science from the who?",
+      "O.G.",
+      "Teacher",
+      "Scientist"
+     ],
+     [
+      "Carbon what?",
+      "Copies",
+      "Fiber",
+      "Dating"
+     ],
+     [
+      "They can't get it past the what?",
+      "Goalie mask",
+      "Referee",
+      "Defense"
+     ],
+     [
+      "Which card game does he name?",
+      "Gin rummy",
+      "Spades",
+      "Poker"
+     ],
+     [
+      "Low stamina, but still what?",
+      "Hungry",
+      "Standing",
+      "Winning"
+     ]
+    ],
+    [
+     [
+      "He's a black panther on a what?",
+      "Mission",
+      "Prowl",
+      "Throne"
+     ],
+     [
+      "Robotron golden arms, what kind of brain cell?",
+      "Pentagon",
+      "Genius",
+      "Robot"
+     ],
+     [
+      "Wolfgang hunters, field goal what?",
+      "Punters",
+      "Kickers",
+      "Holders"
+     ],
+     [
+      "Flying what?",
+      "Saucers",
+      "Carpets",
+      "Squirrels"
+     ],
+     [
+      "May the what not be with you?",
+      "Force",
+      "Luck",
+      "Lord"
+     ],
+     [
+      "Who does he slow dance with in the club?",
+      "Halle Berry",
+      "Janet Jackson",
+      "Beyonce"
+     ]
+    ],
+    [
+     [
+      "Whose movements does he have?",
+      "Jackie Chan's",
+      "Bruce Lee's",
+      "Jet Li's"
+     ],
+     [
+      "A ruthless, butter what flow?",
+      "Roll",
+      "Cream",
+      "Pecan"
+     ],
+     [
+      "Eight ball in the side what?",
+      "Pocket",
+      "Corner",
+      "Hole"
+     ],
+     [
+      "Give him his what?",
+      "Poolstick",
+      "Mic",
+      "Pen"
+     ],
+     [
+      "Fans, read the what?",
+      "Blueprints",
+      "Headlines",
+      "Liner notes"
+     ],
+     [
+      "He was the apprentice under whose training?",
+      "RZA's",
+      "GZA's",
+      "Ghost's"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
