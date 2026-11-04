@@ -52,7 +52,7 @@
       },
       mute: on => { try { const p = yt(); if (on) { p._v = p.getVolume(); p.setVolume(18); } else p.setVolume(p._v != null ? p._v : 100); } catch (e) {} },
       /* a tap on the video works like a tap on the record */
-      toggle: () => { try { const p = yt(); if (typeof atStop !== "undefined" && atStop) return; if (p.getPlayerState() === 1) p.pauseVideo(); else if (p.getPlayerState() === 2) p.playVideo(); } catch (e) {} }
+      toggle: () => { try { if (typeof atStop !== "undefined" && atStop) { if (typeof toast === "function") toast("ANSWER TO KEEP IT GOING"); return; } const p = yt(); if (!p || typeof current === "undefined" || current < 0) { document.getElementById("record").click(); return; } const s = p.getPlayerState(); if (s === 1 || s === 3) p.pauseVideo(); else p.playVideo(); } catch (e) {} }
     };
     setInterval(() => { if (mini) mini.classList.toggle("on", A.playing()); }, 400);
   }
@@ -113,7 +113,9 @@
   };
 
   document.addEventListener("pointerdown", e => {
-    const t = A.targets().find(t => hit(e, t)); if (!t) return;
+    /* buttons on top (full screen, close, play prompts) win: only touches that land on the record or the scrub pad itself count */
+    if (e.target && e.target.closest && e.target.closest("#bigExit, .bigbtn, .playcue, .x, a")) return;
+    const t = A.targets().find(t => hit(e, t) && t.el && (t.el === e.target || t.el.contains(e.target))); if (!t) return;
     const r = t.el.getBoundingClientRect();
     S = { id: e.pointerId, t, x: e.clientX, y: e.clientY, w: r.width, cx: r.left + r.width / 2, cy: r.top + r.height / 2, acc: 0, moved: false, lastSeek: 0, lastT: performance.now(), base: 0, playing: A.playing() };
     S.a = angleOf(e.clientX, e.clientY, S);

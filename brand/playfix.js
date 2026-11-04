@@ -68,12 +68,12 @@
       ".bigbtn small{display:block;font-size:.5rem;letter-spacing:.08em;font-weight:800;margin-top:-6px}" +
       "#pPlay .screen.big{position:fixed !important;left:0;top:0;width:100vw !important;height:100vh;height:100dvh;max-width:none;aspect-ratio:auto;z-index:9998;border-radius:0;border:0;box-shadow:none;margin:0;background:#000}" +
       "#pPlay .screen.big .playcue .arr{display:none}" +
-      "#bigExit{position:fixed;z-index:9999;right:12px;top:calc(12px + env(safe-area-inset-top,0px));width:auto;height:48px;padding:0 16px;border-radius:999px;border:2px solid #fff;background:#d62828;color:#fff;font-family:var(--display,inherit);letter-spacing:.1em;font-size:1rem;box-shadow:0 3px 0 #000}" +
-      "#bigExit[hidden]{display:none}";
+      "#bigExit{position:absolute;z-index:30;right:12px;top:calc(12px + env(safe-area-inset-top,0px));width:auto;height:48px;padding:0 16px;border-radius:999px;border:2px solid #fff;background:#d62828;color:#fff;font-family:var(--display,inherit);letter-spacing:.1em;font-size:1rem;box-shadow:0 3px 0 #000}" +
+      "#bigExit[hidden]{display:none}#pPlay .screen.big .og-scrub{bottom:70px}";
     document.head.appendChild(st3);
     var bb = document.createElement("button"); bb.type = "button"; bb.className = "bigbtn"; bb.setAttribute("aria-label", "Full screen"); bb.innerHTML = "&#10530;<small>FULL</small>";
     ep.appendChild(bb);
-    var ex = document.createElement("button"); ex.type = "button"; ex.id = "bigExit"; ex.hidden = true; ex.innerHTML = "&#10005; CLOSE"; document.body.appendChild(ex);
+    var ex = document.createElement("button"); ex.type = "button"; ex.id = "bigExit"; ex.hidden = true; ex.innerHTML = "&#10005; CLOSE"; scr.appendChild(ex);
     var track = document.getElementById("track"), saved = null, realFs = false;
     var iOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
     function setBig(on) {
