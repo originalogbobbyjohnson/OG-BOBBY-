@@ -501,27 +501,30 @@
     { n: "ATLANTA", d: "The A, Decatur, College Park, East Point.", c: "#d62828" },
     { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6" },
     { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf" },
-    { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a" },
-    { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c" },
+    { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Count Bass D"] },
+    { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c", coming: ["Tonedeff"] },
     { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8" },
     { n: "MORE OF THE SOUTH", d: "Every other Southern city.", c: "#35b867", locked: [{ who: "The real_Saddium", ig: "the_real_saddium" }] },
     { g: "EAST COAST" },
-    { n: "PHILADELPHIA", d: "North Philly, West Philly, South Philly.", c: "#004c54" },
+    { n: "PHILADELPHIA", d: "North Philly, West Philly, South Philly.", c: "#004c54", coming: ["Vinnie Paz"] },
     { n: "THE DMV", d: "D.C., Maryland, Northern Virginia.", c: "#e81828" },
-    { n: "BOSTON + NEW ENGLAND", d: "Boston, Providence, Hartford.", c: "#0b3d91" },
+    { n: "UPSTATE NEW YORK", d: "Middletown, Albany, Rochester, Buffalo, Syracuse.", c: "#7b3fbf", coming: ["Cage"] },
+    { n: "BOSTON + NEW ENGLAND", d: "Boston, Providence, Hartford.", c: "#0b3d91", coming: ["Mr. Lif", "Esoteric", "Slaine", "Sage Francis", "Apathy"] },
     { g: "MIDWEST" },
     { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de" },
-    { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319" },
+    { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["eLZhi", "Quelle Chris", "One Be Lo"] },
+    { n: "MINNEAPOLIS", d: "Minneapolis and St. Paul. Rhymesayers country.", c: "#7b3fbf", coming: ["Slug", "Brother Ali", "Eyedea"] },
+    { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e" },
     { g: "WEST COAST" },
-    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e" },
-    { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8" },
+    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
+    { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
     { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867" }
   ];
   function drawRegions() {
     var p = panes.regions;
     p.innerHTML = '<div class="wp-h"><div class="t">REGIONS</div><div class="s">EVERY CITY GETS ITS OWN MAP</div></div>' +
-      '<div class="wgrid">' + REGIONS.map(function (r, i) { if (r.g) return '<div class="rg-h">' + r.g + '</div>'; return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-r="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small>' + (r.locked ? '<small style="color:#e8b84a;font-weight:800">&#128274; LOCKED IN: ' + r.locked.map(function (x) { return esc(x.who); }).join(", ") + '</small>' : '') + '<span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO RIDE" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
+      '<div class="wgrid">' + REGIONS.map(function (r, i) { if (r.g) return '<div class="rg-h">' + r.g + '</div>'; return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-r="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small>' + (r.coming ? '<small style="font-weight:700">COMING: ' + r.coming.map(esc).join(", ") + '</small>' : '') + (r.locked ? '<small style="color:#e8b84a;font-weight:800">&#128274; LOCKED IN: ' + r.locked.map(function (x) { return esc(x.who); }).join(", ") + '</small>' : '') + '<span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO RIDE" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
       '<div class="wmsg" id="rgMsg"></div>';
     p.querySelector(".wgrid").onclick = function (e) { var b = e.target.closest("[data-r]"); if (!b) return; var r = REGIONS[+b.dataset.r]; if (r.live) return go("map"); $("rgMsg").innerHTML = esc(r.n) + " is under construction. Its map is coming." + (r.locked ? "<br>LOCKED IN: " + r.locked.map(function (x) { return esc(x.who) + (x.ig ? ' <a href="https://www.instagram.com/' + encodeURIComponent(x.ig) + '/" target="_blank" rel="noopener" style="color:#e8b84a">@' + esc(x.ig) + '</a>' : ""); }).join(", ") : ""); };
   }
