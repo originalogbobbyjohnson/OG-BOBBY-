@@ -93,40 +93,1303 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
-  {
-   "title": "Luchini AKA This Is It",
-   "id": "WvAqy1i2hEA",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
+ "songs": [
   {
    "title": "Coolie High",
-   "id": "Y3nA3OgqWaw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "id": "VsA2wfC_09o",
+   "cuts": [
+    42.8,
+    90.5,
+    179.8
+   ],
+   "qs": [
+    [
+     [
+      "You need to come inside and check who?",
+      "Lo",
+      "Joe",
+      "Flo"
+     ],
+     [
+      "You need to come where and check Lo?",
+      "Inside",
+      "Outside",
+      "Uptown"
+     ],
+     [
+      "What should you do with yourself?",
+      "Relax",
+      "Enjoy",
+      "Express"
+     ],
+     [
+      "Let the sugar Lo do what?",
+      "Flow",
+      "Go",
+      "Glow"
+     ],
+     [
+      "Coolie High got you what?",
+      "Wide",
+      "High",
+      "Fly"
+     ],
+     [
+      "It's rainin' what?",
+      "Alizay",
+      "Champagne",
+      "Money"
+     ],
+     [
+      "Floatin' through which tunnel?",
+      "Holland",
+      "Lincoln",
+      "Battery"
+     ],
+     [
+      "Floatin' through the tunnel doing what?",
+      "Swervin'",
+      "Speedin'",
+      "Sleepin'"
+     ],
+     [
+      "Three shots of life for all what?",
+      "Night",
+      "Day",
+      "Week"
+     ],
+     [
+      "Camp-ah hotta what?",
+      "Pinata",
+      "Tamale",
+      "Tortilla"
+     ],
+     [
+      "Spillin' what inside my automobile?",
+      "Coffee",
+      "Soda",
+      "Juice"
+     ]
+    ],
+    [
+     [
+      "Crackin' satin and what?",
+      "Leather",
+      "Silk",
+      "Lace"
+     ],
+     [
+      "Cash straight outta comic what?",
+      "Books",
+      "Strips",
+      "Stores"
+     ],
+     [
+      "Keep your eye on the what?",
+      "Lo",
+      "Prize",
+      "Sky"
+     ],
+     [
+      "Who's takin' it over?",
+      "Diamond crooks",
+      "Bronx kings",
+      "Uptown players"
+     ],
+     [
+      "We live for Coolie High what?",
+      "Treasures",
+      "Pleasures",
+      "Measures"
+     ],
+     [
+      "Check the queen bee Lady who?",
+      "Ree",
+      "Bee",
+      "Day"
+     ],
+     [
+      "Who's in the casino with gold sugar?",
+      "Cleopatra",
+      "Josephine",
+      "Nefertiti"
+     ],
+     [
+      "Dig my what?",
+      "Harlequin",
+      "Mannequin",
+      "Violin"
+     ],
+     [
+      "Bottles of what to tranquilize my heaven?",
+      "Asti Spumanti",
+      "Moet",
+      "Cristal"
+     ],
+     [
+      "Luchini to what?",
+      "Spare",
+      "Share",
+      "Burn"
+     ],
+     [
+      "What two words close the verse?",
+      "Word life",
+      "Peace out",
+      "Say word"
+     ]
+    ],
+    [
+     [
+      "Lo keeps the party what?",
+      "Live",
+      "Hype",
+      "Going"
+     ],
+     [
+      "I'm layin' in the purple what?",
+      "Rain",
+      "Rose",
+      "Light"
+     ],
+     [
+      "We movin' what, continuous?",
+      "Motionless",
+      "Endless",
+      "Nonstop"
+     ],
+     [
+      "The bubbly's pourin' through me and whose casino?",
+      "Cleopatra's",
+      "Caesar's",
+      "Pharaoh's"
+     ],
+     [
+      "Who's outta sight?",
+      "Dolemite",
+      "Shaft",
+      "Superfly"
+     ],
+     [
+      "Billy Holidayin' the who?",
+      "Foxy Browns",
+      "Pam Griers",
+      "Diana Rosses"
+     ],
+     [
+      "Lickin' Cuban what?",
+      "Cigars",
+      "Coffee",
+      "Sandwiches"
+     ],
+     [
+      "Underneath the what moon?",
+      "Silver",
+      "Harvest",
+      "Blue"
+     ],
+     [
+      "My shadow's by the what?",
+      "Moonlight",
+      "Streetlight",
+      "Sunlight"
+     ],
+     [
+      "Data's on the levels and the Lo is on the what?",
+      "EQ",
+      "Mic",
+      "Board"
+     ],
+     [
+      "My stamina is what?",
+      "Sugar",
+      "Steel",
+      "Endless"
+     ]
+    ]
+   ]
   },
   {
    "title": "Black Nostaljack",
-   "id": "Clp4nmC6z5w",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "id": "FORQF0Kd8Es",
+   "start": 21.6,
+   "cuts": [
+    51.3,
+    123.9,
+    183.5
+   ],
+   "qs": [
+    [
+     [
+      "Which old-time soda is named first?",
+      "Sarsaparilla",
+      "Root beer",
+      "Ginger ale"
+     ],
+     [
+      "Yes I be the what?",
+      "Suede",
+      "Smooth",
+      "Sweet"
+     ],
+     [
+      "And we can get with who?",
+      "Kiki",
+      "Gigi",
+      "Lulu"
+     ],
+     [
+      "The seventh heaven what?",
+      "Cloud",
+      "Floor",
+      "Sky"
+     ],
+     [
+      "So you see me on the what?",
+      "Upper",
+      "Corner",
+      "Block"
+     ],
+     [
+      "We make it what?",
+      "Hollywood",
+      "Happen",
+      "Big"
+     ],
+     [
+      "Who's takin' over?",
+      "Diamond crooks",
+      "Bronx kings",
+      "Uptown players"
+     ],
+     [
+      "Scores like what on my IQ test?",
+      "10",
+      "200",
+      "50"
+     ],
+     [
+      "Stay live with who?",
+      "Divine",
+      "Dolemite",
+      "Diana"
+     ],
+     [
+      "So I'm so funky what?",
+      "Fresh",
+      "Fly",
+      "Fine"
+     ],
+     [
+      "I rocks to the east, I flows to the what?",
+      "West",
+      "North",
+      "South"
+     ]
+    ],
+    [
+     [
+      "Who's the number one draft pick?",
+      "Max Julien",
+      "Max Payne",
+      "Mad Max"
+     ],
+     [
+      "Here we go for which team?",
+      "Knicks",
+      "Nets",
+      "Yankees"
+     ],
+     [
+      "Super phat, catch a what?",
+      "Heart attack",
+      "Cold",
+      "Cab"
+     ],
+     [
+      "Hair so what?",
+      "Sweet",
+      "Long",
+      "Nice"
+     ],
+     [
+      "I rock around the what?",
+      "Clock",
+      "World",
+      "Town"
+     ],
+     [
+      "Then I end up on your what?",
+      "Block",
+      "Roof",
+      "Stoop"
+     ],
+     [
+      "To the rhythm what?",
+      "Tick tock",
+      "Hip hop",
+      "Bang bang"
+     ],
+     [
+      "Who he? It only be the who?",
+      "Sonny Chee",
+      "Geechi Suede",
+      "Ill Will"
+     ],
+     [
+      "I ride up on a what?",
+      "Wave",
+      "Horse",
+      "Bike"
+     ],
+     [
+      "We meet them in where?",
+      "Aruba",
+      "Jamaica",
+      "Bermuda"
+     ],
+     [
+      "Get the goods down in where?",
+      "Savannah",
+      "Atlanta",
+      "Havana"
+     ]
+    ],
+    [
+     [
+      "One for the money, two is for the what?",
+      "Ebeneezer",
+      "Show",
+      "Dealer"
+     ],
+     [
+      "We do it on our what?",
+      "Leisure",
+      "Schedule",
+      "Weekend"
+     ],
+     [
+      "I used to rock a what?",
+      "Bubblegoose",
+      "Kangol hat",
+      "Sheepskin"
+     ],
+     [
+      "Wild child into the what?",
+      "Fever",
+      "Night",
+      "Fire"
+     ],
+     [
+      "Now we in the what?",
+      "Estee Lauder",
+      "Calvin Klein",
+      "Chanel"
+     ],
+     [
+      "The microphone what?",
+      "Kimono",
+      "Kingdom",
+      "Cologne"
+     ],
+     [
+      "I said it once before and I'm sayin' it all what?",
+      "Over",
+      "Night",
+      "Day"
+     ],
+     [
+      "Drop cats from which borough on the one and the two?",
+      "BX",
+      "BK",
+      "QB"
+     ],
+     [
+      "Somebody pulled a what?",
+      "Heist",
+      "Prank",
+      "Stunt"
+     ],
+     [
+      "I swing my flings but I practice what?",
+      "Kung fu",
+      "Karate",
+      "Boxing"
+     ],
+     [
+      "Now this here be the what?",
+      "End",
+      "Start",
+      "Spot"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Sugar Streets",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Life I Love",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Luchini AKA This Is It",
+   "id": "G-CLSpvgzvk",
+   "start": 10.5,
+   "cuts": [
+    46,
+    86.3,
+    173.4
+   ],
+   "qs": [
+    [
+     [
+      "What's pouring from the sky?",
+      "Luchini",
+      "Diamonds",
+      "Rain"
+     ],
+     [
+      "This is it, let's get what?",
+      "Rich",
+      "Paid",
+      "Down"
+     ],
+     [
+      "The jiggy vines, the sugar what?",
+      "Dimes",
+      "Times",
+      "Rhymes"
+     ],
+     [
+      "This is it, we can't what?",
+      "Quit",
+      "Stop",
+      "Wait"
+     ],
+     [
+      "Now pop the what?",
+      "Cork",
+      "Top",
+      "Lock"
+     ],
+     [
+      "Introducing phantom of the what?",
+      "Dark",
+      "Night",
+      "Opera"
+     ],
+     [
+      "Walk through my what?",
+      "Heaven",
+      "Castle",
+      "Garden"
+     ],
+     [
+      "Flash vines, whose vigor?",
+      "Belafonte",
+      "Sinatra",
+      "Ali"
+     ],
+     [
+      "Who's levitating jiggy in dashikis?",
+      "Casanova Brown",
+      "Foxy Brown",
+      "James Brown"
+     ],
+     [
+      "Chasing diamond what?",
+      "Runners",
+      "Rings",
+      "Dealers"
+     ],
+     [
+      "The big chilla diamond what?",
+      "Convention",
+      "Collection",
+      "Connection"
+     ]
+    ],
+    [
+     [
+      "Sensations at which festival?",
+      "Mardi Gras",
+      "Carnival",
+      "Coachella"
+     ],
+     [
+      "Fulfilling pleasures in my what?",
+      "Castles",
+      "Mansion",
+      "Palace"
+     ],
+     [
+      "The Lo don't stop, give me what?",
+      "Shouts",
+      "Props",
+      "Love"
+     ],
+     [
+      "Souffléers for swerving on what?",
+      "Corners",
+      "Highways",
+      "Bridges"
+     ],
+     [
+      "We magnets to what?",
+      "Moolah",
+      "Honeys",
+      "Trouble"
+     ],
+     [
+      "Living with whose Angels on us?",
+      "Charlie's",
+      "Johnny's",
+      "Bobby's"
+     ],
+     [
+      "No smiling, we're what?",
+      "Sliding",
+      "Hiding",
+      "Riding"
+     ],
+     [
+      "Quest to the coast of where?",
+      "Key Largo",
+      "Miami",
+      "Malibu"
+     ],
+     [
+      "Keep your ears out for who?",
+      "Roy Ayers",
+      "Roy Orbison",
+      "Ray Charles"
+     ],
+     [
+      "Sip the what?",
+      "Fontainebleau",
+      "Moscato",
+      "Bordeaux"
+     ],
+     [
+      "House of bamboo what?",
+      "Paradise",
+      "Palace",
+      "Garden"
+     ]
+    ],
+    [
+     [
+      "Fallen pharaohs, courtesies of who?",
+      "Black Caesar",
+      "Julius Caesar",
+      "King Tut"
+     ],
+     [
+      "Silky days, satin what?",
+      "Nights",
+      "Sheets",
+      "Dreams"
+     ],
+     [
+      "Bottoms up, sunshine, Love Potion No. what?",
+      "9",
+      "7",
+      "5"
+     ],
+     [
+      "We hailing from the what city?",
+      "Magic",
+      "Windy",
+      "Emerald"
+     ],
+     [
+      "Found 'chini in where?",
+      "London",
+      "Paris",
+      "Tokyo"
+     ],
+     [
+      "Relaxation in where?",
+      "Bora Bora",
+      "Bermuda",
+      "Bahamas"
+     ],
+     [
+      "Who's the first one sipping Amaret-tah?",
+      "Sonny Cheeba",
+      "Ill Will",
+      "Cab Calloway"
+     ],
+     [
+      "We float the tri-state draped in the satin what?",
+      "Vines",
+      "Robes",
+      "Suits"
+     ],
+     [
+      "We start the Harlem River what?",
+      "Quiver",
+      "Shiver",
+      "Driver"
+     ],
+     [
+      "High Sierra what?",
+      "Serenade",
+      "Escapade",
+      "Parade"
+     ],
+     [
+      "As we exit the place with what?",
+      "Grace",
+      "Style",
+      "Haste"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Coolie High",
+   "id": "VsA2wfC_09o",
+   "cuts": [
+    42.8,
+    90.5,
+    179.8
+   ],
+   "qs": [
+    [
+     [
+      "You need to come inside and check who?",
+      "Lo",
+      "Joe",
+      "Flo"
+     ],
+     [
+      "You need to come where and check Lo?",
+      "Inside",
+      "Outside",
+      "Uptown"
+     ],
+     [
+      "What should you do with yourself?",
+      "Relax",
+      "Enjoy",
+      "Express"
+     ],
+     [
+      "Let the sugar Lo do what?",
+      "Flow",
+      "Go",
+      "Glow"
+     ],
+     [
+      "Coolie High got you what?",
+      "Wide",
+      "High",
+      "Fly"
+     ],
+     [
+      "It's rainin' what?",
+      "Alizay",
+      "Champagne",
+      "Money"
+     ],
+     [
+      "Floatin' through which tunnel?",
+      "Holland",
+      "Lincoln",
+      "Battery"
+     ],
+     [
+      "Floatin' through the tunnel doing what?",
+      "Swervin'",
+      "Speedin'",
+      "Sleepin'"
+     ],
+     [
+      "Three shots of life for all what?",
+      "Night",
+      "Day",
+      "Week"
+     ],
+     [
+      "Camp-ah hotta what?",
+      "Pinata",
+      "Tamale",
+      "Tortilla"
+     ],
+     [
+      "Spillin' what inside my automobile?",
+      "Coffee",
+      "Soda",
+      "Juice"
+     ]
+    ],
+    [
+     [
+      "Crackin' satin and what?",
+      "Leather",
+      "Silk",
+      "Lace"
+     ],
+     [
+      "Cash straight outta comic what?",
+      "Books",
+      "Strips",
+      "Stores"
+     ],
+     [
+      "Keep your eye on the what?",
+      "Lo",
+      "Prize",
+      "Sky"
+     ],
+     [
+      "Who's takin' it over?",
+      "Diamond crooks",
+      "Bronx kings",
+      "Uptown players"
+     ],
+     [
+      "We live for Coolie High what?",
+      "Treasures",
+      "Pleasures",
+      "Measures"
+     ],
+     [
+      "Check the queen bee Lady who?",
+      "Ree",
+      "Bee",
+      "Day"
+     ],
+     [
+      "Who's in the casino with gold sugar?",
+      "Cleopatra",
+      "Josephine",
+      "Nefertiti"
+     ],
+     [
+      "Dig my what?",
+      "Harlequin",
+      "Mannequin",
+      "Violin"
+     ],
+     [
+      "Bottles of what to tranquilize my heaven?",
+      "Asti Spumanti",
+      "Moet",
+      "Cristal"
+     ],
+     [
+      "Luchini to what?",
+      "Spare",
+      "Share",
+      "Burn"
+     ],
+     [
+      "What two words close the verse?",
+      "Word life",
+      "Peace out",
+      "Say word"
+     ]
+    ],
+    [
+     [
+      "Lo keeps the party what?",
+      "Live",
+      "Hype",
+      "Going"
+     ],
+     [
+      "I'm layin' in the purple what?",
+      "Rain",
+      "Rose",
+      "Light"
+     ],
+     [
+      "We movin' what, continuous?",
+      "Motionless",
+      "Endless",
+      "Nonstop"
+     ],
+     [
+      "The bubbly's pourin' through me and whose casino?",
+      "Cleopatra's",
+      "Caesar's",
+      "Pharaoh's"
+     ],
+     [
+      "Who's outta sight?",
+      "Dolemite",
+      "Shaft",
+      "Superfly"
+     ],
+     [
+      "Billy Holidayin' the who?",
+      "Foxy Browns",
+      "Pam Griers",
+      "Diana Rosses"
+     ],
+     [
+      "Lickin' Cuban what?",
+      "Cigars",
+      "Coffee",
+      "Sandwiches"
+     ],
+     [
+      "Underneath the what moon?",
+      "Silver",
+      "Harvest",
+      "Blue"
+     ],
+     [
+      "My shadow's by the what?",
+      "Moonlight",
+      "Streetlight",
+      "Sunlight"
+     ],
+     [
+      "Data's on the levels and the Lo is on the what?",
+      "EQ",
+      "Mic",
+      "Board"
+     ],
+     [
+      "My stamina is what?",
+      "Sugar",
+      "Steel",
+      "Endless"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Black Nostaljack",
+   "id": "FORQF0Kd8Es",
+   "start": 21.6,
+   "cuts": [
+    51.3,
+    123.9,
+    183.5
+   ],
+   "qs": [
+    [
+     [
+      "Which old-time soda is named first?",
+      "Sarsaparilla",
+      "Root beer",
+      "Ginger ale"
+     ],
+     [
+      "Yes I be the what?",
+      "Suede",
+      "Smooth",
+      "Sweet"
+     ],
+     [
+      "And we can get with who?",
+      "Kiki",
+      "Gigi",
+      "Lulu"
+     ],
+     [
+      "The seventh heaven what?",
+      "Cloud",
+      "Floor",
+      "Sky"
+     ],
+     [
+      "So you see me on the what?",
+      "Upper",
+      "Corner",
+      "Block"
+     ],
+     [
+      "We make it what?",
+      "Hollywood",
+      "Happen",
+      "Big"
+     ],
+     [
+      "Who's takin' over?",
+      "Diamond crooks",
+      "Bronx kings",
+      "Uptown players"
+     ],
+     [
+      "Scores like what on my IQ test?",
+      "10",
+      "200",
+      "50"
+     ],
+     [
+      "Stay live with who?",
+      "Divine",
+      "Dolemite",
+      "Diana"
+     ],
+     [
+      "So I'm so funky what?",
+      "Fresh",
+      "Fly",
+      "Fine"
+     ],
+     [
+      "I rocks to the east, I flows to the what?",
+      "West",
+      "North",
+      "South"
+     ]
+    ],
+    [
+     [
+      "Who's the number one draft pick?",
+      "Max Julien",
+      "Max Payne",
+      "Mad Max"
+     ],
+     [
+      "Here we go for which team?",
+      "Knicks",
+      "Nets",
+      "Yankees"
+     ],
+     [
+      "Super phat, catch a what?",
+      "Heart attack",
+      "Cold",
+      "Cab"
+     ],
+     [
+      "Hair so what?",
+      "Sweet",
+      "Long",
+      "Nice"
+     ],
+     [
+      "I rock around the what?",
+      "Clock",
+      "World",
+      "Town"
+     ],
+     [
+      "Then I end up on your what?",
+      "Block",
+      "Roof",
+      "Stoop"
+     ],
+     [
+      "To the rhythm what?",
+      "Tick tock",
+      "Hip hop",
+      "Bang bang"
+     ],
+     [
+      "Who he? It only be the who?",
+      "Sonny Chee",
+      "Geechi Suede",
+      "Ill Will"
+     ],
+     [
+      "I ride up on a what?",
+      "Wave",
+      "Horse",
+      "Bike"
+     ],
+     [
+      "We meet them in where?",
+      "Aruba",
+      "Jamaica",
+      "Bermuda"
+     ],
+     [
+      "Get the goods down in where?",
+      "Savannah",
+      "Atlanta",
+      "Havana"
+     ]
+    ],
+    [
+     [
+      "One for the money, two is for the what?",
+      "Ebeneezer",
+      "Show",
+      "Dealer"
+     ],
+     [
+      "We do it on our what?",
+      "Leisure",
+      "Schedule",
+      "Weekend"
+     ],
+     [
+      "I used to rock a what?",
+      "Bubblegoose",
+      "Kangol hat",
+      "Sheepskin"
+     ],
+     [
+      "Wild child into the what?",
+      "Fever",
+      "Night",
+      "Fire"
+     ],
+     [
+      "Now we in the what?",
+      "Estee Lauder",
+      "Calvin Klein",
+      "Chanel"
+     ],
+     [
+      "The microphone what?",
+      "Kimono",
+      "Kingdom",
+      "Cologne"
+     ],
+     [
+      "I said it once before and I'm sayin' it all what?",
+      "Over",
+      "Night",
+      "Day"
+     ],
+     [
+      "Drop cats from which borough on the one and the two?",
+      "BX",
+      "BK",
+      "QB"
+     ],
+     [
+      "Somebody pulled a what?",
+      "Heist",
+      "Prank",
+      "Stunt"
+     ],
+     [
+      "I swing my flings but I practice what?",
+      "Kung fu",
+      "Karate",
+      "Boxing"
+     ],
+     [
+      "Now this here be the what?",
+      "End",
+      "Start",
+      "Spot"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Luchini AKA This Is It",
+   "id": "G-CLSpvgzvk",
+   "start": 10.5,
+   "cuts": [
+    46,
+    86.3,
+    173.4
+   ],
+   "qs": [
+    [
+     [
+      "What's pouring from the sky?",
+      "Luchini",
+      "Diamonds",
+      "Rain"
+     ],
+     [
+      "This is it, let's get what?",
+      "Rich",
+      "Paid",
+      "Down"
+     ],
+     [
+      "The jiggy vines, the sugar what?",
+      "Dimes",
+      "Times",
+      "Rhymes"
+     ],
+     [
+      "This is it, we can't what?",
+      "Quit",
+      "Stop",
+      "Wait"
+     ],
+     [
+      "Now pop the what?",
+      "Cork",
+      "Top",
+      "Lock"
+     ],
+     [
+      "Introducing phantom of the what?",
+      "Dark",
+      "Night",
+      "Opera"
+     ],
+     [
+      "Walk through my what?",
+      "Heaven",
+      "Castle",
+      "Garden"
+     ],
+     [
+      "Flash vines, whose vigor?",
+      "Belafonte",
+      "Sinatra",
+      "Ali"
+     ],
+     [
+      "Who's levitating jiggy in dashikis?",
+      "Casanova Brown",
+      "Foxy Brown",
+      "James Brown"
+     ],
+     [
+      "Chasing diamond what?",
+      "Runners",
+      "Rings",
+      "Dealers"
+     ],
+     [
+      "The big chilla diamond what?",
+      "Convention",
+      "Collection",
+      "Connection"
+     ]
+    ],
+    [
+     [
+      "Sensations at which festival?",
+      "Mardi Gras",
+      "Carnival",
+      "Coachella"
+     ],
+     [
+      "Fulfilling pleasures in my what?",
+      "Castles",
+      "Mansion",
+      "Palace"
+     ],
+     [
+      "The Lo don't stop, give me what?",
+      "Shouts",
+      "Props",
+      "Love"
+     ],
+     [
+      "Souffléers for swerving on what?",
+      "Corners",
+      "Highways",
+      "Bridges"
+     ],
+     [
+      "We magnets to what?",
+      "Moolah",
+      "Honeys",
+      "Trouble"
+     ],
+     [
+      "Living with whose Angels on us?",
+      "Charlie's",
+      "Johnny's",
+      "Bobby's"
+     ],
+     [
+      "No smiling, we're what?",
+      "Sliding",
+      "Hiding",
+      "Riding"
+     ],
+     [
+      "Quest to the coast of where?",
+      "Key Largo",
+      "Miami",
+      "Malibu"
+     ],
+     [
+      "Keep your ears out for who?",
+      "Roy Ayers",
+      "Roy Orbison",
+      "Ray Charles"
+     ],
+     [
+      "Sip the what?",
+      "Fontainebleau",
+      "Moscato",
+      "Bordeaux"
+     ],
+     [
+      "House of bamboo what?",
+      "Paradise",
+      "Palace",
+      "Garden"
+     ]
+    ],
+    [
+     [
+      "Fallen pharaohs, courtesies of who?",
+      "Black Caesar",
+      "Julius Caesar",
+      "King Tut"
+     ],
+     [
+      "Silky days, satin what?",
+      "Nights",
+      "Sheets",
+      "Dreams"
+     ],
+     [
+      "Bottoms up, sunshine, Love Potion No. what?",
+      "9",
+      "7",
+      "5"
+     ],
+     [
+      "We hailing from the what city?",
+      "Magic",
+      "Windy",
+      "Emerald"
+     ],
+     [
+      "Found 'chini in where?",
+      "London",
+      "Paris",
+      "Tokyo"
+     ],
+     [
+      "Relaxation in where?",
+      "Bora Bora",
+      "Bermuda",
+      "Bahamas"
+     ],
+     [
+      "Who's the first one sipping Amaret-tah?",
+      "Sonny Cheeba",
+      "Ill Will",
+      "Cab Calloway"
+     ],
+     [
+      "We float the tri-state draped in the satin what?",
+      "Vines",
+      "Robes",
+      "Suits"
+     ],
+     [
+      "We start the Harlem River what?",
+      "Quiver",
+      "Shiver",
+      "Driver"
+     ],
+     [
+      "High Sierra what?",
+      "Serenade",
+      "Escapade",
+      "Parade"
+     ],
+     [
+      "As we exit the place with what?",
+      "Grace",
+      "Style",
+      "Haste"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
