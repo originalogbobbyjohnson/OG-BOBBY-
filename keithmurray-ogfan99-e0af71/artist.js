@@ -93,40 +93,1341 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "The Most Beautifullest Thing in This World",
-   "id": "PiUYEF7qNgc",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Nobody Do It Better",
+   "id": "CenFKzsBVmc",
+   "start": 10.4,
+   "cuts": [
+    45.2,
+    115.2,
+    177.4
+   ],
+   "qs": [
+    [
+     [
+      "Keith calls himself the lyrical what?",
+      "Hannibal",
+      "Animal",
+      "Genius"
+     ],
+     [
+      "He's an animalistic tough what?",
+      "Guy",
+      "Kid",
+      "Man"
+     ],
+     [
+      "A hater said he ain't what no more?",
+      "Fire",
+      "Hot",
+      "Hungry"
+     ],
+     [
+      "He was on your block back when hip hop was what?",
+      "Hip hop",
+      "Fun",
+      "Young"
+     ],
+     [
+      "Puff came to get him to make y'all happy with who?",
+      "Mary J.",
+      "Faith",
+      "Lil' Kim"
+     ],
+     [
+      "Who did they call him for, to make y'all see?",
+      "Total",
+      "Brandy",
+      "Monica"
+     ],
+     [
+      "He was called again for what Delivery?",
+      "Special",
+      "Express",
+      "Overnight"
+     ],
+     [
+      "He rocked every hole in the what?",
+      "Wall",
+      "Ground",
+      "Block"
+     ],
+     [
+      "He went arena to arena with who?",
+      "R. Kelly",
+      "Usher",
+      "Jay-Z"
+     ]
+    ],
+    [
+     [
+      "He rocked bells with who?",
+      "L",
+      "Run",
+      "Rakim"
+     ],
+     [
+      "He doesn't need no what to do what he does?",
+      "Permission",
+      "Help",
+      "Money"
+     ],
+     [
+      "What song did he bless y'all with?",
+      "Fatty Girl",
+      "Get Lifted",
+      "The Rhyme"
+     ],
+     [
+      "He got them saying ba donk a donk around the what?",
+      "World",
+      "Block",
+      "Club"
+     ],
+     [
+      "He's hearing he's got what issues?",
+      "Anger",
+      "Money",
+      "Trust"
+     ],
+     [
+      "He'll turn your six pack into barbecue what?",
+      "Rib tips",
+      "Wings",
+      "Chicken"
+     ],
+     [
+      "He'll make you make the ugly face like whose aunt?",
+      "Lamont's",
+      "Martin's",
+      "Carlton's"
+     ],
+     [
+      "Even what situations help him?",
+      "Negative",
+      "Bad",
+      "Crazy"
+     ],
+     [
+      "That's money in the bank like a what?",
+      "Trust fund",
+      "Savings",
+      "Paycheck"
+     ]
+    ],
+    [
+     [
+      "Keith Murray is your excellency MC what?",
+      "Ultra",
+      "Supreme",
+      "Major"
+     ],
+     [
+      "Honeys sweat him like what?",
+      "Conversation",
+      "Summer",
+      "A sauna"
+     ],
+     [
+      "The K don't play, touché and what?",
+      "Toupee",
+      "Parfait",
+      "Bouquet"
+     ],
+     [
+      "He rhymes flagrant, you're sweeter than a sugar what?",
+      "Fragrance",
+      "Cookie",
+      "Cube"
+     ],
+     [
+      "They've been milking the game like a green what?",
+      "Cow",
+      "Goat",
+      "Field"
+     ],
+     [
+      "Metaphors dawn on you in time like what?",
+      "Revelations",
+      "Sunrise",
+      "Lightning"
+     ],
+     [
+      "Let it be sensible, he'll make you what?",
+      "Invisible",
+      "Famous",
+      "Disappear"
+     ],
+     [
+      "His style is royalty like what?",
+      "Residuals",
+      "Diamonds",
+      "Crowns"
+     ],
+     [
+      "He came back with the sickest what?",
+      "Comeback",
+      "Flow",
+      "Crew"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Get Lifted",
-   "id": "cJJy7w6Ypdc",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Dangerous Ground",
+   "id": "OL3FRk1uOGg",
+   "start": 9.8,
+   "cuts": [
+    47.1,
+    114.2,
+    161.6
+   ],
+   "qs": [
+    [
+     [
+      "He's got nothing to lose and the world to what?",
+      "Gain",
+      "Win",
+      "Take"
+     ],
+     [
+      "Like which coast says?",
+      "West",
+      "East",
+      "Third"
+     ],
+     [
+      "He's coming with what click?",
+      "Def Squad",
+      "Wu-Tang",
+      "Bad Boy"
+     ],
+     [
+      "He's a gridiron mic what?",
+      "Cuffer",
+      "Breaker",
+      "Master"
+     ],
+     [
+      "He keeps it real because me and you is what?",
+      "Brothers",
+      "Family",
+      "Friends"
+     ],
+     [
+      "It'll happen so fast you won't stand a what?",
+      "Chance",
+      "Day",
+      "Round"
+     ],
+     [
+      "The L.O.D. put in work like what?",
+      "Red ants",
+      "Bees",
+      "Robots"
+     ],
+     [
+      "When he walks by, who'll draft?",
+      "Curtis Mayfield",
+      "Isaac Hayes",
+      "James Brown"
+     ]
+    ],
+    [
+     [
+      "He lays you down for standing on what ground?",
+      "Dangerous",
+      "Holy",
+      "Sacred"
+     ],
+     [
+      "You're standing too close to the what?",
+      "Crown",
+      "Throne",
+      "Edge"
+     ],
+     [
+      "Let's see if you know the what?",
+      "Bounds",
+      "Rules",
+      "Rhymes"
+     ],
+     [
+      "They embark on a mission like Black who?",
+      "Indiana Jones",
+      "James Bond",
+      "Superman"
+     ],
+     [
+      "He'll pimp the rhythm like Too $hort and who?",
+      "Dru Down",
+      "E-40",
+      "Ice-T"
+     ],
+     [
+      "He waits for what goes around to what?",
+      "Come around",
+      "Go away",
+      "Turn around"
+     ],
+     [
+      "In and out of what?",
+      "Consciousness",
+      "Trouble",
+      "Focus"
+     ],
+     [
+      "He's the world's most foul what?",
+      "Freestylist",
+      "Lyricist",
+      "MC"
+     ]
+    ],
+    [
+     [
+      "Kill the noise, playboys, 'cause they have no what?",
+      "Flaws",
+      "Fears",
+      "Limits"
+     ],
+     [
+      "He employs hits the whole what can enjoy?",
+      "Family",
+      "Block",
+      "World"
+     ],
+     [
+      "He's mastering the Funk like who?",
+      "Flex",
+      "Clinton",
+      "Parliament"
+     ],
+     [
+      "He's speaking with his hands like who?",
+      "Terminator X",
+      "Flavor Flav",
+      "DJ Scratch"
+     ],
+     [
+      "His team will put you to sleep and let you what?",
+      "Dream",
+      "Rest",
+      "Snore"
+     ],
+     [
+      "He's not down with the East West coast what?",
+      "Controversy",
+      "Beef",
+      "Rivalry"
+     ],
+     [
+      "He's making millis across the what?",
+      "Country",
+      "World",
+      "City"
+     ],
+     [
+      "He'll be glad to see a brother get paid for what?",
+      "Hard work",
+      "Good rhymes",
+      "Nothing"
+     ]
+    ]
+   ]
   },
   {
    "title": "The Rhyme",
-   "id": "6w1m4S21i28",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "id": "k0LcQk3PYHA",
+   "start": 21,
+   "cuts": [
+    50.9,
+    127.6,
+    170.6
+   ],
+   "qs": [
+    [
+     [
+      "For next to nothing he's ripping up every what?",
+      "Function",
+      "Party",
+      "Show"
+     ],
+     [
+      "With scientifical mad man what?",
+      "Consumptions",
+      "Inventions",
+      "Experiments"
+     ],
+     [
+      "Mass productions of mass what?",
+      "Conjunctions",
+      "Confusion",
+      "Construction"
+     ],
+     [
+      "He displays new ways of MC what?",
+      "Destruction",
+      "Production",
+      "Instruction"
+     ],
+     [
+      "He puts the hip in what?",
+      "Hop",
+      "Hype",
+      "Hits"
+     ],
+     [
+      "He puts the don't in what?",
+      "Stop",
+      "Quit",
+      "Drop"
+     ],
+     [
+      "When he rock boxes your what?",
+      "Block",
+      "Town",
+      "Party"
+     ],
+     [
+      "You better come to terms with his what quick?",
+      "Vocabulary",
+      "Style",
+      "Crew"
+     ]
+    ],
+    [
+     [
+      "His brain bleeds mental complex what?",
+      "Feeds",
+      "Needs",
+      "Seeds"
+     ],
+     [
+      "He'll live forever like who?",
+      "Bob Marley",
+      "Elvis",
+      "Tupac"
+     ],
+     [
+      "The mad matador metaphor rips the what?",
+      "Hard core",
+      "Crowd",
+      "Stage"
+     ],
+     [
+      "It beez like that sometimes 'cause he can't control the what?",
+      "Rhyme",
+      "Crowd",
+      "Mic"
+     ],
+     [
+      "He's the most beautifullest what?",
+      "Vocabulist",
+      "Lyricist",
+      "Rapper"
+     ],
+     [
+      "He's symbolic to the sun, moon and what?",
+      "Stars",
+      "Sky",
+      "Earth"
+     ],
+     [
+      "His vocals send your brain into what position?",
+      "Fetal",
+      "Upright",
+      "Fighting"
+     ],
+     [
+      "He's turning fly emcees back into what?",
+      "Maggots",
+      "Rookies",
+      "Fans"
+     ]
+    ],
+    [
+     [
+      "He played the many thousand roles of street what?",
+      "Life",
+      "Corners",
+      "Games"
+     ],
+     [
+      "He showed who the freaks come out in broad daylight?",
+      "Whodini",
+      "Run-DMC",
+      "The Fat Boys"
+     ],
+     [
+      "He and his crew are tight like who?",
+      "Laverne and Shirley",
+      "Kid 'n Play",
+      "Salt-N-Pepa"
+     ],
+     [
+      "Rolling through y'all's hoods pulling all y'all's fly what?",
+      "Girlies",
+      "Rides",
+      "Crews"
+     ],
+     [
+      "He rolls with nobody but God and the what?",
+      "Squad",
+      "Crew",
+      "Fam"
+     ],
+     [
+      "He lets the OJ juice loose on phat tracks who produced?",
+      "E-d",
+      "Premier",
+      "Pete Rock"
+     ],
+     [
+      "Keep it jiggy, and keep it what?",
+      "Wiggy",
+      "Jumping",
+      "Tight"
+     ],
+     [
+      "How often does it beez like that?",
+      "Sometimes",
+      "Always",
+      "Never"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Sychosymatic",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Seasoning",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Get Lifted",
+   "id": "FX2yEGTFo0Y",
+   "start": 20.8,
+   "cuts": [
+    55.3,
+    114.4,
+    176.6
+   ],
+   "qs": [
+    [
+     [
+      "He grabs the mic and comes out the what?",
+      "Woodworks",
+      "Shadows",
+      "Crowd"
+     ],
+     [
+      "Keith Murray gets busy off a what?",
+      "Basic Instinct",
+      "Bad Intention",
+      "Brand New Beat"
+     ],
+     [
+      "He sits down and writes a what?",
+      "Jam",
+      "Book",
+      "Letter"
+     ],
+     [
+      "As God as my what?",
+      "Witness",
+      "Judge",
+      "Guide"
+     ],
+     [
+      "He floats like a what?",
+      "Cumulus",
+      "Feather",
+      "Balloon"
+     ],
+     [
+      "He's a perpetual rebel what?",
+      "Intellectual",
+      "Spirit",
+      "Soldier"
+     ],
+     [
+      "His speech falls deep as in the what?",
+      "Scriptures",
+      "Ocean",
+      "Classics"
+     ],
+     [
+      "Opponents get painted in pictures like who?",
+      "Picasso",
+      "Van Gogh",
+      "Da Vinci"
+     ]
+    ],
+    [
+     [
+      "It was once said by a what?",
+      "Ph.D",
+      "Preacher",
+      "Lawyer"
+     ],
+     [
+      "Fire up this what?",
+      "Funk",
+      "Track",
+      "Place"
+     ],
+     [
+      "This the real deal, not a publicity what?",
+      "Stunt",
+      "Move",
+      "Show"
+     ],
+     [
+      "He's been to what?",
+      "College",
+      "Europe",
+      "Paris"
+     ],
+     [
+      "To be truthfully what?",
+      "Frank",
+      "Honest",
+      "Real"
+     ],
+     [
+      "He hems reality like who?",
+      "Jah",
+      "Moses",
+      "Kings"
+     ],
+     [
+      "What do Rastas read?",
+      "The bible",
+      "The paper",
+      "The news"
+     ],
+     [
+      "Who could verify that?",
+      "Bill Clinton",
+      "Al Gore",
+      "Bob Marley"
+     ]
+    ],
+    [
+     [
+      "Step into this what and take this rap?",
+      "Intersection",
+      "Cypher",
+      "Session"
+     ],
+     [
+      "He's got a vicious what?",
+      "Plot",
+      "Plan",
+      "Flow"
+     ],
+     [
+      "He does this for his people who are what?",
+      "Locked down",
+      "Back home",
+      "Overseas"
+     ],
+     [
+      "What he discusses busts a rhyme style what?",
+      "Nucleus",
+      "Record",
+      "Pattern"
+     ],
+     [
+      "He's roasting them what?",
+      "Ghosts",
+      "Toasts",
+      "Hosts"
+     ],
+     [
+      "Puffing hocus what?",
+      "Pocus",
+      "Focus",
+      "Potion"
+     ],
+     [
+      "Different strokes for different what?",
+      "Folks",
+      "Hopes",
+      "Jokes"
+     ],
+     [
+      "Laid back, hypnotized to the funky what?",
+      "Sound",
+      "Beat",
+      "Bass"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Nobody Do It Better",
+   "id": "CenFKzsBVmc",
+   "start": 10.4,
+   "cuts": [
+    45.2,
+    115.2,
+    177.4
+   ],
+   "qs": [
+    [
+     [
+      "Keith calls himself the lyrical what?",
+      "Hannibal",
+      "Animal",
+      "Genius"
+     ],
+     [
+      "He's an animalistic tough what?",
+      "Guy",
+      "Kid",
+      "Man"
+     ],
+     [
+      "A hater said he ain't what no more?",
+      "Fire",
+      "Hot",
+      "Hungry"
+     ],
+     [
+      "He was on your block back when hip hop was what?",
+      "Hip hop",
+      "Fun",
+      "Young"
+     ],
+     [
+      "Puff came to get him to make y'all happy with who?",
+      "Mary J.",
+      "Faith",
+      "Lil' Kim"
+     ],
+     [
+      "Who did they call him for, to make y'all see?",
+      "Total",
+      "Brandy",
+      "Monica"
+     ],
+     [
+      "He was called again for what Delivery?",
+      "Special",
+      "Express",
+      "Overnight"
+     ],
+     [
+      "He rocked every hole in the what?",
+      "Wall",
+      "Ground",
+      "Block"
+     ],
+     [
+      "He went arena to arena with who?",
+      "R. Kelly",
+      "Usher",
+      "Jay-Z"
+     ]
+    ],
+    [
+     [
+      "He rocked bells with who?",
+      "L",
+      "Run",
+      "Rakim"
+     ],
+     [
+      "He doesn't need no what to do what he does?",
+      "Permission",
+      "Help",
+      "Money"
+     ],
+     [
+      "What song did he bless y'all with?",
+      "Fatty Girl",
+      "Get Lifted",
+      "The Rhyme"
+     ],
+     [
+      "He got them saying ba donk a donk around the what?",
+      "World",
+      "Block",
+      "Club"
+     ],
+     [
+      "He's hearing he's got what issues?",
+      "Anger",
+      "Money",
+      "Trust"
+     ],
+     [
+      "He'll turn your six pack into barbecue what?",
+      "Rib tips",
+      "Wings",
+      "Chicken"
+     ],
+     [
+      "He'll make you make the ugly face like whose aunt?",
+      "Lamont's",
+      "Martin's",
+      "Carlton's"
+     ],
+     [
+      "Even what situations help him?",
+      "Negative",
+      "Bad",
+      "Crazy"
+     ],
+     [
+      "That's money in the bank like a what?",
+      "Trust fund",
+      "Savings",
+      "Paycheck"
+     ]
+    ],
+    [
+     [
+      "Keith Murray is your excellency MC what?",
+      "Ultra",
+      "Supreme",
+      "Major"
+     ],
+     [
+      "Honeys sweat him like what?",
+      "Conversation",
+      "Summer",
+      "A sauna"
+     ],
+     [
+      "The K don't play, touché and what?",
+      "Toupee",
+      "Parfait",
+      "Bouquet"
+     ],
+     [
+      "He rhymes flagrant, you're sweeter than a sugar what?",
+      "Fragrance",
+      "Cookie",
+      "Cube"
+     ],
+     [
+      "They've been milking the game like a green what?",
+      "Cow",
+      "Goat",
+      "Field"
+     ],
+     [
+      "Metaphors dawn on you in time like what?",
+      "Revelations",
+      "Sunrise",
+      "Lightning"
+     ],
+     [
+      "Let it be sensible, he'll make you what?",
+      "Invisible",
+      "Famous",
+      "Disappear"
+     ],
+     [
+      "His style is royalty like what?",
+      "Residuals",
+      "Diamonds",
+      "Crowns"
+     ],
+     [
+      "He came back with the sickest what?",
+      "Comeback",
+      "Flow",
+      "Crew"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Dangerous Ground",
+   "id": "OL3FRk1uOGg",
+   "start": 9.8,
+   "cuts": [
+    47.1,
+    114.2,
+    161.6
+   ],
+   "qs": [
+    [
+     [
+      "He's got nothing to lose and the world to what?",
+      "Gain",
+      "Win",
+      "Take"
+     ],
+     [
+      "Like which coast says?",
+      "West",
+      "East",
+      "Third"
+     ],
+     [
+      "He's coming with what click?",
+      "Def Squad",
+      "Wu-Tang",
+      "Bad Boy"
+     ],
+     [
+      "He's a gridiron mic what?",
+      "Cuffer",
+      "Breaker",
+      "Master"
+     ],
+     [
+      "He keeps it real because me and you is what?",
+      "Brothers",
+      "Family",
+      "Friends"
+     ],
+     [
+      "It'll happen so fast you won't stand a what?",
+      "Chance",
+      "Day",
+      "Round"
+     ],
+     [
+      "The L.O.D. put in work like what?",
+      "Red ants",
+      "Bees",
+      "Robots"
+     ],
+     [
+      "When he walks by, who'll draft?",
+      "Curtis Mayfield",
+      "Isaac Hayes",
+      "James Brown"
+     ]
+    ],
+    [
+     [
+      "He lays you down for standing on what ground?",
+      "Dangerous",
+      "Holy",
+      "Sacred"
+     ],
+     [
+      "You're standing too close to the what?",
+      "Crown",
+      "Throne",
+      "Edge"
+     ],
+     [
+      "Let's see if you know the what?",
+      "Bounds",
+      "Rules",
+      "Rhymes"
+     ],
+     [
+      "They embark on a mission like Black who?",
+      "Indiana Jones",
+      "James Bond",
+      "Superman"
+     ],
+     [
+      "He'll pimp the rhythm like Too $hort and who?",
+      "Dru Down",
+      "E-40",
+      "Ice-T"
+     ],
+     [
+      "He waits for what goes around to what?",
+      "Come around",
+      "Go away",
+      "Turn around"
+     ],
+     [
+      "In and out of what?",
+      "Consciousness",
+      "Trouble",
+      "Focus"
+     ],
+     [
+      "He's the world's most foul what?",
+      "Freestylist",
+      "Lyricist",
+      "MC"
+     ]
+    ],
+    [
+     [
+      "Kill the noise, playboys, 'cause they have no what?",
+      "Flaws",
+      "Fears",
+      "Limits"
+     ],
+     [
+      "He employs hits the whole what can enjoy?",
+      "Family",
+      "Block",
+      "World"
+     ],
+     [
+      "He's mastering the Funk like who?",
+      "Flex",
+      "Clinton",
+      "Parliament"
+     ],
+     [
+      "He's speaking with his hands like who?",
+      "Terminator X",
+      "Flavor Flav",
+      "DJ Scratch"
+     ],
+     [
+      "His team will put you to sleep and let you what?",
+      "Dream",
+      "Rest",
+      "Snore"
+     ],
+     [
+      "He's not down with the East West coast what?",
+      "Controversy",
+      "Beef",
+      "Rivalry"
+     ],
+     [
+      "He's making millis across the what?",
+      "Country",
+      "World",
+      "City"
+     ],
+     [
+      "He'll be glad to see a brother get paid for what?",
+      "Hard work",
+      "Good rhymes",
+      "Nothing"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "The Rhyme",
+   "id": "k0LcQk3PYHA",
+   "start": 21,
+   "cuts": [
+    50.9,
+    127.6,
+    170.6
+   ],
+   "qs": [
+    [
+     [
+      "For next to nothing he's ripping up every what?",
+      "Function",
+      "Party",
+      "Show"
+     ],
+     [
+      "With scientifical mad man what?",
+      "Consumptions",
+      "Inventions",
+      "Experiments"
+     ],
+     [
+      "Mass productions of mass what?",
+      "Conjunctions",
+      "Confusion",
+      "Construction"
+     ],
+     [
+      "He displays new ways of MC what?",
+      "Destruction",
+      "Production",
+      "Instruction"
+     ],
+     [
+      "He puts the hip in what?",
+      "Hop",
+      "Hype",
+      "Hits"
+     ],
+     [
+      "He puts the don't in what?",
+      "Stop",
+      "Quit",
+      "Drop"
+     ],
+     [
+      "When he rock boxes your what?",
+      "Block",
+      "Town",
+      "Party"
+     ],
+     [
+      "You better come to terms with his what quick?",
+      "Vocabulary",
+      "Style",
+      "Crew"
+     ]
+    ],
+    [
+     [
+      "His brain bleeds mental complex what?",
+      "Feeds",
+      "Needs",
+      "Seeds"
+     ],
+     [
+      "He'll live forever like who?",
+      "Bob Marley",
+      "Elvis",
+      "Tupac"
+     ],
+     [
+      "The mad matador metaphor rips the what?",
+      "Hard core",
+      "Crowd",
+      "Stage"
+     ],
+     [
+      "It beez like that sometimes 'cause he can't control the what?",
+      "Rhyme",
+      "Crowd",
+      "Mic"
+     ],
+     [
+      "He's the most beautifullest what?",
+      "Vocabulist",
+      "Lyricist",
+      "Rapper"
+     ],
+     [
+      "He's symbolic to the sun, moon and what?",
+      "Stars",
+      "Sky",
+      "Earth"
+     ],
+     [
+      "His vocals send your brain into what position?",
+      "Fetal",
+      "Upright",
+      "Fighting"
+     ],
+     [
+      "He's turning fly emcees back into what?",
+      "Maggots",
+      "Rookies",
+      "Fans"
+     ]
+    ],
+    [
+     [
+      "He played the many thousand roles of street what?",
+      "Life",
+      "Corners",
+      "Games"
+     ],
+     [
+      "He showed who the freaks come out in broad daylight?",
+      "Whodini",
+      "Run-DMC",
+      "The Fat Boys"
+     ],
+     [
+      "He and his crew are tight like who?",
+      "Laverne and Shirley",
+      "Kid 'n Play",
+      "Salt-N-Pepa"
+     ],
+     [
+      "Rolling through y'all's hoods pulling all y'all's fly what?",
+      "Girlies",
+      "Rides",
+      "Crews"
+     ],
+     [
+      "He rolls with nobody but God and the what?",
+      "Squad",
+      "Crew",
+      "Fam"
+     ],
+     [
+      "He lets the OJ juice loose on phat tracks who produced?",
+      "E-d",
+      "Premier",
+      "Pete Rock"
+     ],
+     [
+      "Keep it jiggy, and keep it what?",
+      "Wiggy",
+      "Jumping",
+      "Tight"
+     ],
+     [
+      "How often does it beez like that?",
+      "Sometimes",
+      "Always",
+      "Never"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Get Lifted",
+   "id": "FX2yEGTFo0Y",
+   "start": 20.8,
+   "cuts": [
+    55.3,
+    114.4,
+    176.6
+   ],
+   "qs": [
+    [
+     [
+      "He grabs the mic and comes out the what?",
+      "Woodworks",
+      "Shadows",
+      "Crowd"
+     ],
+     [
+      "Keith Murray gets busy off a what?",
+      "Basic Instinct",
+      "Bad Intention",
+      "Brand New Beat"
+     ],
+     [
+      "He sits down and writes a what?",
+      "Jam",
+      "Book",
+      "Letter"
+     ],
+     [
+      "As God as my what?",
+      "Witness",
+      "Judge",
+      "Guide"
+     ],
+     [
+      "He floats like a what?",
+      "Cumulus",
+      "Feather",
+      "Balloon"
+     ],
+     [
+      "He's a perpetual rebel what?",
+      "Intellectual",
+      "Spirit",
+      "Soldier"
+     ],
+     [
+      "His speech falls deep as in the what?",
+      "Scriptures",
+      "Ocean",
+      "Classics"
+     ],
+     [
+      "Opponents get painted in pictures like who?",
+      "Picasso",
+      "Van Gogh",
+      "Da Vinci"
+     ]
+    ],
+    [
+     [
+      "It was once said by a what?",
+      "Ph.D",
+      "Preacher",
+      "Lawyer"
+     ],
+     [
+      "Fire up this what?",
+      "Funk",
+      "Track",
+      "Place"
+     ],
+     [
+      "This the real deal, not a publicity what?",
+      "Stunt",
+      "Move",
+      "Show"
+     ],
+     [
+      "He's been to what?",
+      "College",
+      "Europe",
+      "Paris"
+     ],
+     [
+      "To be truthfully what?",
+      "Frank",
+      "Honest",
+      "Real"
+     ],
+     [
+      "He hems reality like who?",
+      "Jah",
+      "Moses",
+      "Kings"
+     ],
+     [
+      "What do Rastas read?",
+      "The bible",
+      "The paper",
+      "The news"
+     ],
+     [
+      "Who could verify that?",
+      "Bill Clinton",
+      "Al Gore",
+      "Bob Marley"
+     ]
+    ],
+    [
+     [
+      "Step into this what and take this rap?",
+      "Intersection",
+      "Cypher",
+      "Session"
+     ],
+     [
+      "He's got a vicious what?",
+      "Plot",
+      "Plan",
+      "Flow"
+     ],
+     [
+      "He does this for his people who are what?",
+      "Locked down",
+      "Back home",
+      "Overseas"
+     ],
+     [
+      "What he discusses busts a rhyme style what?",
+      "Nucleus",
+      "Record",
+      "Pattern"
+     ],
+     [
+      "He's roasting them what?",
+      "Ghosts",
+      "Toasts",
+      "Hosts"
+     ],
+     [
+      "Puffing hocus what?",
+      "Pocus",
+      "Focus",
+      "Potion"
+     ],
+     [
+      "Different strokes for different what?",
+      "Folks",
+      "Hopes",
+      "Jokes"
+     ],
+     [
+      "Laid back, hypnotized to the funky what?",
+      "Sound",
+      "Beat",
+      "Bass"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
