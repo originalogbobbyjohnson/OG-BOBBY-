@@ -93,40 +93,1341 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "explicitSongs": [
   {
-   "title": "Winter Warz",
-   "id": "1DXGzbwoKYM",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Everything Is Everything",
+   "id": "7CQhW-wFv48",
+   "start": 21.2,
+   "cuts": [
+    55.4,
+    126,
+    190.1
+   ],
+   "qs": [
+    [
+     [
+      "All in the club — rugged what?",
+      "Dressed up",
+      "Laid back",
+      "Fresh out"
+     ],
+     [
+      "His hair is what?",
+      "Messed up",
+      "Braided",
+      "Cut low"
+     ],
+     [
+      "What's on his neck?",
+      "Gold",
+      "Silver",
+      "Ice"
+     ],
+     [
+      "Don't sweat — y'all show what?",
+      "Respect",
+      "Love",
+      "Up"
+     ],
+     [
+      "Feel what you feel — which hood?",
+      "Park Hill",
+      "Stapleton",
+      "Port Richmond"
+     ],
+     [
+      "Which zip code does he shout?",
+      "10304",
+      "10301",
+      "11201"
+     ],
+     [
+      "Prepare for darts and what?",
+      "Martial arts",
+      "Fireworks",
+      "Hard parts"
+     ],
+     [
+      "You heard it through the what?",
+      "Grapevine",
+      "Radio",
+      "Streets"
+     ]
+    ],
+    [
+     [
+      "Face to face, he breaks what every time?",
+      "Bread",
+      "Rules",
+      "Hearts"
+     ],
+     [
+      "\"In the world I hold ___\"",
+      "Mine",
+      "Tight",
+      "On"
+     ],
+     [
+      "These crossover rappers lost their what?",
+      "Origin",
+      "Minds",
+      "Fans"
+     ],
+     [
+      "Run from whom — this time it's more trouble?",
+      "The Wu",
+      "The cops",
+      "The crowd"
+     ],
+     [
+      "Never concerned about rabbits — he's after his what?",
+      "Cabbage",
+      "Carrots",
+      "Lettuce"
+     ],
+     [
+      "Buckwild with the what?",
+      "Flow",
+      "Crew",
+      "Style"
+     ],
+     [
+      "Wu-Tang broke what laws?",
+      "Radio",
+      "Street",
+      "Record"
+     ],
+     [
+      "He erupts like who?",
+      "Holyfield",
+      "Tyson",
+      "Ali"
+     ]
+    ],
+    [
+     [
+      "I'm all alone — I feel what in the street?",
+      "Trouble",
+      "Peace",
+      "The cold"
+     ],
+     [
+      "City heats, ghetto beefs, trick or what?",
+      "Treat",
+      "Cheat",
+      "Street"
+     ],
+     [
+      "Killer Beez — one what?",
+      "Machine",
+      "Team",
+      "Hive"
+     ],
+     [
+      "He hops y'all like what?",
+      "Checkers",
+      "Rabbits",
+      "Frogs"
+     ],
+     [
+      "\"Out of sight, out of ___\"",
+      "Mind",
+      "Time",
+      "Line"
+     ],
+     [
+      "\"Don't laugh\" — he drops what?",
+      "Math",
+      "Bombs",
+      "Science"
+     ],
+     [
+      "He calls himself the rap who?",
+      "Shakespeare",
+      "Picasso",
+      "Einstein"
+     ],
+     [
+      "Brown skin with the what?",
+      "Satellite",
+      "Spotlight",
+      "Microphone"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Run",
-   "id": "WRcytXa4hVc",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Milk the Cow",
+   "id": "-xeNThvUHec",
+   "start": 9.9,
+   "cuts": [
+    48.9,
+    84.3,
+    139.9
+   ],
+   "qs": [
+    [
+     [
+      "Let us milk this what?",
+      "Cow",
+      "Goat",
+      "Game"
+     ],
+     [
+      "\"The best way we know ___\"",
+      "How",
+      "Now",
+      "Right"
+     ],
+     [
+      "Which projects does he shout?",
+      "Park Hill",
+      "Stapleton",
+      "Marcy"
+     ],
+     [
+      "Park Hill projects — chicka what?",
+      "POW",
+      "BOOM",
+      "BAM"
+     ],
+     [
+      "Return of the track what?",
+      "Slasher",
+      "Master",
+      "Smasher"
+     ],
+     [
+      "Double douser, Cappadonna the what?",
+      "Broadcaster",
+      "Professor",
+      "Preacher"
+     ],
+     [
+      "Strivin' for what?",
+      "Perfection",
+      "Money",
+      "Respect"
+     ],
+     [
+      "He got his life back through investin' and what?",
+      "Devotion",
+      "Patience",
+      "Motion"
+     ]
+    ],
+    [
+     [
+      "He milks for all his what?",
+      "Childhood",
+      "Children",
+      "Crew"
+     ],
+     [
+      "Where does he keep on writin' and meditatin'?",
+      "In the ghetto",
+      "In the booth",
+      "In the park"
+     ],
+     [
+      "Waiting for lost what to settle?",
+      "Minds",
+      "Souls",
+      "Friends"
+     ],
+     [
+      "He speaks out because we all need the what?",
+      "Guidance",
+      "Money",
+      "Love"
+     ],
+     [
+      "Deep down inside us, where you could define what?",
+      "Science",
+      "Love",
+      "Truth"
+     ],
+     [
+      "Who told him what to do when he was stressed out?",
+      "His mother",
+      "His father",
+      "RZA"
+     ],
+     [
+      "\"All you gotta do is just put your ___ out\"",
+      "Best",
+      "Heart",
+      "Hand"
+     ],
+     [
+      "\"And I did it, ___\"",
+      "Milky",
+      "Baby",
+      "Donna"
+     ]
+    ],
+    [
+     [
+      "New Cappadonna is about to what?",
+      "Exhale",
+      "Explode",
+      "Exit"
+     ],
+     [
+      "Hold all the phone calls, stop all the what?",
+      "Mail",
+      "Shows",
+      "Music"
+     ],
+     [
+      "His alibi was tight that night — chillin' up in the what?",
+      "Hill",
+      "Hall",
+      "Ville"
+     ],
+     [
+      "Friends are exiled from close what?",
+      "Distance",
+      "Range",
+      "Quarters"
+     ],
+     [
+      "Every time he steps up, he rips what up?",
+      "Reps",
+      "Mics",
+      "Stages"
+     ],
+     [
+      "His words swing around like what?",
+      "Nunchucks",
+      "Swords",
+      "Fists"
+     ],
+     [
+      "It feeds his what?",
+      "Seeds",
+      "Family",
+      "Soul"
+     ],
+     [
+      "Gigantic crowds, all what?",
+      "Aboard",
+      "Around",
+      "Alive"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Oh-Donna",
+   "id": "Yva0bS-wuKs",
+   "start": 50.5,
+   "cuts": [
+    80.6,
+    108.9,
+    216.3
+   ],
+   "qs": [
+    [
+     [
+      "Word on the block is that half the King what?",
+      "Killer Beez",
+      "Lions",
+      "Dragons"
+     ],
+     [
+      "Rap's under what?",
+      "Siege",
+      "Fire",
+      "Arrest"
+     ],
+     [
+      "He's got what kind of funds?",
+      "European",
+      "African",
+      "Asian"
+     ],
+     [
+      "His ice don't what?",
+      "Melt",
+      "Shine",
+      "Break"
+     ],
+     [
+      "Which place is felt?",
+      "Shaolin",
+      "Park Hill",
+      "Harlem"
+     ],
+     [
+      "Mathematics is his rod and his what?",
+      "Staff",
+      "Sword",
+      "Shield"
+     ],
+     [
+      "He calls himself Mr. what?",
+      "September",
+      "October",
+      "December"
+     ],
+     [
+      "He rocks his long FUBU shirt in which season?",
+      "Winter",
+      "Summer",
+      "Spring"
+     ]
+    ],
+    [
+     [
+      "His daytime outfit — superb what?",
+      "Outlet",
+      "Style",
+      "Fit"
+     ],
+     [
+      "Which island is in effect?",
+      "Staten Isle",
+      "Long Island",
+      "Coney Island"
+     ],
+     [
+      "If you can feel Don — down in which city?",
+      "Atlanta",
+      "Miami",
+      "Chicago"
+     ],
+     [
+      "\"I'm a poet, my work is never ___\"",
+      "Done",
+      "Dull",
+      "Wrong"
+     ],
+     [
+      "He's the law of where?",
+      "Park Hill",
+      "Brooklyn",
+      "Shaolin"
+     ],
+     [
+      "\"My mic is stage ___\"",
+      "One",
+      "Two",
+      "Five"
+     ],
+     [
+      "Fifty-five tribes — in which Psalm?",
+      "30",
+      "23",
+      "91"
+     ],
+     [
+      "You only got one life to live — think what?",
+      "Twice",
+      "Fast",
+      "Big"
+     ]
+    ],
+    [
+     [
+      "This year, we throw darts where?",
+      "In the air",
+      "At the board",
+      "At the charts"
+     ],
+     [
+      "In a class by himself, he holds the what?",
+      "Foundation",
+      "Crown",
+      "Mic"
+     ],
+     [
+      "Short and brief, he makes out with the what?",
+      "Looseleaf",
+      "Notepad",
+      "Napkin"
+     ],
+     [
+      "In the struggle — how many years after the beef?",
+      "Ten",
+      "Five",
+      "Twenty"
+     ],
+     [
+      "\"I'ma keep switchin' my ___\"",
+      "Gear",
+      "Style",
+      "Flow"
+     ],
+     [
+      "What is it, for life?",
+      "Wu-Wear",
+      "Wu-Tang",
+      "FUBU"
+     ],
+     [
+      "His darts came to save the world like what?",
+      "Blue Ribbon",
+      "Superman",
+      "Captain Planet"
+     ],
+     [
+      "Raised in the what?",
+      "Pillage",
+      "Projects",
+      "Hills"
+     ]
+    ]
+   ]
   },
   {
    "title": "Slang Editorial",
-   "id": "DEr-9urWE30",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Super Model",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "The Pillage",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "n6jWxm29nVE",
+   "start": 28.3,
+   "cuts": [
+    59.4,
+    121.3,
+    215.2
+   ],
+   "qs": [
+    [
+     [
+      "He came to the fork in the road and went what?",
+      "Straight",
+      "Left",
+      "Back"
+     ],
+     [
+      "What did the silver spoon in his mouth have?",
+      "Cake",
+      "Gold",
+      "Ice"
+     ],
+     [
+      "Read it like a what?",
+      "Novel",
+      "Letter",
+      "Map"
+     ],
+     [
+      "Strivin' — his duns be what?",
+      "Dollars and coins",
+      "Rings and chains",
+      "Cars and homes"
+     ],
+     [
+      "Whether in New York or where?",
+      "Compton",
+      "Atlanta",
+      "Houston"
+     ],
+     [
+      "He comes correct with how many outfits?",
+      "Twenty-two",
+      "Twelve",
+      "Thirty-three"
+     ],
+     [
+      "\"One derby, Cappachino the ___\"",
+      "Great",
+      "King",
+      "Boss"
+     ],
+     [
+      "Sittin' at the table where who ate?",
+      "The Gambinos",
+      "The Corleones",
+      "The Wu"
+     ],
+     [
+      "Wu-Tang Clan — what?",
+      "Concentrate",
+      "Celebrate",
+      "Dominate"
+     ]
+    ],
+    [
+     [
+      "Bounce on the track — Donna cracks it like a what?",
+      "Safe",
+      "Egg",
+      "Code"
+     ],
+     [
+      "His slang is editorial, explicit what?",
+      "Material",
+      "Matter",
+      "Mission"
+     ],
+     [
+      "Briefcase, yo — live in what?",
+      "Stereo",
+      "Color",
+      "Concert"
+     ],
+     [
+      "Set the black people what?",
+      "Free",
+      "Straight",
+      "Up"
+     ],
+     [
+      "Killer bees got the best what?",
+      "Stee",
+      "Honey",
+      "Sting"
+     ],
+     [
+      "He drips through the what?",
+      "Faucet",
+      "Ceiling",
+      "Speaker"
+     ],
+     [
+      "Give him the mic and he'll what?",
+      "Toss it",
+      "Rock it",
+      "Drop it"
+     ],
+     [
+      "Cappadonna seven what?",
+      "Sauna",
+      "Samurai",
+      "Swords"
+     ],
+     [
+      "Thirty-three piranha, chaos like what?",
+      "Iguana",
+      "Jaguar",
+      "Anaconda"
+     ]
+    ],
+    [
+     [
+      "Dart specialist — new Cappadonna gets what?",
+      "Treacherous",
+      "Generous",
+      "Famous"
+     ],
+     [
+      "He rocks the track like a what?",
+      "Necklace",
+      "Bracelet",
+      "Watch"
+     ],
+     [
+      "What is he to the Wu-Tang Clan sword?",
+      "New addition",
+      "Leader",
+      "Founder"
+     ],
+     [
+      "Sunz of Man and Killer Bee can't fold under what?",
+      "Pressure",
+      "Fire",
+      "Weight"
+     ],
+     [
+      "Respect the Abbott — Wu what?",
+      "Orchestra",
+      "Empire",
+      "Dynasty"
+     ],
+     [
+      "Fly girls, keep ya what up?",
+      "Eyes",
+      "Heads",
+      "Hands"
+     ],
+     [
+      "Deep in the hill, Jack battles with whom?",
+      "Jill",
+      "Jane",
+      "Bill"
+     ],
+     [
+      "Brooklyn bound — he hops the what?",
+      "Turnstiles",
+      "Fence",
+      "Train"
+     ],
+     [
+      "Tabernacles catch fire within the what?",
+      "Apple",
+      "Temple",
+      "Pyramid"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Everything Is Everything",
+   "id": "7CQhW-wFv48",
+   "start": 21.2,
+   "cuts": [
+    55.4,
+    126,
+    190.1
+   ],
+   "qs": [
+    [
+     [
+      "All in the club — rugged what?",
+      "Dressed up",
+      "Laid back",
+      "Fresh out"
+     ],
+     [
+      "His hair is what?",
+      "Messed up",
+      "Braided",
+      "Cut low"
+     ],
+     [
+      "What's on his neck?",
+      "Gold",
+      "Silver",
+      "Ice"
+     ],
+     [
+      "Don't sweat — y'all show what?",
+      "Respect",
+      "Love",
+      "Up"
+     ],
+     [
+      "Feel what you feel — which hood?",
+      "Park Hill",
+      "Stapleton",
+      "Port Richmond"
+     ],
+     [
+      "Which zip code does he shout?",
+      "10304",
+      "10301",
+      "11201"
+     ],
+     [
+      "Prepare for darts and what?",
+      "Martial arts",
+      "Fireworks",
+      "Hard parts"
+     ],
+     [
+      "You heard it through the what?",
+      "Grapevine",
+      "Radio",
+      "Streets"
+     ]
+    ],
+    [
+     [
+      "Face to face, he breaks what every time?",
+      "Bread",
+      "Rules",
+      "Hearts"
+     ],
+     [
+      "\"In the world I hold ___\"",
+      "Mine",
+      "Tight",
+      "On"
+     ],
+     [
+      "These crossover rappers lost their what?",
+      "Origin",
+      "Minds",
+      "Fans"
+     ],
+     [
+      "Run from whom — this time it's more trouble?",
+      "The Wu",
+      "The cops",
+      "The crowd"
+     ],
+     [
+      "Never concerned about rabbits — he's after his what?",
+      "Cabbage",
+      "Carrots",
+      "Lettuce"
+     ],
+     [
+      "Buckwild with the what?",
+      "Flow",
+      "Crew",
+      "Style"
+     ],
+     [
+      "Wu-Tang broke what laws?",
+      "Radio",
+      "Street",
+      "Record"
+     ],
+     [
+      "He erupts like who?",
+      "Holyfield",
+      "Tyson",
+      "Ali"
+     ]
+    ],
+    [
+     [
+      "I'm all alone — I feel what in the street?",
+      "Trouble",
+      "Peace",
+      "The cold"
+     ],
+     [
+      "City heats, ghetto beefs, trick or what?",
+      "Treat",
+      "Cheat",
+      "Street"
+     ],
+     [
+      "Killer Beez — one what?",
+      "Machine",
+      "Team",
+      "Hive"
+     ],
+     [
+      "He hops y'all like what?",
+      "Checkers",
+      "Rabbits",
+      "Frogs"
+     ],
+     [
+      "\"Out of sight, out of ___\"",
+      "Mind",
+      "Time",
+      "Line"
+     ],
+     [
+      "\"Don't laugh\" — he drops what?",
+      "Math",
+      "Bombs",
+      "Science"
+     ],
+     [
+      "He calls himself the rap who?",
+      "Shakespeare",
+      "Picasso",
+      "Einstein"
+     ],
+     [
+      "Brown skin with the what?",
+      "Satellite",
+      "Spotlight",
+      "Microphone"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Milk the Cow",
+   "id": "-xeNThvUHec",
+   "start": 9.9,
+   "cuts": [
+    48.9,
+    84.3,
+    139.9
+   ],
+   "qs": [
+    [
+     [
+      "Let us milk this what?",
+      "Cow",
+      "Goat",
+      "Game"
+     ],
+     [
+      "\"The best way we know ___\"",
+      "How",
+      "Now",
+      "Right"
+     ],
+     [
+      "Which projects does he shout?",
+      "Park Hill",
+      "Stapleton",
+      "Marcy"
+     ],
+     [
+      "Park Hill projects — chicka what?",
+      "POW",
+      "BOOM",
+      "BAM"
+     ],
+     [
+      "Return of the track what?",
+      "Slasher",
+      "Master",
+      "Smasher"
+     ],
+     [
+      "Double douser, Cappadonna the what?",
+      "Broadcaster",
+      "Professor",
+      "Preacher"
+     ],
+     [
+      "Strivin' for what?",
+      "Perfection",
+      "Money",
+      "Respect"
+     ],
+     [
+      "He got his life back through investin' and what?",
+      "Devotion",
+      "Patience",
+      "Motion"
+     ]
+    ],
+    [
+     [
+      "He milks for all his what?",
+      "Childhood",
+      "Children",
+      "Crew"
+     ],
+     [
+      "Where does he keep on writin' and meditatin'?",
+      "In the ghetto",
+      "In the booth",
+      "In the park"
+     ],
+     [
+      "Waiting for lost what to settle?",
+      "Minds",
+      "Souls",
+      "Friends"
+     ],
+     [
+      "He speaks out because we all need the what?",
+      "Guidance",
+      "Money",
+      "Love"
+     ],
+     [
+      "Deep down inside us, where you could define what?",
+      "Science",
+      "Love",
+      "Truth"
+     ],
+     [
+      "Who told him what to do when he was stressed out?",
+      "His mother",
+      "His father",
+      "RZA"
+     ],
+     [
+      "\"All you gotta do is just put your ___ out\"",
+      "Best",
+      "Heart",
+      "Hand"
+     ],
+     [
+      "\"And I did it, ___\"",
+      "Milky",
+      "Baby",
+      "Donna"
+     ]
+    ],
+    [
+     [
+      "New Cappadonna is about to what?",
+      "Exhale",
+      "Explode",
+      "Exit"
+     ],
+     [
+      "Hold all the phone calls, stop all the what?",
+      "Mail",
+      "Shows",
+      "Music"
+     ],
+     [
+      "His alibi was tight that night — chillin' up in the what?",
+      "Hill",
+      "Hall",
+      "Ville"
+     ],
+     [
+      "Friends are exiled from close what?",
+      "Distance",
+      "Range",
+      "Quarters"
+     ],
+     [
+      "Every time he steps up, he rips what up?",
+      "Reps",
+      "Mics",
+      "Stages"
+     ],
+     [
+      "His words swing around like what?",
+      "Nunchucks",
+      "Swords",
+      "Fists"
+     ],
+     [
+      "It feeds his what?",
+      "Seeds",
+      "Family",
+      "Soul"
+     ],
+     [
+      "Gigantic crowds, all what?",
+      "Aboard",
+      "Around",
+      "Alive"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Oh-Donna",
+   "id": "Yva0bS-wuKs",
+   "start": 50.5,
+   "cuts": [
+    80.6,
+    108.9,
+    216.3
+   ],
+   "qs": [
+    [
+     [
+      "Word on the block is that half the King what?",
+      "Killer Beez",
+      "Lions",
+      "Dragons"
+     ],
+     [
+      "Rap's under what?",
+      "Siege",
+      "Fire",
+      "Arrest"
+     ],
+     [
+      "He's got what kind of funds?",
+      "European",
+      "African",
+      "Asian"
+     ],
+     [
+      "His ice don't what?",
+      "Melt",
+      "Shine",
+      "Break"
+     ],
+     [
+      "Which place is felt?",
+      "Shaolin",
+      "Park Hill",
+      "Harlem"
+     ],
+     [
+      "Mathematics is his rod and his what?",
+      "Staff",
+      "Sword",
+      "Shield"
+     ],
+     [
+      "He calls himself Mr. what?",
+      "September",
+      "October",
+      "December"
+     ],
+     [
+      "He rocks his long FUBU shirt in which season?",
+      "Winter",
+      "Summer",
+      "Spring"
+     ]
+    ],
+    [
+     [
+      "His daytime outfit — superb what?",
+      "Outlet",
+      "Style",
+      "Fit"
+     ],
+     [
+      "Which island is in effect?",
+      "Staten Isle",
+      "Long Island",
+      "Coney Island"
+     ],
+     [
+      "If you can feel Don — down in which city?",
+      "Atlanta",
+      "Miami",
+      "Chicago"
+     ],
+     [
+      "\"I'm a poet, my work is never ___\"",
+      "Done",
+      "Dull",
+      "Wrong"
+     ],
+     [
+      "He's the law of where?",
+      "Park Hill",
+      "Brooklyn",
+      "Shaolin"
+     ],
+     [
+      "\"My mic is stage ___\"",
+      "One",
+      "Two",
+      "Five"
+     ],
+     [
+      "Fifty-five tribes — in which Psalm?",
+      "30",
+      "23",
+      "91"
+     ],
+     [
+      "You only got one life to live — think what?",
+      "Twice",
+      "Fast",
+      "Big"
+     ]
+    ],
+    [
+     [
+      "This year, we throw darts where?",
+      "In the air",
+      "At the board",
+      "At the charts"
+     ],
+     [
+      "In a class by himself, he holds the what?",
+      "Foundation",
+      "Crown",
+      "Mic"
+     ],
+     [
+      "Short and brief, he makes out with the what?",
+      "Looseleaf",
+      "Notepad",
+      "Napkin"
+     ],
+     [
+      "In the struggle — how many years after the beef?",
+      "Ten",
+      "Five",
+      "Twenty"
+     ],
+     [
+      "\"I'ma keep switchin' my ___\"",
+      "Gear",
+      "Style",
+      "Flow"
+     ],
+     [
+      "What is it, for life?",
+      "Wu-Wear",
+      "Wu-Tang",
+      "FUBU"
+     ],
+     [
+      "His darts came to save the world like what?",
+      "Blue Ribbon",
+      "Superman",
+      "Captain Planet"
+     ],
+     [
+      "Raised in the what?",
+      "Pillage",
+      "Projects",
+      "Hills"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Slang Editorial",
+   "id": "n6jWxm29nVE",
+   "start": 28.3,
+   "cuts": [
+    59.4,
+    121.3,
+    215.2
+   ],
+   "qs": [
+    [
+     [
+      "He came to the fork in the road and went what?",
+      "Straight",
+      "Left",
+      "Back"
+     ],
+     [
+      "What did the silver spoon in his mouth have?",
+      "Cake",
+      "Gold",
+      "Ice"
+     ],
+     [
+      "Read it like a what?",
+      "Novel",
+      "Letter",
+      "Map"
+     ],
+     [
+      "Strivin' — his duns be what?",
+      "Dollars and coins",
+      "Rings and chains",
+      "Cars and homes"
+     ],
+     [
+      "Whether in New York or where?",
+      "Compton",
+      "Atlanta",
+      "Houston"
+     ],
+     [
+      "He comes correct with how many outfits?",
+      "Twenty-two",
+      "Twelve",
+      "Thirty-three"
+     ],
+     [
+      "\"One derby, Cappachino the ___\"",
+      "Great",
+      "King",
+      "Boss"
+     ],
+     [
+      "Sittin' at the table where who ate?",
+      "The Gambinos",
+      "The Corleones",
+      "The Wu"
+     ],
+     [
+      "Wu-Tang Clan — what?",
+      "Concentrate",
+      "Celebrate",
+      "Dominate"
+     ]
+    ],
+    [
+     [
+      "Bounce on the track — Donna cracks it like a what?",
+      "Safe",
+      "Egg",
+      "Code"
+     ],
+     [
+      "His slang is editorial, explicit what?",
+      "Material",
+      "Matter",
+      "Mission"
+     ],
+     [
+      "Briefcase, yo — live in what?",
+      "Stereo",
+      "Color",
+      "Concert"
+     ],
+     [
+      "Set the black people what?",
+      "Free",
+      "Straight",
+      "Up"
+     ],
+     [
+      "Killer bees got the best what?",
+      "Stee",
+      "Honey",
+      "Sting"
+     ],
+     [
+      "He drips through the what?",
+      "Faucet",
+      "Ceiling",
+      "Speaker"
+     ],
+     [
+      "Give him the mic and he'll what?",
+      "Toss it",
+      "Rock it",
+      "Drop it"
+     ],
+     [
+      "Cappadonna seven what?",
+      "Sauna",
+      "Samurai",
+      "Swords"
+     ],
+     [
+      "Thirty-three piranha, chaos like what?",
+      "Iguana",
+      "Jaguar",
+      "Anaconda"
+     ]
+    ],
+    [
+     [
+      "Dart specialist — new Cappadonna gets what?",
+      "Treacherous",
+      "Generous",
+      "Famous"
+     ],
+     [
+      "He rocks the track like a what?",
+      "Necklace",
+      "Bracelet",
+      "Watch"
+     ],
+     [
+      "What is he to the Wu-Tang Clan sword?",
+      "New addition",
+      "Leader",
+      "Founder"
+     ],
+     [
+      "Sunz of Man and Killer Bee can't fold under what?",
+      "Pressure",
+      "Fire",
+      "Weight"
+     ],
+     [
+      "Respect the Abbott — Wu what?",
+      "Orchestra",
+      "Empire",
+      "Dynasty"
+     ],
+     [
+      "Fly girls, keep ya what up?",
+      "Eyes",
+      "Heads",
+      "Hands"
+     ],
+     [
+      "Deep in the hill, Jack battles with whom?",
+      "Jill",
+      "Jane",
+      "Bill"
+     ],
+     [
+      "Brooklyn bound — he hops the what?",
+      "Turnstiles",
+      "Fence",
+      "Train"
+     ],
+     [
+      "Tabernacles catch fire within the what?",
+      "Apple",
+      "Temple",
+      "Pyramid"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
