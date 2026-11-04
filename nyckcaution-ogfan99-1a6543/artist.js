@@ -99,40 +99,1339 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "PRESSURE!",
-   "id": "z5zd2MBVRbI",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Off the Wall (Nyck @ Knight)",
+   "id": "UMihsd2Igus",
+   "start": 8.7,
+   "cuts": [
+    32.3,
+    96,
+    169.3
+   ],
+   "qs": [
+    [
+     [
+      "Everything he spits is what?",
+      "Direct",
+      "Correct",
+      "Perfect"
+     ],
+     [
+      "So y'all really what?",
+      "Feel it",
+      "Hear it",
+      "See it"
+     ],
+     [
+      "He finally got up off the what?",
+      "Wall",
+      "Floor",
+      "Couch"
+     ],
+     [
+      "One day you finally pay the what?",
+      "Debt",
+      "Rent",
+      "Price"
+     ],
+     [
+      "You owe your what?",
+      "Life",
+      "Mom",
+      "Crew"
+     ],
+     [
+      "He'll do his best to make what finally exist?",
+      "These dreams",
+      "These plans",
+      "These songs"
+     ],
+     [
+      "What if he doesn't become what he said he'd be?",
+      "The man",
+      "The star",
+      "The king"
+     ],
+     [
+      "Remember me for who I was, not for who I what?",
+      "Couldn't be",
+      "Used to be",
+      "Wanted to be"
+     ]
+    ],
+    [
+     [
+      "Off the wall, going what?",
+      "In",
+      "Out",
+      "Up"
+     ],
+     [
+      "He's on his what?",
+      "God of War",
+      "Call of Duty",
+      "Mortal Kombat"
+     ],
+     [
+      "Rock the cradle, y'all been sleepin' on who?",
+      "The kid",
+      "The man",
+      "The crew"
+     ],
+     [
+      "What does he rip from 'round his neck?",
+      "The bib",
+      "The tag",
+      "The tie"
+     ],
+     [
+      "Spell Nyck with what letter?",
+      "Y",
+      "I",
+      "K"
+     ],
+     [
+      "Small white kid with the bars, he's a what?",
+      "Titan",
+      "Giant",
+      "Legend"
+     ],
+     [
+      "What doesn't he make?",
+      "Resolutions",
+      "Excuses",
+      "Promises"
+     ],
+     [
+      "Hope my what soothes it?",
+      "Umbrella",
+      "Raincoat",
+      "Music"
+     ]
+    ],
+    [
+     [
+      "What ain't his only problem?",
+      "Paranoia",
+      "Money",
+      "Pressure"
+     ],
+     [
+      "'Til then it's get it how you what?",
+      "Live",
+      "Can",
+      "Want"
+     ],
+     [
+      "Life's a what?",
+      "Gamble",
+      "Game",
+      "Movie"
+     ],
+     [
+      "What's callin'?",
+      "Money",
+      "The streets",
+      "His mom"
+     ],
+     [
+      "Like a what, he's been grown?",
+      "Old head",
+      "Big brother",
+      "Grown man"
+     ],
+     [
+      "His energy is through the what?",
+      "Roof",
+      "Sky",
+      "Wall"
+     ],
+     [
+      "Turn up the what?",
+      "Gain",
+      "Bass",
+      "Volume"
+     ],
+     [
+      "Where does he let it out?",
+      "In the booth",
+      "On the stage",
+      "On the block"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Basin",
-   "id": "NQ1A2W-9fWg",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Coat Check / Session 47",
+   "id": "JKZLpXfzfv0",
+   "cuts": [
+    42.3,
+    71.1,
+    153.3
+   ],
+   "qs": [
+    [
+     [
+      "Don't get out of what?",
+      "Pocket",
+      "Line",
+      "Hand"
+     ],
+     [
+      "I don't want my coat, no what?",
+      "Coat check",
+      "Coat hanger",
+      "Coat rack"
+     ],
+     [
+      "How the world done got so what?",
+      "Cold",
+      "Old",
+      "Bold"
+     ],
+     [
+      "Stay away from the bull like who?",
+      "Stockton",
+      "Malone",
+      "Ewing"
+     ],
+     [
+      "What's gonna surface about you?",
+      "Fake news",
+      "Old photos",
+      "Your ex"
+     ],
+     [
+      "Bad vibes, he don't need those what?",
+      "Options",
+      "Problems",
+      "Feelings"
+     ],
+     [
+      "Cut 'em off like what?",
+      "Tonsils",
+      "Fingernails",
+      "Hair"
+     ],
+     [
+      "Life's a game but it's not no what?",
+      "Console",
+      "Joke",
+      "Lottery"
+     ],
+     [
+      "Stay mindful, because there's no what?",
+      "Respawn",
+      "Restart",
+      "Replay"
+     ]
+    ],
+    [
+     [
+      "When the rain falls down, we're all gonna get what?",
+      "Wet",
+      "Cold",
+      "Lost"
+     ],
+     [
+      "When the day gets rough, we gon' solve these what?",
+      "Tests",
+      "Problems",
+      "Cases"
+     ],
+     [
+      "Life's too short and we all be what?",
+      "Stressed",
+      "Tired",
+      "Broke"
+     ],
+     [
+      "Why are we all blessed?",
+      "We still woke up",
+      "We got paid",
+      "We got family"
+     ],
+     [
+      "Just another kid from the what?",
+      "City",
+      "Block",
+      "Burbs"
+     ],
+     [
+      "There's enough for us both, we could all be what?",
+      "Fed",
+      "Paid",
+      "Rich"
+     ],
+     [
+      "While they're here, be there for your what?",
+      "Brothers",
+      "Mother",
+      "Friends"
+     ],
+     [
+      "Tell your sisters you what?",
+      "Love 'em",
+      "Miss 'em",
+      "Need 'em"
+     ]
+    ],
+    [
+     [
+      "Cutting off ties, following what?",
+      "Suit",
+      "Orders",
+      "Trends"
+     ],
+     [
+      "He talks from the what?",
+      "Heart",
+      "Gut",
+      "Soul"
+     ],
+     [
+      "Nobody's owed except for who?",
+      "The bros",
+      "His mom",
+      "The fans"
+     ],
+     [
+      "Every tomorrow he's doing what again?",
+      "Runnin'",
+      "Fightin'",
+      "Workin'"
+     ],
+     [
+      "What does he say nobody should look at?",
+      "The sheets",
+      "The texts",
+      "The receipts"
+     ],
+     [
+      "When he walks out of the session, the what begins?",
+      "Session",
+      "Show",
+      "Struggle"
+     ],
+     [
+      "On tour he feels like who?",
+      "Thor",
+      "Hulk",
+      "Superman"
+     ],
+     [
+      "Can he find what in living this life?",
+      "Balance",
+      "Peace",
+      "Love"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Warning Signs",
-   "id": "UyJNAa6505w",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Product of My Environment",
+   "id": "EZYzoE1BAZQ",
+   "start": 6.9,
+   "cuts": [
+    30,
+    47.5,
+    74.1
+   ],
+   "qs": [
+    [
+     [
+      "This is how the what begins?",
+      "Story",
+      "Song",
+      "Movie"
+     ],
+     [
+      "It started as a middle-aged married what?",
+      "Couple",
+      "Pastor",
+      "Teacher"
+     ],
+     [
+      "What was the name of their only kid?",
+      "Sean Joseph",
+      "Sean Michael",
+      "Jesse James"
+     ],
+     [
+      "About how many years later came Jesse?",
+      "Five",
+      "Two",
+      "Ten"
+     ],
+     [
+      "Where was the vacation?",
+      "Jamaica",
+      "Puerto Rico",
+      "Bermuda"
+     ],
+     [
+      "Where were they living?",
+      "Brooklyn",
+      "Queens",
+      "The Bronx"
+     ],
+     [
+      "Which part were they from?",
+      "The Basin",
+      "The Bay",
+      "The Bridge"
+     ],
+     [
+      "His dad wanted life with no what?",
+      "Limitations",
+      "Complications",
+      "Regrets"
+     ]
+    ],
+    [
+     [
+      "Where did his dad take him?",
+      "The park",
+      "The beach",
+      "The store"
+     ],
+     [
+      "What did his dad cover his head with?",
+      "Yellow tape",
+      "A towel",
+      "A hat"
+     ],
+     [
+      "Where did the tape come from?",
+      "The bench",
+      "The fence",
+      "The car"
+     ],
+     [
+      "What name did his dad give him?",
+      "Caution",
+      "Danger",
+      "Warning"
+     ],
+     [
+      "The name seemed fittin' for his what?",
+      "Character",
+      "Face",
+      "Family"
+     ],
+     [
+      "That wild what that run around?",
+      "Child",
+      "Card",
+      "Thing"
+     ],
+     [
+      "He was bad at taking what?",
+      "Rules",
+      "Tests",
+      "Pictures"
+     ],
+     [
+      "Maybe it was what to name him that?",
+      "Destiny",
+      "Luck",
+      "A joke"
+     ],
+     [
+      "The process was a lot what than it seemed?",
+      "Harder",
+      "Longer",
+      "Easier"
+     ]
+    ],
+    [
+     [
+      "When did he start writing in his book?",
+      "Middle school",
+      "High school",
+      "Third grade"
+     ],
+     [
+      "What was his book full of?",
+      "Dreams",
+      "Secrets",
+      "Drawings"
+     ],
+     [
+      "Who did he tell he had rhymes?",
+      "His friends",
+      "His teacher",
+      "His dad"
+     ],
+     [
+      "He had these rhymes and what?",
+      "Raps",
+      "Beats",
+      "Poems"
+     ],
+     [
+      "When he tried to flow, what did they do?",
+      "Smiled and laughed",
+      "Cheered",
+      "Walked away"
+     ],
+     [
+      "He would choose a different what?",
+      "Path",
+      "Crew",
+      "Name"
+     ],
+     [
+      "How did he still turn out?",
+      "Dope",
+      "Fine",
+      "Famous"
+     ],
+     [
+      "He's just a product of his what?",
+      "Environment",
+      "Generation",
+      "Family"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Church",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Margot Robbie",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "What's Understood",
+   "id": "RP-wQQKqlcQ",
+   "start": 13.5,
+   "cuts": [
+    40.3,
+    57.5,
+    108.8
+   ],
+   "qs": [
+    [
+     [
+      "He runs around through the night like he's what?",
+      "Nocturnal",
+      "A vampire",
+      "A ghost"
+     ],
+     [
+      "What does he wish they would've swapped?",
+      "Journals",
+      "Jerseys",
+      "Lunches"
+     ],
+     [
+      "He learned he's not the flop when the what was hot?",
+      "Block",
+      "Summer",
+      "Track"
+     ],
+     [
+      "Which rapper got him thinking he got this?",
+      "Lil Wayne",
+      "Jay-Z",
+      "Eminem"
+     ],
+     [
+      "A little what is gonna happen in the process?",
+      "Pain",
+      "Rain",
+      "Fame"
+     ],
+     [
+      "But a little what happens after all that?",
+      "Change",
+      "Money",
+      "Rest"
+     ],
+     [
+      "Now he's thinking back like he what?",
+      "Once did",
+      "Always does",
+      "Never did"
+     ],
+     [
+      "Summer plans getting fly for the what?",
+      "Function",
+      "Fourth",
+      "Photo"
+     ],
+     [
+      "How was he getting by?",
+      "As a young kid",
+      "With his crew",
+      "On his own"
+     ]
+    ],
+    [
+     [
+      "Back when everything was what?",
+      "Blissful",
+      "Peaceful",
+      "Easy"
+     ],
+     [
+      "Back when everything was so what?",
+      "Simple",
+      "Sweet",
+      "Slow"
+     ],
+     [
+      "Everything don't last what?",
+      "Forever",
+      "Long",
+      "All summer"
+     ],
+     [
+      "He breaks bread with who?",
+      "The fans",
+      "The crew",
+      "The block"
+     ],
+     [
+      "He brings what together?",
+      "Cats",
+      "Kids",
+      "Hearts"
+     ],
+     [
+      "Little different than his last what?",
+      "Direction",
+      "Album",
+      "Tour"
+     ],
+     [
+      "About time Nyck what y'all that?",
+      "Told",
+      "Showed",
+      "Sold"
+     ],
+     [
+      "Nyck is what, and the world knows that?",
+      "Cold",
+      "Hot",
+      "Real"
+     ]
+    ],
+    [
+     [
+      "If you see him around the block, he don't owe y'all what?",
+      "Dap",
+      "Money",
+      "Nothing"
+     ],
+     [
+      "He's world class on a what?",
+      "Verse",
+      "Track",
+      "Stage"
+     ],
+     [
+      "Y'all know the what?",
+      "Name",
+      "Game",
+      "Face"
+     ],
+     [
+      "What's understood don't gotta be what?",
+      "Explained",
+      "Complained",
+      "Repeated"
+     ],
+     [
+      "Where did he not wanna go?",
+      "School",
+      "Church",
+      "Work"
+     ],
+     [
+      "So he started doing what?",
+      "Dropping out",
+      "Acting out",
+      "Hanging out"
+     ],
+     [
+      "Instead he hit the what?",
+      "Road",
+      "Studio",
+      "Streets"
+     ],
+     [
+      "I don't wanna know if you gotta what?",
+      "Go",
+      "Leave",
+      "Stay"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Off the Wall (Nyck @ Knight)",
+   "id": "UMihsd2Igus",
+   "start": 8.7,
+   "cuts": [
+    32.3,
+    96,
+    169.3
+   ],
+   "qs": [
+    [
+     [
+      "Everything he spits is what?",
+      "Direct",
+      "Correct",
+      "Perfect"
+     ],
+     [
+      "So y'all really what?",
+      "Feel it",
+      "Hear it",
+      "See it"
+     ],
+     [
+      "He finally got up off the what?",
+      "Wall",
+      "Floor",
+      "Couch"
+     ],
+     [
+      "One day you finally pay the what?",
+      "Debt",
+      "Rent",
+      "Price"
+     ],
+     [
+      "You owe your what?",
+      "Life",
+      "Mom",
+      "Crew"
+     ],
+     [
+      "He'll do his best to make what finally exist?",
+      "These dreams",
+      "These plans",
+      "These songs"
+     ],
+     [
+      "What if he doesn't become what he said he'd be?",
+      "The man",
+      "The star",
+      "The king"
+     ],
+     [
+      "Remember me for who I was, not for who I what?",
+      "Couldn't be",
+      "Used to be",
+      "Wanted to be"
+     ]
+    ],
+    [
+     [
+      "Off the wall, going what?",
+      "In",
+      "Out",
+      "Up"
+     ],
+     [
+      "He's on his what?",
+      "God of War",
+      "Call of Duty",
+      "Mortal Kombat"
+     ],
+     [
+      "Rock the cradle, y'all been sleepin' on who?",
+      "The kid",
+      "The man",
+      "The crew"
+     ],
+     [
+      "What does he rip from 'round his neck?",
+      "The bib",
+      "The tag",
+      "The tie"
+     ],
+     [
+      "Spell Nyck with what letter?",
+      "Y",
+      "I",
+      "K"
+     ],
+     [
+      "Small white kid with the bars, he's a what?",
+      "Titan",
+      "Giant",
+      "Legend"
+     ],
+     [
+      "What doesn't he make?",
+      "Resolutions",
+      "Excuses",
+      "Promises"
+     ],
+     [
+      "Hope my what soothes it?",
+      "Umbrella",
+      "Raincoat",
+      "Music"
+     ]
+    ],
+    [
+     [
+      "What ain't his only problem?",
+      "Paranoia",
+      "Money",
+      "Pressure"
+     ],
+     [
+      "'Til then it's get it how you what?",
+      "Live",
+      "Can",
+      "Want"
+     ],
+     [
+      "Life's a what?",
+      "Gamble",
+      "Game",
+      "Movie"
+     ],
+     [
+      "What's callin'?",
+      "Money",
+      "The streets",
+      "His mom"
+     ],
+     [
+      "Like a what, he's been grown?",
+      "Old head",
+      "Big brother",
+      "Grown man"
+     ],
+     [
+      "His energy is through the what?",
+      "Roof",
+      "Sky",
+      "Wall"
+     ],
+     [
+      "Turn up the what?",
+      "Gain",
+      "Bass",
+      "Volume"
+     ],
+     [
+      "Where does he let it out?",
+      "In the booth",
+      "On the stage",
+      "On the block"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Coat Check / Session 47",
+   "id": "JKZLpXfzfv0",
+   "cuts": [
+    42.3,
+    71.1,
+    153.3
+   ],
+   "qs": [
+    [
+     [
+      "Don't get out of what?",
+      "Pocket",
+      "Line",
+      "Hand"
+     ],
+     [
+      "I don't want my coat, no what?",
+      "Coat check",
+      "Coat hanger",
+      "Coat rack"
+     ],
+     [
+      "How the world done got so what?",
+      "Cold",
+      "Old",
+      "Bold"
+     ],
+     [
+      "Stay away from the bull like who?",
+      "Stockton",
+      "Malone",
+      "Ewing"
+     ],
+     [
+      "What's gonna surface about you?",
+      "Fake news",
+      "Old photos",
+      "Your ex"
+     ],
+     [
+      "Bad vibes, he don't need those what?",
+      "Options",
+      "Problems",
+      "Feelings"
+     ],
+     [
+      "Cut 'em off like what?",
+      "Tonsils",
+      "Fingernails",
+      "Hair"
+     ],
+     [
+      "Life's a game but it's not no what?",
+      "Console",
+      "Joke",
+      "Lottery"
+     ],
+     [
+      "Stay mindful, because there's no what?",
+      "Respawn",
+      "Restart",
+      "Replay"
+     ]
+    ],
+    [
+     [
+      "When the rain falls down, we're all gonna get what?",
+      "Wet",
+      "Cold",
+      "Lost"
+     ],
+     [
+      "When the day gets rough, we gon' solve these what?",
+      "Tests",
+      "Problems",
+      "Cases"
+     ],
+     [
+      "Life's too short and we all be what?",
+      "Stressed",
+      "Tired",
+      "Broke"
+     ],
+     [
+      "Why are we all blessed?",
+      "We still woke up",
+      "We got paid",
+      "We got family"
+     ],
+     [
+      "Just another kid from the what?",
+      "City",
+      "Block",
+      "Burbs"
+     ],
+     [
+      "There's enough for us both, we could all be what?",
+      "Fed",
+      "Paid",
+      "Rich"
+     ],
+     [
+      "While they're here, be there for your what?",
+      "Brothers",
+      "Mother",
+      "Friends"
+     ],
+     [
+      "Tell your sisters you what?",
+      "Love 'em",
+      "Miss 'em",
+      "Need 'em"
+     ]
+    ],
+    [
+     [
+      "Cutting off ties, following what?",
+      "Suit",
+      "Orders",
+      "Trends"
+     ],
+     [
+      "He talks from the what?",
+      "Heart",
+      "Gut",
+      "Soul"
+     ],
+     [
+      "Nobody's owed except for who?",
+      "The bros",
+      "His mom",
+      "The fans"
+     ],
+     [
+      "Every tomorrow he's doing what again?",
+      "Runnin'",
+      "Fightin'",
+      "Workin'"
+     ],
+     [
+      "What does he say nobody should look at?",
+      "The sheets",
+      "The texts",
+      "The receipts"
+     ],
+     [
+      "When he walks out of the session, the what begins?",
+      "Session",
+      "Show",
+      "Struggle"
+     ],
+     [
+      "On tour he feels like who?",
+      "Thor",
+      "Hulk",
+      "Superman"
+     ],
+     [
+      "Can he find what in living this life?",
+      "Balance",
+      "Peace",
+      "Love"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Product of My Environment",
+   "id": "EZYzoE1BAZQ",
+   "start": 6.9,
+   "cuts": [
+    30,
+    47.5,
+    74.1
+   ],
+   "qs": [
+    [
+     [
+      "This is how the what begins?",
+      "Story",
+      "Song",
+      "Movie"
+     ],
+     [
+      "It started as a middle-aged married what?",
+      "Couple",
+      "Pastor",
+      "Teacher"
+     ],
+     [
+      "What was the name of their only kid?",
+      "Sean Joseph",
+      "Sean Michael",
+      "Jesse James"
+     ],
+     [
+      "About how many years later came Jesse?",
+      "Five",
+      "Two",
+      "Ten"
+     ],
+     [
+      "Where was the vacation?",
+      "Jamaica",
+      "Puerto Rico",
+      "Bermuda"
+     ],
+     [
+      "Where were they living?",
+      "Brooklyn",
+      "Queens",
+      "The Bronx"
+     ],
+     [
+      "Which part were they from?",
+      "The Basin",
+      "The Bay",
+      "The Bridge"
+     ],
+     [
+      "His dad wanted life with no what?",
+      "Limitations",
+      "Complications",
+      "Regrets"
+     ]
+    ],
+    [
+     [
+      "Where did his dad take him?",
+      "The park",
+      "The beach",
+      "The store"
+     ],
+     [
+      "What did his dad cover his head with?",
+      "Yellow tape",
+      "A towel",
+      "A hat"
+     ],
+     [
+      "Where did the tape come from?",
+      "The bench",
+      "The fence",
+      "The car"
+     ],
+     [
+      "What name did his dad give him?",
+      "Caution",
+      "Danger",
+      "Warning"
+     ],
+     [
+      "The name seemed fittin' for his what?",
+      "Character",
+      "Face",
+      "Family"
+     ],
+     [
+      "That wild what that run around?",
+      "Child",
+      "Card",
+      "Thing"
+     ],
+     [
+      "He was bad at taking what?",
+      "Rules",
+      "Tests",
+      "Pictures"
+     ],
+     [
+      "Maybe it was what to name him that?",
+      "Destiny",
+      "Luck",
+      "A joke"
+     ],
+     [
+      "The process was a lot what than it seemed?",
+      "Harder",
+      "Longer",
+      "Easier"
+     ]
+    ],
+    [
+     [
+      "When did he start writing in his book?",
+      "Middle school",
+      "High school",
+      "Third grade"
+     ],
+     [
+      "What was his book full of?",
+      "Dreams",
+      "Secrets",
+      "Drawings"
+     ],
+     [
+      "Who did he tell he had rhymes?",
+      "His friends",
+      "His teacher",
+      "His dad"
+     ],
+     [
+      "He had these rhymes and what?",
+      "Raps",
+      "Beats",
+      "Poems"
+     ],
+     [
+      "When he tried to flow, what did they do?",
+      "Smiled and laughed",
+      "Cheered",
+      "Walked away"
+     ],
+     [
+      "He would choose a different what?",
+      "Path",
+      "Crew",
+      "Name"
+     ],
+     [
+      "How did he still turn out?",
+      "Dope",
+      "Fine",
+      "Famous"
+     ],
+     [
+      "He's just a product of his what?",
+      "Environment",
+      "Generation",
+      "Family"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "What's Understood",
+   "id": "RP-wQQKqlcQ",
+   "start": 13.5,
+   "cuts": [
+    40.3,
+    57.5,
+    108.8
+   ],
+   "qs": [
+    [
+     [
+      "He runs around through the night like he's what?",
+      "Nocturnal",
+      "A vampire",
+      "A ghost"
+     ],
+     [
+      "What does he wish they would've swapped?",
+      "Journals",
+      "Jerseys",
+      "Lunches"
+     ],
+     [
+      "He learned he's not the flop when the what was hot?",
+      "Block",
+      "Summer",
+      "Track"
+     ],
+     [
+      "Which rapper got him thinking he got this?",
+      "Lil Wayne",
+      "Jay-Z",
+      "Eminem"
+     ],
+     [
+      "A little what is gonna happen in the process?",
+      "Pain",
+      "Rain",
+      "Fame"
+     ],
+     [
+      "But a little what happens after all that?",
+      "Change",
+      "Money",
+      "Rest"
+     ],
+     [
+      "Now he's thinking back like he what?",
+      "Once did",
+      "Always does",
+      "Never did"
+     ],
+     [
+      "Summer plans getting fly for the what?",
+      "Function",
+      "Fourth",
+      "Photo"
+     ],
+     [
+      "How was he getting by?",
+      "As a young kid",
+      "With his crew",
+      "On his own"
+     ]
+    ],
+    [
+     [
+      "Back when everything was what?",
+      "Blissful",
+      "Peaceful",
+      "Easy"
+     ],
+     [
+      "Back when everything was so what?",
+      "Simple",
+      "Sweet",
+      "Slow"
+     ],
+     [
+      "Everything don't last what?",
+      "Forever",
+      "Long",
+      "All summer"
+     ],
+     [
+      "He breaks bread with who?",
+      "The fans",
+      "The crew",
+      "The block"
+     ],
+     [
+      "He brings what together?",
+      "Cats",
+      "Kids",
+      "Hearts"
+     ],
+     [
+      "Little different than his last what?",
+      "Direction",
+      "Album",
+      "Tour"
+     ],
+     [
+      "About time Nyck what y'all that?",
+      "Told",
+      "Showed",
+      "Sold"
+     ],
+     [
+      "Nyck is what, and the world knows that?",
+      "Cold",
+      "Hot",
+      "Real"
+     ]
+    ],
+    [
+     [
+      "If you see him around the block, he don't owe y'all what?",
+      "Dap",
+      "Money",
+      "Nothing"
+     ],
+     [
+      "He's world class on a what?",
+      "Verse",
+      "Track",
+      "Stage"
+     ],
+     [
+      "Y'all know the what?",
+      "Name",
+      "Game",
+      "Face"
+     ],
+     [
+      "What's understood don't gotta be what?",
+      "Explained",
+      "Complained",
+      "Repeated"
+     ],
+     [
+      "Where did he not wanna go?",
+      "School",
+      "Church",
+      "Work"
+     ],
+     [
+      "So he started doing what?",
+      "Dropping out",
+      "Acting out",
+      "Hanging out"
+     ],
+     [
+      "Instead he hit the what?",
+      "Road",
+      "Studio",
+      "Streets"
+     ],
+     [
+      "I don't wanna know if you gotta what?",
+      "Go",
+      "Leave",
+      "Stay"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

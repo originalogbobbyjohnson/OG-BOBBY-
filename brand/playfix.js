@@ -45,7 +45,7 @@
       document.getElementById("cueBig").textContent = stop ? "ANSWER THE QUESTION BELOW" : "TAP THE RECORD TO PLAY";
       document.getElementById("cueSm").textContent = stop ? "GET IT RIGHT TO KEEP THE SONG GOING" : "THE SONG STARTS RIGHT HERE";
     }
-    setInterval(sync, 400);
+    setInterval(function () { sync(); try { if (scr.classList.contains("big") && ((typeof atStop !== "undefined" && atStop) || (track && track.style.transform && track.style.transform !== "none"))) { var fs = document.fullscreenElement || document.webkitFullscreenElement; if (fs) (document.exitFullscreen || document.webkitExitFullscreen).call(document); setBig(false); } } catch (e) {} }, 400);
     new MutationObserver(sync).observe(big, { attributes: true, attributeFilter: ["class"], subtree: true, childList: true, characterData: true });
     sync();
     function toggle(e) {
@@ -61,6 +61,40 @@
       } catch (er) {}
       big.click();
     }
+    /* our own big-screen button, bottom right (YouTube's own button sits under the tap layer) */
+    var st3 = document.createElement("style");
+    st3.textContent = ".bigbtn{position:absolute;right:6px;bottom:6px;z-index:5;width:46px;height:46px;border-radius:12px;border:2px solid #fff;background:rgba(0,0,0,.72);color:#fff;font-size:1.6rem;line-height:1;display:grid;place-items:center;padding:0;cursor:pointer;box-shadow:0 0 0 2px #000;-webkit-tap-highlight-color:transparent}" +
+      "#pPlay .screen.big{position:fixed !important;left:0;top:0;width:100vw !important;height:100vh;height:100dvh;max-width:none;aspect-ratio:auto;z-index:9999;border-radius:0;border:0;box-shadow:none;margin:0;background:#000}" +
+      "#pPlay .screen.big .bigbtn{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));width:56px;height:56px;font-size:1.5rem}" +
+      "#pPlay .screen.big .playcue .arr{display:none}";
+    document.head.appendChild(st3);
+    var bb = document.createElement("button"); bb.type = "button"; bb.className = "bigbtn"; bb.setAttribute("aria-label", "Full screen"); bb.innerHTML = "&#10530;";
+    scr.appendChild(bb);
+    var track = document.getElementById("track"), saved = null;
+    function setBig(on) {
+      if (on) {
+        saved = { t: track ? track.style.transform : "", tr: track ? track.style.transition : "" };
+        if (track) { var m = /translateX\((-?[\d.]+)%\)/.exec(track.style.transform || ""); track.style.transition = "none"; track.style.transform = "none"; track.style.marginLeft = (m ? m[1] : "-100") + "%"; }
+        scr.classList.add("big"); bb.innerHTML = "&#10005;"; bb.setAttribute("aria-label", "Exit full screen");
+        try { document.body.style.overflow = "hidden"; } catch (e) {}
+      } else {
+        scr.classList.remove("big"); bb.innerHTML = "&#10530;"; bb.setAttribute("aria-label", "Full screen");
+        if (track && saved) { track.style.marginLeft = ""; if (!track.style.transform || track.style.transform === "none") track.style.transform = saved.t; setTimeout(function () { track.style.transition = saved.tr; }, 50); }
+        try { document.body.style.overflow = ""; } catch (e) {}
+      }
+    }
+    bb.addEventListener("click", function (e) {
+      e.preventDefault(); e.stopPropagation();
+      var fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+      if (fsEl) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+      if (scr.classList.contains("big")) { setBig(false); return; }
+      setBig(true);
+      /* phones that allow real full screen get it too; iPhone stays in the big view */
+      var rq = scr.requestFullscreen || scr.webkitRequestFullscreen;
+      if (rq) { try { var p = rq.call(scr); if (p && p.catch) p.catch(function () {}); } catch (er) {} }
+    });
+    document.addEventListener("fullscreenchange", function () { if (!document.fullscreenElement && scr.classList.contains("big")) setBig(false); });
+    document.addEventListener("webkitfullscreenchange", function () { if (!document.webkitFullscreenElement && scr.classList.contains("big")) setBig(false); });
     mini.addEventListener("click", toggle);
     tc.addEventListener("click", toggle);
     cue.addEventListener("click", toggle);

@@ -99,40 +99,672 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "They Reminisce Over You (T.R.O.Y.)",
-   "id": "k6mdRv0ZdR8",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "It's Like That",
+   "id": "azvv7ah4mg0",
+   "start": 22.4,
+   "cuts": [
+    56.9,
+    127.3,
+    202.1
+   ],
+   "qs": [
+    [
+     [
+      "Catch a verse from the big what?",
+      "Purse",
+      "Boss",
+      "Bank"
+     ],
+     [
+      "What does C.L. tell you to rotate?",
+      "The megahertz",
+      "The turntable",
+      "The volume"
+     ],
+     [
+      "Wig out by the who?",
+      "The goodfella",
+      "The godfather",
+      "The gangster"
+     ],
+     [
+      "Which baseball manager does C.L. say he's NOT?",
+      "Lou Pinella",
+      "Billy Martin",
+      "Joe Torre"
+     ],
+     [
+      "C.L. is black and what?",
+      "Mo' betta",
+      "Mo' smooth",
+      "Mo' bold"
+     ],
+     [
+      "Deep in roots, but my name ain't who?",
+      "Kizzie",
+      "Kunta",
+      "Toby"
+     ],
+     [
+      "C.L. is heavy on the what?",
+      "Starch",
+      "Bass",
+      "Brass"
+     ],
+     [
+      "Shape it like what?",
+      "Play-Do",
+      "Clay",
+      "Lego"
+     ],
+     [
+      "Soprano at the what?",
+      "The Chateau",
+      "The opera",
+      "The Apollo"
+     ]
+    ],
+    [
+     [
+      "What should you save when he kicks a format fat?",
+      "The chit-chat",
+      "The small talk",
+      "The applause"
+     ],
+     [
+      "C.L. is the attribute you do what to?",
+      "Salute",
+      "Recruit",
+      "Dispute"
+     ],
+     [
+      "Why can't he afford to be cute?",
+      "He's gotta make loot",
+      "He's gotta stay true",
+      "He's gotta stay in the booth"
+     ],
+     [
+      "He drops a psalm like a what?",
+      "A bomb",
+      "A prayer",
+      "A hymn"
+     ],
+     [
+      "Now he's so cool and what?",
+      "Calm",
+      "Collected",
+      "Composed"
+     ],
+     [
+      "Who is the storm?",
+      "Pete Rock",
+      "Heavy D",
+      "Grand Puba"
+     ],
+     [
+      "What does he call his rare compilation?",
+      "Recreation",
+      "Relaxation",
+      "Education"
+     ],
+     [
+      "He's large like which band?",
+      "The Beatles",
+      "The Stones",
+      "The Temptations"
+     ]
+    ],
+    [
+     [
+      "C.L. is all what, no doubt?",
+      "Sold out",
+      "Burnt out",
+      "Stressed out"
+     ],
+     [
+      "Who does he address with 'anyway'?",
+      "Your honor",
+      "Your highness",
+      "Your majesty"
+     ],
+     [
+      "The melee is here for the what?",
+      "Payday",
+      "Party",
+      "Holiday"
+     ],
+     [
+      "Smooth like a what?",
+      "Reservoir",
+      "River",
+      "Waterfall"
+     ],
+     [
+      "Which funky place does he name?",
+      "Shang-Ri-La",
+      "Taj Mahal",
+      "Copacabana"
+     ],
+     [
+      "There's no shame in his what?",
+      "Game",
+      "Name",
+      "Frame"
+     ],
+     [
+      "He's flowing like which river?",
+      "The Nile",
+      "The Hudson",
+      "The Mississippi"
+     ],
+     [
+      "Here's to another hit, perfectly what?",
+      "Legitimate",
+      "Legendary",
+      "Intimate"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Straighten It Out",
-   "id": "xhDb8LoScpI",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Tell Me",
+   "id": "AGZDz8Uk2QY",
+   "start": 19.4,
+   "cuts": [
+    51.3,
+    121.3,
+    182.1
+   ],
+   "qs": [
+    [
+     [
+      "When power lands, the sister had other what?",
+      "Plans",
+      "Dreams",
+      "Friends"
+     ],
+     [
+      "Whose permission was given for her to wed?",
+      "Her dad's",
+      "Her mom's",
+      "Her brother's"
+     ],
+     [
+      "Who was she set to marry?",
+      "The next boss in line",
+      "The mayor's son",
+      "The best man"
+     ],
+     [
+      "The objective is never to do what to her?",
+      "Leave her",
+      "Fail her",
+      "Fool her"
+     ],
+     [
+      "Now meet the black who?",
+      "Caesar",
+      "Panther",
+      "Moses"
+     ],
+     [
+      "He bought her diamonds and what?",
+      "Furs",
+      "Pearls",
+      "Cars"
+     ],
+     [
+      "Deep down, what kind of man does she prefer?",
+      "A simple man",
+      "A rich man",
+      "A famous man"
+     ],
+     [
+      "Every plan was a what?",
+      "Let down",
+      "Lie",
+      "Setup"
+     ],
+     [
+      "Where does she pull over in tears?",
+      "By the playground",
+      "By the river",
+      "By the church"
+     ]
+    ],
+    [
+     [
+      "What does she spot a game through?",
+      "The schoolyard fence",
+      "The park gate",
+      "Her car window"
+     ],
+     [
+      "What was her hobby?",
+      "Photography",
+      "Painting",
+      "Dancing"
+     ],
+     [
+      "Tell me how you what?",
+      "Feel",
+      "Deal",
+      "Live"
+     ],
+     [
+      "How much time goes by in verse two?",
+      "A couple of weeks",
+      "A couple of days",
+      "A couple of months"
+     ],
+     [
+      "What was her mommy doing?",
+      "Shopping",
+      "Cooking",
+      "Working"
+     ],
+     [
+      "The woman's about to claim her what?",
+      "King",
+      "Crown",
+      "Throne"
+     ],
+     [
+      "Where does C.L. peep it all from?",
+      "His window",
+      "His car",
+      "The corner"
+     ],
+     [
+      "Danger lurks based on how the what read 'em?",
+      "The cards",
+      "The stars",
+      "The papers"
+     ]
+    ],
+    [
+     [
+      "How many briefcases?",
+      "Two",
+      "One",
+      "Three"
+     ],
+     [
+      "You bless your people when you conquer like who?",
+      "Hannibal",
+      "Napoleon",
+      "Caesar"
+     ],
+     [
+      "What did he run for money at your age?",
+      "The numbers",
+      "A store",
+      "A cab"
+     ],
+     [
+      "Who is he picturing in the study?",
+      "John Gotti",
+      "Don King",
+      "Al Capone"
+     ],
+     [
+      "Where did he grow to be large?",
+      "Crooklyn",
+      "The Bronx",
+      "Queens"
+     ],
+     [
+      "What were they ready to take?",
+      "Harlem",
+      "Jersey",
+      "Queens"
+     ],
+     [
+      "Who was he ringside with?",
+      "Don King",
+      "Spike Lee",
+      "Mike Tyson"
+     ],
+     [
+      "Ali fought who?",
+      "Frazier",
+      "Foreman",
+      "Liston"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Step Up",
-   "id": "xfBfjf-A6Tc",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Anger in the Nation",
+   "id": "l_ALUyVuL4Q",
+   "start": 49.6,
+   "cuts": [
+    81,
+    121,
+    174
+   ],
+   "qs": [
+    [
+     [
+      "Which country does the first verse open with?",
+      "South Africa",
+      "Ethiopia",
+      "Jamaica"
+     ],
+     [
+      "He conquers like a what?",
+      "Philistine",
+      "Pharaoh",
+      "Spartan"
+     ],
+     [
+      "Which one do you prefer?",
+      "War or peace",
+      "Truth or lies",
+      "Love or hate"
+     ],
+     [
+      "A reason for the treason in what kind of season?",
+      "Jet-black",
+      "Long hot",
+      "Cold winter"
+     ],
+     [
+      "Peace, justice and what?",
+      "Freedom",
+      "Equality",
+      "Unity"
+     ],
+     [
+      "The original man is the architect of what?",
+      "The motherland",
+      "The pyramids",
+      "The nation"
+     ],
+     [
+      "Kings to queens is the Asiatic black what?",
+      "Plan",
+      "Land",
+      "Man"
+     ],
+     [
+      "Way before who took flight?",
+      "Adam and Eve",
+      "Moses",
+      "Noah"
+     ],
+     [
+      "Bless the seed of who?",
+      "Abraham",
+      "Isaac",
+      "David"
+     ]
+    ],
+    [
+     [
+      "Who stays loyal so they boil?",
+      "Uncle Tom",
+      "Uncle Sam",
+      "Uncle Ben"
+     ],
+     [
+      "He's the alchemist with a twist from the true what?",
+      "Soil",
+      "Soul",
+      "Source"
+     ],
+     [
+      "Who is his blood brother on the side of him?",
+      "Adolpho",
+      "Alfonso",
+      "Antonio"
+     ],
+     [
+      "His vision ain't what?",
+      "Blurry",
+      "Cloudy",
+      "Broken"
+     ],
+     [
+      "The rebirth, the what?",
+      "Revival",
+      "Return",
+      "Rising"
+     ],
+     [
+      "Elevating the black man is what?",
+      "Vital",
+      "Final",
+      "Natural"
+     ],
+     [
+      "What is he pacing?",
+      "The floors",
+      "The streets",
+      "The stage"
+     ],
+     [
+      "Let's get together and what?",
+      "Face it",
+      "Fix it",
+      "Change it"
+     ]
+    ],
+    [
+     [
+      "Salt and pepper in the earthly what?",
+      "Stew",
+      "Soup",
+      "Pot"
+     ],
+     [
+      "Who thinks it tastes better?",
+      "The salt",
+      "The pepper",
+      "The sugar"
+     ],
+     [
+      "Incorrect though, giving some what?",
+      "Heartburn",
+      "Headaches",
+      "Heartache"
+     ],
+     [
+      "No one should be judged by what?",
+      "Complexion",
+      "Religion",
+      "Their clothes"
+     ],
+     [
+      "Who all hurry to force their beliefs?",
+      "The pilgrims",
+      "The preachers",
+      "The soldiers"
+     ],
+     [
+      "What does he call television?",
+      "Tell-a-lie-vision",
+      "Hell-a-vision",
+      "The idiot box"
+     ],
+     [
+      "How many years to weep?",
+      "435",
+      "400",
+      "350"
+     ],
+     [
+      "Armageddon comes like a what?",
+      "A thief in the night",
+      "A storm at sea",
+      "A flood"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Mind over Matter",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Square One",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Can't Front on Me",
+   "id": "8NMGy0634IM",
+   "start": 20.4,
+   "cuts": [
+    52,
+    93.1,
+    145.2
+   ],
+   "qs": [
+    [
+     [
+      "What does C.L. hit that vibrates the earth?",
+      "The war drums",
+      "The bass drums",
+      "The timbales"
+     ],
+     [
+      "Who's gotta wake up?",
+      "The chief",
+      "The city",
+      "The block"
+     ],
+     [
+      "C.L.'s not a pale frail what?",
+      "Ghost",
+      "Man",
+      "Child"
+     ],
+     [
+      "He's the master of the what?",
+      "Mediterranean",
+      "Caribbean",
+      "Atlantic"
+     ],
+     [
+      "Lower than the who?",
+      "The mole man",
+      "The sandman",
+      "The boogeyman"
+     ],
+     [
+      "Rise to the what?",
+      "Supernova",
+      "Mountaintop",
+      "Rooftop"
+     ],
+     [
+      "He measures like a what?",
+      "Yardstick",
+      "Tape measure",
+      "Scale"
+     ],
+     [
+      "He's thick at what?",
+      "Arithmetic",
+      "Geometry",
+      "Algebra"
+     ]
+    ],
+    [
+     [
+      "Hit the what and then he's gone?",
+      "Pitch",
+      "Switch",
+      "Stage"
+     ],
+     [
+      "What lingers on when he's gone?",
+      "The funk",
+      "The bass",
+      "The echo"
+     ],
+     [
+      "At his altitude you get the mental what?",
+      "Food",
+      "Health",
+      "Fuel"
+     ],
+     [
+      "Not to be rude, here's a fresh what?",
+      "Pot brewed",
+      "Track cooked",
+      "Batch baked"
+     ],
+     [
+      "What do we weave when we practice to deceive?",
+      "A web",
+      "A net",
+      "A lie"
+     ],
+     [
+      "Sparkin' off a trick up the what?",
+      "Sleeve",
+      "Hat",
+      "Street"
+     ],
+     [
+      "What did Pete stock?",
+      "The bedrock",
+      "The crates",
+      "The shelves"
+     ],
+     [
+      "You can't do what on C.L.?",
+      "Front",
+      "Fight",
+      "Frown"
+     ]
+    ],
+    [
+     [
+      "What was locked in?",
+      "A tomb",
+      "A vault",
+      "A safe"
+     ],
+     [
+      "Coming out now smelling like what?",
+      "Perfume",
+      "Roses",
+      "Money"
+     ],
+     [
+      "He plays ya like a what?",
+      "Gospel",
+      "Fiddle",
+      "Drum"
+     ],
+     [
+      "What did he never need?",
+      "Hair Club for Men",
+      "A barber",
+      "A wig"
+     ],
+     [
+      "What happens soon as it leaves his lips?",
+      "Skips to backflips",
+      "Flips to cartwheels",
+      "Jumps to handstands"
+     ],
+     [
+      "He can boogie on what?",
+      "Static",
+      "Air",
+      "Ice"
+     ],
+     [
+      "Put the anger in the nation on your what?",
+      "Station",
+      "Speakers",
+      "Stereo"
+     ],
+     [
+      "Whose horn do the people crowd to hear?",
+      "Gabriel's",
+      "Joshua's",
+      "Moses'"
+     ]
+    ]
+   ]
   }
- ],
- "preview": true
+ ]
 };

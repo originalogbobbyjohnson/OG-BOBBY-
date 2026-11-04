@@ -99,40 +99,1339 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Hip Hop Hooray",
-   "id": "hgdw3BsUfFE",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Clap Yo Hands",
+   "id": "jsHWEKE_DcA",
+   "cuts": [
+    30.5,
+    89.1,
+    139.4
+   ],
+   "qs": [
+    [
+     [
+      "Get up out your what?",
+      "Sheet",
+      "Seat",
+      "Car"
+     ],
+     [
+      "What kind of clap does he ask for?",
+      "The old, slow clap",
+      "The big, loud clap",
+      "The fast, double clap"
+     ],
+     [
+      "Clap your hands to the what?",
+      "Beat",
+      "Bass",
+      "Band"
+     ],
+     [
+      "Coming out the alleyways of where?",
+      "Illtown",
+      "Uptown",
+      "Brick City"
+     ],
+     [
+      "Who's the producer extraordinaire?",
+      "Kaygee",
+      "Vin Rock",
+      "Treach"
+     ],
+     [
+      "Who's called the backbone?",
+      "Vin Rock",
+      "Kaygee",
+      "Treach"
+     ],
+     [
+      "The last to fall onto this what?",
+      "Planet",
+      "Stage",
+      "Track"
+     ],
+     [
+      "Get your arms together and your what together?",
+      "Hands",
+      "Feet",
+      "Crew"
+     ]
+    ],
+    [
+     [
+      "Treach comes falling through the what?",
+      "The earth",
+      "The roof",
+      "The sky"
+     ],
+     [
+      "Clapping your hands, now we must say what?",
+      "Ah-ha",
+      "Ho!",
+      "Yeah!"
+     ],
+     [
+      "Treach says he's still what?",
+      "Thirsty",
+      "Hungry",
+      "Sleepy"
+     ],
+     [
+      "Which state does Treach shout out?",
+      "Jersey",
+      "New York",
+      "Florida"
+     ],
+     [
+      "Who's trackin' this?",
+      "Kay",
+      "Vin",
+      "Premier"
+     ],
+     [
+      "Even when in which state with no gear?",
+      "Texas",
+      "Georgia",
+      "Ohio"
+     ],
+     [
+      "Who does he call first?",
+      "The honies",
+      "The fellas",
+      "The DJs"
+     ],
+     [
+      "Clap your hands this what?",
+      "Evening",
+      "Morning",
+      "Weekend"
+     ]
+    ],
+    [
+     [
+      "How many companies did they form?",
+      "Three",
+      "Two",
+      "Four"
+     ],
+     [
+      "The whole industry awaits the new what?",
+      "Recital",
+      "Arrival",
+      "Revival"
+     ],
+     [
+      "Why is your stage show wack?",
+      "Your crew isn't developed",
+      "No DJ",
+      "No lights"
+     ],
+     [
+      "Naughty is to live and die for what?",
+      "Hip-hop",
+      "Jersey",
+      "Money"
+     ],
+     [
+      "What is Vin Rock holding down around his block?",
+      "The fort",
+      "The corner",
+      "The crew"
+     ],
+     [
+      "He sneezes upon the what?",
+      "Wack",
+      "Weak",
+      "Fake"
+     ],
+     [
+      "To Vin, the rest is considered what?",
+      "Scrap",
+      "Junk",
+      "Trash"
+     ],
+     [
+      "Naughty will never be what?",
+      "Defeated",
+      "Forgotten",
+      "Repeated"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Holiday",
+   "id": "ErZcYyD008c",
+   "start": 20.4,
+   "cuts": [
+    59.4,
+    98.1,
+    194.1
+   ],
+   "qs": [
+    [
+     [
+      "We came here to what?",
+      "Party",
+      "Battle",
+      "Dance"
+     ],
+     [
+      "It's a what?",
+      "Holiday",
+      "Birthday",
+      "Friday"
+     ],
+     [
+      "Throw your what up, everybody?",
+      "Hands",
+      "Drinks",
+      "Flags"
+     ],
+     [
+      "Let's what?",
+      "Celebrate",
+      "Get loose",
+      "Go home"
+     ],
+     [
+      "It's been awhile since you heard the what?",
+      "Style",
+      "Crew",
+      "Smile"
+     ],
+     [
+      "It took a little time, but now we're worth your what?",
+      "While",
+      "Time",
+      "Dime"
+     ],
+     [
+      "The Ill-town party what?",
+      "Rhyme sayer",
+      "Rock starter",
+      "Beat maker"
+     ],
+     [
+      "He depletes MCs like the what?",
+      "Ozone layer",
+      "Rain forest",
+      "Gas tank"
+     ],
+     [
+      "Like vintage wine, no rhyme is sold before its what?",
+      "Time",
+      "Prime",
+      "Line"
+     ]
+    ],
+    [
+     [
+      "He's the Nineteen Naughty what MC?",
+      "Nine",
+      "Eight",
+      "Ten"
+     ],
+     [
+      "Microphone what?",
+      "Controller",
+      "Commander",
+      "Collector"
+     ],
+     [
+      "Master of what?",
+      "Ceremonies",
+      "Disguise",
+      "The house"
+     ],
+     [
+      "Remember why you what?",
+      "Hate me",
+      "Rate me",
+      "Date me"
+     ],
+     [
+      "You're severed by what?",
+      "Association",
+      "Separation",
+      "Your station"
+     ],
+     [
+      "You keep on rhymin' like you didn't what?",
+      "Know",
+      "Care",
+      "Hear"
+     ],
+     [
+      "Join together who?",
+      "Everybody",
+      "The whole crew",
+      "All of Jersey"
+     ],
+     [
+      "It's a party goin' what?",
+      "On",
+      "Strong",
+      "Long"
+     ]
+    ],
+    [
+     [
+      "Who's watching everything that we touch?",
+      "The Feds",
+      "The cops",
+      "The fans"
+     ],
+     [
+      "What are they watching through?",
+      "Binoculars",
+      "Cameras",
+      "Windows"
+     ],
+     [
+      "Give him a picture and a compass and he'll do a who?",
+      "Nostradamus",
+      "Columbus",
+      "Sherlock"
+     ],
+     [
+      "Your album cover ends up on the back of a what?",
+      "Milk box",
+      "Cereal box",
+      "Bus"
+     ],
+     [
+      "Come to Dirty Jerz, New what?",
+      "Jeru",
+      "York",
+      "Ark"
+     ],
+     [
+      "Whose name is he sure of?",
+      "Vin Rock",
+      "Treach",
+      "Kay Gee"
+     ],
+     [
+      "In '99 he'll officially re-open what?",
+      "The block",
+      "The club",
+      "The store"
+     ],
+     [
+      "Hip-hop ain't gon' die, it's gon' what?",
+      "Diversify",
+      "Multiply",
+      "Survive"
+     ]
+    ]
+   ]
   },
   {
    "title": "Feel Me Flow",
-   "id": "SLSbWDVI_pw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "id": "Qnu4V2J61tY",
+   "start": 19.2,
+   "cuts": [
+    48.2,
+    116.5,
+    160.3
+   ],
+   "qs": [
+    [
+     [
+      "You 'bout to feel the chronicles of a what?",
+      "Bionical lyric",
+      "Comical lyric",
+      "Classical lyric"
+     ],
+     [
+      "He's on a mission of just what?",
+      "Hittin'",
+      "Winnin'",
+      "Spittin'"
+     ],
+     [
+      "He glistens like sun and water while doing what?",
+      "Fishin'",
+      "Swimmin'",
+      "Sailin'"
+     ],
+     [
+      "Bust the move and then what?",
+      "Swerve",
+      "Serve",
+      "Dip"
+     ],
+     [
+      "Serve words with what?",
+      "Nerve",
+      "Verve",
+      "Curves"
+     ],
+     [
+      "Which town is he coming from?",
+      "Illy",
+      "Philly",
+      "Brick"
+     ],
+     [
+      "The alleys are full of Phillies and what?",
+      "Rallys",
+      "Wendy's",
+      "Dallys"
+     ],
+     [
+      "Holla if ya what?",
+      "Hear me",
+      "Feel me",
+      "See me"
+     ],
+     [
+      "Come and feel me what?",
+      "Flow",
+      "Glow",
+      "Show"
+     ]
+    ],
+    [
+     [
+      "Try boom-bye what?",
+      "Bye-bye",
+      "Boom-boom",
+      "Bap-bap"
+     ],
+     [
+      "The flow pro what?",
+      "Poetical",
+      "Political",
+      "Theatrical"
+     ],
+     [
+      "Skills only a what'll know?",
+      "Vet",
+      "Fan",
+      "Kid"
+     ],
+     [
+      "On point like what?",
+      "Decimals",
+      "Needles",
+      "Arrows"
+     ],
+     [
+      "Who is he partyin' with?",
+      "The Zoo Crew",
+      "The Flavor Unit",
+      "The Juice Crew"
+     ],
+     [
+      "Damagin' mics, men and even what?",
+      "Mannequins",
+      "Machines",
+      "Monsters"
+     ],
+     [
+      "Naughty's back like what?",
+      "Vertebraes",
+      "Boomerangs",
+      "Bad habits"
+     ],
+     [
+      "Now you're a what again?",
+      "A fan",
+      "A friend",
+      "A fool"
+     ]
+    ],
+    [
+     [
+      "Who'll break the body of a beat?",
+      "Kay",
+      "Vin",
+      "Treach"
+     ],
+     [
+      "Chase bass-lines like what?",
+      "Bullies",
+      "Cops",
+      "Dogs"
+     ],
+     [
+      "All we wanna know is if your body wanna what?",
+      "Party",
+      "Dance",
+      "Move"
+     ],
+     [
+      "No guts set up for what?",
+      "Sit-ups",
+      "Push-ups",
+      "Pull-ups"
+     ],
+     [
+      "If not, zip up your what?",
+      "Lip",
+      "Coat",
+      "Bag"
+     ],
+     [
+      "Why did Naughty come back?",
+      "Hip-hop needed another anthem",
+      "The fans kept calling",
+      "The label begged them"
+     ],
+     [
+      "Back with the Drifters, they'd be known as the what?",
+      "Flow-ers",
+      "Rhymers",
+      "Groovers"
+     ],
+     [
+      "They've been reppin' since which decade?",
+      "The '70s",
+      "The '60s",
+      "The '80s"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Uptown Anthem",
-   "id": "OwhVh0YGquE",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "O.P.P.",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Everything's Gonna Be Alright",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Hip Hop Hooray",
+   "id": "Rz1Xn1vzOM4",
+   "start": 17,
+   "cuts": [
+    57.4,
+    141.6,
+    196.4
+   ],
+   "qs": [
+    [
+     [
+      "You drew a picture of my what?",
+      "Morning",
+      "Mama",
+      "Mirror"
+     ],
+     [
+      "But you couldn't make my what?",
+      "Day",
+      "Bed",
+      "Night"
+     ],
+     [
+      "I'm rocking and you're what?",
+      "Yawning",
+      "Snoring",
+      "Talking"
+     ],
+     [
+      "Your funny flow is foreign and a what's on the way?",
+      "Green card",
+      "Passport",
+      "Visa"
+     ],
+     [
+      "Watch your what?",
+      "Head 'n Shoulders",
+      "Hat and gloves",
+      "Back and front"
+     ],
+     [
+      "Who's bold enough to fold ya?",
+      "A brother older",
+      "A younger brother",
+      "A bigger brother"
+     ],
+     [
+      "Why are they still around?",
+      "They're real",
+      "They're rich",
+      "They're lucky"
+     ],
+     [
+      "Don't lamp with a freestyle what?",
+      "Phantom",
+      "Champion",
+      "Rookie"
+     ],
+     [
+      "Treach ain't tryin' to be what?",
+      "Handsome",
+      "Famous",
+      "Polite"
+     ]
+    ],
+    [
+     [
+      "What does Treach live and die for?",
+      "Hip hop",
+      "Jersey",
+      "His crew"
+     ],
+     [
+      "This is hip hop of when?",
+      "Today",
+      "Tomorrow",
+      "Yesterday"
+     ],
+     [
+      "You heard a lot about a brother gainin' what?",
+      "Mo' ground",
+      "Mo' money",
+      "Mo' fans"
+     ],
+     [
+      "What did you say you know he is?",
+      "Mister O.P.P. man",
+      "Mister Hip Hop man",
+      "Mister Naughty man"
+     ],
+     [
+      "He's naughty by what?",
+      "Nature",
+      "Choice",
+      "Design"
+     ],
+     [
+      "Who does Treach love always?",
+      "Black women",
+      "His mama",
+      "His crew"
+     ],
+     [
+      "Disrespect ain't the what?",
+      "Way",
+      "Play",
+      "Game"
+     ],
+     [
+      "What does he want to start today?",
+      "A family",
+      "A party",
+      "A crew"
+     ]
+    ],
+    [
+     [
+      "What kind of hip hoppers are there many of?",
+      "Hungry",
+      "Young",
+      "Angry"
+     ],
+     [
+      "He ain't baling no what?",
+      "Hay",
+      "Cotton",
+      "Wheat"
+     ],
+     [
+      "But still doing what every day?",
+      "Growing",
+      "Rhyming",
+      "Rising"
+     ],
+     [
+      "The underground town is down the what?",
+      "Hill",
+      "Block",
+      "Road"
+     ],
+     [
+      "Snatchin' crowns from who?",
+      "Clowns",
+      "Kings",
+      "Clones"
+     ],
+     [
+      "Their styles are older than who?",
+      "Lou Rawls",
+      "James Brown",
+      "Ray Charles"
+     ],
+     [
+      "Which TV character didn't know them either?",
+      "Parker Lewis",
+      "Doogie Howser",
+      "Zack Morris"
+     ],
+     [
+      "What's his problem solver's name?",
+      "Mook",
+      "Mike",
+      "Moe"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Clap Yo Hands",
+   "id": "jsHWEKE_DcA",
+   "cuts": [
+    30.5,
+    89.1,
+    139.4
+   ],
+   "qs": [
+    [
+     [
+      "Get up out your what?",
+      "Sheet",
+      "Seat",
+      "Car"
+     ],
+     [
+      "What kind of clap does he ask for?",
+      "The old, slow clap",
+      "The big, loud clap",
+      "The fast, double clap"
+     ],
+     [
+      "Clap your hands to the what?",
+      "Beat",
+      "Bass",
+      "Band"
+     ],
+     [
+      "Coming out the alleyways of where?",
+      "Illtown",
+      "Uptown",
+      "Brick City"
+     ],
+     [
+      "Who's the producer extraordinaire?",
+      "Kaygee",
+      "Vin Rock",
+      "Treach"
+     ],
+     [
+      "Who's called the backbone?",
+      "Vin Rock",
+      "Kaygee",
+      "Treach"
+     ],
+     [
+      "The last to fall onto this what?",
+      "Planet",
+      "Stage",
+      "Track"
+     ],
+     [
+      "Get your arms together and your what together?",
+      "Hands",
+      "Feet",
+      "Crew"
+     ]
+    ],
+    [
+     [
+      "Treach comes falling through the what?",
+      "The earth",
+      "The roof",
+      "The sky"
+     ],
+     [
+      "Clapping your hands, now we must say what?",
+      "Ah-ha",
+      "Ho!",
+      "Yeah!"
+     ],
+     [
+      "Treach says he's still what?",
+      "Thirsty",
+      "Hungry",
+      "Sleepy"
+     ],
+     [
+      "Which state does Treach shout out?",
+      "Jersey",
+      "New York",
+      "Florida"
+     ],
+     [
+      "Who's trackin' this?",
+      "Kay",
+      "Vin",
+      "Premier"
+     ],
+     [
+      "Even when in which state with no gear?",
+      "Texas",
+      "Georgia",
+      "Ohio"
+     ],
+     [
+      "Who does he call first?",
+      "The honies",
+      "The fellas",
+      "The DJs"
+     ],
+     [
+      "Clap your hands this what?",
+      "Evening",
+      "Morning",
+      "Weekend"
+     ]
+    ],
+    [
+     [
+      "How many companies did they form?",
+      "Three",
+      "Two",
+      "Four"
+     ],
+     [
+      "The whole industry awaits the new what?",
+      "Recital",
+      "Arrival",
+      "Revival"
+     ],
+     [
+      "Why is your stage show wack?",
+      "Your crew isn't developed",
+      "No DJ",
+      "No lights"
+     ],
+     [
+      "Naughty is to live and die for what?",
+      "Hip-hop",
+      "Jersey",
+      "Money"
+     ],
+     [
+      "What is Vin Rock holding down around his block?",
+      "The fort",
+      "The corner",
+      "The crew"
+     ],
+     [
+      "He sneezes upon the what?",
+      "Wack",
+      "Weak",
+      "Fake"
+     ],
+     [
+      "To Vin, the rest is considered what?",
+      "Scrap",
+      "Junk",
+      "Trash"
+     ],
+     [
+      "Naughty will never be what?",
+      "Defeated",
+      "Forgotten",
+      "Repeated"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Holiday",
+   "id": "ErZcYyD008c",
+   "start": 20.4,
+   "cuts": [
+    59.4,
+    98.1,
+    194.1
+   ],
+   "qs": [
+    [
+     [
+      "We came here to what?",
+      "Party",
+      "Battle",
+      "Dance"
+     ],
+     [
+      "It's a what?",
+      "Holiday",
+      "Birthday",
+      "Friday"
+     ],
+     [
+      "Throw your what up, everybody?",
+      "Hands",
+      "Drinks",
+      "Flags"
+     ],
+     [
+      "Let's what?",
+      "Celebrate",
+      "Get loose",
+      "Go home"
+     ],
+     [
+      "It's been awhile since you heard the what?",
+      "Style",
+      "Crew",
+      "Smile"
+     ],
+     [
+      "It took a little time, but now we're worth your what?",
+      "While",
+      "Time",
+      "Dime"
+     ],
+     [
+      "The Ill-town party what?",
+      "Rhyme sayer",
+      "Rock starter",
+      "Beat maker"
+     ],
+     [
+      "He depletes MCs like the what?",
+      "Ozone layer",
+      "Rain forest",
+      "Gas tank"
+     ],
+     [
+      "Like vintage wine, no rhyme is sold before its what?",
+      "Time",
+      "Prime",
+      "Line"
+     ]
+    ],
+    [
+     [
+      "He's the Nineteen Naughty what MC?",
+      "Nine",
+      "Eight",
+      "Ten"
+     ],
+     [
+      "Microphone what?",
+      "Controller",
+      "Commander",
+      "Collector"
+     ],
+     [
+      "Master of what?",
+      "Ceremonies",
+      "Disguise",
+      "The house"
+     ],
+     [
+      "Remember why you what?",
+      "Hate me",
+      "Rate me",
+      "Date me"
+     ],
+     [
+      "You're severed by what?",
+      "Association",
+      "Separation",
+      "Your station"
+     ],
+     [
+      "You keep on rhymin' like you didn't what?",
+      "Know",
+      "Care",
+      "Hear"
+     ],
+     [
+      "Join together who?",
+      "Everybody",
+      "The whole crew",
+      "All of Jersey"
+     ],
+     [
+      "It's a party goin' what?",
+      "On",
+      "Strong",
+      "Long"
+     ]
+    ],
+    [
+     [
+      "Who's watching everything that we touch?",
+      "The Feds",
+      "The cops",
+      "The fans"
+     ],
+     [
+      "What are they watching through?",
+      "Binoculars",
+      "Cameras",
+      "Windows"
+     ],
+     [
+      "Give him a picture and a compass and he'll do a who?",
+      "Nostradamus",
+      "Columbus",
+      "Sherlock"
+     ],
+     [
+      "Your album cover ends up on the back of a what?",
+      "Milk box",
+      "Cereal box",
+      "Bus"
+     ],
+     [
+      "Come to Dirty Jerz, New what?",
+      "Jeru",
+      "York",
+      "Ark"
+     ],
+     [
+      "Whose name is he sure of?",
+      "Vin Rock",
+      "Treach",
+      "Kay Gee"
+     ],
+     [
+      "In '99 he'll officially re-open what?",
+      "The block",
+      "The club",
+      "The store"
+     ],
+     [
+      "Hip-hop ain't gon' die, it's gon' what?",
+      "Diversify",
+      "Multiply",
+      "Survive"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Feel Me Flow",
+   "id": "Qnu4V2J61tY",
+   "start": 19.2,
+   "cuts": [
+    48.2,
+    116.5,
+    160.3
+   ],
+   "qs": [
+    [
+     [
+      "You 'bout to feel the chronicles of a what?",
+      "Bionical lyric",
+      "Comical lyric",
+      "Classical lyric"
+     ],
+     [
+      "He's on a mission of just what?",
+      "Hittin'",
+      "Winnin'",
+      "Spittin'"
+     ],
+     [
+      "He glistens like sun and water while doing what?",
+      "Fishin'",
+      "Swimmin'",
+      "Sailin'"
+     ],
+     [
+      "Bust the move and then what?",
+      "Swerve",
+      "Serve",
+      "Dip"
+     ],
+     [
+      "Serve words with what?",
+      "Nerve",
+      "Verve",
+      "Curves"
+     ],
+     [
+      "Which town is he coming from?",
+      "Illy",
+      "Philly",
+      "Brick"
+     ],
+     [
+      "The alleys are full of Phillies and what?",
+      "Rallys",
+      "Wendy's",
+      "Dallys"
+     ],
+     [
+      "Holla if ya what?",
+      "Hear me",
+      "Feel me",
+      "See me"
+     ],
+     [
+      "Come and feel me what?",
+      "Flow",
+      "Glow",
+      "Show"
+     ]
+    ],
+    [
+     [
+      "Try boom-bye what?",
+      "Bye-bye",
+      "Boom-boom",
+      "Bap-bap"
+     ],
+     [
+      "The flow pro what?",
+      "Poetical",
+      "Political",
+      "Theatrical"
+     ],
+     [
+      "Skills only a what'll know?",
+      "Vet",
+      "Fan",
+      "Kid"
+     ],
+     [
+      "On point like what?",
+      "Decimals",
+      "Needles",
+      "Arrows"
+     ],
+     [
+      "Who is he partyin' with?",
+      "The Zoo Crew",
+      "The Flavor Unit",
+      "The Juice Crew"
+     ],
+     [
+      "Damagin' mics, men and even what?",
+      "Mannequins",
+      "Machines",
+      "Monsters"
+     ],
+     [
+      "Naughty's back like what?",
+      "Vertebraes",
+      "Boomerangs",
+      "Bad habits"
+     ],
+     [
+      "Now you're a what again?",
+      "A fan",
+      "A friend",
+      "A fool"
+     ]
+    ],
+    [
+     [
+      "Who'll break the body of a beat?",
+      "Kay",
+      "Vin",
+      "Treach"
+     ],
+     [
+      "Chase bass-lines like what?",
+      "Bullies",
+      "Cops",
+      "Dogs"
+     ],
+     [
+      "All we wanna know is if your body wanna what?",
+      "Party",
+      "Dance",
+      "Move"
+     ],
+     [
+      "No guts set up for what?",
+      "Sit-ups",
+      "Push-ups",
+      "Pull-ups"
+     ],
+     [
+      "If not, zip up your what?",
+      "Lip",
+      "Coat",
+      "Bag"
+     ],
+     [
+      "Why did Naughty come back?",
+      "Hip-hop needed another anthem",
+      "The fans kept calling",
+      "The label begged them"
+     ],
+     [
+      "Back with the Drifters, they'd be known as the what?",
+      "Flow-ers",
+      "Rhymers",
+      "Groovers"
+     ],
+     [
+      "They've been reppin' since which decade?",
+      "The '70s",
+      "The '60s",
+      "The '80s"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Hip Hop Hooray",
+   "id": "Rz1Xn1vzOM4",
+   "start": 17,
+   "cuts": [
+    57.4,
+    141.6,
+    196.4
+   ],
+   "qs": [
+    [
+     [
+      "You drew a picture of my what?",
+      "Morning",
+      "Mama",
+      "Mirror"
+     ],
+     [
+      "But you couldn't make my what?",
+      "Day",
+      "Bed",
+      "Night"
+     ],
+     [
+      "I'm rocking and you're what?",
+      "Yawning",
+      "Snoring",
+      "Talking"
+     ],
+     [
+      "Your funny flow is foreign and a what's on the way?",
+      "Green card",
+      "Passport",
+      "Visa"
+     ],
+     [
+      "Watch your what?",
+      "Head 'n Shoulders",
+      "Hat and gloves",
+      "Back and front"
+     ],
+     [
+      "Who's bold enough to fold ya?",
+      "A brother older",
+      "A younger brother",
+      "A bigger brother"
+     ],
+     [
+      "Why are they still around?",
+      "They're real",
+      "They're rich",
+      "They're lucky"
+     ],
+     [
+      "Don't lamp with a freestyle what?",
+      "Phantom",
+      "Champion",
+      "Rookie"
+     ],
+     [
+      "Treach ain't tryin' to be what?",
+      "Handsome",
+      "Famous",
+      "Polite"
+     ]
+    ],
+    [
+     [
+      "What does Treach live and die for?",
+      "Hip hop",
+      "Jersey",
+      "His crew"
+     ],
+     [
+      "This is hip hop of when?",
+      "Today",
+      "Tomorrow",
+      "Yesterday"
+     ],
+     [
+      "You heard a lot about a brother gainin' what?",
+      "Mo' ground",
+      "Mo' money",
+      "Mo' fans"
+     ],
+     [
+      "What did you say you know he is?",
+      "Mister O.P.P. man",
+      "Mister Hip Hop man",
+      "Mister Naughty man"
+     ],
+     [
+      "He's naughty by what?",
+      "Nature",
+      "Choice",
+      "Design"
+     ],
+     [
+      "Who does Treach love always?",
+      "Black women",
+      "His mama",
+      "His crew"
+     ],
+     [
+      "Disrespect ain't the what?",
+      "Way",
+      "Play",
+      "Game"
+     ],
+     [
+      "What does he want to start today?",
+      "A family",
+      "A party",
+      "A crew"
+     ]
+    ],
+    [
+     [
+      "What kind of hip hoppers are there many of?",
+      "Hungry",
+      "Young",
+      "Angry"
+     ],
+     [
+      "He ain't baling no what?",
+      "Hay",
+      "Cotton",
+      "Wheat"
+     ],
+     [
+      "But still doing what every day?",
+      "Growing",
+      "Rhyming",
+      "Rising"
+     ],
+     [
+      "The underground town is down the what?",
+      "Hill",
+      "Block",
+      "Road"
+     ],
+     [
+      "Snatchin' crowns from who?",
+      "Clowns",
+      "Kings",
+      "Clones"
+     ],
+     [
+      "Their styles are older than who?",
+      "Lou Rawls",
+      "James Brown",
+      "Ray Charles"
+     ],
+     [
+      "Which TV character didn't know them either?",
+      "Parker Lewis",
+      "Doogie Howser",
+      "Zack Morris"
+     ],
+     [
+      "What's his problem solver's name?",
+      "Mook",
+      "Mike",
+      "Moe"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
