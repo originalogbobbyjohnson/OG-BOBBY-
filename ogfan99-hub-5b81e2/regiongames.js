@@ -15,4 +15,5 @@ window.OG_REGION_GAMES = {
   "Sage Francis": { url: "../sagefrancis-ogfan99-424f31/", ex: 0 },
   "Apathy": { url: "../apathy-ogfan99-dc32b4/", ex: 2 },
   "Vinnie Paz": { url: "../vinniepaz-ogfan99-377809/", ex: 2 },
+  "Mr. Lif": { url: "../mrlif-ogfan99-92e090/", ex: 2 },
 };
