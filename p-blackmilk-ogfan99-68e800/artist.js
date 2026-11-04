@@ -1,4 +1,4 @@
-/* Black Milk producer game (PRODUCERS tab). Every song is a beat Black Milk made, one song per lead artist (Long Story Short is his own record). Explicit set is the main game (only Champion Sound runs clean, so no clean set). */
+/* Black Milk producer game (PRODUCERS tab). Every song is a beat Black Milk made, one song per lead artist. Explicit set is the main game (only Champion Sound runs clean, so no clean set). */
 window.CFG = {
  "name": "Black Milk",
  "nameUpper": "BLACK MILK",
@@ -25,11 +25,11 @@ window.CFG = {
   },
   "Basement Tape Maker": {
    "bongs": 10,
-   "line": "Back to the basement, recording on the tape deck."
+   "line": "Back to the basement, chopping on the MPC."
   },
   "Fat Beats Signee": {
    "bongs": 15,
-   "line": "The phone rang. You're the newest artist on the roster."
+   "line": "The phone rang. Sean P and Guilty want the beat."
   },
   "Tronic Beatsmith": {
    "bongs": 20,
@@ -312,217 +312,217 @@ window.CFG = {
    ]
   },
   {
-   "title": "Long Story Short (Black Milk)",
-   "id": "6URzw_G64yU",
-   "start": 56.7,
+   "title": "Random Call (Random Axe)",
+   "id": "Cs9QPVh5V6I",
+   "start": 43.9,
    "cuts": [
-    97.3,
-    134.8,
-    182.4
+    75.2,
+    131.85,
+    149.5
    ],
    "qs": [
     [
      [
-      "What year does the story start?",
-      "'83",
-      "'85",
-      "'87"
+      "He's chemically what?",
+      "Imbalanced",
+      "Unstable",
+      "Enhanced"
      ],
      [
-      "How many years does he fast-forward?",
-      "About 17",
-      "About 10",
-      "About 20"
+      "You're no what?",
+      "Challenge",
+      "Problem",
+      "Threat"
      ],
      [
-      "Back to the basics, back to the what?",
-      "Basement",
-      "Block",
-      "Studio"
+      "He eats hot emcees like cold what?",
+      "Salads",
+      "Cuts",
+      "Pizza"
      ],
      [
-      "Hi-hat, snare drum, bassline and what?",
-      "Bass kick",
-      "Cymbal",
-      "Clap"
+      "He eats what kind of emcees?",
+      "Hot",
+      "Fake",
+      "Weak"
      ],
      [
-      "He's recording on a stereo what?",
-      "Tape deck",
-      "Turntable",
-      "Laptop"
+      "He's so valid, trust the what?",
+      "Word",
+      "Truth",
+      "Fam"
      ],
      [
-      "Having fun, not worried about what yet?",
-      "Getting paid",
-      "Getting signed",
-      "Going on tour"
+      "He's so what?",
+      "Valid",
+      "Solid",
+      "Real"
      ],
      [
-      "He stepped up as an emcee and stepped up to the what?",
-      "MP",
+      "He's a madman from what city?",
+      "Murder City",
+      "Motor City",
+      "Windy City"
+     ],
+     [
+      "The madman is stacking what?",
+      "Bills",
+      "Chips",
+      "Paper"
+     ],
+     [
+      "He walks past the what?",
+      "Snakes",
+      "Fakes",
+      "Cops"
+     ],
+     [
+      "They won't stop till the odds get what?",
+      "Even",
+      "Better",
+      "Bigger"
+     ],
+     [
+      "Revenge is a dish served how?",
+      "Cold",
+      "Hot",
+      "Fast"
+     ]
+    ],
+    [
+     [
+      "So he wears what?",
+      "Coats",
+      "Hoods",
+      "Boots"
+     ],
+     [
+      "Break bread, the flow is worth what?",
+      "Gold",
+      "Millions",
+      "Diamonds"
+     ],
+     [
+      "Break what?",
+      "Bread",
+      "Bones",
+      "Ground"
+     ],
+     [
+      "The silver lining is his skin is what?",
+      "Bronze",
+      "Copper",
+      "Brown"
+     ],
+     [
+      "He ain't have much to give to who?",
+      "Moms",
+      "Pops",
+      "Fam"
+     ],
+     [
+      "313 to the what?",
+      "NYC",
+      "Bay",
+      "South"
+     ],
+     [
+      "Me, Guilty and Black is aggressive what?",
+      "Content",
+      "Music",
+      "Rhymes"
+     ],
+     [
+      "Me, who and Black?",
+      "Guilty",
+      "Ghost",
+      "Elzhi"
+     ],
+     [
+      "No love letter rhymes and raps about what?",
+      "Chicks",
+      "Cars",
+      "Money"
+     ],
+     [
+      "You can call him one-what?",
+      "Dimensional",
+      "Hit wonder",
+      "Of a kind"
+     ],
+     [
+      "Where shouldn't you ask him dumb questions?",
+      "The interview",
+      "The club",
+      "The studio"
+     ]
+    ],
+    [
+     [
+      "Bike-rider, Lance who?",
+      "Armstrong",
+      "Stephens",
+      "Bass"
+     ],
+     [
+      "What kind of rider?",
+      "Bike",
+      "Low",
+      "Rough"
+     ],
+     [
+      "He's running out of what, fam?",
+      "Air",
+      "Time",
+      "Gas"
+     ],
+     [
+      "He can't stand how?",
+      "Long",
+      "Still",
+      "Up"
+     ],
+     [
+      "Sean Price, the worst what?",
+      "Rapper",
+      "Dresser",
+      "Driver"
+     ],
+     [
+      "The worst rapper, the purse what?",
+      "Snatcher",
+      "Holder",
+      "Maker"
+     ],
+     [
+      "Who is rapping this verse?",
+      "Sean Price",
+      "Guilty Simpson",
+      "Black Milk"
+     ],
+     [
+      "Smack it out of you and whoever's the church what?",
+      "Pastor",
+      "Deacon",
+      "Choir"
+     ],
+     [
+      "His hand is in the collection what?",
       "Plate",
-      "Stage"
+      "Box",
+      "Jar"
      ],
      [
-      "He's doing beat what?",
-      "CDs",
-      "Tapes",
-      "Videos"
+      "Don't you ever disrespect the what?",
+      "Ape",
+      "King",
+      "God"
      ],
      [
-      "Pete Rock, Premo and who on the regular?",
-      "Dilla",
-      "Madlib",
-      "Large Professor"
-     ],
-     [
-      "He's about to add a little what?",
-      "Group",
-      "Band",
-      "Label"
-     ],
-     [
-      "How long did that last?",
-      "About 2 years",
-      "Six months",
-      "Five years"
-     ]
-    ],
-    [
-     [
-      "His kinfolk went on tour as a roadie for who?",
-      "Slum Village",
-      "The Roots",
-      "Outkast"
-     ],
-     [
-      "Whose hands did the beat CD land in?",
-      "Baatin",
-      "T3",
-      "Dilla"
-     ],
-     [
-      "He didn't hear back till they got back to what state?",
-      "Michigan",
-      "Ohio",
-      "Illinois"
-     ],
-     [
-      "What greeting came on the phone call?",
-      "What up doe",
-      "What's good",
-      "Yo, yo"
-     ],
-     [
-      "They told him come up to the what?",
-      "Studio",
-      "Office",
-      "Crib"
-     ],
-     [
-      "They picked a few and he made a little what?",
-      "Dough",
-      "Noise",
-      "Name"
-     ],
-     [
-      "Is the story over?",
-      "Not really",
-      "Yes",
-      "Almost"
-     ],
-     [
-      "Trinity, Dirty District, and what?",
-      "Detroit Deli",
-      "Detroit Diner",
-      "Detroit Red"
-     ],
-     [
-      "He's thinking how can we what?",
-      "Fail",
-      "Win",
-      "Rest"
-     ],
-     [
-      "Who did he tour with?",
-      "D12",
-      "G-Unit",
-      "The Roots"
-     ],
-     [
-      "Who kept stage diving into the crowd?",
-      "Proof",
-      "Bizarre",
-      "Kuniva"
-     ]
-    ],
-    [
-     [
-      "He backtracks to which crew?",
-      "BR Gunna",
-      "Slum Village",
-      "D12"
-     ],
-     [
-      "Young J and his homie who?",
-      "Fat Ray",
-      "Phat Kat",
-      "Proof"
-     ],
-     [
-      "On Dirty District 2, things seemed what?",
-      "Okay",
-      "Great",
-      "Bad"
-     ],
-     [
-      "Things were moving how?",
-      "Slo-mo",
-      "Fast",
-      "Backwards"
-     ],
-     [
-      "So he had to go what?",
-      "Solo",
-      "Home",
-      "Pro"
-     ],
-     [
-      "Grinding it out, then he made what?",
-      "Sound of the City",
-      "Popular Demand",
-      "Tronic"
-     ],
-     [
-      "He's trying to show who how he does it?",
-      "Bruhs",
-      "Kids",
-      "Critics"
-     ],
-     [
-      "He's trying to keep his what up?",
-      "Buzz",
-      "Grades",
-      "Name"
-     ],
-     [
-      "Where is his buzz?",
-      "The underground",
-      "Overseas",
-      "Uptown"
-     ],
-     [
-      "Who called him?",
-      "Fat Beats",
-      "Def Jam",
-      "Stones Throw"
-     ],
-     [
-      "They want to make him the newest what?",
-      "Artist on the roster",
-      "Producer in town",
-      "Face of the label"
+      "What name does he shout to close the verse?",
+      "Sean P",
+      "The Ape",
+      "Random"
      ]
     ]
    ]
@@ -962,217 +962,217 @@ window.CFG = {
    ]
   },
   {
-   "title": "Long Story Short (Black Milk)",
-   "id": "6URzw_G64yU",
-   "start": 56.7,
+   "title": "Random Call (Random Axe)",
+   "id": "Cs9QPVh5V6I",
+   "start": 43.9,
    "cuts": [
-    97.3,
-    134.8,
-    182.4
+    75.2,
+    131.85,
+    149.5
    ],
    "qs": [
     [
      [
-      "What year does the story start?",
-      "'83",
-      "'85",
-      "'87"
+      "He's chemically what?",
+      "Imbalanced",
+      "Unstable",
+      "Enhanced"
      ],
      [
-      "How many years does he fast-forward?",
-      "About 17",
-      "About 10",
-      "About 20"
+      "You're no what?",
+      "Challenge",
+      "Problem",
+      "Threat"
      ],
      [
-      "Back to the basics, back to the what?",
-      "Basement",
-      "Block",
-      "Studio"
+      "He eats hot emcees like cold what?",
+      "Salads",
+      "Cuts",
+      "Pizza"
      ],
      [
-      "Hi-hat, snare drum, bassline and what?",
-      "Bass kick",
-      "Cymbal",
-      "Clap"
+      "He eats what kind of emcees?",
+      "Hot",
+      "Fake",
+      "Weak"
      ],
      [
-      "He's recording on a stereo what?",
-      "Tape deck",
-      "Turntable",
-      "Laptop"
+      "He's so valid, trust the what?",
+      "Word",
+      "Truth",
+      "Fam"
      ],
      [
-      "Having fun, not worried about what yet?",
-      "Getting paid",
-      "Getting signed",
-      "Going on tour"
+      "He's so what?",
+      "Valid",
+      "Solid",
+      "Real"
      ],
      [
-      "He stepped up as an emcee and stepped up to the what?",
-      "MP",
+      "He's a madman from what city?",
+      "Murder City",
+      "Motor City",
+      "Windy City"
+     ],
+     [
+      "The madman is stacking what?",
+      "Bills",
+      "Chips",
+      "Paper"
+     ],
+     [
+      "He walks past the what?",
+      "Snakes",
+      "Fakes",
+      "Cops"
+     ],
+     [
+      "They won't stop till the odds get what?",
+      "Even",
+      "Better",
+      "Bigger"
+     ],
+     [
+      "Revenge is a dish served how?",
+      "Cold",
+      "Hot",
+      "Fast"
+     ]
+    ],
+    [
+     [
+      "So he wears what?",
+      "Coats",
+      "Hoods",
+      "Boots"
+     ],
+     [
+      "Break bread, the flow is worth what?",
+      "Gold",
+      "Millions",
+      "Diamonds"
+     ],
+     [
+      "Break what?",
+      "Bread",
+      "Bones",
+      "Ground"
+     ],
+     [
+      "The silver lining is his skin is what?",
+      "Bronze",
+      "Copper",
+      "Brown"
+     ],
+     [
+      "He ain't have much to give to who?",
+      "Moms",
+      "Pops",
+      "Fam"
+     ],
+     [
+      "313 to the what?",
+      "NYC",
+      "Bay",
+      "South"
+     ],
+     [
+      "Me, Guilty and Black is aggressive what?",
+      "Content",
+      "Music",
+      "Rhymes"
+     ],
+     [
+      "Me, who and Black?",
+      "Guilty",
+      "Ghost",
+      "Elzhi"
+     ],
+     [
+      "No love letter rhymes and raps about what?",
+      "Chicks",
+      "Cars",
+      "Money"
+     ],
+     [
+      "You can call him one-what?",
+      "Dimensional",
+      "Hit wonder",
+      "Of a kind"
+     ],
+     [
+      "Where shouldn't you ask him dumb questions?",
+      "The interview",
+      "The club",
+      "The studio"
+     ]
+    ],
+    [
+     [
+      "Bike-rider, Lance who?",
+      "Armstrong",
+      "Stephens",
+      "Bass"
+     ],
+     [
+      "What kind of rider?",
+      "Bike",
+      "Low",
+      "Rough"
+     ],
+     [
+      "He's running out of what, fam?",
+      "Air",
+      "Time",
+      "Gas"
+     ],
+     [
+      "He can't stand how?",
+      "Long",
+      "Still",
+      "Up"
+     ],
+     [
+      "Sean Price, the worst what?",
+      "Rapper",
+      "Dresser",
+      "Driver"
+     ],
+     [
+      "The worst rapper, the purse what?",
+      "Snatcher",
+      "Holder",
+      "Maker"
+     ],
+     [
+      "Who is rapping this verse?",
+      "Sean Price",
+      "Guilty Simpson",
+      "Black Milk"
+     ],
+     [
+      "Smack it out of you and whoever's the church what?",
+      "Pastor",
+      "Deacon",
+      "Choir"
+     ],
+     [
+      "His hand is in the collection what?",
       "Plate",
-      "Stage"
+      "Box",
+      "Jar"
      ],
      [
-      "He's doing beat what?",
-      "CDs",
-      "Tapes",
-      "Videos"
+      "Don't you ever disrespect the what?",
+      "Ape",
+      "King",
+      "God"
      ],
      [
-      "Pete Rock, Premo and who on the regular?",
-      "Dilla",
-      "Madlib",
-      "Large Professor"
-     ],
-     [
-      "He's about to add a little what?",
-      "Group",
-      "Band",
-      "Label"
-     ],
-     [
-      "How long did that last?",
-      "About 2 years",
-      "Six months",
-      "Five years"
-     ]
-    ],
-    [
-     [
-      "His kinfolk went on tour as a roadie for who?",
-      "Slum Village",
-      "The Roots",
-      "Outkast"
-     ],
-     [
-      "Whose hands did the beat CD land in?",
-      "Baatin",
-      "T3",
-      "Dilla"
-     ],
-     [
-      "He didn't hear back till they got back to what state?",
-      "Michigan",
-      "Ohio",
-      "Illinois"
-     ],
-     [
-      "What greeting came on the phone call?",
-      "What up doe",
-      "What's good",
-      "Yo, yo"
-     ],
-     [
-      "They told him come up to the what?",
-      "Studio",
-      "Office",
-      "Crib"
-     ],
-     [
-      "They picked a few and he made a little what?",
-      "Dough",
-      "Noise",
-      "Name"
-     ],
-     [
-      "Is the story over?",
-      "Not really",
-      "Yes",
-      "Almost"
-     ],
-     [
-      "Trinity, Dirty District, and what?",
-      "Detroit Deli",
-      "Detroit Diner",
-      "Detroit Red"
-     ],
-     [
-      "He's thinking how can we what?",
-      "Fail",
-      "Win",
-      "Rest"
-     ],
-     [
-      "Who did he tour with?",
-      "D12",
-      "G-Unit",
-      "The Roots"
-     ],
-     [
-      "Who kept stage diving into the crowd?",
-      "Proof",
-      "Bizarre",
-      "Kuniva"
-     ]
-    ],
-    [
-     [
-      "He backtracks to which crew?",
-      "BR Gunna",
-      "Slum Village",
-      "D12"
-     ],
-     [
-      "Young J and his homie who?",
-      "Fat Ray",
-      "Phat Kat",
-      "Proof"
-     ],
-     [
-      "On Dirty District 2, things seemed what?",
-      "Okay",
-      "Great",
-      "Bad"
-     ],
-     [
-      "Things were moving how?",
-      "Slo-mo",
-      "Fast",
-      "Backwards"
-     ],
-     [
-      "So he had to go what?",
-      "Solo",
-      "Home",
-      "Pro"
-     ],
-     [
-      "Grinding it out, then he made what?",
-      "Sound of the City",
-      "Popular Demand",
-      "Tronic"
-     ],
-     [
-      "He's trying to show who how he does it?",
-      "Bruhs",
-      "Kids",
-      "Critics"
-     ],
-     [
-      "He's trying to keep his what up?",
-      "Buzz",
-      "Grades",
-      "Name"
-     ],
-     [
-      "Where is his buzz?",
-      "The underground",
-      "Overseas",
-      "Uptown"
-     ],
-     [
-      "Who called him?",
-      "Fat Beats",
-      "Def Jam",
-      "Stones Throw"
-     ],
-     [
-      "They want to make him the newest what?",
-      "Artist on the roster",
-      "Producer in town",
-      "Face of the label"
+      "What name does he shout to close the verse?",
+      "Sean P",
+      "The Ape",
+      "Random"
      ]
     ]
    ]

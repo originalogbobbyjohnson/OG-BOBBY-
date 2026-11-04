@@ -29,7 +29,7 @@ window.CFG = {
   },
   "Train of Thought DJ": {
    "bongs": 15,
-   "line": "Reflection Eternal on the decks. Move somethin'."
+   "line": "Black Star on the decks. Definition."
   },
   "Hi-Teknology Producer": {
    "bongs": 20,
@@ -431,168 +431,169 @@ window.CFG = {
    ]
   },
   {
-   "title": "Move Somethin' (Reflection Eternal)",
-   "id": "gahYzHv_nek",
+   "title": "Master Fard Muhammad (Busta Rhymes)",
+   "id": "5FmGwHxRD8A",
+   "start": 71.8,
    "cuts": [
-    38.6,
-    89,
-    158
+    105.2,
+    141,
+    183.5
    ],
    "qs": [
     [
      [
-      "\"What's with the...\"?",
-      "Melodrama",
-      "Commotion",
-      "Attitude"
+      "\"Look at my ___, yo, it's about that time\"?",
+      "Piguet",
+      "Rolex",
+      "Cartier"
      ],
      [
-      "They wanna hover in his cypher like a...?",
-      "Helicopter",
-      "Hummingbird",
-      "Spaceship"
+      "\"Light sparkle off my jewelry, it's about that...\"?",
+      "Shine",
+      "Glow",
+      "Flash"
      ],
      [
-      "\"Like it's a special...\"?",
-      "Honor",
-      "Moment",
-      "Occasion"
+      "\"Money bust out every pocket, it's about that...\"?",
+      "Grind",
+      "Hustle",
+      "Paper"
      ],
      [
-      "\"Stealth bomber, gem dropper, make the ghetto...\"?",
-      "Holler",
-      "Party",
-      "Bounce"
+      "Which razor brand does he name?",
+      "Gillette",
+      "Schick",
+      "Bic"
      ],
      [
-      "\"Inter-...\"?",
-      "Continental",
-      "National",
-      "Galactic"
+      "\"Shootin' star like a...\"?",
+      "Comet",
+      "Rocket",
+      "Meteor"
      ],
      [
-      "\"Taking you high like sky...\"?",
-      "Divers",
-      "Rockets",
-      "Scrapers"
+      "\"Swag gave birth to millions like Master Fard...\"?",
+      "Muhammad",
+      "Ali",
+      "Malik"
      ],
      [
-      "\"When we spark with live...\"?",
-      "Wires",
-      "Shows",
-      "Crowds"
+      "\"Lookin' relaxed like I don't wanna be...\"?",
+      "Bothered",
+      "Bugged",
+      "Stopped"
      ],
      [
-      "\"Original cavemen quest for my...\"?",
+      "\"As I journey through a jungle of ___ so unscathed\"?",
+      "Lions",
+      "Tigers",
+      "Snakes"
+     ]
+    ],
+    [
+     [
+      "\"And hustle like a ___ with strength\"?",
+      "Genius",
+      "Champion",
+      "Madman"
+     ],
+     [
+      "\"Unconditional a love as a daughter's love for her...\"?",
+      "Father",
+      "Mother",
+      "Family"
+     ],
+     [
+      "\"Flying through the clouds on the planes that I...\"?",
+      "Charter",
+      "Own",
+      "Rent"
+     ],
+     [
+      "\"Documentin' moments in time, becomin' a...\"?",
+      "Martyr",
+      "Legend",
+      "Leader"
+     ],
+     [
+      "\"The corporation's expandin' a little...\"?",
+      "Larger",
+      "Further",
+      "Faster"
+     ],
+     [
+      "\"For the sole purpose, my people can all...\"?",
+      "Eat",
+      "Win",
+      "Rise"
+     ],
+     [
+      "Desperate folks are occupying up which street?",
+      "Wall Street",
+      "Main Street",
+      "Broadway"
+     ],
+     [
+      "\"But I'm torn while in the studio, givin' you all...\"?",
+      "Heat",
       "Fire",
-      "Food",
-      "Throne"
+      "Bars"
+     ],
+     [
+      "\"Their ignorance is ___, busy sayin' they born street\"?",
+      "Bliss",
+      "Blind",
+      "Loud"
      ]
     ],
     [
      [
-      "\"We gonna make y'all feel this, break your...\"?",
-      "Spirit",
-      "Silence",
-      "Habit"
+      "\"I ration up success sniffin' a rose...\"?",
+      "Petal",
+      "Garden",
+      "Bush"
      ],
      [
-      "\"Bringing it in from the new...\"?",
-      "Millennium",
-      "Century",
-      "Decade"
+      "\"Listen to these words with the power to fuel...\"?",
+      "Rockets",
+      "Engines",
+      "Fires"
      ],
      [
-      "He calls these cats Reynolds because they...?",
-      "Plastic wrap",
-      "Paper thin",
-      "Tinfoil"
+      "\"It's getting to the point where they beggin' the kid to...\"?",
+      "Stop it",
+      "Drop it",
+      "Quit"
      ],
      [
-      "\"You cats ain't real, you just a...\"?",
-      "Re-enactment",
-      "Rerun",
-      "Remix"
+      "\"It's hard to honor such requests when you're bathin' in...\"?",
+      "Profit",
+      "Money",
+      "Gold"
      ],
      [
-      "\"Better yet,...\"?",
-      "Dramatization",
-      "Imitation",
-      "Exaggeration"
+      "What do they call him when his words come to pass?",
+      "Prophet",
+      "Poet",
+      "Preacher"
      ],
      [
-      "\"Soon as the director say ___ you start faking\"?",
-      "Action",
-      "Cut",
-      "Roll"
+      "\"So precious like a moment of watchin' a baby...\"?",
+      "Sleepin'",
+      "Smile",
+      "Walk"
      ],
      [
-      "\"The whole joint start...\"?",
-      "Shaking",
-      "Rocking",
-      "Jumping"
+      "\"From journeys that I travel and ___ I be completin'\"?",
+      "Missions",
+      "Tasks",
+      "Levels"
      ],
      [
-      "\"This ain't the time or place for you to prove...\"?",
-      "Something",
-      "Yourself",
-      "Nothing"
-     ],
-     [
-      "\"Cut the stargazing, yo...\"?",
-      "Move somethin'",
-      "Wake up",
-      "Get loose"
-     ]
-    ],
-    [
-     [
-      "\"To be continued, let's see what's next up on the...\"?",
-      "Menu",
-      "Agenda",
-      "Schedule"
-     ],
-     [
-      "\"Pick any mental: instru-, funda-,...\"?",
-      "Detri-",
-      "Experi-",
-      "Monu-"
-     ],
-     [
-      "\"Extra extra large like the borough of...\"?",
-      "Brooklyn",
-      "Queens",
-      "The Bronx"
-     ],
-     [
-      "\"Like Sly Stone with my poem and fly...\"?",
-      "Song",
-      "Style",
-      "Sound"
-     ],
-     [
-      "\"We gonna rock till nothing else...\"?",
-      "Matters",
-      "Remains",
-      "Happens"
-     ],
-     [
-      "\"Cotton mouth and we peppermint...\"?",
-      "Altoids",
-      "Patties",
-      "Tic Tacs"
-     ],
-     [
-      "\"Stepping in, repping the spot called...\"?",
-      "Flatbush",
-      "Bed-Stuy",
-      "Crown Heights"
-     ],
-     [
-      "\"The abstract then becomes the...\"?",
-      "Reality",
-      "Picture",
-      "Story"
+      "\"Put the mic down and leave it with ___ for safe keepin'\"?",
+      "Mama",
+      "Grandma",
+      "Auntie"
      ]
     ]
    ]
@@ -1096,168 +1097,169 @@ window.CFG = {
    ]
   },
   {
-   "title": "Move Somethin' (Reflection Eternal)",
-   "id": "gahYzHv_nek",
+   "title": "Master Fard Muhammad (Busta Rhymes)",
+   "id": "5FmGwHxRD8A",
+   "start": 71.8,
    "cuts": [
-    38.6,
-    89,
-    158
+    105.2,
+    141,
+    183.5
    ],
    "qs": [
     [
      [
-      "\"What's with the...\"?",
-      "Melodrama",
-      "Commotion",
-      "Attitude"
+      "\"Look at my ___, yo, it's about that time\"?",
+      "Piguet",
+      "Rolex",
+      "Cartier"
      ],
      [
-      "They wanna hover in his cypher like a...?",
-      "Helicopter",
-      "Hummingbird",
-      "Spaceship"
+      "\"Light sparkle off my jewelry, it's about that...\"?",
+      "Shine",
+      "Glow",
+      "Flash"
      ],
      [
-      "\"Like it's a special...\"?",
-      "Honor",
-      "Moment",
-      "Occasion"
+      "\"Money bust out every pocket, it's about that...\"?",
+      "Grind",
+      "Hustle",
+      "Paper"
      ],
      [
-      "\"Stealth bomber, gem dropper, make the ghetto...\"?",
-      "Holler",
-      "Party",
-      "Bounce"
+      "Which razor brand does he name?",
+      "Gillette",
+      "Schick",
+      "Bic"
      ],
      [
-      "\"Inter-...\"?",
-      "Continental",
-      "National",
-      "Galactic"
+      "\"Shootin' star like a...\"?",
+      "Comet",
+      "Rocket",
+      "Meteor"
      ],
      [
-      "\"Taking you high like sky...\"?",
-      "Divers",
-      "Rockets",
-      "Scrapers"
+      "\"Swag gave birth to millions like Master Fard...\"?",
+      "Muhammad",
+      "Ali",
+      "Malik"
      ],
      [
-      "\"When we spark with live...\"?",
-      "Wires",
-      "Shows",
-      "Crowds"
+      "\"Lookin' relaxed like I don't wanna be...\"?",
+      "Bothered",
+      "Bugged",
+      "Stopped"
      ],
      [
-      "\"Original cavemen quest for my...\"?",
+      "\"As I journey through a jungle of ___ so unscathed\"?",
+      "Lions",
+      "Tigers",
+      "Snakes"
+     ]
+    ],
+    [
+     [
+      "\"And hustle like a ___ with strength\"?",
+      "Genius",
+      "Champion",
+      "Madman"
+     ],
+     [
+      "\"Unconditional a love as a daughter's love for her...\"?",
+      "Father",
+      "Mother",
+      "Family"
+     ],
+     [
+      "\"Flying through the clouds on the planes that I...\"?",
+      "Charter",
+      "Own",
+      "Rent"
+     ],
+     [
+      "\"Documentin' moments in time, becomin' a...\"?",
+      "Martyr",
+      "Legend",
+      "Leader"
+     ],
+     [
+      "\"The corporation's expandin' a little...\"?",
+      "Larger",
+      "Further",
+      "Faster"
+     ],
+     [
+      "\"For the sole purpose, my people can all...\"?",
+      "Eat",
+      "Win",
+      "Rise"
+     ],
+     [
+      "Desperate folks are occupying up which street?",
+      "Wall Street",
+      "Main Street",
+      "Broadway"
+     ],
+     [
+      "\"But I'm torn while in the studio, givin' you all...\"?",
+      "Heat",
       "Fire",
-      "Food",
-      "Throne"
+      "Bars"
+     ],
+     [
+      "\"Their ignorance is ___, busy sayin' they born street\"?",
+      "Bliss",
+      "Blind",
+      "Loud"
      ]
     ],
     [
      [
-      "\"We gonna make y'all feel this, break your...\"?",
-      "Spirit",
-      "Silence",
-      "Habit"
+      "\"I ration up success sniffin' a rose...\"?",
+      "Petal",
+      "Garden",
+      "Bush"
      ],
      [
-      "\"Bringing it in from the new...\"?",
-      "Millennium",
-      "Century",
-      "Decade"
+      "\"Listen to these words with the power to fuel...\"?",
+      "Rockets",
+      "Engines",
+      "Fires"
      ],
      [
-      "He calls these cats Reynolds because they...?",
-      "Plastic wrap",
-      "Paper thin",
-      "Tinfoil"
+      "\"It's getting to the point where they beggin' the kid to...\"?",
+      "Stop it",
+      "Drop it",
+      "Quit"
      ],
      [
-      "\"You cats ain't real, you just a...\"?",
-      "Re-enactment",
-      "Rerun",
-      "Remix"
+      "\"It's hard to honor such requests when you're bathin' in...\"?",
+      "Profit",
+      "Money",
+      "Gold"
      ],
      [
-      "\"Better yet,...\"?",
-      "Dramatization",
-      "Imitation",
-      "Exaggeration"
+      "What do they call him when his words come to pass?",
+      "Prophet",
+      "Poet",
+      "Preacher"
      ],
      [
-      "\"Soon as the director say ___ you start faking\"?",
-      "Action",
-      "Cut",
-      "Roll"
+      "\"So precious like a moment of watchin' a baby...\"?",
+      "Sleepin'",
+      "Smile",
+      "Walk"
      ],
      [
-      "\"The whole joint start...\"?",
-      "Shaking",
-      "Rocking",
-      "Jumping"
+      "\"From journeys that I travel and ___ I be completin'\"?",
+      "Missions",
+      "Tasks",
+      "Levels"
      ],
      [
-      "\"This ain't the time or place for you to prove...\"?",
-      "Something",
-      "Yourself",
-      "Nothing"
-     ],
-     [
-      "\"Cut the stargazing, yo...\"?",
-      "Move somethin'",
-      "Wake up",
-      "Get loose"
-     ]
-    ],
-    [
-     [
-      "\"To be continued, let's see what's next up on the...\"?",
-      "Menu",
-      "Agenda",
-      "Schedule"
-     ],
-     [
-      "\"Pick any mental: instru-, funda-,...\"?",
-      "Detri-",
-      "Experi-",
-      "Monu-"
-     ],
-     [
-      "\"Extra extra large like the borough of...\"?",
-      "Brooklyn",
-      "Queens",
-      "The Bronx"
-     ],
-     [
-      "\"Like Sly Stone with my poem and fly...\"?",
-      "Song",
-      "Style",
-      "Sound"
-     ],
-     [
-      "\"We gonna rock till nothing else...\"?",
-      "Matters",
-      "Remains",
-      "Happens"
-     ],
-     [
-      "\"Cotton mouth and we peppermint...\"?",
-      "Altoids",
-      "Patties",
-      "Tic Tacs"
-     ],
-     [
-      "\"Stepping in, repping the spot called...\"?",
-      "Flatbush",
-      "Bed-Stuy",
-      "Crown Heights"
-     ],
-     [
-      "\"The abstract then becomes the...\"?",
-      "Reality",
-      "Picture",
-      "Story"
+      "\"Put the mic down and leave it with ___ for safe keepin'\"?",
+      "Mama",
+      "Grandma",
+      "Auntie"
      ]
     ]
    ]
