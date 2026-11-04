@@ -104,40 +104,1341 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "explicitSongs": [
   {
-   "title": "Heaven & Hell",
-   "id": "fF4frZmtJ1U",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Purple Brick Road",
+   "id": "SApBqm4ae_I",
+   "start": 31.2,
+   "cuts": [
+    72.5,
+    124.3,
+    141.1
+   ],
+   "qs": [
+    [
+     [
+      "What color cloth is on him?",
+      "Purple",
+      "Gold",
+      "Black"
+     ],
+     [
+      "His DNA is worth a what?",
+      "Fortune",
+      "Million",
+      "Mint"
+     ],
+     [
+      "He gave y'all style and taught you how to be what?",
+      "Fly",
+      "Fresh",
+      "Real"
+     ],
+     [
+      "He gave you what to soar?",
+      "Wings",
+      "Rings",
+      "Room"
+     ],
+     [
+      "Forever may not exist in the flesh, but his what will?",
+      "Music",
+      "Name",
+      "Money"
+     ],
+     [
+      "All praises due to the most what?",
+      "High",
+      "Holy",
+      "Great"
+     ],
+     [
+      "Pretty women fall in love with his expensive what?",
+      "Taste",
+      "Cars",
+      "Watches"
+     ],
+     [
+      "He doesn't trust them as far as he can what?",
+      "Throw",
+      "See",
+      "Walk"
+     ]
+    ],
+    [
+     [
+      "Let's pop another bottle of what?",
+      "Dom",
+      "Moet",
+      "Cristal"
+     ],
+     [
+      "...and watch our what grow?",
+      "Gross",
+      "Crew",
+      "Stack"
+     ],
+     [
+      "Clarity: stones in his bracelets, watches and what?",
+      "Rings",
+      "Chains",
+      "Earrings"
+     ],
+     [
+      "Should he stop because a jealous what wants him to?",
+      "Coward",
+      "Rapper",
+      "Hater"
+     ],
+     [
+      "Or go harder and buy more what?",
+      "Diamonds",
+      "Cars",
+      "Chains"
+     ],
+     [
+      "...and blind his what?",
+      "Crew",
+      "Eyes",
+      "Fans"
+     ],
+     [
+      "He loves to make 'em what color?",
+      "Blue",
+      "Green",
+      "Red"
+     ],
+     [
+      "Do what he wants, no more strugglin' just to get what?",
+      "By",
+      "Paid",
+      "Out"
+     ],
+     [
+      "New money got his what wishin' she was never in his past?",
+      "Ex",
+      "Mom",
+      "Boss"
+     ]
+    ],
+    [
+     [
+      "He laughs and enjoys these what?",
+      "Fruits",
+      "Gifts",
+      "Checks"
+     ],
+     [
+      "The strain and pain come from his what?",
+      "Labor",
+      "Family",
+      "Past"
+     ],
+     [
+      "He still feels the strain and what?",
+      "Pain",
+      "Rain",
+      "Stress"
+     ],
+     [
+      "He spent his what to achieve the fortune and fame?",
+      "Time",
+      "Life",
+      "Money"
+     ],
+     [
+      "He spent his time to achieve fortune and what?",
+      "Fame",
+      "Gold",
+      "Power"
+     ],
+     [
+      "...and for himself, makin' a what?",
+      "Name",
+      "Living",
+      "Home"
+     ],
+     [
+      "Deep inside he tries to cover up the what?",
+      "Scars",
+      "Tears",
+      "Bruises"
+     ],
+     [
+      "...to be a shinin' what?",
+      "Star",
+      "Light",
+      "King"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "All About You",
+   "id": "8H2VYxTbzho",
+   "start": 40.8,
+   "cuts": [
+    82,
+    137.4,
+    158.8
+   ],
+   "qs": [
+    [
+     [
+      "He's been a king from the what?",
+      "Rip",
+      "Start",
+      "Crib"
+     ],
+     [
+      "His own millionaire what?",
+      "Style",
+      "Smile",
+      "Mile"
+     ],
+     [
+      "Stay fresh in the freshest what?",
+      "Places",
+      "Faces",
+      "Spaces"
+     ],
+     [
+      "Fly around in Bugattis and what?",
+      "Yachts",
+      "Jets",
+      "Planes"
+     ],
+     [
+      "Holding knots, what relations?",
+      "C.R.E.A.M.",
+      "Family",
+      "Business"
+     ],
+     [
+      "It's like hitting the what?",
+      "Lotto",
+      "Jackpot",
+      "Number"
+     ],
+     [
+      "More money, more problems — you gotta be what?",
+      "Kidding",
+      "Tripping",
+      "Winning"
+     ],
+     [
+      "When he's in the streets, we eating more what?",
+      "Ruffles",
+      "Doritos",
+      "Pringles"
+     ],
+     [
+      "Then we can play the suits in which city?",
+      "Vegas",
+      "Atlantic City",
+      "Miami"
+     ]
+    ],
+    [
+     [
+      "We real, realer than real, word to who?",
+      "Mamas",
+      "Papas",
+      "Bosses"
+     ],
+     [
+      "Kingpin chef in the town, keep it what?",
+      "100",
+      "Real",
+      "Tight"
+     ],
+     [
+      "Ice on his neck and his what?",
+      "Arms",
+      "Wrists",
+      "Ears"
+     ],
+     [
+      "Pockets carry more than a what?",
+      "Stack",
+      "Knot",
+      "Grand"
+     ],
+     [
+      "Rich black African dons getting what?",
+      "Cheddar",
+      "Paper",
+      "Bread"
+     ],
+     [
+      "Shorty knows what?",
+      "Better",
+      "Nothing",
+      "Everything"
+     ],
+     [
+      "Showing off the what?",
+      "Vault",
+      "Watch",
+      "Whip"
+     ],
+     [
+      "Or you can stay here and be what with him?",
+      "Rich",
+      "Fly",
+      "Free"
+     ]
+    ],
+    [
+     [
+      "He's just crazy, fly, slick what?",
+      "Intelligence",
+      "Elegance",
+      "Excellence"
+     ],
+     [
+      "Play high on the strips and flip what?",
+      "Pelicans",
+      "Pancakes",
+      "Penguins"
+     ],
+     [
+      "His whole clique is here — how many elephants?",
+      "10",
+      "5",
+      "12"
+     ],
+     [
+      "Who stays fresher than us? That's what?",
+      "Irrelevant",
+      "Elegant",
+      "Intelligent"
+     ],
+     [
+      "True, nothing but a what?",
+      "G-thing",
+      "Wu-thing",
+      "King thing"
+     ],
+     [
+      "They be coming through, peep what?",
+      "Game",
+      "Fame",
+      "Gang"
+     ],
+     [
+      "Boo, I know it's over baby, keep what?",
+      "Playing",
+      "Praying",
+      "Staying"
+     ],
+     [
+      "Oops, he's out of what?",
+      "Energy",
+      "Money",
+      "Time"
+     ]
+    ]
+   ]
   },
   {
    "title": "1 Life",
-   "id": "nCxwcajBLkk",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "This Is What It Comes Too",
-   "id": "GG62vuHd0dE",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Ice Cream",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "iAtbPNo7wAM",
+   "start": 57.5,
+   "cuts": [
+    99.3,
+    177.1,
+    199.1
+   ],
+   "qs": [
+    [
+     [
+      "Here's a thought from the what crew?",
+      "Old-school",
+      "New-school",
+      "Wu-Tang"
+     ],
+     [
+      "For those playing in what cars?",
+      "Maybachs",
+      "Bentleys",
+      "Ferraris"
+     ],
+     [
+      "Life is what?",
+      "Wild",
+      "Short",
+      "Hard"
+     ],
+     [
+      "Now they're in the skies looking what?",
+      "Down",
+      "Up",
+      "Back"
+     ],
+     [
+      "This culture made him a what?",
+      "Man",
+      "King",
+      "Star"
+     ],
+     [
+      "He hung with what?",
+      "Vultures",
+      "Hustlers",
+      "Legends"
+     ],
+     [
+      "Some wasn't real — he heard the what?",
+      "Feedback",
+      "Rumors",
+      "News"
+     ],
+     [
+      "Don't let this money overlook the time we was what?",
+      "Broke",
+      "Young",
+      "Poor"
+     ]
+    ],
+    [
+     [
+      "Keep the what listening?",
+      "Kids",
+      "Fans",
+      "Streets"
+     ],
+     [
+      "Stand on what?",
+      "Business",
+      "Principle",
+      "Money"
+     ],
+     [
+      "Catch the verse from the what?",
+      "GOAT",
+      "Chef",
+      "King"
+     ],
+     [
+      "The industry is what now?",
+      "Fouler",
+      "Bigger",
+      "Colder"
+     ],
+     [
+      "Filled with the greed, controlling what?",
+      "Narratives",
+      "Networks",
+      "Radios"
+     ],
+     [
+      "Sending wrong thoughts to the what?",
+      "Seeds",
+      "Streets",
+      "Teens"
+     ],
+     [
+      "Save our what?",
+      "Babies",
+      "Children",
+      "Culture"
+     ],
+     [
+      "The devil's in the back by the what?",
+      "Screens",
+      "Scenes",
+      "Doors"
+     ]
+    ],
+    [
+     [
+      "Keep striving and what?",
+      "Think",
+      "Pray",
+      "Grind"
+     ],
+     [
+      "Highlights await you; those who hate you will what?",
+      "Blink",
+      "Sink",
+      "Wink"
+     ],
+     [
+      "Keep your thoughts what?",
+      "Rising",
+      "Shining",
+      "Flying"
+     ],
+     [
+      "Open your eyes, know the what?",
+      "Lies",
+      "Signs",
+      "Ties"
+     ],
+     [
+      "Salute the what of the past?",
+      "Pioneers",
+      "Legends",
+      "Soldiers"
+     ],
+     [
+      "...that paved the what?",
+      "Way",
+      "Road",
+      "Streets"
+     ],
+     [
+      "Their legacy is fading and starting to what?",
+      "Decay",
+      "Crumble",
+      "Vanish"
+     ],
+     [
+      "He sees the culture being exploited for what?",
+      "Profit",
+      "Fame",
+      "Views"
+     ]
+    ]
+   ]
   },
   {
    "title": "Incarcerated Scarfaces",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "_xj5AcHcl9E",
+   "start": 47.7,
+   "cuts": [
+    88.1,
+    178.1,
+    229.1
+   ],
+   "qs": [
+    [
+     [
+      "Yo, what up, yo? Time is what?",
+      "Runnin' out",
+      "Movin' on",
+      "Standin' still"
+     ],
+     [
+      "Let's connect, politic, what?",
+      "Ditto",
+      "Pronto",
+      "Quickly"
+     ],
+     [
+      "We could trade what?",
+      "Places",
+      "Spaces",
+      "Faces"
+     ],
+     [
+      "Word up, peace, incarcerated what?",
+      "Scarfaces",
+      "Shooters",
+      "Soldiers"
+     ],
+     [
+      "Thug-related style attracts millions of what?",
+      "Fans",
+      "Kids",
+      "Dollars"
+     ],
+     [
+      "Who's the kid up in the green what?",
+      "Land",
+      "Benz",
+      "Jeep"
+     ],
+     [
+      "Rae's a heavy what?",
+      "Generator",
+      "Hitter",
+      "Machine"
+     ],
+     [
+      "Guess who's the black what?",
+      "Trump",
+      "Gotti",
+      "Sinatra"
+     ],
+     [
+      "Dough be flowing by the what?",
+      "Hours",
+      "Minutes",
+      "Days"
+     ]
+    ],
+    [
+     [
+      "Chef'll shine like what?",
+      "Marble",
+      "Gold",
+      "Diamonds"
+     ],
+     [
+      "This time is for the what?",
+      "Uninvited",
+      "Undecided",
+      "United"
+     ],
+     [
+      "What drink is tasting like throw-up?",
+      "Moet",
+      "Cristal",
+      "Hennessy"
+     ],
+     [
+      "Do you wanna battle for what?",
+      "Cash",
+      "Fame",
+      "Respect"
+     ],
+     [
+      "It's just slang rap what?",
+      "Democracy",
+      "Policy",
+      "Philosophy"
+     ],
+     [
+      "Slide off the ring, plus the what?",
+      "Wallabees",
+      "Timbs",
+      "Jordans"
+     ],
+     [
+      "Soon you'll see him at Caesar's Palace eating what?",
+      "Salads",
+      "Steak",
+      "Lobster"
+     ],
+     [
+      "That means the island of what?",
+      "Staten",
+      "Manhattan",
+      "Long"
+     ]
+    ],
+    [
+     [
+      "He does this for barbershop crowds in the what?",
+      "Plaza",
+      "Mall",
+      "Square"
+     ],
+     [
+      "Catching what?",
+      "Asthma",
+      "Colds",
+      "Feelings"
+     ],
+     [
+      "Well-dressed, skating through the what?",
+      "Projects",
+      "Lobby",
+      "Park"
+     ],
+     [
+      "Broke what?",
+      "Elevators",
+      "Windows",
+      "Escalators"
+     ],
+     [
+      "Switch like a what?",
+      "Chameleon",
+      "Lizard",
+      "Snake"
+     ],
+     [
+      "They be folding like what?",
+      "Envelopes",
+      "Paper",
+      "Laundry"
+     ],
+     [
+      "Rubber band wrap all his what?",
+      "Knots",
+      "Stacks",
+      "Bills"
+     ],
+     [
+      "Like a 27-inch what?",
+      "Zenith",
+      "Sony",
+      "Magnavox"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Purple Brick Road",
+   "id": "SApBqm4ae_I",
+   "start": 31.2,
+   "cuts": [
+    72.5,
+    124.3,
+    141.1
+   ],
+   "qs": [
+    [
+     [
+      "What color cloth is on him?",
+      "Purple",
+      "Gold",
+      "Black"
+     ],
+     [
+      "His DNA is worth a what?",
+      "Fortune",
+      "Million",
+      "Mint"
+     ],
+     [
+      "He gave y'all style and taught you how to be what?",
+      "Fly",
+      "Fresh",
+      "Real"
+     ],
+     [
+      "He gave you what to soar?",
+      "Wings",
+      "Rings",
+      "Room"
+     ],
+     [
+      "Forever may not exist in the flesh, but his what will?",
+      "Music",
+      "Name",
+      "Money"
+     ],
+     [
+      "All praises due to the most what?",
+      "High",
+      "Holy",
+      "Great"
+     ],
+     [
+      "Pretty women fall in love with his expensive what?",
+      "Taste",
+      "Cars",
+      "Watches"
+     ],
+     [
+      "He doesn't trust them as far as he can what?",
+      "Throw",
+      "See",
+      "Walk"
+     ]
+    ],
+    [
+     [
+      "Let's pop another bottle of what?",
+      "Dom",
+      "Moet",
+      "Cristal"
+     ],
+     [
+      "...and watch our what grow?",
+      "Gross",
+      "Crew",
+      "Stack"
+     ],
+     [
+      "Clarity: stones in his bracelets, watches and what?",
+      "Rings",
+      "Chains",
+      "Earrings"
+     ],
+     [
+      "Should he stop because a jealous what wants him to?",
+      "Coward",
+      "Rapper",
+      "Hater"
+     ],
+     [
+      "Or go harder and buy more what?",
+      "Diamonds",
+      "Cars",
+      "Chains"
+     ],
+     [
+      "...and blind his what?",
+      "Crew",
+      "Eyes",
+      "Fans"
+     ],
+     [
+      "He loves to make 'em what color?",
+      "Blue",
+      "Green",
+      "Red"
+     ],
+     [
+      "Do what he wants, no more strugglin' just to get what?",
+      "By",
+      "Paid",
+      "Out"
+     ],
+     [
+      "New money got his what wishin' she was never in his past?",
+      "Ex",
+      "Mom",
+      "Boss"
+     ]
+    ],
+    [
+     [
+      "He laughs and enjoys these what?",
+      "Fruits",
+      "Gifts",
+      "Checks"
+     ],
+     [
+      "The strain and pain come from his what?",
+      "Labor",
+      "Family",
+      "Past"
+     ],
+     [
+      "He still feels the strain and what?",
+      "Pain",
+      "Rain",
+      "Stress"
+     ],
+     [
+      "He spent his what to achieve the fortune and fame?",
+      "Time",
+      "Life",
+      "Money"
+     ],
+     [
+      "He spent his time to achieve fortune and what?",
+      "Fame",
+      "Gold",
+      "Power"
+     ],
+     [
+      "...and for himself, makin' a what?",
+      "Name",
+      "Living",
+      "Home"
+     ],
+     [
+      "Deep inside he tries to cover up the what?",
+      "Scars",
+      "Tears",
+      "Bruises"
+     ],
+     [
+      "...to be a shinin' what?",
+      "Star",
+      "Light",
+      "King"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "All About You",
+   "id": "8H2VYxTbzho",
+   "start": 40.8,
+   "cuts": [
+    82,
+    137.4,
+    158.8
+   ],
+   "qs": [
+    [
+     [
+      "He's been a king from the what?",
+      "Rip",
+      "Start",
+      "Crib"
+     ],
+     [
+      "His own millionaire what?",
+      "Style",
+      "Smile",
+      "Mile"
+     ],
+     [
+      "Stay fresh in the freshest what?",
+      "Places",
+      "Faces",
+      "Spaces"
+     ],
+     [
+      "Fly around in Bugattis and what?",
+      "Yachts",
+      "Jets",
+      "Planes"
+     ],
+     [
+      "Holding knots, what relations?",
+      "C.R.E.A.M.",
+      "Family",
+      "Business"
+     ],
+     [
+      "It's like hitting the what?",
+      "Lotto",
+      "Jackpot",
+      "Number"
+     ],
+     [
+      "More money, more problems — you gotta be what?",
+      "Kidding",
+      "Tripping",
+      "Winning"
+     ],
+     [
+      "When he's in the streets, we eating more what?",
+      "Ruffles",
+      "Doritos",
+      "Pringles"
+     ],
+     [
+      "Then we can play the suits in which city?",
+      "Vegas",
+      "Atlantic City",
+      "Miami"
+     ]
+    ],
+    [
+     [
+      "We real, realer than real, word to who?",
+      "Mamas",
+      "Papas",
+      "Bosses"
+     ],
+     [
+      "Kingpin chef in the town, keep it what?",
+      "100",
+      "Real",
+      "Tight"
+     ],
+     [
+      "Ice on his neck and his what?",
+      "Arms",
+      "Wrists",
+      "Ears"
+     ],
+     [
+      "Pockets carry more than a what?",
+      "Stack",
+      "Knot",
+      "Grand"
+     ],
+     [
+      "Rich black African dons getting what?",
+      "Cheddar",
+      "Paper",
+      "Bread"
+     ],
+     [
+      "Shorty knows what?",
+      "Better",
+      "Nothing",
+      "Everything"
+     ],
+     [
+      "Showing off the what?",
+      "Vault",
+      "Watch",
+      "Whip"
+     ],
+     [
+      "Or you can stay here and be what with him?",
+      "Rich",
+      "Fly",
+      "Free"
+     ]
+    ],
+    [
+     [
+      "He's just crazy, fly, slick what?",
+      "Intelligence",
+      "Elegance",
+      "Excellence"
+     ],
+     [
+      "Play high on the strips and flip what?",
+      "Pelicans",
+      "Pancakes",
+      "Penguins"
+     ],
+     [
+      "His whole clique is here — how many elephants?",
+      "10",
+      "5",
+      "12"
+     ],
+     [
+      "Who stays fresher than us? That's what?",
+      "Irrelevant",
+      "Elegant",
+      "Intelligent"
+     ],
+     [
+      "True, nothing but a what?",
+      "G-thing",
+      "Wu-thing",
+      "King thing"
+     ],
+     [
+      "They be coming through, peep what?",
+      "Game",
+      "Fame",
+      "Gang"
+     ],
+     [
+      "Boo, I know it's over baby, keep what?",
+      "Playing",
+      "Praying",
+      "Staying"
+     ],
+     [
+      "Oops, he's out of what?",
+      "Energy",
+      "Money",
+      "Time"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "1 Life",
+   "id": "iAtbPNo7wAM",
+   "start": 57.5,
+   "cuts": [
+    99.3,
+    177.1,
+    199.1
+   ],
+   "qs": [
+    [
+     [
+      "Here's a thought from the what crew?",
+      "Old-school",
+      "New-school",
+      "Wu-Tang"
+     ],
+     [
+      "For those playing in what cars?",
+      "Maybachs",
+      "Bentleys",
+      "Ferraris"
+     ],
+     [
+      "Life is what?",
+      "Wild",
+      "Short",
+      "Hard"
+     ],
+     [
+      "Now they're in the skies looking what?",
+      "Down",
+      "Up",
+      "Back"
+     ],
+     [
+      "This culture made him a what?",
+      "Man",
+      "King",
+      "Star"
+     ],
+     [
+      "He hung with what?",
+      "Vultures",
+      "Hustlers",
+      "Legends"
+     ],
+     [
+      "Some wasn't real — he heard the what?",
+      "Feedback",
+      "Rumors",
+      "News"
+     ],
+     [
+      "Don't let this money overlook the time we was what?",
+      "Broke",
+      "Young",
+      "Poor"
+     ]
+    ],
+    [
+     [
+      "Keep the what listening?",
+      "Kids",
+      "Fans",
+      "Streets"
+     ],
+     [
+      "Stand on what?",
+      "Business",
+      "Principle",
+      "Money"
+     ],
+     [
+      "Catch the verse from the what?",
+      "GOAT",
+      "Chef",
+      "King"
+     ],
+     [
+      "The industry is what now?",
+      "Fouler",
+      "Bigger",
+      "Colder"
+     ],
+     [
+      "Filled with the greed, controlling what?",
+      "Narratives",
+      "Networks",
+      "Radios"
+     ],
+     [
+      "Sending wrong thoughts to the what?",
+      "Seeds",
+      "Streets",
+      "Teens"
+     ],
+     [
+      "Save our what?",
+      "Babies",
+      "Children",
+      "Culture"
+     ],
+     [
+      "The devil's in the back by the what?",
+      "Screens",
+      "Scenes",
+      "Doors"
+     ]
+    ],
+    [
+     [
+      "Keep striving and what?",
+      "Think",
+      "Pray",
+      "Grind"
+     ],
+     [
+      "Highlights await you; those who hate you will what?",
+      "Blink",
+      "Sink",
+      "Wink"
+     ],
+     [
+      "Keep your thoughts what?",
+      "Rising",
+      "Shining",
+      "Flying"
+     ],
+     [
+      "Open your eyes, know the what?",
+      "Lies",
+      "Signs",
+      "Ties"
+     ],
+     [
+      "Salute the what of the past?",
+      "Pioneers",
+      "Legends",
+      "Soldiers"
+     ],
+     [
+      "...that paved the what?",
+      "Way",
+      "Road",
+      "Streets"
+     ],
+     [
+      "Their legacy is fading and starting to what?",
+      "Decay",
+      "Crumble",
+      "Vanish"
+     ],
+     [
+      "He sees the culture being exploited for what?",
+      "Profit",
+      "Fame",
+      "Views"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Incarcerated Scarfaces",
+   "id": "_xj5AcHcl9E",
+   "start": 47.7,
+   "cuts": [
+    88.1,
+    178.1,
+    229.1
+   ],
+   "qs": [
+    [
+     [
+      "Yo, what up, yo? Time is what?",
+      "Runnin' out",
+      "Movin' on",
+      "Standin' still"
+     ],
+     [
+      "Let's connect, politic, what?",
+      "Ditto",
+      "Pronto",
+      "Quickly"
+     ],
+     [
+      "We could trade what?",
+      "Places",
+      "Spaces",
+      "Faces"
+     ],
+     [
+      "Word up, peace, incarcerated what?",
+      "Scarfaces",
+      "Shooters",
+      "Soldiers"
+     ],
+     [
+      "Thug-related style attracts millions of what?",
+      "Fans",
+      "Kids",
+      "Dollars"
+     ],
+     [
+      "Who's the kid up in the green what?",
+      "Land",
+      "Benz",
+      "Jeep"
+     ],
+     [
+      "Rae's a heavy what?",
+      "Generator",
+      "Hitter",
+      "Machine"
+     ],
+     [
+      "Guess who's the black what?",
+      "Trump",
+      "Gotti",
+      "Sinatra"
+     ],
+     [
+      "Dough be flowing by the what?",
+      "Hours",
+      "Minutes",
+      "Days"
+     ]
+    ],
+    [
+     [
+      "Chef'll shine like what?",
+      "Marble",
+      "Gold",
+      "Diamonds"
+     ],
+     [
+      "This time is for the what?",
+      "Uninvited",
+      "Undecided",
+      "United"
+     ],
+     [
+      "What drink is tasting like throw-up?",
+      "Moet",
+      "Cristal",
+      "Hennessy"
+     ],
+     [
+      "Do you wanna battle for what?",
+      "Cash",
+      "Fame",
+      "Respect"
+     ],
+     [
+      "It's just slang rap what?",
+      "Democracy",
+      "Policy",
+      "Philosophy"
+     ],
+     [
+      "Slide off the ring, plus the what?",
+      "Wallabees",
+      "Timbs",
+      "Jordans"
+     ],
+     [
+      "Soon you'll see him at Caesar's Palace eating what?",
+      "Salads",
+      "Steak",
+      "Lobster"
+     ],
+     [
+      "That means the island of what?",
+      "Staten",
+      "Manhattan",
+      "Long"
+     ]
+    ],
+    [
+     [
+      "He does this for barbershop crowds in the what?",
+      "Plaza",
+      "Mall",
+      "Square"
+     ],
+     [
+      "Catching what?",
+      "Asthma",
+      "Colds",
+      "Feelings"
+     ],
+     [
+      "Well-dressed, skating through the what?",
+      "Projects",
+      "Lobby",
+      "Park"
+     ],
+     [
+      "Broke what?",
+      "Elevators",
+      "Windows",
+      "Escalators"
+     ],
+     [
+      "Switch like a what?",
+      "Chameleon",
+      "Lizard",
+      "Snake"
+     ],
+     [
+      "They be folding like what?",
+      "Envelopes",
+      "Paper",
+      "Laundry"
+     ],
+     [
+      "Rubber band wrap all his what?",
+      "Knots",
+      "Stacks",
+      "Bills"
+     ],
+     [
+      "Like a 27-inch what?",
+      "Zenith",
+      "Sony",
+      "Magnavox"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

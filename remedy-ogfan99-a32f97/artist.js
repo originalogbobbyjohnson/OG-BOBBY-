@@ -93,39 +93,1303 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "explicitSongs": [
   {
-   "title": "Death Defying",
-   "id": "TVnS9IVcAnQ",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Sparrow",
+   "id": "GaRxp6T8MBY",
+   "start": 0.95,
+   "cuts": [
+    42.2,
+    76.6,
+    149.3
+   ],
+   "qs": [
+    [
+     [
+      "His mind travels the four corners of the what?",
+      "Universe",
+      "World",
+      "City"
+     ],
+     [
+      "The sun shines bright and gives birth like a what?",
+      "Sparrow",
+      "Eagle",
+      "Robin"
+     ],
+     [
+      "Shaolin, you know the what?",
+      "Worth",
+      "Truth",
+      "Way"
+     ],
+     [
+      "His what hurts?",
+      "Back",
+      "Head",
+      "Knee"
+     ],
+     [
+      "He's got to go to what?",
+      "Work",
+      "Church",
+      "Court"
+     ],
+     [
+      "It feels like the whole world is what?",
+      "Cursed",
+      "Lost",
+      "Crazy"
+     ],
+     [
+      "So never get what?",
+      "Addicted",
+      "Distracted",
+      "Restricted"
+     ],
+     [
+      "Never get caught, and you never get what?",
+      "Convicted",
+      "Arrested",
+      "Indicted"
+     ],
+     [
+      "You gotta know your what?",
+      "Limitation",
+      "Situation",
+      "Destination"
+     ],
+     [
+      "Everything in what?",
+      "Moderation",
+      "Meditation",
+      "Motion"
+     ],
+     [
+      "Manifest your own what?",
+      "Creation",
+      "Destiny",
+      "Nation"
+     ]
+    ],
+    [
+     [
+      "Life is what you what?",
+      "Make it",
+      "Take it",
+      "Fake it"
+     ],
+     [
+      "There's a glitch up in the what?",
+      "Matrix",
+      "System",
+      "Program"
+     ],
+     [
+      "Hit the switch, get back to what?",
+      "Basics",
+      "Business",
+      "Classics"
+     ],
+     [
+      "Live long and what?",
+      "Prosper",
+      "Proper",
+      "Party"
+     ],
+     [
+      "Sing your own what?",
+      "Song",
+      "Tune",
+      "Story"
+     ],
+     [
+      "Forget the Grammy and the what?",
+      "Oscar",
+      "Emmy",
+      "Tony"
+     ],
+     [
+      "He knows some gangsters and some what?",
+      "Monsters",
+      "Hustlers",
+      "Ballers"
+     ],
+     [
+      "So mind your own what?",
+      "Business",
+      "Manners",
+      "Mouth"
+     ],
+     [
+      "Don't find yourself the victim and the what?",
+      "Witness",
+      "Suspect",
+      "Villain"
+     ],
+     [
+      "Have you begging for what?",
+      "Forgiveness",
+      "Mercy",
+      "Money"
+     ],
+     [
+      "Remedy is the way of what?",
+      "Life",
+      "Truth",
+      "Peace"
+     ]
+    ],
+    [
+     [
+      "Pardon the what?",
+      "Intrusion",
+      "Interruption",
+      "Delay"
+     ],
+     [
+      "He can move a what?",
+      "Mountain",
+      "Building",
+      "River"
+     ],
+     [
+      "What's all the what?",
+      "Confusion",
+      "Commotion",
+      "Fuss"
+     ],
+     [
+      "Shaolin and the Killer Bees raised him to be what?",
+      "Fearless",
+      "Peerless",
+      "Careless"
+     ],
+     [
+      "He hopes the whole what hears this?",
+      "World",
+      "City",
+      "Block"
+     ],
+     [
+      "Much success to his what?",
+      "Brothers",
+      "Sisters",
+      "Fans"
+     ],
+     [
+      "Love goes to the what?",
+      "Family",
+      "Hood",
+      "Crew"
+     ],
+     [
+      "Life is like a recycle what?",
+      "Bin",
+      "Bag",
+      "Truck"
+     ],
+     [
+      "Which year is wack?",
+      "2020",
+      "2019",
+      "2021"
+     ],
+     [
+      "Bring back the what?",
+      "80s",
+      "90s",
+      "70s"
+     ],
+     [
+      "Aging like a sparrow, circling in the what?",
+      "Narrows",
+      "Shadows",
+      "Arrows"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Greatness: The Killa Bee Legacy",
-   "id": "cik6-il-dOU",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Calculated Risk",
+   "id": "9KoYhrQZNkk",
+   "cuts": [
+    34.4,
+    86.9,
+    148.6
+   ],
+   "qs": [
+    [
+     [
+      "His life's a calculated what?",
+      "Risk",
+      "Move",
+      "Bet"
+     ],
+     [
+      "With ways to get what?",
+      "Rich",
+      "Paid",
+      "Out"
+     ],
+     [
+      "His right hand always got the what?",
+      "Itch",
+      "Gold",
+      "Grip"
+     ],
+     [
+      "Things ain't been the same ever what?",
+      "Since",
+      "After",
+      "Before"
+     ],
+     [
+      "He wouldn't have it any other what?",
+      "Way",
+      "Time",
+      "Place"
+     ],
+     [
+      "Family and friends are what?",
+      "Healthy",
+      "Happy",
+      "Gone"
+     ],
+     [
+      "The difference between being rich and being what?",
+      "Wealthy",
+      "Famous",
+      "Free"
+     ],
+     [
+      "Yeah, this is not an what?",
+      "Act",
+      "Accident",
+      "Ad"
+     ],
+     [
+      "You can have your own opinions but not your own what?",
+      "Facts",
+      "Truth",
+      "Rules"
+     ],
+     [
+      "Power to the what?",
+      "People",
+      "Streets",
+      "Fighters"
+     ],
+     [
+      "We are all created what?",
+      "Equal",
+      "Different",
+      "Free"
+     ]
+    ],
+    [
+     [
+      "Left-right, black-white, now there's no more what?",
+      "Symmetry",
+      "Harmony",
+      "Unity"
+     ],
+     [
+      "The words are full of racism and what?",
+      "Bigotry",
+      "Hatred",
+      "Jealousy"
+     ],
+     [
+      "Can't it be? It was all so what?",
+      "Simple",
+      "Easy",
+      "Sweet"
+     ],
+     [
+      "Ever sit back and wonder, gazing into the what?",
+      "Sky",
+      "Sea",
+      "Stars"
+     ],
+     [
+      "The question you want to ask God?",
+      "Why",
+      "How",
+      "When"
+     ],
+     [
+      "Who does he say God bless to?",
+      "Bobby Rich",
+      "Bobby Digital",
+      "Billy Rich"
+     ],
+     [
+      "He gets a funny feeling gazing out the glass what?",
+      "Ceiling",
+      "Window",
+      "Door"
+     ],
+     [
+      "Tomorrow's not what?",
+      "Promised",
+      "Given",
+      "Coming"
+     ],
+     [
+      "He needs to chill on what?",
+      "Vacation",
+      "The beach",
+      "The couch"
+     ],
+     [
+      "Bills and what?",
+      "Obligations",
+      "Frustrations",
+      "Taxes"
+     ],
+     [
+      "Now he gives back to say what?",
+      "Thanks",
+      "Sorry",
+      "Hello"
+     ]
+    ],
+    [
+     [
+      "There's hope for what?",
+      "Tomorrow",
+      "Today",
+      "The future"
+     ],
+     [
+      "Tears of joy drowned out the what?",
+      "Sorrow",
+      "Pain",
+      "Tears"
+     ],
+     [
+      "Sometimes life's what?",
+      "Illogical",
+      "Logical",
+      "Magical"
+     ],
+     [
+      "You got to dodge those what?",
+      "Obstacles",
+      "Bullets",
+      "Problems"
+     ],
+     [
+      "You got to do the what?",
+      "Impossible",
+      "Improbable",
+      "Incredible"
+     ],
+     [
+      "He lives his life in the what?",
+      "Loopholes",
+      "Shadows",
+      "Fast lane"
+     ],
+     [
+      "So it goes, the ball what?",
+      "Bounces",
+      "Rolls",
+      "Drops"
+     ],
+     [
+      "'Cause we all make what?",
+      "Mistakes",
+      "Money",
+      "Moves"
+     ],
+     [
+      "Life could change in an what?",
+      "Instance",
+      "Hour",
+      "Minute"
+     ],
+     [
+      "You gotta treasure your what?",
+      "Existence",
+      "Family",
+      "Riches"
+     ],
+     [
+      "Have a nice what?",
+      "Day",
+      "Night",
+      "Life"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Never Again",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Exodus",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "New single",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "To Say the Least",
+   "id": "VhIv_G64FZw",
+   "start": 6.8,
+   "cuts": [
+    46.9,
+    105.4,
+    163.1
+   ],
+   "qs": [
+    [
+     [
+      "Take a look outside your what?",
+      "Window",
+      "Door",
+      "Phone"
+     ],
+     [
+      "The protests, the what?",
+      "Movement",
+      "Marches",
+      "Crowds"
+     ],
+     [
+      "The action, the what?",
+      "Silence",
+      "Noise",
+      "Reaction"
+     ],
+     [
+      "He can't believe what we're what?",
+      "Seeing",
+      "Hearing",
+      "Doing"
+     ],
+     [
+      "Are we not all human what?",
+      "Beings",
+      "Brothers",
+      "Rights"
+     ],
+     [
+      "With morals and what?",
+      "Ethics",
+      "Values",
+      "Manners"
+     ],
+     [
+      "...and the ability to what?",
+      "Reason",
+      "Speak",
+      "Vote"
+     ],
+     [
+      "Politicians, media what?",
+      "Scheming",
+      "Screaming",
+      "Lying"
+     ],
+     [
+      "Wake me up, I must be what?",
+      "Dreaming",
+      "Sleeping",
+      "Crazy"
+     ],
+     [
+      "The time is of the what?",
+      "Hour",
+      "Essence",
+      "Moment"
+     ],
+     [
+      "The rebuilding of the what?",
+      "Towers",
+      "Bridges",
+      "Cities"
+     ]
+    ],
+    [
+     [
+      "You can smell the what?",
+      "Flowers",
+      "Roses",
+      "Rain"
+     ],
+     [
+      "America is what?",
+      "Ours",
+      "Free",
+      "Home"
+     ],
+     [
+      "Freedom is a must, equality and what?",
+      "Trust",
+      "Love",
+      "Peace"
+     ],
+     [
+      "No excuse, we need what?",
+      "Justice",
+      "Freedom",
+      "Change"
+     ],
+     [
+      "Marching in the what?",
+      "Streets",
+      "Halls",
+      "Rain"
+     ],
+     [
+      "Barking at the what?",
+      "Beast",
+      "Moon",
+      "Feast"
+     ],
+     [
+      "No justice, no what?",
+      "Peace",
+      "Rest",
+      "Change"
+     ],
+     [
+      "Black lives matter, to say the what?",
+      "Least",
+      "Most",
+      "Last"
+     ],
+     [
+      "Power to the people, that's the what?",
+      "Basis",
+      "Answer",
+      "Message"
+     ],
+     [
+      "We gotta help and what each other?",
+      "Teach",
+      "Love",
+      "Reach"
+     ],
+     [
+      "We all bleed the same what?",
+      "Color",
+      "Way",
+      "Tears"
+     ]
+    ],
+    [
+     [
+      "This is not a foreign what?",
+      "Argument",
+      "Problem",
+      "Country"
+     ],
+     [
+      "Tear the roof off what?",
+      "Parliament",
+      "The White House",
+      "Congress"
+     ],
+     [
+      "Reform and what?",
+      "Abolish",
+      "Rebuild",
+      "Restore"
+     ],
+     [
+      "...to ensure the people's what?",
+      "Promise",
+      "Freedom",
+      "Future"
+     ],
+     [
+      "Everyone deserves a what?",
+      "Chance",
+      "Home",
+      "Voice"
+     ],
+     [
+      "Wu-Tang is for the what?",
+      "Children",
+      "People",
+      "Streets"
+     ],
+     [
+      "Protect ya neck and keep what?",
+      "Building",
+      "Pushing",
+      "Moving"
+     ],
+     [
+      "Respect and know your what?",
+      "Privilege",
+      "Place",
+      "History"
+     ],
+     [
+      "Fight the power, take your what?",
+      "Mark",
+      "Stand",
+      "Place"
+     ],
+     [
+      "Love conquers what?",
+      "Hate",
+      "All",
+      "Fear"
+     ],
+     [
+      "This verse is like a what?",
+      "Ladder",
+      "Letter",
+      "Prayer"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Sparrow",
+   "id": "GaRxp6T8MBY",
+   "start": 0.95,
+   "cuts": [
+    42.2,
+    76.6,
+    149.3
+   ],
+   "qs": [
+    [
+     [
+      "His mind travels the four corners of the what?",
+      "Universe",
+      "World",
+      "City"
+     ],
+     [
+      "The sun shines bright and gives birth like a what?",
+      "Sparrow",
+      "Eagle",
+      "Robin"
+     ],
+     [
+      "Shaolin, you know the what?",
+      "Worth",
+      "Truth",
+      "Way"
+     ],
+     [
+      "His what hurts?",
+      "Back",
+      "Head",
+      "Knee"
+     ],
+     [
+      "He's got to go to what?",
+      "Work",
+      "Church",
+      "Court"
+     ],
+     [
+      "It feels like the whole world is what?",
+      "Cursed",
+      "Lost",
+      "Crazy"
+     ],
+     [
+      "So never get what?",
+      "Addicted",
+      "Distracted",
+      "Restricted"
+     ],
+     [
+      "Never get caught, and you never get what?",
+      "Convicted",
+      "Arrested",
+      "Indicted"
+     ],
+     [
+      "You gotta know your what?",
+      "Limitation",
+      "Situation",
+      "Destination"
+     ],
+     [
+      "Everything in what?",
+      "Moderation",
+      "Meditation",
+      "Motion"
+     ],
+     [
+      "Manifest your own what?",
+      "Creation",
+      "Destiny",
+      "Nation"
+     ]
+    ],
+    [
+     [
+      "Life is what you what?",
+      "Make it",
+      "Take it",
+      "Fake it"
+     ],
+     [
+      "There's a glitch up in the what?",
+      "Matrix",
+      "System",
+      "Program"
+     ],
+     [
+      "Hit the switch, get back to what?",
+      "Basics",
+      "Business",
+      "Classics"
+     ],
+     [
+      "Live long and what?",
+      "Prosper",
+      "Proper",
+      "Party"
+     ],
+     [
+      "Sing your own what?",
+      "Song",
+      "Tune",
+      "Story"
+     ],
+     [
+      "Forget the Grammy and the what?",
+      "Oscar",
+      "Emmy",
+      "Tony"
+     ],
+     [
+      "He knows some gangsters and some what?",
+      "Monsters",
+      "Hustlers",
+      "Ballers"
+     ],
+     [
+      "So mind your own what?",
+      "Business",
+      "Manners",
+      "Mouth"
+     ],
+     [
+      "Don't find yourself the victim and the what?",
+      "Witness",
+      "Suspect",
+      "Villain"
+     ],
+     [
+      "Have you begging for what?",
+      "Forgiveness",
+      "Mercy",
+      "Money"
+     ],
+     [
+      "Remedy is the way of what?",
+      "Life",
+      "Truth",
+      "Peace"
+     ]
+    ],
+    [
+     [
+      "Pardon the what?",
+      "Intrusion",
+      "Interruption",
+      "Delay"
+     ],
+     [
+      "He can move a what?",
+      "Mountain",
+      "Building",
+      "River"
+     ],
+     [
+      "What's all the what?",
+      "Confusion",
+      "Commotion",
+      "Fuss"
+     ],
+     [
+      "Shaolin and the Killer Bees raised him to be what?",
+      "Fearless",
+      "Peerless",
+      "Careless"
+     ],
+     [
+      "He hopes the whole what hears this?",
+      "World",
+      "City",
+      "Block"
+     ],
+     [
+      "Much success to his what?",
+      "Brothers",
+      "Sisters",
+      "Fans"
+     ],
+     [
+      "Love goes to the what?",
+      "Family",
+      "Hood",
+      "Crew"
+     ],
+     [
+      "Life is like a recycle what?",
+      "Bin",
+      "Bag",
+      "Truck"
+     ],
+     [
+      "Which year is wack?",
+      "2020",
+      "2019",
+      "2021"
+     ],
+     [
+      "Bring back the what?",
+      "80s",
+      "90s",
+      "70s"
+     ],
+     [
+      "Aging like a sparrow, circling in the what?",
+      "Narrows",
+      "Shadows",
+      "Arrows"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Calculated Risk",
+   "id": "9KoYhrQZNkk",
+   "cuts": [
+    34.4,
+    86.9,
+    148.6
+   ],
+   "qs": [
+    [
+     [
+      "His life's a calculated what?",
+      "Risk",
+      "Move",
+      "Bet"
+     ],
+     [
+      "With ways to get what?",
+      "Rich",
+      "Paid",
+      "Out"
+     ],
+     [
+      "His right hand always got the what?",
+      "Itch",
+      "Gold",
+      "Grip"
+     ],
+     [
+      "Things ain't been the same ever what?",
+      "Since",
+      "After",
+      "Before"
+     ],
+     [
+      "He wouldn't have it any other what?",
+      "Way",
+      "Time",
+      "Place"
+     ],
+     [
+      "Family and friends are what?",
+      "Healthy",
+      "Happy",
+      "Gone"
+     ],
+     [
+      "The difference between being rich and being what?",
+      "Wealthy",
+      "Famous",
+      "Free"
+     ],
+     [
+      "Yeah, this is not an what?",
+      "Act",
+      "Accident",
+      "Ad"
+     ],
+     [
+      "You can have your own opinions but not your own what?",
+      "Facts",
+      "Truth",
+      "Rules"
+     ],
+     [
+      "Power to the what?",
+      "People",
+      "Streets",
+      "Fighters"
+     ],
+     [
+      "We are all created what?",
+      "Equal",
+      "Different",
+      "Free"
+     ]
+    ],
+    [
+     [
+      "Left-right, black-white, now there's no more what?",
+      "Symmetry",
+      "Harmony",
+      "Unity"
+     ],
+     [
+      "The words are full of racism and what?",
+      "Bigotry",
+      "Hatred",
+      "Jealousy"
+     ],
+     [
+      "Can't it be? It was all so what?",
+      "Simple",
+      "Easy",
+      "Sweet"
+     ],
+     [
+      "Ever sit back and wonder, gazing into the what?",
+      "Sky",
+      "Sea",
+      "Stars"
+     ],
+     [
+      "The question you want to ask God?",
+      "Why",
+      "How",
+      "When"
+     ],
+     [
+      "Who does he say God bless to?",
+      "Bobby Rich",
+      "Bobby Digital",
+      "Billy Rich"
+     ],
+     [
+      "He gets a funny feeling gazing out the glass what?",
+      "Ceiling",
+      "Window",
+      "Door"
+     ],
+     [
+      "Tomorrow's not what?",
+      "Promised",
+      "Given",
+      "Coming"
+     ],
+     [
+      "He needs to chill on what?",
+      "Vacation",
+      "The beach",
+      "The couch"
+     ],
+     [
+      "Bills and what?",
+      "Obligations",
+      "Frustrations",
+      "Taxes"
+     ],
+     [
+      "Now he gives back to say what?",
+      "Thanks",
+      "Sorry",
+      "Hello"
+     ]
+    ],
+    [
+     [
+      "There's hope for what?",
+      "Tomorrow",
+      "Today",
+      "The future"
+     ],
+     [
+      "Tears of joy drowned out the what?",
+      "Sorrow",
+      "Pain",
+      "Tears"
+     ],
+     [
+      "Sometimes life's what?",
+      "Illogical",
+      "Logical",
+      "Magical"
+     ],
+     [
+      "You got to dodge those what?",
+      "Obstacles",
+      "Bullets",
+      "Problems"
+     ],
+     [
+      "You got to do the what?",
+      "Impossible",
+      "Improbable",
+      "Incredible"
+     ],
+     [
+      "He lives his life in the what?",
+      "Loopholes",
+      "Shadows",
+      "Fast lane"
+     ],
+     [
+      "So it goes, the ball what?",
+      "Bounces",
+      "Rolls",
+      "Drops"
+     ],
+     [
+      "'Cause we all make what?",
+      "Mistakes",
+      "Money",
+      "Moves"
+     ],
+     [
+      "Life could change in an what?",
+      "Instance",
+      "Hour",
+      "Minute"
+     ],
+     [
+      "You gotta treasure your what?",
+      "Existence",
+      "Family",
+      "Riches"
+     ],
+     [
+      "Have a nice what?",
+      "Day",
+      "Night",
+      "Life"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "To Say the Least",
+   "id": "VhIv_G64FZw",
+   "start": 6.8,
+   "cuts": [
+    46.9,
+    105.4,
+    163.1
+   ],
+   "qs": [
+    [
+     [
+      "Take a look outside your what?",
+      "Window",
+      "Door",
+      "Phone"
+     ],
+     [
+      "The protests, the what?",
+      "Movement",
+      "Marches",
+      "Crowds"
+     ],
+     [
+      "The action, the what?",
+      "Silence",
+      "Noise",
+      "Reaction"
+     ],
+     [
+      "He can't believe what we're what?",
+      "Seeing",
+      "Hearing",
+      "Doing"
+     ],
+     [
+      "Are we not all human what?",
+      "Beings",
+      "Brothers",
+      "Rights"
+     ],
+     [
+      "With morals and what?",
+      "Ethics",
+      "Values",
+      "Manners"
+     ],
+     [
+      "...and the ability to what?",
+      "Reason",
+      "Speak",
+      "Vote"
+     ],
+     [
+      "Politicians, media what?",
+      "Scheming",
+      "Screaming",
+      "Lying"
+     ],
+     [
+      "Wake me up, I must be what?",
+      "Dreaming",
+      "Sleeping",
+      "Crazy"
+     ],
+     [
+      "The time is of the what?",
+      "Hour",
+      "Essence",
+      "Moment"
+     ],
+     [
+      "The rebuilding of the what?",
+      "Towers",
+      "Bridges",
+      "Cities"
+     ]
+    ],
+    [
+     [
+      "You can smell the what?",
+      "Flowers",
+      "Roses",
+      "Rain"
+     ],
+     [
+      "America is what?",
+      "Ours",
+      "Free",
+      "Home"
+     ],
+     [
+      "Freedom is a must, equality and what?",
+      "Trust",
+      "Love",
+      "Peace"
+     ],
+     [
+      "No excuse, we need what?",
+      "Justice",
+      "Freedom",
+      "Change"
+     ],
+     [
+      "Marching in the what?",
+      "Streets",
+      "Halls",
+      "Rain"
+     ],
+     [
+      "Barking at the what?",
+      "Beast",
+      "Moon",
+      "Feast"
+     ],
+     [
+      "No justice, no what?",
+      "Peace",
+      "Rest",
+      "Change"
+     ],
+     [
+      "Black lives matter, to say the what?",
+      "Least",
+      "Most",
+      "Last"
+     ],
+     [
+      "Power to the people, that's the what?",
+      "Basis",
+      "Answer",
+      "Message"
+     ],
+     [
+      "We gotta help and what each other?",
+      "Teach",
+      "Love",
+      "Reach"
+     ],
+     [
+      "We all bleed the same what?",
+      "Color",
+      "Way",
+      "Tears"
+     ]
+    ],
+    [
+     [
+      "This is not a foreign what?",
+      "Argument",
+      "Problem",
+      "Country"
+     ],
+     [
+      "Tear the roof off what?",
+      "Parliament",
+      "The White House",
+      "Congress"
+     ],
+     [
+      "Reform and what?",
+      "Abolish",
+      "Rebuild",
+      "Restore"
+     ],
+     [
+      "...to ensure the people's what?",
+      "Promise",
+      "Freedom",
+      "Future"
+     ],
+     [
+      "Everyone deserves a what?",
+      "Chance",
+      "Home",
+      "Voice"
+     ],
+     [
+      "Wu-Tang is for the what?",
+      "Children",
+      "People",
+      "Streets"
+     ],
+     [
+      "Protect ya neck and keep what?",
+      "Building",
+      "Pushing",
+      "Moving"
+     ],
+     [
+      "Respect and know your what?",
+      "Privilege",
+      "Place",
+      "History"
+     ],
+     [
+      "Fight the power, take your what?",
+      "Mark",
+      "Stand",
+      "Place"
+     ],
+     [
+      "Love conquers what?",
+      "Hate",
+      "All",
+      "Fear"
+     ],
+     [
+      "This verse is like a what?",
+      "Ladder",
+      "Letter",
+      "Prayer"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
