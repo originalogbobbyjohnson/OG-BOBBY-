@@ -99,39 +99,1369 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "It's Me Snitches",
-   "id": "NcMeVP--usM",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Money in the Bank",
-   "id": "A3fjGvRX5cg",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Take a Picture",
+   "id": "iJx1VxCwVZU",
+   "cuts": [
+    41.5,
+    80.6,
+    129.9
+   ],
+   "qs": [
+    [
+     [
+      "What should you say?",
+      "Cheese",
+      "Smile",
+      "Pose"
+     ],
+     [
+      "What does he need y'all to get out?",
+      "Cameras",
+      "Phones",
+      "Money"
+     ],
+     [
+      "A good picture of what young what look like?",
+      "Money",
+      "Fame",
+      "Love"
+     ],
+     [
+      "Young hustlers or a young what?",
+      "Entrepreneur",
+      "Superstar",
+      "Baller"
+     ],
+     [
+      "Get your what right?",
+      "Flash",
+      "Angle",
+      "Light"
+     ],
+     [
+      "He's gonna what so you can picture him?",
+      "Pose",
+      "Dance",
+      "Smile"
+     ],
+     [
+      "Picture me doing my what?",
+      "Thing",
+      "Dance",
+      "Job"
+     ]
+    ],
+    [
+     [
+      "Who cooked him breakfast?",
+      "My chef",
+      "My mom",
+      "My girl"
+     ],
+     [
+      "After brushing his teeth he puts on his what?",
+      "Necklace",
+      "Watch",
+      "Shoes"
+     ],
+     [
+      "He didn't think about what car to what?",
+      "Ride",
+      "Buy",
+      "Wash"
+     ],
+     [
+      "When he sees you haters in the street, he don't what?",
+      "Speak",
+      "Stop",
+      "Look"
+     ],
+     [
+      "It's like a what sometimes?",
+      "Jungle",
+      "Maze",
+      "Movie"
+     ],
+     [
+      "He still gets his numbers and still stays what?",
+      "Humble",
+      "Hungry",
+      "Focused"
+     ],
+     [
+      "How much could he raise in a day right now?",
+      "Five mill",
+      "One mill",
+      "Ten mill"
+     ]
+    ],
+    [
+     [
+      "He's thinking of his what plan?",
+      "Master",
+      "Business",
+      "Back-up"
+     ],
+     [
+      "He ain't talkin' 'bout a measly how much?",
+      "100 grand",
+      "50 grand",
+      "10 grand"
+     ],
+     [
+      "He's flyin' in his what?",
+      "G5",
+      "G4",
+      "Learjet"
+     ],
+     [
+      "Put my feet up in the what?",
+      "Sand",
+      "Air",
+      "Pool"
+     ],
+     [
+      "What kind of moment is it?",
+      "Kodak",
+      "Golden",
+      "Magic"
+     ],
+     [
+      "He's gotta stop and show love to all his what?",
+      "Fans",
+      "Friends",
+      "Fam"
+     ]
+    ]
+   ]
   },
   {
    "title": "Top Down",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "iaaNyXT6zbQ",
+   "cuts": [
+    39.4,
+    87.4,
+    155.9
+   ],
+   "qs": [
+    [
+     [
+      "Wherever you are, what?",
+      "Shine",
+      "Dance",
+      "Rise"
+     ],
+     [
+      "Ridin' with his top down and his what on?",
+      "Jewelry",
+      "Shades",
+      "Music"
+     ],
+     [
+      "He's just gettin' his what on?",
+      "Hood",
+      "Game",
+      "Swag"
+     ],
+     [
+      "I'm just doin' my what?",
+      "Thing",
+      "Job",
+      "Best"
+     ],
+     [
+      "Money like a what?",
+      "Mountain",
+      "River",
+      "Tower"
+     ],
+     [
+      "Tell me why you what?",
+      "Poutin'",
+      "Hatin'",
+      "Leavin'"
+     ],
+     [
+      "What name gets shouted at the start?",
+      "Swizzy",
+      "Swizz Beatz",
+      "Kasseem"
+     ]
+    ],
+    [
+     [
+      "Who's on him besides his goons?",
+      "Security",
+      "Cameras",
+      "Fans"
+     ],
+     [
+      "What does he shake off him?",
+      "Haters",
+      "Dust",
+      "Rain"
+     ],
+     [
+      "Y'all know my what?",
+      "Name",
+      "Song",
+      "Face"
+     ],
+     [
+      "What kind of paint is on his car?",
+      "Candy",
+      "Chrome",
+      "Matte"
+     ],
+     [
+      "What does the candy paint spell?",
+      "My name",
+      "My city",
+      "My crew"
+     ],
+     [
+      "If you got a problem, who should come and get him?",
+      "Sucka",
+      "Homie",
+      "Shorty"
+     ],
+     [
+      "Ridin' with my top what?",
+      "Down",
+      "Up",
+      "Off"
+     ]
+    ],
+    [
+     [
+      "You know the what is bumpin'?",
+      "Block",
+      "Club",
+      "Party"
+     ],
+     [
+      "They playin' his song and people is what?",
+      "Jumpin'",
+      "Dancin'",
+      "Singin'"
+     ],
+     [
+      "What kind of party do we got?",
+      "Block party",
+      "House party",
+      "Pool party"
+     ],
+     [
+      "Sittin' on the stoop, on the what?",
+      "Milk crate",
+      "Lawn chair",
+      "Bucket"
+     ],
+     [
+      "This chick wanna ride in his what?",
+      "Viper",
+      "Ferrari",
+      "Bentley"
+     ],
+     [
+      "His car is number 2 out of only how many in the world?",
+      "20",
+      "10",
+      "50"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Bigger Business",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Big Munny",
+   "id": "KRWLGzxlXfI",
+   "cuts": [
+    34.6,
+    87,
+    141.1
+   ],
+   "qs": [
+    [
+     [
+      "Who's comin'?",
+      "Big Munny",
+      "Big Daddy",
+      "Big Mike"
+     ],
+     [
+      "He's been tearin' this what, man?",
+      "Joint",
+      "Town",
+      "Club"
+     ],
+     [
+      "He walks through the clubs and the what?",
+      "Neighbourhoods",
+      "Malls",
+      "Studios"
+     ],
+     [
+      "They all be on the same what?",
+      "Page",
+      "Team",
+      "Block"
+     ],
+     [
+      "They see the watch and what?",
+      "Chain",
+      "Ring",
+      "Car"
+     ],
+     [
+      "The money ain't a what?",
+      "Thang",
+      "Problem",
+      "Joke"
+     ],
+     [
+      "When he walks in the club, everybody yells his what?",
+      "Name",
+      "Song",
+      "Number"
+     ]
+    ],
+    [
+     [
+      "He's around the block with the whole black what?",
+      "Drop",
+      "Truck",
+      "Crew"
+     ],
+     [
+      "He got the cream on what?",
+      "Cream",
+      "Ice",
+      "Gold"
+     ],
+     [
+      "Cruisin' in that what?",
+      "Lambo",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "He's lookin' like who?",
+      "Rambo",
+      "Rocky",
+      "Tyson"
+     ],
+     [
+      "What's Rambo wearing?",
+      "Tank top",
+      "Leather jacket",
+      "Hoodie"
+     ],
+     [
+      "What's he got on with the tank top?",
+      "Bandana",
+      "Fitted cap",
+      "Durag"
+     ],
+     [
+      "What do they see on him with the chain?",
+      "The watch",
+      "The ring",
+      "The grill"
+     ]
+    ],
+    [
+     [
+      "Everybody want a little what?",
+      "Drama",
+      "Money",
+      "Fame"
+     ],
+     [
+      "Movie stars asking to be his what?",
+      "Baby momma",
+      "Girlfriend",
+      "Wife"
+     ],
+     [
+      "He's an entrepreneur slash what?",
+      "Monster",
+      "Mogul",
+      "Artist"
+     ],
+     [
+      "Which pop star does he mention?",
+      "Madonna",
+      "Britney",
+      "Beyonce"
+     ],
+     [
+      "His bank account says zero, zero, zero, what?",
+      "Comma",
+      "Dollar",
+      "Million"
+     ],
+     [
+      "They be thinkin' 'bout his money when he's walkin' and what?",
+      "Talkin'",
+      "Sleepin'",
+      "Ridin'"
+     ]
+    ]
+   ]
   },
   {
-   "title": "New single",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "It's Me Snitches",
+   "id": "NcMeVP--usM",
+   "cuts": [
+    41.3,
+    78,
+    124.8
+   ],
+   "qs": [
+    [
+     [
+      "What time is it?",
+      "Show time",
+      "Party time",
+      "Money time"
+     ],
+     [
+      "He's chillin' in his what?",
+      "Beamer",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "What's he listenin' to?",
+      "Ether",
+      "Illmatic",
+      "Reasonable Doubt"
+     ],
+     [
+      "What music does he like?",
+      "Hip hop",
+      "R&B",
+      "Rock"
+     ],
+     [
+      "What does he yell before 'you know who it is'?",
+      "Freeze",
+      "Stop",
+      "Look"
+     ],
+     [
+      "Come into the club what like you should?",
+      "Stuntin'",
+      "Dancin'",
+      "Rollin'"
+     ],
+     [
+      "He's coming through your block with the deuce what?",
+      "Two seater",
+      "Four door",
+      "Drop top"
+     ]
+    ],
+    [
+     [
+      "Ring the what?",
+      "Alarm",
+      "Bell",
+      "Phone"
+     ],
+     [
+      "Call him the what?",
+      "Sand man",
+      "Candy man",
+      "Mail man"
+     ],
+     [
+      "When he drops beats he's the one what?",
+      "Man band",
+      "Hit wonder",
+      "Man show"
+     ],
+     [
+      "Cash rules everything around me, what?",
+      "Cream",
+      "Green",
+      "Dream"
+     ],
+     [
+      "See him in that four what?",
+      "Door",
+      "Seater",
+      "Wheeler"
+     ],
+     [
+      "What sports car?",
+      "Bentley",
+      "Ferrari",
+      "Porsche"
+     ],
+     [
+      "His rims are so what?",
+      "Lethal",
+      "Shiny",
+      "Big"
+     ]
+    ],
+    [
+     [
+      "Bumpin' through your what?",
+      "Speakers",
+      "Window",
+      "Radio"
+     ],
+     [
+      "Rockin' don't what?",
+      "Stop",
+      "Quit",
+      "Drop"
+     ],
+     [
+      "He's bangin' them what?",
+      "Beats",
+      "Drums",
+      "Doors"
+     ],
+     [
+      "Stuntin' like you what?",
+      "Should",
+      "Could",
+      "Would"
+     ],
+     [
+      "Which Wu-Tang line does he quote?",
+      "Cash rules everything",
+      "Protect ya neck",
+      "Bring da ruckus"
+     ],
+     [
+      "What's the deuce two seater coming through?",
+      "Your block",
+      "The club",
+      "The tunnel"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Money in the Bank",
+   "id": "tK2bvZL9XF0",
+   "start": 10.3,
+   "cuts": [
+    49.4,
+    107.8,
+    148.3
+   ],
+   "qs": [
+    [
+     [
+      "She ain't got no money in the what?",
+      "Bank",
+      "Purse",
+      "Jar"
+     ],
+     [
+      "She be walking 'round actin' all what?",
+      "Stank",
+      "Fake",
+      "Brand new"
+     ],
+     [
+      "Where is she looking at him?",
+      "At the party",
+      "At the club",
+      "At the mall"
+     ],
+     [
+      "He ain't tryna what that girl?",
+      "Save",
+      "Call",
+      "Date"
+     ],
+     [
+      "She got the what open like he pays her?",
+      "Hand",
+      "Door",
+      "Purse"
+     ],
+     [
+      "What do y'all wanna be? Ballers and shot what?",
+      "Callers",
+      "Blockers",
+      "Takers"
+     ],
+     [
+      "She wanna ride in his what?",
+      "Jag",
+      "Benz",
+      "Range"
+     ]
+    ],
+    [
+     [
+      "She wanna ride to whose house?",
+      "His house",
+      "Her house",
+      "Her mom's house"
+     ],
+     [
+      "He said easy chick, I what to my house?",
+      "Fly",
+      "Drive",
+      "Walk"
+     ],
+     [
+      "He lives so far, think he looks where?",
+      "Down south",
+      "Uptown",
+      "Out west"
+     ],
+     [
+      "He sees she's got the good what on?",
+      "Shoes",
+      "Perfume",
+      "Jacket"
+     ],
+     [
+      "She got the best what?",
+      "Song",
+      "Dress",
+      "Hair"
+     ],
+     [
+      "Better get your what?",
+      "Own",
+      "Money",
+      "Job"
+     ]
+    ],
+    [
+     [
+      "It started like what?",
+      "Soft and warm",
+      "Hot and cold",
+      "Fast and loud"
+     ],
+     [
+      "He's invited to the new quiet what?",
+      "Storm",
+      "Party",
+      "Show"
+     ],
+     [
+      "All she want is love and what?",
+      "Affection",
+      "Money",
+      "Attention"
+     ],
+     [
+      "Let me be your what?",
+      "Angel",
+      "Hero",
+      "Man"
+     ],
+     [
+      "He'll be her what?",
+      "Protection",
+      "Provider",
+      "Partner"
+     ],
+     [
+      "Why's she got no money in the bank? Cause she what?",
+      "Broke",
+      "Lazy",
+      "Cheap"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Take a Picture",
+   "id": "iJx1VxCwVZU",
+   "cuts": [
+    41.5,
+    80.6,
+    129.9
+   ],
+   "qs": [
+    [
+     [
+      "What should you say?",
+      "Cheese",
+      "Smile",
+      "Pose"
+     ],
+     [
+      "What does he need y'all to get out?",
+      "Cameras",
+      "Phones",
+      "Money"
+     ],
+     [
+      "A good picture of what young what look like?",
+      "Money",
+      "Fame",
+      "Love"
+     ],
+     [
+      "Young hustlers or a young what?",
+      "Entrepreneur",
+      "Superstar",
+      "Baller"
+     ],
+     [
+      "Get your what right?",
+      "Flash",
+      "Angle",
+      "Light"
+     ],
+     [
+      "He's gonna what so you can picture him?",
+      "Pose",
+      "Dance",
+      "Smile"
+     ],
+     [
+      "Picture me doing my what?",
+      "Thing",
+      "Dance",
+      "Job"
+     ]
+    ],
+    [
+     [
+      "Who cooked him breakfast?",
+      "My chef",
+      "My mom",
+      "My girl"
+     ],
+     [
+      "After brushing his teeth he puts on his what?",
+      "Necklace",
+      "Watch",
+      "Shoes"
+     ],
+     [
+      "He didn't think about what car to what?",
+      "Ride",
+      "Buy",
+      "Wash"
+     ],
+     [
+      "When he sees you haters in the street, he don't what?",
+      "Speak",
+      "Stop",
+      "Look"
+     ],
+     [
+      "It's like a what sometimes?",
+      "Jungle",
+      "Maze",
+      "Movie"
+     ],
+     [
+      "He still gets his numbers and still stays what?",
+      "Humble",
+      "Hungry",
+      "Focused"
+     ],
+     [
+      "How much could he raise in a day right now?",
+      "Five mill",
+      "One mill",
+      "Ten mill"
+     ]
+    ],
+    [
+     [
+      "He's thinking of his what plan?",
+      "Master",
+      "Business",
+      "Back-up"
+     ],
+     [
+      "He ain't talkin' 'bout a measly how much?",
+      "100 grand",
+      "50 grand",
+      "10 grand"
+     ],
+     [
+      "He's flyin' in his what?",
+      "G5",
+      "G4",
+      "Learjet"
+     ],
+     [
+      "Put my feet up in the what?",
+      "Sand",
+      "Air",
+      "Pool"
+     ],
+     [
+      "What kind of moment is it?",
+      "Kodak",
+      "Golden",
+      "Magic"
+     ],
+     [
+      "He's gotta stop and show love to all his what?",
+      "Fans",
+      "Friends",
+      "Fam"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Top Down",
+   "id": "iaaNyXT6zbQ",
+   "cuts": [
+    39.4,
+    87.4,
+    155.9
+   ],
+   "qs": [
+    [
+     [
+      "Wherever you are, what?",
+      "Shine",
+      "Dance",
+      "Rise"
+     ],
+     [
+      "Ridin' with his top down and his what on?",
+      "Jewelry",
+      "Shades",
+      "Music"
+     ],
+     [
+      "He's just gettin' his what on?",
+      "Hood",
+      "Game",
+      "Swag"
+     ],
+     [
+      "I'm just doin' my what?",
+      "Thing",
+      "Job",
+      "Best"
+     ],
+     [
+      "Money like a what?",
+      "Mountain",
+      "River",
+      "Tower"
+     ],
+     [
+      "Tell me why you what?",
+      "Poutin'",
+      "Hatin'",
+      "Leavin'"
+     ],
+     [
+      "What name gets shouted at the start?",
+      "Swizzy",
+      "Swizz Beatz",
+      "Kasseem"
+     ]
+    ],
+    [
+     [
+      "Who's on him besides his goons?",
+      "Security",
+      "Cameras",
+      "Fans"
+     ],
+     [
+      "What does he shake off him?",
+      "Haters",
+      "Dust",
+      "Rain"
+     ],
+     [
+      "Y'all know my what?",
+      "Name",
+      "Song",
+      "Face"
+     ],
+     [
+      "What kind of paint is on his car?",
+      "Candy",
+      "Chrome",
+      "Matte"
+     ],
+     [
+      "What does the candy paint spell?",
+      "My name",
+      "My city",
+      "My crew"
+     ],
+     [
+      "If you got a problem, who should come and get him?",
+      "Sucka",
+      "Homie",
+      "Shorty"
+     ],
+     [
+      "Ridin' with my top what?",
+      "Down",
+      "Up",
+      "Off"
+     ]
+    ],
+    [
+     [
+      "You know the what is bumpin'?",
+      "Block",
+      "Club",
+      "Party"
+     ],
+     [
+      "They playin' his song and people is what?",
+      "Jumpin'",
+      "Dancin'",
+      "Singin'"
+     ],
+     [
+      "What kind of party do we got?",
+      "Block party",
+      "House party",
+      "Pool party"
+     ],
+     [
+      "Sittin' on the stoop, on the what?",
+      "Milk crate",
+      "Lawn chair",
+      "Bucket"
+     ],
+     [
+      "This chick wanna ride in his what?",
+      "Viper",
+      "Ferrari",
+      "Bentley"
+     ],
+     [
+      "His car is number 2 out of only how many in the world?",
+      "20",
+      "10",
+      "50"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Big Munny",
+   "id": "KRWLGzxlXfI",
+   "cuts": [
+    34.6,
+    87,
+    141.1
+   ],
+   "qs": [
+    [
+     [
+      "Who's comin'?",
+      "Big Munny",
+      "Big Daddy",
+      "Big Mike"
+     ],
+     [
+      "He's been tearin' this what, man?",
+      "Joint",
+      "Town",
+      "Club"
+     ],
+     [
+      "He walks through the clubs and the what?",
+      "Neighbourhoods",
+      "Malls",
+      "Studios"
+     ],
+     [
+      "They all be on the same what?",
+      "Page",
+      "Team",
+      "Block"
+     ],
+     [
+      "They see the watch and what?",
+      "Chain",
+      "Ring",
+      "Car"
+     ],
+     [
+      "The money ain't a what?",
+      "Thang",
+      "Problem",
+      "Joke"
+     ],
+     [
+      "When he walks in the club, everybody yells his what?",
+      "Name",
+      "Song",
+      "Number"
+     ]
+    ],
+    [
+     [
+      "He's around the block with the whole black what?",
+      "Drop",
+      "Truck",
+      "Crew"
+     ],
+     [
+      "He got the cream on what?",
+      "Cream",
+      "Ice",
+      "Gold"
+     ],
+     [
+      "Cruisin' in that what?",
+      "Lambo",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "He's lookin' like who?",
+      "Rambo",
+      "Rocky",
+      "Tyson"
+     ],
+     [
+      "What's Rambo wearing?",
+      "Tank top",
+      "Leather jacket",
+      "Hoodie"
+     ],
+     [
+      "What's he got on with the tank top?",
+      "Bandana",
+      "Fitted cap",
+      "Durag"
+     ],
+     [
+      "What do they see on him with the chain?",
+      "The watch",
+      "The ring",
+      "The grill"
+     ]
+    ],
+    [
+     [
+      "Everybody want a little what?",
+      "Drama",
+      "Money",
+      "Fame"
+     ],
+     [
+      "Movie stars asking to be his what?",
+      "Baby momma",
+      "Girlfriend",
+      "Wife"
+     ],
+     [
+      "He's an entrepreneur slash what?",
+      "Monster",
+      "Mogul",
+      "Artist"
+     ],
+     [
+      "Which pop star does he mention?",
+      "Madonna",
+      "Britney",
+      "Beyonce"
+     ],
+     [
+      "His bank account says zero, zero, zero, what?",
+      "Comma",
+      "Dollar",
+      "Million"
+     ],
+     [
+      "They be thinkin' 'bout his money when he's walkin' and what?",
+      "Talkin'",
+      "Sleepin'",
+      "Ridin'"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "It's Me Snitches",
+   "id": "NcMeVP--usM",
+   "cuts": [
+    41.3,
+    78,
+    124.8
+   ],
+   "qs": [
+    [
+     [
+      "What time is it?",
+      "Show time",
+      "Party time",
+      "Money time"
+     ],
+     [
+      "He's chillin' in his what?",
+      "Beamer",
+      "Benz",
+      "Bentley"
+     ],
+     [
+      "What's he listenin' to?",
+      "Ether",
+      "Illmatic",
+      "Reasonable Doubt"
+     ],
+     [
+      "What music does he like?",
+      "Hip hop",
+      "R&B",
+      "Rock"
+     ],
+     [
+      "What does he yell before 'you know who it is'?",
+      "Freeze",
+      "Stop",
+      "Look"
+     ],
+     [
+      "Come into the club what like you should?",
+      "Stuntin'",
+      "Dancin'",
+      "Rollin'"
+     ],
+     [
+      "He's coming through your block with the deuce what?",
+      "Two seater",
+      "Four door",
+      "Drop top"
+     ]
+    ],
+    [
+     [
+      "Ring the what?",
+      "Alarm",
+      "Bell",
+      "Phone"
+     ],
+     [
+      "Call him the what?",
+      "Sand man",
+      "Candy man",
+      "Mail man"
+     ],
+     [
+      "When he drops beats he's the one what?",
+      "Man band",
+      "Hit wonder",
+      "Man show"
+     ],
+     [
+      "Cash rules everything around me, what?",
+      "Cream",
+      "Green",
+      "Dream"
+     ],
+     [
+      "See him in that four what?",
+      "Door",
+      "Seater",
+      "Wheeler"
+     ],
+     [
+      "What sports car?",
+      "Bentley",
+      "Ferrari",
+      "Porsche"
+     ],
+     [
+      "His rims are so what?",
+      "Lethal",
+      "Shiny",
+      "Big"
+     ]
+    ],
+    [
+     [
+      "Bumpin' through your what?",
+      "Speakers",
+      "Window",
+      "Radio"
+     ],
+     [
+      "Rockin' don't what?",
+      "Stop",
+      "Quit",
+      "Drop"
+     ],
+     [
+      "He's bangin' them what?",
+      "Beats",
+      "Drums",
+      "Doors"
+     ],
+     [
+      "Stuntin' like you what?",
+      "Should",
+      "Could",
+      "Would"
+     ],
+     [
+      "Which Wu-Tang line does he quote?",
+      "Cash rules everything",
+      "Protect ya neck",
+      "Bring da ruckus"
+     ],
+     [
+      "What's the deuce two seater coming through?",
+      "Your block",
+      "The club",
+      "The tunnel"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Money in the Bank",
+   "id": "tK2bvZL9XF0",
+   "start": 10.3,
+   "cuts": [
+    49.4,
+    107.8,
+    148.3
+   ],
+   "qs": [
+    [
+     [
+      "She ain't got no money in the what?",
+      "Bank",
+      "Purse",
+      "Jar"
+     ],
+     [
+      "She be walking 'round actin' all what?",
+      "Stank",
+      "Fake",
+      "Brand new"
+     ],
+     [
+      "Where is she looking at him?",
+      "At the party",
+      "At the club",
+      "At the mall"
+     ],
+     [
+      "He ain't tryna what that girl?",
+      "Save",
+      "Call",
+      "Date"
+     ],
+     [
+      "She got the what open like he pays her?",
+      "Hand",
+      "Door",
+      "Purse"
+     ],
+     [
+      "What do y'all wanna be? Ballers and shot what?",
+      "Callers",
+      "Blockers",
+      "Takers"
+     ],
+     [
+      "She wanna ride in his what?",
+      "Jag",
+      "Benz",
+      "Range"
+     ]
+    ],
+    [
+     [
+      "She wanna ride to whose house?",
+      "His house",
+      "Her house",
+      "Her mom's house"
+     ],
+     [
+      "He said easy chick, I what to my house?",
+      "Fly",
+      "Drive",
+      "Walk"
+     ],
+     [
+      "He lives so far, think he looks where?",
+      "Down south",
+      "Uptown",
+      "Out west"
+     ],
+     [
+      "He sees she's got the good what on?",
+      "Shoes",
+      "Perfume",
+      "Jacket"
+     ],
+     [
+      "She got the best what?",
+      "Song",
+      "Dress",
+      "Hair"
+     ],
+     [
+      "Better get your what?",
+      "Own",
+      "Money",
+      "Job"
+     ]
+    ],
+    [
+     [
+      "It started like what?",
+      "Soft and warm",
+      "Hot and cold",
+      "Fast and loud"
+     ],
+     [
+      "He's invited to the new quiet what?",
+      "Storm",
+      "Party",
+      "Show"
+     ],
+     [
+      "All she want is love and what?",
+      "Affection",
+      "Money",
+      "Attention"
+     ],
+     [
+      "Let me be your what?",
+      "Angel",
+      "Hero",
+      "Man"
+     ],
+     [
+      "He'll be her what?",
+      "Protection",
+      "Provider",
+      "Partner"
+     ],
+     [
+      "Why's she got no money in the bank? Cause she what?",
+      "Broke",
+      "Lazy",
+      "Cheap"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
