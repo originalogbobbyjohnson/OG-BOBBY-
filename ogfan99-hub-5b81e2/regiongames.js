@@ -9,4 +9,7 @@ window.OG_REGION_GAMES = {
   "Gift of Gab": { url: "../giftofgab-ogfan99-f338b0/", ex: 0 },
   "Evidence": { url: "../evidence-ogfan99-76b14d/", ex: 2 },
   "The Grouch": { url: "../thegrouch-ogfan99-e5540e/", ex: 0 },
+  "Blu": { url: "../blu-ogfan99-822fce/", ex: 0 },
+  "Busdriver": { url: "../busdriver-ogfan99-d30a4e/", ex: 0 },
+  "Open Mike Eagle": { url: "../openmikeeagle-ogfan99-ce8ee9/", ex: 2 },
 };
