@@ -526,217 +526,217 @@ window.CFG = {
    ]
   },
   {
-   "title": "To Say the Least",
-   "id": "VhIv_G64FZw",
-   "start": 6.8,
+   "title": "Hip Hop Music",
+   "id": "A7i7WmeHVkQ",
+   "start": 1.6,
    "cuts": [
-    46.9,
-    105.4,
-    163.1
+    43.7,
+    95.2,
+    149.2
    ],
    "qs": [
     [
      [
-      "Take a look outside your what?",
-      "Window",
-      "Door",
-      "Phone"
+      "Who does he call out to first?",
+      "Hip-hoppers",
+      "B-boys",
+      "Rappers"
      ],
      [
-      "The protests, the what?",
-      "Movement",
-      "Marches",
-      "Crowds"
+      "Hip-hoppers, beboppers and what?",
+      "Body-rockers",
+      "Breakdancers",
+      "Head-bangers"
      ],
      [
-      "The action, the what?",
-      "Silence",
-      "Noise",
-      "Reaction"
+      "This is who right here?",
+      "Remedy",
+      "RZA",
+      "Ghostface"
      ],
      [
-      "He can't believe what we're what?",
-      "Seeing",
-      "Hearing",
-      "Doing"
+      "A little what, with a touch of rock and roll?",
+      "Hip-hop",
+      "Disco",
+      "Funk"
      ],
      [
-      "Are we not all human what?",
-      "Beings",
-      "Brothers",
-      "Rights"
+      "A little hip-hop with a touch of what?",
+      "Rock and roll",
+      "Rhythm and blues",
+      "Jazz"
      ],
      [
-      "With morals and what?",
-      "Ethics",
-      "Values",
-      "Manners"
+      "Feel your what?",
+      "Soul",
+      "Body",
+      "Heart"
      ],
      [
-      "...and the ability to what?",
-      "Reason",
-      "Speak",
-      "Vote"
+      "Feel your soul, lose what?",
+      "Control",
+      "Your mind",
+      "Your cool"
      ],
      [
-      "Politicians, media what?",
-      "Scheming",
-      "Screaming",
-      "Lying"
+      "Way back in the days, what year?",
+      "1979",
+      "1975",
+      "1989"
      ],
      [
-      "Wake me up, I must be what?",
-      "Dreaming",
-      "Sleeping",
-      "Crazy"
+      "Back then he wrote his first what?",
+      "Rhyme",
+      "Song",
+      "Check"
      ],
      [
-      "The time is of the what?",
-      "Hour",
-      "Essence",
-      "Moment"
+      "The same year came the what?",
+      "Sugarhill Gang",
+      "Furious Five",
+      "Beastie Boys"
      ],
      [
-      "The rebuilding of the what?",
-      "Towers",
-      "Bridges",
-      "Cities"
+      "Little did they know about the what slang?",
+      "Shaolin",
+      "Brooklyn",
+      "Wu-Tang"
      ]
     ],
     [
      [
-      "You can smell the what?",
-      "Flowers",
-      "Roses",
-      "Rain"
+      "R&B, disco, pop, country and what?",
+      "Jazz",
+      "Soul",
+      "Funk"
      ],
      [
-      "America is what?",
-      "Ours",
-      "Free",
-      "Home"
+      "Don't think hip-hop was ever just a what?",
+      "Fad",
+      "Phase",
+      "Trend"
      ],
      [
-      "Freedom is a must, equality and what?",
-      "Trust",
-      "Love",
-      "Peace"
+      "SoundScan and what?",
+      "Billboard",
+      "Rolling Stone",
+      "MTV"
      ],
      [
-      "No excuse, we need what?",
-      "Justice",
-      "Freedom",
-      "Change"
+      "While other music failed, hip-hop what?",
+      "Prevailed",
+      "Sailed",
+      "Exhaled"
      ],
      [
-      "Marching in the what?",
+      "Rap music was going what from the start?",
+      "Platinum",
+      "Gold",
+      "Global"
+     ],
+     [
+      "He came straight from the what?",
+      "Heart",
       "Streets",
-      "Halls",
-      "Rain"
+      "Soul"
      ],
      [
-      "Barking at the what?",
-      "Beast",
-      "Moon",
-      "Feast"
+      "In '79, the what army?",
+      "Kiss",
+      "Wu",
+      "Rap"
      ],
      [
-      "No justice, no what?",
-      "Peace",
-      "Rest",
-      "Change"
+      "Who came in '83?",
+      "Run-DMC",
+      "LL Cool J",
+      "Public Enemy"
      ],
      [
-      "Black lives matter, to say the what?",
-      "Least",
-      "Most",
-      "Last"
+      "In '86, KRS and who?",
+      "Beasties",
+      "Rakim",
+      "Slick Rick"
      ],
      [
-      "Power to the people, that's the what?",
-      "Basis",
-      "Answer",
-      "Message"
+      "Rakim, G Rap, the Biz and who?",
+      "Daddy Kane",
+      "Slick Rick",
+      "Kool Moe Dee"
      ],
      [
-      "We gotta help and what each other?",
-      "Teach",
-      "Love",
-      "Reach"
-     ],
-     [
-      "We all bleed the same what?",
-      "Color",
-      "Way",
-      "Tears"
+      "In 1993 he ended up with who?",
+      "Wu-Tang",
+      "Def Jam",
+      "Bad Boy"
      ]
     ],
     [
      [
-      "This is not a foreign what?",
-      "Argument",
-      "Problem",
-      "Country"
+      "How many long years?",
+      "Twenty",
+      "Ten",
+      "Thirty"
      ],
      [
-      "Tear the roof off what?",
-      "Parliament",
-      "The White House",
-      "Congress"
+      "He'll tell you how the what has changed?",
+      "Industry",
+      "Game",
+      "City"
      ],
      [
-      "Reform and what?",
-      "Abolish",
-      "Rebuild",
-      "Restore"
+      "Everybody wants to rock what?",
+      "Ice",
+      "Gold",
+      "Chains"
      ],
      [
-      "...to ensure the people's what?",
-      "Promise",
-      "Freedom",
-      "Future"
+      "Everybody swears that they're what?",
+      "Nice",
+      "Real",
+      "Hot"
      ],
      [
-      "Everyone deserves a what?",
-      "Chance",
-      "Home",
-      "Voice"
+      "Everybody wants to be what?",
+      "Somebody",
+      "Famous",
+      "Rich"
      ],
      [
-      "Wu-Tang is for the what?",
-      "Children",
-      "People",
+      "There's no more love for the what?",
+      "Music",
+      "Game",
       "Streets"
      ],
      [
-      "Protect ya neck and keep what?",
-      "Building",
-      "Pushing",
-      "Moving"
+      "What and cash now rule it?",
+      "Politics",
+      "Power",
+      "Fame"
      ],
      [
-      "Respect and know your what?",
-      "Privilege",
-      "Place",
-      "History"
+      "The A&Rs are wannabe rock and what stars?",
+      "Rap",
+      "Movie",
+      "Pop"
      ],
      [
-      "Fight the power, take your what?",
-      "Mark",
-      "Stand",
-      "Place"
+      "A word of advice: this is not a what?",
+      "Game",
+      "Joke",
+      "Toy"
      ],
      [
-      "Love conquers what?",
-      "Hate",
-      "All",
-      "Fear"
+      "He'd walk in the office on some old what?",
+      "Slim Shady",
+      "Dr. Dre",
+      "Vanilla Ice"
      ],
      [
-      "This verse is like a what?",
-      "Ladder",
-      "Letter",
-      "Prayer"
+      "Love and what broke fast with the record?",
+      "Respect",
+      "Trust",
+      "Money"
      ]
     ]
    ]
@@ -1175,217 +1175,217 @@ window.CFG = {
    ]
   },
   {
-   "title": "To Say the Least",
-   "id": "VhIv_G64FZw",
-   "start": 6.8,
+   "title": "Hip Hop Music",
+   "id": "A7i7WmeHVkQ",
+   "start": 1.6,
    "cuts": [
-    46.9,
-    105.4,
-    163.1
+    43.7,
+    95.2,
+    149.2
    ],
    "qs": [
     [
      [
-      "Take a look outside your what?",
-      "Window",
-      "Door",
-      "Phone"
+      "Who does he call out to first?",
+      "Hip-hoppers",
+      "B-boys",
+      "Rappers"
      ],
      [
-      "The protests, the what?",
-      "Movement",
-      "Marches",
-      "Crowds"
+      "Hip-hoppers, beboppers and what?",
+      "Body-rockers",
+      "Breakdancers",
+      "Head-bangers"
      ],
      [
-      "The action, the what?",
-      "Silence",
-      "Noise",
-      "Reaction"
+      "This is who right here?",
+      "Remedy",
+      "RZA",
+      "Ghostface"
      ],
      [
-      "He can't believe what we're what?",
-      "Seeing",
-      "Hearing",
-      "Doing"
+      "A little what, with a touch of rock and roll?",
+      "Hip-hop",
+      "Disco",
+      "Funk"
      ],
      [
-      "Are we not all human what?",
-      "Beings",
-      "Brothers",
-      "Rights"
+      "A little hip-hop with a touch of what?",
+      "Rock and roll",
+      "Rhythm and blues",
+      "Jazz"
      ],
      [
-      "With morals and what?",
-      "Ethics",
-      "Values",
-      "Manners"
+      "Feel your what?",
+      "Soul",
+      "Body",
+      "Heart"
      ],
      [
-      "...and the ability to what?",
-      "Reason",
-      "Speak",
-      "Vote"
+      "Feel your soul, lose what?",
+      "Control",
+      "Your mind",
+      "Your cool"
      ],
      [
-      "Politicians, media what?",
-      "Scheming",
-      "Screaming",
-      "Lying"
+      "Way back in the days, what year?",
+      "1979",
+      "1975",
+      "1989"
      ],
      [
-      "Wake me up, I must be what?",
-      "Dreaming",
-      "Sleeping",
-      "Crazy"
+      "Back then he wrote his first what?",
+      "Rhyme",
+      "Song",
+      "Check"
      ],
      [
-      "The time is of the what?",
-      "Hour",
-      "Essence",
-      "Moment"
+      "The same year came the what?",
+      "Sugarhill Gang",
+      "Furious Five",
+      "Beastie Boys"
      ],
      [
-      "The rebuilding of the what?",
-      "Towers",
-      "Bridges",
-      "Cities"
+      "Little did they know about the what slang?",
+      "Shaolin",
+      "Brooklyn",
+      "Wu-Tang"
      ]
     ],
     [
      [
-      "You can smell the what?",
-      "Flowers",
-      "Roses",
-      "Rain"
+      "R&B, disco, pop, country and what?",
+      "Jazz",
+      "Soul",
+      "Funk"
      ],
      [
-      "America is what?",
-      "Ours",
-      "Free",
-      "Home"
+      "Don't think hip-hop was ever just a what?",
+      "Fad",
+      "Phase",
+      "Trend"
      ],
      [
-      "Freedom is a must, equality and what?",
-      "Trust",
-      "Love",
-      "Peace"
+      "SoundScan and what?",
+      "Billboard",
+      "Rolling Stone",
+      "MTV"
      ],
      [
-      "No excuse, we need what?",
-      "Justice",
-      "Freedom",
-      "Change"
+      "While other music failed, hip-hop what?",
+      "Prevailed",
+      "Sailed",
+      "Exhaled"
      ],
      [
-      "Marching in the what?",
+      "Rap music was going what from the start?",
+      "Platinum",
+      "Gold",
+      "Global"
+     ],
+     [
+      "He came straight from the what?",
+      "Heart",
       "Streets",
-      "Halls",
-      "Rain"
+      "Soul"
      ],
      [
-      "Barking at the what?",
-      "Beast",
-      "Moon",
-      "Feast"
+      "In '79, the what army?",
+      "Kiss",
+      "Wu",
+      "Rap"
      ],
      [
-      "No justice, no what?",
-      "Peace",
-      "Rest",
-      "Change"
+      "Who came in '83?",
+      "Run-DMC",
+      "LL Cool J",
+      "Public Enemy"
      ],
      [
-      "Black lives matter, to say the what?",
-      "Least",
-      "Most",
-      "Last"
+      "In '86, KRS and who?",
+      "Beasties",
+      "Rakim",
+      "Slick Rick"
      ],
      [
-      "Power to the people, that's the what?",
-      "Basis",
-      "Answer",
-      "Message"
+      "Rakim, G Rap, the Biz and who?",
+      "Daddy Kane",
+      "Slick Rick",
+      "Kool Moe Dee"
      ],
      [
-      "We gotta help and what each other?",
-      "Teach",
-      "Love",
-      "Reach"
-     ],
-     [
-      "We all bleed the same what?",
-      "Color",
-      "Way",
-      "Tears"
+      "In 1993 he ended up with who?",
+      "Wu-Tang",
+      "Def Jam",
+      "Bad Boy"
      ]
     ],
     [
      [
-      "This is not a foreign what?",
-      "Argument",
-      "Problem",
-      "Country"
+      "How many long years?",
+      "Twenty",
+      "Ten",
+      "Thirty"
      ],
      [
-      "Tear the roof off what?",
-      "Parliament",
-      "The White House",
-      "Congress"
+      "He'll tell you how the what has changed?",
+      "Industry",
+      "Game",
+      "City"
      ],
      [
-      "Reform and what?",
-      "Abolish",
-      "Rebuild",
-      "Restore"
+      "Everybody wants to rock what?",
+      "Ice",
+      "Gold",
+      "Chains"
      ],
      [
-      "...to ensure the people's what?",
-      "Promise",
-      "Freedom",
-      "Future"
+      "Everybody swears that they're what?",
+      "Nice",
+      "Real",
+      "Hot"
      ],
      [
-      "Everyone deserves a what?",
-      "Chance",
-      "Home",
-      "Voice"
+      "Everybody wants to be what?",
+      "Somebody",
+      "Famous",
+      "Rich"
      ],
      [
-      "Wu-Tang is for the what?",
-      "Children",
-      "People",
+      "There's no more love for the what?",
+      "Music",
+      "Game",
       "Streets"
      ],
      [
-      "Protect ya neck and keep what?",
-      "Building",
-      "Pushing",
-      "Moving"
+      "What and cash now rule it?",
+      "Politics",
+      "Power",
+      "Fame"
      ],
      [
-      "Respect and know your what?",
-      "Privilege",
-      "Place",
-      "History"
+      "The A&Rs are wannabe rock and what stars?",
+      "Rap",
+      "Movie",
+      "Pop"
      ],
      [
-      "Fight the power, take your what?",
-      "Mark",
-      "Stand",
-      "Place"
+      "A word of advice: this is not a what?",
+      "Game",
+      "Joke",
+      "Toy"
      ],
      [
-      "Love conquers what?",
-      "Hate",
-      "All",
-      "Fear"
+      "He'd walk in the office on some old what?",
+      "Slim Shady",
+      "Dr. Dre",
+      "Vanilla Ice"
      ],
      [
-      "This verse is like a what?",
-      "Ladder",
-      "Letter",
-      "Prayer"
+      "Love and what broke fast with the record?",
+      "Respect",
+      "Trust",
+      "Money"
      ]
     ]
    ]
