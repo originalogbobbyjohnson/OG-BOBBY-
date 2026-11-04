@@ -16,4 +16,7 @@ window.OG_REGION_GAMES = {
   "Apathy": { url: "../apathy-ogfan99-dc32b4/", ex: 2 },
   "Vinnie Paz": { url: "../vinniepaz-ogfan99-377809/", ex: 2 },
   "Mr. Lif": { url: "../mrlif-ogfan99-92e090/", ex: 2 },
+  "Esoteric": { url: "../esoteric-ogfan99-2c439c/", ex: 2 },
+  "Rasco": { url: "../rasco-ogfan99-05cd6b/", ex: 2 },
+  "Slaine": { url: "../slaine-ogfan99-ab1fa1/", ex: 2 },
 };
