@@ -93,40 +93,1301 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
-  {
-   "title": "Chief Rocka",
-   "id": "JFQXtAE7SiU",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Here Come the Lords",
-   "id": "FlEbkkcekYw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
+ "songs": [
   {
    "title": "Tic Toc",
-   "id": "m7RqZ6ApnCw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "id": "jzHOPqxy0r8",
+   "cuts": [
+    41.5,
+    124.9,
+    208.9
+   ],
+   "qs": [
+    [
+     [
+      "Tic toc, this is how we...?",
+      "Rock",
+      "Roll",
+      "Talk"
+     ],
+     [
+      "Throw your hands in the air and do it for your...?",
+      "Block",
+      "Crew",
+      "Mom"
+     ],
+     [
+      "Throw your hands in the air and please don't...?",
+      "Stop",
+      "Drop",
+      "Sit"
+     ],
+     [
+      "They're the same brothers that brought you...?",
+      "Chief Rocka",
+      "Funky Child",
+      "Psycho"
+     ],
+     [
+      "What's his style?",
+      "Underground",
+      "Commercial",
+      "Pop"
+     ],
+     [
+      "He swears he'll always rock a...?",
+      "Crowd",
+      "Party",
+      "Mic"
+     ],
+     [
+      "Peace to his area...?",
+      "N.W.K.",
+      "B.K.",
+      "Q.B."
+     ],
+     [
+      "His area is...?",
+      "Scarier",
+      "Bigger",
+      "Prettier"
+     ],
+     [
+      "Who cares, the more the...?",
+      "Merrier",
+      "Better",
+      "Louder"
+     ],
+     [
+      "Right off which street?",
+      "South Orange",
+      "Broad Street",
+      "Main Street"
+     ],
+     [
+      "Which avenue is his stomping grounds?",
+      "Thirteenth",
+      "Fifth",
+      "Ninth"
+     ]
+    ],
+    [
+     [
+      "To his 'hood he gives his...?",
+      "Heart",
+      "Money",
+      "Time"
+     ],
+     [
+      "Without the heart, the 'hood...?",
+      "Falls apart",
+      "Gets rich",
+      "Moves out"
+     ],
+     [
+      "Respect to the...?",
+      "Cement",
+      "Teachers",
+      "Mayor"
+     ],
+     [
+      "What's the park called?",
+      "The Corner",
+      "The Yard",
+      "The Pit"
+     ],
+     [
+      "What was he jumpin'?",
+      "Big gates",
+      "Parked cars",
+      "Rooftops"
+     ],
+     [
+      "Before records, the 'hood was his...?",
+      "Savior",
+      "Prison",
+      "School"
+     ],
+     [
+      "Now he makes tunes to jam with your...?",
+      "Neighbor",
+      "Sister",
+      "Teacher"
+     ],
+     [
+      "Half you rappers couldn't see him with...?",
+      "Binoculars",
+      "Glasses",
+      "A telescope"
+     ],
+     [
+      "When he dies he hopes they make records up in...?",
+      "Heaven",
+      "Space",
+      "The clouds"
+     ],
+     [
+      "Grabbin' the mic is like who running to a phone booth?",
+      "Superman",
+      "Batman",
+      "Spider-Man"
+     ],
+     [
+      "He's straight from Martin Luther King...?",
+      "Boulevard",
+      "Avenue",
+      "Park"
+     ]
+    ],
+    [
+     [
+      "Times have changed for the urban and the...?",
+      "Suburban",
+      "Country",
+      "Rich"
+     ],
+     [
+      "From black kids to...?",
+      "White kids",
+      "Old folks",
+      "Little kids"
+     ],
+     [
+      "From the blond hair to the...?",
+      "Redhead",
+      "Bald head",
+      "Brunette"
+     ],
+     [
+      "He even seen a...?",
+      "Dread",
+      "Mohawk",
+      "Afro"
+     ],
+     [
+      "They say you sold out 'cause you sold a...copies?",
+      "Million",
+      "Thousand",
+      "Billion"
+     ],
+     [
+      "Do it for the 'hood but do it from the...?",
+      "Heart",
+      "Wallet",
+      "Top"
+     ],
+     [
+      "Where did the kids meet up to rock?",
+      "The hallway",
+      "The roof",
+      "The park"
+     ],
+     [
+      "What's his brother's name?",
+      "Hard Bernard",
+      "Easy Ed",
+      "Big Wise"
+     ],
+     [
+      "He hit the beat on the wall until his hands turned...?",
+      "Red",
+      "Blue",
+      "Numb"
+     ],
+     [
+      "He only writes rhymes that will be...?",
+      "Appreciated",
+      "Played",
+      "Sold"
+     ],
+     [
+      "From the 'hood he came and to the 'hood he must...?",
+      "Return",
+      "Give back",
+      "Stay"
+     ]
+    ]
+   ]
   },
   {
    "title": "Funky Child",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "9zZ10Jw5ecc",
+   "cuts": [
+    42.5,
+    103.9,
+    191.8
+   ],
+   "qs": [
+    [
+     [
+      "What year is it?",
+      "1971",
+      "1981",
+      "1969"
+     ],
+     [
+      "What do the Lords witness the birth of?",
+      "The funky child",
+      "A new king",
+      "A superstar"
+     ],
+     [
+      "Who's told to 'hit 'em'?",
+      "Do It All",
+      "Funkee",
+      "Jazz"
+     ],
+     [
+      "She likes the Lords but she used to dig...?",
+      "The Spinners",
+      "The Temptations",
+      "The Jackson 5"
+     ],
+     [
+      "First with the style from the...?",
+      "Birth canal",
+      "Block",
+      "Basement"
+     ],
+     [
+      "He's got the flav to make the crowd go...?",
+      "Wild",
+      "Home",
+      "Quiet"
+     ],
+     [
+      "Dig it, don't watch me...?",
+      "Kick it",
+      "Spit it",
+      "Flip it"
+     ],
+     [
+      "Who cries 'Wahh! Gaga'?",
+      "The baby",
+      "The crowd",
+      "The DJ"
+     ],
+     [
+      "No rattles or...?",
+      "Playpens",
+      "Bottles",
+      "Blankets"
+     ],
+     [
+      "What's he rapping for?",
+      "The crowd",
+      "The money",
+      "The girls"
+     ],
+     [
+      "Which TV kid does he do?",
+      "Reruns",
+      "Urkel",
+      "Webster"
+     ]
+    ],
+    [
+     [
+      "Which day birthed the funk one?",
+      "January fourteenth",
+      "July fourth",
+      "June first"
+     ],
+     [
+      "It's the D-Day for...?",
+      "Dupree",
+      "Funkee",
+      "Marley"
+     ],
+     [
+      "Who lets 'em know here comes the funky child?",
+      "K-Def",
+      "Marley",
+      "Jazz"
+     ],
+     [
+      "Born in the underground of...?",
+      "Newark",
+      "Brooklyn",
+      "Harlem"
+     ],
+     [
+      "Now witness the birth of Mr...?",
+      "Funkee",
+      "Rocka",
+      "Jazz"
+     ],
+     [
+      "It's the return of Funky...?",
+      "Krueger",
+      "Monster",
+      "Jones"
+     ],
+     [
+      "Mr. Funkee...?",
+      "Wallbanger",
+      "Brown",
+      "Junior"
+     ],
+     [
+      "The funky child was taught the ways of the...?",
+      "Masters",
+      "Streets",
+      "Church"
+     ],
+     [
+      "He hurdles over rappers just like...?",
+      "Jackie Joyner-Kersee",
+      "Carl Lewis",
+      "Flo-Jo"
+     ],
+     [
+      "When he was younger he sang with his...?",
+      "Sister",
+      "Mother",
+      "Cousin"
+     ],
+     [
+      "Now you have to call him...?",
+      "Mister",
+      "Uncle",
+      "Boss"
+     ]
+    ],
+    [
+     [
+      "Back up baby, here comes the...?",
+      "Schooler",
+      "Ruler",
+      "Teacher"
+     ],
+     [
+      "He's hypnotized by the...?",
+      "Pendulum",
+      "Music",
+      "Lights"
+     ],
+     [
+      "Who's on the M.P.?",
+      "K",
+      "Jazz",
+      "Marley"
+     ],
+     [
+      "Jazz is on the...?",
+      "Technique",
+      "Mic",
+      "Drums"
+     ],
+     [
+      "Who's on the mix?",
+      "Marley",
+      "K-Def",
+      "Funkee"
+     ],
+     [
+      "The Lords have a hit like...?",
+      "Pow",
+      "Boom",
+      "Bang"
+     ],
+     [
+      "Go grab the album to bring the Lords...?",
+      "Money",
+      "Fans",
+      "Fame"
+     ],
+     [
+      "Take it home to...?",
+      "Mom",
+      "Grandma",
+      "School"
+     ],
+     [
+      "The brothers of LOTUG keep the lyrical...?",
+      "Fitness",
+      "Business",
+      "Madness"
+     ],
+     [
+      "Props you receive are the props that you...?",
+      "Earn",
+      "Steal",
+      "Give"
+     ],
+     [
+      "He's off till the funky child...?",
+      "Returns",
+      "Grows up",
+      "Calls"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Neva Faded",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Chief Rocka",
+   "id": "TBqrcwcZ-88",
+   "start": 18.9,
+   "cuts": [
+    57.6,
+    153.7,
+    208.9
+   ],
+   "qs": [
+    [
+     [
+      "Boom shaka laka, here comes the...?",
+      "Chief Rocka",
+      "Funky Child",
+      "Grave Digga"
+     ],
+     [
+      "Jump up off the...?",
+      "Tip",
+      "Roof",
+      "Stage"
+     ],
+     [
+      "He says what he wants 'cause he's that type of...?",
+      "Guy",
+      "Kid",
+      "Man"
+     ],
+     [
+      "Now hold it, let me...?",
+      "Choose",
+      "Speak",
+      "Breathe"
+     ],
+     [
+      "It's gotta be the...?",
+      "Shoes",
+      "Hat",
+      "Beat"
+     ],
+     [
+      "Who clock him and stand around?",
+      "Girlies",
+      "Teachers",
+      "Cops"
+     ],
+     [
+      "They stand around and...?",
+      "Jock",
+      "Dance",
+      "Stare"
+     ],
+     [
+      "Grab the microphone then...?",
+      "Rock",
+      "Talk",
+      "Drop"
+     ],
+     [
+      "The cat in the hat and the mouse ran up the...?",
+      "Stairs",
+      "Clock",
+      "Tree"
+     ],
+     [
+      "That doesn't make no...?",
+      "Sense",
+      "Money",
+      "Noise"
+     ],
+     [
+      "C'mon, who...?",
+      "Cares",
+      "Knows",
+      "Wins"
+     ]
+    ],
+    [
+     [
+      "He says what he wants as long as it sounds...?",
+      "Funk",
+      "Fresh",
+      "Loud"
+     ],
+     [
+      "Some MCs wanted to...him?",
+      "Buy",
+      "Battle",
+      "Sign"
+     ],
+     [
+      "He amazes and...?",
+      "Astounds",
+      "Confounds",
+      "Shouts"
+     ],
+     [
+      "Let them know who wears the...?",
+      "Crown",
+      "Chain",
+      "Hat"
+     ],
+     [
+      "The cream of the...?",
+      "Crop",
+      "Cake",
+      "Coffee"
+     ],
+     [
+      "The best under the...?",
+      "Sun",
+      "Moon",
+      "Stars"
+     ],
+     [
+      "He freaks it so you'll boom it in your...?",
+      "Cars",
+      "Rooms",
+      "Ears"
+     ],
+     [
+      "The flow and the grip like...?",
+      "G.I. Joe",
+      "Superman",
+      "Batman"
+     ],
+     [
+      "He doesn't wanna go...?",
+      "Pop",
+      "Home",
+      "Soft"
+     ],
+     [
+      "Too much soul, rhythm and...?",
+      "Blues",
+      "Rock",
+      "Funk"
+     ],
+     [
+      "He used to break on a...?",
+      "Box",
+      "Floor",
+      "Stage"
+     ]
+    ],
+    [
+     [
+      "Who does he ask, 'whassup?'",
+      "Mr. Funke",
+      "Do It All",
+      "Marley"
+     ],
+     [
+      "Yo Jazz, flex a...?",
+      "Cut",
+      "Beat",
+      "Record"
+     ],
+     [
+      "He's chillin' with his...?",
+      "Knocker",
+      "Brother",
+      "Partner"
+     ],
+     [
+      "What goes up must...?",
+      "Come down",
+      "Stay up",
+      "Fly"
+     ],
+     [
+      "But not me...?",
+      "Clown",
+      "Bro",
+      "Kid"
+     ],
+     [
+      "What does he crack when he's pumpin'?",
+      "A speaker",
+      "A window",
+      "A record"
+     ],
+     [
+      "Watch your ears start...?",
+      "Hummin'",
+      "Ringin'",
+      "Poppin'"
+     ],
+     [
+      "The kids around the way thought he was...?",
+      "Buggin'",
+      "Lyin'",
+      "Sleepin'"
+     ],
+     [
+      "He walks, talks, eats and...with the funk?",
+      "Sleeps",
+      "Dances",
+      "Prays"
+     ],
+     [
+      "He lives for the...?",
+      "Funk",
+      "Fame",
+      "Money"
+     ],
+     [
+      "What do they say when he's walkin' up the block?",
+      "Boom shaka laka",
+      "Watch out now",
+      "Here he comes"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Tic Toc",
+   "id": "jzHOPqxy0r8",
+   "cuts": [
+    41.5,
+    124.9,
+    208.9
+   ],
+   "qs": [
+    [
+     [
+      "Tic toc, this is how we...?",
+      "Rock",
+      "Roll",
+      "Talk"
+     ],
+     [
+      "Throw your hands in the air and do it for your...?",
+      "Block",
+      "Crew",
+      "Mom"
+     ],
+     [
+      "Throw your hands in the air and please don't...?",
+      "Stop",
+      "Drop",
+      "Sit"
+     ],
+     [
+      "They're the same brothers that brought you...?",
+      "Chief Rocka",
+      "Funky Child",
+      "Psycho"
+     ],
+     [
+      "What's his style?",
+      "Underground",
+      "Commercial",
+      "Pop"
+     ],
+     [
+      "He swears he'll always rock a...?",
+      "Crowd",
+      "Party",
+      "Mic"
+     ],
+     [
+      "Peace to his area...?",
+      "N.W.K.",
+      "B.K.",
+      "Q.B."
+     ],
+     [
+      "His area is...?",
+      "Scarier",
+      "Bigger",
+      "Prettier"
+     ],
+     [
+      "Who cares, the more the...?",
+      "Merrier",
+      "Better",
+      "Louder"
+     ],
+     [
+      "Right off which street?",
+      "South Orange",
+      "Broad Street",
+      "Main Street"
+     ],
+     [
+      "Which avenue is his stomping grounds?",
+      "Thirteenth",
+      "Fifth",
+      "Ninth"
+     ]
+    ],
+    [
+     [
+      "To his 'hood he gives his...?",
+      "Heart",
+      "Money",
+      "Time"
+     ],
+     [
+      "Without the heart, the 'hood...?",
+      "Falls apart",
+      "Gets rich",
+      "Moves out"
+     ],
+     [
+      "Respect to the...?",
+      "Cement",
+      "Teachers",
+      "Mayor"
+     ],
+     [
+      "What's the park called?",
+      "The Corner",
+      "The Yard",
+      "The Pit"
+     ],
+     [
+      "What was he jumpin'?",
+      "Big gates",
+      "Parked cars",
+      "Rooftops"
+     ],
+     [
+      "Before records, the 'hood was his...?",
+      "Savior",
+      "Prison",
+      "School"
+     ],
+     [
+      "Now he makes tunes to jam with your...?",
+      "Neighbor",
+      "Sister",
+      "Teacher"
+     ],
+     [
+      "Half you rappers couldn't see him with...?",
+      "Binoculars",
+      "Glasses",
+      "A telescope"
+     ],
+     [
+      "When he dies he hopes they make records up in...?",
+      "Heaven",
+      "Space",
+      "The clouds"
+     ],
+     [
+      "Grabbin' the mic is like who running to a phone booth?",
+      "Superman",
+      "Batman",
+      "Spider-Man"
+     ],
+     [
+      "He's straight from Martin Luther King...?",
+      "Boulevard",
+      "Avenue",
+      "Park"
+     ]
+    ],
+    [
+     [
+      "Times have changed for the urban and the...?",
+      "Suburban",
+      "Country",
+      "Rich"
+     ],
+     [
+      "From black kids to...?",
+      "White kids",
+      "Old folks",
+      "Little kids"
+     ],
+     [
+      "From the blond hair to the...?",
+      "Redhead",
+      "Bald head",
+      "Brunette"
+     ],
+     [
+      "He even seen a...?",
+      "Dread",
+      "Mohawk",
+      "Afro"
+     ],
+     [
+      "They say you sold out 'cause you sold a...copies?",
+      "Million",
+      "Thousand",
+      "Billion"
+     ],
+     [
+      "Do it for the 'hood but do it from the...?",
+      "Heart",
+      "Wallet",
+      "Top"
+     ],
+     [
+      "Where did the kids meet up to rock?",
+      "The hallway",
+      "The roof",
+      "The park"
+     ],
+     [
+      "What's his brother's name?",
+      "Hard Bernard",
+      "Easy Ed",
+      "Big Wise"
+     ],
+     [
+      "He hit the beat on the wall until his hands turned...?",
+      "Red",
+      "Blue",
+      "Numb"
+     ],
+     [
+      "He only writes rhymes that will be...?",
+      "Appreciated",
+      "Played",
+      "Sold"
+     ],
+     [
+      "From the 'hood he came and to the 'hood he must...?",
+      "Return",
+      "Give back",
+      "Stay"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Funky Child",
+   "id": "9zZ10Jw5ecc",
+   "cuts": [
+    42.5,
+    103.9,
+    191.8
+   ],
+   "qs": [
+    [
+     [
+      "What year is it?",
+      "1971",
+      "1981",
+      "1969"
+     ],
+     [
+      "What do the Lords witness the birth of?",
+      "The funky child",
+      "A new king",
+      "A superstar"
+     ],
+     [
+      "Who's told to 'hit 'em'?",
+      "Do It All",
+      "Funkee",
+      "Jazz"
+     ],
+     [
+      "She likes the Lords but she used to dig...?",
+      "The Spinners",
+      "The Temptations",
+      "The Jackson 5"
+     ],
+     [
+      "First with the style from the...?",
+      "Birth canal",
+      "Block",
+      "Basement"
+     ],
+     [
+      "He's got the flav to make the crowd go...?",
+      "Wild",
+      "Home",
+      "Quiet"
+     ],
+     [
+      "Dig it, don't watch me...?",
+      "Kick it",
+      "Spit it",
+      "Flip it"
+     ],
+     [
+      "Who cries 'Wahh! Gaga'?",
+      "The baby",
+      "The crowd",
+      "The DJ"
+     ],
+     [
+      "No rattles or...?",
+      "Playpens",
+      "Bottles",
+      "Blankets"
+     ],
+     [
+      "What's he rapping for?",
+      "The crowd",
+      "The money",
+      "The girls"
+     ],
+     [
+      "Which TV kid does he do?",
+      "Reruns",
+      "Urkel",
+      "Webster"
+     ]
+    ],
+    [
+     [
+      "Which day birthed the funk one?",
+      "January fourteenth",
+      "July fourth",
+      "June first"
+     ],
+     [
+      "It's the D-Day for...?",
+      "Dupree",
+      "Funkee",
+      "Marley"
+     ],
+     [
+      "Who lets 'em know here comes the funky child?",
+      "K-Def",
+      "Marley",
+      "Jazz"
+     ],
+     [
+      "Born in the underground of...?",
+      "Newark",
+      "Brooklyn",
+      "Harlem"
+     ],
+     [
+      "Now witness the birth of Mr...?",
+      "Funkee",
+      "Rocka",
+      "Jazz"
+     ],
+     [
+      "It's the return of Funky...?",
+      "Krueger",
+      "Monster",
+      "Jones"
+     ],
+     [
+      "Mr. Funkee...?",
+      "Wallbanger",
+      "Brown",
+      "Junior"
+     ],
+     [
+      "The funky child was taught the ways of the...?",
+      "Masters",
+      "Streets",
+      "Church"
+     ],
+     [
+      "He hurdles over rappers just like...?",
+      "Jackie Joyner-Kersee",
+      "Carl Lewis",
+      "Flo-Jo"
+     ],
+     [
+      "When he was younger he sang with his...?",
+      "Sister",
+      "Mother",
+      "Cousin"
+     ],
+     [
+      "Now you have to call him...?",
+      "Mister",
+      "Uncle",
+      "Boss"
+     ]
+    ],
+    [
+     [
+      "Back up baby, here comes the...?",
+      "Schooler",
+      "Ruler",
+      "Teacher"
+     ],
+     [
+      "He's hypnotized by the...?",
+      "Pendulum",
+      "Music",
+      "Lights"
+     ],
+     [
+      "Who's on the M.P.?",
+      "K",
+      "Jazz",
+      "Marley"
+     ],
+     [
+      "Jazz is on the...?",
+      "Technique",
+      "Mic",
+      "Drums"
+     ],
+     [
+      "Who's on the mix?",
+      "Marley",
+      "K-Def",
+      "Funkee"
+     ],
+     [
+      "The Lords have a hit like...?",
+      "Pow",
+      "Boom",
+      "Bang"
+     ],
+     [
+      "Go grab the album to bring the Lords...?",
+      "Money",
+      "Fans",
+      "Fame"
+     ],
+     [
+      "Take it home to...?",
+      "Mom",
+      "Grandma",
+      "School"
+     ],
+     [
+      "The brothers of LOTUG keep the lyrical...?",
+      "Fitness",
+      "Business",
+      "Madness"
+     ],
+     [
+      "Props you receive are the props that you...?",
+      "Earn",
+      "Steal",
+      "Give"
+     ],
+     [
+      "He's off till the funky child...?",
+      "Returns",
+      "Grows up",
+      "Calls"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Chief Rocka",
+   "id": "TBqrcwcZ-88",
+   "start": 18.9,
+   "cuts": [
+    57.6,
+    153.7,
+    208.9
+   ],
+   "qs": [
+    [
+     [
+      "Boom shaka laka, here comes the...?",
+      "Chief Rocka",
+      "Funky Child",
+      "Grave Digga"
+     ],
+     [
+      "Jump up off the...?",
+      "Tip",
+      "Roof",
+      "Stage"
+     ],
+     [
+      "He says what he wants 'cause he's that type of...?",
+      "Guy",
+      "Kid",
+      "Man"
+     ],
+     [
+      "Now hold it, let me...?",
+      "Choose",
+      "Speak",
+      "Breathe"
+     ],
+     [
+      "It's gotta be the...?",
+      "Shoes",
+      "Hat",
+      "Beat"
+     ],
+     [
+      "Who clock him and stand around?",
+      "Girlies",
+      "Teachers",
+      "Cops"
+     ],
+     [
+      "They stand around and...?",
+      "Jock",
+      "Dance",
+      "Stare"
+     ],
+     [
+      "Grab the microphone then...?",
+      "Rock",
+      "Talk",
+      "Drop"
+     ],
+     [
+      "The cat in the hat and the mouse ran up the...?",
+      "Stairs",
+      "Clock",
+      "Tree"
+     ],
+     [
+      "That doesn't make no...?",
+      "Sense",
+      "Money",
+      "Noise"
+     ],
+     [
+      "C'mon, who...?",
+      "Cares",
+      "Knows",
+      "Wins"
+     ]
+    ],
+    [
+     [
+      "He says what he wants as long as it sounds...?",
+      "Funk",
+      "Fresh",
+      "Loud"
+     ],
+     [
+      "Some MCs wanted to...him?",
+      "Buy",
+      "Battle",
+      "Sign"
+     ],
+     [
+      "He amazes and...?",
+      "Astounds",
+      "Confounds",
+      "Shouts"
+     ],
+     [
+      "Let them know who wears the...?",
+      "Crown",
+      "Chain",
+      "Hat"
+     ],
+     [
+      "The cream of the...?",
+      "Crop",
+      "Cake",
+      "Coffee"
+     ],
+     [
+      "The best under the...?",
+      "Sun",
+      "Moon",
+      "Stars"
+     ],
+     [
+      "He freaks it so you'll boom it in your...?",
+      "Cars",
+      "Rooms",
+      "Ears"
+     ],
+     [
+      "The flow and the grip like...?",
+      "G.I. Joe",
+      "Superman",
+      "Batman"
+     ],
+     [
+      "He doesn't wanna go...?",
+      "Pop",
+      "Home",
+      "Soft"
+     ],
+     [
+      "Too much soul, rhythm and...?",
+      "Blues",
+      "Rock",
+      "Funk"
+     ],
+     [
+      "He used to break on a...?",
+      "Box",
+      "Floor",
+      "Stage"
+     ]
+    ],
+    [
+     [
+      "Who does he ask, 'whassup?'",
+      "Mr. Funke",
+      "Do It All",
+      "Marley"
+     ],
+     [
+      "Yo Jazz, flex a...?",
+      "Cut",
+      "Beat",
+      "Record"
+     ],
+     [
+      "He's chillin' with his...?",
+      "Knocker",
+      "Brother",
+      "Partner"
+     ],
+     [
+      "What goes up must...?",
+      "Come down",
+      "Stay up",
+      "Fly"
+     ],
+     [
+      "But not me...?",
+      "Clown",
+      "Bro",
+      "Kid"
+     ],
+     [
+      "What does he crack when he's pumpin'?",
+      "A speaker",
+      "A window",
+      "A record"
+     ],
+     [
+      "Watch your ears start...?",
+      "Hummin'",
+      "Ringin'",
+      "Poppin'"
+     ],
+     [
+      "The kids around the way thought he was...?",
+      "Buggin'",
+      "Lyin'",
+      "Sleepin'"
+     ],
+     [
+      "He walks, talks, eats and...with the funk?",
+      "Sleeps",
+      "Dances",
+      "Prays"
+     ],
+     [
+      "He lives for the...?",
+      "Funk",
+      "Fame",
+      "Money"
+     ],
+     [
+      "What do they say when he's walkin' up the block?",
+      "Boom shaka laka",
+      "Watch out now",
+      "Here he comes"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

@@ -93,40 +93,1341 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
-  {
-   "title": "Deja Vu (Uptown Baby)",
-   "id": "mVnoNpncfh0",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
+ "songs": [
   {
    "title": "We Will Ball",
    "id": "zDEuCtKKQfE",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "start": 35.8,
+   "cuts": [
+    78.5,
+    140.5,
+    193.5
+   ],
+   "qs": [
+    [
+     [
+      "He's too hot to...?",
+      "Handle",
+      "Hold",
+      "Touch"
+     ],
+     [
+      "And too cold to...?",
+      "Freeze",
+      "Feel",
+      "Breathe"
+     ],
+     [
+      "Less than four O's on a check is...?",
+      "Absurd",
+      "Fine",
+      "Normal"
+     ],
+     [
+      "Which figure is preferred?",
+      "The six",
+      "The five",
+      "The four"
+     ],
+     [
+      "Where's he getting a tan?",
+      "In the sand",
+      "On a boat",
+      "By the pool"
+     ],
+     [
+      "When it stops he'll still be sitting in the...?",
+      "Drop",
+      "Jeep",
+      "Lex"
+     ],
+     [
+      "What's he coming through in?",
+      "The Benz",
+      "The Jeep",
+      "The Lex"
+     ],
+     [
+      "What does he make off this label deal?",
+      "A mill",
+      "A hit",
+      "A name"
+     ]
+    ],
+    [
+     [
+      "It all helped him get his...?",
+      "600",
+      "Lexus",
+      "Rolex"
+     ],
+     [
+      "We ball, we take it all and never deal with...?",
+      "Fractions",
+      "Problems",
+      "Haters"
+     ],
+     [
+      "He talks jewels like his tongue was dipped in...?",
+      "Platinum",
+      "Gold",
+      "Silver"
+     ],
+     [
+      "What does he drop the top on?",
+      "The Porsche",
+      "The Benz",
+      "The Jeep"
+     ],
+     [
+      "Hit the clutch, see you...?",
+      "Later",
+      "Soon",
+      "Tomorrow"
+     ],
+     [
+      "Before he turns 30 he'll be...?",
+      "CEO",
+      "Retired",
+      "A legend"
+     ],
+     [
+      "Young black...?",
+      "Millionaire",
+      "King",
+      "Star"
+     ],
+     [
+      "If getting money's a crime, he's...?",
+      "Guilty as charged",
+      "Innocent",
+      "On the run"
+     ],
+     [
+      "Under the sun with your chick getting a...?",
+      "Massage",
+      "Tan",
+      "Manicure"
+     ]
+    ],
+    [
+     [
+      "They call his office for a free...?",
+      "CD",
+      "Ticket",
+      "Shirt"
+     ],
+     [
+      "They said we couldn't do it, but it's...?",
+      "Done",
+      "Over",
+      "Hard"
+     ],
+     [
+      "They said we couldn't win, but we...?",
+      "Won",
+      "Lost",
+      "Tried"
+     ],
+     [
+      "They said it'd be better if we...?",
+      "Run",
+      "Quit",
+      "Wait"
+     ],
+     [
+      "Where did they run to?",
+      "Top of the charts",
+      "The bank",
+      "The club"
+     ],
+     [
+      "What kind of plaques?",
+      "Platinum",
+      "Gold",
+      "Silver"
+     ],
+     [
+      "Ain't nothing sweet, we just trying to...?",
+      "Eat",
+      "Ball",
+      "Win"
+     ],
+     [
+      "You estimated how many?",
+      "100,000",
+      "50,000",
+      "A million"
+     ]
+    ]
+   ]
   },
   {
-   "title": "What's That Sound",
-   "id": "V8It5yOtzco",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Be My Lady",
+   "id": "rL0rsy93jgQ",
+   "start": 31,
+   "cuts": [
+    63.3,
+    121.1,
+    140.6
+   ],
+   "qs": [
+    [
+     [
+      "What color is her 320?",
+      "Silver",
+      "Red",
+      "Black"
+     ],
+     [
+      "She's got an S class...?",
+      "Face",
+      "Car",
+      "Smile"
+     ],
+     [
+      "What's her complexion?",
+      "Slight beige",
+      "Dark brown",
+      "Pale"
+     ],
+     [
+      "How fast did he step in?",
+      "Less than a minute",
+      "An hour",
+      "A day"
+     ],
+     [
+      "Where were her eyes?",
+      "On his six",
+      "On his chain",
+      "On the floor"
+     ],
+     [
+      "What does he offer her?",
+      "The world",
+      "A ring",
+      "A ride"
+     ],
+     [
+      "What does she politely tell him?",
+      "No",
+      "Maybe",
+      "Later"
+     ],
+     [
+      "The streets...him?",
+      "Raised",
+      "Made",
+      "Paid"
+     ]
+    ],
+    [
+     [
+      "He gets the job done in more ways than...?",
+      "One",
+      "Two",
+      "Ten"
+     ],
+     [
+      "Grow old and maybe raise a...?",
+      "Son",
+      "Dog",
+      "Family"
+     ],
+     [
+      "What's it gonna take to get...?",
+      "Next to you",
+      "Your number",
+      "Your love"
+     ],
+     [
+      "He'd love it if you'd be his...?",
+      "Lady",
+      "Friend",
+      "Wife"
+     ],
+     [
+      "Back then he saw her with her...?",
+      "Crew",
+      "Mom",
+      "Man"
+     ],
+     [
+      "Now his playin' days are...?",
+      "Over",
+      "Back",
+      "Done right"
+     ],
+     [
+      "He'd like to finally get to...?",
+      "Know ya",
+      "Call ya",
+      "See ya"
+     ],
+     [
+      "A lot of things he wants to...?",
+      "Show ya",
+      "Tell ya",
+      "Buy ya"
+     ],
+     [
+      "She's not impressed with his money and...?",
+      "Fame",
+      "Cars",
+      "Chains"
+     ]
+    ],
+    [
+     [
+      "She says he makes his money in...?",
+      "Vain",
+      "Cash",
+      "Secret"
+     ],
+     [
+      "She says his music shows no...?",
+      "Love",
+      "Skill",
+      "Style"
+     ],
+     [
+      "He raps what he...?",
+      "Sees",
+      "Hears",
+      "Feels"
+     ],
+     [
+      "Where can they sit?",
+      "In the six",
+      "In the park",
+      "At the diner"
+     ],
+     [
+      "And make...?",
+      "Plans",
+      "Moves",
+      "Music"
+     ],
+     [
+      "They'll talk about the...he's gotta take?",
+      "Steps",
+      "Trips",
+      "Chances"
+     ],
+     [
+      "To be your...?",
+      "Man",
+      "Friend",
+      "Boo"
+     ],
+     [
+      "What does he call her?",
+      "Honey",
+      "Shorty",
+      "Mami"
+     ]
+    ]
+   ]
   },
   {
    "title": "Cross Bronx Expressway",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "B_mb4m35mQE",
+   "start": 19.4,
+   "cuts": [
+    53.6,
+    92.4,
+    224.2
+   ],
+   "qs": [
+    [
+     [
+      "He's been through many...?",
+      "Places",
+      "Fights",
+      "Schools"
+     ],
+     [
+      "He's seen the eyes of many...?",
+      "Faces",
+      "Cities",
+      "Kids"
+     ],
+     [
+      "From New York to...?",
+      "Texas",
+      "Cali",
+      "Florida"
+     ],
+     [
+      "To the faces on...?",
+      "Rolexes",
+      "Money",
+      "TV"
+     ],
+     [
+      "He's not a racist or...?",
+      "Sexist",
+      "Hater",
+      "Fake"
+     ],
+     [
+      "Nothin' less than a...?",
+      "Lexus",
+      "Benz",
+      "Jeep"
+     ],
+     [
+      "Troubled minds and troubled...?",
+      "Times",
+      "Streets",
+      "Days"
+     ],
+     [
+      "Stacks, he's tryin' to...mine?",
+      "Double",
+      "Hide",
+      "Save"
+     ],
+     [
+      "Who's back to back with him circling the block?",
+      "Tracks",
+      "Joe",
+      "Pun"
+     ]
+    ],
+    [
+     [
+      "Which highway is he on?",
+      "Cross Bronx",
+      "BQE",
+      "Major Deegan"
+     ],
+     [
+      "Who's on it with him?",
+      "Fat Joe",
+      "Big Pun",
+      "Nas"
+     ],
+     [
+      "Which side of town?",
+      "East side",
+      "West side",
+      "South side"
+     ],
+     [
+      "What's the first spot he names?",
+      "Soundview",
+      "Hunts Point",
+      "Melrose"
+     ],
+     [
+      "Castle...?",
+      "Hill",
+      "Rock",
+      "Point"
+     ],
+     [
+      "Bronx...?",
+      "Dale",
+      "Park",
+      "Side"
+     ],
+     [
+      "Which avenue starts his second list?",
+      "Commonwealth",
+      "Walton",
+      "Jerome"
+     ],
+     [
+      "Which college-name street does he name?",
+      "Colgate",
+      "Harvard",
+      "Yale"
+     ]
+    ],
+    [
+     [
+      "He had a dream that a team had a...?",
+      "Scheme",
+      "Plan",
+      "Song"
+     ],
+     [
+      "His main objective is Benz and...?",
+      "Lexuses",
+      "Jeeps",
+      "Hondas"
+     ],
+     [
+      "What does he cop?",
+      "Rolexes",
+      "Sneakers",
+      "Chains"
+     ],
+     [
+      "Far from a devil, he says he's...?",
+      "Gunz",
+      "Tariq",
+      "Joe"
+     ],
+     [
+      "He shines like...?",
+      "Sun",
+      "Gold",
+      "Stars"
+     ],
+     [
+      "He rhymes like...?",
+      "None",
+      "Pun",
+      "Nas"
+     ],
+     [
+      "You can't wear that, you gotta wear...?",
+      "This",
+      "Black",
+      "Gold"
+     ],
+     [
+      "Words from which DJ?",
+      "Funkmaster Flex",
+      "Kid Capri",
+      "DJ Clue"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Fiesta",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Deja Vu (Uptown Baby)",
+   "id": "N_utN5jVoHs",
+   "start": 29.7,
+   "cuts": [
+    70.2,
+    134.3,
+    239.9
+   ],
+   "qs": [
+    [
+     [
+      "New York to the heart but got love for...?",
+      "All",
+      "Brooklyn",
+      "Nobody"
+     ],
+     [
+      "Where does he lay his dome?",
+      "Uptown",
+      "Downtown",
+      "Midtown"
+     ],
+     [
+      "On the streets of the Bronx where his...roam?",
+      "Family",
+      "Dogs",
+      "Crew"
+     ],
+     [
+      "He never really liked to play a...?",
+      "Fool",
+      "Game",
+      "Role"
+     ],
+     [
+      "He loves to succeed and see foes fall...?",
+      "Flat",
+      "Back",
+      "Down"
+     ],
+     [
+      "Splat like...?",
+      "Deja Vu",
+      "Bam Bam",
+      "Big Pun"
+     ],
+     [
+      "Which bills does he keep near?",
+      "Fifties and hundreds",
+      "Ones and fives",
+      "Tens and twenties"
+     ],
+     [
+      "Anything less than that, you keep the...?",
+      "Change",
+      "Car",
+      "Chain"
+     ]
+    ],
+    [
+     [
+      "Friends call him...?",
+      "Gunz",
+      "Pete",
+      "Lex"
+     ],
+     [
+      "His sons call him...?",
+      "Trife",
+      "Pops",
+      "Gunz"
+     ],
+     [
+      "What watch does he rock?",
+      "Rolex",
+      "Cartier",
+      "Timex"
+     ],
+     [
+      "What car does he push?",
+      "A Lex",
+      "A Benz",
+      "A Jeep"
+     ],
+     [
+      "Harlem macks the...?",
+      "600",
+      "Lex",
+      "Jeep"
+     ],
+     [
+      "If it wasn't for the...this rap would never be?",
+      "Bronx",
+      "Brooklyn",
+      "Queens"
+     ],
+     [
+      "Tell me where you from?",
+      "Uptown, baby",
+      "Downtown, baby",
+      "Brooklyn, baby"
+     ],
+     [
+      "We gets down, baby, up for the...?",
+      "Crown",
+      "Count",
+      "Night"
+     ]
+    ],
+    [
+     [
+      "His ride's parked right next to the...?",
+      "Mercedes",
+      "Bentley",
+      "Jeep"
+     ],
+     [
+      "He's livin' life...?",
+      "Lawless",
+      "Large",
+      "Fast"
+     ],
+     [
+      "He's makin' big...?",
+      "Investments",
+      "Moves",
+      "Records"
+     ],
+     [
+      "Keep your eye on the...?",
+      "Sparrow",
+      "Prize",
+      "Money"
+     ],
+     [
+      "Riches like the...?",
+      "Pharaoh",
+      "King",
+      "Sultan"
+     ],
+     [
+      "Where's he from?",
+      "Soundview",
+      "Hunts Point",
+      "Mott Haven"
+     ],
+     [
+      "Bronx most...?",
+      "Wanted",
+      "Famous",
+      "Hated"
+     ],
+     [
+      "Which movie does he name?",
+      "From Dusk Till Dawn",
+      "Scarface",
+      "Juice"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "We Will Ball",
+   "id": "zDEuCtKKQfE",
+   "start": 35.8,
+   "cuts": [
+    78.5,
+    140.5,
+    193.5
+   ],
+   "qs": [
+    [
+     [
+      "He's too hot to...?",
+      "Handle",
+      "Hold",
+      "Touch"
+     ],
+     [
+      "And too cold to...?",
+      "Freeze",
+      "Feel",
+      "Breathe"
+     ],
+     [
+      "Less than four O's on a check is...?",
+      "Absurd",
+      "Fine",
+      "Normal"
+     ],
+     [
+      "Which figure is preferred?",
+      "The six",
+      "The five",
+      "The four"
+     ],
+     [
+      "Where's he getting a tan?",
+      "In the sand",
+      "On a boat",
+      "By the pool"
+     ],
+     [
+      "When it stops he'll still be sitting in the...?",
+      "Drop",
+      "Jeep",
+      "Lex"
+     ],
+     [
+      "What's he coming through in?",
+      "The Benz",
+      "The Jeep",
+      "The Lex"
+     ],
+     [
+      "What does he make off this label deal?",
+      "A mill",
+      "A hit",
+      "A name"
+     ]
+    ],
+    [
+     [
+      "It all helped him get his...?",
+      "600",
+      "Lexus",
+      "Rolex"
+     ],
+     [
+      "We ball, we take it all and never deal with...?",
+      "Fractions",
+      "Problems",
+      "Haters"
+     ],
+     [
+      "He talks jewels like his tongue was dipped in...?",
+      "Platinum",
+      "Gold",
+      "Silver"
+     ],
+     [
+      "What does he drop the top on?",
+      "The Porsche",
+      "The Benz",
+      "The Jeep"
+     ],
+     [
+      "Hit the clutch, see you...?",
+      "Later",
+      "Soon",
+      "Tomorrow"
+     ],
+     [
+      "Before he turns 30 he'll be...?",
+      "CEO",
+      "Retired",
+      "A legend"
+     ],
+     [
+      "Young black...?",
+      "Millionaire",
+      "King",
+      "Star"
+     ],
+     [
+      "If getting money's a crime, he's...?",
+      "Guilty as charged",
+      "Innocent",
+      "On the run"
+     ],
+     [
+      "Under the sun with your chick getting a...?",
+      "Massage",
+      "Tan",
+      "Manicure"
+     ]
+    ],
+    [
+     [
+      "They call his office for a free...?",
+      "CD",
+      "Ticket",
+      "Shirt"
+     ],
+     [
+      "They said we couldn't do it, but it's...?",
+      "Done",
+      "Over",
+      "Hard"
+     ],
+     [
+      "They said we couldn't win, but we...?",
+      "Won",
+      "Lost",
+      "Tried"
+     ],
+     [
+      "They said it'd be better if we...?",
+      "Run",
+      "Quit",
+      "Wait"
+     ],
+     [
+      "Where did they run to?",
+      "Top of the charts",
+      "The bank",
+      "The club"
+     ],
+     [
+      "What kind of plaques?",
+      "Platinum",
+      "Gold",
+      "Silver"
+     ],
+     [
+      "Ain't nothing sweet, we just trying to...?",
+      "Eat",
+      "Ball",
+      "Win"
+     ],
+     [
+      "You estimated how many?",
+      "100,000",
+      "50,000",
+      "A million"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Be My Lady",
+   "id": "rL0rsy93jgQ",
+   "start": 31,
+   "cuts": [
+    63.3,
+    121.1,
+    140.6
+   ],
+   "qs": [
+    [
+     [
+      "What color is her 320?",
+      "Silver",
+      "Red",
+      "Black"
+     ],
+     [
+      "She's got an S class...?",
+      "Face",
+      "Car",
+      "Smile"
+     ],
+     [
+      "What's her complexion?",
+      "Slight beige",
+      "Dark brown",
+      "Pale"
+     ],
+     [
+      "How fast did he step in?",
+      "Less than a minute",
+      "An hour",
+      "A day"
+     ],
+     [
+      "Where were her eyes?",
+      "On his six",
+      "On his chain",
+      "On the floor"
+     ],
+     [
+      "What does he offer her?",
+      "The world",
+      "A ring",
+      "A ride"
+     ],
+     [
+      "What does she politely tell him?",
+      "No",
+      "Maybe",
+      "Later"
+     ],
+     [
+      "The streets...him?",
+      "Raised",
+      "Made",
+      "Paid"
+     ]
+    ],
+    [
+     [
+      "He gets the job done in more ways than...?",
+      "One",
+      "Two",
+      "Ten"
+     ],
+     [
+      "Grow old and maybe raise a...?",
+      "Son",
+      "Dog",
+      "Family"
+     ],
+     [
+      "What's it gonna take to get...?",
+      "Next to you",
+      "Your number",
+      "Your love"
+     ],
+     [
+      "He'd love it if you'd be his...?",
+      "Lady",
+      "Friend",
+      "Wife"
+     ],
+     [
+      "Back then he saw her with her...?",
+      "Crew",
+      "Mom",
+      "Man"
+     ],
+     [
+      "Now his playin' days are...?",
+      "Over",
+      "Back",
+      "Done right"
+     ],
+     [
+      "He'd like to finally get to...?",
+      "Know ya",
+      "Call ya",
+      "See ya"
+     ],
+     [
+      "A lot of things he wants to...?",
+      "Show ya",
+      "Tell ya",
+      "Buy ya"
+     ],
+     [
+      "She's not impressed with his money and...?",
+      "Fame",
+      "Cars",
+      "Chains"
+     ]
+    ],
+    [
+     [
+      "She says he makes his money in...?",
+      "Vain",
+      "Cash",
+      "Secret"
+     ],
+     [
+      "She says his music shows no...?",
+      "Love",
+      "Skill",
+      "Style"
+     ],
+     [
+      "He raps what he...?",
+      "Sees",
+      "Hears",
+      "Feels"
+     ],
+     [
+      "Where can they sit?",
+      "In the six",
+      "In the park",
+      "At the diner"
+     ],
+     [
+      "And make...?",
+      "Plans",
+      "Moves",
+      "Music"
+     ],
+     [
+      "They'll talk about the...he's gotta take?",
+      "Steps",
+      "Trips",
+      "Chances"
+     ],
+     [
+      "To be your...?",
+      "Man",
+      "Friend",
+      "Boo"
+     ],
+     [
+      "What does he call her?",
+      "Honey",
+      "Shorty",
+      "Mami"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Cross Bronx Expressway",
+   "id": "B_mb4m35mQE",
+   "start": 19.4,
+   "cuts": [
+    53.6,
+    92.4,
+    224.2
+   ],
+   "qs": [
+    [
+     [
+      "He's been through many...?",
+      "Places",
+      "Fights",
+      "Schools"
+     ],
+     [
+      "He's seen the eyes of many...?",
+      "Faces",
+      "Cities",
+      "Kids"
+     ],
+     [
+      "From New York to...?",
+      "Texas",
+      "Cali",
+      "Florida"
+     ],
+     [
+      "To the faces on...?",
+      "Rolexes",
+      "Money",
+      "TV"
+     ],
+     [
+      "He's not a racist or...?",
+      "Sexist",
+      "Hater",
+      "Fake"
+     ],
+     [
+      "Nothin' less than a...?",
+      "Lexus",
+      "Benz",
+      "Jeep"
+     ],
+     [
+      "Troubled minds and troubled...?",
+      "Times",
+      "Streets",
+      "Days"
+     ],
+     [
+      "Stacks, he's tryin' to...mine?",
+      "Double",
+      "Hide",
+      "Save"
+     ],
+     [
+      "Who's back to back with him circling the block?",
+      "Tracks",
+      "Joe",
+      "Pun"
+     ]
+    ],
+    [
+     [
+      "Which highway is he on?",
+      "Cross Bronx",
+      "BQE",
+      "Major Deegan"
+     ],
+     [
+      "Who's on it with him?",
+      "Fat Joe",
+      "Big Pun",
+      "Nas"
+     ],
+     [
+      "Which side of town?",
+      "East side",
+      "West side",
+      "South side"
+     ],
+     [
+      "What's the first spot he names?",
+      "Soundview",
+      "Hunts Point",
+      "Melrose"
+     ],
+     [
+      "Castle...?",
+      "Hill",
+      "Rock",
+      "Point"
+     ],
+     [
+      "Bronx...?",
+      "Dale",
+      "Park",
+      "Side"
+     ],
+     [
+      "Which avenue starts his second list?",
+      "Commonwealth",
+      "Walton",
+      "Jerome"
+     ],
+     [
+      "Which college-name street does he name?",
+      "Colgate",
+      "Harvard",
+      "Yale"
+     ]
+    ],
+    [
+     [
+      "He had a dream that a team had a...?",
+      "Scheme",
+      "Plan",
+      "Song"
+     ],
+     [
+      "His main objective is Benz and...?",
+      "Lexuses",
+      "Jeeps",
+      "Hondas"
+     ],
+     [
+      "What does he cop?",
+      "Rolexes",
+      "Sneakers",
+      "Chains"
+     ],
+     [
+      "Far from a devil, he says he's...?",
+      "Gunz",
+      "Tariq",
+      "Joe"
+     ],
+     [
+      "He shines like...?",
+      "Sun",
+      "Gold",
+      "Stars"
+     ],
+     [
+      "He rhymes like...?",
+      "None",
+      "Pun",
+      "Nas"
+     ],
+     [
+      "You can't wear that, you gotta wear...?",
+      "This",
+      "Black",
+      "Gold"
+     ],
+     [
+      "Words from which DJ?",
+      "Funkmaster Flex",
+      "Kid Capri",
+      "DJ Clue"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Deja Vu (Uptown Baby)",
+   "id": "N_utN5jVoHs",
+   "start": 29.7,
+   "cuts": [
+    70.2,
+    134.3,
+    239.9
+   ],
+   "qs": [
+    [
+     [
+      "New York to the heart but got love for...?",
+      "All",
+      "Brooklyn",
+      "Nobody"
+     ],
+     [
+      "Where does he lay his dome?",
+      "Uptown",
+      "Downtown",
+      "Midtown"
+     ],
+     [
+      "On the streets of the Bronx where his...roam?",
+      "Family",
+      "Dogs",
+      "Crew"
+     ],
+     [
+      "He never really liked to play a...?",
+      "Fool",
+      "Game",
+      "Role"
+     ],
+     [
+      "He loves to succeed and see foes fall...?",
+      "Flat",
+      "Back",
+      "Down"
+     ],
+     [
+      "Splat like...?",
+      "Deja Vu",
+      "Bam Bam",
+      "Big Pun"
+     ],
+     [
+      "Which bills does he keep near?",
+      "Fifties and hundreds",
+      "Ones and fives",
+      "Tens and twenties"
+     ],
+     [
+      "Anything less than that, you keep the...?",
+      "Change",
+      "Car",
+      "Chain"
+     ]
+    ],
+    [
+     [
+      "Friends call him...?",
+      "Gunz",
+      "Pete",
+      "Lex"
+     ],
+     [
+      "His sons call him...?",
+      "Trife",
+      "Pops",
+      "Gunz"
+     ],
+     [
+      "What watch does he rock?",
+      "Rolex",
+      "Cartier",
+      "Timex"
+     ],
+     [
+      "What car does he push?",
+      "A Lex",
+      "A Benz",
+      "A Jeep"
+     ],
+     [
+      "Harlem macks the...?",
+      "600",
+      "Lex",
+      "Jeep"
+     ],
+     [
+      "If it wasn't for the...this rap would never be?",
+      "Bronx",
+      "Brooklyn",
+      "Queens"
+     ],
+     [
+      "Tell me where you from?",
+      "Uptown, baby",
+      "Downtown, baby",
+      "Brooklyn, baby"
+     ],
+     [
+      "We gets down, baby, up for the...?",
+      "Crown",
+      "Count",
+      "Night"
+     ]
+    ],
+    [
+     [
+      "His ride's parked right next to the...?",
+      "Mercedes",
+      "Bentley",
+      "Jeep"
+     ],
+     [
+      "He's livin' life...?",
+      "Lawless",
+      "Large",
+      "Fast"
+     ],
+     [
+      "He's makin' big...?",
+      "Investments",
+      "Moves",
+      "Records"
+     ],
+     [
+      "Keep your eye on the...?",
+      "Sparrow",
+      "Prize",
+      "Money"
+     ],
+     [
+      "Riches like the...?",
+      "Pharaoh",
+      "King",
+      "Sultan"
+     ],
+     [
+      "Where's he from?",
+      "Soundview",
+      "Hunts Point",
+      "Mott Haven"
+     ],
+     [
+      "Bronx most...?",
+      "Wanted",
+      "Famous",
+      "Hated"
+     ],
+     [
+      "Which movie does he name?",
+      "From Dusk Till Dawn",
+      "Scarface",
+      "Juice"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
