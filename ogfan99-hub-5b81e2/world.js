@@ -524,9 +524,22 @@
   function drawRegions() {
     var p = panes.regions;
     p.innerHTML = '<div class="wp-h"><div class="t">REGIONS</div><div class="s">EVERY CITY GETS ITS OWN MAP</div></div>' +
-      '<div class="wgrid">' + REGIONS.map(function (r, i) { if (r.g) return '<div class="rg-h">' + r.g + '</div>'; return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-r="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small>' + (r.coming ? '<small style="font-weight:700">COMING: ' + r.coming.map(esc).join(", ") + '</small>' : '') + (r.locked ? '<small style="color:#e8b84a;font-weight:800">&#128274; LOCKED IN: ' + r.locked.map(function (x) { return esc(x.who); }).join(", ") + '</small>' : '') + '<span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO RIDE" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
+      '<div class="wgrid">' + REGIONS.map(function (r, i) { if (r.g) return '<div class="rg-h">' + r.g + '</div>'; return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-r="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small>' + (r.coming ? '<small style="font-weight:700">' + ((window.OG_REGION_GAMES ? r.coming.filter(function (n) { return window.OG_REGION_GAMES[n]; }).length : 0) ? '<span style="color:#35b867">&#9654; ' + r.coming.filter(function (n) { return window.OG_REGION_GAMES[n]; }).length + ' PLAYABLE NOW</span><br>' : '') + 'ARTISTS: ' + r.coming.map(esc).join(", ") + '</small>' : '') + (r.locked ? '<small style="color:#e8b84a;font-weight:800">&#128274; LOCKED IN: ' + r.locked.map(function (x) { return esc(x.who); }).join(", ") + '</small>' : '') + '<span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO RIDE" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
       '<div class="wmsg" id="rgMsg"></div>';
-    p.querySelector(".wgrid").onclick = function (e) { var b = e.target.closest("[data-r]"); if (!b) return; var r = REGIONS[+b.dataset.r]; if (r.live) return go("map"); $("rgMsg").innerHTML = esc(r.n) + " is under construction. Its map is coming." + (r.locked ? "<br>LOCKED IN: " + r.locked.map(function (x) { return esc(x.who) + (x.ig ? ' <a href="https://www.instagram.com/' + encodeURIComponent(x.ig) + '/" target="_blank" rel="noopener" style="color:#e8b84a">@' + esc(x.ig) + '</a>' : ""); }).join(", ") : ""); };
+    var RG = window.OG_REGION_GAMES || {};
+    p.querySelector(".wgrid").onclick = function (e) {
+      var b = e.target.closest("[data-r]"); if (!b) return; var r = REGIONS[+b.dataset.r]; if (r.live) return go("map");
+      var games = (r.coming || []).filter(function (n) { return RG[n]; });
+      var ig = r.locked ? "LOCKED IN: " + r.locked.map(function (x) { return esc(x.who) + (x.ig ? ' <a href="https://www.instagram.com/' + encodeURIComponent(x.ig) + '/" target="_blank" rel="noopener" style="color:#e8b84a">@' + esc(x.ig) + '</a>' : ""); }).join(", ") : "";
+      if (!games.length) { $("rgMsg").innerHTML = esc(r.n) + " is under construction. Its map is coming." + (ig ? "<br>" + ig : ""); return; }
+      $("rgMsg").innerHTML = '<b style="font-family:var(--display);letter-spacing:.08em">' + esc(r.n) + '</b><br>Its map is coming. Play these games now:' +
+        '<div class="prl" style="margin-top:8px">' + games.map(function (n) { var g = RG[n]; return '<button type="button" class="prr" data-g="' + esc(n) + '"><span class="prdot" style="background:' + r.c + '"></span><span class="prn"><b>' + esc(n) + '</b><small>' + esc(r.n) + '</small></span><span class="st live">' + (g.ex === 2 ? "PLAY 18+" : "PLAY") + '</span></button>'; }).join("") + '</div>' +
+        ((r.coming || []).length > games.length ? '<small>Still building: ' + r.coming.filter(function (n) { return !RG[n]; }).map(esc).join(", ") + '</small>' : '') + (ig ? "<br>" + ig : "");
+      $("rgMsg").querySelectorAll("[data-g]").forEach(function (x) { x.onclick = function (ev) { ev.stopPropagation(); var g = RG[x.dataset.g]; var exOn = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (er) { return false; } })();
+        if (g.ex === 2 && !exOn) { $("rgMsg").insertAdjacentHTML("beforeend", '<p style="color:#e8b84a">' + esc(x.dataset.g) + "'s game is 18+ (explicit lyrics). Turn on EXPLICIT LYRICS 18+ in the ☰ menu to play.</p>"); return; }
+        location.href = g.url + "?from=ogfan99"; }; });
+      try { $("rgMsg").scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (er) {}
+    };
   }
 
 
