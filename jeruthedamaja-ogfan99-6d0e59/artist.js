@@ -93,40 +93,1377 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "explicitSongs": [
   {
-   "title": "Come Clean",
-   "id": "aYYSlCa3xfw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Statik",
+   "id": "OYQ4J5j1p3s",
+   "start": 19.5,
+   "cuts": [
+    43.5,
+    109.3,
+    169.5
+   ],
+   "qs": [
+    [
+     [
+      "Electromagnetic beam, Jeru gets what?",
+      "Charged",
+      "Shocked",
+      "Lit"
+     ],
+     [
+      "MCs tried to hang, but it's a what thang?",
+      "Brooklyn",
+      "Harlem",
+      "Queens"
+     ],
+     [
+      "Poison slang, poison what?",
+      "Fang",
+      "Tongue",
+      "Bite"
+     ],
+     [
+      "Poison what, let him begin?",
+      "Pen",
+      "Ink",
+      "Mic"
+     ],
+     [
+      "Trying to rhyme up in his cipher is what?",
+      "Gamblin'",
+      "Foolish",
+      "Dangerous"
+     ],
+     [
+      "Freestylin', he be what?",
+      "Buckwildin'",
+      "Shinin'",
+      "Rippin'"
+     ],
+     [
+      "His renditions are more freaky than who?",
+      "Rick James",
+      "Prince",
+      "George Clinton"
+     ]
+    ],
+    [
+     [
+      "Jeru flies like what?",
+      "Airplanes",
+      "Eagles",
+      "Rockets"
+     ],
+     [
+      "He could rock a rhyme with just what?",
+      "Statik",
+      "A beat",
+      "A mic"
+     ],
+     [
+      "He's got your heart doing what?",
+      "Pulsating",
+      "Racing",
+      "Pounding"
+     ],
+     [
+      "He doesn't know who gassed your what up?",
+      "Head",
+      "Ego",
+      "Mind"
+     ],
+     [
+      "On a mission, scrambling his enemies' what?",
+      "Transmission",
+      "Signals",
+      "Radios"
+     ],
+     [
+      "He slithers like a what?",
+      "Snake",
+      "Eel",
+      "Worm"
+     ],
+     [
+      "This is his house and he'll what?",
+      "Evict ya",
+      "Kick ya out",
+      "Lock ya out"
+     ]
+    ],
+    [
+     [
+      "For the longest, they knew you were what?",
+      "Plotting",
+      "Scheming",
+      "Lying"
+     ],
+     [
+      "On the downfall, who stands what?",
+      "Tall",
+      "Strong",
+      "Alone"
+     ],
+     [
+      "Praise to the most what?",
+      "High",
+      "Holy",
+      "Great"
+     ],
+     [
+      "He electrifies like the ark of the what?",
+      "Covenant",
+      "Ages",
+      "Kings"
+     ],
+     [
+      "What does Jeru glorify?",
+      "Intelligence",
+      "Knowledge",
+      "Freedom"
+     ],
+     [
+      "Who is horrified?",
+      "Devils",
+      "Demons",
+      "Rappers"
+     ],
+     [
+      "Step into his realm and be what?",
+      "Fried",
+      "Frozen",
+      "Shocked"
+     ]
+    ]
+   ]
   },
   {
-   "title": "D. Original",
-   "id": "49uSOT_Zxvw",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Black Cowboy",
+   "id": "MK8zU_zVybs",
+   "start": 18,
+   "cuts": [
+    59.2,
+    108.9,
+    175.8
+   ],
+   "qs": [
+    [
+     [
+      "Who is one of those MCs' strongest men?",
+      "A female",
+      "A rookie",
+      "A kid"
+     ],
+     [
+      "When Jeru steps to you, don't seek what?",
+      "Refuge",
+      "Shelter",
+      "Help"
+     ],
+     [
+      "The first time he touched the mic, it did what?",
+      "Glowed",
+      "Sparked",
+      "Shook"
+     ],
+     [
+      "He's sick and tired of the izm what?",
+      "Schism",
+      "Prism",
+      "System"
+     ],
+     [
+      "He flows muddy like the gutter after the what?",
+      "Rainstorm",
+      "Snowstorm",
+      "Flood"
+     ],
+     [
+      "His mission: seek, build or what?",
+      "Destroy",
+      "Create",
+      "Conquer"
+     ],
+     [
+      "Jeru says he be the Black what?",
+      "Cowboy",
+      "Sheriff",
+      "Outlaw"
+     ]
+    ],
+    [
+     [
+      "He hopes they apply the proper what?",
+      "Strategy",
+      "Technique",
+      "Tactics"
+     ],
+     [
+      "Worst comes to worst, he'll be the what?",
+      "Best",
+      "Last",
+      "Champ"
+     ],
+     [
+      "Storms will come, but can you stand the what?",
+      "Crash test",
+      "Pressure",
+      "Heat"
+     ],
+     [
+      "There's no way you can get what up?",
+      "Suited",
+      "Geared",
+      "Warmed"
+     ],
+     [
+      "Ignorance is bliss, so you're all what?",
+      "Blistered",
+      "Blessed",
+      "Clueless"
+     ],
+     [
+      "Living on a diet of flesh and what?",
+      "Mistic",
+      "Snapple",
+      "Water"
+     ],
+     [
+      "What kind of monks?",
+      "Perverted",
+      "Shaolin",
+      "Silent"
+     ]
+    ],
+    [
+     [
+      "He switches up the rules of the what?",
+      "Game",
+      "Fight",
+      "Law"
+     ],
+     [
+      "What does he drop in the game?",
+      "Jewels",
+      "Bombs",
+      "Science"
+     ],
+     [
+      "The God is hot like a what?",
+      "Volcano",
+      "Furnace",
+      "Desert"
+     ],
+     [
+      "Once he met up with this what?",
+      "Bandolero",
+      "Desperado",
+      "Ranchero"
+     ],
+     [
+      "He puts MCs on the ceiling like who?",
+      "Michelangelo",
+      "Da Vinci",
+      "Picasso"
+     ],
+     [
+      "You couldn't test the real what?",
+      "McCoy",
+      "Deal",
+      "Thing"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Can't Stop the Prophet",
-   "id": "LUyvqwILCeU",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Ain't the Devil Happy",
+   "id": "uoP9xsFcymQ",
+   "start": 17,
+   "cuts": [
+    50.5,
+    153.8,
+    209.5
+   ],
+   "qs": [
+    [
+     [
+      "Devils search for the secrets to what?",
+      "Immortality",
+      "Wealth",
+      "Power"
+     ],
+     [
+      "Jeru alters his physical what?",
+      "Chemistry",
+      "Form",
+      "Shape"
+     ],
+     [
+      "Vibrations transcend space and what?",
+      "Time",
+      "Matter",
+      "Light"
+     ],
+     [
+      "He's pure at heart because he deals with the what?",
+      "Mind",
+      "Soul",
+      "Truth"
+     ],
+     [
+      "His thoughts are now what?",
+      "Universes",
+      "Galaxies",
+      "Planets"
+     ],
+     [
+      "The ageless wisdom of the what?",
+      "Sages",
+      "Elders",
+      "Ancients"
+     ],
+     [
+      "What is contagious?",
+      "Ignorance",
+      "Hatred",
+      "Fear"
+     ]
+    ],
+    [
+     [
+      "Wise up and use your what?",
+      "Brain",
+      "Head",
+      "Heart"
+     ],
+     [
+      "Balance positivity with what?",
+      "Negativity",
+      "Patience",
+      "Reality"
+     ],
+     [
+      "How does Jeru wear his hair?",
+      "Nappy",
+      "Braided",
+      "Short"
+     ],
+     [
+      "There's no room for what to bloom?",
+      "Flowers",
+      "Roses",
+      "Trees"
+     ],
+     [
+      "What are we accomplishing?",
+      "Nothing",
+      "Everything",
+      "Too little"
+     ],
+     [
+      "Who's the only one who really gets fatter?",
+      "The devil",
+      "The rich",
+      "The man"
+     ],
+     [
+      "Another queen without a what?",
+      "King",
+      "Crown",
+      "Throne"
+     ]
+    ],
+    [
+     [
+      "If you're in range, he hopes you what?",
+      "Hear this",
+      "Feel this",
+      "Get this"
+     ],
+     [
+      "The dollar bill is the what we trust?",
+      "God",
+      "Thing",
+      "Bank"
+     ],
+     [
+      "The days blow by like what?",
+      "Dust",
+      "Wind",
+      "Leaves"
+     ],
+     [
+      "Even men of what rust?",
+      "Steel",
+      "Iron",
+      "Gold"
+     ],
+     [
+      "Look to the sky for your what?",
+      "Savior",
+      "Answer",
+      "Blessing"
+     ],
+     [
+      "Discover the power of what?",
+      "Self",
+      "Love",
+      "Truth"
+     ]
+    ]
+   ]
   },
   {
    "title": "Me or the Papes",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "g9S_sfBfIUA",
+   "start": 22.4,
+   "cuts": [
+    50,
+    155.5,
+    236.5
+   ],
+   "qs": [
+    [
+     [
+      "Making him wait, she thought he'd have more what?",
+      "Respect",
+      "Patience",
+      "Love"
+     ],
+     [
+      "She'd end up spending his what?",
+      "Digits",
+      "Savings",
+      "Paycheck"
+     ],
+     [
+      "Top rated what?",
+      "Game",
+      "Player",
+      "Hustle"
+     ],
+     [
+      "If it's game, Jeru did what?",
+      "Played it",
+      "Beat it",
+      "Ran it"
+     ],
+     [
+      "She swore the king was what?",
+      "Checkmated",
+      "Defeated",
+      "Dethroned"
+     ],
+     [
+      "She loves his mind because he's so what?",
+      "Intelligent",
+      "Handsome",
+      "Famous"
+     ]
+    ],
+    [
+     [
+      "It's long distance and what?",
+      "Disconnected",
+      "Delayed",
+      "Collect"
+     ],
+     [
+      "That's not his particular style and what?",
+      "Taste",
+      "Flavor",
+      "Choice"
+     ],
+     [
+      "Jeru says his name ain't who?",
+      "Puff",
+      "Biggie",
+      "Jay"
+     ],
+     [
+      "Fake players never get out the what?",
+      "Projects",
+      "Hood",
+      "Game"
+     ],
+     [
+      "She bends for what?",
+      "Dividends",
+      "Diamonds",
+      "Dollars"
+     ],
+     [
+      "Back in the days, Biz said it was the what?",
+      "Vapors",
+      "Fumes",
+      "Breaks"
+     ],
+     [
+      "No fiends come between him and his what?",
+      "Dreams",
+      "Family",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "Find a queen and she'll be his what?",
+      "Earth",
+      "Moon",
+      "Star"
+     ],
+     [
+      "Deep down, he wishes to give 'em the what?",
+      "Universe",
+      "World",
+      "Stars"
+     ],
+     [
+      "Who does Jeru build with?",
+      "Afu",
+      "Primo",
+      "Guru"
+     ],
+     [
+      "They come a dime a what?",
+      "Dozen",
+      "Minute",
+      "Block"
+     ],
+     [
+      "Low stress, old age and what?",
+      "Retirement",
+      "Comfort",
+      "Wisdom"
+     ],
+     [
+      "When he's right, she's his what?",
+      "Reflection",
+      "Partner",
+      "Rock"
+     ],
+     [
+      "Great what of me and she?",
+      "Expectations",
+      "Adventures",
+      "Plans"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Ya Playin' Yaself",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Come Clean",
+   "id": "ccioFqddzQ0",
+   "start": 21.3,
+   "cuts": [
+    54.5,
+    160.7,
+    241.7
+   ],
+   "qs": [
+    [
+     [
+      "Feeling lucky, duck? Then press your what?",
+      "Luck",
+      "Chance",
+      "Fate"
+     ],
+     [
+      "Malignant what steadily pumps the funk?",
+      "Mist",
+      "Fog",
+      "Smoke"
+     ],
+     [
+      "You couldn't come to the jungles of the what?",
+      "East",
+      "West",
+      "South"
+     ],
+     [
+      "Catching what is their thing?",
+      "Wreck",
+      "Breaks",
+      "Vibes"
+     ],
+     [
+      "You can check his what?",
+      "Credentials",
+      "Records",
+      "Resume"
+     ],
+     [
+      "He chooses to use his infinite what?",
+      "Potentials",
+      "Wisdom",
+      "Powers"
+     ]
+    ],
+    [
+     [
+      "He controls the mic like who?",
+      "Fidel Castro",
+      "Che Guevara",
+      "Malcolm X"
+     ],
+     [
+      "Locked so deep that you can what?",
+      "Scuba",
+      "Swim",
+      "Drown"
+     ],
+     [
+      "His attack is purely what?",
+      "Mental",
+      "Physical",
+      "Verbal"
+     ],
+     [
+      "Meant to wake you out of your what state?",
+      "Brainwashed",
+      "Sleeping",
+      "Frozen"
+     ],
+     [
+      "You can't count the what that he ripped?",
+      "Mics",
+      "Stages",
+      "Shows"
+     ],
+     [
+      "He kicks like kung fu flicks by who?",
+      "Run Run Shaw",
+      "Bruce Lee",
+      "Jackie Chan"
+     ]
+    ],
+    [
+     [
+      "He flies like a jet and stings like a what?",
+      "Hornet",
+      "Bee",
+      "Scorpion"
+     ],
+     [
+      "Don't provoke the wrath of this rhyme what?",
+      "Inventor",
+      "Master",
+      "Machine"
+     ],
+     [
+      "The tech's technique, 'cause he's a what?",
+      "Technician",
+      "Teacher",
+      "Scientist"
+     ],
+     [
+      "Hard rocks melt in the clutch of the what?",
+      "Suntoucha",
+      "Moonwalker",
+      "Firestarter"
+     ],
+     [
+      "You got lost in what borough?",
+      "Brooklyn",
+      "Queens",
+      "The Bronx"
+     ],
+     [
+      "You was webbed straight from the what?",
+      "Start",
+      "Jump",
+      "Gate"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Statik",
+   "id": "OYQ4J5j1p3s",
+   "start": 19.5,
+   "cuts": [
+    43.5,
+    109.3,
+    169.5
+   ],
+   "qs": [
+    [
+     [
+      "Electromagnetic beam, Jeru gets what?",
+      "Charged",
+      "Shocked",
+      "Lit"
+     ],
+     [
+      "MCs tried to hang, but it's a what thang?",
+      "Brooklyn",
+      "Harlem",
+      "Queens"
+     ],
+     [
+      "Poison slang, poison what?",
+      "Fang",
+      "Tongue",
+      "Bite"
+     ],
+     [
+      "Poison what, let him begin?",
+      "Pen",
+      "Ink",
+      "Mic"
+     ],
+     [
+      "Trying to rhyme up in his cipher is what?",
+      "Gamblin'",
+      "Foolish",
+      "Dangerous"
+     ],
+     [
+      "Freestylin', he be what?",
+      "Buckwildin'",
+      "Shinin'",
+      "Rippin'"
+     ],
+     [
+      "His renditions are more freaky than who?",
+      "Rick James",
+      "Prince",
+      "George Clinton"
+     ]
+    ],
+    [
+     [
+      "Jeru flies like what?",
+      "Airplanes",
+      "Eagles",
+      "Rockets"
+     ],
+     [
+      "He could rock a rhyme with just what?",
+      "Statik",
+      "A beat",
+      "A mic"
+     ],
+     [
+      "He's got your heart doing what?",
+      "Pulsating",
+      "Racing",
+      "Pounding"
+     ],
+     [
+      "He doesn't know who gassed your what up?",
+      "Head",
+      "Ego",
+      "Mind"
+     ],
+     [
+      "On a mission, scrambling his enemies' what?",
+      "Transmission",
+      "Signals",
+      "Radios"
+     ],
+     [
+      "He slithers like a what?",
+      "Snake",
+      "Eel",
+      "Worm"
+     ],
+     [
+      "This is his house and he'll what?",
+      "Evict ya",
+      "Kick ya out",
+      "Lock ya out"
+     ]
+    ],
+    [
+     [
+      "For the longest, they knew you were what?",
+      "Plotting",
+      "Scheming",
+      "Lying"
+     ],
+     [
+      "On the downfall, who stands what?",
+      "Tall",
+      "Strong",
+      "Alone"
+     ],
+     [
+      "Praise to the most what?",
+      "High",
+      "Holy",
+      "Great"
+     ],
+     [
+      "He electrifies like the ark of the what?",
+      "Covenant",
+      "Ages",
+      "Kings"
+     ],
+     [
+      "What does Jeru glorify?",
+      "Intelligence",
+      "Knowledge",
+      "Freedom"
+     ],
+     [
+      "Who is horrified?",
+      "Devils",
+      "Demons",
+      "Rappers"
+     ],
+     [
+      "Step into his realm and be what?",
+      "Fried",
+      "Frozen",
+      "Shocked"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Black Cowboy",
+   "id": "MK8zU_zVybs",
+   "start": 18,
+   "cuts": [
+    59.2,
+    108.9,
+    175.8
+   ],
+   "qs": [
+    [
+     [
+      "Who is one of those MCs' strongest men?",
+      "A female",
+      "A rookie",
+      "A kid"
+     ],
+     [
+      "When Jeru steps to you, don't seek what?",
+      "Refuge",
+      "Shelter",
+      "Help"
+     ],
+     [
+      "The first time he touched the mic, it did what?",
+      "Glowed",
+      "Sparked",
+      "Shook"
+     ],
+     [
+      "He's sick and tired of the izm what?",
+      "Schism",
+      "Prism",
+      "System"
+     ],
+     [
+      "He flows muddy like the gutter after the what?",
+      "Rainstorm",
+      "Snowstorm",
+      "Flood"
+     ],
+     [
+      "His mission: seek, build or what?",
+      "Destroy",
+      "Create",
+      "Conquer"
+     ],
+     [
+      "Jeru says he be the Black what?",
+      "Cowboy",
+      "Sheriff",
+      "Outlaw"
+     ]
+    ],
+    [
+     [
+      "He hopes they apply the proper what?",
+      "Strategy",
+      "Technique",
+      "Tactics"
+     ],
+     [
+      "Worst comes to worst, he'll be the what?",
+      "Best",
+      "Last",
+      "Champ"
+     ],
+     [
+      "Storms will come, but can you stand the what?",
+      "Crash test",
+      "Pressure",
+      "Heat"
+     ],
+     [
+      "There's no way you can get what up?",
+      "Suited",
+      "Geared",
+      "Warmed"
+     ],
+     [
+      "Ignorance is bliss, so you're all what?",
+      "Blistered",
+      "Blessed",
+      "Clueless"
+     ],
+     [
+      "Living on a diet of flesh and what?",
+      "Mistic",
+      "Snapple",
+      "Water"
+     ],
+     [
+      "What kind of monks?",
+      "Perverted",
+      "Shaolin",
+      "Silent"
+     ]
+    ],
+    [
+     [
+      "He switches up the rules of the what?",
+      "Game",
+      "Fight",
+      "Law"
+     ],
+     [
+      "What does he drop in the game?",
+      "Jewels",
+      "Bombs",
+      "Science"
+     ],
+     [
+      "The God is hot like a what?",
+      "Volcano",
+      "Furnace",
+      "Desert"
+     ],
+     [
+      "Once he met up with this what?",
+      "Bandolero",
+      "Desperado",
+      "Ranchero"
+     ],
+     [
+      "He puts MCs on the ceiling like who?",
+      "Michelangelo",
+      "Da Vinci",
+      "Picasso"
+     ],
+     [
+      "You couldn't test the real what?",
+      "McCoy",
+      "Deal",
+      "Thing"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Ain't the Devil Happy",
+   "id": "uoP9xsFcymQ",
+   "start": 17,
+   "cuts": [
+    50.5,
+    153.8,
+    209.5
+   ],
+   "qs": [
+    [
+     [
+      "Devils search for the secrets to what?",
+      "Immortality",
+      "Wealth",
+      "Power"
+     ],
+     [
+      "Jeru alters his physical what?",
+      "Chemistry",
+      "Form",
+      "Shape"
+     ],
+     [
+      "Vibrations transcend space and what?",
+      "Time",
+      "Matter",
+      "Light"
+     ],
+     [
+      "He's pure at heart because he deals with the what?",
+      "Mind",
+      "Soul",
+      "Truth"
+     ],
+     [
+      "His thoughts are now what?",
+      "Universes",
+      "Galaxies",
+      "Planets"
+     ],
+     [
+      "The ageless wisdom of the what?",
+      "Sages",
+      "Elders",
+      "Ancients"
+     ],
+     [
+      "What is contagious?",
+      "Ignorance",
+      "Hatred",
+      "Fear"
+     ]
+    ],
+    [
+     [
+      "Wise up and use your what?",
+      "Brain",
+      "Head",
+      "Heart"
+     ],
+     [
+      "Balance positivity with what?",
+      "Negativity",
+      "Patience",
+      "Reality"
+     ],
+     [
+      "How does Jeru wear his hair?",
+      "Nappy",
+      "Braided",
+      "Short"
+     ],
+     [
+      "There's no room for what to bloom?",
+      "Flowers",
+      "Roses",
+      "Trees"
+     ],
+     [
+      "What are we accomplishing?",
+      "Nothing",
+      "Everything",
+      "Too little"
+     ],
+     [
+      "Who's the only one who really gets fatter?",
+      "The devil",
+      "The rich",
+      "The man"
+     ],
+     [
+      "Another queen without a what?",
+      "King",
+      "Crown",
+      "Throne"
+     ]
+    ],
+    [
+     [
+      "If you're in range, he hopes you what?",
+      "Hear this",
+      "Feel this",
+      "Get this"
+     ],
+     [
+      "The dollar bill is the what we trust?",
+      "God",
+      "Thing",
+      "Bank"
+     ],
+     [
+      "The days blow by like what?",
+      "Dust",
+      "Wind",
+      "Leaves"
+     ],
+     [
+      "Even men of what rust?",
+      "Steel",
+      "Iron",
+      "Gold"
+     ],
+     [
+      "Look to the sky for your what?",
+      "Savior",
+      "Answer",
+      "Blessing"
+     ],
+     [
+      "Discover the power of what?",
+      "Self",
+      "Love",
+      "Truth"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Me or the Papes",
+   "id": "g9S_sfBfIUA",
+   "start": 22.4,
+   "cuts": [
+    50,
+    155.5,
+    236.5
+   ],
+   "qs": [
+    [
+     [
+      "Making him wait, she thought he'd have more what?",
+      "Respect",
+      "Patience",
+      "Love"
+     ],
+     [
+      "She'd end up spending his what?",
+      "Digits",
+      "Savings",
+      "Paycheck"
+     ],
+     [
+      "Top rated what?",
+      "Game",
+      "Player",
+      "Hustle"
+     ],
+     [
+      "If it's game, Jeru did what?",
+      "Played it",
+      "Beat it",
+      "Ran it"
+     ],
+     [
+      "She swore the king was what?",
+      "Checkmated",
+      "Defeated",
+      "Dethroned"
+     ],
+     [
+      "She loves his mind because he's so what?",
+      "Intelligent",
+      "Handsome",
+      "Famous"
+     ]
+    ],
+    [
+     [
+      "It's long distance and what?",
+      "Disconnected",
+      "Delayed",
+      "Collect"
+     ],
+     [
+      "That's not his particular style and what?",
+      "Taste",
+      "Flavor",
+      "Choice"
+     ],
+     [
+      "Jeru says his name ain't who?",
+      "Puff",
+      "Biggie",
+      "Jay"
+     ],
+     [
+      "Fake players never get out the what?",
+      "Projects",
+      "Hood",
+      "Game"
+     ],
+     [
+      "She bends for what?",
+      "Dividends",
+      "Diamonds",
+      "Dollars"
+     ],
+     [
+      "Back in the days, Biz said it was the what?",
+      "Vapors",
+      "Fumes",
+      "Breaks"
+     ],
+     [
+      "No fiends come between him and his what?",
+      "Dreams",
+      "Family",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "Find a queen and she'll be his what?",
+      "Earth",
+      "Moon",
+      "Star"
+     ],
+     [
+      "Deep down, he wishes to give 'em the what?",
+      "Universe",
+      "World",
+      "Stars"
+     ],
+     [
+      "Who does Jeru build with?",
+      "Afu",
+      "Primo",
+      "Guru"
+     ],
+     [
+      "They come a dime a what?",
+      "Dozen",
+      "Minute",
+      "Block"
+     ],
+     [
+      "Low stress, old age and what?",
+      "Retirement",
+      "Comfort",
+      "Wisdom"
+     ],
+     [
+      "When he's right, she's his what?",
+      "Reflection",
+      "Partner",
+      "Rock"
+     ],
+     [
+      "Great what of me and she?",
+      "Expectations",
+      "Adventures",
+      "Plans"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Come Clean",
+   "id": "ccioFqddzQ0",
+   "start": 21.3,
+   "cuts": [
+    54.5,
+    160.7,
+    241.7
+   ],
+   "qs": [
+    [
+     [
+      "Feeling lucky, duck? Then press your what?",
+      "Luck",
+      "Chance",
+      "Fate"
+     ],
+     [
+      "Malignant what steadily pumps the funk?",
+      "Mist",
+      "Fog",
+      "Smoke"
+     ],
+     [
+      "You couldn't come to the jungles of the what?",
+      "East",
+      "West",
+      "South"
+     ],
+     [
+      "Catching what is their thing?",
+      "Wreck",
+      "Breaks",
+      "Vibes"
+     ],
+     [
+      "You can check his what?",
+      "Credentials",
+      "Records",
+      "Resume"
+     ],
+     [
+      "He chooses to use his infinite what?",
+      "Potentials",
+      "Wisdom",
+      "Powers"
+     ]
+    ],
+    [
+     [
+      "He controls the mic like who?",
+      "Fidel Castro",
+      "Che Guevara",
+      "Malcolm X"
+     ],
+     [
+      "Locked so deep that you can what?",
+      "Scuba",
+      "Swim",
+      "Drown"
+     ],
+     [
+      "His attack is purely what?",
+      "Mental",
+      "Physical",
+      "Verbal"
+     ],
+     [
+      "Meant to wake you out of your what state?",
+      "Brainwashed",
+      "Sleeping",
+      "Frozen"
+     ],
+     [
+      "You can't count the what that he ripped?",
+      "Mics",
+      "Stages",
+      "Shows"
+     ],
+     [
+      "He kicks like kung fu flicks by who?",
+      "Run Run Shaw",
+      "Bruce Lee",
+      "Jackie Chan"
+     ]
+    ],
+    [
+     [
+      "He flies like a jet and stings like a what?",
+      "Hornet",
+      "Bee",
+      "Scorpion"
+     ],
+     [
+      "Don't provoke the wrath of this rhyme what?",
+      "Inventor",
+      "Master",
+      "Machine"
+     ],
+     [
+      "The tech's technique, 'cause he's a what?",
+      "Technician",
+      "Teacher",
+      "Scientist"
+     ],
+     [
+      "Hard rocks melt in the clutch of the what?",
+      "Suntoucha",
+      "Moonwalker",
+      "Firestarter"
+     ],
+     [
+      "You got lost in what borough?",
+      "Brooklyn",
+      "Queens",
+      "The Bronx"
+     ],
+     [
+      "You was webbed straight from the what?",
+      "Start",
+      "Jump",
+      "Gate"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

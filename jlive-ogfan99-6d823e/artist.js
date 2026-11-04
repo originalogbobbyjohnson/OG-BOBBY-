@@ -93,40 +93,1373 @@ window.CFG = {
   }
  ],
  "saveKey": "ogfan99jlive1",
- "episodes": [
+ "explicitSongs": [
   {
-   "title": "The Way That I Rhyme",
-   "id": "TN3IPir2ufA",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Vampire Hunter J",
+   "id": "O2EfKg_nWbA",
+   "start": 21.3,
+   "cuts": [
+    47.3,
+    85,
+    136.8
+   ],
+   "qs": [
+    [
+     [
+      "J lets you know from the get what?",
+      "Go",
+      "Start",
+      "Jump"
+     ],
+     [
+      "A little garlic and a what won't stop this one?",
+      "Cross",
+      "Stake",
+      "Prayer"
+     ],
+     [
+      "He's not speaking on a figment of what?",
+      "Folklore",
+      "Fantasy",
+      "Fiction"
+     ],
+     [
+      "Spreading lies to the what?",
+      "Poor",
+      "Young",
+      "Masses"
+     ],
+     [
+      "Starting plagues with a what?",
+      "Cure",
+      "Kiss",
+      "Vaccine"
+     ],
+     [
+      "When opportunity knocks, what does he do?",
+      "Locks doors",
+      "Answers",
+      "Hides"
+     ],
+     [
+      "The reign of the undead is self what?",
+      "Preservation",
+      "Destruction",
+      "Defense"
+     ]
+    ],
+    [
+     [
+      "He feeds off the lives of others, but not with what?",
+      "Fangs",
+      "Teeth",
+      "Claws"
+     ],
+     [
+      "He's protected by powerful what?",
+      "Armies",
+      "Kings",
+      "Walls"
+     ],
+     [
+      "The beast hides by what?",
+      "Days",
+      "Night",
+      "Fog"
+     ],
+     [
+      "A deep dark coffin blocks the what?",
+      "Sun rays",
+      "Moonlight",
+      "Wind"
+     ],
+     [
+      "From dusk till what, he takes on the task?",
+      "Dawn",
+      "Midnight",
+      "Noon"
+     ],
+     [
+      "Unmasking the snake in the what?",
+      "Grass",
+      "Garden",
+      "Tree"
+     ],
+     [
+      "He wakes up the sleepwalkers till they're able to what?",
+      "See",
+      "Think",
+      "Run"
+     ]
+    ],
+    [
+     [
+      "Here he stands with what in hand?",
+      "Stake",
+      "Sword",
+      "Torch"
+     ],
+     [
+      "Knowing the enemy is your only what?",
+      "Protection",
+      "Weapon",
+      "Hope"
+     ],
+     [
+      "The windows expose his lack of what?",
+      "Reflection",
+      "Shadow",
+      "Soul"
+     ],
+     [
+      "His lies hypnotize with the promise of what?",
+      "Gold",
+      "Power",
+      "Fame"
+     ],
+     [
+      "Monopolies dominate what?",
+      "Politics",
+      "Markets",
+      "Media"
+     ],
+     [
+      "From sunlight, the vampires have no what?",
+      "Shield",
+      "Escape",
+      "Cover"
+     ],
+     [
+      "It won't stop till the what-percent nightmare ceases?",
+      "10",
+      "5",
+      "1"
+     ]
+    ]
+   ]
   },
   {
-   "title": "The Authentic",
-   "id": "iN14IHQ-LbM",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Don't Play",
+   "id": "fHNh6OqPjsU",
+   "start": 26.8,
+   "cuts": [
+    61.4,
+    125.1,
+    204.6
+   ],
+   "qs": [
+    [
+     [
+      "It's been a long time what?",
+      "Coming",
+      "Going",
+      "Waiting"
+     ],
+     [
+      "Non-stop till his name is preceded by the what?",
+      "Great",
+      "Best",
+      "King"
+     ],
+     [
+      "He's been around like the what on your block?",
+      "Ice cream truck",
+      "Mailman",
+      "Corner store"
+     ],
+     [
+      "Spittin' tight wisdom, making you what?",
+      "Think",
+      "Laugh",
+      "Nod"
+     ],
+     [
+      "You need art you can what?",
+      "Respect",
+      "Feel",
+      "Afford"
+     ],
+     [
+      "Underground, meaning not just after the what?",
+      "Check",
+      "Fame",
+      "Hype"
+     ],
+     [
+      "This mist you can hardly what?",
+      "Detect",
+      "Escape",
+      "Breathe"
+     ]
+    ],
+    [
+     [
+      "He heard nice guys finish what?",
+      "Last",
+      "First",
+      "Strong"
+     ],
+     [
+      "He's politely waiting for you at the what?",
+      "Finish line",
+      "Front door",
+      "Starting gate"
+     ],
+     [
+      "He brings a rhyme to life like who?",
+      "Dr. Frankenstein",
+      "Dr. Jekyll",
+      "Dr. Seuss"
+     ],
+     [
+      "His lines are built for battle like a what?",
+      "Tank",
+      "Ship",
+      "Fortress"
+     ],
+     [
+      "Running through obstacles like who?",
+      "Popeye",
+      "Superman",
+      "The Hulk"
+     ],
+     [
+      "Follow his rules and you could become his what?",
+      "Friend",
+      "Student",
+      "Partner"
+     ],
+     [
+      "They get ate like paint and he was what?",
+      "Turpentine",
+      "Bleach",
+      "Water"
+     ]
+    ],
+    [
+     [
+      "You still got a bounce in your what?",
+      "Neck",
+      "Step",
+      "Walk"
+     ],
+     [
+      "Folks expect to divide your what?",
+      "Check",
+      "Plate",
+      "Time"
+     ],
+     [
+      "Soon as your ship comes in, you'll be ready to what?",
+      "Sink",
+      "Sail",
+      "Party"
+     ],
+     [
+      "Some are scared of leaving their what?",
+      "Block",
+      "House",
+      "City"
+     ],
+     [
+      "Hear the same word twice and wanna file a what?",
+      "Complaint",
+      "Report",
+      "Lawsuit"
+     ],
+     [
+      "Check the what of the line to set things straight?",
+      "Order",
+      "Rhythm",
+      "Words"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Money Matters",
-   "id": "7OQK2dSgHnE",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "Them That's Not",
+   "id": "js9yJapjNMA",
+   "start": 16.6,
+   "cuts": [
+    46.7,
+    117,
+    211.6
+   ],
+   "qs": [
+    [
+     [
+      "What was the brother's name?",
+      "Castro",
+      "Carlos",
+      "Cassius"
+     ],
+     [
+      "He had a little problem with his what?",
+      "Cash flow",
+      "Landlord",
+      "Car"
+     ],
+     [
+      "What flashed up in his forehead?",
+      "A light bulb",
+      "A camera",
+      "A sign"
+     ],
+     [
+      "It shined so bright he had to close both what?",
+      "Eyes",
+      "Fists",
+      "Blinds"
+     ],
+     [
+      "He stepped to his boy at the label of the what?",
+      "Month",
+      "Year",
+      "Week"
+     ],
+     [
+      "He asked his boy to get him a what?",
+      "Deal",
+      "Beat",
+      "Show"
+     ],
+     [
+      "His dope style sounds just like who?",
+      "So-and-so",
+      "Everybody",
+      "Nobody"
+     ]
+    ],
+    [
+     [
+      "Make ya wanna holler like who?",
+      "Marvin",
+      "Michael",
+      "Otis"
+     ],
+     [
+      "Bring him that crate with the old what?",
+      "Hits",
+      "Tapes",
+      "Soul"
+     ],
+     [
+      "The DJ is fake as a what?",
+      "Toupee",
+      "Three-dollar bill",
+      "Cubic zirconia"
+     ],
+     [
+      "He's at what ball now?",
+      "Cinderella",
+      "Masquerade",
+      "Debutante"
+     ],
+     [
+      "He makes it happen like what?",
+      "Hormones",
+      "Magic",
+      "Clockwork"
+     ],
+     [
+      "If you stress him, he could tell you through the what?",
+      "Grapevine",
+      "Telephone",
+      "Radio"
+     ],
+     [
+      "Them that's got, shall what?",
+      "Get",
+      "Give",
+      "Keep"
+     ]
+    ],
+    [
+     [
+      "He's got a handful of what? Take your pick.",
+      "Cards",
+      "Hits",
+      "Rings"
+     ],
+     [
+      "He's in every video and every other what?",
+      "Magazine",
+      "Movie",
+      "Commercial"
+     ],
+     [
+      "His accountant says he can't get out the what?",
+      "Red",
+      "Hole",
+      "Game"
+     ],
+     [
+      "His pockets are on SlimFast and who?",
+      "Jenny Craig",
+      "Weight Watchers",
+      "Richard Simmons"
+     ],
+     [
+      "What new word did he just learn?",
+      "Recoupment",
+      "Royalties",
+      "Bankruptcy"
+     ],
+     [
+      "He's got a live-in what, so he tiptoes?",
+      "Landlord",
+      "Mother-in-law",
+      "Roommate"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Braggin' Writes",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Braggin' Writes (Revisited)",
+   "id": "bUDyQiJx7H8",
+   "cuts": [
+    39.8,
+    143.6,
+    187.4
+   ],
+   "qs": [
+    [
+     [
+      "For underground what?",
+      "Metaphors",
+      "Rhymes",
+      "Records"
+     ],
+     [
+      "His style was developed in the core of the what?",
+      "Earth",
+      "Sun",
+      "City"
+     ],
+     [
+      "His exhale is what?",
+      "Volcanic",
+      "Arctic",
+      "Toxic"
+     ],
+     [
+      "His inhale is what?",
+      "Seismic",
+      "Massive",
+      "Electric"
+     ],
+     [
+      "From Dallas to where?",
+      "L.A.",
+      "Chicago",
+      "Miami"
+     ],
+     [
+      "Every day is what?",
+      "Mayday",
+      "Payday",
+      "Doomsday"
+     ],
+     [
+      "He's looking on your brain with what?",
+      "Disdain",
+      "Pity",
+      "Envy"
+     ]
+    ],
+    [
+     [
+      "He displays his credentials over what?",
+      "Instrumentals",
+      "Turntables",
+      "Breakbeats"
+     ],
+     [
+      "His potential increases at a rate that's what?",
+      "Exponential",
+      "Steady",
+      "Doubling"
+     ],
+     [
+      "His vocab is fluent, yours is evident of being what?",
+      "Truant",
+      "Absent",
+      "Broken"
+     ],
+     [
+      "Take a second look before his what takes your rook?",
+      "Knight",
+      "Bishop",
+      "Queen"
+     ],
+     [
+      "Everybody's rappin', but only few can what?",
+      "Flow",
+      "Write",
+      "Freestyle"
+     ],
+     [
+      "The microphone magician says what?",
+      "Poof",
+      "Presto",
+      "Abracadabra"
+     ],
+     [
+      "Your joint was fly, but the flight was what?",
+      "Delayed",
+      "Cancelled",
+      "Grounded"
+     ]
+    ],
+    [
+     [
+      "Pretenders go through his mental what?",
+      "Blender",
+      "Grinder",
+      "Shredder"
+     ],
+     [
+      "And then return to what?",
+      "Sender",
+      "Owner",
+      "Base"
+     ],
+     [
+      "MCs hang loose like a what?",
+      "Fender bender",
+      "Broken door",
+      "Loose tooth"
+     ],
+     [
+      "He recommends it regardless of your what?",
+      "Gender",
+      "Age",
+      "Hood"
+     ],
+     [
+      "He surpasses the serpent as he heads the what?",
+      "Class",
+      "Line",
+      "Pack"
+     ],
+     [
+      "You best believe he gets the last what?",
+      "Laugh",
+      "Word",
+      "Dance"
+     ]
+    ]
+   ]
   },
   {
-   "title": "Pay It Forward",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "title": "Satisfied?",
+   "id": "IkPPNA4T8_Q",
+   "cuts": [
+    38.2,
+    130.6,
+    201.4
+   ],
+   "qs": [
+    [
+     [
+      "Lights, camera, tragedy, comedy and what?",
+      "Romance",
+      "Action",
+      "Drama"
+     ],
+     [
+      "Dance from your what stance?",
+      "Fighting",
+      "Winning",
+      "Standing"
+     ],
+     [
+      "In the what race?",
+      "Rat",
+      "Human",
+      "Arms"
+     ],
+     [
+      "Whose son started way in advance?",
+      "The referee's",
+      "The coach's",
+      "The judge's"
+     ],
+     [
+      "Silk PJ's, sheets and what?",
+      "Down pillows",
+      "Satin robes",
+      "Blankets"
+     ],
+     [
+      "You bought your mom a new whip, scrap the what?",
+      "Jalopy",
+      "Hooptie",
+      "Bucket"
+     ]
+    ],
+    [
+     [
+      "To eat good, you gotta swallow your what?",
+      "Pride",
+      "Words",
+      "Tongue"
+     ],
+     [
+      "The poor get worked, the rich get what?",
+      "Richer",
+      "Bigger",
+      "Lazy"
+     ],
+     [
+      "The world gets worse, do you get the what?",
+      "Picture",
+      "Message",
+      "Point"
+     ],
+     [
+      "The old get stiff, the young get what?",
+      "Stepped on",
+      "Locked up",
+      "Left out"
+     ],
+     [
+      "It won't pull equality from behind your what?",
+      "Ear",
+      "Back",
+      "Curtain"
+     ],
+     [
+      "Tell who not to forget to cut the lawn?",
+      "Huey Freeman",
+      "Riley Freeman",
+      "Uncle Ruckus"
+     ]
+    ],
+    [
+     [
+      "They turned hip-hop into a get-rich-quick what?",
+      "Scheme",
+      "Plan",
+      "Game"
+     ],
+     [
+      "They'd have you believe we're on the same what?",
+      "Team",
+      "Side",
+      "Page"
+     ],
+     [
+      "This jam demands your undivided what?",
+      "Attention",
+      "Support",
+      "Respect"
+     ],
+     [
+      "Grab the bull by the what?",
+      "Horns",
+      "Tail",
+      "Neck"
+     ],
+     [
+      "And the bucks by the what?",
+      "Antlers",
+      "Hooves",
+      "Ears"
+     ],
+     [
+      "Until we're all what, he'll never be satisfied?",
+      "Free",
+      "Equal",
+      "Fed"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "songs": [
+  {
+   "title": "Vampire Hunter J",
+   "id": "O2EfKg_nWbA",
+   "start": 21.3,
+   "cuts": [
+    47.3,
+    85,
+    136.8
+   ],
+   "qs": [
+    [
+     [
+      "J lets you know from the get what?",
+      "Go",
+      "Start",
+      "Jump"
+     ],
+     [
+      "A little garlic and a what won't stop this one?",
+      "Cross",
+      "Stake",
+      "Prayer"
+     ],
+     [
+      "He's not speaking on a figment of what?",
+      "Folklore",
+      "Fantasy",
+      "Fiction"
+     ],
+     [
+      "Spreading lies to the what?",
+      "Poor",
+      "Young",
+      "Masses"
+     ],
+     [
+      "Starting plagues with a what?",
+      "Cure",
+      "Kiss",
+      "Vaccine"
+     ],
+     [
+      "When opportunity knocks, what does he do?",
+      "Locks doors",
+      "Answers",
+      "Hides"
+     ],
+     [
+      "The reign of the undead is self what?",
+      "Preservation",
+      "Destruction",
+      "Defense"
+     ]
+    ],
+    [
+     [
+      "He feeds off the lives of others, but not with what?",
+      "Fangs",
+      "Teeth",
+      "Claws"
+     ],
+     [
+      "He's protected by powerful what?",
+      "Armies",
+      "Kings",
+      "Walls"
+     ],
+     [
+      "The beast hides by what?",
+      "Days",
+      "Night",
+      "Fog"
+     ],
+     [
+      "A deep dark coffin blocks the what?",
+      "Sun rays",
+      "Moonlight",
+      "Wind"
+     ],
+     [
+      "From dusk till what, he takes on the task?",
+      "Dawn",
+      "Midnight",
+      "Noon"
+     ],
+     [
+      "Unmasking the snake in the what?",
+      "Grass",
+      "Garden",
+      "Tree"
+     ],
+     [
+      "He wakes up the sleepwalkers till they're able to what?",
+      "See",
+      "Think",
+      "Run"
+     ]
+    ],
+    [
+     [
+      "Here he stands with what in hand?",
+      "Stake",
+      "Sword",
+      "Torch"
+     ],
+     [
+      "Knowing the enemy is your only what?",
+      "Protection",
+      "Weapon",
+      "Hope"
+     ],
+     [
+      "The windows expose his lack of what?",
+      "Reflection",
+      "Shadow",
+      "Soul"
+     ],
+     [
+      "His lies hypnotize with the promise of what?",
+      "Gold",
+      "Power",
+      "Fame"
+     ],
+     [
+      "Monopolies dominate what?",
+      "Politics",
+      "Markets",
+      "Media"
+     ],
+     [
+      "From sunlight, the vampires have no what?",
+      "Shield",
+      "Escape",
+      "Cover"
+     ],
+     [
+      "It won't stop till the what-percent nightmare ceases?",
+      "10",
+      "5",
+      "1"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Don't Play",
+   "id": "fHNh6OqPjsU",
+   "start": 26.8,
+   "cuts": [
+    61.4,
+    125.1,
+    204.6
+   ],
+   "qs": [
+    [
+     [
+      "It's been a long time what?",
+      "Coming",
+      "Going",
+      "Waiting"
+     ],
+     [
+      "Non-stop till his name is preceded by the what?",
+      "Great",
+      "Best",
+      "King"
+     ],
+     [
+      "He's been around like the what on your block?",
+      "Ice cream truck",
+      "Mailman",
+      "Corner store"
+     ],
+     [
+      "Spittin' tight wisdom, making you what?",
+      "Think",
+      "Laugh",
+      "Nod"
+     ],
+     [
+      "You need art you can what?",
+      "Respect",
+      "Feel",
+      "Afford"
+     ],
+     [
+      "Underground, meaning not just after the what?",
+      "Check",
+      "Fame",
+      "Hype"
+     ],
+     [
+      "This mist you can hardly what?",
+      "Detect",
+      "Escape",
+      "Breathe"
+     ]
+    ],
+    [
+     [
+      "He heard nice guys finish what?",
+      "Last",
+      "First",
+      "Strong"
+     ],
+     [
+      "He's politely waiting for you at the what?",
+      "Finish line",
+      "Front door",
+      "Starting gate"
+     ],
+     [
+      "He brings a rhyme to life like who?",
+      "Dr. Frankenstein",
+      "Dr. Jekyll",
+      "Dr. Seuss"
+     ],
+     [
+      "His lines are built for battle like a what?",
+      "Tank",
+      "Ship",
+      "Fortress"
+     ],
+     [
+      "Running through obstacles like who?",
+      "Popeye",
+      "Superman",
+      "The Hulk"
+     ],
+     [
+      "Follow his rules and you could become his what?",
+      "Friend",
+      "Student",
+      "Partner"
+     ],
+     [
+      "They get ate like paint and he was what?",
+      "Turpentine",
+      "Bleach",
+      "Water"
+     ]
+    ],
+    [
+     [
+      "You still got a bounce in your what?",
+      "Neck",
+      "Step",
+      "Walk"
+     ],
+     [
+      "Folks expect to divide your what?",
+      "Check",
+      "Plate",
+      "Time"
+     ],
+     [
+      "Soon as your ship comes in, you'll be ready to what?",
+      "Sink",
+      "Sail",
+      "Party"
+     ],
+     [
+      "Some are scared of leaving their what?",
+      "Block",
+      "House",
+      "City"
+     ],
+     [
+      "Hear the same word twice and wanna file a what?",
+      "Complaint",
+      "Report",
+      "Lawsuit"
+     ],
+     [
+      "Check the what of the line to set things straight?",
+      "Order",
+      "Rhythm",
+      "Words"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Them That's Not",
+   "id": "js9yJapjNMA",
+   "start": 16.6,
+   "cuts": [
+    46.7,
+    117,
+    211.6
+   ],
+   "qs": [
+    [
+     [
+      "What was the brother's name?",
+      "Castro",
+      "Carlos",
+      "Cassius"
+     ],
+     [
+      "He had a little problem with his what?",
+      "Cash flow",
+      "Landlord",
+      "Car"
+     ],
+     [
+      "What flashed up in his forehead?",
+      "A light bulb",
+      "A camera",
+      "A sign"
+     ],
+     [
+      "It shined so bright he had to close both what?",
+      "Eyes",
+      "Fists",
+      "Blinds"
+     ],
+     [
+      "He stepped to his boy at the label of the what?",
+      "Month",
+      "Year",
+      "Week"
+     ],
+     [
+      "He asked his boy to get him a what?",
+      "Deal",
+      "Beat",
+      "Show"
+     ],
+     [
+      "His dope style sounds just like who?",
+      "So-and-so",
+      "Everybody",
+      "Nobody"
+     ]
+    ],
+    [
+     [
+      "Make ya wanna holler like who?",
+      "Marvin",
+      "Michael",
+      "Otis"
+     ],
+     [
+      "Bring him that crate with the old what?",
+      "Hits",
+      "Tapes",
+      "Soul"
+     ],
+     [
+      "The DJ is fake as a what?",
+      "Toupee",
+      "Three-dollar bill",
+      "Cubic zirconia"
+     ],
+     [
+      "He's at what ball now?",
+      "Cinderella",
+      "Masquerade",
+      "Debutante"
+     ],
+     [
+      "He makes it happen like what?",
+      "Hormones",
+      "Magic",
+      "Clockwork"
+     ],
+     [
+      "If you stress him, he could tell you through the what?",
+      "Grapevine",
+      "Telephone",
+      "Radio"
+     ],
+     [
+      "Them that's got, shall what?",
+      "Get",
+      "Give",
+      "Keep"
+     ]
+    ],
+    [
+     [
+      "He's got a handful of what? Take your pick.",
+      "Cards",
+      "Hits",
+      "Rings"
+     ],
+     [
+      "He's in every video and every other what?",
+      "Magazine",
+      "Movie",
+      "Commercial"
+     ],
+     [
+      "His accountant says he can't get out the what?",
+      "Red",
+      "Hole",
+      "Game"
+     ],
+     [
+      "His pockets are on SlimFast and who?",
+      "Jenny Craig",
+      "Weight Watchers",
+      "Richard Simmons"
+     ],
+     [
+      "What new word did he just learn?",
+      "Recoupment",
+      "Royalties",
+      "Bankruptcy"
+     ],
+     [
+      "He's got a live-in what, so he tiptoes?",
+      "Landlord",
+      "Mother-in-law",
+      "Roommate"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Braggin' Writes (Revisited)",
+   "id": "bUDyQiJx7H8",
+   "cuts": [
+    39.8,
+    143.6,
+    187.4
+   ],
+   "qs": [
+    [
+     [
+      "For underground what?",
+      "Metaphors",
+      "Rhymes",
+      "Records"
+     ],
+     [
+      "His style was developed in the core of the what?",
+      "Earth",
+      "Sun",
+      "City"
+     ],
+     [
+      "His exhale is what?",
+      "Volcanic",
+      "Arctic",
+      "Toxic"
+     ],
+     [
+      "His inhale is what?",
+      "Seismic",
+      "Massive",
+      "Electric"
+     ],
+     [
+      "From Dallas to where?",
+      "L.A.",
+      "Chicago",
+      "Miami"
+     ],
+     [
+      "Every day is what?",
+      "Mayday",
+      "Payday",
+      "Doomsday"
+     ],
+     [
+      "He's looking on your brain with what?",
+      "Disdain",
+      "Pity",
+      "Envy"
+     ]
+    ],
+    [
+     [
+      "He displays his credentials over what?",
+      "Instrumentals",
+      "Turntables",
+      "Breakbeats"
+     ],
+     [
+      "His potential increases at a rate that's what?",
+      "Exponential",
+      "Steady",
+      "Doubling"
+     ],
+     [
+      "His vocab is fluent, yours is evident of being what?",
+      "Truant",
+      "Absent",
+      "Broken"
+     ],
+     [
+      "Take a second look before his what takes your rook?",
+      "Knight",
+      "Bishop",
+      "Queen"
+     ],
+     [
+      "Everybody's rappin', but only few can what?",
+      "Flow",
+      "Write",
+      "Freestyle"
+     ],
+     [
+      "The microphone magician says what?",
+      "Poof",
+      "Presto",
+      "Abracadabra"
+     ],
+     [
+      "Your joint was fly, but the flight was what?",
+      "Delayed",
+      "Cancelled",
+      "Grounded"
+     ]
+    ],
+    [
+     [
+      "Pretenders go through his mental what?",
+      "Blender",
+      "Grinder",
+      "Shredder"
+     ],
+     [
+      "And then return to what?",
+      "Sender",
+      "Owner",
+      "Base"
+     ],
+     [
+      "MCs hang loose like a what?",
+      "Fender bender",
+      "Broken door",
+      "Loose tooth"
+     ],
+     [
+      "He recommends it regardless of your what?",
+      "Gender",
+      "Age",
+      "Hood"
+     ],
+     [
+      "He surpasses the serpent as he heads the what?",
+      "Class",
+      "Line",
+      "Pack"
+     ],
+     [
+      "You best believe he gets the last what?",
+      "Laugh",
+      "Word",
+      "Dance"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Satisfied?",
+   "id": "IkPPNA4T8_Q",
+   "cuts": [
+    38.2,
+    130.6,
+    201.4
+   ],
+   "qs": [
+    [
+     [
+      "Lights, camera, tragedy, comedy and what?",
+      "Romance",
+      "Action",
+      "Drama"
+     ],
+     [
+      "Dance from your what stance?",
+      "Fighting",
+      "Winning",
+      "Standing"
+     ],
+     [
+      "In the what race?",
+      "Rat",
+      "Human",
+      "Arms"
+     ],
+     [
+      "Whose son started way in advance?",
+      "The referee's",
+      "The coach's",
+      "The judge's"
+     ],
+     [
+      "Silk PJ's, sheets and what?",
+      "Down pillows",
+      "Satin robes",
+      "Blankets"
+     ],
+     [
+      "You bought your mom a new whip, scrap the what?",
+      "Jalopy",
+      "Hooptie",
+      "Bucket"
+     ]
+    ],
+    [
+     [
+      "To eat good, you gotta swallow your what?",
+      "Pride",
+      "Words",
+      "Tongue"
+     ],
+     [
+      "The poor get worked, the rich get what?",
+      "Richer",
+      "Bigger",
+      "Lazy"
+     ],
+     [
+      "The world gets worse, do you get the what?",
+      "Picture",
+      "Message",
+      "Point"
+     ],
+     [
+      "The old get stiff, the young get what?",
+      "Stepped on",
+      "Locked up",
+      "Left out"
+     ],
+     [
+      "It won't pull equality from behind your what?",
+      "Ear",
+      "Back",
+      "Curtain"
+     ],
+     [
+      "Tell who not to forget to cut the lawn?",
+      "Huey Freeman",
+      "Riley Freeman",
+      "Uncle Ruckus"
+     ]
+    ],
+    [
+     [
+      "They turned hip-hop into a get-rich-quick what?",
+      "Scheme",
+      "Plan",
+      "Game"
+     ],
+     [
+      "They'd have you believe we're on the same what?",
+      "Team",
+      "Side",
+      "Page"
+     ],
+     [
+      "This jam demands your undivided what?",
+      "Attention",
+      "Support",
+      "Respect"
+     ],
+     [
+      "Grab the bull by the what?",
+      "Horns",
+      "Tail",
+      "Neck"
+     ],
+     [
+      "And the bucks by the what?",
+      "Antlers",
+      "Hooves",
+      "Ears"
+     ],
+     [
+      "Until we're all what, he'll never be satisfied?",
+      "Free",
+      "Equal",
+      "Fed"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
