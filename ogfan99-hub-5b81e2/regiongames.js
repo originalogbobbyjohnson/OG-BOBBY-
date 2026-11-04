@@ -21,4 +21,7 @@ window.OG_REGION_GAMES = {
   "Slaine": { url: "../slaine-ogfan99-ab1fa1/", ex: 2 },
   "Planet Asia": { url: "../planetasia-ogfan99-c7c2b0/", ex: 2 },
   "Tech N9ne": { url: "../technine-ogfan99-4dc3c6/", ex: 0 },
+  "Tonedeff": { url: "../tonedeff-ogfan99-3d6f6f/", ex: 2 },
+  "eLZhi": { url: "../elzhi-ogfan99-b42071/", ex: 2 },
+  "Cage": { url: "../cage-ogfan99-ac03b3/", ex: 2 },
 };
