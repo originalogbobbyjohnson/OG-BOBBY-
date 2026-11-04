@@ -99,40 +99,1305 @@ window.CFG = {
   }
  ],
  "saveKey": "ogfan99leikeli471",
- "episodes": [
+ "songs": [
+  {
+   "title": "Tic Boom",
+   "id": "45rDN6Opjas",
+   "start": 20.8,
+   "cuts": [
+    49.8,
+    85,
+    116.9
+   ],
+   "qs": [
+    [
+     [
+      "What two words open the hook?",
+      "Tic boom",
+      "Bing bang",
+      "Tick tock"
+     ],
+     [
+      "The bulldozer tells everybody to what?",
+      "Make room",
+      "Back up",
+      "Move over"
+     ],
+     [
+      "Where does she say to write it?",
+      "On her tomb",
+      "On the wall",
+      "In the sky"
+     ],
+     [
+      "She doesn't care if they what?",
+      "Assume",
+      "Stare",
+      "Talk"
+     ],
+     [
+      "She only stops to collect, then she does what?",
+      "Resumes",
+      "Leaves",
+      "Rests"
+     ],
+     [
+      "They click her pics and do what?",
+      "Zoom",
+      "Post",
+      "Print"
+     ],
+     [
+      "Which brand is on the floor of her hotel room?",
+      "Chanel",
+      "Gucci",
+      "Prada"
+     ],
+     [
+      "They all wish they had her what?",
+      "Leg room",
+      "Money",
+      "Closet"
+     ],
+     [
+      "Another deal, and it ain't even what?",
+      "Noon",
+      "Monday",
+      "Midnight"
+     ],
+     [
+      "Tour Dior or sit by the what?",
+      "Pool",
+      "Beach",
+      "Window"
+     ],
+     [
+      "She says it's not when you say, it's when she what?",
+      "Chooses",
+      "Wakes up",
+      "Shows up"
+     ]
+    ],
+    [
+     [
+      "\"Televise this\" what?",
+      "Dress",
+      "Show",
+      "Look"
+     ],
+     [
+      "Which designer made the dress?",
+      "Alaïa",
+      "Versace",
+      "Dior"
+     ],
+     [
+      "Because of the dress, show some what?",
+      "Respect",
+      "Love",
+      "Class"
+     ],
+     [
+      "She's sitting with no what?",
+      "Armrest",
+      "Cushion",
+      "Shoes"
+     ],
+     [
+      "\"Get in, I'm what's...\" what?",
+      "Next",
+      "Hot",
+      "New"
+     ],
+     [
+      "Incoming texts from the who?",
+      "Vets",
+      "Fans",
+      "Haters"
+     ],
+     [
+      "No hate here, she's what?",
+      "Blessed",
+      "Busy",
+      "Bored"
+     ],
+     [
+      "Mild-mannered, no what?",
+      "Stress",
+      "Drama",
+      "Rush"
+     ],
+     [
+      "She's too woke to walk with the what?",
+      "Rest",
+      "Crowd",
+      "Fakes"
+     ],
+     [
+      "Abstract and what?",
+      "Fearless",
+      "Famous",
+      "Flawless"
+     ],
+     [
+      "She says what's on her what?",
+      "Chest",
+      "Mind",
+      "Phone"
+     ]
+    ],
+    [
+     [
+      "She's all in your face like what?",
+      "Whoa",
+      "Wow",
+      "Boom"
+     ],
+     [
+      "Air Max and which hairstyle?",
+      "Cornrows",
+      "Braids",
+      "Afro"
+     ],
+     [
+      "She's got a glow like who?",
+      "Bruce Leroy",
+      "Bruce Lee",
+      "Bruce Wayne"
+     ],
+     [
+      "She never stays long because she's got places to what?",
+      "Go",
+      "Be",
+      "See"
+     ],
+     [
+      "She gets that bag, then she wants what?",
+      "More",
+      "Two",
+      "A break"
+     ],
+     [
+      "\"I am the show,\" then they will what?",
+      "Grow",
+      "Know",
+      "Go"
+     ],
+     [
+      "Which word does she spell out?",
+      "Iconic",
+      "Legend",
+      "Famous"
+     ],
+     [
+      "They all wanna be her because she is what?",
+      "Goals",
+      "Rich",
+      "Fly"
+     ],
+     [
+      "She came from the what, so she stays low?",
+      "Dirt",
+      "Block",
+      "Bottom"
+     ],
+     [
+      "F-A-B and so what?",
+      "Ghetto",
+      "Fresh",
+      "Fly"
+     ],
+     [
+      "They copy and what?",
+      "Paste",
+      "Print",
+      "Share"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Attitude",
+   "id": "xs19QfiprcQ",
+   "start": 14.1,
+   "cuts": [
+    44.5,
+    75.4,
+    163.9
+   ],
+   "qs": [
+    [
+     [
+      "What did she brush first?",
+      "Her hair",
+      "Her teeth",
+      "Her shoes"
+     ],
+     [
+      "Where did she go next?",
+      "Downstairs",
+      "Outside",
+      "Upstairs"
+     ],
+     [
+      "What did she put on?",
+      "Her favorite jeans",
+      "Her sneakers",
+      "Her dress"
+     ],
+     [
+      "Where did she look?",
+      "In her mirror",
+      "Out the window",
+      "At her phone"
+     ],
+     [
+      "What did she ask the mirror?",
+      "Who's that there?",
+      "What's the time?",
+      "Where'd I go?"
+     ],
+     [
+      "\"I don't care and they're\" what?",
+      "Aware",
+      "Scared",
+      "Here"
+     ],
+     [
+      "Now she sees just why they what?",
+      "Stare",
+      "Talk",
+      "Hate"
+     ],
+     [
+      "So what, she's got a what?",
+      "Attitude",
+      "Problem",
+      "Secret"
+     ],
+     [
+      "She doesn't sleep and she doesn't what?",
+      "Snore",
+      "Eat",
+      "Stop"
+     ],
+     [
+      "Too much money out that what?",
+      "Door",
+      "Window",
+      "Bag"
+     ],
+     [
+      "Where is she on her way to?",
+      "Work",
+      "School",
+      "Church"
+     ]
+    ],
+    [
+     [
+      "Then there was a change of what?",
+      "Plans",
+      "Heart",
+      "Clothes"
+     ],
+     [
+      "Which rapper came on?",
+      "Juvenile",
+      "Ludacris",
+      "Nelly"
+     ],
+     [
+      "You know that's her favorite what?",
+      "Song",
+      "Rapper",
+      "Station"
+     ],
+     [
+      "How many minutes late was she?",
+      "15",
+      "5",
+      "30"
+     ],
+     [
+      "Why was she late?",
+      "She tried to be great",
+      "She missed the bus",
+      "She overslept"
+     ],
+     [
+      "She was dancing on her what?",
+      "Fate",
+      "Feet",
+      "Way"
+     ],
+     [
+      "Your opinion? Not when?",
+      "Today",
+      "Now",
+      "Tonight"
+     ],
+     [
+      "They asked her, what's it gonna what?",
+      "Take",
+      "Cost",
+      "Be"
+     ],
+     [
+      "She said she wants a bigger what?",
+      "Plate",
+      "House",
+      "Check"
+     ],
+     [
+      "Like her ex, you got to what?",
+      "Go",
+      "Leave",
+      "Change"
+     ],
+     [
+      "She wants all her money when?",
+      "Upfront",
+      "Later",
+      "Friday"
+     ]
+    ],
+    [
+     [
+      "When they ask where she's been, she says what?",
+      "Busy",
+      "Away",
+      "Home"
+     ],
+     [
+      "When they ask where she lives, she says what?",
+      "The city",
+      "The suburbs",
+      "Upstate"
+     ],
+     [
+      "What doesn't she own?",
+      "A welcome mat",
+      "A car",
+      "A phone"
+     ],
+     [
+      "Give her the proper feet and what?",
+      "Stand back",
+      "Step up",
+      "Sit down"
+     ],
+     [
+      "Which film star's name starts the roll call?",
+      "Dandridge",
+      "Monroe",
+      "Holiday"
+     ],
+     [
+      "Which singer comes right after Dandridge?",
+      "Grace Jones",
+      "Diana Ross",
+      "Tina Turner"
+     ],
+     [
+      "Pay rent or what?",
+      "Own homes",
+      "Move out",
+      "Go broke"
+     ],
+     [
+      "Who does she call god?",
+      "Kelis",
+      "Rihanna",
+      "Brandy"
+     ],
+     [
+      "\"Kelis is god, so is\" who?",
+      "Beyoncé",
+      "Janet",
+      "Mariah"
+     ],
+     [
+      "Whose name ends the roll call?",
+      "Leikeli",
+      "Kelis",
+      "Grace"
+     ],
+     [
+      "What one word is chanted over and over?",
+      "Attitude",
+      "Money",
+      "Busy"
+     ]
+    ]
+   ]
+  },
   {
    "title": "Money",
    "id": "JAM_ONZgPnE",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Miss Me",
-   "id": "M7-pXHbruYA",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "LL Cool J",
-   "id": "71EoMtPsJ4w",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Tic Boom",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "O.M.C.",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "start": 7.5,
+   "cuts": [
+    48,
+    98.2,
+    119.9
+   ],
+   "qs": [
+    [
+     [
+      "What's the first thing she's doing?",
+      "Chilling",
+      "Waiting",
+      "Grinding"
+     ],
+     [
+      "Which word comes right after \"laying in the cut\"?",
+      "Easy",
+      "Cozy",
+      "Lazy"
+     ],
+     [
+      "Which borough does she name?",
+      "Brooklyn",
+      "Queens",
+      "Harlem"
+     ],
+     [
+      "She calls Brooklyn the home of the what?",
+      "Cut",
+      "Kings",
+      "Hustle"
+     ],
+     [
+      "Which name does she drop after Brooklyn?",
+      "Notorious",
+      "Jay-Z",
+      "Nas"
+     ],
+     [
+      "\"Y'all know how the rest\" what?",
+      "Go",
+      "Flow",
+      "Show"
+     ],
+     [
+      "She sleeps with how many eyes open?",
+      "One",
+      "Both",
+      "None"
+     ],
+     [
+      "She's too smart because she's always what?",
+      "Scoping",
+      "Talking",
+      "Sleeping"
+     ],
+     [
+      "She's watching how these what look?",
+      "Lames",
+      "Fakes",
+      "Kids"
+     ],
+     [
+      "Being lazy is how you get your what took?",
+      "Fame",
+      "Spot",
+      "Crown"
+     ],
+     [
+      "What does she say your problem is?",
+      "Always talking",
+      "Always late",
+      "Always broke"
+     ]
+    ],
+    [
+     [
+      "She's a rockstar mixed with a what?",
+      "Ghetto chick",
+      "Pop star",
+      "Rich girl"
+     ],
+     [
+      "Which single word starts the next part?",
+      "Chola",
+      "Lola",
+      "Mona"
+     ],
+     [
+      "\"Who gonna\" what?",
+      "Hold us",
+      "Stop us",
+      "Catch us"
+     ],
+     [
+      "Not the cemetery or the what?",
+      "Penitentiary",
+      "Pharmacy",
+      "Factory"
+     ],
+     [
+      "She says she's too what?",
+      "Legendary",
+      "Famous",
+      "Busy"
+     ],
+     [
+      "\"It's so\" what?",
+      "Money",
+      "Funny",
+      "Easy"
+     ],
+     [
+      "All her life she had to grind and what?",
+      "Hustle",
+      "Wait",
+      "Pray"
+     ],
+     [
+      "She worked like which player?",
+      "Kobe",
+      "Jordan",
+      "LeBron"
+     ],
+     [
+      "She had to work like Kobe just to shine like who?",
+      "Russell",
+      "Shaq",
+      "Magic"
+     ],
+     [
+      "They say glad you made it, it happened how?",
+      "Overnight",
+      "By luck",
+      "Too late"
+     ],
+     [
+      "She's in the crib trying to find a what?",
+      "B-P-M",
+      "Beat",
+      "Hook"
+     ]
+    ],
+    [
+     [
+      "Where does she rehearse for the next show?",
+      "Her kitchen",
+      "Her car",
+      "The studio"
+     ],
+     [
+      "She rushes off for what?",
+      "Tour",
+      "Work",
+      "School"
+     ],
+     [
+      "After how many years might she start to take it in?",
+      "20",
+      "10",
+      "5"
+     ],
+     [
+      "Which store is she chasing in again?",
+      "Dover Street",
+      "Fifth Avenue",
+      "Saks"
+     ],
+     [
+      "She calls herself what?",
+      "Introverted",
+      "Extroverted",
+      "Shy"
+     ],
+     [
+      "What is she not open to?",
+      "New friends",
+      "New songs",
+      "New shoes"
+     ],
+     [
+      "Who makes her think again?",
+      "Someone real cute",
+      "Someone rich",
+      "Someone famous"
+     ],
+     [
+      "Where do you shop to stay on trend?",
+      "The runway",
+      "The mall",
+      "The corner"
+     ],
+     [
+      "You shop the runway so you can stay on what?",
+      "Trend",
+      "Top",
+      "Budget"
+     ],
+     [
+      "Shop the runway so you can look like what?",
+      "Money",
+      "A star",
+      "A model"
+     ],
+     [
+      "She can't tell you where she's what?",
+      "Been",
+      "Going",
+      "Living"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "Tic Boom",
+   "id": "45rDN6Opjas",
+   "start": 20.8,
+   "cuts": [
+    49.8,
+    85,
+    116.9
+   ],
+   "qs": [
+    [
+     [
+      "What two words open the hook?",
+      "Tic boom",
+      "Bing bang",
+      "Tick tock"
+     ],
+     [
+      "The bulldozer tells everybody to what?",
+      "Make room",
+      "Back up",
+      "Move over"
+     ],
+     [
+      "Where does she say to write it?",
+      "On her tomb",
+      "On the wall",
+      "In the sky"
+     ],
+     [
+      "She doesn't care if they what?",
+      "Assume",
+      "Stare",
+      "Talk"
+     ],
+     [
+      "She only stops to collect, then she does what?",
+      "Resumes",
+      "Leaves",
+      "Rests"
+     ],
+     [
+      "They click her pics and do what?",
+      "Zoom",
+      "Post",
+      "Print"
+     ],
+     [
+      "Which brand is on the floor of her hotel room?",
+      "Chanel",
+      "Gucci",
+      "Prada"
+     ],
+     [
+      "They all wish they had her what?",
+      "Leg room",
+      "Money",
+      "Closet"
+     ],
+     [
+      "Another deal, and it ain't even what?",
+      "Noon",
+      "Monday",
+      "Midnight"
+     ],
+     [
+      "Tour Dior or sit by the what?",
+      "Pool",
+      "Beach",
+      "Window"
+     ],
+     [
+      "She says it's not when you say, it's when she what?",
+      "Chooses",
+      "Wakes up",
+      "Shows up"
+     ]
+    ],
+    [
+     [
+      "\"Televise this\" what?",
+      "Dress",
+      "Show",
+      "Look"
+     ],
+     [
+      "Which designer made the dress?",
+      "Alaïa",
+      "Versace",
+      "Dior"
+     ],
+     [
+      "Because of the dress, show some what?",
+      "Respect",
+      "Love",
+      "Class"
+     ],
+     [
+      "She's sitting with no what?",
+      "Armrest",
+      "Cushion",
+      "Shoes"
+     ],
+     [
+      "\"Get in, I'm what's...\" what?",
+      "Next",
+      "Hot",
+      "New"
+     ],
+     [
+      "Incoming texts from the who?",
+      "Vets",
+      "Fans",
+      "Haters"
+     ],
+     [
+      "No hate here, she's what?",
+      "Blessed",
+      "Busy",
+      "Bored"
+     ],
+     [
+      "Mild-mannered, no what?",
+      "Stress",
+      "Drama",
+      "Rush"
+     ],
+     [
+      "She's too woke to walk with the what?",
+      "Rest",
+      "Crowd",
+      "Fakes"
+     ],
+     [
+      "Abstract and what?",
+      "Fearless",
+      "Famous",
+      "Flawless"
+     ],
+     [
+      "She says what's on her what?",
+      "Chest",
+      "Mind",
+      "Phone"
+     ]
+    ],
+    [
+     [
+      "She's all in your face like what?",
+      "Whoa",
+      "Wow",
+      "Boom"
+     ],
+     [
+      "Air Max and which hairstyle?",
+      "Cornrows",
+      "Braids",
+      "Afro"
+     ],
+     [
+      "She's got a glow like who?",
+      "Bruce Leroy",
+      "Bruce Lee",
+      "Bruce Wayne"
+     ],
+     [
+      "She never stays long because she's got places to what?",
+      "Go",
+      "Be",
+      "See"
+     ],
+     [
+      "She gets that bag, then she wants what?",
+      "More",
+      "Two",
+      "A break"
+     ],
+     [
+      "\"I am the show,\" then they will what?",
+      "Grow",
+      "Know",
+      "Go"
+     ],
+     [
+      "Which word does she spell out?",
+      "Iconic",
+      "Legend",
+      "Famous"
+     ],
+     [
+      "They all wanna be her because she is what?",
+      "Goals",
+      "Rich",
+      "Fly"
+     ],
+     [
+      "She came from the what, so she stays low?",
+      "Dirt",
+      "Block",
+      "Bottom"
+     ],
+     [
+      "F-A-B and so what?",
+      "Ghetto",
+      "Fresh",
+      "Fly"
+     ],
+     [
+      "They copy and what?",
+      "Paste",
+      "Print",
+      "Share"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Attitude",
+   "id": "xs19QfiprcQ",
+   "start": 14.1,
+   "cuts": [
+    44.5,
+    75.4,
+    163.9
+   ],
+   "qs": [
+    [
+     [
+      "What did she brush first?",
+      "Her hair",
+      "Her teeth",
+      "Her shoes"
+     ],
+     [
+      "Where did she go next?",
+      "Downstairs",
+      "Outside",
+      "Upstairs"
+     ],
+     [
+      "What did she put on?",
+      "Her favorite jeans",
+      "Her sneakers",
+      "Her dress"
+     ],
+     [
+      "Where did she look?",
+      "In her mirror",
+      "Out the window",
+      "At her phone"
+     ],
+     [
+      "What did she ask the mirror?",
+      "Who's that there?",
+      "What's the time?",
+      "Where'd I go?"
+     ],
+     [
+      "\"I don't care and they're\" what?",
+      "Aware",
+      "Scared",
+      "Here"
+     ],
+     [
+      "Now she sees just why they what?",
+      "Stare",
+      "Talk",
+      "Hate"
+     ],
+     [
+      "So what, she's got a what?",
+      "Attitude",
+      "Problem",
+      "Secret"
+     ],
+     [
+      "She doesn't sleep and she doesn't what?",
+      "Snore",
+      "Eat",
+      "Stop"
+     ],
+     [
+      "Too much money out that what?",
+      "Door",
+      "Window",
+      "Bag"
+     ],
+     [
+      "Where is she on her way to?",
+      "Work",
+      "School",
+      "Church"
+     ]
+    ],
+    [
+     [
+      "Then there was a change of what?",
+      "Plans",
+      "Heart",
+      "Clothes"
+     ],
+     [
+      "Which rapper came on?",
+      "Juvenile",
+      "Ludacris",
+      "Nelly"
+     ],
+     [
+      "You know that's her favorite what?",
+      "Song",
+      "Rapper",
+      "Station"
+     ],
+     [
+      "How many minutes late was she?",
+      "15",
+      "5",
+      "30"
+     ],
+     [
+      "Why was she late?",
+      "She tried to be great",
+      "She missed the bus",
+      "She overslept"
+     ],
+     [
+      "She was dancing on her what?",
+      "Fate",
+      "Feet",
+      "Way"
+     ],
+     [
+      "Your opinion? Not when?",
+      "Today",
+      "Now",
+      "Tonight"
+     ],
+     [
+      "They asked her, what's it gonna what?",
+      "Take",
+      "Cost",
+      "Be"
+     ],
+     [
+      "She said she wants a bigger what?",
+      "Plate",
+      "House",
+      "Check"
+     ],
+     [
+      "Like her ex, you got to what?",
+      "Go",
+      "Leave",
+      "Change"
+     ],
+     [
+      "She wants all her money when?",
+      "Upfront",
+      "Later",
+      "Friday"
+     ]
+    ],
+    [
+     [
+      "When they ask where she's been, she says what?",
+      "Busy",
+      "Away",
+      "Home"
+     ],
+     [
+      "When they ask where she lives, she says what?",
+      "The city",
+      "The suburbs",
+      "Upstate"
+     ],
+     [
+      "What doesn't she own?",
+      "A welcome mat",
+      "A car",
+      "A phone"
+     ],
+     [
+      "Give her the proper feet and what?",
+      "Stand back",
+      "Step up",
+      "Sit down"
+     ],
+     [
+      "Which film star's name starts the roll call?",
+      "Dandridge",
+      "Monroe",
+      "Holiday"
+     ],
+     [
+      "Which singer comes right after Dandridge?",
+      "Grace Jones",
+      "Diana Ross",
+      "Tina Turner"
+     ],
+     [
+      "Pay rent or what?",
+      "Own homes",
+      "Move out",
+      "Go broke"
+     ],
+     [
+      "Who does she call god?",
+      "Kelis",
+      "Rihanna",
+      "Brandy"
+     ],
+     [
+      "\"Kelis is god, so is\" who?",
+      "Beyoncé",
+      "Janet",
+      "Mariah"
+     ],
+     [
+      "Whose name ends the roll call?",
+      "Leikeli",
+      "Kelis",
+      "Grace"
+     ],
+     [
+      "What one word is chanted over and over?",
+      "Attitude",
+      "Money",
+      "Busy"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Money",
+   "id": "JAM_ONZgPnE",
+   "start": 7.5,
+   "cuts": [
+    48,
+    98.2,
+    119.9
+   ],
+   "qs": [
+    [
+     [
+      "What's the first thing she's doing?",
+      "Chilling",
+      "Waiting",
+      "Grinding"
+     ],
+     [
+      "Which word comes right after \"laying in the cut\"?",
+      "Easy",
+      "Cozy",
+      "Lazy"
+     ],
+     [
+      "Which borough does she name?",
+      "Brooklyn",
+      "Queens",
+      "Harlem"
+     ],
+     [
+      "She calls Brooklyn the home of the what?",
+      "Cut",
+      "Kings",
+      "Hustle"
+     ],
+     [
+      "Which name does she drop after Brooklyn?",
+      "Notorious",
+      "Jay-Z",
+      "Nas"
+     ],
+     [
+      "\"Y'all know how the rest\" what?",
+      "Go",
+      "Flow",
+      "Show"
+     ],
+     [
+      "She sleeps with how many eyes open?",
+      "One",
+      "Both",
+      "None"
+     ],
+     [
+      "She's too smart because she's always what?",
+      "Scoping",
+      "Talking",
+      "Sleeping"
+     ],
+     [
+      "She's watching how these what look?",
+      "Lames",
+      "Fakes",
+      "Kids"
+     ],
+     [
+      "Being lazy is how you get your what took?",
+      "Fame",
+      "Spot",
+      "Crown"
+     ],
+     [
+      "What does she say your problem is?",
+      "Always talking",
+      "Always late",
+      "Always broke"
+     ]
+    ],
+    [
+     [
+      "She's a rockstar mixed with a what?",
+      "Ghetto chick",
+      "Pop star",
+      "Rich girl"
+     ],
+     [
+      "Which single word starts the next part?",
+      "Chola",
+      "Lola",
+      "Mona"
+     ],
+     [
+      "\"Who gonna\" what?",
+      "Hold us",
+      "Stop us",
+      "Catch us"
+     ],
+     [
+      "Not the cemetery or the what?",
+      "Penitentiary",
+      "Pharmacy",
+      "Factory"
+     ],
+     [
+      "She says she's too what?",
+      "Legendary",
+      "Famous",
+      "Busy"
+     ],
+     [
+      "\"It's so\" what?",
+      "Money",
+      "Funny",
+      "Easy"
+     ],
+     [
+      "All her life she had to grind and what?",
+      "Hustle",
+      "Wait",
+      "Pray"
+     ],
+     [
+      "She worked like which player?",
+      "Kobe",
+      "Jordan",
+      "LeBron"
+     ],
+     [
+      "She had to work like Kobe just to shine like who?",
+      "Russell",
+      "Shaq",
+      "Magic"
+     ],
+     [
+      "They say glad you made it, it happened how?",
+      "Overnight",
+      "By luck",
+      "Too late"
+     ],
+     [
+      "She's in the crib trying to find a what?",
+      "B-P-M",
+      "Beat",
+      "Hook"
+     ]
+    ],
+    [
+     [
+      "Where does she rehearse for the next show?",
+      "Her kitchen",
+      "Her car",
+      "The studio"
+     ],
+     [
+      "She rushes off for what?",
+      "Tour",
+      "Work",
+      "School"
+     ],
+     [
+      "After how many years might she start to take it in?",
+      "20",
+      "10",
+      "5"
+     ],
+     [
+      "Which store is she chasing in again?",
+      "Dover Street",
+      "Fifth Avenue",
+      "Saks"
+     ],
+     [
+      "She calls herself what?",
+      "Introverted",
+      "Extroverted",
+      "Shy"
+     ],
+     [
+      "What is she not open to?",
+      "New friends",
+      "New songs",
+      "New shoes"
+     ],
+     [
+      "Who makes her think again?",
+      "Someone real cute",
+      "Someone rich",
+      "Someone famous"
+     ],
+     [
+      "Where do you shop to stay on trend?",
+      "The runway",
+      "The mall",
+      "The corner"
+     ],
+     [
+      "You shop the runway so you can stay on what?",
+      "Trend",
+      "Top",
+      "Budget"
+     ],
+     [
+      "Shop the runway so you can look like what?",
+      "Money",
+      "A star",
+      "A model"
+     ],
+     [
+      "She can't tell you where she's what?",
+      "Been",
+      "Going",
+      "Living"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
