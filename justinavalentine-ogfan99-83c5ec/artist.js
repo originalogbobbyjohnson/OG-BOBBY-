@@ -104,40 +104,1337 @@ window.CFG = {
    "sfx": "spray"
   }
  ],
- "episodes": [
+ "songs": [
   {
-   "title": "Love You Better",
-   "id": "lVW3VFmvkho",
-   "listen": true,
-   "cuts": [],
-   "qs": []
+   "title": "MYOB",
+   "id": "NdHoqK_FSvE",
+   "cuts": [
+    38.5,
+    85.6,
+    210.2
+   ],
+   "qs": [
+    [
+     [
+      "Who does she call to at the very start?",
+      "Webb",
+      "Mike",
+      "Ross"
+     ],
+     [
+      "What letters does she spell out in the hook?",
+      "M-Y-O-B",
+      "D-I-Y-O",
+      "O-M-G"
+     ],
+     [
+      "Mirror, mirror on the what?",
+      "Wall",
+      "Shelf",
+      "Door"
+     ],
+     [
+      "They act big when they're so what?",
+      "Small",
+      "Fake",
+      "Broke"
+     ],
+     [
+      "Where did she record?",
+      "Taj Mahal",
+      "Eiffel Tower",
+      "Pyramids"
+     ],
+     [
+      "Keeping up with the schedule gives her a what?",
+      "Hernia",
+      "Headache",
+      "Migraine"
+     ],
+     [
+      "They can't diss you back, they never what?",
+      "Heard of ya",
+      "Saw ya",
+      "Met ya"
+     ],
+     [
+      "She and Chris Webb are so cold it's like what?",
+      "Hypothermia",
+      "Antarctica",
+      "Frostbite"
+     ]
+    ],
+    [
+     [
+      "What word does she spell out letter by letter?",
+      "Independent",
+      "Different",
+      "Respect"
+     ],
+     [
+      "How many streams does she mention?",
+      "Quarter million",
+      "Half a million",
+      "A million"
+     ],
+     [
+      "While streaming, she waters her what?",
+      "Dreams",
+      "Garden",
+      "Plants"
+     ],
+     [
+      "First she's skinny, now she's what?",
+      "Thick",
+      "Fit",
+      "Strong"
+     ],
+     [
+      "They ask her if she's what?",
+      "Pregnant",
+      "Engaged",
+      "Married"
+     ],
+     [
+      "Save it for a what day?",
+      "Rainy",
+      "Better",
+      "Sunny"
+     ],
+     [
+      "She wouldn't give them a what?",
+      "Penny",
+      "Dollar",
+      "Dime"
+     ],
+     [
+      "You wanna see her fall, but she's still gon' what?",
+      "Rise",
+      "Shine",
+      "Fly"
+     ]
+    ],
+    [
+     [
+      "This is her vibe and this is her what?",
+      "Tribe",
+      "Team",
+      "Life"
+     ],
+     [
+      "This is her way and this is her what?",
+      "Ride",
+      "Day",
+      "Lane"
+     ],
+     [
+      "She's living in your mind how?",
+      "Rent-free",
+      "Full-time",
+      "Way back"
+     ],
+     [
+      "She would never what about you?",
+      "Worry",
+      "Think",
+      "Care"
+     ],
+     [
+      "Another day comes and another day what?",
+      "Goes",
+      "Ends",
+      "Starts"
+     ],
+     [
+      "You're still gon' be a what?",
+      "Troll",
+      "Hater",
+      "Clown"
+     ],
+     [
+      "You need to find your own what?",
+      "Peace",
+      "Lane",
+      "Way"
+     ],
+     [
+      "Baby, it's out of what?",
+      "Control",
+      "Hand",
+      "Line"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Candy Land",
+   "id": "HwHhnX7Rhow",
+   "start": 8.6,
+   "cuts": [
+    46.3,
+    74.9,
+    179.1
+   ],
+   "qs": [
+    [
+     [
+      "Two spaces up and she might just what?",
+      "Kiss him",
+      "Miss him",
+      "Diss him"
+     ],
+     [
+      "Go and roll that what?",
+      "Dice",
+      "Ball",
+      "Dough"
+     ],
+     [
+      "Come and melt her what?",
+      "Ice",
+      "Heart",
+      "Snow"
+     ],
+     [
+      "Wait till you come and what?",
+      "See",
+      "Taste",
+      "Play"
+     ],
+     [
+      "Her love is sugar what?",
+      "Rain",
+      "Cane",
+      "Rush"
+     ],
+     [
+      "Which flavors go with fudge?",
+      "Vanilla & caramel",
+      "Mint & cherry",
+      "Lemon & lime"
+     ],
+     [
+      "They want her what?",
+      "Treats",
+      "Cake",
+      "Money"
+     ],
+     [
+      "Her candy land is not for what?",
+      "Free",
+      "Sale",
+      "Rent"
+     ]
+    ],
+    [
+     [
+      "They're trying to get to her what?",
+      "Candy land",
+      "Wonderland",
+      "Dreamland"
+     ],
+     [
+      "Come and taste, your mouth so what?",
+      "Sweet",
+      "Sour",
+      "Soft"
+     ],
+     [
+      "Bon what?",
+      "Appétit",
+      "Voyage",
+      "Jour"
+     ],
+     [
+      "They cannot what?",
+      "Compete",
+      "Complete",
+      "Keep up"
+     ],
+     [
+      "What's spread all over these streets?",
+      "Sugar",
+      "Glitter",
+      "Honey"
+     ],
+     [
+      "Sugar's spread all over these what?",
+      "Streets",
+      "Sheets",
+      "Seats"
+     ],
+     [
+      "What kind of treats are they?",
+      "Candy land treats",
+      "Birthday treats",
+      "Halloween treats"
+     ],
+     [
+      "What does she say is so sweet?",
+      "Your mouth",
+      "The cake",
+      "Her smile"
+     ]
+    ],
+    [
+     [
+      "Come taste her rainbow what?",
+      "Flavour",
+      "Candy",
+      "Colors"
+     ],
+     [
+      "Her rainbow flavour is what?",
+      "Amazing",
+      "Delicious",
+      "Electric"
+     ],
+     [
+      "She calls it animal what?",
+      "Instinct",
+      "Kingdom",
+      "Magic"
+     ],
+     [
+      "Tonight we what?",
+      "Dine",
+      "Dance",
+      "Shine"
+     ],
+     [
+      "What's on deck to sweeten up the streets?",
+      "Sugar",
+      "Candy",
+      "Honey"
+     ],
+     [
+      "Her baby is a what?",
+      "Hustler",
+      "Baller",
+      "Dreamer"
+     ],
+     [
+      "Getting this money like taking candy from who?",
+      "Kids",
+      "Babies",
+      "Strangers"
+     ],
+     [
+      "Melt in your mouth, not your what?",
+      "Hand",
+      "Pocket",
+      "Lap"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Justina Valentine",
+   "id": "I5TS3JmnJUI",
+   "cuts": [
+    39.5,
+    118.3,
+    160.3
+   ],
+   "qs": [
+    [
+     [
+      "She thinks it's what?",
+      "Fugazi",
+      "Crazy",
+      "Phony"
+     ],
+     [
+      "People that used to do what now want to pick her up?",
+      "Igg her",
+      "Diss her",
+      "Hate her"
+     ],
+     [
+      "Now she sees it ain't what it what?",
+      "Seem",
+      "Was",
+      "Is"
+     ],
+     [
+      "They wanna treat her what?",
+      "Different",
+      "Better",
+      "Special"
+     ],
+     [
+      "She's just the same old what?",
+      "Me",
+      "Girl",
+      "Story"
+     ],
+     [
+      "She's just a regular what?",
+      "Chick",
+      "Girl",
+      "Kid"
+     ],
+     [
+      "She doesn't know why all the what about her?",
+      "Fuss",
+      "Hype",
+      "Talk"
+     ],
+     [
+      "Everybody wants to try to take what at her?",
+      "Shots",
+      "Jabs",
+      "Swings"
+     ]
+    ],
+    [
+     [
+      "She rips a freestyle, none of it what?",
+      "Written",
+      "Planned",
+      "Rehearsed"
+     ],
+     [
+      "She's running like it's what?",
+      "Cross-fits",
+      "Marathons",
+      "Track"
+     ],
+     [
+      "What did the red signs in front of her read?",
+      "Wrong way",
+      "Stop",
+      "Dead end"
+     ],
+     [
+      "She had a few dead-on what?",
+      "Collisions",
+      "Crashes",
+      "Battles"
+     ],
+     [
+      "Nobody cares about the words, just hit them what?",
+      "Ad-libs",
+      "Hooks",
+      "Beats"
+     ],
+     [
+      "Where do you go to pull up Migos, Future and Fetty Wap?",
+      "YouTube",
+      "Spotify",
+      "Radio"
+     ],
+     [
+      "Boom-boom-pow, now you got a new what?",
+      "Style",
+      "Song",
+      "Flow"
+     ],
+     [
+      "Everybody's on your stuff by how much?",
+      "300k",
+      "100k",
+      "A million"
+     ]
+    ],
+    [
+     [
+      "Nobody cared till she was on the what?",
+      "TV screen",
+      "Radio",
+      "Billboard"
+     ],
+     [
+      "She tried to pass them a what?",
+      "Mixtape",
+      "Flyer",
+      "Demo"
+     ],
+     [
+      "Now they ask if she's from what?",
+      "MTV",
+      "BET",
+      "VH1"
+     ],
+     [
+      "They couldn't shade her what?",
+      "Light",
+      "Shine",
+      "Glow"
+     ],
+     [
+      "A kid slid in her DMs and said she saved his what?",
+      "Life",
+      "Day",
+      "Year"
+     ],
+     [
+      "Saving one man is a what in itself?",
+      "Blessing",
+      "Victory",
+      "Miracle"
+     ],
+     [
+      "Who made her?",
+      "Only her fans",
+      "Her label",
+      "Her family"
+     ],
+     [
+      "They say her attitude does what?",
+      "Stinks",
+      "Shines",
+      "Changes"
+     ]
+    ]
+   ]
   },
   {
    "title": "Just Spit It",
-   "id": "sPZG-mf2uqs",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "Splashy",
-   "id": "cV2B3lXxq2Y",
-   "listen": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "FADED",
-   "locked": true,
-   "cuts": [],
-   "qs": []
-  },
-  {
-   "title": "DAMN",
-   "locked": true,
-   "cuts": [],
-   "qs": []
+   "id": "4JIT1bzeQ2Y",
+   "start": 10.2,
+   "cuts": [
+    42,
+    102.1,
+    137.3
+   ],
+   "qs": [
+    [
+     [
+      "What does she tell you to just do?",
+      "Spit it",
+      "Say it",
+      "Quit it"
+     ],
+     [
+      "They're always on her everywhere that she what?",
+      "Goes",
+      "Flows",
+      "Shows"
+     ],
+     [
+      "If they see her in person, they'd say what?",
+      "Goals",
+      "Wow",
+      "Facts"
+     ],
+     [
+      "Her nickname is Tommy, so you could get what?",
+      "Ghost",
+      "Lost",
+      "Toast"
+     ],
+     [
+      "She shows love, but they never show it what?",
+      "Back",
+      "Off",
+      "Twice"
+     ],
+     [
+      "Their man thinks she's a whole what?",
+      "Snack",
+      "Meal",
+      "Vibe"
+     ],
+     [
+      "She won't get her what dirty?",
+      "Hands",
+      "Shoes",
+      "Name"
+     ],
+     [
+      "Where does she have some dogs?",
+      "Jersey",
+      "Queens",
+      "Philly"
+     ],
+     [
+      "For how much will they do it?",
+      "Thirty",
+      "Fifty",
+      "Twenty"
+     ]
+    ],
+    [
+     [
+      "People are only tough behind what?",
+      "Computers",
+      "Doors",
+      "Phones"
+     ],
+     [
+      "Rap ain't even her main what?",
+      "Endeavor",
+      "Hustle",
+      "Thing"
+     ],
+     [
+      "She's spicy as what?",
+      "Hot sauce",
+      "Pepper",
+      "Salsa"
+     ],
+     [
+      "She says she's the what?",
+      "Underdog",
+      "Top dog",
+      "Favorite"
+     ],
+     [
+      "She'll turn into a beast and a what?",
+      "Monster",
+      "Legend",
+      "Giant"
+     ],
+     [
+      "A maniac and a what?",
+      "Brainiac",
+      "Lunatic",
+      "Genius"
+     ],
+     [
+      "She's ripping what apart?",
+      "Vowels",
+      "Verses",
+      "Pages"
+     ],
+     [
+      "She says she's going what?",
+      "Vegan",
+      "Pro",
+      "Global"
+     ],
+     [
+      "She's the crème de la crème of the what?",
+      "Crop",
+      "Pack",
+      "Block"
+     ]
+    ],
+    [
+     [
+      "They said she's what?",
+      "Unforgettable",
+      "Untouchable",
+      "Unstoppable"
+     ],
+     [
+      "She's been eating her what?",
+      "Pineapple",
+      "Apples",
+      "Mango"
+     ],
+     [
+      "Rice and what?",
+      "Vegetable",
+      "Beans",
+      "Chicken"
+     ],
+     [
+      "She's in a league of her what?",
+      "Own",
+      "Dreams",
+      "Lane"
+     ],
+     [
+      "Compare her only to rappers who come off the what?",
+      "Dome",
+      "Top",
+      "Bench"
+     ],
+     [
+      "Those rappers can sing and write their own what?",
+      "Songs",
+      "Hooks",
+      "Checks"
+     ],
+     [
+      "Due to the fakeness, she's too what?",
+      "Underrated",
+      "Overlooked",
+      "Humble"
+     ],
+     [
+      "She's quite a what?",
+      "Fireball",
+      "Firework",
+      "Fighter"
+     ],
+     [
+      "She says she's un-what?",
+      "Undeniable",
+      "Unbreakable",
+      "Unbothered"
+     ]
+    ]
+   ]
   }
  ],
- "preview": true
+ "explicitSongs": [
+  {
+   "title": "MYOB",
+   "id": "NdHoqK_FSvE",
+   "cuts": [
+    38.5,
+    85.6,
+    210.2
+   ],
+   "qs": [
+    [
+     [
+      "Who does she call to at the very start?",
+      "Webb",
+      "Mike",
+      "Ross"
+     ],
+     [
+      "What letters does she spell out in the hook?",
+      "M-Y-O-B",
+      "D-I-Y-O",
+      "O-M-G"
+     ],
+     [
+      "Mirror, mirror on the what?",
+      "Wall",
+      "Shelf",
+      "Door"
+     ],
+     [
+      "They act big when they're so what?",
+      "Small",
+      "Fake",
+      "Broke"
+     ],
+     [
+      "Where did she record?",
+      "Taj Mahal",
+      "Eiffel Tower",
+      "Pyramids"
+     ],
+     [
+      "Keeping up with the schedule gives her a what?",
+      "Hernia",
+      "Headache",
+      "Migraine"
+     ],
+     [
+      "They can't diss you back, they never what?",
+      "Heard of ya",
+      "Saw ya",
+      "Met ya"
+     ],
+     [
+      "She and Chris Webb are so cold it's like what?",
+      "Hypothermia",
+      "Antarctica",
+      "Frostbite"
+     ]
+    ],
+    [
+     [
+      "What word does she spell out letter by letter?",
+      "Independent",
+      "Different",
+      "Respect"
+     ],
+     [
+      "How many streams does she mention?",
+      "Quarter million",
+      "Half a million",
+      "A million"
+     ],
+     [
+      "While streaming, she waters her what?",
+      "Dreams",
+      "Garden",
+      "Plants"
+     ],
+     [
+      "First she's skinny, now she's what?",
+      "Thick",
+      "Fit",
+      "Strong"
+     ],
+     [
+      "They ask her if she's what?",
+      "Pregnant",
+      "Engaged",
+      "Married"
+     ],
+     [
+      "Save it for a what day?",
+      "Rainy",
+      "Better",
+      "Sunny"
+     ],
+     [
+      "She wouldn't give them a what?",
+      "Penny",
+      "Dollar",
+      "Dime"
+     ],
+     [
+      "You wanna see her fall, but she's still gon' what?",
+      "Rise",
+      "Shine",
+      "Fly"
+     ]
+    ],
+    [
+     [
+      "This is her vibe and this is her what?",
+      "Tribe",
+      "Team",
+      "Life"
+     ],
+     [
+      "This is her way and this is her what?",
+      "Ride",
+      "Day",
+      "Lane"
+     ],
+     [
+      "She's living in your mind how?",
+      "Rent-free",
+      "Full-time",
+      "Way back"
+     ],
+     [
+      "She would never what about you?",
+      "Worry",
+      "Think",
+      "Care"
+     ],
+     [
+      "Another day comes and another day what?",
+      "Goes",
+      "Ends",
+      "Starts"
+     ],
+     [
+      "You're still gon' be a what?",
+      "Troll",
+      "Hater",
+      "Clown"
+     ],
+     [
+      "You need to find your own what?",
+      "Peace",
+      "Lane",
+      "Way"
+     ],
+     [
+      "Baby, it's out of what?",
+      "Control",
+      "Hand",
+      "Line"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Candy Land",
+   "id": "HwHhnX7Rhow",
+   "start": 8.6,
+   "cuts": [
+    46.3,
+    74.9,
+    179.1
+   ],
+   "qs": [
+    [
+     [
+      "Two spaces up and she might just what?",
+      "Kiss him",
+      "Miss him",
+      "Diss him"
+     ],
+     [
+      "Go and roll that what?",
+      "Dice",
+      "Ball",
+      "Dough"
+     ],
+     [
+      "Come and melt her what?",
+      "Ice",
+      "Heart",
+      "Snow"
+     ],
+     [
+      "Wait till you come and what?",
+      "See",
+      "Taste",
+      "Play"
+     ],
+     [
+      "Her love is sugar what?",
+      "Rain",
+      "Cane",
+      "Rush"
+     ],
+     [
+      "Which flavors go with fudge?",
+      "Vanilla & caramel",
+      "Mint & cherry",
+      "Lemon & lime"
+     ],
+     [
+      "They want her what?",
+      "Treats",
+      "Cake",
+      "Money"
+     ],
+     [
+      "Her candy land is not for what?",
+      "Free",
+      "Sale",
+      "Rent"
+     ]
+    ],
+    [
+     [
+      "They're trying to get to her what?",
+      "Candy land",
+      "Wonderland",
+      "Dreamland"
+     ],
+     [
+      "Come and taste, your mouth so what?",
+      "Sweet",
+      "Sour",
+      "Soft"
+     ],
+     [
+      "Bon what?",
+      "Appétit",
+      "Voyage",
+      "Jour"
+     ],
+     [
+      "They cannot what?",
+      "Compete",
+      "Complete",
+      "Keep up"
+     ],
+     [
+      "What's spread all over these streets?",
+      "Sugar",
+      "Glitter",
+      "Honey"
+     ],
+     [
+      "Sugar's spread all over these what?",
+      "Streets",
+      "Sheets",
+      "Seats"
+     ],
+     [
+      "What kind of treats are they?",
+      "Candy land treats",
+      "Birthday treats",
+      "Halloween treats"
+     ],
+     [
+      "What does she say is so sweet?",
+      "Your mouth",
+      "The cake",
+      "Her smile"
+     ]
+    ],
+    [
+     [
+      "Come taste her rainbow what?",
+      "Flavour",
+      "Candy",
+      "Colors"
+     ],
+     [
+      "Her rainbow flavour is what?",
+      "Amazing",
+      "Delicious",
+      "Electric"
+     ],
+     [
+      "She calls it animal what?",
+      "Instinct",
+      "Kingdom",
+      "Magic"
+     ],
+     [
+      "Tonight we what?",
+      "Dine",
+      "Dance",
+      "Shine"
+     ],
+     [
+      "What's on deck to sweeten up the streets?",
+      "Sugar",
+      "Candy",
+      "Honey"
+     ],
+     [
+      "Her baby is a what?",
+      "Hustler",
+      "Baller",
+      "Dreamer"
+     ],
+     [
+      "Getting this money like taking candy from who?",
+      "Kids",
+      "Babies",
+      "Strangers"
+     ],
+     [
+      "Melt in your mouth, not your what?",
+      "Hand",
+      "Pocket",
+      "Lap"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Justina Valentine",
+   "id": "I5TS3JmnJUI",
+   "cuts": [
+    39.5,
+    118.3,
+    160.3
+   ],
+   "qs": [
+    [
+     [
+      "She thinks it's what?",
+      "Fugazi",
+      "Crazy",
+      "Phony"
+     ],
+     [
+      "People that used to do what now want to pick her up?",
+      "Igg her",
+      "Diss her",
+      "Hate her"
+     ],
+     [
+      "Now she sees it ain't what it what?",
+      "Seem",
+      "Was",
+      "Is"
+     ],
+     [
+      "They wanna treat her what?",
+      "Different",
+      "Better",
+      "Special"
+     ],
+     [
+      "She's just the same old what?",
+      "Me",
+      "Girl",
+      "Story"
+     ],
+     [
+      "She's just a regular what?",
+      "Chick",
+      "Girl",
+      "Kid"
+     ],
+     [
+      "She doesn't know why all the what about her?",
+      "Fuss",
+      "Hype",
+      "Talk"
+     ],
+     [
+      "Everybody wants to try to take what at her?",
+      "Shots",
+      "Jabs",
+      "Swings"
+     ]
+    ],
+    [
+     [
+      "She rips a freestyle, none of it what?",
+      "Written",
+      "Planned",
+      "Rehearsed"
+     ],
+     [
+      "She's running like it's what?",
+      "Cross-fits",
+      "Marathons",
+      "Track"
+     ],
+     [
+      "What did the red signs in front of her read?",
+      "Wrong way",
+      "Stop",
+      "Dead end"
+     ],
+     [
+      "She had a few dead-on what?",
+      "Collisions",
+      "Crashes",
+      "Battles"
+     ],
+     [
+      "Nobody cares about the words, just hit them what?",
+      "Ad-libs",
+      "Hooks",
+      "Beats"
+     ],
+     [
+      "Where do you go to pull up Migos, Future and Fetty Wap?",
+      "YouTube",
+      "Spotify",
+      "Radio"
+     ],
+     [
+      "Boom-boom-pow, now you got a new what?",
+      "Style",
+      "Song",
+      "Flow"
+     ],
+     [
+      "Everybody's on your stuff by how much?",
+      "300k",
+      "100k",
+      "A million"
+     ]
+    ],
+    [
+     [
+      "Nobody cared till she was on the what?",
+      "TV screen",
+      "Radio",
+      "Billboard"
+     ],
+     [
+      "She tried to pass them a what?",
+      "Mixtape",
+      "Flyer",
+      "Demo"
+     ],
+     [
+      "Now they ask if she's from what?",
+      "MTV",
+      "BET",
+      "VH1"
+     ],
+     [
+      "They couldn't shade her what?",
+      "Light",
+      "Shine",
+      "Glow"
+     ],
+     [
+      "A kid slid in her DMs and said she saved his what?",
+      "Life",
+      "Day",
+      "Year"
+     ],
+     [
+      "Saving one man is a what in itself?",
+      "Blessing",
+      "Victory",
+      "Miracle"
+     ],
+     [
+      "Who made her?",
+      "Only her fans",
+      "Her label",
+      "Her family"
+     ],
+     [
+      "They say her attitude does what?",
+      "Stinks",
+      "Shines",
+      "Changes"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Just Spit It",
+   "id": "4JIT1bzeQ2Y",
+   "start": 10.2,
+   "cuts": [
+    42,
+    102.1,
+    137.3
+   ],
+   "qs": [
+    [
+     [
+      "What does she tell you to just do?",
+      "Spit it",
+      "Say it",
+      "Quit it"
+     ],
+     [
+      "They're always on her everywhere that she what?",
+      "Goes",
+      "Flows",
+      "Shows"
+     ],
+     [
+      "If they see her in person, they'd say what?",
+      "Goals",
+      "Wow",
+      "Facts"
+     ],
+     [
+      "Her nickname is Tommy, so you could get what?",
+      "Ghost",
+      "Lost",
+      "Toast"
+     ],
+     [
+      "She shows love, but they never show it what?",
+      "Back",
+      "Off",
+      "Twice"
+     ],
+     [
+      "Their man thinks she's a whole what?",
+      "Snack",
+      "Meal",
+      "Vibe"
+     ],
+     [
+      "She won't get her what dirty?",
+      "Hands",
+      "Shoes",
+      "Name"
+     ],
+     [
+      "Where does she have some dogs?",
+      "Jersey",
+      "Queens",
+      "Philly"
+     ],
+     [
+      "For how much will they do it?",
+      "Thirty",
+      "Fifty",
+      "Twenty"
+     ]
+    ],
+    [
+     [
+      "People are only tough behind what?",
+      "Computers",
+      "Doors",
+      "Phones"
+     ],
+     [
+      "Rap ain't even her main what?",
+      "Endeavor",
+      "Hustle",
+      "Thing"
+     ],
+     [
+      "She's spicy as what?",
+      "Hot sauce",
+      "Pepper",
+      "Salsa"
+     ],
+     [
+      "She says she's the what?",
+      "Underdog",
+      "Top dog",
+      "Favorite"
+     ],
+     [
+      "She'll turn into a beast and a what?",
+      "Monster",
+      "Legend",
+      "Giant"
+     ],
+     [
+      "A maniac and a what?",
+      "Brainiac",
+      "Lunatic",
+      "Genius"
+     ],
+     [
+      "She's ripping what apart?",
+      "Vowels",
+      "Verses",
+      "Pages"
+     ],
+     [
+      "She says she's going what?",
+      "Vegan",
+      "Pro",
+      "Global"
+     ],
+     [
+      "She's the crème de la crème of the what?",
+      "Crop",
+      "Pack",
+      "Block"
+     ]
+    ],
+    [
+     [
+      "They said she's what?",
+      "Unforgettable",
+      "Untouchable",
+      "Unstoppable"
+     ],
+     [
+      "She's been eating her what?",
+      "Pineapple",
+      "Apples",
+      "Mango"
+     ],
+     [
+      "Rice and what?",
+      "Vegetable",
+      "Beans",
+      "Chicken"
+     ],
+     [
+      "She's in a league of her what?",
+      "Own",
+      "Dreams",
+      "Lane"
+     ],
+     [
+      "Compare her only to rappers who come off the what?",
+      "Dome",
+      "Top",
+      "Bench"
+     ],
+     [
+      "Those rappers can sing and write their own what?",
+      "Songs",
+      "Hooks",
+      "Checks"
+     ],
+     [
+      "Due to the fakeness, she's too what?",
+      "Underrated",
+      "Overlooked",
+      "Humble"
+     ],
+     [
+      "She's quite a what?",
+      "Fireball",
+      "Firework",
+      "Fighter"
+     ],
+     [
+      "She says she's un-what?",
+      "Undeniable",
+      "Unbreakable",
+      "Unbothered"
+     ]
+    ]
+   ]
+  }
+ ]
 };
+(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();
