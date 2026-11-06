@@ -36,4 +36,6 @@ window.OG_REGION_GAMES = {
   "Three Times Dope": { url: "../threetimesdope-ogfan99-a06085/", ex: 2 },
   "Cassidy": { url: "../cassidy-ogfan99-991c0c/", ex: 2 },
   "Lil Dicky": { url: "../lildicky-ogfan99-6d45a5/", ex: 2 },
+  "Freeway": { url: "../freeway-ogfan99-ca380c/", ex: 2 },
+  "Bahamadia": { url: "../bahamadia-ogfan99-bd212d/", ex: 1 },
 };
