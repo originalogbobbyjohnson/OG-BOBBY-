@@ -596,7 +596,8 @@
     { who: "Black Rob", d: "Bad Boy from East Harlem. Like whoa.", home: "East Harlem, Manhattan" },
     { who: "Guru", d: "The voice of Gang Starr and Jazzmatazz. Roxbury to Fort Greene.", home: "Fort Greene, Brooklyn" },
     { who: "Craig Mack", d: "The brand new flava from Brentwood who kicked off Bad Boy.", home: "Brentwood, Long Island" },
-    { who: "Chinx", d: "Far Rock's own, Riot Squad to Coke Boys. Welcome to JFK.", home: "Far Rockaway, Queens" }
+    { who: "Chinx", d: "Far Rock's own, Riot Squad to Coke Boys. Welcome to JFK.", home: "Far Rockaway, Queens" },
+    { who: "Biz Markie", d: "The Clown Prince of hip-hop. Make the music with your mouth.", home: "Patchogue, Long Island" }
   ];
   function drawRip() {
     var p = panes.rip, RG = window.OG_REGION_GAMES || {};
