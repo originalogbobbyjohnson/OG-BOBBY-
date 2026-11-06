@@ -77,4 +77,6 @@ window.OG_REGION_GAMES = {
   "James Taylor": { url: "../jamestaylor-ogfan99-071246/", ex: 0 },
   "Ivy Sole": { url: "../ivysole-ogfan99-f3b856/", ex: 0 },
   "Kurt Vile": { url: "../kurtvile-ogfan99-5b30b4/", ex: 1 },
+  "Japanese Breakfast": { url: "../japanesebreakfast-ogfan99-101485/", ex: 0 },
+  "The War on Drugs": { url: "../thewarondrugs-ogfan99-4f4896/", ex: 0 },
 };
