@@ -48,4 +48,5 @@ window.OG_REGION_GAMES = {
   "Black Thought": { url: "../blackthought-ogfan99-37eab5/", ex: 0 },
   "Jill Scott": { url: "../jillscott-ogfan99-9c2269/", ex: 0 },
   "Jazmine Sullivan": { url: "../jazminesullivan-ogfan99-0680eb/", ex: 0 },
+  "Musiq Soulchild": { url: "../musiqsoulchild-ogfan99-35c32c/", ex: 0 },
 };
