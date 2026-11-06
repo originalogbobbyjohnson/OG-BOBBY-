@@ -79,4 +79,6 @@ window.OG_REGION_GAMES = {
   "Kurt Vile": { url: "../kurtvile-ogfan99-5b30b4/", ex: 1 },
   "Japanese Breakfast": { url: "../japanesebreakfast-ogfan99-101485/", ex: 0 },
   "The War on Drugs": { url: "../thewarondrugs-ogfan99-4f4896/", ex: 0 },
+  "Dropkick Murphys": { url: "../dropkickmurphys-ogfan99-48c790/", ex: 0 },
+  "Passion Pit": { url: "../passionpit-ogfan99-563571/", ex: 0 },
 };
