@@ -590,7 +590,8 @@
     { who: "DMX", d: "The Dog from School Street who made Yonkers bark.", home: "Yonkers, Westchester" },
     { who: "Heavy D", d: "The Overweight Lover from Money Earnin' Mount Vernon.", home: "Mount Vernon, Westchester" },
     { who: "Big Pun", d: "Soundview's Puerto Rock, the Dream Shatterer.", home: "Soundview, the Bronx" },
-    { who: "Prodigy", d: "Mobb Deep. The 41st Side, Prodigy Way.", home: "Queensbridge, Queens" }
+    { who: "Prodigy", d: "Mobb Deep. The 41st Side, Prodigy Way.", home: "Queensbridge, Queens" },
+    { who: "Pop Smoke", d: "The Woo from Canarsie who took Brooklyn drill worldwide.", home: "Canarsie, Brooklyn" }
   ];
   function drawRip() {
     var p = panes.rip, RG = window.OG_REGION_GAMES || {};
