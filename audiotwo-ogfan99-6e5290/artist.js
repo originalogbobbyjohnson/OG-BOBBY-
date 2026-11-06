@@ -1,6 +1,7 @@
 /* Audio Two game (NYC map, Brooklyn: Bed-Stuy, Milk Dee and DJ Gizmo). CLEAN set, 4 songs, Milk Dee's verses only.
    Timings: Top Billin' = lrclib 5807141 (176 s) matched to PcNL9WqbL2c (176 s; its auto captions line up to the second; no regular Topic upload exists, only the acapella).
-   Questions = lrclib 28063173 (182) on the Topic upload (182). Hickeys = lrclib 37223955 (233) on the Topic upload (233).
+   Questions = lrclib 28063173 (182) on the Topic upload (182).
+   I Don't Care = YouTube auto-caption word timings of wY-HRfwKzAE itself (230 s; Topic dFBbazXGT20 is 247 s with no captions). Swapped in Nov 6 (owner).
    Giz Starts Buggin' = YouTube auto-caption word timings of AJefvU6_ymw itself (191 s; Topic is 192 s with no captions). */
 window.CFG = {
   name: "Audio Two", nameUpper: "AUDIO TWO", short: "AUDIO2",
@@ -112,36 +113,36 @@ window.CFG = {
         ["The road he's paving is paved in what?", "Gold", "Silver", "Stone"]
       ]
     ] },
-    { title: "Hickeys Around My Neck", id: "Nfzh7cIkQN4", cuts: [39.9, 80.2, 115.3], qs: [
+    { title: "I Don't Care", id: "wY-HRfwKzAE", start: 17.9, cuts: [53.3, 101.5, 191.2], qs: [
       [
-        ["He always hated hickeys all around his what?", "Neck", "Arm", "Face"],
-        ["It was feelin' pretty good, so what the what?", "Heck", "Deal", "Check"],
-        ["After the hickey went on, where did he go?", "Home", "Out", "School"],
-        ["He tried to brush it off, then he used a what?", "Comb", "Towel", "Sponge"],
-        ["The comb didn't work, it got bigger and what?", "Redder", "Darker", "Wider"],
-        ["Who said, \"You shouldn't have let her\"?", "Giz", "Pop", "King of Chill"],
-        ["He tried what, but it just got soft?", "Lotion", "Soap", "Powder"],
-        ["\"Man, I wish the hickey was\" what?", "Gone", "Small", "Hidden"]
+        ["When Milk is on the mic, he says all the rhymes MC's do what?", "Hate", "Love", "Steal"],
+        ["He's got to bust a rhyme in his own special what?", "Way", "Voice", "Beat"],
+        ["Who is his brother?", "Giz", "The King", "Daddy-O"],
+        ["\"D is my\" what?", "Father", "Brother", "Partner"],
+        ["Who is on his side, worth more to him than you?", "Lyte", "Roxanne", "Salt"],
+        ["\"Forget your\" what?", "Crew", "Girl", "Style"],
+        ["All you groupies make him what?", "Sick", "Laugh", "Rich"],
+        ["First Priority is the what that they trust?", "Label", "Crew", "Name"]
       ],
       [
-        ["Who was coming over?", "My girl", "My mom", "Gizmo"],
-        ["He needed a what to try to get over?", "Plan", "Shirt", "Ride"],
-        ["Who did he call first?", "King of Chill", "Gizmo", "Pop"],
-        ["King of Chill said bust a what?", "Turtleneck", "Scarf", "Hoodie"],
-        ["\"Then like\" what TV show, \"The Search begun\"?", "Star Trek", "Star Wars", "Batman"],
-        ["He ran through his house from the bottom to the what?", "Top", "Roof", "Door"],
-        ["Dad said a turtleneck would make him look like a what?", "Jerk", "Clown", "Nerd"],
-        ["Dad said go into the what for a piece of ice?", "Freezer", "Fridge", "Kitchen"]
+        ["He doesn't care if you're big and what?", "Bad", "Tall", "Rich"],
+        ["He's making more money than you what?", "Wish you had", "Ever made", "Could count"],
+        ["\"The left to Milk, the right to\" whom?", "Giz", "Lyte", "The King"],
+        ["He never throws a mic because he has what?", "Respect", "Class", "Style"],
+        ["To his left and to his right, he has what?", "Bodyguards", "Speakers", "Fans"],
+        ["What's in his wallet?", "Credit cards", "Pictures", "Tickets"],
+        ["\"I call you son, you call me\" what?", "Dad", "Boss", "Milk"],
+        ["Milk helps him grow and think like a what?", "Champ", "King", "Pro"]
       ],
       [
-        ["The piece of ice was going where?", "On my neck", "In my cup", "On my head"],
-        ["\"It sounds real\" what, \"but what the heck?\"", "Cold", "Wild", "Weird"],
-        ["He put the ice on and what?", "Waited", "Prayed", "Slept"],
-        ["The hickey was gone, it what?", "Faded", "Melted", "Shrunk"],
-        ["He counted up to what number?", "Three", "Ten", "Five"],
-        ["What did he hear at the door?", "The bell", "The phone", "A knock"],
-        ["As he opened the door, his eyes did what?", "Swell", "Close", "Blink"],
-        ["What was his girl chillin' there with?", "A great big hickey", "A turtleneck", "A piece of ice"]
+        ["He has too much what?", "Personality", "Money", "Style"],
+        ["When he produces, he pans it right, then he pans it what?", "Left", "Up", "Down"],
+        ["\"It isn't a riddle, it's a\" what?", "Rhyme", "Song", "Joke"],
+        ["The Audio Two is here to stay how often?", "Every day", "All night", "Forever"],
+        ["\"You're a fighter, I'm a\" what?", "Lover", "Rapper", "Winner"],
+        ["When he's at a jam, he's always what?", "Undercover", "On stage", "Up front"],
+        ["His speakers boom the room and shake your what?", "World", "House", "Block"],
+        ["You paid your what, but the game didn't start?", "Quarter", "Dollar", "Ticket"]
       ]
     ] },
     { title: "Top Billin'", id: "PcNL9WqbL2c", start: 8.7, cuts: [47.0, 115.5, 167.5], qs: [
