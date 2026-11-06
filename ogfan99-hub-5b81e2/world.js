@@ -591,7 +591,9 @@
     { who: "Heavy D", d: "The Overweight Lover from Money Earnin' Mount Vernon.", home: "Mount Vernon, Westchester" },
     { who: "Big Pun", d: "Soundview's Puerto Rock, the Dream Shatterer.", home: "Soundview, the Bronx" },
     { who: "Prodigy", d: "Mobb Deep. The 41st Side, Prodigy Way.", home: "Queensbridge, Queens" },
-    { who: "Pop Smoke", d: "The Woo from Canarsie who took Brooklyn drill worldwide.", home: "Canarsie, Brooklyn" }
+    { who: "Pop Smoke", d: "The Woo from Canarsie who took Brooklyn drill worldwide.", home: "Canarsie, Brooklyn" },
+    { who: "Ol' Dirty Bastard", d: "Wu-Tang's wild card. Brooklyn Zoo to ODB Jones Way.", home: "Fort Greene / Bed-Stuy, Brooklyn" },
+    { who: "Black Rob", d: "Bad Boy from East Harlem. Like whoa.", home: "East Harlem, Manhattan" }
   ];
   function drawRip() {
     var p = panes.rip, RG = window.OG_REGION_GAMES || {};
