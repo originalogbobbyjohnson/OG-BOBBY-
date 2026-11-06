@@ -410,7 +410,11 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .wrap.app.step1 .bgrid button.wide { align-content: center; }
 .howto { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; text-align: center; }
 .howto b { grid-column: 1 / -1; font: 900 .6rem/1 Helvetica, Arial, sans-serif; letter-spacing: .2em; color: #e8b84a; }
-.howto span { display: flex; align-items: center; justify-content: center; gap: 4px; background: #1d2033; border: 1.5px solid #e8b84a; border-radius: 8px; padding: 5px 2px; font: 900 .6rem/1.1 Helvetica, Arial, sans-serif; letter-spacing: .04em; color: #fff; }
+.howto button { display: flex; align-items: center; justify-content: center; gap: 4px; background: #1d2033; border: 1.5px solid #e8b84a; border-radius: 8px; padding: 5px 2px; font: 900 .6rem/1.1 Helvetica, Arial, sans-serif; letter-spacing: .04em; color: #fff; }
+.howto button { cursor: pointer; box-shadow: 0 2px 0 #000; }
+.howto button:active { transform: translateY(1px); background: #2a2410; }
+.bgrid.flash > button:not(.wide) { animation: bflash .45s ease-in-out 3; }
+@keyframes bflash { 50% { box-shadow: 0 3px 0 #000, 0 0 0 3px #e8b84a, 0 0 18px rgba(232,184,74,.9); } }
 .howto i { font-style: normal; flex: none; width: 15px; height: 15px; border-radius: 50%; background: #e8b84a; color: #000; font-size: .6rem; line-height: 15px; }
 .step3 { margin: 6px 0 2px; background: #2a2410; border: 1.5px solid #e8b84a; border-radius: 10px; padding: 8px 10px; color: #fff; font: 700 .8rem/1.35 Helvetica, Arial, sans-serif; }
 .step3 b { color: #e8b84a; }
@@ -1992,7 +1996,7 @@ window.OGX = (function () {
     '<div class="bgrid">' + BOROS.map(b => '<button type="button" data-pb="' + b + '" style="--bc:' + (COL[b] || "#fff") + '">' + (NAME[b] || b.toUpperCase()) + '<small>' + cnt(b) + ' ARTISTS</small></button>').join("") +
     '<button type="button" class="wide" data-pb="__regions">&#127758; OTHER REGIONS &amp; GENRES<small>SOUTH FLORIDA · ATLANTA · LA · CHICAGO + MORE</small></button>' +
     '<button type="button" class="wide" data-pb="__find">&#128269; SEARCH ANY ARTIST</button></div>' +
-    '<div class="howto"><b>3 WAYS TO FIND AN ARTIST</b><span><i>1</i>PICK A BOROUGH</span><span><i>2</i>SEARCH A NAME</span><span><i>3</i>TAP THE MAP &#9660;</span></div>';
+    '<div class="howto"><b>3 WAYS TO FIND AN ARTIST</b><button type="button" data-how="boro"><i>1</i>PICK A BOROUGH</button><button type="button" data-how="find"><i>2</i>SEARCH A NAME</button><button type="button" data-how="map"><i>3</i>TAP THE MAP &#9660;</button></div>';
   mb.insertAdjacentElement("afterend", p);
   /* STEP 2 header: where you are + what to do */
   const c = document.createElement("div"); c.className = "crumb";
@@ -2005,6 +2009,10 @@ window.OGX = (function () {
     if (n === 2) $("crName").textContent = (NAME[boroTab] || boroTab.toUpperCase()) + " · " + cnt(boroTab) + " ARTISTS"; fix();
     /* once the map has its new size, frame it close on the borough you picked */
     if (n === 2) setTimeout(() => { try { const pts = ARTISTS.filter(a => boroOf(a) === boroTab && a.lat != null).map(a => [a.lat, a.lng]); if (window.__map && pts.length) { window.__map.stop(); window.__map.invalidateSize({ pan: false }); window.__map.fitBounds(pts, { padding: [24, 24], maxZoom: 13, animate: false }); } } catch (e) {} }, 250); }
+  p.addEventListener("click", e => { const h = e.target.closest("[data-how]"); if (!h) return; const w = h.dataset.how;
+    if (w === "find") { const f = $("findBtn2"); if (f) f.click(); }
+    else if (w === "map") { const bb = mb.querySelector(".mapbig"); if (bb && !mb.classList.contains("big")) bb.click(); }
+    else { const g = p.querySelector(".bgrid"); g.classList.remove("flash"); void g.offsetWidth; g.classList.add("flash"); setTimeout(() => g.classList.remove("flash"), 1500); } });
   p.onclick = e => { const b = e.target.closest("[data-pb]"); if (!b) return; const v = b.dataset.pb;
     if (v === "__regions") return window.OGW && OGW.go("regions");
     if (v === "__find") return $("findBtn2") && $("findBtn2").click();
