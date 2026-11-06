@@ -145,18 +145,23 @@ T.forEach((t, i) => {
 });
 const btns = [...document.querySelectorAll("li button")];
 
-function mark(i) {
-  if (i === cur && btns[i].getAttribute("aria-current")) return;
-  cur = i;
-  btns.forEach(b => b.removeAttribute("aria-current"));
-  btns[i].setAttribute("aria-current", "true");
-  $("nowTitle").textContent = T[i].t;
+function meta(i) {
+  try { document.title = "\u2019\u2468 " + (i + 1) + " \u00b7 " + T[i].t + " – OG Bobby"; } catch (e) {}
   if ("mediaSession" in navigator) {
     try {
       navigator.mediaSession.metadata = new MediaMetadata({ title: "\u2019\u2468 " + (i + 1) + " \u00b7 " + T[i].t, artist: "OG Bobby", album: "OG Made – Fade ’9",
         artwork: [{ src: new URL("../cover.png", location.href).href, sizes: "512x512", type: "image/png" }] });
     } catch (e) {}
   }
+}
+
+function mark(i) {
+  if (i === cur && btns[i].getAttribute("aria-current")) return;
+  cur = i;
+  btns.forEach(b => b.removeAttribute("aria-current"));
+  btns[i].setAttribute("aria-current", "true");
+  $("nowTitle").textContent = T[i].t;
+  meta(i);
 }
 
 function go(i, play) {
@@ -194,6 +199,10 @@ const setIcon = () => {
   $("playIcon").innerHTML = audio.paused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
   $("play").setAttribute("aria-label", audio.paused ? "Play" : "Pause");
 };
+// Re-send the car-display name once each song really starts (iPhone/CarPlay drops it when a new song loads)
+["loadedmetadata", "playing"].forEach(ev => audio.addEventListener(ev, () => meta(cur)));
+audio.addEventListener("play", () => { try { navigator.mediaSession.playbackState = "playing"; } catch (e) {} });
+audio.addEventListener("pause", () => { try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} });
 audio.addEventListener("play", setIcon); audio.addEventListener("pause", setIcon);
 
 $("play").onclick = () => { if (!audio.src) go(0, true); else audio.paused ? audio.play() : audio.pause(); };
