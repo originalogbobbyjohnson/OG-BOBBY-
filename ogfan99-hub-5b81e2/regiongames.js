@@ -27,4 +27,6 @@ window.OG_REGION_GAMES = {
   "One Be Lo": { url: "../onebelo-ogfan99-c58a89/", ex: 2 },
   "The Roots": { url: "../theroots-ogfan99-a54d91/", ex: 2 },
   "Meek Mill": { url: "../meekmill-ogfan99-e5dbdf/", ex: 2 },
+  "Chiddy Bang": { url: "../chiddybang-ogfan99-acdfaa/", ex: 0 },
+  "Armani White": { url: "../armaniwhite-ogfan99-d2cdcf/", ex: 2 },
 };
