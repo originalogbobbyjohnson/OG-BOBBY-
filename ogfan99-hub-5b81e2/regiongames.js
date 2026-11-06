@@ -52,4 +52,5 @@ window.OG_REGION_GAMES = {
   "Will Smith": { url: "../willsmith-ogfan99-16e5b1/", ex: 0 },
   "Boyz II Men": { url: "../boyziimen-ogfan99-8c9479/", ex: 0 },
   "Patti LaBelle": { url: "../pattilabelle-ogfan99-47572c/", ex: 0 },
+  "Kurupt": { url: "../kurupt-ogfan99-d174a8/", ex: 2 },
 };
