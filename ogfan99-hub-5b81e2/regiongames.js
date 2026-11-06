@@ -45,4 +45,5 @@ window.OG_REGION_GAMES = {
   "Lay Bankz": { url: "../laybankz-ogfan99-7a290d/", ex: 2 },
   "The Last Emperor": { url: "../lastemperor-ogfan99-eaa363/", ex: 0 },
   "Young Gunz": { url: "../younggunz-ogfan99-9ad5c4/", ex: 2 },
+  "Black Thought": { url: "../blackthought-ogfan99-37eab5/", ex: 0 },
 };
