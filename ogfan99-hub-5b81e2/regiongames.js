@@ -61,4 +61,6 @@ window.OG_REGION_GAMES = {
   "Ed O.G.": { url: "../edog-ogfan99-b8107d/", ex: 2 },
   "Cousin Stizz": { url: "../cousinstizz-ogfan99-f58162/", ex: 2 },
   "Michael Christmas": { url: "../michaelchristmas-ogfan99-0ce57b/", ex: 2 },
+  "New Edition": { url: "../newedition-ogfan99-8404ad/", ex: 0 },
+  "Guru's Jazzmatazz": { url: "../gurusolo-ogfan99-6a7ae1/", ex: 0 },
 };
