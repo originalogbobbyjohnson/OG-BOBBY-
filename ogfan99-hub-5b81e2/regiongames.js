@@ -70,4 +70,6 @@ window.OG_REGION_GAMES = {
   "Reks": { url: "../reks-ogfan99-deb5d5/", ex: 2 },
   "New Kids on the Block": { url: "../newkidsontheblock-ogfan99-93debf/", ex: 0 },
   "Akrobatik": { url: "../akrobatik-ogfan99-1d8398/", ex: 2 },
+  "Donna Summer": { url: "../donnasummer-ogfan99-6b25a0/", ex: 0 },
+  "Bell Biv DeVoe": { url: "../bellbivdevoe-ogfan99-9fd553/", ex: 0 },
 };
