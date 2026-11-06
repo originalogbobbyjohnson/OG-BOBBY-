@@ -85,4 +85,5 @@ window.OG_REGION_GAMES = {
   "Boston": { url: "../bostonband-ogfan99-4fb1e0/", ex: 0 },
   "Bobby Rydell": { url: "../bobbyrydell-ogfan99-39de94/", ex: 0 },
   "Frankie Avalon": { url: "../frankieavalon-ogfan99-8fe09c/", ex: 0 },
+  "Bill Haley & His Comets": { url: "../billhaley-ogfan99-500c71/", ex: 0 },
 };
