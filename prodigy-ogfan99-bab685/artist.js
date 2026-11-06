@@ -1,7 +1,7 @@
 /* Prodigy game (NYC map, Queens: Queensbridge, Long Island City). 18+ only (songs = explicitSongs): every Prodigy / Mobb Deep record has curses before the first stop.
-   Questions stay clean, Prodigy's own verses only (Havoc's verse on Hell on Earth is skipped; Survival of the Fittest stops inside P's verse 1).
+   Questions stay clean, Prodigy's own verses only (Survival of the Fittest stops inside P's verse 1, before Havoc's verse).
    Timings = lrclib synced lyrics matched to Topic uploads (same length): Genesis 491294 (169), You Can Never Feel My Pain 12000971 (208),
-   Survival of the Fittest 30064253 (222), Hell on Earth 31714959 (275), Keep It Thoro 496777 (186). No YouTube id shared with Havoc, Nas or p-alchemist. */
+   Survival of the Fittest 30064253 (222), Give 'Em Hell 7476033 (177; =33213168, 9704912), Keep It Thoro 496777 (186). No YouTube id shared with Havoc, Nas or p-alchemist. */
 window.CFG = {
  "name": "Prodigy",
  "nameUpper": "PRODIGY",
@@ -525,133 +525,133 @@ window.CFG = {
    ]
   },
   {
-   "title": "Hell on Earth (Front Lines)",
-   "id": "R2P0XrkMy-c",
-   "start": 9.8,
+   "title": "Give 'Em Hell",
+   "id": "LpEVoPnIkwI",
+   "start": 13,
    "cuts": [
-    36.2,
-    213.3,
-    270.6
+    45.6,
+    88.75,
+    139.3
    ],
    "qs": [
     [
      [
-      "\"The saga\" what?",
-      "Begins",
-      "Continues",
-      "Ends"
+      "He's seein' far beyond his what?",
+      "Nose",
+      "Block",
+      "Years"
      ],
      [
-      "He lays down what?",
-      "Laws",
-      "Bars",
-      "Rules"
+      "Ten years from now, he'll still be what?",
+      "Around",
+      "Here",
+      "Rich"
      ],
      [
-      "They rush the what?",
-      "Doors",
-      "Stage",
+      "You'll be a memory that no one what?",
+      "Knows",
+      "Shows",
+      "Owns"
+     ],
+     [
+      "Dead-weight cats try to pull you what?",
+      "Down",
+      "Back",
+      "In"
+     ],
+     [
+      "They're like psychic what?",
+      "Vampires",
+      "Leeches",
+      "Ghosts"
+     ],
+     [
+      "Mentally, he thinks like a what?",
+      "Marine",
+      "General",
+      "Chess player"
+     ]
+    ],
+    [
+     [
+      "\"Nobody could\" what?",
+      "Stop me",
+      "Touch me",
+      "Catch me"
+     ],
+     [
+      "He's the illest rapper probably on the what?",
+      "Earth",
+      "Map",
       "Block"
      ],
      [
-      "His team'll go at your main what?",
-      "Source",
-      "Man",
-      "Spot"
+      "Every line he draws, these rappers is what?",
+      "Frauds",
+      "Clowns",
+      "Clones"
      ],
      [
-      "\"We're not\" what?",
-      "Tourists",
-      "Rookies",
-      "Strangers"
+      "His artwork is what?",
+      "Expensive",
+      "Priceless",
+      "Famous"
      ],
      [
-      "Your whole setup, from the what up?",
-      "Ground",
-      "Top",
-      "Bottom"
+      "\"RSVP, circa\" what year?",
+      "2012",
+      "2010",
+      "2013"
+     ],
+     [
+      "Spittin' flames like a what?",
+      "Volcano",
+      "Dragon",
+      "Torch"
+     ],
+     [
+      "\"Give 'em\" what?",
+      "Hell",
+      "Heat",
+      "Fire"
      ]
     ],
     [
      [
-      "His team'll glow like what?",
-      "Radiation",
-      "Diamonds",
-      "Neon"
+      "Watch out for unmarked cars and what?",
+      "Plainclothes",
+      "Sirens",
+      "Cameras"
      ],
      [
-      "No time for patience, or what?",
-      "Complication",
-      "Conversation",
-      "Hesitation"
+      "He's God's soldier, and it's what time?",
+      "Harvest",
+      "Show",
+      "Judgment"
      ],
      [
-      "His click is what?",
-      "Airtight",
-      "Worldwide",
-      "Untouchable"
+      "You reap what you sow when you cross the what?",
+      "Line",
+      "Street",
+      "River"
      ],
      [
-      "The projects is the what?",
-      "Front lines",
-      "Battlefield",
-      "Jungle"
+      "He is so beyond what?",
+      "Fear",
+      "Reach",
+      "Rap"
      ],
      [
-      "He was born to take what?",
-      "Power",
-      "Over",
-      "Money"
+      "He can see through you with his eyes what?",
+      "Closed",
+      "Open",
+      "Low"
      ],
      [
-      "\"Closed for\" what?",
-      "Business",
-      "Repairs",
-      "The night"
-     ],
-     [
-      "Special forces in the green what?",
-      "Beret",
-      "Machine",
-      "Light"
-     ]
-    ],
-    [
-     [
-      "He lays back and watches the world what?",
-      "Spin",
-      "Burn",
-      "Turn"
-     ],
-     [
-      "Thugs claim they gonna rob who?",
-      "The Mobb",
-      "The Bridge",
-      "The P"
-     ],
-     [
-      "It's a package what?",
-      "Deal",
-      "Plan",
-      "Drop"
-     ],
-     [
-      "He ain't your average what?",
-      "Cat",
-      "Dunn",
-      "Rapper"
-     ],
-     [
-      "How many mikes on stage?",
-      "Four",
-      "Two",
-      "Three"
-     ],
-     [
-      "Save it for the what?",
-      "Burbs",
-      "Clubs",
-      "Squares"
+      "He's got a deadly what?",
+      "Rap",
+      "Aim",
+      "Crew"
      ]
     ]
    ]
@@ -1211,133 +1211,133 @@ window.CFG = {
    ]
   },
   {
-   "title": "Hell on Earth (Front Lines)",
-   "id": "R2P0XrkMy-c",
-   "start": 9.8,
+   "title": "Give 'Em Hell",
+   "id": "LpEVoPnIkwI",
+   "start": 13,
    "cuts": [
-    36.2,
-    213.3,
-    270.6
+    45.6,
+    88.75,
+    139.3
    ],
    "qs": [
     [
      [
-      "\"The saga\" what?",
-      "Begins",
-      "Continues",
-      "Ends"
+      "He's seein' far beyond his what?",
+      "Nose",
+      "Block",
+      "Years"
      ],
      [
-      "He lays down what?",
-      "Laws",
-      "Bars",
-      "Rules"
+      "Ten years from now, he'll still be what?",
+      "Around",
+      "Here",
+      "Rich"
      ],
      [
-      "They rush the what?",
-      "Doors",
-      "Stage",
+      "You'll be a memory that no one what?",
+      "Knows",
+      "Shows",
+      "Owns"
+     ],
+     [
+      "Dead-weight cats try to pull you what?",
+      "Down",
+      "Back",
+      "In"
+     ],
+     [
+      "They're like psychic what?",
+      "Vampires",
+      "Leeches",
+      "Ghosts"
+     ],
+     [
+      "Mentally, he thinks like a what?",
+      "Marine",
+      "General",
+      "Chess player"
+     ]
+    ],
+    [
+     [
+      "\"Nobody could\" what?",
+      "Stop me",
+      "Touch me",
+      "Catch me"
+     ],
+     [
+      "He's the illest rapper probably on the what?",
+      "Earth",
+      "Map",
       "Block"
      ],
      [
-      "His team'll go at your main what?",
-      "Source",
-      "Man",
-      "Spot"
+      "Every line he draws, these rappers is what?",
+      "Frauds",
+      "Clowns",
+      "Clones"
      ],
      [
-      "\"We're not\" what?",
-      "Tourists",
-      "Rookies",
-      "Strangers"
+      "His artwork is what?",
+      "Expensive",
+      "Priceless",
+      "Famous"
      ],
      [
-      "Your whole setup, from the what up?",
-      "Ground",
-      "Top",
-      "Bottom"
+      "\"RSVP, circa\" what year?",
+      "2012",
+      "2010",
+      "2013"
+     ],
+     [
+      "Spittin' flames like a what?",
+      "Volcano",
+      "Dragon",
+      "Torch"
+     ],
+     [
+      "\"Give 'em\" what?",
+      "Hell",
+      "Heat",
+      "Fire"
      ]
     ],
     [
      [
-      "His team'll glow like what?",
-      "Radiation",
-      "Diamonds",
-      "Neon"
+      "Watch out for unmarked cars and what?",
+      "Plainclothes",
+      "Sirens",
+      "Cameras"
      ],
      [
-      "No time for patience, or what?",
-      "Complication",
-      "Conversation",
-      "Hesitation"
+      "He's God's soldier, and it's what time?",
+      "Harvest",
+      "Show",
+      "Judgment"
      ],
      [
-      "His click is what?",
-      "Airtight",
-      "Worldwide",
-      "Untouchable"
+      "You reap what you sow when you cross the what?",
+      "Line",
+      "Street",
+      "River"
      ],
      [
-      "The projects is the what?",
-      "Front lines",
-      "Battlefield",
-      "Jungle"
+      "He is so beyond what?",
+      "Fear",
+      "Reach",
+      "Rap"
      ],
      [
-      "He was born to take what?",
-      "Power",
-      "Over",
-      "Money"
+      "He can see through you with his eyes what?",
+      "Closed",
+      "Open",
+      "Low"
      ],
      [
-      "\"Closed for\" what?",
-      "Business",
-      "Repairs",
-      "The night"
-     ],
-     [
-      "Special forces in the green what?",
-      "Beret",
-      "Machine",
-      "Light"
-     ]
-    ],
-    [
-     [
-      "He lays back and watches the world what?",
-      "Spin",
-      "Burn",
-      "Turn"
-     ],
-     [
-      "Thugs claim they gonna rob who?",
-      "The Mobb",
-      "The Bridge",
-      "The P"
-     ],
-     [
-      "It's a package what?",
-      "Deal",
-      "Plan",
-      "Drop"
-     ],
-     [
-      "He ain't your average what?",
-      "Cat",
-      "Dunn",
-      "Rapper"
-     ],
-     [
-      "How many mikes on stage?",
-      "Four",
-      "Two",
-      "Three"
-     ],
-     [
-      "Save it for the what?",
-      "Burbs",
-      "Clubs",
-      "Squares"
+      "He's got a deadly what?",
+      "Rap",
+      "Aim",
+      "Crew"
      ]
     ]
    ]
