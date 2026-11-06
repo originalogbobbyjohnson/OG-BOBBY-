@@ -46,4 +46,6 @@ window.OG_REGION_GAMES = {
   "The Last Emperor": { url: "../lastemperor-ogfan99-eaa363/", ex: 0 },
   "Young Gunz": { url: "../younggunz-ogfan99-9ad5c4/", ex: 2 },
   "Black Thought": { url: "../blackthought-ogfan99-37eab5/", ex: 0 },
+  "Jill Scott": { url: "../jillscott-ogfan99-9c2269/", ex: 0 },
+  "Jazmine Sullivan": { url: "../jazminesullivan-ogfan99-0680eb/", ex: 0 },
 };
