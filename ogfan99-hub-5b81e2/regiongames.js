@@ -38,4 +38,6 @@ window.OG_REGION_GAMES = {
   "Lil Dicky": { url: "../lildicky-ogfan99-6d45a5/", ex: 2 },
   "Freeway": { url: "../freeway-ogfan99-ca380c/", ex: 2 },
   "Bahamadia": { url: "../bahamadia-ogfan99-bd212d/", ex: 1 },
+  "Chill Moody": { url: "../chillmoody-ogfan99-412e34/", ex: 0 },
+  "Reef the Lost Cauze": { url: "../reefthelostcauze-ogfan99-f0127a/", ex: 2 },
 };
