@@ -599,7 +599,8 @@
     { who: "Chinx", d: "Far Rock's own, Riot Squad to Coke Boys. Welcome to JFK.", home: "Far Rockaway, Queens" },
     { who: "Biz Markie", d: "The Clown Prince of hip-hop. Make the music with your mouth.", home: "Patchogue, Long Island" },
     { who: "Lil Peep", d: "Long Beach's emo-rap star. Star shopping forever.", home: "Long Beach, Long Island" },
-    { who: "Phife Dawg", d: "The Five-Foot Assassin. A Tribe Called Quest, Linden Blvd.", home: "St. Albans, Queens" }
+    { who: "Phife Dawg", d: "The Five-Foot Assassin. A Tribe Called Quest, Linden Blvd.", home: "St. Albans, Queens" },
+    { who: "Grand Daddy I.U.", d: "Cold Chillin' smooth talker in a suit and tie.", home: "Hempstead, Long Island" }
   ];
   function drawRip() {
     var p = panes.rip, RG = window.OG_REGION_GAMES || {};
