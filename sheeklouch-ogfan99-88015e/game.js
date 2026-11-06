@@ -388,7 +388,7 @@ function playSong(k) {
   loadedId = e.id;
   if (!player) {
     player = new YT.Player("yt", {
-      videoId: e.id, playerVars: { playsinline: 1, rel: 0, modestbranding: 1, start: Math.floor(from) },
+      videoId: e.id, playerVars: { playsinline: 1, rel: 0, modestbranding: 1, fs: 0, start: Math.floor(from) },
       events: {
         onReady: ev => { ev.target.playVideo(); startWatch(); },
         onStateChange: ev => { setPlaying(ev.data === YT.PlayerState.PLAYING); if (ev.data === YT.PlayerState.PLAYING) guardSeek(); },
