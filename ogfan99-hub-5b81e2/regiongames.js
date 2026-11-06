@@ -33,4 +33,5 @@ window.OG_REGION_GAMES = {
   "Tierra Whack": { url: "../tierrawhack-ogfan99-b5c875/", ex: 0 },
   "Eve": { url: "../eve-ogfan99-bac7f7/", ex: 2 },
   "Lil Uzi Vert": { url: "../liluzivert-ogfan99-49f0a4/", ex: 2 },
+  "Three Times Dope": { url: "../threetimesdope-ogfan99-a06085/", ex: 2 },
 };
