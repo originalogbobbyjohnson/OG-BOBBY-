@@ -31,4 +31,6 @@ window.OG_REGION_GAMES = {
   "Armani White": { url: "../armaniwhite-ogfan99-d2cdcf/", ex: 2 },
   "DJ Jazzy Jeff & The Fresh Prince": { url: "../jazzyjefffreshprince-ogfan99-d914cc/", ex: 0 },
   "Tierra Whack": { url: "../tierrawhack-ogfan99-b5c875/", ex: 0 },
+  "Eve": { url: "../eve-ogfan99-bac7f7/", ex: 2 },
+  "Lil Uzi Vert": { url: "../liluzivert-ogfan99-49f0a4/", ex: 2 },
 };
