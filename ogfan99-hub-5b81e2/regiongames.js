@@ -75,4 +75,6 @@ window.OG_REGION_GAMES = {
   "The Delfonics": { url: "../delfonics-ogfan99-0092c3/", ex: 0 },
   "Jim Croce": { url: "../jimcroce-ogfan99-71f67d/", ex: 0 },
   "James Taylor": { url: "../jamestaylor-ogfan99-071246/", ex: 0 },
+  "Ivy Sole": { url: "../ivysole-ogfan99-f3b856/", ex: 0 },
+  "Kurt Vile": { url: "../kurtvile-ogfan99-5b30b4/", ex: 1 },
 };
