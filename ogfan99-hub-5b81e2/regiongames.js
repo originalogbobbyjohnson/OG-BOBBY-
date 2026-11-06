@@ -88,4 +88,5 @@ window.OG_REGION_GAMES = {
   "Bill Haley & His Comets": { url: "../billhaley-ogfan99-500c71/", ex: 0 },
   "Pixies": { url: "../pixies-ogfan99-b651e2/", ex: 0 },
   "The Mighty Mighty Bosstones": { url: "../mightymightybosstones-ogfan99-046b5f/", ex: 0 },
+  "Amos Lee": { url: "../amoslee-ogfan99-f52cf4/", ex: 0 },
 };
