@@ -40,4 +40,5 @@ window.OG_REGION_GAMES = {
   "Bahamadia": { url: "../bahamadia-ogfan99-bd212d/", ex: 1 },
   "Chill Moody": { url: "../chillmoody-ogfan99-412e34/", ex: 0 },
   "Reef the Lost Cauze": { url: "../reefthelostcauze-ogfan99-f0127a/", ex: 2 },
+  "PnB Rock": { url: "../pnbrock-ogfan99-127fa5/", ex: 2 },
 };
