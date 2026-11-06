@@ -603,7 +603,8 @@
     { who: "Grand Daddy I.U.", d: "Cold Chillin' smooth talker in a suit and tie.", home: "Hempstead, Long Island" },
     { who: "Pumpkinhead", d: "Park Slope battle legend. Robert PH Diaz Way on Degraw St.", home: "Park Slope, Brooklyn" },
     { who: "Hurricane G", d: "Hit Squad's Boricua queen from Brooklyn. Neva give up.", home: "Brooklyn" },
-    { who: "Capital STEEZ", d: "Pro Era co-founder from Flatbush. Free the robots.", home: "Flatbush, Brooklyn" }
+    { who: "Capital STEEZ", d: "Pro Era co-founder from Flatbush. Free the robots.", home: "Flatbush, Brooklyn" },
+    { who: "Rob Base & DJ E-Z Rock", d: "It Takes Two. Harlem's party-rap legends, both gone too soon.", home: "Harlem, Manhattan" }
   ];
   function drawRip() {
     var p = panes.rip, RG = window.OG_REGION_GAMES || {};
