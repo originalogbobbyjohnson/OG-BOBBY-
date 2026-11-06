@@ -67,4 +67,5 @@ window.OG_REGION_GAMES = {
   "Termanology": { url: "../termanology-ogfan99-b20f7a/", ex: 2 },
   "Meghan Trainor": { url: "../meghantrainor-ogfan99-07a4a7/", ex: 0 },
   "Santigold": { url: "../santigold-ogfan99-fdad15/", ex: 0 },
+  "Reks": { url: "../reks-ogfan99-deb5d5/", ex: 2 },
 };
