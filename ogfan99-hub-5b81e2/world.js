@@ -584,7 +584,13 @@
     { who: "Tame One", d: "The Artifacts. Brick City graffiti and bars.", home: "Newark, New Jersey" },
     { who: "Chino XL", d: "Punchline king. Bronx-born, East Orange raised.", home: "East Orange, New Jersey" },
     { who: "Eyedea", d: "Battle champ and freestyle genius. Rhymesayers.", home: "St. Paul, Minnesota", rg: 1 },
-    { who: "Gift of Gab", d: "Blackalicious. The fastest, smoothest tongue in the Bay.", home: "Sacramento, Northern California", rg: 1 }
+    { who: "Gift of Gab", d: "Blackalicious. The fastest, smoothest tongue in the Bay.", home: "Sacramento, Northern California", rg: 1 },
+    { who: "The Notorious B.I.G.", d: "From St James Pl to King of New York.", home: "Clinton Hill, Brooklyn" },
+    { who: "Big L", d: "Harlem's Finest from the Danger Zone on Lenox Av.", home: "Harlem, Manhattan" },
+    { who: "DMX", d: "The Dog from School Street who made Yonkers bark.", home: "Yonkers, Westchester" },
+    { who: "Heavy D", d: "The Overweight Lover from Money Earnin' Mount Vernon.", home: "Mount Vernon, Westchester" },
+    { who: "Big Pun", d: "Soundview's Puerto Rock, the Dream Shatterer.", home: "Soundview, the Bronx" },
+    { who: "Prodigy", d: "Mobb Deep. The 41st Side, Prodigy Way.", home: "Queensbridge, Queens" }
   ];
   function drawRip() {
     var p = panes.rip, RG = window.OG_REGION_GAMES || {};
