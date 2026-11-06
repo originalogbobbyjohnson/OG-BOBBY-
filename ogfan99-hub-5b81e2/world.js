@@ -507,7 +507,7 @@
     { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8" },
     { n: "MORE OF THE SOUTH", d: "Every other Southern city.", c: "#35b867", locked: [{ who: "The real_Saddium", ig: "the_real_saddium" }] },
     { g: "EAST COAST" },
-    { n: "PHILADELPHIA", d: "North Philly, West Philly, South Philly.", c: "#004c54", coming: ["PnB Rock", "Reef the Lost Cauze", "Chill Moody", "Bahamadia", "Freeway", "Lil Dicky", "Cassidy", "Three Times Dope", "Lil Uzi Vert", "Eve", "Tierra Whack", "DJ Jazzy Jeff & The Fresh Prince", "Armani White", "Chiddy Bang", "Meek Mill", "The Roots", "Vinnie Paz"] },
+    { n: "PHILADELPHIA", d: "North Philly, West Philly, South Philly.", c: "#004c54", coming: ["Kur", "PnB Rock", "Reef the Lost Cauze", "Chill Moody", "Bahamadia", "Freeway", "Lil Dicky", "Cassidy", "Three Times Dope", "Lil Uzi Vert", "Eve", "Tierra Whack", "DJ Jazzy Jeff & The Fresh Prince", "Armani White", "Chiddy Bang", "Meek Mill", "The Roots", "Vinnie Paz"] },
     { n: "THE DMV", d: "D.C., Maryland, Northern Virginia.", c: "#e81828" },
     { n: "UPSTATE NEW YORK", d: "Middletown, Albany, Rochester, Buffalo, Syracuse.", c: "#7b3fbf", coming: ["Cage"] },
     { n: "BOSTON + NEW ENGLAND", d: "Boston, Providence, Hartford.", c: "#0b3d91", coming: ["Mr. Lif", "Esoteric", "Slaine", "Sage Francis", "Apathy"] },
