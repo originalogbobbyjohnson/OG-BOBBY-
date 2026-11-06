@@ -29,4 +29,6 @@ window.OG_REGION_GAMES = {
   "Meek Mill": { url: "../meekmill-ogfan99-e5dbdf/", ex: 2 },
   "Chiddy Bang": { url: "../chiddybang-ogfan99-acdfaa/", ex: 0 },
   "Armani White": { url: "../armaniwhite-ogfan99-d2cdcf/", ex: 2 },
+  "DJ Jazzy Jeff & The Fresh Prince": { url: "../jazzyjefffreshprince-ogfan99-d914cc/", ex: 0 },
+  "Tierra Whack": { url: "../tierrawhack-ogfan99-b5c875/", ex: 0 },
 };
