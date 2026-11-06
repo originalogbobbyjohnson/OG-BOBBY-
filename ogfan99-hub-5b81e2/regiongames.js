@@ -42,4 +42,5 @@ window.OG_REGION_GAMES = {
   "Reef the Lost Cauze": { url: "../reefthelostcauze-ogfan99-f0127a/", ex: 2 },
   "PnB Rock": { url: "../pnbrock-ogfan99-127fa5/", ex: 2 },
   "Kur": { url: "../kur-ogfan99-498a6b/", ex: 2 },
+  "Lay Bankz": { url: "../laybankz-ogfan99-7a290d/", ex: 2 },
 };
