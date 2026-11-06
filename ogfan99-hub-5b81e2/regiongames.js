@@ -51,4 +51,5 @@ window.OG_REGION_GAMES = {
   "Musiq Soulchild": { url: "../musiqsoulchild-ogfan99-35c32c/", ex: 0 },
   "Will Smith": { url: "../willsmith-ogfan99-16e5b1/", ex: 0 },
   "Boyz II Men": { url: "../boyziimen-ogfan99-8c9479/", ex: 0 },
+  "Patti LaBelle": { url: "../pattilabelle-ogfan99-47572c/", ex: 0 },
 };
