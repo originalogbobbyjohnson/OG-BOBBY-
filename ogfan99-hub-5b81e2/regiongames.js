@@ -68,4 +68,6 @@ window.OG_REGION_GAMES = {
   "Meghan Trainor": { url: "../meghantrainor-ogfan99-07a4a7/", ex: 0 },
   "Santigold": { url: "../santigold-ogfan99-fdad15/", ex: 0 },
   "Reks": { url: "../reks-ogfan99-deb5d5/", ex: 2 },
+  "New Kids on the Block": { url: "../newkidsontheblock-ogfan99-93debf/", ex: 0 },
+  "Akrobatik": { url: "../akrobatik-ogfan99-1d8398/", ex: 2 },
 };

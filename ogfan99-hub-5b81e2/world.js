@@ -510,7 +510,7 @@
     { n: "PHILADELPHIA", d: "North Philly, West Philly, South Philly.", c: "#004c54", coming: ["Santigold", "P!nk", "Chubby Checker", "Hall & Oates", "The O'Jays", "Teddy Pendergrass", "Kurupt", "Patti LaBelle", "Boyz II Men", "Will Smith", "Musiq Soulchild", "Jazmine Sullivan", "Jill Scott", "Black Thought", "Young Gunz", "The Last Emperor", "Lay Bankz", "Kur", "PnB Rock", "Reef the Lost Cauze", "Chill Moody", "Bahamadia", "Freeway", "Lil Dicky", "Cassidy", "Three Times Dope", "Lil Uzi Vert", "Eve", "Tierra Whack", "DJ Jazzy Jeff & The Fresh Prince", "Armani White", "Chiddy Bang", "Meek Mill", "The Roots", "Vinnie Paz"] },
     { n: "THE DMV", d: "D.C., Maryland, Northern Virginia.", c: "#e81828" },
     { n: "UPSTATE NEW YORK", d: "Middletown, Albany, Rochester, Buffalo, Syracuse.", c: "#7b3fbf", coming: ["Cage"] },
-    { n: "BOSTON + NEW ENGLAND", d: "Boston, Providence, Hartford.", c: "#0b3d91", coming: ["Reks", "Meghan Trainor", "Termanology", "Guru's Jazzmatazz", "New Edition", "Michael Christmas", "Cousin Stizz", "Ed O.G.", "Joyner Lucas", "Mr. Lif", "Esoteric", "Slaine", "Sage Francis", "Apathy"] },
+    { n: "BOSTON + NEW ENGLAND", d: "Boston, Providence, Hartford.", c: "#0b3d91", coming: ["Akrobatik", "New Kids on the Block", "Reks", "Meghan Trainor", "Termanology", "Guru's Jazzmatazz", "New Edition", "Michael Christmas", "Cousin Stizz", "Ed O.G.", "Joyner Lucas", "Mr. Lif", "Esoteric", "Slaine", "Sage Francis", "Apathy"] },
     { g: "MIDWEST" },
     { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de" },
     { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["eLZhi", "Quelle Chris", "One Be Lo"] },
