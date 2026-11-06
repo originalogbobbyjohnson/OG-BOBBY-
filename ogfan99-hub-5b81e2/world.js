@@ -601,7 +601,8 @@
     { who: "Lil Peep", d: "Long Beach's emo-rap star. Star shopping forever.", home: "Long Beach, Long Island" },
     { who: "Phife Dawg", d: "The Five-Foot Assassin. A Tribe Called Quest, Linden Blvd.", home: "St. Albans, Queens" },
     { who: "Grand Daddy I.U.", d: "Cold Chillin' smooth talker in a suit and tie.", home: "Hempstead, Long Island" },
-    { who: "Pumpkinhead", d: "Park Slope battle legend. Robert PH Diaz Way on Degraw St.", home: "Park Slope, Brooklyn" }
+    { who: "Pumpkinhead", d: "Park Slope battle legend. Robert PH Diaz Way on Degraw St.", home: "Park Slope, Brooklyn" },
+    { who: "Hurricane G", d: "Hit Squad's Boricua queen from Brooklyn. Neva give up.", home: "Brooklyn" }
   ];
   function drawRip() {
     var p = panes.rip, RG = window.OG_REGION_GAMES || {};
