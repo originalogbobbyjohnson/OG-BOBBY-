@@ -393,6 +393,21 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .crumb div { min-width: 0; display: grid; gap: 2px; }
 .crumb div b { font-family: var(--display); font-size: 1.05rem; letter-spacing: .06em; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .crumb div small { font: 900 .58rem/1.2 Helvetica, Arial, sans-serif; letter-spacing: .12em; color: #e8b84a; }
+/* Nov 6: step 1 fits one screen, no scrolling; boroughs on top, map fills the bottom */
+.wrap.app.step1 > .step1p { order: 1; flex: none; overflow: hidden; gap: 6px; padding-bottom: 0; }
+.wrap.app.step1 > .mapbox:not(.big) { order: 2; flex: 1 1 auto; min-height: 90px; height: auto !important; }
+.wrap.app.step1 > .dock2 { order: 3; }
+.wrap.app.step1 .board { padding: 4px 8px 5px; }
+.wrap.app.step1 .bgrid { gap: 6px; }
+.wrap.app.step1 .bgrid button { padding: 7px 6px 6px; border-top-width: 5px; gap: 3px; font-size: .84rem; }
+.wrap.app.step1 .bgrid button.wide { grid-column: auto; padding: 8px 4px; font-size: .74rem; line-height: 1.15; }
+.wrap.app.step1 .bgrid button.wide small { display: none; }
+.wrap.app.step1 .stepcap b { font-size: 1.1rem; }
+.wrap.app.step1 .bd-h { margin-bottom: 3px; }
+.wrap.app.step1 .bd-row button { gap: 2px; }
+.wrap.app.step1 .bd-row b { font-size: 1.3rem; }
+.wrap.app.step1 .bd-row em { margin-top: 0; padding: 2px 7px; }
+.wrap.app.step1 .bgrid button.wide { align-content: center; }
 .step3 { margin: 6px 0 2px; background: #2a2410; border: 1.5px solid #e8b84a; border-radius: 10px; padding: 8px 10px; color: #fff; font: 700 .8rem/1.35 Helvetica, Arial, sans-serif; }
 .step3 b { color: #e8b84a; }
 .st-sign { font-size: .72rem !important; padding: 5px 10px !important; letter-spacing: .06em; }
@@ -1964,13 +1979,14 @@ window.OGX = (function () {
     '<div class="board"><div class="bd-h"><i></i>LIVE ON THE LINE<i></i></div><div class="bd-row"><button type="button" id="mtAb"><b id="mtA">' + ARTISTS.length + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtFb"><b id="mtF">—</b><small>FANS</small><em>SEE ALL &#9656;</em></button></div></div>' +
     '<div class="bgrid">' + BOROS.map(b => '<button type="button" data-pb="' + b + '" style="--bc:' + (COL[b] || "#fff") + '">' + (NAME[b] || b.toUpperCase()) + '<small>' + cnt(b) + ' ARTISTS</small></button>').join("") +
     '<button type="button" class="wide" data-pb="__regions">&#127758; OTHER REGIONS &amp; GENRES<small>SOUTH FLORIDA · ATLANTA · LA · CHICAGO + MORE</small></button>' +
-    '<button type="button" class="wide" data-pb="__find">&#128269; KNOW WHO YOU WANT? SEARCH ANY ARTIST</button></div>';
+    '<button type="button" class="wide" data-pb="__find">&#128269; SEARCH ANY ARTIST</button></div>';
   mb.insertAdjacentElement("afterend", p);
   /* STEP 2 header: where you are + what to do */
   const c = document.createElement("div"); c.className = "crumb";
   c.innerHTML = '<button type="button" id="crBack">&#9664; BOROUGHS</button><div><b id="crName"></b><small>STEP 2 OF 3 · TAP AN ARTIST · DOUBLE-TAP TO PLAY · TAP AGAIN TO UNSELECT</small></div>';
   document.querySelector(".bhead").insertAdjacentElement("beforebegin", c);
   const fix = () => setTimeout(() => { try { window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 60);
+  try { new ResizeObserver(() => { try { window.__map && window.__map.invalidateSize({ pan: false }); } catch (e) {} }).observe(mb); } catch (e) {}
   function setStep(n) { if (mb.classList.contains("big")) { const bb = mb.querySelector(".mapbig"); if (bb) bb.click(); }
     app.classList.toggle("step1", n === 1); try { sessionStorage.setItem("ogfan99step", String(n)); } catch (e) {}
     if (n === 2) $("crName").textContent = (NAME[boroTab] || boroTab.toUpperCase()) + " · " + cnt(boroTab) + " ARTISTS"; fix();
