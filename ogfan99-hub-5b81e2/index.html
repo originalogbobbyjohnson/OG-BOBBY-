@@ -388,6 +388,8 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .bgrid button { position: relative; border: 2px solid #000; border-top: 6px solid var(--bc, #fff); border-radius: 10px; background: #111; color: #fff; padding: 11px 6px 9px; font: 900 .9rem/1 Helvetica, Arial, sans-serif; letter-spacing: .04em; box-shadow: 0 3px 0 #000, 0 0 0 2px #3a3f48; cursor: pointer; display: grid; gap: 5px; justify-items: center; }
 .bgrid button small { font: 900 .64rem/1 Helvetica, Arial, sans-serif; color: #f2c14e; letter-spacing: .1em; }
 .bgrid button.wide { grid-column: 1 / -1; background: #1d2033; }
+.bgrid .wide3 { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.bgrid .wide3 button.wide { grid-column: auto; padding: 8px 4px; font-size: .74rem; line-height: 1.15; align-content: center; }
 .crumb { flex: none; display: grid; grid-template-columns: auto 1fr; gap: 8px; align-items: center; }
 .crumb button { border: 2px solid #e8b84a; border-radius: 10px; background: #1d2033; color: #e8b84a; font: 900 .7rem/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; padding: 8px 9px; cursor: pointer; white-space: nowrap; }
 .crumb div { min-width: 0; display: grid; gap: 2px; }
@@ -2001,8 +2003,9 @@ window.OGX = (function () {
 })();
 </script>
 <script src="producers.js?v=19"></script>
-<script src="regiongames.js?v=51"></script>
-<script src="world.js?v=72"></script>
+<script src="regiongames.js?v=52"></script>
+<script src="genregames.js?v=1"></script>
+<script src="world.js?v=73"></script>
 
 <script>
 /* ---------- map + list work together (Nov 1) ----------
@@ -2090,8 +2093,9 @@ window.OGX = (function () {
   p.innerHTML = '<div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR BOROUGH</b></div>' +
     '<div class="board"><div class="bd-h"><i></i>LIVE ON THE LINE<i></i></div><div class="bd-row"><button type="button" id="mtAb"><b id="mtA">' + ARTISTS.length + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtFb"><b id="mtF">—</b><small>FANS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtPb"><b id="mtP">—</b><small>PLAYS</small><em>' + (isOwner() ? 'BY ARTIST &#9656;' : 'LIVE') + '</em></button></div></div>' +
     '<div class="bgrid">' + BOROS.map(b => '<button type="button" data-pb="' + b + '" style="--bc:' + (COL[b] || "#fff") + '">' + (NAME[b] || b.toUpperCase()) + '<small>' + cnt(b) + ' ARTISTS</small></button>').join("") +
-    '<button type="button" class="wide" data-pb="__regions">&#127758; OTHER REGIONS &amp; GENRES<small>SOUTH FLORIDA · ATLANTA · LA · CHICAGO + MORE</small></button>' +
-    '<button type="button" class="wide" data-pb="__find">&#128269; SEARCH ANY ARTIST</button></div>' +
+    '<div class="wide3"><button type="button" class="wide" data-pb="__regions">&#127758; OTHER CITIES<small>PHILLY · BOSTON · ATLANTA + MORE</small></button>' +
+    '<button type="button" class="wide" data-pb="__genres">&#127925; OTHER GENRES<small>R&amp;B · POP · ROCK + MORE</small></button>' +
+    '<button type="button" class="wide" data-pb="__find">&#128269; SEARCH ANY ARTIST</button></div></div>' +
     '<div class="howto"><b>3 WAYS TO FIND AN ARTIST</b><button type="button" data-how="boro"><i>1</i>PICK A BOROUGH</button><button type="button" data-how="find"><i>2</i>SEARCH A NAME</button><button type="button" data-how="map"><i>3</i>TAP THE MAP &#9660;</button></div>';
   mb.insertAdjacentElement("afterend", p);
   /* STEP 2 header: where you are + what to do */
@@ -2111,6 +2115,7 @@ window.OGX = (function () {
     else { const g = p.querySelector(".bgrid"); g.classList.remove("flash"); void g.offsetWidth; g.classList.add("flash"); setTimeout(() => g.classList.remove("flash"), 1500); } });
   p.onclick = e => { const b = e.target.closest("[data-pb]"); if (!b) return; const v = b.dataset.pb;
     if (v === "__regions") return window.OGW && OGW.go("regions");
+    if (v === "__genres") return window.OGW && OGW.go("genres");
     if (v === "__find") return $("findBtn2") && $("findBtn2").click();
     const t = document.querySelector('.boro[data-b="' + v + '"]'); if (t) t.click(); setStep(2);
     setTimeout(() => { $("listwrap").scrollTop = 0; }, 80); };
