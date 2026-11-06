@@ -57,4 +57,6 @@ window.OG_REGION_GAMES = {
   "The O'Jays": { url: "../ojays-ogfan99-07e1d1/", ex: 0 },
   "Hall & Oates": { url: "../hallandoates-ogfan99-9a9062/", ex: 0 },
   "Chubby Checker": { url: "../chubbychecker-ogfan99-0f1911/", ex: 0 },
+  "Joyner Lucas": { url: "../joynerlucas-ogfan99-ce025e/", ex: 2 },
+  "Ed O.G.": { url: "../edog-ogfan99-b8107d/", ex: 2 },
 };
