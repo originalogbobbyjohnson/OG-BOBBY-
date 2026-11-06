@@ -55,4 +55,6 @@ window.OG_REGION_GAMES = {
   "Kurupt": { url: "../kurupt-ogfan99-d174a8/", ex: 2 },
   "Teddy Pendergrass": { url: "../teddypendergrass-ogfan99-166982/", ex: 0 },
   "The O'Jays": { url: "../ojays-ogfan99-07e1d1/", ex: 0 },
+  "Hall & Oates": { url: "../hallandoates-ogfan99-9a9062/", ex: 0 },
+  "Chubby Checker": { url: "../chubbychecker-ogfan99-0f1911/", ex: 0 },
 };
