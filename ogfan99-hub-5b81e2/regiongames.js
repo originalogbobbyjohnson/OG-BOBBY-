@@ -89,4 +89,6 @@ window.OG_REGION_GAMES = {
   "Pixies": { url: "../pixies-ogfan99-b651e2/", ex: 0 },
   "The Mighty Mighty Bosstones": { url: "../mightymightybosstones-ogfan99-046b5f/", ex: 0 },
   "Amos Lee": { url: "../amoslee-ogfan99-f52cf4/", ex: 0 },
+  "Michael Bolton": { url: "../michaelbolton-ogfan99-3fa56e/", ex: 0 },
+  "Aimee Mann": { url: "../aimeemann-ogfan99-0eefc7/", ex: 0 },
 };
