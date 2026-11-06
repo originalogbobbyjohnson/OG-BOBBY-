@@ -64,4 +64,6 @@ window.OG_REGION_GAMES = {
   "New Edition": { url: "../newedition-ogfan99-8404ad/", ex: 0 },
   "Guru's Jazzmatazz": { url: "../gurusolo-ogfan99-6a7ae1/", ex: 0 },
   "P!nk": { url: "../pink-ogfan99-f1fc06/", ex: 0 },
+  "Termanology": { url: "../termanology-ogfan99-b20f7a/", ex: 2 },
+  "Meghan Trainor": { url: "../meghantrainor-ogfan99-07a4a7/", ex: 0 },
 };
