@@ -49,4 +49,6 @@ window.OG_REGION_GAMES = {
   "Jill Scott": { url: "../jillscott-ogfan99-9c2269/", ex: 0 },
   "Jazmine Sullivan": { url: "../jazminesullivan-ogfan99-0680eb/", ex: 0 },
   "Musiq Soulchild": { url: "../musiqsoulchild-ogfan99-35c32c/", ex: 0 },
+  "Will Smith": { url: "../willsmith-ogfan99-16e5b1/", ex: 0 },
+  "Boyz II Men": { url: "../boyziimen-ogfan99-8c9479/", ex: 0 },
 };
