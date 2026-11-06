@@ -59,4 +59,6 @@ window.OG_REGION_GAMES = {
   "Chubby Checker": { url: "../chubbychecker-ogfan99-0f1911/", ex: 0 },
   "Joyner Lucas": { url: "../joynerlucas-ogfan99-ce025e/", ex: 2 },
   "Ed O.G.": { url: "../edog-ogfan99-b8107d/", ex: 2 },
+  "Cousin Stizz": { url: "../cousinstizz-ogfan99-f58162/", ex: 2 },
+  "Michael Christmas": { url: "../michaelchristmas-ogfan99-0ce57b/", ex: 2 },
 };
