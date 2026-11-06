@@ -595,7 +595,8 @@
     { who: "Ol' Dirty Bastard", d: "Wu-Tang's wild card. Brooklyn Zoo to ODB Jones Way.", home: "Fort Greene / Bed-Stuy, Brooklyn" },
     { who: "Black Rob", d: "Bad Boy from East Harlem. Like whoa.", home: "East Harlem, Manhattan" },
     { who: "Guru", d: "The voice of Gang Starr and Jazzmatazz. Roxbury to Fort Greene.", home: "Fort Greene, Brooklyn" },
-    { who: "Craig Mack", d: "The brand new flava from Brentwood who kicked off Bad Boy.", home: "Brentwood, Long Island" }
+    { who: "Craig Mack", d: "The brand new flava from Brentwood who kicked off Bad Boy.", home: "Brentwood, Long Island" },
+    { who: "Chinx", d: "Far Rock's own, Riot Squad to Coke Boys. Welcome to JFK.", home: "Far Rockaway, Queens" }
   ];
   function drawRip() {
     var p = panes.rip, RG = window.OG_REGION_GAMES || {};
