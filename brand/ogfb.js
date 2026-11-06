@@ -64,6 +64,12 @@
     ready: function () { return !!CFG; },
     submitClaim: function (c) { return db().then(function (d) { return d.collection("claims").add({ artist: c.artist, name: c.name, role: c.role, ig: c.ig, email: c.email, phone: c.phone, note: c.note, t: now() }); }); },
     saveRider: function (id, name, pts, rank) { return db().then(function (d) { return d.collection("riders").doc(id).set({ name: name, pts: pts, rank: rank, t: now() }); }); },
+    /* plays: one row per game started (artist slug + day); sent with keepalive so it survives the page change */
+    logPlay: function (slug) { try { if (!CFG) return; var d = new Date(), day = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+      fetch("https://firestore.googleapis.com/v1/projects/" + CFG.projectId + "/databases/(default)/documents/plays?key=" + CFG.apiKey, { method: "POST", keepalive: true, headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fields: { a: { stringValue: String(slug).slice(0, 60) }, d: { stringValue: day }, t: { timestampValue: d.toISOString() } } }) }).catch(function () {}); } catch (e) {} },
+    playCount: function () { return db().then(function (d) { var c = d.collection("plays"); return c.count ? c.count().get().then(function (x) { return x.data().count; }) : c.get().then(function (q) { return q.size; }); }); },
+    recentPlays: function (n) { return db().then(function (d) { return d.collection("plays").orderBy("t", "desc").limit(n || 5000).get(); }).then(function (q) { var out = []; q.forEach(function (x) { out.push(x.data()); }); return out; }); },
     topRiders: function (n) { return db().then(function (d) { return d.collection("riders").orderBy("pts", "desc").limit(n || 20).get(); }).then(function (q) { var out = []; q.forEach(function (x) { var v = x.data(); out.push({ id: x.id, name: v.name, pts: v.pts, rank: v.rank }); }); return out; }); }
   };
 })();

@@ -424,7 +424,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .bd-h { display: flex; align-items: center; justify-content: center; gap: 8px; font: 900 .58rem/1 Helvetica, Arial, sans-serif; letter-spacing: .24em; color: #f2c14e; margin-bottom: 5px; }
 .bd-h i { width: 7px; height: 7px; border-radius: 50%; background: #35b867; box-shadow: 0 0 6px #35b867; animation: bdblink 1.4s steps(2, start) infinite; }
 @keyframes bdblink { 50% { opacity: .25; } }
-.bd-row { display: grid; grid-template-columns: 1fr 2px 1fr; align-items: stretch; }
+.bd-row { display: grid; grid-template-columns: 1fr 2px 1fr 2px 1fr; align-items: stretch; }
 .bd-sep { background: #2c2c2c; }
 .bd-row button { background: none; border: 0; cursor: pointer; display: grid; justify-items: center; gap: 3px; padding: 2px; }
 .bd-row b { font: 900 1.7rem/1 "Courier New", monospace; color: #ff8a1f; text-shadow: 0 0 10px rgba(255,138,31,.85); letter-spacing: .12em; }
@@ -454,7 +454,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <meta name="copyright" content="© 2026 OG Bobby · OG FAN 99. All rights reserved.">
 <script src="/brand/guard.js?v=15"></script>
-<script src="/brand/ogfb.js?v=8"></script>
+<script src="/brand/ogfb.js?v=9"></script>
 </head>
 <body>
 <div class="start" id="start" role="button" tabindex="0" aria-label="Tap to start">
@@ -1568,7 +1568,7 @@ function goArtist(i) {
   const a = ARTISTS[i]; try { sessionStorage.setItem("ogfan99last", String(i)); } catch (e) {}
   if (window.OGX && OGX.mysteryIdx() === i && a.url && isOwner()) { location.href = a.url + "?from=ogfan99&mystery=1"; return; }
   if (a.ex === 2 && !EXPL()) { openCard(i); return; }
-  if (a.url && (a.status === "live" || (a.status === "demo" && isOwner()))) location.href = a.url + "?from=ogfan99";
+  if (a.url && (a.status === "live" || (a.status === "demo" && isOwner()))) { window.__logPlay && window.__logPlay(a.url); location.href = a.url + "?from=ogfan99"; }
   else openCard(i);
 }
 function recolorPins() { (window.__pins || []).forEach(c => { const a = ARTISTS[c.__i]; c.setStyle({ fillColor: a.status === "live" ? "#35b867" : a.status === "demo" && isOwner() ? "#e8b84a" : "#d62828" }); }); }
@@ -1746,7 +1746,7 @@ window.OGX = (function () {
     const i = mysteryIdx(); if (i < 0) return; const el = $("list").querySelector('[data-i="' + i + '"]'); if (!el) return;
     el.classList.add("mystery"); const w = el.querySelector(".who,.snm"); if (w && !w.querySelector(".mystag")) w.insertAdjacentHTML("beforeend", '<span class="mystag">MYSTERY DOOR</span>');
   }
-  return { streak, badges, wallHTML, mysteryIdx, celebrate, nextStop, marks, mapMarks, toast, setStats: f => { stats0 = f; }, horn, confetti };
+  return { streak, badges, wallHTML, mysteryIdx, celebrate, nextStop, marks, mapMarks, toast, setStats: f => { stats0 = f; }, stats: () => stats0 ? stats0() : null, horn, confetti };
 })();
 /* ---------- game feel: MetroCard player card, Today's Train (2X), stars, one SORT button ---------- */
 (function () {
@@ -2004,7 +2004,7 @@ window.OGX = (function () {
   /* STEP 1 panel */
   const p = document.createElement("section"); p.className = "step1p";
   p.innerHTML = '<div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR BOROUGH</b></div>' +
-    '<div class="board"><div class="bd-h"><i></i>LIVE ON THE LINE<i></i></div><div class="bd-row"><button type="button" id="mtAb"><b id="mtA">' + ARTISTS.length + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtFb"><b id="mtF">—</b><small>FANS</small><em>SEE ALL &#9656;</em></button></div></div>' +
+    '<div class="board"><div class="bd-h"><i></i>LIVE ON THE LINE<i></i></div><div class="bd-row"><button type="button" id="mtAb"><b id="mtA">' + ARTISTS.length + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtFb"><b id="mtF">—</b><small>FANS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtPb"><b id="mtP">—</b><small>PLAYS</small><em>' + (isOwner() ? 'BY ARTIST &#9656;' : 'LIVE') + '</em></button></div></div>' +
     '<div class="bgrid">' + BOROS.map(b => '<button type="button" data-pb="' + b + '" style="--bc:' + (COL[b] || "#fff") + '">' + (NAME[b] || b.toUpperCase()) + '<small>' + cnt(b) + ' ARTISTS</small></button>').join("") +
     '<button type="button" class="wide" data-pb="__regions">&#127758; OTHER REGIONS &amp; GENRES<small>SOUTH FLORIDA · ATLANTA · LA · CHICAGO + MORE</small></button>' +
     '<button type="button" class="wide" data-pb="__find">&#128269; SEARCH ANY ARTIST</button></div>' +
@@ -2071,6 +2071,26 @@ window.OGX = (function () {
   /* STEP 3 on the artist card */
   const _oc = openCard; openCard = function (i) { const r = _oc.apply(this, arguments); try { const cd = $("card"), a = ARTISTS[i];
       if (cd && !cd.hidden && !cd.querySelector(".step3") && a && a.url) { const d = document.createElement("div"); d.className = "step3"; d.innerHTML = "<b>STEP 3 OF 3:</b> tap PLAY. In the game, tap the record to start the music, then answer the questions."; const x = cd.querySelector(".roombtn"); x ? cd.insertBefore(d, x) : cd.appendChild(d); } } catch (e) {} return r; };
+  /* plays: every game started from the hub is counted (OG Bobby's own test plays are skipped) */
+  const slugOf = u => { const m = String(u || "").match(/([a-z0-9-]+)-ogfan99-[0-9a-f]+/i); return m ? m[1] : ""; };
+  window.__logPlay = u => { try { if (!isOwner() && window.OGFB && OGFB.logPlay) { const s = slugOf(u); if (s) OGFB.logPlay(s); } } catch (e) {} };
+  document.addEventListener("click", e => { const a = e.target.closest && e.target.closest('a[href*="-ogfan99-"]'); if (a) window.__logPlay(a.getAttribute("href")); }, true);
+  try { if (window.OGFB && OGFB.ready() && OGFB.playCount) OGFB.playCount().then(n => { $("mtP").textContent = n; }).catch(() => {}); } catch (e) {}
+  $("mtPb").onclick = () => { if (!isOwner()) return;
+    $("dirT").textContent = "PLAYS BY ARTIST"; $("dirS").innerHTML = ""; D.hidden = false; $("dirL").innerHTML = "<p>Loading...</p>";
+    OGFB.recentPlays(5000).then(r => { const by = {}, today = new Date().toISOString().slice(0, 10); let td = 0;
+      r.forEach(x => { by[x.a] = (by[x.a] || 0) + 1; if (x.d === today) td++; });
+      const nm = s => { const a = ARTISTS.find(z => slugOf(z.url) === s); return a ? a.who : s; };
+      const L = Object.keys(by).sort((x, y) => by[y] - by[x]);
+      $("dirL").innerHTML = '<p>' + r.length + ' plays · ' + td + ' today</p>' + (L.length ? L.map(s => '<button type="button" class="r"><i style="background:#ff8a1f"></i><span><b>' + esc(nm(s)) + '</b></span><em>' + by[s] + ' PLAYS</em></button>').join("") : "<p>No plays yet.</p>");
+    }).catch(() => { $("dirL").innerHTML = "<p>Plays turn on once the database rule is added.</p>"; }); };
+  /* sign-up: the first time a fan comes back with points, ask for a rider name so they count as a fan */
+  setTimeout(() => { try { const r = JSON.parse(localStorage.getItem("ogfan99rider") || "null"), s = OGX.stats ? OGX.stats() : null;
+    if (isOwner() || !s || !s.pts || (r && r.name) || sessionStorage.getItem("ogfan99ask")) return; sessionStorage.setItem("ogfan99ask", "1");
+    $("card").innerHTML = '<button class="x" id="cx" type="button" aria-label="Close">✕</button><div class="who" style="color:#f2c14e">YOU\'RE ON THE BOARD</div>' +
+      '<p>You have <b>' + s.pts + ' ride points</b>. Pick a rider name to save them and get on the Riders Board.</p>' + OGRB.html();
+    $("card").hidden = false; $("scrim").hidden = false; $("cx").onclick = closeCard; OGRB.fill(s.pts, s.rank);
+  } catch (e) {} }, 4000);
   /* fan count: grows from the online database once it's switched on */
   try { if (window.OGFB && OGFB.ready() && OGFB.fanCount) OGFB.fanCount().then(n => { $("mtF").textContent = n; }).catch(() => {}); } catch (e) {}
 })();
