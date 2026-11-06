@@ -72,4 +72,6 @@ window.OG_REGION_GAMES = {
   "Akrobatik": { url: "../akrobatik-ogfan99-1d8398/", ex: 2 },
   "Donna Summer": { url: "../donnasummer-ogfan99-6b25a0/", ex: 0 },
   "Bell Biv DeVoe": { url: "../bellbivdevoe-ogfan99-9fd553/", ex: 0 },
+  "The Delfonics": { url: "../delfonics-ogfan99-0092c3/", ex: 0 },
+  "Jim Croce": { url: "../jimcroce-ogfan99-71f67d/", ex: 0 },
 };
