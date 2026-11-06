@@ -81,4 +81,6 @@ window.OG_REGION_GAMES = {
   "The War on Drugs": { url: "../thewarondrugs-ogfan99-4f4896/", ex: 0 },
   "Dropkick Murphys": { url: "../dropkickmurphys-ogfan99-48c790/", ex: 0 },
   "Passion Pit": { url: "../passionpit-ogfan99-563571/", ex: 0 },
+  "The Cars": { url: "../thecars-ogfan99-b5fcc2/", ex: 0 },
+  "Boston": { url: "../bostonband-ogfan99-4fb1e0/", ex: 0 },
 };
