@@ -53,4 +53,6 @@ window.OG_REGION_GAMES = {
   "Boyz II Men": { url: "../boyziimen-ogfan99-8c9479/", ex: 0 },
   "Patti LaBelle": { url: "../pattilabelle-ogfan99-47572c/", ex: 0 },
   "Kurupt": { url: "../kurupt-ogfan99-d174a8/", ex: 2 },
+  "Teddy Pendergrass": { url: "../teddypendergrass-ogfan99-166982/", ex: 0 },
+  "The O'Jays": { url: "../ojays-ogfan99-07e1d1/", ex: 0 },
 };
