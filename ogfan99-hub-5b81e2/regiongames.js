@@ -25,4 +25,6 @@ window.OG_REGION_GAMES = {
   "eLZhi": { url: "../elzhi-ogfan99-b42071/", ex: 2 },
   "Cage": { url: "../cage-ogfan99-ac03b3/", ex: 2 },
   "One Be Lo": { url: "../onebelo-ogfan99-c58a89/", ex: 2 },
+  "The Roots": { url: "../theroots-ogfan99-a54d91/", ex: 2 },
+  "Meek Mill": { url: "../meekmill-ogfan99-e5dbdf/", ex: 2 },
 };
