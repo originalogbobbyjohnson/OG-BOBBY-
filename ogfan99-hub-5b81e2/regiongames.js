@@ -228,4 +228,6 @@ window.OG_REGION_GAMES = {
   "Plies": { url: "../plies-ogfan99-ff0669/", ex: 2 },
   "Lil Baby": { url: "../lilbaby-ogfan99-a44f1f/", ex: 2 },
   "Chamillionaire": { url: "../chamillionaire-ogfan99-7aa149/", ex: 1 },
+  "David Banner": { url: "../davidbanner-ogfan99-4bf139/", ex: 2 },
+  "Bubba Sparxxx": { url: "../bubbasparxxx-ogfan99-e905fa/", ex: 0 },
 };
