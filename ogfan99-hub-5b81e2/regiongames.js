@@ -251,4 +251,6 @@ window.OG_REGION_GAMES = {
   "G-Eazy": { url: "../geazy-ogfan99-6787c9/", ex: 2 },
   "Gillie Da King": { url: "../gillie-ogfan99-df238c/", ex: 2 },
   "Reed Dollaz": { url: "../reeddollaz-ogfan99-f0b411/", ex: 2 },
+  "Morray": { url: "../morray-ogfan99-131687/", ex: 2 },
+  "Nef the Pharaoh": { url: "../nefthepharaoh-ogfan99-c18bfb/", ex: 2 },
 };
