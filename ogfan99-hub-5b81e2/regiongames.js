@@ -220,4 +220,5 @@ window.OG_REGION_GAMES = {
   "Polo G": { url: "../polog-ogfan99-c1ebfa/", ex: 2 },
   "Big Boi": { url: "../bigboi-ogfan99-6b5363/", ex: 2 },
   "Missy Elliott": { url: "../missyelliott-ogfan99-c6541b/", ex: 0 },
+  "Machine Gun Kelly": { url: "../machinegunkelly-ogfan99-7f89da/", ex: 0 },
 };
