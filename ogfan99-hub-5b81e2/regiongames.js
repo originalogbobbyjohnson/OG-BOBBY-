@@ -126,4 +126,6 @@ window.OG_REGION_GAMES = {
   "Dee-1": { url: "../dee1-ogfan99-d032d9/", ex: 0 },
   "Conway the Machine": { url: "../conwaythemachine-ogfan99-e6fe68/", ex: 2 },
   "Skillz": { url: "../skillz-ogfan99-502ff9/", ex: 2 },
+  "Tink": { url: "../tink-ogfan99-0ee05c/", ex: 2 },
+  "Kamaiyah": { url: "../kamaiyah-ogfan99-0ad0f0/", ex: 2 },
 };
