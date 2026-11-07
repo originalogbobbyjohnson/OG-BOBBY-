@@ -242,4 +242,5 @@ window.OG_REGION_GAMES = {
   "Tee Grizzley": { url: "../teegrizzley-ogfan99-72161b/", ex: 2 },
   "Babyface Ray": { url: "../babyfaceray-ogfan99-3076e2/", ex: 2 },
   "Nipsey Hussle": { url: "../nipseyhussle-ogfan99-0009be/", ex: 2 },
+  "Birdman": { url: "../birdman-ogfan99-93b627/", ex: 2 },
 };
