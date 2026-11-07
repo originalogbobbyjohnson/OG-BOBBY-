@@ -237,4 +237,6 @@ window.OG_REGION_GAMES = {
   "Young Thug": { url: "../youngthug-ogfan99-ae5854/", ex: 2 },
   "Mike Jones": { url: "../mikejones-ogfan99-c844d2/", ex: 2 },
   "Trae tha Truth": { url: "../trae-ogfan99-f3bd6f/", ex: 2 },
+  "Lil Durk": { url: "../lildurk-ogfan99-2db5ef/", ex: 2 },
+  "Juice WRLD": { url: "../juicewrld-ogfan99-5f6695/", ex: 0 },
 };
