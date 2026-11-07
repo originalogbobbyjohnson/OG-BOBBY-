@@ -245,4 +245,6 @@ window.OG_REGION_GAMES = {
   "Birdman": { url: "../birdman-ogfan99-93b627/", ex: 2 },
   "Mia X": { url: "../miax-ogfan99-46c50d/", ex: 2 },
   "Turk": { url: "../turk-ogfan99-2d7c02/", ex: 2 },
+  "Larry June": { url: "../larryjune-ogfan99-067022/", ex: 2 },
+  "Mistah F.A.B.": { url: "../mistahfab-ogfan99-cbb548/", ex: 2 },
 };
