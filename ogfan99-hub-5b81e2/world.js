@@ -536,8 +536,8 @@
     { g: "EAST COAST" },
     { n: "PHILADELPHIA", d: "North Philly, West Philly, South Philly.", c: "#004c54", coming: ["Amos Lee", "Bill Haley & His Comets", "Frankie Avalon", "Bobby Rydell", "The War on Drugs", "Japanese Breakfast", "Kurt Vile", "Ivy Sole", "Jim Croce", "The Delfonics", "Santigold", "P!nk", "Chubby Checker", "Hall & Oates", "The O'Jays", "Teddy Pendergrass", "Kurupt", "Patti LaBelle", "Boyz II Men", "Will Smith", "Musiq Soulchild", "Jazmine Sullivan", "Jill Scott", "Black Thought", "Young Gunz", "The Last Emperor", "Lay Bankz", "Kur", "PnB Rock", "Reef the Lost Cauze", "Chill Moody", "Bahamadia", "Freeway", "Lil Dicky", "Cassidy", "Three Times Dope", "Lil Uzi Vert", "Eve", "Tierra Whack", "DJ Jazzy Jeff & The Fresh Prince", "Armani White", "Chiddy Bang", "Meek Mill", "The Roots", "Vinnie Paz"] },
     { n: "THE DMV", d: "D.C., Maryland, Northern Virginia.", c: "#e81828", coming: ["Substantial", "ANKHLEJOHN", "Oddisee"] },
-    { n: "UPSTATE NEW YORK", d: "Middletown, Albany, Rochester, Buffalo, Syracuse.", c: "#7b3fbf", coming: ["Conway the Machine", "Westside Gunn", "Cage"] },
-    { n: "BOSTON + NEW ENGLAND", d: "Boston, Providence, Hartford.", c: "#0b3d91", coming: ["Aimee Mann", "Michael Bolton", "The Mighty Mighty Bosstones", "Pixies", "Boston", "The Cars", "Passion Pit", "Dropkick Murphys", "James Taylor", "Bell Biv DeVoe", "Donna Summer", "Akrobatik", "New Kids on the Block", "Reks", "Meghan Trainor", "Termanology", "Guru's Jazzmatazz", "New Edition", "Michael Christmas", "Cousin Stizz", "Ed O.G.", "Joyner Lucas", "Mr. Lif", "Esoteric", "Slaine", "Sage Francis", "Apathy"] },
+    { n: "UPSTATE NEW YORK", d: "Middletown, Albany, Rochester, Buffalo, Syracuse.", c: "#7b3fbf", coming: ["Sammus", "Conway the Machine", "Westside Gunn", "Cage"] },
+    { n: "BOSTON + NEW ENGLAND", d: "Boston, Providence, Hartford.", c: "#0b3d91", coming: ["Akua Naru", "Aimee Mann", "Michael Bolton", "The Mighty Mighty Bosstones", "Pixies", "Boston", "The Cars", "Passion Pit", "Dropkick Murphys", "James Taylor", "Bell Biv DeVoe", "Donna Summer", "Akrobatik", "New Kids on the Block", "Reks", "Meghan Trainor", "Termanology", "Guru's Jazzmatazz", "New Edition", "Michael Christmas", "Cousin Stizz", "Ed O.G.", "Joyner Lucas", "Mr. Lif", "Esoteric", "Slaine", "Sage Francis", "Apathy"] },
     { g: "MIDWEST" },
     { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de", coming: ["Tink", "Mick Jenkins", "Noname", "Saba"] },
     { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["Guilty Simpson", "Black Milk", "eLZhi", "Quelle Chris", "One Be Lo"] },
@@ -649,7 +649,7 @@
 
   /* ---------- FEMALE RAPPERS: every woman on the map or in a region, sorted by where she's from ---------- */
   var WOMEN = ["Remy Ma", "Ice Spice", "Cardi B", "Rah Digga", "Queen Latifah", "Princess Nokia", "Azealia Banks", "Melii", "MC Lyte", "Roxanne Shant\u00e9", "HeeSun Lee", "Hanifah Walidah", "Lauryn Hill", "Coi Leray", "Justina Valentine", "Leikeli47", "Nitty Scott", "Salt-N-Pepa", "Sha-Rock", "Jean Grae", "Lil Mama", "Lil' Kim", "Young M.A", "Foxy Brown", "Nicki Minaj", "Lola Brooke", "Queen Pen", "Junglepussy", "Heather B.", "Hurricane G", "Monie Love", "Sweet Tee", "Lady London",
-    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera"];
+    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera", "Sammus", "Akua Naru"];
   function drawWomen() {
     var p = panes.women, RG = window.OG_REGION_GAMES || {}, L = A(), C = "#e84aa0";
     var groups = [], idx = {};

@@ -138,4 +138,6 @@ window.OG_REGION_GAMES = {
   "King Chip": { url: "../kingchip-ogfan99-50c24e/", ex: 2 },
   "Dave B": { url: "../daveb-ogfan99-ff35a1/", ex: 2 },
   "Kenny Mason": { url: "../kennymason-ogfan99-a7a23c/", ex: 2 },
+  "Sammus": { url: "../sammus-ogfan99-b1e3f0/", ex: 2 },
+  "Akua Naru": { url: "../akuanaru-ogfan99-04d332/", ex: 0 },
 };
