@@ -189,4 +189,5 @@ window.OG_REGION_GAMES = {
   "MC Ren": { url: "../mcren-ogfan99-77c50d/", ex: 2 },
   "Eminem": { url: "../eminem-ogfan99-06be16/", ex: 2 },
   "Royce da 5'9\"": { url: "../royce-ogfan99-fc021f/", ex: 2 },
+  "B.G.": { url: "../bg-ogfan99-8d4f75/", ex: 2 },
 };
