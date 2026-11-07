@@ -226,4 +226,5 @@ window.OG_REGION_GAMES = {
   "Ski Mask the Slump God": { url: "../skimask-ogfan99-c2d173/", ex: 2 },
   "Pastor Troy": { url: "../pastortroy-ogfan99-9b5075/", ex: 2 },
   "Plies": { url: "../plies-ogfan99-ff0669/", ex: 2 },
+  "Lil Baby": { url: "../lilbaby-ogfan99-a44f1f/", ex: 2 },
 };
