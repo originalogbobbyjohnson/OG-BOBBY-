@@ -267,4 +267,6 @@ window.OG_REGION_GAMES = {
   "BigXthaPlug": { url: "../bigxtheplug-ogfan99-0fed73/", ex: 2 },
   "ScHoolboy Q": { url: "../schoolboyq-ogfan99-f76a17/", ex: 2 },
   "MC Eiht": { url: "../mceiht-ogfan99-c43654/", ex: 2 },
+  "Blxst": { url: "../blxst-ogfan99-4b695a/", ex: 0 },
+  "Drakeo the Ruler": { url: "../drakeo-ogfan99-c7aeaf/", ex: 2 },
 };
