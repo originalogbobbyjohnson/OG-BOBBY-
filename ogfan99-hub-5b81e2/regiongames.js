@@ -122,4 +122,6 @@ window.OG_REGION_GAMES = {
   "Grieves": { url: "../grieves-ogfan99-6855f4/", ex: 0 },
   "Pouya": { url: "../pouya-ogfan99-6ebc77/", ex: 2 },
   "Big K.R.I.T.": { url: "../bigkrit-ogfan99-2ef7eb/", ex: 1 },
+  "Little Brother": { url: "../littlebrother-ogfan99-42ae24/", ex: 2 },
+  "Dee-1": { url: "../dee1-ogfan99-d032d9/", ex: 0 },
 };
