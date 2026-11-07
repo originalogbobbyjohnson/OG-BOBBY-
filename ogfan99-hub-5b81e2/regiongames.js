@@ -118,4 +118,6 @@ window.OG_REGION_GAMES = {
   "Nickelus F": { url: "../nickelusf-ogfan99-d1a193/", ex: 2 },
   "Mick Jenkins": { url: "../mickjenkins-ogfan99-e9013a/", ex: 2 },
   "Devin the Dude": { url: "../devinthedude-ogfan99-fdad14/", ex: 2 },
+  "Black Milk": { url: "../blackmilk-ogfan99-651f87/", ex: 2 },
+  "Grieves": { url: "../grieves-ogfan99-6855f4/", ex: 0 },
 };
