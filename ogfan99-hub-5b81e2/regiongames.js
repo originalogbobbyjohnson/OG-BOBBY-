@@ -120,4 +120,6 @@ window.OG_REGION_GAMES = {
   "Devin the Dude": { url: "../devinthedude-ogfan99-fdad14/", ex: 2 },
   "Black Milk": { url: "../blackmilk-ogfan99-651f87/", ex: 2 },
   "Grieves": { url: "../grieves-ogfan99-6855f4/", ex: 0 },
+  "Pouya": { url: "../pouya-ogfan99-6ebc77/", ex: 2 },
+  "Big K.R.I.T.": { url: "../bigkrit-ogfan99-2ef7eb/", ex: 1 },
 };
