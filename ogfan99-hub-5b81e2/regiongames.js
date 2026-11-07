@@ -114,4 +114,8 @@ window.OG_REGION_GAMES = {
   "The Pharcyde": { url: "../pharcyde-ogfan99-eccc3b/", ex: 2 },
   "Stik Figa": { url: "../stikfiga-ogfan99-802520/", ex: 0 },
   "J.I.D": { url: "../jid-ogfan99-2cdb70/", ex: 2 },
+  "Westside Gunn": { url: "../westsidegunn-ogfan99-f97ef2/", ex: 2 },
+  "Nickelus F": { url: "../nickelusf-ogfan99-d1a193/", ex: 2 },
+  "Mick Jenkins": { url: "../mickjenkins-ogfan99-e9013a/", ex: 2 },
+  "Devin the Dude": { url: "../devinthedude-ogfan99-fdad14/", ex: 2 },
 };
