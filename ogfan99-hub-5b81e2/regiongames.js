@@ -155,4 +155,5 @@ window.OG_REGION_GAMES = {
   "Zion I": { url: "../zioni-ogfan99-0703fb/", ex: 0 },
   "Curren$y": { url: "../curreny-ogfan99-fad153/", ex: 2 },
   "Bobby Sessions": { url: "../bobbysessions-ogfan99-f6e30a/", ex: 1 },
+  "Toki Wright": { url: "../tokiwright-ogfan99-4a9767/", ex: 0 },
 };
