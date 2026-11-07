@@ -270,4 +270,6 @@ window.OG_REGION_GAMES = {
   "Blxst": { url: "../blxst-ogfan99-4b695a/", ex: 0 },
   "Drakeo the Ruler": { url: "../drakeo-ogfan99-c7aeaf/", ex: 2 },
   "Big Freedia": { url: "../bigfreedia-ogfan99-79a11f/", ex: 0 },
+  "Al Kapone": { url: "../alkapone-ogfan99-65e7e1/", ex: 2 },
+  "Lil Wyte": { url: "../lilwyte-ogfan99-73cc53/", ex: 2 },
 };
