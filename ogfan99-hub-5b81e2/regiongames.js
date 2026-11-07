@@ -124,4 +124,6 @@ window.OG_REGION_GAMES = {
   "Big K.R.I.T.": { url: "../bigkrit-ogfan99-2ef7eb/", ex: 1 },
   "Little Brother": { url: "../littlebrother-ogfan99-42ae24/", ex: 2 },
   "Dee-1": { url: "../dee1-ogfan99-d032d9/", ex: 0 },
+  "Conway the Machine": { url: "../conwaythemachine-ogfan99-e6fe68/", ex: 2 },
+  "Skillz": { url: "../skillz-ogfan99-502ff9/", ex: 2 },
 };
