@@ -259,4 +259,6 @@ window.OG_REGION_GAMES = {
   "Pooh Shiesty": { url: "../poohshiesty-ogfan99-15daa4/", ex: 2 },
   "Vince Staples": { url: "../vincestaples-ogfan99-979d28/", ex: 2 },
   "Murphy Lee": { url: "../murphylee-ogfan99-2946ff/", ex: 2 },
+  "Jay Rock": { url: "../jayrock-ogfan99-56accf/", ex: 2 },
+  "Ab-Soul": { url: "../absoul-ogfan99-06cdc2/", ex: 2 },
 };
