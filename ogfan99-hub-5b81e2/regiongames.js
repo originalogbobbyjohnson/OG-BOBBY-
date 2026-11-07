@@ -140,4 +140,5 @@ window.OG_REGION_GAMES = {
   "Kenny Mason": { url: "../kennymason-ogfan99-a7a23c/", ex: 2 },
   "Sammus": { url: "../sammus-ogfan99-b1e3f0/", ex: 2 },
   "Akua Naru": { url: "../akuanaru-ogfan99-04d332/", ex: 0 },
+  "Mac Lethal": { url: "../maclethal-ogfan99-934e35/", ex: 2 },
 };
