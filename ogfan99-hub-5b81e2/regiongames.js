@@ -249,4 +249,6 @@ window.OG_REGION_GAMES = {
   "Mistah F.A.B.": { url: "../mistahfab-ogfan99-cbb548/", ex: 2 },
   "Logic": { url: "../logic-ogfan99-caac0a/", ex: 2 },
   "G-Eazy": { url: "../geazy-ogfan99-6787c9/", ex: 2 },
+  "Gillie Da King": { url: "../gillie-ogfan99-df238c/", ex: 2 },
+  "Reed Dollaz": { url: "../reeddollaz-ogfan99-f0b411/", ex: 2 },
 };
