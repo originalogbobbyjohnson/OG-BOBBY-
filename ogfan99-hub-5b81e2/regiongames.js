@@ -258,4 +258,5 @@ window.OG_REGION_GAMES = {
   "Rich Homie Quan": { url: "../richhomiequan-ogfan99-dfd7de/", ex: 2 },
   "Pooh Shiesty": { url: "../poohshiesty-ogfan99-15daa4/", ex: 2 },
   "Vince Staples": { url: "../vincestaples-ogfan99-979d28/", ex: 2 },
+  "Murphy Lee": { url: "../murphylee-ogfan99-2946ff/", ex: 2 },
 };
