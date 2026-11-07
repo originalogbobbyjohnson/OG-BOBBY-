@@ -130,4 +130,5 @@ window.OG_REGION_GAMES = {
   "Kamaiyah": { url: "../kamaiyah-ogfan99-0ad0f0/", ex: 2 },
   "Krizz Kaliko": { url: "../krizzkaliko-ogfan99-cefab0/", ex: 2 },
   "Don Trip": { url: "../dontrip-ogfan99-57e5ae/", ex: 2 },
+  "Substantial": { url: "../substantial-ogfan99-b69511/", ex: 0 },
 };
