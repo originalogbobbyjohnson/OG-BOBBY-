@@ -235,4 +235,6 @@ window.OG_REGION_GAMES = {
   "Danny Brown": { url: "../dannybrown-ogfan99-3c781e/", ex: 2 },
   "Travis Scott": { url: "../travisscott-ogfan99-3a16db/", ex: 2 },
   "Young Thug": { url: "../youngthug-ogfan99-ae5854/", ex: 2 },
+  "Mike Jones": { url: "../mikejones-ogfan99-c844d2/", ex: 2 },
+  "Trae tha Truth": { url: "../trae-ogfan99-f3bd6f/", ex: 2 },
 };
