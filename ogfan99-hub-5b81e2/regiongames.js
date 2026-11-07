@@ -272,4 +272,6 @@ window.OG_REGION_GAMES = {
   "Big Freedia": { url: "../bigfreedia-ogfan99-79a11f/", ex: 0 },
   "Al Kapone": { url: "../alkapone-ogfan99-65e7e1/", ex: 2 },
   "Lil Wyte": { url: "../lilwyte-ogfan99-73cc53/", ex: 2 },
+  "Amin\u00e9": { url: "../amine-ogfan99-b0414a/", ex: 2 },
+  "Travis Thompson": { url: "../travisthompson-ogfan99-6cb827/", ex: 2 },
 };
