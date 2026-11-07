@@ -215,4 +215,5 @@ window.OG_REGION_GAMES = {
   "Steady B": { url: "../steadyb-ogfan99-699298/", ex: 0 },
   "Slim Thug": { url: "../slimthug-ogfan99-bff129/", ex: 2 },
   "Lil' Keke": { url: "../lilkeke-ogfan99-04243a/", ex: 2 },
+  "Mac Dre": { url: "../macdre-ogfan99-4ac73f/", ex: 2 },
 };
