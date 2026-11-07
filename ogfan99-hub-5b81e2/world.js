@@ -537,7 +537,7 @@
     { g: "MIDWEST" },
     { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de", coming: ["Noname", "Saba"] },
     { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["eLZhi", "Quelle Chris", "One Be Lo"] },
-    { n: "MINNEAPOLIS", d: "Minneapolis and St. Paul. Rhymesayers country.", c: "#7b3fbf", coming: ["Slug", "Brother Ali", "Eyedea"] },
+    { n: "MINNEAPOLIS", d: "Minneapolis and St. Paul. Rhymesayers country.", c: "#7b3fbf", coming: ["Dessa", "Slug", "Brother Ali", "Eyedea"] },
     { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e" },
     { g: "WEST COAST" },

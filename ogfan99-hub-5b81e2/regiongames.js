@@ -105,4 +105,5 @@ window.OG_REGION_GAMES = {
   "ANKHLEJOHN": { url: "../ankhlejohn-ogfan99-acc477/", ex: 2 },
   "Pell": { url: "../pell-ogfan99-5d84d0/", ex: 2 },
   "Alfred Banks": { url: "../alfredbanks-ogfan99-50c56d/", ex: 2 },
+  "Dessa": { url: "../dessa-ogfan99-2a6b96/", ex: 1 },
 };
