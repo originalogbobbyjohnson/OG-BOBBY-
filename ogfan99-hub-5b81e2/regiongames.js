@@ -274,4 +274,6 @@ window.OG_REGION_GAMES = {
   "Lil Wyte": { url: "../lilwyte-ogfan99-73cc53/", ex: 2 },
   "Amin\u00e9": { url: "../amine-ogfan99-b0414a/", ex: 2 },
   "Travis Thompson": { url: "../travisthompson-ogfan99-6cb827/", ex: 2 },
+  "Jay Electronica": { url: "../jayelectronica-ogfan99-9b1ae6/", ex: 2 },
+  "Ace Hood": { url: "../acehood-ogfan99-a5dcaf/", ex: 2 },
 };
