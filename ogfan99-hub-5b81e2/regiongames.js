@@ -173,4 +173,6 @@ window.OG_REGION_GAMES = {
   "8Ball & MJG": { url: "../8ballmjg-ogfan99-a11ebd/", ex: 2 },
   "Snoop Dogg": { url: "../snoopdogg-ogfan99-5819a9/", ex: 2 },
   "Warren G": { url: "../warreng-ogfan99-0b0ef2/", ex: 2 },
+  "Twista": { url: "../twista-ogfan99-9c9699/", ex: 2 },
+  "Lupe Fiasco": { url: "../lupefiasco-ogfan99-d13ddc/", ex: 0 },
 };
