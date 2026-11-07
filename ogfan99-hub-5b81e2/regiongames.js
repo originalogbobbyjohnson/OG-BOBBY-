@@ -243,4 +243,6 @@ window.OG_REGION_GAMES = {
   "Babyface Ray": { url: "../babyfaceray-ogfan99-3076e2/", ex: 2 },
   "Nipsey Hussle": { url: "../nipseyhussle-ogfan99-0009be/", ex: 2 },
   "Birdman": { url: "../birdman-ogfan99-93b627/", ex: 2 },
+  "Mia X": { url: "../miax-ogfan99-46c50d/", ex: 2 },
+  "Turk": { url: "../turk-ogfan99-2d7c02/", ex: 2 },
 };

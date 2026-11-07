@@ -530,7 +530,7 @@
     { n: "SOUTH FLORIDA", d: "Miami, Fort Lauderdale, West Palm Beach.", c: "#ff4fa3", coming: ["Plies", "Ski Mask the Slump God", "Trick Daddy", "Flo Rida", "Trina", "Pouya", "Denzel Curry"], locked: [{ who: "Sevin Soprano", ig: "sevinsoprano" }] },
     { n: "ATLANTA", d: "The A, Decatur, College Park, East Point.", c: "#d62828", coming: ["Young Thug", "Lil Baby", "Pastor Troy", "Big Boi", "Latto", "Killer Mike", "T.I.", "Jeezy", "Future", "Andr\u00e9 3000", "Ludacris", "CyHi the Prynce", "Jarren Benton", "Baby Tate", "Kenny Mason", "J.I.D", "Deante' Hitchcock", "EarthGang"] },
     { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6", coming: ["Trae tha Truth", "Mike Jones", "Travis Scott", "Chamillionaire", "Lil' Keke", "Slim Thug", "Megan Thee Stallion", "Paul Wall", "Scarface", "Bun B", "Bobby Sessions", "Monaleo", "Devin the Dude", "Fat Tony", "Tobe Nwigwe"] },
-    { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf", coming: ["Birdman", "B.G.", "Lil Wayne", "Master P", "Juvenile", "Nesby Phips", "Curren$y", "Dee-1", "Alfred Banks", "Pell"] },
+    { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf", coming: ["Turk", "Mia X", "Birdman", "B.G.", "Lil Wayne", "Master P", "Juvenile", "Nesby Phips", "Curren$y", "Dee-1", "Alfred Banks", "Pell"] },
     { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Moneybagg Yo", "Young Dolph", "GloRilla", "8Ball & MJG", "Starlito", "Don Trip", "Isaiah Rashad", "Count Bass D"] },
     { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c", coming: ["Missy Elliott", "Pusha T", "Skillz", "Nickelus F", "Tonedeff"] },
     { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8", coming: ["Petey Pablo", "J. Cole", "Deniro Farrar", "Little Brother", "Lute", "Rapsody"] },
@@ -675,7 +675,7 @@
 
   /* ---------- FEMALE RAPPERS: every woman on the map or in a region, sorted by where she's from ---------- */
   var WOMEN = ["Remy Ma", "Ice Spice", "Cardi B", "Rah Digga", "Queen Latifah", "Princess Nokia", "Azealia Banks", "Melii", "MC Lyte", "Roxanne Shant\u00e9", "HeeSun Lee", "Hanifah Walidah", "Lauryn Hill", "Coi Leray", "Justina Valentine", "Leikeli47", "Nitty Scott", "Salt-N-Pepa", "Sha-Rock", "Jean Grae", "Lil Mama", "Lil' Kim", "Young M.A", "Foxy Brown", "Nicki Minaj", "Lola Brooke", "Queen Pen", "Junglepussy", "Heather B.", "Hurricane G", "Monie Love", "Sweet Tee", "Lady London",
-    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera", "Sammus", "Akua Naru", "Rico Nasty", "Baby Tate", "Dutch ReBelle", "Monaleo", "Da Brat", "GloRilla", "Megan Thee Stallion", "Saweetie", "Kash Doll", "Trina", "Latto", "Missy Elliott"];
+    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera", "Sammus", "Akua Naru", "Rico Nasty", "Baby Tate", "Dutch ReBelle", "Monaleo", "Da Brat", "GloRilla", "Megan Thee Stallion", "Saweetie", "Kash Doll", "Trina", "Latto", "Missy Elliott", "Mia X"];
   function drawWomen() {
     var p = panes.women, RG = window.OG_REGION_GAMES || {}, L = A(), C = "#e84aa0";
     var groups = [], idx = {};
