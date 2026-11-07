@@ -667,15 +667,13 @@
   ];
   function drawRip() {
     var p = panes.rip, RG = window.OG_REGION_GAMES || {};
-    p.innerHTML = '<div class="wp-h"><div class="t">REST IN POWER</div><div class="s">THE LEGENDS WE LOST · THEIR MUSIC LIVES ON</div></div>' +
+    p.innerHTML = '<div class="wp-h"><div class="t">REST IN POWER</div><div class="s">THEIR MUSIC LIVES ON</div></div>' +
       '<div class="prh" style="border-color:#e8b84a"><b>&#128330; LEGENDS</b><span>' + RIP.length + '</span></div>' +
-      '<div class="prl">' + RIP.map(function (x, i) { return '<button type="button" class="prr" data-rip="' + i + '"><span class="prdot" style="background:#e8b84a"></span><span class="prn"><b>Rest in Power, ' + esc(x.who) + '</b><small>' + esc(x.d) + '<br>' + esc(x.home) + '</small></span><span class="st live">PLAY</span></button>'; }).join("") + '</div>' +
+      '<div class="prl">' + RIP.map(function (x, i) { return '<button type="button" class="prr" data-rip="' + i + '"><span class="prdot" style="background:#e8b84a"></span><span class="prn"><b>' + esc(x.who) + '</b></span><span class="st live">PLAY</span></button>'; }).join("") + '</div>' +
       '<div class="wmsg" id="ripMsg"></div>';
     p.onclick = function (e) {
       var b = e.target.closest("[data-rip]"); if (!b) return; var x = RIP[+b.dataset.rip];
-      if (x.rg) { var g = RG[x.who]; if (!g) return; var exOn = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (er) { return false; } })();
-        if (g.ex === 2 && !exOn) { $("ripMsg").innerHTML = esc(x.who) + "'s game is 18+ (explicit lyrics). Turn on <b>EXPLICIT LYRICS 18+</b> in the &#9776; menu to play it."; return; }
-        location.href = g.url + "?from=ogfan99"; return; }
+      if (x.rg) { var g = RG[x.who]; if (!g) return; rgPlay(x.who, g, p, b); return; }
       var L = A(), k = -1; for (var j = 0; j < L.length; j++) if (L[j].who === x.who) { k = j; break; }
       if (k < 0) return; go("map"); setTimeout(function () { try { openCard(k); } catch (er) {} }, 80);
     };
