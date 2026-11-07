@@ -199,4 +199,6 @@ window.OG_REGION_GAMES = {
   "Souls of Mischief": { url: "../soulsofmischief-ogfan99-bae7e2/", ex: 2 },
   "Macklemore": { url: "../macklemore-ogfan99-02cf42/", ex: 1 },
   "Paul Wall": { url: "../paulwall-ogfan99-9072c4/", ex: 2 },
+  "Killer Mike": { url: "../killermike-ogfan99-4625bd/", ex: 2 },
+  "Chingy": { url: "../chingy-ogfan99-0caf47/", ex: 2 },
 };
