@@ -95,4 +95,6 @@ window.OG_REGION_GAMES = {
   "Sol": { url: "../sol-ogfan99-d63f6e/", ex: 2 },
   "Tobe Nwigwe": { url: "../tobenwigwe-ogfan99-79f279/", ex: 2 },
   "Fat Tony": { url: "../fattony-ogfan99-6be60b/", ex: 2 },
+  "Saba": { url: "../saba-ogfan99-9c7f4d/", ex: 2 },
+  "Noname": { url: "../noname-ogfan99-246a50/", ex: 2 },
 };
