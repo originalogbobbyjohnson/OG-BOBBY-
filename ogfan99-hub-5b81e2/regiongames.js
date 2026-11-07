@@ -141,4 +141,6 @@ window.OG_REGION_GAMES = {
   "Sammus": { url: "../sammus-ogfan99-b1e3f0/", ex: 2 },
   "Akua Naru": { url: "../akuanaru-ogfan99-04d332/", ex: 0 },
   "Mac Lethal": { url: "../maclethal-ogfan99-934e35/", ex: 2 },
+  "Deniro Farrar": { url: "../denirofarrar-ogfan99-22c7ce/", ex: 2 },
+  "Uptown XO": { url: "../uptownxo-ogfan99-54f1f1/", ex: 2 },
 };
