@@ -207,4 +207,6 @@ window.OG_REGION_GAMES = {
   "Petey Pablo": { url: "../peteypablo-ogfan99-2dc740/", ex: 2 },
   "Chance the Rapper": { url: "../chancetherapper-ogfan99-014468/", ex: 0 },
   "Kash Doll": { url: "../kashdoll-ogfan99-4fae25/", ex: 2 },
+  "Trina": { url: "../trina-ogfan99-1ce39a/", ex: 2 },
+  "Latto": { url: "../latto-ogfan99-506869/", ex: 2 },
 };
