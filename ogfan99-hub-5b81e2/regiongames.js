@@ -181,4 +181,6 @@ window.OG_REGION_GAMES = {
   "Juvenile": { url: "../juvenile-ogfan99-b6c385/", ex: 2 },
   "Master P": { url: "../masterp-ogfan99-932d6b/", ex: 2 },
   "Lil Wayne": { url: "../lilwayne-ogfan99-c8ca34/", ex: 2 },
+  "Ice Cube": { url: "../icecube-ogfan99-9a6293/", ex: 2 },
+  "Kid Cudi": { url: "../kidcudi-ogfan99-9278dc/", ex: 1 },
 };
