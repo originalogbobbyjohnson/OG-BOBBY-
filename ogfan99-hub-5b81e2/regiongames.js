@@ -269,4 +269,5 @@ window.OG_REGION_GAMES = {
   "MC Eiht": { url: "../mceiht-ogfan99-c43654/", ex: 2 },
   "Blxst": { url: "../blxst-ogfan99-4b695a/", ex: 0 },
   "Drakeo the Ruler": { url: "../drakeo-ogfan99-c7aeaf/", ex: 2 },
+  "Big Freedia": { url: "../bigfreedia-ogfan99-79a11f/", ex: 0 },
 };
