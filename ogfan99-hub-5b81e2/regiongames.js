@@ -154,4 +154,5 @@ window.OG_REGION_GAMES = {
   "Onry Ozzborn": { url: "../onryozzborn-ogfan99-661169/", ex: 0 },
   "Zion I": { url: "../zioni-ogfan99-0703fb/", ex: 0 },
   "Curren$y": { url: "../curreny-ogfan99-fad153/", ex: 2 },
+  "Bobby Sessions": { url: "../bobbysessions-ogfan99-f6e30a/", ex: 1 },
 };
