@@ -521,11 +521,11 @@
   var REGIONS = [
     { n: "NEW YORK CITY + METRO", d: "The five boroughs, Westchester, Long Island and Jersey. Riding now.", c: "#d62828", live: 1, wide: 1 },
     { g: "THE SOUTH" },
-    { n: "SOUTH FLORIDA", d: "Miami, Fort Lauderdale, West Palm Beach.", c: "#ff4fa3", locked: [{ who: "Sevin Soprano", ig: "sevinsoprano" }] },
+    { n: "SOUTH FLORIDA", d: "Miami, Fort Lauderdale, West Palm Beach.", c: "#ff4fa3", locked: [{ who: "Sevin Soprano", ig: "sevinsoprano", coming: ["Denzel Curry"] }] },
     { n: "ATLANTA", d: "The A, Decatur, College Park, East Point.", c: "#d62828", coming: ["Deante' Hitchcock", "EarthGang"] },
     { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6", coming: ["Fat Tony", "Tobe Nwigwe"] },
     { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf", coming: ["Alfred Banks", "Pell"] },
-    { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Count Bass D"] },
+    { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Isaiah Rashad", "Count Bass D"] },
     { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c", coming: ["Tonedeff"] },
     { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8", coming: ["Lute", "Rapsody"] },
     { n: "MORE OF THE SOUTH", d: "Every other Southern city.", c: "#35b867", locked: [{ who: "The real_Saddium", ig: "the_real_saddium" }] },

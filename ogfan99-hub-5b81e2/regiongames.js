@@ -108,4 +108,6 @@ window.OG_REGION_GAMES = {
   "Dessa": { url: "../dessa-ogfan99-2a6b96/", ex: 1 },
   "Smino": { url: "../smino-ogfan99-a93faf/", ex: 2 },
   "Stalley": { url: "../stalley-ogfan99-0e80d9/", ex: 0 },
+  "Denzel Curry": { url: "../denzelcurry-ogfan99-3dc656/", ex: 2 },
+  "Isaiah Rashad": { url: "../isaiahrashad-ogfan99-bc699d/", ex: 2 },
 };
