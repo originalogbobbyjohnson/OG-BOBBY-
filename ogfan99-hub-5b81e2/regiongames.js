@@ -131,4 +131,6 @@ window.OG_REGION_GAMES = {
   "Krizz Kaliko": { url: "../krizzkaliko-ogfan99-cefab0/", ex: 2 },
   "Don Trip": { url: "../dontrip-ogfan99-57e5ae/", ex: 2 },
   "Substantial": { url: "../substantial-ogfan99-b69511/", ex: 0 },
+  "Blueprint": { url: "../blueprint-ogfan99-64e2b0/", ex: 2 },
+  "Guilty Simpson": { url: "../guiltysimpson-ogfan99-a7568a/", ex: 2 },
 };
