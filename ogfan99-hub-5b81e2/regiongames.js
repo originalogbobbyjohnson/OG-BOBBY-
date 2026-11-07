@@ -183,4 +183,5 @@ window.OG_REGION_GAMES = {
   "Lil Wayne": { url: "../lilwayne-ogfan99-c8ca34/", ex: 2 },
   "Ice Cube": { url: "../icecube-ogfan99-9a6293/", ex: 2 },
   "Kid Cudi": { url: "../kidcudi-ogfan99-9278dc/", ex: 1 },
+  "Scarface": { url: "../scarface-ogfan99-054944/", ex: 2 },
 };
