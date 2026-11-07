@@ -110,4 +110,6 @@ window.OG_REGION_GAMES = {
   "Stalley": { url: "../stalley-ogfan99-0e80d9/", ex: 0 },
   "Denzel Curry": { url: "../denzelcurry-ogfan99-3dc656/", ex: 2 },
   "Isaiah Rashad": { url: "../isaiahrashad-ogfan99-bc699d/", ex: 2 },
+  "Lyrics Born": { url: "../lyricsborn-ogfan99-468b48/", ex: 2 },
+  "The Pharcyde": { url: "../pharcyde-ogfan99-eccc3b/", ex: 2 },
 };
