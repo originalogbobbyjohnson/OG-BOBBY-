@@ -519,7 +519,7 @@
     { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf" },
     { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Count Bass D"] },
     { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c", coming: ["Tonedeff"] },
-    { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8" },
+    { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8", coming: ["Lute", "Rapsody"] },
     { n: "MORE OF THE SOUTH", d: "Every other Southern city.", c: "#35b867", locked: [{ who: "The real_Saddium", ig: "the_real_saddium" }] },
     { g: "EAST COAST" },
     { n: "PHILADELPHIA", d: "North Philly, West Philly, South Philly.", c: "#004c54", coming: ["Amos Lee", "Bill Haley & His Comets", "Frankie Avalon", "Bobby Rydell", "The War on Drugs", "Japanese Breakfast", "Kurt Vile", "Ivy Sole", "Jim Croce", "The Delfonics", "Santigold", "P!nk", "Chubby Checker", "Hall & Oates", "The O'Jays", "Teddy Pendergrass", "Kurupt", "Patti LaBelle", "Boyz II Men", "Will Smith", "Musiq Soulchild", "Jazmine Sullivan", "Jill Scott", "Black Thought", "Young Gunz", "The Last Emperor", "Lay Bankz", "Kur", "PnB Rock", "Reef the Lost Cauze", "Chill Moody", "Bahamadia", "Freeway", "Lil Dicky", "Cassidy", "Three Times Dope", "Lil Uzi Vert", "Eve", "Tierra Whack", "DJ Jazzy Jeff & The Fresh Prince", "Armani White", "Chiddy Bang", "Meek Mill", "The Roots", "Vinnie Paz"] },

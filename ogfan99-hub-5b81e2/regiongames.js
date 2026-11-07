@@ -97,4 +97,6 @@ window.OG_REGION_GAMES = {
   "Fat Tony": { url: "../fattony-ogfan99-6be60b/", ex: 2 },
   "Saba": { url: "../saba-ogfan99-9c7f4d/", ex: 2 },
   "Noname": { url: "../noname-ogfan99-246a50/", ex: 2 },
+  "Rapsody": { url: "../rapsody-ogfan99-7b3495/", ex: 2 },
+  "Lute": { url: "../lute-ogfan99-10cd08/", ex: 2 },
 };
