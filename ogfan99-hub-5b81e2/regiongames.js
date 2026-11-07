@@ -201,4 +201,5 @@ window.OG_REGION_GAMES = {
   "Paul Wall": { url: "../paulwall-ogfan99-9072c4/", ex: 2 },
   "Killer Mike": { url: "../killermike-ogfan99-4625bd/", ex: 2 },
   "Chingy": { url: "../chingy-ogfan99-0caf47/", ex: 2 },
+  "GloRilla": { url: "../glorilla-ogfan99-35a004/", ex: 2 },
 };
