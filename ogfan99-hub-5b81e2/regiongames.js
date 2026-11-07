@@ -177,4 +177,7 @@ window.OG_REGION_GAMES = {
   "Lupe Fiasco": { url: "../lupefiasco-ogfan99-d13ddc/", ex: 0 },
   "Kendrick Lamar": { url: "../kendricklamar-ogfan99-780d4b/", ex: 2 },
   "Eazy-E": { url: "../eazye-ogfan99-99138e/", ex: 2 },
+  "Future": { url: "../future-ogfan99-047a1f/", ex: 2 },
+  "Juvenile": { url: "../juvenile-ogfan99-b6c385/", ex: 2 },
+  "Master P": { url: "../masterp-ogfan99-932d6b/", ex: 2 },
 };
