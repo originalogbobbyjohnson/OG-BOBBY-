@@ -158,4 +158,5 @@ window.OG_REGION_GAMES = {
   "Toki Wright": { url: "../tokiwright-ogfan99-4a9767/", ex: 0 },
   "Joey Purp": { url: "../joeypurp-ogfan99-6b1e5b/", ex: 2 },
   "Jon Connor": { url: "../jonconnor-ogfan99-e2ff3f/", ex: 2 },
+  "Dizzy Wright": { url: "../dizzywright-ogfan99-53e2c2/", ex: 2 },
 };
