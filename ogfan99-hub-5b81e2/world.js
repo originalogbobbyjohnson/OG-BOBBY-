@@ -76,7 +76,7 @@
     ".wtile .st{justify-self:start;font:900 .6rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;padding:4px 6px;border-radius:5px;border:1.5px solid #000}",
     ".wtile .st.live{background:#35b867;color:#031}.wtile .st.uc{background:repeating-linear-gradient(-45deg,#f2c14e 0 6px,#e0a800 6px 12px);color:#000}",
     ".wtile.mini{padding:12px 10px 10px;grid-template-columns:1fr auto;align-items:center;gap:6px;min-height:52px}",
-    ".wtile.mini b{font-size:.92rem}",
+    ".wtile.mini b{font-size:.92rem;overflow-wrap:anywhere;min-width:0}", ".wtile.mini{min-width:0}", ".wgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}",
     ".wtile .cnt{font:900 .62rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;padding:5px 7px;border-radius:6px;border:1.5px solid #000;white-space:nowrap}",
     ".wtile .cnt.on{background:#35b867;color:#031}.wtile .cnt.soon{background:#e8b84a;color:#000}",
     ".wtile.open{outline:3px solid #e8b84a;outline-offset:-1px}",
@@ -137,6 +137,7 @@
     { id: "producers", ic: "&#127899;", t: "PRODUCERS" },
     { id: "regions", ic: "&#127758;", t: "CITIES", uc: 1 },
     { id: "genres", ic: "&#127926;", t: "GENRES", uc: 1 },
+    { id: "women", ic: "&#128081;", t: "FEMALE RAPPERS" },
     { id: "rip", ic: "&#128330;", t: "REST IN POWER" }
   ];
   var app = document.querySelector(".wrap.app"), bar = document.querySelector(".appbar");
@@ -161,7 +162,7 @@
     var ex = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } })();
     var td = $("today"), tdName = td && !td.hidden ? (td.querySelector("b") || {}).textContent : "";
     var it = function (k, ic, t, extra, on) { return '<button type="button" data-m="' + k + '"' + (on ? ' class="on"' : '') + '><b>' + ic + '</b><span>' + t + '</span>' + (extra || "") + '</button>'; };
-    nav.innerHTML = '<div class="hm-sec">GO TO</div>' + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "OTHER CITIES", genres: "OTHER GENRES", rip: "REST IN POWER" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join("") +
+    nav.innerHTML = '<div class="hm-sec">GO TO</div>' + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "OTHER CITIES", genres: "OTHER GENRES", women: "FEMALE RAPPERS", rip: "REST IN POWER" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join("") +
       '<div class="hm-sec">YOU</div>' + it("metro", "&#127915;", "MY RIDER CARD") + (tdName ? it("today", "&#9733;", "TODAY'S TRAIN 2X", '<em class="g">' + esc(tdName) + '</em>') : "") + it("perks", "&#127873;", "PLAY TO WIN PERKS") +
       '<div class="hm-sec">SETTINGS</div>' + it("ex", "<span class=\"exb\">E</span>", "EXPLICIT LYRICS 18+", '<em class="' + (ex ? "g" : "") + '">' + (ex ? "ON" : "OFF") + '</em>') + it("key", "&#128647;", "SUBWAY KEY + LEGEND") + it("over", "&#8634;", "START OVER");
   }
@@ -181,7 +182,7 @@
     app.classList.toggle("paneon", id !== "map"); back.hidden = id === "map";
     Object.keys(panes).forEach(function (k) { panes[k].hidden = k !== id; });
     if (id === "map") { setTimeout(function () { try { window.__map && window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 30); return; }
-    ({ lounge: drawLounge, fans: drawFans, producers: drawProducers, regions: drawRegions, genres: drawGenres, rip: drawRip })[id]();
+    ({ lounge: drawLounge, fans: drawFans, producers: drawProducers, regions: drawRegions, genres: drawGenres, women: drawWomen, rip: drawRip })[id]();
     panes[id].scrollTop = 0;
   }
   window.OGW = { go: go, h: { row: function () { return row.apply(null, arguments); }, initials: initials, avColor: avColor, meta: meta, bul: bul, owner: owner, live: live, LS: LS, cert: function (a) { return certInfo(a); } } };
@@ -612,6 +613,7 @@
   /* ---------- GENRES: beyond rap ---------- */
   var GENRES = [
     { n: "HIP-HOP + RAP", d: "Every game on the map right now.", c: "#d62828", live: 1, wide: 1 },
+    { n: "FEMALE RAPPERS", d: "Every woman in rap on the app.", c: "#e84aa0", women: 1, wide: 1 },
     { n: "R&B", d: "Singers and songwriters.", c: "#7b3fbf" },
     { n: "LATIN + REGGAETON", d: "Reggaeton, Latin trap, salsa and bachata.", c: "#ff6319" },
     { n: "DANCEHALL + AFROBEATS", d: "Island and African sounds.", c: "#35b867" },
@@ -627,6 +629,7 @@
     p.innerHTML = '<div class="wp-h"><div class="t">OTHER GENRES</div><div class="s">TAP A GENRE</div></div><div class="wgrid"></div>';
     tileGrid(p, GENRES.map(function (g) {
       if (g.live) return { n: g.n, c: g.c, wide: 1, badge: "LIVE", go: function () { go("map"); } };
+      if (g.women) return { n: g.n, c: g.c, wide: 1, badge: "&#128081;", go: function () { go("women"); } };
       var games = gamesOf(g);
       return { n: g.n, c: g.c, badge: games.length ? "&#9654; " + games.length : "",
         detail: function () { return '<div class="dh">' + esc(g.n) + '</div><div>' + esc(g.d) + '</div>' + (games.length ? gameRows(games, g.c) : '<div>Games coming soon.</div>'); },
@@ -635,6 +638,28 @@
   }
 
 
+
+
+  /* ---------- FEMALE RAPPERS: every woman on the map or in a region, sorted by where she's from ---------- */
+  var WOMEN = ["Remy Ma", "Ice Spice", "Cardi B", "Rah Digga", "Queen Latifah", "Princess Nokia", "Azealia Banks", "Melii", "MC Lyte", "Roxanne Shant\u00e9", "HeeSun Lee", "Hanifah Walidah", "Lauryn Hill", "Coi Leray", "Justina Valentine", "Leikeli47", "Nitty Scott", "Salt-N-Pepa", "Sha-Rock", "Jean Grae", "Lil Mama", "Lil' Kim", "Young M.A", "Foxy Brown", "Nicki Minaj", "Lola Brooke", "Queen Pen", "Junglepussy", "Heather B.", "Hurricane G", "Monie Love", "Sweet Tee", "Lady London",
+    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa"];
+  function drawWomen() {
+    var p = panes.women, RG = window.OG_REGION_GAMES || {}, L = A(), C = "#e84aa0";
+    var groups = [], idx = {};
+    var add = function (area, color, item) { if (!idx[area]) { idx[area] = { n: area, c: color, list: [] }; groups.push(idx[area]); } idx[area].list.push(item); };
+    var BOROS = ["Brooklyn", "Queens", "the Bronx", "Manhattan", "Staten Island", "Long Island", "Westchester", "New Jersey"];
+    BOROS.forEach(function (b) { L.forEach(function (a, k) { if (WOMEN.indexOf(a.who) >= 0 && boroOf(a) === b) add(b === "the Bronx" ? "The Bronx" : b, BORO_C[b] || C, { who: a.who, k: k }); }); });
+    REGIONS.forEach(function (r) { (r.coming || []).forEach(function (n) { if (WOMEN.indexOf(n) >= 0 && RG[n]) add(r.n, r.c, { who: n, rg: 1 }); }); });
+    var total = groups.reduce(function (t, g) { return t + g.list.length; }, 0);
+    p.innerHTML = '<div class="wp-h"><div class="t">FEMALE RAPPERS</div><div class="s">' + total + ' QUEENS · TAP WHERE SHE\'S FROM</div></div><div class="wgrid"></div>';
+    tileGrid(p, groups.map(function (g) {
+      return { n: g.n.toUpperCase(), c: g.c, badge: "&#9654; " + g.list.length,
+        detail: function () { return '<div class="prl">' + g.list.map(function (x, i) { var e = x.rg ? RG[x.who] : L[x.k]; return '<button type="button" class="prr" data-wi="' + i + '"><span class="prdot" style="background:' + g.c + '"></span><span class="prn"><b>' + esc(x.who) + '</b></span><span class="st live">' + (e && e.ex === 2 ? "PLAY 18+" : "PLAY") + '</span></button>'; }).join("") + '</div>'; },
+        wire: function (d) { d.querySelectorAll("[data-wi]").forEach(function (b) { b.onclick = function (ev) { ev.stopPropagation(); var x = g.list[+b.dataset.wi];
+          if (x.rg) return rgPlay(x.who, RG[x.who], d, b);
+          go("map"); setTimeout(function () { try { openCard(x.k); } catch (er) {} }, 80); }; }); } };
+    }));
+  }
 
   /* ---------- REST IN POWER: the legends we lost, their own category ---------- */
   var RIP = [
