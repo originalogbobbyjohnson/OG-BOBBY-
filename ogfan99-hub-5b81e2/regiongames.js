@@ -230,4 +230,6 @@ window.OG_REGION_GAMES = {
   "Chamillionaire": { url: "../chamillionaire-ogfan99-7aa149/", ex: 1 },
   "David Banner": { url: "../davidbanner-ogfan99-4bf139/", ex: 2 },
   "Bubba Sparxxx": { url: "../bubbasparxxx-ogfan99-e905fa/", ex: 0 },
+  "Young Dolph": { url: "../youngdolph-ogfan99-b22bf7/", ex: 2 },
+  "Moneybagg Yo": { url: "../moneybaggyo-ogfan99-6b6f15/", ex: 2 },
 };
