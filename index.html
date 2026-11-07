@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OG Bobby · The Brooklyn Music Game</title>
-<meta name="description" content="Free to play. Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
+<meta name="description" content="Free to play. OG Bobby is a real rapper from Bay Ridge, Brooklyn, and every song is a true story about real people. Listen, answer what you heard, and climb from New Face to OG.">
 <meta property="og:type" content="music.album">
 <meta property="og:site_name" content="OG Bobby">
 <meta property="og:title" content="The Brooklyn Music Game">
-<meta property="og:description" content="Free to play. Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
+<meta property="og:description" content="Free to play. OG Bobby is a real rapper from Bay Ridge, Brooklyn, and every song is a true story about real people. Listen, answer what you heard, and climb from New Face to OG.">
 <meta property="og:url" content="https://ogbobbybrooklyn.com/">
 <meta property="og:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=3">
 <meta property="og:image:type" content="image/jpeg">
@@ -17,8 +17,9 @@
 <meta property="og:image:alt" content="OG Bobby on a Bay Ridge block at night — the Brooklyn music game">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Brooklyn Music Game">
-<meta name="twitter:description" content="Free to play. Listen to the songs, answer what you heard, unlock the story. Earn Street Cred and climb from New Face to OG — a Bay Ridge life, one episode at a time.">
+<meta name="twitter:description" content="Free to play. OG Bobby is a real rapper from Bay Ridge, Brooklyn, and every song is a true story about real people. Listen, answer what you heard, and climb from New Face to OG.">
 <meta name="twitter:image" content="https://ogbobbybrooklyn.com/share-game.jpg?v=3">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://ogbobbybrooklyn.com/#ogbobby", "name": "OG Bobby", "alternateName": ["OG Bobby Brooklyn", "ogbobbybrooklyn"], "description": "OG Bobby is the stage name of a real rapper from Bay Ridge, Brooklyn, New York — born and raised at 84th Street and 4th Avenue. A Golden Gloves boxer, third-degree Brazilian jiu-jitsu black belt and former Wall Street office runner, he tells true stories about real people and real places in Bay Ridge.", "jobTitle": "Rapper", "homeLocation": {"@type": "Place", "name": "Bay Ridge, Brooklyn, New York"}, "url": "https://ogbobbybrooklyn.com/", "image": "https://ogbobbybrooklyn.com/share-game.jpg", "sameAs": ["https://www.instagram.com/originalogbobbyjohnson/", "https://www.instagram.com/ogbobbybrooklyn/", "https://www.tiktok.com/@ogbobbybrooklyn", "https://www.youtube.com/@ogbobbybrooklyn", "https://soundcloud.com/ogbobbybrooklyn"]}, {"@type": "MusicAlbum", "name": "OG Made '99", "albumProductionType": "https://schema.org/StudioAlbum", "byArtist": {"@id": "https://ogbobbybrooklyn.com/#ogbobby"}, "description": "A music series of true stories from OG Bobby's life in Bay Ridge, Brooklyn — real people, real places. Every song is an episode."}, {"@type": "WebSite", "name": "OG Bobby · The Brooklyn Music Game", "url": "https://ogbobbybrooklyn.com/", "author": {"@id": "https://ogbobbybrooklyn.com/#ogbobby"}}]}</script>
 <link rel="icon" href="icon-game.png?v=2">
 <link rel="apple-touch-icon" href="icon-game.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -628,6 +629,17 @@ body.practice { overflow: hidden; }
 </div>
 
 
+<div class="sheet" id="realSheet" hidden role="dialog" aria-modal="true" aria-labelledby="realTitle">
+  <div class="box about-box">
+    <p class="ab-kick">TRUE STORY</p>
+    <h3 id="realTitle">The real OG Bobby</h3>
+    <p style="color:#fff">A real rapper from Bay Ridge, Brooklyn. Born and raised at 84th and 4th. Golden Gloves boxer, jiu&#8209;jitsu black belt, ex&#8209;Wall&nbsp;Street.</p>
+    <p style="color:#fff">Every episode is a true story.<br>Every name is real.</p>
+    <a class="btn" href="https://www.instagram.com/originalogbobbyjohnson/" target="_blank" rel="noopener">Meet him on Instagram</a>
+    <button class="btn ghost" id="realClose" type="button">Close</button>
+  </div>
+</div>
+
 <div class="sheet" id="aboutSheet" hidden role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
   <div class="box about-box">
     <p class="ab-kick">ABOUT THE GAME</p>
@@ -650,6 +662,7 @@ body.practice { overflow: hidden; }
 
 <div class="sheet" id="menuSheet" hidden role="dialog" aria-modal="true" aria-label="Menu">
   <div class="box menu-box">
+    <a class="menu-item" id="mReal" href="#">The real OG Bobby</a>
     <a class="menu-item" id="mAbout" href="#">About the game</a>
     <a class="menu-item" id="mHow" href="#">How to play</a>
     <a class="menu-item" id="mShare" href="#">Share the game</a>
@@ -1007,6 +1020,9 @@ $("menuClose").onclick = closeMenu;
 $("menuSheet").addEventListener("click", ev => { if (ev.target.id === "menuSheet") closeMenu(); });
 document.addEventListener("keydown", ev => { if (ev.key === "Escape") closeMenu(); });
 $("mHow").onclick = ev => { ev.preventDefault(); closeMenu(); if (window.ogGoHome) window.ogGoHome(); };
+$("mReal").onclick = ev => { ev.preventDefault(); closeMenu(); $("realSheet").hidden = false; track("real", "Opened The real OG Bobby"); };
+$("realClose").onclick = () => { $("realSheet").hidden = true; };
+$("realSheet").addEventListener("click", ev => { if (ev.target.id === "realSheet") $("realSheet").hidden = true; });
 $("mAbout").onclick = ev => { ev.preventDefault(); closeMenu(); $("aboutSheet").hidden = false; $("aboutSheet").querySelector(".box").scrollTop = 0; track("about", "Opened About the game"); };
 $("aboutPlay").onclick = () => { $("aboutSheet").hidden = true; };
 $("aboutSheet").addEventListener("click", ev => { if (ev.target.id === "aboutSheet") $("aboutSheet").hidden = true; });
