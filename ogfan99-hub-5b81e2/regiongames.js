@@ -99,4 +99,6 @@ window.OG_REGION_GAMES = {
   "Noname": { url: "../noname-ogfan99-246a50/", ex: 2 },
   "Rapsody": { url: "../rapsody-ogfan99-7b3495/", ex: 2 },
   "Lute": { url: "../lute-ogfan99-10cd08/", ex: 2 },
+  "EarthGang": { url: "../earthgang-ogfan99-857e0c/", ex: 2 },
+  "Deante' Hitchcock": { url: "../deantehitchcock-ogfan99-0bccec/", ex: 2 },
 };

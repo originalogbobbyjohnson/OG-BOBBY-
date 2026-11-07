@@ -75,6 +75,14 @@
     ".wtile small{font-size:.72rem;line-height:1.25;color:#fff}",
     ".wtile .st{justify-self:start;font:900 .6rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;padding:4px 6px;border-radius:5px;border:1.5px solid #000}",
     ".wtile .st.live{background:#35b867;color:#031}.wtile .st.uc{background:repeating-linear-gradient(-45deg,#f2c14e 0 6px,#e0a800 6px 12px);color:#000}",
+    ".wtile.mini{padding:12px 10px 10px;grid-template-columns:1fr auto;align-items:center;gap:6px;min-height:52px}",
+    ".wtile.mini b{font-size:.92rem}",
+    ".wtile .cnt{font:900 .62rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;padding:5px 7px;border-radius:6px;border:1.5px solid #000;white-space:nowrap}",
+    ".wtile .cnt.on{background:#35b867;color:#031}.wtile .cnt.soon{background:#e8b84a;color:#000}",
+    ".wtile.open{outline:3px solid #e8b84a;outline-offset:-1px}",
+    ".wdrw{grid-column:1/-1;background:#0f1424;border:2px solid #e8b84a;border-radius:12px;padding:12px;display:grid;gap:8px;color:#fff;font-size:.82rem;line-height:1.35}",
+    ".wdrw .dh{font-family:var(--display);letter-spacing:.08em;font-size:1rem;color:#e8b84a}",
+    ".wdrw .lk{color:#e8b84a;font-weight:800}",
     ".wtile.wide{grid-column:1/-1}",
     /* lounge */
     ".lsub{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px}",
@@ -127,7 +135,7 @@
     { id: "lounge", ic: "&#127908;", t: "LOUNGE" },
     { id: "fans", ic: "&#128293;", t: "FANS" },
     { id: "producers", ic: "&#127899;", t: "PRODUCERS" },
-    { id: "regions", ic: "&#127758;", t: "REGIONS", uc: 1 },
+    { id: "regions", ic: "&#127758;", t: "CITIES", uc: 1 },
     { id: "genres", ic: "&#127926;", t: "GENRES", uc: 1 },
     { id: "rip", ic: "&#128330;", t: "REST IN POWER" }
   ];
@@ -153,7 +161,7 @@
     var ex = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } })();
     var td = $("today"), tdName = td && !td.hidden ? (td.querySelector("b") || {}).textContent : "";
     var it = function (k, ic, t, extra, on) { return '<button type="button" data-m="' + k + '"' + (on ? ' class="on"' : '') + '><b>' + ic + '</b><span>' + t + '</span>' + (extra || "") + '</button>'; };
-    nav.innerHTML = '<div class="hm-sec">GO TO</div>' + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "REGIONS", genres: "GENRES", rip: "REST IN POWER" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join("") +
+    nav.innerHTML = '<div class="hm-sec">GO TO</div>' + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "OTHER CITIES", genres: "OTHER GENRES", rip: "REST IN POWER" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join("") +
       '<div class="hm-sec">YOU</div>' + it("metro", "&#127915;", "MY RIDER CARD") + (tdName ? it("today", "&#9733;", "TODAY'S TRAIN 2X", '<em class="g">' + esc(tdName) + '</em>') : "") + it("perks", "&#127873;", "PLAY TO WIN PERKS") +
       '<div class="hm-sec">SETTINGS</div>' + it("ex", "<span class=\"exb\">E</span>", "EXPLICIT LYRICS 18+", '<em class="' + (ex ? "g" : "") + '">' + (ex ? "ON" : "OFF") + '</em>') + it("key", "&#128647;", "SUBWAY KEY + LEGEND") + it("over", "&#8634;", "START OVER");
   }
@@ -514,7 +522,7 @@
     { n: "NEW YORK CITY + METRO", d: "The five boroughs, Westchester, Long Island and Jersey. Riding now.", c: "#d62828", live: 1, wide: 1 },
     { g: "THE SOUTH" },
     { n: "SOUTH FLORIDA", d: "Miami, Fort Lauderdale, West Palm Beach.", c: "#ff4fa3", locked: [{ who: "Sevin Soprano", ig: "sevinsoprano" }] },
-    { n: "ATLANTA", d: "The A, Decatur, College Park, East Point.", c: "#d62828" },
+    { n: "ATLANTA", d: "The A, Decatur, College Park, East Point.", c: "#d62828", coming: ["Deante' Hitchcock", "EarthGang"] },
     { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6", coming: ["Fat Tony", "Tobe Nwigwe"] },
     { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf" },
     { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Count Bass D"] },
@@ -537,23 +545,51 @@
     { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
     { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Sol", "Blue Scholars"] }
   ];
-  function drawRegions() {
-    var p = panes.regions;
-    p.innerHTML = '<div class="wp-h"><div class="t">REGIONS</div><div class="s">EVERY CITY GETS ITS OWN MAP</div></div>' +
-      '<div class="wgrid">' + REGIONS.map(function (r, i) { if (r.g) return '<div class="rg-h">' + r.g + '</div>'; return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-r="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small>' + (r.coming && r.coming.filter(rgIsRap).length ? '<small style="font-weight:700">' + ((window.OG_REGION_GAMES ? r.coming.filter(rgIsRap).filter(function (n) { return window.OG_REGION_GAMES[n]; }).length : 0) ? '<span style="color:#35b867">&#9654; ' + r.coming.filter(rgIsRap).filter(function (n) { return window.OG_REGION_GAMES[n]; }).length + ' PLAYABLE NOW</span><br>' : '') + 'ARTISTS: ' + r.coming.filter(rgIsRap).map(esc).join(", ") + '</small>' : '') + (r.locked ? '<small style="color:#e8b84a;font-weight:800">&#128274; LOCKED IN: ' + r.locked.map(function (x) { return esc(x.who); }).join(", ") + '</small>' : '') + '<span class="st ' + (r.live ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO RIDE" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
-      '<div class="wmsg" id="rgMsg"></div>';
-    var RG = window.OG_REGION_GAMES || {};
-    p.querySelector(".wgrid").onclick = function (e) {
-      var b = e.target.closest("[data-r]"); if (!b) return; var r = REGIONS[+b.dataset.r]; if (r.live) return go("map");
-      var rap = (r.coming || []).filter(rgIsRap), games = rap.filter(function (n) { return RG[n]; });
-      var ig = r.locked ? "LOCKED IN: " + r.locked.map(function (x) { return esc(x.who) + (x.ig ? ' <a href="https://www.instagram.com/' + encodeURIComponent(x.ig) + '/" target="_blank" rel="noopener" style="color:#e8b84a">@' + esc(x.ig) + '</a>' : ""); }).join(", ") : "";
-      if (!games.length) { $("rgMsg").innerHTML = esc(r.n) + " is under construction. Its map is coming." + (ig ? "<br>" + ig : ""); return; }
-      $("rgMsg").innerHTML = '<b style="font-family:var(--display);letter-spacing:.08em">' + esc(r.n) + '</b><br>Its map is coming. Play these games now:' +
-        '<div class="prl" style="margin-top:8px">' + games.map(function (n) { var g = RG[n]; return '<button type="button" class="prr" data-g="' + esc(n) + '"><span class="prdot" style="background:' + r.c + '"></span><span class="prn"><b>' + esc(n) + '</b><small>' + esc(r.n) + '</small></span><span class="st live">' + (g.ex === 2 ? "PLAY 18+" : "PLAY") + '</span></button>'; }).join("") + '</div>' +
-        (rap.length > games.length ? '<small>Still building: ' + rap.filter(function (n) { return !RG[n]; }).map(esc).join(", ") + '</small>' : '') + (ig ? "<br>" + ig : "");
-      $("rgMsg").querySelectorAll("[data-g]").forEach(function (x) { x.onclick = function (ev) { ev.stopPropagation(); rgPlay(x.dataset.g, RG[x.dataset.g], $("rgMsg"), x); }; });
-      try { $("rgMsg").scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (er) {}
+  /* compact tiles: name + small badge; tap opens a drawer right under the row with the details */
+  function tileGrid(p, items) {
+    var g = p.querySelector(".wgrid");
+    g.innerHTML = items.map(function (it, i) {
+      if (it.sec) return '<div class="rg-h">' + it.sec + '</div>';
+      return '<button class="wtile mini' + (it.wide ? " wide" : "") + '" type="button" data-i="' + i + '"><span class="bar" style="background:' + it.c + '"></span><b>' + esc(it.n) + '</b>' +
+        '<span class="cnt ' + (it.badge ? "on" : "soon") + '">' + (it.badge || "SOON") + '</span></button>';
+    }).join("");
+    g.onclick = function (e) {
+      if (e.target.closest(".wdrw")) return;
+      var b = e.target.closest("[data-i]"); if (!b) return; var it = items[+b.dataset.i];
+      if (it.go) return it.go();
+      var was = b.classList.contains("open");
+      g.querySelectorAll(".wdrw").forEach(function (d) { d.remove(); }); g.querySelectorAll(".wtile.open").forEach(function (t) { t.classList.remove("open"); });
+      if (was) return;
+      b.classList.add("open");
+      /* drawer goes after the last tile in this row (2 per row) */
+      var tiles = Array.prototype.slice.call(g.children), idx = tiles.indexOf(b), after = b;
+      if (!b.classList.contains("wide")) { var row = [b], k = idx - 1; while (k >= 0 && tiles[k].classList.contains("wtile") && !tiles[k].classList.contains("wide")) { row.unshift(tiles[k]); k--; } var pos = row.length - 1; if (pos % 2 === 0 && tiles[idx + 1] && tiles[idx + 1].classList.contains("wtile") && !tiles[idx + 1].classList.contains("wide")) after = tiles[idx + 1]; }
+      var d = document.createElement("div"); d.className = "wdrw"; d.innerHTML = it.detail(); after.insertAdjacentElement("afterend", d);
+      if (it.wire) it.wire(d);
+      try { d.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (er) {}
     };
+  }
+  function gameRows(names, c, sub) {
+    var RG = window.OG_REGION_GAMES || {};
+    return '<div class="prl">' + names.map(function (n) { var g = RG[n]; return '<button type="button" class="prr" data-gg="' + esc(n) + '"><span class="prdot" style="background:' + c + '"></span><span class="prn"><b>' + esc(n) + '</b></span><span class="st live">' + (g.ex === 2 ? "PLAY 18+" : "PLAY") + '</span></button>'; }).join("") + '</div>';
+  }
+  function wireRows(d) { var RG = window.OG_REGION_GAMES || {}; d.querySelectorAll("[data-gg]").forEach(function (x) { x.onclick = function (ev) { ev.stopPropagation(); rgPlay(x.dataset.gg, RG[x.dataset.gg], d, x); }; }); }
+
+  function drawRegions() {
+    var p = panes.regions, RG = window.OG_REGION_GAMES || {};
+    p.innerHTML = '<div class="wp-h"><div class="t">OTHER CITIES</div><div class="s">TAP A CITY</div></div><div class="wgrid"></div>';
+    tileGrid(p, REGIONS.map(function (r) {
+      if (r.g) return { sec: r.g };
+      if (r.live) return { n: r.n, c: r.c, wide: 1, badge: "LIVE", go: function () { go("map"); } };
+      var rap = (r.coming || []).filter(rgIsRap), games = rap.filter(function (n) { return RG[n]; }), wait = rap.filter(function (n) { return !RG[n]; });
+      return { n: r.n, c: r.c, badge: games.length ? "&#9654; " + games.length : "",
+        detail: function () {
+          return '<div class="dh">' + esc(r.n) + '</div><div>' + esc(r.d) + '</div>' +
+            (games.length ? gameRows(games, r.c) : '<div>Games coming soon.</div>') +
+            (wait.length ? '<div>Coming: ' + wait.map(esc).join(", ") + '</div>' : '') +
+            (r.locked ? '<div class="lk">&#128274; LOCKED IN: ' + r.locked.map(function (x) { return esc(x.who) + (x.ig ? ' <a href="https://www.instagram.com/' + encodeURIComponent(x.ig) + '/" target="_blank" rel="noopener" style="color:#e8b84a">@' + esc(x.ig) + '</a>' : ""); }).join(", ") + '</div>' : '');
+        }, wire: wireRows };
+    }));
   }
 
 
@@ -561,14 +597,17 @@
   var PROD_TIERS = [["mainstream", "MAINSTREAM", "#e8b84a"], ["legend", "LEGENDS", "#d62828"], ["indie", "INDIE", "#35b867"]];
   function drawProducers() {
     var p = panes.producers, L = window.PRODUCERS || [];
-    p.innerHTML = '<div class="wp-h"><div class="t">PRODUCERS</div><div class="s">THE BEATMAKERS · EVERY SONG A DIFFERENT ARTIST</div></div>' +
-      PROD_TIERS.map(function (t) {
-        var list = L.filter(function (x) { return x.tier === t[0]; });
-        return '<div class="prh" style="border-color:' + t[2] + '"><b>' + t[1] + '</b><span>' + list.length + '</span></div>' +
-          '<div class="prl">' + list.map(function (x, i) { return '<button type="button" class="prr" data-p="' + esc(x.slug) + '"><span class="prdot" style="background:' + t[2] + '"></span><span class="prn"><b>' + esc(x.name) + '</b><small>' + esc(x.home || "") + '</small></span><span class="st ' + (x.url ? "live" : "uc") + '">' + (x.url ? (x.ex === 2 ? "PLAY 18+" : "PLAY") : "BUILDING") + '</span></button>'; }).join("") + '</div>';
-      }).join("") + '<div class="wmsg" id="prMsg"></div>';
-    p.onclick = function (e) { var b = e.target.closest("[data-p]"); if (!b) return; var x = L.filter(function (y) { return y.slug === b.dataset.p; })[0]; if (!x) return; if (x.url) { var exOn = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } })(); if (x.ex === 2 && !exOn) { $("prMsg").innerHTML = esc(x.name) + "'s game is 18+ (explicit lyrics). Turn on <b>EXPLICIT LYRICS 18+</b> in the &#9776; menu to play it."; return; } location.href = x.url; return; } $("prMsg").textContent = x.name + "'s game is being built: " + (x.knownFor || "beats for many artists") + "."; };
+    p.innerHTML = '<div class="wp-h"><div class="t">PRODUCERS</div><div class="s">TAP A LEVEL</div></div><div class="wgrid"></div>';
+    tileGrid(p, PROD_TIERS.map(function (t) {
+      var list = L.filter(function (x) { return x.tier === t[0]; }), live = list.filter(function (x) { return x.url; });
+      return { n: t[1], c: t[2], wide: 1, badge: live.length ? "&#9654; " + live.length : "",
+        detail: function () {
+          return '<div class="prl">' + list.map(function (x) { return '<button type="button" class="prr" data-p="' + esc(x.slug) + '"><span class="prdot" style="background:' + t[2] + '"></span><span class="prn"><b>' + esc(x.name) + '</b></span><span class="st ' + (x.url ? "live" : "uc") + '">' + (x.url ? (x.ex === 2 ? "PLAY 18+" : "PLAY") : "SOON") + '</span></button>'; }).join("") + '</div>';
+        },
+        wire: function (d) { d.querySelectorAll("[data-p]").forEach(function (b) { b.onclick = function (ev) { ev.stopPropagation(); var x = L.filter(function (y) { return y.slug === b.dataset.p; })[0]; if (!x || !x.url) return; rgPlay(x.name, { url: x.url.replace(/\?.*$/, ""), ex: x.ex }, d, b); }; }); } };
+    }));
   }
+
 
   /* ---------- GENRES: beyond rap ---------- */
   var GENRES = [
@@ -585,18 +624,16 @@
   function drawGenres() {
     var p = panes.genres, RG = window.OG_REGION_GAMES || {}, GO = window.OG_GENRE_OF || {};
     var gamesOf = function (g) { return Object.keys(GO).filter(function (n) { return GO[n] === g.n && RG[n]; }); };
-    p.innerHTML = '<div class="wp-h"><div class="t">GENRES</div><div class="s">EVERY SOUND GETS ITS OWN GAMES</div></div>' +
-      '<div class="wgrid">' + GENRES.map(function (r, i) { var n = r.live ? 0 : gamesOf(r).length; return '<button class="wtile' + (r.wide ? " wide" : "") + '" type="button" data-g="' + i + '"><span class="bar" style="background:' + r.c + '"></span><b>' + r.n + '</b><small>' + r.d + '</small>' + (n ? '<small style="font-weight:700;color:#35b867">&#9654; ' + n + ' PLAYABLE NOW</small>' : '') + '<span class="st ' + (r.live || n ? "live" : "uc") + '">' + (r.live ? "LIVE · TAP TO PLAY" : n ? "TAP TO SEE GAMES" : "UNDER CONSTRUCTION") + '</span></button>'; }).join("") + '</div>' +
-      '<div class="wmsg" id="gnMsg"></div>';
-    p.querySelector(".wgrid").onclick = function (e) { var b = e.target.closest("[data-g]"); if (!b) return; var g = GENRES[+b.dataset.g]; if (g.live) return go("map");
-      var games = gamesOf(g), m = $("gnMsg");
-      if (!games.length) { m.textContent = g.n + " is under construction."; return; }
-      m.innerHTML = '<b style="font-family:var(--display);letter-spacing:.08em">' + esc(g.n) + '</b><br>Play these games now:' +
-        '<div class="prl" style="margin-top:8px">' + games.map(function (n) { var x = RG[n]; return '<button type="button" class="prr" data-gg="' + esc(n) + '"><span class="prdot" style="background:' + g.c + '"></span><span class="prn"><b>' + esc(n) + '</b><small>' + esc(g.n) + '</small></span><span class="st live">' + (x.ex === 2 ? "PLAY 18+" : "PLAY") + '</span></button>'; }).join("") + '</div>';
-      m.querySelectorAll("[data-gg]").forEach(function (x) { x.onclick = function (ev) { ev.stopPropagation(); rgPlay(x.dataset.gg, RG[x.dataset.gg], m, x); }; });
-      try { m.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (er) {}
-    };
+    p.innerHTML = '<div class="wp-h"><div class="t">OTHER GENRES</div><div class="s">TAP A GENRE</div></div><div class="wgrid"></div>';
+    tileGrid(p, GENRES.map(function (g) {
+      if (g.live) return { n: g.n, c: g.c, wide: 1, badge: "LIVE", go: function () { go("map"); } };
+      var games = gamesOf(g);
+      return { n: g.n, c: g.c, badge: games.length ? "&#9654; " + games.length : "",
+        detail: function () { return '<div class="dh">' + esc(g.n) + '</div><div>' + esc(g.d) + '</div>' + (games.length ? gameRows(games, g.c) : '<div>Games coming soon.</div>'); },
+        wire: wireRows };
+    }));
   }
+
 
 
   /* ---------- REST IN POWER: the legends we lost, their own category ---------- */
