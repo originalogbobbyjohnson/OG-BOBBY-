@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OG Certified · Cover Picks</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark only">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@600;700&family=Sedgwick+Ave+Display&display=swap">
+<link rel="stylesheet" href="../brand/og-made-header.css">
+<style>
+@font-face { font-family: "Sedgwick Nine"; src: url("../brand/sedgwick-nine.woff") format("woff"); unicode-range: U+0039; }
+@font-face { font-family: "OG Dirt"; src: url("../brand/rubik-dirt.woff") format("woff"); }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #050505; color: #fff; font-family: "Barlow", system-ui, sans-serif; }
+.page { max-width: 900px; margin: 0 auto; padding: 24px 16px 60px; display: grid; gap: 34px; }
+h1 { margin: 0; text-align: center; font: 400 2rem "Sedgwick Ave Display", cursive; }
+.pick { display: grid; gap: 10px; }
+.pick p { margin: 0; text-align: center; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; font-size: .9rem; }
+.pick p b { color: #d62828; }
+/* every cover is a perfect square and scales with the screen */
+.cv { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: #000; container-type: inline-size; }
+.cv > * { position: absolute; }
+.bg { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.shade { inset: 0; }
+.omh { font-size: 7.4cqw; }
+.sub { font: 700 2.6cqw/1.2 "Sedgwick Nine", "Barlow", sans-serif; letter-spacing: .26em; text-transform: uppercase; color: #fff; text-shadow: 0 2px 6px #000; white-space: nowrap; }
+.big { font-family: "Sedgwick Ave Display", cursive; color: #fff; line-height: .9; text-shadow: .03em .05em 0 #000, 0 .1em .3em rgba(0,0,0,.7); white-space: nowrap; }
+.wm { height: auto; filter: drop-shadow(.3cqw .3cqw 0 #000); }
+
+/* 1 · Night Smirk */
+.c1 .bg { object-position: 50% 18%; }
+.c1 .shade { background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,0) 30%, rgba(0,0,0,0) 55%, rgba(0,0,0,.9) 88%); }
+.c1 .omh { top: 4cqw; left: 50%; transform: translateX(-50%); }
+.c1 .big { bottom: 11cqw; left: 0; right: 0; text-align: center; font-size: 17cqw; }
+.c1 .sub { bottom: 5cqw; left: 0; right: 0; text-align: center; }
+
+/* 2 · The Skyline */
+.c2 .bg { object-position: 50% 30%; }
+.c2 .shade { background: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,0) 25%, rgba(0,0,0,0) 62%, rgba(0,0,0,.85)); }
+.c2 .wm { top: 5cqw; left: 5cqw; width: 34cqw; }
+.c2 .bar { left: 0; right: 0; bottom: 0; height: 22cqw; background: #d62828; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.4cqw; box-shadow: 0 -1cqw 3cqw rgba(0,0,0,.6); }
+.c2 .bar .t { font: 400 12cqw/1 "Anton", Impact, sans-serif; letter-spacing: .04em; color: #fff; text-shadow: .4cqw .4cqw 0 #000; }
+.c2 .bar .sub { position: static; text-shadow: none; color: #fff; }
+.c2 .omh { top: 4cqw; right: 4cqw; font-size: 5cqw; }
+
+/* 3 · Red Neon */
+.c3 { background: radial-gradient(circle at 50% 42%, #3a0606 0%, #0b0000 55%, #000 80%); }
+.c3 .neon { top: 6cqw; left: 50%; width: 92cqw; transform: translateX(-50%); opacity: .95; filter: drop-shadow(0 0 4cqw rgba(214,40,40,.8)); }
+.c3 .cut { bottom: 0; left: 50%; transform: translateX(-50%); height: 88cqw; width: auto; filter: drop-shadow(0 0 3cqw rgba(0,0,0,.9)); }
+.c3 .fade { left: 0; right: 0; bottom: 0; height: 34cqw; background: linear-gradient(to bottom, rgba(0,0,0,0), #000 75%); }
+.c3 .dirt { bottom: 9cqw; left: 0; right: 0; text-align: center; font: 400 15cqw/1 "OG Dirt", Impact, sans-serif; color: #d62828; text-shadow: .5cqw .5cqw 0 #000; }
+.c3 .sig { bottom: 3.6cqw; left: 0; right: 0; display: flex; justify-content: center; align-items: center; gap: 2cqw; }
+.c3 .sig .wm { position: static; width: 24cqw; }
+
+/* 4 · Gold Seal */
+.c4 { background: radial-gradient(circle at 38% 55%, #3b2a08 0%, #120c02 45%, #000 78%); }
+.c4 .cut { bottom: 0; left: 6cqw; height: 92cqw; width: auto; }
+.c4 .omh { top: 5cqw; left: 5cqw; font-size: 6cqw; justify-items: start; }
+.c4 .seal { right: 6cqw; top: 34cqw; width: 36cqw; height: 36cqw; border-radius: 50%; border: 1.2cqw solid #e3b23c; outline: .5cqw solid #e3b23c; outline-offset: 1.2cqw; display: grid; place-items: center; text-align: center; background: rgba(0,0,0,.65); box-shadow: 0 0 5cqw rgba(227,178,60,.45); transform: rotate(-9deg); }
+.c4 .seal .s1 { font: 400 4.2cqw/1 "Anton", sans-serif; letter-spacing: .2em; color: #e3b23c; }
+.c4 .seal .s2 { font: 400 8cqw/1 "Sedgwick Ave Display", cursive; color: #fff; margin: 1cqw 0; }
+.c4 .seal .s3 { font: 700 2.6cqw/1 "Sedgwick Nine", "Barlow", sans-serif; letter-spacing: .3em; color: #e3b23c; }
+.c4 .sub { right: 5cqw; bottom: 6cqw; }
+
+/* 5 · The Stare */
+.c5 .bg { object-position: 50% 22%; filter: grayscale(1) contrast(1.25) brightness(.9); }
+.c5 .shade { background: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,0) 30%, rgba(0,0,0,0) 60%, rgba(0,0,0,.85)); }
+.c5 .stamp { left: 50%; top: 58%; transform: translate(-50%, -50%) rotate(-12deg); padding: 1.6cqw 4cqw; border: 1.4cqw solid #d62828; border-radius: 2cqw; font: 400 14cqw/1 "OG Dirt", Impact, sans-serif; color: #d62828; mix-blend-mode: screen; opacity: .92; }
+.c5 .omh { top: 4cqw; left: 50%; transform: translateX(-50%); font-size: 6.4cqw; }
+.c5 .sub { bottom: 5cqw; left: 0; right: 0; text-align: center; }
+
+/* 6 · Wall Street Boss */
+.c6 .bg { object-position: 50% 20%; }
+.c6 .shade { background: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,0) 28%, rgba(0,0,0,0) 58%, rgba(0,0,0,.92) 90%); }
+.c6 .omh { top: 4cqw; left: 50%; transform: translateX(-50%); }
+.c6 .gold { bottom: 11cqw; left: 0; right: 0; text-align: center; font: 400 15cqw/1 "Anton", Impact, sans-serif; letter-spacing: .06em; color: #e3b23c; text-shadow: .5cqw .5cqw 0 #000; }
+.c6 .sub { bottom: 5cqw; left: 0; right: 0; text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>OG Certified · Pick a Cover</h1>
+
+  <div class="pick" id="p1">
+    <div class="cv c1"><img class="bg" src="a.jpg" alt=""><div class="shade"></div>
+      <div class="omh"><div class="omh-row"><span class="omh-word">OG MADE</span><img class="omh-99" src="../brand/og-made-99.svg" alt=""></div><div class="omh-sig">— <img src="../brand/og-bobby-wordmark-top.png" alt=""></div></div>
+      <div class="big">Certified</div><div class="sub">The Complete Series · 19 Episodes</div></div>
+    <p><b>1</b> · Night Smirk</p>
+  </div>
+
+  <div class="pick" id="p2">
+    <div class="cv c2"><img class="bg" src="b.jpg" alt=""><div class="shade"></div>
+      <img class="wm" src="../brand/og-bobby-wordmark.png" alt="">
+      <div class="bar"><div class="t">OG CERTIFIED</div><div class="sub">The Complete Series · 19 Episodes</div></div></div>
+    <p><b>2</b> · The Skyline</p>
+  </div>
+
+  <div class="pick" id="p3">
+    <div class="cv c3"><img class="neon" src="../brand/og-made-99.svg" alt=""><img class="cut" src="c.png" alt=""><div class="fade"></div>
+      <div class="dirt">CERTIFIED</div>
+      <div class="sig"><img class="wm" src="../brand/og-bobby-wordmark.png" alt=""></div></div>
+    <p><b>3</b> · Red Neon</p>
+  </div>
+
+  <div class="pick" id="p4">
+    <div class="cv c4"><img class="cut" src="d.png" alt="">
+      <div class="omh"><div class="omh-row"><span class="omh-word">OG MADE</span><img class="omh-99" src="../brand/og-made-99.svg" alt=""></div><div class="omh-sig">— <img src="../brand/og-bobby-wordmark-top.png" alt=""></div></div>
+      <div class="seal"><div><div class="s1">OG</div><div class="s2">Certified</div><div class="s3">19 Episodes</div></div></div>
+      <div class="sub">The Complete Series</div></div>
+    <p><b>4</b> · Gold Seal</p>
+  </div>
+
+  <div class="pick" id="p5">
+    <div class="cv c5"><img class="bg" src="e.png" alt=""><div class="shade"></div>
+      <div class="omh"><div class="omh-row"><span class="omh-word">OG MADE</span><img class="omh-99" src="../brand/og-made-99.svg" alt=""></div><div class="omh-sig">— <img src="../brand/og-bobby-wordmark-top.png" alt=""></div></div>
+      <div class="stamp">CERTIFIED</div><div class="sub">The Complete Series · 19 Episodes</div></div>
+    <p><b>5</b> · The Stare</p>
+  </div>
+
+  <div class="pick" id="p6">
+    <div class="cv c6"><img class="bg" src="f.jpg" alt=""><div class="shade"></div>
+      <div class="omh"><div class="omh-row"><span class="omh-word">OG MADE</span><img class="omh-99" src="../brand/og-made-99.svg" alt=""></div><div class="omh-sig">— <img src="../brand/og-bobby-wordmark-top.png" alt=""></div></div>
+      <div class="gold">CERTIFIED</div><div class="sub">The Complete Series · 19 Episodes</div></div>
+    <p><b>6</b> · Wall Street Boss</p>
+  </div>
+</div>
+</body>
+</html>
