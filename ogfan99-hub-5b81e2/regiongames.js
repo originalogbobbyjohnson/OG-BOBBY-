@@ -232,4 +232,5 @@ window.OG_REGION_GAMES = {
   "Bubba Sparxxx": { url: "../bubbasparxxx-ogfan99-e905fa/", ex: 0 },
   "Young Dolph": { url: "../youngdolph-ogfan99-b22bf7/", ex: 2 },
   "Moneybagg Yo": { url: "../moneybaggyo-ogfan99-6b6f15/", ex: 2 },
+  "Danny Brown": { url: "../dannybrown-ogfan99-3c781e/", ex: 2 },
 };
