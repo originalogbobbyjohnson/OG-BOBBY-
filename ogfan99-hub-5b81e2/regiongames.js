@@ -143,4 +143,5 @@ window.OG_REGION_GAMES = {
   "Mac Lethal": { url: "../maclethal-ogfan99-934e35/", ex: 2 },
   "Deniro Farrar": { url: "../denirofarrar-ogfan99-22c7ce/", ex: 2 },
   "Uptown XO": { url: "../uptownxo-ogfan99-54f1f1/", ex: 2 },
+  "Rico Nasty": { url: "../riconasty-ogfan99-b85f37/", ex: 2 },
 };
