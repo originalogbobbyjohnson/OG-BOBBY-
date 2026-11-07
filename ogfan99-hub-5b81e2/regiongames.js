@@ -156,4 +156,5 @@ window.OG_REGION_GAMES = {
   "Curren$y": { url: "../curreny-ogfan99-fad153/", ex: 2 },
   "Bobby Sessions": { url: "../bobbysessions-ogfan99-f6e30a/", ex: 1 },
   "Toki Wright": { url: "../tokiwright-ogfan99-4a9767/", ex: 0 },
+  "Joey Purp": { url: "../joeypurp-ogfan99-6b1e5b/", ex: 2 },
 };
