@@ -145,4 +145,5 @@ window.OG_REGION_GAMES = {
   "Uptown XO": { url: "../uptownxo-ogfan99-54f1f1/", ex: 2 },
   "Rico Nasty": { url: "../riconasty-ogfan99-b85f37/", ex: 2 },
   "Serengeti": { url: "../serengeti-ogfan99-521c0d/", ex: 2 },
+  "Baby Tate": { url: "../babytate-ogfan99-2cd6da/", ex: 2 },
 };
