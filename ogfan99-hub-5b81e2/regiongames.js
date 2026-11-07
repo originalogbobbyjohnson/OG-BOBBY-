@@ -256,4 +256,5 @@ window.OG_REGION_GAMES = {
   "IDK": { url: "../idk-ogfan99-7dd3b2/", ex: 2 },
   "Lil Yachty": { url: "../lilyachty-ogfan99-e00a91/", ex: 2 },
   "Rich Homie Quan": { url: "../richhomiequan-ogfan99-dfd7de/", ex: 2 },
+  "Pooh Shiesty": { url: "../poohshiesty-ogfan99-15daa4/", ex: 2 },
 };
