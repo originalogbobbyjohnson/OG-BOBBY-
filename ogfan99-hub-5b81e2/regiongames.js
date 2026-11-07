@@ -113,4 +113,5 @@ window.OG_REGION_GAMES = {
   "Lyrics Born": { url: "../lyricsborn-ogfan99-468b48/", ex: 2 },
   "The Pharcyde": { url: "../pharcyde-ogfan99-eccc3b/", ex: 2 },
   "Stik Figa": { url: "../stikfiga-ogfan99-802520/", ex: 0 },
+  "J.I.D": { url: "../jid-ogfan99-2cdb70/", ex: 2 },
 };
