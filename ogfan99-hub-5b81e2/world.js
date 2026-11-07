@@ -85,7 +85,8 @@
     ".wdrw .lk{color:#e8b84a;font-weight:800}",
     ".rg-h{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}",
     ".rg-h em{font:900 .78rem/1 Helvetica,Arial,sans-serif;font-style:normal;letter-spacing:.1em;color:#000;background:#e8b84a;border:2px solid #000;border-radius:8px;padding:6px 9px;transform:rotate(2deg);-webkit-text-stroke:0;text-shadow:none;white-space:nowrap}",
-    ".wtot{display:flex;justify-content:center;gap:10px;margin:2px 0 12px}.wtot b{font:900 .8rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;color:#000;background:#35b867;border:2px solid #000;border-radius:999px;padding:8px 14px}.wtot b.g{background:#e8b84a}",
+    ".wtot{display:flex;justify-content:center;gap:10px;margin:2px 0 12px}.wtot button{font:900 .8rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;color:#000;background:#35b867;border:2px solid #000;border-radius:999px;padding:9px 14px;box-shadow:0 3px 0 #000;cursor:pointer}.wtot button.g{background:#e8b84a}.wtot button.on{transform:translateY(2px);box-shadow:0 1px 0 #000;outline:2px solid #fff}",
+    ".wldg{border:2px solid #e8b84a;border-radius:12px;background:#12142a;padding:10px;margin:0 0 14px;display:grid;gap:6px}.wldg .dh{font:900 .9rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;color:#e8b84a;text-align:center;margin-bottom:4px}.wldg .lh{display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding:6px 4px;border-bottom:2px solid #e8b84a}.wldg .lh b{font:900 .78rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;color:#fff}.wldg .lh em{font:900 .72rem/1 Helvetica,Arial,sans-serif;font-style:normal;color:#000;background:#e8b84a;border-radius:999px;padding:4px 8px}",
     ".wtile.wide{grid-column:1/-1}",
     /* lounge */
     ".lsub{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px}",
@@ -584,7 +585,30 @@
     var gamesIn = function (r) { return (r.coming || []).filter(rgIsRap).filter(function (n) { return RG[n]; }); };
     var secN = {}, sec = null, nyc = (typeof ARTISTS !== "undefined" && ARTISTS.length) || 0, total = nyc, cities = nyc ? 1 : 0;
     REGIONS.forEach(function (r) { if (r.g) { sec = r.g; secN[sec] = 0; return; } if (r.live) return; var n = gamesIn(r).length; if (sec) secN[sec] += n; total += n; if (n) cities++; });
-    p.innerHTML = '<div class="wp-h"><div class="t">OTHER CITIES</div><div class="s">TAP A CITY</div></div><div class="wtot"><b>' + total + ' GAMES</b><b class="g">' + cities + ' CITIES</b></div><div class="wgrid"></div>';
+    p.innerHTML = '<div class="wp-h"><div class="t">OTHER CITIES</div><div class="s">TAP A CITY</div></div><div class="wtot"><button type="button" data-led="games">' + total + ' GAMES &#9662;</button><button type="button" class="g" data-led="cities">' + cities + ' CITIES &#9662;</button></div><div class="wldg" hidden></div><div class="wgrid"></div>';
+    var ldg = p.querySelector(".wldg"), cur = null, nycRows = function () {
+      var L = A().map(function (a, i) { return { n: a.who, i: i }; }).sort(function (x, y) { return x.n.localeCompare(y.n); });
+      return '<div class="prl">' + L.map(function (x) { return '<button type="button" class="prr" data-nyc="' + x.i + '"><span class="prdot" style="background:#d62828"></span><span class="prn"><b>' + esc(x.n) + '</b></span><span class="st live">PLAY</span></button>'; }).join("") + '</div>';
+    };
+    p.querySelectorAll("[data-led]").forEach(function (b) { b.onclick = function () {
+      var k = b.dataset.led; p.querySelectorAll("[data-led]").forEach(function (x) { x.classList.remove("on"); });
+      if (cur === k) { cur = null; ldg.hidden = true; ldg.innerHTML = ""; return; }
+      cur = k; b.classList.add("on"); ldg.hidden = false;
+      if (k === "cities") {
+        ldg.innerHTML = '<div class="dh">ALL CITIES</div><div class="prl">' + REGIONS.filter(function (r) { return !r.g; }).map(function (r) { var n = r.live ? nyc : gamesIn(r).length; return '<button type="button" class="prr" data-city="' + esc(r.n) + '"><span class="prdot" style="background:' + r.c + '"></span><span class="prn"><b>' + esc(r.n) + '</b></span><span class="st ' + (n ? "live" : "uc") + '">' + (n ? n + (n === 1 ? " GAME" : " GAMES") : "SOON") + '</span></button>'; }).join("") + '</div>';
+      } else {
+        var h = '<div class="dh">ALL GAMES</div><div class="lh"><b>NEW YORK CITY + METRO</b><em>' + nyc + '</em></div>' + nycRows();
+        REGIONS.forEach(function (r) { if (r.g || r.live) return; var gs = gamesIn(r).slice().sort(); if (!gs.length) return; h += '<div class="lh"><b>' + esc(r.n) + '</b><em>' + gs.length + '</em></div>' + gameRows(gs, r.c); });
+        ldg.innerHTML = h;
+      }
+      wireRows(ldg);
+      ldg.querySelectorAll("[data-nyc]").forEach(function (x) { x.onclick = function () { var k2 = +x.dataset.nyc; go("map"); setTimeout(function () { try { openCard(k2); } catch (er) {} }, 80); }; });
+      ldg.querySelectorAll("[data-city]").forEach(function (x) { x.onclick = function () {
+        var nm = x.dataset.city; cur = null; ldg.hidden = true; ldg.innerHTML = ""; p.querySelectorAll("[data-led]").forEach(function (y) { y.classList.remove("on"); });
+        var t = Array.prototype.slice.call(p.querySelectorAll(".wtile")).filter(function (y) { return y.querySelector("b").textContent === nm; })[0];
+        if (t) { t.click(); try { t.scrollIntoView({ behavior: "smooth", block: "center" }); } catch (er) {} }
+      }; });
+    }; });
     tileGrid(p, REGIONS.map(function (r) {
       if (r.g) return { sec: r.g, secN: secN[r.g] };
       if (r.live) return { n: r.n, c: r.c, wide: 1, badge: nyc ? nyc + " GAMES" : "LIVE", go: function () { go("map"); } };
