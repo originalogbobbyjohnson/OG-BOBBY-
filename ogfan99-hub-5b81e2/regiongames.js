@@ -222,4 +222,6 @@ window.OG_REGION_GAMES = {
   "Missy Elliott": { url: "../missyelliott-ogfan99-c6541b/", ex: 0 },
   "Machine Gun Kelly": { url: "../machinegunkelly-ogfan99-7f89da/", ex: 0 },
   "Yelawolf": { url: "../yelawolf-ogfan99-5d1101/", ex: 2 },
+  "Trick Daddy": { url: "../trickdaddy-ogfan99-2b489b/", ex: 2 },
+  "Ski Mask the Slump God": { url: "../skimask-ogfan99-c2d173/", ex: 2 },
 };
