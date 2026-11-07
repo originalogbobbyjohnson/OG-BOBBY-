@@ -170,4 +170,7 @@ window.OG_REGION_GAMES = {
   "Slum Village": { url: "../slumvillage-ogfan99-b9623f/", ex: 2 },
   "Ludacris": { url: "../ludacris-ogfan99-a88f08/", ex: 2 },
   "Andr\u00e9 3000": { url: "../andre3000-ogfan99-aa57be/", ex: 2 },
+  "8Ball & MJG": { url: "../8ballmjg-ogfan99-a11ebd/", ex: 2 },
+  "Snoop Dogg": { url: "../snoopdogg-ogfan99-5819a9/", ex: 2 },
+  "Warren G": { url: "../warreng-ogfan99-0b0ef2/", ex: 2 },
 };
