@@ -202,4 +202,6 @@ window.OG_REGION_GAMES = {
   "Killer Mike": { url: "../killermike-ogfan99-4625bd/", ex: 2 },
   "Chingy": { url: "../chingy-ogfan99-0caf47/", ex: 2 },
   "GloRilla": { url: "../glorilla-ogfan99-35a004/", ex: 2 },
+  "Megan Thee Stallion": { url: "../megantheestallion-ogfan99-be48c0/", ex: 2 },
+  "Saweetie": { url: "../saweetie-ogfan99-e43eb0/", ex: 2 },
 };
