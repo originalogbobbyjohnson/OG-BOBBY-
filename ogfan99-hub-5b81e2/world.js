@@ -540,7 +540,7 @@
     { n: "BOSTON + NEW ENGLAND", d: "Boston, Providence, Hartford.", c: "#0b3d91", coming: ["Dutch ReBelle", "Akua Naru", "Aimee Mann", "Michael Bolton", "The Mighty Mighty Bosstones", "Pixies", "Boston", "The Cars", "Passion Pit", "Dropkick Murphys", "James Taylor", "Bell Biv DeVoe", "Donna Summer", "Akrobatik", "New Kids on the Block", "Reks", "Meghan Trainor", "Termanology", "Guru's Jazzmatazz", "New Edition", "Michael Christmas", "Cousin Stizz", "Ed O.G.", "Joyner Lucas", "Mr. Lif", "Esoteric", "Slaine", "Sage Francis", "Apathy"] },
     { g: "MIDWEST" },
     { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de", coming: ["Joey Purp", "Serengeti", "Tink", "Mick Jenkins", "Noname", "Saba"] },
-    { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["Guilty Simpson", "Black Milk", "eLZhi", "Quelle Chris", "One Be Lo"] },
+    { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["Jon Connor", "Guilty Simpson", "Black Milk", "eLZhi", "Quelle Chris", "One Be Lo"] },
     { n: "MINNEAPOLIS", d: "Minneapolis and St. Paul. Rhymesayers country.", c: "#7b3fbf", coming: ["Toki Wright", "Dessa", "Slug", "Brother Ali", "Eyedea"] },
     { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Mac Lethal", "Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["King Chip", "Blueprint", "Stalley", "Smino"] },
