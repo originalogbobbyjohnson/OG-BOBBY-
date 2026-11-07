@@ -133,4 +133,6 @@ window.OG_REGION_GAMES = {
   "Substantial": { url: "../substantial-ogfan99-b69511/", ex: 0 },
   "Blueprint": { url: "../blueprint-ogfan99-64e2b0/", ex: 2 },
   "Guilty Simpson": { url: "../guiltysimpson-ogfan99-a7568a/", ex: 2 },
+  "Reverie": { url: "../reverie-ogfan99-f2f0ed/", ex: 2 },
+  "Rocky Rivera": { url: "../rockyrivera-ogfan99-290bab/", ex: 2 },
 };

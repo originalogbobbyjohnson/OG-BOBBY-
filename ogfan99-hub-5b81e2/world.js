@@ -545,8 +545,8 @@
     { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["Blueprint", "Stalley", "Smino"] },
     { g: "WEST COAST" },
-    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
-    { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Kamaiyah", "Lyrics Born", "Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
+    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
+    { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Rocky Rivera", "Kamaiyah", "Lyrics Born", "Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
     { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Grieves", "Sol", "Blue Scholars"] }
   ];
   /* compact tiles: name + small badge; tap opens a drawer right under the row with the details */
@@ -649,7 +649,7 @@
 
   /* ---------- FEMALE RAPPERS: every woman on the map or in a region, sorted by where she's from ---------- */
   var WOMEN = ["Remy Ma", "Ice Spice", "Cardi B", "Rah Digga", "Queen Latifah", "Princess Nokia", "Azealia Banks", "Melii", "MC Lyte", "Roxanne Shant\u00e9", "HeeSun Lee", "Hanifah Walidah", "Lauryn Hill", "Coi Leray", "Justina Valentine", "Leikeli47", "Nitty Scott", "Salt-N-Pepa", "Sha-Rock", "Jean Grae", "Lil Mama", "Lil' Kim", "Young M.A", "Foxy Brown", "Nicki Minaj", "Lola Brooke", "Queen Pen", "Junglepussy", "Heather B.", "Hurricane G", "Monie Love", "Sweet Tee", "Lady London",
-    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah"];
+    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera"];
   function drawWomen() {
     var p = panes.women, RG = window.OG_REGION_GAMES || {}, L = A(), C = "#e84aa0";
     var groups = [], idx = {};
