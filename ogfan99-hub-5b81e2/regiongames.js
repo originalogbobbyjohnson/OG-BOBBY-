@@ -227,4 +227,5 @@ window.OG_REGION_GAMES = {
   "Pastor Troy": { url: "../pastortroy-ogfan99-9b5075/", ex: 2 },
   "Plies": { url: "../plies-ogfan99-ff0669/", ex: 2 },
   "Lil Baby": { url: "../lilbaby-ogfan99-a44f1f/", ex: 2 },
+  "Chamillionaire": { url: "../chamillionaire-ogfan99-7aa149/", ex: 1 },
 };
