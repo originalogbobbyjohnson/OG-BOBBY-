@@ -540,8 +540,8 @@
     { n: "UPSTATE NEW YORK", d: "Middletown, Albany, Rochester, Buffalo, Syracuse.", c: "#7b3fbf", coming: ["Sammus", "Conway the Machine", "Westside Gunn", "Cage"] },
     { n: "BOSTON + NEW ENGLAND", d: "Boston, Providence, Hartford.", c: "#0b3d91", coming: ["Dutch ReBelle", "Akua Naru", "Aimee Mann", "Michael Bolton", "The Mighty Mighty Bosstones", "Pixies", "Boston", "The Cars", "Passion Pit", "Dropkick Murphys", "James Taylor", "Bell Biv DeVoe", "Donna Summer", "Akrobatik", "New Kids on the Block", "Reks", "Meghan Trainor", "Termanology", "Guru's Jazzmatazz", "New Edition", "Michael Christmas", "Cousin Stizz", "Ed O.G.", "Joyner Lucas", "Mr. Lif", "Esoteric", "Slaine", "Sage Francis", "Apathy"] },
     { g: "MIDWEST" },
-    { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de", coming: ["Da Brat", "Lupe Fiasco", "Twista", "Common", "Joey Purp", "Serengeti", "Tink", "Mick Jenkins", "Noname", "Saba"] },
-    { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["Royce da 5'9\"", "Eminem", "Slum Village", "Dizzy Wright", "Jon Connor", "Guilty Simpson", "Black Milk", "eLZhi", "Quelle Chris", "One Be Lo"] },
+    { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de", coming: ["Chance the Rapper", "Da Brat", "Lupe Fiasco", "Twista", "Common", "Joey Purp", "Serengeti", "Tink", "Mick Jenkins", "Noname", "Saba"] },
+    { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["Kash Doll", "Royce da 5'9\"", "Eminem", "Slum Village", "Dizzy Wright", "Jon Connor", "Guilty Simpson", "Black Milk", "eLZhi", "Quelle Chris", "One Be Lo"] },
     { n: "MINNEAPOLIS", d: "Minneapolis and St. Paul. Rhymesayers country.", c: "#7b3fbf", coming: ["P.O.S", "Toki Wright", "Dessa", "Slug", "Brother Ali", "Eyedea"] },
     { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Mac Lethal", "Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["Chingy", "Nelly", "Kid Cudi", "King Chip", "Blueprint", "Stalley", "Smino"] },
@@ -673,7 +673,7 @@
 
   /* ---------- FEMALE RAPPERS: every woman on the map or in a region, sorted by where she's from ---------- */
   var WOMEN = ["Remy Ma", "Ice Spice", "Cardi B", "Rah Digga", "Queen Latifah", "Princess Nokia", "Azealia Banks", "Melii", "MC Lyte", "Roxanne Shant\u00e9", "HeeSun Lee", "Hanifah Walidah", "Lauryn Hill", "Coi Leray", "Justina Valentine", "Leikeli47", "Nitty Scott", "Salt-N-Pepa", "Sha-Rock", "Jean Grae", "Lil Mama", "Lil' Kim", "Young M.A", "Foxy Brown", "Nicki Minaj", "Lola Brooke", "Queen Pen", "Junglepussy", "Heather B.", "Hurricane G", "Monie Love", "Sweet Tee", "Lady London",
-    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera", "Sammus", "Akua Naru", "Rico Nasty", "Baby Tate", "Dutch ReBelle", "Monaleo", "Da Brat", "GloRilla", "Megan Thee Stallion", "Saweetie"];
+    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera", "Sammus", "Akua Naru", "Rico Nasty", "Baby Tate", "Dutch ReBelle", "Monaleo", "Da Brat", "GloRilla", "Megan Thee Stallion", "Saweetie", "Kash Doll"];
   function drawWomen() {
     var p = panes.women, RG = window.OG_REGION_GAMES || {}, L = A(), C = "#e84aa0";
     var groups = [], idx = {};

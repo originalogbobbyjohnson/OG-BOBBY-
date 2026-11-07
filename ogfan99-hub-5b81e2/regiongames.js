@@ -205,4 +205,6 @@ window.OG_REGION_GAMES = {
   "Megan Thee Stallion": { url: "../megantheestallion-ogfan99-be48c0/", ex: 2 },
   "Saweetie": { url: "../saweetie-ogfan99-e43eb0/", ex: 2 },
   "Petey Pablo": { url: "../peteypablo-ogfan99-2dc740/", ex: 2 },
+  "Chance the Rapper": { url: "../chancetherapper-ogfan99-014468/", ex: 0 },
+  "Kash Doll": { url: "../kashdoll-ogfan99-4fae25/", ex: 2 },
 };
