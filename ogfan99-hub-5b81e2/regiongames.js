@@ -166,4 +166,6 @@ window.OG_REGION_GAMES = {
   "Nesby Phips": { url: "../nesby-ogfan99-903709/", ex: 2 },
   "Bun B": { url: "../bunb-ogfan99-2c0d31/", ex: 2 },
   "E-40": { url: "../e40-ogfan99-4f3944/", ex: 2 },
+  "Common": { url: "../common-ogfan99-5ccbb6/", ex: 0 },
+  "Slum Village": { url: "../slumvillage-ogfan99-b9623f/", ex: 2 },
 };
