@@ -149,4 +149,5 @@ window.OG_REGION_GAMES = {
   "King Syze": { url: "../kingsyze-ogfan99-2355b5/", ex: 2 },
   "Dutch ReBelle": { url: "../dutchrebelle-ogfan99-80c9a9/", ex: 2 },
   "Monaleo": { url: "../monaleo-ogfan99-10f945/", ex: 2 },
+  "Jarren Benton": { url: "../jarrenbenton-ogfan99-3dc6de/", ex: 2 },
 };
