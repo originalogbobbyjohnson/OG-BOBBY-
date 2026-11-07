@@ -198,4 +198,5 @@ window.OG_REGION_GAMES = {
   "Sir Mix-a-Lot": { url: "../sirmixalot-ogfan99-57538b/", ex: 0 },
   "Souls of Mischief": { url: "../soulsofmischief-ogfan99-bae7e2/", ex: 2 },
   "Macklemore": { url: "../macklemore-ogfan99-02cf42/", ex: 1 },
+  "Paul Wall": { url: "../paulwall-ogfan99-9072c4/", ex: 2 },
 };
