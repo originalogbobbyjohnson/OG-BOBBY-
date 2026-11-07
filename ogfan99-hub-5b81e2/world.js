@@ -543,11 +543,11 @@
     { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["Guilty Simpson", "Black Milk", "eLZhi", "Quelle Chris", "One Be Lo"] },
     { n: "MINNEAPOLIS", d: "Minneapolis and St. Paul. Rhymesayers country.", c: "#7b3fbf", coming: ["Dessa", "Slug", "Brother Ali", "Eyedea"] },
     { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
-    { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["Blueprint", "Stalley", "Smino"] },
+    { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["King Chip", "Blueprint", "Stalley", "Smino"] },
     { g: "WEST COAST" },
     { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
     { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Rocky Rivera", "Kamaiyah", "Lyrics Born", "Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
-    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Grieves", "Sol", "Blue Scholars"] }
+    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Dave B", "Grieves", "Sol", "Blue Scholars"] }
   ];
   /* compact tiles: name + small badge; tap opens a drawer right under the row with the details */
   function tileGrid(p, items) {
