@@ -152,4 +152,5 @@ window.OG_REGION_GAMES = {
   "Jarren Benton": { url: "../jarrenbenton-ogfan99-3dc6de/", ex: 2 },
   "Luckyiam": { url: "../luckyiam-ogfan99-460e94/", ex: 2 },
   "Onry Ozzborn": { url: "../onryozzborn-ogfan99-661169/", ex: 0 },
+  "Zion I": { url: "../zioni-ogfan99-0703fb/", ex: 0 },
 };
