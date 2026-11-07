@@ -91,4 +91,8 @@ window.OG_REGION_GAMES = {
   "Amos Lee": { url: "../amoslee-ogfan99-f52cf4/", ex: 0 },
   "Michael Bolton": { url: "../michaelbolton-ogfan99-3fa56e/", ex: 0 },
   "Aimee Mann": { url: "../aimeemann-ogfan99-0eefc7/", ex: 0 },
+  "Blue Scholars": { url: "../bluescholars-ogfan99-1638fe/", ex: 0 },
+  "Sol": { url: "../sol-ogfan99-d63f6e/", ex: 2 },
+  "Tobe Nwigwe": { url: "../tobenwigwe-ogfan99-79f279/", ex: 2 },
+  "Fat Tony": { url: "../fattony-ogfan99-6be60b/", ex: 2 },
 };

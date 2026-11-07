@@ -515,7 +515,7 @@
     { g: "THE SOUTH" },
     { n: "SOUTH FLORIDA", d: "Miami, Fort Lauderdale, West Palm Beach.", c: "#ff4fa3", locked: [{ who: "Sevin Soprano", ig: "sevinsoprano" }] },
     { n: "ATLANTA", d: "The A, Decatur, College Park, East Point.", c: "#d62828" },
-    { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6" },
+    { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6", coming: ["Fat Tony", "Tobe Nwigwe"] },
     { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf" },
     { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Count Bass D"] },
     { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c", coming: ["Tonedeff"] },
@@ -535,7 +535,7 @@
     { g: "WEST COAST" },
     { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
     { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
-    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867" }
+    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Sol", "Blue Scholars"] }
   ];
   function drawRegions() {
     var p = panes.regions;
