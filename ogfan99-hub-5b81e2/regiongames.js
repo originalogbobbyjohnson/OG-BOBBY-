@@ -190,4 +190,6 @@ window.OG_REGION_GAMES = {
   "Eminem": { url: "../eminem-ogfan99-06be16/", ex: 2 },
   "Royce da 5'9\"": { url: "../royce-ogfan99-fc021f/", ex: 2 },
   "B.G.": { url: "../bg-ogfan99-8d4f75/", ex: 2 },
+  "T.I.": { url: "../ti-ogfan99-fc6a26/", ex: 2 },
+  "Da Brat": { url: "../dabrat-ogfan99-90e658/", ex: 2 },
 };
