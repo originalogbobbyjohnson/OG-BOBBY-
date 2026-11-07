@@ -254,4 +254,6 @@ window.OG_REGION_GAMES = {
   "Morray": { url: "../morray-ogfan99-131687/", ex: 2 },
   "Nef the Pharaoh": { url: "../nefthepharaoh-ogfan99-c18bfb/", ex: 2 },
   "IDK": { url: "../idk-ogfan99-7dd3b2/", ex: 2 },
+  "Lil Yachty": { url: "../lilyachty-ogfan99-e00a91/", ex: 2 },
+  "Rich Homie Quan": { url: "../richhomiequan-ogfan99-dfd7de/", ex: 2 },
 };
