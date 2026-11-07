@@ -103,4 +103,6 @@ window.OG_REGION_GAMES = {
   "Deante' Hitchcock": { url: "../deantehitchcock-ogfan99-0bccec/", ex: 2 },
   "Oddisee": { url: "../oddisee-ogfan99-cad0c8/", ex: 0 },
   "ANKHLEJOHN": { url: "../ankhlejohn-ogfan99-acc477/", ex: 2 },
+  "Pell": { url: "../pell-ogfan99-5d84d0/", ex: 2 },
+  "Alfred Banks": { url: "../alfredbanks-ogfan99-50c56d/", ex: 2 },
 };
