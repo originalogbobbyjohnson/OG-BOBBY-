@@ -194,4 +194,6 @@ window.OG_REGION_GAMES = {
   "Da Brat": { url: "../dabrat-ogfan99-90e658/", ex: 2 },
   "Wale": { url: "../wale-ogfan99-fc1d91/", ex: 2 },
   "Pusha T": { url: "../pushat-ogfan99-8a5472/", ex: 2 },
+  "J. Cole": { url: "../jcole-ogfan99-9e4564/", ex: 2 },
+  "Sir Mix-a-Lot": { url: "../sirmixalot-ogfan99-57538b/", ex: 0 },
 };

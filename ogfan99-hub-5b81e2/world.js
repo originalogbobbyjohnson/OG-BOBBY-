@@ -532,7 +532,7 @@
     { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf", coming: ["B.G.", "Lil Wayne", "Master P", "Juvenile", "Nesby Phips", "Curren$y", "Dee-1", "Alfred Banks", "Pell"] },
     { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["8Ball & MJG", "Starlito", "Don Trip", "Isaiah Rashad", "Count Bass D"] },
     { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c", coming: ["Pusha T", "Skillz", "Nickelus F", "Tonedeff"] },
-    { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8", coming: ["Deniro Farrar", "Little Brother", "Lute", "Rapsody"] },
+    { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8", coming: ["J. Cole", "Deniro Farrar", "Little Brother", "Lute", "Rapsody"] },
     { n: "MORE OF THE SOUTH", d: "Every other Southern city.", c: "#35b867", locked: [{ who: "The real_Saddium", ig: "the_real_saddium", coming: ["Big K.R.I.T."] }] },
     { g: "EAST COAST" },
     { n: "PHILADELPHIA", d: "North Philly, West Philly, South Philly.", c: "#004c54", coming: ["King Syze", "Amos Lee", "Bill Haley & His Comets", "Frankie Avalon", "Bobby Rydell", "The War on Drugs", "Japanese Breakfast", "Kurt Vile", "Ivy Sole", "Jim Croce", "The Delfonics", "Santigold", "P!nk", "Chubby Checker", "Hall & Oates", "The O'Jays", "Teddy Pendergrass", "Kurupt", "Patti LaBelle", "Boyz II Men", "Will Smith", "Musiq Soulchild", "Jazmine Sullivan", "Jill Scott", "Black Thought", "Young Gunz", "The Last Emperor", "Lay Bankz", "Kur", "PnB Rock", "Reef the Lost Cauze", "Chill Moody", "Bahamadia", "Freeway", "Lil Dicky", "Cassidy", "Three Times Dope", "Lil Uzi Vert", "Eve", "Tierra Whack", "DJ Jazzy Jeff & The Fresh Prince", "Armani White", "Chiddy Bang", "Meek Mill", "The Roots", "Vinnie Paz"] },
@@ -548,7 +548,7 @@
     { g: "WEST COAST" },
     { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["MC Ren", "Ice Cube", "Eazy-E", "Kendrick Lamar", "Warren G", "Snoop Dogg", "Luckyiam", "Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
     { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["E-40", "Zion I", "Rocky Rivera", "Kamaiyah", "Lyrics Born", "Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
-    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Mic Capes", "Onry Ozzborn", "Dave B", "Grieves", "Sol", "Blue Scholars"] }
+    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Sir Mix-a-Lot", "Mic Capes", "Onry Ozzborn", "Dave B", "Grieves", "Sol", "Blue Scholars"] }
   ];
   /* compact tiles: name + small badge; tap opens a drawer right under the row with the details */
   function tileGrid(p, items) {
