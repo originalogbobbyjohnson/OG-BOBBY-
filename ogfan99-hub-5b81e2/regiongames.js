@@ -163,4 +163,5 @@ window.OG_REGION_GAMES = {
   "Mic Capes": { url: "../miccapes-ogfan99-ed6bfe/", ex: 2 },
   "Starlito": { url: "../starlito-ogfan99-093cb0/", ex: 2 },
   "P.O.S": { url: "../pos-ogfan99-e2fe02/", ex: 2 },
+  "Nesby Phips": { url: "../nesby-ogfan99-903709/", ex: 2 },
 };
