@@ -161,4 +161,5 @@ window.OG_REGION_GAMES = {
   "Dizzy Wright": { url: "../dizzywright-ogfan99-53e2c2/", ex: 2 },
   "CyHi the Prynce": { url: "../cyhitheprynce-ogfan99-5b7594/", ex: 2 },
   "Mic Capes": { url: "../miccapes-ogfan99-ed6bfe/", ex: 2 },
+  "Starlito": { url: "../starlito-ogfan99-093cb0/", ex: 2 },
 };
