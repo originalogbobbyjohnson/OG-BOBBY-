@@ -150,4 +150,6 @@ window.OG_REGION_GAMES = {
   "Dutch ReBelle": { url: "../dutchrebelle-ogfan99-80c9a9/", ex: 2 },
   "Monaleo": { url: "../monaleo-ogfan99-10f945/", ex: 2 },
   "Jarren Benton": { url: "../jarrenbenton-ogfan99-3dc6de/", ex: 2 },
+  "Luckyiam": { url: "../luckyiam-ogfan99-460e94/", ex: 2 },
+  "Onry Ozzborn": { url: "../onryozzborn-ogfan99-661169/", ex: 0 },
 };

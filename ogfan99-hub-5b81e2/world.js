@@ -545,9 +545,9 @@
     { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Mac Lethal", "Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["King Chip", "Blueprint", "Stalley", "Smino"] },
     { g: "WEST COAST" },
-    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
+    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Luckyiam", "Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
     { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Rocky Rivera", "Kamaiyah", "Lyrics Born", "Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
-    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Dave B", "Grieves", "Sol", "Blue Scholars"] }
+    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Onry Ozzborn", "Dave B", "Grieves", "Sol", "Blue Scholars"] }
   ];
   /* compact tiles: name + small badge; tap opens a drawer right under the row with the details */
   function tileGrid(p, items) {
