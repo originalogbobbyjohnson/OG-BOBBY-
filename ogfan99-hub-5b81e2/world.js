@@ -75,14 +75,17 @@
     ".wtile small{font-size:.72rem;line-height:1.25;color:#fff}",
     ".wtile .st{justify-self:start;font:900 .6rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;padding:4px 6px;border-radius:5px;border:1.5px solid #000}",
     ".wtile .st.live{background:#35b867;color:#031}.wtile .st.uc{background:repeating-linear-gradient(-45deg,#f2c14e 0 6px,#e0a800 6px 12px);color:#000}",
-    ".wtile.mini{padding:12px 10px 10px;grid-template-columns:1fr auto;align-items:center;gap:6px;min-height:52px}",
-    ".wtile.mini b{font-size:.92rem;overflow-wrap:anywhere;min-width:0}", ".wtile.mini{min-width:0}", ".wgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}",
+    ".wtile.mini{padding:14px 10px 10px;grid-template-columns:1fr;align-content:start;justify-items:start;gap:7px;min-height:52px}",
+    ".wtile.mini b{font-size:.92rem;overflow-wrap:normal;word-break:normal;hyphens:none;min-width:0}", ".wtile.mini{min-width:0}", ".wgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}",
     ".wtile .cnt{font:900 .62rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;padding:5px 7px;border-radius:6px;border:1.5px solid #000;white-space:nowrap}",
     ".wtile .cnt.on{background:#35b867;color:#031}.wtile .cnt.soon{background:#e8b84a;color:#000}",
     ".wtile.open{outline:3px solid #e8b84a;outline-offset:-1px}",
     ".wdrw{grid-column:1/-1;background:#0f1424;border:2px solid #e8b84a;border-radius:12px;padding:12px;display:grid;gap:8px;color:#fff;font-size:.82rem;line-height:1.35}",
     ".wdrw .dh{font-family:var(--display);letter-spacing:.08em;font-size:1rem;color:#e8b84a}",
     ".wdrw .lk{color:#e8b84a;font-weight:800}",
+    ".rg-h{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}",
+    ".rg-h em{font:900 .78rem/1 Helvetica,Arial,sans-serif;font-style:normal;letter-spacing:.1em;color:#000;background:#e8b84a;border:2px solid #000;border-radius:8px;padding:6px 9px;transform:rotate(2deg);-webkit-text-stroke:0;text-shadow:none;white-space:nowrap}",
+    ".wtot{display:flex;justify-content:center;gap:10px;margin:2px 0 12px}.wtot b{font:900 .8rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;color:#000;background:#35b867;border:2px solid #000;border-radius:999px;padding:8px 14px}.wtot b.g{background:#e8b84a}",
     ".wtile.wide{grid-column:1/-1}",
     /* lounge */
     ".lsub{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px}",
@@ -550,7 +553,7 @@
   function tileGrid(p, items) {
     var g = p.querySelector(".wgrid");
     g.innerHTML = items.map(function (it, i) {
-      if (it.sec) return '<div class="rg-h">' + it.sec + '</div>';
+      if (it.sec) return '<div class="rg-h"><span>' + it.sec + '</span>' + (it.secN != null ? '<em>' + it.secN + (it.secN === 1 ? ' GAME' : ' GAMES') + '</em>' : '') + '</div>';
       return '<button class="wtile mini' + (it.wide ? " wide" : "") + '" type="button" data-i="' + i + '"><span class="bar" style="background:' + it.c + '"></span><b>' + esc(it.n) + '</b>' +
         '<span class="cnt ' + (it.badge ? "on" : "soon") + '">' + (it.badge || "SOON") + '</span></button>';
     }).join("");
@@ -578,12 +581,15 @@
 
   function drawRegions() {
     var p = panes.regions, RG = window.OG_REGION_GAMES || {};
-    p.innerHTML = '<div class="wp-h"><div class="t">OTHER CITIES</div><div class="s">TAP A CITY</div></div><div class="wgrid"></div>';
+    var gamesIn = function (r) { return (r.coming || []).filter(rgIsRap).filter(function (n) { return RG[n]; }); };
+    var secN = {}, sec = null, nyc = (typeof ARTISTS !== "undefined" && ARTISTS.length) || 0, total = nyc, cities = nyc ? 1 : 0;
+    REGIONS.forEach(function (r) { if (r.g) { sec = r.g; secN[sec] = 0; return; } if (r.live) return; var n = gamesIn(r).length; if (sec) secN[sec] += n; total += n; if (n) cities++; });
+    p.innerHTML = '<div class="wp-h"><div class="t">OTHER CITIES</div><div class="s">TAP A CITY</div></div><div class="wtot"><b>' + total + ' GAMES</b><b class="g">' + cities + ' CITIES</b></div><div class="wgrid"></div>';
     tileGrid(p, REGIONS.map(function (r) {
-      if (r.g) return { sec: r.g };
-      if (r.live) return { n: r.n, c: r.c, wide: 1, badge: "LIVE", go: function () { go("map"); } };
-      var rap = (r.coming || []).filter(rgIsRap), games = rap.filter(function (n) { return RG[n]; }), wait = rap.filter(function (n) { return !RG[n]; });
-      return { n: r.n, c: r.c, badge: games.length ? "&#9654; " + games.length : "",
+      if (r.g) return { sec: r.g, secN: secN[r.g] };
+      if (r.live) return { n: r.n, c: r.c, wide: 1, badge: nyc ? nyc + " GAMES" : "LIVE", go: function () { go("map"); } };
+      var games = gamesIn(r), wait = (r.coming || []).filter(rgIsRap).filter(function (n) { return !RG[n]; });
+      return { n: r.n, c: r.c, badge: games.length ? games.length + (games.length === 1 ? " GAME" : " GAMES") : "",
         detail: function () {
           return '<div class="dh">' + esc(r.n) + '</div><div>' + esc(r.d) + '</div>' +
             (games.length ? gameRows(games, r.c) : '<div>Games coming soon.</div>') +
@@ -594,6 +600,7 @@
   }
 
 
+
   /* ---------- PRODUCERS: the beatmakers, their own category (hip-hop only) ---------- */
   var PROD_TIERS = [["mainstream", "MAINSTREAM", "#e8b84a"], ["legend", "LEGENDS", "#d62828"], ["indie", "INDIE", "#35b867"]];
   function drawProducers() {
@@ -601,7 +608,7 @@
     p.innerHTML = '<div class="wp-h"><div class="t">PRODUCERS</div><div class="s">TAP A LEVEL</div></div><div class="wgrid"></div>';
     tileGrid(p, PROD_TIERS.map(function (t) {
       var list = L.filter(function (x) { return x.tier === t[0]; }), live = list.filter(function (x) { return x.url; });
-      return { n: t[1], c: t[2], wide: 1, badge: live.length ? "&#9654; " + live.length : "",
+      return { n: t[1], c: t[2], wide: 1, badge: live.length ? live.length + (live.length === 1 ? " GAME" : " GAMES") : "",
         detail: function () {
           return '<div class="prl">' + list.map(function (x) { return '<button type="button" class="prr" data-p="' + esc(x.slug) + '"><span class="prdot" style="background:' + t[2] + '"></span><span class="prn"><b>' + esc(x.name) + '</b></span><span class="st ' + (x.url ? "live" : "uc") + '">' + (x.url ? (x.ex === 2 ? "PLAY 18+" : "PLAY") : "SOON") + '</span></button>'; }).join("") + '</div>';
         },
@@ -631,7 +638,7 @@
       if (g.live) return { n: g.n, c: g.c, wide: 1, badge: "LIVE", go: function () { go("map"); } };
       if (g.women) return { n: g.n, c: g.c, wide: 1, badge: "&#128081;", go: function () { go("women"); } };
       var games = gamesOf(g);
-      return { n: g.n, c: g.c, badge: games.length ? "&#9654; " + games.length : "",
+      return { n: g.n, c: g.c, badge: games.length ? games.length + (games.length === 1 ? " GAME" : " GAMES") : "",
         detail: function () { return '<div class="dh">' + esc(g.n) + '</div><div>' + esc(g.d) + '</div>' + (games.length ? gameRows(games, g.c) : '<div>Games coming soon.</div>'); },
         wire: wireRows };
     }));
@@ -653,7 +660,7 @@
     var total = groups.reduce(function (t, g) { return t + g.list.length; }, 0);
     p.innerHTML = '<div class="wp-h"><div class="t">FEMALE RAPPERS</div><div class="s">' + total + ' QUEENS · TAP WHERE SHE\'S FROM</div></div><div class="wgrid"></div>';
     tileGrid(p, groups.map(function (g) {
-      return { n: g.n.toUpperCase(), c: g.c, badge: "&#9654; " + g.list.length,
+      return { n: g.n.toUpperCase(), c: g.c, badge: g.list.length + (g.list.length === 1 ? " GAME" : " GAMES"),
         detail: function () { return '<div class="prl">' + g.list.map(function (x, i) { var e = x.rg ? RG[x.who] : L[x.k]; return '<button type="button" class="prr" data-wi="' + i + '"><span class="prdot" style="background:' + g.c + '"></span><span class="prn"><b>' + esc(x.who) + '</b></span><span class="st live">' + (e && e.ex === 2 ? "PLAY 18+" : "PLAY") + '</span></button>'; }).join("") + '</div>'; },
         wire: function (d) { d.querySelectorAll("[data-wi]").forEach(function (b) { b.onclick = function (ev) { ev.stopPropagation(); var x = g.list[+b.dataset.wi];
           if (x.rg) return rgPlay(x.who, RG[x.who], d, b);

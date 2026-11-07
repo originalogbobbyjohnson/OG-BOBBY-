@@ -390,6 +390,8 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .bgrid button.wide { grid-column: 1 / -1; background: #1d2033; }
 .bgrid .wide3 { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
 .bgrid .wide3 button.wide { grid-column: auto; padding: 8px 4px; font-size: .74rem; line-height: 1.15; align-content: center; }
+.bgrid .wide3 button.go3, .wrap.app.step1 .bgrid .wide3 button.go3 { background: linear-gradient(#ffd75e, #f2b92e); color: #000; border: 2px solid #000; border-top: 2px solid #000; box-shadow: 0 3px 0 #000; font: 900 .9rem/1 Helvetica, Arial, sans-serif; letter-spacing: .1em; padding: 9px 4px 8px; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 6px; }
+.bgrid .wide3 button.go3 i { font-style: normal; font-size: 1rem; line-height: 1; }
 .crumb { flex: none; display: grid; grid-template-columns: auto 1fr; gap: 8px; align-items: center; }
 .crumb button { border: 2px solid #e8b84a; border-radius: 10px; background: #1d2033; color: #e8b84a; font: 900 .7rem/1 Helvetica, Arial, sans-serif; letter-spacing: .08em; padding: 8px 9px; cursor: pointer; white-space: nowrap; }
 .crumb div { min-width: 0; display: grid; gap: 2px; }
@@ -2005,7 +2007,7 @@ window.OGX = (function () {
 <script src="producers.js?v=19"></script>
 <script src="regiongames.js?v=67"></script>
 <script src="genregames.js?v=1"></script>
-<script src="world.js?v=93"></script>
+<script src="world.js?v=96"></script>
 
 <script>
 /* ---------- map + list work together (Nov 1) ----------
@@ -2093,9 +2095,9 @@ window.OGX = (function () {
   p.innerHTML = '<div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR BOROUGH</b></div>' +
     '<div class="board"><div class="bd-h"><i></i>LIVE ON THE LINE<i></i></div><div class="bd-row"><button type="button" id="mtAb"><b id="mtA">' + ARTISTS.length + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtFb"><b id="mtF">—</b><small>FANS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtPb"><b id="mtP">—</b><small>PLAYS</small><em>' + (isOwner() ? 'BY ARTIST &#9656;' : 'LIVE') + '</em></button></div></div>' +
     '<div class="bgrid">' + BOROS.map(b => '<button type="button" data-pb="' + b + '" style="--bc:' + (COL[b] || "#fff") + '">' + (NAME[b] || b.toUpperCase()) + '<small>' + cnt(b) + ' ARTISTS</small></button>').join("") +
-    '<div class="wide3"><button type="button" class="wide" data-pb="__regions">&#127758; OTHER CITIES<small>PHILLY · BOSTON · ATLANTA + MORE</small></button>' +
-    '<button type="button" class="wide" data-pb="__genres">&#127925; OTHER GENRES<small>R&amp;B · POP · ROCK + MORE</small></button>' +
-    '<button type="button" class="wide" data-pb="__find">&#128269; SEARCH ANY ARTIST</button></div></div>' +
+    '<div class="wide3"><button type="button" class="wide go3" data-pb="__regions"><i>&#127758;</i>CITIES</button>' +
+    '<button type="button" class="wide go3" data-pb="__genres"><i>&#127925;</i>GENRES</button>' +
+    '<button type="button" class="wide go3" data-pb="__find"><i>&#128269;</i>SEARCH</button></div></div>' +
     '<div class="howto"><b>3 WAYS TO FIND AN ARTIST</b><button type="button" data-how="boro"><i>1</i>PICK A BOROUGH</button><button type="button" data-how="find"><i>2</i>SEARCH A NAME</button><button type="button" data-how="map"><i>3</i>TAP THE MAP &#9660;</button></div>';
   mb.insertAdjacentElement("afterend", p);
   /* STEP 2 header: where you are + what to do */
