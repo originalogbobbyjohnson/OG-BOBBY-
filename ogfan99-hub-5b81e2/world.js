@@ -542,7 +542,7 @@
     { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de", coming: ["Tink", "Mick Jenkins", "Noname", "Saba"] },
     { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["Black Milk", "eLZhi", "Quelle Chris", "One Be Lo"] },
     { n: "MINNEAPOLIS", d: "Minneapolis and St. Paul. Rhymesayers country.", c: "#7b3fbf", coming: ["Dessa", "Slug", "Brother Ali", "Eyedea"] },
-    { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Stik Figa", "Tech N9ne"] },
+    { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["Stalley", "Smino"] },
     { g: "WEST COAST" },
     { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },

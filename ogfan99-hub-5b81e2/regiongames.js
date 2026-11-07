@@ -128,4 +128,5 @@ window.OG_REGION_GAMES = {
   "Skillz": { url: "../skillz-ogfan99-502ff9/", ex: 2 },
   "Tink": { url: "../tink-ogfan99-0ee05c/", ex: 2 },
   "Kamaiyah": { url: "../kamaiyah-ogfan99-0ad0f0/", ex: 2 },
+  "Krizz Kaliko": { url: "../krizzkaliko-ogfan99-cefab0/", ex: 2 },
 };
