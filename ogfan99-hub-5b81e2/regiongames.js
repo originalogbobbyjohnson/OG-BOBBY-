@@ -213,4 +213,6 @@ window.OG_REGION_GAMES = {
   "Big Shug": { url: "../bigshug-ogfan99-372e25/", ex: 0 },
   "Flo Rida": { url: "../florida-ogfan99-c1a292/", ex: 0 },
   "Steady B": { url: "../steadyb-ogfan99-699298/", ex: 0 },
+  "Slim Thug": { url: "../slimthug-ogfan99-bff129/", ex: 2 },
+  "Lil' Keke": { url: "../lilkeke-ogfan99-04243a/", ex: 2 },
 };
