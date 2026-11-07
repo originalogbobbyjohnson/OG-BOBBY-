@@ -184,4 +184,7 @@ window.OG_REGION_GAMES = {
   "Ice Cube": { url: "../icecube-ogfan99-9a6293/", ex: 2 },
   "Kid Cudi": { url: "../kidcudi-ogfan99-9278dc/", ex: 1 },
   "Scarface": { url: "../scarface-ogfan99-054944/", ex: 2 },
+  "Nelly": { url: "../nelly-ogfan99-431ef7/", ex: 2 },
+  "Jeezy": { url: "../jeezy-ogfan99-7efb26/", ex: 2 },
+  "MC Ren": { url: "../mcren-ogfan99-77c50d/", ex: 2 },
 };
