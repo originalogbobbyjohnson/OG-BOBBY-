@@ -209,4 +209,6 @@ window.OG_REGION_GAMES = {
   "Kash Doll": { url: "../kashdoll-ogfan99-4fae25/", ex: 2 },
   "Trina": { url: "../trina-ogfan99-1ce39a/", ex: 2 },
   "Latto": { url: "../latto-ogfan99-506869/", ex: 2 },
+  "Beanie Sigel": { url: "../beaniesigel-ogfan99-779dc2/", ex: 2 },
+  "Big Shug": { url: "../bigshug-ogfan99-372e25/", ex: 0 },
 };
