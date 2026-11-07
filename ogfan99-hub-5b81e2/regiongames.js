@@ -175,4 +175,6 @@ window.OG_REGION_GAMES = {
   "Warren G": { url: "../warreng-ogfan99-0b0ef2/", ex: 2 },
   "Twista": { url: "../twista-ogfan99-9c9699/", ex: 2 },
   "Lupe Fiasco": { url: "../lupefiasco-ogfan99-d13ddc/", ex: 0 },
+  "Kendrick Lamar": { url: "../kendricklamar-ogfan99-780d4b/", ex: 2 },
+  "Eazy-E": { url: "../eazye-ogfan99-99138e/", ex: 2 },
 };
