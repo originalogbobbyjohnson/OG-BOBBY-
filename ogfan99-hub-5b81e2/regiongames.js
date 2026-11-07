@@ -204,4 +204,5 @@ window.OG_REGION_GAMES = {
   "GloRilla": { url: "../glorilla-ogfan99-35a004/", ex: 2 },
   "Megan Thee Stallion": { url: "../megantheestallion-ogfan99-be48c0/", ex: 2 },
   "Saweetie": { url: "../saweetie-ogfan99-e43eb0/", ex: 2 },
+  "Petey Pablo": { url: "../peteypablo-ogfan99-2dc740/", ex: 2 },
 };
