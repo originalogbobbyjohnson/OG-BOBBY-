@@ -239,4 +239,6 @@ window.OG_REGION_GAMES = {
   "Trae tha Truth": { url: "../trae-ogfan99-f3bd6f/", ex: 2 },
   "Lil Durk": { url: "../lildurk-ogfan99-2db5ef/", ex: 2 },
   "Juice WRLD": { url: "../juicewrld-ogfan99-5f6695/", ex: 0 },
+  "Tee Grizzley": { url: "../teegrizzley-ogfan99-72161b/", ex: 2 },
+  "Babyface Ray": { url: "../babyfaceray-ogfan99-3076e2/", ex: 2 },
 };
