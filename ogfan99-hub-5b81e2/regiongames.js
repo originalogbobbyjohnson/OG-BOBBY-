@@ -224,4 +224,6 @@ window.OG_REGION_GAMES = {
   "Yelawolf": { url: "../yelawolf-ogfan99-5d1101/", ex: 2 },
   "Trick Daddy": { url: "../trickdaddy-ogfan99-2b489b/", ex: 2 },
   "Ski Mask the Slump God": { url: "../skimask-ogfan99-c2d173/", ex: 2 },
+  "Pastor Troy": { url: "../pastortroy-ogfan99-9b5075/", ex: 2 },
+  "Plies": { url: "../plies-ogfan99-ff0669/", ex: 2 },
 };
