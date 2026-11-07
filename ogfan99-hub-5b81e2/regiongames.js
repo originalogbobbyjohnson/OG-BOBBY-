@@ -247,4 +247,6 @@ window.OG_REGION_GAMES = {
   "Turk": { url: "../turk-ogfan99-2d7c02/", ex: 2 },
   "Larry June": { url: "../larryjune-ogfan99-067022/", ex: 2 },
   "Mistah F.A.B.": { url: "../mistahfab-ogfan99-cbb548/", ex: 2 },
+  "Logic": { url: "../logic-ogfan99-caac0a/", ex: 2 },
+  "G-Eazy": { url: "../geazy-ogfan99-6787c9/", ex: 2 },
 };
