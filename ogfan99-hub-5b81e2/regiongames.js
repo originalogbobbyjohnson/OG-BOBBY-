@@ -187,4 +187,6 @@ window.OG_REGION_GAMES = {
   "Nelly": { url: "../nelly-ogfan99-431ef7/", ex: 2 },
   "Jeezy": { url: "../jeezy-ogfan99-7efb26/", ex: 2 },
   "MC Ren": { url: "../mcren-ogfan99-77c50d/", ex: 2 },
+  "Eminem": { url: "../eminem-ogfan99-06be16/", ex: 2 },
+  "Royce da 5'9\"": { url: "../royce-ogfan99-fc021f/", ex: 2 },
 };
