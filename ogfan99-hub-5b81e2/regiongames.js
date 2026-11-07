@@ -112,4 +112,5 @@ window.OG_REGION_GAMES = {
   "Isaiah Rashad": { url: "../isaiahrashad-ogfan99-bc699d/", ex: 2 },
   "Lyrics Born": { url: "../lyricsborn-ogfan99-468b48/", ex: 2 },
   "The Pharcyde": { url: "../pharcyde-ogfan99-eccc3b/", ex: 2 },
+  "Stik Figa": { url: "../stikfiga-ogfan99-802520/", ex: 0 },
 };
