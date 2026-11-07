@@ -15,13 +15,13 @@
 <meta property="og:title" content="OG Certified · The Complete Series">
 <meta property="og:description" content="OG Bobby · OG Made ’99 · Season 1, Season 2 and The Finale · 19 episodes">
 <meta property="og:url" content="https://ogbobbybrooklyn.com/og-certified-19-b7e4c1/">
-<meta property="og:image" content="https://ogbobbybrooklyn.com/og-certified-19-b7e4c1/share.jpg?v=4">
+<meta property="og:image" content="https://ogbobbybrooklyn.com/og-certified-19-b7e4c1/share.jpg?v=5">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OG Certified · The Complete Series">
-<meta name="twitter:image" content="https://ogbobbybrooklyn.com/og-certified-19-b7e4c1/share.jpg?v=4">
+<meta name="twitter:image" content="https://ogbobbybrooklyn.com/og-certified-19-b7e4c1/share.jpg?v=5">
 <link rel="icon" href="icon-v2-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="icon-v2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,7 +57,7 @@ body { font-family: var(--body); font-size: 16px; -webkit-tap-highlight-color: t
 .cover-txt .open svg { width: 18px; height: 18px; fill: var(--gold); }
 
 /* Songs view */
-#bgArt { position: fixed; inset: 0; z-index: 0; background: #0a0d0b url("art.jpg?v=4") 50% 30% / cover no-repeat; filter: blur(18px) brightness(.35); transform: scale(1.1); }
+#bgArt { position: fixed; inset: 0; z-index: 0; background: #0a0d0b url("art.jpg?v=5") 50% 30% / cover no-repeat; filter: blur(18px) brightness(.35); transform: scale(1.1); }
 .wrap { position: relative; z-index: 1; max-width: 540px; margin: 0 auto; padding: 0 16px 48px; display: grid; gap: 16px; }
 .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .top .back { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: rgba(0,0,0,.5); display: grid; place-items: center; cursor: pointer; }
@@ -127,10 +127,10 @@ footer { color: var(--soft); font-size: .8rem; text-align: center; }
 .hdr .album .series { margin-top: 0; }
 
 /* Skyline cover: full photo, OG BOBBY wordmark top-left, red OG CERTIFIED bar along the bottom */
-#cover::after { background: linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 60%, rgba(0,0,0,.75) 82%, #000 100%) !important; }
-#cover img.art { object-position: 50% 20%; }
+#cover::after { background: none !important; }
+#cover img.art { object-position: 22% 50%; }
 .sky-wm { position: absolute; z-index: 1; top: calc(max(14px, env(safe-area-inset-top)) + 16px); left: 20px; width: min(44%, 220px); height: auto; filter: drop-shadow(3px 3px 0 #000); }
-.cover-txt.sky { padding-bottom: calc(max(20px, env(safe-area-inset-bottom)) + 118px); }
+.cover-txt.sky { padding-bottom: max(18px, env(safe-area-inset-bottom)); }
 .sky-bar { position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; padding: 18px 12px calc(max(16px, env(safe-area-inset-bottom)) + 4px); background: #d62828; display: grid; justify-items: center; gap: 8px; box-shadow: 0 -8px 24px rgba(0,0,0,.6); }
 .sky-bar .t { font: 400 clamp(2.6rem, 13vw, 3.6rem)/1 "Anton", Impact, sans-serif; letter-spacing: .04em; color: #fff; text-shadow: 2px 2px 0 #000; }
 .sky-bar .s { font: 700 .74rem/1.2 "Sedgwick Nine", "Barlow", sans-serif; letter-spacing: .24em; text-transform: uppercase; color: #fff; }
@@ -140,12 +140,10 @@ footer { color: var(--soft); font-size: .8rem; text-align: center; }
 </head>
 <body>
 <div id="cover" role="button" tabindex="0" aria-label="Open OG MADE ’99">
-  <img class="art" src="art.jpg?v=4" alt="OG Bobby in a black leather jacket at night, city skyline behind him">
-  <img class="sky-wm" src="../brand/og-bobby-wordmark.png" alt="OG BOBBY">
-  <div class="cover-txt sky">
+  <img class="art" src="art.jpg?v=5" alt="OG Bobby on a Bay Ridge street at night, the Verrazzano Bridge behind him and an OG MADE ’99 billboard on the corner">
+    <div class="cover-txt sky">
     <span class="open"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Open</span>
   </div>
-  <div class="sky-bar"><span class="t">OG CERTIFIED</span><span class="s">The Complete Series · 19 Episodes</span></div>
 </div>
 <div id="bgArt" aria-hidden="true"></div>
 <div class="wrap">
