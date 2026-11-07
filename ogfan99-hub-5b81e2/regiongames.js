@@ -263,4 +263,6 @@ window.OG_REGION_GAMES = {
   "Ab-Soul": { url: "../absoul-ogfan99-06cdc2/", ex: 2 },
   "Mozzy": { url: "../mozzy-ogfan99-bf20dc/", ex: 2 },
   "Yukmouth": { url: "../yukmouth-ogfan99-d4ed19/", ex: 2 },
+  "Maxo Kream": { url: "../maxokream-ogfan99-2e06aa/", ex: 2 },
+  "BigXthaPlug": { url: "../bigxtheplug-ogfan99-0fed73/", ex: 2 },
 };
