@@ -192,4 +192,6 @@ window.OG_REGION_GAMES = {
   "B.G.": { url: "../bg-ogfan99-8d4f75/", ex: 2 },
   "T.I.": { url: "../ti-ogfan99-fc6a26/", ex: 2 },
   "Da Brat": { url: "../dabrat-ogfan99-90e658/", ex: 2 },
+  "Wale": { url: "../wale-ogfan99-fc1d91/", ex: 2 },
+  "Pusha T": { url: "../pushat-ogfan99-8a5472/", ex: 2 },
 };
