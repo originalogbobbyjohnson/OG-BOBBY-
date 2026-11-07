@@ -526,7 +526,7 @@
     { n: "NEW YORK CITY + METRO", d: "The five boroughs, Westchester, Long Island and Jersey. Riding now.", c: "#d62828", live: 1, wide: 1 },
     { g: "THE SOUTH" },
     { n: "SOUTH FLORIDA", d: "Miami, Fort Lauderdale, West Palm Beach.", c: "#ff4fa3", locked: [{ who: "Sevin Soprano", ig: "sevinsoprano", coming: ["Pouya", "Denzel Curry"] }] },
-    { n: "ATLANTA", d: "The A, Decatur, College Park, East Point.", c: "#d62828", coming: ["CyHi the Prynce", "Jarren Benton", "Baby Tate", "Kenny Mason", "J.I.D", "Deante' Hitchcock", "EarthGang"] },
+    { n: "ATLANTA", d: "The A, Decatur, College Park, East Point.", c: "#d62828", coming: ["Andr\u00e9 3000", "Ludacris", "CyHi the Prynce", "Jarren Benton", "Baby Tate", "Kenny Mason", "J.I.D", "Deante' Hitchcock", "EarthGang"] },
     { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6", coming: ["Bun B", "Bobby Sessions", "Monaleo", "Devin the Dude", "Fat Tony", "Tobe Nwigwe"] },
     { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf", coming: ["Nesby Phips", "Curren$y", "Dee-1", "Alfred Banks", "Pell"] },
     { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Starlito", "Don Trip", "Isaiah Rashad", "Count Bass D"] },

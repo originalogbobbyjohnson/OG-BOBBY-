@@ -168,4 +168,6 @@ window.OG_REGION_GAMES = {
   "E-40": { url: "../e40-ogfan99-4f3944/", ex: 2 },
   "Common": { url: "../common-ogfan99-5ccbb6/", ex: 0 },
   "Slum Village": { url: "../slumvillage-ogfan99-b9623f/", ex: 2 },
+  "Ludacris": { url: "../ludacris-ogfan99-a88f08/", ex: 2 },
+  "Andr\u00e9 3000": { url: "../andre3000-ogfan99-aa57be/", ex: 2 },
 };
