@@ -265,4 +265,6 @@ window.OG_REGION_GAMES = {
   "Yukmouth": { url: "../yukmouth-ogfan99-d4ed19/", ex: 2 },
   "Maxo Kream": { url: "../maxokream-ogfan99-2e06aa/", ex: 2 },
   "BigXthaPlug": { url: "../bigxtheplug-ogfan99-0fed73/", ex: 2 },
+  "ScHoolboy Q": { url: "../schoolboyq-ogfan99-f76a17/", ex: 2 },
+  "MC Eiht": { url: "../mceiht-ogfan99-c43654/", ex: 2 },
 };
