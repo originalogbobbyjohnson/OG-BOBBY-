@@ -146,4 +146,6 @@ window.OG_REGION_GAMES = {
   "Rico Nasty": { url: "../riconasty-ogfan99-b85f37/", ex: 2 },
   "Serengeti": { url: "../serengeti-ogfan99-521c0d/", ex: 2 },
   "Baby Tate": { url: "../babytate-ogfan99-2cd6da/", ex: 2 },
+  "King Syze": { url: "../kingsyze-ogfan99-2355b5/", ex: 2 },
+  "Dutch ReBelle": { url: "../dutchrebelle-ogfan99-80c9a9/", ex: 2 },
 };
