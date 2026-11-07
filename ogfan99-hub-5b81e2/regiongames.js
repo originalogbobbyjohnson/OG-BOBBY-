@@ -261,4 +261,6 @@ window.OG_REGION_GAMES = {
   "Murphy Lee": { url: "../murphylee-ogfan99-2946ff/", ex: 2 },
   "Jay Rock": { url: "../jayrock-ogfan99-56accf/", ex: 2 },
   "Ab-Soul": { url: "../absoul-ogfan99-06cdc2/", ex: 2 },
+  "Mozzy": { url: "../mozzy-ogfan99-bf20dc/", ex: 2 },
+  "Yukmouth": { url: "../yukmouth-ogfan99-d4ed19/", ex: 2 },
 };
