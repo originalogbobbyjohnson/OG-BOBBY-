@@ -287,4 +287,5 @@ window.OG_REGION_GAMES = {
   "Ch\u00e9 Noir": { url: "../chenoir-ogfan99-8741f5/", ex: 2 },
   "Lil Jon": { url: "../liljon-ogfan99-9e228b/", ex: 2 },
   "Lil Ugly Mane": { url: "../liluglymane-ogfan99-520d98/", ex: 0 },
+  "Jack Harlow": { url: "../jackharlow-ogfan99-5a4242/", ex: 1 },
 };
