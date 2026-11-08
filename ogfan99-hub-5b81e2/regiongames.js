@@ -390,4 +390,5 @@ window.OG_REGION_GAMES = {
   "Timbaland & Magoo": { url: "../timbalandmagoo-ogfan99-b77133/", ex: 2 },
   "Rappin' 4-Tay": { url: "../rappin4tay-ogfan99-53b975/", ex: 2 },
   "Cordae": { url: "../cordae-ogfan99-d88cd1/", ex: 2 },
+  "Yung Gravy": { url: "../yunggravy-ogfan99-2c10af/", ex: 2 },
 };
