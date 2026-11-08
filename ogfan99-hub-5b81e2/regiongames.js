@@ -411,4 +411,6 @@ window.OG_REGION_GAMES = {
   "Lil Loaded": { url: "../lilloaded-ogfan99-f63b8a/", ex: 2 },
   "Symba": { url: "../symba-ogfan99-981eb2/", ex: 2 },
   "Krayzie Bone": { url: "../krayziebone-ogfan99-3b1d20/", ex: 0 },
+  "The Lady of Rage": { url: "../ladyofrage-ogfan99-d0b606/", ex: 2 },
+  "The D.O.C.": { url: "../thedoc-ogfan99-7e5279/", ex: 1 },
 };
