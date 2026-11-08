@@ -351,4 +351,6 @@ window.OG_REGION_GAMES = {
   "Mac Miller": { url: "../macmiller-ogfan99-eb9182/", ex: 1 },
   "iann dior": { url: "../ianndior-ogfan99-6c3e47/", ex: 1 },
   "Kodie Shane": { url: "../kodieshane-ogfan99-ef7108/", ex: 0 },
+  "Kid Ink": { url: "../kidink-ogfan99-e3991b/", ex: 2 },
+  "Iamsu!": { url: "../iamsu-ogfan99-a8357b/", ex: 2 },
 };
