@@ -416,4 +416,6 @@ window.OG_REGION_GAMES = {
   "Ice-T": { url: "../icet-ogfan99-bac0d4/", ex: 2 },
   "Tha Alkaholiks": { url: "../thaalkaholiks-ogfan99-220388/", ex: 2 },
   "King Tee": { url: "../kingtee-ogfan99-2fb142/", ex: 2 },
+  "Above the Law": { url: "../abovethelaw-ogfan99-fc03e6/", ex: 2 },
+  "Freestyle Fellowship": { url: "../freestylefellowship-ogfan99-420627/", ex: 2 },
 };
