@@ -55,4 +55,6 @@ window.OG_GENRE_OF = {
   "Mint Condition": "R&B",
   "Morris Day and The Time": "R&B",
   "Tony! Toni! Ton\u00e9!": "R&B",
+  "Ginuwine": "R&B",
+  "Raheem DeVaughn": "R&B",
 };

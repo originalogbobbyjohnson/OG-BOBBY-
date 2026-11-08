@@ -464,4 +464,6 @@ window.OG_REGION_GAMES = {
   "Mint Condition": { url: "../mintcondition-ogfan99-1d6c41/", ex: 0 },
   "Morris Day and The Time": { url: "../morrisday-ogfan99-5ea8b8/", ex: 2 },
   "Tony! Toni! Ton\u00e9!": { url: "../tonytonitone-ogfan99-cd37fe/", ex: 0 },
+  "Ginuwine": { url: "../ginuwine-ogfan99-3d03f5/", ex: 0 },
+  "Raheem DeVaughn": { url: "../raheemdevaughn-ogfan99-9bcd73/", ex: 0 },
 };
