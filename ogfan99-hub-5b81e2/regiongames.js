@@ -443,4 +443,5 @@ window.OG_REGION_GAMES = {
   "Struggle Jennings": { url: "../strugglejennings-ogfan99-21d0fd/", ex: 0 },
   "YoungBloodZ": { url: "../youngbloodz-ogfan99-7269dc/", ex: 2 },
   "Hoodrich Pablo Juan": { url: "../hoodrichpablojuan-ogfan99-b1c6dd/", ex: 2 },
+  "Bankroll Mafia": { url: "../bankrollmafia-ogfan99-cd1a4c/", ex: 2 },
 };
