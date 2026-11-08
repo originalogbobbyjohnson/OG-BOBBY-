@@ -330,4 +330,5 @@ window.OG_REGION_GAMES = {
   "Stunna 4 Vegas": { url: "../stunna4vegas-ogfan99-879b8e/", ex: 2 },
   "Grynch": { url: "../grynch-ogfan99-bf790d/", ex: 2 },
   "Chris Webby": { url: "../chriswebby-ogfan99-e84454/", ex: 2 },
+  "Duke Deuce": { url: "../dukedeuce-ogfan99-172452/", ex: 2 },
 };
