@@ -368,4 +368,5 @@ window.OG_REGION_GAMES = {
   "Pitbull": { url: "../pitbull-ogfan99-c91215/", ex: 0 },
   "Xzibit": { url: "../xzibit-ogfan99-710710/", ex: 2 },
   "Doechii": { url: "../doechii-ogfan99-5025fc/", ex: 2 },
+  "Kevin Abstract": { url: "../kevinabstract-ogfan99-c4a4fd/", ex: 2 },
 };
