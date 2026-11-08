@@ -423,4 +423,5 @@ window.OG_REGION_GAMES = {
   "Kid Frost": { url: "../kidfrost-ogfan99-7ae191/", ex: 2 },
   "Jurassic 5": { url: "../jurassic5-ogfan99-51eb0e/", ex: 0 },
   "People Under the Stairs": { url: "../peopleunderthestairs-ogfan99-d36a23/", ex: 0 },
+  "House of Pain": { url: "../houseofpain-ogfan99-ccc5c4/", ex: 2 },
 };
