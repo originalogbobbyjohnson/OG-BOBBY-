@@ -544,7 +544,7 @@
     { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de", coming: ["Juice WRLD", "Lil Durk", "Polo G", "Vic Mensa", "Chance the Rapper", "Da Brat", "Lupe Fiasco", "Twista", "Common", "Joey Purp", "Serengeti", "Tink", "Mick Jenkins", "Noname", "Saba"] },
     { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["Babyface Ray", "Tee Grizzley", "Danny Brown", "Kash Doll", "Royce da 5'9\"", "Eminem", "Slum Village", "Dizzy Wright", "Jon Connor", "Guilty Simpson", "Black Milk", "eLZhi", "Quelle Chris", "One Be Lo"] },
     { n: "MINNEAPOLIS", d: "Minneapolis and St. Paul. Rhymesayers country.", c: "#7b3fbf", coming: ["P.O.S", "Toki Wright", "Dessa", "Slug", "Brother Ali", "Eyedea"] },
-    { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Mac Lethal", "Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
+    { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Joey Cool", "Kutt Calhoun", "Mac Lethal", "Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["Murphy Lee", "Machine Gun Kelly", "Chingy", "Nelly", "Kid Cudi", "King Chip", "Blueprint", "Stalley", "Smino"] },
     { g: "WEST COAST" },
     { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Drakeo the Ruler", "Blxst", "MC Eiht", "ScHoolboy Q", "Ab-Soul", "Jay Rock", "Vince Staples", "Nipsey Hussle", "MC Ren", "Ice Cube", "Eazy-E", "Kendrick Lamar", "Warren G", "Snoop Dogg", "Luckyiam", "Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
