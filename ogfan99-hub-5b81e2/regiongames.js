@@ -297,4 +297,5 @@ window.OG_REGION_GAMES = {
   "DeJ Loaf": { url: "../dejloaf-ogfan99-be2a73/", ex: 2 },
   "Oschino": { url: "../oschino-ogfan99-0fbc13/", ex: 2 },
   "GoldLink": { url: "../goldlink-ogfan99-37ca5f/", ex: 2 },
+  "2 Chainz": { url: "../2chainz-ogfan99-ff0fc0/", ex: 2 },
 };
