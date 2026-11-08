@@ -370,4 +370,5 @@ window.OG_REGION_GAMES = {
   "Doechii": { url: "../doechii-ogfan99-5025fc/", ex: 2 },
   "Kevin Abstract": { url: "../kevinabstract-ogfan99-c4a4fd/", ex: 2 },
   "Snow Tha Product": { url: "../snowthaproduct-ogfan99-910f3d/", ex: 2 },
+  "St. Lunatics": { url: "../stlunatics-ogfan99-792923/", ex: 2 },
 };
