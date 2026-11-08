@@ -402,4 +402,6 @@ window.OG_REGION_GAMES = {
   "BabyTron": { url: "../babytron-ogfan99-67f7e6/", ex: 2 },
   "Peezy": { url: "../peezy-ogfan99-9ed50c/", ex: 2 },
   "Rio Da Yung OG": { url: "../riodayungog-ogfan99-8afe1e/", ex: 2 },
+  "Luh Tyler": { url: "../luhtyler-ogfan99-04019c/", ex: 2 },
+  "Lil Poppa": { url: "../lilpoppa-ogfan99-83d1a5/", ex: 2 },
 };
