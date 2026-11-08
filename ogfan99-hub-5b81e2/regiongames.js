@@ -396,4 +396,5 @@ window.OG_REGION_GAMES = {
   "Domo Genesis": { url: "../domogenesis-ogfan99-8dc5ec/", ex: 2 },
   "Remble": { url: "../remble-ogfan99-31ce70/", ex: 2 },
   "Kalan.FrFr": { url: "../kalanfrfr-ogfan99-54d294/", ex: 2 },
+  "Toosii": { url: "../toosii-ogfan99-242152/", ex: 0 },
 };
