@@ -88,4 +88,6 @@ window.OG_GENRE_OF = {
   "Keyshia Cole": "R&B",
   "Archie Bell & the Drells": "R&B",
   "H-Town": "R&B",
+  "Keri Hilson": "R&B",
+  "K. Michelle": "R&B",
 };
