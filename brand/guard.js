@@ -112,5 +112,7 @@
     document.addEventListener("touchstart", function (e) { if (e.target && e.target.closest && e.target.closest("#record")) { document.documentElement.style.overscrollBehavior = "none"; document.body.style.overscrollBehavior = "none"; } }, { passive: true });
   };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fitRec); else fitRec();
+  /* phone turned sideways: the screen is too short for the fixed game layout, so let the page scroll and give the game box its normal height */
+  try { if (!document.getElementById("ogShort")) { var sh = document.createElement("style"); sh.id = "ogShort"; sh.textContent = "@media (orientation:landscape) and (max-height:520px){html,body{height:auto!important;overflow-y:auto!important;overflow-x:hidden!important}.game{height:auto!important;min-height:100%}.game>.viewport{height:560px!important;min-height:560px}.screen{width:min(100%,420px)!important}}"; (document.head || document.documentElement).appendChild(sh); } } catch (e) {}
   try { if (!document.getElementById("nycSidesJs")) { var ns = document.createElement("script"); ns.id = "nycSidesJs"; ns.src = "/brand/nycsides.js?v=2"; document.head.appendChild(ns); } } catch (e) {}
 })();
