@@ -453,4 +453,6 @@ window.OG_REGION_GAMES = {
   "Monica": { url: "../monica-ogfan99-8214b0/", ex: 0 },
   "Lionel Richie": { url: "../lionelrichie-ogfan99-a36c13/", ex: 0 },
   "Ciara": { url: "../ciara-ogfan99-59cff4/", ex: 0 },
+  "Aretha Franklin": { url: "../arethafranklin-ogfan99-43d484/", ex: 0 },
+  "Brandy": { url: "../brandy-ogfan99-ef5169/", ex: 0 },
 };

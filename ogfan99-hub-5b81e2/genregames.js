@@ -44,4 +44,6 @@ window.OG_GENRE_OF = {
   "Monica": "R&B",
   "Lionel Richie": "R&B",
   "Ciara": "R&B",
+  "Aretha Franklin": "R&B",
+  "Brandy": "R&B",
 };
