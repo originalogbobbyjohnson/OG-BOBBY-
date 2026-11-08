@@ -413,4 +413,5 @@ window.OG_REGION_GAMES = {
   "Krayzie Bone": { url: "../krayziebone-ogfan99-3b1d20/", ex: 0 },
   "The Lady of Rage": { url: "../ladyofrage-ogfan99-d0b606/", ex: 2 },
   "The D.O.C.": { url: "../thedoc-ogfan99-7e5279/", ex: 1 },
+  "Ice-T": { url: "../icet-ogfan99-bac0d4/", ex: 2 },
 };
