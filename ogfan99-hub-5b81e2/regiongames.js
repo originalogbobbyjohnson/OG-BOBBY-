@@ -291,4 +291,6 @@ window.OG_REGION_GAMES = {
   "Icewear Vezzo": { url: "../icewearvezzo-ogfan99-dffbaf/", ex: 2 },
   "Payroll Giovanni": { url: "../payrollgiovanni-ogfan99-667acc/", ex: 2 },
   "Shordie Shordie": { url: "../shordieshordie-ogfan99-5ad80d/", ex: 2 },
+  "Arrested Development": { url: "../arresteddevelopment-ogfan99-25d29e/", ex: 2 },
+  "Kris Kross": { url: "../kriskross-ogfan99-6bb2ec/", ex: 0 },
 };
