@@ -419,4 +419,6 @@ window.OG_REGION_GAMES = {
   "Above the Law": { url: "../abovethelaw-ogfan99-fc03e6/", ex: 2 },
   "Freestyle Fellowship": { url: "../freestylefellowship-ogfan99-420627/", ex: 2 },
   "Young MC": { url: "../youngmc-ogfan99-c9c1a3/", ex: 0 },
+  "Cypress Hill": { url: "../cypresshill-ogfan99-7ffca0/", ex: 2 },
+  "Kid Frost": { url: "../kidfrost-ogfan99-7ae191/", ex: 2 },
 };
