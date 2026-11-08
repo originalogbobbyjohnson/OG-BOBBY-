@@ -521,4 +521,6 @@ window.OG_REGION_GAMES = {
   "Lizzo": { url: "../lizzo-ogfan99-6869a4/", ex: 2 },
   "Ledisi": { url: "../ledisi-ogfan99-5ee38a/", ex: 0 },
   "Lalah Hathaway": { url: "../lalahhathaway-ogfan99-9cd447/", ex: 0 },
+  "Tank": { url: "../tank-ogfan99-68a812/", ex: 0 },
+  "M\u00fda": { url: "../mya-ogfan99-f25f96/", ex: 0 },
 };

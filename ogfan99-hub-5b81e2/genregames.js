@@ -97,4 +97,6 @@ window.OG_GENRE_OF = {
   "Lizzo": "POP",
   "Ledisi": "R&B",
   "Lalah Hathaway": "R&B",
+  "Tank": "R&B",
+  "M\u00fda": "R&B",
 };
