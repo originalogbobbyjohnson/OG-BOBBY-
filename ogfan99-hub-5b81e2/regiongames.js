@@ -516,4 +516,5 @@ window.OG_REGION_GAMES = {
   "Rich the Kid": { url: "../richthekid-ogfan99-5f951d/", ex: 2 },
   "Riff Raff": { url: "../riffraff-ogfan99-6c4ec7/", ex: 2 },
   "Geto Boys": { url: "../getoboys-ogfan99-b3965b/", ex: 2 },
+  "Upchurch": { url: "../upchurch-ogfan99-7c3a99/", ex: 0 },
 };
