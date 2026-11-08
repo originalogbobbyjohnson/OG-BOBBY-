@@ -408,4 +408,5 @@ window.OG_REGION_GAMES = {
   "OMB Peezy": { url: "../ombpeezy-ogfan99-fe7c08/", ex: 2 },
   "Hotboii": { url: "../hotboii-ogfan99-c35535/", ex: 2 },
   "SOB X RBE": { url: "../sobxrbe-ogfan99-7c06b3/", ex: 2 },
+  "Lil Loaded": { url: "../lilloaded-ogfan99-f63b8a/", ex: 2 },
 };
