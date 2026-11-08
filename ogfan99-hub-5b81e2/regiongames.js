@@ -337,4 +337,5 @@ window.OG_REGION_GAMES = {
   "Pink Siifu": { url: "../pinksiifu-ogfan99-5c3165/", ex: 2 },
   "Blac Youngsta": { url: "../blacyoungsta-ogfan99-8c54a7/", ex: 2 },
   "Big Boogie": { url: "../bigboogie-ogfan99-afb605/", ex: 2 },
+  "Mo3": { url: "../mo3-ogfan99-957497/", ex: 2 },
 };
