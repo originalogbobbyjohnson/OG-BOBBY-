@@ -394,4 +394,6 @@ window.OG_REGION_GAMES = {
   "JPEGMafia": { url: "../jpegmafia-ogfan99-5b3b47/", ex: 2 },
   "Doja Cat": { url: "../dojacat-ogfan99-193823/", ex: 2 },
   "Domo Genesis": { url: "../domogenesis-ogfan99-8dc5ec/", ex: 2 },
+  "Remble": { url: "../remble-ogfan99-31ce70/", ex: 2 },
+  "Kalan.FrFr": { url: "../kalanfrfr-ogfan99-54d294/", ex: 2 },
 };
