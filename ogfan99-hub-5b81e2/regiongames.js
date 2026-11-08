@@ -492,4 +492,5 @@ window.OG_REGION_GAMES = {
   "Jerry Butler": { url: "../jerrybutler-ogfan99-ed3d8e/", ex: 0 },
   "Irma Thomas": { url: "../irmathomas-ogfan99-35f972/", ex: 0 },
   "Fats Domino": { url: "../fatsdomino-ogfan99-eaa8f2/", ex: 0 },
+  "Clipse": { url: "../clipse-ogfan99-287abc/", ex: 2 },
 };
