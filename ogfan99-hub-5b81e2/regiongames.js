@@ -512,4 +512,5 @@ window.OG_REGION_GAMES = {
   "Marvin Gaye": { url: "../marvingaye-ogfan99-eacaaa/", ex: 0 },
   "Don Toliver": { url: "../dontoliver-ogfan99-e199e6/", ex: 0 },
   "Sauce Walka": { url: "../saucewalka-ogfan99-19eb6e/", ex: 2 },
+  "Key Glock": { url: "../keyglock-ogfan99-21ac89/", ex: 2 },
 };
