@@ -313,4 +313,6 @@ window.OG_REGION_GAMES = {
   "Huey": { url: "../huey-ogfan99-748db6/", ex: 0 },
   "Lil Keed": { url: "../lilkeed-ogfan99-ca6182/", ex: 2 },
   "Lil Gotit": { url: "../lilgotit-ogfan99-13f126/", ex: 2 },
+  "Westside Boogie": { url: "../westsideboogie-ogfan99-b32efc/", ex: 2 },
+  "Problem": { url: "../problem-ogfan99-a20006/", ex: 2 },
 };
