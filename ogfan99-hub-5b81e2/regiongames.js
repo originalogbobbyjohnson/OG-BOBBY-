@@ -434,4 +434,5 @@ window.OG_REGION_GAMES = {
   "Chingo Bling": { url: "../chingobling-ogfan99-c93330/", ex: 2 },
   "Lighter Shade of Brown": { url: "../lightershadeofbrown-ogfan99-136870/", ex: 0 },
   "Mr. Capone-E": { url: "../mrcaponee-ogfan99-23a400/", ex: 0 },
+  "Doomtree": { url: "../doomtree-ogfan99-f67fcc/", ex: 0 },
 };
