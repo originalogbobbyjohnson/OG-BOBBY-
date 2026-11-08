@@ -90,4 +90,5 @@ window.OG_GENRE_OF = {
   "H-Town": "R&B",
   "Keri Hilson": "R&B",
   "K. Michelle": "R&B",
+  "The Temptations": "R&B",
 };

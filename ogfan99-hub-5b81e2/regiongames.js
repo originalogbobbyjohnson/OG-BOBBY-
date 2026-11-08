@@ -507,4 +507,5 @@ window.OG_REGION_GAMES = {
   "K. Michelle": { url: "../kmichelle-ogfan99-2c6823/", ex: 0 },
   "Tyler, the Creator": { url: "../tylerthecreator-ogfan99-bdff9c/", ex: 2 },
   "Mack 10": { url: "../mack10-ogfan99-d80a99/", ex: 2 },
+  "The Temptations": { url: "../temptations-ogfan99-d1ba16/", ex: 0 },
 };
