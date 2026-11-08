@@ -57,4 +57,6 @@ window.OG_GENRE_OF = {
   "Tony! Toni! Ton\u00e9!": "R&B",
   "Ginuwine": "R&B",
   "Raheem DeVaughn": "R&B",
+  "The Spinners": "R&B",
+  "The Dramatics": "R&B",
 };
