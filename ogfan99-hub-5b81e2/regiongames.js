@@ -280,4 +280,6 @@ window.OG_REGION_GAMES = {
   "Joey Cool": { url: "../joeycool-ogfan99-ed52d2/", ex: 2 },
   "King Mez": { url: "../kingmez-ogfan99-662bb4/", ex: 2 },
   "Do or Die": { url: "../doordie-ogfan99-881fec/", ex: 2 },
+  "YG": { url: "../yg-ogfan99-547be2/", ex: 2 },
+  "Shelley FKA DRAM": { url: "../dram-ogfan99-b982aa/", ex: 2 },
 };

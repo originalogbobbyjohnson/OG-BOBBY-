@@ -532,7 +532,7 @@
     { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6", coming: ["BigXthaPlug", "Maxo Kream", "Trae tha Truth", "Mike Jones", "Travis Scott", "Chamillionaire", "Lil' Keke", "Slim Thug", "Megan Thee Stallion", "Paul Wall", "Scarface", "Bun B", "Bobby Sessions", "Monaleo", "Devin the Dude", "Fat Tony", "Tobe Nwigwe"] },
     { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf", coming: ["Jay Electronica", "Big Freedia", "Turk", "Mia X", "Birdman", "B.G.", "Lil Wayne", "Master P", "Juvenile", "Nesby Phips", "Curren$y", "Dee-1", "Alfred Banks", "Pell"] },
     { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Lil Wyte", "Al Kapone", "Pooh Shiesty", "Moneybagg Yo", "Young Dolph", "GloRilla", "8Ball & MJG", "Starlito", "Don Trip", "Isaiah Rashad", "Count Bass D"] },
-    { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c", coming: ["Missy Elliott", "Pusha T", "Skillz", "Nickelus F", "Tonedeff"] },
+    { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c", coming: ["Shelley FKA DRAM", "Missy Elliott", "Pusha T", "Skillz", "Nickelus F", "Tonedeff"] },
     { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8", coming: ["King Mez", "Morray", "Petey Pablo", "J. Cole", "Deniro Farrar", "Little Brother", "Lute", "Rapsody"] },
     { n: "MORE OF THE SOUTH", d: "Every other Southern city.", c: "#35b867", coming: ["Bubba Sparxxx", "David Banner", "Yelawolf", "Big K.R.I.T."], locked: [{ who: "The real_Saddium", ig: "the_real_saddium" }] },
     { g: "EAST COAST" },
@@ -547,7 +547,7 @@
     { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Joey Cool", "Kutt Calhoun", "Mac Lethal", "Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["Murphy Lee", "Machine Gun Kelly", "Chingy", "Nelly", "Kid Cudi", "King Chip", "Blueprint", "Stalley", "Smino"] },
     { g: "WEST COAST" },
-    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Drakeo the Ruler", "Blxst", "MC Eiht", "ScHoolboy Q", "Ab-Soul", "Jay Rock", "Vince Staples", "Nipsey Hussle", "MC Ren", "Ice Cube", "Eazy-E", "Kendrick Lamar", "Warren G", "Snoop Dogg", "Luckyiam", "Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
+    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["YG", "Drakeo the Ruler", "Blxst", "MC Eiht", "ScHoolboy Q", "Ab-Soul", "Jay Rock", "Vince Staples", "Nipsey Hussle", "MC Ren", "Ice Cube", "Eazy-E", "Kendrick Lamar", "Warren G", "Snoop Dogg", "Luckyiam", "Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
     { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Yukmouth", "Mozzy", "Nef the Pharaoh", "G-Eazy", "Mistah F.A.B.", "Larry June", "Mac Dre", "Saweetie", "Souls of Mischief", "E-40", "Zion I", "Rocky Rivera", "Kamaiyah", "Lyrics Born", "Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
     { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Travis Thompson", "Amin\u00e9", "Macklemore", "Sir Mix-a-Lot", "Mic Capes", "Onry Ozzborn", "Dave B", "Grieves", "Sol", "Blue Scholars"] }
   ];
