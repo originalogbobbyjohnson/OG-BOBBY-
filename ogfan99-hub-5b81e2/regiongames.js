@@ -298,4 +298,6 @@ window.OG_REGION_GAMES = {
   "Oschino": { url: "../oschino-ogfan99-0fbc13/", ex: 2 },
   "GoldLink": { url: "../goldlink-ogfan99-37ca5f/", ex: 2 },
   "2 Chainz": { url: "../2chainz-ogfan99-ff0fc0/", ex: 2 },
+  "21 Savage": { url: "../21savage-ogfan99-fe3aa1/", ex: 2 },
+  "Gunna": { url: "../gunna-ogfan99-26ea42/", ex: 2 },
 };
