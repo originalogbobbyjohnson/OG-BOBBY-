@@ -380,4 +380,5 @@ window.OG_REGION_GAMES = {
   "Calboy": { url: "../calboy-ogfan99-8d2227/", ex: 2 },
   "Lil' O": { url: "../lilo-ogfan99-b34b71/", ex: 2 },
   "Lil Phat": { url: "../lilphat-ogfan99-04a8e0/", ex: 2 },
+  "Shop Boyz": { url: "../shopboyz-ogfan99-a6f21d/", ex: 2 },
 };
