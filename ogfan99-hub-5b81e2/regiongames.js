@@ -384,4 +384,6 @@ window.OG_REGION_GAMES = {
   "Field Mob": { url: "../fieldmob-ogfan99-3cb4b7/", ex: 2 },
   "D4L": { url: "../d4l-ogfan99-507529/", ex: 2 },
   "Dreezy": { url: "../dreezy-ogfan99-8d815b/", ex: 2 },
+  "Keak da Sneak": { url: "../keakdasneak-ogfan99-74bf9f/", ex: 2 },
+  "The Jacka": { url: "../thejacka-ogfan99-f7bff8/", ex: 2 },
 };
