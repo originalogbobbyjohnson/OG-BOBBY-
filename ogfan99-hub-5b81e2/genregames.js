@@ -95,4 +95,6 @@ window.OG_GENRE_OF = {
   "Marvin Gaye": "R&B",
   "Brian McKnight": "R&B",
   "Lizzo": "POP",
+  "Ledisi": "R&B",
+  "Lalah Hathaway": "R&B",
 };
