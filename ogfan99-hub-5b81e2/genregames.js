@@ -63,4 +63,5 @@ window.OG_GENRE_OF = {
   "Solange": "R&B",
   "The Neville Brothers": "R&B",
   "Maze featuring Frankie Beverly": "R&B",
+  "Johnny Gill": "R&B",
 };

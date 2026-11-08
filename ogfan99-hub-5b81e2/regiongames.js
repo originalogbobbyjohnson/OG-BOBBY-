@@ -472,4 +472,5 @@ window.OG_REGION_GAMES = {
   "Solange": { url: "../solange-ogfan99-aaa9bc/", ex: 0 },
   "The Neville Brothers": { url: "../nevillebrothers-ogfan99-1ce220/", ex: 0 },
   "Maze featuring Frankie Beverly": { url: "../maze-ogfan99-d02fe7/", ex: 0 },
+  "Johnny Gill": { url: "../johnnygill-ogfan99-652b8a/", ex: 0 },
 };
