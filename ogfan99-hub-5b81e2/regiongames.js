@@ -373,4 +373,6 @@ window.OG_REGION_GAMES = {
   "St. Lunatics": { url: "../stlunatics-ogfan99-792923/", ex: 2 },
   "SpaceGhostPurrp": { url: "../spaceghostpurrp-ogfan99-da4660/", ex: 2 },
   "BossMan Dlow": { url: "../bossmandlow-ogfan99-861011/", ex: 2 },
+  "Trinidad James": { url: "../trinidadjames-ogfan99-c6efb5/", ex: 2 },
+  "Bankroll Fresh": { url: "../bankrollfresh-ogfan99-a37e57/", ex: 2 },
 };
