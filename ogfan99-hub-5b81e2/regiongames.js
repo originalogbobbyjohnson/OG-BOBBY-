@@ -377,4 +377,5 @@ window.OG_REGION_GAMES = {
   "Bankroll Fresh": { url: "../bankrollfresh-ogfan99-a37e57/", ex: 2 },
   "Dorrough": { url: "../dorrough-ogfan99-e4d2bc/", ex: 2 },
   "Asian Doll": { url: "../asiandoll-ogfan99-a46c52/", ex: 2 },
+  "Calboy": { url: "../calboy-ogfan99-8d2227/", ex: 2 },
 };
