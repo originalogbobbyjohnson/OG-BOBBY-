@@ -51,4 +51,5 @@ window.OG_GENRE_OF = {
   "Teena Marie": "R&B",
   "Gladys Knight": "R&B",
   "India.Arie": "R&B",
+  "The Isley Brothers": "R&B",
 };

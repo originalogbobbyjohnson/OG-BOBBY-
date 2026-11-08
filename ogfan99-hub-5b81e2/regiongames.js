@@ -460,4 +460,5 @@ window.OG_REGION_GAMES = {
   "Teena Marie": { url: "../teenamarie-ogfan99-2a9ad3/", ex: 0 },
   "Gladys Knight": { url: "../gladysknight-ogfan99-2e813d/", ex: 0 },
   "India.Arie": { url: "../indiaarie-ogfan99-6531ec/", ex: 0 },
+  "The Isley Brothers": { url: "../isleybrothers-ogfan99-0e599a/", ex: 0 },
 };
