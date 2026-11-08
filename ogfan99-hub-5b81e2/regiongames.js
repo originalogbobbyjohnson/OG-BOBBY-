@@ -355,4 +355,5 @@ window.OG_REGION_GAMES = {
   "Iamsu!": { url: "../iamsu-ogfan99-a8357b/", ex: 2 },
   "P-Lo": { url: "../plo-ogfan99-bb2e0f/", ex: 2 },
   "Hit-Boy": { url: "../hitboy-ogfan99-ebc479/", ex: 2 },
+  "Jayo Felony": { url: "../jayofelony-ogfan99-16c72a/", ex: 2 },
 };
