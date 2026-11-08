@@ -510,4 +510,6 @@ window.OG_REGION_GAMES = {
   "The Temptations": { url: "../temptations-ogfan99-d1ba16/", ex: 0 },
   "Stevie Wonder": { url: "../steviewonder-ogfan99-b70fc7/", ex: 0 },
   "Marvin Gaye": { url: "../marvingaye-ogfan99-eacaaa/", ex: 0 },
+  "Don Toliver": { url: "../dontoliver-ogfan99-e199e6/", ex: 0 },
+  "Sauce Walka": { url: "../saucewalka-ogfan99-19eb6e/", ex: 2 },
 };
