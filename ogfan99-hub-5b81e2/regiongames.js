@@ -461,4 +461,6 @@ window.OG_REGION_GAMES = {
   "Gladys Knight": { url: "../gladysknight-ogfan99-2e813d/", ex: 0 },
   "India.Arie": { url: "../indiaarie-ogfan99-6531ec/", ex: 0 },
   "The Isley Brothers": { url: "../isleybrothers-ogfan99-0e599a/", ex: 0 },
+  "Mint Condition": { url: "../mintcondition-ogfan99-1d6c41/", ex: 0 },
+  "Morris Day and The Time": { url: "../morrisday-ogfan99-5ea8b8/", ex: 2 },
 };

@@ -52,4 +52,6 @@ window.OG_GENRE_OF = {
   "Gladys Knight": "R&B",
   "India.Arie": "R&B",
   "The Isley Brothers": "R&B",
+  "Mint Condition": "R&B",
+  "Morris Day and The Time": "R&B",
 };
