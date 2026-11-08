@@ -365,4 +365,6 @@ window.OG_REGION_GAMES = {
   "Shawnna": { url: "../shawnna-ogfan99-e46cb8/", ex: 2 },
   "Erica Banks": { url: "../ericabanks-ogfan99-ce8d45/", ex: 2 },
   "Silkk the Shocker": { url: "../silkktheshocker-ogfan99-a79dc4/", ex: 2 },
+  "Pitbull": { url: "../pitbull-ogfan99-c91215/", ex: 0 },
+  "Xzibit": { url: "../xzibit-ogfan99-710710/", ex: 2 },
 };
