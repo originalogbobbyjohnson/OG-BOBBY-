@@ -290,4 +290,5 @@ window.OG_REGION_GAMES = {
   "Jack Harlow": { url: "../jackharlow-ogfan99-5a4242/", ex: 1 },
   "Icewear Vezzo": { url: "../icewearvezzo-ogfan99-dffbaf/", ex: 2 },
   "Payroll Giovanni": { url: "../payrollgiovanni-ogfan99-667acc/", ex: 2 },
+  "Shordie Shordie": { url: "../shordieshordie-ogfan99-5ad80d/", ex: 2 },
 };
