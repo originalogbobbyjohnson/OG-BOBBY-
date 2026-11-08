@@ -73,4 +73,5 @@ window.OG_GENRE_OF = {
   "Harold Melvin & the Blue Notes": "R&B",
   "Curtis Mayfield": "R&B",
   "Chaka Khan": "R&B",
+  "Ruth Brown": "R&B",
 };
