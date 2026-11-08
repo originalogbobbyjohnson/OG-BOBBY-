@@ -283,4 +283,6 @@ window.OG_REGION_GAMES = {
   "YG": { url: "../yg-ogfan99-547be2/", ex: 2 },
   "Shelley FKA DRAM": { url: "../dram-ogfan99-b982aa/", ex: 2 },
   "Crucial Conflict": { url: "../crucialconflict-ogfan99-4ba9cb/", ex: 2 },
+  "Stove God Cook$": { url: "../stovegodcooks-ogfan99-a2ce63/", ex: 2 },
+  "Ch\u00e9 Noir": { url: "../chenoir-ogfan99-8741f5/", ex: 2 },
 };
