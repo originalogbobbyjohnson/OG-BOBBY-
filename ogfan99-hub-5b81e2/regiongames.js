@@ -295,4 +295,5 @@ window.OG_REGION_GAMES = {
   "Kris Kross": { url: "../kriskross-ogfan99-6bb2ec/", ex: 0 },
   "CunninLynguists": { url: "../cunninlynguists-ogfan99-feb3d2/", ex: 0 },
   "DeJ Loaf": { url: "../dejloaf-ogfan99-be2a73/", ex: 2 },
+  "Oschino": { url: "../oschino-ogfan99-0fbc13/", ex: 2 },
 };
