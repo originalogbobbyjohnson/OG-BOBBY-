@@ -483,4 +483,5 @@ window.OG_REGION_GAMES = {
   "Curtis Mayfield": { url: "../curtismayfield-ogfan99-5ffdf6/", ex: 0 },
   "Chaka Khan": { url: "../chakakhan-ogfan99-71e670/", ex: 0 },
   "Ruth Brown": { url: "../ruthbrown-ogfan99-b8cdcb/", ex: 0 },
+  "Minnie Riperton": { url: "../minnieriperton-ogfan99-23acab/", ex: 0 },
 };

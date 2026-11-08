@@ -74,4 +74,5 @@ window.OG_GENRE_OF = {
   "Curtis Mayfield": "R&B",
   "Chaka Khan": "R&B",
   "Ruth Brown": "R&B",
+  "Minnie Riperton": "R&B",
 };
