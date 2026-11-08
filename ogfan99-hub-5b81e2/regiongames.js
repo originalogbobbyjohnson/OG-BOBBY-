@@ -405,4 +405,6 @@ window.OG_REGION_GAMES = {
   "Luh Tyler": { url: "../luhtyler-ogfan99-04019c/", ex: 2 },
   "Lil Poppa": { url: "../lilpoppa-ogfan99-83d1a5/", ex: 2 },
   "Kenny Muney": { url: "../kennymuney-ogfan99-9651e7/", ex: 2 },
+  "OMB Peezy": { url: "../ombpeezy-ogfan99-fe7c08/", ex: 2 },
+  "Hotboii": { url: "../hotboii-ogfan99-c35535/", ex: 2 },
 };
