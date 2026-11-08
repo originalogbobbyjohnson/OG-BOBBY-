@@ -71,4 +71,6 @@ window.OG_GENRE_OF = {
   "Carla Thomas": "R&B",
   "The Stylistics": "R&B",
   "Harold Melvin & the Blue Notes": "R&B",
+  "Curtis Mayfield": "R&B",
+  "Chaka Khan": "R&B",
 };

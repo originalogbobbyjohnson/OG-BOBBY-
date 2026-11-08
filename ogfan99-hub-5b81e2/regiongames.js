@@ -480,4 +480,6 @@ window.OG_REGION_GAMES = {
   "Carla Thomas": { url: "../carlathomas-ogfan99-f78289/", ex: 0 },
   "The Stylistics": { url: "../stylistics-ogfan99-960807/", ex: 0 },
   "Harold Melvin & the Blue Notes": { url: "../haroldmelvin-ogfan99-492c85/", ex: 0 },
+  "Curtis Mayfield": { url: "../curtismayfield-ogfan99-5ffdf6/", ex: 0 },
+  "Chaka Khan": { url: "../chakakhan-ogfan99-71e670/", ex: 0 },
 };
