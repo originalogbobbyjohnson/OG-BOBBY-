@@ -307,4 +307,6 @@ window.OG_REGION_GAMES = {
   "Lil Nas X": { url: "../lilnasx-ogfan99-38fbca/", ex: 0 },
   "Young Nudy": { url: "../youngnudy-ogfan99-bc99a0/", ex: 2 },
   "Dom Kennedy": { url: "../domkennedy-ogfan99-9c0ed3/", ex: 2 },
+  "That Mexican OT": { url: "../thatmexicanot-ogfan99-46649b/", ex: 2 },
+  "Kirko Bangz": { url: "../kirkobangz-ogfan99-7c4ecf/", ex: 2 },
 };
