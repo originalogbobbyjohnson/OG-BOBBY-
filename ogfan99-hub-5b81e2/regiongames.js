@@ -288,4 +288,6 @@ window.OG_REGION_GAMES = {
   "Lil Jon": { url: "../liljon-ogfan99-9e228b/", ex: 2 },
   "Lil Ugly Mane": { url: "../liluglymane-ogfan99-520d98/", ex: 0 },
   "Jack Harlow": { url: "../jackharlow-ogfan99-5a4242/", ex: 1 },
+  "Icewear Vezzo": { url: "../icewearvezzo-ogfan99-dffbaf/", ex: 2 },
+  "Payroll Giovanni": { url: "../payrollgiovanni-ogfan99-667acc/", ex: 2 },
 };
