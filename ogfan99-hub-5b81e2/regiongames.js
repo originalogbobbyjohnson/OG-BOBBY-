@@ -317,4 +317,6 @@ window.OG_REGION_GAMES = {
   "Problem": { url: "../problem-ogfan99-a20006/", ex: 2 },
   "Waka Flocka Flame": { url: "../wakaflocka-ogfan99-2346f2/", ex: 2 },
   "Rocko": { url: "../rocko-ogfan99-0e6801/", ex: 2 },
+  "Lil' Flip": { url: "../lilflip-ogfan99-b58b77/", ex: 2 },
+  "Big Moe": { url: "../bigmoe-ogfan99-09c1ff/", ex: 2 },
 };
