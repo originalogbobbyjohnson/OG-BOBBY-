@@ -85,4 +85,5 @@ window.OG_GENRE_OF = {
   "Sly and the Family Stone": "R&B",
   "The Pointer Sisters": "R&B",
   "Kehlani": "R&B",
+  "Keyshia Cole": "R&B",
 };

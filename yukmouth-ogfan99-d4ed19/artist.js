@@ -1,6 +1,6 @@
-/* Yukmouth game (REGIONS tab: The Bay Area; East Oakland, the 65th Village). 18+ ONLY (curses heard in every pick). Yukmouth's own verses only (No Way: verse 1 only, Numskull's verse never reached; Free at Last: Country Black's sung hook never asked).
-   Lyrics: lrclib synced: Stuntastic 14565171 (221 s) = GipHocKPxAE Topic (221); No Way 31475384 (270) = GYh1vwhNeos Topic (270); Roll the Dice 30585066 (257) = A_HQ9UEPBsg Topic (257); Free at Last 28571989 (311) = RPgGnKj2MNg Topic (311).
-   I Got 5 On It (_FrSZxP4sJQ, lrclib 11606850, 254 s) left out: only one verse is surely Yuk's; sources disagree on the last verse. */
+/* Yukmouth game (REGIONS tab: The Bay Area; East Oakland, the 65th Village). 18+ ONLY (curses heard in every pick). Yukmouth's own verses only (The Life: Ya Boy's verse skipped by start, London's sung hook never asked; Free at Last: Country Black's sung hook never asked).
+   Lyrics: lrclib synced: Stuntastic 14565171 (221 s) = GipHocKPxAE Topic (221); The Life 30170371 (308) = a8FidRVGwdY Topic (308, Free At Last album); Roll the Dice 30585066 (257) = A_HQ9UEPBsg Topic (257); Free at Last 28571989 (311) = RPgGnKj2MNg Topic (311).
+   Nov 8 2026: owner asked for every group-partner mention removed; group songs and songs with that partner are left out. */
 window.CFG = {
  "name": "Yukmouth",
  "nameUpper": "YUKMOUTH",
@@ -9,21 +9,21 @@ window.CFG = {
  "hoodUpper": "EAST OAKLAND",
  "boro": "The Bay Area",
  "saveKey": "ogfan99yukmouth1",
- "startRank": "Playa Hata",
+ "startRank": "Buster",
  "ranks": [
-  "Looney",
+  "United Ghettos",
   "Roll the Dice",
   "Stuntastic",
   "Thugged Out",
   "Thug Lord"
  ],
  "topRank": "Godzilla",
- "point": "Five",
- "points": "Fives",
+ "point": "Throwback",
+ "points": "Throwbacks",
  "rankRewards": {
-  "Looney": {
+  "United Ghettos": {
    "bongs": 5,
-   "line": "Looney. Welcome to the Luniz."
+   "line": "United Ghettos. The whole map knows the Town."
   },
   "Roll the Dice": {
    "bongs": 10,
@@ -44,7 +44,7 @@ window.CFG = {
  },
  "trophyArt": [
   "<circle cx=\"40\" cy=\"44\" r=\"28\" fill=\"#b8b2a6\" stroke=\"#6e6a62\" stroke-width=\"2\"/><circle cx=\"30\" cy=\"38\" r=\"3\" fill=\"#3a3632\"/><circle cx=\"50\" cy=\"38\" r=\"3\" fill=\"#3a3632\"/><path d=\"M28 58q12 -10 24 0\" stroke=\"#3a3632\" stroke-width=\"3\" fill=\"none\"/><path d=\"M24 30l10 4M56 30l-10 4\" stroke=\"#3a3632\" stroke-width=\"3\"/>",
-  "<rect x=\"8\" y=\"26\" width=\"64\" height=\"40\" rx=\"4\" fill=\"#2a2a2a\" stroke=\"#7ee06a\" stroke-width=\"2\"/><rect x=\"16\" y=\"32\" width=\"48\" height=\"16\" rx=\"2\" fill=\"#7ee06a\"/><text x=\"40\" y=\"44\" text-anchor=\"middle\" font-family=\"Helvetica, Arial, sans-serif\" font-weight=\"700\" font-size=\"10\" fill=\"#1a1a1a\">LUNIZ</text><circle cx=\"28\" cy=\"56\" r=\"5\" fill=\"#ddd\"/><circle cx=\"52\" cy=\"56\" r=\"5\" fill=\"#ddd\"/>",
+  "<circle cx=\"40\" cy=\"48\" r=\"26\" fill=\"#1f3a2a\" stroke=\"#7ee06a\" stroke-width=\"2\"/><path d=\"M16 44h48M18 58h44M40 22v52\" stroke=\"#7ee06a\" stroke-width=\"1.2\" opacity=\".7\"/><path d=\"M40 48q-14 0 -14 -26q14 -6 28 0q0 26 -14 26z\" fill=\"none\" stroke=\"#7ee06a\" stroke-width=\"1.2\" opacity=\".7\"/><path d=\"M40 52q-12 -14 -12 -22a12 12 0 0 1 24 0q0 8 -12 22z\" fill=\"#f5c542\" stroke=\"#8a6a12\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"30\" r=\"4\" fill=\"#8a6a12\"/><rect x=\"10\" y=\"66\" width=\"60\" height=\"10\" rx=\"2\" fill=\"#f2efe6\"/><text x=\"40\" y=\"74\" text-anchor=\"middle\" font-family=\"Helvetica, Arial, sans-serif\" font-weight=\"700\" font-size=\"6.4\" fill=\"#1a1a1a\">UNITED GHETTOS</text>",
   "<rect x=\"8\" y=\"34\" width=\"30\" height=\"30\" rx=\"5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"2\" transform=\"rotate(-12 23 49)\"/><circle cx=\"16\" cy=\"44\" r=\"3\" fill=\"#c0392b\"/><circle cx=\"23\" cy=\"50\" r=\"3\" fill=\"#c0392b\"/><circle cx=\"30\" cy=\"56\" r=\"3\" fill=\"#c0392b\"/><rect x=\"42\" y=\"30\" width=\"30\" height=\"30\" rx=\"5\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"2\" transform=\"rotate(10 57 45)\"/><circle cx=\"50\" cy=\"38\" r=\"3\" fill=\"#1a7a3a\"/><circle cx=\"64\" cy=\"38\" r=\"3\" fill=\"#1a7a3a\"/><circle cx=\"50\" cy=\"52\" r=\"3\" fill=\"#1a7a3a\"/><circle cx=\"64\" cy=\"52\" r=\"3\" fill=\"#1a7a3a\"/>",
   "<path d=\"M22 22l10 -6h16l10 6l14 10l-8 12l-8 -4v38h-36v-38l-8 4l-8 -12z\" fill=\"#552583\" stroke=\"#f5c542\" stroke-width=\"2\"/><text x=\"40\" y=\"58\" text-anchor=\"middle\" font-family=\"Helvetica, Arial, sans-serif\" font-weight=\"700\" font-size=\"20\" fill=\"#f5c542\">32</text>",
   "<path d=\"M14 20q26 50 52 0\" stroke=\"#f5c542\" stroke-width=\"5\" fill=\"none\" stroke-dasharray=\"5 2\"/><circle cx=\"40\" cy=\"58\" r=\"16\" fill=\"#f5c542\" stroke=\"#8a6a12\" stroke-width=\"2\"/><text x=\"40\" y=\"64\" text-anchor=\"middle\" font-family=\"Helvetica, Arial, sans-serif\" font-weight=\"700\" font-size=\"16\" fill=\"#8a6a12\">Y</text>",
@@ -54,7 +54,7 @@ window.CFG = {
  "clubTitle": "The Gamble Shack",
  "clubTab": "SHACK",
  "tags": [
-  "LUNIZ",
+  "REGIME",
   "THE TOWN",
   "YUK"
  ],
@@ -265,169 +265,169 @@ window.CFG = {
    ]
   },
   {
-   "title": "No Way",
-   "id": "GYh1vwhNeos",
-   "start": 10.7,
+   "title": "The Life",
+   "id": "a8FidRVGwdY",
+   "start": 150.7,
    "cuts": [
-    50.55,
-    79.52,
-    124.54
+    177.07,
+    196.78,
+    285.6
    ],
    "qs": [
     [
      [
-      "They ride Escalades, but they live with their what?",
-      "Moms",
-      "Girls",
-      "Cousins"
+      "It's who? \"Okay, it's\"...",
+      "Yuk",
+      "Jay",
+      "Dru"
      ],
      [
-      "They go broke trying to compete with the what?",
-      "Don",
-      "Boss",
-      "King"
+      "He gets what while you playa haters stay broke?",
+      "Paper",
+      "Fame",
+      "Love"
      ],
      [
-      "Freeze up your what?",
-      "Arms",
-      "Hands",
-      "Feet"
+      "The playa haters stay what?",
+      "Broke",
+      "Mad",
+      "Home"
      ],
      [
-      "Every year he comes with a new piece and a what?",
-      "Charm",
-      "Chain",
-      "Watch"
+      "What color is his S550?",
+      "White",
+      "Black",
+      "Silver"
      ],
      [
-      "Every summer, new feet in the what?",
-      "Car",
-      "Club",
-      "Game"
+      "You can call the S550 what?",
+      "Space ghost",
+      "Snow ghost",
+      "Ghost rider"
      ],
      [
-      "He beat the what?",
-      "Odds",
-      "Case",
-      "System"
+      "He's coming for that what?",
+      "Cheddar",
+      "Paper",
+      "Cake"
      ],
      [
-      "Creep with your what when he raps?",
-      "Pride",
-      "Crew",
-      "Girl"
+      "He's the boss in the what?",
+      "Range Rover",
+      "Phantom",
+      "Benz"
      ],
      [
-      "When he raps, he speaks to the what?",
-      "Gods",
-      "Streets",
-      "People"
+      "Every single weekend, catch him where?",
+      "On the road",
+      "In the Town",
+      "At the club"
      ]
     ],
     [
      [
-      "He skywalks on what?",
-      "Clouds",
-      "Water",
-      "Rooftops"
+      "New city, new what?",
+      "Shows",
+      "Cars",
+      "Crew"
      ],
      [
-      "He wipes his feet on the what?",
-      "Stars",
-      "Floor",
-      "Sun"
+      "New shows, new what?",
+      "Money",
+      "Clothes",
+      "Fans"
      ],
      [
-      "The moons and what?",
-      "Quasars",
-      "Comets",
-      "Planets"
+      "He rides a drop head what?",
+      "Phantom",
+      "Bentley",
+      "Maybach"
      ],
      [
-      "Yukmouth is greater than you what?",
-      "Haters",
-      "Rappers",
-      "Ballers"
+      "What kind of top on the Phantom?",
+      "Drop head",
+      "Hard top",
+      "Sunroof"
      ],
      [
-      "A three-story mansion with the what?",
-      "Elevator",
-      "Pool",
-      "Garage"
+      "What kind of doors on the Phantom?",
+      "Suicide",
+      "Butterfly",
+      "Scissor"
      ],
      [
-      "He steps out the Navigator in Jordan what?",
-      "Gators",
-      "Elevens",
-      "Retros"
-     ],
-     [
-      "He slaps you with his what, see you later?",
-      "Spacebar",
-      "Backhand",
-      "Keyboard"
-     ],
-     [
-      "Stop playing games, y'all, like what?",
-      "8-ball",
-      "Checkers",
-      "Dominoes"
-     ],
-     [
-      "He's heavy in the what?",
-      "Game",
-      "Streets",
-      "Booth"
-     ]
-    ],
-    [
-     [
-      "Game over, he rides the what?",
-      "CL5",
-      "Range",
-      "Hummer"
-     ],
-     [
-      "Spree-wheel what?",
-      "Tires",
-      "Rims",
-      "Spinners"
-     ],
-     [
-      "They tell lies about the what they drive?",
-      "Car",
-      "Bike",
-      "Boat"
-     ],
-     [
-      "He calls you just a what?",
-      "Storyteller",
-      "Fortune teller",
-      "Bank teller"
-     ],
-     [
-      "Old Yella, Cinderella, what-writing?",
-      "Goodfella",
-      "Rockefeller",
-      "Godfather"
-     ],
-     [
-      "You wanna be who, biting?",
-      "Mobb Deep",
-      "Wu-Tang",
-      "Onyx"
-     ],
-     [
-      "You crossed Yuk how many times?",
-      "One",
+      "How many doors on the Phantom?",
       "Two",
+      "Four",
       "Three"
      ],
      [
-      "He's the last one you wanna mess with, so up your what?",
-      "Cash",
-      "Game",
-      "Guard"
+      "Where's his condo?",
+      "NoHo",
+      "SoHo",
+      "Downtown"
+     ],
+     [
+      "The team is getting mo' what?",
+      "Dough",
+      "Shows",
+      "Love"
+     ]
+    ],
+    [
+     [
+      "He hit the road for how many days?",
+      "Forty",
+      "Thirty",
+      "Sixty"
+     ],
+     [
+      "Then he's back in what?",
+      "Town",
+      "Jail",
+      "School"
+     ],
+     [
+      "He does it big like who, if God willing?",
+      "Godzilla",
+      "King Kong",
+      "Superman"
+     ],
+     [
+      "He'll get billions, come back and buy what?",
+      "Buildings",
+      "Blocks",
+      "Boats"
+     ],
+     [
+      "He's on the grind for him and his what?",
+      "Children",
+      "Brothers",
+      "Mama"
+     ],
+     [
+      "Being broke's a cold what?",
+      "Feeling",
+      "World",
+      "Winter"
+     ],
+     [
+      "Two stories, money stacked in both what?",
+      "Ceilings",
+      "Closets",
+      "Garages"
+     ],
+     [
+      "Sky diving, rock what?",
+      "Climbing",
+      "Hopping",
+      "Sliding"
+     ],
+     [
+      "The way he's shining got his foes what?",
+      "Jealous",
+      "Hating",
+      "Shook"
      ]
     ]
    ]
@@ -718,24 +718,6 @@ window.CFG = {
       "1990"
      ],
      [
-      "He told who about the Looneys?",
-      "Numb",
-      "Drew",
-      "Keak"
-     ],
-     [
-      "Now the rap group is what?",
-      "Complete",
-      "Signed",
-      "Famous"
-     ],
-     [
-      "They didn't have a what yet?",
-      "Deal",
-      "Name",
-      "Manager"
-     ],
-     [
       "At the same house, a man from which crew?",
       "Dangerous Crew",
       "Mob Squad",
@@ -754,16 +736,34 @@ window.CFG = {
       "Club"
      ],
      [
-      "They dropped what with Ice Cream Man?",
-      "Pimp of the Year",
-      "Playa Hata",
-      "Thug Life"
-     ],
-     [
       "Triple gold Daytons on the what?",
       "Ice Cream truck",
       "Cutlass",
       "Low rider"
+     ],
+     [
+      "What kind of Daytons on the Ice Cream truck?",
+      "Triple gold",
+      "Chrome",
+      "Black"
+     ],
+     [
+      "Who did he meet the next day?",
+      "Big bruh",
+      "Lil cuz",
+      "The label"
+     ],
+     [
+      "He said, I'll do what?",
+      "Sign you",
+      "Pay you",
+      "Call you"
+     ],
+     [
+      "It's good to be what?",
+      "Free",
+      "Home",
+      "Rich"
      ]
     ]
    ]
@@ -932,169 +932,169 @@ window.CFG = {
    ]
   },
   {
-   "title": "No Way",
-   "id": "GYh1vwhNeos",
-   "start": 10.7,
+   "title": "The Life",
+   "id": "a8FidRVGwdY",
+   "start": 150.7,
    "cuts": [
-    50.55,
-    79.52,
-    124.54
+    177.07,
+    196.78,
+    285.6
    ],
    "qs": [
     [
      [
-      "They ride Escalades, but they live with their what?",
-      "Moms",
-      "Girls",
-      "Cousins"
+      "It's who? \"Okay, it's\"...",
+      "Yuk",
+      "Jay",
+      "Dru"
      ],
      [
-      "They go broke trying to compete with the what?",
-      "Don",
-      "Boss",
-      "King"
+      "He gets what while you playa haters stay broke?",
+      "Paper",
+      "Fame",
+      "Love"
      ],
      [
-      "Freeze up your what?",
-      "Arms",
-      "Hands",
-      "Feet"
+      "The playa haters stay what?",
+      "Broke",
+      "Mad",
+      "Home"
      ],
      [
-      "Every year he comes with a new piece and a what?",
-      "Charm",
-      "Chain",
-      "Watch"
+      "What color is his S550?",
+      "White",
+      "Black",
+      "Silver"
      ],
      [
-      "Every summer, new feet in the what?",
-      "Car",
-      "Club",
-      "Game"
+      "You can call the S550 what?",
+      "Space ghost",
+      "Snow ghost",
+      "Ghost rider"
      ],
      [
-      "He beat the what?",
-      "Odds",
-      "Case",
-      "System"
+      "He's coming for that what?",
+      "Cheddar",
+      "Paper",
+      "Cake"
      ],
      [
-      "Creep with your what when he raps?",
-      "Pride",
-      "Crew",
-      "Girl"
+      "He's the boss in the what?",
+      "Range Rover",
+      "Phantom",
+      "Benz"
      ],
      [
-      "When he raps, he speaks to the what?",
-      "Gods",
-      "Streets",
-      "People"
+      "Every single weekend, catch him where?",
+      "On the road",
+      "In the Town",
+      "At the club"
      ]
     ],
     [
      [
-      "He skywalks on what?",
-      "Clouds",
-      "Water",
-      "Rooftops"
+      "New city, new what?",
+      "Shows",
+      "Cars",
+      "Crew"
      ],
      [
-      "He wipes his feet on the what?",
-      "Stars",
-      "Floor",
-      "Sun"
+      "New shows, new what?",
+      "Money",
+      "Clothes",
+      "Fans"
      ],
      [
-      "The moons and what?",
-      "Quasars",
-      "Comets",
-      "Planets"
+      "He rides a drop head what?",
+      "Phantom",
+      "Bentley",
+      "Maybach"
      ],
      [
-      "Yukmouth is greater than you what?",
-      "Haters",
-      "Rappers",
-      "Ballers"
+      "What kind of top on the Phantom?",
+      "Drop head",
+      "Hard top",
+      "Sunroof"
      ],
      [
-      "A three-story mansion with the what?",
-      "Elevator",
-      "Pool",
-      "Garage"
+      "What kind of doors on the Phantom?",
+      "Suicide",
+      "Butterfly",
+      "Scissor"
      ],
      [
-      "He steps out the Navigator in Jordan what?",
-      "Gators",
-      "Elevens",
-      "Retros"
-     ],
-     [
-      "He slaps you with his what, see you later?",
-      "Spacebar",
-      "Backhand",
-      "Keyboard"
-     ],
-     [
-      "Stop playing games, y'all, like what?",
-      "8-ball",
-      "Checkers",
-      "Dominoes"
-     ],
-     [
-      "He's heavy in the what?",
-      "Game",
-      "Streets",
-      "Booth"
-     ]
-    ],
-    [
-     [
-      "Game over, he rides the what?",
-      "CL5",
-      "Range",
-      "Hummer"
-     ],
-     [
-      "Spree-wheel what?",
-      "Tires",
-      "Rims",
-      "Spinners"
-     ],
-     [
-      "They tell lies about the what they drive?",
-      "Car",
-      "Bike",
-      "Boat"
-     ],
-     [
-      "He calls you just a what?",
-      "Storyteller",
-      "Fortune teller",
-      "Bank teller"
-     ],
-     [
-      "Old Yella, Cinderella, what-writing?",
-      "Goodfella",
-      "Rockefeller",
-      "Godfather"
-     ],
-     [
-      "You wanna be who, biting?",
-      "Mobb Deep",
-      "Wu-Tang",
-      "Onyx"
-     ],
-     [
-      "You crossed Yuk how many times?",
-      "One",
+      "How many doors on the Phantom?",
       "Two",
+      "Four",
       "Three"
      ],
      [
-      "He's the last one you wanna mess with, so up your what?",
-      "Cash",
-      "Game",
-      "Guard"
+      "Where's his condo?",
+      "NoHo",
+      "SoHo",
+      "Downtown"
+     ],
+     [
+      "The team is getting mo' what?",
+      "Dough",
+      "Shows",
+      "Love"
+     ]
+    ],
+    [
+     [
+      "He hit the road for how many days?",
+      "Forty",
+      "Thirty",
+      "Sixty"
+     ],
+     [
+      "Then he's back in what?",
+      "Town",
+      "Jail",
+      "School"
+     ],
+     [
+      "He does it big like who, if God willing?",
+      "Godzilla",
+      "King Kong",
+      "Superman"
+     ],
+     [
+      "He'll get billions, come back and buy what?",
+      "Buildings",
+      "Blocks",
+      "Boats"
+     ],
+     [
+      "He's on the grind for him and his what?",
+      "Children",
+      "Brothers",
+      "Mama"
+     ],
+     [
+      "Being broke's a cold what?",
+      "Feeling",
+      "World",
+      "Winter"
+     ],
+     [
+      "Two stories, money stacked in both what?",
+      "Ceilings",
+      "Closets",
+      "Garages"
+     ],
+     [
+      "Sky diving, rock what?",
+      "Climbing",
+      "Hopping",
+      "Sliding"
+     ],
+     [
+      "The way he's shining got his foes what?",
+      "Jealous",
+      "Hating",
+      "Shook"
      ]
     ]
    ]
@@ -1385,24 +1385,6 @@ window.CFG = {
       "1990"
      ],
      [
-      "He told who about the Looneys?",
-      "Numb",
-      "Drew",
-      "Keak"
-     ],
-     [
-      "Now the rap group is what?",
-      "Complete",
-      "Signed",
-      "Famous"
-     ],
-     [
-      "They didn't have a what yet?",
-      "Deal",
-      "Name",
-      "Manager"
-     ],
-     [
       "At the same house, a man from which crew?",
       "Dangerous Crew",
       "Mob Squad",
@@ -1421,16 +1403,34 @@ window.CFG = {
       "Club"
      ],
      [
-      "They dropped what with Ice Cream Man?",
-      "Pimp of the Year",
-      "Playa Hata",
-      "Thug Life"
-     ],
-     [
       "Triple gold Daytons on the what?",
       "Ice Cream truck",
       "Cutlass",
       "Low rider"
+     ],
+     [
+      "What kind of Daytons on the Ice Cream truck?",
+      "Triple gold",
+      "Chrome",
+      "Black"
+     ],
+     [
+      "Who did he meet the next day?",
+      "Big bruh",
+      "Lil cuz",
+      "The label"
+     ],
+     [
+      "He said, I'll do what?",
+      "Sign you",
+      "Pay you",
+      "Call you"
+     ],
+     [
+      "It's good to be what?",
+      "Free",
+      "Home",
+      "Rich"
      ]
     ]
    ]

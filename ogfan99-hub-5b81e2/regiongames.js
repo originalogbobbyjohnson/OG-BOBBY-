@@ -497,4 +497,7 @@ window.OG_REGION_GAMES = {
   "The Pointer Sisters": { url: "../pointersisters-ogfan99-e37907/", ex: 0 },
   "Kehlani": { url: "../kehlani-ogfan99-d27d0a/", ex: 0 },
   "Benny the Butcher": { url: "../bennythebutcher-ogfan99-16fcfe/", ex: 2 },
+  "Yung Joc": { url: "../yungjoc-ogfan99-063e7f/", ex: 2 },
+  "Stunna Girl": { url: "../stunnagirl-ogfan99-66017c/", ex: 2 },
+  "Keyshia Cole": { url: "../keyshiacole-ogfan99-810f6c/", ex: 0 },
 };

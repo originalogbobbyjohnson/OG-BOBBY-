@@ -1,7 +1,7 @@
 /* yukmouth scenes (Regions tab: The Bay Area; East Oakland, "the Ville"). CSS classes prefixed yk- (the page's own anim-train is kept).
    1 Eastmont Transit Center, 73rd Ave by the old Eastmont Mall: an AC Transit bus pulling into the bays (lines 73, 40, 45, NL).
    2 The Ville: the 65th Village townhouses by the Coliseum where he was born and raised, outside stairs, palms, a kid on a bike.
-   3 Westlake Middle School by Lake Merritt, where he met Numskull and the Luniz started: the old school front, flag, kids out front.
+   3 Westlake Middle School by Lake Merritt, where he went to school: the old school front, flag, kids out front.
    4 The Ice Cream truck on triple gold Daytons ("Free at Last": Pimp of the Year, Ice Cream Man), rolling down International Blvd, the wire wheels spinning.
    5 73rd Ave and Bancroft Ave: green signs, YUKMOUTH tagged, a jet coming down into Oakland Airport over the East Oakland flats behind.
    No digit 9 is drawn anywhere. */
@@ -89,7 +89,7 @@
       '<rect x="0" y="180" width="400" height="14" fill="#c9c3b6"/><rect x="0" y="194" width="400" height="66" fill="#4a4b50"/>' +
       [70, 110, 290, 330].map((x, i) => '<g class="yk-bob ' + (i % 2 ? "yk-bob2" : "") + '"><circle cx="' + x + '" cy="176" r="5" fill="#3a2a22"/><rect x="' + (x - 5) + '" y="181" width="10" height="12" rx="2" fill="' + [GRN, PURP, GOLD, "#e2574c"][i] + '"/></g>').join("") +
       car("yk-carL", 0, 230, "#d0d4da") +
-      '<text x="200" y="22" text-anchor="middle" ' + font + ' font-size="11" fill="#2b2b2b">WHERE THE LUNIZ STARTED</text>',
+      '<text x="200" y="22" text-anchor="middle" ' + font + ' font-size="11" fill="#2b2b2b">WHERE IT ALL STARTED</text>',
       sky("yks3", "#a9d3f2", "#f6efe2"));
   }
 
@@ -123,7 +123,7 @@
       palm(140, 136, 60) + palm(200, 136, 70, "yk-sway2") +
       '<rect x="0" y="130" width="400" height="94" fill="#3f5a4a"/>' + Array.from({ length: 11 }, (_, i) => '<path d="M0 ' + (138 + i * 8) + 'h400" stroke="#33493c" stroke-width="1"/>').join("") +
       Array.from({ length: 11 }, (_, i) => Array.from({ length: 9 }, (_, j) => '<path d="M' + (j * 46 + (i % 2) * 23) + ' ' + (130 + i * 8) + 'v8" stroke="#33493c" stroke-width="1"/>').join("")).join("") +
-      tag("YUKMOUTH", 18, 192, 40, GRN, -6) + tag("LUNIZ", 40, 218, 20, GOLD, -4) + tag("THE TOWN", 140, 218, 18, PURP, -3) +
+      tag("YUKMOUTH", 18, 192, 40, GRN, -6) + tag("REGIME", 40, 218, 20, GOLD, -4) + tag("THE TOWN", 140, 218, 18, PURP, -3) +
       '<rect x="0" y="224" width="400" height="36" fill="#5d5a55"/><rect x="0" y="222" width="400" height="4" fill="#e8ecf2"/>' +
       '<rect x="336" y="96" width="6" height="128" fill="#2f2f2f"/>' + sign(260, 98, 130, "73rd Av") + sign(250, 124, 140, "Bancroft Av") +
       '<rect x="8" y="110" width="4" height="114" fill="#222"/><circle class="yk-flk" cx="10" cy="108" r="7" fill="#ffe9a8"/>' +
