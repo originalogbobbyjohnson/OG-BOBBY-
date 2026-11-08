@@ -49,4 +49,6 @@ window.OG_GENRE_OF = {
   "Earth, Wind & Fire": "R&B",
   "Anthony Hamilton": "R&B",
   "Teena Marie": "R&B",
+  "Gladys Knight": "R&B",
+  "India.Arie": "R&B",
 };

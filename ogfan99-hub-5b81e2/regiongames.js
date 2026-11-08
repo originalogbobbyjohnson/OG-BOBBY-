@@ -458,4 +458,6 @@ window.OG_REGION_GAMES = {
   "Earth, Wind & Fire": { url: "../earthwindfire-ogfan99-9ab9d7/", ex: 0 },
   "Anthony Hamilton": { url: "../anthonyhamilton-ogfan99-876af6/", ex: 0 },
   "Teena Marie": { url: "../teenamarie-ogfan99-2a9ad3/", ex: 0 },
+  "Gladys Knight": { url: "../gladysknight-ogfan99-2e813d/", ex: 0 },
+  "India.Arie": { url: "../indiaarie-ogfan99-6531ec/", ex: 0 },
 };
