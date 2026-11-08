@@ -65,4 +65,6 @@ window.OG_GENRE_OF = {
   "Maze featuring Frankie Beverly": "R&B",
   "Johnny Gill": "R&B",
   "Ralph Tresvant": "R&B",
+  "Donny Hathaway": "R&B",
+  "Roberta Flack": "R&B",
 };

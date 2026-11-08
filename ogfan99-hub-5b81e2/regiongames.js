@@ -474,4 +474,6 @@ window.OG_REGION_GAMES = {
   "Maze featuring Frankie Beverly": { url: "../maze-ogfan99-d02fe7/", ex: 0 },
   "Johnny Gill": { url: "../johnnygill-ogfan99-652b8a/", ex: 0 },
   "Ralph Tresvant": { url: "../ralphtresvant-ogfan99-04c12f/", ex: 0 },
+  "Donny Hathaway": { url: "../donnyhathaway-ogfan99-d60e16/", ex: 0 },
+  "Roberta Flack": { url: "../robertaflack-ogfan99-927706/", ex: 0 },
 };
