@@ -500,4 +500,6 @@ window.OG_REGION_GAMES = {
   "Yung Joc": { url: "../yungjoc-ogfan99-063e7f/", ex: 2 },
   "Stunna Girl": { url: "../stunnagirl-ogfan99-66017c/", ex: 2 },
   "Keyshia Cole": { url: "../keyshiacole-ogfan99-810f6c/", ex: 0 },
+  "Archie Bell & the Drells": { url: "../archiebell-ogfan99-9099c1/", ex: 0 },
+  "H-Town": { url: "../htown-ogfan99-7ad52b/", ex: 0 },
 };

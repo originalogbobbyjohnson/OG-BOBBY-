@@ -86,4 +86,6 @@ window.OG_GENRE_OF = {
   "The Pointer Sisters": "R&B",
   "Kehlani": "R&B",
   "Keyshia Cole": "R&B",
+  "Archie Bell & the Drells": "R&B",
+  "H-Town": "R&B",
 };
