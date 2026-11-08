@@ -303,4 +303,6 @@ window.OG_REGION_GAMES = {
   "Childish Gambino": { url: "../childishgambino-ogfan99-87f9ce/", ex: 2 },
   "Earl Sweatshirt": { url: "../earlsweatshirt-ogfan99-780343/", ex: 2 },
   "Baby Keem": { url: "../babykeem-ogfan99-5cf96d/", ex: 2 },
+  "City Girls": { url: "../citygirls-ogfan99-ec8bd5/", ex: 2 },
+  "Lil Nas X": { url: "../lilnasx-ogfan99-38fbca/", ex: 0 },
 };
