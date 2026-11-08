@@ -91,4 +91,6 @@ window.OG_GENRE_OF = {
   "Keri Hilson": "R&B",
   "K. Michelle": "R&B",
   "The Temptations": "R&B",
+  "Stevie Wonder": "R&B",
+  "Marvin Gaye": "R&B",
 };

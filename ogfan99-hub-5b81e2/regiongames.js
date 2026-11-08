@@ -508,4 +508,6 @@ window.OG_REGION_GAMES = {
   "Tyler, the Creator": { url: "../tylerthecreator-ogfan99-bdff9c/", ex: 2 },
   "Mack 10": { url: "../mack10-ogfan99-d80a99/", ex: 2 },
   "The Temptations": { url: "../temptations-ogfan99-d1ba16/", ex: 0 },
+  "Stevie Wonder": { url: "../steviewonder-ogfan99-b70fc7/", ex: 0 },
+  "Marvin Gaye": { url: "../marvingaye-ogfan99-eacaaa/", ex: 0 },
 };
