@@ -316,4 +316,5 @@ window.OG_REGION_GAMES = {
   "Westside Boogie": { url: "../westsideboogie-ogfan99-b32efc/", ex: 2 },
   "Problem": { url: "../problem-ogfan99-a20006/", ex: 2 },
   "Waka Flocka Flame": { url: "../wakaflocka-ogfan99-2346f2/", ex: 2 },
+  "Rocko": { url: "../rocko-ogfan99-0e6801/", ex: 2 },
 };
