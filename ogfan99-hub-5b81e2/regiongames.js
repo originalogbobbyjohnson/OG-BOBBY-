@@ -383,4 +383,5 @@ window.OG_REGION_GAMES = {
   "Shop Boyz": { url: "../shopboyz-ogfan99-a6f21d/", ex: 2 },
   "Field Mob": { url: "../fieldmob-ogfan99-3cb4b7/", ex: 2 },
   "D4L": { url: "../d4l-ogfan99-507529/", ex: 2 },
+  "Dreezy": { url: "../dreezy-ogfan99-8d815b/", ex: 2 },
 };
