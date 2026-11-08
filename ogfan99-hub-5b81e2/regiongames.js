@@ -311,4 +311,6 @@ window.OG_REGION_GAMES = {
   "Kirko Bangz": { url: "../kirkobangz-ogfan99-7c4ecf/", ex: 2 },
   "J-Kwon": { url: "../jkwon-ogfan99-fc1b7f/", ex: 2 },
   "Huey": { url: "../huey-ogfan99-748db6/", ex: 0 },
+  "Lil Keed": { url: "../lilkeed-ogfan99-ca6182/", ex: 2 },
+  "Lil Gotit": { url: "../lilgotit-ogfan99-13f126/", ex: 2 },
 };
