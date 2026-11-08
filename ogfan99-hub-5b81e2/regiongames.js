@@ -296,4 +296,5 @@ window.OG_REGION_GAMES = {
   "CunninLynguists": { url: "../cunninlynguists-ogfan99-feb3d2/", ex: 0 },
   "DeJ Loaf": { url: "../dejloaf-ogfan99-be2a73/", ex: 2 },
   "Oschino": { url: "../oschino-ogfan99-0fbc13/", ex: 2 },
+  "GoldLink": { url: "../goldlink-ogfan99-37ca5f/", ex: 2 },
 };
