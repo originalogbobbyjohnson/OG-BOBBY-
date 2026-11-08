@@ -319,4 +319,5 @@ window.OG_REGION_GAMES = {
   "Rocko": { url: "../rocko-ogfan99-0e6801/", ex: 2 },
   "Lil' Flip": { url: "../lilflip-ogfan99-b58b77/", ex: 2 },
   "Big Moe": { url: "../bigmoe-ogfan99-09c1ff/", ex: 2 },
+  "Andre Nickatina": { url: "../andrenickatina-ogfan99-439765/", ex: 2 },
 };
