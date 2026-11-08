@@ -309,4 +309,6 @@ window.OG_REGION_GAMES = {
   "Dom Kennedy": { url: "../domkennedy-ogfan99-9c0ed3/", ex: 2 },
   "That Mexican OT": { url: "../thatmexicanot-ogfan99-46649b/", ex: 2 },
   "Kirko Bangz": { url: "../kirkobangz-ogfan99-7c4ecf/", ex: 2 },
+  "J-Kwon": { url: "../jkwon-ogfan99-fc1b7f/", ex: 2 },
+  "Huey": { url: "../huey-ogfan99-748db6/", ex: 0 },
 };
