@@ -488,4 +488,6 @@ window.OG_REGION_GAMES = {
   "Erykah Badu": { url: "../erykahbadu-ogfan99-8ae0f9/", ex: 1 },
   "Fantasia": { url: "../fantasia-ogfan99-95deb2/", ex: 0 },
   "J.J. Fad": { url: "../jjfad-ogfan99-bf340a/", flag: "UNOFFICIAL SONGS", ex: 0 },
+  "The Chi-Lites": { url: "../chilites-ogfan99-2e1686/", ex: 0 },
+  "Jerry Butler": { url: "../jerrybutler-ogfan99-ed3d8e/", ex: 0 },
 };

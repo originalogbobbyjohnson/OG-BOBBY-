@@ -78,4 +78,6 @@ window.OG_GENRE_OF = {
   "LeVert": "R&B",
   "Erykah Badu": "R&B",
   "Fantasia": "R&B",
+  "The Chi-Lites": "R&B",
+  "Jerry Butler": "R&B",
 };
