@@ -400,4 +400,6 @@ window.OG_REGION_GAMES = {
   "Elcamino": { url: "../elcamino-ogfan99-ce2e0d/", ex: 2 },
   "Veeze": { url: "../veeze-ogfan99-558216/", ex: 2 },
   "BabyTron": { url: "../babytron-ogfan99-67f7e6/", ex: 2 },
+  "Peezy": { url: "../peezy-ogfan99-9ed50c/", ex: 2 },
+  "Rio Da Yung OG": { url: "../riodayungog-ogfan99-8afe1e/", ex: 2 },
 };
