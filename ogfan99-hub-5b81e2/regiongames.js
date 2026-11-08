@@ -279,4 +279,5 @@ window.OG_REGION_GAMES = {
   "Kutt Calhoun": { url: "../kuttcalhoun-ogfan99-a2cef9/", ex: 2 },
   "Joey Cool": { url: "../joeycool-ogfan99-ed52d2/", ex: 2 },
   "King Mez": { url: "../kingmez-ogfan99-662bb4/", ex: 2 },
+  "Do or Die": { url: "../doordie-ogfan99-881fec/", ex: 2 },
 };
