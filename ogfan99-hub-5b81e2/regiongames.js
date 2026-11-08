@@ -470,4 +470,6 @@ window.OG_REGION_GAMES = {
   "The Dramatics": { url: "../dramatics-ogfan99-1412cb/", ex: 0 },
   "Beyonc\u00e9": { url: "../beyonce-ogfan99-2238cf/", ex: 0 },
   "Solange": { url: "../solange-ogfan99-aaa9bc/", ex: 0 },
+  "The Neville Brothers": { url: "../nevillebrothers-ogfan99-1ce220/", ex: 0 },
+  "Maze featuring Frankie Beverly": { url: "../maze-ogfan99-d02fe7/", ex: 0 },
 };

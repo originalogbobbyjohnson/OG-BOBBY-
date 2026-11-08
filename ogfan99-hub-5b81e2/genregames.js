@@ -61,4 +61,6 @@ window.OG_GENRE_OF = {
   "The Dramatics": "R&B",
   "Beyonc\u00e9": "R&B",
   "Solange": "R&B",
+  "The Neville Brothers": "R&B",
+  "Maze featuring Frankie Beverly": "R&B",
 };
