@@ -391,4 +391,5 @@ window.OG_REGION_GAMES = {
   "Rappin' 4-Tay": { url: "../rappin4tay-ogfan99-53b975/", ex: 2 },
   "Cordae": { url: "../cordae-ogfan99-d88cd1/", ex: 2 },
   "Yung Gravy": { url: "../yunggravy-ogfan99-2c10af/", ex: 2 },
+  "JPEGMafia": { url: "../jpegmafia-ogfan99-5b3b47/", ex: 2 },
 };
