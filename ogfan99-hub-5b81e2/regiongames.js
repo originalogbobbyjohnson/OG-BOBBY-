@@ -409,4 +409,5 @@ window.OG_REGION_GAMES = {
   "Hotboii": { url: "../hotboii-ogfan99-c35535/", ex: 2 },
   "SOB X RBE": { url: "../sobxrbe-ogfan99-7c06b3/", ex: 2 },
   "Lil Loaded": { url: "../lilloaded-ogfan99-f63b8a/", ex: 2 },
+  "Symba": { url: "../symba-ogfan99-981eb2/", ex: 2 },
 };
