@@ -338,4 +338,6 @@ window.OG_REGION_GAMES = {
   "Blac Youngsta": { url: "../blacyoungsta-ogfan99-8c54a7/", ex: 2 },
   "Big Boogie": { url: "../bigboogie-ogfan99-afb605/", ex: 2 },
   "Mo3": { url: "../mo3-ogfan99-957497/", ex: 2 },
+  "Mavi": { url: "../mavi-ogfan99-abc5be/", ex: 0 },
+  "Rapper Big Pooh": { url: "../rapperbigpooh-ogfan99-0d2aaf/", ex: 2 },
 };
