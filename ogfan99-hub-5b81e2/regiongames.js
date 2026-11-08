@@ -325,4 +325,6 @@ window.OG_REGION_GAMES = {
   "Richie Rich": { url: "../richierich-ogfan99-068197/", ex: 2 },
   "Yungeen Ace": { url: "../yungeenace-ogfan99-45a435/", ex: 2 },
   "Big Scarr": { url: "../bigscarr-ogfan99-da31d5/", ex: 2 },
+  "Millyz": { url: "../millyz-ogfan99-93212d/", ex: 2 },
+  "Cam Meekins": { url: "../cammeekins-ogfan99-7615b4/", ex: 2 },
 };
