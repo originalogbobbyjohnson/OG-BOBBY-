@@ -101,4 +101,6 @@ window.OG_GENRE_OF = {
   "M\u00fda": "R&B",
   "Ohio Players": "R&B",
   "Zapp": "R&B",
+  "Bobby Womack": "R&B",
+  "Macy Gray": "R&B",
 };

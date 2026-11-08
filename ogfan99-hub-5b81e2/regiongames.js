@@ -525,4 +525,6 @@ window.OG_REGION_GAMES = {
   "M\u00fda": { url: "../mya-ogfan99-f25f96/", ex: 0 },
   "Ohio Players": { url: "../ohioplayers-ogfan99-fd7a96/", ex: 0 },
   "Zapp": { url: "../zapp-ogfan99-95f62f/", ex: 0 },
+  "Bobby Womack": { url: "../bobbywomack-ogfan99-f0e40f/", ex: 0 },
+  "Macy Gray": { url: "../macygray-ogfan99-b569fd/", ex: 0 },
 };
