@@ -347,4 +347,6 @@ window.OG_REGION_GAMES = {
   "Dem Franchize Boyz": { url: "../demfranchize-ogfan99-e9f7f8/", ex: 2 },
   "Russ": { url: "../russ-ogfan99-15ac18/", ex: 0 },
   "Lil Skies": { url: "../lilskies-ogfan99-dca1e5/", ex: 2 },
+  "Wiz Khalifa": { url: "../wizkhalifa-ogfan99-c7deb9/", ex: 2 },
+  "Mac Miller": { url: "../macmiller-ogfan99-eb9182/", ex: 1 },
 };
