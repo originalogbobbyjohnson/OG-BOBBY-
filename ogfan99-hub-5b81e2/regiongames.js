@@ -490,4 +490,6 @@ window.OG_REGION_GAMES = {
   "J.J. Fad": { url: "../jjfad-ogfan99-bf340a/", flag: "UNOFFICIAL SONGS", ex: 0 },
   "The Chi-Lites": { url: "../chilites-ogfan99-2e1686/", ex: 0 },
   "Jerry Butler": { url: "../jerrybutler-ogfan99-ed3d8e/", ex: 0 },
+  "Irma Thomas": { url: "../irmathomas-ogfan99-35f972/", ex: 0 },
+  "Fats Domino": { url: "../fatsdomino-ogfan99-eaa8f2/", ex: 0 },
 };

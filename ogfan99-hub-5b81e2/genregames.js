@@ -80,4 +80,6 @@ window.OG_GENRE_OF = {
   "Fantasia": "R&B",
   "The Chi-Lites": "R&B",
   "Jerry Butler": "R&B",
+  "Irma Thomas": "R&B",
+  "Fats Domino": "R&B",
 };
