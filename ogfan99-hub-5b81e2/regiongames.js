@@ -331,4 +331,5 @@ window.OG_REGION_GAMES = {
   "Grynch": { url: "../grynch-ogfan99-bf790d/", ex: 2 },
   "Chris Webby": { url: "../chriswebby-ogfan99-e84454/", ex: 2 },
   "Duke Deuce": { url: "../dukedeuce-ogfan99-172452/", ex: 2 },
+  "Flo Milli": { url: "../flomilli-ogfan99-716c0e/", ex: 2 },
 };
