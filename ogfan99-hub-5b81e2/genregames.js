@@ -36,4 +36,6 @@ window.OG_GENRE_OF = {
   "Aimee Mann": "ROCK",
   "Donna Summer": "DANCE + HOUSE",
   "Destiny's Child": "R&B",
+  "Toni Braxton": "R&B",
+  "Jennifer Hudson": "R&B",
 };

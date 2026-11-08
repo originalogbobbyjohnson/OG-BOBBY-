@@ -445,4 +445,6 @@ window.OG_REGION_GAMES = {
   "Hoodrich Pablo Juan": { url: "../hoodrichpablojuan-ogfan99-b1c6dd/", ex: 2 },
   "Bankroll Mafia": { url: "../bankrollmafia-ogfan99-cd1a4c/", ex: 2 },
   "Destiny's Child": { url: "../destinyschild-ogfan99-fc542d/", ex: 0 },
+  "Toni Braxton": { url: "../tonibraxton-ogfan99-da4e30/", ex: 0 },
+  "Jennifer Hudson": { url: "../jenniferhudson-ogfan99-7efbbd/", ex: 0 },
 };
