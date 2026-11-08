@@ -493,4 +493,6 @@ window.OG_REGION_GAMES = {
   "Irma Thomas": { url: "../irmathomas-ogfan99-35f972/", ex: 0 },
   "Fats Domino": { url: "../fatsdomino-ogfan99-eaa8f2/", ex: 0 },
   "Clipse": { url: "../clipse-ogfan99-287abc/", ex: 2 },
+  "Sly and the Family Stone": { url: "../slystone-ogfan99-bb5db8/", ex: 0 },
+  "The Pointer Sisters": { url: "../pointersisters-ogfan99-e37907/", ex: 0 },
 };

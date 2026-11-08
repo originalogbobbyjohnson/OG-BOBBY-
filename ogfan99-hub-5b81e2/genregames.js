@@ -82,4 +82,6 @@ window.OG_GENRE_OF = {
   "Jerry Butler": "R&B",
   "Irma Thomas": "R&B",
   "Fats Domino": "R&B",
+  "Sly and the Family Stone": "R&B",
+  "The Pointer Sisters": "R&B",
 };
