@@ -456,4 +456,5 @@ window.OG_REGION_GAMES = {
   "Aretha Franklin": { url: "../arethafranklin-ogfan99-43d484/", ex: 0 },
   "Brandy": { url: "../brandy-ogfan99-ef5169/", ex: 0 },
   "Earth, Wind & Fire": { url: "../earthwindfire-ogfan99-9ab9d7/", ex: 0 },
+  "Anthony Hamilton": { url: "../anthonyhamilton-ogfan99-876af6/", ex: 0 },
 };
