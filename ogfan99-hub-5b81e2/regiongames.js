@@ -353,4 +353,5 @@ window.OG_REGION_GAMES = {
   "Kodie Shane": { url: "../kodieshane-ogfan99-ef7108/", ex: 0 },
   "Kid Ink": { url: "../kidink-ogfan99-e3991b/", ex: 2 },
   "Iamsu!": { url: "../iamsu-ogfan99-a8357b/", ex: 2 },
+  "P-Lo": { url: "../plo-ogfan99-bb2e0f/", ex: 2 },
 };
