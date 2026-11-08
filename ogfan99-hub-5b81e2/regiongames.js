@@ -282,4 +282,5 @@ window.OG_REGION_GAMES = {
   "Do or Die": { url: "../doordie-ogfan99-881fec/", ex: 2 },
   "YG": { url: "../yg-ogfan99-547be2/", ex: 2 },
   "Shelley FKA DRAM": { url: "../dram-ogfan99-b982aa/", ex: 2 },
+  "Crucial Conflict": { url: "../crucialconflict-ogfan99-4ba9cb/", ex: 2 },
 };
