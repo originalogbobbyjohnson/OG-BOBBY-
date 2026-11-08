@@ -335,4 +335,6 @@ window.OG_REGION_GAMES = {
   "Shabazz Palaces": { url: "../shabazzpalaces-ogfan99-e1c8ec/", ex: 2 },
   "Fly Anakin": { url: "../flyanakin-ogfan99-f14e95/", ex: 2 },
   "Pink Siifu": { url: "../pinksiifu-ogfan99-5c3165/", ex: 2 },
+  "Blac Youngsta": { url: "../blacyoungsta-ogfan99-8c54a7/", ex: 2 },
+  "Big Boogie": { url: "../bigboogie-ogfan99-afb605/", ex: 2 },
 };
