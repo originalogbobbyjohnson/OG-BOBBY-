@@ -441,4 +441,5 @@ window.OG_REGION_GAMES = {
   "Matt Ox": { url: "../mattox-ogfan99-60c03c/", ex: 0 },
   "Rockie Fresh": { url: "../rockiefresh-ogfan99-652a44/", ex: 2 },
   "Struggle Jennings": { url: "../strugglejennings-ogfan99-21d0fd/", ex: 0 },
+  "YoungBloodZ": { url: "../youngbloodz-ogfan99-7269dc/", ex: 2 },
 };
