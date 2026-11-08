@@ -155,7 +155,7 @@ footer { color: var(--soft); font-size: .8rem; text-align: center; }
     </div>
     <div aria-hidden="true"><span class="nine-badge" style="width:66px"><span class="tick">’</span><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg><svg viewBox="-4 -4 72 100" aria-hidden="true"><g transform="translate(4 4)" fill="none" stroke="#000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g><g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="31" cy="29" rx="19" ry="21" transform="rotate(-8 31 29)"/><path d="M49 30 L42 86"/></g></svg></span></div>
   </div>
-  <div class="album"><span class="series">OG Certified · The Complete Series</span></div>
+  <div class="album"><span class="series">OG Certified · The Complete Music Series</span></div>
   <section class="now">
     <div class="lab">Now playing</div>
     <div id="nowTitle">Whatever It Takes</div>
@@ -183,7 +183,7 @@ const fmt = s => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60
 let cur = 0, seeking = false;
 
 T.forEach((t, i) => {
-  if (!i || T[i-1].se !== t.se) { const h = document.createElement("li"); h.className = "sea"; h.innerHTML = t.se === 1 ? 'Season 1 · <span class="tk">’</span><span class="nine">9</span>' : t.se === 2 ? 'Season 2 · <span class="nine">9</span>' : 'The Finale · <span class="tk">’</span><span class="nine">99</span>'; $("list").appendChild(h); }
+  if (!i || T[i-1].se !== t.se) { const h = document.createElement("li"); h.className = "sea"; h.innerHTML = t.se === 1 ? 'Season 1 · <span class="tk">’</span><span class="nine">9</span>' : t.se === 2 ? 'Season 2 · <span class="nine">9</span>' : 'The Music Series - Grand Finale'; $("list").appendChild(h); }
   const li = document.createElement("li"), b = document.createElement("button");
   b.innerHTML = '<span class="n">' + (t.n || i + 1) + '</span><span class="t"></span><span class="d">' + fmt(t.d) + '</span>';
   b.querySelector(".t").textContent = t.t;
