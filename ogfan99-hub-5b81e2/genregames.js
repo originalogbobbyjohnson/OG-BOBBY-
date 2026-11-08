@@ -69,4 +69,6 @@ window.OG_GENRE_OF = {
   "Roberta Flack": "R&B",
   "Isaac Hayes": "R&B",
   "Carla Thomas": "R&B",
+  "The Stylistics": "R&B",
+  "Harold Melvin & the Blue Notes": "R&B",
 };
