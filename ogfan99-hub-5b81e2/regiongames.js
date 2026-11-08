@@ -449,4 +449,6 @@ window.OG_REGION_GAMES = {
   "Jennifer Hudson": { url: "../jenniferhudson-ogfan99-7efbbd/", ex: 0 },
   "Anita Baker": { url: "../anitabaker-ogfan99-c959f9/", ex: 0 },
   "En Vogue": { url: "../envogue-ogfan99-cf53c3/", ex: 0 },
+  "TLC": { url: "../tlc-ogfan99-ac4b6f/", ex: 1 },
+  "Monica": { url: "../monica-ogfan99-8214b0/", ex: 0 },
 };

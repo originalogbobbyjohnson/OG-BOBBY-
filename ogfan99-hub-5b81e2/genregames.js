@@ -40,4 +40,6 @@ window.OG_GENRE_OF = {
   "Jennifer Hudson": "R&B",
   "Anita Baker": "R&B",
   "En Vogue": "R&B",
+  "TLC": "R&B",
+  "Monica": "R&B",
 };
