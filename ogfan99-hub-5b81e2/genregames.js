@@ -99,4 +99,6 @@ window.OG_GENRE_OF = {
   "Lalah Hathaway": "R&B",
   "Tank": "R&B",
   "M\u00fda": "R&B",
+  "Ohio Players": "R&B",
+  "Zapp": "R&B",
 };

@@ -523,4 +523,6 @@ window.OG_REGION_GAMES = {
   "Lalah Hathaway": { url: "../lalahhathaway-ogfan99-9cd447/", ex: 0 },
   "Tank": { url: "../tank-ogfan99-68a812/", ex: 0 },
   "M\u00fda": { url: "../mya-ogfan99-f25f96/", ex: 0 },
+  "Ohio Players": { url: "../ohioplayers-ogfan99-fd7a96/", ex: 0 },
+  "Zapp": { url: "../zapp-ogfan99-95f62f/", ex: 0 },
 };
