@@ -439,4 +439,6 @@ window.OG_REGION_GAMES = {
   "Boaz": { url: "../boaz-ogfan99-7b54f0/", ex: 2 },
   "Latrell James": { url: "../latrelljames-ogfan99-37199b/", ex: 2 },
   "Matt Ox": { url: "../mattox-ogfan99-60c03c/", ex: 0 },
+  "Rockie Fresh": { url: "../rockiefresh-ogfan99-652a44/", ex: 2 },
+  "Struggle Jennings": { url: "../strugglejennings-ogfan99-21d0fd/", ex: 0 },
 };
