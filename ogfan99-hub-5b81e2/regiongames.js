@@ -463,4 +463,5 @@ window.OG_REGION_GAMES = {
   "The Isley Brothers": { url: "../isleybrothers-ogfan99-0e599a/", ex: 0 },
   "Mint Condition": { url: "../mintcondition-ogfan99-1d6c41/", ex: 0 },
   "Morris Day and The Time": { url: "../morrisday-ogfan99-5ea8b8/", ex: 2 },
+  "Tony! Toni! Ton\u00e9!": { url: "../tonytonitone-ogfan99-cd37fe/", ex: 0 },
 };

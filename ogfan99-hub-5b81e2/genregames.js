@@ -54,4 +54,5 @@ window.OG_GENRE_OF = {
   "The Isley Brothers": "R&B",
   "Mint Condition": "R&B",
   "Morris Day and The Time": "R&B",
+  "Tony! Toni! Ton\u00e9!": "R&B",
 };
