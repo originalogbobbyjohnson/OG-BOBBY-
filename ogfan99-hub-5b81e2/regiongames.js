@@ -378,4 +378,6 @@ window.OG_REGION_GAMES = {
   "Dorrough": { url: "../dorrough-ogfan99-e4d2bc/", ex: 2 },
   "Asian Doll": { url: "../asiandoll-ogfan99-a46c52/", ex: 2 },
   "Calboy": { url: "../calboy-ogfan99-8d2227/", ex: 2 },
+  "Lil' O": { url: "../lilo-ogfan99-b34b71/", ex: 2 },
+  "Lil Phat": { url: "../lilphat-ogfan99-04a8e0/", ex: 2 },
 };
