@@ -513,4 +513,5 @@ window.OG_REGION_GAMES = {
   "Don Toliver": { url: "../dontoliver-ogfan99-e199e6/", ex: 0 },
   "Sauce Walka": { url: "../saucewalka-ogfan99-19eb6e/", ex: 2 },
   "Key Glock": { url: "../keyglock-ogfan99-21ac89/", ex: 2 },
+  "Rich the Kid": { url: "../richthekid-ogfan99-5f951d/", ex: 2 },
 };
