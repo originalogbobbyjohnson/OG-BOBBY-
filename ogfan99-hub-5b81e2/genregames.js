@@ -93,4 +93,6 @@ window.OG_GENRE_OF = {
   "The Temptations": "R&B",
   "Stevie Wonder": "R&B",
   "Marvin Gaye": "R&B",
+  "Brian McKnight": "R&B",
+  "Lizzo": "POP",
 };
