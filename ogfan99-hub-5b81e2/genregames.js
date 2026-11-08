@@ -38,4 +38,6 @@ window.OG_GENRE_OF = {
   "Destiny's Child": "R&B",
   "Toni Braxton": "R&B",
   "Jennifer Hudson": "R&B",
+  "Anita Baker": "R&B",
+  "En Vogue": "R&B",
 };

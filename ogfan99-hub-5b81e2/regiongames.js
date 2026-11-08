@@ -447,4 +447,6 @@ window.OG_REGION_GAMES = {
   "Destiny's Child": { url: "../destinyschild-ogfan99-fc542d/", ex: 0 },
   "Toni Braxton": { url: "../tonibraxton-ogfan99-da4e30/", ex: 0 },
   "Jennifer Hudson": { url: "../jenniferhudson-ogfan99-7efbbd/", ex: 0 },
+  "Anita Baker": { url: "../anitabaker-ogfan99-c959f9/", ex: 0 },
+  "En Vogue": { url: "../envogue-ogfan99-cf53c3/", ex: 0 },
 };
