@@ -505,4 +505,6 @@ window.OG_REGION_GAMES = {
   "Chief Keef": { url: "../chiefkeef-ogfan99-6032f5/", ex: 2 },
   "Keri Hilson": { url: "../kerihilson-ogfan99-e07f52/", ex: 0 },
   "K. Michelle": { url: "../kmichelle-ogfan99-2c6823/", ex: 0 },
+  "Tyler, the Creator": { url: "../tylerthecreator-ogfan99-bdff9c/", ex: 2 },
+  "Mack 10": { url: "../mack10-ogfan99-d80a99/", ex: 2 },
 };
