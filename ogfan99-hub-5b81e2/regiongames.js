@@ -468,4 +468,6 @@ window.OG_REGION_GAMES = {
   "Raheem DeVaughn": { url: "../raheemdevaughn-ogfan99-9bcd73/", ex: 0 },
   "The Spinners": { url: "../spinners-ogfan99-6fac08/", ex: 0 },
   "The Dramatics": { url: "../dramatics-ogfan99-1412cb/", ex: 0 },
+  "Beyonc\u00e9": { url: "../beyonce-ogfan99-2238cf/", ex: 0 },
+  "Solange": { url: "../solange-ogfan99-aaa9bc/", ex: 0 },
 };

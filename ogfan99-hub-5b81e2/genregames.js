@@ -59,4 +59,6 @@ window.OG_GENRE_OF = {
   "Raheem DeVaughn": "R&B",
   "The Spinners": "R&B",
   "The Dramatics": "R&B",
+  "Beyonc\u00e9": "R&B",
+  "Solange": "R&B",
 };
