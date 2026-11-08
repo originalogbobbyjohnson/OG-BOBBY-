@@ -372,4 +372,5 @@ window.OG_REGION_GAMES = {
   "Snow Tha Product": { url: "../snowthaproduct-ogfan99-910f3d/", ex: 2 },
   "St. Lunatics": { url: "../stlunatics-ogfan99-792923/", ex: 2 },
   "SpaceGhostPurrp": { url: "../spaceghostpurrp-ogfan99-da4660/", ex: 2 },
+  "BossMan Dlow": { url: "../bossmandlow-ogfan99-861011/", ex: 2 },
 };
