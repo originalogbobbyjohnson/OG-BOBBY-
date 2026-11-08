@@ -84,4 +84,5 @@ window.OG_GENRE_OF = {
   "Fats Domino": "R&B",
   "Sly and the Family Stone": "R&B",
   "The Pointer Sisters": "R&B",
+  "Kehlani": "R&B",
 };

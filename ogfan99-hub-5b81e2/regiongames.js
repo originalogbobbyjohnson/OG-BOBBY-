@@ -495,4 +495,6 @@ window.OG_REGION_GAMES = {
   "Clipse": { url: "../clipse-ogfan99-287abc/", ex: 2 },
   "Sly and the Family Stone": { url: "../slystone-ogfan99-bb5db8/", ex: 0 },
   "The Pointer Sisters": { url: "../pointersisters-ogfan99-e37907/", ex: 0 },
+  "Kehlani": { url: "../kehlani-ogfan99-d27d0a/", ex: 0 },
+  "Benny the Butcher": { url: "../bennythebutcher-ogfan99-16fcfe/", ex: 2 },
 };
