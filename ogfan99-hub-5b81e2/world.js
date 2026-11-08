@@ -158,7 +158,7 @@
   document.body.appendChild(menu);
   var nav = menu.querySelector("#hmList");
   var dock = document.querySelector(".dock2");
-  var back = document.createElement("button"); back.type = "button"; back.className = "wback"; back.innerHTML = "&#9664; BACK TO THE MAP"; back.hidden = true; app.insertBefore(back, dock);
+  var back = document.createElement("button"); back.type = "button"; back.className = "wback"; back.innerHTML = "&#9664; BACK"; back.hidden = true; app.insertBefore(back, dock);
   back.onclick = function () { go("map"); };
   var panes = {};
   TABS.forEach(function (t) { if (t.id === "map") return; var p = document.createElement("section"); p.className = "wpane"; p.id = "w-" + t.id; p.hidden = true; app.insertBefore(p, dock); panes[t.id] = p; });
@@ -548,7 +548,7 @@
     { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Joey Cool", "Kutt Calhoun", "Mac Lethal", "Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["Jibbs", "Huey", "J-Kwon", "Murphy Lee", "Machine Gun Kelly", "Chingy", "Nelly", "Kid Cudi", "King Chip", "Blueprint", "Stalley", "Smino"] },
     { g: "WEST COAST" },
-    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Xzibit", "Jayo Felony", "Hit-Boy", "Kid Ink", "Problem", "Westside Boogie", "Dom Kennedy", "Baby Keem", "Earl Sweatshirt", "YG", "Drakeo the Ruler", "Blxst", "MC Eiht", "ScHoolboy Q", "Ab-Soul", "Jay Rock", "Vince Staples", "Nipsey Hussle", "MC Ren", "Ice Cube", "Eazy-E", "Kendrick Lamar", "Warren G", "Snoop Dogg", "Luckyiam", "Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
+    { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Snow Tha Product", "Xzibit", "Jayo Felony", "Hit-Boy", "Kid Ink", "Problem", "Westside Boogie", "Dom Kennedy", "Baby Keem", "Earl Sweatshirt", "YG", "Drakeo the Ruler", "Blxst", "MC Eiht", "ScHoolboy Q", "Ab-Soul", "Jay Rock", "Vince Staples", "Nipsey Hussle", "MC Ren", "Ice Cube", "Eazy-E", "Kendrick Lamar", "Warren G", "Snoop Dogg", "Luckyiam", "Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
     { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Guapdad 4000", "Rexx Life Raj", "P-Lo", "Iamsu!", "Richie Rich", "Mac Mall", "Andre Nickatina", "Yukmouth", "Mozzy", "Nef the Pharaoh", "G-Eazy", "Mistah F.A.B.", "Larry June", "Mac Dre", "Saweetie", "Souls of Mischief", "E-40", "Zion I", "Rocky Rivera", "Kamaiyah", "Lyrics Born", "Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
     { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Shabazz Palaces", "Grynch", "Travis Thompson", "Amin\u00e9", "Macklemore", "Sir Mix-a-Lot", "Mic Capes", "Onry Ozzborn", "Dave B", "Grieves", "Sol", "Blue Scholars"] }
   ];
@@ -628,6 +628,11 @@
 
 
 
+  /* front page helpers: game count per region, open one region, open the full games list */
+  window.OGW.regionCounts = function () { var RG = window.OG_REGION_GAMES || {}; return REGIONS.filter(function (r) { return !r.g && !r.live; }).map(function (r) { return { n: r.n, c: r.c, k: (r.coming || []).filter(rgIsRap).filter(function (x) { return RG[x]; }).length }; }); };
+  window.OGW.openRegion = function (nm) { go("regions"); setTimeout(function () { var t = Array.prototype.slice.call(panes.regions.querySelectorAll(".wtile")).filter(function (y) { return y.querySelector("b").textContent === nm; })[0]; if (t) { t.click(); try { t.scrollIntoView({ block: "start" }); } catch (e) {} } }, 40); };
+  window.OGW.allGames = function () { go("regions"); setTimeout(function () { var b = panes.regions.querySelector('[data-led="games"]'); if (b) b.click(); }, 40); };
+
   /* ---------- PRODUCERS: the beatmakers, their own category (hip-hop only) ---------- */
   var PROD_TIERS = [["mainstream", "MAINSTREAM", "#e8b84a"], ["legend", "LEGENDS", "#d62828"], ["indie", "INDIE", "#35b867"]];
   function drawProducers() {
@@ -676,7 +681,7 @@
 
   /* ---------- FEMALE RAPPERS: every woman on the map or in a region, sorted by where she's from ---------- */
   var WOMEN = ["Remy Ma", "Ice Spice", "Cardi B", "Rah Digga", "Queen Latifah", "Princess Nokia", "Azealia Banks", "Melii", "MC Lyte", "Roxanne Shant\u00e9", "HeeSun Lee", "Hanifah Walidah", "Lauryn Hill", "Coi Leray", "Justina Valentine", "Leikeli47", "Nitty Scott", "Salt-N-Pepa", "Sha-Rock", "Jean Grae", "Lil Mama", "Lil' Kim", "Young M.A", "Foxy Brown", "Nicki Minaj", "Lola Brooke", "Queen Pen", "Junglepussy", "Heather B.", "Hurricane G", "Monie Love", "Sweet Tee", "Lady London",
-    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera", "Sammus", "Akua Naru", "Rico Nasty", "Baby Tate", "Dutch ReBelle", "Monaleo", "Da Brat", "GloRilla", "Megan Thee Stallion", "Saweetie", "Kash Doll", "Trina", "Latto", "Missy Elliott", "Mia X", "Ché Noir", "DeJ Loaf", "City Girls", "Flo Milli", "Kodie Shane", "Ms. Jade", "Maiya the Don", "Shawnna", "Erica Banks", "Doechii"];
+    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera", "Sammus", "Akua Naru", "Rico Nasty", "Baby Tate", "Dutch ReBelle", "Monaleo", "Da Brat", "GloRilla", "Megan Thee Stallion", "Saweetie", "Kash Doll", "Trina", "Latto", "Missy Elliott", "Mia X", "Ché Noir", "DeJ Loaf", "City Girls", "Flo Milli", "Kodie Shane", "Ms. Jade", "Maiya the Don", "Shawnna", "Erica Banks", "Doechii", "Snow Tha Product"];
   function drawWomen() {
     var p = panes.women, RG = window.OG_REGION_GAMES || {}, L = A(), C = "#e84aa0";
     var groups = [], idx = {};

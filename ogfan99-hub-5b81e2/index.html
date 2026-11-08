@@ -412,6 +412,19 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .wrap.app.step1 .bd-row b { font-size: 1.3rem; }
 .wrap.app.step1 .bd-row em { margin-top: 0; padding: 2px 7px; }
 .wrap.app.step1 .bgrid button.wide { align-content: center; }
+.natp { display: none; }
+.wrap.app.nation:not(.paneon) > .natp { display: flex; order: 1; flex: 1 1 auto; min-height: 0; overflow-y: auto; flex-direction: column; gap: 8px; padding-bottom: 6px; }
+.wrap.app.nation:not(.paneon) > .dock2 { order: 3; }
+.wrap.app.nation > .mapbox:not(.big), .wrap.app.nation > .step1p, .wrap.app.nation > .boros, .wrap.app.nation > .bhead, .wrap.app.nation > .listwrap, .wrap.app.nation > .crumb { display: none !important; }
+.natp > * { flex: none; }
+.natp .bgrid { grid-auto-rows: 1fr; }
+.natp .bgrid button { padding: 8px 6px 7px; font-size: .78rem; line-height: 1.1; min-height: 58px; align-content: center; }
+.natp .bgrid .wide3 { grid-row: auto; }
+.natp .bgrid button.soon small { color: #fff; }
+.wrap.app .natp .bgrid .wide3 button.go3 { font-size: .68rem; letter-spacing: .02em; padding: 8px 2px; min-height: 0; }
+.wrap.app .natp .bgrid .wide3 button.go3 i { font-size: .8rem; }
+.stepcap { position: relative; }
+.stepcap .nback { position: absolute; left: 0; top: 50%; transform: translateY(-50%); padding: 6px 9px !important; background: #1d2033; border: 1.5px solid #e8b84a; border-radius: 99px; color: #fff; font: 900 .62rem/1 Helvetica, Arial, sans-serif; letter-spacing: .12em; padding: 5px 12px; cursor: pointer; box-shadow: 0 2px 0 #000; }
 .howto { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; text-align: center; }
 .howto b { grid-column: 1 / -1; font: 900 .6rem/1 Helvetica, Arial, sans-serif; letter-spacing: .2em; color: #e8b84a; }
 .howto button { display: flex; align-items: center; justify-content: center; gap: 4px; background: #1d2033; border: 1.5px solid #e8b84a; border-radius: 8px; padding: 5px 2px; font: 900 .6rem/1.1 Helvetica, Arial, sans-serif; letter-spacing: .04em; color: #fff; }
@@ -2009,9 +2022,9 @@ window.OGX = (function () {
 })();
 </script>
 <script src="producers.js?v=19"></script>
-<script src="regiongames.js?v=1108d4"></script>
+<script src="regiongames.js?v=1108d5"></script>
 <script src="genregames.js?v=1"></script>
-<script src="world.js?v=1108d4"></script>
+<script src="world.js?v=1108d5"></script>
 
 <script>
 /* ---------- map + list work together (Nov 1) ----------
@@ -2096,7 +2109,7 @@ window.OGX = (function () {
   const cnt = b => ARTISTS.filter(a => boroOf(a) === b).length;
   /* STEP 1 panel */
   const p = document.createElement("section"); p.className = "step1p";
-  p.innerHTML = '<div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR BOROUGH</b></div>' +
+  p.innerHTML = '<div class="stepcap"><button type="button" class="nback" id="natBack" aria-label="All regions">&#9664; USA</button><small>NEW YORK AREA</small><b>PICK YOUR BOROUGH</b></div>' +
     '<div class="board"><div class="bd-h"><i></i>LIVE ON THE LINE<i></i></div><div class="bd-row"><button type="button" id="mtAb"><b id="mtA">' + ARTISTS.length + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtFb"><b id="mtF">—</b><small>FANS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="mtPb"><b id="mtP">—</b><small>PLAYS</small><em>' + (isOwner() ? 'BY ARTIST &#9656;' : 'LIVE') + '</em></button></div></div>' +
     '<div class="bgrid">' + BOROS.map(b => '<button type="button" data-pb="' + b + '" style="--bc:' + (COL[b] || "#fff") + '">' + (NAME[b] || b.toUpperCase()) + '<small>' + cnt(b) + ' ARTISTS</small></button>').join("") +
     '<div class="wide3"><button type="button" class="wide go3" data-pb="__regions"><i>&#127758;</i>CITIES</button>' +
@@ -2104,6 +2117,33 @@ window.OGX = (function () {
     '<button type="button" class="wide go3" data-pb="__find"><i>&#128269;</i>SEARCH</button></div></div>' +
     '<div class="howto"><b>3 WAYS TO FIND AN ARTIST</b><button type="button" data-how="boro"><i>1</i>PICK A BOROUGH</button><button type="button" data-how="find"><i>2</i>SEARCH A NAME</button><button type="button" data-how="map"><i>3</i>TAP THE MAP &#9660;</button></div>';
   mb.insertAdjacentElement("afterend", p);
+  /* STEP 1: the whole country. New York is one region among the rest, ranked by how many games each has */
+  const n0 = document.createElement("section"); n0.className = "natp";
+  p.insertAdjacentElement("afterend", n0);
+  const nyCnt = () => ARTISTS.length;
+  function drawNat() {
+    const R = (window.OGW && OGW.regionCounts) ? OGW.regionCounts() : [];
+    const all = [{ n: "NEW YORK AREA", c: "#d62828", k: nyCnt(), ny: 1 }].concat(R).map((r, i) => (r.i = i, r));
+    all.sort((x, y) => (y.k - x.k) || (x.i - y.i));
+    const tot = all.reduce((s, r) => s + r.k, 0), live = all.filter(r => r.k).length;
+    n0.innerHTML = '<div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR REGION</b></div>' +
+      '<div class="board"><div class="bd-h"><i></i>LIVE ACROSS THE COUNTRY<i></i></div><div class="bd-row"><button type="button" id="ntAb"><b>' + tot + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="ntRb"><b>' + live + '</b><small>REGIONS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="ntFb"><b id="ntF">' + ($("mtF") ? $("mtF").textContent : "—") + '</b><small>FANS</small><em>SEE ALL &#9656;</em></button></div></div>' +
+      '<div class="bgrid">' + all.map(r => '<button type="button"' + (r.k ? '' : ' class="soon"') + ' data-nr="' + (r.ny ? "__ny" : esc(r.n)) + '" style="--bc:' + r.c + '">' + esc(r.n) + '<small>' + (r.k ? r.k + (r.k === 1 ? ' ARTIST' : ' ARTISTS') : 'COMING SOON') + '</small></button>').join("") +
+      '<div class="wide3"><button type="button" class="wide go3" data-nr="__genres"><i>&#127925;</i>GENRES</button>' +
+      '<button type="button" class="wide go3" data-nr="__prod"><i>&#127911;</i>PRODUCERS</button>' +
+      '<button type="button" class="wide go3" data-nr="__find"><i>&#128269;</i>SEARCH</button></div></div>';
+  }
+  n0.onclick = e => { const b = e.target.closest("[data-nr]"); if (b) { const v = b.dataset.nr;
+      if (v === "__ny") return setStep(1);
+      if (v === "__genres") return OGW.go("genres");
+      if (v === "__prod") return OGW.go("producers");
+      if (v === "__find") return $("findBtn2") && $("findBtn2").click();
+      return OGW.openRegion(v); }
+    const t = e.target.closest("button[id]"); if (!t) return;
+    if (t.id === "ntAb") OGW.allGames();
+    else if (t.id === "ntRb") OGW.go("regions");
+    else if (t.id === "ntFb") $("mtFb").click(); };
+  try { new MutationObserver(() => { const f = $("ntF"); if (f && $("mtF")) f.textContent = $("mtF").textContent; }).observe($("mtF"), { childList: true, characterData: true, subtree: true }); } catch (e) {}
   /* STEP 2 header: where you are + what to do */
   const c = document.createElement("div"); c.className = "crumb";
   c.innerHTML = '<button type="button" id="crBack">&#9664; BOROUGHS</button><div><b id="crName"></b><small>STEP 2 OF 3 · TAP AN ARTIST · DOUBLE-TAP TO PLAY · TAP AGAIN TO UNSELECT</small></div>';
@@ -2111,7 +2151,7 @@ window.OGX = (function () {
   const fix = () => setTimeout(() => { try { window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 60);
   try { new ResizeObserver(() => { try { window.__map && window.__map.invalidateSize({ pan: false }); } catch (e) {} }).observe(mb); } catch (e) {}
   function setStep(n) { if (mb.classList.contains("big")) { const bb = mb.querySelector(".mapbig"); if (bb) bb.click(); }
-    app.classList.toggle("step1", n === 1); try { sessionStorage.setItem("ogfan99step", String(n)); } catch (e) {}
+    app.classList.toggle("step1", n <= 1); app.classList.toggle("nation", n === 0); if (n === 0) drawNat(); try { sessionStorage.setItem("ogfan99step", String(n)); } catch (e) {}
     if (n === 2) $("crName").textContent = (NAME[boroTab] || boroTab.toUpperCase()) + " · " + cnt(boroTab) + " ARTISTS"; fix();
     /* once the map has its new size, frame it close on the borough you picked */
     if (n === 2) setTimeout(() => { try { const pts = ARTISTS.filter(a => boroOf(a) === boroTab && a.lat != null).map(a => [a.lat, a.lng]); if (window.__map && pts.length) { window.__map.stop(); window.__map.invalidateSize({ pan: false }); window.__map.fitBounds(pts, { padding: [24, 24], maxZoom: 13, animate: false }); } } catch (e) {} }, 250); }
@@ -2125,6 +2165,7 @@ window.OGX = (function () {
     if (v === "__find") return $("findBtn2") && $("findBtn2").click();
     const t = document.querySelector('.boro[data-b="' + v + '"]'); if (t) t.click(); setStep(2);
     setTimeout(() => { $("listwrap").scrollTop = 0; }, 80); };
+  $("natBack").onclick = () => setStep(0);
   $("crBack").onclick = () => { setStep(1); const all = $("allNyc"); if (all && !all.hidden) all.click(); };
   /* anything that picks an artist from elsewhere (map pin, FIND) lands you on step 2 */
   new MutationObserver(() => { if (app.classList.contains("step1") && document.querySelector("#list li.picked")) setStep(2); }).observe($("list"), { subtree: true, attributes: true, attributeFilter: ["class"] });
@@ -2160,8 +2201,8 @@ window.OGX = (function () {
     OGFB.topRiders(200).then(r => { $("dirL").innerHTML = r.length ? r.map((x, k) => '<button type="button" class="r"><i style="background:#f2c14e"></i><span><b>' + esc(x.name || "Rider") + '</b><small>' + esc(x.rank || "") + '</small></span><em>' + (x.pts || 0) + ' PTS</em></button>').join("") : '<p>No fans yet. Be the first.</p>'; }).catch(() => { $("dirL").innerHTML = '<p>Couldn&#39;t load the fans. Try again.</p>'; });
   };
   /* first visit this session starts at STEP 1; coming back from a game keeps you on STEP 2 */
-  let st = "1"; try { st = sessionStorage.getItem("ogfan99step") || "1"; } catch (e) {}
-  setStep(st === "2" ? 2 : 1);
+  let st = "0"; try { st = sessionStorage.getItem("ogfan99step") || "0"; } catch (e) {}
+  setStep(st === "2" ? 2 : st === "1" ? 1 : 0);
   $("restartAll").addEventListener("click", () => { try { sessionStorage.removeItem("ogfan99step"); } catch (e) {} }, true);
   /* STEP 3 on the artist card */
   const _oc = openCard; openCard = function (i) { const r = _oc.apply(this, arguments); try { const cd = $("card"), a = ARTISTS[i];
