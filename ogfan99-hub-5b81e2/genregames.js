@@ -43,4 +43,5 @@ window.OG_GENRE_OF = {
   "TLC": "R&B",
   "Monica": "R&B",
   "Lionel Richie": "R&B",
+  "Ciara": "R&B",
 };
