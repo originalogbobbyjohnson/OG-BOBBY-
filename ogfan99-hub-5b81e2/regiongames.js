@@ -315,4 +315,5 @@ window.OG_REGION_GAMES = {
   "Lil Gotit": { url: "../lilgotit-ogfan99-13f126/", ex: 2 },
   "Westside Boogie": { url: "../westsideboogie-ogfan99-b32efc/", ex: 2 },
   "Problem": { url: "../problem-ogfan99-a20006/", ex: 2 },
+  "Waka Flocka Flame": { url: "../wakaflocka-ogfan99-2346f2/", ex: 2 },
 };
