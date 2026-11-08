@@ -421,4 +421,6 @@ window.OG_REGION_GAMES = {
   "Young MC": { url: "../youngmc-ogfan99-c9c1a3/", ex: 0 },
   "Cypress Hill": { url: "../cypresshill-ogfan99-7ffca0/", ex: 2 },
   "Kid Frost": { url: "../kidfrost-ogfan99-7ae191/", ex: 2 },
+  "Jurassic 5": { url: "../jurassic5-ogfan99-51eb0e/", ex: 0 },
+  "People Under the Stairs": { url: "../peopleunderthestairs-ogfan99-d36a23/", ex: 0 },
 };
