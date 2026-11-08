@@ -340,4 +340,5 @@ window.OG_REGION_GAMES = {
   "Mo3": { url: "../mo3-ogfan99-957497/", ex: 2 },
   "Mavi": { url: "../mavi-ogfan99-abc5be/", ex: 0 },
   "Rapper Big Pooh": { url: "../rapperbigpooh-ogfan99-0d2aaf/", ex: 2 },
+  "Jibbs": { url: "../jibbs-ogfan99-53574d/", ex: 0 },
 };
