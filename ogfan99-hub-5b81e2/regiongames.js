@@ -386,4 +386,7 @@ window.OG_REGION_GAMES = {
   "Dreezy": { url: "../dreezy-ogfan99-8d815b/", ex: 2 },
   "Keak da Sneak": { url: "../keakdasneak-ogfan99-74bf9f/", ex: 2 },
   "The Jacka": { url: "../thejacka-ogfan99-f7bff8/", ex: 2 },
+  "Speaker Knockerz": { url: "../speakerknockerz-ogfan99-273f67/", ex: 2 },
+  "Timbaland & Magoo": { url: "../timbalandmagoo-ogfan99-b77133/", ex: 2 },
+  "Rappin' 4-Tay": { url: "../rappin4tay-ogfan99-53b975/", ex: 2 },
 };
