@@ -375,4 +375,5 @@ window.OG_REGION_GAMES = {
   "BossMan Dlow": { url: "../bossmandlow-ogfan99-861011/", ex: 2 },
   "Trinidad James": { url: "../trinidadjames-ogfan99-c6efb5/", ex: 2 },
   "Bankroll Fresh": { url: "../bankrollfresh-ogfan99-a37e57/", ex: 2 },
+  "Dorrough": { url: "../dorrough-ogfan99-e4d2bc/", ex: 2 },
 };
