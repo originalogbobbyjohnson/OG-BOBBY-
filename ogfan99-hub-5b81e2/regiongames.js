@@ -437,4 +437,5 @@ window.OG_REGION_GAMES = {
   "Doomtree": { url: "../doomtree-ogfan99-f67fcc/", ex: 0 },
   "Yo-Yo": { url: "../yoyo-ogfan99-c24d90/", ex: 2 },
   "Boaz": { url: "../boaz-ogfan99-7b54f0/", ex: 2 },
+  "Latrell James": { url: "../latrelljames-ogfan99-37199b/", ex: 2 },
 };
