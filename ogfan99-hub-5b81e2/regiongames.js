@@ -329,4 +329,5 @@ window.OG_REGION_GAMES = {
   "Cam Meekins": { url: "../cammeekins-ogfan99-7615b4/", ex: 2 },
   "Stunna 4 Vegas": { url: "../stunna4vegas-ogfan99-879b8e/", ex: 2 },
   "Grynch": { url: "../grynch-ogfan99-bf790d/", ex: 2 },
+  "Chris Webby": { url: "../chriswebby-ogfan99-e84454/", ex: 2 },
 };
