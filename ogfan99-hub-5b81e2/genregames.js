@@ -64,4 +64,5 @@ window.OG_GENRE_OF = {
   "The Neville Brothers": "R&B",
   "Maze featuring Frankie Beverly": "R&B",
   "Johnny Gill": "R&B",
+  "Ralph Tresvant": "R&B",
 };

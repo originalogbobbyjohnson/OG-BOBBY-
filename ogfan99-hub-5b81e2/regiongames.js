@@ -473,4 +473,5 @@ window.OG_REGION_GAMES = {
   "The Neville Brothers": { url: "../nevillebrothers-ogfan99-1ce220/", ex: 0 },
   "Maze featuring Frankie Beverly": { url: "../maze-ogfan99-d02fe7/", ex: 0 },
   "Johnny Gill": { url: "../johnnygill-ogfan99-652b8a/", ex: 0 },
+  "Ralph Tresvant": { url: "../ralphtresvant-ogfan99-04c12f/", ex: 0 },
 };
