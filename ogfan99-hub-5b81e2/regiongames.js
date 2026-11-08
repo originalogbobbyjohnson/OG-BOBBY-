@@ -285,4 +285,5 @@ window.OG_REGION_GAMES = {
   "Crucial Conflict": { url: "../crucialconflict-ogfan99-4ba9cb/", ex: 2 },
   "Stove God Cook$": { url: "../stovegodcooks-ogfan99-a2ce63/", ex: 2 },
   "Ch\u00e9 Noir": { url: "../chenoir-ogfan99-8741f5/", ex: 2 },
+  "Lil Jon": { url: "../liljon-ogfan99-9e228b/", ex: 2 },
 };
