@@ -429,4 +429,6 @@ window.OG_REGION_GAMES = {
   "MC Hammer": { url: "../mchammer-ogfan99-24e26a/", ex: 0 },
   "Baby Bash": { url: "../babybash-ogfan99-f1b60b/", ex: 0 },
   "Lil Rob": { url: "../lilrob-ogfan99-ea54ca/", ex: 0 },
+  "Dilated Peoples": { url: "../dilatedpeoples-ogfan99-d5b877/", ex: 0 },
+  "Delinquent Habits": { url: "../delinquenthabits-ogfan99-816c36/", ex: 2 },
 };
