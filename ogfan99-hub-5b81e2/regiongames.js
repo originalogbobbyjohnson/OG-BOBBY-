@@ -476,4 +476,6 @@ window.OG_REGION_GAMES = {
   "Ralph Tresvant": { url: "../ralphtresvant-ogfan99-04c12f/", ex: 0 },
   "Donny Hathaway": { url: "../donnyhathaway-ogfan99-d60e16/", ex: 0 },
   "Roberta Flack": { url: "../robertaflack-ogfan99-927706/", ex: 0 },
+  "Isaac Hayes": { url: "../isaachayes-ogfan99-c7f414/", ex: 0 },
+  "Carla Thomas": { url: "../carlathomas-ogfan99-f78289/", ex: 0 },
 };

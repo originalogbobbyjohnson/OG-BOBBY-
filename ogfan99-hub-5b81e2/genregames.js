@@ -67,4 +67,6 @@ window.OG_GENRE_OF = {
   "Ralph Tresvant": "R&B",
   "Donny Hathaway": "R&B",
   "Roberta Flack": "R&B",
+  "Isaac Hayes": "R&B",
+  "Carla Thomas": "R&B",
 };
