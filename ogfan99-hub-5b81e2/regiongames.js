@@ -327,4 +327,5 @@ window.OG_REGION_GAMES = {
   "Big Scarr": { url: "../bigscarr-ogfan99-da31d5/", ex: 2 },
   "Millyz": { url: "../millyz-ogfan99-93212d/", ex: 2 },
   "Cam Meekins": { url: "../cammeekins-ogfan99-7615b4/", ex: 2 },
+  "Stunna 4 Vegas": { url: "../stunna4vegas-ogfan99-879b8e/", ex: 2 },
 };
