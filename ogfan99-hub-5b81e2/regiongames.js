@@ -404,4 +404,5 @@ window.OG_REGION_GAMES = {
   "Rio Da Yung OG": { url: "../riodayungog-ogfan99-8afe1e/", ex: 2 },
   "Luh Tyler": { url: "../luhtyler-ogfan99-04019c/", ex: 2 },
   "Lil Poppa": { url: "../lilpoppa-ogfan99-83d1a5/", ex: 2 },
+  "Kenny Muney": { url: "../kennymuney-ogfan99-9651e7/", ex: 2 },
 };
