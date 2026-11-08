@@ -398,4 +398,6 @@ window.OG_REGION_GAMES = {
   "Kalan.FrFr": { url: "../kalanfrfr-ogfan99-54d294/", ex: 2 },
   "Toosii": { url: "../toosii-ogfan99-242152/", ex: 0 },
   "Elcamino": { url: "../elcamino-ogfan99-ce2e0d/", ex: 2 },
+  "Veeze": { url: "../veeze-ogfan99-558216/", ex: 2 },
+  "BabyTron": { url: "../babytron-ogfan99-67f7e6/", ex: 2 },
 };
