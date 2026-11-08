@@ -543,7 +543,7 @@
     { g: "MIDWEST" },
     { n: "CHICAGO", d: "The Chi, North to South Side.", c: "#00a1de", coming: ["Dreezy", "Calboy", "Shawnna", "Lil Bibby", "Crucial Conflict", "Do or Die", "Juice WRLD", "Lil Durk", "Polo G", "Vic Mensa", "Chance the Rapper", "Da Brat", "Lupe Fiasco", "Twista", "Common", "Joey Purp", "Serengeti", "Tink", "Mick Jenkins", "Noname", "Saba"] },
     { n: "DETROIT", d: "The D, East Side to West Side.", c: "#ff6319", coming: ["Rio Da Yung OG", "Peezy", "BabyTron", "Veeze", "Trick-Trick", "D12", "DeJ Loaf", "Payroll Giovanni", "Icewear Vezzo", "Babyface Ray", "Tee Grizzley", "Danny Brown", "Kash Doll", "Royce da 5'9\"", "Eminem", "Slum Village", "Dizzy Wright", "Jon Connor", "Guilty Simpson", "Black Milk", "eLZhi", "Quelle Chris", "One Be Lo"] },
-    { n: "PITTSBURGH", d: "The Steel City. Hill District to Point Breeze.", c: "#ffb612", coming: ["Wiz Khalifa", "Mac Miller"] },
+    { n: "PITTSBURGH", d: "The Steel City. Hill District to Point Breeze.", c: "#ffb612", coming: ["Boaz", "Wiz Khalifa", "Mac Miller"] },
     { n: "MINNEAPOLIS", d: "Minneapolis and St. Paul. Rhymesayers country.", c: "#7b3fbf", coming: ["Doomtree", "Yung Gravy", "P.O.S", "Toki Wright", "Dessa", "Slug", "Brother Ali", "Eyedea"] },
     { n: "KANSAS CITY", d: "KC, Missouri and Kansas.", c: "#d62828", coming: ["Joey Cool", "Kutt Calhoun", "Mac Lethal", "Krizz Kaliko", "Stik Figa", "Tech N9ne"] },
     { n: "ST. LOUIS + OHIO", d: "St. Louis, Cleveland, Cincinnati, Columbus.", c: "#f2c14e", coming: ["Krayzie Bone", "St. Lunatics", "Jibbs", "Huey", "J-Kwon", "Murphy Lee", "Machine Gun Kelly", "Chingy", "Nelly", "Kid Cudi", "King Chip", "Blueprint", "Stalley", "Smino"] },

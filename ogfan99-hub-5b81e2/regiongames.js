@@ -436,4 +436,5 @@ window.OG_REGION_GAMES = {
   "Mr. Capone-E": { url: "../mrcaponee-ogfan99-23a400/", ex: 0 },
   "Doomtree": { url: "../doomtree-ogfan99-f67fcc/", ex: 0 },
   "Yo-Yo": { url: "../yoyo-ogfan99-c24d90/", ex: 2 },
+  "Boaz": { url: "../boaz-ogfan99-7b54f0/", ex: 2 },
 };
