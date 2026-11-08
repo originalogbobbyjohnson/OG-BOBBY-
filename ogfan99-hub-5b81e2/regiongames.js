@@ -433,4 +433,5 @@ window.OG_REGION_GAMES = {
   "Delinquent Habits": { url: "../delinquenthabits-ogfan99-816c36/", ex: 2 },
   "Chingo Bling": { url: "../chingobling-ogfan99-c93330/", ex: 2 },
   "Lighter Shade of Brown": { url: "../lightershadeofbrown-ogfan99-136870/", ex: 0 },
+  "Mr. Capone-E": { url: "../mrcaponee-ogfan99-23a400/", ex: 0 },
 };
