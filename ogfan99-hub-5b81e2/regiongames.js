@@ -300,4 +300,6 @@ window.OG_REGION_GAMES = {
   "2 Chainz": { url: "../2chainz-ogfan99-ff0fc0/", ex: 2 },
   "21 Savage": { url: "../21savage-ogfan99-fe3aa1/", ex: 2 },
   "Gunna": { url: "../gunna-ogfan99-26ea42/", ex: 2 },
+  "Childish Gambino": { url: "../childishgambino-ogfan99-87f9ce/", ex: 2 },
+  "Earl Sweatshirt": { url: "../earlsweatshirt-ogfan99-780343/", ex: 2 },
 };
