@@ -451,4 +451,5 @@ window.OG_REGION_GAMES = {
   "En Vogue": { url: "../envogue-ogfan99-cf53c3/", ex: 0 },
   "TLC": { url: "../tlc-ogfan99-ac4b6f/", ex: 1 },
   "Monica": { url: "../monica-ogfan99-8214b0/", ex: 0 },
+  "Lionel Richie": { url: "../lionelrichie-ogfan99-a36c13/", ex: 0 },
 };

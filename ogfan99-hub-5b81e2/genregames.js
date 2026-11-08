@@ -42,4 +42,5 @@ window.OG_GENRE_OF = {
   "En Vogue": "R&B",
   "TLC": "R&B",
   "Monica": "R&B",
+  "Lionel Richie": "R&B",
 };
