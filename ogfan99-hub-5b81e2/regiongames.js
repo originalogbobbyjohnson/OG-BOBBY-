@@ -367,4 +367,5 @@ window.OG_REGION_GAMES = {
   "Silkk the Shocker": { url: "../silkktheshocker-ogfan99-a79dc4/", ex: 2 },
   "Pitbull": { url: "../pitbull-ogfan99-c91215/", ex: 0 },
   "Xzibit": { url: "../xzibit-ogfan99-710710/", ex: 2 },
+  "Doechii": { url: "../doechii-ogfan99-5025fc/", ex: 2 },
 };
