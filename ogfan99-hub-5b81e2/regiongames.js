@@ -362,4 +362,6 @@ window.OG_REGION_GAMES = {
   "Trick-Trick": { url: "../tricktrick-ogfan99-a45d96/", ex: 2 },
   "Ms. Jade": { url: "../msjade-ogfan99-d8a226/", ex: 2 },
   "Jedi Mind Tricks": { url: "../jedimindtricks-ogfan99-edc92d/", ex: 2 },
+  "Shawnna": { url: "../shawnna-ogfan99-e46cb8/", ex: 2 },
+  "Erica Banks": { url: "../ericabanks-ogfan99-ce8d45/", ex: 2 },
 };
