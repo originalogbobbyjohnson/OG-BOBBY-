@@ -484,4 +484,8 @@ window.OG_REGION_GAMES = {
   "Chaka Khan": { url: "../chakakhan-ogfan99-71e670/", ex: 0 },
   "Ruth Brown": { url: "../ruthbrown-ogfan99-b8cdcb/", ex: 0 },
   "Minnie Riperton": { url: "../minnieriperton-ogfan99-23acab/", ex: 0 },
+  "LeVert": { url: "../levert-ogfan99-ccf64b/", ex: 0 },
+  "Erykah Badu": { url: "../erykahbadu-ogfan99-8ae0f9/", ex: 1 },
+  "Fantasia": { url: "../fantasia-ogfan99-95deb2/", ex: 0 },
+  "J.J. Fad": { url: "../jjfad-ogfan99-bf340a/", flag: "UNOFFICIAL SONGS", ex: 0 },
 };

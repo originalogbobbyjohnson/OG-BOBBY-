@@ -75,4 +75,7 @@ window.OG_GENRE_OF = {
   "Chaka Khan": "R&B",
   "Ruth Brown": "R&B",
   "Minnie Riperton": "R&B",
+  "LeVert": "R&B",
+  "Erykah Badu": "R&B",
+  "Fantasia": "R&B",
 };
