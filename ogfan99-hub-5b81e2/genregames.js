@@ -103,4 +103,6 @@ window.OG_GENRE_OF = {
   "Zapp": "R&B",
   "Bobby Womack": "R&B",
   "Macy Gray": "R&B",
+  "Aaliyah": "R&B",
+  "Johnnie Taylor": "R&B",
 };

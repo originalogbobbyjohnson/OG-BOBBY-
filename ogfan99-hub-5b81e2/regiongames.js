@@ -527,4 +527,6 @@ window.OG_REGION_GAMES = {
   "Zapp": { url: "../zapp-ogfan99-95f62f/", ex: 0 },
   "Bobby Womack": { url: "../bobbywomack-ogfan99-f0e40f/", ex: 0 },
   "Macy Gray": { url: "../macygray-ogfan99-b569fd/", ex: 0 },
+  "Aaliyah": { url: "../aaliyah-ogfan99-531174/", ex: 0 },
+  "Johnnie Taylor": { url: "../johnnietaylor-ogfan99-52034d/", ex: 0 },
 };
