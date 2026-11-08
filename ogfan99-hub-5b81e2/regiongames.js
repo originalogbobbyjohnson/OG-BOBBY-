@@ -356,4 +356,6 @@ window.OG_REGION_GAMES = {
   "P-Lo": { url: "../plo-ogfan99-bb2e0f/", ex: 2 },
   "Hit-Boy": { url: "../hitboy-ogfan99-ebc479/", ex: 2 },
   "Jayo Felony": { url: "../jayofelony-ogfan99-16c72a/", ex: 2 },
+  "Rexx Life Raj": { url: "../rexxliferaj-ogfan99-9eed3b/", ex: 0 },
+  "Guapdad 4000": { url: "../guapdad4000-ogfan99-970f69/", ex: 2 },
 };
