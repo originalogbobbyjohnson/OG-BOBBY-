@@ -392,4 +392,6 @@ window.OG_REGION_GAMES = {
   "Cordae": { url: "../cordae-ogfan99-d88cd1/", ex: 2 },
   "Yung Gravy": { url: "../yunggravy-ogfan99-2c10af/", ex: 2 },
   "JPEGMafia": { url: "../jpegmafia-ogfan99-5b3b47/", ex: 2 },
+  "Doja Cat": { url: "../dojacat-ogfan99-193823/", ex: 2 },
+  "Domo Genesis": { url: "../domogenesis-ogfan99-8dc5ec/", ex: 2 },
 };
