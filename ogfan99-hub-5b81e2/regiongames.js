@@ -324,4 +324,5 @@ window.OG_REGION_GAMES = {
   "Mac Mall": { url: "../macmall-ogfan99-b89692/", ex: 2 },
   "Richie Rich": { url: "../richierich-ogfan99-068197/", ex: 2 },
   "Yungeen Ace": { url: "../yungeenace-ogfan99-45a435/", ex: 2 },
+  "Big Scarr": { url: "../bigscarr-ogfan99-da31d5/", ex: 2 },
 };
