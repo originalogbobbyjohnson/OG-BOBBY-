@@ -438,4 +438,5 @@ window.OG_REGION_GAMES = {
   "Yo-Yo": { url: "../yoyo-ogfan99-c24d90/", ex: 2 },
   "Boaz": { url: "../boaz-ogfan99-7b54f0/", ex: 2 },
   "Latrell James": { url: "../latrelljames-ogfan99-37199b/", ex: 2 },
+  "Matt Ox": { url: "../mattox-ogfan99-60c03c/", ex: 0 },
 };
