@@ -293,4 +293,5 @@ window.OG_REGION_GAMES = {
   "Shordie Shordie": { url: "../shordieshordie-ogfan99-5ad80d/", ex: 2 },
   "Arrested Development": { url: "../arresteddevelopment-ogfan99-25d29e/", ex: 2 },
   "Kris Kross": { url: "../kriskross-ogfan99-6bb2ec/", ex: 0 },
+  "CunninLynguists": { url: "../cunninlynguists-ogfan99-feb3d2/", ex: 0 },
 };
