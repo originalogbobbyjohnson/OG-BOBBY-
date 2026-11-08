@@ -286,4 +286,5 @@ window.OG_REGION_GAMES = {
   "Stove God Cook$": { url: "../stovegodcooks-ogfan99-a2ce63/", ex: 2 },
   "Ch\u00e9 Noir": { url: "../chenoir-ogfan99-8741f5/", ex: 2 },
   "Lil Jon": { url: "../liljon-ogfan99-9e228b/", ex: 2 },
+  "Lil Ugly Mane": { url: "../liluglymane-ogfan99-520d98/", ex: 0 },
 };
