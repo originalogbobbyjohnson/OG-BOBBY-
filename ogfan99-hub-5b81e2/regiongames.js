@@ -514,4 +514,6 @@ window.OG_REGION_GAMES = {
   "Sauce Walka": { url: "../saucewalka-ogfan99-19eb6e/", ex: 2 },
   "Key Glock": { url: "../keyglock-ogfan99-21ac89/", ex: 2 },
   "Rich the Kid": { url: "../richthekid-ogfan99-5f951d/", ex: 2 },
+  "Riff Raff": { url: "../riffraff-ogfan99-6c4ec7/", ex: 2 },
+  "Geto Boys": { url: "../getoboys-ogfan99-b3965b/", ex: 2 },
 };
