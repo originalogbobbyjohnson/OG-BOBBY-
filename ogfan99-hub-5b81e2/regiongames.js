@@ -426,4 +426,5 @@ window.OG_REGION_GAMES = {
   "House of Pain": { url: "../houseofpain-ogfan99-ccc5c4/", ex: 2 },
   "Hieroglyphics": { url: "../hieroglyphics-ogfan99-3472af/", ex: 2 },
   "Blackalicious": { url: "../blackalicious-ogfan99-ad059d/", ex: 0 },
+  "MC Hammer": { url: "../mchammer-ogfan99-24e26a/", ex: 0 },
 };
