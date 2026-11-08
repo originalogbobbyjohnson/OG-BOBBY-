@@ -414,4 +414,6 @@ window.OG_REGION_GAMES = {
   "The Lady of Rage": { url: "../ladyofrage-ogfan99-d0b606/", ex: 2 },
   "The D.O.C.": { url: "../thedoc-ogfan99-7e5279/", ex: 1 },
   "Ice-T": { url: "../icet-ogfan99-bac0d4/", ex: 2 },
+  "Tha Alkaholiks": { url: "../thaalkaholiks-ogfan99-220388/", ex: 2 },
+  "King Tee": { url: "../kingtee-ogfan99-2fb142/", ex: 2 },
 };
