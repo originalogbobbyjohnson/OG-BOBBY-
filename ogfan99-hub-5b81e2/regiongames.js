@@ -502,4 +502,5 @@ window.OG_REGION_GAMES = {
   "Keyshia Cole": { url: "../keyshiacole-ogfan99-810f6c/", ex: 0 },
   "Archie Bell & the Drells": { url: "../archiebell-ogfan99-9099c1/", ex: 0 },
   "H-Town": { url: "../htown-ogfan99-7ad52b/", ex: 0 },
+  "Chief Keef": { url: "../chiefkeef-ogfan99-6032f5/", ex: 2 },
 };
