@@ -360,4 +360,5 @@ window.OG_REGION_GAMES = {
   "Guapdad 4000": { url: "../guapdad4000-ogfan99-970f69/", ex: 2 },
   "D12": { url: "../d12-ogfan99-ef0c53/", ex: 2 },
   "Trick-Trick": { url: "../tricktrick-ogfan99-a45d96/", ex: 2 },
+  "Ms. Jade": { url: "../msjade-ogfan99-d8a226/", ex: 2 },
 };
