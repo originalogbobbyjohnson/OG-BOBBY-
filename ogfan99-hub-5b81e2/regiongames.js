@@ -435,4 +435,5 @@ window.OG_REGION_GAMES = {
   "Lighter Shade of Brown": { url: "../lightershadeofbrown-ogfan99-136870/", ex: 0 },
   "Mr. Capone-E": { url: "../mrcaponee-ogfan99-23a400/", ex: 0 },
   "Doomtree": { url: "../doomtree-ogfan99-f67fcc/", ex: 0 },
+  "Yo-Yo": { url: "../yoyo-ogfan99-c24d90/", ex: 2 },
 };
