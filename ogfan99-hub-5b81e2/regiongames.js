@@ -345,4 +345,6 @@ window.OG_REGION_GAMES = {
   "Phonte": { url: "../phonte-ogfan99-2c5ed6/", ex: 2 },
   "Jermaine Dupri": { url: "../jermainedupri-ogfan99-ee7b87/", ex: 2 },
   "Dem Franchize Boyz": { url: "../demfranchize-ogfan99-e9f7f8/", ex: 2 },
+  "Russ": { url: "../russ-ogfan99-15ac18/", ex: 0 },
+  "Lil Skies": { url: "../lilskies-ogfan99-dca1e5/", ex: 2 },
 };
