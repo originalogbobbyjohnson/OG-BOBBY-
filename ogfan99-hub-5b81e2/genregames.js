@@ -35,4 +35,5 @@ window.OG_GENRE_OF = {
   "James Taylor": "ROCK",
   "Aimee Mann": "ROCK",
   "Donna Summer": "DANCE + HOUSE",
+  "Destiny's Child": "R&B",
 };

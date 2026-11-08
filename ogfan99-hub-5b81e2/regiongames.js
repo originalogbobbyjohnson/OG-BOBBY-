@@ -444,4 +444,5 @@ window.OG_REGION_GAMES = {
   "YoungBloodZ": { url: "../youngbloodz-ogfan99-7269dc/", ex: 2 },
   "Hoodrich Pablo Juan": { url: "../hoodrichpablojuan-ogfan99-b1c6dd/", ex: 2 },
   "Bankroll Mafia": { url: "../bankrollmafia-ogfan99-cd1a4c/", ex: 2 },
+  "Destiny's Child": { url: "../destinyschild-ogfan99-fc542d/", ex: 0 },
 };
