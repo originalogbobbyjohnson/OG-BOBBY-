@@ -5287,6 +5287,27 @@ body #player > div.hdr3 > #pTitle { text-shadow: 0 2px 8px #000, 0 0 2px #000; }
   let t = 0;
   new MutationObserver(() => { cancelAnimationFrame(t); t = requestAnimationFrame(paint); }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ["data-v", "class"] });
   setInterval(paint, 700);
+  /* Full-length song videos: when a song has one, it plays in the picture spot, muted, locked to the song's own audio. Add more by episode number (0 = Episode 1). */
+  const VID = { 0: "r/og-made-s1-ep1-whatever-it-takes.mp4" };
+  const vid = document.createElement("video"); vid.muted = true; vid.playsInline = true; vid.setAttribute("playsinline", ""); vid.setAttribute("muted", ""); vid.preload = "metadata";
+  vid.className = "ep-vid"; back.appendChild(vid);
+  const st = document.createElement("style"); st.textContent = "#player .ep-art video.ep-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0;transition:opacity .6s}#player .ep-art.hasvid video.ep-vid{opacity:.92}#player .ep-art.hasvid i{opacity:0!important}";
+  document.head.appendChild(st);
+  const au = document.getElementById("audio");
+  let vk = null;
+  const songT = () => { try { const e = EPISODES[idx]; return starts(e)[sec] + au.currentTime; } catch (e) { return au ? au.currentTime : 0; } };
+  function syncVid() {
+    let k = -1; try { k = idx; } catch (e) {}
+    const src = VID[k];
+    if (!src) { if (vk !== null) { vk = null; vid.pause(); vid.removeAttribute("src"); vid.load(); back.classList.remove("hasvid"); } return; }
+    if (vk !== k) { vk = k; vid.src = src; back.classList.add("hasvid"); }
+    const want = songT();
+    if (isFinite(want) && Math.abs((vid.currentTime || 0) - want) > 0.35) { try { vid.currentTime = want; } catch (e) {} }
+    if (au && !au.paused && vid.paused) { const p = vid.play(); if (p && p.catch) p.catch(() => {}); }
+    if (au && au.paused && !vid.paused) vid.pause();
+  }
+  if (au) ["play", "pause", "seeked", "timeupdate", "ended"].forEach(ev => au.addEventListener(ev, syncVid));
+  setInterval(syncVid, 1000);
 })();
 </script>
 <script src="/brand/scratch.js?v=4"></script>
