@@ -566,4 +566,5 @@ window.OG_REGION_GAMES = {
   "BLACKPINK": { url: "../blackpink-ogfan99-fed795/", ex: 0 },
   "Bad Bunny": { url: "../badbunny-ogfan99-71a6a5/", ex: 2 },
   "Daddy Yankee": { url: "../daddyyankee-ogfan99-014b52/", ex: 0 },
+  "Rihanna": { url: "../rihanna-ogfan99-a77d15/", ex: 0 },
 };

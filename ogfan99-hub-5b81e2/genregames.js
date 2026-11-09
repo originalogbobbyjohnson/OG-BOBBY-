@@ -160,5 +160,6 @@ window.OG_GENRE_OF = {
   "BLACKPINK": "POP",
   "Bad Bunny": "LATIN + REGGAETON",
   "Daddy Yankee": "LATIN + REGGAETON",
+  "Rihanna": "POP",
 };
 
