@@ -558,4 +558,6 @@ window.OG_REGION_GAMES = {
   "Sean Paul": { url: "../seanpaul-ogfan99-94dccd/", ex: 1 },
   "Tems": { url: "../tems-ogfan99-61384b/", ex: 0 },
   "Tyla": { url: "../tyla-ogfan99-e608b2/", ex: 0 },
+  "Shakira": { url: "../shakira-ogfan99-d98a0a/", ex: 0 },
+  "J Balvin": { url: "../jbalvin-ogfan99-69d001/", ex: 0 },
 };

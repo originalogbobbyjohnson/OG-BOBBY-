@@ -152,5 +152,7 @@ window.OG_GENRE_OF = {
   "Sean Paul": "DANCEHALL + AFROBEATS",
   "Tems": "DANCEHALL + AFROBEATS",
   "Tyla": "DANCEHALL + AFROBEATS",
+  "Shakira": "LATIN + REGGAETON",
+  "J Balvin": "LATIN + REGGAETON",
 };
 
