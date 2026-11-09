@@ -113,4 +113,6 @@ window.OG_GENRE_OF = {
   "Yolanda Adams": "GOSPEL",
   "Selena": "LATIN + REGGAETON",
   "Gloria Estefan": "LATIN + REGGAETON",
+  "CeCe Winans": "GOSPEL",
+  "Fred Hammond": "GOSPEL",
 };
