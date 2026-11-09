@@ -564,4 +564,6 @@ window.OG_REGION_GAMES = {
   "ABBA": { url: "../abba-ogfan99-3f5f14/", ex: 0 },
   "Kylie Minogue": { url: "../kylieminogue-ogfan99-96e334/", ex: 0 },
   "BLACKPINK": { url: "../blackpink-ogfan99-fed795/", ex: 0 },
+  "Bad Bunny": { url: "../badbunny-ogfan99-71a6a5/", ex: 2 },
+  "Daddy Yankee": { url: "../daddyyankee-ogfan99-014b52/", ex: 0 },
 };

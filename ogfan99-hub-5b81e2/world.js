@@ -618,7 +618,7 @@ window.OGNav = (function () {
     { g: "INTERNATIONAL" },
     { n: "CANADA", d: "Toronto, Montreal, Vancouver.", c: "#d08a1e", coming: ["C\u00e9line Dion", "The Weeknd", "Avril Lavigne", "Shania Twain", ] },
     { n: "UK + EUROPE", d: "London, Manchester, Glasgow, Paris, Berlin, Stockholm, Amsterdam.", c: "#d08a1e", coming: ["ABBA", "Dua Lipa", "Ed Sheeran", "Adele", "Zedd", "Calvin Harris", ] },
-    { n: "CARIBBEAN", d: "Jamaica, Trinidad, Puerto Rico, the islands.", c: "#d08a1e", coming: ["Sean Paul", "Bob Marley", ] },
+    { n: "CARIBBEAN", d: "Jamaica, Trinidad, Puerto Rico, the islands.", c: "#d08a1e", coming: ["Daddy Yankee", "Bad Bunny", "Sean Paul", "Bob Marley", ] },
     { n: "LATIN AMERICA", d: "Mexico, Colombia, Brazil, Argentina and the rest.", c: "#d08a1e", coming: ["J Balvin", "Shakira", ] },
     { n: "AFRICA", d: "Lagos, Accra, Johannesburg.", c: "#d08a1e", coming: ["Tyla", "Tems", ] },
     { n: "ASIA + AUSTRALIA", d: "Seoul, Tokyo, Sydney and the rest.", c: "#d08a1e", coming: ["BLACKPINK", "Kylie Minogue", ] },

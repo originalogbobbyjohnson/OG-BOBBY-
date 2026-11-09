@@ -158,5 +158,7 @@ window.OG_GENRE_OF = {
   "ABBA": "POP",
   "Kylie Minogue": "POP",
   "BLACKPINK": "POP",
+  "Bad Bunny": "LATIN + REGGAETON",
+  "Daddy Yankee": "LATIN + REGGAETON",
 };
 
