@@ -138,5 +138,7 @@ window.OG_GENRE_OF = {
   "Marvin Sapp": "GOSPEL",
   "Marshmello": "EDM + DANCE",
   "Porter Robinson": "EDM + DANCE",
+  "Skrillex": "EDM + DANCE",
+  "Kaskade": "EDM + DANCE",
 };
 

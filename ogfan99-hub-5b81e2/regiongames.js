@@ -545,4 +545,6 @@ window.OG_REGION_GAMES = {
   "Marvin Sapp": { url: "../marvinsapp-ogfan99-7ea678/", ex: 0 },
   "Marshmello": { url: "../marshmello-ogfan99-7aaaa6/", ex: 0 },
   "Porter Robinson": { url: "../porterrobinson-ogfan99-72da10/", ex: 0 },
+  "Skrillex": { url: "../skrillex-ogfan99-8333f8/", ex: 0 },
+  "Kaskade": { url: "../kaskade-ogfan99-ee35dd/", ex: 0 },
 };
