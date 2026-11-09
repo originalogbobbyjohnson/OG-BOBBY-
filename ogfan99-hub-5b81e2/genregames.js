@@ -115,4 +115,19 @@ window.OG_GENRE_OF = {
   "Gloria Estefan": "LATIN + REGGAETON",
   "CeCe Winans": "GOSPEL",
   "Fred Hammond": "GOSPEL",
+  "Keith Sweat": "R&B",
+  "Luther Vandross": "R&B",
+  "SWV": "R&B",
+  "Blackstreet": "R&B",
+  "Alicia Keys": "R&B",
+  "Mary J. Blige": "R&B",
+  "Ashanti": "R&B",
+  "Jaheim": "R&B",
+  "Whitney Houston": "R&B",
+  "Faith Evans": "R&B",
+  "SZA": "R&B",
+  "Mariah Carey": "POP",
+  "Billy Joel": "ROCK",
+  "Bruce Springsteen": "ROCK"
 };
+

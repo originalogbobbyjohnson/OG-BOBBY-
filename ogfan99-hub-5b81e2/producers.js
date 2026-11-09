@@ -6,7 +6,7 @@ window.PRODUCERS = [
   "tier": "mainstream",
   "home": "Chicago, IL (South Shore)",
   "knownFor": "Chipmunk-soul sampler who built the Roc-A-Fella sound before going solo",
-  "url": "../p-kanyewest-ogfan99-f47ec1/",
+  "url": null,
   "ex": 1
  },
  {
@@ -15,7 +15,7 @@ window.PRODUCERS = [
   "tier": "mainstream",
   "home": "Compton, CA",
   "knownFor": "G-funk architect behind Death Row and Aftermath",
-  "url": "../p-drdre-ogfan99-fa525c/",
+  "url": null,
   "ex": 1
  },
  {

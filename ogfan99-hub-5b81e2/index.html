@@ -2049,10 +2049,11 @@ window.OGX = (function () {
   $("start").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(); });
 })();
 </script>
-<script src="producers.js?v=19"></script>
-<script src="regiongames.js?v=1108s6"></script>
-<script src="genregames.js?v=1108t2"></script>
-<script src="world.js?v=1108t2"></script>
+<script src="producers.js?v=20"></script>
+<script src="regiongames.js?v=1108t3"></script>
+<script src="genregames.js?v=1108t3"></script>
+<script src="world.js?v=1108t3"></script>
+<script src="search.js?v=1"></script>
 
 <script>
 /* ---------- map + list work together (Nov 1) ----------
@@ -2153,7 +2154,7 @@ window.OGX = (function () {
     const R = (window.OGW && OGW.regionCounts) ? OGW.regionCounts() : [];
     const all = [{ n: "NEW YORK AREA", c: "#2f6fd6", grp: "EAST COAST", k: nyCnt(), ny: 1 }].concat(R).map((r, i) => (r.i = i, r));
     all.sort((x, y) => (y.k - x.k) || (x.i - y.i));
-    const GO = ["EAST COAST", "THE SOUTH", "MIDWEST", "WEST COAST"];
+    const GO = ["EAST COAST", "THE SOUTH", "MIDWEST", "WEST COAST", "INTERNATIONAL"];
     const secs = GO.map(g => ({ g, list: all.filter(r => r.grp === g) })).concat([{ g: "MORE", list: all.filter(r => GO.indexOf(r.grp) < 0) }]).filter(x => x.list.length);
     const tile = r => '<button type="button" class="rb' + (r.k ? '' : ' soon') + '" data-nr="' + (r.ny ? "__ny" : esc(r.n)) + '" style="--bc:' + r.c + '">' + esc(r.n) + '<small>' + (r.k ? r.k + (r.k === 1 ? ' ARTIST' : ' ARTISTS') : 'COMING SOON') + '</small><i class="chev">&#9654;</i></button>';
     const tot = all.reduce((s, r) => s + r.k, 0), live = all.filter(r => r.k).length;

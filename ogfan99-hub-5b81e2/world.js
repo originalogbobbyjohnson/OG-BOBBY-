@@ -559,10 +559,17 @@
     { g: "WEST COAST" },
     { n: "LOS ANGELES + SOCAL", d: "LA, Long Beach, Compton, Inglewood, the IE, San Diego.", c: "#f2c14e", coming: ["Mack 10", "Tyler, the Creator", "J.J. Fad", "Teena Marie", "Brandy", "Yo-Yo", "Mr. Capone-E", "Lighter Shade of Brown", "Delinquent Habits", "Dilated Peoples", "Lil Rob", "House of Pain", "People Under the Stairs", "Jurassic 5", "Kid Frost", "Cypress Hill", "Young MC", "Freestyle Fellowship", "Above the Law", "King Tee", "Tha Alkaholiks", "Ice-T", "Kalan.FrFr", "Remble", "Domo Genesis", "Doja Cat", "Snow Tha Product", "Xzibit", "Jayo Felony", "Hit-Boy", "Kid Ink", "Problem", "Westside Boogie", "Dom Kennedy", "Baby Keem", "Earl Sweatshirt", "YG", "Drakeo the Ruler", "Blxst", "MC Eiht", "ScHoolboy Q", "Ab-Soul", "Jay Rock", "Vince Staples", "Nipsey Hussle", "MC Ren", "Ice Cube", "Eazy-E", "Kendrick Lamar", "Warren G", "Snoop Dogg", "Luckyiam", "Reverie", "The Pharcyde", "Murs", "Aceyalone", "Evidence", "Blu", "Busdriver", "Open Mike Eagle"] },
     { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Ledisi", "Keyshia Cole", "Stunna Girl", "Kehlani", "The Pointer Sisters", "Sly and the Family Stone", "Tony! Toni! Ton\u00e9!", "En Vogue", "MC Hammer", "Blackalicious", "Hieroglyphics", "Symba", "SOB X RBE", "Rappin' 4-Tay", "The Jacka", "Keak da Sneak", "Guapdad 4000", "Rexx Life Raj", "P-Lo", "Iamsu!", "Richie Rich", "Mac Mall", "Andre Nickatina", "Yukmouth", "Mozzy", "Nef the Pharaoh", "G-Eazy", "Mistah F.A.B.", "Larry June", "Mac Dre", "Saweetie", "Souls of Mischief", "E-40", "Zion I", "Rocky Rivera", "Kamaiyah", "Lyrics Born", "Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
-    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Shabazz Palaces", "Grynch", "Travis Thompson", "Amin\u00e9", "Macklemore", "Sir Mix-a-Lot", "Mic Capes", "Onry Ozzborn", "Dave B", "Grieves", "Sol", "Blue Scholars"] }
+    { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Shabazz Palaces", "Grynch", "Travis Thompson", "Amin\u00e9", "Macklemore", "Sir Mix-a-Lot", "Mic Capes", "Onry Ozzborn", "Dave B", "Grieves", "Sol", "Blue Scholars"] },
+    { g: "INTERNATIONAL" },
+    { n: "CANADA", d: "Toronto, Montreal, Vancouver.", c: "#d08a1e", coming: [] },
+    { n: "UK + EUROPE", d: "London, Manchester, Glasgow, Paris, Berlin, Stockholm, Amsterdam.", c: "#d08a1e", coming: [] },
+    { n: "CARIBBEAN", d: "Jamaica, Trinidad, Puerto Rico, the islands.", c: "#d08a1e", coming: [] },
+    { n: "LATIN AMERICA", d: "Mexico, Colombia, Brazil, Argentina and the rest.", c: "#d08a1e", coming: [] },
+    { n: "AFRICA", d: "Lagos, Accra, Johannesburg.", c: "#d08a1e", coming: [] },
+    { n: "ASIA + AUSTRALIA", d: "Seoul, Tokyo, Sydney and the rest.", c: "#d08a1e", coming: [] },
   ];
   /* one color per part of the country, so the board reads as four clean groups */
-  var GROUP_C = { "EAST COAST": "#2f6fd6", "THE SOUTH": "#d2462f", "MIDWEST": "#2e9e58", "WEST COAST": "#8a4fd6" };
+  var GROUP_C = { "EAST COAST": "#2f6fd6", "THE SOUTH": "#d2462f", "MIDWEST": "#2e9e58", "WEST COAST": "#8a4fd6", "INTERNATIONAL": "#d08a1e" };
   (function () { var cur = null; REGIONS.forEach(function (r) { if (r.g) { cur = r.g; return; } r.grp = r.live ? "EAST COAST" : cur; if (GROUP_C[r.grp]) r.c = GROUP_C[r.grp]; }); })();
   /* compact tiles: name + small badge; tap opens a drawer right under the row with the details */
   function tileGrid(p, items) {
@@ -641,6 +648,7 @@
 
 
   /* front page helpers: game count per region, open one region, open the full games list */
+  window.OGW.regions = function () { return REGIONS; };
   window.OGW.regionCounts = function () { var RG = window.OG_REGION_GAMES || {}; return REGIONS.filter(function (r) { return !r.g && !r.live; }).map(function (r) { return { n: r.n, c: r.c, grp: r.grp, k: (r.coming || []).filter(rgIsRap).filter(function (x) { return RG[x]; }).length }; }); };
   window.OGW.openRegion = function (nm) { go("regions"); setTimeout(function () { var t = Array.prototype.slice.call(panes.regions.querySelectorAll(".wtile")).filter(function (y) { return y.querySelector("b").textContent === nm; })[0]; if (t) { t.click(); try { t.scrollIntoView({ block: "start" }); } catch (e) {} } }, 40); };
   window.OGW.allGames = function () { go("regions"); setTimeout(function () { var b = panes.regions.querySelector('[data-led="games"]'); if (b) b.click(); }, 40); };
