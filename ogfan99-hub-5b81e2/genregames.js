@@ -134,5 +134,7 @@ window.OG_GENRE_OF = {
   "Bruce Springsteen": "ROCK",
   "Dolly Parton": "COUNTRY",
   "Willie Nelson": "COUNTRY",
+  "Mahalia Jackson": "GOSPEL",
+  "Marvin Sapp": "GOSPEL",
 };
 

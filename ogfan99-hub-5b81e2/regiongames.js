@@ -541,4 +541,6 @@ window.OG_REGION_GAMES = {
   "Fred Hammond": { url: "../fredhammond-ogfan99-a73665/", ex: 0 },
   "Dolly Parton": { url: "../dollyparton-ogfan99-8ae913/", ex: 0 },
   "Willie Nelson": { url: "../willienelson-ogfan99-3de8f2/", ex: 0 },
+  "Mahalia Jackson": { url: "../mahaliajackson-ogfan99-28898d/", ex: 0 },
+  "Marvin Sapp": { url: "../marvinsapp-ogfan99-7ea678/", ex: 0 },
 };
