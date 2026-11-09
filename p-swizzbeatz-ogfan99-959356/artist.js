@@ -1,4 +1,4 @@
-/* Swizz Beatz producer game (PRODUCERS tab). Every song is a beat Swizz Beatz made, one song per lead artist. Rooms are all different from his artist game. 18+ set is the main game (no 3 clean songs). */
+/* Swizz Beatz producer game (PRODUCERS tab). Every song is a beat Swizz Beatz made, one song per lead artist. Rooms are all different from his artist game. 18+ set is the main game (no 3 clean songs). Ruff Ryders' Anthem (DMX) removed Nov 8 per the Diddy-files rule; replaced by Ring the Alarm (Beyoncé - Topic 7cYB2ZFc5mY, 204 s = lrclib 3567438 203 s; Swizz Beatz co-produced). */
 window.CFG = {
  "name": "Swizz Beatz",
  "nameUpper": "SWIZZ BEATZ",
@@ -294,7 +294,7 @@ window.CFG = {
       "\"You know, ___, Eve\"",
       "Teflon",
       "Swizz",
-      "DMX"
+      "Drag-On"
      ],
      [
       "\"They wanna...\"?",
@@ -603,163 +603,163 @@ window.CFG = {
    ]
   },
   {
-   "title": "Ruff Ryders' Anthem (DMX)",
-   "id": "3xpI7VZVw6g",
-   "start": 11,
+   "title": "Ring the Alarm (Beyoncé)",
+   "id": "7cYB2ZFc5mY",
+   "start": 7.8,
    "cuts": [
-    44.5,
-    96.9,
-    136.6
+    42.8,
+    87.6,
+    161.9
    ],
    "qs": [
     [
      [
-      "\"Something...\"?",
-      "New",
-      "Fresh",
-      "Big"
+      "\"Ring the...\" what?",
+      "Alarm",
+      "Bell",
+      "Phone"
      ],
      [
-      "\"Stop, drop, shut 'em down, open up...\"?",
-      "Shop",
-      "Shot",
-      "Up"
+      "\"I been through this too...\" what?",
+      "Long",
+      "Much",
+      "Far"
      ],
      [
-      "\"Stop, ___, shut 'em down\"",
-      "Drop",
-      "Roll",
-      "Lock"
+      "She'll be damned if she sees another chick on your...?",
+      "Arm",
+      "Car",
+      "Phone"
      ],
      [
-      "\"Oh, ___, that's how Ruff Ryders roll\"",
-      "No",
-      "Yeah",
-      "Man"
+      "She gon' be rockin' what kind of coats?",
+      "Chinchilla",
+      "Mink",
+      "Leather"
      ],
      [
-      "\"That's how ___ roll\"",
-      "Ruff Ryders",
-      "Bad Boys",
-      "Dogs"
+      "Getting the house off the...?",
+      "Coast",
+      "Hill",
+      "Lake"
      ],
      [
-      "\"All I know is...\"?",
-      "Pain",
-      "Struggle",
-      "Grind"
+      "She gon' rock them what stones?",
+      "VVS",
+      "Ruby",
+      "Gold"
      ],
      [
-      "\"All I feel is...\"?",
-      "Rain",
+      "\"In the 'bach or the...\" what?",
+      "Rolls",
+      "Benz",
+      "Range"
+     ],
+     [
+      "She gon' profit everything I...?",
+      "Taught",
+      "Bought",
+      "Got"
+     ]
+    ],
+    [
+     [
+      "\"Tell me how should I feel when I know what I...\" what?",
+      "Know",
+      "See",
+      "Heard"
+     ],
+     [
+      "Her female what is telling her you're a dog?",
+      "Intuition",
+      "Friends",
+      "Heart"
+     ],
+     [
+      "People told her 'bout the flames, she couldn't see through the...?",
+      "Smoke",
+      "Fire",
+      "Glass"
+     ],
+     [
+      "When she needs answers, she gets...?",
+      "Accusations",
+      "Excuses",
+      "Silence"
+     ],
+     [
+      "\"You can't stay, you gotta...\" what?",
+      "Go",
+      "Leave",
+      "Run"
+     ],
+     [
+      "Ain't no other chicks spending your...?",
+      "Dough",
+      "Time",
+      "Love"
+     ],
+     [
+      "\"This is taking a...\" what?",
+      "Toll",
+      "Turn",
+      "Trip"
+     ],
+     [
+      "Not the picture-perfect what?",
+      "Movie",
+      "Story",
+      "Fairytale"
+     ]
+    ],
+    [
+     [
+      "\"Tell me how should I feel, when you made me...\" what?",
+      "Belong",
+      "Believe",
+      "Be strong"
+     ],
+     [
+      "What she hates most is the thought of you just...?",
+      "Touching her",
+      "Calling her",
+      "Seeing her"
+     ],
+     [
+      "He's so arrogant and...?",
+      "Bold",
       "Cold",
-      "Pain"
+      "Proud"
      ],
      [
-      "\"How can I ___ with that on my brain?\"",
-      "Maintain",
-      "Explain",
-      "Remain"
-     ]
-    ],
-    [
-     [
-      "My crew \"move in...\"?",
-      "Silence",
-      "Packs",
-      "Shadows"
+      "\"I done put in a...\" what?",
+      "Call",
+      "Bid",
+      "Word"
      ],
      [
-      "\"New York... the...\"?",
-      "Wildest",
-      "Hardest",
-      "Realest"
+      "You ain't never seen a what like the one she'll cause?",
+      "Fire",
+      "Storm",
+      "Scene"
      ],
      [
-      "\"You want it? Come and...\"?",
-      "Get it",
-      "Take it",
-      "See it"
+      "\"Is that the...\" what \"...that I pay?\"",
+      "Price",
+      "Cost",
+      "Bill"
      ],
      [
-      "\"...with the wrong...\"?",
-      "Crew",
-      "Dog",
-      "Block"
+      "\"But this is my...\" what?",
+      "Show",
+      "House",
+      "Life"
      ],
      [
-      "\"Nothin' we can't...\"?",
-      "Handle",
-      "Fix",
-      "Take"
-     ],
-     [
-      "\"Break it up and...\"?",
-      "Dismantle",
-      "Scramble",
-      "Sell it"
-     ],
-     [
-      "\"Put my stuff on tapes like you bustin'...\"?",
-      "Grapes",
-      "Bubbles",
-      "Pipes"
-     ],
-     [
-      "\"Think you holdin' weight? Then you haven't met the...\"?",
-      "Apes",
-      "Dogs",
-      "Crew"
-     ]
-    ],
-    [
-     [
-      "\"Stop actin' like a baby, mind your business...\"?",
-      "Lady",
-      "Baby",
-      "Buddy"
-     ],
-     [
-      "\"___ people get it too\"",
-      "Nosy",
-      "Lazy",
-      "Fake"
-     ],
-     [
-      "\"Yeah I know, it's...\"?",
-      "Pitiful",
-      "Painful",
-      "Wonderful"
-     ],
-     [
-      "\"Oh, you think it's funny? Then you don't know me...\"?",
-      "Money",
-      "Homie",
-      "Dog"
-     ],
-     [
-      "\"Give a dog a bone, leave a dog...\"?",
-      "Alone",
-      "Outside",
-      "Hungry"
-     ],
-     [
-      "\"Let a dog roam and he'll find his way...\"?",
-      "Home",
-      "Back",
-      "Out"
-     ],
-     [
-      "\"Home of the...\"?",
-      "Brave",
-      "Free",
-      "Dogs"
-     ],
-     [
-      "\"I'ma pull capers, it's all about the...\"?",
-      "Papers",
-      "Records",
-      "Ryders"
+      "All has been paid for, and it's...?",
+      "Mine",
+      "Done",
+      "Gone"
      ]
     ]
    ]
@@ -959,7 +959,7 @@ window.CFG = {
       "\"You know, ___, Eve\"",
       "Teflon",
       "Swizz",
-      "DMX"
+      "Drag-On"
      ],
      [
       "\"They wanna...\"?",
@@ -1268,168 +1268,166 @@ window.CFG = {
    ]
   },
   {
-   "title": "Ruff Ryders' Anthem (DMX)",
-   "id": "3xpI7VZVw6g",
-   "start": 11,
+   "title": "Ring the Alarm (Beyoncé)",
+   "id": "7cYB2ZFc5mY",
+   "start": 7.8,
    "cuts": [
-    44.5,
-    96.9,
-    136.6
+    42.8,
+    87.6,
+    161.9
    ],
    "qs": [
     [
      [
-      "\"Something...\"?",
-      "New",
-      "Fresh",
-      "Big"
+      "\"Ring the...\" what?",
+      "Alarm",
+      "Bell",
+      "Phone"
      ],
      [
-      "\"Stop, drop, shut 'em down, open up...\"?",
-      "Shop",
-      "Shot",
-      "Up"
+      "\"I been through this too...\" what?",
+      "Long",
+      "Much",
+      "Far"
      ],
      [
-      "\"Stop, ___, shut 'em down\"",
-      "Drop",
-      "Roll",
-      "Lock"
+      "She'll be damned if she sees another chick on your...?",
+      "Arm",
+      "Car",
+      "Phone"
      ],
      [
-      "\"Oh, ___, that's how Ruff Ryders roll\"",
-      "No",
-      "Yeah",
-      "Man"
+      "She gon' be rockin' what kind of coats?",
+      "Chinchilla",
+      "Mink",
+      "Leather"
      ],
      [
-      "\"That's how ___ roll\"",
-      "Ruff Ryders",
-      "Bad Boys",
-      "Dogs"
+      "Getting the house off the...?",
+      "Coast",
+      "Hill",
+      "Lake"
      ],
      [
-      "\"All I know is...\"?",
-      "Pain",
-      "Struggle",
-      "Grind"
+      "She gon' rock them what stones?",
+      "VVS",
+      "Ruby",
+      "Gold"
      ],
      [
-      "\"All I feel is...\"?",
-      "Rain",
+      "\"In the 'bach or the...\" what?",
+      "Rolls",
+      "Benz",
+      "Range"
+     ],
+     [
+      "She gon' profit everything I...?",
+      "Taught",
+      "Bought",
+      "Got"
+     ]
+    ],
+    [
+     [
+      "\"Tell me how should I feel when I know what I...\" what?",
+      "Know",
+      "See",
+      "Heard"
+     ],
+     [
+      "Her female what is telling her you're a dog?",
+      "Intuition",
+      "Friends",
+      "Heart"
+     ],
+     [
+      "People told her 'bout the flames, she couldn't see through the...?",
+      "Smoke",
+      "Fire",
+      "Glass"
+     ],
+     [
+      "When she needs answers, she gets...?",
+      "Accusations",
+      "Excuses",
+      "Silence"
+     ],
+     [
+      "\"You can't stay, you gotta...\" what?",
+      "Go",
+      "Leave",
+      "Run"
+     ],
+     [
+      "Ain't no other chicks spending your...?",
+      "Dough",
+      "Time",
+      "Love"
+     ],
+     [
+      "\"This is taking a...\" what?",
+      "Toll",
+      "Turn",
+      "Trip"
+     ],
+     [
+      "Not the picture-perfect what?",
+      "Movie",
+      "Story",
+      "Fairytale"
+     ]
+    ],
+    [
+     [
+      "\"Tell me how should I feel, when you made me...\" what?",
+      "Belong",
+      "Believe",
+      "Be strong"
+     ],
+     [
+      "What she hates most is the thought of you just...?",
+      "Touching her",
+      "Calling her",
+      "Seeing her"
+     ],
+     [
+      "He's so arrogant and...?",
+      "Bold",
       "Cold",
-      "Pain"
+      "Proud"
      ],
      [
-      "\"How can I ___ with that on my brain?\"",
-      "Maintain",
-      "Explain",
-      "Remain"
-     ]
-    ],
-    [
-     [
-      "My crew \"move in...\"?",
-      "Silence",
-      "Packs",
-      "Shadows"
+      "\"I done put in a...\" what?",
+      "Call",
+      "Bid",
+      "Word"
      ],
      [
-      "\"New York... the...\"?",
-      "Wildest",
-      "Hardest",
-      "Realest"
+      "You ain't never seen a what like the one she'll cause?",
+      "Fire",
+      "Storm",
+      "Scene"
      ],
      [
-      "\"You want it? Come and...\"?",
-      "Get it",
-      "Take it",
-      "See it"
+      "\"Is that the...\" what \"...that I pay?\"",
+      "Price",
+      "Cost",
+      "Bill"
      ],
      [
-      "\"...with the wrong...\"?",
-      "Crew",
-      "Dog",
-      "Block"
+      "\"But this is my...\" what?",
+      "Show",
+      "House",
+      "Life"
      ],
      [
-      "\"Nothin' we can't...\"?",
-      "Handle",
-      "Fix",
-      "Take"
-     ],
-     [
-      "\"Break it up and...\"?",
-      "Dismantle",
-      "Scramble",
-      "Sell it"
-     ],
-     [
-      "\"Put my stuff on tapes like you bustin'...\"?",
-      "Grapes",
-      "Bubbles",
-      "Pipes"
-     ],
-     [
-      "\"Think you holdin' weight? Then you haven't met the...\"?",
-      "Apes",
-      "Dogs",
-      "Crew"
-     ]
-    ],
-    [
-     [
-      "\"Stop actin' like a baby, mind your business...\"?",
-      "Lady",
-      "Baby",
-      "Buddy"
-     ],
-     [
-      "\"___ people get it too\"",
-      "Nosy",
-      "Lazy",
-      "Fake"
-     ],
-     [
-      "\"Yeah I know, it's...\"?",
-      "Pitiful",
-      "Painful",
-      "Wonderful"
-     ],
-     [
-      "\"Oh, you think it's funny? Then you don't know me...\"?",
-      "Money",
-      "Homie",
-      "Dog"
-     ],
-     [
-      "\"Give a dog a bone, leave a dog...\"?",
-      "Alone",
-      "Outside",
-      "Hungry"
-     ],
-     [
-      "\"Let a dog roam and he'll find his way...\"?",
-      "Home",
-      "Back",
-      "Out"
-     ],
-     [
-      "\"Home of the...\"?",
-      "Brave",
-      "Free",
-      "Dogs"
-     ],
-     [
-      "\"I'ma pull capers, it's all about the...\"?",
-      "Papers",
-      "Records",
-      "Ryders"
+      "All has been paid for, and it's...?",
+      "Mine",
+      "Done",
+      "Gone"
      ]
     ]
    ]
   }
  ]
 };
-
-(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

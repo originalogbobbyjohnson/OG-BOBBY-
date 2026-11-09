@@ -1,7 +1,7 @@
 /* The LOX game (OG FAN 99 GROUP, NYC map, Westchester: west Yonkers). 18+ ONLY set (songs = explicitSongs): every LOX song curses early.
-   Group verses only (Jadakiss, Styles P, Sheek Louch). No questions on Lil' Kim's hook or DMX's verse in Money, Power & Respect (last stop ends before DMX); start 10.9 skips the spoken intro.
+   Group verses only (Jadakiss, Styles P, Sheek Louch). Money, Power & Respect removed Nov 8 per the Diddy-files rule (DMX on it); replaced by Livin' the Life (The LOX - Topic 2XmWe3BhF_g, 216 s = lrclib 40130534 216 s; lead vocals The Lox only; start 19.4 skips the spoken intro; not sure who speaks the intro).
    Skipped: Wild Out (mainly guns), If You Think I'm Jiggy (line about shooting a woman), Recognize (lrclib lyrics garbled, mainly violent), Faded (mainly weed), Bout Shit (owner said skip), Fade Away (not found).
-   Timings: lrclib synced lyrics matched to The LOX - Topic uploads (Get This $ 239 s, Loyalty and Love 243 s, Gave It To 'Em 240 s, Money, Power & Respect 270 s; all within 1 s). */
+   Timings: lrclib synced lyrics matched to The LOX - Topic uploads (Get This $ 239 s, Loyalty and Love 243 s, Gave It To 'Em 240 s, Livin' the Life 216 s; all within 1 s). */
 window.CFG = {
  "name": "The LOX",
  "nameUpper": "THE LOX",
@@ -606,163 +606,163 @@ window.CFG = {
    ]
   },
   {
-   "title": "Money, Power & Respect",
-   "id": "nnr7Yq5oBuo",
-   "start": 10.9,
+   "title": "Livin' the Life",
+   "id": "2XmWe3BhF_g",
+   "start": 19.4,
    "cuts": [
-    44.6,
-    131.2,
-    191.1
+    47.7,
+    121,
+    188.6
    ],
    "qs": [
     [
      [
-      "\"Ayo, my whole clique\" what?",
-      "'Bout it, 'bout it",
-      "Down with it",
-      "Wild with it"
+      "\"Everything involved the...\" what?",
+      "Lox",
+      "Block",
+      "Mob"
      ],
      [
-      "\"We take yours while you\" what?",
-      "Pout about it",
-      "Shout about it",
-      "Doubt about it"
+      "Where's the money kept?",
+      "In the safe",
+      "In the bank",
+      "In the car"
      ],
      [
-      "You could see me on what TV?",
-      "Optimum",
-      "Cable",
-      "Public"
+      "The car is parked in the...?",
+      "Lot",
+      "Street",
+      "Garage"
      ],
      [
-      "\"Go in your\" what \"and turn the light out\"?",
-      "Bathroom",
-      "Kitchen",
-      "Bedroom"
+      "And the door is...?",
+      "Locked",
+      "Open",
+      "Gone"
      ],
      [
-      "Then scream whose name?",
-      "Bloody Mary",
-      "Candyman",
-      "Freddy"
+      "The phone is only blocked when home is...?",
+      "Hot",
+      "Cold",
+      "Empty"
      ],
      [
-      "\"1, 2,\" what?",
-      "Three",
-      "Four",
-      "Go"
+      "He flows more ways than...?",
+      "One",
+      "Two",
+      "Ten"
      ],
      [
-      "\"Sheek ain't your usual\" what?",
-      "Friend",
-      "Guy",
-      "Rapper"
+      "What do they count with?",
+      "Mississippi",
+      "Missouri",
+      "Michigan"
      ],
      [
-      "\"I could set you up like\" who?",
-      "Keyser",
-      "Tony",
-      "Nino"
+      "\"One Mississippi, you can't...\" what?",
+      "Get with me",
+      "Stop me",
+      "Catch me"
      ]
     ],
     [
      [
-      "\"I'm done with ice and\" what?",
-      "Charms",
-      "Chains",
-      "Rings"
+      "Blazin', revvin' in the black...?",
+      "911",
+      "745",
+      "300"
      ],
      [
-      "\"'Cause on Earth, I was gettin'\" what?",
-      "Bored",
-      "Old",
-      "Tired"
+      "Out of sight like Michael Knight and who?",
+      "Devon",
+      "KITT",
+      "Bonnie"
      ],
      [
-      "Two-thirty, what?",
-      "Six-two",
-      "Six-four",
-      "Five-ten"
+      "\"Livin' the life, either you rise or...\" what?",
+      "Fall",
+      "Fold",
+      "Stall"
      ],
      [
-      "\"Me budge for you? That's like a cat vers' a\" what?",
-      "Pitbull",
-      "Lion",
-      "Rottweiler"
+      "It's a two-way street, be large or...?",
+      "Small",
+      "Broke",
+      "Short"
      ],
      [
-      "Plan for the future, 'cause you figure you gon' be what?",
-      "Older",
-      "Richer",
-      "Wiser"
+      "They order parts for cars like...?",
+      "Pizza",
+      "Chinese food",
+      "Groceries"
      ],
      [
-      "\"I'm really loved here, but I'm still a\" what?",
-      "Hostage",
-      "Stranger",
-      "Prisoner"
+      "While you get all yours from where?",
+      "Sears",
+      "Kmart",
+      "Macy's"
      ],
      [
-      "\"Two\" what, \"check the posture\"?",
-      "Personalities",
-      "Faces",
-      "Sides"
+      "Links Cuban, rugs...?",
+      "Persian",
+      "Turkish",
+      "Indian"
      ],
      [
-      "Race my man in mountain climbin' for about how many diamonds?",
-      "Ten",
-      "Five",
-      "Twenty"
+      "Lox take blocks, turn 'em into...?",
+      "Fort Knox",
+      "Fort Lee",
+      "Fort Dix"
      ]
     ],
     [
      [
-      "\"Nothin' but the\" what \"whenever we drop this\"?",
-      "Hotness",
-      "Realness",
-      "Madness"
+      "They stop drama like anti-lock...?",
+      "Brakes",
+      "Doors",
+      "Wheels"
      ],
      [
-      "It's what for y'all to keep hatin'?",
-      "Monotonous",
-      "Dangerous",
-      "Ridiculous"
+      "High stakes, politic, pies and...?",
+      "Cakes",
+      "Pizza",
+      "Shakes"
      ],
      [
-      "\"I keep my rocks\" what?",
-      "Spotless",
-      "Flawless",
-      "Frozen"
+      "Where they from don't matter 'cause they gettin' it...?",
+      "Done",
+      "Right",
+      "Big"
      ],
      [
-      "\"Take time, try to figure out who\" what \"is\"?",
-      "The Lox",
-      "D-Block",
-      "Bad Boy"
+      "Land Rover with a double...?",
+      "Sunroof",
+      "Exhaust",
+      "Turbo"
      ],
      [
-      "\"Fear no one, kick rhymes like\" what?",
-      "Shoguns",
-      "Ninjas",
-      "Samurai"
+      "Deep dish beef, sip what with ease?",
+      "Dom P",
+      "Cristal",
+      "Hennessy"
      ],
      [
-      "\"And if I don't kiss you, I'ma\" what \"you\"?",
-      "Peck",
-      "Pinch",
-      "Poke"
+      "L-O-X, three-letter word...?",
+      "Black Mob",
+      "Bad Boy",
+      "Big Money"
      ],
      [
-      "\"I sneeze on tracks and\" what \"you\"?",
-      "Bless",
-      "Cure",
-      "Hug"
+      "Every last member of the team on the...?",
+      "Job",
+      "Block",
+      "Track"
      ],
      [
-      "\"My story\" is what?",
-      "Self-explanatory",
-      "Mandatory",
-      "Legendary"
+      "Really don't matter to him, long as they...?",
+      "Eat",
+      "Win",
+      "Ball"
      ]
     ]
    ]
@@ -1271,163 +1271,163 @@ window.CFG = {
    ]
   },
   {
-   "title": "Money, Power & Respect",
-   "id": "nnr7Yq5oBuo",
-   "start": 10.9,
+   "title": "Livin' the Life",
+   "id": "2XmWe3BhF_g",
+   "start": 19.4,
    "cuts": [
-    44.6,
-    131.2,
-    191.1
+    47.7,
+    121,
+    188.6
    ],
    "qs": [
     [
      [
-      "\"Ayo, my whole clique\" what?",
-      "'Bout it, 'bout it",
-      "Down with it",
-      "Wild with it"
+      "\"Everything involved the...\" what?",
+      "Lox",
+      "Block",
+      "Mob"
      ],
      [
-      "\"We take yours while you\" what?",
-      "Pout about it",
-      "Shout about it",
-      "Doubt about it"
+      "Where's the money kept?",
+      "In the safe",
+      "In the bank",
+      "In the car"
      ],
      [
-      "You could see me on what TV?",
-      "Optimum",
-      "Cable",
-      "Public"
+      "The car is parked in the...?",
+      "Lot",
+      "Street",
+      "Garage"
      ],
      [
-      "\"Go in your\" what \"and turn the light out\"?",
-      "Bathroom",
-      "Kitchen",
-      "Bedroom"
+      "And the door is...?",
+      "Locked",
+      "Open",
+      "Gone"
      ],
      [
-      "Then scream whose name?",
-      "Bloody Mary",
-      "Candyman",
-      "Freddy"
+      "The phone is only blocked when home is...?",
+      "Hot",
+      "Cold",
+      "Empty"
      ],
      [
-      "\"1, 2,\" what?",
-      "Three",
-      "Four",
-      "Go"
+      "He flows more ways than...?",
+      "One",
+      "Two",
+      "Ten"
      ],
      [
-      "\"Sheek ain't your usual\" what?",
-      "Friend",
-      "Guy",
-      "Rapper"
+      "What do they count with?",
+      "Mississippi",
+      "Missouri",
+      "Michigan"
      ],
      [
-      "\"I could set you up like\" who?",
-      "Keyser",
-      "Tony",
-      "Nino"
+      "\"One Mississippi, you can't...\" what?",
+      "Get with me",
+      "Stop me",
+      "Catch me"
      ]
     ],
     [
      [
-      "\"I'm done with ice and\" what?",
-      "Charms",
-      "Chains",
-      "Rings"
+      "Blazin', revvin' in the black...?",
+      "911",
+      "745",
+      "300"
      ],
      [
-      "\"'Cause on Earth, I was gettin'\" what?",
-      "Bored",
-      "Old",
-      "Tired"
+      "Out of sight like Michael Knight and who?",
+      "Devon",
+      "KITT",
+      "Bonnie"
      ],
      [
-      "Two-thirty, what?",
-      "Six-two",
-      "Six-four",
-      "Five-ten"
+      "\"Livin' the life, either you rise or...\" what?",
+      "Fall",
+      "Fold",
+      "Stall"
      ],
      [
-      "\"Me budge for you? That's like a cat vers' a\" what?",
-      "Pitbull",
-      "Lion",
-      "Rottweiler"
+      "It's a two-way street, be large or...?",
+      "Small",
+      "Broke",
+      "Short"
      ],
      [
-      "Plan for the future, 'cause you figure you gon' be what?",
-      "Older",
-      "Richer",
-      "Wiser"
+      "They order parts for cars like...?",
+      "Pizza",
+      "Chinese food",
+      "Groceries"
      ],
      [
-      "\"I'm really loved here, but I'm still a\" what?",
-      "Hostage",
-      "Stranger",
-      "Prisoner"
+      "While you get all yours from where?",
+      "Sears",
+      "Kmart",
+      "Macy's"
      ],
      [
-      "\"Two\" what, \"check the posture\"?",
-      "Personalities",
-      "Faces",
-      "Sides"
+      "Links Cuban, rugs...?",
+      "Persian",
+      "Turkish",
+      "Indian"
      ],
      [
-      "Race my man in mountain climbin' for about how many diamonds?",
-      "Ten",
-      "Five",
-      "Twenty"
+      "Lox take blocks, turn 'em into...?",
+      "Fort Knox",
+      "Fort Lee",
+      "Fort Dix"
      ]
     ],
     [
      [
-      "\"Nothin' but the\" what \"whenever we drop this\"?",
-      "Hotness",
-      "Realness",
-      "Madness"
+      "They stop drama like anti-lock...?",
+      "Brakes",
+      "Doors",
+      "Wheels"
      ],
      [
-      "It's what for y'all to keep hatin'?",
-      "Monotonous",
-      "Dangerous",
-      "Ridiculous"
+      "High stakes, politic, pies and...?",
+      "Cakes",
+      "Pizza",
+      "Shakes"
      ],
      [
-      "\"I keep my rocks\" what?",
-      "Spotless",
-      "Flawless",
-      "Frozen"
+      "Where they from don't matter 'cause they gettin' it...?",
+      "Done",
+      "Right",
+      "Big"
      ],
      [
-      "\"Take time, try to figure out who\" what \"is\"?",
-      "The Lox",
-      "D-Block",
-      "Bad Boy"
+      "Land Rover with a double...?",
+      "Sunroof",
+      "Exhaust",
+      "Turbo"
      ],
      [
-      "\"Fear no one, kick rhymes like\" what?",
-      "Shoguns",
-      "Ninjas",
-      "Samurai"
+      "Deep dish beef, sip what with ease?",
+      "Dom P",
+      "Cristal",
+      "Hennessy"
      ],
      [
-      "\"And if I don't kiss you, I'ma\" what \"you\"?",
-      "Peck",
-      "Pinch",
-      "Poke"
+      "L-O-X, three-letter word...?",
+      "Black Mob",
+      "Bad Boy",
+      "Big Money"
      ],
      [
-      "\"I sneeze on tracks and\" what \"you\"?",
-      "Bless",
-      "Cure",
-      "Hug"
+      "Every last member of the team on the...?",
+      "Job",
+      "Block",
+      "Track"
      ],
      [
-      "\"My story\" is what?",
-      "Self-explanatory",
-      "Mandatory",
-      "Legendary"
+      "Really don't matter to him, long as they...?",
+      "Eat",
+      "Win",
+      "Ball"
      ]
     ]
    ]

@@ -1,3 +1,4 @@
+/* Lord Tariq & Peter Gunz game. Nov 8: Cross Bronx Expressway REMOVED per the Diddy-files rule (feat. Fat Joe & Big Pun). No clean lrclib-synced replacement (only Deja Vu / Be My Lady / Cross Bronx are synced; My All remix lrclib = Mariah's original lyrics), so its 25 questions moved onto the other 3 songs (same cuts): We Will Ball 11/11/12 (YouTube captions), Be My Lady 11/11/8, Deja Vu 11/12/12 = 99. Deja Vu extra questions from lrclib 5028899 (video runs ~20 s later than lrclib). */
 window.CFG = {
  "name": "Lord Tariq & Peter Gunz",
  "nameUpper": "LORD TARIQ & PETER GUNZ",
@@ -152,6 +153,24 @@ window.CFG = {
       "A mill",
       "A hit",
       "A name"
+     ],
+     [
+      "He's getting dizzy sipping on what?",
+      "Coronas",
+      "Heinekens",
+      "Champagne"
+     ],
+     [
+      "He did it all for manipulating...?",
+      "Words",
+      "Beats",
+      "Minds"
+     ],
+     [
+      "He got the five as...?",
+      "Feasible",
+      "Backup",
+      "A bonus"
      ]
     ],
     [
@@ -208,6 +227,18 @@ window.CFG = {
       "Massage",
       "Tan",
       "Manicure"
+     ],
+     [
+      "Tanqueray got him dripping like...?",
+      "Activator",
+      "Sweat",
+      "Rain"
+     ],
+     [
+      "Filthy rich, built to be...?",
+      "Large",
+      "Great",
+      "Strong"
      ]
     ],
     [
@@ -258,6 +289,30 @@ window.CFG = {
       "100,000",
       "50,000",
       "A million"
+     ],
+     [
+      "They sweat him 'cause they're double...?",
+      "P",
+      "R",
+      "O"
+     ],
+     [
+      "They went platinum when this rap was doing what?",
+      "Falling apart",
+      "Taking off",
+      "Blowing up"
+     ],
+     [
+      "Take a taste, fix your...?",
+      "Face",
+      "Plate",
+      "Drink"
+     ],
+     [
+      "You estimated 100,000; they sold how many in a week?",
+      "Five",
+      "Two",
+      "Ten"
      ]
     ]
    ]
@@ -320,6 +375,24 @@ window.CFG = {
       "Raised",
       "Made",
       "Paid"
+     ],
+     [
+      "Her silver 320 is flashing to the...?",
+      "World",
+      "Block",
+      "Crowd"
+     ],
+     [
+      "Put you in his life, it's all...?",
+      "Gravy",
+      "Good",
+      "Love"
+     ],
+     [
+      "\"Get in, we...\" what?",
+      "Go",
+      "Ride",
+      "Roll"
      ]
     ],
     [
@@ -376,6 +449,18 @@ window.CFG = {
       "Fame",
       "Cars",
       "Chains"
+     ],
+     [
+      "Maybe a trip while in the...?",
+      "Sun",
+      "Snow",
+      "City"
+     ],
+     [
+      "He'd like to take this what?",
+      "Time out",
+      "Trip",
+      "Chance"
      ]
     ],
     [
@@ -431,174 +516,6 @@ window.CFG = {
    ]
   },
   {
-   "title": "Cross Bronx Expressway",
-   "id": "B_mb4m35mQE",
-   "start": 19.4,
-   "cuts": [
-    53.6,
-    92.4,
-    224.2
-   ],
-   "qs": [
-    [
-     [
-      "He's been through many...?",
-      "Places",
-      "Fights",
-      "Schools"
-     ],
-     [
-      "He's seen the eyes of many...?",
-      "Faces",
-      "Cities",
-      "Kids"
-     ],
-     [
-      "From New York to...?",
-      "Texas",
-      "Cali",
-      "Florida"
-     ],
-     [
-      "To the faces on...?",
-      "Rolexes",
-      "Money",
-      "TV"
-     ],
-     [
-      "He's not a racist or...?",
-      "Sexist",
-      "Hater",
-      "Fake"
-     ],
-     [
-      "Nothin' less than a...?",
-      "Lexus",
-      "Benz",
-      "Jeep"
-     ],
-     [
-      "Troubled minds and troubled...?",
-      "Times",
-      "Streets",
-      "Days"
-     ],
-     [
-      "Stacks, he's tryin' to...mine?",
-      "Double",
-      "Hide",
-      "Save"
-     ],
-     [
-      "Who's back to back with him circling the block?",
-      "Tracks",
-      "Joe",
-      "Pun"
-     ]
-    ],
-    [
-     [
-      "Which highway is he on?",
-      "Cross Bronx",
-      "BQE",
-      "Major Deegan"
-     ],
-     [
-      "Who's on it with him?",
-      "Fat Joe",
-      "Big Pun",
-      "Nas"
-     ],
-     [
-      "Which side of town?",
-      "East side",
-      "West side",
-      "South side"
-     ],
-     [
-      "What's the first spot he names?",
-      "Soundview",
-      "Hunts Point",
-      "Melrose"
-     ],
-     [
-      "Castle...?",
-      "Hill",
-      "Rock",
-      "Point"
-     ],
-     [
-      "Bronx...?",
-      "Dale",
-      "Park",
-      "Side"
-     ],
-     [
-      "Which avenue starts his second list?",
-      "Commonwealth",
-      "Walton",
-      "Jerome"
-     ],
-     [
-      "Which college-name street does he name?",
-      "Colgate",
-      "Harvard",
-      "Yale"
-     ]
-    ],
-    [
-     [
-      "He had a dream that a team had a...?",
-      "Scheme",
-      "Plan",
-      "Song"
-     ],
-     [
-      "His main objective is Benz and...?",
-      "Lexuses",
-      "Jeeps",
-      "Hondas"
-     ],
-     [
-      "What does he cop?",
-      "Rolexes",
-      "Sneakers",
-      "Chains"
-     ],
-     [
-      "Far from a devil, he says he's...?",
-      "Gunz",
-      "Tariq",
-      "Joe"
-     ],
-     [
-      "He shines like...?",
-      "Sun",
-      "Gold",
-      "Stars"
-     ],
-     [
-      "He rhymes like...?",
-      "None",
-      "Pun",
-      "Nas"
-     ],
-     [
-      "You can't wear that, you gotta wear...?",
-      "This",
-      "Black",
-      "Gold"
-     ],
-     [
-      "Words from which DJ?",
-      "Funkmaster Flex",
-      "Kid Capri",
-      "DJ Clue"
-     ]
-    ]
-   ]
-  },
-  {
    "title": "Deja Vu (Uptown Baby)",
    "id": "N_utN5jVoHs",
    "start": 29.7,
@@ -643,7 +560,7 @@ window.CFG = {
       "Splat like...?",
       "Deja Vu",
       "Bam Bam",
-      "Big Pun"
+      "Ka-Pow"
      ],
      [
       "Which bills does he keep near?",
@@ -656,6 +573,24 @@ window.CFG = {
       "Change",
       "Car",
       "Chain"
+     ],
+     [
+      "\"Lie and die in the fire where I learned to...\" what?",
+      "Ball",
+      "Rhyme",
+      "Fight"
+     ],
+     [
+      "He sips Cristal, Don P and...?",
+      "Mo'",
+      "Henny",
+      "Gin"
+     ],
+     [
+      "Not filthy rich, but he's barely...?",
+      "Broke",
+      "Paid",
+      "Known"
      ]
     ],
     [
@@ -706,6 +641,30 @@ window.CFG = {
       "Crown",
       "Count",
       "Night"
+     ],
+     [
+      "When you're playing cards for Gunz, it ain't time to...?",
+      "Fold",
+      "Bluff",
+      "Deal"
+     ],
+     [
+      "Out of town, they're all the...?",
+      "Same",
+      "Lame",
+      "Broke"
+     ],
+     [
+      "Which borough gets crazy loot?",
+      "Brooklyn",
+      "Queens",
+      "Harlem"
+     ],
+     [
+      "Which borough's got it on lock?",
+      "Queens",
+      "Brooklyn",
+      "Harlem"
      ]
     ],
     [
@@ -756,6 +715,30 @@ window.CFG = {
       "From Dusk Till Dawn",
       "Scarface",
       "Juice"
+     ],
+     [
+      "He rocks stones, others rock...?",
+      "Gravel",
+      "Glass",
+      "Plastic"
+     ],
+     [
+      "Wipe your feet when you step in his...?",
+      "House",
+      "Ride",
+      "Spot"
+     ],
+     [
+      "Points sharper than an...?",
+      "Arrow",
+      "Knife",
+      "Needle"
+     ],
+     [
+      "They're rollin' deep in the one point five...?",
+      "Hundreds",
+      "Thousands",
+      "Millions"
      ]
     ]
    ]
@@ -820,6 +803,24 @@ window.CFG = {
       "A mill",
       "A hit",
       "A name"
+     ],
+     [
+      "He's getting dizzy sipping on what?",
+      "Coronas",
+      "Heinekens",
+      "Champagne"
+     ],
+     [
+      "He did it all for manipulating...?",
+      "Words",
+      "Beats",
+      "Minds"
+     ],
+     [
+      "He got the five as...?",
+      "Feasible",
+      "Backup",
+      "A bonus"
      ]
     ],
     [
@@ -876,6 +877,18 @@ window.CFG = {
       "Massage",
       "Tan",
       "Manicure"
+     ],
+     [
+      "Tanqueray got him dripping like...?",
+      "Activator",
+      "Sweat",
+      "Rain"
+     ],
+     [
+      "Filthy rich, built to be...?",
+      "Large",
+      "Great",
+      "Strong"
      ]
     ],
     [
@@ -926,6 +939,30 @@ window.CFG = {
       "100,000",
       "50,000",
       "A million"
+     ],
+     [
+      "They sweat him 'cause they're double...?",
+      "P",
+      "R",
+      "O"
+     ],
+     [
+      "They went platinum when this rap was doing what?",
+      "Falling apart",
+      "Taking off",
+      "Blowing up"
+     ],
+     [
+      "Take a taste, fix your...?",
+      "Face",
+      "Plate",
+      "Drink"
+     ],
+     [
+      "You estimated 100,000; they sold how many in a week?",
+      "Five",
+      "Two",
+      "Ten"
      ]
     ]
    ]
@@ -988,6 +1025,24 @@ window.CFG = {
       "Raised",
       "Made",
       "Paid"
+     ],
+     [
+      "Her silver 320 is flashing to the...?",
+      "World",
+      "Block",
+      "Crowd"
+     ],
+     [
+      "Put you in his life, it's all...?",
+      "Gravy",
+      "Good",
+      "Love"
+     ],
+     [
+      "\"Get in, we...\" what?",
+      "Go",
+      "Ride",
+      "Roll"
      ]
     ],
     [
@@ -1044,6 +1099,18 @@ window.CFG = {
       "Fame",
       "Cars",
       "Chains"
+     ],
+     [
+      "Maybe a trip while in the...?",
+      "Sun",
+      "Snow",
+      "City"
+     ],
+     [
+      "He'd like to take this what?",
+      "Time out",
+      "Trip",
+      "Chance"
      ]
     ],
     [
@@ -1099,174 +1166,6 @@ window.CFG = {
    ]
   },
   {
-   "title": "Cross Bronx Expressway",
-   "id": "B_mb4m35mQE",
-   "start": 19.4,
-   "cuts": [
-    53.6,
-    92.4,
-    224.2
-   ],
-   "qs": [
-    [
-     [
-      "He's been through many...?",
-      "Places",
-      "Fights",
-      "Schools"
-     ],
-     [
-      "He's seen the eyes of many...?",
-      "Faces",
-      "Cities",
-      "Kids"
-     ],
-     [
-      "From New York to...?",
-      "Texas",
-      "Cali",
-      "Florida"
-     ],
-     [
-      "To the faces on...?",
-      "Rolexes",
-      "Money",
-      "TV"
-     ],
-     [
-      "He's not a racist or...?",
-      "Sexist",
-      "Hater",
-      "Fake"
-     ],
-     [
-      "Nothin' less than a...?",
-      "Lexus",
-      "Benz",
-      "Jeep"
-     ],
-     [
-      "Troubled minds and troubled...?",
-      "Times",
-      "Streets",
-      "Days"
-     ],
-     [
-      "Stacks, he's tryin' to...mine?",
-      "Double",
-      "Hide",
-      "Save"
-     ],
-     [
-      "Who's back to back with him circling the block?",
-      "Tracks",
-      "Joe",
-      "Pun"
-     ]
-    ],
-    [
-     [
-      "Which highway is he on?",
-      "Cross Bronx",
-      "BQE",
-      "Major Deegan"
-     ],
-     [
-      "Who's on it with him?",
-      "Fat Joe",
-      "Big Pun",
-      "Nas"
-     ],
-     [
-      "Which side of town?",
-      "East side",
-      "West side",
-      "South side"
-     ],
-     [
-      "What's the first spot he names?",
-      "Soundview",
-      "Hunts Point",
-      "Melrose"
-     ],
-     [
-      "Castle...?",
-      "Hill",
-      "Rock",
-      "Point"
-     ],
-     [
-      "Bronx...?",
-      "Dale",
-      "Park",
-      "Side"
-     ],
-     [
-      "Which avenue starts his second list?",
-      "Commonwealth",
-      "Walton",
-      "Jerome"
-     ],
-     [
-      "Which college-name street does he name?",
-      "Colgate",
-      "Harvard",
-      "Yale"
-     ]
-    ],
-    [
-     [
-      "He had a dream that a team had a...?",
-      "Scheme",
-      "Plan",
-      "Song"
-     ],
-     [
-      "His main objective is Benz and...?",
-      "Lexuses",
-      "Jeeps",
-      "Hondas"
-     ],
-     [
-      "What does he cop?",
-      "Rolexes",
-      "Sneakers",
-      "Chains"
-     ],
-     [
-      "Far from a devil, he says he's...?",
-      "Gunz",
-      "Tariq",
-      "Joe"
-     ],
-     [
-      "He shines like...?",
-      "Sun",
-      "Gold",
-      "Stars"
-     ],
-     [
-      "He rhymes like...?",
-      "None",
-      "Pun",
-      "Nas"
-     ],
-     [
-      "You can't wear that, you gotta wear...?",
-      "This",
-      "Black",
-      "Gold"
-     ],
-     [
-      "Words from which DJ?",
-      "Funkmaster Flex",
-      "Kid Capri",
-      "DJ Clue"
-     ]
-    ]
-   ]
-  },
-  {
    "title": "Deja Vu (Uptown Baby)",
    "id": "N_utN5jVoHs",
    "start": 29.7,
@@ -1311,7 +1210,7 @@ window.CFG = {
       "Splat like...?",
       "Deja Vu",
       "Bam Bam",
-      "Big Pun"
+      "Ka-Pow"
      ],
      [
       "Which bills does he keep near?",
@@ -1324,6 +1223,24 @@ window.CFG = {
       "Change",
       "Car",
       "Chain"
+     ],
+     [
+      "\"Lie and die in the fire where I learned to...\" what?",
+      "Ball",
+      "Rhyme",
+      "Fight"
+     ],
+     [
+      "He sips Cristal, Don P and...?",
+      "Mo'",
+      "Henny",
+      "Gin"
+     ],
+     [
+      "Not filthy rich, but he's barely...?",
+      "Broke",
+      "Paid",
+      "Known"
      ]
     ],
     [
@@ -1374,6 +1291,30 @@ window.CFG = {
       "Crown",
       "Count",
       "Night"
+     ],
+     [
+      "When you're playing cards for Gunz, it ain't time to...?",
+      "Fold",
+      "Bluff",
+      "Deal"
+     ],
+     [
+      "Out of town, they're all the...?",
+      "Same",
+      "Lame",
+      "Broke"
+     ],
+     [
+      "Which borough gets crazy loot?",
+      "Brooklyn",
+      "Queens",
+      "Harlem"
+     ],
+     [
+      "Which borough's got it on lock?",
+      "Queens",
+      "Brooklyn",
+      "Harlem"
      ]
     ],
     [
@@ -1424,6 +1365,30 @@ window.CFG = {
       "From Dusk Till Dawn",
       "Scarface",
       "Juice"
+     ],
+     [
+      "He rocks stones, others rock...?",
+      "Gravel",
+      "Glass",
+      "Plastic"
+     ],
+     [
+      "Wipe your feet when you step in his...?",
+      "House",
+      "Ride",
+      "Spot"
+     ],
+     [
+      "Points sharper than an...?",
+      "Arrow",
+      "Knife",
+      "Needle"
+     ],
+     [
+      "They're rollin' deep in the one point five...?",
+      "Hundreds",
+      "Thousands",
+      "Millions"
      ]
     ]
    ]

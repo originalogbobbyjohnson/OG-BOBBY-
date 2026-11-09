@@ -1,3 +1,5 @@
+/* Jim Jones game. explicitSongs (18+): Na Na Nana Na Na (Jim Jones - Topic clean album version tIrfoVIyLJ8, 240 s; lrclib 33381848 explicit album version 239 s), Pop Champagne, We Fly High.
+   New York (with Fabolous) removed Nov 8 per the Diddy-files rule (Fabolous). Na Na: Jim's verses only, hook (may be Bree-beauty) not asked; stops before the drug line at 40.1 and the curse line at 3:09. */
 window.CFG = {
  "name": "Jim Jones",
  "nameUpper": "JIM JONES",
@@ -190,7 +192,7 @@ window.CFG = {
    "start": 8.9
   },
   {
-   "title": "New York",
+   "title": "Na Na Nana Na Na",
    "locked": true,
    "cuts": [],
    "qs": []
@@ -234,217 +236,216 @@ window.CFG = {
  ],
  "explicitSongs": [
   {
-   "title": "New York (with Fabolous)",
-   "id": "79BC7FbkI8I",
-   "start": 42.3,
+   "title": "Na Na Nana Na Na",
+   "id": "tIrfoVIyLJ8",
    "cuts": [
-    75.4,
-    106.6,
-    153.8
+    35.7,
+    124.4,
+    189.2
    ],
    "qs": [
     [
      [
-      "If you can make it here, you can make it where?",
-      "Anywhere",
-      "Nowhere",
-      "Home"
+      "\"It's '...\" what year?",
+      "09",
+      "08",
+      "99"
      ],
      [
-      "The elevators don't what?",
-      "Work",
-      "Stop",
-      "Close"
+      "\"One thing to do, to get...\" what?",
+      "Money",
+      "Famous",
+      "Paid"
      ],
      [
-      "So they had to take the what?",
-      "Stairs",
-      "Train",
-      "Bus"
-     ],
-     [
-      "Broadway what?",
-      "Plays",
-      "Lights",
-      "Parades"
-     ],
-     [
-      "What's on his feet?",
-      "Air Ones",
-      "Vans",
-      "Jordans"
-     ],
-     [
-      "Air Ones make his summer what?",
-      "Complete",
-      "Hot",
-      "Fly"
-     ],
-     [
-      "They watch where they what?",
-      "Walk",
-      "Park",
-      "Eat"
-     ],
-     [
-      "Junior's is out of which borough?",
-      "Brooklyn",
-      "Harlem",
-      "Queens"
-     ],
-     [
-      "What dessert does he mention?",
-      "Cheesecake",
-      "Ice cream",
-      "Pie"
-     ],
-     [
-      "\"Shout to the...\" who?",
-      "Homies",
-      "Fans",
-      "Mayor"
-     ],
-     [
-      "Where are those homies?",
-      "In the tombs",
-      "In the club",
-      "In LA"
-     ]
-    ],
-    [
-     [
-      "He knows some real kings if you ever get to where?",
-      "Queens",
-      "Brooklyn",
+      "Who gets shouted out first on the song?",
+      "Dipset",
+      "Byrdgang",
       "Harlem"
      ],
      [
-      "Some Bronx what?",
-      "Bombers",
-      "Builders",
-      "Bankers"
+      "\"As we proceed, what have we...\" what?",
+      "Here",
+      "Now",
+      "Done"
      ],
      [
-      "\"Stay...\" what?",
-      "Strong",
-      "Fly",
-      "Up"
+      "He pulled off like...?",
+      "Na-na-na-na-na-na",
+      "La-la-la-la-la-la",
+      "Ha-ha-ha-ha-ha-ha"
      ],
      [
-      "New York's the city, who is the team?",
-      "The Knicks",
-      "The Nets",
-      "The Mets"
+      "They only got him 'cause they caught it on the...?",
+      "Camera",
+      "Phone",
+      "Radio"
      ],
      [
-      "\"Start spreading the...\" what?",
-      "News",
-      "Word",
-      "Love"
+      "They wanna ball but they ain't got no...?",
+      "Stamina",
+      "Money",
+      "Game"
      ],
      [
-      "When is he leaving?",
-      "Today",
-      "Tomorrow",
-      "Tonight"
+      "What's the ad-lib after \"no stamina\"?",
+      "Weak knees",
+      "Weak legs",
+      "Weak hands"
      ],
      [
-      "He wants to be a what of it?",
-      "Part",
-      "Fan",
-      "King"
+      "They said, \"Damn, man, you lookin' like...\" who?",
+      "Pac",
+      "Biggie",
+      "Nas"
      ],
      [
-      "\"New York, New...\" what?",
-      "York",
-      "Jersey",
-      "Day"
-     ],
-     [
-      "\"That's this one for the...\" what?",
-      "Town",
-      "Crowd",
-      "Block"
-     ],
-     [
-      "\"That's the big...\" what?",
-      "City",
-      "Apple",
-      "Time"
-     ],
-     [
-      "Who does he call out to with \"Hey\"?",
-      "Capo",
-      "Cam",
+      "\"Nah, not alive, man, I'm lookin' like...\" who?",
+      "Jones",
+      "Cam'ron",
       "Juelz"
+     ],
+     [
+      "Watch what you say up on them...?",
+      "Phones",
+      "Streets",
+      "Blocks"
      ]
     ],
     [
      [
-      "\"Let's what about it\"?",
-      "Rap",
-      "Talk",
-      "Fight"
+      "The Porsche'll look...?",
+      "Gorgeous",
+      "Shiny",
+      "Faster"
      ],
      [
-      "That mighty NYC, we done overcame it what?",
-      "All",
-      "Twice",
-      "Before"
+      "\"We bring them...\" what \"...out\"?",
+      "Whips",
+      "Chains",
+      "Bottles"
      ],
      [
-      "So you know they came to what?",
-      "Ball",
-      "Win",
-      "Party"
+      "\"I got dogs and they not on a...\" what?",
+      "Leash",
+      "Chain",
+      "Porch"
      ],
      [
-      "In the function, feeling like which Knick?",
-      "Brunson",
-      "Ewing",
-      "Starbury"
+      "\"Do you copy?\" and what Italian word?",
+      "Capiche",
+      "Ciao",
+      "Bravo"
      ],
      [
-      "What does the BX do?",
-      "Yankee it",
-      "Knick it",
-      "Met it"
+      "At this point, he don't think they can...?",
+      "Take me",
+      "Break me",
+      "Shake me"
      ],
      [
-      "Staten Isle: cash rules and what?",
-      "Ice cream",
-      "Pizza",
-      "Ferries"
+      "Sharks in the water, they won't make it to...?",
+      "Safety",
+      "The shore",
+      "Land"
      ],
      [
-      "Fresh out of where?",
-      "Far Rockaway",
-      "Far East",
-      "Flatbush"
+      "The money taste sweet like...?",
+      "Pastry",
+      "Candy",
+      "Honey"
      ],
      [
-      "He laughs all the way to the what?",
-      "Bank",
-      "Club",
-      "Top"
+      "\"Now tell me how it...\" what?",
+      "Look",
+      "Feel",
+      "Sound"
      ],
      [
-      "Bacon, egg and what?",
-      "Cheese",
-      "Toast",
-      "Hash"
+      "Would you rather live life like him or by the...?",
+      "Book",
+      "Rules",
+      "Clock"
      ],
      [
-      "Hot sauce on their what?",
-      "Wings",
-      "Eggs",
-      "Fries"
+      "\"If it's red apples fallin', hit me on the...\" what?",
+      "Bat line",
+      "Hot line",
+      "Front line"
      ],
      [
-      "How long do they rock their Timbs?",
-      "All year",
-      "All winter",
-      "Never"
+      "\"I'm back for...\" what?",
+      "Mine",
+      "More",
+      "Good"
+     ]
+    ],
+    [
+     [
+      "Pockets on fat like who?",
+      "Rasputia",
+      "Santa",
+      "Fat Albert"
+     ],
+     [
+      "Think he's gettin' used to the...?",
+      "Lifestyle",
+      "Money",
+      "Fame"
+     ],
+     [
+      "The lifestyle: rich and...?",
+      "Conspicuous",
+      "Famous",
+      "Generous"
+     ],
+     [
+      "When they take flicks of him, what's the ad-lib?",
+      "Say cheese",
+      "Smile",
+      "Freeze"
+     ],
+     [
+      "They all know he put on for...?",
+      "Harlem",
+      "Brooklyn",
+      "The Bronx"
+     ],
+     [
+      "He took eighty, blew it on a...?",
+      "Bezel",
+      "Chain",
+      "Ring"
+     ],
+     [
+      "He bought the new what?",
+      "Fisker",
+      "Ferrari",
+      "Bentley"
+     ],
+     [
+      "\"The definition of...\" what?",
+      "Opulence",
+      "Excellence",
+      "Elegance"
+     ],
+     [
+      "Who would think that this kid from the...?",
+      "Projects",
+      "Suburbs",
+      "Country"
+     ],
+     [
+      "His neck so cold, you would think he's...?",
+      "Lethargic",
+      "Sleepy",
+      "Shivering"
+     ],
+     [
+      "The wrist look like what set in?",
+      "Hypothermia",
+      "Frostbite",
+      "Winter"
      ]
     ]
    ]

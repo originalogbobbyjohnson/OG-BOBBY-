@@ -1,4 +1,4 @@
-/* The Beatnuts game (NYC map, Queens: Corona, the 7 at 111 St). 18+ ONLY set (songs = explicitSongs), 5 songs, 99 questions. Group verses (JuJu, Psycho Les, Fashion/Al' Tariq) count; Big Pun and Cuban Link's verses on Off the Books are skipped by start: 81. Timings = lrclib synced lyrics matched to the official uploads (lengths within 2 s); check by ear. Questions are clean only. */
+/* The Beatnuts game (NYC map, Queens: Corona, the 7 at 111 St). 18+ ONLY set (songs = explicitSongs), 4 songs, 99 questions. Group verses (JuJu, Psycho Les, Fashion/Al' Tariq) count; Off the Books removed Nov 8 per the Diddy-files rule (Big Pun on it); no clean replacement with lrclib sync (Look Around: Beatnuts lines too short, dead prez verses; the rest mainly violent/graphic), so its 19 questions were moved onto the other 4 songs (pools 9/6/12, 7/10/11, 8/8/7, 7/6/8). Timings = lrclib synced lyrics matched to the official uploads (lengths within 2 s); check by ear. Questions are clean only. */
 window.CFG = {
  "name": "The Beatnuts",
  "nameUpper": "THE BEATNUTS",
@@ -33,7 +33,7 @@ window.CFG = {
   },
   "Off the Books Hustler": {
    "bongs": 20,
-   "line": "Making mad money off the books this year."
+   "line": "Getting more dough off the books. Watch out now."
   },
   "Musical Massacre Maestro": {
    "bongs": 25,
@@ -147,6 +147,18 @@ window.CFG = {
       "Studio",
       "Streets",
       "Basement"
+     ],
+     [
+      "This here sounds like nobody's...?",
+      "Groove",
+      "Song",
+      "Record"
+     ],
+     [
+      "He ain't tryna sound like the next...?",
+      "Estúpido",
+      "Amigo",
+      "Rapper"
      ]
     ],
     [
@@ -160,7 +172,7 @@ window.CFG = {
       "Who answers that number?",
       "Big Syke",
       "Big Ju",
-      "Big Pun"
+      "Big Al"
      ],
      [
       "\"Beats, I flip 'em, I...\" what?",
@@ -229,6 +241,36 @@ window.CFG = {
       "Recipe",
       "Remedy",
       "Remix"
+     ],
+     [
+      "Her heart wasn't...?",
+      "In it",
+      "Broken",
+      "Gold"
+     ],
+     [
+      "She hasn't been to the block for a...?",
+      "Minute",
+      "Year",
+      "Week"
+     ],
+     [
+      "She really can't sing and she's no...?",
+      "Salma Hayek",
+      "J.Lo",
+      "Shakira"
+     ],
+     [
+      "Her producer bit the whole idea off his...?",
+      "Show deck",
+      "Notebook",
+      "Demo tape"
+     ],
+     [
+      "The real man that mommy always thought you would...?",
+      "Marry",
+      "Meet",
+      "Date"
      ]
     ]
    ]
@@ -279,6 +321,12 @@ window.CFG = {
       "The Pharcyde",
       "De La Soul",
       "The Roots"
+     ],
+     [
+      "He just kicks back with a...?",
+      "Six pack",
+      "Cold one",
+      "Forty"
      ]
     ],
     [
@@ -323,6 +371,24 @@ window.CFG = {
       "Detroit",
       "Philly",
       "Texas"
+     ],
+     [
+      "Which city comes right after Detroit?",
+      "Philly",
+      "Chicago",
+      "Boston"
+     ],
+     [
+      "They hang 'til the night is...?",
+      "Thru",
+      "Done",
+      "Over"
+     ],
+     [
+      "He won't have a clue of what tomorrow will...?",
+      "Bring",
+      "Hold",
+      "Be"
      ]
     ],
     [
@@ -367,6 +433,30 @@ window.CFG = {
       "DC",
       "Chicago",
       "Boston"
+     ],
+     [
+      "Real ones do real things, and that's a...?",
+      "Fact",
+      "Rule",
+      "Must"
+     ],
+     [
+      "Your life's down like a heavy...?",
+      "Price to pay",
+      "Weight to carry",
+      "Load to lift"
+     ],
+     [
+      "He's got a lot of things to do, a lot of money to...?",
+      "Make",
+      "Save",
+      "Spend"
+     ],
+     [
+      "He's got no time for you and all the moves you...?",
+      "Fake",
+      "Pull",
+      "Try"
      ]
     ]
    ]
@@ -423,6 +513,12 @@ window.CFG = {
       "Fuses",
       "Speakers",
       "Minds"
+     ],
+     [
+      "Guerilla army, they kill tracks in...?",
+      "Harmony",
+      "Silence",
+      "Order"
      ]
     ],
     [
@@ -467,6 +563,12 @@ window.CFG = {
       "Deal",
       "Mess",
       "Play"
+     ],
+     [
+      "\"So stop fooling...\" what?",
+      "Yourself",
+      "Around",
+      "Me"
      ]
     ],
     [
@@ -505,138 +607,12 @@ window.CFG = {
       "Hitter",
       "Player",
       "House"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Off the Books",
-   "id": "cD7K69skVyg",
-   "start": 81,
-   "cuts": [
-    103.1,
-    124.4,
-    148.5
-   ],
-   "qs": [
-    [
-     [
-      "\"I'm out here... getting this...\" what?",
-      "Loot",
-      "Food",
-      "Look"
      ],
      [
-      "\"I got a waterproof...\" what?",
-      "Suit",
-      "Watch",
-      "Coat"
-     ],
-     [
-      "He can tell you lots of things that'll make you what?",
-      "Believe",
-      "Laugh",
-      "Leave"
-     ],
-     [
-      "Where is it better to take than to receive?",
-      "Corona",
-      "Harlem",
-      "The Bronx"
-     ],
-     [
-      "In Corona, it's better to take than to what?",
-      "Receive",
-      "Give",
-      "Lose"
-     ],
-     [
-      "\"Your career's on life...\" what?",
-      "Support",
-      "Line",
-      "Lock"
-     ]
-    ],
-    [
-     [
-      "\"No...\" what \"...this\"?",
-      "Escapin'",
-      "Stoppin'",
-      "Fakin'"
-     ],
-     [
-      "\"World...\" what?",
-      "Premiere",
-      "Tour",
-      "Wide"
-     ],
-     [
-      "\"Loud and...\" what?",
-      "Clear",
-      "Proud",
-      "Real"
-     ],
-     [
-      "Get the dough, blow up the what?",
-      "Show",
-      "Spot",
-      "Block"
-     ],
-     [
-      "\"Jump in the...\" what?",
-      "Cavalier",
-      "Cadillac",
-      "Coupe"
-     ],
-     [
-      "How is he feeling?",
-      "Marvelous",
-      "Fabulous",
-      "Dangerous"
-     ]
-    ],
-    [
-     [
-      "His heart nowadays is too what?",
-      "Cold",
-      "Old",
-      "Bold"
-     ],
-     [
-      "\"In black...\" what?",
-      "Shades",
-      "Suits",
-      "Boots"
-     ],
-     [
-      "Like a secret what?",
-      "Agent",
-      "Weapon",
-      "Service"
-     ],
-     [
-      "\"...and stack...\" what?",
-      "Cheese",
-      "Chips",
-      "Bread"
-     ],
-     [
-      "\"It's off the...\" what \"...this year\"?",
-      "Hook",
-      "Chain",
-      "Wall"
-     ],
-     [
-      "Making mad money off the what?",
-      "Books",
-      "Charts",
-      "Streets"
-     ],
-     [
-      "\"Ain't nothing but...\" what \"...in here\"?",
-      "Crooks",
-      "Cooks",
-      "Kings"
+      "Every other country burning the...?",
+      "Flag",
+      "Bridge",
+      "House"
      ]
     ]
    ]
@@ -718,7 +694,7 @@ window.CFG = {
       "Who gets called \"Big\" in the bridge?",
       "Ju",
       "Les",
-      "Pun"
+      "Al"
      ],
      [
       "\"The girls don't only love me, they love...\" who?",
@@ -775,6 +751,12 @@ window.CFG = {
       "Crooks",
       "Thugs",
       "Kings"
+     ],
+     [
+      "They made a what for your cheap self?",
+      "Roley",
+      "Chain",
+      "Benz"
      ]
     ]
    ]
@@ -833,6 +815,18 @@ window.CFG = {
       "Studio",
       "Streets",
       "Basement"
+     ],
+     [
+      "This here sounds like nobody's...?",
+      "Groove",
+      "Song",
+      "Record"
+     ],
+     [
+      "He ain't tryna sound like the next...?",
+      "Estúpido",
+      "Amigo",
+      "Rapper"
      ]
     ],
     [
@@ -846,7 +840,7 @@ window.CFG = {
       "Who answers that number?",
       "Big Syke",
       "Big Ju",
-      "Big Pun"
+      "Big Al"
      ],
      [
       "\"Beats, I flip 'em, I...\" what?",
@@ -915,6 +909,36 @@ window.CFG = {
       "Recipe",
       "Remedy",
       "Remix"
+     ],
+     [
+      "Her heart wasn't...?",
+      "In it",
+      "Broken",
+      "Gold"
+     ],
+     [
+      "She hasn't been to the block for a...?",
+      "Minute",
+      "Year",
+      "Week"
+     ],
+     [
+      "She really can't sing and she's no...?",
+      "Salma Hayek",
+      "J.Lo",
+      "Shakira"
+     ],
+     [
+      "Her producer bit the whole idea off his...?",
+      "Show deck",
+      "Notebook",
+      "Demo tape"
+     ],
+     [
+      "The real man that mommy always thought you would...?",
+      "Marry",
+      "Meet",
+      "Date"
      ]
     ]
    ]
@@ -965,6 +989,12 @@ window.CFG = {
       "The Pharcyde",
       "De La Soul",
       "The Roots"
+     ],
+     [
+      "He just kicks back with a...?",
+      "Six pack",
+      "Cold one",
+      "Forty"
      ]
     ],
     [
@@ -1009,6 +1039,24 @@ window.CFG = {
       "Detroit",
       "Philly",
       "Texas"
+     ],
+     [
+      "Which city comes right after Detroit?",
+      "Philly",
+      "Chicago",
+      "Boston"
+     ],
+     [
+      "They hang 'til the night is...?",
+      "Thru",
+      "Done",
+      "Over"
+     ],
+     [
+      "He won't have a clue of what tomorrow will...?",
+      "Bring",
+      "Hold",
+      "Be"
      ]
     ],
     [
@@ -1053,6 +1101,30 @@ window.CFG = {
       "DC",
       "Chicago",
       "Boston"
+     ],
+     [
+      "Real ones do real things, and that's a...?",
+      "Fact",
+      "Rule",
+      "Must"
+     ],
+     [
+      "Your life's down like a heavy...?",
+      "Price to pay",
+      "Weight to carry",
+      "Load to lift"
+     ],
+     [
+      "He's got a lot of things to do, a lot of money to...?",
+      "Make",
+      "Save",
+      "Spend"
+     ],
+     [
+      "He's got no time for you and all the moves you...?",
+      "Fake",
+      "Pull",
+      "Try"
      ]
     ]
    ]
@@ -1109,6 +1181,12 @@ window.CFG = {
       "Fuses",
       "Speakers",
       "Minds"
+     ],
+     [
+      "Guerilla army, they kill tracks in...?",
+      "Harmony",
+      "Silence",
+      "Order"
      ]
     ],
     [
@@ -1153,6 +1231,12 @@ window.CFG = {
       "Deal",
       "Mess",
       "Play"
+     ],
+     [
+      "\"So stop fooling...\" what?",
+      "Yourself",
+      "Around",
+      "Me"
      ]
     ],
     [
@@ -1191,138 +1275,12 @@ window.CFG = {
       "Hitter",
       "Player",
       "House"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Off the Books",
-   "id": "cD7K69skVyg",
-   "start": 81,
-   "cuts": [
-    103.1,
-    124.4,
-    148.5
-   ],
-   "qs": [
-    [
-     [
-      "\"I'm out here... getting this...\" what?",
-      "Loot",
-      "Food",
-      "Look"
      ],
      [
-      "\"I got a waterproof...\" what?",
-      "Suit",
-      "Watch",
-      "Coat"
-     ],
-     [
-      "He can tell you lots of things that'll make you what?",
-      "Believe",
-      "Laugh",
-      "Leave"
-     ],
-     [
-      "Where is it better to take than to receive?",
-      "Corona",
-      "Harlem",
-      "The Bronx"
-     ],
-     [
-      "In Corona, it's better to take than to what?",
-      "Receive",
-      "Give",
-      "Lose"
-     ],
-     [
-      "\"Your career's on life...\" what?",
-      "Support",
-      "Line",
-      "Lock"
-     ]
-    ],
-    [
-     [
-      "\"No...\" what \"...this\"?",
-      "Escapin'",
-      "Stoppin'",
-      "Fakin'"
-     ],
-     [
-      "\"World...\" what?",
-      "Premiere",
-      "Tour",
-      "Wide"
-     ],
-     [
-      "\"Loud and...\" what?",
-      "Clear",
-      "Proud",
-      "Real"
-     ],
-     [
-      "Get the dough, blow up the what?",
-      "Show",
-      "Spot",
-      "Block"
-     ],
-     [
-      "\"Jump in the...\" what?",
-      "Cavalier",
-      "Cadillac",
-      "Coupe"
-     ],
-     [
-      "How is he feeling?",
-      "Marvelous",
-      "Fabulous",
-      "Dangerous"
-     ]
-    ],
-    [
-     [
-      "His heart nowadays is too what?",
-      "Cold",
-      "Old",
-      "Bold"
-     ],
-     [
-      "\"In black...\" what?",
-      "Shades",
-      "Suits",
-      "Boots"
-     ],
-     [
-      "Like a secret what?",
-      "Agent",
-      "Weapon",
-      "Service"
-     ],
-     [
-      "\"...and stack...\" what?",
-      "Cheese",
-      "Chips",
-      "Bread"
-     ],
-     [
-      "\"It's off the...\" what \"...this year\"?",
-      "Hook",
-      "Chain",
-      "Wall"
-     ],
-     [
-      "Making mad money off the what?",
-      "Books",
-      "Charts",
-      "Streets"
-     ],
-     [
-      "\"Ain't nothing but...\" what \"...in here\"?",
-      "Crooks",
-      "Cooks",
-      "Kings"
+      "Every other country burning the...?",
+      "Flag",
+      "Bridge",
+      "House"
      ]
     ]
    ]
@@ -1404,7 +1362,7 @@ window.CFG = {
       "Who gets called \"Big\" in the bridge?",
       "Ju",
       "Les",
-      "Pun"
+      "Al"
      ],
      [
       "\"The girls don't only love me, they love...\" who?",
@@ -1461,6 +1419,12 @@ window.CFG = {
       "Crooks",
       "Thugs",
       "Kings"
+     ],
+     [
+      "They made a what for your cheap self?",
+      "Roley",
+      "Chain",
+      "Benz"
      ]
     ]
    ]
