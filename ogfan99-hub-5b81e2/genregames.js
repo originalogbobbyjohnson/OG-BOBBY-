@@ -129,6 +129,7 @@ window.OG_GENRE_OF = {
   "Mariah Carey": "POP",
   "Marc Anthony": "LATIN + REGGAETON",
   "Jennifer Lopez": "LATIN + REGGAETON",
+  "Shaggy": "DANCEHALL + AFROBEATS",
   "Billy Joel": "ROCK",
   "Bruce Springsteen": "ROCK",
   "Dolly Parton": "COUNTRY",
