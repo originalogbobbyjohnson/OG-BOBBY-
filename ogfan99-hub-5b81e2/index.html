@@ -430,6 +430,7 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .wrap.app .natp .bgrid button.rb .chev { position: absolute; right: 9px; top: 50%; transform: translateY(-50%); font-style: normal; font-size: .75rem; }
 .wrap.app .natp .bgrid button.rb.soon { background: linear-gradient(180deg, #2a2e45, #1a1d2e); box-shadow: 0 5px 0 #000, inset 0 0 0 2px var(--bc); }
 .wrap.app .natp .bgrid button.rb.soon small { background: #e8b84a; color: #000; }
+.wrap.app.nation:not(.paneon) > .natp > .natTop { position: sticky; top: 0; z-index: 20; background: #10132a; margin: 0 -12px; padding: 4px 12px 10px; display: grid; gap: 8px; box-shadow: 0 8px 12px -6px rgba(0,0,0,.8); }
 .natp .bgrid .wide3 { grid-row: auto; }
 .wrap.app.nation:not(.paneon) > .natp { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
 .wrap.app.nation:not(.paneon) > .natp .bgrid .wide3 { position: fixed; left: 50%; bottom: 0; transform: translateX(-50%); width: min(100%, 460px); box-sizing: border-box; z-index: 1500; padding: 8px 12px max(10px, env(safe-area-inset-bottom)); background: var(--bg); border-top: 2px solid #000; box-shadow: 0 -6px 14px rgba(0,0,0,.55); }
@@ -2156,9 +2157,9 @@ window.OGX = (function () {
     const secs = GO.map(g => ({ g, list: all.filter(r => r.grp === g) })).concat([{ g: "MORE", list: all.filter(r => GO.indexOf(r.grp) < 0) }]).filter(x => x.list.length);
     const tile = r => '<button type="button" class="rb' + (r.k ? '' : ' soon') + '" data-nr="' + (r.ny ? "__ny" : esc(r.n)) + '" style="--bc:' + r.c + '">' + esc(r.n) + '<small>' + (r.k ? r.k + (r.k === 1 ? ' ARTIST' : ' ARTISTS') : 'COMING SOON') + '</small><i class="chev">&#9654;</i></button>';
     const tot = all.reduce((s, r) => s + r.k, 0), live = all.filter(r => r.k).length;
-    n0.innerHTML = '<div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR REGION</b></div>' +
+    n0.innerHTML = '<div class="natTop"><div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR REGION</b></div>' +
       '<div class="board"><div class="bd-h"><i></i>LIVE ACROSS THE COUNTRY<i></i></div><div class="bd-row"><button type="button" id="ntAb"><b>' + tot + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="ntRb"><b>' + live + '</b><small>REGIONS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="ntFb"><b id="ntF">' + ($("mtF") ? $("mtF").textContent : "—") + '</b><small>FANS</small><em>SEE ALL &#9656;</em></button></div></div>' +
-      '<div class="bgrid">' + secs.map(x => '<div class="natsec" style="--bc:' + x.list[0].c + '"><span>' + x.g + '</span><em>' + x.list.reduce((a, r) => a + r.k, 0) + '</em></div>' + x.list.map(tile).join("")).join("") +
+      '</div>' + '<div class="bgrid">' + secs.map(x => '<div class="natsec" style="--bc:' + x.list[0].c + '"><span>' + x.g + '</span><em>' + x.list.reduce((a, r) => a + r.k, 0) + '</em></div>' + x.list.map(tile).join("")).join("") +
       '<div class="wide3"><button type="button" class="wide go3" data-nr="__genres"><i>&#127925;</i>GENRES</button>' +
       '<button type="button" class="wide go3" data-nr="__prod"><i>&#127911;</i>PRODUCERS</button>' +
       '<button type="button" class="wide go3" data-nr="__find"><i>&#128269;</i>SEARCH</button></div></div>';
