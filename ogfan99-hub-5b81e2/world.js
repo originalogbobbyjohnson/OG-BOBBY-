@@ -681,7 +681,7 @@
     var HIP = "#d62828", ON = "#2f6fd6", SOON = "#4a4f6a";
     var item = function (g) {
       if (g.live) return { n: g.n, c: HIP, wide: 1, badge: "LIVE", go: function () { go("map"); } };
-      if (g.women) return { n: g.n, c: HIP, wide: 1, badge: "&#128081; QUEENS", go: function () { go("women"); } };
+      if (g.women) return { n: g.n, c: HIP, wide: 1, badge: "&#128081; EMPRESSES", go: function () { go("women"); } };
       var games = gamesOf(g), c = games.length ? ON : SOON;
       return { n: g.n, c: c, badge: games.length ? games.length + (games.length === 1 ? " GAME" : " GAMES") : "",
         detail: function () { return '<div class="dh">' + esc(g.n) + '</div><div>' + esc(g.d) + '</div>' + (games.length ? gameRows(games, c) : '<div>Games coming soon.</div>'); },
