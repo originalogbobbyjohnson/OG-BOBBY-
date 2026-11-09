@@ -531,4 +531,6 @@ window.OG_REGION_GAMES = {
   "Johnnie Taylor": { url: "../johnnietaylor-ogfan99-52034d/", ex: 0 },
   "Janelle Mon\u00e1e": { url: "../janellemonae-ogfan99-4b7bb3/", ex: 0 },
   "Bilal": { url: "../bilal-ogfan99-d4df48/", ex: 0 },
+  "Dru Hill": { url: "../druhill-ogfan99-4a85da/", ex: 0 },
+  "Avant": { url: "../avant-ogfan99-48a980/", ex: 0 },
 };

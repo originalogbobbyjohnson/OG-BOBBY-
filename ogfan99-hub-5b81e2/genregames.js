@@ -107,4 +107,6 @@ window.OG_GENRE_OF = {
   "Johnnie Taylor": "R&B",
   "Janelle Mon\u00e1e": "R&B",
   "Bilal": "R&B",
+  "Dru Hill": "R&B",
+  "Avant": "R&B",
 };
