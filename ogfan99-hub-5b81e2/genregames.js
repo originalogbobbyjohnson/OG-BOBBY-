@@ -105,4 +105,6 @@ window.OG_GENRE_OF = {
   "Macy Gray": "R&B",
   "Aaliyah": "R&B",
   "Johnnie Taylor": "R&B",
+  "Janelle Mon\u00e1e": "R&B",
+  "Bilal": "R&B",
 };

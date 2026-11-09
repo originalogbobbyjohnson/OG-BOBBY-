@@ -529,4 +529,6 @@ window.OG_REGION_GAMES = {
   "Macy Gray": { url: "../macygray-ogfan99-b569fd/", ex: 0 },
   "Aaliyah": { url: "../aaliyah-ogfan99-531174/", ex: 0 },
   "Johnnie Taylor": { url: "../johnnietaylor-ogfan99-52034d/", ex: 0 },
+  "Janelle Mon\u00e1e": { url: "../janellemonae-ogfan99-4b7bb3/", ex: 0 },
+  "Bilal": { url: "../bilal-ogfan99-d4df48/", ex: 0 },
 };
