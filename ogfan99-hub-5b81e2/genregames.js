@@ -156,5 +156,7 @@ window.OG_GENRE_OF = {
   "J Balvin": "LATIN + REGGAETON",
   "Dua Lipa": "POP",
   "ABBA": "POP",
+  "Kylie Minogue": "POP",
+  "BLACKPINK": "POP",
 };
 

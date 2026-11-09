@@ -562,4 +562,6 @@ window.OG_REGION_GAMES = {
   "J Balvin": { url: "../jbalvin-ogfan99-69d001/", ex: 0 },
   "Dua Lipa": { url: "../dualipa-ogfan99-902ebe/", ex: 0 },
   "ABBA": { url: "../abba-ogfan99-3f5f14/", ex: 0 },
+  "Kylie Minogue": { url: "../kylieminogue-ogfan99-96e334/", ex: 0 },
+  "BLACKPINK": { url: "../blackpink-ogfan99-fed795/", ex: 0 },
 };
