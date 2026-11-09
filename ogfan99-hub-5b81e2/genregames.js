@@ -154,5 +154,7 @@ window.OG_GENRE_OF = {
   "Tyla": "DANCEHALL + AFROBEATS",
   "Shakira": "LATIN + REGGAETON",
   "J Balvin": "LATIN + REGGAETON",
+  "Dua Lipa": "POP",
+  "ABBA": "POP",
 };
 
