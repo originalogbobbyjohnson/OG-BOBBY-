@@ -568,7 +568,7 @@
   function tileGrid(p, items) {
     var g = p.querySelector(".wgrid");
     g.innerHTML = items.map(function (it, i) {
-      if (it.sec) return '<div class="rg-h"><span>' + it.sec + '</span>' + (it.secN != null ? '<em>' + it.secN + (it.secN === 1 ? ' GAME' : ' GAMES') + '</em>' : '') + '</div>';
+      if (it.sec) return '<div class="rg-h"><span>' + it.sec + '</span>' + (it.secT ? '<em>' + it.secT + '</em>' : it.secN != null ? '<em>' + it.secN + (it.secN === 1 ? ' GAME' : ' GAMES') + '</em>' : '') + '</div>';
       return '<button class="wtile mini' + (it.wide ? " wide" : "") + (it.badge ? "" : " soon") + '" type="button" data-i="' + i + '" style="--tc:' + it.c + '"><b>' + esc(it.n) + '</b>' +
         '<span class="cnt ' + (it.badge ? "on" : "soon") + '">' + (it.badge || "SOON") + '</span><i class="chev">&#9654;</i></button>';
     }).join("");
@@ -677,19 +677,24 @@
   function drawGenres() {
     var p = panes.genres, RG = window.OG_REGION_GAMES || {}, GO = window.OG_GENRE_OF || {};
     var gamesOf = function (g) { return Object.keys(GO).filter(function (n) { return GO[n] === g.n && RG[n]; }); };
-    p.innerHTML = '<div class="wp-h"><div class="t">OTHER GENRES</div><div class="s">TAP A GENRE</div></div><div class="wgrid"></div>';
-    var HIP = "#d62828", ON = "#2f6fd6", SOON = "#4a4f6a";
+    p.innerHTML = '<div class="wp-h"><div class="t">GENRES</div><div class="s">TAP A GENRE</div></div><div class="wgrid"></div>';
+    var HIP = "#d62828", SOON = "#4a4f6a";
+    /* other genres: one blue family, each genre its own shade */
+    var SHADES = ["#2f6fd6", "#1f8fb8", "#4b5fd8", "#2a7fd0", "#3a4fb8", "#1c9fae", "#5a6ee0", "#2468b0", "#3b8ccf"], si = 0, shadeOf = {};
     var item = function (g) {
       if (g.live) return { n: g.n, c: HIP, wide: 1, badge: "LIVE", go: function () { go("map"); } };
       if (g.women) return { n: g.n, c: HIP, wide: 1, badge: "&#128081; EMPRESSES", go: function () { go("women"); } };
-      var games = gamesOf(g), c = games.length ? ON : SOON;
+      var games = gamesOf(g), c = games.length ? (shadeOf[g.n] || (shadeOf[g.n] = SHADES[si++ % SHADES.length])) : SOON;
       return { n: g.n, c: c, badge: games.length ? games.length + (games.length === 1 ? " GAME" : " GAMES") : "",
         detail: function () { return '<div class="dh">' + esc(g.n) + '</div><div>' + esc(g.d) + '</div>' + (games.length ? gameRows(games, c) : '<div>Games coming soon.</div>'); },
         wire: wireRows };
     };
     var hip = GENRES.filter(function (g) { return g.live || g.women; }), rest = GENRES.filter(function (g) { return !g.live && !g.women; });
     var on = rest.filter(function (g) { return gamesOf(g).length; }).sort(function (a, b) { return gamesOf(b).length - gamesOf(a).length; }), soon = rest.filter(function (g) { return !gamesOf(g).length; });
-    tileGrid(p, [{ sec: "HIP-HOP" }].concat(hip.map(item), on.length ? [{ sec: "PLAYING NOW" }] : [], on.map(item), soon.length ? [{ sec: "COMING SOON" }] : [], soon.map(item)));
+    var nyc = (typeof ARTISTS !== "undefined" && ARTISTS.length) || 0;
+    var hipN = nyc + Object.keys(RG).filter(function (n) { return !GO[n]; }).length;
+    var otherN = on.reduce(function (a, g) { return a + gamesOf(g).length; }, 0);
+    tileGrid(p, [{ sec: "HIP-HOP", secN: hipN }].concat(hip.map(item), on.length ? [{ sec: "OTHER GENRES", secN: otherN }] : [], on.map(item), soon.length ? [{ sec: "COMING SOON", secT: "100&ndash;500+ GAMES" }] : [], soon.map(item)));
   }
 
 
