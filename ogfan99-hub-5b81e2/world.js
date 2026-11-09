@@ -672,7 +672,8 @@
     { n: "ROCK", d: "Rock, punk and metal.", c: "#e04e1b" },
     { n: "COUNTRY", d: "Country and Americana.", c: "#b5651d" },
     { n: "GOSPEL", d: "Gospel and Christian.", c: "#f2c14e" },
-    { n: "DANCE + HOUSE", d: "House, EDM and club.", c: "#0099d8" }
+    { n: "EDM + DANCE", d: "Electronic dance music: the producers, the headliners and the acts that open for them. House, EDM and club.", c: "#0099d8" },
+    { n: "DJS", d: "Straight DJs: hip-hop, club and radio DJs and their mixes.", c: "#0099d8" }
   ];
   function drawGenres() {
     var p = panes.genres, RG = window.OG_REGION_GAMES || {}, GO = window.OG_GENRE_OF || {};

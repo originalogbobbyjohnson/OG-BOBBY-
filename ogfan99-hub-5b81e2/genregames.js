@@ -34,7 +34,7 @@ window.OG_GENRE_OF = {
   "Boston": "ROCK",
   "James Taylor": "ROCK",
   "Aimee Mann": "ROCK",
-  "Donna Summer": "DANCE + HOUSE",
+  "Donna Summer": "EDM + DANCE",
   "Destiny's Child": "R&B",
   "Toni Braxton": "R&B",
   "Jennifer Hudson": "R&B",
