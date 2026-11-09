@@ -136,5 +136,7 @@ window.OG_GENRE_OF = {
   "Willie Nelson": "COUNTRY",
   "Mahalia Jackson": "GOSPEL",
   "Marvin Sapp": "GOSPEL",
+  "Marshmello": "EDM + DANCE",
+  "Porter Robinson": "EDM + DANCE",
 };
 

@@ -543,4 +543,6 @@ window.OG_REGION_GAMES = {
   "Willie Nelson": { url: "../willienelson-ogfan99-3de8f2/", ex: 0 },
   "Mahalia Jackson": { url: "../mahaliajackson-ogfan99-28898d/", ex: 0 },
   "Marvin Sapp": { url: "../marvinsapp-ogfan99-7ea678/", ex: 0 },
+  "Marshmello": { url: "../marshmello-ogfan99-7aaaa6/", ex: 0 },
+  "Porter Robinson": { url: "../porterrobinson-ogfan99-72da10/", ex: 0 },
 };
