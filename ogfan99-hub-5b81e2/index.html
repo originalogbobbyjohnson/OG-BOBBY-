@@ -420,6 +420,8 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .natp .bgrid { grid-auto-rows: 1fr; }
 .natp .bgrid button { padding: 8px 6px 7px; font-size: .78rem; line-height: 1.1; min-height: 58px; align-content: center; }
 .natp .bgrid .wide3 { grid-row: auto; }
+.wrap.app.nation:not(.paneon) > .natp { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+.wrap.app.nation:not(.paneon) > .natp .bgrid .wide3 { position: fixed; left: 50%; bottom: 0; transform: translateX(-50%); width: min(100%, 460px); box-sizing: border-box; z-index: 1500; padding: 8px 12px max(10px, env(safe-area-inset-bottom)); background: var(--bg); border-top: 2px solid #000; box-shadow: 0 -6px 14px rgba(0,0,0,.55); }
 .natp .bgrid button.soon small { color: #fff; }
 .wrap.app .natp .bgrid .wide3 button.go3 { font-size: .68rem; letter-spacing: .02em; padding: 8px 2px; min-height: 0; }
 .wrap.app .natp .bgrid .wide3 button.go3 i { font-size: .8rem; }
