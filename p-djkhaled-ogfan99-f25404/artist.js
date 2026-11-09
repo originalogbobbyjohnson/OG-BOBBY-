@@ -106,168 +106,169 @@ window.CFG = {
  ],
  "explicitSongs": [
   {
-   "title": "Welcome to My Hood",
-   "id": "SpXk19LNizY",
+   "title": "Just Us",
+   "id": "ZV7S-Kg9sL0",
+   "start": 19.7,
    "cuts": [
-    40.5,
-    109.5,
-    177.9
+    58.9,
+    121.4,
+    216.9
    ],
    "qs": [
     [
      [
-      "Which label does he shout out next to Young Money?",
-      "Cash Money",
+      "Busting through the what, they gon' feel me now?",
+      "Crowd",
+      "Door",
+      "Club"
+     ],
+     [
+      "\"99 problems, but you ain't...\" what?",
+      "One",
+      "Two",
+      "Mine"
+     ],
+     [
+      "You could see it in my...?",
+      "Eyes",
+      "Face",
+      "Smile"
+     ],
+     [
+      "\"Real love, show me what it...\"?",
+      "Feels like",
+      "Looks like",
+      "Sounds like"
+     ],
+     [
+      "\"Girl, I let you pull up on me\" in broad...?",
+      "Daylight",
+      "Moonlight",
+      "Traffic"
+     ],
+     [
+      "\"We ain't gotta lay low, we...\"?",
+      "Grown",
+      "Home",
+      "Gone"
+     ],
+     [
+      "\"A field trip and I don't need no...\"?",
+      "Chaperone",
+      "Permission",
+      "Bus pass"
+     ],
+     [
+      "\"I'm tryna get...\"?",
+      "Ghost",
+      "Gone",
+      "Paid"
+     ],
+     [
+      "\"Tell me get 'em, then I...\"?",
+      "Got 'em",
+      "Lost 'em",
+      "Hold 'em"
+     ]
+    ],
+    [
+     [
+      "\"It's just us against the...\"?",
+      "World",
+      "Clock",
+      "Odds"
+     ],
+     [
+      "\"It's lovely at the top, private...\"?",
+      "Destination",
+      "Island",
+      "Party"
+     ],
+     [
+      "This kinda love is what, when there's nothing else to lose?",
+      "Dangerous",
+      "Beautiful",
+      "Forever"
+     ],
+     [
+      "\"Got 99 problems, what's one...\"?",
+      "More",
+      "Less",
+      "Now"
+     ],
+     [
+      "\"Livin' fast and we spending...\"?",
+      "Slow",
+      "Fast",
+      "Cash"
+     ],
+     [
+      "Side eyes let them know that they're...?",
+      "Visible",
+      "Hidden",
+      "Famous"
+     ],
+     [
+      "\"Ten toes...\"?",
+      "Down",
+      "Up",
+      "Deep"
+     ],
+     [
+      "\"We gonna turn the lights...\"?",
+      "Off",
+      "On",
+      "Low"
+     ]
+    ],
+    [
+     [
+      "\"Ain't nobody gonna take us...\"?",
+      "Out",
+      "Down",
+      "Under"
+     ],
+     [
+      "\"It's always us, never...\"?",
+      "Them",
+      "Me",
+      "Alone"
+     ],
+     [
+      "\"...in this life of\" what?",
+      "Sin",
+      "Gold",
+      "Fame"
+     ],
+     [
+      "\"Against the world, when the ... clears\"?",
+      "Smoke",
+      "Rain",
+      "Air"
+     ],
+     [
+      "\"This how a/an ... sounds\"?",
+      "Angel",
+      "Legend",
+      "Winner"
+     ],
+     [
+      "\"You're all that I...\"?",
+      "Need",
+      "Want",
+      "See"
+     ],
+     [
+      "Whose label gets shouted at the end: \"... Music\"?",
+      "We The Best",
       "Bad Boy",
-      "Def Jam"
+      "Cash Money"
      ],
      [
-      "\"Khaled, I...\" what?",
-      "Got you",
-      "See you",
-      "Love you"
-     ],
-     [
-      "\"Where the ___ at?\"",
-      "Hood",
-      "Party",
-      "Money"
-     ],
-     [
-      "In his hood, everybody knows who?",
-      "Everybody",
-      "Nobody",
-      "The boss"
-     ],
-     [
-      "If he got it, who else got it?",
-      "Everybody",
-      "Nobody",
-      "His mama"
-     ],
-     [
-      "What kind of Chevys are on the block?",
-      "Old school",
-      "Brand new",
-      "Candy paint"
-     ],
-     [
-      "What size rims, so you know they roll heavy?",
-      "24's",
-      "22's",
-      "26's"
-     ],
-     [
-      "What game are they playing outside?",
-      "Hopscotch",
-      "Double dutch",
-      "Stickball"
-     ],
-     [
-      "Everybody knows this is the what?",
-      "Hot spot",
-      "Best spot",
-      "Old block"
-     ]
-    ],
-    [
-     [
-      "What watch is on his wrist?",
-      "Audemar",
-      "Rolex",
-      "Cartier"
-     ],
-     [
-      "His diamonds look like they're doing what?",
-      "Glowin'",
-      "Dancin'",
-      "Drippin'"
-     ],
-     [
-      "\"50 stacks, all...\" what?",
-      "Singles",
-      "Hundreds",
-      "Twenties"
-     ],
-     [
-      "What color are the unmarked cars?",
-      "Black",
-      "White",
-      "Gray"
-     ],
-     [
-      "\"Lord, forgive me for my...\" what?",
-      "Sins",
-      "Ways",
-      "Past"
-     ],
-     [
-      "The Ferrari is just a what?",
-      "Front",
-      "Toy",
-      "Rental"
-     ],
-     [
-      "What's parked in the back?",
-      "The Lambo",
-      "The Bentley",
-      "The Rolls"
-     ],
-     [
-      "\"We the best forever,\" who handles that?",
-      "DJ Khaled",
-      "Rick Ross",
-      "Lil Wayne"
-     ]
-    ],
-    [
-     [
-      "Who should you tell when you see 'em?",
-      "Congress",
-      "The mayor",
-      "The judge"
-     ],
-     [
-      "Some are on house arrest, some are on what?",
-      "Child support",
-      "Vacation",
-      "The radio"
-     ],
-     [
-      "Who's getting the eviction note?",
-      "Mr. Landlord",
-      "Mr. Mayor",
-      "Mr. Officer"
-     ],
-     [
-      "Better have the police with you if you came to do what?",
-      "Repo",
-      "Collect",
-      "Visit"
-     ],
-     [
-      "Strip clubs and what kind of stores?",
-      "Liquor stores",
-      "Corner stores",
-      "Shoe stores"
-     ],
-     [
-      "What do they throw 'round here?",
-      "Money",
-      "Parties",
-      "Shade"
-     ],
-     [
-      "\"Woop, woop\" is the sound of who?",
-      "The police",
-      "The ice cream truck",
-      "The fire truck"
-     ],
-     [
-      "\"Look at all these old school...\" what?",
-      "Chevy's",
-      "Cadillacs",
-      "Fords"
+      "Then Khaled says \"Another...\"?",
+      "One",
+      "Day",
+      "Hit"
      ]
     ]
    ]
@@ -608,162 +609,162 @@ window.CFG = {
    ]
   },
   {
-   "title": "All I Do Is Win",
-   "id": "xN9ZXjUiQm0",
+   "title": "I Believe",
+   "id": "SphTGtDlhHw",
    "cuts": [
-    32,
-    95.7,
-    159.9
+    44.5,
+    132.2,
+    211.3
    ],
    "qs": [
     [
      [
-      "\"All I do is win, win, win, no matter...\" what?",
-      "What",
-      "How",
-      "When"
+      "\"Some people stand, some people...\"?",
+      "Move",
+      "Fall",
+      "Run"
      ],
      [
-      "What's on his mind?",
-      "Money",
-      "The game",
-      "Victory"
+      "\"Tough times don't last, but tough...\"?",
+      "People do",
+      "Times do",
+      "Days do"
      ],
      [
-      "He can never get what?",
-      "Enough",
-      "Tired",
-      "Beat"
+      "As long as you've got what, you'll find your way?",
+      "Hope",
+      "Love",
+      "Faith"
      ],
      [
-      "Every time he steps up in the what?",
-      "Building",
-      "Club",
-      "Ring"
+      "There's power in the what that you think?",
+      "Thoughts",
+      "Dreams",
+      "Plans"
      ],
      [
-      "What goes up, for everybody?",
-      "Hands",
-      "Drinks",
-      "Flags"
+      "There's power in the what you say?",
+      "Words",
+      "Songs",
+      "Prayers"
      ],
      [
-      "\"And they ___ there\"",
-      "Stay",
-      "Keep",
-      "Wait"
+      "\"Like I can, I can, I...\"?",
+      "Will",
+      "Must",
+      "Might"
      ],
      [
-      "Which directions does he call out?",
-      "Up, down",
-      "Left, right",
-      "In, out"
+      "\"I am, I am, no...\"?",
+      "Fear",
+      "Doubt",
+      "Limit"
      ],
      [
-      "Who does Khaled tell to listen at the end?",
-      "Luda",
-      "Ross",
-      "Snoop"
+      "Who gets shouted out at the start?",
+      "DJ Khaled",
+      "Demi Lovato",
+      "Drake"
      ]
     ],
     [
      [
-      "He's never been what?",
-      "Defeated",
-      "Stopped",
-      "Tired"
-     ],
-     [
-      "\"Keep your hands up, get 'em in the...\" what?",
+      "\"Today, I saw a rainbow in the...\"?",
+      "Rain",
       "Sky",
-      "Clouds",
-      "Ceiling"
+      "Dark"
      ],
      [
-      "What are people saying?",
-      "\"Luda's back!\"",
-      "\"Luda's here!\"",
-      "\"Luda won!\""
+      "\"It told me I can do...\"?",
+      "Anything",
+      "Nothing",
+      "Better"
      ],
      [
-      "His verses still be doing what?",
-      "Servin'",
-      "Burnin'",
-      "Killin'"
+      "\"I believe, I believe, I believe in...\"?",
+      "Me",
+      "You",
+      "Us"
      ],
      [
-      "Last time he was on the Khaled what?",
-      "Remix",
-      "Mixtape",
-      "Intro"
+      "\"I got the ... inside of me\"?",
+      "Light",
+      "Fire",
+      "Song"
      ],
      [
-      "Now he's on the original what?",
-      "Version",
-      "Track",
-      "Album"
+      "\"I've got no choice, but to let it...\"?",
+      "Breathe",
+      "Shine",
+      "Go"
      ],
      [
-      "How many bank accounts has he got?",
-      "20",
-      "10",
-      "50"
+      "As long as there is love, she can make it where?",
+      "Anywhere I go",
+      "Back home",
+      "To the top"
      ],
      [
-      "He calls himself the South's what?",
-      "Champion",
-      "Hero",
-      "Leader"
+      "\"If I follow my...\" what?",
+      "Dreams",
+      "Heart",
+      "Friends"
+     ],
+     [
+      "Following them, she'll end up building a...?",
+      "Yellow brick road",
+      "Golden bridge",
+      "Stairway"
      ]
     ],
     [
      [
-      "What's Ross swervin' in?",
-      "His low-low",
-      "His drop-top",
-      "His hoopty"
+      "\"I'm living my best...\"?",
+      "Life",
+      "Day",
+      "Year"
      ],
      [
-      "\"Clean as a...\" what?",
-      "Whistle",
-      "Bell",
-      "Diamond"
+      "\"I am a flower that's blooming, like roses in...\"?",
+      "Spring",
+      "Summer",
+      "June"
      ],
      [
-      "What car does he pull out in?",
-      "Rolls Royce",
-      "Bentley",
-      "Lambo"
+      "\"I am wearin' a crown that's only fit for a...\"?",
+      "Queen",
+      "King",
+      "Star"
      ],
      [
-      "When they see it, what do they say?",
-      "\"Oh boy\"",
-      "\"Oh wow\"",
-      "\"Oh my\""
+      "\"I'm glorious...\"?",
+      "Victorious",
+      "Notorious",
+      "Precious"
      ],
      [
-      "He tells Khaled to do what?",
-      "Back it up",
-      "Turn it up",
-      "Run it back"
+      "She calls herself a...?",
+      "Warrior",
+      "Winner",
+      "Fighter"
      ],
      [
-      "What life does he represent?",
-      "Mud life",
-      "Good life",
-      "High life"
+      "\"When times got hard, I went...\"?",
+      "Harder",
+      "Home",
+      "Quiet"
      ],
      [
-      "They come together holding what?",
-      "Hands",
-      "Bottles",
-      "Trophies"
+      "\"The best thing I ever did was believe in...\"?",
+      "Me",
+      "Love",
+      "God"
      ],
      [
-      "\"'Cause we ridin'...\" when?",
-      "Tonight",
-      "All day",
-      "Forever"
+      "\"To succeed, you must...\"?",
+      "Believe",
+      "Work",
+      "Pray"
      ]
     ]
    ]
@@ -771,168 +772,169 @@ window.CFG = {
  ],
  "songs": [
   {
-   "title": "Welcome to My Hood",
-   "id": "SpXk19LNizY",
+   "title": "Just Us",
+   "id": "ZV7S-Kg9sL0",
+   "start": 19.7,
    "cuts": [
-    40.5,
-    109.5,
-    177.9
+    58.9,
+    121.4,
+    216.9
    ],
    "qs": [
     [
      [
-      "Which label does he shout out next to Young Money?",
-      "Cash Money",
+      "Busting through the what, they gon' feel me now?",
+      "Crowd",
+      "Door",
+      "Club"
+     ],
+     [
+      "\"99 problems, but you ain't...\" what?",
+      "One",
+      "Two",
+      "Mine"
+     ],
+     [
+      "You could see it in my...?",
+      "Eyes",
+      "Face",
+      "Smile"
+     ],
+     [
+      "\"Real love, show me what it...\"?",
+      "Feels like",
+      "Looks like",
+      "Sounds like"
+     ],
+     [
+      "\"Girl, I let you pull up on me\" in broad...?",
+      "Daylight",
+      "Moonlight",
+      "Traffic"
+     ],
+     [
+      "\"We ain't gotta lay low, we...\"?",
+      "Grown",
+      "Home",
+      "Gone"
+     ],
+     [
+      "\"A field trip and I don't need no...\"?",
+      "Chaperone",
+      "Permission",
+      "Bus pass"
+     ],
+     [
+      "\"I'm tryna get...\"?",
+      "Ghost",
+      "Gone",
+      "Paid"
+     ],
+     [
+      "\"Tell me get 'em, then I...\"?",
+      "Got 'em",
+      "Lost 'em",
+      "Hold 'em"
+     ]
+    ],
+    [
+     [
+      "\"It's just us against the...\"?",
+      "World",
+      "Clock",
+      "Odds"
+     ],
+     [
+      "\"It's lovely at the top, private...\"?",
+      "Destination",
+      "Island",
+      "Party"
+     ],
+     [
+      "This kinda love is what, when there's nothing else to lose?",
+      "Dangerous",
+      "Beautiful",
+      "Forever"
+     ],
+     [
+      "\"Got 99 problems, what's one...\"?",
+      "More",
+      "Less",
+      "Now"
+     ],
+     [
+      "\"Livin' fast and we spending...\"?",
+      "Slow",
+      "Fast",
+      "Cash"
+     ],
+     [
+      "Side eyes let them know that they're...?",
+      "Visible",
+      "Hidden",
+      "Famous"
+     ],
+     [
+      "\"Ten toes...\"?",
+      "Down",
+      "Up",
+      "Deep"
+     ],
+     [
+      "\"We gonna turn the lights...\"?",
+      "Off",
+      "On",
+      "Low"
+     ]
+    ],
+    [
+     [
+      "\"Ain't nobody gonna take us...\"?",
+      "Out",
+      "Down",
+      "Under"
+     ],
+     [
+      "\"It's always us, never...\"?",
+      "Them",
+      "Me",
+      "Alone"
+     ],
+     [
+      "\"...in this life of\" what?",
+      "Sin",
+      "Gold",
+      "Fame"
+     ],
+     [
+      "\"Against the world, when the ... clears\"?",
+      "Smoke",
+      "Rain",
+      "Air"
+     ],
+     [
+      "\"This how a/an ... sounds\"?",
+      "Angel",
+      "Legend",
+      "Winner"
+     ],
+     [
+      "\"You're all that I...\"?",
+      "Need",
+      "Want",
+      "See"
+     ],
+     [
+      "Whose label gets shouted at the end: \"... Music\"?",
+      "We The Best",
       "Bad Boy",
-      "Def Jam"
+      "Cash Money"
      ],
      [
-      "\"Khaled, I...\" what?",
-      "Got you",
-      "See you",
-      "Love you"
-     ],
-     [
-      "\"Where the ___ at?\"",
-      "Hood",
-      "Party",
-      "Money"
-     ],
-     [
-      "In his hood, everybody knows who?",
-      "Everybody",
-      "Nobody",
-      "The boss"
-     ],
-     [
-      "If he got it, who else got it?",
-      "Everybody",
-      "Nobody",
-      "His mama"
-     ],
-     [
-      "What kind of Chevys are on the block?",
-      "Old school",
-      "Brand new",
-      "Candy paint"
-     ],
-     [
-      "What size rims, so you know they roll heavy?",
-      "24's",
-      "22's",
-      "26's"
-     ],
-     [
-      "What game are they playing outside?",
-      "Hopscotch",
-      "Double dutch",
-      "Stickball"
-     ],
-     [
-      "Everybody knows this is the what?",
-      "Hot spot",
-      "Best spot",
-      "Old block"
-     ]
-    ],
-    [
-     [
-      "What watch is on his wrist?",
-      "Audemar",
-      "Rolex",
-      "Cartier"
-     ],
-     [
-      "His diamonds look like they're doing what?",
-      "Glowin'",
-      "Dancin'",
-      "Drippin'"
-     ],
-     [
-      "\"50 stacks, all...\" what?",
-      "Singles",
-      "Hundreds",
-      "Twenties"
-     ],
-     [
-      "What color are the unmarked cars?",
-      "Black",
-      "White",
-      "Gray"
-     ],
-     [
-      "\"Lord, forgive me for my...\" what?",
-      "Sins",
-      "Ways",
-      "Past"
-     ],
-     [
-      "The Ferrari is just a what?",
-      "Front",
-      "Toy",
-      "Rental"
-     ],
-     [
-      "What's parked in the back?",
-      "The Lambo",
-      "The Bentley",
-      "The Rolls"
-     ],
-     [
-      "\"We the best forever,\" who handles that?",
-      "DJ Khaled",
-      "Rick Ross",
-      "Lil Wayne"
-     ]
-    ],
-    [
-     [
-      "Who should you tell when you see 'em?",
-      "Congress",
-      "The mayor",
-      "The judge"
-     ],
-     [
-      "Some are on house arrest, some are on what?",
-      "Child support",
-      "Vacation",
-      "The radio"
-     ],
-     [
-      "Who's getting the eviction note?",
-      "Mr. Landlord",
-      "Mr. Mayor",
-      "Mr. Officer"
-     ],
-     [
-      "Better have the police with you if you came to do what?",
-      "Repo",
-      "Collect",
-      "Visit"
-     ],
-     [
-      "Strip clubs and what kind of stores?",
-      "Liquor stores",
-      "Corner stores",
-      "Shoe stores"
-     ],
-     [
-      "What do they throw 'round here?",
-      "Money",
-      "Parties",
-      "Shade"
-     ],
-     [
-      "\"Woop, woop\" is the sound of who?",
-      "The police",
-      "The ice cream truck",
-      "The fire truck"
-     ],
-     [
-      "\"Look at all these old school...\" what?",
-      "Chevy's",
-      "Cadillacs",
-      "Fords"
+      "Then Khaled says \"Another...\"?",
+      "One",
+      "Day",
+      "Hit"
      ]
     ]
    ]
@@ -1273,162 +1275,162 @@ window.CFG = {
    ]
   },
   {
-   "title": "All I Do Is Win",
-   "id": "xN9ZXjUiQm0",
+   "title": "I Believe",
+   "id": "SphTGtDlhHw",
    "cuts": [
-    32,
-    95.7,
-    159.9
+    44.5,
+    132.2,
+    211.3
    ],
    "qs": [
     [
      [
-      "\"All I do is win, win, win, no matter...\" what?",
-      "What",
-      "How",
-      "When"
+      "\"Some people stand, some people...\"?",
+      "Move",
+      "Fall",
+      "Run"
      ],
      [
-      "What's on his mind?",
-      "Money",
-      "The game",
-      "Victory"
+      "\"Tough times don't last, but tough...\"?",
+      "People do",
+      "Times do",
+      "Days do"
      ],
      [
-      "He can never get what?",
-      "Enough",
-      "Tired",
-      "Beat"
+      "As long as you've got what, you'll find your way?",
+      "Hope",
+      "Love",
+      "Faith"
      ],
      [
-      "Every time he steps up in the what?",
-      "Building",
-      "Club",
-      "Ring"
+      "There's power in the what that you think?",
+      "Thoughts",
+      "Dreams",
+      "Plans"
      ],
      [
-      "What goes up, for everybody?",
-      "Hands",
-      "Drinks",
-      "Flags"
+      "There's power in the what you say?",
+      "Words",
+      "Songs",
+      "Prayers"
      ],
      [
-      "\"And they ___ there\"",
-      "Stay",
-      "Keep",
-      "Wait"
+      "\"Like I can, I can, I...\"?",
+      "Will",
+      "Must",
+      "Might"
      ],
      [
-      "Which directions does he call out?",
-      "Up, down",
-      "Left, right",
-      "In, out"
+      "\"I am, I am, no...\"?",
+      "Fear",
+      "Doubt",
+      "Limit"
      ],
      [
-      "Who does Khaled tell to listen at the end?",
-      "Luda",
-      "Ross",
-      "Snoop"
+      "Who gets shouted out at the start?",
+      "DJ Khaled",
+      "Demi Lovato",
+      "Drake"
      ]
     ],
     [
      [
-      "He's never been what?",
-      "Defeated",
-      "Stopped",
-      "Tired"
-     ],
-     [
-      "\"Keep your hands up, get 'em in the...\" what?",
+      "\"Today, I saw a rainbow in the...\"?",
+      "Rain",
       "Sky",
-      "Clouds",
-      "Ceiling"
+      "Dark"
      ],
      [
-      "What are people saying?",
-      "\"Luda's back!\"",
-      "\"Luda's here!\"",
-      "\"Luda won!\""
+      "\"It told me I can do...\"?",
+      "Anything",
+      "Nothing",
+      "Better"
      ],
      [
-      "His verses still be doing what?",
-      "Servin'",
-      "Burnin'",
-      "Killin'"
+      "\"I believe, I believe, I believe in...\"?",
+      "Me",
+      "You",
+      "Us"
      ],
      [
-      "Last time he was on the Khaled what?",
-      "Remix",
-      "Mixtape",
-      "Intro"
+      "\"I got the ... inside of me\"?",
+      "Light",
+      "Fire",
+      "Song"
      ],
      [
-      "Now he's on the original what?",
-      "Version",
-      "Track",
-      "Album"
+      "\"I've got no choice, but to let it...\"?",
+      "Breathe",
+      "Shine",
+      "Go"
      ],
      [
-      "How many bank accounts has he got?",
-      "20",
-      "10",
-      "50"
+      "As long as there is love, she can make it where?",
+      "Anywhere I go",
+      "Back home",
+      "To the top"
      ],
      [
-      "He calls himself the South's what?",
-      "Champion",
-      "Hero",
-      "Leader"
+      "\"If I follow my...\" what?",
+      "Dreams",
+      "Heart",
+      "Friends"
+     ],
+     [
+      "Following them, she'll end up building a...?",
+      "Yellow brick road",
+      "Golden bridge",
+      "Stairway"
      ]
     ],
     [
      [
-      "What's Ross swervin' in?",
-      "His low-low",
-      "His drop-top",
-      "His hoopty"
+      "\"I'm living my best...\"?",
+      "Life",
+      "Day",
+      "Year"
      ],
      [
-      "\"Clean as a...\" what?",
-      "Whistle",
-      "Bell",
-      "Diamond"
+      "\"I am a flower that's blooming, like roses in...\"?",
+      "Spring",
+      "Summer",
+      "June"
      ],
      [
-      "What car does he pull out in?",
-      "Rolls Royce",
-      "Bentley",
-      "Lambo"
+      "\"I am wearin' a crown that's only fit for a...\"?",
+      "Queen",
+      "King",
+      "Star"
      ],
      [
-      "When they see it, what do they say?",
-      "\"Oh boy\"",
-      "\"Oh wow\"",
-      "\"Oh my\""
+      "\"I'm glorious...\"?",
+      "Victorious",
+      "Notorious",
+      "Precious"
      ],
      [
-      "He tells Khaled to do what?",
-      "Back it up",
-      "Turn it up",
-      "Run it back"
+      "She calls herself a...?",
+      "Warrior",
+      "Winner",
+      "Fighter"
      ],
      [
-      "What life does he represent?",
-      "Mud life",
-      "Good life",
-      "High life"
+      "\"When times got hard, I went...\"?",
+      "Harder",
+      "Home",
+      "Quiet"
      ],
      [
-      "They come together holding what?",
-      "Hands",
-      "Bottles",
-      "Trophies"
+      "\"The best thing I ever did was believe in...\"?",
+      "Me",
+      "Love",
+      "God"
      ],
      [
-      "\"'Cause we ridin'...\" when?",
-      "Tonight",
-      "All day",
-      "Forever"
+      "\"To succeed, you must...\"?",
+      "Believe",
+      "Work",
+      "Pray"
      ]
     ]
    ]

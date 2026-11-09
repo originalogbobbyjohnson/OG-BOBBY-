@@ -257,175 +257,174 @@ window.CFG = {
    ]
   },
   {
-   "title": "Runnin' (The Game)",
-   "id": "k2b2UUC463c",
-   "start": 22.8,
+   "title": "Round & Round (Hi-Tek ft. Jonell)",
+   "id": "9cqf5bXutYU",
    "cuts": [
-    62.9,
-    109.9,
-    199.9
+    34.3,
+    98.1,
+    175
    ],
    "qs": [
     [
      [
-      "\"Got to live for today cause ___ ain't promised to me\"?",
-      "Tomorrow",
-      "Money",
-      "Nothing"
+      "\"I try and I try to stop the...\"?",
+      "Forces",
+      "Voices",
+      "Feelings"
      ],
      [
-      "\"Don't just want a piece, I want my whole...\"?",
-      "Destiny",
-      "Pie",
-      "City"
+      "Forces that go 'round in her...?",
+      "Head",
+      "Heart",
+      "Room"
      ],
      [
-      "\"If you got it, I'm gon'...\"?",
-      "Take it",
-      "Make it",
-      "Break it"
+      "\"Thought you were the one to...\"?",
+      "Understand me",
+      "Love me",
+      "Save me"
      ],
      [
-      "\"Bench warmers get no playing...\"?",
-      "Time",
-      "Field",
-      "Ball"
+      "\"You turned my dark skies to...\"?",
+      "Light",
+      "Blue",
+      "Gold"
      ],
      [
-      "\"No sleeping 'til I cross the...\"?",
-      "Line",
-      "Street",
-      "Border"
+      "\"But once again you touched my...\"?",
+      "Hopes",
+      "Heart",
+      "Hand"
      ],
      [
-      "Which rental car company?",
-      "Avis",
-      "Hertz",
-      "Enterprise"
+      "Her tears start gleaming in the...?",
+      "Rain",
+      "Light",
+      "Dark"
      ],
      [
-      "\"Blowing horns like...\"?",
-      "Miles Davis",
-      "Louis Armstrong",
-      "Dizzy Gillespie"
+      "\"Falling...\"?",
+      "Again",
+      "Apart",
+      "Down"
      ],
      [
-      "Which channel does he want in his room?",
-      "ESPN",
-      "HBO",
-      "BET"
+      "What does she sing at the very start?",
+      "Yeah, yeah",
+      "Oh, baby",
+      "Hey, hey"
      ],
      [
-      "\"But I'm running like New York...\"?",
-      "Pedestrians",
-      "Taxis",
-      "Subways"
+      "How many times does she sing \"falling again\"?",
+      "Two",
+      "Three",
+      "Four"
      ]
     ],
     [
      [
-      "\"Trying not to scuff my ___ again\"?",
-      "Nike Air checks",
-      "Jordans",
-      "Timbs"
+      "\"I really don't know what you came here...\"?",
+      "For",
+      "To do",
+      "About"
      ],
      [
-      "\"She ain't listen to...\"?",
-      "Nas",
-      "Jay-Z",
-      "Biggie"
+      "\"Round and around we...\"?",
+      "Go",
+      "Spin",
+      "Ride"
      ],
      [
-      "\"And never heard about Ike and the ___ jersey\"?",
-      "Iverson",
-      "Jordan",
-      "Kobe"
-     ],
-     [
-      "\"He got a cousin named ___\"?",
-      "Jayceon",
-      "Jerome",
-      "Tyrone"
-     ],
-     [
-      "His cousin rocks whose jersey?",
-      "Gary Payton",
-      "Shaq",
-      "Magic"
-     ],
-     [
-      "\"Tomorrow ain't ___ to me\"?",
-      "Promised",
-      "Given",
-      "Granted"
-     ],
-     [
-      "\"Bench ___ get no playing time\"?",
-      "Warmers",
-      "Players",
-      "Sitters"
-     ],
-     [
-      "\"If you're in it, you're coming with...\"?",
-      "Me",
-      "Us",
-      "Them"
-     ]
-    ],
-    [
-     [
-      "\"I went on tour to Barcelona and...\"?",
-      "Brazil",
-      "Berlin",
-      "Paris"
-     ],
-     [
-      "\"Cause I gotta pack them...\"?",
-      "Shows",
+      "\"I'm sending your ... outside the door\"?",
       "Bags",
-      "Clubs"
+      "Clothes",
+      "Keys"
      ],
      [
-      "\"And Dre told me ain't no coming back from...\"?",
-      "Gold",
-      "Platinum",
-      "Silver"
+      "She's sending them outside the...?",
+      "Door",
+      "House",
+      "Gate"
      ],
      [
-      "\"My G-Unit features, my Eminem...\"?",
-      "Sixteens",
-      "Hooks",
-      "Verses"
+      "Then her heart is tellin' her you're not the...?",
+      "One",
+      "Man",
+      "Same"
      ],
      [
-      "\"And took my demo to ___ and he ain't sign me\"?",
-      "Suge",
-      "Dre",
-      "Puff"
+      "\"All the ... you played\"?",
+      "Games",
+      "Songs",
+      "Tricks"
      ],
      [
-      "\"My mom said I'm hard head, I don't follow the...\"?",
-      "Rules",
-      "Leader",
-      "Signs"
+      "\"You're not the one for me no more so baby...\"?",
+      "Bye-bye",
+      "Goodnight",
+      "So long"
      ],
      [
-      "\"Why should I when ___ giving (them) they own shoes\"?",
-      "Reebok",
-      "Nike",
-      "Puma"
+      "\"Pack yo' bags and get to...\"?",
+      "Steppin'",
+      "Movin'",
+      "Walkin'"
+     ]
+    ],
+    [
+     [
+      "\"It's gonna...\"?",
+      "Rain",
+      "Snow",
+      "Shine"
      ],
      [
-      "\"I'm dealing with the same problems ___ got\"?",
-      "50 Cent",
-      "Eminem",
-      "Dre"
+      "\"Today I made up my...\"?",
+      "Mind",
+      "Bed",
+      "Plans"
      ],
      [
-      "\"I'm in the studio laughing at...\"?",
-      "Chris Rock",
-      "Eddie Murphy",
-      "Kevin Hart"
+      "She made up her mind to get...?",
+      "Away",
+      "Even",
+      "Married"
+     ],
+     [
+      "\"Every day, I sit and...\"?",
+      "Pray",
+      "Wait",
+      "Cry"
+     ],
+     [
+      "How often does she sit and pray?",
+      "Every day",
+      "Every night",
+      "On Sundays"
+     ],
+     [
+      "\"Today I'm gonna take a little...\"?",
+      "Time",
+      "Trip",
+      "Break"
+     ],
+     [
+      "How many times \"it's gonna rain\" in each line?",
+      "Two",
+      "Three",
+      "One"
+     ],
+     [
+      "Where do the bags go this time?",
+      "Outside the door",
+      "In the car",
+      "Down the hall"
+     ],
+     [
+      "\"Every day, every...\"?",
+      "Day",
+      "Night",
+      "Week"
      ]
     ]
    ]
@@ -923,175 +922,174 @@ window.CFG = {
    ]
   },
   {
-   "title": "Runnin' (The Game)",
-   "id": "k2b2UUC463c",
-   "start": 22.8,
+   "title": "Round & Round (Hi-Tek ft. Jonell)",
+   "id": "9cqf5bXutYU",
    "cuts": [
-    62.9,
-    109.9,
-    199.9
+    34.3,
+    98.1,
+    175
    ],
    "qs": [
     [
      [
-      "\"Got to live for today cause ___ ain't promised to me\"?",
-      "Tomorrow",
-      "Money",
-      "Nothing"
+      "\"I try and I try to stop the...\"?",
+      "Forces",
+      "Voices",
+      "Feelings"
      ],
      [
-      "\"Don't just want a piece, I want my whole...\"?",
-      "Destiny",
-      "Pie",
-      "City"
+      "Forces that go 'round in her...?",
+      "Head",
+      "Heart",
+      "Room"
      ],
      [
-      "\"If you got it, I'm gon'...\"?",
-      "Take it",
-      "Make it",
-      "Break it"
+      "\"Thought you were the one to...\"?",
+      "Understand me",
+      "Love me",
+      "Save me"
      ],
      [
-      "\"Bench warmers get no playing...\"?",
-      "Time",
-      "Field",
-      "Ball"
+      "\"You turned my dark skies to...\"?",
+      "Light",
+      "Blue",
+      "Gold"
      ],
      [
-      "\"No sleeping 'til I cross the...\"?",
-      "Line",
-      "Street",
-      "Border"
+      "\"But once again you touched my...\"?",
+      "Hopes",
+      "Heart",
+      "Hand"
      ],
      [
-      "Which rental car company?",
-      "Avis",
-      "Hertz",
-      "Enterprise"
+      "Her tears start gleaming in the...?",
+      "Rain",
+      "Light",
+      "Dark"
      ],
      [
-      "\"Blowing horns like...\"?",
-      "Miles Davis",
-      "Louis Armstrong",
-      "Dizzy Gillespie"
+      "\"Falling...\"?",
+      "Again",
+      "Apart",
+      "Down"
      ],
      [
-      "Which channel does he want in his room?",
-      "ESPN",
-      "HBO",
-      "BET"
+      "What does she sing at the very start?",
+      "Yeah, yeah",
+      "Oh, baby",
+      "Hey, hey"
      ],
      [
-      "\"But I'm running like New York...\"?",
-      "Pedestrians",
-      "Taxis",
-      "Subways"
+      "How many times does she sing \"falling again\"?",
+      "Two",
+      "Three",
+      "Four"
      ]
     ],
     [
      [
-      "\"Trying not to scuff my ___ again\"?",
-      "Nike Air checks",
-      "Jordans",
-      "Timbs"
+      "\"I really don't know what you came here...\"?",
+      "For",
+      "To do",
+      "About"
      ],
      [
-      "\"She ain't listen to...\"?",
-      "Nas",
-      "Jay-Z",
-      "Biggie"
+      "\"Round and around we...\"?",
+      "Go",
+      "Spin",
+      "Ride"
      ],
      [
-      "\"And never heard about Ike and the ___ jersey\"?",
-      "Iverson",
-      "Jordan",
-      "Kobe"
-     ],
-     [
-      "\"He got a cousin named ___\"?",
-      "Jayceon",
-      "Jerome",
-      "Tyrone"
-     ],
-     [
-      "His cousin rocks whose jersey?",
-      "Gary Payton",
-      "Shaq",
-      "Magic"
-     ],
-     [
-      "\"Tomorrow ain't ___ to me\"?",
-      "Promised",
-      "Given",
-      "Granted"
-     ],
-     [
-      "\"Bench ___ get no playing time\"?",
-      "Warmers",
-      "Players",
-      "Sitters"
-     ],
-     [
-      "\"If you're in it, you're coming with...\"?",
-      "Me",
-      "Us",
-      "Them"
-     ]
-    ],
-    [
-     [
-      "\"I went on tour to Barcelona and...\"?",
-      "Brazil",
-      "Berlin",
-      "Paris"
-     ],
-     [
-      "\"Cause I gotta pack them...\"?",
-      "Shows",
+      "\"I'm sending your ... outside the door\"?",
       "Bags",
-      "Clubs"
+      "Clothes",
+      "Keys"
      ],
      [
-      "\"And Dre told me ain't no coming back from...\"?",
-      "Gold",
-      "Platinum",
-      "Silver"
+      "She's sending them outside the...?",
+      "Door",
+      "House",
+      "Gate"
      ],
      [
-      "\"My G-Unit features, my Eminem...\"?",
-      "Sixteens",
-      "Hooks",
-      "Verses"
+      "Then her heart is tellin' her you're not the...?",
+      "One",
+      "Man",
+      "Same"
      ],
      [
-      "\"And took my demo to ___ and he ain't sign me\"?",
-      "Suge",
-      "Dre",
-      "Puff"
+      "\"All the ... you played\"?",
+      "Games",
+      "Songs",
+      "Tricks"
      ],
      [
-      "\"My mom said I'm hard head, I don't follow the...\"?",
-      "Rules",
-      "Leader",
-      "Signs"
+      "\"You're not the one for me no more so baby...\"?",
+      "Bye-bye",
+      "Goodnight",
+      "So long"
      ],
      [
-      "\"Why should I when ___ giving (them) they own shoes\"?",
-      "Reebok",
-      "Nike",
-      "Puma"
+      "\"Pack yo' bags and get to...\"?",
+      "Steppin'",
+      "Movin'",
+      "Walkin'"
+     ]
+    ],
+    [
+     [
+      "\"It's gonna...\"?",
+      "Rain",
+      "Snow",
+      "Shine"
      ],
      [
-      "\"I'm dealing with the same problems ___ got\"?",
-      "50 Cent",
-      "Eminem",
-      "Dre"
+      "\"Today I made up my...\"?",
+      "Mind",
+      "Bed",
+      "Plans"
      ],
      [
-      "\"I'm in the studio laughing at...\"?",
-      "Chris Rock",
-      "Eddie Murphy",
-      "Kevin Hart"
+      "She made up her mind to get...?",
+      "Away",
+      "Even",
+      "Married"
+     ],
+     [
+      "\"Every day, I sit and...\"?",
+      "Pray",
+      "Wait",
+      "Cry"
+     ],
+     [
+      "How often does she sit and pray?",
+      "Every day",
+      "Every night",
+      "On Sundays"
+     ],
+     [
+      "\"Today I'm gonna take a little...\"?",
+      "Time",
+      "Trip",
+      "Break"
+     ],
+     [
+      "How many times \"it's gonna rain\" in each line?",
+      "Two",
+      "Three",
+      "One"
+     ],
+     [
+      "Where do the bags go this time?",
+      "Outside the door",
+      "In the car",
+      "Down the hall"
+     ],
+     [
+      "\"Every day, every...\"?",
+      "Day",
+      "Night",
+      "Week"
      ]
     ]
    ]

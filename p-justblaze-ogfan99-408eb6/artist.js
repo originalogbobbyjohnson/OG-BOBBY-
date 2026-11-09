@@ -317,216 +317,216 @@ window.CFG = {
    ]
   },
   {
-   "title": "Touch the Sky (Kanye West)",
-   "id": "B95OUKk7alM",
+   "title": "U Don't Know (Jay-Z)",
+   "id": "jjCPc-47NmI",
    "cuts": [
-    38.8,
-    91.8,
-    128.8
+    61.9,
+    127,
+    166
    ],
    "qs": [
     [
      [
-      "\"I gotta...\"?",
-      "Testify",
-      "Glorify",
-      "Celebrate"
+      "\"Turn my music...\"?",
+      "High",
+      "Up",
+      "Loud"
      ],
      [
-      "\"Come up in the spot looking extra...\"?",
-      "Fly",
-      "Fresh",
-      "Clean"
+      "The voice says \"You don't know what you're...\"?",
+      "Doing",
+      "Saying",
+      "Thinking"
      ],
      [
-      "\"'Fore the day I die, I'ma touch the...\"?",
-      "Sky",
-      "Stars",
-      "Clouds"
+      "Jay answers: \"Sure I...\"?",
+      "Do",
+      "Can",
+      "Know"
      ],
      [
-      "\"Back when they thought pink ___ would hurt the Roc\"",
-      "Polos",
-      "Jackets",
-      "Sneakers"
+      "\"I'm from the...\" where?",
+      "Streets",
+      "Suburbs",
+      "Country"
      ],
      [
-      "\"The doors was...\"?",
-      "Closed",
-      "Locked",
-      "Open"
-     ],
-     [
-      "\"I felt like Bad Boy's street...\"?",
-      "Team",
-      "Crew",
-      "Squad"
-     ],
-     [
-      "\"I couldn't work the...\"?",
-      "Locks",
-      "Doors",
-      "Keys"
-     ],
-     [
-      "\"Take 'em back to the...\"?",
-      "Plan",
-      "Start",
+      "\"...but it's home sweet...\"?",
+      "Home",
+      "Street",
       "Block"
      ],
      [
-      "\"Me and my momma hopped in that ___ van\"",
-      "U-Haul",
-      "Ryder",
-      "Moving"
+      "\"All scars we...\"?",
+      "Earn 'em",
+      "Wear 'em",
+      "Hide 'em"
      ],
      [
-      "\"Any ___, I ain't talk to them\"",
-      "Pessimists",
-      "Haters",
-      "Critics"
+      "All cars we learn 'em like the back of our...?",
+      "Hand",
+      "Head",
+      "Block"
      ],
      [
-      "\"Plus I ain't have no ___ in my apartment\"",
-      "Phone",
-      "TV",
-      "Couch"
+      "\"We watch for cops hopping out the back of...\"?",
+      "Van",
+      "Truck",
+      "Train"
+     ],
+     [
+      "\"Wear a G on my chest, I don't need...\" who?",
+      "Dapper Dan",
+      "Tommy Hilfiger",
+      "Ralph Lauren"
+     ],
+     [
+      "\"This ain't a sewn...\"?",
+      "Outfit",
+      "Pocket",
+      "Jacket"
+     ],
+     [
+      "For playing him, y'all shall forever remain...?",
+      "Nameless",
+      "Famous",
+      "Broke"
      ]
     ],
     [
      [
-      "\"Let's take 'em back to the...\"?",
-      "Club",
-      "Block",
-      "Start"
+      "\"I am...\" who?",
+      "Hov'",
+      "Jigga",
+      "Sean"
      ],
      [
-      "\"Least about an ___ I stand on line\"",
-      "Hour",
-      "Minute",
-      "Night"
+      "\"I tell you the difference between me and...\"?",
+      "Them",
+      "You",
+      "Him"
      ],
      [
-      "Where did he go after he got his advance?",
-      "Jacob",
-      "Macy's",
-      "Tiffany"
+      "They trying to get they ones, he's tryin' to get them...?",
+      "M's",
+      "G's",
+      "K's"
      ],
      [
-      "\"After I got my...\"?",
-      "Advance",
-      "Check",
-      "Deal"
+      "\"One million, two million, three million...\"?",
+      "Four",
+      "Five",
+      "More"
      ],
      [
-      "\"I just wanted to dance... I just wanted to...\"?",
-      "Shine",
-      "Rhyme",
-      "Sing"
+      "\"In just five years,\" how many million more?",
+      "Forty",
+      "Fifty",
+      "Eighty"
      ],
      [
-      "\"Jay favorite line, 'Dawg, in due...'\"?",
-      "Time",
-      "Course",
-      "Season"
+      "\"You are now looking at the forty million...\"?",
+      "Boy",
+      "Man",
+      "Kid"
      ],
      [
-      "\"Now he look at me, like... you where I...\"?",
-      "Am",
-      "Stand",
-      "Be"
+      "He's going 'til he's the hundred million...?",
+      "Man",
+      "Boy",
+      "King"
      ],
      [
-      "\"A hip-hop...\"?",
-      "Legend",
-      "Hero",
-      "Icon"
+      "Spelled out: \"R-O-...\"?",
+      "C",
+      "A",
+      "K"
      ],
      [
-      "\"I think I died in that accident, 'cause this must be...\"?",
-      "Heaven",
-      "A dream",
-      "Paradise"
+      "He came in a hundred grand...?",
+      "Strong",
+      "Deep",
+      "Rich"
      ],
      [
-      "\"Now let's take them...\"?",
-      "High",
-      "Home",
+      "Who'd have thought Hov would sell...?",
+      "Clothing",
+      "Sneakers",
+      "Cars"
+     ],
+     [
+      "\"In 18 months,\" how many million more?",
+      "80",
+      "40",
+      "100"
+     ]
+    ],
+    [
+     [
+      "\"Momma ain't raised no...\"?",
+      "Fool",
+      "Quitter",
+      "Liar"
+     ],
+     [
+      "Put him anywhere on God's green earth, he'll ... his worth?",
+      "Triple",
+      "Double",
+      "Prove"
+     ],
+     [
+      "\"I, will not...\"?",
+      "Lose",
+      "Stop",
+      "Fall"
+     ],
+     [
+      "\"Put somethin' on...\"?",
+      "It",
+      "Me",
+      "That"
+     ],
+     [
+      "\"I sell ice in the...\"?",
+      "Winter",
+      "Summer",
+      "Desert"
+     ],
+     [
+      "And he sells fire in...?",
+      "Hell",
+      "July",
+      "Texas"
+     ],
+     [
+      "\"I am a hustler baby, I'll sell water to a...\"?",
+      "Well",
+      "Fish",
+      "Lake"
+     ],
+     [
+      "\"I was born to get...\"?",
+      "Cake",
+      "Paid",
+      "Famous"
+     ],
+     [
+      "\"Cop the Coupe with the roof...\"?",
+      "Gone",
+      "Down",
       "Back"
      ],
      [
-      "\"Top of the ___, baby\"",
-      "World",
-      "Game",
-      "Charts"
-     ]
-    ],
-    [
-     [
-      "Which brand was the thing to rock back then?",
-      "Gucci",
-      "Prada",
-      "Fendi"
+      "\"Was born to dictate, never follow...\"?",
+      "Orders",
+      "Rules",
+      "Leaders"
      ],
      [
-      "Who does he name right after Gucci?",
-      "Slick Rick",
-      "Big Daddy Kane",
-      "Rakim"
-     ],
-     [
-      "\"Them new ___ hurt my pocket\"",
-      "Loafers",
-      "Sneakers",
-      "Boots"
-     ],
-     [
-      "\"Before anybody wanted K. West...\"?",
-      "Beats",
-      "Rhymes",
-      "Albums"
-     ],
-     [
-      "\"Me and my girl split the buffet at...\"?",
-      "KFC",
-      "Pizza Hut",
-      "Golden Corral"
-     ],
-     [
-      "\"I was havin' nervous...\"?",
-      "Breakdowns",
-      "Moments",
-      "Feelings"
-     ],
-     [
-      "\"Baby, I'm goin' on an...\"?",
-      "Aeroplane",
-      "Tour",
-      "Adventure"
-     ],
-     [
-      "\"And I don't know if I'll be back...\"?",
-      "Again",
-      "Home",
-      "Soon"
-     ],
-     [
-      "\"Sure enough, I sent the plane...\"?",
-      "Tickets",
-      "Fare",
-      "Money"
-     ],
-     [
-      "\"But when she came to kick it, things became...\"?",
-      "Different",
-      "Difficult",
-      "Better"
-     ],
-     [
-      "\"Them same wrongs helped me write this...\"?",
-      "Song",
-      "Rhyme",
-      "Verse"
+      "\"Will not lose...\" when?",
+      "Ever",
+      "Tonight",
+      "Again"
      ]
     ]
    ]
@@ -964,216 +964,216 @@ window.CFG = {
    ]
   },
   {
-   "title": "Touch the Sky (Kanye West)",
-   "id": "B95OUKk7alM",
+   "title": "U Don't Know (Jay-Z)",
+   "id": "jjCPc-47NmI",
    "cuts": [
-    38.8,
-    91.8,
-    128.8
+    61.9,
+    127,
+    166
    ],
    "qs": [
     [
      [
-      "\"I gotta...\"?",
-      "Testify",
-      "Glorify",
-      "Celebrate"
+      "\"Turn my music...\"?",
+      "High",
+      "Up",
+      "Loud"
      ],
      [
-      "\"Come up in the spot looking extra...\"?",
-      "Fly",
-      "Fresh",
-      "Clean"
+      "The voice says \"You don't know what you're...\"?",
+      "Doing",
+      "Saying",
+      "Thinking"
      ],
      [
-      "\"'Fore the day I die, I'ma touch the...\"?",
-      "Sky",
-      "Stars",
-      "Clouds"
+      "Jay answers: \"Sure I...\"?",
+      "Do",
+      "Can",
+      "Know"
      ],
      [
-      "\"Back when they thought pink ___ would hurt the Roc\"",
-      "Polos",
-      "Jackets",
-      "Sneakers"
+      "\"I'm from the...\" where?",
+      "Streets",
+      "Suburbs",
+      "Country"
      ],
      [
-      "\"The doors was...\"?",
-      "Closed",
-      "Locked",
-      "Open"
-     ],
-     [
-      "\"I felt like Bad Boy's street...\"?",
-      "Team",
-      "Crew",
-      "Squad"
-     ],
-     [
-      "\"I couldn't work the...\"?",
-      "Locks",
-      "Doors",
-      "Keys"
-     ],
-     [
-      "\"Take 'em back to the...\"?",
-      "Plan",
-      "Start",
+      "\"...but it's home sweet...\"?",
+      "Home",
+      "Street",
       "Block"
      ],
      [
-      "\"Me and my momma hopped in that ___ van\"",
-      "U-Haul",
-      "Ryder",
-      "Moving"
+      "\"All scars we...\"?",
+      "Earn 'em",
+      "Wear 'em",
+      "Hide 'em"
      ],
      [
-      "\"Any ___, I ain't talk to them\"",
-      "Pessimists",
-      "Haters",
-      "Critics"
+      "All cars we learn 'em like the back of our...?",
+      "Hand",
+      "Head",
+      "Block"
      ],
      [
-      "\"Plus I ain't have no ___ in my apartment\"",
-      "Phone",
-      "TV",
-      "Couch"
+      "\"We watch for cops hopping out the back of...\"?",
+      "Van",
+      "Truck",
+      "Train"
+     ],
+     [
+      "\"Wear a G on my chest, I don't need...\" who?",
+      "Dapper Dan",
+      "Tommy Hilfiger",
+      "Ralph Lauren"
+     ],
+     [
+      "\"This ain't a sewn...\"?",
+      "Outfit",
+      "Pocket",
+      "Jacket"
+     ],
+     [
+      "For playing him, y'all shall forever remain...?",
+      "Nameless",
+      "Famous",
+      "Broke"
      ]
     ],
     [
      [
-      "\"Let's take 'em back to the...\"?",
-      "Club",
-      "Block",
-      "Start"
+      "\"I am...\" who?",
+      "Hov'",
+      "Jigga",
+      "Sean"
      ],
      [
-      "\"Least about an ___ I stand on line\"",
-      "Hour",
-      "Minute",
-      "Night"
+      "\"I tell you the difference between me and...\"?",
+      "Them",
+      "You",
+      "Him"
      ],
      [
-      "Where did he go after he got his advance?",
-      "Jacob",
-      "Macy's",
-      "Tiffany"
+      "They trying to get they ones, he's tryin' to get them...?",
+      "M's",
+      "G's",
+      "K's"
      ],
      [
-      "\"After I got my...\"?",
-      "Advance",
-      "Check",
-      "Deal"
+      "\"One million, two million, three million...\"?",
+      "Four",
+      "Five",
+      "More"
      ],
      [
-      "\"I just wanted to dance... I just wanted to...\"?",
-      "Shine",
-      "Rhyme",
-      "Sing"
+      "\"In just five years,\" how many million more?",
+      "Forty",
+      "Fifty",
+      "Eighty"
      ],
      [
-      "\"Jay favorite line, 'Dawg, in due...'\"?",
-      "Time",
-      "Course",
-      "Season"
+      "\"You are now looking at the forty million...\"?",
+      "Boy",
+      "Man",
+      "Kid"
      ],
      [
-      "\"Now he look at me, like... you where I...\"?",
-      "Am",
-      "Stand",
-      "Be"
+      "He's going 'til he's the hundred million...?",
+      "Man",
+      "Boy",
+      "King"
      ],
      [
-      "\"A hip-hop...\"?",
-      "Legend",
-      "Hero",
-      "Icon"
+      "Spelled out: \"R-O-...\"?",
+      "C",
+      "A",
+      "K"
      ],
      [
-      "\"I think I died in that accident, 'cause this must be...\"?",
-      "Heaven",
-      "A dream",
-      "Paradise"
+      "He came in a hundred grand...?",
+      "Strong",
+      "Deep",
+      "Rich"
      ],
      [
-      "\"Now let's take them...\"?",
-      "High",
-      "Home",
+      "Who'd have thought Hov would sell...?",
+      "Clothing",
+      "Sneakers",
+      "Cars"
+     ],
+     [
+      "\"In 18 months,\" how many million more?",
+      "80",
+      "40",
+      "100"
+     ]
+    ],
+    [
+     [
+      "\"Momma ain't raised no...\"?",
+      "Fool",
+      "Quitter",
+      "Liar"
+     ],
+     [
+      "Put him anywhere on God's green earth, he'll ... his worth?",
+      "Triple",
+      "Double",
+      "Prove"
+     ],
+     [
+      "\"I, will not...\"?",
+      "Lose",
+      "Stop",
+      "Fall"
+     ],
+     [
+      "\"Put somethin' on...\"?",
+      "It",
+      "Me",
+      "That"
+     ],
+     [
+      "\"I sell ice in the...\"?",
+      "Winter",
+      "Summer",
+      "Desert"
+     ],
+     [
+      "And he sells fire in...?",
+      "Hell",
+      "July",
+      "Texas"
+     ],
+     [
+      "\"I am a hustler baby, I'll sell water to a...\"?",
+      "Well",
+      "Fish",
+      "Lake"
+     ],
+     [
+      "\"I was born to get...\"?",
+      "Cake",
+      "Paid",
+      "Famous"
+     ],
+     [
+      "\"Cop the Coupe with the roof...\"?",
+      "Gone",
+      "Down",
       "Back"
      ],
      [
-      "\"Top of the ___, baby\"",
-      "World",
-      "Game",
-      "Charts"
-     ]
-    ],
-    [
-     [
-      "Which brand was the thing to rock back then?",
-      "Gucci",
-      "Prada",
-      "Fendi"
+      "\"Was born to dictate, never follow...\"?",
+      "Orders",
+      "Rules",
+      "Leaders"
      ],
      [
-      "Who does he name right after Gucci?",
-      "Slick Rick",
-      "Big Daddy Kane",
-      "Rakim"
-     ],
-     [
-      "\"Them new ___ hurt my pocket\"",
-      "Loafers",
-      "Sneakers",
-      "Boots"
-     ],
-     [
-      "\"Before anybody wanted K. West...\"?",
-      "Beats",
-      "Rhymes",
-      "Albums"
-     ],
-     [
-      "\"Me and my girl split the buffet at...\"?",
-      "KFC",
-      "Pizza Hut",
-      "Golden Corral"
-     ],
-     [
-      "\"I was havin' nervous...\"?",
-      "Breakdowns",
-      "Moments",
-      "Feelings"
-     ],
-     [
-      "\"Baby, I'm goin' on an...\"?",
-      "Aeroplane",
-      "Tour",
-      "Adventure"
-     ],
-     [
-      "\"And I don't know if I'll be back...\"?",
-      "Again",
-      "Home",
-      "Soon"
-     ],
-     [
-      "\"Sure enough, I sent the plane...\"?",
-      "Tickets",
-      "Fare",
-      "Money"
-     ],
-     [
-      "\"But when she came to kick it, things became...\"?",
-      "Different",
-      "Difficult",
-      "Better"
-     ],
-     [
-      "\"Them same wrongs helped me write this...\"?",
-      "Song",
-      "Rhyme",
-      "Verse"
+      "\"Will not lose...\" when?",
+      "Ever",
+      "Tonight",
+      "Again"
      ]
     ]
    ]

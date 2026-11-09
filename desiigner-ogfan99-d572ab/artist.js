@@ -153,6 +153,18 @@ window.CFG = {
       "Ball out",
       "Go hard",
       "Win big"
+     ],
+     [
+      "\"We gon' survive this, on the...\"?",
+      "Gang",
+      "Block",
+      "Team"
+     ],
+     [
+      "His boo gets everything he...?",
+      "Got",
+      "Wants",
+      "Earns"
      ]
     ],
     [
@@ -197,6 +209,24 @@ window.CFG = {
       "Dirt",
       "Mud",
       "Lies"
+     ],
+     [
+      "\"Gone through all that...\"?",
+      "Pain",
+      "Rain",
+      "Fame"
+     ],
+     [
+      "\"Baby, we could fly far...\"?",
+      "Away",
+      "Up",
+      "Home"
+     ],
+     [
+      "\"I wanna be ... and fly miles away\"?",
+      "Free",
+      "Rich",
+      "Known"
      ]
     ],
     [
@@ -241,6 +271,36 @@ window.CFG = {
       "Rari",
       "Lambo",
       "Wraith"
+     ],
+     [
+      "\"The world is goin' in a...\"?",
+      "Drought",
+      "Circle",
+      "Storm"
+     ],
+     [
+      "\"I just wanna make it...\"?",
+      "Out",
+      "Big",
+      "Home"
+     ],
+     [
+      "\"We are the survivors, no we can't be...\"?",
+      "Stopped",
+      "Beat",
+      "Caught"
+     ],
+     [
+      "\"A house for us to..., babe\"?",
+      "Party",
+      "Live",
+      "Dance"
+     ],
+     [
+      "\"We gon' go out, we gon'...\"?",
+      "Celebrate",
+      "Vacation",
+      "Stay up"
      ]
     ]
    ]
@@ -290,6 +350,12 @@ window.CFG = {
       "Live it right up",
       "Save it all",
       "Move away"
+     ],
+     [
+      "\"There's lotta stuff that I hold...\"?",
+      "Down",
+      "Up",
+      "In"
      ]
     ],
     [
@@ -328,6 +394,12 @@ window.CFG = {
       "Right up",
       "Too fast",
       "Uptown"
+     ],
+     [
+      "\"I see ..., there's no limit\"?",
+      "Stars",
+      "Lights",
+      "Gold"
      ]
     ],
     [
@@ -366,6 +438,12 @@ window.CFG = {
       "Girl",
       "Guy",
       "Kid"
+     ],
+     [
+      "\"Times one, little...\"?",
+      "Fun",
+      "Run",
+      "Sun"
      ]
     ]
    ]
@@ -421,6 +499,12 @@ window.CFG = {
       "Gang",
       "Fam",
       "Team"
+     ],
+     [
+      "\"All around the world, me and my...\"?",
+      "Hitters",
+      "Brothers",
+      "Fans"
      ]
     ],
     [
@@ -465,6 +549,24 @@ window.CFG = {
       "Save it",
       "Spend it",
       "Shake it"
+     ],
+     [
+      "\"Yellow gold be on my neck out the...\"?",
+      "Basement",
+      "Window",
+      "Closet"
+     ],
+     [
+      "\"Desiigner get paid a...\"?",
+      "Fee",
+      "Bonus",
+      "Check"
+     ],
+     [
+      "\"And give her that double...\"?",
+      "C",
+      "R",
+      "G"
      ]
     ],
     [
@@ -509,137 +611,6 @@ window.CFG = {
       "Getters",
       "Hitters",
       "Diamonds"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Liife",
-   "id": "5c3UySRXMoI",
-   "cuts": [
-    37,
-    86,
-    166.4
-   ],
-   "qs": [
-    [
-     [
-      "\"Let me tell you how it\" what?",
-      "Is",
-      "Goes",
-      "Was"
-     ],
-     [
-      "\"I'm on some real\" what?",
-      "Life",
-      "Talk",
-      "Wave"
-     ],
-     [
-      "He's never what when going past rich?",
-      "Satisfied",
-      "Finished",
-      "Tired"
-     ],
-     [
-      "\"Never satisfied when you're goin' past\" what?",
-      "Rich",
-      "Broke",
-      "Famous"
-     ],
-     [
-      "They don't wanna see you ball, they just want a what?",
-      "Draft pick",
-      "Jersey",
-      "Highlight"
-     ],
-     [
-      "\"They don't wan' see you\" what?",
-      "Ball",
-      "Fall",
-      "Win"
-     ]
-    ],
-    [
-     [
-      "He was told to stay what?",
-      "Focused",
-      "Humble",
-      "Hungry"
-     ],
-     [
-      "\"Hashtag, click,\" what?",
-      "Pound",
-      "Share",
-      "Like"
-     ],
-     [
-      "They talk trash or do what?",
-      "Freestyle",
-      "Fight",
-      "Leave"
-     ],
-     [
-      "\"Everybody\" what?",
-      "Stylin'",
-      "Wildin'",
-      "Hatin'"
-     ],
-     [
-      "The beat is doing what?",
-      "Bouncin'",
-      "Knockin'",
-      "Droppin'"
-     ],
-     [
-      "\"Pop off these\" what?",
-      "Diamonds",
-      "Bottles",
-      "Tags"
-     ],
-     [
-      "He makes who get down with it?",
-      "A DJ",
-      "The crowd",
-      "The block"
-     ]
-    ],
-    [
-     [
-      "\"Man, this boy gettin'\" what?",
-      "Money",
-      "Famous",
-      "Bigger"
-     ],
-     [
-      "\"I'm in love with the\" what?",
-      "Money",
-      "Game",
-      "Fame"
-     ],
-     [
-      "He threw the hate in the what?",
-      "Fire",
-      "Trash",
-      "Ocean"
-     ],
-     [
-      "\"All the\" what?",
-      "Finest",
-      "Realest",
-      "Hottest"
-     ],
-     [
-      "What do they want instead of watching you ball?",
-      "A draft pick",
-      "A trade",
-      "A timeout"
-     ],
-     [
-      "In the hook, he's on some real life, what life?",
-      "Real life",
-      "Fast life",
-      "Good life"
      ]
     ]
    ]
@@ -778,6 +749,18 @@ window.CFG = {
       "Big Rollie",
       "Gold chain",
       "Diamond ring"
+     ],
+     [
+      "\"Call up Phillip-Phillip, gon' fill the...\"?",
+      "Bank",
+      "Tank",
+      "Cup"
+     ],
+     [
+      "\"I be gettin' to the...\"?",
+      "Chicken",
+      "Party",
+      "Studio"
      ]
     ]
    ]
@@ -836,6 +819,18 @@ window.CFG = {
       "Ball out",
       "Go hard",
       "Win big"
+     ],
+     [
+      "\"We gon' survive this, on the...\"?",
+      "Gang",
+      "Block",
+      "Team"
+     ],
+     [
+      "His boo gets everything he...?",
+      "Got",
+      "Wants",
+      "Earns"
      ]
     ],
     [
@@ -880,6 +875,24 @@ window.CFG = {
       "Dirt",
       "Mud",
       "Lies"
+     ],
+     [
+      "\"Gone through all that...\"?",
+      "Pain",
+      "Rain",
+      "Fame"
+     ],
+     [
+      "\"Baby, we could fly far...\"?",
+      "Away",
+      "Up",
+      "Home"
+     ],
+     [
+      "\"I wanna be ... and fly miles away\"?",
+      "Free",
+      "Rich",
+      "Known"
      ]
     ],
     [
@@ -924,6 +937,36 @@ window.CFG = {
       "Rari",
       "Lambo",
       "Wraith"
+     ],
+     [
+      "\"The world is goin' in a...\"?",
+      "Drought",
+      "Circle",
+      "Storm"
+     ],
+     [
+      "\"I just wanna make it...\"?",
+      "Out",
+      "Big",
+      "Home"
+     ],
+     [
+      "\"We are the survivors, no we can't be...\"?",
+      "Stopped",
+      "Beat",
+      "Caught"
+     ],
+     [
+      "\"A house for us to..., babe\"?",
+      "Party",
+      "Live",
+      "Dance"
+     ],
+     [
+      "\"We gon' go out, we gon'...\"?",
+      "Celebrate",
+      "Vacation",
+      "Stay up"
      ]
     ]
    ]
@@ -973,6 +1016,12 @@ window.CFG = {
       "Live it right up",
       "Save it all",
       "Move away"
+     ],
+     [
+      "\"There's lotta stuff that I hold...\"?",
+      "Down",
+      "Up",
+      "In"
      ]
     ],
     [
@@ -1011,6 +1060,12 @@ window.CFG = {
       "Right up",
       "Too fast",
       "Uptown"
+     ],
+     [
+      "\"I see ..., there's no limit\"?",
+      "Stars",
+      "Lights",
+      "Gold"
      ]
     ],
     [
@@ -1049,6 +1104,12 @@ window.CFG = {
       "Girl",
       "Guy",
       "Kid"
+     ],
+     [
+      "\"Times one, little...\"?",
+      "Fun",
+      "Run",
+      "Sun"
      ]
     ]
    ]
@@ -1104,6 +1165,12 @@ window.CFG = {
       "Gang",
       "Fam",
       "Team"
+     ],
+     [
+      "\"All around the world, me and my...\"?",
+      "Hitters",
+      "Brothers",
+      "Fans"
      ]
     ],
     [
@@ -1148,6 +1215,24 @@ window.CFG = {
       "Save it",
       "Spend it",
       "Shake it"
+     ],
+     [
+      "\"Yellow gold be on my neck out the...\"?",
+      "Basement",
+      "Window",
+      "Closet"
+     ],
+     [
+      "\"Desiigner get paid a...\"?",
+      "Fee",
+      "Bonus",
+      "Check"
+     ],
+     [
+      "\"And give her that double...\"?",
+      "C",
+      "R",
+      "G"
      ]
     ],
     [
@@ -1192,137 +1277,6 @@ window.CFG = {
       "Getters",
       "Hitters",
       "Diamonds"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Liife",
-   "id": "5c3UySRXMoI",
-   "cuts": [
-    37,
-    86,
-    166.4
-   ],
-   "qs": [
-    [
-     [
-      "\"Let me tell you how it\" what?",
-      "Is",
-      "Goes",
-      "Was"
-     ],
-     [
-      "\"I'm on some real\" what?",
-      "Life",
-      "Talk",
-      "Wave"
-     ],
-     [
-      "He's never what when going past rich?",
-      "Satisfied",
-      "Finished",
-      "Tired"
-     ],
-     [
-      "\"Never satisfied when you're goin' past\" what?",
-      "Rich",
-      "Broke",
-      "Famous"
-     ],
-     [
-      "They don't wanna see you ball, they just want a what?",
-      "Draft pick",
-      "Jersey",
-      "Highlight"
-     ],
-     [
-      "\"They don't wan' see you\" what?",
-      "Ball",
-      "Fall",
-      "Win"
-     ]
-    ],
-    [
-     [
-      "He was told to stay what?",
-      "Focused",
-      "Humble",
-      "Hungry"
-     ],
-     [
-      "\"Hashtag, click,\" what?",
-      "Pound",
-      "Share",
-      "Like"
-     ],
-     [
-      "They talk trash or do what?",
-      "Freestyle",
-      "Fight",
-      "Leave"
-     ],
-     [
-      "\"Everybody\" what?",
-      "Stylin'",
-      "Wildin'",
-      "Hatin'"
-     ],
-     [
-      "The beat is doing what?",
-      "Bouncin'",
-      "Knockin'",
-      "Droppin'"
-     ],
-     [
-      "\"Pop off these\" what?",
-      "Diamonds",
-      "Bottles",
-      "Tags"
-     ],
-     [
-      "He makes who get down with it?",
-      "A DJ",
-      "The crowd",
-      "The block"
-     ]
-    ],
-    [
-     [
-      "\"Man, this boy gettin'\" what?",
-      "Money",
-      "Famous",
-      "Bigger"
-     ],
-     [
-      "\"I'm in love with the\" what?",
-      "Money",
-      "Game",
-      "Fame"
-     ],
-     [
-      "He threw the hate in the what?",
-      "Fire",
-      "Trash",
-      "Ocean"
-     ],
-     [
-      "\"All the\" what?",
-      "Finest",
-      "Realest",
-      "Hottest"
-     ],
-     [
-      "What do they want instead of watching you ball?",
-      "A draft pick",
-      "A trade",
-      "A timeout"
-     ],
-     [
-      "In the hook, he's on some real life, what life?",
-      "Real life",
-      "Fast life",
-      "Good life"
      ]
     ]
    ]
@@ -1461,6 +1415,18 @@ window.CFG = {
       "Big Rollie",
       "Gold chain",
       "Diamond ring"
+     ],
+     [
+      "\"Call up Phillip-Phillip, gon' fill the...\"?",
+      "Bank",
+      "Tank",
+      "Cup"
+     ],
+     [
+      "\"I be gettin' to the...\"?",
+      "Chicken",
+      "Party",
+      "Studio"
      ]
     ]
    ]

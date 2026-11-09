@@ -269,169 +269,168 @@ window.CFG = {
    ]
   },
   {
-   "title": "Sixteen",
-   "id": "NTfmgP_OKlQ",
-   "start": 224.3,
+   "title": "Hey Ya!",
+   "id": "-7XnDlYY9qw",
    "cuts": [
-    257.6,
-    302.6,
-    357
+    33.9,
+    100.3,
+    166.2
    ],
    "qs": [
     [
      [
-      "Summer of what year, or was it '89?",
-      "'88",
-      "'87",
-      "'86"
+      "\"My baby don't mess...\"?",
+      "Around",
+      "Up",
+      "With me"
      ],
      [
-      "Or was it what time?",
-      "Winter",
-      "Spring",
-      "Fall"
+      "\"Because she loves me...\"?",
+      "So",
+      "True",
+      "More"
      ],
      [
-      "He's drawing whose album covers?",
-      "LL Cool J",
-      "Run-DMC",
-      "Big Daddy Kane"
+      "\"And this I know for...\"?",
+      "Sure",
+      "Real",
+      "Now"
      ],
      [
-      "On what kind of paper?",
-      "Construction",
-      "Notebook",
-      "Tracing"
+      "\"But can't stand to see me walk out the...\"?",
+      "Door",
+      "Room",
+      "House"
      ],
      [
-      "He's trying to hook his what up?",
-      "Waves",
-      "Fade",
-      "Braids"
+      "\"Don't try to fight the...\"?",
+      "Feeling",
+      "Music",
+      "Truth"
      ],
      [
-      "He's pulling his grades up to get them saddle what?",
-      "Lace ups",
-      "Slip-ons",
-      "High tops"
+      "The thought alone is killin' him right...?",
+      "Now",
+      "Here",
+      "Away"
      ],
      [
-      "Before little Marc was what?",
-      "Jacob",
-      "Famous",
-      "Rich"
+      "\"Thank God for mom and...\"?",
+      "Dad",
+      "Grandma",
+      "Uncle"
      ],
      [
-      "Before his what would break up?",
-      "Voice",
-      "Band",
-      "Crew"
+      "\"For sticking two...\"?",
+      "Together",
+      "Forever",
+      "Apart"
      ]
     ],
     [
      [
-      "He don't want much, just a roof and a what?",
-      "Porch",
-      "Yard",
-      "Pool"
+      "What gets shouted over and over?",
+      "Hey ya!",
+      "Oh yeah!",
+      "Alright!"
      ],
      [
-      "And a Porsche and a what?",
-      "Horse",
-      "Boat",
-      "Jet"
+      "\"But got it just don't get it when there's nothin'...\"?",
+      "At all",
+      "To lose",
+      "Inside"
      ],
      [
-      "Intruders whose what did a lousy job?",
-      "Tutors",
-      "Parents",
-      "Coaches"
+      "\"We get together, but separate's always...\"?",
+      "Better",
+      "Worse",
+      "Easier"
      ],
      [
-      "Every time we dine we eat until our what aches?",
-      "Belly",
-      "Head",
-      "Feet"
+      "\"...when there's ... involved\"?",
+      "Feelings",
+      "Money",
+      "Friends"
      ],
      [
-      "Then go grab the finest what?",
-      "Wine",
-      "Food",
-      "Suit"
+      "\"If what they say is nothing is...\"?",
+      "Forever",
+      "Perfect",
+      "Free"
      ],
      [
-      "Which grape and which what it came from?",
-      "Region",
-      "Vineyard",
-      "Country"
+      "\"What makes love the...\"?",
+      "Exception",
+      "Answer",
+      "Problem"
      ],
      [
-      "Hint hint, it ain't what?",
-      "Welch's",
-      "Kool-Aid",
-      "Minute Maid"
-     ],
-     [
-      "You'll need a ruler made by all the what?",
-      "Greek gods",
-      "Roman kings",
-      "Old masters"
-     ],
-     [
-      "The odds have always been what against him?",
-      "Stacked",
-      "Set",
-      "Turned"
-     ]
-    ],
-    [
-     [
-      "Y'all all Kelly green with what?",
-      "Envy",
-      "Paint",
-      "Grass"
-     ],
-     [
-      "While he's what descending?",
-      "Jelly beans",
-      "Snowflakes",
-      "Raindrops"
-     ],
-     [
-      "A what gon' shake his fin?",
-      "Dolphin",
-      "Shark",
-      "Whale"
-     ],
-     [
-      "Who didn't hold his nose?",
-      "Flipper",
-      "Nemo",
-      "Jaws"
-     ],
-     [
-      "So why shall he hold his what?",
-      "Tongue",
-      "Breath",
-      "Head"
-     ],
-     [
-      "Mere privacy, so what?",
-      "Essential",
-      "Expensive",
-      "Rare"
-     ],
-     [
-      "Something tells him we ain't in where anymore?",
-      "Kansas",
-      "Georgia",
-      "Texas"
-     ],
-     [
-      "The women we were pursuing, now they want what?",
-      "More",
+      "\"Why are we so in...\"?",
+      "Denial",
       "Love",
-      "Less"
+      "Trouble"
+     ],
+     [
+      "\"When we know we're not...\"?",
+      "Happy here",
+      "Alone here",
+      "Meant to be"
+     ],
+     [
+      "How many times \"you think you've got it\"?",
+      "Two",
+      "Three",
+      "One"
+     ]
+    ],
+    [
+     [
+      "\"Don't want to meet your...\"?",
+      "Daddy",
+      "Brother",
+      "Friends"
+     ],
+     [
+      "\"Just want you in my...\"?",
+      "Caddy",
+      "Car",
+      "Life"
+     ],
+     [
+      "\"I'm just being...\"?",
+      "Honest",
+      "Real",
+      "Funny"
+     ],
+     [
+      "\"Hey, alright now, alright now...\"?",
+      "Fellas",
+      "Ladies",
+      "Y'all"
+     ],
+     [
+      "What's cooler than being cool?",
+      "Ice cold",
+      "Freezing",
+      "Chillin'"
+     ],
+     [
+      "\"I can't...\"?",
+      "Hear ya",
+      "See ya",
+      "Feel ya"
+     ],
+     [
+      "\"We gon' break this thing down in just a few...\"?",
+      "Seconds",
+      "Minutes",
+      "Beats"
+     ],
+     [
+      "\"Lend me some sugar, I am your...\"?",
+      "Neighbor",
+      "Brother",
+      "Baby"
      ]
     ]
    ]
@@ -936,169 +935,168 @@ window.CFG = {
    ]
   },
   {
-   "title": "Sixteen",
-   "id": "NTfmgP_OKlQ",
-   "start": 224.3,
+   "title": "Hey Ya!",
+   "id": "-7XnDlYY9qw",
    "cuts": [
-    257.6,
-    302.6,
-    357
+    33.9,
+    100.3,
+    166.2
    ],
    "qs": [
     [
      [
-      "Summer of what year, or was it '89?",
-      "'88",
-      "'87",
-      "'86"
+      "\"My baby don't mess...\"?",
+      "Around",
+      "Up",
+      "With me"
      ],
      [
-      "Or was it what time?",
-      "Winter",
-      "Spring",
-      "Fall"
+      "\"Because she loves me...\"?",
+      "So",
+      "True",
+      "More"
      ],
      [
-      "He's drawing whose album covers?",
-      "LL Cool J",
-      "Run-DMC",
-      "Big Daddy Kane"
+      "\"And this I know for...\"?",
+      "Sure",
+      "Real",
+      "Now"
      ],
      [
-      "On what kind of paper?",
-      "Construction",
-      "Notebook",
-      "Tracing"
+      "\"But can't stand to see me walk out the...\"?",
+      "Door",
+      "Room",
+      "House"
      ],
      [
-      "He's trying to hook his what up?",
-      "Waves",
-      "Fade",
-      "Braids"
+      "\"Don't try to fight the...\"?",
+      "Feeling",
+      "Music",
+      "Truth"
      ],
      [
-      "He's pulling his grades up to get them saddle what?",
-      "Lace ups",
-      "Slip-ons",
-      "High tops"
+      "The thought alone is killin' him right...?",
+      "Now",
+      "Here",
+      "Away"
      ],
      [
-      "Before little Marc was what?",
-      "Jacob",
-      "Famous",
-      "Rich"
+      "\"Thank God for mom and...\"?",
+      "Dad",
+      "Grandma",
+      "Uncle"
      ],
      [
-      "Before his what would break up?",
-      "Voice",
-      "Band",
-      "Crew"
+      "\"For sticking two...\"?",
+      "Together",
+      "Forever",
+      "Apart"
      ]
     ],
     [
      [
-      "He don't want much, just a roof and a what?",
-      "Porch",
-      "Yard",
-      "Pool"
+      "What gets shouted over and over?",
+      "Hey ya!",
+      "Oh yeah!",
+      "Alright!"
      ],
      [
-      "And a Porsche and a what?",
-      "Horse",
-      "Boat",
-      "Jet"
+      "\"But got it just don't get it when there's nothin'...\"?",
+      "At all",
+      "To lose",
+      "Inside"
      ],
      [
-      "Intruders whose what did a lousy job?",
-      "Tutors",
-      "Parents",
-      "Coaches"
+      "\"We get together, but separate's always...\"?",
+      "Better",
+      "Worse",
+      "Easier"
      ],
      [
-      "Every time we dine we eat until our what aches?",
-      "Belly",
-      "Head",
-      "Feet"
+      "\"...when there's ... involved\"?",
+      "Feelings",
+      "Money",
+      "Friends"
      ],
      [
-      "Then go grab the finest what?",
-      "Wine",
-      "Food",
-      "Suit"
+      "\"If what they say is nothing is...\"?",
+      "Forever",
+      "Perfect",
+      "Free"
      ],
      [
-      "Which grape and which what it came from?",
-      "Region",
-      "Vineyard",
-      "Country"
+      "\"What makes love the...\"?",
+      "Exception",
+      "Answer",
+      "Problem"
      ],
      [
-      "Hint hint, it ain't what?",
-      "Welch's",
-      "Kool-Aid",
-      "Minute Maid"
-     ],
-     [
-      "You'll need a ruler made by all the what?",
-      "Greek gods",
-      "Roman kings",
-      "Old masters"
-     ],
-     [
-      "The odds have always been what against him?",
-      "Stacked",
-      "Set",
-      "Turned"
-     ]
-    ],
-    [
-     [
-      "Y'all all Kelly green with what?",
-      "Envy",
-      "Paint",
-      "Grass"
-     ],
-     [
-      "While he's what descending?",
-      "Jelly beans",
-      "Snowflakes",
-      "Raindrops"
-     ],
-     [
-      "A what gon' shake his fin?",
-      "Dolphin",
-      "Shark",
-      "Whale"
-     ],
-     [
-      "Who didn't hold his nose?",
-      "Flipper",
-      "Nemo",
-      "Jaws"
-     ],
-     [
-      "So why shall he hold his what?",
-      "Tongue",
-      "Breath",
-      "Head"
-     ],
-     [
-      "Mere privacy, so what?",
-      "Essential",
-      "Expensive",
-      "Rare"
-     ],
-     [
-      "Something tells him we ain't in where anymore?",
-      "Kansas",
-      "Georgia",
-      "Texas"
-     ],
-     [
-      "The women we were pursuing, now they want what?",
-      "More",
+      "\"Why are we so in...\"?",
+      "Denial",
       "Love",
-      "Less"
+      "Trouble"
+     ],
+     [
+      "\"When we know we're not...\"?",
+      "Happy here",
+      "Alone here",
+      "Meant to be"
+     ],
+     [
+      "How many times \"you think you've got it\"?",
+      "Two",
+      "Three",
+      "One"
+     ]
+    ],
+    [
+     [
+      "\"Don't want to meet your...\"?",
+      "Daddy",
+      "Brother",
+      "Friends"
+     ],
+     [
+      "\"Just want you in my...\"?",
+      "Caddy",
+      "Car",
+      "Life"
+     ],
+     [
+      "\"I'm just being...\"?",
+      "Honest",
+      "Real",
+      "Funny"
+     ],
+     [
+      "\"Hey, alright now, alright now...\"?",
+      "Fellas",
+      "Ladies",
+      "Y'all"
+     ],
+     [
+      "What's cooler than being cool?",
+      "Ice cold",
+      "Freezing",
+      "Chillin'"
+     ],
+     [
+      "\"I can't...\"?",
+      "Hear ya",
+      "See ya",
+      "Feel ya"
+     ],
+     [
+      "\"We gon' break this thing down in just a few...\"?",
+      "Seconds",
+      "Minutes",
+      "Beats"
+     ],
+     [
+      "\"Lend me some sugar, I am your...\"?",
+      "Neighbor",
+      "Brother",
+      "Baby"
      ]
     ]
    ]

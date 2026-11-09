@@ -151,6 +151,18 @@ window.CFG = {
       "Me",
       "You",
       "Dre"
+     ],
+     [
+      "\"The hero of great, take a stand and we'll...\"?",
+      "See",
+      "Win",
+      "Go"
+     ],
+     [
+      "\"It's gotta go even lower than that, you know...\"?",
+      "Why",
+      "How",
+      "Who"
      ]
     ],
     [
@@ -207,6 +219,30 @@ window.CFG = {
       "Cash flow",
       "Attitude",
       "Vibe"
+     ],
+     [
+      "\"I get ill when I hear the bass...\"?",
+      "Go",
+      "Drop",
+      "Boom"
+     ],
+     [
+      "\"Of the D.O.C. and the new ... that I've found\"?",
+      "Style",
+      "Sound",
+      "Crew"
+     ],
+     [
+      "\"Enough to make you dance, so I picked up the...\"?",
+      "Pace",
+      "Mic",
+      "Bass"
+     ],
+     [
+      "\"Do a show, and I'm good to like a...\"?",
+      "G-O",
+      "Pro",
+      "Star"
      ]
     ],
     [
@@ -257,6 +293,18 @@ window.CFG = {
       "Residual",
       "Royalty",
       "Check"
+     ],
+     [
+      "\"Kill the treble, pump the...\"?",
+      "Bass",
+      "Beat",
+      "Volume"
+     ],
+     [
+      "\"Roll by, booming like a nuke...\"?",
+      "Bomb",
+      "Blast",
+      "Drum"
      ]
     ]
    ]
@@ -325,6 +373,18 @@ window.CFG = {
       "Bitin'",
       "Fightin'",
       "Lyin'"
+     ],
+     [
+      "\"Pumpin' it just like...\"?",
+      "This",
+      "That",
+      "Me"
+     ],
+     [
+      "\"As you progress, and you're...\"?",
+      "Enlightened",
+      "Excited",
+      "Inspired"
      ]
     ],
     [
@@ -375,6 +435,24 @@ window.CFG = {
       "Potion",
       "Lotion",
       "Motion"
+     ],
+     [
+      "\"A kid in his prime, pumpin' records that'll blow ya...\"?",
+      "Mind",
+      "Speakers",
+      "Doors"
+     ],
+     [
+      "\"Of an artist, hard it may be, but not my...\"?",
+      "Hardest",
+      "Best",
+      "Last"
+     ],
+     [
+      "\"Smooth, wordy example of how I'm...\"?",
+      "Livin'",
+      "Talkin'",
+      "Rappin'"
      ]
     ],
     [
@@ -425,6 +503,24 @@ window.CFG = {
       "Feelin'",
       "Sound",
       "Vibe"
+     ],
+     [
+      "He decided to make himself ... once more?",
+      "Apparent",
+      "Famous",
+      "Known"
+     ],
+     [
+      "\"And now I'm ruthless, by keepin' the crowd...\"?",
+      "Groovin'",
+      "Movin'",
+      "Jumpin'"
+     ],
+     [
+      "A brother tried to play him like a kid, so he...?",
+      "Dismissed him",
+      "Missed him",
+      "Fought him"
      ]
     ]
    ]
@@ -492,6 +588,18 @@ window.CFG = {
       "Mother",
       "Father",
       "Teacher"
+     ],
+     [
+      "\"Interact, altogether better with the...\"?",
+      "Crowd",
+      "Beat",
+      "Band"
+     ],
+     [
+      "\"Whether I'm coolin' or...\"?",
+      "Thrashin'",
+      "Rappin'",
+      "Dancin'"
      ]
     ],
     [
@@ -542,6 +650,24 @@ window.CFG = {
       "Pen",
       "Mic",
       "Pot"
+     ],
+     [
+      "\"Originality is a must, whenever I...\"?",
+      "Bust",
+      "Rhyme",
+      "Write"
+     ],
+     [
+      "\"In the end, it's dope, that's 'cause I want to...\"?",
+      "Win",
+      "Rap",
+      "Shine"
+     ],
+     [
+      "\"Never less, see I don't fess, I mean I'm like...\"?",
+      "Fresh",
+      "Cold",
+      "Smooth"
      ]
     ],
     [
@@ -592,167 +718,24 @@ window.CFG = {
       "Patent",
       "Platinum",
       "Printed"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "The D.O.C. & The Doctor",
-   "id": "Xi74FwnkLFY",
-   "cuts": [
-    37.93,
-    97.6,
-    155.6
-   ],
-   "qs": [
-    [
-     [
-      "Dre, let's kick it on the what?",
-      "One",
-      "Two",
-      "Beat"
      ],
      [
-      "He's makin' records that people are cold what?",
-      "Checkin'",
-      "Buyin'",
-      "Playin'"
+      "\"Keepin' it dope as long as I can like...\"?",
+      "Imagine",
+      "Magic",
+      "Forever"
      ],
      [
-      "People are cold checkin' and what?",
-      "Respectin'",
-      "Collectin'",
-      "Expectin'"
+      "\"Makin' each record that I do better than the...\"?",
+      "Last one",
+      "Next one",
+      "First one"
      ],
      [
-      "Because it rocks, the what won't stop?",
-      "Sales",
-      "Fans",
-      "Party"
-     ],
-     [
-      "He's the diggy diggy what?",
-      "D.O.C.",
-      "Doctor",
-      "Dallas"
-     ],
-     [
-      "He's on the set to be kickin' what?",
-      "Fresh",
-      "Rhymes",
-      "Back"
-     ],
-     [
-      "Letting the bass go and flow with what?",
-      "Soul",
-      "Style",
-      "Ease"
-     ],
-     [
-      "He leaves the rest to D.J. who?",
-      "Dr. Dre",
-      "Yella",
-      "Speed"
-     ]
-    ],
-    [
-     [
-      "When he hears a drum he's gotta get what?",
-      "Dumb",
-      "Loud",
-      "Up"
-     ],
-     [
-      "Some think it's a what?",
-      "Fable",
-      "Joke",
-      "Lie"
-     ],
-     [
-      "He jets back to his what?",
-      "Room",
-      "Car",
-      "Block"
-     ],
-     [
-      "He invents somethin' to compliment the what?",
-      "Boom",
-      "Bass",
-      "Crowd"
-     ],
-     [
-      "He wants it all like in what game?",
-      "Monopoly",
-      "Chess",
-      "Poker"
-     ],
-     [
-      "It's strictly for public what?",
-      "Satisfaction",
-      "Attention",
-      "Approval"
-     ],
-     [
-      "If you want it deeper, Dre, go get a what?",
-      "Shovel",
-      "Ladder",
-      "Drill"
-     ],
-     [
-      "It's all over the world, but without a what?",
-      "Satellite",
-      "Passport",
-      "Radio"
-     ]
-    ],
-    [
-     [
-      "Turn up the what?",
-      "Radio",
-      "Volume",
-      "Bass"
-     ],
-     [
-      "You like it, you know the what? Get it",
-      "Album",
-      "Single",
-      "Tape"
-     ],
-     [
-      "A rhythm with a style that makes you get what?",
-      "Loose",
-      "Up",
-      "Hype"
-     ],
-     [
-      "He's as good as you've what?",
-      "Gotten yet",
-      "Ever heard",
-      "Seen before"
-     ],
-     [
-      "Some say they could handle it, you wanna what?",
-      "Bet",
-      "Battle",
-      "Try"
-     ],
-     [
-      "He doesn't understand the what?",
-      "Misconception",
-      "Confusion",
-      "Question"
-     ],
-     [
-      "It's all what? Here's the rule",
-      "Evolution",
-      "Competition",
-      "Education"
-     ],
-     [
-      "Enroll in a new what?",
-      "School",
-      "Class",
-      "Crew"
+      "\"One of the top vocalists,\" and...?",
+      "Lyricists",
+      "Producers",
+      "DJs"
      ]
     ]
    ]
@@ -822,6 +805,18 @@ window.CFG = {
       "Mother",
       "Father",
       "Teacher"
+     ],
+     [
+      "\"Interact, altogether better with the...\"?",
+      "Crowd",
+      "Beat",
+      "Band"
+     ],
+     [
+      "\"Whether I'm coolin' or...\"?",
+      "Thrashin'",
+      "Rappin'",
+      "Dancin'"
      ]
     ],
     [
@@ -872,6 +867,24 @@ window.CFG = {
       "Pen",
       "Mic",
       "Pot"
+     ],
+     [
+      "\"Originality is a must, whenever I...\"?",
+      "Bust",
+      "Rhyme",
+      "Write"
+     ],
+     [
+      "\"In the end, it's dope, that's 'cause I want to...\"?",
+      "Win",
+      "Rap",
+      "Shine"
+     ],
+     [
+      "\"Never less, see I don't fess, I mean I'm like...\"?",
+      "Fresh",
+      "Cold",
+      "Smooth"
      ]
     ],
     [
@@ -922,167 +935,24 @@ window.CFG = {
       "Patent",
       "Platinum",
       "Printed"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "The D.O.C. & The Doctor",
-   "id": "Xi74FwnkLFY",
-   "cuts": [
-    37.93,
-    97.6,
-    155.6
-   ],
-   "qs": [
-    [
-     [
-      "Dre, let's kick it on the what?",
-      "One",
-      "Two",
-      "Beat"
      ],
      [
-      "He's makin' records that people are cold what?",
-      "Checkin'",
-      "Buyin'",
-      "Playin'"
+      "\"Keepin' it dope as long as I can like...\"?",
+      "Imagine",
+      "Magic",
+      "Forever"
      ],
      [
-      "People are cold checkin' and what?",
-      "Respectin'",
-      "Collectin'",
-      "Expectin'"
+      "\"Makin' each record that I do better than the...\"?",
+      "Last one",
+      "Next one",
+      "First one"
      ],
      [
-      "Because it rocks, the what won't stop?",
-      "Sales",
-      "Fans",
-      "Party"
-     ],
-     [
-      "He's the diggy diggy what?",
-      "D.O.C.",
-      "Doctor",
-      "Dallas"
-     ],
-     [
-      "He's on the set to be kickin' what?",
-      "Fresh",
-      "Rhymes",
-      "Back"
-     ],
-     [
-      "Letting the bass go and flow with what?",
-      "Soul",
-      "Style",
-      "Ease"
-     ],
-     [
-      "He leaves the rest to D.J. who?",
-      "Dr. Dre",
-      "Yella",
-      "Speed"
-     ]
-    ],
-    [
-     [
-      "When he hears a drum he's gotta get what?",
-      "Dumb",
-      "Loud",
-      "Up"
-     ],
-     [
-      "Some think it's a what?",
-      "Fable",
-      "Joke",
-      "Lie"
-     ],
-     [
-      "He jets back to his what?",
-      "Room",
-      "Car",
-      "Block"
-     ],
-     [
-      "He invents somethin' to compliment the what?",
-      "Boom",
-      "Bass",
-      "Crowd"
-     ],
-     [
-      "He wants it all like in what game?",
-      "Monopoly",
-      "Chess",
-      "Poker"
-     ],
-     [
-      "It's strictly for public what?",
-      "Satisfaction",
-      "Attention",
-      "Approval"
-     ],
-     [
-      "If you want it deeper, Dre, go get a what?",
-      "Shovel",
-      "Ladder",
-      "Drill"
-     ],
-     [
-      "It's all over the world, but without a what?",
-      "Satellite",
-      "Passport",
-      "Radio"
-     ]
-    ],
-    [
-     [
-      "Turn up the what?",
-      "Radio",
-      "Volume",
-      "Bass"
-     ],
-     [
-      "You like it, you know the what? Get it",
-      "Album",
-      "Single",
-      "Tape"
-     ],
-     [
-      "A rhythm with a style that makes you get what?",
-      "Loose",
-      "Up",
-      "Hype"
-     ],
-     [
-      "He's as good as you've what?",
-      "Gotten yet",
-      "Ever heard",
-      "Seen before"
-     ],
-     [
-      "Some say they could handle it, you wanna what?",
-      "Bet",
-      "Battle",
-      "Try"
-     ],
-     [
-      "He doesn't understand the what?",
-      "Misconception",
-      "Confusion",
-      "Question"
-     ],
-     [
-      "It's all what? Here's the rule",
-      "Evolution",
-      "Competition",
-      "Education"
-     ],
-     [
-      "Enroll in a new what?",
-      "School",
-      "Class",
-      "Crew"
+      "\"One of the top vocalists,\" and...?",
+      "Lyricists",
+      "Producers",
+      "DJs"
      ]
     ]
    ]
@@ -1144,6 +1014,18 @@ window.CFG = {
       "Tree",
       "Vine",
       "Flower"
+     ],
+     [
+      "\"For there is not the...\"?",
+      "Problem",
+      "Answer",
+      "Question"
+     ],
+     [
+      "\"Causin' much destruction, because I'm...\"?",
+      "Crushin'",
+      "Rushin'",
+      "Bluffin'"
      ]
     ],
     [
@@ -1194,6 +1076,24 @@ window.CFG = {
       "Forever",
       "Tonight",
       "Always"
+     ],
+     [
+      "\"In my own right it's dope, 'cause I'm...\"?",
+      "Original",
+      "Unusual",
+      "Special"
+     ],
+     [
+      "\"When the vocals are done, then you...\"?",
+      "Know",
+      "Go",
+      "Show"
+     ],
+     [
+      "\"I am not your...\"?",
+      "Equal",
+      "Brother",
+      "Rival"
      ]
     ],
     [
@@ -1250,6 +1150,24 @@ window.CFG = {
       "Flex",
       "Love",
       "Class"
+     ],
+     [
+      "\"And I'm like 'damn, another...'\"?",
+      "Loser",
+      "Rookie",
+      "Sucker"
+     ],
+     [
+      "\"An exhibition, a new hip-hop...\"?",
+      "Introduction",
+      "Revolution",
+      "Generation"
+     ],
+     [
+      "\"Drop it on a rhythm, somethin'...\"?",
+      "Basic",
+      "Classic",
+      "Funky"
      ]
     ]
    ]
@@ -1318,6 +1236,18 @@ window.CFG = {
       "Enough",
       "Tonight",
       "Again"
+     ],
+     [
+      "\"Nothin' like an idiot, get...\"?",
+      "It",
+      "Out",
+      "Lost"
+     ],
+     [
+      "\"Let the rhythm take you, ... it 'cause it makes you\"?",
+      "Shake",
+      "Feel",
+      "Ride"
      ]
     ],
     [
@@ -1368,6 +1298,24 @@ window.CFG = {
       "Bluff",
       "Joke",
       "Game"
+     ],
+     [
+      "\"It's gettin'...\"?",
+      "Funky",
+      "Hot",
+      "Crazy"
+     ],
+     [
+      "\"Watch the smooth lyrics that take...\"?",
+      "Place",
+      "Flight",
+      "Time"
+     ],
+     [
+      "P-E-R-F-O-R-M-I-N-G on the...?",
+      "Stage",
+      "Radio",
+      "Block"
      ]
     ],
     [
@@ -1418,6 +1366,24 @@ window.CFG = {
       "Money",
       "Music",
       "Mic"
+     ],
+     [
+      "\"Continue with the rhyme and make sure I get...\"?",
+      "Mine",
+      "Paid",
+      "Home"
+     ],
+     [
+      "\"But in the event that someone will try and ... this\"?",
+      "Juice",
+      "Lose",
+      "Use"
+     ],
+     [
+      "\"Lessons have been...\"?",
+      "Learned",
+      "Taught",
+      "Lost"
      ]
     ]
    ]

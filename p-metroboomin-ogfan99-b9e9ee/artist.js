@@ -102,337 +102,335 @@ window.CFG = {
  ],
  "explicitSongs": [
   {
-   "title": "Bounce Back (Big Sean)",
-   "id": "6whOxmf4kn0",
-   "start": 8.6,
+   "title": "Creepin' (The Weeknd & 21 Savage)",
+   "id": "LOqGYF0oFIg",
    "cuts": [
-    46.5,
-    95.7,
-    157.3
+    44.4,
+    118.7,
+    197.4
    ],
    "qs": [
     [
      [
-      "\"Last night took an L, but tonight I...\"?",
-      "Bounce back",
-      "Come back",
-      "Go back"
+      "\"Somebody said they...\"?",
+      "Saw you",
+      "Heard you",
+      "Called you"
      ],
      [
-      "\"Wake up every morning, by the night, I count...\"?",
-      "Stacks",
-      "Sheep",
-      "Hours"
+      "The person you were ... wasn't me?",
+      "Kissing",
+      "Calling",
+      "Holding"
      ],
      [
-      "\"Boy, I been broke, cashed a ___ and bounced back\"",
-      "Check",
-      "Bet",
-      "Chip"
+      "\"I would never ask you, I just kept it to...\"?",
+      "Myself",
+      "My friends",
+      "The phone"
      ],
      [
-      "\"___ town LAX, every week I bounce back\"",
-      "D",
-      "A",
-      "H"
+      "\"I don't wanna know, if you're...\"?",
+      "Playing me",
+      "Leaving me",
+      "Loving me"
      ],
      [
-      "\"If you a ___ one, then you know how to bounce back\"",
-      "Real",
-      "True",
-      "Good"
-     ],
-     [
-      "\"Don't owe...\"?",
-      "Nobody",
-      "Nothing",
-      "A dime"
-     ],
-     [
-      "\"Always on the job, I got no...\"?",
-      "Hobbies",
-      "Days off",
-      "Problems"
-     ],
-     [
-      "\"Got the city with me 'cause I'm...\"?",
-      "Homegrown",
-      "Famous",
-      "Local"
-     ],
-     [
-      "\"Vibin' out more than my ___ though\"",
+      "\"Keep it on the...\"?",
+      "Low",
       "Phone",
-      "Car",
-      "Crew"
+      "Side"
+     ],
+     [
+      "\"'Cause my heart can't take it...\"?",
+      "Anymore",
+      "Tonight",
+      "Again"
+     ],
+     [
+      "\"And if you creeping, please don't let it...\"?",
+      "Show",
+      "Go",
+      "Slip"
+     ],
+     [
+      "Who \"want some more\" at the start?",
+      "Metro Boomin",
+      "21 Savage",
+      "Mustard"
+     ],
+     [
+      "\"Just can't believe this...\"?",
+      "Man",
+      "Girl",
+      "Night"
      ]
     ],
     [
      [
-      "\"My daddy a G, it's...\"?",
-      "Genetics",
-      "Tradition",
-      "Destiny"
+      "\"I think about it when I...\"?",
+      "Hold you",
+      "Call you",
+      "See you"
      ],
      [
-      "\"I heard ya new stuff, it's...\"?",
-      "Pathetic",
-      "Average",
-      "Nothing"
+      "When looking in your ..., he can't believe?",
+      "Eyes",
+      "Phone",
+      "Face"
      ],
      [
-      "\"Ya contract should be...\"?",
-      "Shredded",
-      "Burned",
-      "Signed"
+      "\"And I don't need to know the...\"?",
+      "Truth",
+      "Name",
+      "Details"
      ],
      [
-      "\"Took my dogs on a private jet from the public...\"?",
-      "Housing",
-      "School",
-      "Bus"
+      "\"But baby keep it to...\"?",
+      "Yourself",
+      "Your friends",
+      "The side"
      ],
      [
-      "\"Clique star studded like the ___ mountain\"",
-      "Paramount",
-      "Universal",
-      "Rocky"
+      "\"Did he watch you fall...\"?",
+      "Asleep",
+      "Apart",
+      "Down"
      ],
      [
-      "\"Betting on me is the right...\"?",
-      "Risk",
-      "Move",
-      "Call"
+      "\"If you're better off that...\"?",
+      "Way",
+      "Day",
+      "Side"
      ],
      [
-      "\"I switch gears to the night...\"?",
-      "Shift",
-      "Life",
-      "Owl"
+      "\"Baby all that I can...\"?",
+      "Say",
+      "Do",
+      "Give"
      ],
      [
-      "\"God talk to me in...\"?",
-      "Silence",
-      "Dreams",
-      "Church"
+      "\"If you're gonna do your thing, then don't come back to...\"?",
+      "Me",
+      "Town",
+      "Here"
      ]
     ],
     [
      [
-      "\"Look, I woke up in ___ mode\"",
-      "Beast",
-      "Boss",
-      "Grind"
+      "Who jumps in with the verse?",
+      "21",
+      "Metro",
+      "Abel"
      ],
      [
-      "\"With my girl, that's ___ and the beast though\"",
-      "Beauty",
-      "Bonnie",
-      "Bella"
+      "\"Had me crushing, I was cuffing like the...\"?",
+      "Precinct",
+      "Police",
+      "Judge"
      ],
      [
-      "\"Only thing that sold out is the ___ though\"",
-      "Seats",
-      "Shows",
-      "Shirts"
+      "\"How you go from housewife to a sneaky...\"?",
+      "Link",
+      "Friend",
+      "Date"
      ],
      [
-      "\"Faith of a ___ seed, I kept growing\"",
-      "Mustard",
-      "Sunflower",
-      "Apple"
+      "\"All types of Benz's and...\"?",
+      "Rovers",
+      "Jeeps",
+      "Bentleys"
      ],
      [
-      "\"Livin' like I'm on a ___ pill\"",
-      "Limitless",
-      "Magic",
-      "Happy"
+      "\"Fashion Nova model, I put you on the...\"?",
+      "Runway",
+      "Cover",
+      "Map"
      ],
      [
-      "Which actor does he say he's like on the scene?",
-      "Denzel",
-      "De Niro",
-      "Pacino"
+      "\"I got a girl but I still feel...\"?",
+      "Alone",
+      "Lost",
+      "Cold"
      ],
      [
-      "\"Seen court rooms and court...\"?",
-      "Sides",
-      "Yards",
-      "Dates"
+      "\"If you playing me that mean my home ain't...\"?",
+      "Home",
+      "Safe",
+      "Mine"
      ],
      [
-      "\"The underdog just turned into the...\"?",
-      "Wolf",
-      "Lion",
-      "Boss"
+      "\"Having nightmares of going through your...\"?",
+      "Phone",
+      "Bag",
+      "Car"
      ]
     ]
    ]
   },
   {
-   "title": "Congratulations (Post Malone)",
-   "id": "R8vpQdZErbw",
-   "start": 14.5,
+   "title": "Jumpman (Drake & Future)",
+   "id": "drprt4Dft7Y",
    "cuts": [
-    53.6,
-    92.8,
-    133.9
+    40.9,
+    81.5,
+    115.4
    ],
    "qs": [
     [
      [
-      "\"My momma called, seen you on...\"?",
-      "TV",
-      "The news",
-      "The radio"
+      "What holiday gets called out early?",
+      "Halloween",
+      "Christmas",
+      "Easter"
      ],
      [
-      "\"I dreamed it all ever since I was...\"?",
-      "Young",
-      "Small",
-      "Broke"
+      "\"Jumpman, Jumpman, Jumpman, them boys up to...\"?",
+      "Something",
+      "No good",
+      "Nothing"
      ],
      [
-      "\"Now they always say...\"?",
-      "Congratulations",
-      "Welcome back",
-      "Good luck"
+      "They spent two or three weeks out the...?",
+      "Country",
+      "City",
+      "Studio"
      ],
      [
-      "\"Worked so hard, forgot how to...\"?",
-      "Vacation",
-      "Relax",
-      "Sleep"
+      "\"Them boys up to something, they just not just...\"?",
+      "Bluffing",
+      "Talking",
+      "Playing"
      ],
      [
-      "\"They ain't never had the...\"?",
-      "Dedication",
-      "Motivation",
-      "Patience"
+      "\"I hit my dance like...\"?",
+      "Usher",
+      "Michael",
+      "Chris"
      ],
      [
-      "\"They was never...\"?",
-      "Friendly",
-      "Around",
-      "Real"
+      "\"I just found my tempo like I'm DJ...\"?",
+      "Mustard",
+      "Khaled",
+      "Drama"
      ],
      [
-      "\"Now I'm jumping out the...\"?",
-      "Bentley",
-      "Benz",
-      "Jet"
+      "He hit that Ginobili with which hand up?",
+      "Left",
+      "Right",
+      "Both"
      ],
      [
-      "\"And I know I sound...\"?",
-      "Dramatic",
-      "Crazy",
-      "Cocky"
+      "\"Lobster and ... for all my babies that I miss\"?",
+      "Céline",
+      "Chanel",
+      "Gucci"
      ]
     ],
     [
      [
-      "\"For the money, I'm a...\"?",
-      "Savage",
-      "Soldier",
-      "Monster"
+      "\"Way too many questions, you must think I...\"?",
+      "Trust you",
+      "Know you",
+      "Need you"
      ],
      [
-      "\"I be itching like a...\"?",
-      "Addict",
-      "Rookie",
-      "Puppy"
-     ],
-     [
-      "\"But they didn't know me last...\"?",
-      "Year",
-      "Week",
-      "Summer"
-     ],
-     [
-      "\"Everyone wanna act like they...\"?",
-      "Important",
-      "Famous",
-      "Tough"
-     ],
-     [
-      "\"Everyone counting on me, drop the...\"?",
-      "Ball",
-      "Mic",
-      "Beat"
-     ],
-     [
-      "\"Everything custom like I'm at the...\"?",
-      "Border",
-      "Tailor",
-      "Mall"
-     ],
-     [
-      "\"Put your ___ to the sky\"",
-      "Lighters",
-      "Hands",
-      "Phones"
-     ],
-     [
-      "\"How could I make cents when I got ___ on my mind?\"",
-      "Millions",
-      "Billions",
+      "\"You searching for...\"?",
+      "Answers",
+      "Trouble",
       "Money"
      ],
      [
-      "\"Balling since a baby, they could see it in my...\"?",
-      "Eyes",
-      "Walk",
-      "Smile"
+      "\"I see 'em tweaking, they know something's...\"?",
+      "Coming",
+      "Wrong",
+      "Up"
+     ],
+     [
+      "Which town gets shouted out twice?",
+      "Chi-Town",
+      "H-Town",
+      "Motown"
+     ],
+     [
+      "Who \"just had text me\"?",
+      "Michael Jordan",
+      "Metro Boomin",
+      "Future"
+     ],
+     [
+      "\"I just seen the ... take off\"?",
+      "Jet",
+      "Car",
+      "Rocket"
+     ],
+     [
+      "\"You searching for answers, I do not know...\"?",
+      "Nothing",
+      "Anything",
+      "Nobody"
+     ],
+     [
+      "How many times \"Jumpman\" in the long line?",
+      "Six",
+      "Four",
+      "Three"
+     ],
+     [
+      "What sound ends a lot of lines?",
+      "Woo",
+      "Yeah",
+      "Wow"
      ]
     ],
     [
      [
-      "Who called? \"My ___ called\"",
-      "Momma",
-      "Daddy",
-      "Brother"
+      "She was tryna join the team, he told her...?",
+      "Wait",
+      "No",
+      "Later"
      ],
      [
-      "\"Seen you on TV...\"?",
-      "Son",
-      "Kid",
-      "Boy"
+      "\"Chicken wings and fries, we don't go on...\"?",
+      "Dates",
+      "Trips",
+      "Tour"
      ],
      [
-      "\"They said I wouldn't be...\"?",
-      "Nothing",
-      "Famous",
-      "Here"
+      "Which restaurant gets repeated?",
+      "Nobu",
+      "Catch",
+      "Zuma"
      ],
      [
-      "\"Worked so ___, forgot how to vacation\"",
-      "Hard",
-      "Long",
-      "Late"
+      "\"I just throwed a private dinner in...\"?",
+      "LA",
+      "Miami",
+      "Toronto"
      ],
      [
-      "\"People hatin', say we ___ and look we made it\"",
-      "Changed",
-      "Faked it",
-      "Fell off"
+      "\"Money coming fast, we never getting...\"?",
+      "Sleep",
+      "Tired",
+      "Caught"
      ],
      [
-      "\"I dreamed it ___ ever since I was young\"",
-      "All",
-      "Big",
-      "Up"
+      "\"I just had to buy another...\"?",
+      "Safe",
+      "Watch",
+      "Car"
      ],
      [
-      "\"Uh, I was...\"?",
-      "Patient",
-      "Hungry",
-      "Ready"
+      "\"Bentley Spur and Phantom, Jordan...\"?",
+      "Fadeaway",
+      "Crossover",
+      "Dunk"
      ],
      [
-      "\"Now I can ___ that we made it\"",
-      "Scream",
-      "Say",
-      "Prove"
+      "Who's \"on production\"?",
+      "Metro Boomin",
+      "Mustard",
+      "Southside"
      ]
     ]
    ]
@@ -769,337 +767,335 @@ window.CFG = {
  ],
  "songs": [
   {
-   "title": "Bounce Back (Big Sean)",
-   "id": "6whOxmf4kn0",
-   "start": 8.6,
+   "title": "Creepin' (The Weeknd & 21 Savage)",
+   "id": "LOqGYF0oFIg",
    "cuts": [
-    46.5,
-    95.7,
-    157.3
+    44.4,
+    118.7,
+    197.4
    ],
    "qs": [
     [
      [
-      "\"Last night took an L, but tonight I...\"?",
-      "Bounce back",
-      "Come back",
-      "Go back"
+      "\"Somebody said they...\"?",
+      "Saw you",
+      "Heard you",
+      "Called you"
      ],
      [
-      "\"Wake up every morning, by the night, I count...\"?",
-      "Stacks",
-      "Sheep",
-      "Hours"
+      "The person you were ... wasn't me?",
+      "Kissing",
+      "Calling",
+      "Holding"
      ],
      [
-      "\"Boy, I been broke, cashed a ___ and bounced back\"",
-      "Check",
-      "Bet",
-      "Chip"
+      "\"I would never ask you, I just kept it to...\"?",
+      "Myself",
+      "My friends",
+      "The phone"
      ],
      [
-      "\"___ town LAX, every week I bounce back\"",
-      "D",
-      "A",
-      "H"
+      "\"I don't wanna know, if you're...\"?",
+      "Playing me",
+      "Leaving me",
+      "Loving me"
      ],
      [
-      "\"If you a ___ one, then you know how to bounce back\"",
-      "Real",
-      "True",
-      "Good"
-     ],
-     [
-      "\"Don't owe...\"?",
-      "Nobody",
-      "Nothing",
-      "A dime"
-     ],
-     [
-      "\"Always on the job, I got no...\"?",
-      "Hobbies",
-      "Days off",
-      "Problems"
-     ],
-     [
-      "\"Got the city with me 'cause I'm...\"?",
-      "Homegrown",
-      "Famous",
-      "Local"
-     ],
-     [
-      "\"Vibin' out more than my ___ though\"",
+      "\"Keep it on the...\"?",
+      "Low",
       "Phone",
-      "Car",
-      "Crew"
+      "Side"
+     ],
+     [
+      "\"'Cause my heart can't take it...\"?",
+      "Anymore",
+      "Tonight",
+      "Again"
+     ],
+     [
+      "\"And if you creeping, please don't let it...\"?",
+      "Show",
+      "Go",
+      "Slip"
+     ],
+     [
+      "Who \"want some more\" at the start?",
+      "Metro Boomin",
+      "21 Savage",
+      "Mustard"
+     ],
+     [
+      "\"Just can't believe this...\"?",
+      "Man",
+      "Girl",
+      "Night"
      ]
     ],
     [
      [
-      "\"My daddy a G, it's...\"?",
-      "Genetics",
-      "Tradition",
-      "Destiny"
+      "\"I think about it when I...\"?",
+      "Hold you",
+      "Call you",
+      "See you"
      ],
      [
-      "\"I heard ya new stuff, it's...\"?",
-      "Pathetic",
-      "Average",
-      "Nothing"
+      "When looking in your ..., he can't believe?",
+      "Eyes",
+      "Phone",
+      "Face"
      ],
      [
-      "\"Ya contract should be...\"?",
-      "Shredded",
-      "Burned",
-      "Signed"
+      "\"And I don't need to know the...\"?",
+      "Truth",
+      "Name",
+      "Details"
      ],
      [
-      "\"Took my dogs on a private jet from the public...\"?",
-      "Housing",
-      "School",
-      "Bus"
+      "\"But baby keep it to...\"?",
+      "Yourself",
+      "Your friends",
+      "The side"
      ],
      [
-      "\"Clique star studded like the ___ mountain\"",
-      "Paramount",
-      "Universal",
-      "Rocky"
+      "\"Did he watch you fall...\"?",
+      "Asleep",
+      "Apart",
+      "Down"
      ],
      [
-      "\"Betting on me is the right...\"?",
-      "Risk",
-      "Move",
-      "Call"
+      "\"If you're better off that...\"?",
+      "Way",
+      "Day",
+      "Side"
      ],
      [
-      "\"I switch gears to the night...\"?",
-      "Shift",
-      "Life",
-      "Owl"
+      "\"Baby all that I can...\"?",
+      "Say",
+      "Do",
+      "Give"
      ],
      [
-      "\"God talk to me in...\"?",
-      "Silence",
-      "Dreams",
-      "Church"
+      "\"If you're gonna do your thing, then don't come back to...\"?",
+      "Me",
+      "Town",
+      "Here"
      ]
     ],
     [
      [
-      "\"Look, I woke up in ___ mode\"",
-      "Beast",
-      "Boss",
-      "Grind"
+      "Who jumps in with the verse?",
+      "21",
+      "Metro",
+      "Abel"
      ],
      [
-      "\"With my girl, that's ___ and the beast though\"",
-      "Beauty",
-      "Bonnie",
-      "Bella"
+      "\"Had me crushing, I was cuffing like the...\"?",
+      "Precinct",
+      "Police",
+      "Judge"
      ],
      [
-      "\"Only thing that sold out is the ___ though\"",
-      "Seats",
-      "Shows",
-      "Shirts"
+      "\"How you go from housewife to a sneaky...\"?",
+      "Link",
+      "Friend",
+      "Date"
      ],
      [
-      "\"Faith of a ___ seed, I kept growing\"",
-      "Mustard",
-      "Sunflower",
-      "Apple"
+      "\"All types of Benz's and...\"?",
+      "Rovers",
+      "Jeeps",
+      "Bentleys"
      ],
      [
-      "\"Livin' like I'm on a ___ pill\"",
-      "Limitless",
-      "Magic",
-      "Happy"
+      "\"Fashion Nova model, I put you on the...\"?",
+      "Runway",
+      "Cover",
+      "Map"
      ],
      [
-      "Which actor does he say he's like on the scene?",
-      "Denzel",
-      "De Niro",
-      "Pacino"
+      "\"I got a girl but I still feel...\"?",
+      "Alone",
+      "Lost",
+      "Cold"
      ],
      [
-      "\"Seen court rooms and court...\"?",
-      "Sides",
-      "Yards",
-      "Dates"
+      "\"If you playing me that mean my home ain't...\"?",
+      "Home",
+      "Safe",
+      "Mine"
      ],
      [
-      "\"The underdog just turned into the...\"?",
-      "Wolf",
-      "Lion",
-      "Boss"
+      "\"Having nightmares of going through your...\"?",
+      "Phone",
+      "Bag",
+      "Car"
      ]
     ]
    ]
   },
   {
-   "title": "Congratulations (Post Malone)",
-   "id": "R8vpQdZErbw",
-   "start": 14.5,
+   "title": "Jumpman (Drake & Future)",
+   "id": "drprt4Dft7Y",
    "cuts": [
-    53.6,
-    92.8,
-    133.9
+    40.9,
+    81.5,
+    115.4
    ],
    "qs": [
     [
      [
-      "\"My momma called, seen you on...\"?",
-      "TV",
-      "The news",
-      "The radio"
+      "What holiday gets called out early?",
+      "Halloween",
+      "Christmas",
+      "Easter"
      ],
      [
-      "\"I dreamed it all ever since I was...\"?",
-      "Young",
-      "Small",
-      "Broke"
+      "\"Jumpman, Jumpman, Jumpman, them boys up to...\"?",
+      "Something",
+      "No good",
+      "Nothing"
      ],
      [
-      "\"Now they always say...\"?",
-      "Congratulations",
-      "Welcome back",
-      "Good luck"
+      "They spent two or three weeks out the...?",
+      "Country",
+      "City",
+      "Studio"
      ],
      [
-      "\"Worked so hard, forgot how to...\"?",
-      "Vacation",
-      "Relax",
-      "Sleep"
+      "\"Them boys up to something, they just not just...\"?",
+      "Bluffing",
+      "Talking",
+      "Playing"
      ],
      [
-      "\"They ain't never had the...\"?",
-      "Dedication",
-      "Motivation",
-      "Patience"
+      "\"I hit my dance like...\"?",
+      "Usher",
+      "Michael",
+      "Chris"
      ],
      [
-      "\"They was never...\"?",
-      "Friendly",
-      "Around",
-      "Real"
+      "\"I just found my tempo like I'm DJ...\"?",
+      "Mustard",
+      "Khaled",
+      "Drama"
      ],
      [
-      "\"Now I'm jumping out the...\"?",
-      "Bentley",
-      "Benz",
-      "Jet"
+      "He hit that Ginobili with which hand up?",
+      "Left",
+      "Right",
+      "Both"
      ],
      [
-      "\"And I know I sound...\"?",
-      "Dramatic",
-      "Crazy",
-      "Cocky"
+      "\"Lobster and ... for all my babies that I miss\"?",
+      "Céline",
+      "Chanel",
+      "Gucci"
      ]
     ],
     [
      [
-      "\"For the money, I'm a...\"?",
-      "Savage",
-      "Soldier",
-      "Monster"
+      "\"Way too many questions, you must think I...\"?",
+      "Trust you",
+      "Know you",
+      "Need you"
      ],
      [
-      "\"I be itching like a...\"?",
-      "Addict",
-      "Rookie",
-      "Puppy"
-     ],
-     [
-      "\"But they didn't know me last...\"?",
-      "Year",
-      "Week",
-      "Summer"
-     ],
-     [
-      "\"Everyone wanna act like they...\"?",
-      "Important",
-      "Famous",
-      "Tough"
-     ],
-     [
-      "\"Everyone counting on me, drop the...\"?",
-      "Ball",
-      "Mic",
-      "Beat"
-     ],
-     [
-      "\"Everything custom like I'm at the...\"?",
-      "Border",
-      "Tailor",
-      "Mall"
-     ],
-     [
-      "\"Put your ___ to the sky\"",
-      "Lighters",
-      "Hands",
-      "Phones"
-     ],
-     [
-      "\"How could I make cents when I got ___ on my mind?\"",
-      "Millions",
-      "Billions",
+      "\"You searching for...\"?",
+      "Answers",
+      "Trouble",
       "Money"
      ],
      [
-      "\"Balling since a baby, they could see it in my...\"?",
-      "Eyes",
-      "Walk",
-      "Smile"
+      "\"I see 'em tweaking, they know something's...\"?",
+      "Coming",
+      "Wrong",
+      "Up"
+     ],
+     [
+      "Which town gets shouted out twice?",
+      "Chi-Town",
+      "H-Town",
+      "Motown"
+     ],
+     [
+      "Who \"just had text me\"?",
+      "Michael Jordan",
+      "Metro Boomin",
+      "Future"
+     ],
+     [
+      "\"I just seen the ... take off\"?",
+      "Jet",
+      "Car",
+      "Rocket"
+     ],
+     [
+      "\"You searching for answers, I do not know...\"?",
+      "Nothing",
+      "Anything",
+      "Nobody"
+     ],
+     [
+      "How many times \"Jumpman\" in the long line?",
+      "Six",
+      "Four",
+      "Three"
+     ],
+     [
+      "What sound ends a lot of lines?",
+      "Woo",
+      "Yeah",
+      "Wow"
      ]
     ],
     [
      [
-      "Who called? \"My ___ called\"",
-      "Momma",
-      "Daddy",
-      "Brother"
+      "She was tryna join the team, he told her...?",
+      "Wait",
+      "No",
+      "Later"
      ],
      [
-      "\"Seen you on TV...\"?",
-      "Son",
-      "Kid",
-      "Boy"
+      "\"Chicken wings and fries, we don't go on...\"?",
+      "Dates",
+      "Trips",
+      "Tour"
      ],
      [
-      "\"They said I wouldn't be...\"?",
-      "Nothing",
-      "Famous",
-      "Here"
+      "Which restaurant gets repeated?",
+      "Nobu",
+      "Catch",
+      "Zuma"
      ],
      [
-      "\"Worked so ___, forgot how to vacation\"",
-      "Hard",
-      "Long",
-      "Late"
+      "\"I just throwed a private dinner in...\"?",
+      "LA",
+      "Miami",
+      "Toronto"
      ],
      [
-      "\"People hatin', say we ___ and look we made it\"",
-      "Changed",
-      "Faked it",
-      "Fell off"
+      "\"Money coming fast, we never getting...\"?",
+      "Sleep",
+      "Tired",
+      "Caught"
      ],
      [
-      "\"I dreamed it ___ ever since I was young\"",
-      "All",
-      "Big",
-      "Up"
+      "\"I just had to buy another...\"?",
+      "Safe",
+      "Watch",
+      "Car"
      ],
      [
-      "\"Uh, I was...\"?",
-      "Patient",
-      "Hungry",
-      "Ready"
+      "\"Bentley Spur and Phantom, Jordan...\"?",
+      "Fadeaway",
+      "Crossover",
+      "Dunk"
      ],
      [
-      "\"Now I can ___ that we made it\"",
-      "Scream",
-      "Say",
-      "Prove"
+      "Who's \"on production\"?",
+      "Metro Boomin",
+      "Mustard",
+      "Southside"
      ]
     ]
    ]
@@ -1435,5 +1431,3 @@ window.CFG = {
   }
  ]
 };
-
-(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

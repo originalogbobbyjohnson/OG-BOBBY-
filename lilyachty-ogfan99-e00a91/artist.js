@@ -387,270 +387,271 @@ window.CFG = {
    ]
   },
   {
-   "title": "Oprah's Bank Account (ft. Drake & DaBaby)",
-   "id": "vx6b4T21B6o",
+   "title": "drive ME crazy!",
+   "id": "ZlFr9t3zMNI",
+   "start": 17.2,
    "cuts": [
-    40.55,
-    76.4,
-    131.6
+    51.7,
+    80.7,
+    125.8
    ],
    "qs": [
     [
      [
-      "Overseas, he'll do what?",
-      "Fly you out",
-      "Ship you out",
-      "Leave you"
+      "\"Imagine life without me, it's a waste of...\"?",
+      "Time",
+      "Love",
+      "Space"
      ],
      [
-      "Is it trickin' if she really what?",
-      "Loves me",
-      "Needs me",
-      "Knows me"
-     ],
-     [
-      "She's a city girl straight from where?",
-      "The South",
-      "The North",
-      "The coast"
-     ],
-     [
-      "Back home on a presi', he's who?",
-      "Obama",
-      "Biden",
-      "Clinton"
-     ],
-     [
-      "He condones the what?",
-      "Drama",
-      "Money",
-      "Party"
-     ],
-     [
-      "Do you need some what?",
-      "Pajamas",
-      "Slippers",
-      "Water"
-     ],
-     [
-      "Staying the night, girl, you what?",
-      "Promised it",
-      "Planned it",
-      "Earned it"
-     ]
-    ],
-    [
-     [
-      "He's blowing a bag where?",
-      "Diamond District",
-      "The mall",
-      "Lenox"
-     ],
-     [
-      "You need him like dollars that are what?",
-      "Owed to you",
-      "In the bank",
-      "Folded"
-     ],
-     [
-      "Money and him are the same, but he don't do what for you?",
-      "Fold",
-      "Spend",
-      "Stay"
-     ],
-     [
-      "He'll put a what on the road for you?",
-      "Range",
-      "Benz",
-      "Truck"
-     ],
-     [
-      "\"I don't know what you were ___\"?",
-      "Told",
-      "Doing",
-      "Thinking"
-     ],
-     [
-      "If he seen you out, he'd be up on you how?",
-      "Crazy",
-      "Quick",
-      "Shy"
-     ]
-    ],
-    [
-     [
-      "\"I ain't mad at 'em,\" who?",
-      "Baby",
-      "Shawty",
-      "Mama"
-     ],
-     [
-      "You're a diamond in the what?",
-      "Rough",
-      "Sky",
-      "Dark"
-     ],
-     [
-      "You look as good as whose bank account?",
-      "Oprah's",
-      "Beyonce's",
-      "Rihanna's"
-     ],
-     [
-      "You look as good as Oprah's what?",
-      "Bank account",
-      "House",
-      "Show"
-     ],
-     [
-      "He just wants to take you what?",
-      "Out",
+      "\"You want the kind of love that can make a...\"?",
+      "Child",
       "Home",
-      "Shopping"
+      "Song"
      ],
      [
-      "Is he mad at 'em?",
-      "No",
-      "Yes",
-      "A little"
+      "\"Don't want just...\"?",
+      "Anybody",
+      "Somebody",
+      "Money"
+     ],
+     [
+      "Good love fill his body up like a ... when you pour it all out?",
+      "Glass",
+      "Cup",
+      "Bottle"
+     ],
+     [
+      "\"If you know me, you know I...\"?",
+      "Mind",
+      "Shine",
+      "Try"
+     ],
+     [
+      "\"Someone like me is hard to...\"?",
+      "Find",
+      "Keep",
+      "Love"
+     ],
+     [
+      "\"Well aware you are always...\"?",
+      "Mine",
+      "Late",
+      "Right"
+     ]
+    ],
+    [
+     [
+      "\"And still you seem so...\"?",
+      "Surprised",
+      "Tired",
+      "Shy"
+     ],
+     [
+      "\"I wanna be where you...\"?",
+      "Are",
+      "Go",
+      "Live"
+     ],
+     [
+      "\"I just can't walk...\"?",
+      "Away",
+      "Straight",
+      "Home"
+     ],
+     [
+      "\"You drive me...\"?",
+      "Crazy",
+      "Home",
+      "Wild"
+     ],
+     [
+      "\"I lose it, lose...\"?",
+      "It",
+      "You",
+      "Out"
+     ],
+     [
+      "How many times \"lose it\" in a row?",
+      "Two",
+      "Three",
+      "One"
+     ]
+    ],
+    [
+     [
+      "\"Circling through life without a piece of...\"?",
+      "You",
+      "Mind",
+      "Love"
+     ],
+     [
+      "\"Seven out of seven days I'm...\"?",
+      "Needin' you",
+      "Missin' you",
+      "Callin' you"
+     ],
+     [
+      "\"You bring life to the...\"?",
+      "Party",
+      "Room",
+      "World"
+     ],
+     [
+      "Good love feels like ... suffocating your insides?",
+      "Butterflies",
+      "Fireflies",
+      "Bees"
+     ],
+     [
+      "\"It's a late night, you know I...\"?",
+      "Try",
+      "Lie",
+      "Fly"
+     ],
+     [
+      "\"I'm mistaken thinkin' you were...\"?",
+      "Taken",
+      "Leaving",
+      "Lying"
      ]
     ]
    ]
   },
   {
-   "title": "Minnesota (ft. Quavo & Skippa Da Flippa)",
-   "id": "FvpWJKRPadk",
-   "start": 19.3,
+   "title": "running out of time",
+   "id": "eQRyZE2r7oM",
+   "start": 30.9,
    "cuts": [
-    57.9,
-    88.1,
-    135.9
+    96,
+    140.7,
+    215.9
    ],
    "qs": [
     [
      [
-      "You need to stay up out them what?",
-      "Streets",
-      "Clubs",
-      "Woods"
+      "\"Watch it,...\"?",
+      "Girl",
+      "Out",
+      "Me"
      ],
      [
-      "It gets cold like which state?",
-      "Minnesota",
-      "Michigan",
-      "Montana"
+      "\"Don't ever tell me...\"?",
+      "Lies",
+      "Goodbye",
+      "Secrets"
      ],
      [
-      "He's riding 'round on what?",
-      "Boulders",
-      "Twenties",
-      "Skates"
+      "\"I said ..., baby\"?",
+      "Watch it",
+      "Wait",
+      "Stop"
      ],
      [
-      "Money sits way above your what?",
-      "Shoulders",
-      "Head",
-      "Knees"
+      "\"You and I been running out of...\"?",
+      "Time",
+      "Luck",
+      "Road"
      ],
      [
-      "He was eating pork and what?",
-      "Rinds",
-      "Beans",
-      "Rice"
+      "\"What you may never know is more than you will...\"?",
+      "See",
+      "Hear",
+      "Feel"
      ],
      [
-      "The girl was from which newspaper?",
-      "New York Times",
-      "Washington Post",
-      "USA Today"
+      "\"And I can part the...\"?",
+      "Ocean",
+      "Sea",
+      "Sky"
      ],
      [
-      "Does he really eat pork and rinds?",
-      "No",
-      "Yes",
-      "Only on Sundays"
+      "If he told all his secrets, would you look in his ... and feel deceived?",
+      "Eyes",
+      "Face",
+      "Heart"
+     ],
+     [
+      "\"I told you far too much, now you gotta stick with...\"?",
+      "Me",
+      "It",
+      "Us"
      ]
     ],
     [
      [
-      "What's all on his necklace?",
-      "Gold",
-      "Pearls",
-      "Silver"
+      "\"Run out, running out of time with...\"?",
+      "Me",
+      "You",
+      "Us"
      ],
      [
-      "He tatted up his what?",
-      "Arms",
-      "Neck",
-      "Hands"
+      "\"Stay up and watch the...\"?",
+      "Sun",
+      "Stars",
+      "Moon"
      ],
      [
-      "His mama thinks he's what?",
-      "Reckless",
-      "Lazy",
-      "Famous"
+      "\"Baby, ... up with me\"?",
+      "Lay",
+      "Wake",
+      "Hang"
      ],
      [
-      "His cousin's from Hamilton, not where?",
-      "D.C.",
-      "Detroit",
-      "Dallas"
+      "\"You been on my...\"?",
+      "Mind",
+      "Phone",
+      "Way"
      ],
      [
-      "He rocks NBs like who?",
-      "Gleetchie",
-      "Quavo",
-      "Takeoff"
+      "\"But it ain't much ... left\"?",
+      "Time",
+      "Love",
+      "Room"
      ],
      [
-      "What kind of phone is banging off the walls?",
-      "Flip phone",
-      "iPhone",
-      "Pager"
+      "\"Struggle when we...\"?",
+      "Unite",
+      "Fight",
+      "Leave"
      ],
      [
-      "Gucci on his what?",
-      "Drawers",
-      "Shoes",
-      "Belt"
+      "How many times \"Stay up with me\" in this part?",
+      "Two",
+      "One",
+      "Three"
+     ],
+     [
+      "What is he running out of?",
+      "Time",
+      "Money",
+      "Gas"
      ]
     ],
     [
      [
-      "He was counting up them what?",
-      "Racks",
-      "Days",
-      "Votes"
+      "What do they stay up to watch?",
+      "The sun",
+      "The stars",
+      "TV"
      ],
      [
-      "He shouts out who?",
-      "Pat",
-      "Pete",
-      "Paul"
+      "\"Baby, lay up with...\"?",
+      "Me",
+      "Him",
+      "Them"
      ],
      [
-      "Who is Pat?",
-      "His lawyer",
-      "His cousin",
-      "His DJ"
+      "\"But it ain't much time...\"?",
+      "Left",
+      "Now",
+      "Here"
      ],
      [
-      "How many stacks for Pat?",
-      "8",
-      "5",
-      "10"
-     ],
-     [
-      "Pat took care of the what?",
-      "Boy",
-      "Bill",
-      "Car"
-     ],
-     [
-      "Stay out the streets if you can't take the what?",
-      "Heat",
-      "Cold",
-      "Pressure"
+      "\"When you...\"?",
+      "Someone",
+      "Alone",
+      "Gone"
      ]
     ]
    ]
@@ -1070,270 +1071,271 @@ window.CFG = {
    ]
   },
   {
-   "title": "Oprah's Bank Account (ft. Drake & DaBaby)",
-   "id": "vx6b4T21B6o",
+   "title": "drive ME crazy!",
+   "id": "ZlFr9t3zMNI",
+   "start": 17.2,
    "cuts": [
-    40.55,
-    76.4,
-    131.6
+    51.7,
+    80.7,
+    125.8
    ],
    "qs": [
     [
      [
-      "Overseas, he'll do what?",
-      "Fly you out",
-      "Ship you out",
-      "Leave you"
+      "\"Imagine life without me, it's a waste of...\"?",
+      "Time",
+      "Love",
+      "Space"
      ],
      [
-      "Is it trickin' if she really what?",
-      "Loves me",
-      "Needs me",
-      "Knows me"
-     ],
-     [
-      "She's a city girl straight from where?",
-      "The South",
-      "The North",
-      "The coast"
-     ],
-     [
-      "Back home on a presi', he's who?",
-      "Obama",
-      "Biden",
-      "Clinton"
-     ],
-     [
-      "He condones the what?",
-      "Drama",
-      "Money",
-      "Party"
-     ],
-     [
-      "Do you need some what?",
-      "Pajamas",
-      "Slippers",
-      "Water"
-     ],
-     [
-      "Staying the night, girl, you what?",
-      "Promised it",
-      "Planned it",
-      "Earned it"
-     ]
-    ],
-    [
-     [
-      "He's blowing a bag where?",
-      "Diamond District",
-      "The mall",
-      "Lenox"
-     ],
-     [
-      "You need him like dollars that are what?",
-      "Owed to you",
-      "In the bank",
-      "Folded"
-     ],
-     [
-      "Money and him are the same, but he don't do what for you?",
-      "Fold",
-      "Spend",
-      "Stay"
-     ],
-     [
-      "He'll put a what on the road for you?",
-      "Range",
-      "Benz",
-      "Truck"
-     ],
-     [
-      "\"I don't know what you were ___\"?",
-      "Told",
-      "Doing",
-      "Thinking"
-     ],
-     [
-      "If he seen you out, he'd be up on you how?",
-      "Crazy",
-      "Quick",
-      "Shy"
-     ]
-    ],
-    [
-     [
-      "\"I ain't mad at 'em,\" who?",
-      "Baby",
-      "Shawty",
-      "Mama"
-     ],
-     [
-      "You're a diamond in the what?",
-      "Rough",
-      "Sky",
-      "Dark"
-     ],
-     [
-      "You look as good as whose bank account?",
-      "Oprah's",
-      "Beyonce's",
-      "Rihanna's"
-     ],
-     [
-      "You look as good as Oprah's what?",
-      "Bank account",
-      "House",
-      "Show"
-     ],
-     [
-      "He just wants to take you what?",
-      "Out",
+      "\"You want the kind of love that can make a...\"?",
+      "Child",
       "Home",
-      "Shopping"
+      "Song"
      ],
      [
-      "Is he mad at 'em?",
-      "No",
-      "Yes",
-      "A little"
+      "\"Don't want just...\"?",
+      "Anybody",
+      "Somebody",
+      "Money"
+     ],
+     [
+      "Good love fill his body up like a ... when you pour it all out?",
+      "Glass",
+      "Cup",
+      "Bottle"
+     ],
+     [
+      "\"If you know me, you know I...\"?",
+      "Mind",
+      "Shine",
+      "Try"
+     ],
+     [
+      "\"Someone like me is hard to...\"?",
+      "Find",
+      "Keep",
+      "Love"
+     ],
+     [
+      "\"Well aware you are always...\"?",
+      "Mine",
+      "Late",
+      "Right"
+     ]
+    ],
+    [
+     [
+      "\"And still you seem so...\"?",
+      "Surprised",
+      "Tired",
+      "Shy"
+     ],
+     [
+      "\"I wanna be where you...\"?",
+      "Are",
+      "Go",
+      "Live"
+     ],
+     [
+      "\"I just can't walk...\"?",
+      "Away",
+      "Straight",
+      "Home"
+     ],
+     [
+      "\"You drive me...\"?",
+      "Crazy",
+      "Home",
+      "Wild"
+     ],
+     [
+      "\"I lose it, lose...\"?",
+      "It",
+      "You",
+      "Out"
+     ],
+     [
+      "How many times \"lose it\" in a row?",
+      "Two",
+      "Three",
+      "One"
+     ]
+    ],
+    [
+     [
+      "\"Circling through life without a piece of...\"?",
+      "You",
+      "Mind",
+      "Love"
+     ],
+     [
+      "\"Seven out of seven days I'm...\"?",
+      "Needin' you",
+      "Missin' you",
+      "Callin' you"
+     ],
+     [
+      "\"You bring life to the...\"?",
+      "Party",
+      "Room",
+      "World"
+     ],
+     [
+      "Good love feels like ... suffocating your insides?",
+      "Butterflies",
+      "Fireflies",
+      "Bees"
+     ],
+     [
+      "\"It's a late night, you know I...\"?",
+      "Try",
+      "Lie",
+      "Fly"
+     ],
+     [
+      "\"I'm mistaken thinkin' you were...\"?",
+      "Taken",
+      "Leaving",
+      "Lying"
      ]
     ]
    ]
   },
   {
-   "title": "Minnesota (ft. Quavo & Skippa Da Flippa)",
-   "id": "FvpWJKRPadk",
-   "start": 19.3,
+   "title": "running out of time",
+   "id": "eQRyZE2r7oM",
+   "start": 30.9,
    "cuts": [
-    57.9,
-    88.1,
-    135.9
+    96,
+    140.7,
+    215.9
    ],
    "qs": [
     [
      [
-      "You need to stay up out them what?",
-      "Streets",
-      "Clubs",
-      "Woods"
+      "\"Watch it,...\"?",
+      "Girl",
+      "Out",
+      "Me"
      ],
      [
-      "It gets cold like which state?",
-      "Minnesota",
-      "Michigan",
-      "Montana"
+      "\"Don't ever tell me...\"?",
+      "Lies",
+      "Goodbye",
+      "Secrets"
      ],
      [
-      "He's riding 'round on what?",
-      "Boulders",
-      "Twenties",
-      "Skates"
+      "\"I said ..., baby\"?",
+      "Watch it",
+      "Wait",
+      "Stop"
      ],
      [
-      "Money sits way above your what?",
-      "Shoulders",
-      "Head",
-      "Knees"
+      "\"You and I been running out of...\"?",
+      "Time",
+      "Luck",
+      "Road"
      ],
      [
-      "He was eating pork and what?",
-      "Rinds",
-      "Beans",
-      "Rice"
+      "\"What you may never know is more than you will...\"?",
+      "See",
+      "Hear",
+      "Feel"
      ],
      [
-      "The girl was from which newspaper?",
-      "New York Times",
-      "Washington Post",
-      "USA Today"
+      "\"And I can part the...\"?",
+      "Ocean",
+      "Sea",
+      "Sky"
      ],
      [
-      "Does he really eat pork and rinds?",
-      "No",
-      "Yes",
-      "Only on Sundays"
+      "If he told all his secrets, would you look in his ... and feel deceived?",
+      "Eyes",
+      "Face",
+      "Heart"
+     ],
+     [
+      "\"I told you far too much, now you gotta stick with...\"?",
+      "Me",
+      "It",
+      "Us"
      ]
     ],
     [
      [
-      "What's all on his necklace?",
-      "Gold",
-      "Pearls",
-      "Silver"
+      "\"Run out, running out of time with...\"?",
+      "Me",
+      "You",
+      "Us"
      ],
      [
-      "He tatted up his what?",
-      "Arms",
-      "Neck",
-      "Hands"
+      "\"Stay up and watch the...\"?",
+      "Sun",
+      "Stars",
+      "Moon"
      ],
      [
-      "His mama thinks he's what?",
-      "Reckless",
-      "Lazy",
-      "Famous"
+      "\"Baby, ... up with me\"?",
+      "Lay",
+      "Wake",
+      "Hang"
      ],
      [
-      "His cousin's from Hamilton, not where?",
-      "D.C.",
-      "Detroit",
-      "Dallas"
+      "\"You been on my...\"?",
+      "Mind",
+      "Phone",
+      "Way"
      ],
      [
-      "He rocks NBs like who?",
-      "Gleetchie",
-      "Quavo",
-      "Takeoff"
+      "\"But it ain't much ... left\"?",
+      "Time",
+      "Love",
+      "Room"
      ],
      [
-      "What kind of phone is banging off the walls?",
-      "Flip phone",
-      "iPhone",
-      "Pager"
+      "\"Struggle when we...\"?",
+      "Unite",
+      "Fight",
+      "Leave"
      ],
      [
-      "Gucci on his what?",
-      "Drawers",
-      "Shoes",
-      "Belt"
+      "How many times \"Stay up with me\" in this part?",
+      "Two",
+      "One",
+      "Three"
+     ],
+     [
+      "What is he running out of?",
+      "Time",
+      "Money",
+      "Gas"
      ]
     ],
     [
      [
-      "He was counting up them what?",
-      "Racks",
-      "Days",
-      "Votes"
+      "What do they stay up to watch?",
+      "The sun",
+      "The stars",
+      "TV"
      ],
      [
-      "He shouts out who?",
-      "Pat",
-      "Pete",
-      "Paul"
+      "\"Baby, lay up with...\"?",
+      "Me",
+      "Him",
+      "Them"
      ],
      [
-      "Who is Pat?",
-      "His lawyer",
-      "His cousin",
-      "His DJ"
+      "\"But it ain't much time...\"?",
+      "Left",
+      "Now",
+      "Here"
      ],
      [
-      "How many stacks for Pat?",
-      "8",
-      "5",
-      "10"
-     ],
-     [
-      "Pat took care of the what?",
-      "Boy",
-      "Bill",
-      "Car"
-     ],
-     [
-      "Stay out the streets if you can't take the what?",
-      "Heat",
-      "Cold",
-      "Pressure"
+      "\"When you...\"?",
+      "Someone",
+      "Alone",
+      "Gone"
      ]
     ]
    ]

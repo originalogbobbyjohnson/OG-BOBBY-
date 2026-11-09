@@ -106,217 +106,216 @@ window.CFG = {
  ],
  "songs": [
   {
-   "title": "Ballin' Out of Control",
-   "id": "-ay_VfMlSP8",
-   "start": 28.7,
+   "title": "Sweetheart (feat. Mariah Carey)",
+   "id": "LXMku94oZpE",
    "cuts": [
-    53,
-    108,
-    167.5
+    38.9,
+    94.9,
+    194
    ],
    "qs": [
     [
      [
-      "\"Mirror mirror on the\" what?",
-      "Wall",
+      "\"You and me goin'...\"?",
+      "One-on-one",
+      "Out tonight",
+      "Steady"
+     ],
+     [
+      "Which label gets shouted out?",
+      "So So Def",
+      "Bad Boy",
+      "Def Jam"
+     ],
+     [
+      "\"I'm the man to fulfill your...\"?",
+      "Needs",
+      "Wishes",
+      "Life"
+     ],
+     [
+      "\"Get you everything that you see in your...\"?",
+      "Dreams",
+      "Head",
+      "Store"
+     ],
+     [
+      "\"Let nobody tear us...\"?",
+      "Apart",
+      "Down",
+      "Up"
+     ],
+     [
+      "\"If forever you'll be my...\"?",
+      "Sweetheart",
+      "Baby",
+      "Lady"
+     ],
+     [
+      "\"Boy, haven't you noticed the gleam in my...\"?",
+      "Eyes",
+      "Smile",
+      "Heart"
+     ],
+     [
+      "\"Because of you, I'm a little...\"?",
+      "Hypnotized",
+      "Nervous",
+      "Shy"
+     ],
+     [
+      "\"But everytime you're with me, feel so...\"?",
+      "Positive",
+      "Lonely",
+      "Alive"
+     ],
+     [
+      "\"With you a little love, something's gotta...\"?",
+      "Give",
+      "Change",
+      "Break"
+     ],
+     [
+      "Who is \"MC y'all\"?",
+      "Mariah Carey",
+      "MC Lyte",
+      "MC Hammer"
+     ]
+    ],
+    [
+     [
+      "\"A full moon is waiting in the...\"?",
+      "Twilight",
+      "Sky",
+      "Night"
+     ],
+     [
+      "\"Maybe soon you will come to be my...\"?",
+      "Light",
+      "Man",
+      "World"
+     ],
+     [
+      "\"Here we are, hoping that we'll never...\"?",
+      "Part",
+      "Stop",
+      "Fight"
+     ],
+     [
+      "\"Stay with...\"?",
+      "Me",
+      "Love",
+      "Him"
+     ],
+     [
+      "\"We can share a story book...\"?",
+      "Moment",
+      "Ending",
+      "Kiss"
+     ],
+     [
+      "\"Just deep in...\"?",
+      "Love",
+      "Thought",
+      "Trouble"
+     ],
+     [
+      "\"You ain't no...\"?",
+      "Casanova",
+      "Romeo",
+      "Player"
+     ],
+     [
+      "\"I know that you'll be...\"?",
+      "True",
+      "There",
+      "Mine"
+     ],
+     [
+      "\"I'm so in love with you\" — and JD answers?",
+      "Me, too",
+      "Same here",
+      "I know"
+     ],
+     [
+      "\"But this romantic evening, you led me at my...\"?",
       "Door",
-      "Ceiling"
+      "Car",
+      "Table"
      ],
      [
-      "Who's the biggest what of all?",
-      "Baller",
-      "Player",
-      "Hustler"
-     ],
-     [
-      "He's got a 700, a Magine and a what?",
-      "Bentley",
-      "Hummer",
-      "Jaguar"
-     ],
-     [
-      "Where is his duplex?",
-      "In the sky",
-      "On the beach",
-      "Downtown"
-     ],
-     [
-      "Who just die when he's ridin' past?",
-      "The girls",
-      "The haters",
-      "The neighbors"
-     ],
-     [
-      "How many wives does he joke about?",
-      "Two or three",
-      "Four or five",
-      "Just one"
-     ],
-     [
-      "Two or three what to hide?",
-      "Houses",
-      "Safes",
-      "Boats"
-     ],
-     [
-      "How many cars are parked outside?",
-      "Ten",
-      "Five",
-      "Twenty"
-     ],
-     [
-      "What kind of jet flies?",
-      "A Leer jet",
-      "A Concorde",
-      "A seaplane"
-     ],
-     [
-      "The jet flies over what?",
-      "Crimson Tides",
-      "Atlanta",
-      "The ocean"
-     ],
-     [
-      "How many bedrooms in the duplex?",
-      "Four",
-      "Two",
-      "Six"
+      "\"But tonight, I'd like to...\"?",
+      "Explore",
+      "Stay",
+      "Dance"
      ]
     ],
     [
      [
-      "What's his nickname, 'cause he don't stop spendin'?",
-      "Lottery",
-      "Jackpot",
-      "Money Bags"
+      "\"Putcha hand in the...\"?",
+      "Air",
+      "Sky",
+      "Back"
      ],
      [
-      "When the wheels stop, what keeps spinnin'?",
-      "The chrome",
-      "The rims",
-      "The beat"
+      "\"See, I saw you at the...\"?",
+      "Party",
+      "Club",
+      "Mall"
      ],
      [
-      "He's so frozen, it's a wonder he ain't what?",
-      "Shiverin'",
-      "Sneezin'",
-      "Shakin'"
+      "\"With your eyes on...\"?",
+      "Me",
+      "Him",
+      "The door"
      ],
      [
-      "He ain't talkin' it, he's straight what?",
-      "Livin' it",
-      "Rappin' it",
-      "Spendin' it"
+      "Fittin' the description of what he wants his ... to be?",
+      "Wife",
+      "Girl",
+      "Lady"
      ],
      [
-      "\"I'm so frozen and you've been\" what?",
-      "Chosen",
-      "Frozen",
-      "Stolen"
+      "\"And usin' wild name like...\"?",
+      "Ivory",
+      "Ebony",
+      "Honey"
      ],
      [
-      "Who does he say to roll with, along with him?",
-      "Nate Dogg",
-      "Snoop Dogg",
-      "Warren G"
+      "\"But woman with her own...\"?",
+      "Shine",
+      "Money",
+      "Car"
      ],
      [
-      "Whenever he drops, he gives you number one hits what?",
-      "Platinum hot",
-      "Every time",
-      "All summer"
+      "She up in the corner sippin'...?",
+      "Don P, Rosé",
+      "Cristal",
+      "Hennessy"
      ],
      [
-      "There's so much what in his rocks?",
-      "Clarity",
-      "Color",
-      "Water"
+      "\"Shakin' it up with the...\"?",
+      "Homegirls",
+      "DJ",
+      "Band"
      ],
      [
-      "He flows for those that get that what?",
-      "Dough",
-      "Fame",
-      "Love"
+      "\"Payin' no attention to...\"?",
+      "Us",
+      "Him",
+      "Them"
      ],
      [
-      "He don't mind wavin' at who?",
-      "You kids",
-      "The fans",
-      "The haters"
+      "\"They in they own...\"?",
+      "World",
+      "Zone",
+      "Club"
      ],
      [
-      "What can't he manage to raise?",
-      "His wrist",
-      "His voice",
-      "His hand"
-     ]
-    ],
-    [
-     [
-      "His jewels are so heavy, y'all fools ain't what?",
-      "Ready",
-      "Steady",
-      "Lucky"
-     ],
-     [
-      "His twenty-twos shot the streets into what?",
-      "Confetti",
-      "Glitter",
-      "Pieces"
-     ],
-     [
-      "He moves like who?",
-      "Andretti",
-      "Earnhardt",
-      "Gordon"
-     ],
-     [
-      "Whatever city he's in, he's what?",
-      "Headlinin'",
-      "Performin'",
-      "Shoppin'"
-     ],
-     [
-      "At what time is he still lookin' for mo'?",
-      "Five a.m.",
-      "Two a.m.",
-      "Midnight"
-     ],
-     [
-      "He's still gettin' crunk and still lettin' it what?",
-      "Flow",
-      "Go",
-      "Ride"
-     ],
-     [
-      "What's upset at the end of his verse?",
-      "His stomach",
-      "His girl",
-      "His crew"
-     ],
-     [
-      "What does he tell everybody to do first?",
-      "Dance",
-      "Jump",
-      "Sing"
-     ],
-     [
-      "Then everybody just what?",
-      "Clap ya hands",
-      "Stomp ya feet",
-      "Wave ya arms"
-     ],
-     [
-      "He's still gettin' what?",
-      "Crunk",
-      "Paid",
-      "Started"
-     ],
-     [
-      "Who does he call on — 'Dance,' who?",
-      "Everybody",
-      "The ladies",
-      "The DJ"
+      "\"Tryin' to think of new things to...\"?",
+      "Say",
+      "Do",
+      "Buy"
      ]
     ]
    ]
@@ -755,217 +754,216 @@ window.CFG = {
  ],
  "explicitSongs": [
   {
-   "title": "Ballin' Out of Control",
-   "id": "-ay_VfMlSP8",
-   "start": 28.7,
+   "title": "Sweetheart (feat. Mariah Carey)",
+   "id": "LXMku94oZpE",
    "cuts": [
-    53,
-    108,
-    167.5
+    38.9,
+    94.9,
+    194
    ],
    "qs": [
     [
      [
-      "\"Mirror mirror on the\" what?",
-      "Wall",
+      "\"You and me goin'...\"?",
+      "One-on-one",
+      "Out tonight",
+      "Steady"
+     ],
+     [
+      "Which label gets shouted out?",
+      "So So Def",
+      "Bad Boy",
+      "Def Jam"
+     ],
+     [
+      "\"I'm the man to fulfill your...\"?",
+      "Needs",
+      "Wishes",
+      "Life"
+     ],
+     [
+      "\"Get you everything that you see in your...\"?",
+      "Dreams",
+      "Head",
+      "Store"
+     ],
+     [
+      "\"Let nobody tear us...\"?",
+      "Apart",
+      "Down",
+      "Up"
+     ],
+     [
+      "\"If forever you'll be my...\"?",
+      "Sweetheart",
+      "Baby",
+      "Lady"
+     ],
+     [
+      "\"Boy, haven't you noticed the gleam in my...\"?",
+      "Eyes",
+      "Smile",
+      "Heart"
+     ],
+     [
+      "\"Because of you, I'm a little...\"?",
+      "Hypnotized",
+      "Nervous",
+      "Shy"
+     ],
+     [
+      "\"But everytime you're with me, feel so...\"?",
+      "Positive",
+      "Lonely",
+      "Alive"
+     ],
+     [
+      "\"With you a little love, something's gotta...\"?",
+      "Give",
+      "Change",
+      "Break"
+     ],
+     [
+      "Who is \"MC y'all\"?",
+      "Mariah Carey",
+      "MC Lyte",
+      "MC Hammer"
+     ]
+    ],
+    [
+     [
+      "\"A full moon is waiting in the...\"?",
+      "Twilight",
+      "Sky",
+      "Night"
+     ],
+     [
+      "\"Maybe soon you will come to be my...\"?",
+      "Light",
+      "Man",
+      "World"
+     ],
+     [
+      "\"Here we are, hoping that we'll never...\"?",
+      "Part",
+      "Stop",
+      "Fight"
+     ],
+     [
+      "\"Stay with...\"?",
+      "Me",
+      "Love",
+      "Him"
+     ],
+     [
+      "\"We can share a story book...\"?",
+      "Moment",
+      "Ending",
+      "Kiss"
+     ],
+     [
+      "\"Just deep in...\"?",
+      "Love",
+      "Thought",
+      "Trouble"
+     ],
+     [
+      "\"You ain't no...\"?",
+      "Casanova",
+      "Romeo",
+      "Player"
+     ],
+     [
+      "\"I know that you'll be...\"?",
+      "True",
+      "There",
+      "Mine"
+     ],
+     [
+      "\"I'm so in love with you\" — and JD answers?",
+      "Me, too",
+      "Same here",
+      "I know"
+     ],
+     [
+      "\"But this romantic evening, you led me at my...\"?",
       "Door",
-      "Ceiling"
+      "Car",
+      "Table"
      ],
      [
-      "Who's the biggest what of all?",
-      "Baller",
-      "Player",
-      "Hustler"
-     ],
-     [
-      "He's got a 700, a Magine and a what?",
-      "Bentley",
-      "Hummer",
-      "Jaguar"
-     ],
-     [
-      "Where is his duplex?",
-      "In the sky",
-      "On the beach",
-      "Downtown"
-     ],
-     [
-      "Who just die when he's ridin' past?",
-      "The girls",
-      "The haters",
-      "The neighbors"
-     ],
-     [
-      "How many wives does he joke about?",
-      "Two or three",
-      "Four or five",
-      "Just one"
-     ],
-     [
-      "Two or three what to hide?",
-      "Houses",
-      "Safes",
-      "Boats"
-     ],
-     [
-      "How many cars are parked outside?",
-      "Ten",
-      "Five",
-      "Twenty"
-     ],
-     [
-      "What kind of jet flies?",
-      "A Leer jet",
-      "A Concorde",
-      "A seaplane"
-     ],
-     [
-      "The jet flies over what?",
-      "Crimson Tides",
-      "Atlanta",
-      "The ocean"
-     ],
-     [
-      "How many bedrooms in the duplex?",
-      "Four",
-      "Two",
-      "Six"
+      "\"But tonight, I'd like to...\"?",
+      "Explore",
+      "Stay",
+      "Dance"
      ]
     ],
     [
      [
-      "What's his nickname, 'cause he don't stop spendin'?",
-      "Lottery",
-      "Jackpot",
-      "Money Bags"
+      "\"Putcha hand in the...\"?",
+      "Air",
+      "Sky",
+      "Back"
      ],
      [
-      "When the wheels stop, what keeps spinnin'?",
-      "The chrome",
-      "The rims",
-      "The beat"
+      "\"See, I saw you at the...\"?",
+      "Party",
+      "Club",
+      "Mall"
      ],
      [
-      "He's so frozen, it's a wonder he ain't what?",
-      "Shiverin'",
-      "Sneezin'",
-      "Shakin'"
+      "\"With your eyes on...\"?",
+      "Me",
+      "Him",
+      "The door"
      ],
      [
-      "He ain't talkin' it, he's straight what?",
-      "Livin' it",
-      "Rappin' it",
-      "Spendin' it"
+      "Fittin' the description of what he wants his ... to be?",
+      "Wife",
+      "Girl",
+      "Lady"
      ],
      [
-      "\"I'm so frozen and you've been\" what?",
-      "Chosen",
-      "Frozen",
-      "Stolen"
+      "\"And usin' wild name like...\"?",
+      "Ivory",
+      "Ebony",
+      "Honey"
      ],
      [
-      "Who does he say to roll with, along with him?",
-      "Nate Dogg",
-      "Snoop Dogg",
-      "Warren G"
+      "\"But woman with her own...\"?",
+      "Shine",
+      "Money",
+      "Car"
      ],
      [
-      "Whenever he drops, he gives you number one hits what?",
-      "Platinum hot",
-      "Every time",
-      "All summer"
+      "She up in the corner sippin'...?",
+      "Don P, Rosé",
+      "Cristal",
+      "Hennessy"
      ],
      [
-      "There's so much what in his rocks?",
-      "Clarity",
-      "Color",
-      "Water"
+      "\"Shakin' it up with the...\"?",
+      "Homegirls",
+      "DJ",
+      "Band"
      ],
      [
-      "He flows for those that get that what?",
-      "Dough",
-      "Fame",
-      "Love"
+      "\"Payin' no attention to...\"?",
+      "Us",
+      "Him",
+      "Them"
      ],
      [
-      "He don't mind wavin' at who?",
-      "You kids",
-      "The fans",
-      "The haters"
+      "\"They in they own...\"?",
+      "World",
+      "Zone",
+      "Club"
      ],
      [
-      "What can't he manage to raise?",
-      "His wrist",
-      "His voice",
-      "His hand"
-     ]
-    ],
-    [
-     [
-      "His jewels are so heavy, y'all fools ain't what?",
-      "Ready",
-      "Steady",
-      "Lucky"
-     ],
-     [
-      "His twenty-twos shot the streets into what?",
-      "Confetti",
-      "Glitter",
-      "Pieces"
-     ],
-     [
-      "He moves like who?",
-      "Andretti",
-      "Earnhardt",
-      "Gordon"
-     ],
-     [
-      "Whatever city he's in, he's what?",
-      "Headlinin'",
-      "Performin'",
-      "Shoppin'"
-     ],
-     [
-      "At what time is he still lookin' for mo'?",
-      "Five a.m.",
-      "Two a.m.",
-      "Midnight"
-     ],
-     [
-      "He's still gettin' crunk and still lettin' it what?",
-      "Flow",
-      "Go",
-      "Ride"
-     ],
-     [
-      "What's upset at the end of his verse?",
-      "His stomach",
-      "His girl",
-      "His crew"
-     ],
-     [
-      "What does he tell everybody to do first?",
-      "Dance",
-      "Jump",
-      "Sing"
-     ],
-     [
-      "Then everybody just what?",
-      "Clap ya hands",
-      "Stomp ya feet",
-      "Wave ya arms"
-     ],
-     [
-      "He's still gettin' what?",
-      "Crunk",
-      "Paid",
-      "Started"
-     ],
-     [
-      "Who does he call on — 'Dance,' who?",
-      "Everybody",
-      "The ladies",
-      "The DJ"
+      "\"Tryin' to think of new things to...\"?",
+      "Say",
+      "Do",
+      "Buy"
      ]
     ]
    ]

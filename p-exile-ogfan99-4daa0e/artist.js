@@ -96,217 +96,217 @@ window.CFG = {
  ],
  "explicitSongs": [
   {
-   "title": "Wait for Me (Big Sean)",
-   "id": "SQ-WHmHP_W8",
-   "start": 19,
+   "title": "My World Is... (Blu & Exile)",
+   "id": "m0MSufrTBfA",
+   "start": 28.6,
    "cuts": [
-    53.5,
-    79.2,
-    96.6
+    59.1,
+    105.7,
+    201.9
    ],
    "qs": [
     [
      [
-      "\"I hope it's not too ___ for me\"",
-      "Late",
-      "Far",
-      "Soon"
+      "\"You know my name rings a...\"?",
+      "Bell",
+      "Phone",
+      "Alarm"
      ],
      [
-      "\"Could you just ___ for me, a while?\"",
-      "Wait",
-      "Pray",
-      "Look"
+      "\"Or should I say...\"?",
+      "Rocks 'em",
+      "Shocks 'em",
+      "Knocks 'em"
      ],
      [
-      "\"Could you just wait for me, a...\"?",
-      "While",
-      "Minute",
-      "Day"
+      "\"I'm shell toe...\"?",
+      "Rockin'",
+      "Walkin'",
+      "Stompin'"
      ],
      [
-      "\"I hope it's not too late, too late,...\"?",
-      "Oh",
+      "\"I don't pack ... yet, I still rock 'em\"?",
+      "Stadiums",
+      "Arenas",
+      "Clubs"
+     ],
+     [
+      "They still spell his name wrong on their...?",
+      "Flyers",
+      "Posters",
+      "Tickets"
+     ],
+     [
+      "\"It's B-L-U and if you see the ... drop 'em\"?",
+      "E",
+      "A",
+      "W"
+     ],
+     [
+      "\"Got you peeps...\"?",
+      "Eavesdropping",
+      "Watching",
+      "Waiting"
+     ],
+     [
+      "\"And the world keeps...\"?",
+      "Watching him",
+      "Calling him",
+      "Following him"
+     ],
+     [
+      "\"I see 'em checking out the...\"?",
+      "Scenery",
+      "Gallery",
+      "Jewelry"
+     ],
+     [
+      "Chicks scream his name out from the...?",
+      "Bleachers",
+      "Balcony",
+      "Front row"
+     ],
+     [
+      "What gets sung after \"proud of 'em\"?",
+      "Bluuu",
       "Yeah",
-      "Girl"
-     ],
-     [
-      "How many times is \"too late\" said in \"Is it too late, too late?\"",
-      "Two",
-      "Three",
-      "One"
-     ],
-     [
-      "\"I got my whole life packed inside a...\"?",
-      "Suitcase",
-      "Backpack",
-      "Car"
-     ],
-     [
-      "\"I got my whole ___ packed inside a suitcase\"",
-      "Life",
-      "Closet",
-      "World"
-     ],
-     [
-      "\"Riding in a ___ that shoulda been a Mercedes\"",
-      "Chevy",
-      "Honda",
-      "Ford"
-     ],
-     [
-      "\"Riding in a Chevy that shoulda been a...\"?",
-      "Mercedes",
-      "Bentley",
-      "Cadillac"
-     ],
-     [
-      "\"Tryna keep my head above...\"?",
-      "Water",
-      "Ground",
-      "Clouds"
-     ],
-     [
-      "\"Tryna keep my head above water, so I stayed out the...\"?",
-      "Navy",
-      "Army",
-      "Rain"
+      "Encore"
      ]
     ],
     [
      [
-      "\"I made a promise to my...\"?",
-      "Girl",
-      "Mama",
-      "Crew"
+      "\"A product of a God fearing...\"?",
+      "Pastor",
+      "Teacher",
+      "Mother"
      ],
      [
-      "\"Said I'ma leave town and bring back the whole...\"?",
-      "World",
-      "Crown",
-      "Bag"
+      "\"And still crush the...\"?",
+      "Competition",
+      "Opposition",
+      "Party"
      ],
      [
-      "\"So I bought a ___, took longer than expected\"",
-      "Ticket",
+      "No kid is...?",
+      "Hotter",
+      "Colder",
+      "Smarter"
+     ],
+     [
+      "\"Your momma's kitchen, beg your...\"?",
+      "Pardon",
+      "Forgiveness",
+      "Patience"
+     ],
+     [
+      "He says he's on a...?",
+      "Mission",
+      "Journey",
+      "Break"
+     ],
+     [
+      "\"My world is...\"?",
+      "Blu",
+      "Mine",
+      "Yours"
+     ],
+     [
+      "He skipped class a few times but he ain't...?",
+      "Dumb",
+      "Done",
+      "Lost"
+     ],
+     [
+      "\"Never was the fastest in class but if you put me on the...\"?",
+      "Track",
+      "Court",
+      "Field"
+     ],
+     [
+      "\"Like back when I was a young...\"?",
+      "Spitta",
+      "Hitta",
+      "Rookie"
+     ],
+     [
+      "\"But I was into older ones kinda like my...\"?",
+      "Teachers",
+      "Neighbors",
+      "Cousins"
+     ],
+     [
+      "\"On the first day of school I would say it's nice to...\"?",
+      "Meet ya",
+      "See ya",
+      "Know ya"
+     ]
+    ],
+    [
+     [
+      "\"My mission's just beginning, call it...\"?",
+      "Genesis",
+      "Exodus",
+      "Chapter one"
+     ],
+     [
+      "\"I'm God's eye messenger but the devil's...\"?",
+      "Nemesis",
+      "Neighbor",
+      "Partner"
+     ],
+     [
+      "\"I'm straightenin' out the facts cause you...\"?",
+      "Twistin' it",
+      "Missin' it",
+      "Hidin' it"
+     ],
+     [
+      "\"This is with soldiers I...\"?",
+      "Bred",
+      "Led",
+      "Met"
+     ],
+     [
+      "\"I move slow cause bro I got a lot on my...\"?",
+      "Mind",
+      "Plate",
+      "Back"
+     ],
+     [
+      "\"Still grinding at the drop of a...\"?",
+      "Dime",
+      "Hat",
+      "Beat"
+     ],
+     [
+      "How many little sisters is he doing it for?",
+      "5",
+      "3",
+      "2"
+     ],
+     [
+      "\"But Nas told me it was...\"?",
+      "Mines",
+      "Over",
+      "Yours"
+     ],
+     [
+      "\"But it's 4th ... and we just getting it\"?",
+      "Quarter",
+      "Round",
+      "Inning"
+     ],
+     [
+      "He'll be sinking with his...?",
+      "Penmanship",
+      "Partnership",
+      "Championship"
+     ],
+     [
+      "\"Look up on the stage, it's a bird, it's a...\"?",
       "Plane",
-      "Car"
-     ],
-     [
-      "\"So I bought a ticket, took longer than...\"?",
-      "Expected",
-      "Forever",
-      "A year"
-     ],
-     [
-      "\"Came back around like a...\"?",
-      "Necklace",
-      "Boomerang",
-      "Record"
-     ],
-     [
-      "What was the first thing she said?",
-      "\"It's too late\"",
-      "\"I missed you\"",
-      "\"Welcome home\""
-     ],
-     [
-      "\"I barely got a text, a call...\"?",
-      "Back",
-      "Home",
-      "Up"
-     ],
-     [
-      "\"You a dog, out here chasing...\"?",
-      "Paper",
-      "Girls",
-      "Trains"
-     ],
-     [
-      "\"Live with it, now you got a...\"?",
-      "Roommate",
-      "Lawyer",
-      "New girl"
-     ],
-     [
-      "\"Live ___ it, now you got a roommate\"",
-      "With",
-      "Without",
-      "Through"
-     ],
-     [
-      "Who says \"it's too late\" to him in this part?",
-      "His girl",
-      "His boss",
-      "His mama"
-     ]
-    ],
-    [
-     [
-      "\"Too late for him to make it out the ___ legally\"",
-      "Hood",
-      "City",
-      "Game"
-     ],
-     [
-      "\"Too late for him to make it out the hood...\"?",
-      "Legally",
-      "Alive",
-      "Rich"
-     ],
-     [
-      "\"Riding around doing my...\"?",
-      "Thing",
-      "Job",
-      "Laps"
-     ],
-     [
-      "\"Riding ___ doing my thing\"",
-      "Around",
-      "Downtown",
-      "Alone"
-     ],
-     [
-      "\"Is it too late to be tryna live...\"?",
-      "Dreams",
-      "Free",
-      "Large"
-     ],
-     [
-      "\"And turn them all...\"?",
-      "Real",
-      "Gold",
-      "Around"
-     ],
-     [
-      "\"Reality is just a...\"?",
-      "Technicality",
-      "Fantasy",
-      "Formality"
-     ],
-     [
-      "\"So is being ___, so don't tell me that I'm too late\"",
-      "Fake",
-      "Real",
-      "Late"
-     ],
-     [
-      "\"So don't tell me that I'm...\"?",
-      "Too late",
-      "Too young",
-      "Too slow"
-     ],
-     [
-      "\"Too late for ___ to make it out the hood legally\"",
-      "Him",
-      "Me",
-      "Us"
-     ],
-     [
-      "\"Is it too late to be tryna ___ dreams\"",
-      "Live",
-      "Chase",
-      "Sell"
+      "Star",
+      "Kite"
      ]
     ]
    ]
@@ -746,217 +746,217 @@ window.CFG = {
  ],
  "songs": [
   {
-   "title": "Wait for Me (Big Sean)",
-   "id": "SQ-WHmHP_W8",
-   "start": 19,
+   "title": "My World Is... (Blu & Exile)",
+   "id": "m0MSufrTBfA",
+   "start": 28.6,
    "cuts": [
-    53.5,
-    79.2,
-    96.6
+    59.1,
+    105.7,
+    201.9
    ],
    "qs": [
     [
      [
-      "\"I hope it's not too ___ for me\"",
-      "Late",
-      "Far",
-      "Soon"
+      "\"You know my name rings a...\"?",
+      "Bell",
+      "Phone",
+      "Alarm"
      ],
      [
-      "\"Could you just ___ for me, a while?\"",
-      "Wait",
-      "Pray",
-      "Look"
+      "\"Or should I say...\"?",
+      "Rocks 'em",
+      "Shocks 'em",
+      "Knocks 'em"
      ],
      [
-      "\"Could you just wait for me, a...\"?",
-      "While",
-      "Minute",
-      "Day"
+      "\"I'm shell toe...\"?",
+      "Rockin'",
+      "Walkin'",
+      "Stompin'"
      ],
      [
-      "\"I hope it's not too late, too late,...\"?",
-      "Oh",
+      "\"I don't pack ... yet, I still rock 'em\"?",
+      "Stadiums",
+      "Arenas",
+      "Clubs"
+     ],
+     [
+      "They still spell his name wrong on their...?",
+      "Flyers",
+      "Posters",
+      "Tickets"
+     ],
+     [
+      "\"It's B-L-U and if you see the ... drop 'em\"?",
+      "E",
+      "A",
+      "W"
+     ],
+     [
+      "\"Got you peeps...\"?",
+      "Eavesdropping",
+      "Watching",
+      "Waiting"
+     ],
+     [
+      "\"And the world keeps...\"?",
+      "Watching him",
+      "Calling him",
+      "Following him"
+     ],
+     [
+      "\"I see 'em checking out the...\"?",
+      "Scenery",
+      "Gallery",
+      "Jewelry"
+     ],
+     [
+      "Chicks scream his name out from the...?",
+      "Bleachers",
+      "Balcony",
+      "Front row"
+     ],
+     [
+      "What gets sung after \"proud of 'em\"?",
+      "Bluuu",
       "Yeah",
-      "Girl"
-     ],
-     [
-      "How many times is \"too late\" said in \"Is it too late, too late?\"",
-      "Two",
-      "Three",
-      "One"
-     ],
-     [
-      "\"I got my whole life packed inside a...\"?",
-      "Suitcase",
-      "Backpack",
-      "Car"
-     ],
-     [
-      "\"I got my whole ___ packed inside a suitcase\"",
-      "Life",
-      "Closet",
-      "World"
-     ],
-     [
-      "\"Riding in a ___ that shoulda been a Mercedes\"",
-      "Chevy",
-      "Honda",
-      "Ford"
-     ],
-     [
-      "\"Riding in a Chevy that shoulda been a...\"?",
-      "Mercedes",
-      "Bentley",
-      "Cadillac"
-     ],
-     [
-      "\"Tryna keep my head above...\"?",
-      "Water",
-      "Ground",
-      "Clouds"
-     ],
-     [
-      "\"Tryna keep my head above water, so I stayed out the...\"?",
-      "Navy",
-      "Army",
-      "Rain"
+      "Encore"
      ]
     ],
     [
      [
-      "\"I made a promise to my...\"?",
-      "Girl",
-      "Mama",
-      "Crew"
+      "\"A product of a God fearing...\"?",
+      "Pastor",
+      "Teacher",
+      "Mother"
      ],
      [
-      "\"Said I'ma leave town and bring back the whole...\"?",
-      "World",
-      "Crown",
-      "Bag"
+      "\"And still crush the...\"?",
+      "Competition",
+      "Opposition",
+      "Party"
      ],
      [
-      "\"So I bought a ___, took longer than expected\"",
-      "Ticket",
+      "No kid is...?",
+      "Hotter",
+      "Colder",
+      "Smarter"
+     ],
+     [
+      "\"Your momma's kitchen, beg your...\"?",
+      "Pardon",
+      "Forgiveness",
+      "Patience"
+     ],
+     [
+      "He says he's on a...?",
+      "Mission",
+      "Journey",
+      "Break"
+     ],
+     [
+      "\"My world is...\"?",
+      "Blu",
+      "Mine",
+      "Yours"
+     ],
+     [
+      "He skipped class a few times but he ain't...?",
+      "Dumb",
+      "Done",
+      "Lost"
+     ],
+     [
+      "\"Never was the fastest in class but if you put me on the...\"?",
+      "Track",
+      "Court",
+      "Field"
+     ],
+     [
+      "\"Like back when I was a young...\"?",
+      "Spitta",
+      "Hitta",
+      "Rookie"
+     ],
+     [
+      "\"But I was into older ones kinda like my...\"?",
+      "Teachers",
+      "Neighbors",
+      "Cousins"
+     ],
+     [
+      "\"On the first day of school I would say it's nice to...\"?",
+      "Meet ya",
+      "See ya",
+      "Know ya"
+     ]
+    ],
+    [
+     [
+      "\"My mission's just beginning, call it...\"?",
+      "Genesis",
+      "Exodus",
+      "Chapter one"
+     ],
+     [
+      "\"I'm God's eye messenger but the devil's...\"?",
+      "Nemesis",
+      "Neighbor",
+      "Partner"
+     ],
+     [
+      "\"I'm straightenin' out the facts cause you...\"?",
+      "Twistin' it",
+      "Missin' it",
+      "Hidin' it"
+     ],
+     [
+      "\"This is with soldiers I...\"?",
+      "Bred",
+      "Led",
+      "Met"
+     ],
+     [
+      "\"I move slow cause bro I got a lot on my...\"?",
+      "Mind",
+      "Plate",
+      "Back"
+     ],
+     [
+      "\"Still grinding at the drop of a...\"?",
+      "Dime",
+      "Hat",
+      "Beat"
+     ],
+     [
+      "How many little sisters is he doing it for?",
+      "5",
+      "3",
+      "2"
+     ],
+     [
+      "\"But Nas told me it was...\"?",
+      "Mines",
+      "Over",
+      "Yours"
+     ],
+     [
+      "\"But it's 4th ... and we just getting it\"?",
+      "Quarter",
+      "Round",
+      "Inning"
+     ],
+     [
+      "He'll be sinking with his...?",
+      "Penmanship",
+      "Partnership",
+      "Championship"
+     ],
+     [
+      "\"Look up on the stage, it's a bird, it's a...\"?",
       "Plane",
-      "Car"
-     ],
-     [
-      "\"So I bought a ticket, took longer than...\"?",
-      "Expected",
-      "Forever",
-      "A year"
-     ],
-     [
-      "\"Came back around like a...\"?",
-      "Necklace",
-      "Boomerang",
-      "Record"
-     ],
-     [
-      "What was the first thing she said?",
-      "\"It's too late\"",
-      "\"I missed you\"",
-      "\"Welcome home\""
-     ],
-     [
-      "\"I barely got a text, a call...\"?",
-      "Back",
-      "Home",
-      "Up"
-     ],
-     [
-      "\"You a dog, out here chasing...\"?",
-      "Paper",
-      "Girls",
-      "Trains"
-     ],
-     [
-      "\"Live with it, now you got a...\"?",
-      "Roommate",
-      "Lawyer",
-      "New girl"
-     ],
-     [
-      "\"Live ___ it, now you got a roommate\"",
-      "With",
-      "Without",
-      "Through"
-     ],
-     [
-      "Who says \"it's too late\" to him in this part?",
-      "His girl",
-      "His boss",
-      "His mama"
-     ]
-    ],
-    [
-     [
-      "\"Too late for him to make it out the ___ legally\"",
-      "Hood",
-      "City",
-      "Game"
-     ],
-     [
-      "\"Too late for him to make it out the hood...\"?",
-      "Legally",
-      "Alive",
-      "Rich"
-     ],
-     [
-      "\"Riding around doing my...\"?",
-      "Thing",
-      "Job",
-      "Laps"
-     ],
-     [
-      "\"Riding ___ doing my thing\"",
-      "Around",
-      "Downtown",
-      "Alone"
-     ],
-     [
-      "\"Is it too late to be tryna live...\"?",
-      "Dreams",
-      "Free",
-      "Large"
-     ],
-     [
-      "\"And turn them all...\"?",
-      "Real",
-      "Gold",
-      "Around"
-     ],
-     [
-      "\"Reality is just a...\"?",
-      "Technicality",
-      "Fantasy",
-      "Formality"
-     ],
-     [
-      "\"So is being ___, so don't tell me that I'm too late\"",
-      "Fake",
-      "Real",
-      "Late"
-     ],
-     [
-      "\"So don't tell me that I'm...\"?",
-      "Too late",
-      "Too young",
-      "Too slow"
-     ],
-     [
-      "\"Too late for ___ to make it out the hood legally\"",
-      "Him",
-      "Me",
-      "Us"
-     ],
-     [
-      "\"Is it too late to be tryna ___ dreams\"",
-      "Live",
-      "Chase",
-      "Sell"
+      "Star",
+      "Kite"
      ]
     ]
    ]

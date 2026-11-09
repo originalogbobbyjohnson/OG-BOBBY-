@@ -156,6 +156,30 @@ window.CFG = {
       "Rain",
       "Night",
       "Fire"
+     ],
+     [
+      "\"Being the bad ... that I am\"?",
+      "Boy",
+      "Guy",
+      "Man"
+     ],
+     [
+      "\"So on that ... baby\"?",
+      "Note",
+      "Day",
+      "Night"
+     ],
+     [
+      "\"Anytime, ... I'll be waiting\"?",
+      "Anyplace",
+      "Any day",
+      "Any hour"
+     ],
+     [
+      "\"Through the storm, through the rain, girl...\"?",
+      "Whatever",
+      "Forever",
+      "Together"
      ]
     ],
     [
@@ -200,6 +224,30 @@ window.CFG = {
       "Booze",
       "Juice",
       "Water"
+     ],
+     [
+      "\"Ayo ma, you gotta...\"?",
+      "Understand",
+      "Believe",
+      "Listen"
+     ],
+     [
+      "\"Was 17, I was far from a...\"?",
+      "Man",
+      "Star",
+      "Home"
+     ],
+     [
+      "\"Plus I was part of a...\"?",
+      "Team",
+      "Crew",
+      "Band"
+     ],
+     [
+      "\"We had a fight, now you got me...\"?",
+      "Confused",
+      "Upset",
+      "Worried"
      ]
     ],
     [
@@ -244,132 +292,30 @@ window.CFG = {
       "In the house",
       "In the car",
       "In the bank"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "I Need a Girl (Pt. 2)",
-   "id": "Wf64fEwFcb0",
-   "start": 85,
-   "cuts": [
-    107.8,
-    117.3,
-    127.2
-   ],
-   "qs": [
-    [
-     [
-      "He's sippin' coladas, dipped in what?",
-      "Prada",
-      "Gucci",
-      "Fendi"
      ],
      [
-      "He's smooth as who?",
-      "Erik Estrada",
-      "Billy Dee",
-      "Denzel"
+      "\"Whenever you call, whatever you...\"?",
+      "Need",
+      "Want",
+      "Say"
      ],
      [
-      "Where are they out?",
-      "Vegas, Nevada",
-      "Miami, Florida",
-      "L.A."
+      "Walking around with the same chip on my...?",
+      "Shoulder",
+      "Back",
+      "Mind"
      ],
      [
-      "Bubble bath in the what?",
-      "Champagne glass",
-      "Hot tub",
-      "Jacuzzi"
+      "\"Still resenting your...\"?",
+      "Loving",
+      "Calling",
+      "Leaving"
      ],
      [
-      "The glass is about the size of a what?",
-      "Campaign ad",
-      "Billboard",
-      "Swimming pool"
-     ],
-     [
-      "If love was a crime, you'd be a what?",
-      "Crook",
-      "Thief",
-      "Outlaw"
-     ]
-    ],
-    [
-     [
-      "He's been around your girl, he believes he reads what?",
-      "Faces",
-      "Minds",
-      "Palms"
-     ],
-     [
-      "Whose girl has he been around?",
-      "Your girl",
-      "My girl",
-      "His girl"
-     ],
-     [
-      "He can tell she don't want him to what?",
-      "Prevail",
-      "Call",
-      "Stay"
-     ],
-     [
-      "He learned his lesson watching who?",
-      "Sean",
-      "Mase",
-      "Mario"
-     ],
-     [
-      "He learned his what, watching Sean?",
-      "Lesson",
-      "Moves",
-      "Style"
-     ],
-     [
-      "So why listen to her and start what?",
-      "Guessin'",
-      "Stressin'",
-      "Messin'"
-     ]
-    ],
-    [
-     [
-      "If you ain't ready to ride, then start what?",
-      "Dressin'",
-      "Walkin'",
-      "Guessin'"
-     ],
-     [
-      "He needs a girl to receive his mom's what?",
-      "Blessin'",
-      "Approval",
-      "Number"
-     ],
-     [
-      "He makes a what?",
-      "Confession",
-      "Promise",
-      "Wish"
-     ],
-     [
-      "His love: no what?",
-      "Contestin'",
-      "Questions",
-      "Pressure"
-     ],
-     [
-      "He says twice that he needs what?",
-      "Affection",
-      "Attention",
-      "Protection"
-     ],
-     [
-      "Who does he pass it to?",
-      "Mario",
-      "Ginuwine",
-      "Sean"
+      "\"I was a victim of...\"?",
+      "Scam",
+      "Fame",
+      "Love"
      ]
     ]
    ]
@@ -426,6 +372,30 @@ window.CFG = {
       "Fiancé",
       "Vacation",
       "Drink"
+     ],
+     [
+      "\"Body was...\"?",
+      "Perfection",
+      "Beautiful",
+      "Amazing"
+     ],
+     [
+      "\"Tennis skirts and Nike up, throwin' the ... up\"?",
+      "Bike",
+      "Ball",
+      "Peace"
+     ],
+     [
+      "\"Don't believe me, should have been at the...\"?",
+      "Party",
+      "Club",
+      "Show"
+     ],
+     [
+      "You would think J.Lo was in the...?",
+      "Lobby",
+      "Building",
+      "Kitchen"
      ]
     ],
     [
@@ -470,6 +440,30 @@ window.CFG = {
       "Loyal",
       "Royal",
       "Honest"
+     ],
+     [
+      "\"The type of love that will last...\"?",
+      "Forever",
+      "A while",
+      "All night"
+     ],
+     [
+      "\"Wanna play, wanna ... together\"?",
+      "Laugh",
+      "Dance",
+      "Sing"
+     ],
+     [
+      "\"Someone who's always...\"?",
+      "There",
+      "Around",
+      "Home"
+     ],
+     [
+      "\"Someone to fulfill my...\"?",
+      "Dreams",
+      "Needs",
+      "Plans"
      ]
     ],
     [
@@ -514,6 +508,30 @@ window.CFG = {
       "Protection",
       "Shelter",
       "Hero"
+     ],
+     [
+      "\"I want a woman that's ... for me\"?",
+      "Down",
+      "Made",
+      "Here"
+     ],
+     [
+      "\"Car get dirty, I help her out the...\"?",
+      "Jag",
+      "Benz",
+      "Truck"
+     ],
+     [
+      "\"Even though on the low it get...\"?",
+      "Hectic",
+      "Crazy",
+      "Messy"
+     ],
+     [
+      "\"'Cause you something I never...\"?",
+      "Had",
+      "Knew",
+      "Saw"
      ]
     ]
    ]
@@ -570,6 +588,30 @@ window.CFG = {
       "Girl",
       "Break",
       "Hit"
+     ],
+     [
+      "\"That's not my...\"?",
+      "Steez",
+      "Style",
+      "Thing"
+     ],
+     [
+      "\"That's not my steez, not like...\"?",
+      "Me",
+      "You",
+      "Them"
+     ],
+     [
+      "She looked at his ... and she got sick?",
+      "Watch",
+      "Ring",
+      "Car"
+     ],
+     [
+      "Sick of cats screaming out what?",
+      "Block",
+      "Gang",
+      "Street"
      ]
     ],
     [
@@ -580,10 +622,10 @@ window.CFG = {
       "Like"
      ],
      [
-      "Who's he partying with?",
-      "Puff",
-      "Mase",
-      "Kelis"
+      "\"Less...\" what?",
+      "Confusion",
+      "Drama",
+      "Talking"
      ],
      [
       "That's on me and my what?",
@@ -614,6 +656,30 @@ window.CFG = {
       "Bub",
       "Cris",
       "Moe"
+     ],
+     [
+      "\"Critical curves, see it through...\"?",
+      "Furs",
+      "Glass",
+      "Silk"
+     ],
+     [
+      "\"I was just checking you, wasn't...\"?",
+      "Disrespecting you",
+      "Ignoring you",
+      "Following you"
+     ],
+     [
+      "\"You ain't gotta flip the...\"?",
+      "Script",
+      "Coin",
+      "Table"
+     ],
+     [
+      "\"You know the difference between a scar and a...\"?",
+      "Cut",
+      "Bruise",
+      "Burn"
      ]
     ],
     [
@@ -658,132 +724,30 @@ window.CFG = {
       "All-stars",
       "Hustlers",
       "Legends"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "I Need a Girl (Pt. 1)",
-   "id": "Wk-BITyU2Vw",
-   "start": 84.6,
-   "cuts": [
-    106.7,
-    116.8,
-    127.4
-   ],
-   "qs": [
-    [
-     [
-      "He's met a lot of women in his what?",
-      "Lifetime",
-      "City",
-      "Travels"
      ],
      [
-      "Not a lot of women got the right what?",
-      "Mind",
-      "Look",
-      "Heart"
+      "\"And we all hungry and all...\"?",
+      "Hustle",
+      "Tired",
+      "Broke"
      ],
      [
-      "Pretty chicks with all the right what?",
-      "Features",
-      "Moves",
-      "Clothes"
+      "\"Look the way that the rocks...\"?",
+      "Glow",
+      "Fall",
+      "Spin"
      ],
      [
-      "Cellphones and what?",
-      "Beepers",
-      "Two-ways",
-      "Laptops"
+      "\"Keep the illest cat with the hot...\"?",
+      "Flow",
+      "Car",
+      "Bars"
      ],
      [
-      "When he finds a girl, he's gonna what?",
-      "Keep her",
-      "Leave her",
-      "Call her"
-     ],
-     [
-      "Now the game's gettin' what?",
-      "Deeper",
-      "Harder",
-      "Bigger"
-     ]
-    ],
-    [
-     [
-      "He needs somebody he could what with?",
-      "Chill",
-      "Party",
-      "Ride"
-     ],
-     [
-      "And somebody he could what with?",
-      "Build",
-      "Grow",
-      "Shop"
-     ],
-     [
-      "He needs somebody he could hold how?",
-      "Tight",
-      "Close",
-      "Forever"
-     ],
-     [
-      "What season does he mention?",
-      "Winter",
-      "Summer",
-      "Spring"
-     ],
-     [
-      "Winter time in a full what?",
-      "Length",
-      "Fur",
-      "Bloom"
-     ],
-     [
-      "The full-length is what color?",
-      "Snow White",
-      "Jet black",
-      "Mink brown"
-     ]
-    ],
-    [
-     [
-      "Anytime we're together it feels so what?",
-      "Right",
-      "Good",
-      "Real"
-     ],
-     [
-      "You the girl I been lookin' for my whole what?",
-      "Life",
-      "Time",
-      "Year"
-     ],
-     [
-      "Who does he ask to bless him?",
-      "God",
-      "His moms",
-      "Puff"
-     ],
-     [
-      "He's glad he got the what?",
-      "Insight",
-      "Chance",
-      "Ring"
-     ],
-     [
-      "Because of you, now he understands what?",
-      "Life",
-      "Love",
-      "Women"
-     ],
-     [
-      "When does it feel so right?",
-      "Anytime we're together",
-      "Late at night",
-      "On the weekend"
+      "\"I pity a...\"?",
+      "Fool",
+      "Child",
+      "Rookie"
      ]
     ]
    ]
@@ -842,6 +806,30 @@ window.CFG = {
       "Rain",
       "Night",
       "Fire"
+     ],
+     [
+      "\"Being the bad ... that I am\"?",
+      "Boy",
+      "Guy",
+      "Man"
+     ],
+     [
+      "\"So on that ... baby\"?",
+      "Note",
+      "Day",
+      "Night"
+     ],
+     [
+      "\"Anytime, ... I'll be waiting\"?",
+      "Anyplace",
+      "Any day",
+      "Any hour"
+     ],
+     [
+      "\"Through the storm, through the rain, girl...\"?",
+      "Whatever",
+      "Forever",
+      "Together"
      ]
     ],
     [
@@ -886,6 +874,30 @@ window.CFG = {
       "Booze",
       "Juice",
       "Water"
+     ],
+     [
+      "\"Ayo ma, you gotta...\"?",
+      "Understand",
+      "Believe",
+      "Listen"
+     ],
+     [
+      "\"Was 17, I was far from a...\"?",
+      "Man",
+      "Star",
+      "Home"
+     ],
+     [
+      "\"Plus I was part of a...\"?",
+      "Team",
+      "Crew",
+      "Band"
+     ],
+     [
+      "\"We had a fight, now you got me...\"?",
+      "Confused",
+      "Upset",
+      "Worried"
      ]
     ],
     [
@@ -930,132 +942,30 @@ window.CFG = {
       "In the house",
       "In the car",
       "In the bank"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "I Need a Girl (Pt. 2)",
-   "id": "Wf64fEwFcb0",
-   "start": 85,
-   "cuts": [
-    107.8,
-    117.3,
-    127.2
-   ],
-   "qs": [
-    [
-     [
-      "He's sippin' coladas, dipped in what?",
-      "Prada",
-      "Gucci",
-      "Fendi"
      ],
      [
-      "He's smooth as who?",
-      "Erik Estrada",
-      "Billy Dee",
-      "Denzel"
+      "\"Whenever you call, whatever you...\"?",
+      "Need",
+      "Want",
+      "Say"
      ],
      [
-      "Where are they out?",
-      "Vegas, Nevada",
-      "Miami, Florida",
-      "L.A."
+      "Walking around with the same chip on my...?",
+      "Shoulder",
+      "Back",
+      "Mind"
      ],
      [
-      "Bubble bath in the what?",
-      "Champagne glass",
-      "Hot tub",
-      "Jacuzzi"
+      "\"Still resenting your...\"?",
+      "Loving",
+      "Calling",
+      "Leaving"
      ],
      [
-      "The glass is about the size of a what?",
-      "Campaign ad",
-      "Billboard",
-      "Swimming pool"
-     ],
-     [
-      "If love was a crime, you'd be a what?",
-      "Crook",
-      "Thief",
-      "Outlaw"
-     ]
-    ],
-    [
-     [
-      "He's been around your girl, he believes he reads what?",
-      "Faces",
-      "Minds",
-      "Palms"
-     ],
-     [
-      "Whose girl has he been around?",
-      "Your girl",
-      "My girl",
-      "His girl"
-     ],
-     [
-      "He can tell she don't want him to what?",
-      "Prevail",
-      "Call",
-      "Stay"
-     ],
-     [
-      "He learned his lesson watching who?",
-      "Sean",
-      "Mase",
-      "Mario"
-     ],
-     [
-      "He learned his what, watching Sean?",
-      "Lesson",
-      "Moves",
-      "Style"
-     ],
-     [
-      "So why listen to her and start what?",
-      "Guessin'",
-      "Stressin'",
-      "Messin'"
-     ]
-    ],
-    [
-     [
-      "If you ain't ready to ride, then start what?",
-      "Dressin'",
-      "Walkin'",
-      "Guessin'"
-     ],
-     [
-      "He needs a girl to receive his mom's what?",
-      "Blessin'",
-      "Approval",
-      "Number"
-     ],
-     [
-      "He makes a what?",
-      "Confession",
-      "Promise",
-      "Wish"
-     ],
-     [
-      "His love: no what?",
-      "Contestin'",
-      "Questions",
-      "Pressure"
-     ],
-     [
-      "He says twice that he needs what?",
-      "Affection",
-      "Attention",
-      "Protection"
-     ],
-     [
-      "Who does he pass it to?",
-      "Mario",
-      "Ginuwine",
-      "Sean"
+      "\"I was a victim of...\"?",
+      "Scam",
+      "Fame",
+      "Love"
      ]
     ]
    ]
@@ -1112,6 +1022,30 @@ window.CFG = {
       "Fiancé",
       "Vacation",
       "Drink"
+     ],
+     [
+      "\"Body was...\"?",
+      "Perfection",
+      "Beautiful",
+      "Amazing"
+     ],
+     [
+      "\"Tennis skirts and Nike up, throwin' the ... up\"?",
+      "Bike",
+      "Ball",
+      "Peace"
+     ],
+     [
+      "\"Don't believe me, should have been at the...\"?",
+      "Party",
+      "Club",
+      "Show"
+     ],
+     [
+      "You would think J.Lo was in the...?",
+      "Lobby",
+      "Building",
+      "Kitchen"
      ]
     ],
     [
@@ -1156,6 +1090,30 @@ window.CFG = {
       "Loyal",
       "Royal",
       "Honest"
+     ],
+     [
+      "\"The type of love that will last...\"?",
+      "Forever",
+      "A while",
+      "All night"
+     ],
+     [
+      "\"Wanna play, wanna ... together\"?",
+      "Laugh",
+      "Dance",
+      "Sing"
+     ],
+     [
+      "\"Someone who's always...\"?",
+      "There",
+      "Around",
+      "Home"
+     ],
+     [
+      "\"Someone to fulfill my...\"?",
+      "Dreams",
+      "Needs",
+      "Plans"
      ]
     ],
     [
@@ -1200,6 +1158,30 @@ window.CFG = {
       "Protection",
       "Shelter",
       "Hero"
+     ],
+     [
+      "\"I want a woman that's ... for me\"?",
+      "Down",
+      "Made",
+      "Here"
+     ],
+     [
+      "\"Car get dirty, I help her out the...\"?",
+      "Jag",
+      "Benz",
+      "Truck"
+     ],
+     [
+      "\"Even though on the low it get...\"?",
+      "Hectic",
+      "Crazy",
+      "Messy"
+     ],
+     [
+      "\"'Cause you something I never...\"?",
+      "Had",
+      "Knew",
+      "Saw"
      ]
     ]
    ]
@@ -1256,6 +1238,30 @@ window.CFG = {
       "Girl",
       "Break",
       "Hit"
+     ],
+     [
+      "\"That's not my...\"?",
+      "Steez",
+      "Style",
+      "Thing"
+     ],
+     [
+      "\"That's not my steez, not like...\"?",
+      "Me",
+      "You",
+      "Them"
+     ],
+     [
+      "She looked at his ... and she got sick?",
+      "Watch",
+      "Ring",
+      "Car"
+     ],
+     [
+      "Sick of cats screaming out what?",
+      "Block",
+      "Gang",
+      "Street"
      ]
     ],
     [
@@ -1266,10 +1272,10 @@ window.CFG = {
       "Like"
      ],
      [
-      "Who's he partying with?",
-      "Puff",
-      "Mase",
-      "Kelis"
+      "\"Less...\" what?",
+      "Confusion",
+      "Drama",
+      "Talking"
      ],
      [
       "That's on me and my what?",
@@ -1300,6 +1306,30 @@ window.CFG = {
       "Bub",
       "Cris",
       "Moe"
+     ],
+     [
+      "\"Critical curves, see it through...\"?",
+      "Furs",
+      "Glass",
+      "Silk"
+     ],
+     [
+      "\"I was just checking you, wasn't...\"?",
+      "Disrespecting you",
+      "Ignoring you",
+      "Following you"
+     ],
+     [
+      "\"You ain't gotta flip the...\"?",
+      "Script",
+      "Coin",
+      "Table"
+     ],
+     [
+      "\"You know the difference between a scar and a...\"?",
+      "Cut",
+      "Bruise",
+      "Burn"
      ]
     ],
     [
@@ -1344,132 +1374,30 @@ window.CFG = {
       "All-stars",
       "Hustlers",
       "Legends"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "I Need a Girl (Pt. 1)",
-   "id": "Wk-BITyU2Vw",
-   "start": 84.6,
-   "cuts": [
-    106.7,
-    116.8,
-    127.4
-   ],
-   "qs": [
-    [
-     [
-      "He's met a lot of women in his what?",
-      "Lifetime",
-      "City",
-      "Travels"
      ],
      [
-      "Not a lot of women got the right what?",
-      "Mind",
-      "Look",
-      "Heart"
+      "\"And we all hungry and all...\"?",
+      "Hustle",
+      "Tired",
+      "Broke"
      ],
      [
-      "Pretty chicks with all the right what?",
-      "Features",
-      "Moves",
-      "Clothes"
+      "\"Look the way that the rocks...\"?",
+      "Glow",
+      "Fall",
+      "Spin"
      ],
      [
-      "Cellphones and what?",
-      "Beepers",
-      "Two-ways",
-      "Laptops"
+      "\"Keep the illest cat with the hot...\"?",
+      "Flow",
+      "Car",
+      "Bars"
      ],
      [
-      "When he finds a girl, he's gonna what?",
-      "Keep her",
-      "Leave her",
-      "Call her"
-     ],
-     [
-      "Now the game's gettin' what?",
-      "Deeper",
-      "Harder",
-      "Bigger"
-     ]
-    ],
-    [
-     [
-      "He needs somebody he could what with?",
-      "Chill",
-      "Party",
-      "Ride"
-     ],
-     [
-      "And somebody he could what with?",
-      "Build",
-      "Grow",
-      "Shop"
-     ],
-     [
-      "He needs somebody he could hold how?",
-      "Tight",
-      "Close",
-      "Forever"
-     ],
-     [
-      "What season does he mention?",
-      "Winter",
-      "Summer",
-      "Spring"
-     ],
-     [
-      "Winter time in a full what?",
-      "Length",
-      "Fur",
-      "Bloom"
-     ],
-     [
-      "The full-length is what color?",
-      "Snow White",
-      "Jet black",
-      "Mink brown"
-     ]
-    ],
-    [
-     [
-      "Anytime we're together it feels so what?",
-      "Right",
-      "Good",
-      "Real"
-     ],
-     [
-      "You the girl I been lookin' for my whole what?",
-      "Life",
-      "Time",
-      "Year"
-     ],
-     [
-      "Who does he ask to bless him?",
-      "God",
-      "His moms",
-      "Puff"
-     ],
-     [
-      "He's glad he got the what?",
-      "Insight",
-      "Chance",
-      "Ring"
-     ],
-     [
-      "Because of you, now he understands what?",
-      "Life",
-      "Love",
-      "Women"
-     ],
-     [
-      "When does it feel so right?",
-      "Anytime we're together",
-      "Late at night",
-      "On the weekend"
+      "\"I pity a...\"?",
+      "Fool",
+      "Child",
+      "Rookie"
      ]
     ]
    ]

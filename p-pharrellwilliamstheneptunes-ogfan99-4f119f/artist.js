@@ -102,167 +102,6 @@ window.CFG = {
  ],
  "explicitSongs": [
   {
-   "title": "Lookin' at Me (Mase)",
-   "id": "VTDJyTmNBqQ",
-   "cuts": [
-    40.8,
-    101.6,
-    142.3
-   ],
-   "qs": [
-    [
-     [
-      "Who gets called out at the very start, \"Hey yo...\"?",
-      "Mase",
-      "Puff",
-      "Biggie"
-     ],
-     [
-      "\"Why you over there lookin' at...\"?",
-      "Me",
-      "Her",
-      "Them"
-     ],
-     [
-      "\"While my girl standin'...\"?",
-      "Here",
-      "There",
-      "Near"
-     ],
-     [
-      "Who's standing right here?",
-      "My girl",
-      "My man",
-      "My crew"
-     ],
-     [
-      "\"I don't like when, you know, I'm in a...\"?",
-      "Club",
-      "Car",
-      "Store"
-     ],
-     [
-      "\"And I'm with my...\"?",
-      "Honey",
-      "Crew",
-      "Boys"
-     ],
-     [
-      "\"You got, you know, the...\"?",
-      "Haters",
-      "Fans",
-      "Cameras"
-     ],
-     [
-      "\"They wanna be ___ guys all of the sudden\"",
-      "Tough",
-      "Bad",
-      "Big"
-     ]
-    ],
-    [
-     [
-      "\"Can't a young man get ___ anymore?\"",
-      "Money",
-      "Paid",
-      "Love"
-     ],
-     [
-      "\"Let my pants sag down to the...\"?",
-      "Floor",
-      "Knees",
-      "Ground"
-     ],
-     [
-      "\"Can't my car look better than...\"?",
-      "Yours",
-      "His",
-      "Theirs"
-     ],
-     [
-      "\"In a stretch Lex with about ___ doors?\"",
-      "Ten",
-      "Six",
-      "Eight"
-     ],
-     [
-      "Who \"name me pretty\"?",
-      "P. Diddy",
-      "Biggie",
-      "Jay-Z"
-     ],
-     [
-      "\"People wanna know who is he, he get...\"?",
-      "Busy",
-      "Money",
-      "Dizzy"
-     ],
-     [
-      "\"Spray so much izzy, girls get...\"?",
-      "Dizzy",
-      "Busy",
-      "Silly"
-     ],
-     [
-      "\"One thing about ___ World, we all got dough\"",
-      "Harlem",
-      "Hip-Hop",
-      "Bad Boy"
-     ]
-    ],
-    [
-     [
-      "\"I can't get mad cuz you look at...\"?",
-      "Me",
-      "Her",
-      "It"
-     ],
-     [
-      "\"It always be the haters that be sittin' in the...\"?",
-      "Rear",
-      "Back",
-      "Front"
-     ],
-     [
-      "\"Dissin' every...\"?",
-      "Gear",
-      "Year",
-      "Car"
-     ],
-     [
-      "\"Bein' broke and ___ is something I can't condone\"",
-      "Alone",
-      "Lonely",
-      "Hungry"
-     ],
-     [
-      "\"Sit gently, while I'm on the ___ phone\"",
-      "Bentley",
-      "Benz",
-      "Car"
-     ],
-     [
-      "\"Cuz I'm mad fly and...\"?",
-      "Icy",
-      "Rich",
-      "Fresh"
-     ],
-     [
-      "\"And if it wasn't for this ___ exposure\"",
-      "Bad Boy",
-      "Harlem",
-      "TV"
-     ],
-     [
-      "\"Now me and Blink float in the gold...\"?",
-      "Rover",
-      "Benz",
-      "Lex"
-     ]
-    ]
-   ]
-  },
-  {
    "title": "Luv U Better (LL Cool J)",
    "id": "Ic_5836wRAY",
    "cuts": [
@@ -319,6 +158,24 @@ window.CFG = {
       "Sick",
       "Mad",
       "Tired"
+     ],
+     [
+      "\"True baby, for I...\"?",
+      "Adore",
+      "Admire",
+      "Implore"
+     ],
+     [
+      "\"Now I talk real foul and...\"?",
+      "Slick",
+      "Mean",
+      "Loud"
+     ],
+     [
+      "How many times \"This is for my number one\" at the start?",
+      "Three",
+      "Two",
+      "Four"
      ]
     ],
     [
@@ -369,6 +226,24 @@ window.CFG = {
       "Today",
       "For me",
       "Again"
+     ],
+     [
+      "\"And you was my good ... that wouldn't give it up\"?",
+      "Girl",
+      "Friend",
+      "Wife"
+     ],
+     [
+      "\"'Cause I been on that journey...\"?",
+      "Always",
+      "Lately",
+      "Alone"
+     ],
+     [
+      "\"Just when you think there's nothin' else I can...\"?",
+      "Do",
+      "Say",
+      "Give"
      ]
     ],
     [
@@ -419,6 +294,24 @@ window.CFG = {
       "Grow",
       "Learn",
       "Cry"
+     ],
+     [
+      "\"In addition to the SL's, bigets and...\"?",
+      "Rings",
+      "Chains",
+      "Pearls"
+     ],
+     [
+      "\"Losin' all that, God...\"?",
+      "Forbid",
+      "Knows",
+      "Willing"
+     ],
+     [
+      "\"I'ma do it real gentle baby, nice and...\"?",
+      "Slow",
+      "Easy",
+      "Sweet"
      ]
     ]
    ]
@@ -480,6 +373,24 @@ window.CFG = {
       "Troopers",
       "Soldiers",
       "Ladies"
+     ],
+     [
+      "\"Where my hustlers, my ... at?\"",
+      "Boosters",
+      "Soldiers",
+      "Ladies"
+     ],
+     [
+      "\"Hah, let's get it...\"?",
+      "In",
+      "On",
+      "Up"
+     ],
+     [
+      "Who's back? \"Your ... is back\"",
+      "Boy",
+      "Man",
+      "Crew"
      ]
     ],
     [
@@ -530,6 +441,24 @@ window.CFG = {
       "Globe",
       "World",
       "Game"
+     ],
+     [
+      "\"I know the world glued your back to the...\"?",
+      "Wall",
+      "Floor",
+      "Door"
+     ],
+     [
+      "\"I need the space to say whatever I...\"?",
+      "Like",
+      "Want",
+      "Feel"
+     ],
+     [
+      "\"So let's exchange ... and go\"?",
+      "Numbers",
+      "Places",
+      "Seats"
      ]
     ],
     [
@@ -580,6 +509,24 @@ window.CFG = {
       "Wang",
       "Bradley",
       "Lee"
+     ],
+     [
+      "\"Best believe, I sweat out...\"?",
+      "Weaves",
+      "Jeans",
+      "Sleeves"
+     ],
+     [
+      "\"Give Afro Puffs like...\"?",
+      "R.A.G.E",
+      "Missy",
+      "Eve"
+     ],
+     [
+      "\"Do I, to you, look like a...\"?",
+      "Lame",
+      "Fool",
+      "Clown"
      ]
     ]
    ]
@@ -647,6 +594,12 @@ window.CFG = {
       "Believe",
       "Trust",
       "Count"
+     ],
+     [
+      "\"Lookin' for the right ... to shoot my steam\"?",
+      "Time",
+      "Place",
+      "Spot"
      ]
     ],
     [
@@ -703,6 +656,18 @@ window.CFG = {
       "Use",
       "Deal",
       "Move"
+     ],
+     [
+      "\"No deceivin', nothin' up my sleeve, no...\"?",
+      "Teasin'",
+      "Leavin'",
+      "Cheatin'"
+     ],
+     [
+      "\"I feel like touchin'...\"?",
+      "You",
+      "It",
+      "Her"
      ]
     ],
     [
@@ -759,6 +724,24 @@ window.CFG = {
       "Mirror",
       "TV",
       "Window"
+     ],
+     [
+      "\"I spit game 'cause baby I can't...\"?",
+      "Talk it",
+      "Walk it",
+      "Fake it"
+     ],
+     [
+      "\"... tanktop, on at this point\"?",
+      "VOKAL",
+      "Polo",
+      "Nike"
+     ],
+     [
+      "\"So take it off like you're home...\"?",
+      "Alone",
+      "Sick",
+      "Late"
      ]
     ]
    ]
@@ -766,167 +749,6 @@ window.CFG = {
  ],
  "songs": [
   {
-   "title": "Lookin' at Me (Mase)",
-   "id": "VTDJyTmNBqQ",
-   "cuts": [
-    40.8,
-    101.6,
-    142.3
-   ],
-   "qs": [
-    [
-     [
-      "Who gets called out at the very start, \"Hey yo...\"?",
-      "Mase",
-      "Puff",
-      "Biggie"
-     ],
-     [
-      "\"Why you over there lookin' at...\"?",
-      "Me",
-      "Her",
-      "Them"
-     ],
-     [
-      "\"While my girl standin'...\"?",
-      "Here",
-      "There",
-      "Near"
-     ],
-     [
-      "Who's standing right here?",
-      "My girl",
-      "My man",
-      "My crew"
-     ],
-     [
-      "\"I don't like when, you know, I'm in a...\"?",
-      "Club",
-      "Car",
-      "Store"
-     ],
-     [
-      "\"And I'm with my...\"?",
-      "Honey",
-      "Crew",
-      "Boys"
-     ],
-     [
-      "\"You got, you know, the...\"?",
-      "Haters",
-      "Fans",
-      "Cameras"
-     ],
-     [
-      "\"They wanna be ___ guys all of the sudden\"",
-      "Tough",
-      "Bad",
-      "Big"
-     ]
-    ],
-    [
-     [
-      "\"Can't a young man get ___ anymore?\"",
-      "Money",
-      "Paid",
-      "Love"
-     ],
-     [
-      "\"Let my pants sag down to the...\"?",
-      "Floor",
-      "Knees",
-      "Ground"
-     ],
-     [
-      "\"Can't my car look better than...\"?",
-      "Yours",
-      "His",
-      "Theirs"
-     ],
-     [
-      "\"In a stretch Lex with about ___ doors?\"",
-      "Ten",
-      "Six",
-      "Eight"
-     ],
-     [
-      "Who \"name me pretty\"?",
-      "P. Diddy",
-      "Biggie",
-      "Jay-Z"
-     ],
-     [
-      "\"People wanna know who is he, he get...\"?",
-      "Busy",
-      "Money",
-      "Dizzy"
-     ],
-     [
-      "\"Spray so much izzy, girls get...\"?",
-      "Dizzy",
-      "Busy",
-      "Silly"
-     ],
-     [
-      "\"One thing about ___ World, we all got dough\"",
-      "Harlem",
-      "Hip-Hop",
-      "Bad Boy"
-     ]
-    ],
-    [
-     [
-      "\"I can't get mad cuz you look at...\"?",
-      "Me",
-      "Her",
-      "It"
-     ],
-     [
-      "\"It always be the haters that be sittin' in the...\"?",
-      "Rear",
-      "Back",
-      "Front"
-     ],
-     [
-      "\"Dissin' every...\"?",
-      "Gear",
-      "Year",
-      "Car"
-     ],
-     [
-      "\"Bein' broke and ___ is something I can't condone\"",
-      "Alone",
-      "Lonely",
-      "Hungry"
-     ],
-     [
-      "\"Sit gently, while I'm on the ___ phone\"",
-      "Bentley",
-      "Benz",
-      "Car"
-     ],
-     [
-      "\"Cuz I'm mad fly and...\"?",
-      "Icy",
-      "Rich",
-      "Fresh"
-     ],
-     [
-      "\"And if it wasn't for this ___ exposure\"",
-      "Bad Boy",
-      "Harlem",
-      "TV"
-     ],
-     [
-      "\"Now me and Blink float in the gold...\"?",
-      "Rover",
-      "Benz",
-      "Lex"
-     ]
-    ]
-   ]
-  },
-  {
    "title": "Luv U Better (LL Cool J)",
    "id": "Ic_5836wRAY",
    "cuts": [
@@ -983,6 +805,24 @@ window.CFG = {
       "Sick",
       "Mad",
       "Tired"
+     ],
+     [
+      "\"True baby, for I...\"?",
+      "Adore",
+      "Admire",
+      "Implore"
+     ],
+     [
+      "\"Now I talk real foul and...\"?",
+      "Slick",
+      "Mean",
+      "Loud"
+     ],
+     [
+      "How many times \"This is for my number one\" at the start?",
+      "Three",
+      "Two",
+      "Four"
      ]
     ],
     [
@@ -1033,6 +873,24 @@ window.CFG = {
       "Today",
       "For me",
       "Again"
+     ],
+     [
+      "\"And you was my good ... that wouldn't give it up\"?",
+      "Girl",
+      "Friend",
+      "Wife"
+     ],
+     [
+      "\"'Cause I been on that journey...\"?",
+      "Always",
+      "Lately",
+      "Alone"
+     ],
+     [
+      "\"Just when you think there's nothin' else I can...\"?",
+      "Do",
+      "Say",
+      "Give"
      ]
     ],
     [
@@ -1083,6 +941,24 @@ window.CFG = {
       "Grow",
       "Learn",
       "Cry"
+     ],
+     [
+      "\"In addition to the SL's, bigets and...\"?",
+      "Rings",
+      "Chains",
+      "Pearls"
+     ],
+     [
+      "\"Losin' all that, God...\"?",
+      "Forbid",
+      "Knows",
+      "Willing"
+     ],
+     [
+      "\"I'ma do it real gentle baby, nice and...\"?",
+      "Slow",
+      "Easy",
+      "Sweet"
      ]
     ]
    ]
@@ -1144,6 +1020,24 @@ window.CFG = {
       "Troopers",
       "Soldiers",
       "Ladies"
+     ],
+     [
+      "\"Where my hustlers, my ... at?\"",
+      "Boosters",
+      "Soldiers",
+      "Ladies"
+     ],
+     [
+      "\"Hah, let's get it...\"?",
+      "In",
+      "On",
+      "Up"
+     ],
+     [
+      "Who's back? \"Your ... is back\"",
+      "Boy",
+      "Man",
+      "Crew"
      ]
     ],
     [
@@ -1194,6 +1088,24 @@ window.CFG = {
       "Globe",
       "World",
       "Game"
+     ],
+     [
+      "\"I know the world glued your back to the...\"?",
+      "Wall",
+      "Floor",
+      "Door"
+     ],
+     [
+      "\"I need the space to say whatever I...\"?",
+      "Like",
+      "Want",
+      "Feel"
+     ],
+     [
+      "\"So let's exchange ... and go\"?",
+      "Numbers",
+      "Places",
+      "Seats"
      ]
     ],
     [
@@ -1244,6 +1156,24 @@ window.CFG = {
       "Wang",
       "Bradley",
       "Lee"
+     ],
+     [
+      "\"Best believe, I sweat out...\"?",
+      "Weaves",
+      "Jeans",
+      "Sleeves"
+     ],
+     [
+      "\"Give Afro Puffs like...\"?",
+      "R.A.G.E",
+      "Missy",
+      "Eve"
+     ],
+     [
+      "\"Do I, to you, look like a...\"?",
+      "Lame",
+      "Fool",
+      "Clown"
      ]
     ]
    ]
@@ -1311,6 +1241,12 @@ window.CFG = {
       "Believe",
       "Trust",
       "Count"
+     ],
+     [
+      "\"Lookin' for the right ... to shoot my steam\"?",
+      "Time",
+      "Place",
+      "Spot"
      ]
     ],
     [
@@ -1367,6 +1303,18 @@ window.CFG = {
       "Use",
       "Deal",
       "Move"
+     ],
+     [
+      "\"No deceivin', nothin' up my sleeve, no...\"?",
+      "Teasin'",
+      "Leavin'",
+      "Cheatin'"
+     ],
+     [
+      "\"I feel like touchin'...\"?",
+      "You",
+      "It",
+      "Her"
      ]
     ],
     [
@@ -1423,6 +1371,24 @@ window.CFG = {
       "Mirror",
       "TV",
       "Window"
+     ],
+     [
+      "\"I spit game 'cause baby I can't...\"?",
+      "Talk it",
+      "Walk it",
+      "Fake it"
+     ],
+     [
+      "\"... tanktop, on at this point\"?",
+      "VOKAL",
+      "Polo",
+      "Nike"
+     ],
+     [
+      "\"So take it off like you're home...\"?",
+      "Alone",
+      "Sick",
+      "Late"
      ]
     ]
    ]

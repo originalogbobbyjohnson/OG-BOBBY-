@@ -152,6 +152,18 @@ window.CFG = {
       "Say",
       "Give",
       "Do"
+     ],
+     [
+      "Being on the road doesn't mean she doesn't have time for...?",
+      "You",
+      "Love",
+      "Fun"
+     ],
+     [
+      "\"None of the ..., nothing can stop us\"?",
+      "Gossip",
+      "Haters",
+      "Drama"
      ]
     ],
     [
@@ -196,6 +208,18 @@ window.CFG = {
       "Fears",
       "Rules",
       "Limits"
+     ],
+     [
+      "\"Baby, let's just take our...\"?",
+      "Chance",
+      "Time",
+      "Shot"
+     ],
+     [
+      "\"We can do this thing...\"?",
+      "Together",
+      "Forever",
+      "Tonight"
      ]
     ],
     [
@@ -234,6 +258,12 @@ window.CFG = {
       "Crazy",
       "Busy",
       "Hard"
+     ],
+     [
+      "\"I won't judge, I don't...\"?",
+      "Care",
+      "Mind",
+      "Stop"
      ]
     ]
    ]
@@ -290,6 +320,12 @@ window.CFG = {
       "Situation",
       "Story",
       "Feelings"
+     ],
+     [
+      "\"Let me see what you got, let me...\"?",
+      "See it",
+      "Hear it",
+      "Feel it"
      ]
     ],
     [
@@ -334,6 +370,18 @@ window.CFG = {
       "Butterflies",
       "Knots",
       "Fire"
+     ],
+     [
+      "\"And I wonder what it's...\"?",
+      "Like",
+      "Worth",
+      "For"
+     ],
+     [
+      "\"Why does this feel like some love...\"?",
+      "Affair",
+      "Song",
+      "Story"
      ]
     ],
     [
@@ -372,6 +420,18 @@ window.CFG = {
       "Tell you",
       "Text you",
       "Sing it"
+     ],
+     [
+      "\"But I can't help how I...\"?",
+      "Feel",
+      "Act",
+      "Look"
+     ],
+     [
+      "\"Can't nobody ... us\"?",
+      "Stop",
+      "Catch",
+      "Beat"
      ]
     ]
    ]
@@ -472,6 +532,24 @@ window.CFG = {
       "Careful",
       "Cool",
       "Quiet"
+     ],
+     [
+      "She's about to order herself the...?",
+      "Tesla",
+      "Rolex",
+      "Range"
+     ],
+     [
+      "\"Diamonds are real, no need for...\"?",
+      "Testers",
+      "Jewelers",
+      "Receipts"
+     ],
+     [
+      "\"If I left today, who will it...\"?",
+      "Affect",
+      "Hurt",
+      "Change"
      ]
     ],
     [
@@ -510,6 +588,18 @@ window.CFG = {
       "Father",
       "Mother",
       "Brother"
+     ],
+     [
+      "\"You tell me that you'd never...\"?",
+      "Leave me",
+      "Lie to me",
+      "Forget me"
+     ],
+     [
+      "Needed their father \"just like Tim...\"?",
+      "Reid",
+      "Duncan",
+      "Allen"
      ]
     ]
    ]
@@ -566,6 +656,12 @@ window.CFG = {
       "Struggle",
       "Story",
       "Past"
+     ],
+     [
+      "\"What\" you grindin' for, and ... you grindin' for?",
+      "Who",
+      "How",
+      "Where"
      ]
     ],
     [
@@ -610,6 +706,12 @@ window.CFG = {
       "Ball",
       "Eat",
       "Win"
+     ],
+     [
+      "\"Say what's your..., dawg\"?",
+      "Purpose",
+      "Problem",
+      "Plan"
      ]
     ],
     [
@@ -648,138 +750,18 @@ window.CFG = {
       "On",
       "Fed",
       "Safe"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Back Up",
-   "id": "RXVNl9l7Kcw",
-   "start": 15.3,
-   "cuts": [
-    47.8,
-    71.8,
-    119.6
-   ],
-   "qs": [
-    [
-     [
-      "What does she keep telling them to do?",
-      "Back up",
-      "Step up",
-      "Pull up"
      ],
      [
-      "She's too clean, too holy, she's what?",
-      "Godly",
-      "Golden",
-      "Lovely"
-     ],
-     [
-      "She goes for real ones who don't brag about what?",
-      "What they bought her",
-      "Their cars",
-      "Their chains"
-     ],
-     [
-      "Don't be blowin' up her what?",
-      "Phone",
-      "Spot",
-      "Name"
-     ],
-     [
-      "And don't be leavin' what?",
-      "Voice messages",
-      "Love notes",
-      "Flowers"
-     ],
-     [
-      "She can do you better than your what?",
-      "Exes",
-      "Friends",
-      "Last one"
-     ],
-     [
-      "She told him he was talkin' out his what?",
-      "Necklace",
-      "Wallet",
-      "Chain"
-     ]
-    ],
-    [
-     [
-      "She'll leave 'em where she what?",
-      "Met 'em",
-      "Found 'em",
-      "Saw 'em"
-     ],
-     [
-      "Who's waiting in the cut?",
-      "Goons",
-      "Haters",
-      "Fans"
-     ],
-     [
-      "What does she say before 'I know, I know, I know'?",
-      "Woo",
-      "Yeah",
-      "Okay"
-     ],
-     [
-      "He heard about her and was waitin' where?",
-      "At the door",
-      "Outside",
-      "By the car"
-     ],
-     [
-      "What's all on the floor?",
-      "Mink",
+      "\"My name buzzin', that ... comin'\"?",
+      "Fame",
       "Money",
-      "Clothes"
+      "Rain"
      ],
      [
-      "Skating from 6 till late, she'd come in at what time?",
-      "4",
-      "2",
-      "Midnight"
-     ]
-    ],
-    [
-     [
-      "What did they get for the girls?",
-      "Glow sticks",
-      "Bottles",
-      "Balloons"
-     ],
-     [
-      "Don't act like you don't what this?",
-      "Know",
-      "Hear",
-      "Want"
-     ],
-     [
-      "She says she's very what?",
-      "Antisocial",
-      "Outgoing",
-      "Friendly"
-     ],
-     [
-      "Social network ain't her what?",
-      "Motion",
-      "Thing",
-      "Focus"
-     ],
-     [
-      "She says she don't what like that?",
-      "Move",
-      "Talk",
-      "Play"
-     ],
-     [
-      "In the hook she says 'woah woah,' then what?",
-      "Yah yah",
-      "Hey hey",
-      "Uh huh"
+      "Nike Cortez, fresh up out the...?",
+      "Box",
+      "Store",
+      "Bag"
      ]
     ]
    ]
@@ -838,6 +820,18 @@ window.CFG = {
       "Say",
       "Give",
       "Do"
+     ],
+     [
+      "Being on the road doesn't mean she doesn't have time for...?",
+      "You",
+      "Love",
+      "Fun"
+     ],
+     [
+      "\"None of the ..., nothing can stop us\"?",
+      "Gossip",
+      "Haters",
+      "Drama"
      ]
     ],
     [
@@ -882,6 +876,18 @@ window.CFG = {
       "Fears",
       "Rules",
       "Limits"
+     ],
+     [
+      "\"Baby, let's just take our...\"?",
+      "Chance",
+      "Time",
+      "Shot"
+     ],
+     [
+      "\"We can do this thing...\"?",
+      "Together",
+      "Forever",
+      "Tonight"
      ]
     ],
     [
@@ -920,6 +926,12 @@ window.CFG = {
       "Crazy",
       "Busy",
       "Hard"
+     ],
+     [
+      "\"I won't judge, I don't...\"?",
+      "Care",
+      "Mind",
+      "Stop"
      ]
     ]
    ]
@@ -976,6 +988,12 @@ window.CFG = {
       "Situation",
       "Story",
       "Feelings"
+     ],
+     [
+      "\"Let me see what you got, let me...\"?",
+      "See it",
+      "Hear it",
+      "Feel it"
      ]
     ],
     [
@@ -1020,6 +1038,18 @@ window.CFG = {
       "Butterflies",
       "Knots",
       "Fire"
+     ],
+     [
+      "\"And I wonder what it's...\"?",
+      "Like",
+      "Worth",
+      "For"
+     ],
+     [
+      "\"Why does this feel like some love...\"?",
+      "Affair",
+      "Song",
+      "Story"
      ]
     ],
     [
@@ -1058,6 +1088,18 @@ window.CFG = {
       "Tell you",
       "Text you",
       "Sing it"
+     ],
+     [
+      "\"But I can't help how I...\"?",
+      "Feel",
+      "Act",
+      "Look"
+     ],
+     [
+      "\"Can't nobody ... us\"?",
+      "Stop",
+      "Catch",
+      "Beat"
      ]
     ]
    ]
@@ -1158,6 +1200,24 @@ window.CFG = {
       "Careful",
       "Cool",
       "Quiet"
+     ],
+     [
+      "She's about to order herself the...?",
+      "Tesla",
+      "Rolex",
+      "Range"
+     ],
+     [
+      "\"Diamonds are real, no need for...\"?",
+      "Testers",
+      "Jewelers",
+      "Receipts"
+     ],
+     [
+      "\"If I left today, who will it...\"?",
+      "Affect",
+      "Hurt",
+      "Change"
      ]
     ],
     [
@@ -1196,6 +1256,18 @@ window.CFG = {
       "Father",
       "Mother",
       "Brother"
+     ],
+     [
+      "\"You tell me that you'd never...\"?",
+      "Leave me",
+      "Lie to me",
+      "Forget me"
+     ],
+     [
+      "Needed their father \"just like Tim...\"?",
+      "Reid",
+      "Duncan",
+      "Allen"
      ]
     ]
    ]
@@ -1252,6 +1324,12 @@ window.CFG = {
       "Struggle",
       "Story",
       "Past"
+     ],
+     [
+      "\"What\" you grindin' for, and ... you grindin' for?",
+      "Who",
+      "How",
+      "Where"
      ]
     ],
     [
@@ -1296,6 +1374,12 @@ window.CFG = {
       "Ball",
       "Eat",
       "Win"
+     ],
+     [
+      "\"Say what's your..., dawg\"?",
+      "Purpose",
+      "Problem",
+      "Plan"
      ]
     ],
     [
@@ -1334,138 +1418,18 @@ window.CFG = {
       "On",
       "Fed",
       "Safe"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Back Up",
-   "id": "RXVNl9l7Kcw",
-   "start": 15.3,
-   "cuts": [
-    47.8,
-    71.8,
-    119.6
-   ],
-   "qs": [
-    [
-     [
-      "What does she keep telling them to do?",
-      "Back up",
-      "Step up",
-      "Pull up"
      ],
      [
-      "She's too clean, too holy, she's what?",
-      "Godly",
-      "Golden",
-      "Lovely"
-     ],
-     [
-      "She goes for real ones who don't brag about what?",
-      "What they bought her",
-      "Their cars",
-      "Their chains"
-     ],
-     [
-      "Don't be blowin' up her what?",
-      "Phone",
-      "Spot",
-      "Name"
-     ],
-     [
-      "And don't be leavin' what?",
-      "Voice messages",
-      "Love notes",
-      "Flowers"
-     ],
-     [
-      "She can do you better than your what?",
-      "Exes",
-      "Friends",
-      "Last one"
-     ],
-     [
-      "She told him he was talkin' out his what?",
-      "Necklace",
-      "Wallet",
-      "Chain"
-     ]
-    ],
-    [
-     [
-      "She'll leave 'em where she what?",
-      "Met 'em",
-      "Found 'em",
-      "Saw 'em"
-     ],
-     [
-      "Who's waiting in the cut?",
-      "Goons",
-      "Haters",
-      "Fans"
-     ],
-     [
-      "What does she say before 'I know, I know, I know'?",
-      "Woo",
-      "Yeah",
-      "Okay"
-     ],
-     [
-      "He heard about her and was waitin' where?",
-      "At the door",
-      "Outside",
-      "By the car"
-     ],
-     [
-      "What's all on the floor?",
-      "Mink",
+      "\"My name buzzin', that ... comin'\"?",
+      "Fame",
       "Money",
-      "Clothes"
+      "Rain"
      ],
      [
-      "Skating from 6 till late, she'd come in at what time?",
-      "4",
-      "2",
-      "Midnight"
-     ]
-    ],
-    [
-     [
-      "What did they get for the girls?",
-      "Glow sticks",
-      "Bottles",
-      "Balloons"
-     ],
-     [
-      "Don't act like you don't what this?",
-      "Know",
-      "Hear",
-      "Want"
-     ],
-     [
-      "She says she's very what?",
-      "Antisocial",
-      "Outgoing",
-      "Friendly"
-     ],
-     [
-      "Social network ain't her what?",
-      "Motion",
-      "Thing",
-      "Focus"
-     ],
-     [
-      "She says she don't what like that?",
-      "Move",
-      "Talk",
-      "Play"
-     ],
-     [
-      "In the hook she says 'woah woah,' then what?",
-      "Yah yah",
-      "Hey hey",
-      "Uh huh"
+      "Nike Cortez, fresh up out the...?",
+      "Box",
+      "Store",
+      "Bag"
      ]
     ]
    ]

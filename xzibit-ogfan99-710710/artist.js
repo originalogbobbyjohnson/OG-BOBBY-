@@ -160,6 +160,12 @@ window.CFG = {
       "Regulate",
       "Operate",
       "Navigate"
+     ],
+     [
+      "\"Concentrate, move that...\"?",
+      "Weight",
+      "Crowd",
+      "Car"
      ]
     ],
     [
@@ -204,6 +210,18 @@ window.CFG = {
       "Steaks",
       "Eggs",
       "Greens"
+     ],
+     [
+      "\"Hypnotized by the way she...\"?",
+      "Move",
+      "Talk",
+      "Smile"
+     ],
+     [
+      "\"Take your time, you might arrive too...\"?",
+      "Soon",
+      "Late",
+      "Fast"
      ]
     ],
     [
@@ -248,6 +266,18 @@ window.CFG = {
       "Race",
       "Game",
       "Maze"
+     ],
+     [
+      "\"Remain in place, the same mind...\"?",
+      "State",
+      "Frame",
+      "Space"
+     ],
+     [
+      "\"Not too good, don't fit my...\"?",
+      "Taste",
+      "Waist",
+      "Style"
      ]
     ]
    ]
@@ -304,6 +334,18 @@ window.CFG = {
       "Party",
       "Club",
       "Block"
+     ],
+     [
+      "\"I'm a menace to...\"?",
+      "Society",
+      "The streets",
+      "The city"
+     ],
+     [
+      "\"Taking long rides in the G4...\"?",
+      "Plane",
+      "Jet",
+      "Car"
      ]
     ],
     [
@@ -348,6 +390,18 @@ window.CFG = {
       "L.A.",
       "X",
       "Detroit"
+     ],
+     [
+      "\"Feeling kinda rowdy huh? Hey now, hey...\"?",
+      "Now",
+      "Wow",
+      "Down"
+     ],
+     [
+      "\"On a 4 or 5 in the ... lane\"?",
+      "Carpool",
+      "Fast",
+      "Bike"
      ]
     ],
     [
@@ -392,6 +446,12 @@ window.CFG = {
       "Companies",
       "Records",
       "Houses"
+     ],
+     [
+      "\"I got a mean hook, to rattle yo...\"?",
+      "Body",
+      "Brain",
+      "Car"
      ]
     ]
    ]
@@ -486,6 +546,24 @@ window.CFG = {
       "Track",
       "Point",
       "Top"
+     ],
+     [
+      "\"Beware of the...\"?",
+      "Serpent",
+      "Wolf",
+      "Snake"
+     ],
+     [
+      "\"Total domination takes full...\"?",
+      "Concentration",
+      "Dedication",
+      "Motivation"
+     ],
+     [
+      "\"A solid...\"?",
+      "Foundation",
+      "Future",
+      "Family"
      ]
     ],
     [
@@ -524,144 +602,18 @@ window.CFG = {
       "Son",
       "Daughter",
       "Fan"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Multiply",
-   "id": "0zg_IW7qlM8",
-   "start": 18.4,
-   "cuts": [
-    58.5,
-    107.7,
-    176.5
-   ],
-   "qs": [
-    [
-     [
-      "Hands on the what, and he won't drop?",
-      "Ball",
-      "Mic",
-      "Wheel"
      ],
      [
-      "Get a grip while the getting is what?",
-      "Good",
-      "Hot",
-      "Free"
+      "\"So it's like I'm livin' ... at the exact same time\"?",
+      "Twice",
+      "Forever",
+      "Again"
      ],
      [
-      "The game is ten percent skill and the rest is what?",
-      "Hollywood",
-      "Luck",
-      "Money"
-     ],
-     [
-      "He flirts with the idea of quitting the what?",
-      "Game",
-      "Mic",
-      "City"
-     ],
-     [
-      "Instead he'll evolve and continue to what?",
-      "Change",
-      "Grind",
-      "Climb"
-     ],
-     [
-      "Keep it moving, to each his what?",
-      "Own",
-      "Kind",
-      "Crew"
-     ],
-     [
-      "Dedicated to the enemies and what?",
-      "Friends",
-      "Fans",
+      "\"No matter where life takes you, come home to the...\"?",
+      "West",
+      "East",
       "Family"
-     ]
-    ],
-    [
-     [
-      "Above the rest, accept no what?",
-      "Less",
-      "Loss",
-      "Limits"
-     ],
-     [
-      "Go ahead, check the game, be my what?",
-      "Guest",
-      "Judge",
-      "Witness"
-     ],
-     [
-      "Hardhat, punch the what?",
-      "Clock",
-      "Bag",
-      "Wall"
-     ],
-     [
-      "Bigger, stronger, what?",
-      "Faster",
-      "Better",
-      "Harder"
-     ],
-     [
-      "Collect respect like what?",
-      "Paychecks",
-      "Trophies",
-      "Royalties"
-     ],
-     [
-      "He believes in seizing the what?",
-      "Moment",
-      "Day",
-      "Crown"
-     ],
-     [
-      "He's here for what?",
-      "Redemption",
-      "Revenge",
-      "The money"
-     ]
-    ],
-    [
-     [
-      "He's got a what sense?",
-      "Sixth",
-      "Common",
-      "Street"
-     ],
-     [
-      "Whattup who?",
-      "Doc",
-      "Dawg",
-      "X"
-     ],
-     [
-      "Getting down to what?",
-      "Business",
-      "The wire",
-      "Basics"
-     ],
-     [
-      "Which LAPD district does he name?",
-      "Rampart",
-      "Hollenbeck",
-      "Newton"
-     ],
-     [
-      "Lose yourself in the music, move it or what?",
-      "Lose it",
-      "Use it",
-      "Prove it"
-     ],
-     [
-      "Stand firm, solid as the what?",
-      "Ground",
-      "Rock",
-      "Wall"
      ]
     ]
    ]
@@ -712,6 +664,12 @@ window.CFG = {
       "Cricket",
       "Roach",
       "Bee"
+     ],
+     [
+      "\"It's Xzibit, bring it live, one...\"?",
+      "Time",
+      "More",
+      "Night"
      ]
     ],
     [
@@ -750,6 +708,18 @@ window.CFG = {
       "Los Angeles",
       "Detroit",
       "New York"
+     ],
+     [
+      "\"Only for the money and the fame, extra...\"?",
+      "Large",
+      "Cash",
+      "Loud"
+     ],
+     [
+      "No lights, no cameras, \"just...\"?",
+      "Action",
+      "Music",
+      "Money"
      ]
     ],
     [
@@ -788,6 +758,18 @@ window.CFG = {
       "Liquidation",
       "Lyrical",
       "Likwit"
+     ],
+     [
+      "\"But too much of anything can make you a...\"?",
+      "Addict",
+      "Enemy",
+      "Expert"
+     ],
+     [
+      "\"Others going through schemes and pipe...\"?",
+      "Dreams",
+      "Plans",
+      "Lines"
      ]
     ]
    ]
@@ -846,6 +828,12 @@ window.CFG = {
       "Regulate",
       "Operate",
       "Navigate"
+     ],
+     [
+      "\"Concentrate, move that...\"?",
+      "Weight",
+      "Crowd",
+      "Car"
      ]
     ],
     [
@@ -890,6 +878,18 @@ window.CFG = {
       "Steaks",
       "Eggs",
       "Greens"
+     ],
+     [
+      "\"Hypnotized by the way she...\"?",
+      "Move",
+      "Talk",
+      "Smile"
+     ],
+     [
+      "\"Take your time, you might arrive too...\"?",
+      "Soon",
+      "Late",
+      "Fast"
      ]
     ],
     [
@@ -934,6 +934,18 @@ window.CFG = {
       "Race",
       "Game",
       "Maze"
+     ],
+     [
+      "\"Remain in place, the same mind...\"?",
+      "State",
+      "Frame",
+      "Space"
+     ],
+     [
+      "\"Not too good, don't fit my...\"?",
+      "Taste",
+      "Waist",
+      "Style"
      ]
     ]
    ]
@@ -990,6 +1002,18 @@ window.CFG = {
       "Party",
       "Club",
       "Block"
+     ],
+     [
+      "\"I'm a menace to...\"?",
+      "Society",
+      "The streets",
+      "The city"
+     ],
+     [
+      "\"Taking long rides in the G4...\"?",
+      "Plane",
+      "Jet",
+      "Car"
      ]
     ],
     [
@@ -1034,6 +1058,18 @@ window.CFG = {
       "L.A.",
       "X",
       "Detroit"
+     ],
+     [
+      "\"Feeling kinda rowdy huh? Hey now, hey...\"?",
+      "Now",
+      "Wow",
+      "Down"
+     ],
+     [
+      "\"On a 4 or 5 in the ... lane\"?",
+      "Carpool",
+      "Fast",
+      "Bike"
      ]
     ],
     [
@@ -1078,6 +1114,12 @@ window.CFG = {
       "Companies",
       "Records",
       "Houses"
+     ],
+     [
+      "\"I got a mean hook, to rattle yo...\"?",
+      "Body",
+      "Brain",
+      "Car"
      ]
     ]
    ]
@@ -1172,6 +1214,24 @@ window.CFG = {
       "Track",
       "Point",
       "Top"
+     ],
+     [
+      "\"Beware of the...\"?",
+      "Serpent",
+      "Wolf",
+      "Snake"
+     ],
+     [
+      "\"Total domination takes full...\"?",
+      "Concentration",
+      "Dedication",
+      "Motivation"
+     ],
+     [
+      "\"A solid...\"?",
+      "Foundation",
+      "Future",
+      "Family"
      ]
     ],
     [
@@ -1210,144 +1270,18 @@ window.CFG = {
       "Son",
       "Daughter",
       "Fan"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Multiply",
-   "id": "0zg_IW7qlM8",
-   "start": 18.4,
-   "cuts": [
-    58.5,
-    107.7,
-    176.5
-   ],
-   "qs": [
-    [
-     [
-      "Hands on the what, and he won't drop?",
-      "Ball",
-      "Mic",
-      "Wheel"
      ],
      [
-      "Get a grip while the getting is what?",
-      "Good",
-      "Hot",
-      "Free"
+      "\"So it's like I'm livin' ... at the exact same time\"?",
+      "Twice",
+      "Forever",
+      "Again"
      ],
      [
-      "The game is ten percent skill and the rest is what?",
-      "Hollywood",
-      "Luck",
-      "Money"
-     ],
-     [
-      "He flirts with the idea of quitting the what?",
-      "Game",
-      "Mic",
-      "City"
-     ],
-     [
-      "Instead he'll evolve and continue to what?",
-      "Change",
-      "Grind",
-      "Climb"
-     ],
-     [
-      "Keep it moving, to each his what?",
-      "Own",
-      "Kind",
-      "Crew"
-     ],
-     [
-      "Dedicated to the enemies and what?",
-      "Friends",
-      "Fans",
+      "\"No matter where life takes you, come home to the...\"?",
+      "West",
+      "East",
       "Family"
-     ]
-    ],
-    [
-     [
-      "Above the rest, accept no what?",
-      "Less",
-      "Loss",
-      "Limits"
-     ],
-     [
-      "Go ahead, check the game, be my what?",
-      "Guest",
-      "Judge",
-      "Witness"
-     ],
-     [
-      "Hardhat, punch the what?",
-      "Clock",
-      "Bag",
-      "Wall"
-     ],
-     [
-      "Bigger, stronger, what?",
-      "Faster",
-      "Better",
-      "Harder"
-     ],
-     [
-      "Collect respect like what?",
-      "Paychecks",
-      "Trophies",
-      "Royalties"
-     ],
-     [
-      "He believes in seizing the what?",
-      "Moment",
-      "Day",
-      "Crown"
-     ],
-     [
-      "He's here for what?",
-      "Redemption",
-      "Revenge",
-      "The money"
-     ]
-    ],
-    [
-     [
-      "He's got a what sense?",
-      "Sixth",
-      "Common",
-      "Street"
-     ],
-     [
-      "Whattup who?",
-      "Doc",
-      "Dawg",
-      "X"
-     ],
-     [
-      "Getting down to what?",
-      "Business",
-      "The wire",
-      "Basics"
-     ],
-     [
-      "Which LAPD district does he name?",
-      "Rampart",
-      "Hollenbeck",
-      "Newton"
-     ],
-     [
-      "Lose yourself in the music, move it or what?",
-      "Lose it",
-      "Use it",
-      "Prove it"
-     ],
-     [
-      "Stand firm, solid as the what?",
-      "Ground",
-      "Rock",
-      "Wall"
      ]
     ]
    ]
@@ -1398,6 +1332,12 @@ window.CFG = {
       "Cricket",
       "Roach",
       "Bee"
+     ],
+     [
+      "\"It's Xzibit, bring it live, one...\"?",
+      "Time",
+      "More",
+      "Night"
      ]
     ],
     [
@@ -1436,6 +1376,18 @@ window.CFG = {
       "Los Angeles",
       "Detroit",
       "New York"
+     ],
+     [
+      "\"Only for the money and the fame, extra...\"?",
+      "Large",
+      "Cash",
+      "Loud"
+     ],
+     [
+      "No lights, no cameras, \"just...\"?",
+      "Action",
+      "Music",
+      "Money"
      ]
     ],
     [
@@ -1474,6 +1426,18 @@ window.CFG = {
       "Liquidation",
       "Lyrical",
       "Likwit"
+     ],
+     [
+      "\"But too much of anything can make you a...\"?",
+      "Addict",
+      "Enemy",
+      "Expert"
+     ],
+     [
+      "\"Others going through schemes and pipe...\"?",
+      "Dreams",
+      "Plans",
+      "Lines"
      ]
     ]
    ]

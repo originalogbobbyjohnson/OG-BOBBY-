@@ -167,6 +167,18 @@ window.CFG = {
       "Saks",
       "Macy's",
       "Gucci"
+     ],
+     [
+      "If that Rollie ain't at least three hundred, them ain't no...?",
+      "Racks",
+      "Jewels",
+      "Cars"
+     ],
+     [
+      "\"Fill my closet up,...\"?",
+      "Mix-match",
+      "Brand new",
+      "Wall to wall"
      ]
     ],
     [
@@ -211,6 +223,12 @@ window.CFG = {
       "Blue gems",
       "White gems",
       "Pink gems"
+     ],
+     [
+      "\"I can pop it 'cause I'm...\"?",
+      "Him",
+      "Hot",
+      "Rich"
      ]
     ],
     [
@@ -249,6 +267,12 @@ window.CFG = {
       "Ten thousand",
       "Five thousand",
       "Fifty thousand"
+     ],
+     [
+      "He's been gettin' it since the what phone?",
+      "Flip",
+      "Smart",
+      "House"
      ]
     ]
    ]
@@ -299,6 +323,12 @@ window.CFG = {
       "Rappers",
       "Bloggers",
       "Fans"
+     ],
+     [
+      "\"Vezzo, DJ...\"?",
+      "Drama",
+      "Khaled",
+      "Mustard"
      ]
     ],
     [
@@ -343,6 +373,24 @@ window.CFG = {
       "House",
       "Car",
       "Boat"
+     ],
+     [
+      "He don't care for the fame, he just wants the...?",
+      "Money",
+      "Glory",
+      "Respect"
+     ],
+     [
+      "\"Want millions on...\"?",
+      "Millions",
+      "Billions",
+      "Hundreds"
+     ],
+     [
+      "He ain't never chasin' no girls or...?",
+      "Clout",
+      "Cars",
+      "Fame"
      ]
     ],
     [
@@ -381,6 +429,12 @@ window.CFG = {
       "Nervous",
       "Hating",
       "Jealous"
+     ],
+     [
+      "\"Don't really be dancin', just let the money...\"?",
+      "Flip",
+      "Fly",
+      "Talk"
      ]
     ]
    ]
@@ -437,6 +491,18 @@ window.CFG = {
       "OD",
       "Truck",
       "Benz"
+     ],
+     [
+      "\"Franck Muller, Vossy...\"?",
+      "AP",
+      "Rolex",
+      "Cartier"
+     ],
+     [
+      "Which label tag gets shouted?",
+      "Iced Up Records",
+      "Quality Control",
+      "Cash Money"
      ]
     ],
     [
@@ -519,6 +585,24 @@ window.CFG = {
       "Two",
       "Three",
       "Four"
+     ],
+     [
+      "To count it all, he needs how many hands?",
+      "Ten",
+      "Two",
+      "Four"
+     ],
+     [
+      "Counting it up \"might take a...\" what?",
+      "Month",
+      "Week",
+      "Year"
+     ],
+     [
+      "\"Love pinks and...\"?",
+      "Blues",
+      "Greens",
+      "Reds"
      ]
     ]
    ]
@@ -575,6 +659,30 @@ window.CFG = {
       "Cribs",
       "Cars",
       "Chains"
+     ],
+     [
+      "\"When you hit the bricks, new whips and new...\"?",
+      "Bust downs",
+      "Chains",
+      "Rings"
+     ],
+     [
+      "\"Celebratin' like ... when it touch down\"?",
+      "Parades",
+      "Birthdays",
+      "Holidays"
+     ],
+     [
+      "\"Treat the Robins like my new...\"?",
+      "Friends",
+      "Toys",
+      "Shoes"
+     ],
+     [
+      "\"Times change, a hundred racks, the new...\"?",
+      "Ten",
+      "Twenty",
+      "Million"
      ]
     ],
     [
@@ -657,144 +765,18 @@ window.CFG = {
       "Watch",
       "Chain",
       "Car"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Balance",
-   "id": "jsZ_sK0y05s",
-   "start": 4.2,
-   "cuts": [
-    34.4,
-    90.1,
-    185.4
-   ],
-   "qs": [
-    [
-     [
-      "When you say you miss him, he don't what?",
-      "Believe it",
-      "Trust it",
-      "Hear it"
      ],
      [
-      "He's got trust what?",
-      "Issues",
-      "Problems",
-      "Funds"
+      "\"Took a chance for this ... I rock\"?",
+      "Ice",
+      "Ring",
+      "Coat"
      ],
      [
-      "A lot falling off, but we still what?",
-      "Balance",
-      "Ballin'",
-      "Winning"
-     ],
-     [
-      "He's been through everything except a what?",
-      "Wedding ring",
-      "Divorce",
-      "Funeral"
-     ],
-     [
-      "Being on is his what?",
-      "Destiny",
-      "Dream",
-      "Job"
-     ],
-     [
-      "He talks his stuff but bet that he what?",
-      "Backs it",
-      "Means it",
-      "Proves it"
-     ],
-     [
-      "He can't trust a thing you're doing what?",
-      "Telling me",
-      "Showing me",
-      "Giving me"
-     ]
-    ],
-    [
-     [
-      "He's been turning up for how many summers?",
-      "Six",
-      "Four",
-      "Ten"
-     ],
-     [
-      "He just bought another what?",
-      "Cuban",
-      "Rollie",
-      "Chain"
-     ],
-     [
-      "Another Cuban, he's a what?",
-      "Savage",
-      "Rookie",
-      "Rapper"
-     ],
-     [
-      "He's a boss, he ain't what?",
-      "Average",
-      "Broke",
-      "Basic"
-     ],
-     [
-      "Let it hit, bet they what that?",
-      "Feel",
-      "Hear",
-      "Want"
-     ],
-     [
-      "What's the ad-lib after balance?",
-      "Zroom",
-      "Skrrt",
-      "Brrt"
-     ]
-    ],
-    [
-     [
-      "He's finna change his name to what?",
-      "Big Sauce",
-      "Big Boss",
-      "Big Vez"
-     ],
-     [
-      "He made it off the 6 and did it how?",
-      "Historically",
-      "Quickly",
-      "Quietly"
-     ],
-     [
-      "The OGs passed the what to him?",
-      "Torch",
-      "Ball",
-      "Crown"
-     ],
-     [
-      "Alley-oop off the what for him?",
-      "Board",
-      "Glass",
-      "Rim"
-     ],
-     [
-      "He still supports the what?",
-      "Crib",
-      "Block",
-      "Team"
-     ],
-     [
-      "Turnt up, no what him?",
-      "Distorting",
-      "Stopping",
-      "Changing"
-     ],
-     [
-      "So bright, homes look like the what's on?",
-      "Lights",
-      "Sun",
-      "Stars"
+      "Seen a rat get respect and they knew he...?",
+      "Told",
+      "Lied",
+      "Left"
      ]
     ]
    ]
@@ -853,6 +835,18 @@ window.CFG = {
       "Saks",
       "Macy's",
       "Gucci"
+     ],
+     [
+      "If that Rollie ain't at least three hundred, them ain't no...?",
+      "Racks",
+      "Jewels",
+      "Cars"
+     ],
+     [
+      "\"Fill my closet up,...\"?",
+      "Mix-match",
+      "Brand new",
+      "Wall to wall"
      ]
     ],
     [
@@ -897,6 +891,12 @@ window.CFG = {
       "Blue gems",
       "White gems",
       "Pink gems"
+     ],
+     [
+      "\"I can pop it 'cause I'm...\"?",
+      "Him",
+      "Hot",
+      "Rich"
      ]
     ],
     [
@@ -935,6 +935,12 @@ window.CFG = {
       "Ten thousand",
       "Five thousand",
       "Fifty thousand"
+     ],
+     [
+      "He's been gettin' it since the what phone?",
+      "Flip",
+      "Smart",
+      "House"
      ]
     ]
    ]
@@ -985,6 +991,12 @@ window.CFG = {
       "Rappers",
       "Bloggers",
       "Fans"
+     ],
+     [
+      "\"Vezzo, DJ...\"?",
+      "Drama",
+      "Khaled",
+      "Mustard"
      ]
     ],
     [
@@ -1029,6 +1041,24 @@ window.CFG = {
       "House",
       "Car",
       "Boat"
+     ],
+     [
+      "He don't care for the fame, he just wants the...?",
+      "Money",
+      "Glory",
+      "Respect"
+     ],
+     [
+      "\"Want millions on...\"?",
+      "Millions",
+      "Billions",
+      "Hundreds"
+     ],
+     [
+      "He ain't never chasin' no girls or...?",
+      "Clout",
+      "Cars",
+      "Fame"
      ]
     ],
     [
@@ -1067,6 +1097,12 @@ window.CFG = {
       "Nervous",
       "Hating",
       "Jealous"
+     ],
+     [
+      "\"Don't really be dancin', just let the money...\"?",
+      "Flip",
+      "Fly",
+      "Talk"
      ]
     ]
    ]
@@ -1123,6 +1159,18 @@ window.CFG = {
       "OD",
       "Truck",
       "Benz"
+     ],
+     [
+      "\"Franck Muller, Vossy...\"?",
+      "AP",
+      "Rolex",
+      "Cartier"
+     ],
+     [
+      "Which label tag gets shouted?",
+      "Iced Up Records",
+      "Quality Control",
+      "Cash Money"
      ]
     ],
     [
@@ -1205,6 +1253,24 @@ window.CFG = {
       "Two",
       "Three",
       "Four"
+     ],
+     [
+      "To count it all, he needs how many hands?",
+      "Ten",
+      "Two",
+      "Four"
+     ],
+     [
+      "Counting it up \"might take a...\" what?",
+      "Month",
+      "Week",
+      "Year"
+     ],
+     [
+      "\"Love pinks and...\"?",
+      "Blues",
+      "Greens",
+      "Reds"
      ]
     ]
    ]
@@ -1261,6 +1327,30 @@ window.CFG = {
       "Cribs",
       "Cars",
       "Chains"
+     ],
+     [
+      "\"When you hit the bricks, new whips and new...\"?",
+      "Bust downs",
+      "Chains",
+      "Rings"
+     ],
+     [
+      "\"Celebratin' like ... when it touch down\"?",
+      "Parades",
+      "Birthdays",
+      "Holidays"
+     ],
+     [
+      "\"Treat the Robins like my new...\"?",
+      "Friends",
+      "Toys",
+      "Shoes"
+     ],
+     [
+      "\"Times change, a hundred racks, the new...\"?",
+      "Ten",
+      "Twenty",
+      "Million"
      ]
     ],
     [
@@ -1343,144 +1433,18 @@ window.CFG = {
       "Watch",
       "Chain",
       "Car"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Balance",
-   "id": "jsZ_sK0y05s",
-   "start": 4.2,
-   "cuts": [
-    34.4,
-    90.1,
-    185.4
-   ],
-   "qs": [
-    [
-     [
-      "When you say you miss him, he don't what?",
-      "Believe it",
-      "Trust it",
-      "Hear it"
      ],
      [
-      "He's got trust what?",
-      "Issues",
-      "Problems",
-      "Funds"
+      "\"Took a chance for this ... I rock\"?",
+      "Ice",
+      "Ring",
+      "Coat"
      ],
      [
-      "A lot falling off, but we still what?",
-      "Balance",
-      "Ballin'",
-      "Winning"
-     ],
-     [
-      "He's been through everything except a what?",
-      "Wedding ring",
-      "Divorce",
-      "Funeral"
-     ],
-     [
-      "Being on is his what?",
-      "Destiny",
-      "Dream",
-      "Job"
-     ],
-     [
-      "He talks his stuff but bet that he what?",
-      "Backs it",
-      "Means it",
-      "Proves it"
-     ],
-     [
-      "He can't trust a thing you're doing what?",
-      "Telling me",
-      "Showing me",
-      "Giving me"
-     ]
-    ],
-    [
-     [
-      "He's been turning up for how many summers?",
-      "Six",
-      "Four",
-      "Ten"
-     ],
-     [
-      "He just bought another what?",
-      "Cuban",
-      "Rollie",
-      "Chain"
-     ],
-     [
-      "Another Cuban, he's a what?",
-      "Savage",
-      "Rookie",
-      "Rapper"
-     ],
-     [
-      "He's a boss, he ain't what?",
-      "Average",
-      "Broke",
-      "Basic"
-     ],
-     [
-      "Let it hit, bet they what that?",
-      "Feel",
-      "Hear",
-      "Want"
-     ],
-     [
-      "What's the ad-lib after balance?",
-      "Zroom",
-      "Skrrt",
-      "Brrt"
-     ]
-    ],
-    [
-     [
-      "He's finna change his name to what?",
-      "Big Sauce",
-      "Big Boss",
-      "Big Vez"
-     ],
-     [
-      "He made it off the 6 and did it how?",
-      "Historically",
-      "Quickly",
-      "Quietly"
-     ],
-     [
-      "The OGs passed the what to him?",
-      "Torch",
-      "Ball",
-      "Crown"
-     ],
-     [
-      "Alley-oop off the what for him?",
-      "Board",
-      "Glass",
-      "Rim"
-     ],
-     [
-      "He still supports the what?",
-      "Crib",
-      "Block",
-      "Team"
-     ],
-     [
-      "Turnt up, no what him?",
-      "Distorting",
-      "Stopping",
-      "Changing"
-     ],
-     [
-      "So bright, homes look like the what's on?",
-      "Lights",
-      "Sun",
-      "Stars"
+      "Seen a rat get respect and they knew he...?",
+      "Told",
+      "Lied",
+      "Left"
      ]
     ]
    ]

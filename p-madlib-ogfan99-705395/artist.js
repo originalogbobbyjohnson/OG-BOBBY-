@@ -432,169 +432,169 @@ window.CFG = {
    ]
   },
   {
-   "title": "No More Parties in LA (Kanye West)",
-   "id": "NnMuFqsmYSE",
-   "start": 156.5,
+   "title": "All Caps (Madvillain)",
+   "id": "gSJeHDlhYls",
+   "start": 20.7,
    "cuts": [
-    182.6,
-    219.5,
-    271.7
+    45.2,
+    77.7,
+    109.9
    ],
    "qs": [
     [
      [
-      "\"Friday night, tryna make it into the...\"?",
-      "City",
-      "Party",
-      "Club"
+      "\"You can call me, Your...\"?",
+      "Majesty",
+      "Highness",
+      "Honor"
      ],
      [
-      "\"Breakneck speeds, ___ seat, somethin' pretty\"?",
-      "Passenger",
-      "Back",
-      "Driver"
+      "\"Keep your ... charged\"?",
+      "Battery",
+      "Phone",
+      "Mind"
      ],
      [
-      "\"Thinking back to how I got here in the first...\"?",
-      "Place",
-      "Time",
-      "Week"
+      "It's not his fault you kick...?",
+      "Slow",
+      "Fast",
+      "Wrong"
      ],
      [
-      "A backpacker with luxury what?",
-      "Tastebuds",
-      "Habits",
-      "Dreams"
+      "\"The beat is so...\"?",
+      "Butter",
+      "Smooth",
+      "Heavy"
      ],
      [
-      "\"And the Louis Vuitton store got all of my...\"?",
-      "Pay stubs",
-      "Receipts",
-      "Paychecks"
+      "\"Peep the slow...\"?",
+      "Cutter",
+      "Talker",
+      "Mover"
      ],
      [
-      "He made beats for people who were more what?",
-      "Famous",
-      "Rich",
-      "Gifted"
+      "\"As he utter the calm...\"?",
+      "Flow",
+      "Words",
+      "Tone"
      ],
      [
-      "\"When did I become A-list? I wasn't even on a...\"?",
-      "List",
-      "Show",
-      "Track"
+      "He's so nasty it's probably somewhat of a...?",
+      "Travesty",
+      "Tragedy",
+      "Miracle"
      ],
      [
-      "\"When I get on my Steve Jobs, somebody gon' get...\"?",
-      "Fired",
-      "Hired",
-      "Tired"
-     ]
-    ],
-    [
-     [
-      "\"I was uninspired since ___ retired\"?",
-      "Lauryn Hill",
-      "Missy Elliott",
-      "Jay-Z"
-     ],
-     [
-      "\"And 3 Stacks, man, you preaching to the...\"?",
-      "Choir",
+      "Then he told the...?",
+      "People",
       "Crowd",
-      "Church"
+      "World"
      ],
      [
-      "\"Any rumor you ever heard about me was true and...\"?",
-      "Legendary",
-      "Scary",
-      "Necessary"
-     ],
-     [
-      "\"The next generation will be the real...\"?",
-      "Victims",
-      "Winners",
-      "Leaders"
-     ],
-     [
-      "\"I can't fault 'em...\"?",
-      "Really",
-      "Ever",
-      "Fully"
-     ],
-     [
-      "\"She ain't goin' back to...\"?",
-      "Philly",
-      "Chicago",
-      "Houston"
-     ],
-     [
-      "\"Back to our regularly scheduled...\"?",
-      "Programmin'",
-      "Broadcast",
-      "Show"
-     ],
-     [
-      "\"Of weak content and slow...\"?",
-      "Jammin'",
-      "Dancin'",
-      "Rappin'"
+      "\"You know it won't...\"?",
+      "Stick",
+      "Stop",
+      "Last"
      ]
     ],
     [
      [
-      "\"Mulholland Drive need to put up some...\"?",
-      "Barricades",
-      "Stop signs",
-      "Streetlights"
+      "\"Don't talk about my...\"?",
+      "Moms",
+      "Pops",
+      "Crew"
      ],
      [
-      "\"The problem ain't I be drivin', the problem is I be...\"?",
-      "Textin'",
-      "Speedin'",
-      "Sleepin'"
+      "\"Sometimes he rhyme quick, sometimes he rhyme...\"?",
+      "Slow",
+      "Fast",
+      "Long"
      ],
      [
-      "\"That's why I'd rather take the...\"?",
-      "405",
-      "101",
-      "10"
+      "\"Whip up a slice of nice verse...\"?",
+      "Pie",
+      "Cake",
+      "Bread"
      ],
      [
-      "\"I be worried 'bout my daughter, I be worried 'bout...\"?",
-      "Kim",
-      "Mom",
-      "Kids"
+      "\"Hit it on the first...\"?",
+      "Try",
+      "Day",
+      "Take"
      ],
      [
-      "\"But Saint is baby...\"?",
-      "Ye",
-      "Jay",
-      "Pablo"
+      "\"Villain, the worst...\"?",
+      "Guy",
+      "Kind",
+      "Man"
      ],
      [
-      "\"Every agent I know know I hate...\"?",
-      "Agents",
-      "Critics",
-      "Labels"
+      "He won't stop 'til he got the...?",
+      "Masses",
+      "Classes",
+      "Glasses"
      ],
      [
-      "\"I'm too black, I'm too vocal, I'm too...\"?",
-      "Flagrant",
-      "Famous",
-      "Faded"
+      "\"Through flows of hot...\"?",
+      "Molasses",
+      "Sauce",
+      "Lava"
      ],
      [
-      "\"Some days I'm in my Yeezys, some days I'm in my...\"?",
-      "Vans",
-      "Jordans",
-      "Timbs"
+      "\"Just remember ALL CAPS when you spell the man...\"?",
+      "Name",
+      "Rhyme",
+      "Game"
+     ]
+    ],
+    [
+     [
+      "\"You know it like a poet, like baby...\"?",
+      "Doll",
+      "Girl",
+      "Blue"
      ],
      [
-      "\"But the writer's block is over, emcees, cancel your...\"?",
-      "Plans",
-      "Shows",
-      "Deals"
+      "She tried to say she gave him her...?",
+      "All",
+      "Heart",
+      "Best"
+     ],
+     [
+      "\"All bets off, the villain got the ... rigged\"?",
+      "Dice",
+      "Cards",
+      "Game"
+     ],
+     [
+      "\"The man with the sliced...\"?",
+      "Wig",
+      "Hat",
+      "Coat"
+     ],
+     [
+      "\"Allegedly, the ... is still ongoing\"?",
+      "Investigation",
+      "Trial",
+      "Party"
+     ],
+     [
+      "\"In this pesky nation he gots the best con...\"?",
+      "Flowin'",
+      "Goin'",
+      "Showin'"
+     ],
+     [
+      "\"The pot doubles, now they really got...\"?",
+      "Troubles",
+      "Problems",
+      "Bills"
+     ],
+     [
+      "\"Madman never go pop like...\"?",
+      "Snot bubbles",
+      "Balloons",
+      "Soda cans"
      ]
     ]
    ]
@@ -1100,169 +1100,169 @@ window.CFG = {
    ]
   },
   {
-   "title": "No More Parties in LA (Kanye West)",
-   "id": "NnMuFqsmYSE",
-   "start": 156.5,
+   "title": "All Caps (Madvillain)",
+   "id": "gSJeHDlhYls",
+   "start": 20.7,
    "cuts": [
-    182.6,
-    219.5,
-    271.7
+    45.2,
+    77.7,
+    109.9
    ],
    "qs": [
     [
      [
-      "\"Friday night, tryna make it into the...\"?",
-      "City",
-      "Party",
-      "Club"
+      "\"You can call me, Your...\"?",
+      "Majesty",
+      "Highness",
+      "Honor"
      ],
      [
-      "\"Breakneck speeds, ___ seat, somethin' pretty\"?",
-      "Passenger",
-      "Back",
-      "Driver"
+      "\"Keep your ... charged\"?",
+      "Battery",
+      "Phone",
+      "Mind"
      ],
      [
-      "\"Thinking back to how I got here in the first...\"?",
-      "Place",
-      "Time",
-      "Week"
+      "It's not his fault you kick...?",
+      "Slow",
+      "Fast",
+      "Wrong"
      ],
      [
-      "A backpacker with luxury what?",
-      "Tastebuds",
-      "Habits",
-      "Dreams"
+      "\"The beat is so...\"?",
+      "Butter",
+      "Smooth",
+      "Heavy"
      ],
      [
-      "\"And the Louis Vuitton store got all of my...\"?",
-      "Pay stubs",
-      "Receipts",
-      "Paychecks"
+      "\"Peep the slow...\"?",
+      "Cutter",
+      "Talker",
+      "Mover"
      ],
      [
-      "He made beats for people who were more what?",
-      "Famous",
-      "Rich",
-      "Gifted"
+      "\"As he utter the calm...\"?",
+      "Flow",
+      "Words",
+      "Tone"
      ],
      [
-      "\"When did I become A-list? I wasn't even on a...\"?",
-      "List",
-      "Show",
-      "Track"
+      "He's so nasty it's probably somewhat of a...?",
+      "Travesty",
+      "Tragedy",
+      "Miracle"
      ],
      [
-      "\"When I get on my Steve Jobs, somebody gon' get...\"?",
-      "Fired",
-      "Hired",
-      "Tired"
-     ]
-    ],
-    [
-     [
-      "\"I was uninspired since ___ retired\"?",
-      "Lauryn Hill",
-      "Missy Elliott",
-      "Jay-Z"
-     ],
-     [
-      "\"And 3 Stacks, man, you preaching to the...\"?",
-      "Choir",
+      "Then he told the...?",
+      "People",
       "Crowd",
-      "Church"
+      "World"
      ],
      [
-      "\"Any rumor you ever heard about me was true and...\"?",
-      "Legendary",
-      "Scary",
-      "Necessary"
-     ],
-     [
-      "\"The next generation will be the real...\"?",
-      "Victims",
-      "Winners",
-      "Leaders"
-     ],
-     [
-      "\"I can't fault 'em...\"?",
-      "Really",
-      "Ever",
-      "Fully"
-     ],
-     [
-      "\"She ain't goin' back to...\"?",
-      "Philly",
-      "Chicago",
-      "Houston"
-     ],
-     [
-      "\"Back to our regularly scheduled...\"?",
-      "Programmin'",
-      "Broadcast",
-      "Show"
-     ],
-     [
-      "\"Of weak content and slow...\"?",
-      "Jammin'",
-      "Dancin'",
-      "Rappin'"
+      "\"You know it won't...\"?",
+      "Stick",
+      "Stop",
+      "Last"
      ]
     ],
     [
      [
-      "\"Mulholland Drive need to put up some...\"?",
-      "Barricades",
-      "Stop signs",
-      "Streetlights"
+      "\"Don't talk about my...\"?",
+      "Moms",
+      "Pops",
+      "Crew"
      ],
      [
-      "\"The problem ain't I be drivin', the problem is I be...\"?",
-      "Textin'",
-      "Speedin'",
-      "Sleepin'"
+      "\"Sometimes he rhyme quick, sometimes he rhyme...\"?",
+      "Slow",
+      "Fast",
+      "Long"
      ],
      [
-      "\"That's why I'd rather take the...\"?",
-      "405",
-      "101",
-      "10"
+      "\"Whip up a slice of nice verse...\"?",
+      "Pie",
+      "Cake",
+      "Bread"
      ],
      [
-      "\"I be worried 'bout my daughter, I be worried 'bout...\"?",
-      "Kim",
-      "Mom",
-      "Kids"
+      "\"Hit it on the first...\"?",
+      "Try",
+      "Day",
+      "Take"
      ],
      [
-      "\"But Saint is baby...\"?",
-      "Ye",
-      "Jay",
-      "Pablo"
+      "\"Villain, the worst...\"?",
+      "Guy",
+      "Kind",
+      "Man"
      ],
      [
-      "\"Every agent I know know I hate...\"?",
-      "Agents",
-      "Critics",
-      "Labels"
+      "He won't stop 'til he got the...?",
+      "Masses",
+      "Classes",
+      "Glasses"
      ],
      [
-      "\"I'm too black, I'm too vocal, I'm too...\"?",
-      "Flagrant",
-      "Famous",
-      "Faded"
+      "\"Through flows of hot...\"?",
+      "Molasses",
+      "Sauce",
+      "Lava"
      ],
      [
-      "\"Some days I'm in my Yeezys, some days I'm in my...\"?",
-      "Vans",
-      "Jordans",
-      "Timbs"
+      "\"Just remember ALL CAPS when you spell the man...\"?",
+      "Name",
+      "Rhyme",
+      "Game"
+     ]
+    ],
+    [
+     [
+      "\"You know it like a poet, like baby...\"?",
+      "Doll",
+      "Girl",
+      "Blue"
      ],
      [
-      "\"But the writer's block is over, emcees, cancel your...\"?",
-      "Plans",
-      "Shows",
-      "Deals"
+      "She tried to say she gave him her...?",
+      "All",
+      "Heart",
+      "Best"
+     ],
+     [
+      "\"All bets off, the villain got the ... rigged\"?",
+      "Dice",
+      "Cards",
+      "Game"
+     ],
+     [
+      "\"The man with the sliced...\"?",
+      "Wig",
+      "Hat",
+      "Coat"
+     ],
+     [
+      "\"Allegedly, the ... is still ongoing\"?",
+      "Investigation",
+      "Trial",
+      "Party"
+     ],
+     [
+      "\"In this pesky nation he gots the best con...\"?",
+      "Flowin'",
+      "Goin'",
+      "Showin'"
+     ],
+     [
+      "\"The pot doubles, now they really got...\"?",
+      "Troubles",
+      "Problems",
+      "Bills"
+     ],
+     [
+      "\"Madman never go pop like...\"?",
+      "Snot bubbles",
+      "Balloons",
+      "Soda cans"
      ]
     ]
    ]

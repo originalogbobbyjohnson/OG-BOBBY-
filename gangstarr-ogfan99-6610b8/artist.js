@@ -156,6 +156,18 @@ window.CFG = {
       "Guru",
       "Teacher",
       "Doctor"
+     ],
+     [
+      "\"The ... is gone, but what you did was still wrong\"?",
+      "Pain",
+      "Fame",
+      "Love"
+     ],
+     [
+      "\"Nevertheless, cleverness can't...\"?",
+      "Impress",
+      "Last",
+      "Win"
      ]
     ],
     [
@@ -200,6 +212,18 @@ window.CFG = {
       "Premier",
       "Big Shug",
       "Jeru"
+     ],
+     [
+      "\"It's how you ... 'em up\"?",
+      "Hook",
+      "Mix",
+      "Line"
+     ],
+     [
+      "\"The life I live and kick the ... I kick\"?",
+      "Lyrics",
+      "Rhymes",
+      "Beats"
      ]
     ],
     [
@@ -244,150 +268,12 @@ window.CFG = {
       "Daytime talk show",
       "Gossip column",
       "Late night show"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Royalty",
-   "id": "r0X-SWwPXVc",
-   "start": 19.8,
-   "cuts": [
-    53.2,
-    85.1,
-    151.7
-   ],
-   "qs": [
-    [
-     [
-      "\"One of the meanest and the\" what?",
-      "Cleanest",
-      "Keenest",
-      "Leanest"
      ],
      [
-      "\"Been doin' this for\" how long?",
-      "Eons",
-      "Decades",
-      "Ages"
-     ],
-     [
-      "\"Vision of\" what?",
-      "Excellence",
-      "Greatness",
-      "The future"
-     ],
-     [
-      "\"Bout to make some dead presidents, macking a\" what?",
-      "Million G",
-      "Hundred G",
-      "Billion G"
-     ],
-     [
-      "\"Products and puppets and\" what?",
-      "Pawns",
-      "Clowns",
-      "Props"
-     ],
-     [
-      "\"Waving my mic like a\" what?",
-      "Scepter",
-      "Sword",
-      "Flag"
-     ],
-     [
-      "He's a \"descendant of the\" what?",
-      "Kings and queens",
-      "Pharaohs",
-      "Gods"
-     ]
-    ],
-    [
-     [
-      "\"The overlord, cream of the\" what?",
-      "Crop",
-      "Class",
-      "World"
-     ],
-     [
-      "\"Spent years buildin' with cats in the\" where?",
-      "Streets",
-      "Studio",
-      "Park"
-     ],
-     [
-      "\"Again,\" who \"has done it\"?",
-      "Gang Starr",
-      "Big Shug",
-      "Jeru"
-     ],
-     [
-      "\"The ground be hot under our\" what?",
-      "Feet",
-      "Shoes",
-      "Boots"
-     ],
-     [
-      "\"We be listening to beats to keep the\" what \"complete\"?",
-      "Cypher",
-      "Circle",
-      "Album"
-     ],
-     [
-      "\"Whether you being schooled, or in the\" where?",
-      "Library",
-      "Classroom",
-      "Kitchen"
-     ],
-     [
-      "\"Realize that your essence is\" what?",
-      "Divine",
-      "Royal",
-      "Golden"
-     ]
-    ],
-    [
-     [
-      "\"My honey anoints me with\" what?",
-      "Oils",
-      "Gold",
-      "Flowers"
-     ],
-     [
-      "\"She don't sweat me for my loot, my fame, or my\" what?",
-      "Ride",
-      "Rhymes",
-      "Name"
-     ],
-     [
-      "\"A lot of ladies out there be lookin'\" what?",
-      "Lovely",
-      "Lonely",
-      "Lucky"
-     ],
-     [
-      "\"Word to Bugsy, and to\" who?",
-      "Red Alert",
-      "Kid Capri",
-      "Mister Cee"
-     ],
-     [
-      "Which DJ is shouted out \"to make your head jerk\"?",
-      "Funkmaster Flex",
-      "Clark Kent",
-      "Kid Capri"
-     ],
-     [
-      "\"The best way, it ain't always the\" what?",
-      "Fast way",
-      "Hard way",
-      "Easy way"
-     ],
-     [
-      "\"I'll open up the door always before you\" what?",
-      "Pass me",
-      "Leave",
-      "Ask me"
+      "\"I stopped coming by 'cause of the way you...\"?",
+      "Act",
+      "Talk",
+      "Dress"
      ]
     ]
    ]
@@ -444,6 +330,18 @@ window.CFG = {
       "Baggy slacks",
       "Leather jackets",
       "Fresh kicks"
+     ],
+     [
+      "Sounds that are what?",
+      "Profound",
+      "Profane",
+      "Proud"
+     ],
+     [
+      "\"Right about now, I use my...\"?",
+      "Authority",
+      "Talent",
+      "Voice"
      ]
     ],
     [
@@ -488,6 +386,24 @@ window.CFG = {
       "Plague",
       "Flu",
       "Wildfire"
+     ],
+     [
+      "\"The beat is sinister, Primo makes you...\"?",
+      "Relax",
+      "Dance",
+      "Smile"
+     ],
+     [
+      "\"I be bringing ... through the way that I rap\"?",
+      "Salvation",
+      "Wisdom",
+      "Peace"
+     ],
+     [
+      "\"I keep my soul tight and let these lines take...\"?",
+      "Flight",
+      "Over",
+      "Shape"
      ]
     ],
     [
@@ -532,6 +448,12 @@ window.CFG = {
       "Rayon",
       "Plastic",
       "Nylon"
+     ],
+     [
+      "\"Let 'em know, do your thing, God, keep it...\"?",
+      "Live",
+      "Real",
+      "Tight"
      ]
     ]
    ]
@@ -582,6 +504,12 @@ window.CFG = {
       "Whole joint",
       "Whole show",
       "Whole block"
+     ],
+     [
+      "\"We all must meet our moment of...\"?",
+      "Truth",
+      "Glory",
+      "Fame"
      ]
     ],
     [
@@ -620,6 +548,18 @@ window.CFG = {
       "Judge",
       "Speak",
       "Leave"
+     ],
+     [
+      "\"It's best to step back, and observe with...\"?",
+      "Couth",
+      "Care",
+      "Caution"
+     ],
+     [
+      "\"You may not know the ... people don't speak of\"?",
+      "Hardships",
+      "Secrets",
+      "Stories"
      ]
     ],
     [
@@ -658,6 +598,18 @@ window.CFG = {
       "Day",
       "Bone",
       "Time"
+     ],
+     [
+      "\"God works in a ... way\"?",
+      "Mysterious",
+      "Beautiful",
+      "Special"
+     ],
+     [
+      "\"Rememberin' the days of my...\"?",
+      "Youth",
+      "Past",
+      "Life"
      ]
     ]
    ]
@@ -708,6 +660,12 @@ window.CFG = {
       "Mass appeal",
       "A hit record",
       "Big money"
+     ],
+     [
+      "\"With my unique skills, nah, you can't...\"?",
+      "Compare me",
+      "Catch me",
+      "Stop me"
      ]
     ],
     [
@@ -746,6 +704,18 @@ window.CFG = {
       "Care",
       "Ride",
       "Pray"
+     ],
+     [
+      "\"Money's growing like ... with the mass appeal\"?",
+      "Grass",
+      "Weeds",
+      "Trees"
+     ],
+     [
+      "\"'Cause without some of them I wouldn't be...\"?",
+      "Here",
+      "Free",
+      "Great"
      ]
     ],
     [
@@ -784,6 +754,18 @@ window.CFG = {
       "Wands",
       "Wizards",
       "Spells"
+     ],
+     [
+      "\"Gimme a fly beat and I'm all...\"?",
+      "In it",
+      "Over it",
+      "On it"
+     ],
+     [
+      "\"So I'ma end this...\"?",
+      "Lecture",
+      "Session",
+      "Story"
      ]
     ]
    ]
@@ -842,6 +824,18 @@ window.CFG = {
       "Guru",
       "Teacher",
       "Doctor"
+     ],
+     [
+      "\"The ... is gone, but what you did was still wrong\"?",
+      "Pain",
+      "Fame",
+      "Love"
+     ],
+     [
+      "\"Nevertheless, cleverness can't...\"?",
+      "Impress",
+      "Last",
+      "Win"
      ]
     ],
     [
@@ -886,6 +880,18 @@ window.CFG = {
       "Premier",
       "Big Shug",
       "Jeru"
+     ],
+     [
+      "\"It's how you ... 'em up\"?",
+      "Hook",
+      "Mix",
+      "Line"
+     ],
+     [
+      "\"The life I live and kick the ... I kick\"?",
+      "Lyrics",
+      "Rhymes",
+      "Beats"
      ]
     ],
     [
@@ -930,150 +936,12 @@ window.CFG = {
       "Daytime talk show",
       "Gossip column",
       "Late night show"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Royalty",
-   "id": "r0X-SWwPXVc",
-   "start": 19.8,
-   "cuts": [
-    53.2,
-    85.1,
-    151.7
-   ],
-   "qs": [
-    [
-     [
-      "\"One of the meanest and the\" what?",
-      "Cleanest",
-      "Keenest",
-      "Leanest"
      ],
      [
-      "\"Been doin' this for\" how long?",
-      "Eons",
-      "Decades",
-      "Ages"
-     ],
-     [
-      "\"Vision of\" what?",
-      "Excellence",
-      "Greatness",
-      "The future"
-     ],
-     [
-      "\"Bout to make some dead presidents, macking a\" what?",
-      "Million G",
-      "Hundred G",
-      "Billion G"
-     ],
-     [
-      "\"Products and puppets and\" what?",
-      "Pawns",
-      "Clowns",
-      "Props"
-     ],
-     [
-      "\"Waving my mic like a\" what?",
-      "Scepter",
-      "Sword",
-      "Flag"
-     ],
-     [
-      "He's a \"descendant of the\" what?",
-      "Kings and queens",
-      "Pharaohs",
-      "Gods"
-     ]
-    ],
-    [
-     [
-      "\"The overlord, cream of the\" what?",
-      "Crop",
-      "Class",
-      "World"
-     ],
-     [
-      "\"Spent years buildin' with cats in the\" where?",
-      "Streets",
-      "Studio",
-      "Park"
-     ],
-     [
-      "\"Again,\" who \"has done it\"?",
-      "Gang Starr",
-      "Big Shug",
-      "Jeru"
-     ],
-     [
-      "\"The ground be hot under our\" what?",
-      "Feet",
-      "Shoes",
-      "Boots"
-     ],
-     [
-      "\"We be listening to beats to keep the\" what \"complete\"?",
-      "Cypher",
-      "Circle",
-      "Album"
-     ],
-     [
-      "\"Whether you being schooled, or in the\" where?",
-      "Library",
-      "Classroom",
-      "Kitchen"
-     ],
-     [
-      "\"Realize that your essence is\" what?",
-      "Divine",
-      "Royal",
-      "Golden"
-     ]
-    ],
-    [
-     [
-      "\"My honey anoints me with\" what?",
-      "Oils",
-      "Gold",
-      "Flowers"
-     ],
-     [
-      "\"She don't sweat me for my loot, my fame, or my\" what?",
-      "Ride",
-      "Rhymes",
-      "Name"
-     ],
-     [
-      "\"A lot of ladies out there be lookin'\" what?",
-      "Lovely",
-      "Lonely",
-      "Lucky"
-     ],
-     [
-      "\"Word to Bugsy, and to\" who?",
-      "Red Alert",
-      "Kid Capri",
-      "Mister Cee"
-     ],
-     [
-      "Which DJ is shouted out \"to make your head jerk\"?",
-      "Funkmaster Flex",
-      "Clark Kent",
-      "Kid Capri"
-     ],
-     [
-      "\"The best way, it ain't always the\" what?",
-      "Fast way",
-      "Hard way",
-      "Easy way"
-     ],
-     [
-      "\"I'll open up the door always before you\" what?",
-      "Pass me",
-      "Leave",
-      "Ask me"
+      "\"I stopped coming by 'cause of the way you...\"?",
+      "Act",
+      "Talk",
+      "Dress"
      ]
     ]
    ]
@@ -1130,6 +998,18 @@ window.CFG = {
       "Baggy slacks",
       "Leather jackets",
       "Fresh kicks"
+     ],
+     [
+      "Sounds that are what?",
+      "Profound",
+      "Profane",
+      "Proud"
+     ],
+     [
+      "\"Right about now, I use my...\"?",
+      "Authority",
+      "Talent",
+      "Voice"
      ]
     ],
     [
@@ -1174,6 +1054,24 @@ window.CFG = {
       "Plague",
       "Flu",
       "Wildfire"
+     ],
+     [
+      "\"The beat is sinister, Primo makes you...\"?",
+      "Relax",
+      "Dance",
+      "Smile"
+     ],
+     [
+      "\"I be bringing ... through the way that I rap\"?",
+      "Salvation",
+      "Wisdom",
+      "Peace"
+     ],
+     [
+      "\"I keep my soul tight and let these lines take...\"?",
+      "Flight",
+      "Over",
+      "Shape"
      ]
     ],
     [
@@ -1218,6 +1116,12 @@ window.CFG = {
       "Rayon",
       "Plastic",
       "Nylon"
+     ],
+     [
+      "\"Let 'em know, do your thing, God, keep it...\"?",
+      "Live",
+      "Real",
+      "Tight"
      ]
     ]
    ]
@@ -1268,6 +1172,12 @@ window.CFG = {
       "Whole joint",
       "Whole show",
       "Whole block"
+     ],
+     [
+      "\"We all must meet our moment of...\"?",
+      "Truth",
+      "Glory",
+      "Fame"
      ]
     ],
     [
@@ -1306,6 +1216,18 @@ window.CFG = {
       "Judge",
       "Speak",
       "Leave"
+     ],
+     [
+      "\"It's best to step back, and observe with...\"?",
+      "Couth",
+      "Care",
+      "Caution"
+     ],
+     [
+      "\"You may not know the ... people don't speak of\"?",
+      "Hardships",
+      "Secrets",
+      "Stories"
      ]
     ],
     [
@@ -1344,6 +1266,18 @@ window.CFG = {
       "Day",
       "Bone",
       "Time"
+     ],
+     [
+      "\"God works in a ... way\"?",
+      "Mysterious",
+      "Beautiful",
+      "Special"
+     ],
+     [
+      "\"Rememberin' the days of my...\"?",
+      "Youth",
+      "Past",
+      "Life"
      ]
     ]
    ]
@@ -1394,6 +1328,12 @@ window.CFG = {
       "Mass appeal",
       "A hit record",
       "Big money"
+     ],
+     [
+      "\"With my unique skills, nah, you can't...\"?",
+      "Compare me",
+      "Catch me",
+      "Stop me"
      ]
     ],
     [
@@ -1432,6 +1372,18 @@ window.CFG = {
       "Care",
       "Ride",
       "Pray"
+     ],
+     [
+      "\"Money's growing like ... with the mass appeal\"?",
+      "Grass",
+      "Weeds",
+      "Trees"
+     ],
+     [
+      "\"'Cause without some of them I wouldn't be...\"?",
+      "Here",
+      "Free",
+      "Great"
      ]
     ],
     [
@@ -1470,6 +1422,18 @@ window.CFG = {
       "Wands",
       "Wizards",
       "Spells"
+     ],
+     [
+      "\"Gimme a fly beat and I'm all...\"?",
+      "In it",
+      "Over it",
+      "On it"
+     ],
+     [
+      "\"So I'ma end this...\"?",
+      "Lecture",
+      "Session",
+      "Story"
      ]
     ]
    ]

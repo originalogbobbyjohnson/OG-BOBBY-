@@ -533,217 +533,217 @@ window.CFG = {
    ]
   },
   {
-   "title": "Overnight Celebrity",
-   "id": "I177W0XJlT4",
-   "start": 46.6,
+   "title": "Lavish (feat. Pharrell Williams)",
+   "id": "_ESH5kAJ3LQ",
+   "start": 13.5,
    "cuts": [
-    83.3,
-    133.7,
-    228.8
+    56.5,
+    121.5,
+    192.4
    ],
    "qs": [
     [
      [
-      "Girl I see you in them what jeans?",
-      "Apple Bottom",
-      "Baby Phat",
-      "True Religion"
+      "\"You want the lavish crib and fancy...\"?",
+      "Cars",
+      "Clothes",
+      "Chains"
      ],
      [
-      "What's on her back?",
-      "Chinchilla",
-      "Mink",
-      "Leather"
+      "\"You want the face, on that ... shinin'\"?",
+      "Rolex",
+      "Cartier",
+      "Chain"
      ],
      [
-      "He wants to know her what?",
-      "Name",
-      "Sign",
-      "Number"
+      "Shinin' like the...?",
+      "Stars",
+      "Sun",
+      "Moon"
      ],
      [
-      "He'll put her in a chameleon what?",
-      "Range",
+      "\"Don't worry Mayne, you could...\"?",
+      "Get it",
+      "Make it",
+      "Have it"
+     ],
+     [
+      "\"If you look in the sky and you don't see your...\"?",
+      "Dream",
+      "Star",
+      "Plane"
+     ],
+     [
+      "\"Now hear the words that I flow when I...\"?",
+      "Spit",
+      "Sing",
+      "Write"
+     ],
+     [
+      "Shorties be havin' dreams of goin'...?",
+      "Legit",
+      "Home",
+      "Pro"
+     ],
+     [
+      "\"It's on, ain't nuttin' gon' ... us now\"?",
+      "Stop",
+      "Catch",
+      "Hold"
+     ],
+     [
+      "\"Spinners rollin' up the block while they pump out...\"?",
+      "Noise",
+      "Bass",
+      "Music"
+     ],
+     [
+      "\"Know the difference between real and...\"?",
+      "Fake",
+      "Fame",
+      "False"
+     ],
+     [
+      "\"Open your mind, you got more than the ... to take\"?",
+      "Skill",
+      "Time",
+      "Will"
+     ]
+    ],
+    [
+     [
+      "Two times for the ones with their hands in the...?",
+      "Air",
+      "Sky",
+      "Pockets"
+     ],
+     [
+      "\"Singin' a...\"?",
+      "Prayer",
+      "Song",
+      "Hymn"
+     ],
+     [
+      "\"Yes, I know that...\"?",
+      "Puzzle",
+      "Story",
+      "Struggle"
+     ],
+     [
+      "\"You're smokin' your life...\"?",
+      "Away",
+      "Up",
+      "Out"
+     ],
+     [
+      "\"Look at me, big car, big house, big...\"?",
+      "Jewels",
+      "Money",
+      "Dreams"
+     ],
+     [
+      "\"All that came out my...\"?",
+      "Backpack",
+      "Pocket",
+      "Notebook"
+     ],
+     [
+      "\"Even though that hurt, I just ... past that\"?",
+      "Skated",
+      "Walked",
+      "Drove"
+     ],
+     [
+      "\"Horse on the...\"?",
+      "Hood",
+      "Chain",
+      "Wheel"
+     ],
+     [
+      "\"Make a virtual picture, and spin...\"?",
+      "Around",
+      "Away",
+      "Out"
+     ],
+     [
+      "\"Focus up, we gotta hit it...\"?",
+      "Now",
+      "Hard",
+      "Twice"
+     ],
+     [
+      "\"This dedicated to my man up in...\"?",
+      "Norfolk",
+      "Chicago",
+      "Richmond"
+     ]
+    ],
+    [
+     [
+      "\"Ha ha...\"?",
+      "Wait",
+      "Stop",
+      "Yeah"
+     ],
+     [
+      "\"Through the wisdom of a...\"?",
+      "Prism",
+      "Prophet",
+      "Mirror"
+     ],
+     [
+      "Who does he listen to spit to the track?",
+      "Pharrell",
+      "Kanye",
+      "Timbaland"
+     ],
+     [
+      "\"Pull up in a ... Bentley\"?",
+      "Burgundy",
+      "Black",
+      "White"
+     ],
+     [
+      "\"I ain't speculatin' homey I just stick to the...\"?",
+      "Facts",
+      "Plan",
+      "Script"
+     ],
+     [
+      "\"If you wanna get the money and the ... and the mob\"?",
+      "Status",
+      "Cars",
+      "Fame"
+     ],
+     [
+      "\"Better ride when you roll with the...\"?",
+      "Crew",
+      "Gang",
+      "Squad"
+     ],
+     [
+      "\"When you hear this in the club then you know what to...\"?",
+      "Do",
+      "Say",
+      "Play"
+     ],
+     [
+      "\"Throw these stacks in the black...\"?",
+      "Cadillac",
       "Benz",
-      "Jag"
+      "Range"
      ],
      [
-      "She's got him hotter than a what?",
-      "Oven",
-      "Fire",
-      "Stove"
+      "\"Get it like Twista and...\"?",
+      "Neptunes",
+      "Timbaland",
+      "Kanye"
      ],
      [
-      "He says she oughta be in what?",
-      "Pictures",
-      "Magazines",
-      "Movies"
-     ],
-     [
-      "He sees her career going how?",
-      "Sky high",
-      "Far away",
-      "Straight up"
-     ],
-     [
-      "Taking her home to the crib in the what?",
-      "Chi",
-      "Lou",
-      "Bay"
-     ],
-     [
-      "The fellas are on some who?",
-      "Johnny Gill",
-      "Bobby Brown",
-      "Ralph Tresvant"
-     ],
-     [
-      "Kicking it on the couch at what?",
-      "106 & Park",
-      "The Grammys",
-      "The studio"
-     ],
-     [
-      "Her dress is better than whose?",
-      "Jennifer's",
-      "Beyonce's",
-      "Halle's"
-     ]
-    ],
-    [
-     [
-      "With him, he can mold your what?",
-      "Life",
-      "Style",
-      "Look"
-     ],
-     [
-      "Who told him she's the prototype?",
-      "Dre",
-      "Ye",
-      "Pharrell"
-     ],
-     [
-      "If you want fame, you can take that what?",
-      "Path",
-      "Road",
-      "Chance"
-     ],
-     [
-      "Candlelights before you take a what?",
-      "Bath",
-      "Nap",
-      "Trip"
-     ],
-     [
-      "Jimmy Choo and whose bags?",
-      "Marc Jacobs",
-      "Louis Vuitton",
-      "Coach"
-     ],
-     [
-      "He can cop her a what?",
-      "2003",
-      "2004",
-      "2001"
-     ],
-     [
-      "He can get her on CDs and what?",
-      "DVDs",
-      "Magazines",
-      "Billboards"
-     ],
-     [
-      "He'll take her to BeBe's and what?",
-      "BCBG",
-      "Bloomingdale's",
-      "Macy's"
-     ],
-     [
-      "He'll protect her from who?",
-      "Others",
-      "Haters",
-      "Paparazzi"
-     ],
-     [
-      "He can see her in some Gucci or who?",
-      "Roberto Cavalli",
-      "Versace",
-      "Dolce"
-     ],
-     [
-      "She's gon' put a hurt on 'em hard in the what?",
-      "Party",
-      "Club",
-      "Street"
-     ]
-    ],
-    [
-     [
-      "She was born to be a what?",
-      "Pro",
-      "Star",
-      "Model"
-     ],
-     [
-      "How she poses taking what?",
-      "Photos",
-      "Bows",
-      "Notes"
-     ],
-     [
-      "Come here girl, he can see you're what?",
-      "Bored",
-      "Tired",
-      "Lonely"
-     ],
-     [
-      "He'll turn you to the what he sees you for?",
-      "Queen",
-      "Star",
-      "Lady"
-     ],
-     [
-      "Take you shopping on sprees in what?",
-      "Stores",
-      "Malls",
-      "Paris"
-     ],
-     [
-      "Which awards will he get you to first?",
-      "MTV Awards",
-      "The Grammys",
-      "The Oscars"
-     ],
-     [
-      "We about to do a what tonight?",
-      "Show",
-      "Shoot",
-      "Party"
-     ],
-     [
-      "He'll take you places he knows you what?",
-      "Like",
-      "Need",
-      "Miss"
-     ],
-     [
-      "You can hang if you're what?",
-      "Bored",
-      "Ready",
-      "Down"
-     ],
-     [
-      "We could do plenty things plus what?",
-      "More",
-      "Some",
-      "Less"
-     ],
-     [
-      "He can even get you to which awards?",
-      "Soul Train Awards",
-      "BET Awards",
-      "American Music Awards"
+      "\"Aren't you ready to...\"?",
+      "Go",
+      "Ride",
+      "Win"
      ]
     ]
    ]
@@ -1182,217 +1182,217 @@ window.CFG = {
    ]
   },
   {
-   "title": "Overnight Celebrity",
-   "id": "I177W0XJlT4",
-   "start": 46.6,
+   "title": "Lavish (feat. Pharrell Williams)",
+   "id": "_ESH5kAJ3LQ",
+   "start": 13.5,
    "cuts": [
-    83.3,
-    133.7,
-    228.8
+    56.5,
+    121.5,
+    192.4
    ],
    "qs": [
     [
      [
-      "Girl I see you in them what jeans?",
-      "Apple Bottom",
-      "Baby Phat",
-      "True Religion"
+      "\"You want the lavish crib and fancy...\"?",
+      "Cars",
+      "Clothes",
+      "Chains"
      ],
      [
-      "What's on her back?",
-      "Chinchilla",
-      "Mink",
-      "Leather"
+      "\"You want the face, on that ... shinin'\"?",
+      "Rolex",
+      "Cartier",
+      "Chain"
      ],
      [
-      "He wants to know her what?",
-      "Name",
-      "Sign",
-      "Number"
+      "Shinin' like the...?",
+      "Stars",
+      "Sun",
+      "Moon"
      ],
      [
-      "He'll put her in a chameleon what?",
-      "Range",
+      "\"Don't worry Mayne, you could...\"?",
+      "Get it",
+      "Make it",
+      "Have it"
+     ],
+     [
+      "\"If you look in the sky and you don't see your...\"?",
+      "Dream",
+      "Star",
+      "Plane"
+     ],
+     [
+      "\"Now hear the words that I flow when I...\"?",
+      "Spit",
+      "Sing",
+      "Write"
+     ],
+     [
+      "Shorties be havin' dreams of goin'...?",
+      "Legit",
+      "Home",
+      "Pro"
+     ],
+     [
+      "\"It's on, ain't nuttin' gon' ... us now\"?",
+      "Stop",
+      "Catch",
+      "Hold"
+     ],
+     [
+      "\"Spinners rollin' up the block while they pump out...\"?",
+      "Noise",
+      "Bass",
+      "Music"
+     ],
+     [
+      "\"Know the difference between real and...\"?",
+      "Fake",
+      "Fame",
+      "False"
+     ],
+     [
+      "\"Open your mind, you got more than the ... to take\"?",
+      "Skill",
+      "Time",
+      "Will"
+     ]
+    ],
+    [
+     [
+      "Two times for the ones with their hands in the...?",
+      "Air",
+      "Sky",
+      "Pockets"
+     ],
+     [
+      "\"Singin' a...\"?",
+      "Prayer",
+      "Song",
+      "Hymn"
+     ],
+     [
+      "\"Yes, I know that...\"?",
+      "Puzzle",
+      "Story",
+      "Struggle"
+     ],
+     [
+      "\"You're smokin' your life...\"?",
+      "Away",
+      "Up",
+      "Out"
+     ],
+     [
+      "\"Look at me, big car, big house, big...\"?",
+      "Jewels",
+      "Money",
+      "Dreams"
+     ],
+     [
+      "\"All that came out my...\"?",
+      "Backpack",
+      "Pocket",
+      "Notebook"
+     ],
+     [
+      "\"Even though that hurt, I just ... past that\"?",
+      "Skated",
+      "Walked",
+      "Drove"
+     ],
+     [
+      "\"Horse on the...\"?",
+      "Hood",
+      "Chain",
+      "Wheel"
+     ],
+     [
+      "\"Make a virtual picture, and spin...\"?",
+      "Around",
+      "Away",
+      "Out"
+     ],
+     [
+      "\"Focus up, we gotta hit it...\"?",
+      "Now",
+      "Hard",
+      "Twice"
+     ],
+     [
+      "\"This dedicated to my man up in...\"?",
+      "Norfolk",
+      "Chicago",
+      "Richmond"
+     ]
+    ],
+    [
+     [
+      "\"Ha ha...\"?",
+      "Wait",
+      "Stop",
+      "Yeah"
+     ],
+     [
+      "\"Through the wisdom of a...\"?",
+      "Prism",
+      "Prophet",
+      "Mirror"
+     ],
+     [
+      "Who does he listen to spit to the track?",
+      "Pharrell",
+      "Kanye",
+      "Timbaland"
+     ],
+     [
+      "\"Pull up in a ... Bentley\"?",
+      "Burgundy",
+      "Black",
+      "White"
+     ],
+     [
+      "\"I ain't speculatin' homey I just stick to the...\"?",
+      "Facts",
+      "Plan",
+      "Script"
+     ],
+     [
+      "\"If you wanna get the money and the ... and the mob\"?",
+      "Status",
+      "Cars",
+      "Fame"
+     ],
+     [
+      "\"Better ride when you roll with the...\"?",
+      "Crew",
+      "Gang",
+      "Squad"
+     ],
+     [
+      "\"When you hear this in the club then you know what to...\"?",
+      "Do",
+      "Say",
+      "Play"
+     ],
+     [
+      "\"Throw these stacks in the black...\"?",
+      "Cadillac",
       "Benz",
-      "Jag"
+      "Range"
      ],
      [
-      "She's got him hotter than a what?",
-      "Oven",
-      "Fire",
-      "Stove"
+      "\"Get it like Twista and...\"?",
+      "Neptunes",
+      "Timbaland",
+      "Kanye"
      ],
      [
-      "He says she oughta be in what?",
-      "Pictures",
-      "Magazines",
-      "Movies"
-     ],
-     [
-      "He sees her career going how?",
-      "Sky high",
-      "Far away",
-      "Straight up"
-     ],
-     [
-      "Taking her home to the crib in the what?",
-      "Chi",
-      "Lou",
-      "Bay"
-     ],
-     [
-      "The fellas are on some who?",
-      "Johnny Gill",
-      "Bobby Brown",
-      "Ralph Tresvant"
-     ],
-     [
-      "Kicking it on the couch at what?",
-      "106 & Park",
-      "The Grammys",
-      "The studio"
-     ],
-     [
-      "Her dress is better than whose?",
-      "Jennifer's",
-      "Beyonce's",
-      "Halle's"
-     ]
-    ],
-    [
-     [
-      "With him, he can mold your what?",
-      "Life",
-      "Style",
-      "Look"
-     ],
-     [
-      "Who told him she's the prototype?",
-      "Dre",
-      "Ye",
-      "Pharrell"
-     ],
-     [
-      "If you want fame, you can take that what?",
-      "Path",
-      "Road",
-      "Chance"
-     ],
-     [
-      "Candlelights before you take a what?",
-      "Bath",
-      "Nap",
-      "Trip"
-     ],
-     [
-      "Jimmy Choo and whose bags?",
-      "Marc Jacobs",
-      "Louis Vuitton",
-      "Coach"
-     ],
-     [
-      "He can cop her a what?",
-      "2003",
-      "2004",
-      "2001"
-     ],
-     [
-      "He can get her on CDs and what?",
-      "DVDs",
-      "Magazines",
-      "Billboards"
-     ],
-     [
-      "He'll take her to BeBe's and what?",
-      "BCBG",
-      "Bloomingdale's",
-      "Macy's"
-     ],
-     [
-      "He'll protect her from who?",
-      "Others",
-      "Haters",
-      "Paparazzi"
-     ],
-     [
-      "He can see her in some Gucci or who?",
-      "Roberto Cavalli",
-      "Versace",
-      "Dolce"
-     ],
-     [
-      "She's gon' put a hurt on 'em hard in the what?",
-      "Party",
-      "Club",
-      "Street"
-     ]
-    ],
-    [
-     [
-      "She was born to be a what?",
-      "Pro",
-      "Star",
-      "Model"
-     ],
-     [
-      "How she poses taking what?",
-      "Photos",
-      "Bows",
-      "Notes"
-     ],
-     [
-      "Come here girl, he can see you're what?",
-      "Bored",
-      "Tired",
-      "Lonely"
-     ],
-     [
-      "He'll turn you to the what he sees you for?",
-      "Queen",
-      "Star",
-      "Lady"
-     ],
-     [
-      "Take you shopping on sprees in what?",
-      "Stores",
-      "Malls",
-      "Paris"
-     ],
-     [
-      "Which awards will he get you to first?",
-      "MTV Awards",
-      "The Grammys",
-      "The Oscars"
-     ],
-     [
-      "We about to do a what tonight?",
-      "Show",
-      "Shoot",
-      "Party"
-     ],
-     [
-      "He'll take you places he knows you what?",
-      "Like",
-      "Need",
-      "Miss"
-     ],
-     [
-      "You can hang if you're what?",
-      "Bored",
-      "Ready",
-      "Down"
-     ],
-     [
-      "We could do plenty things plus what?",
-      "More",
-      "Some",
-      "Less"
-     ],
-     [
-      "He can even get you to which awards?",
-      "Soul Train Awards",
-      "BET Awards",
-      "American Music Awards"
+      "\"Aren't you ready to...\"?",
+      "Go",
+      "Ride",
+      "Win"
      ]
     ]
    ]

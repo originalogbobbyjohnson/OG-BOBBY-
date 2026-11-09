@@ -102,127 +102,127 @@ window.CFG = {
  ],
  "songs": [
   {
-   "title": "Mr. Telephone Man",
-   "id": "YTdxdr9pNnw",
-   "start": 20,
+   "title": "Crucial",
+   "id": "IzRlmtwQbHI",
+   "start": 22.7,
    "cuts": [
-    61.8,
-    123.6,
-    184.5
+    60,
+    155,
+    250
    ],
    "qs": [
     [
      [
-      "Who does he call out to in the hook?",
-      "Mr. Telephone Man",
-      "Mr. Postman",
-      "Mr. Operator"
+      "\"Heart, beating...\"?",
+      "Strong",
+      "Fast",
+      "Loud"
      ],
      [
-      "Something's wrong with his what?",
-      "Line",
-      "Phone bill",
-      "Radio"
+      "\"I was serious, my love was...\"?",
+      "Furious",
+      "Curious",
+      "Glorious"
      ],
      [
-      "When he dials his baby's number, he gets a what?",
-      "Click",
-      "Busy signal",
-      "Dial tone"
+      "\"For you, only...\"?",
+      "You",
+      "Me",
+      "Us"
      ],
      [
-      "What number does he dial to get service?",
-      "611",
-      "411",
-      "711"
+      "\"Darling, I don't know...\"?",
+      "Why",
+      "How",
+      "Where"
      ],
      [
-      "What did the lady on the line ask him?",
-      "May I help you",
-      "Who's calling",
-      "Can you hold"
+      "\"I can't leave you...\"?",
+      "Alone",
+      "Behind",
+      "Today"
      ],
      [
-      "He says his baby wouldn't do what to him?",
-      "Hang up on me",
-      "Lie to me",
-      "Forget me"
+      "\"You thrill me to the...\"?",
+      "Bone",
+      "Core",
+      "Max"
      ]
     ],
     [
      [
-      "How many times did she let the phone ring?",
-      "20",
-      "10",
-      "50"
-     ],
-     [
-      "A minute later, who did he get?",
-      "The operator",
-      "Her mother",
-      "A busy signal"
-     ],
-     [
-      "The operator said hang up and do what?",
-      "Place your call again",
-      "Try tomorrow",
-      "Leave a message"
-     ],
-     [
-      "He gets a click how often?",
-      "Every time",
-      "Once a week",
-      "Late at night"
-     ],
-     [
-      "Whose number does he keep dialing?",
-      "My baby's",
-      "My mama's",
-      "My best friend's"
-     ],
-     [
-      "The operator ends her line calling him what?",
+      "\"Obsession, oh...\"?",
       "Baby",
-      "Sir",
-      "Honey"
+      "Darling",
+      "Lady"
+     ],
+     [
+      "\"Don't you know it was a crucial...\"?",
+      "Lovin'",
+      "Feeling",
+      "Moment"
+     ],
+     [
+      "What comes \"over me\"?",
+      "Chills",
+      "Clouds",
+      "Shadows"
+     ],
+     [
+      "\"Different from the...\"?",
+      "Rest",
+      "Crowd",
+      "Past"
+     ],
+     [
+      "\"I won't settle for...\"?",
+      "Less",
+      "More",
+      "Him"
+     ],
+     [
+      "\"Stood the test of...\"?",
+      "Time",
+      "Love",
+      "Fire"
      ]
     ],
     [
      [
-      "Who is on the telephone now?",
-      "Some strange man",
-      "Her mother",
-      "The mailman"
+      "\"Down to the, down to the...\"?",
+      "Bone",
+      "Floor",
+      "Wire"
      ],
      [
-      "He keeps telling him his baby ain't what?",
-      "Home",
-      "Awake",
-      "Free"
+      "\"I have more than ... you\"?",
+      "Told",
+      "Shown",
+      "Given"
      ],
      [
-      "She ain't got no what kind of line?",
-      "Party line",
-      "Long line",
-      "Hot line"
+      "\"Girl, I've got to ... you\"?",
+      "Show",
+      "Tell",
+      "Hold"
      ],
      [
-      "The situation's blowing his what?",
-      "Mind",
-      "Cover",
-      "Chance"
+      "\"Feelings overload...\"?",
+      "Extreme",
+      "Tonight",
+      "Again"
      ],
      [
-      "He dialed the right number but still couldn't what?",
-      "Get through",
-      "Hear her",
-      "Find her"
+      "\"For the very ... time\"?",
+      "First",
+      "Next",
+      "Same"
      ],
      [
-      "He's sure his phone wouldn't be answered by who?",
-      "No man",
-      "Her sister",
-      "Her daddy"
+      "\"You have taken ... me\"?",
+      "Over",
+      "From",
+      "With"
      ]
     ]
    ]
@@ -354,145 +354,144 @@ window.CFG = {
    ]
   },
   {
-   "title": "Cool It Now",
-   "id": "RZUq6N7Gx1c",
-   "start": 18.3,
+   "title": "Boys to Men",
+   "id": "G8XwNyCgVqw",
    "cuts": [
-    49.4,
-    136,
-    176
+    41.5,
+    140,
+    230
    ],
    "qs": [
     [
      [
-      "Everybody's saying what kind of things?",
-      "Silly things",
-      "Crazy things",
-      "Mean things"
+      "\"Growing up can be a...\"?",
+      "Pain",
+      "Joy",
+      "Breeze"
      ],
      [
-      "Life brings a what?",
-      "Change",
-      "Chance",
-      "Choice"
-     ],
-     [
-      "They've been checking all the what?",
-      "Signs",
-      "Stars",
-      "Rings"
-     ],
-     [
-      "His friends say he's what?",
-      "Lovesick",
-      "Crazy",
-      "Lazy"
-     ],
-     [
-      "All he keeps thinking about is her in his what?",
-      "Arms",
-      "Dreams",
-      "Car"
-     ],
-     [
-      "He won't be the same until she is what?",
-      "Mine",
+      "\"You're not a man until you come of...\"?",
+      "Age",
       "Home",
-      "Here"
+      "Time"
      ],
      [
-      "He's got to see what what is about?",
-      "Love",
-      "Life",
-      "School"
+      "\"We've given up our teenage...\"?",
+      "Years",
+      "Dreams",
+      "Friends"
+     ],
+     [
+      "Given up in the effort to pursue our...?",
+      "Career",
+      "Dreams",
+      "Futures"
+     ],
+     [
+      "\"Who assumes...\"?",
+      "Responsibility",
+      "The blame",
+      "Control"
+     ],
+     [
+      "\"Of having to support our...\"?",
+      "Families",
+      "Friends",
+      "Fans"
+     ],
+     [
+      "\"Who's protecting us from...\"?",
+      "Harm",
+      "Pain",
+      "Fame"
      ]
     ],
     [
      [
-      "His friends keep telling him to do what?",
-      "Cool it now",
-      "Speed it up",
-      "Call her now"
+      "\"Is there anyone around that we can...\"?",
+      "Trust",
+      "Call",
+      "Love"
      ],
      [
-      "If he doesn't slow it down, he's gonna what?",
-      "Fall in love",
-      "Fall behind",
-      "Lose his mind"
+      "\"So we search for answers to our...\"?",
+      "Questions",
+      "Problems",
+      "Prayers"
      ],
      [
-      "Every day he walks her home from where?",
-      "School",
-      "Church",
-      "Work"
+      "\"We are taught a ... every time\"?",
+      "Lesson",
+      "Story",
+      "Rule"
      ],
      [
-      "There's no doubt in his what?",
-      "Mind",
+      "\"Through mistakes, we've learned to gather...\"?",
+      "Wisdom",
+      "Strength",
+      "Courage"
+     ],
+     [
+      "\"Life's responsibilities fall in our...\"?",
+      "Hands",
+      "Laps",
+      "Hearts"
+     ],
+     [
+      "\"These are the things that change boys to...\"?",
+      "Men",
+      "Kings",
+      "Stars"
+     ],
+     [
+      "\"The goals we set may exceed...\"?",
+      "Reality",
+      "Our reach",
+      "The sky"
+     ]
+    ],
+    [
+     [
+      "\"Wisdom helps us...\"?",
+      "Understand",
+      "Grow up",
+      "See clearly"
+     ],
+     [
+      "\"We're maturing, without...\"?",
+      "Knowing",
+      "Trying",
+      "Stopping"
+     ],
+     [
+      "\"Keep on learning, keep on...\"?",
+      "Growing",
+      "Going",
+      "Dreaming"
+     ],
+     [
+      "\"All you have to do is...\"?",
+      "Hold on",
+      "Let go",
+      "Be strong"
+     ],
+     [
+      "\"Who's gonna protect us from our...\"?",
       "Heart",
-      "Head"
+      "Past",
+      "Fears"
      ],
      [
-      "This girl is one of a what?",
-      "Kind",
-      "Million",
-      "Few"
+      "What \"falls in our hand\"?",
+      "Responsibility",
+      "Money",
+      "The future"
      ],
      [
-      "When you got a girl who takes her time, you must slow the what?",
-      "Pace",
-      "Beat",
-      "Car"
-     ],
-     [
-      "You almost lost a girl who is right on what?",
+      "\"Taught a lesson every...\"?",
       "Time",
-      "Track",
-      "Point"
-     ]
-    ],
-    [
-     [
-      "What are they all doing to him?",
-      "Coming down on me",
-      "Laughing at me",
-      "Calling on me"
-     ],
-     [
-      "They're telling him how his what is supposed to be?",
-      "Life",
-      "Look",
-      "Song"
-     ],
-     [
-      "This time he's gonna make it on his what?",
-      "Own",
-      "Feet",
-      "Way"
-     ],
-     [
-      "He tells the fellas to just leave him what?",
-      "Alone",
-      "Be",
-      "Out"
-     ],
-     [
-      "Ronnie, Bobby, Ricky and who?",
-      "Mike",
-      "Ralph",
-      "Johnny"
-     ],
-     [
-      "If I love the girl, who cares who what?",
-      "You like",
-      "She likes",
-      "They like"
-     ],
-     [
-      "He knows they're only trying to what?",
-      "Help me out",
-      "Hold me back",
-      "Put me down"
+      "Day",
+      "Year"
      ]
     ]
    ]
@@ -642,145 +641,145 @@ window.CFG = {
    ]
   },
   {
-   "title": "Candy Girl",
-   "id": "0AZqPl46HcU",
-   "start": 11.7,
+   "title": "That's the Way We're Livin'",
+   "id": "YVxxCJIUPKw",
+   "start": 22.3,
    "cuts": [
-    40.5,
-    107.2,
-    139.7
+    62,
+    130,
+    228
    ],
    "qs": [
     [
      [
-      "His girl's like what?",
-      "Candy",
-      "Honey",
-      "Sugar"
+      "Which word opens the song, sung twice?",
+      "Tonight",
+      "Forever",
+      "Alright"
      ],
      [
-      "She knocks him right off of his what?",
-      "Feet",
-      "Bike",
-      "Seat"
+      "What you're looking for is not so hard to...?",
+      "Find",
+      "See",
+      "Get"
      ],
      [
-      "This girl is meant for who?",
-      "Me",
-      "You",
-      "Him"
+      "\"It's in your...\"?",
+      "Eyes",
+      "Heart",
+      "Hands"
      ],
      [
-      "Candy girl, you are my what?",
-      "World",
-      "Star",
-      "Song"
+      "\"Hurry, don't...\"?",
+      "Hesitate",
+      "Wait up",
+      "Slow down"
      ],
      [
-      "You look so sweet, you're my special what?",
-      "Treat",
-      "Friend",
-      "Girl"
+      "You're running out of...?",
+      "Time",
+      "Luck",
+      "Road"
      ],
      [
-      "When you're with me, you brighten up my what?",
-      "Day",
-      "Night",
-      "Room"
+      "\"There's no need to be...\"?",
+      "Misled",
+      "Afraid",
+      "Alone"
      ],
      [
-      "Candy girl, all I want to what?",
-      "Say",
-      "Do",
-      "Play"
-     ]
-    ],
-    [
-     [
-      "She makes him feel so good through and what?",
-      "Through",
-      "True",
-      "Thin"
-     ],
-     [
-      "He loves the way she walks and the way she what?",
-      "Talks",
-      "Dances",
-      "Smiles"
-     ],
-     [
-      "She makes him forget his what?",
-      "Thoughts",
-      "Name",
-      "Words"
-     ],
-     [
-      "Do you really love me? Don't you really what?",
-      "Care",
-      "Know",
-      "Mind"
-     ],
-     [
-      "And will you always be what?",
-      "There",
-      "Mine",
-      "True"
-     ],
-     [
-      "Every night and every day, he's always what?",
-      "Thinking of you",
-      "Calling you",
-      "Dreaming of you"
-     ],
-     [
-      "He needs your love how often?",
-      "Each and every day",
-      "Every night",
-      "Once a week"
-     ]
-    ],
-    [
-     [
-      "Whose ladies do they check out first?",
-      "Mike and Bobby's",
-      "Ricky and Ralph's",
-      "Ronnie and Johnny's"
-     ],
-     [
-      "Then they check out Rikki and who?",
-      "Ralph",
-      "Ronnie",
-      "Johnny"
-     ],
-     [
-      "Whose girl comes up next?",
-      "Ronnie's",
-      "Bobby's",
-      "Mike's"
-     ],
-     [
-      "She walks so what?",
-      "Fast",
-      "Slow",
-      "Proud"
-     ],
-     [
-      "She makes his heart skip a what?",
-      "Beat",
-      "Step",
-      "Line"
-     ],
-     [
-      "My girl's the best and that's no what?",
-      "Lie",
-      "Joke",
-      "Game"
-     ],
-     [
-      "She tells him he's her only what?",
-      "Guy",
-      "Friend",
+      "\"We'll show you the ... tonight\"?",
+      "Way",
+      "Light",
       "Love"
+     ]
+    ],
+    [
+     [
+      "\"We're working...\"?",
+      "Hard",
+      "Late",
+      "Fast"
+     ],
+     [
+      "\"We're striving for...\"?",
+      "Perfection",
+      "Attention",
+      "Direction"
+     ],
+     [
+      "\"That's why we're working...\"?",
+      "Overtime",
+      "All night",
+      "Too hard"
+     ],
+     [
+      "\"It's up to...\"?",
+      "You",
+      "Me",
+      "Them"
+     ],
+     [
+      "Don't let nobody tell you what to...?",
+      "Do",
+      "Say",
+      "Wear"
+     ],
+     [
+      "\"Make up your...\"?",
+      "Mind",
+      "Bed",
+      "Face"
+     ],
+     [
+      "Life should be taken one ... at a time?",
+      "Day",
+      "Week",
+      "Night"
+     ]
+    ],
+    [
+     [
+      "\"Time, there's no better...\"?",
+      "Time",
+      "Place",
+      "Way"
+     ],
+     [
+      "\"No better time for...\"?",
+      "You",
+      "Love",
+      "Dancing"
+     ],
+     [
+      "\"We're striving for ... 'cause\"?",
+      "Perfection",
+      "Success",
+      "Fortune"
+     ],
+     [
+      "\"Perfection's...\"?",
+      "Hard",
+      "Here",
+      "Near"
+     ],
+     [
+      "\"That's why we're working...\"?",
+      "Overtime",
+      "Nine to five",
+      "Late"
+     ],
+     [
+      "\"That's the way we're...\"?",
+      "Livin'",
+      "Lovin'",
+      "Movin'"
+     ],
+     [
+      "\"We're working...\"?",
+      "Hard",
+      "Late",
+      "Out"
      ]
     ]
    ]

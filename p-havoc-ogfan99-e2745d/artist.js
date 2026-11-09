@@ -318,217 +318,216 @@ window.CFG = {
    ]
   },
   {
-   "title": "Real Friends (Kanye West)",
-   "id": "fWD9GF-Ogf4",
-   "start": 20.4,
+   "title": "Survival of the Fittest (Mobb Deep)",
+   "id": "hIq4UTgqDAc",
    "cuts": [
-    51.9,
-    99.7,
-    149.5
+    44.1,
+    112.4,
+    207
    ],
    "qs": [
     [
      [
-      "Real friends, how many of us? How many what?",
-      "Jealous",
-      "Honest",
-      "Loyal"
+      "This one goes out to his man...?",
+      "Killer B",
+      "Killa Black",
+      "Twin"
      ],
      [
-      "We smile at each other, but how many are what?",
-      "Honest",
-      "Happy",
-      "Here"
+      "\"There's a war goin' on...\" where?",
+      "Outside",
+      "Uptown",
+      "Overseas"
      ],
      [
-      "What kind of issues does he have?",
-      "Trust issues",
-      "Money issues",
-      "Family issues"
+      "\"You could run, but you can't...\"?",
+      "Hide forever",
+      "Run forever",
+      "Stay forever"
      ],
      [
-      "What did he switch up?",
-      "The number",
-      "The lock",
-      "The plan"
+      "\"You walkin' with your head...\"?",
+      "Down",
+      "Up",
+      "Low"
      ],
      [
-      "He can't be what?",
-      "Bothered",
-      "Stopped",
-      "Trusted"
+      "Walking that way, too scared to...?",
+      "Look",
+      "Talk",
+      "Move"
      ],
      [
-      "He can't blame you for having an what?",
-      "Angle",
-      "Attitude",
-      "Answer"
+      "\"Ain't no such things as halfway...\"?",
+      "Crooks",
+      "Friends",
+      "Kings"
      ],
      [
-      "He ain't got no issues, he's just doing his what?",
-      "Thing",
-      "Job",
-      "Best"
+      "His part of town is similar to...?",
+      "Vietnam",
+      "Brooklyn",
+      "Hollywood"
      ],
      [
-      "What kind of cousin does he call himself?",
-      "Deadbeat",
-      "Favorite",
-      "Long-lost"
+      "\"Now we all grown up and...\"?",
+      "Old",
+      "Rich",
+      "Gone"
      ],
      [
-      "What does he hate?",
-      "Family reunions",
-      "Birthdays",
-      "Holidays"
+      "Beyond whose control?",
+      "The cops'",
+      "Their parents'",
+      "The teachers'"
      ],
      [
-      "What did he spill?",
-      "Free wine",
-      "Juice",
-      "Coffee"
+      "\"They better have the ... ready\"?",
+      "Riot gear",
+      "Paperwork",
+      "Cameras"
      ],
      [
-      "What got ruined?",
-      "His tux",
-      "His shoes",
-      "His suit"
+      "\"No doubt...\" what?",
+      "Indeed",
+      "Again",
+      "Tonight"
      ]
     ],
     [
      [
-      "Who your real friends? We all came from the what?",
-      "Bottom",
-      "Block",
-      "Same place"
+      "\"My skin is...\"?",
+      "Thick",
+      "Tough",
+      "Cold"
      ],
      [
-      "He's always blaming you, but you're not the what?",
-      "Problem",
-      "Reason",
-      "Enemy"
+      "Which city got him depressed?",
+      "New York",
+      "L.A.",
+      "Chicago"
      ],
      [
-      "What day did he think it was?",
-      "Thursday",
-      "Friday",
-      "Sunday"
+      "\"God bless my...\"?",
+      "Soul",
+      "Heart",
+      "Crew"
      ],
      [
-      "Why'd you wait a what to call his phone?",
-      "Week",
-      "Month",
-      "Day"
+      "\"Before I put my ... down and begin to stroll\"?",
+      "Foot",
+      "Head",
+      "Guard"
      ],
      [
-      "When was the last time he remembered a what?",
-      "Birthday",
-      "Name",
-      "Holiday"
+      "\"Lord, forgive...\"?",
+      "Me",
+      "Them",
+      "Us"
      ],
      [
-      "When was the last time he wasn't in a what?",
-      "Hurry",
-      "Studio",
-      "Car"
+      "\"I'm fallin' and I can't turn...\"?",
+      "Back",
+      "Around",
+      "Away"
      ],
      [
-      "You want your tickets when it's what?",
-      "Gametime",
-      "Showtime",
-      "Too late"
+      "Whose words can't he say?",
+      "Killa Black's",
+      "Twin's",
+      "Havoc's"
      ],
      [
-      "Who should you call on FaceTime?",
-      "Your daughter",
-      "Your mom",
-      "Your son"
+      "So it's left an untold...?",
+      "Fact",
+      "Story",
+      "Secret"
      ],
      [
-      "Even when they were young, he used to make what?",
-      "Time",
-      "Plans",
-      "Calls"
+      "\"Survival of the fit, only the...\"?",
+      "Strong survive",
+      "Smart survive",
+      "Rich survive"
      ],
      [
-      "Now they're way too busy just to make what?",
-      "Time",
-      "Plans",
-      "Money"
+      "In the background: \"We still...\"?",
+      "Livin' it",
+      "Doin' it",
+      "Runnin' it"
      ],
      [
-      "Word on the streets is they ain't what from him?",
-      "Heard",
-      "Seen",
-      "Gotten"
-     ]
-    ],
-    [
-     [
-      "He couldn't tell you how old your what was?",
-      "Daughter",
-      "Sister",
-      "Mother"
-     ],
-     [
-      "What does he have on the way?",
-      "His own Jr.",
-      "A new album",
-      "A new car"
-     ],
-     [
-      "He just showed up for the what?",
-      "Yams",
-      "Turkey",
-      "Cake"
-     ],
-     [
-      "How many minutes did he stay?",
-      "Fifteen",
-      "Thirty",
-      "Five"
-     ],
-     [
-      "He took some pictures with your what?",
-      "Sister",
-      "Mother",
-      "Cousin"
-     ],
-     [
-      "What holiday greeting does he give?",
-      "Merry Christmas",
-      "Happy New Year",
-      "Happy Easter"
-     ],
-     [
-      "After that, it's back to what?",
-      "Business",
-      "Work",
-      "The road"
-     ],
-     [
-      "He's got enough what to deal with?",
-      "Pressure",
-      "Problems",
-      "Stress"
-     ],
-     [
-      "You've been nothing but a what to him?",
-      "Friend",
-      "Brother",
-      "Help"
-     ],
-     [
-      "He ain't feeling your what?",
-      "Energy",
-      "Attitude",
+      "\"Thug ..., we still livin' it\"?",
+      "Life",
+      "Love",
       "Style"
+     ]
+    ],
+    [
+     [
+      "\"I'm trapped, in between two...\"?",
+      "Worlds",
+      "Blocks",
+      "Cities"
      ],
      [
-      "Money can turn your kin into an what?",
-      "Enemy",
-      "Stranger",
-      "Angel"
+      "When the dough get low, what goes?",
+      "The jewels",
+      "The cars",
+      "The friends"
+     ],
+     [
+      "\"Watchin' my back and proceed with...\"?",
+      "Caution",
+      "Patience",
+      "Pride"
+     ],
+     [
+      "No time to get lost in the...?",
+      "System",
+      "Streets",
+      "Crowd"
+     ],
+     [
+      "\"Ask my man...\" who?",
+      "Twin",
+      "Killa Black",
+      "Prodigy"
+     ],
+     [
+      "\"You find out who's your true...\"?",
+      "Peoples",
+      "Enemies",
+      "Fans"
+     ],
+     [
+      "\"Wild on the streets, I try to...\"?",
+      "Maintain",
+      "Escape",
+      "Explain"
+     ],
+     [
+      "What car is he pushin'?",
+      "A Lex",
+      "A Benz",
+      "A Jeep"
+     ],
+     [
+      "No matter the loot, where is he stayin' forever?",
+      "The projects",
+      "Uptown",
+      "The suburbs"
+     ],
+     [
+      "\"When worse comes to worst, my peoples come...\"?",
+      "First",
+      "Through",
+      "Home"
+     ],
+     [
+      "\"I'm strictly Timb boots and Army certified...\"?",
+      "Suits",
+      "Pants",
+      "Jackets"
      ]
     ]
    ]
@@ -968,217 +967,216 @@ window.CFG = {
    ]
   },
   {
-   "title": "Real Friends (Kanye West)",
-   "id": "fWD9GF-Ogf4",
-   "start": 20.4,
+   "title": "Survival of the Fittest (Mobb Deep)",
+   "id": "hIq4UTgqDAc",
    "cuts": [
-    51.9,
-    99.7,
-    149.5
+    44.1,
+    112.4,
+    207
    ],
    "qs": [
     [
      [
-      "Real friends, how many of us? How many what?",
-      "Jealous",
-      "Honest",
-      "Loyal"
+      "This one goes out to his man...?",
+      "Killer B",
+      "Killa Black",
+      "Twin"
      ],
      [
-      "We smile at each other, but how many are what?",
-      "Honest",
-      "Happy",
-      "Here"
+      "\"There's a war goin' on...\" where?",
+      "Outside",
+      "Uptown",
+      "Overseas"
      ],
      [
-      "What kind of issues does he have?",
-      "Trust issues",
-      "Money issues",
-      "Family issues"
+      "\"You could run, but you can't...\"?",
+      "Hide forever",
+      "Run forever",
+      "Stay forever"
      ],
      [
-      "What did he switch up?",
-      "The number",
-      "The lock",
-      "The plan"
+      "\"You walkin' with your head...\"?",
+      "Down",
+      "Up",
+      "Low"
      ],
      [
-      "He can't be what?",
-      "Bothered",
-      "Stopped",
-      "Trusted"
+      "Walking that way, too scared to...?",
+      "Look",
+      "Talk",
+      "Move"
      ],
      [
-      "He can't blame you for having an what?",
-      "Angle",
-      "Attitude",
-      "Answer"
+      "\"Ain't no such things as halfway...\"?",
+      "Crooks",
+      "Friends",
+      "Kings"
      ],
      [
-      "He ain't got no issues, he's just doing his what?",
-      "Thing",
-      "Job",
-      "Best"
+      "His part of town is similar to...?",
+      "Vietnam",
+      "Brooklyn",
+      "Hollywood"
      ],
      [
-      "What kind of cousin does he call himself?",
-      "Deadbeat",
-      "Favorite",
-      "Long-lost"
+      "\"Now we all grown up and...\"?",
+      "Old",
+      "Rich",
+      "Gone"
      ],
      [
-      "What does he hate?",
-      "Family reunions",
-      "Birthdays",
-      "Holidays"
+      "Beyond whose control?",
+      "The cops'",
+      "Their parents'",
+      "The teachers'"
      ],
      [
-      "What did he spill?",
-      "Free wine",
-      "Juice",
-      "Coffee"
+      "\"They better have the ... ready\"?",
+      "Riot gear",
+      "Paperwork",
+      "Cameras"
      ],
      [
-      "What got ruined?",
-      "His tux",
-      "His shoes",
-      "His suit"
+      "\"No doubt...\" what?",
+      "Indeed",
+      "Again",
+      "Tonight"
      ]
     ],
     [
      [
-      "Who your real friends? We all came from the what?",
-      "Bottom",
-      "Block",
-      "Same place"
+      "\"My skin is...\"?",
+      "Thick",
+      "Tough",
+      "Cold"
      ],
      [
-      "He's always blaming you, but you're not the what?",
-      "Problem",
-      "Reason",
-      "Enemy"
+      "Which city got him depressed?",
+      "New York",
+      "L.A.",
+      "Chicago"
      ],
      [
-      "What day did he think it was?",
-      "Thursday",
-      "Friday",
-      "Sunday"
+      "\"God bless my...\"?",
+      "Soul",
+      "Heart",
+      "Crew"
      ],
      [
-      "Why'd you wait a what to call his phone?",
-      "Week",
-      "Month",
-      "Day"
+      "\"Before I put my ... down and begin to stroll\"?",
+      "Foot",
+      "Head",
+      "Guard"
      ],
      [
-      "When was the last time he remembered a what?",
-      "Birthday",
-      "Name",
-      "Holiday"
+      "\"Lord, forgive...\"?",
+      "Me",
+      "Them",
+      "Us"
      ],
      [
-      "When was the last time he wasn't in a what?",
-      "Hurry",
-      "Studio",
-      "Car"
+      "\"I'm fallin' and I can't turn...\"?",
+      "Back",
+      "Around",
+      "Away"
      ],
      [
-      "You want your tickets when it's what?",
-      "Gametime",
-      "Showtime",
-      "Too late"
+      "Whose words can't he say?",
+      "Killa Black's",
+      "Twin's",
+      "Havoc's"
      ],
      [
-      "Who should you call on FaceTime?",
-      "Your daughter",
-      "Your mom",
-      "Your son"
+      "So it's left an untold...?",
+      "Fact",
+      "Story",
+      "Secret"
      ],
      [
-      "Even when they were young, he used to make what?",
-      "Time",
-      "Plans",
-      "Calls"
+      "\"Survival of the fit, only the...\"?",
+      "Strong survive",
+      "Smart survive",
+      "Rich survive"
      ],
      [
-      "Now they're way too busy just to make what?",
-      "Time",
-      "Plans",
-      "Money"
+      "In the background: \"We still...\"?",
+      "Livin' it",
+      "Doin' it",
+      "Runnin' it"
      ],
      [
-      "Word on the streets is they ain't what from him?",
-      "Heard",
-      "Seen",
-      "Gotten"
-     ]
-    ],
-    [
-     [
-      "He couldn't tell you how old your what was?",
-      "Daughter",
-      "Sister",
-      "Mother"
-     ],
-     [
-      "What does he have on the way?",
-      "His own Jr.",
-      "A new album",
-      "A new car"
-     ],
-     [
-      "He just showed up for the what?",
-      "Yams",
-      "Turkey",
-      "Cake"
-     ],
-     [
-      "How many minutes did he stay?",
-      "Fifteen",
-      "Thirty",
-      "Five"
-     ],
-     [
-      "He took some pictures with your what?",
-      "Sister",
-      "Mother",
-      "Cousin"
-     ],
-     [
-      "What holiday greeting does he give?",
-      "Merry Christmas",
-      "Happy New Year",
-      "Happy Easter"
-     ],
-     [
-      "After that, it's back to what?",
-      "Business",
-      "Work",
-      "The road"
-     ],
-     [
-      "He's got enough what to deal with?",
-      "Pressure",
-      "Problems",
-      "Stress"
-     ],
-     [
-      "You've been nothing but a what to him?",
-      "Friend",
-      "Brother",
-      "Help"
-     ],
-     [
-      "He ain't feeling your what?",
-      "Energy",
-      "Attitude",
+      "\"Thug ..., we still livin' it\"?",
+      "Life",
+      "Love",
       "Style"
+     ]
+    ],
+    [
+     [
+      "\"I'm trapped, in between two...\"?",
+      "Worlds",
+      "Blocks",
+      "Cities"
      ],
      [
-      "Money can turn your kin into an what?",
-      "Enemy",
-      "Stranger",
-      "Angel"
+      "When the dough get low, what goes?",
+      "The jewels",
+      "The cars",
+      "The friends"
+     ],
+     [
+      "\"Watchin' my back and proceed with...\"?",
+      "Caution",
+      "Patience",
+      "Pride"
+     ],
+     [
+      "No time to get lost in the...?",
+      "System",
+      "Streets",
+      "Crowd"
+     ],
+     [
+      "\"Ask my man...\" who?",
+      "Twin",
+      "Killa Black",
+      "Prodigy"
+     ],
+     [
+      "\"You find out who's your true...\"?",
+      "Peoples",
+      "Enemies",
+      "Fans"
+     ],
+     [
+      "\"Wild on the streets, I try to...\"?",
+      "Maintain",
+      "Escape",
+      "Explain"
+     ],
+     [
+      "What car is he pushin'?",
+      "A Lex",
+      "A Benz",
+      "A Jeep"
+     ],
+     [
+      "No matter the loot, where is he stayin' forever?",
+      "The projects",
+      "Uptown",
+      "The suburbs"
+     ],
+     [
+      "\"When worse comes to worst, my peoples come...\"?",
+      "First",
+      "Through",
+      "Home"
+     ],
+     [
+      "\"I'm strictly Timb boots and Army certified...\"?",
+      "Suits",
+      "Pants",
+      "Jackets"
      ]
     ]
    ]

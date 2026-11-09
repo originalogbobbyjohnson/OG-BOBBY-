@@ -327,222 +327,6 @@ window.CFG = {
    ]
   },
   {
-   "title": "GHOST!",
-   "id": "yohg2Obzih4",
-   "start": 22.3,
-   "cuts": [
-    64.1,
-    116.2,
-    211.9
-   ],
-   "qs": [
-    [
-     [
-      "What name does he give?",
-      "Scott Mescudi",
-      "Scott Mitchell",
-      "Sean Mescudi"
-     ],
-     [
-      "He's gotta get it through his thick what?",
-      "Head",
-      "Skull",
-      "Skin"
-     ],
-     [
-      "\"Life...\" what?",
-      "Live it",
-      "Love it",
-      "Fight it"
-     ],
-     [
-      "Nobody sell what?",
-      "Tips",
-      "Dreams",
-      "Lies"
-     ],
-     [
-      "Nobody sells tips about what?",
-      "Life",
-      "Love",
-      "Money"
-     ],
-     [
-      "He's just walkin' without bein' what?",
-      "Led",
-      "Seen",
-      "Stopped"
-     ],
-     [
-      "The world is so what?",
-      "Crazy",
-      "Cold",
-      "Small"
-     ],
-     [
-      "The world is filled with such what?",
-      "Risk",
-      "Hate",
-      "Noise"
-     ],
-     [
-      "He just knows he's gotta what them?",
-      "Dodge",
-      "Fight",
-      "Chase"
-     ],
-     [
-      "The beginnings are followed by an what?",
-      "End",
-      "Exit",
-      "Echo"
-     ],
-     [
-      "What's followed by an end?",
-      "The beginnings",
-      "The good times",
-      "The nights"
-     ]
-    ],
-    [
-     [
-      "In the in-between time, he's not runnin' or what?",
-      "Hidin'",
-      "Cryin'",
-      "Stoppin'"
-     ],
-     [
-      "Things do come what?",
-      "Around",
-      "Along",
-      "Undone"
-     ],
-     [
-      "And make sense when?",
-      "Eventually",
-      "Tomorrow",
-      "Right away"
-     ],
-     [
-      "But some things what him?",
-      "Trouble",
-      "Scare",
-      "Bore"
-     ],
-     [
-      "The people he met and the what he's been?",
-      "Places",
-      "Cities",
-      "Parties"
-     ],
-     [
-      "All will make him the man he so what is?",
-      "Proudly",
-      "Truly",
-      "Simply"
-     ],
-     [
-      "He wants to know how many things?",
-      "One",
-      "Two",
-      "Three"
-     ],
-     [
-      "When did he become a what?",
-      "Ghost",
-      "Star",
-      "Stranger"
-     ],
-     [
-      "He's mostly confused about the what he lives in?",
-      "World",
-      "City",
-      "House"
-     ],
-     [
-      "They think that he's what?",
-      "Lonely",
-      "Crazy",
-      "Famous"
-     ],
-     [
-      "They think he's lonely. Well, he what is?",
-      "Probably",
-      "Never",
-      "Barely"
-     ]
-    ],
-    [
-     [
-      "He tried to fight it, and soon he what?",
-      "Gave in",
-      "Walked away",
-      "Fell asleep"
-     ],
-     [
-      "Before he gave in, he tried to what?",
-      "Fight it",
-      "Hide it",
-      "Fix it"
-     ],
-     [
-      "Down a road with no what on?",
-      "Lights",
-      "Signs",
-      "Lanes"
-     ],
-     [
-      "He can't what it?",
-      "Describe",
-      "Escape",
-      "Forget"
-     ],
-     [
-      "You don't move like who?",
-      "Them",
-      "Us",
-      "Me"
-     ],
-     [
-      "You've become their worst what?",
-      "Nightmare",
-      "Enemy",
-      "Fear"
-     ],
-     [
-      "You remember the things that your who said?",
-      "Parents",
-      "Teachers",
-      "Friends"
-     ],
-     [
-      "You'd rather find out which way?",
-      "The hard way",
-      "The easy way",
-      "The long way"
-     ],
-     [
-      "You should tell a friend to tell a what?",
-      "Friend",
-      "Brother",
-      "Neighbor"
-     ],
-     [
-      "He keeps with his what?",
-      "Stroll",
-      "Style",
-      "Crew"
-     ],
-     [
-      "\"I keep with my stroll, I'm not runnin' or...\" what?",
-      "Hidin'",
-      "Slowin'",
-      "Stallin'"
-     ]
-    ]
-   ]
-  },
-  {
    "title": "Up Up & Away",
    "id": "MP7_VfMZuN0",
    "start": 13.9,
@@ -757,6 +541,222 @@ window.CFG = {
      ]
     ]
    ]
+  },
+  {
+   "title": "GHOST!",
+   "id": "yohg2Obzih4",
+   "start": 22.3,
+   "cuts": [
+    64.1,
+    116.2,
+    211.9
+   ],
+   "qs": [
+    [
+     [
+      "What name does he give?",
+      "Scott Mescudi",
+      "Scott Mitchell",
+      "Sean Mescudi"
+     ],
+     [
+      "He's gotta get it through his thick what?",
+      "Head",
+      "Skull",
+      "Skin"
+     ],
+     [
+      "\"Life...\" what?",
+      "Live it",
+      "Love it",
+      "Fight it"
+     ],
+     [
+      "Nobody sell what?",
+      "Tips",
+      "Dreams",
+      "Lies"
+     ],
+     [
+      "Nobody sells tips about what?",
+      "Life",
+      "Love",
+      "Money"
+     ],
+     [
+      "He's just walkin' without bein' what?",
+      "Led",
+      "Seen",
+      "Stopped"
+     ],
+     [
+      "The world is so what?",
+      "Crazy",
+      "Cold",
+      "Small"
+     ],
+     [
+      "The world is filled with such what?",
+      "Risk",
+      "Hate",
+      "Noise"
+     ],
+     [
+      "He just knows he's gotta what them?",
+      "Dodge",
+      "Fight",
+      "Chase"
+     ],
+     [
+      "The beginnings are followed by an what?",
+      "End",
+      "Exit",
+      "Echo"
+     ],
+     [
+      "What's followed by an end?",
+      "The beginnings",
+      "The good times",
+      "The nights"
+     ]
+    ],
+    [
+     [
+      "In the in-between time, he's not runnin' or what?",
+      "Hidin'",
+      "Cryin'",
+      "Stoppin'"
+     ],
+     [
+      "Things do come what?",
+      "Around",
+      "Along",
+      "Undone"
+     ],
+     [
+      "And make sense when?",
+      "Eventually",
+      "Tomorrow",
+      "Right away"
+     ],
+     [
+      "But some things what him?",
+      "Trouble",
+      "Scare",
+      "Bore"
+     ],
+     [
+      "The people he met and the what he's been?",
+      "Places",
+      "Cities",
+      "Parties"
+     ],
+     [
+      "All will make him the man he so what is?",
+      "Proudly",
+      "Truly",
+      "Simply"
+     ],
+     [
+      "He wants to know how many things?",
+      "One",
+      "Two",
+      "Three"
+     ],
+     [
+      "When did he become a what?",
+      "Ghost",
+      "Star",
+      "Stranger"
+     ],
+     [
+      "He's mostly confused about the what he lives in?",
+      "World",
+      "City",
+      "House"
+     ],
+     [
+      "They think that he's what?",
+      "Lonely",
+      "Crazy",
+      "Famous"
+     ],
+     [
+      "They think he's lonely. Well, he what is?",
+      "Probably",
+      "Never",
+      "Barely"
+     ]
+    ],
+    [
+     [
+      "He tried to fight it, and soon he what?",
+      "Gave in",
+      "Walked away",
+      "Fell asleep"
+     ],
+     [
+      "Before he gave in, he tried to what?",
+      "Fight it",
+      "Hide it",
+      "Fix it"
+     ],
+     [
+      "Down a road with no what on?",
+      "Lights",
+      "Signs",
+      "Lanes"
+     ],
+     [
+      "He can't what it?",
+      "Describe",
+      "Escape",
+      "Forget"
+     ],
+     [
+      "You don't move like who?",
+      "Them",
+      "Us",
+      "Me"
+     ],
+     [
+      "You've become their worst what?",
+      "Nightmare",
+      "Enemy",
+      "Fear"
+     ],
+     [
+      "You remember the things that your who said?",
+      "Parents",
+      "Teachers",
+      "Friends"
+     ],
+     [
+      "You'd rather find out which way?",
+      "The hard way",
+      "The easy way",
+      "The long way"
+     ],
+     [
+      "You should tell a friend to tell a what?",
+      "Friend",
+      "Brother",
+      "Neighbor"
+     ],
+     [
+      "He keeps with his what?",
+      "Stroll",
+      "Style",
+      "Crew"
+     ],
+     [
+      "\"I keep with my stroll, I'm not runnin' or...\" what?",
+      "Hidin'",
+      "Slowin'",
+      "Stallin'"
+     ]
+    ]
+   ]
   }
  ],
  "explicitSongs": [
@@ -923,168 +923,169 @@ window.CFG = {
    ]
   },
   {
-   "title": "Erase Me",
-   "id": "nnvqfucTs0o",
+   "title": "Sky Might Fall",
+   "id": "_yyMDJL0aCU",
+   "start": 19.2,
    "cuts": [
-    34.5,
-    55.85,
-    117.35
+    41.6,
+    99.1,
+    177.9
    ],
    "qs": [
     [
      [
-      "She said he don't spend what like he really should?",
-      "Time",
-      "Money",
-      "Nights"
+      "What a world that he's what?",
+      "Living in",
+      "Stuck in",
+      "Lost in"
      ],
      [
-      "He don't spend time like he really what?",
-      "Should",
-      "Could",
-      "Would"
+      "Will the what ever end?",
+      "Rainstorms",
+      "Hard times",
+      "Long nights"
      ],
      [
-      "She said she don't what him anymore?",
-      "Know",
-      "Love",
-      "Need"
+      "He feels his path is what?",
+      "Narrow",
+      "Endless",
+      "Rocky"
      ],
      [
-      "He thinks she hates him how?",
-      "Deep down",
-      "A little",
-      "Out loud"
+      "With a narrow path, he does what again?",
+      "Runs",
+      "Falls",
+      "Fights"
      ],
      [
-      "He thinks she hates him, and he what she does?",
-      "Knows",
-      "Hopes",
-      "Doubts"
+      "Seems what is gone again?",
+      "Happiness",
+      "Sunshine",
+      "Money"
      ],
      [
-      "She wants to what him?",
-      "Erase",
-      "Replace",
-      "Forget"
+      "What color are the clouds up above?",
+      "Grey",
+      "Black",
+      "Purple"
      ],
      [
-      "How long with no talking?",
-      "A couple days",
-      "A whole month",
-      "A full year"
+      "The clouds are a what to his life?",
+      "Metaphor",
+      "Mirror",
+      "Warning"
      ],
      [
-      "After no talking, he sees his what?",
-      "Baby",
-      "Mama",
-      "Friends"
+      "His heart is stronger than it's ever what?",
+      "Been",
+      "Felt",
+      "Beat"
      ],
      [
-      "\"And this what she...\" what?",
-      "Tells me",
-      "Texts me",
-      "Sings me"
+      "Strong will 'til his what ends?",
+      "Journey",
+      "Story",
+      "Song"
      ]
     ],
     [
      [
-      "She keeps on what?",
-      "Running",
-      "Crying",
-      "Calling"
+      "His eyes are what when the day goes?",
+      "Heavy",
+      "Watery",
+      "Wide"
      ],
      [
-      "How many times \"keep on running\"?",
-      "Two",
-      "Three",
-      "Four"
+      "Nothing's helping when his head does what?",
+      "Doze",
+      "Spin",
+      "Ache"
      ],
      [
-      "She keeps running and nothing what?",
-      "Works",
-      "Changes",
-      "Stops"
+      "\"But I ain't...\" what?",
+      "Sleep",
+      "Scared",
+      "Done"
      ],
      [
-      "She can't get what from him?",
-      "Away",
-      "Free",
-      "Over"
+      "He's awake in another what?",
+      "State",
+      "World",
+      "Town"
      ],
      [
-      "\"I can't get away from...\" who?",
-      "You",
-      "Them",
-      "Love"
+      "He's living in a new what?",
+      "Space",
+      "House",
+      "City"
      ],
      [
-      "She keeps on what him?",
-      "Ducking",
-      "Calling",
-      "Texting"
+      "His mind is running at a steady what?",
+      "Pace",
+      "Speed",
+      "Beat"
      ],
      [
-      "She keeps ducking and nothing what?",
-      "Helps",
-      "Lasts",
-      "Fits"
+      "God help him so he'll win the what?",
+      "Race",
+      "Fight",
+      "Game"
      ],
      [
-      "She can't stop what him?",
-      "Missing",
-      "Calling",
-      "Loving"
+      "The sky might what?",
+      "Fall",
+      "Crack",
+      "Clear"
      ]
     ],
     [
      [
-      "It's like he's her new what?",
-      "Nightmare",
-      "Dream",
-      "Obsession"
+      "\"Grey clouds stuck together...\" who?",
+      "Fam",
+      "Man",
+      "Dawg"
      ],
      [
-      "She ain't what?",
-      "Escaping",
-      "Leaving",
-      "Sleeping"
+      "Lightning piercing through another what?",
+      "Land",
+      "Sky",
+      "Town"
      ],
      [
-      "It makes him feel a bit what?",
-      "Complete",
-      "Empty",
-      "Better"
+      "Over the desert where the what play?",
+      "Lost",
+      "Kids",
+      "Wolves"
      ],
      [
-      "Someone you love don't feel the same what about ya?",
+      "Soul searching each and every what?",
       "Way",
-      "Love",
-      "Thing"
+      "Day",
+      "Night"
      ],
      [
-      "What do they soon delete?",
-      "Memories",
-      "Messages",
-      "Pictures"
+      "Awesome sound, so what?",
+      "Profound",
+      "Loud",
+      "Proud"
      ],
      [
-      "This time, how long with no talking?",
-      "A couple weeks",
-      "A whole month",
-      "A full year"
+      "Something special he is what to?",
+      "Running",
+      "Singing",
+      "Talking"
      ],
      [
-      "He wishes they could what?",
-      "Start over",
-      "Move on",
-      "Run away"
+      "Away, very far away, to another what?",
+      "Universe",
+      "Country",
+      "Planet"
      ],
      [
-      "He told his what?",
-      "Baby",
-      "Mama",
-      "Homies"
+      "\"It's the new, new...\" what?",
+      "Place",
+      "Wave",
+      "Sound"
      ]
     ]
    ]

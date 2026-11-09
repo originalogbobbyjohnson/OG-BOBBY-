@@ -269,336 +269,336 @@ window.CFG = {
    ]
   },
   {
-   "title": "Paradise (Big Sean)",
-   "id": "ueS6oLhERW0",
-   "start": 13.9,
+   "title": "We Can't Stop (Miley Cyrus)",
+   "id": "Km3wOjaRyE4",
    "cuts": [
-    44.9,
-    89.6,
-    179.1
+    37.4,
+    84.9,
+    181
    ],
    "qs": [
     [
      [
-      "\"I always wanted to stunt so...\"?",
-      "Hard",
-      "Much",
-      "Big"
+      "\"It's our ..., we can do what we want\"?",
+      "Party",
+      "House",
+      "Night"
      ],
      [
-      "\"I always wanted to ride that...\"?",
-      "Whip",
-      "Wave",
-      "Bike"
+      "\"Red cups and sweaty ... everywhere\"?",
+      "Bodies",
+      "Dancers",
+      "Faces"
      ],
      [
-      "\"I always wanted to live this...\"?",
-      "Life",
-      "Dream",
-      "Way"
+      "\"Hands in the air like we don't...\"?",
+      "Care",
+      "Stop",
+      "Know"
      ],
      [
-      "\"I always wanted to wear that...\"?",
-      "Ice",
-      "Chain",
-      "Crown"
+      "\"'Cause we came to have so much...\"?",
+      "Fun",
+      "Time",
+      "Love"
      ],
      [
-      "\"I always wanted...\"?",
-      "Paradise",
-      "Heaven",
-      "The world"
+      "What color are the cups?",
+      "Red",
+      "Blue",
+      "Gold"
      ],
      [
-      "\"Now it don't take a lot to make you...\"?",
-      "Rich",
-      "Happy",
-      "Famous"
+      "How many lines start with \"It's our party\" before the verse?",
+      "Six",
+      "Four",
+      "Two"
      ],
      [
-      "\"I always wanted to ___ so hard\"",
-      "Stunt",
-      "Ball",
-      "Work"
+      "\"It's our party, we can kiss...\"?",
+      "Who we want",
+      "Everyone",
+      "The DJ"
      ],
      [
-      "\"Sometimes hate can be the best...\"?",
-      "Love",
-      "Fuel",
-      "Friend"
+      "\"It's our party, we can say...\"?",
+      "What we want",
+      "Our names",
+      "Goodbye"
      ]
     ],
     [
      [
-      "\"Walkin' in like I got ___ on me\"",
-      "Cameras",
-      "Spotlights",
-      "Diamonds"
+      "\"If you're not ready to go...\"?",
+      "Home",
+      "Out",
+      "Yet"
      ],
      [
-      "\"Gotta pretty young girl look like ___ on me\"",
-      "Janet",
-      "Rihanna",
-      "Beyonce"
-     ],
-     [
-      "\"Closet lookin' like Planet of the...\"?",
-      "Bathin' Apes",
-      "Apes",
-      "Giants"
-     ],
-     [
-      "\"My whole city look like it's ___ homie\"",
-      "Abandoned",
-      "On fire",
-      "Asleep"
-     ],
-     [
-      "\"Every wish we ever had got ___ homie\"",
-      "Granted",
-      "Answered",
-      "Paid"
-     ],
-     [
-      "\"Even when the marble floor and counter toppers are...\"?",
-      "Granite",
-      "Gold",
-      "Glass"
-     ],
-     [
-      "\"Even if I was the captain of...\"?",
-      "Titanic",
-      "The Love Boat",
-      "Black Pearl"
-     ],
-     [
-      "\"All the fruits of my labor...\"?",
-      "Organic",
-      "Fresh",
-      "Golden"
-     ],
-     [
-      "\"Makin' sure my family tree got ___ on it\"",
-      "Hammocks",
-      "Branches",
-      "Apples"
-     ]
-    ],
-    [
-     [
-      "What's repeated after the verse? \"Money...\"?",
-      "Bag",
-      "Talk",
-      "Long"
-     ],
-     [
-      "\"Finally...\"?",
-      "Famous",
-      "Rich",
-      "Home"
-     ],
-     [
-      "\"Never throwing money out, I...\"?",
-      "Boomerang it",
-      "Stack it",
-      "Save it"
-     ],
-     [
-      "\"Man, I'm going hard all...\"?",
-      "Season",
+      "\"'Cause we gonna go all...\"?",
       "Night",
-      "Year"
-     ],
-     [
-      "\"Beat the odds and got...\"?",
-      "Even",
-      "Rich",
+      "Day",
       "Out"
      ],
      [
-      "\"Boy, the sword just got...\"?",
-      "Sharper",
-      "Longer",
-      "Heavier"
+      "\"'Till we see the...\"?",
+      "Sunlight",
+      "Morning",
+      "Stars"
      ],
      [
-      "\"This ain't war, we just...\"?",
-      "Sparring",
-      "Playing",
-      "Practicing"
+      "\"So la-da-di-da-di, we like to...\"?",
+      "Party",
+      "Dance",
+      "Sing"
      ],
      [
-      "\"Was up in Florida, no...\"?",
-      "Marlins",
-      "Dolphins",
-      "Heat"
+      "\"This is our house, this is our...\"?",
+      "Rules",
+      "Song",
+      "Night"
+     ],
+     [
+      "\"And we can't stop, and we won't...\"?",
+      "Stop",
+      "Quit",
+      "Drop"
+     ],
+     [
+      "\"Can't you see it's we who own the...\"?",
+      "Night",
+      "Room",
+      "Club"
+     ],
+     [
+      "\"We run things, things don't run...\"?",
+      "We",
+      "Us",
+      "Fast"
+     ],
+     [
+      "\"Don't take nothing from...\"?",
+      "Nobody",
+      "Anybody",
+      "Strangers"
+     ]
+    ],
+    [
+     [
+      "\"Remember only ... can judge ya\"?",
+      "God",
+      "Mama",
+      "You"
+     ],
+     [
+      "\"Forget the haters, 'cause somebody...\"?",
+      "Loves ya",
+      "Needs ya",
+      "Sees ya"
+     ],
+     [
+      "\"We all so turned...\"?",
+      "Up",
+      "Out",
+      "Around"
+     ],
+     [
+      "\"It's our ..., we can sing if we want to\"?",
+      "Song",
+      "Club",
+      "Car"
+     ],
+     [
+      "\"It's my ..., I can say what I want to\"?",
+      "Mouth",
+      "Mind",
+      "Life"
+     ],
+     [
+      "\"Can't you see it's we who 'bout that...\"?",
+      "Life",
+      "Night",
+      "Game"
+     ],
+     [
+      "\"Doing whatever we...\"?",
+      "Want",
+      "Like",
+      "Please"
+     ],
+     [
+      "\"It's our ..., we can love who we want to\"?",
+      "House",
+      "Party",
+      "Night"
      ]
     ]
    ]
   },
   {
-   "title": "Black Beatles (Rae Sremmurd)",
-   "id": "7hCdjhQ1_Gc",
+   "title": "Formation (Beyoncé)",
+   "id": "OI2jn3lJTAE",
+   "start": 7.8,
    "cuts": [
-    39.1,
-    92,
-    223.6
+    44.4,
+    86.6,
+    133.6
    ],
    "qs": [
     [
      [
-      "\"Rae Sremm, Guwop...\" who's called out last?",
-      "Mike WiLL",
-      "Metro",
-      "Swizz"
+      "\"Y'all haters corny with that ... mess\"?",
+      "Illuminati",
+      "Instagram",
+      "Internet"
      ],
      [
-      "\"I sent ___, but you said you didn't receive 'em\"",
-      "Flowers",
-      "Letters",
-      "Texts"
+      "\"Paparazzi, catch my...\"?",
+      "Fly",
+      "Smile",
+      "Good side"
      ],
      [
-      "\"But you said you didn't...\"?",
-      "Need them",
-      "Want them",
-      "Like them"
+      "\"I'm so reckless when I rock my ... dress\"?",
+      "Givenchy",
+      "Gucci",
+      "Chanel"
      ],
      [
-      "\"That girl is a real crowd...\"?",
-      "Pleaser",
-      "Favorite",
-      "Starter"
+      "\"So I rock his ... necklaces\"?",
+      "Roc",
+      "Gold",
+      "Diamond"
      ],
      [
-      "\"Small world, all her ___ know me\"",
-      "Friends",
-      "Sisters",
-      "Exes"
+      "\"My daddy...\"?",
+      "Alabama",
+      "Georgia",
+      "Texas"
      ],
      [
-      "\"Young bull livin' like an old...\"?",
-      "Geezer",
-      "Legend",
-      "Timer"
+      "\"Momma...\"?",
+      "Louisiana",
+      "Mississippi",
+      "Alabama"
      ],
      [
-      "\"Release the ___, watch it fall slowly\"",
-      "Cash",
-      "Doves",
-      "Balloons"
+      "Mix it with that Creole, make a Texas...?",
+      "Bama",
+      "Belle",
+      "Queen"
      ],
      [
-      "\"Release the cash, watch it fall...\"?",
-      "Slowly",
-      "Down",
-      "Fast"
+      "They never take the ... out of her?",
+      "Country",
+      "City",
+      "Hood"
      ]
     ],
     [
      [
-      "\"Frat girls still tryna get...\"?",
-      "Even",
-      "Famous",
-      "Home"
+      "\"I got hot sauce in my...\"?",
+      "Bag",
+      "Car",
+      "Purse"
      ],
      [
-      "\"Haters mad for whatever...\"?",
-      "Reason",
-      "Season",
-      "Money"
+      "\"I see it, I want it, I...\"?",
+      "Stunt",
+      "Take it",
+      "Buy it"
      ],
      [
-      "\"They lose it when the DJ drops the...\"?",
-      "Needle",
-      "Beat",
-      "Bass"
+      "\"I dream it, I work hard, I grind 'til I...\"?",
+      "Own it",
+      "Make it",
+      "Win it"
      ],
      [
-      "\"Gettin' so cold I'm not...\"?",
-      "Blinkin'",
-      "Thinkin'",
-      "Sleepin'"
+      "\"I twirl on them haters, albino...\"?",
+      "Alligators",
+      "Crocodiles",
+      "Snakes"
      ],
      [
-      "\"New day, new ___ to be made\"",
-      "Money",
-      "Moves",
-      "Friends"
+      "\"El Camino with the seat...\"?",
+      "Low",
+      "Back",
+      "Up"
      ],
      [
-      "\"Cream seats in the...\"?",
-      "Regal",
-      "Range",
-      "Rolls"
+      "\"Sometimes I go off, I go...\"?",
+      "Hard",
+      "Home",
+      "Out"
      ],
      [
-      "\"Rockin' ___ lenses\"",
-      "John Lennon",
-      "Paul McCartney",
-      "Elton John"
+      "\"Get what's mine, I'm a...\"?",
+      "Star",
+      "Boss",
+      "Queen"
      ],
      [
-      "\"Screamin' everybody's...\"?",
-      "Famous",
-      "Dancing",
-      "Rich"
+      "\"'Cause I...\"?",
+      "Slay",
+      "Pray",
+      "Stay"
      ],
      [
-      "\"She think she love me, I think she...\"?",
-      "Trollin'",
-      "Lyin'",
-      "Rollin'"
+      "What's the answer to every \"slay\"?",
+      "Okay",
+      "Alright",
+      "Yeah"
      ]
     ],
     [
      [
-      "\"Your body like a work of...\"?",
-      "Art",
-      "God",
-      "Wonder"
+      "\"Ladies, now let's get in...\"?",
+      "Formation",
+      "Position",
+      "Line"
      ],
      [
-      "\"___ on me, I got a lot of flavor\"",
-      "D&G",
-      "Gucci",
-      "Prada"
+      "\"Prove to me you got some...\"?",
+      "Coordination",
+      "Motivation",
+      "Dedication"
      ],
      [
-      "\"___ hundred on my feet\"",
-      "15",
-      "12",
-      "20"
+      "\"Slay trick, or you get...\"?",
+      "Eliminated",
+      "Kicked out",
+      "Replaced"
      ],
      [
-      "\"15 hundred on my...\"?",
-      "Feet",
-      "Wrist",
-      "Neck"
+      "\"Drop him off at the mall, let him buy some...\"?",
+      "J's",
+      "Jeans",
+      "Shoes"
      ],
      [
-      "\"I had haters when I was broke, I'm rich, I still got...\"?",
-      "Haters",
-      "Problems",
-      "Friends"
+      "\"I might get your song played on the...\"?",
+      "Radio station",
+      "TV",
+      "Jukebox"
      ],
      [
-      "What kind of jackets? \"Leather ___ jackets\"",
-      "Gucci",
-      "Prada",
-      "Fendi"
+      "\"You just might be a black Bill ... in the making\"?",
+      "Gates",
+      "Russell",
+      "Withers"
      ],
      [
-      "\"Like it's still the...\"?",
-      "80's",
-      "70's",
-      "60's"
+      "She might take him on a flight on her...?",
+      "Chopper",
+      "Jet",
+      "Yacht"
      ],
      [
-      "\"Me and ___ related\"",
-      "Paul McCartney",
-      "John Lennon",
-      "Ringo Starr"
+      "How many \"okay\"s before \"ladies\"?",
+      "Two",
+      "One",
+      "Three"
      ]
     ]
    ]
@@ -934,336 +934,336 @@ window.CFG = {
    ]
   },
   {
-   "title": "Paradise (Big Sean)",
-   "id": "ueS6oLhERW0",
-   "start": 13.9,
+   "title": "We Can't Stop (Miley Cyrus)",
+   "id": "Km3wOjaRyE4",
    "cuts": [
-    44.9,
-    89.6,
-    179.1
+    37.4,
+    84.9,
+    181
    ],
    "qs": [
     [
      [
-      "\"I always wanted to stunt so...\"?",
-      "Hard",
-      "Much",
-      "Big"
+      "\"It's our ..., we can do what we want\"?",
+      "Party",
+      "House",
+      "Night"
      ],
      [
-      "\"I always wanted to ride that...\"?",
-      "Whip",
-      "Wave",
-      "Bike"
+      "\"Red cups and sweaty ... everywhere\"?",
+      "Bodies",
+      "Dancers",
+      "Faces"
      ],
      [
-      "\"I always wanted to live this...\"?",
-      "Life",
-      "Dream",
-      "Way"
+      "\"Hands in the air like we don't...\"?",
+      "Care",
+      "Stop",
+      "Know"
      ],
      [
-      "\"I always wanted to wear that...\"?",
-      "Ice",
-      "Chain",
-      "Crown"
+      "\"'Cause we came to have so much...\"?",
+      "Fun",
+      "Time",
+      "Love"
      ],
      [
-      "\"I always wanted...\"?",
-      "Paradise",
-      "Heaven",
-      "The world"
+      "What color are the cups?",
+      "Red",
+      "Blue",
+      "Gold"
      ],
      [
-      "\"Now it don't take a lot to make you...\"?",
-      "Rich",
-      "Happy",
-      "Famous"
+      "How many lines start with \"It's our party\" before the verse?",
+      "Six",
+      "Four",
+      "Two"
      ],
      [
-      "\"I always wanted to ___ so hard\"",
-      "Stunt",
-      "Ball",
-      "Work"
+      "\"It's our party, we can kiss...\"?",
+      "Who we want",
+      "Everyone",
+      "The DJ"
      ],
      [
-      "\"Sometimes hate can be the best...\"?",
-      "Love",
-      "Fuel",
-      "Friend"
+      "\"It's our party, we can say...\"?",
+      "What we want",
+      "Our names",
+      "Goodbye"
      ]
     ],
     [
      [
-      "\"Walkin' in like I got ___ on me\"",
-      "Cameras",
-      "Spotlights",
-      "Diamonds"
+      "\"If you're not ready to go...\"?",
+      "Home",
+      "Out",
+      "Yet"
      ],
      [
-      "\"Gotta pretty young girl look like ___ on me\"",
-      "Janet",
-      "Rihanna",
-      "Beyonce"
-     ],
-     [
-      "\"Closet lookin' like Planet of the...\"?",
-      "Bathin' Apes",
-      "Apes",
-      "Giants"
-     ],
-     [
-      "\"My whole city look like it's ___ homie\"",
-      "Abandoned",
-      "On fire",
-      "Asleep"
-     ],
-     [
-      "\"Every wish we ever had got ___ homie\"",
-      "Granted",
-      "Answered",
-      "Paid"
-     ],
-     [
-      "\"Even when the marble floor and counter toppers are...\"?",
-      "Granite",
-      "Gold",
-      "Glass"
-     ],
-     [
-      "\"Even if I was the captain of...\"?",
-      "Titanic",
-      "The Love Boat",
-      "Black Pearl"
-     ],
-     [
-      "\"All the fruits of my labor...\"?",
-      "Organic",
-      "Fresh",
-      "Golden"
-     ],
-     [
-      "\"Makin' sure my family tree got ___ on it\"",
-      "Hammocks",
-      "Branches",
-      "Apples"
-     ]
-    ],
-    [
-     [
-      "What's repeated after the verse? \"Money...\"?",
-      "Bag",
-      "Talk",
-      "Long"
-     ],
-     [
-      "\"Finally...\"?",
-      "Famous",
-      "Rich",
-      "Home"
-     ],
-     [
-      "\"Never throwing money out, I...\"?",
-      "Boomerang it",
-      "Stack it",
-      "Save it"
-     ],
-     [
-      "\"Man, I'm going hard all...\"?",
-      "Season",
+      "\"'Cause we gonna go all...\"?",
       "Night",
-      "Year"
-     ],
-     [
-      "\"Beat the odds and got...\"?",
-      "Even",
-      "Rich",
+      "Day",
       "Out"
      ],
      [
-      "\"Boy, the sword just got...\"?",
-      "Sharper",
-      "Longer",
-      "Heavier"
+      "\"'Till we see the...\"?",
+      "Sunlight",
+      "Morning",
+      "Stars"
      ],
      [
-      "\"This ain't war, we just...\"?",
-      "Sparring",
-      "Playing",
-      "Practicing"
+      "\"So la-da-di-da-di, we like to...\"?",
+      "Party",
+      "Dance",
+      "Sing"
      ],
      [
-      "\"Was up in Florida, no...\"?",
-      "Marlins",
-      "Dolphins",
-      "Heat"
+      "\"This is our house, this is our...\"?",
+      "Rules",
+      "Song",
+      "Night"
+     ],
+     [
+      "\"And we can't stop, and we won't...\"?",
+      "Stop",
+      "Quit",
+      "Drop"
+     ],
+     [
+      "\"Can't you see it's we who own the...\"?",
+      "Night",
+      "Room",
+      "Club"
+     ],
+     [
+      "\"We run things, things don't run...\"?",
+      "We",
+      "Us",
+      "Fast"
+     ],
+     [
+      "\"Don't take nothing from...\"?",
+      "Nobody",
+      "Anybody",
+      "Strangers"
+     ]
+    ],
+    [
+     [
+      "\"Remember only ... can judge ya\"?",
+      "God",
+      "Mama",
+      "You"
+     ],
+     [
+      "\"Forget the haters, 'cause somebody...\"?",
+      "Loves ya",
+      "Needs ya",
+      "Sees ya"
+     ],
+     [
+      "\"We all so turned...\"?",
+      "Up",
+      "Out",
+      "Around"
+     ],
+     [
+      "\"It's our ..., we can sing if we want to\"?",
+      "Song",
+      "Club",
+      "Car"
+     ],
+     [
+      "\"It's my ..., I can say what I want to\"?",
+      "Mouth",
+      "Mind",
+      "Life"
+     ],
+     [
+      "\"Can't you see it's we who 'bout that...\"?",
+      "Life",
+      "Night",
+      "Game"
+     ],
+     [
+      "\"Doing whatever we...\"?",
+      "Want",
+      "Like",
+      "Please"
+     ],
+     [
+      "\"It's our ..., we can love who we want to\"?",
+      "House",
+      "Party",
+      "Night"
      ]
     ]
    ]
   },
   {
-   "title": "Black Beatles (Rae Sremmurd)",
-   "id": "7hCdjhQ1_Gc",
+   "title": "Formation (Beyoncé)",
+   "id": "OI2jn3lJTAE",
+   "start": 7.8,
    "cuts": [
-    39.1,
-    92,
-    223.6
+    44.4,
+    86.6,
+    133.6
    ],
    "qs": [
     [
      [
-      "\"Rae Sremm, Guwop...\" who's called out last?",
-      "Mike WiLL",
-      "Metro",
-      "Swizz"
+      "\"Y'all haters corny with that ... mess\"?",
+      "Illuminati",
+      "Instagram",
+      "Internet"
      ],
      [
-      "\"I sent ___, but you said you didn't receive 'em\"",
-      "Flowers",
-      "Letters",
-      "Texts"
+      "\"Paparazzi, catch my...\"?",
+      "Fly",
+      "Smile",
+      "Good side"
      ],
      [
-      "\"But you said you didn't...\"?",
-      "Need them",
-      "Want them",
-      "Like them"
+      "\"I'm so reckless when I rock my ... dress\"?",
+      "Givenchy",
+      "Gucci",
+      "Chanel"
      ],
      [
-      "\"That girl is a real crowd...\"?",
-      "Pleaser",
-      "Favorite",
-      "Starter"
+      "\"So I rock his ... necklaces\"?",
+      "Roc",
+      "Gold",
+      "Diamond"
      ],
      [
-      "\"Small world, all her ___ know me\"",
-      "Friends",
-      "Sisters",
-      "Exes"
+      "\"My daddy...\"?",
+      "Alabama",
+      "Georgia",
+      "Texas"
      ],
      [
-      "\"Young bull livin' like an old...\"?",
-      "Geezer",
-      "Legend",
-      "Timer"
+      "\"Momma...\"?",
+      "Louisiana",
+      "Mississippi",
+      "Alabama"
      ],
      [
-      "\"Release the ___, watch it fall slowly\"",
-      "Cash",
-      "Doves",
-      "Balloons"
+      "Mix it with that Creole, make a Texas...?",
+      "Bama",
+      "Belle",
+      "Queen"
      ],
      [
-      "\"Release the cash, watch it fall...\"?",
-      "Slowly",
-      "Down",
-      "Fast"
+      "They never take the ... out of her?",
+      "Country",
+      "City",
+      "Hood"
      ]
     ],
     [
      [
-      "\"Frat girls still tryna get...\"?",
-      "Even",
-      "Famous",
-      "Home"
+      "\"I got hot sauce in my...\"?",
+      "Bag",
+      "Car",
+      "Purse"
      ],
      [
-      "\"Haters mad for whatever...\"?",
-      "Reason",
-      "Season",
-      "Money"
+      "\"I see it, I want it, I...\"?",
+      "Stunt",
+      "Take it",
+      "Buy it"
      ],
      [
-      "\"They lose it when the DJ drops the...\"?",
-      "Needle",
-      "Beat",
-      "Bass"
+      "\"I dream it, I work hard, I grind 'til I...\"?",
+      "Own it",
+      "Make it",
+      "Win it"
      ],
      [
-      "\"Gettin' so cold I'm not...\"?",
-      "Blinkin'",
-      "Thinkin'",
-      "Sleepin'"
+      "\"I twirl on them haters, albino...\"?",
+      "Alligators",
+      "Crocodiles",
+      "Snakes"
      ],
      [
-      "\"New day, new ___ to be made\"",
-      "Money",
-      "Moves",
-      "Friends"
+      "\"El Camino with the seat...\"?",
+      "Low",
+      "Back",
+      "Up"
      ],
      [
-      "\"Cream seats in the...\"?",
-      "Regal",
-      "Range",
-      "Rolls"
+      "\"Sometimes I go off, I go...\"?",
+      "Hard",
+      "Home",
+      "Out"
      ],
      [
-      "\"Rockin' ___ lenses\"",
-      "John Lennon",
-      "Paul McCartney",
-      "Elton John"
+      "\"Get what's mine, I'm a...\"?",
+      "Star",
+      "Boss",
+      "Queen"
      ],
      [
-      "\"Screamin' everybody's...\"?",
-      "Famous",
-      "Dancing",
-      "Rich"
+      "\"'Cause I...\"?",
+      "Slay",
+      "Pray",
+      "Stay"
      ],
      [
-      "\"She think she love me, I think she...\"?",
-      "Trollin'",
-      "Lyin'",
-      "Rollin'"
+      "What's the answer to every \"slay\"?",
+      "Okay",
+      "Alright",
+      "Yeah"
      ]
     ],
     [
      [
-      "\"Your body like a work of...\"?",
-      "Art",
-      "God",
-      "Wonder"
+      "\"Ladies, now let's get in...\"?",
+      "Formation",
+      "Position",
+      "Line"
      ],
      [
-      "\"___ on me, I got a lot of flavor\"",
-      "D&G",
-      "Gucci",
-      "Prada"
+      "\"Prove to me you got some...\"?",
+      "Coordination",
+      "Motivation",
+      "Dedication"
      ],
      [
-      "\"___ hundred on my feet\"",
-      "15",
-      "12",
-      "20"
+      "\"Slay trick, or you get...\"?",
+      "Eliminated",
+      "Kicked out",
+      "Replaced"
      ],
      [
-      "\"15 hundred on my...\"?",
-      "Feet",
-      "Wrist",
-      "Neck"
+      "\"Drop him off at the mall, let him buy some...\"?",
+      "J's",
+      "Jeans",
+      "Shoes"
      ],
      [
-      "\"I had haters when I was broke, I'm rich, I still got...\"?",
-      "Haters",
-      "Problems",
-      "Friends"
+      "\"I might get your song played on the...\"?",
+      "Radio station",
+      "TV",
+      "Jukebox"
      ],
      [
-      "What kind of jackets? \"Leather ___ jackets\"",
-      "Gucci",
-      "Prada",
-      "Fendi"
+      "\"You just might be a black Bill ... in the making\"?",
+      "Gates",
+      "Russell",
+      "Withers"
      ],
      [
-      "\"Like it's still the...\"?",
-      "80's",
-      "70's",
-      "60's"
+      "She might take him on a flight on her...?",
+      "Chopper",
+      "Jet",
+      "Yacht"
      ],
      [
-      "\"Me and ___ related\"",
-      "Paul McCartney",
-      "John Lennon",
-      "Ringo Starr"
+      "How many \"okay\"s before \"ladies\"?",
+      "Two",
+      "One",
+      "Three"
      ]
     ]
    ]
@@ -1431,5 +1431,3 @@ window.CFG = {
   }
  ]
 };
-
-(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

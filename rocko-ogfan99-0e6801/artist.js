@@ -151,6 +151,18 @@ window.CFG = {
       "Dough",
       "Rest",
       "Even"
+     ],
+     [
+      "After his hat: \"Got my...\"?",
+      "Bag",
+      "Keys",
+      "Phone"
+     ],
+     [
+      "\"Doin' it for the...\"?",
+      "Streets",
+      "Fans",
+      "Fam"
      ]
     ],
     [
@@ -195,6 +207,18 @@ window.CFG = {
       "Wife",
       "Job",
       "Boss"
+     ],
+     [
+      "\"I'm married to the...\"?",
+      "Cash",
+      "Game",
+      "Streets"
+     ],
+     [
+      "Addicted to the money for more than half his...?",
+      "Life",
+      "Years",
+      "Days"
      ]
     ],
     [
@@ -233,6 +257,12 @@ window.CFG = {
       "His kids",
       "His mama",
       "His girl"
+     ],
+     [
+      "\"Ball e'day ju'like it's my...\"?",
+      "Last",
+      "First",
+      "Birthday"
      ]
     ]
    ]
@@ -332,6 +362,24 @@ window.CFG = {
       "Skybox",
       "Front row",
       "Nosebleeds"
+     ],
+     [
+      "\"Grandma told me, never be a...\"?",
+      "Failure",
+      "Quitter",
+      "Rapper"
+     ],
+     [
+      "\"I'ma have whatever my heart...\"?",
+      "Desire",
+      "Wants",
+      "Needs"
+     ],
+     [
+      "\"I'm tryna stack it to the...\"?",
+      "Sky",
+      "Roof",
+      "Moon"
      ]
     ],
     [
@@ -370,6 +418,18 @@ window.CFG = {
       "Proof",
       "Large",
       "Lavish"
+     ],
+     [
+      "\"Bet I'm gon' get rich, that was way back in...\"?",
+      "1996",
+      "1999",
+      "2006"
+     ],
+     [
+      "\"Got a bike, got a truck, got a V12...\"?",
+      "Benz",
+      "Jag",
+      "Bentley"
      ]
     ]
    ]
@@ -426,6 +486,18 @@ window.CFG = {
       "Languages",
       "Countries",
       "Cities"
+     ],
+     [
+      "\"I wish I could take everybody with...\"?",
+      "Me",
+      "Them",
+      "Us"
+     ],
+     [
+      "They say they gonna leave him; he always sits and...?",
+      "Laughs",
+      "Cries",
+      "Waits"
      ]
     ],
     [
@@ -470,6 +542,18 @@ window.CFG = {
       "Eye",
       "Door",
       "Window"
+     ],
+     [
+      "\"The states ain't big enough for...\"?",
+      "Me",
+      "Us",
+      "Them"
+     ],
+     [
+      "\"Number one rule of the game, play for...\"?",
+      "Keeps",
+      "Fun",
+      "Free"
      ]
     ],
     [
@@ -508,6 +592,12 @@ window.CFG = {
       "Hand",
       "Arm",
       "Life"
+     ],
+     [
+      "Who gets told to preach?",
+      "Future",
+      "Rocko",
+      "Black"
      ]
     ]
    ]
@@ -563,6 +653,12 @@ window.CFG = {
       "Tsunami",
       "Thunder",
       "Pour"
+     ],
+     [
+      "\"You really like her, you might...\"?",
+      "Wife her",
+      "Call her",
+      "Date her"
      ]
     ],
     [
@@ -601,6 +697,12 @@ window.CFG = {
       "And what?",
       "So what?",
       "Now what?"
+     ],
+     [
+      "After \"then watch me do me,\" how many \"watch me do me\"s?",
+      "Two",
+      "Three",
+      "One"
      ]
     ],
     [
@@ -639,144 +741,24 @@ window.CFG = {
       "New thing",
       "Old school",
       "Next one"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "U.O.E.N.O.",
-   "id": "zCQVYk2eF0w",
-   "start": 14.9,
-   "cuts": [
-    45.1,
-    68.1,
-    91.7
-   ],
-   "qs": [
-    [
-     [
-      "A thousand-dollar pair of what?",
-      "Shoes",
-      "Shades",
-      "Jeans"
      ],
      [
-      "A half a million-dollar what?",
-      "Car",
-      "Boat",
-      "Truck"
+      "\"Then I step up out the car, watch the car...\"?",
+      "Back back",
+      "Drive off",
+      "Lock up"
      ],
      [
-      "He came up from the what?",
-      "Bottom",
-      "Block",
-      "Basement"
+      "\"Pay attention let me show you how to...\"?",
+      "Do me",
+      "Get money",
+      "Dress"
      ],
      [
-      "A million-dollar what on his wrist?",
-      "Watch",
-      "Ring",
-      "Chain"
-     ],
-     [
-      "And he's got a million-dollar what?",
-      "Crib",
-      "Jet",
-      "Yacht"
-     ],
-     [
-      "What does the hook say \"you don't even\" do?",
-      "Know it",
-      "Want it",
-      "See it"
-     ],
-     [
-      "What did the shoes cost?",
-      "A thousand",
-      "A hundred",
-      "A million"
-     ]
-    ],
-    [
-     [
-      "The monster truck is so big you can't even what?",
-      "Tow it",
-      "Park it",
-      "Drive it"
-     ],
-     [
-      "He keeps the grass cut 'cause he don't like what?",
-      "Snakes",
-      "Bugs",
-      "Weeds"
-     ],
-     [
-      "He sips Dom Peri'; what don't they do?",
-      "Moet",
-      "Ciroc",
-      "Patrón"
-     ],
-     [
-      "If it ain't P.J., who won't even pour it?",
-      "The hostess",
-      "The bartender",
-      "The waiter"
-     ],
-     [
-      "What brand are his specs?",
-      "Tom Ford",
-      "Cartier",
-      "Gucci"
-     ],
-     [
-      "What's his button-down?",
-      "Michael Kors",
-      "Ralph Lauren",
-      "Versace"
-     ],
-     [
-      "He's always on like the what?",
-      "Refrigerator",
-      "TV",
-      "Radio"
-     ]
-    ],
-    [
-     [
-      "He wears the Breitling when he's what?",
-      "Bored",
-      "Tired",
-      "Out"
-     ],
-     [
-      "What size is the other watch?",
-      "41-millimeter",
-      "38-millimeter",
-      "44-millimeter"
-     ],
-     [
-      "Whose game has him on the floor?",
-      "Hawks",
-      "Lakers",
-      "Heat"
-     ],
-     [
-      "Where's his TV seat?",
-      "Front row",
-      "Skybox",
-      "Balcony"
-     ],
-     [
-      "What does he call himself?",
-      "Rocko Da Don",
-      "Rocko Dinero",
-      "Big Rocko"
-     ],
-     [
-      "He's the CEO, so he ain't gotta what?",
-      "Rap",
-      "Work",
-      "Sign"
+      "\"Black flips, black sack, call 'em...\"?",
+      "Shoestrings",
+      "Shoelaces",
+      "Slippers"
      ]
     ]
    ]
@@ -834,6 +816,18 @@ window.CFG = {
       "Dough",
       "Rest",
       "Even"
+     ],
+     [
+      "After his hat: \"Got my...\"?",
+      "Bag",
+      "Keys",
+      "Phone"
+     ],
+     [
+      "\"Doin' it for the...\"?",
+      "Streets",
+      "Fans",
+      "Fam"
      ]
     ],
     [
@@ -878,6 +872,18 @@ window.CFG = {
       "Wife",
       "Job",
       "Boss"
+     ],
+     [
+      "\"I'm married to the...\"?",
+      "Cash",
+      "Game",
+      "Streets"
+     ],
+     [
+      "Addicted to the money for more than half his...?",
+      "Life",
+      "Years",
+      "Days"
      ]
     ],
     [
@@ -916,6 +922,12 @@ window.CFG = {
       "His kids",
       "His mama",
       "His girl"
+     ],
+     [
+      "\"Ball e'day ju'like it's my...\"?",
+      "Last",
+      "First",
+      "Birthday"
      ]
     ]
    ]
@@ -1015,6 +1027,24 @@ window.CFG = {
       "Skybox",
       "Front row",
       "Nosebleeds"
+     ],
+     [
+      "\"Grandma told me, never be a...\"?",
+      "Failure",
+      "Quitter",
+      "Rapper"
+     ],
+     [
+      "\"I'ma have whatever my heart...\"?",
+      "Desire",
+      "Wants",
+      "Needs"
+     ],
+     [
+      "\"I'm tryna stack it to the...\"?",
+      "Sky",
+      "Roof",
+      "Moon"
      ]
     ],
     [
@@ -1053,6 +1083,18 @@ window.CFG = {
       "Proof",
       "Large",
       "Lavish"
+     ],
+     [
+      "\"Bet I'm gon' get rich, that was way back in...\"?",
+      "1996",
+      "1999",
+      "2006"
+     ],
+     [
+      "\"Got a bike, got a truck, got a V12...\"?",
+      "Benz",
+      "Jag",
+      "Bentley"
      ]
     ]
    ]
@@ -1109,6 +1151,18 @@ window.CFG = {
       "Languages",
       "Countries",
       "Cities"
+     ],
+     [
+      "\"I wish I could take everybody with...\"?",
+      "Me",
+      "Them",
+      "Us"
+     ],
+     [
+      "They say they gonna leave him; he always sits and...?",
+      "Laughs",
+      "Cries",
+      "Waits"
      ]
     ],
     [
@@ -1153,6 +1207,18 @@ window.CFG = {
       "Eye",
       "Door",
       "Window"
+     ],
+     [
+      "\"The states ain't big enough for...\"?",
+      "Me",
+      "Us",
+      "Them"
+     ],
+     [
+      "\"Number one rule of the game, play for...\"?",
+      "Keeps",
+      "Fun",
+      "Free"
      ]
     ],
     [
@@ -1191,6 +1257,12 @@ window.CFG = {
       "Hand",
       "Arm",
       "Life"
+     ],
+     [
+      "Who gets told to preach?",
+      "Future",
+      "Rocko",
+      "Black"
      ]
     ]
    ]
@@ -1246,6 +1318,12 @@ window.CFG = {
       "Tsunami",
       "Thunder",
       "Pour"
+     ],
+     [
+      "\"You really like her, you might...\"?",
+      "Wife her",
+      "Call her",
+      "Date her"
      ]
     ],
     [
@@ -1284,6 +1362,12 @@ window.CFG = {
       "And what?",
       "So what?",
       "Now what?"
+     ],
+     [
+      "After \"then watch me do me,\" how many \"watch me do me\"s?",
+      "Two",
+      "Three",
+      "One"
      ]
     ],
     [
@@ -1322,144 +1406,24 @@ window.CFG = {
       "New thing",
       "Old school",
       "Next one"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "U.O.E.N.O.",
-   "id": "zCQVYk2eF0w",
-   "start": 14.9,
-   "cuts": [
-    45.1,
-    68.1,
-    91.7
-   ],
-   "qs": [
-    [
-     [
-      "A thousand-dollar pair of what?",
-      "Shoes",
-      "Shades",
-      "Jeans"
      ],
      [
-      "A half a million-dollar what?",
-      "Car",
-      "Boat",
-      "Truck"
+      "\"Then I step up out the car, watch the car...\"?",
+      "Back back",
+      "Drive off",
+      "Lock up"
      ],
      [
-      "He came up from the what?",
-      "Bottom",
-      "Block",
-      "Basement"
+      "\"Pay attention let me show you how to...\"?",
+      "Do me",
+      "Get money",
+      "Dress"
      ],
      [
-      "A million-dollar what on his wrist?",
-      "Watch",
-      "Ring",
-      "Chain"
-     ],
-     [
-      "And he's got a million-dollar what?",
-      "Crib",
-      "Jet",
-      "Yacht"
-     ],
-     [
-      "What does the hook say \"you don't even\" do?",
-      "Know it",
-      "Want it",
-      "See it"
-     ],
-     [
-      "What did the shoes cost?",
-      "A thousand",
-      "A hundred",
-      "A million"
-     ]
-    ],
-    [
-     [
-      "The monster truck is so big you can't even what?",
-      "Tow it",
-      "Park it",
-      "Drive it"
-     ],
-     [
-      "He keeps the grass cut 'cause he don't like what?",
-      "Snakes",
-      "Bugs",
-      "Weeds"
-     ],
-     [
-      "He sips Dom Peri'; what don't they do?",
-      "Moet",
-      "Ciroc",
-      "Patrón"
-     ],
-     [
-      "If it ain't P.J., who won't even pour it?",
-      "The hostess",
-      "The bartender",
-      "The waiter"
-     ],
-     [
-      "What brand are his specs?",
-      "Tom Ford",
-      "Cartier",
-      "Gucci"
-     ],
-     [
-      "What's his button-down?",
-      "Michael Kors",
-      "Ralph Lauren",
-      "Versace"
-     ],
-     [
-      "He's always on like the what?",
-      "Refrigerator",
-      "TV",
-      "Radio"
-     ]
-    ],
-    [
-     [
-      "He wears the Breitling when he's what?",
-      "Bored",
-      "Tired",
-      "Out"
-     ],
-     [
-      "What size is the other watch?",
-      "41-millimeter",
-      "38-millimeter",
-      "44-millimeter"
-     ],
-     [
-      "Whose game has him on the floor?",
-      "Hawks",
-      "Lakers",
-      "Heat"
-     ],
-     [
-      "Where's his TV seat?",
-      "Front row",
-      "Skybox",
-      "Balcony"
-     ],
-     [
-      "What does he call himself?",
-      "Rocko Da Don",
-      "Rocko Dinero",
-      "Big Rocko"
-     ],
-     [
-      "He's the CEO, so he ain't gotta what?",
-      "Rap",
-      "Work",
-      "Sign"
+      "\"Black flips, black sack, call 'em...\"?",
+      "Shoestrings",
+      "Shoelaces",
+      "Slippers"
      ]
     ]
    ]

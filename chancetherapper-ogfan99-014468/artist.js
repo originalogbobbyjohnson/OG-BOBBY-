@@ -107,150 +107,12 @@ window.CFG = {
  ],
  "songs": [
   {
-   "title": "All We Got",
-   "id": "rDAkWJgTSOk",
-   "start": 25.9,
-   "cuts": [
-    57.4,
-    71.2,
-    129.0
-   ],
-   "qs": [
-    [
-     [
-      "This ain't no intro, this the what?",
-      "Entree",
-      "Appetizer",
-      "Dessert"
-     ],
-     [
-      "He hit that intro with Kanye and sounds like who?",
-      "André",
-      "Drake",
-      "Pharrell"
-     ],
-     [
-      "He's tryna turn his baby mama to his what?",
-      "Fiancée",
-      "Manager",
-      "Neighbor"
-     ],
-     [
-      "She from Houston like Auntie who?",
-      "Yoncé",
-      "Solange",
-      "Kelly"
-     ],
-     [
-      "His daughter couldn't have a better what?",
-      "Mother",
-      "Teacher",
-      "Sister"
-     ],
-     [
-      "If she ever find another, he better what?",
-      "Love her",
-      "Pay her",
-      "Watch out"
-     ],
-     [
-      "His life is so perfect he could what?",
-      "Merch it",
-      "Film it",
-      "Sell it"
-     ]
-    ],
-    [
-     [
-      "It was a what?",
-      "Dream",
-      "Movie",
-      "Game"
-     ],
-     [
-      "You could not mess with the what?",
-      "Beam",
-      "Scene",
-      "Team"
-     ],
-     [
-      "This is like this many what?",
-      "Rings",
-      "Rooms",
-      "Records"
-     ],
-     [
-      "This for the kids of the king of all what?",
-      "Kings",
-      "Lands",
-      "Streets"
-     ],
-     [
-      "This is the beat that played under the what?",
-      "Word",
-      "Floor",
-      "Stars"
-     ],
-     [
-      "This is the sheep that ain't like what it what?",
-      "Heard",
-      "Saw",
-      "Ate"
-     ]
-    ],
-    [
-     [
-      "He gets his word from the what?",
-      "Sermon",
-      "Streets",
-      "Radio"
-     ],
-     [
-      "He does not talk to the what?",
-      "Serpent",
-      "Press",
-      "Haters"
-     ],
-     [
-      "Who said he's so determined?",
-      "Daddy",
-      "Mama",
-      "Grandma"
-     ],
-     [
-      "These goofies can't do what?",
-      "Hurt me",
-      "Stop me",
-      "Touch me"
-     ],
-     [
-      "He just might make him some what?",
-      "Earl tea",
-      "Lemonade",
-      "Hot cocoa"
-     ],
-     [
-      "He was baptized like real what?",
-      "Early",
-      "Young",
-      "Late"
-     ],
-     [
-      "He might give Satan a what?",
-      "Swirlie",
-      "Wedgie",
-      "Noogie"
-     ]
-    ]
-   ]
-  },
-  {
    "title": "No More Old Men",
    "id": "4FaXrAhcJ5M",
    "start": 29.5,
    "cuts": [
     60.2,
-    80.0,
+    80,
     161.9
    ],
    "qs": [
@@ -296,6 +158,18 @@ window.CFG = {
       "Kangol",
       "Fitted",
       "Bucket"
+     ],
+     [
+      "Forget the DVDs, they tryna get that...?",
+      "Golf drip",
+      "New sneakers",
+      "Old music"
+     ],
+     [
+      "\"Spinnin' stories 'bout ... that they can't go back\"?",
+      "Blocks",
+      "Girls",
+      "Games"
      ]
     ],
     [
@@ -340,6 +214,12 @@ window.CFG = {
       "King",
       "Jet",
       "Sports"
+     ],
+     [
+      "\"It's a lot less ... than it was before\"? (the first one)",
+      "Love",
+      "Money",
+      "Fun"
      ]
     ],
     [
@@ -378,6 +258,18 @@ window.CFG = {
       "Play cousin",
       "Little brother",
       "Best friend"
+     ],
+     [
+      "\"I say we gon' live 'til our hair turn...\"?",
+      "White",
+      "Gray",
+      "Silver"
+     ],
+     [
+      "\"Streetlights on, the kids all come back...\"?",
+      "Home",
+      "Inside",
+      "Running"
      ]
     ]
    ]
@@ -385,7 +277,7 @@ window.CFG = {
   {
    "title": "How Great",
    "id": "l1kupzUz_pc",
-   "start": 188.0,
+   "start": 188,
    "cuts": [
     223.6,
     244.7,
@@ -434,6 +326,18 @@ window.CFG = {
       "Cousins",
       "Brothers",
       "Neighbors"
+     ],
+     [
+      "\"I cannot modify or...\"?",
+      "Ratify",
+      "Rectify",
+      "Testify"
+     ],
+     [
+      "\"Electrify the enemy like...\"?",
+      "Hedwig",
+      "Harry",
+      "Hermione"
      ]
     ],
     [
@@ -472,6 +376,18 @@ window.CFG = {
       "Early",
       "Late",
       "Sooner"
+     ],
+     [
+      "Which street does he say twice?",
+      "79th",
+      "59th",
+      "47th"
+     ],
+     [
+      "\"My dream girl's behind me, feel like I'm James...\"?",
+      "Early",
+      "Brown",
+      "Taylor"
      ]
     ],
     [
@@ -510,6 +426,12 @@ window.CFG = {
       "Borders",
       "Castle",
       "Gates"
+     ],
+     [
+      "\"Descend upon the earth with swords and...\"?",
+      "Fortify",
+      "Glorify",
+      "Testify"
      ]
     ]
    ]
@@ -519,9 +441,9 @@ window.CFG = {
    "id": "XdpGJSe44_o",
    "start": 42.3,
    "cuts": [
-    70.0,
+    70,
     128.7,
-    151.0
+    151
    ],
    "qs": [
     [
@@ -566,6 +488,18 @@ window.CFG = {
       "Trumpet",
       "Guitar",
       "Mic"
+     ],
+     [
+      "\"He has ordered my...\"?",
+      "Steps",
+      "Life",
+      "Words"
+     ],
+     [
+      "\"Gave me a sword with a...\"?",
+      "Crest",
+      "Cross",
+      "Crown"
      ]
     ],
     [
@@ -604,6 +538,18 @@ window.CFG = {
       "Everything",
       "Manager",
       "Best friend"
+     ],
+     [
+      "\"I'm gon' praise Him, praise Him 'til I'm...\"?",
+      "Gone",
+      "Home",
+      "Done"
+     ],
+     [
+      "\"When the praises go up, the blessings come...\"?",
+      "Down",
+      "Back",
+      "Through"
      ]
     ],
     [
@@ -648,6 +594,12 @@ window.CFG = {
       "Dripping water",
       "Falling rain",
       "Autumn leaves"
+     ],
+     [
+      "\"They want ... songs\"?",
+      "Four-minute",
+      "Three-minute",
+      "Short"
      ]
     ]
    ]
@@ -655,7 +607,7 @@ window.CFG = {
   {
    "title": "Sunday Candy",
    "id": "vQriCKszlHc",
-   "start": 11.0,
+   "start": 11,
    "cuts": [
     48.3,
     114.8,
@@ -704,6 +656,18 @@ window.CFG = {
       "Landslide",
       "Mile",
       "Knockout"
+     ],
+     [
+      "\"Something told me I should bring my butt to...\"?",
+      "Church",
+      "School",
+      "Grandma's"
+     ],
+     [
+      "Grandma is president of his...?",
+      "Fan club",
+      "Family",
+      "Choir"
      ]
     ],
     [
@@ -742,6 +706,18 @@ window.CFG = {
       "Rolls",
       "Wings",
       "Biscuits"
+     ],
+     [
+      "\"Come on in this house, 'cause it's gonna...\"?",
+      "Rain",
+      "Snow",
+      "Pour"
+     ],
+     [
+      "\"Rain down...\"?",
+      "Zion",
+      "Heaven",
+      "Jordan"
      ]
     ],
     [
@@ -786,6 +762,12 @@ window.CFG = {
       "Minute",
       "Month",
       "Decade"
+     ],
+     [
+      "\"You're my dreamcatcher, dream...\"?",
+      "Team",
+      "Girl",
+      "Come true"
      ]
     ]
    ]

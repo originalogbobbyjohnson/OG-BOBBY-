@@ -159,6 +159,18 @@ window.CFG = {
       "Celebration",
       "Occasion",
       "Moment"
+     ],
+     [
+      "\"Momma I made it,\" then \"I fly...\"?",
+      "Thru it",
+      "Over it",
+      "Past it"
+     ],
+     [
+      "\"Hooray is the...\"?",
+      "Underdog",
+      "Champion",
+      "Big dog"
      ]
     ],
     [
@@ -209,6 +221,24 @@ window.CFG = {
       "Ovation",
       "Applause",
       "Award"
+     ],
+     [
+      "\"My inspiration, thanks for your...\"?",
+      "Information",
+      "Dedication",
+      "Motivation"
+     ],
+     [
+      "Now his crib is dark as a...?",
+      "Basement",
+      "Cave",
+      "Closet"
+     ],
+     [
+      "\"Pinstripe ...\" when the first day of school came?",
+      "Lee's",
+      "Levi's",
+      "Polos"
      ]
     ],
     [
@@ -259,173 +289,24 @@ window.CFG = {
       "Microphone",
       "Money",
       "Momma"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Kinda Like a Big Deal (Clipse ft. Kanye West)",
-   "id": "2-QgdwCGr44",
-   "cuts": [
-    35.7,
-    63.6,
-    169.2
-   ],
-   "qs": [
-    [
-     [
-      "\"I'm kinda like a big...\"?",
-      "Deal",
-      "Shot",
-      "Star"
      ],
      [
-      "\"My warning gives you big...\"?",
-      "Chills",
-      "Thrills",
-      "Bills"
+      "\"Write down your wish...\"?",
+      "List",
+      "Card",
+      "Book"
      ],
      [
-      "\"The flow runnin' on ___ heels\"",
-      "Big's",
-      "Pac's",
-      "Jay's"
+      "\"Be extra nice to...\"?",
+      "'Em",
+      "Her",
+      "The chef"
      ],
      [
-      "\"Third time's a...\"?",
-      "Charm",
-      "Charge",
-      "Chance"
-     ],
-     [
-      "\"After two classics another ___ up on my arm\"",
-      "Stripe",
-      "Tattoo",
-      "Watch"
-     ],
-     [
-      "\"It's a blessin' to blow a hundred thou in a...\"?",
-      "Recession",
-      "Session",
-      "Second"
-     ],
-     [
-      "\"Drop tops, we're...\"?",
-      "Floorin'",
-      "Rollin'",
-      "Cruisin'"
-     ],
-     [
-      "\"Champagne, we're...\"?",
-      "Pourin'",
-      "Sippin'",
-      "Spillin'"
-     ]
-    ],
-    [
-     [
-      "\"Re-up is the ___ and I'm all in\"",
-      "Gang",
-      "Squad",
-      "Label"
-     ],
-     [
-      "\"Get money, blow money is my...\"?",
-      "Callin'",
-      "Problem",
-      "Motto"
-     ],
-     [
-      "\"Life's a maze, you twist and you ___ through it\"",
-      "Turn",
-      "Run",
-      "Fight"
-     ],
-     [
-      "\"Life's a...\"?",
-      "Maze",
-      "Game",
-      "Race"
-     ],
-     [
-      "\"I'm set straight like a ___ do it\"",
-      "Perm",
-      "Ruler",
-      "Arrow"
-     ],
-     [
-      "\"They whisperin' about...\"?",
-      "Us",
+      "\"Didn't have a man in the house so you made...\"?",
+      "One",
       "Me",
-      "Money"
-     ],
-     [
-      "\"I know you haters...\"?",
-      "Doubt us",
-      "Hate us",
-      "Watch us"
-     ],
-     [
-      "\"How you count our money, we ain't even finish...\"?",
-      "Countin'",
-      "Stackin'",
-      "Spendin'"
-     ]
-    ],
-    [
-     [
-      "\"Lights, cameras...\"?",
-      "Action",
-      "Rolling",
-      "Flash"
-     ],
-     [
-      "\"It's like stoppin' a...\"?",
-      "Train",
-      "Truck",
-      "Storm"
-     ],
-     [
-      "\"Talk slick while droppin' my...\"?",
-      "Name",
-      "Chain",
-      "Phone"
-     ],
-     [
-      "\"50 percent splits, I X out the middle...\"?",
-      "Man",
-      "Class",
-      "Ground"
-     ],
-     [
-      "\"I'm the reason the hood need a ___ plan\"",
-      "Dental",
-      "Health",
-      "Payment"
-     ],
-     [
-      "\"The roof vamoose, like a ___ show\"",
-      "Magic",
-      "Car",
-      "Game"
-     ],
-     [
-      "\"Got me lookin' to the heavens like a ___ throw\"",
-      "Javelin",
-      "Football",
-      "Hail Mary"
-     ],
-     [
-      "\"Y'all twiddle your thumbs like the average...\"?",
-      "Joe",
-      "Fan",
-      "Guy"
-     ],
-     [
-      "\"Just as you reap, so shall you...\"?",
-      "Sow",
-      "Weep",
-      "Keep"
+      "Him"
      ]
     ]
    ]
@@ -494,6 +375,18 @@ window.CFG = {
       "Mil",
       "Life",
       "Free"
+     ],
+     [
+      "\"Equal opportunities rapping, that is...\"?",
+      "Unreal",
+      "Unfair",
+      "Unknown"
+     ],
+     [
+      "\"That ain't how it...\"?",
+      "Works",
+      "Ends",
+      "Starts"
      ]
     ],
     [
@@ -544,6 +437,24 @@ window.CFG = {
       "Scared",
       "Jealous",
       "Tired"
+     ],
+     [
+      "\"But I never share my...\"?",
+      "Thoughts",
+      "Feelings",
+      "Secrets"
+     ],
+     [
+      "\"I remember...\"?",
+      "You",
+      "That",
+      "Me"
+     ],
+     [
+      "\"This feeling isn't...\"?",
+      "New",
+      "Real",
+      "Gone"
      ]
     ],
     [
@@ -594,6 +505,24 @@ window.CFG = {
       "Emotions",
       "Feelings",
       "Money"
+     ],
+     [
+      "He'd drop one for every single thing he...?",
+      "Showed us",
+      "Told us",
+      "Gave us"
+     ],
+     [
+      "\"And I'ma keep it...\"?",
+      "Honest",
+      "Real",
+      "Simple"
+     ],
+     [
+      "\"At least I put it all in the...\"?",
+      "Open",
+      "Music",
+      "Air"
      ]
     ]
    ]
@@ -655,6 +584,24 @@ window.CFG = {
       "Ends",
       "Fame",
       "Money"
+     ],
+     [
+      "It was 'bout busting raps and standing for...?",
+      "Something",
+      "Nothing",
+      "Everything"
+     ],
+     [
+      "\"I'm back...\"?",
+      "Again",
+      "Home",
+      "Now"
+     ],
+     [
+      "After \"So take it all,\" how many more \"a-all\"s?",
+      "Three",
+      "Two",
+      "Five"
      ]
     ],
     [
@@ -705,6 +652,24 @@ window.CFG = {
       "Stadium",
       "Building",
       "City"
+     ],
+     [
+      "\"Why stop when it doesn't have to...\"?",
+      "End",
+      "Start",
+      "Win"
+     ],
+     [
+      "\"Hands up like it's...\"?",
+      "12 noon",
+      "High noon",
+      "Midnight"
+     ],
+     [
+      "\"Came up...\"?",
+      "Rough",
+      "Fast",
+      "Late"
      ]
     ],
     [
@@ -755,6 +720,24 @@ window.CFG = {
       "Circle",
       "Box",
       "Star"
+     ],
+     [
+      "\"I'm so close to my...\"?",
+      "Goals",
+      "Dreams",
+      "Fans"
+     ],
+     [
+      "\"They said I was washed...\"?",
+      "Up",
+      "Out",
+      "Down"
+     ],
+     [
+      "He can just walk up to a ... and just bust?",
+      "Mic",
+      "Stage",
+      "Crowd"
      ]
     ]
    ]
@@ -825,6 +808,18 @@ window.CFG = {
       "Celebration",
       "Occasion",
       "Moment"
+     ],
+     [
+      "\"Momma I made it,\" then \"I fly...\"?",
+      "Thru it",
+      "Over it",
+      "Past it"
+     ],
+     [
+      "\"Hooray is the...\"?",
+      "Underdog",
+      "Champion",
+      "Big dog"
      ]
     ],
     [
@@ -875,6 +870,24 @@ window.CFG = {
       "Ovation",
       "Applause",
       "Award"
+     ],
+     [
+      "\"My inspiration, thanks for your...\"?",
+      "Information",
+      "Dedication",
+      "Motivation"
+     ],
+     [
+      "Now his crib is dark as a...?",
+      "Basement",
+      "Cave",
+      "Closet"
+     ],
+     [
+      "\"Pinstripe ...\" when the first day of school came?",
+      "Lee's",
+      "Levi's",
+      "Polos"
      ]
     ],
     [
@@ -925,173 +938,24 @@ window.CFG = {
       "Microphone",
       "Money",
       "Momma"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Kinda Like a Big Deal (Clipse ft. Kanye West)",
-   "id": "2-QgdwCGr44",
-   "cuts": [
-    35.7,
-    63.6,
-    169.2
-   ],
-   "qs": [
-    [
-     [
-      "\"I'm kinda like a big...\"?",
-      "Deal",
-      "Shot",
-      "Star"
      ],
      [
-      "\"My warning gives you big...\"?",
-      "Chills",
-      "Thrills",
-      "Bills"
+      "\"Write down your wish...\"?",
+      "List",
+      "Card",
+      "Book"
      ],
      [
-      "\"The flow runnin' on ___ heels\"",
-      "Big's",
-      "Pac's",
-      "Jay's"
+      "\"Be extra nice to...\"?",
+      "'Em",
+      "Her",
+      "The chef"
      ],
      [
-      "\"Third time's a...\"?",
-      "Charm",
-      "Charge",
-      "Chance"
-     ],
-     [
-      "\"After two classics another ___ up on my arm\"",
-      "Stripe",
-      "Tattoo",
-      "Watch"
-     ],
-     [
-      "\"It's a blessin' to blow a hundred thou in a...\"?",
-      "Recession",
-      "Session",
-      "Second"
-     ],
-     [
-      "\"Drop tops, we're...\"?",
-      "Floorin'",
-      "Rollin'",
-      "Cruisin'"
-     ],
-     [
-      "\"Champagne, we're...\"?",
-      "Pourin'",
-      "Sippin'",
-      "Spillin'"
-     ]
-    ],
-    [
-     [
-      "\"Re-up is the ___ and I'm all in\"",
-      "Gang",
-      "Squad",
-      "Label"
-     ],
-     [
-      "\"Get money, blow money is my...\"?",
-      "Callin'",
-      "Problem",
-      "Motto"
-     ],
-     [
-      "\"Life's a maze, you twist and you ___ through it\"",
-      "Turn",
-      "Run",
-      "Fight"
-     ],
-     [
-      "\"Life's a...\"?",
-      "Maze",
-      "Game",
-      "Race"
-     ],
-     [
-      "\"I'm set straight like a ___ do it\"",
-      "Perm",
-      "Ruler",
-      "Arrow"
-     ],
-     [
-      "\"They whisperin' about...\"?",
-      "Us",
+      "\"Didn't have a man in the house so you made...\"?",
+      "One",
       "Me",
-      "Money"
-     ],
-     [
-      "\"I know you haters...\"?",
-      "Doubt us",
-      "Hate us",
-      "Watch us"
-     ],
-     [
-      "\"How you count our money, we ain't even finish...\"?",
-      "Countin'",
-      "Stackin'",
-      "Spendin'"
-     ]
-    ],
-    [
-     [
-      "\"Lights, cameras...\"?",
-      "Action",
-      "Rolling",
-      "Flash"
-     ],
-     [
-      "\"It's like stoppin' a...\"?",
-      "Train",
-      "Truck",
-      "Storm"
-     ],
-     [
-      "\"Talk slick while droppin' my...\"?",
-      "Name",
-      "Chain",
-      "Phone"
-     ],
-     [
-      "\"50 percent splits, I X out the middle...\"?",
-      "Man",
-      "Class",
-      "Ground"
-     ],
-     [
-      "\"I'm the reason the hood need a ___ plan\"",
-      "Dental",
-      "Health",
-      "Payment"
-     ],
-     [
-      "\"The roof vamoose, like a ___ show\"",
-      "Magic",
-      "Car",
-      "Game"
-     ],
-     [
-      "\"Got me lookin' to the heavens like a ___ throw\"",
-      "Javelin",
-      "Football",
-      "Hail Mary"
-     ],
-     [
-      "\"Y'all twiddle your thumbs like the average...\"?",
-      "Joe",
-      "Fan",
-      "Guy"
-     ],
-     [
-      "\"Just as you reap, so shall you...\"?",
-      "Sow",
-      "Weep",
-      "Keep"
+      "Him"
      ]
     ]
    ]
@@ -1160,6 +1024,18 @@ window.CFG = {
       "Mil",
       "Life",
       "Free"
+     ],
+     [
+      "\"Equal opportunities rapping, that is...\"?",
+      "Unreal",
+      "Unfair",
+      "Unknown"
+     ],
+     [
+      "\"That ain't how it...\"?",
+      "Works",
+      "Ends",
+      "Starts"
      ]
     ],
     [
@@ -1210,6 +1086,24 @@ window.CFG = {
       "Scared",
       "Jealous",
       "Tired"
+     ],
+     [
+      "\"But I never share my...\"?",
+      "Thoughts",
+      "Feelings",
+      "Secrets"
+     ],
+     [
+      "\"I remember...\"?",
+      "You",
+      "That",
+      "Me"
+     ],
+     [
+      "\"This feeling isn't...\"?",
+      "New",
+      "Real",
+      "Gone"
      ]
     ],
     [
@@ -1260,6 +1154,24 @@ window.CFG = {
       "Emotions",
       "Feelings",
       "Money"
+     ],
+     [
+      "He'd drop one for every single thing he...?",
+      "Showed us",
+      "Told us",
+      "Gave us"
+     ],
+     [
+      "\"And I'ma keep it...\"?",
+      "Honest",
+      "Real",
+      "Simple"
+     ],
+     [
+      "\"At least I put it all in the...\"?",
+      "Open",
+      "Music",
+      "Air"
      ]
     ]
    ]
@@ -1321,6 +1233,24 @@ window.CFG = {
       "Ends",
       "Fame",
       "Money"
+     ],
+     [
+      "It was 'bout busting raps and standing for...?",
+      "Something",
+      "Nothing",
+      "Everything"
+     ],
+     [
+      "\"I'm back...\"?",
+      "Again",
+      "Home",
+      "Now"
+     ],
+     [
+      "After \"So take it all,\" how many more \"a-all\"s?",
+      "Three",
+      "Two",
+      "Five"
      ]
     ],
     [
@@ -1371,6 +1301,24 @@ window.CFG = {
       "Stadium",
       "Building",
       "City"
+     ],
+     [
+      "\"Why stop when it doesn't have to...\"?",
+      "End",
+      "Start",
+      "Win"
+     ],
+     [
+      "\"Hands up like it's...\"?",
+      "12 noon",
+      "High noon",
+      "Midnight"
+     ],
+     [
+      "\"Came up...\"?",
+      "Rough",
+      "Fast",
+      "Late"
      ]
     ],
     [
@@ -1421,11 +1369,27 @@ window.CFG = {
       "Circle",
       "Box",
       "Star"
+     ],
+     [
+      "\"I'm so close to my...\"?",
+      "Goals",
+      "Dreams",
+      "Fans"
+     ],
+     [
+      "\"They said I was washed...\"?",
+      "Up",
+      "Out",
+      "Down"
+     ],
+     [
+      "He can just walk up to a ... and just bust?",
+      "Mic",
+      "Stage",
+      "Crowd"
      ]
     ]
    ]
   }
  ]
 };
-
-(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

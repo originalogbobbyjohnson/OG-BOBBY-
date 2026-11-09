@@ -158,6 +158,18 @@ window.CFG = {
       "Car",
       "Club",
       "House"
+     ],
+     [
+      "\"I know messin' with a ... is whack\"?",
+      "Crook",
+      "Fool",
+      "Liar"
+     ],
+     [
+      "\"What I do, act second...\"?",
+      "Rate",
+      "Place",
+      "Hand"
      ]
     ],
     [
@@ -208,6 +220,24 @@ window.CFG = {
       "Disney World",
       "Paris",
       "Miami"
+     ],
+     [
+      "\"Hey baby let's get...\"?",
+      "Away",
+      "Married",
+      "Lost"
+     ],
+     [
+      "\"Baby, can we\" — \"where you wanna...\"?",
+      "Go",
+      "Be",
+      "Eat"
+     ],
+     [
+      "\"This is my public apology, holla...\"?",
+      "B",
+      "Y'all",
+      "Me"
      ]
     ],
     [
@@ -258,6 +288,24 @@ window.CFG = {
       "Hugged",
       "Held",
       "Need"
+     ],
+     [
+      "He'll give it everything and trust your...?",
+      "Heart",
+      "Word",
+      "Name"
+     ],
+     [
+      "\"Share all of your love, 'til death do you...\"?",
+      "Part",
+      "Stop",
+      "Leave"
+     ],
+     [
+      "\"Loving him a little bit more each...\"?",
+      "Day",
+      "Night",
+      "Week"
      ]
     ]
    ]
@@ -320,6 +368,18 @@ window.CFG = {
       "Thou",
       "Grand",
       "Buck"
+     ],
+     [
+      "\"You better be down, the only question better be...\"?",
+      "How",
+      "When",
+      "Why"
+     ],
+     [
+      "\"In the SC we're...\"?",
+      "Gone",
+      "Here",
+      "Home"
      ]
     ],
     [
@@ -370,6 +430,24 @@ window.CFG = {
       "You",
       "Me",
       "Them"
+     ],
+     [
+      "\"Horse and carriage is for...\"?",
+      "Hire",
+      "Sale",
+      "Rent"
+     ],
+     [
+      "\"We gonna rise to the...\"?",
+      "Top",
+      "Sky",
+      "Show"
+     ],
+     [
+      "What does Mase call her on the hook?",
+      "Mamacita",
+      "Chiquita",
+      "Bonita"
      ]
     ],
     [
@@ -420,174 +498,24 @@ window.CFG = {
       "His horse and carriage",
       "A limo",
       "A cab"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Down and Out",
-   "id": "F74TpVe17lA",
-   "start": 12,
-   "cuts": [
-    47.1,
-    133,
-    202.6
-   ],
-   "qs": [
-    [
-     [
-      "\"Ayo, street mergers I ___\"",
-      "Legislated",
-      "Celebrated",
-      "Calculated"
      ],
      [
-      "\"The nerve, I never ___\"",
-      "Hated",
-      "Waited",
-      "Faded"
+      "\"'Cause Cam rocks the party...\"?",
+      "All night long",
+      "Till dawn",
+      "Every night"
      ],
      [
-      "\"Absurd! I ___\"",
-      "Hesitated",
-      "Celebrated",
-      "Meditated"
+      "\"It don't stop and uh it don't...\"?",
+      "Quit",
+      "Drop",
+      "End"
      ],
      [
-      "What are they drinking on the Suzuki?",
-      "Sake",
-      "Champagne",
-      "Juice"
-     ],
-     [
-      "What are they riding?",
-      "A Suzuki",
-      "A Yamaha",
-      "A Honda"
-     ],
-     [
-      "Where are they?",
-      "Osaka Bay",
-      "Tokyo Bay",
-      "Hudson Bay"
-     ],
-     [
-      "Playing what, stupid?",
-      "Soccer",
-      "Ball",
-      "Games"
-     ],
-     [
-      "Stay in a sucker's what?",
-      "Place",
-      "Lane",
-      "Spot"
-     ],
-     [
-      "You would've thought he was from where?",
-      "Brooklyn",
-      "Queens",
-      "The Bronx"
-     ]
-    ],
-    [
-     [
-      "He did like who, pouring in the pudding?",
-      "Bill Cosby",
-      "Eddie Murphy",
-      "Bill Murray"
-     ],
-     [
-      "Now the dashboard is what?",
-      "Wooden",
-      "Leather",
-      "Golden"
-     ],
-     [
-      "Interior, inferior — what kind of banner?",
-      "Star-spangled",
-      "Checkered",
-      "Purple"
-     ],
-     [
-      "\"Car game ___\"",
-      "Bananas",
-      "Crazy",
-      "Nuts"
-     ],
-     [
-      "Which of his men does he name?",
-      "Santana",
-      "Freekey",
-      "Jim Jones"
-     ],
-     [
-      "He cops Air Ones in which colors?",
-      "Lime and red",
-      "Black and white",
-      "Pink and gold"
-     ],
-     [
-      "His closet's a what?",
-      "Pet Sematary",
-      "Museum",
-      "Mall"
-     ],
-     [
-      "He says he lives in a what?",
-      "Zoo",
-      "Castle",
-      "Jungle"
-     ]
-    ],
-    [
-     [
-      "What color are the gator-toed Mauris?",
-      "Sky blue",
-      "Purple",
-      "White"
-     ],
-     [
-      "What color are mami's eyes?",
-      "Blue",
-      "Green",
-      "Brown"
-     ],
-     [
-      "How tall is she?",
-      "5'2\"",
-      "5'7\"",
-      "6'0\""
-     ],
-     [
-      "Pony skin what?",
-      "Louis",
-      "Gucci",
-      "Prada"
-     ],
-     [
-      "\"Hi boo, how ___?\"",
-      "You",
-      "Ya been",
-      "Was it"
-     ],
-     [
-      "What's her job?",
-      "Stewardess",
-      "Nurse",
-      "Model"
-     ],
-     [
-      "\"Good ma, I ___ too\"",
-      "Fly",
-      "Travel",
-      "Shine"
-     ],
-     [
-      "Harlem Shake? Nah — he's in Harlem shaking what?",
-      "Awake",
-      "Hands",
-      "It up"
+      "\"Just show me my room and get my...\"?",
+      "Bags",
+      "Keys",
+      "Car"
      ]
     ]
    ]
@@ -655,6 +583,18 @@ window.CFG = {
       "The 80's",
       "The 70's",
       "The 90's"
+     ],
+     [
+      "\"Hey Ma, what's up, let's...\"?",
+      "Slide",
+      "Ride",
+      "Dance"
+     ],
+     [
+      "\"And we gon' get it on...\"?",
+      "Tonight",
+      "Right now",
+      "Again"
      ]
     ],
     [
@@ -711,6 +651,18 @@ window.CFG = {
       "Home",
       "There",
       "Late"
+     ],
+     [
+      "\"Come wit me, come stay the...\"?",
+      "Night",
+      "Weekend",
+      "Day"
+     ],
+     [
+      "\"I'm laughin' back like sho' ya...\"?",
+      "Right",
+      "Wrong",
+      "Crazy"
      ]
     ],
     [
@@ -761,6 +713,36 @@ window.CFG = {
       "Game plan",
       "Girl",
       "Crib"
+     ],
+     [
+      "\"Told me to acknowledge her...\"?",
+      "Quick",
+      "Now",
+      "Twice"
+     ],
+     [
+      "\"Boo be's...\"?",
+      "Real",
+      "Rich",
+      "Gone"
+     ],
+     [
+      "\"Go to the crib she got the Gucci...\"?",
+      "Linen",
+      "Purse",
+      "Shoes"
+     ],
+     [
+      "\"This my down girl too, ain't no ... deal\"?",
+      "Groupie",
+      "Money",
+      "Movie"
+     ],
+     [
+      "He dropped her off at the...?",
+      "L",
+      "Store",
+      "Train"
      ]
     ]
    ]
@@ -825,6 +807,18 @@ window.CFG = {
       "Car",
       "Club",
       "House"
+     ],
+     [
+      "\"I know messin' with a ... is whack\"?",
+      "Crook",
+      "Fool",
+      "Liar"
+     ],
+     [
+      "\"What I do, act second...\"?",
+      "Rate",
+      "Place",
+      "Hand"
      ]
     ],
     [
@@ -875,6 +869,24 @@ window.CFG = {
       "Disney World",
       "Paris",
       "Miami"
+     ],
+     [
+      "\"Hey baby let's get...\"?",
+      "Away",
+      "Married",
+      "Lost"
+     ],
+     [
+      "\"Baby, can we\" — \"where you wanna...\"?",
+      "Go",
+      "Be",
+      "Eat"
+     ],
+     [
+      "\"This is my public apology, holla...\"?",
+      "B",
+      "Y'all",
+      "Me"
      ]
     ],
     [
@@ -925,6 +937,24 @@ window.CFG = {
       "Hugged",
       "Held",
       "Need"
+     ],
+     [
+      "He'll give it everything and trust your...?",
+      "Heart",
+      "Word",
+      "Name"
+     ],
+     [
+      "\"Share all of your love, 'til death do you...\"?",
+      "Part",
+      "Stop",
+      "Leave"
+     ],
+     [
+      "\"Loving him a little bit more each...\"?",
+      "Day",
+      "Night",
+      "Week"
      ]
     ]
    ]
@@ -987,6 +1017,18 @@ window.CFG = {
       "Thou",
       "Grand",
       "Buck"
+     ],
+     [
+      "\"You better be down, the only question better be...\"?",
+      "How",
+      "When",
+      "Why"
+     ],
+     [
+      "\"In the SC we're...\"?",
+      "Gone",
+      "Here",
+      "Home"
      ]
     ],
     [
@@ -1037,6 +1079,24 @@ window.CFG = {
       "You",
       "Me",
       "Them"
+     ],
+     [
+      "\"Horse and carriage is for...\"?",
+      "Hire",
+      "Sale",
+      "Rent"
+     ],
+     [
+      "\"We gonna rise to the...\"?",
+      "Top",
+      "Sky",
+      "Show"
+     ],
+     [
+      "What does Mase call her on the hook?",
+      "Mamacita",
+      "Chiquita",
+      "Bonita"
      ]
     ],
     [
@@ -1087,174 +1147,24 @@ window.CFG = {
       "His horse and carriage",
       "A limo",
       "A cab"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Down and Out",
-   "id": "F74TpVe17lA",
-   "start": 12,
-   "cuts": [
-    47.1,
-    133,
-    202.6
-   ],
-   "qs": [
-    [
-     [
-      "\"Ayo, street mergers I ___\"",
-      "Legislated",
-      "Celebrated",
-      "Calculated"
      ],
      [
-      "\"The nerve, I never ___\"",
-      "Hated",
-      "Waited",
-      "Faded"
+      "\"'Cause Cam rocks the party...\"?",
+      "All night long",
+      "Till dawn",
+      "Every night"
      ],
      [
-      "\"Absurd! I ___\"",
-      "Hesitated",
-      "Celebrated",
-      "Meditated"
+      "\"It don't stop and uh it don't...\"?",
+      "Quit",
+      "Drop",
+      "End"
      ],
      [
-      "What are they drinking on the Suzuki?",
-      "Sake",
-      "Champagne",
-      "Juice"
-     ],
-     [
-      "What are they riding?",
-      "A Suzuki",
-      "A Yamaha",
-      "A Honda"
-     ],
-     [
-      "Where are they?",
-      "Osaka Bay",
-      "Tokyo Bay",
-      "Hudson Bay"
-     ],
-     [
-      "Playing what, stupid?",
-      "Soccer",
-      "Ball",
-      "Games"
-     ],
-     [
-      "Stay in a sucker's what?",
-      "Place",
-      "Lane",
-      "Spot"
-     ],
-     [
-      "You would've thought he was from where?",
-      "Brooklyn",
-      "Queens",
-      "The Bronx"
-     ]
-    ],
-    [
-     [
-      "He did like who, pouring in the pudding?",
-      "Bill Cosby",
-      "Eddie Murphy",
-      "Bill Murray"
-     ],
-     [
-      "Now the dashboard is what?",
-      "Wooden",
-      "Leather",
-      "Golden"
-     ],
-     [
-      "Interior, inferior — what kind of banner?",
-      "Star-spangled",
-      "Checkered",
-      "Purple"
-     ],
-     [
-      "\"Car game ___\"",
-      "Bananas",
-      "Crazy",
-      "Nuts"
-     ],
-     [
-      "Which of his men does he name?",
-      "Santana",
-      "Freekey",
-      "Jim Jones"
-     ],
-     [
-      "He cops Air Ones in which colors?",
-      "Lime and red",
-      "Black and white",
-      "Pink and gold"
-     ],
-     [
-      "His closet's a what?",
-      "Pet Sematary",
-      "Museum",
-      "Mall"
-     ],
-     [
-      "He says he lives in a what?",
-      "Zoo",
-      "Castle",
-      "Jungle"
-     ]
-    ],
-    [
-     [
-      "What color are the gator-toed Mauris?",
-      "Sky blue",
-      "Purple",
-      "White"
-     ],
-     [
-      "What color are mami's eyes?",
-      "Blue",
-      "Green",
-      "Brown"
-     ],
-     [
-      "How tall is she?",
-      "5'2\"",
-      "5'7\"",
-      "6'0\""
-     ],
-     [
-      "Pony skin what?",
-      "Louis",
-      "Gucci",
-      "Prada"
-     ],
-     [
-      "\"Hi boo, how ___?\"",
-      "You",
-      "Ya been",
-      "Was it"
-     ],
-     [
-      "What's her job?",
-      "Stewardess",
-      "Nurse",
-      "Model"
-     ],
-     [
-      "\"Good ma, I ___ too\"",
-      "Fly",
-      "Travel",
-      "Shine"
-     ],
-     [
-      "Harlem Shake? Nah — he's in Harlem shaking what?",
-      "Awake",
-      "Hands",
-      "It up"
+      "\"Just show me my room and get my...\"?",
+      "Bags",
+      "Keys",
+      "Car"
      ]
     ]
    ]
@@ -1322,6 +1232,18 @@ window.CFG = {
       "The 80's",
       "The 70's",
       "The 90's"
+     ],
+     [
+      "\"Hey Ma, what's up, let's...\"?",
+      "Slide",
+      "Ride",
+      "Dance"
+     ],
+     [
+      "\"And we gon' get it on...\"?",
+      "Tonight",
+      "Right now",
+      "Again"
      ]
     ],
     [
@@ -1378,6 +1300,18 @@ window.CFG = {
       "Home",
       "There",
       "Late"
+     ],
+     [
+      "\"Come wit me, come stay the...\"?",
+      "Night",
+      "Weekend",
+      "Day"
+     ],
+     [
+      "\"I'm laughin' back like sho' ya...\"?",
+      "Right",
+      "Wrong",
+      "Crazy"
      ]
     ],
     [
@@ -1428,6 +1362,36 @@ window.CFG = {
       "Game plan",
       "Girl",
       "Crib"
+     ],
+     [
+      "\"Told me to acknowledge her...\"?",
+      "Quick",
+      "Now",
+      "Twice"
+     ],
+     [
+      "\"Boo be's...\"?",
+      "Real",
+      "Rich",
+      "Gone"
+     ],
+     [
+      "\"Go to the crib she got the Gucci...\"?",
+      "Linen",
+      "Purse",
+      "Shoes"
+     ],
+     [
+      "\"This my down girl too, ain't no ... deal\"?",
+      "Groupie",
+      "Money",
+      "Movie"
+     ],
+     [
+      "He dropped her off at the...?",
+      "L",
+      "Store",
+      "Train"
      ]
     ]
    ]

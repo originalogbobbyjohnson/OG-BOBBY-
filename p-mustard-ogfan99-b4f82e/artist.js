@@ -164,6 +164,18 @@ window.CFG = {
       "His teacher",
       "His mom",
       "His coach"
+     ],
+     [
+      "\"How to buy the ..., how to buy the house\"?",
+      "Car",
+      "Boat",
+      "Jet"
+     ],
+     [
+      "How many years later does he pull up?",
+      "5",
+      "10",
+      "2"
      ]
     ],
     [
@@ -214,6 +226,30 @@ window.CFG = {
       "Kitten",
       "Baby",
       "Snake"
+     ],
+     [
+      "\"High School, I-I-I was on the...\"?",
+      "News",
+      "Radio",
+      "Team"
+     ],
+     [
+      "\"Mark my words, I don't need...\"?",
+      "Acceptance",
+      "Permission",
+      "Applause"
+     ],
+     [
+      "\"Jody shaking dice watching Miami...\"?",
+      "Vice",
+      "Heat",
+      "Beach"
+     ],
+     [
+      "After the interception he yells...?",
+      "Touchdown",
+      "Score",
+      "Bingo"
      ]
     ],
     [
@@ -264,173 +300,30 @@ window.CFG = {
       "Poppins",
       "J. Blige",
       "Kate"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Ballin' (Mustard ft. Roddy Ricch)",
-   "id": "s9FCCiEs84k",
-   "cuts": [
-    41.1,
-    97.6,
-    157.9
-   ],
-   "qs": [
-    [
-     [
-      "\"I don't really wanna go, I don't really wanna...\"?",
-      "Stay",
-      "Leave",
-      "Wait"
      ],
      [
-      "\"But I really hope and...\"?",
-      "Pray",
-      "Wait",
-      "Wish"
+      "\"It's the white Eddie...\"?",
+      "Murphy",
+      "Griffin",
+      "Money"
      ],
      [
-      "Who's on the beat?",
-      "Mustard",
-      "Metro",
-      "Zaytoven"
+      "\"Whole a lotta money, all bills...\"?",
+      "Paid",
+      "Due",
+      "Gone"
      ],
      [
-      "\"I put the new Forgis on the...\"?",
-      "Jeep",
-      "Benz",
-      "Truck"
+      "\"Big balling, no...\"?",
+      "Stopping",
+      "Sleeping",
+      "Shopping"
      ],
      [
-      "\"I keep a hundred racks inside my...\"?",
-      "Jeans",
-      "Safe",
-      "Room"
-     ],
-     [
-      "\"I remember hittin' the mall with the whole...\"?",
-      "Team",
-      "Block",
-      "Family"
-     ],
-     [
-      "Why can't he answer calls?",
-      "He's ballin'",
-      "He's sleepin'",
-      "He's in the studio"
-     ],
-     [
-      "\"Can we get it...\"?",
-      "Together",
-      "Started",
-      "Right"
-     ],
-     [
-      "\"All this designer on my body got me...\"?",
-      "Drip",
-      "Rich",
-      "Fly"
-     ]
-    ],
-    [
-     [
-      "\"I had to go through the struggle, I didn't...\"?",
-      "Forget that",
-      "Regret that",
-      "Sweat that"
-     ],
-     [
-      "\"I hop inside of the ___ and now I can sit back\"",
-      "Maybach",
-      "Bentley",
-      "Rolls"
-     ],
-     [
-      "\"'Cause I'm gettin' money now, I know you...\"?",
-      "Heard that",
-      "Saw that",
-      "Felt that"
-     ],
-     [
-      "\"We came up on dirty money, I gave it a...\"?",
-      "Birdbath",
-      "Bubble bath",
-      "Shower"
-     ],
-     [
-      "How many racks does he keep in his jeans?",
-      "A hundred",
-      "Fifty",
-      "A thousand"
-     ],
-     [
-      "Who did he hit the mall with?",
-      "The whole team",
-      "His mama",
-      "His girl"
-     ],
-     [
-      "When was he wakin' up gettin' racks?",
-      "In the mornin'",
-      "At midnight",
-      "After school"
-     ],
-     [
-      "\"I was broke, now I'm...\"?",
-      "Rich",
-      "Famous",
-      "Tired"
-     ]
-    ],
-    [
-     [
-      "\"I put in a new AP, the water like a...\"?",
-      "Boat",
-      "Pool",
-      "Lake"
-     ],
-     [
-      "\"Givenchy to my...\"?",
-      "Toes",
-      "Nose",
-      "Coat"
-     ],
-     [
-      "\"I see you swerve back, 'cause I'm in the black...\"?",
-      "'Bach",
-      "Benz",
-      "Truck"
-     ],
-     [
-      "\"Yellow diamonds on me look like...\"?",
-      "Lemonade",
-      "Sunshine",
-      "Mustard"
-     ],
-     [
-      "\"Tryna get the dojo like a...\"?",
-      "Sensei",
-      "Ninja",
-      "Master"
-     ],
-     [
-      "\"___ umbrellas when I'm in the rain\"",
-      "Rolls Royce",
-      "Bentley",
-      "Gucci"
-     ],
-     [
-      "\"I just mind my...\"?",
-      "Business",
-      "Money",
-      "Family"
-     ],
-     [
-      "\"All these rappers just talk about it, I...\"?",
-      "Live it",
-      "Did it",
-      "Own it"
+      "\"Trunk steady...\"?",
+      "Knockin'",
+      "Rockin'",
+      "Bumpin'"
      ]
     ]
    ]
@@ -498,6 +391,18 @@ window.CFG = {
       "Revelation",
       "Celebration",
       "Situation"
+     ],
+     [
+      "\"It's the Alpha and Omega... welcome...\"?",
+      "Home",
+      "Back",
+      "In"
+     ],
+     [
+      "\"I take the G-...\"?",
+      "Pass",
+      "Pack",
+      "Plane"
      ]
     ],
     [
@@ -548,6 +453,30 @@ window.CFG = {
       "Moon",
       "Sun",
       "Stars"
+     ],
+     [
+      "\"Couple sergeants and...\"?",
+      "Lieutenants",
+      "Generals",
+      "Captains"
+     ],
+     [
+      "\"You know I'm trippin' for my...\"?",
+      "Dawg",
+      "Fam",
+      "Crew"
+     ],
+     [
+      "\"If you ain't coming for no chili, what you come...\"?",
+      "For",
+      "Through",
+      "Here"
+     ],
+     [
+      "\"I fell through with the...\"?",
+      "Knick-knacks",
+      "Kick-backs",
+      "Tic-tacs"
      ]
     ],
     [
@@ -598,6 +527,36 @@ window.CFG = {
       "L.A.",
       "New York",
       "Texas"
+     ],
+     [
+      "\"Ain't no other king in this rap thing, they...\"?",
+      "Siblings",
+      "Children",
+      "Rivals"
+     ],
+     [
+      "\"Padlock around the...\"?",
+      "Building",
+      "Gate",
+      "Car"
+     ],
+     [
+      "\"I'm prophetic, they only talk about it, I...\"?",
+      "Get it",
+      "Live it",
+      "Did it"
+     ],
+     [
+      "\"Hurry up and get your muscle up, we off the...\"?",
+      "Plyometric",
+      "Treadmill",
+      "Bench"
+     ],
+     [
+      "\"They mouth get full of...\"?",
+      "Deceit",
+      "Defeat",
+      "Regret"
      ]
     ]
    ]
@@ -659,6 +618,12 @@ window.CFG = {
       "Four",
       "Two",
       "Six"
+     ],
+     [
+      "How many times does he say \"I'm different\" in each line?",
+      "Two",
+      "Three",
+      "One"
      ]
     ],
     [
@@ -709,6 +674,24 @@ window.CFG = {
       "Navi",
       "Driver",
       "Tire"
+     ],
+     [
+      "\"2 Chainz but I got me a few...\"?",
+      "On",
+      "More",
+      "Left"
+     ],
+     [
+      "\"Got the present for the...\"?",
+      "Present",
+      "Party",
+      "Future"
+     ],
+     [
+      "\"Look back...\"?",
+      "At it",
+      "On it",
+      "Up"
      ]
     ],
     [
@@ -743,10 +726,10 @@ window.CFG = {
       "Car"
      ],
      [
-      "Who told ya about the hundred K?",
-      "Ye",
-      "Hov",
-      "Weezy"
+      "\"Me and broke people\" — \"we don't get...\"?",
+      "Along",
+      "Paid",
+      "Close"
      ],
      [
       "\"Yeah it's going down, so get...\"?",
@@ -828,6 +811,18 @@ window.CFG = {
       "His teacher",
       "His mom",
       "His coach"
+     ],
+     [
+      "\"How to buy the ..., how to buy the house\"?",
+      "Car",
+      "Boat",
+      "Jet"
+     ],
+     [
+      "How many years later does he pull up?",
+      "5",
+      "10",
+      "2"
      ]
     ],
     [
@@ -878,6 +873,30 @@ window.CFG = {
       "Kitten",
       "Baby",
       "Snake"
+     ],
+     [
+      "\"High School, I-I-I was on the...\"?",
+      "News",
+      "Radio",
+      "Team"
+     ],
+     [
+      "\"Mark my words, I don't need...\"?",
+      "Acceptance",
+      "Permission",
+      "Applause"
+     ],
+     [
+      "\"Jody shaking dice watching Miami...\"?",
+      "Vice",
+      "Heat",
+      "Beach"
+     ],
+     [
+      "After the interception he yells...?",
+      "Touchdown",
+      "Score",
+      "Bingo"
      ]
     ],
     [
@@ -928,173 +947,30 @@ window.CFG = {
       "Poppins",
       "J. Blige",
       "Kate"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Ballin' (Mustard ft. Roddy Ricch)",
-   "id": "s9FCCiEs84k",
-   "cuts": [
-    41.1,
-    97.6,
-    157.9
-   ],
-   "qs": [
-    [
-     [
-      "\"I don't really wanna go, I don't really wanna...\"?",
-      "Stay",
-      "Leave",
-      "Wait"
      ],
      [
-      "\"But I really hope and...\"?",
-      "Pray",
-      "Wait",
-      "Wish"
+      "\"It's the white Eddie...\"?",
+      "Murphy",
+      "Griffin",
+      "Money"
      ],
      [
-      "Who's on the beat?",
-      "Mustard",
-      "Metro",
-      "Zaytoven"
+      "\"Whole a lotta money, all bills...\"?",
+      "Paid",
+      "Due",
+      "Gone"
      ],
      [
-      "\"I put the new Forgis on the...\"?",
-      "Jeep",
-      "Benz",
-      "Truck"
+      "\"Big balling, no...\"?",
+      "Stopping",
+      "Sleeping",
+      "Shopping"
      ],
      [
-      "\"I keep a hundred racks inside my...\"?",
-      "Jeans",
-      "Safe",
-      "Room"
-     ],
-     [
-      "\"I remember hittin' the mall with the whole...\"?",
-      "Team",
-      "Block",
-      "Family"
-     ],
-     [
-      "Why can't he answer calls?",
-      "He's ballin'",
-      "He's sleepin'",
-      "He's in the studio"
-     ],
-     [
-      "\"Can we get it...\"?",
-      "Together",
-      "Started",
-      "Right"
-     ],
-     [
-      "\"All this designer on my body got me...\"?",
-      "Drip",
-      "Rich",
-      "Fly"
-     ]
-    ],
-    [
-     [
-      "\"I had to go through the struggle, I didn't...\"?",
-      "Forget that",
-      "Regret that",
-      "Sweat that"
-     ],
-     [
-      "\"I hop inside of the ___ and now I can sit back\"",
-      "Maybach",
-      "Bentley",
-      "Rolls"
-     ],
-     [
-      "\"'Cause I'm gettin' money now, I know you...\"?",
-      "Heard that",
-      "Saw that",
-      "Felt that"
-     ],
-     [
-      "\"We came up on dirty money, I gave it a...\"?",
-      "Birdbath",
-      "Bubble bath",
-      "Shower"
-     ],
-     [
-      "How many racks does he keep in his jeans?",
-      "A hundred",
-      "Fifty",
-      "A thousand"
-     ],
-     [
-      "Who did he hit the mall with?",
-      "The whole team",
-      "His mama",
-      "His girl"
-     ],
-     [
-      "When was he wakin' up gettin' racks?",
-      "In the mornin'",
-      "At midnight",
-      "After school"
-     ],
-     [
-      "\"I was broke, now I'm...\"?",
-      "Rich",
-      "Famous",
-      "Tired"
-     ]
-    ],
-    [
-     [
-      "\"I put in a new AP, the water like a...\"?",
-      "Boat",
-      "Pool",
-      "Lake"
-     ],
-     [
-      "\"Givenchy to my...\"?",
-      "Toes",
-      "Nose",
-      "Coat"
-     ],
-     [
-      "\"I see you swerve back, 'cause I'm in the black...\"?",
-      "'Bach",
-      "Benz",
-      "Truck"
-     ],
-     [
-      "\"Yellow diamonds on me look like...\"?",
-      "Lemonade",
-      "Sunshine",
-      "Mustard"
-     ],
-     [
-      "\"Tryna get the dojo like a...\"?",
-      "Sensei",
-      "Ninja",
-      "Master"
-     ],
-     [
-      "\"___ umbrellas when I'm in the rain\"",
-      "Rolls Royce",
-      "Bentley",
-      "Gucci"
-     ],
-     [
-      "\"I just mind my...\"?",
-      "Business",
-      "Money",
-      "Family"
-     ],
-     [
-      "\"All these rappers just talk about it, I...\"?",
-      "Live it",
-      "Did it",
-      "Own it"
+      "\"Trunk steady...\"?",
+      "Knockin'",
+      "Rockin'",
+      "Bumpin'"
      ]
     ]
    ]
@@ -1162,6 +1038,18 @@ window.CFG = {
       "Revelation",
       "Celebration",
       "Situation"
+     ],
+     [
+      "\"It's the Alpha and Omega... welcome...\"?",
+      "Home",
+      "Back",
+      "In"
+     ],
+     [
+      "\"I take the G-...\"?",
+      "Pass",
+      "Pack",
+      "Plane"
      ]
     ],
     [
@@ -1212,6 +1100,30 @@ window.CFG = {
       "Moon",
       "Sun",
       "Stars"
+     ],
+     [
+      "\"Couple sergeants and...\"?",
+      "Lieutenants",
+      "Generals",
+      "Captains"
+     ],
+     [
+      "\"You know I'm trippin' for my...\"?",
+      "Dawg",
+      "Fam",
+      "Crew"
+     ],
+     [
+      "\"If you ain't coming for no chili, what you come...\"?",
+      "For",
+      "Through",
+      "Here"
+     ],
+     [
+      "\"I fell through with the...\"?",
+      "Knick-knacks",
+      "Kick-backs",
+      "Tic-tacs"
      ]
     ],
     [
@@ -1262,6 +1174,36 @@ window.CFG = {
       "L.A.",
       "New York",
       "Texas"
+     ],
+     [
+      "\"Ain't no other king in this rap thing, they...\"?",
+      "Siblings",
+      "Children",
+      "Rivals"
+     ],
+     [
+      "\"Padlock around the...\"?",
+      "Building",
+      "Gate",
+      "Car"
+     ],
+     [
+      "\"I'm prophetic, they only talk about it, I...\"?",
+      "Get it",
+      "Live it",
+      "Did it"
+     ],
+     [
+      "\"Hurry up and get your muscle up, we off the...\"?",
+      "Plyometric",
+      "Treadmill",
+      "Bench"
+     ],
+     [
+      "\"They mouth get full of...\"?",
+      "Deceit",
+      "Defeat",
+      "Regret"
      ]
     ]
    ]
@@ -1323,6 +1265,12 @@ window.CFG = {
       "Four",
       "Two",
       "Six"
+     ],
+     [
+      "How many times does he say \"I'm different\" in each line?",
+      "Two",
+      "Three",
+      "One"
      ]
     ],
     [
@@ -1373,6 +1321,24 @@ window.CFG = {
       "Navi",
       "Driver",
       "Tire"
+     ],
+     [
+      "\"2 Chainz but I got me a few...\"?",
+      "On",
+      "More",
+      "Left"
+     ],
+     [
+      "\"Got the present for the...\"?",
+      "Present",
+      "Party",
+      "Future"
+     ],
+     [
+      "\"Look back...\"?",
+      "At it",
+      "On it",
+      "Up"
      ]
     ],
     [
@@ -1407,10 +1373,10 @@ window.CFG = {
       "Car"
      ],
      [
-      "Who told ya about the hundred K?",
-      "Ye",
-      "Hov",
-      "Weezy"
+      "\"Me and broke people\" — \"we don't get...\"?",
+      "Along",
+      "Paid",
+      "Close"
      ],
      [
       "\"Yeah it's going down, so get...\"?",
@@ -1429,5 +1395,3 @@ window.CFG = {
   }
  ]
 };
-
-(function(){try{if(window.CFG.explicitSongs&&localStorage.getItem("ogfan99explicit")==="1"){window.CFG.songs=window.CFG.explicitSongs;window.CFG.saveKey+="x";}}catch(e){}})();

@@ -159,6 +159,18 @@ window.CFG = {
       "Couch",
       "Bench",
       "Plane"
+     ],
+     [
+      "\"Rolls-Royce truck, they said we stood...\"?",
+      "Out",
+      "Up",
+      "Tall"
+     ],
+     [
+      "What kind of links? \"... links on me\"",
+      "Cuban",
+      "Gold",
+      "Rope"
      ]
     ],
     [
@@ -209,6 +221,24 @@ window.CFG = {
       "Rolls-Royce",
       "Bentley",
       "Maybach"
+     ],
+     [
+      "\"Meetings with HOV and kickin' it with...\"?",
+      "E",
+      "Jay",
+      "Ross"
+     ],
+     [
+      "\"Can't trust nobody, it's all ... and mirrors\"?",
+      "Smoke",
+      "Lies",
+      "Glass"
+     ],
+     [
+      "Where's he shoppin' with a quarter in jewels on?",
+      "Walmart",
+      "Target",
+      "Macy's"
      ]
     ],
     [
@@ -265,168 +295,18 @@ window.CFG = {
       "Barbara Walters",
       "Oprah",
       "Diane Sawyer"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Maybach Music V (Rick Ross)",
-   "id": "0EA9SRrF8k4",
-   "start": 126.4,
-   "cuts": [
-    157.6,
-    190,
-    262
-   ],
-   "qs": [
-    [
-     [
-      "\"Let the dog roam, he found his way...\"?",
-      "Back",
-      "Home",
-      "Out"
      ],
      [
-      "\"Loyal to the...\"?",
-      "Soil",
-      "Game",
-      "Block"
+      "\"That's why I really can't stand you...\"?",
+      "Suckers",
+      "Rappers",
+      "Bloggers"
      ],
      [
-      "\"Loyal to the soil, I never ___ that\"",
-      "Change",
-      "Forget",
-      "Trade"
-     ],
-     [
-      "\"Used to ride ___ only\"",
-      "Chevy's",
-      "Fords",
-      "Bikes"
-     ],
-     [
-      "\"Used to ride Chevy's only, now we in a...\"?",
-      "Maybach",
-      "Bentley",
-      "Rolls"
-     ],
-     [
-      "\"So infectious, I'm...\"?",
-      "Addicted",
-      "Obsessed",
-      "Hooked"
-     ],
-     [
-      "\"All my works are classic, maybe this my magnum...\"?",
-      "Opus",
-      "Force",
-      "Bottle"
-     ],
-     [
-      "\"The loyalty is deep, she my Meryl...\"?",
-      "Streep",
-      "Davis",
-      "Swank"
-     ]
-    ],
-    [
-     [
-      "\"On the phone, she had me listenin' to...\"?",
-      "Boyz II Men",
-      "Jodeci",
-      "New Edition"
-     ],
-     [
-      "\"Food stamps like we dinin' on...\"?",
-      "Islands",
-      "Yachts",
-      "Rooftops"
-     ],
-     [
-      "\"Diced ___, now she's my piña colada\"",
-      "Pineapples",
-      "Coconuts",
-      "Mangoes"
-     ],
-     [
-      "\"Diced pineapples, now she's my...\"?",
-      "Piña colada",
-      "Margarita",
-      "Mimosa"
-     ],
-     [
-      "\"Put my coattail on my dog; I thought was my...\"?",
-      "Rider",
-      "Brother",
-      "Partner"
-     ],
-     [
-      "\"Some things are meant to...\"?",
-      "Be",
-      "Last",
-      "Break"
-     ],
-     [
-      "\"The day they sentence me, show me no...\"?",
-      "Sympathy",
-      "Mercy",
-      "Pity"
-     ],
-     [
-      "\"If it's the Lord's ___, so be it\"",
-      "Will",
+      "His dawg in Houston got a ... for him?",
+      "Tip",
       "Plan",
-      "Way"
-     ]
-    ],
-    [
-     [
-      "\"She full of confidence, we ___ each other\"",
-      "Compliment",
-      "Complete",
-      "Protect"
-     ],
-     [
-      "\"She tatted up and way too trill for...\"?",
-      "Cover ups",
-      "Makeup",
-      "Disguises"
-     ],
-     [
-      "\"We switchin' cars right before the ___ comes\"",
-      "Summer",
-      "Winter",
-      "Party"
-     ],
-     [
-      "\"The hallway just like walking through the...\"?",
-      "Rainforest",
-      "Jungle",
-      "Museum"
-     ],
-     [
-      "\"Before producers started singin'...\"?",
-      "Tracks",
-      "Hooks",
-      "Songs"
-     ],
-     [
-      "\"Once was a dependent on the income...\"?",
-      "Tax",
-      "Check",
-      "Stream"
-     ],
-     [
-      "\"You did the math and said you'd give me...\"?",
-      "Half",
-      "All",
-      "Some"
-     ],
-     [
-      "\"It was ___ when we would interact\"",
-      "Genuine",
-      "Easy",
-      "Different"
+      "Plug"
      ]
     ]
    ]
@@ -489,6 +369,12 @@ window.CFG = {
       "Left",
       "Lived",
       "Stayed"
+     ],
+     [
+      "\"Big ..., nice watch, fresh gear\"?",
+      "Chain",
+      "Ring",
+      "Car"
      ]
     ],
     [
@@ -533,6 +419,30 @@ window.CFG = {
       "Everyday",
       "Old",
       "Hood"
+     ],
+     [
+      "\"You die, they hope, don't...\"?",
+      "Sleep",
+      "Stop",
+      "Quit"
+     ],
+     [
+      "\"In the hood that's how they do...\"?",
+      "Though",
+      "Now",
+      "Too"
+     ],
+     [
+      "\"And you got lied to if they ... to say what I do\"?",
+      "Sad",
+      "Scared",
+      "Proud"
+     ],
+     [
+      "\"'Cause round here man, this an everyday...\"?",
+      "Thing",
+      "Fight",
+      "Show"
      ]
     ],
     [
@@ -583,6 +493,36 @@ window.CFG = {
       "Cujo",
       "Lassie",
       "Beethoven"
+     ],
+     [
+      "\"Never turn down when it's on, I'm front...\"?",
+      "Line",
+      "Row",
+      "Door"
+     ],
+     [
+      "\"Always respected what's real, I want...\"?",
+      "Mine",
+      "More",
+      "Peace"
+     ],
+     [
+      "\"If you have some smut on your name, you can't...\"?",
+      "Grind",
+      "Shine",
+      "Win"
+     ],
+     [
+      "\"And when I find God in this booth, my soul...\"?",
+      "Cry",
+      "Sing",
+      "Fly"
+     ],
+     [
+      "\"See me, I graduated these streets in...\"?",
+      "'05",
+      "'99",
+      "'01"
      ]
     ]
    ]
@@ -707,6 +647,18 @@ window.CFG = {
       "Drive",
       "Heart",
       "Pain"
+     ],
+     [
+      "\"Won't see his ... graduate\"?",
+      "Daughter",
+      "Son",
+      "Niece"
+     ],
+     [
+      "\"Can't teach his ... how to drive\"?",
+      "Son",
+      "Daughter",
+      "Nephew"
      ]
     ],
     [
@@ -757,6 +709,36 @@ window.CFG = {
       "Squeeze",
       "Drop",
       "Spin"
+     ],
+     [
+      "\"Fronted the homie, caught a joint, he stopped...\"?",
+      "Answerin'",
+      "Callin'",
+      "Talkin'"
+     ],
+     [
+      "\"Been my man since grammar school, I don't know how to ... it\"?",
+      "Handle",
+      "Fix",
+      "Face"
+     ],
+     [
+      "\"Don't tell my people stay safe, tell 'em to stay...\"?",
+      "Dangerous",
+      "Famous",
+      "Focused"
+     ],
+     [
+      "\"In other words, he sayin' don't let it...\"?",
+      "Slide",
+      "Go",
+      "Drop"
+     ],
+     [
+      "What fruit gets squeezed on the hook?",
+      "Lemon",
+      "Lime",
+      "Orange"
      ]
     ]
    ]
@@ -827,6 +809,18 @@ window.CFG = {
       "Couch",
       "Bench",
       "Plane"
+     ],
+     [
+      "\"Rolls-Royce truck, they said we stood...\"?",
+      "Out",
+      "Up",
+      "Tall"
+     ],
+     [
+      "What kind of links? \"... links on me\"",
+      "Cuban",
+      "Gold",
+      "Rope"
      ]
     ],
     [
@@ -877,6 +871,24 @@ window.CFG = {
       "Rolls-Royce",
       "Bentley",
       "Maybach"
+     ],
+     [
+      "\"Meetings with HOV and kickin' it with...\"?",
+      "E",
+      "Jay",
+      "Ross"
+     ],
+     [
+      "\"Can't trust nobody, it's all ... and mirrors\"?",
+      "Smoke",
+      "Lies",
+      "Glass"
+     ],
+     [
+      "Where's he shoppin' with a quarter in jewels on?",
+      "Walmart",
+      "Target",
+      "Macy's"
      ]
     ],
     [
@@ -933,168 +945,18 @@ window.CFG = {
       "Barbara Walters",
       "Oprah",
       "Diane Sawyer"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Maybach Music V (Rick Ross)",
-   "id": "0EA9SRrF8k4",
-   "start": 126.4,
-   "cuts": [
-    157.6,
-    190,
-    262
-   ],
-   "qs": [
-    [
-     [
-      "\"Let the dog roam, he found his way...\"?",
-      "Back",
-      "Home",
-      "Out"
      ],
      [
-      "\"Loyal to the...\"?",
-      "Soil",
-      "Game",
-      "Block"
+      "\"That's why I really can't stand you...\"?",
+      "Suckers",
+      "Rappers",
+      "Bloggers"
      ],
      [
-      "\"Loyal to the soil, I never ___ that\"",
-      "Change",
-      "Forget",
-      "Trade"
-     ],
-     [
-      "\"Used to ride ___ only\"",
-      "Chevy's",
-      "Fords",
-      "Bikes"
-     ],
-     [
-      "\"Used to ride Chevy's only, now we in a...\"?",
-      "Maybach",
-      "Bentley",
-      "Rolls"
-     ],
-     [
-      "\"So infectious, I'm...\"?",
-      "Addicted",
-      "Obsessed",
-      "Hooked"
-     ],
-     [
-      "\"All my works are classic, maybe this my magnum...\"?",
-      "Opus",
-      "Force",
-      "Bottle"
-     ],
-     [
-      "\"The loyalty is deep, she my Meryl...\"?",
-      "Streep",
-      "Davis",
-      "Swank"
-     ]
-    ],
-    [
-     [
-      "\"On the phone, she had me listenin' to...\"?",
-      "Boyz II Men",
-      "Jodeci",
-      "New Edition"
-     ],
-     [
-      "\"Food stamps like we dinin' on...\"?",
-      "Islands",
-      "Yachts",
-      "Rooftops"
-     ],
-     [
-      "\"Diced ___, now she's my piña colada\"",
-      "Pineapples",
-      "Coconuts",
-      "Mangoes"
-     ],
-     [
-      "\"Diced pineapples, now she's my...\"?",
-      "Piña colada",
-      "Margarita",
-      "Mimosa"
-     ],
-     [
-      "\"Put my coattail on my dog; I thought was my...\"?",
-      "Rider",
-      "Brother",
-      "Partner"
-     ],
-     [
-      "\"Some things are meant to...\"?",
-      "Be",
-      "Last",
-      "Break"
-     ],
-     [
-      "\"The day they sentence me, show me no...\"?",
-      "Sympathy",
-      "Mercy",
-      "Pity"
-     ],
-     [
-      "\"If it's the Lord's ___, so be it\"",
-      "Will",
+      "His dawg in Houston got a ... for him?",
+      "Tip",
       "Plan",
-      "Way"
-     ]
-    ],
-    [
-     [
-      "\"She full of confidence, we ___ each other\"",
-      "Compliment",
-      "Complete",
-      "Protect"
-     ],
-     [
-      "\"She tatted up and way too trill for...\"?",
-      "Cover ups",
-      "Makeup",
-      "Disguises"
-     ],
-     [
-      "\"We switchin' cars right before the ___ comes\"",
-      "Summer",
-      "Winter",
-      "Party"
-     ],
-     [
-      "\"The hallway just like walking through the...\"?",
-      "Rainforest",
-      "Jungle",
-      "Museum"
-     ],
-     [
-      "\"Before producers started singin'...\"?",
-      "Tracks",
-      "Hooks",
-      "Songs"
-     ],
-     [
-      "\"Once was a dependent on the income...\"?",
-      "Tax",
-      "Check",
-      "Stream"
-     ],
-     [
-      "\"You did the math and said you'd give me...\"?",
-      "Half",
-      "All",
-      "Some"
-     ],
-     [
-      "\"It was ___ when we would interact\"",
-      "Genuine",
-      "Easy",
-      "Different"
+      "Plug"
      ]
     ]
    ]
@@ -1157,6 +1019,12 @@ window.CFG = {
       "Left",
       "Lived",
       "Stayed"
+     ],
+     [
+      "\"Big ..., nice watch, fresh gear\"?",
+      "Chain",
+      "Ring",
+      "Car"
      ]
     ],
     [
@@ -1201,6 +1069,30 @@ window.CFG = {
       "Everyday",
       "Old",
       "Hood"
+     ],
+     [
+      "\"You die, they hope, don't...\"?",
+      "Sleep",
+      "Stop",
+      "Quit"
+     ],
+     [
+      "\"In the hood that's how they do...\"?",
+      "Though",
+      "Now",
+      "Too"
+     ],
+     [
+      "\"And you got lied to if they ... to say what I do\"?",
+      "Sad",
+      "Scared",
+      "Proud"
+     ],
+     [
+      "\"'Cause round here man, this an everyday...\"?",
+      "Thing",
+      "Fight",
+      "Show"
      ]
     ],
     [
@@ -1251,6 +1143,36 @@ window.CFG = {
       "Cujo",
       "Lassie",
       "Beethoven"
+     ],
+     [
+      "\"Never turn down when it's on, I'm front...\"?",
+      "Line",
+      "Row",
+      "Door"
+     ],
+     [
+      "\"Always respected what's real, I want...\"?",
+      "Mine",
+      "More",
+      "Peace"
+     ],
+     [
+      "\"If you have some smut on your name, you can't...\"?",
+      "Grind",
+      "Shine",
+      "Win"
+     ],
+     [
+      "\"And when I find God in this booth, my soul...\"?",
+      "Cry",
+      "Sing",
+      "Fly"
+     ],
+     [
+      "\"See me, I graduated these streets in...\"?",
+      "'05",
+      "'99",
+      "'01"
      ]
     ]
    ]
@@ -1375,6 +1297,18 @@ window.CFG = {
       "Drive",
       "Heart",
       "Pain"
+     ],
+     [
+      "\"Won't see his ... graduate\"?",
+      "Daughter",
+      "Son",
+      "Niece"
+     ],
+     [
+      "\"Can't teach his ... how to drive\"?",
+      "Son",
+      "Daughter",
+      "Nephew"
      ]
     ],
     [
@@ -1425,6 +1359,36 @@ window.CFG = {
       "Squeeze",
       "Drop",
       "Spin"
+     ],
+     [
+      "\"Fronted the homie, caught a joint, he stopped...\"?",
+      "Answerin'",
+      "Callin'",
+      "Talkin'"
+     ],
+     [
+      "\"Been my man since grammar school, I don't know how to ... it\"?",
+      "Handle",
+      "Fix",
+      "Face"
+     ],
+     [
+      "\"Don't tell my people stay safe, tell 'em to stay...\"?",
+      "Dangerous",
+      "Famous",
+      "Focused"
+     ],
+     [
+      "\"In other words, he sayin' don't let it...\"?",
+      "Slide",
+      "Go",
+      "Drop"
+     ],
+     [
+      "What fruit gets squeezed on the hook?",
+      "Lemon",
+      "Lime",
+      "Orange"
      ]
     ]
    ]

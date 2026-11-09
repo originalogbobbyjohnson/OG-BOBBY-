@@ -158,6 +158,12 @@ window.CFG = {
       "Begun",
       "Arrived",
       "Woke up"
+     ],
+     [
+      "How many times \"go\" in a row?",
+      "Four",
+      "Three",
+      "Two"
      ]
     ],
     [
@@ -202,6 +208,24 @@ window.CFG = {
       "Shop",
       "Kitchen",
       "Gate"
+     ],
+     [
+      "\"Night life in the bright...\"?",
+      "Lights",
+      "Stars",
+      "Streets"
+     ],
+     [
+      "\"10 grand in my pocket,\" all...?",
+      "Ours",
+      "Mine",
+      "Gone"
+     ],
+     [
+      "\"So I'ma live it to the top...\"?",
+      "Notch",
+      "Floor",
+      "Shelf"
      ]
     ],
     [
@@ -255,7 +279,7 @@ window.CFG = {
    "id": "ukx6U4q0djc",
    "start": 23.1,
    "cuts": [
-    59.0,
+    59,
     154.95,
     250.95
    ],
@@ -302,6 +326,12 @@ window.CFG = {
       "Shoestring",
       "Savings",
       "Gas tank"
+     ],
+     [
+      "\"Thank God that I'm...\"?",
+      "Straight",
+      "Home",
+      "Free"
      ]
     ],
     [
@@ -346,6 +376,18 @@ window.CFG = {
       "Story",
       "Music",
       "Name"
+     ],
+     [
+      "\"Chucks on my young...\"?",
+      "Heel",
+      "Feet",
+      "Toes"
+     ],
+     [
+      "\"Got off my behind, write me some sweet...\"?",
+      "Lines",
+      "Songs",
+      "Notes"
      ]
     ],
     [
@@ -390,6 +432,18 @@ window.CFG = {
       "Space",
       "Bed",
       "TV"
+     ],
+     [
+      "\"Go hard for my Joy, so she don't need no...\"?",
+      "Boy",
+      "Toy",
+      "Job"
+     ],
+     [
+      "\"Threw up my peace...\"?",
+      "Sign",
+      "Out",
+      "Flag"
      ]
     ]
    ]
@@ -477,6 +531,24 @@ window.CFG = {
       "Crown",
       "Crowd",
       "Cash"
+     ],
+     [
+      "\"You be hating and I still hold it...\"?",
+      "Down",
+      "Up",
+      "Close"
+     ],
+     [
+      "\"Hands high to the...\"?",
+      "Sound",
+      "Sky",
+      "Roof"
+     ],
+     [
+      "\"Go south for the...\"?",
+      "Border",
+      "Winter",
+      "Money"
      ]
     ],
     [
@@ -515,132 +587,12 @@ window.CFG = {
       "Meow",
       "Chase",
       "Love"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "THat Part",
-   "id": "mbBhP_WSCkQ",
-   "start": 15.5,
-   "cuts": [
-    54.2,
-    101.45,
-    236.85
-   ],
-   "qs": [
-    [
-     [
-      "Me no conversate with the what?",
-      "Fake",
-      "Fans",
-      "Press"
      ],
      [
-      "I just want the what?",
-      "Paper",
-      "Plaques",
-      "Party"
-     ],
-     [
-      "He needs more what?",
-      "Options",
-      "Money",
-      "Room"
-     ],
-     [
-      "Broke? Then fix your what?",
-      "Pockets",
-      "Credit",
-      "Attitude"
-     ],
-     [
-      "All I do is what?",
-      "Profit",
-      "Party",
-      "Travel"
-     ],
-     [
-      "Quarter million, switchin' what?",
-      "Lanes",
-      "Teams",
-      "Cars"
-     ]
-    ],
-    [
-     [
-      "I'm still trying to make that what?",
-      "Plate",
-      "Play",
-      "Date"
-     ],
-     [
-      "Rich or poor, choose your what?",
-      "Fate",
-      "Path",
-      "Team"
-     ],
-     [
-      "How many years has he been rich?",
-      "Five",
-      "Ten",
-      "Two"
-     ],
-     [
-      "He drove Beamers down which street?",
-      "Fig",
-      "Crenshaw",
-      "Vermont"
-     ],
-     [
-      "He pushed Porsches down what?",
-      "Broadway",
-      "Sunset",
-      "Slauson"
-     ],
-     [
-      "Got a chain that's worth the what?",
-      "Rolls",
-      "House",
-      "Benz"
-     ]
-    ],
-    [
-     [
-      "Few million made and still ain't what?",
-      "Changed",
-      "Slept",
-      "Stopped"
-     ],
-     [
-      "Me and my girl got matching what?",
-      "Bling",
-      "Cars",
-      "Shoes"
-     ],
-     [
-      "Since a youngin' I wanted to what?",
-      "Ball",
-      "Rap",
-      "Fly"
-     ],
-     [
-      "What kind of car does he have with side to side on it?",
-      "Chevy",
-      "Cadillac",
-      "Buick"
-     ],
-     [
-      "How many spokes?",
-      "Hundred",
-      "Thirty",
-      "Fifty"
-     ],
-     [
-      "\"Hundred spokes, the Dana...\" what?",
-      "Danes",
-      "Dames",
-      "Dawgs"
+      "\"Every once in a while, I see hands in the...\"?",
+      "Crowds",
+      "Sky",
+      "Back"
      ]
     ]
    ]
@@ -784,6 +736,36 @@ window.CFG = {
       "Attitude",
       "Accent",
       "Afro"
+     ],
+     [
+      "\"Nights like this, I'm a ... like this\"?",
+      "Knight",
+      "King",
+      "Kid"
+     ],
+     [
+      "\"Sword in my hand, I ... like this\"?",
+      "Fight",
+      "Write",
+      "Dance"
+     ],
+     [
+      "\"I'm more than a man, I'm a...\"?",
+      "God",
+      "King",
+      "Star"
+     ],
+     [
+      "\"Hang in my penthouse roof, skyline the...\"?",
+      "Clearest",
+      "Highest",
+      "Brightest"
+     ],
+     [
+      "\"Head with no power...\"?",
+      "Steering",
+      "Windows",
+      "Brakes"
      ]
     ]
    ]
@@ -842,6 +824,12 @@ window.CFG = {
       "Begun",
       "Arrived",
       "Woke up"
+     ],
+     [
+      "How many times \"go\" in a row?",
+      "Four",
+      "Three",
+      "Two"
      ]
     ],
     [
@@ -886,6 +874,24 @@ window.CFG = {
       "Shop",
       "Kitchen",
       "Gate"
+     ],
+     [
+      "\"Night life in the bright...\"?",
+      "Lights",
+      "Stars",
+      "Streets"
+     ],
+     [
+      "\"10 grand in my pocket,\" all...?",
+      "Ours",
+      "Mine",
+      "Gone"
+     ],
+     [
+      "\"So I'ma live it to the top...\"?",
+      "Notch",
+      "Floor",
+      "Shelf"
      ]
     ],
     [
@@ -939,7 +945,7 @@ window.CFG = {
    "id": "ukx6U4q0djc",
    "start": 23.1,
    "cuts": [
-    59.0,
+    59,
     154.95,
     250.95
    ],
@@ -986,6 +992,12 @@ window.CFG = {
       "Shoestring",
       "Savings",
       "Gas tank"
+     ],
+     [
+      "\"Thank God that I'm...\"?",
+      "Straight",
+      "Home",
+      "Free"
      ]
     ],
     [
@@ -1030,6 +1042,18 @@ window.CFG = {
       "Story",
       "Music",
       "Name"
+     ],
+     [
+      "\"Chucks on my young...\"?",
+      "Heel",
+      "Feet",
+      "Toes"
+     ],
+     [
+      "\"Got off my behind, write me some sweet...\"?",
+      "Lines",
+      "Songs",
+      "Notes"
      ]
     ],
     [
@@ -1074,6 +1098,18 @@ window.CFG = {
       "Space",
       "Bed",
       "TV"
+     ],
+     [
+      "\"Go hard for my Joy, so she don't need no...\"?",
+      "Boy",
+      "Toy",
+      "Job"
+     ],
+     [
+      "\"Threw up my peace...\"?",
+      "Sign",
+      "Out",
+      "Flag"
      ]
     ]
    ]
@@ -1161,6 +1197,24 @@ window.CFG = {
       "Crown",
       "Crowd",
       "Cash"
+     ],
+     [
+      "\"You be hating and I still hold it...\"?",
+      "Down",
+      "Up",
+      "Close"
+     ],
+     [
+      "\"Hands high to the...\"?",
+      "Sound",
+      "Sky",
+      "Roof"
+     ],
+     [
+      "\"Go south for the...\"?",
+      "Border",
+      "Winter",
+      "Money"
      ]
     ],
     [
@@ -1199,132 +1253,12 @@ window.CFG = {
       "Meow",
       "Chase",
       "Love"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "THat Part",
-   "id": "mbBhP_WSCkQ",
-   "start": 15.5,
-   "cuts": [
-    54.2,
-    101.45,
-    236.85
-   ],
-   "qs": [
-    [
-     [
-      "Me no conversate with the what?",
-      "Fake",
-      "Fans",
-      "Press"
      ],
      [
-      "I just want the what?",
-      "Paper",
-      "Plaques",
-      "Party"
-     ],
-     [
-      "He needs more what?",
-      "Options",
-      "Money",
-      "Room"
-     ],
-     [
-      "Broke? Then fix your what?",
-      "Pockets",
-      "Credit",
-      "Attitude"
-     ],
-     [
-      "All I do is what?",
-      "Profit",
-      "Party",
-      "Travel"
-     ],
-     [
-      "Quarter million, switchin' what?",
-      "Lanes",
-      "Teams",
-      "Cars"
-     ]
-    ],
-    [
-     [
-      "I'm still trying to make that what?",
-      "Plate",
-      "Play",
-      "Date"
-     ],
-     [
-      "Rich or poor, choose your what?",
-      "Fate",
-      "Path",
-      "Team"
-     ],
-     [
-      "How many years has he been rich?",
-      "Five",
-      "Ten",
-      "Two"
-     ],
-     [
-      "He drove Beamers down which street?",
-      "Fig",
-      "Crenshaw",
-      "Vermont"
-     ],
-     [
-      "He pushed Porsches down what?",
-      "Broadway",
-      "Sunset",
-      "Slauson"
-     ],
-     [
-      "Got a chain that's worth the what?",
-      "Rolls",
-      "House",
-      "Benz"
-     ]
-    ],
-    [
-     [
-      "Few million made and still ain't what?",
-      "Changed",
-      "Slept",
-      "Stopped"
-     ],
-     [
-      "Me and my girl got matching what?",
-      "Bling",
-      "Cars",
-      "Shoes"
-     ],
-     [
-      "Since a youngin' I wanted to what?",
-      "Ball",
-      "Rap",
-      "Fly"
-     ],
-     [
-      "What kind of car does he have with side to side on it?",
-      "Chevy",
-      "Cadillac",
-      "Buick"
-     ],
-     [
-      "How many spokes?",
-      "Hundred",
-      "Thirty",
-      "Fifty"
-     ],
-     [
-      "\"Hundred spokes, the Dana...\" what?",
-      "Danes",
-      "Dames",
-      "Dawgs"
+      "\"Every once in a while, I see hands in the...\"?",
+      "Crowds",
+      "Sky",
+      "Back"
      ]
     ]
    ]
@@ -1468,6 +1402,36 @@ window.CFG = {
       "Attitude",
       "Accent",
       "Afro"
+     ],
+     [
+      "\"Nights like this, I'm a ... like this\"?",
+      "Knight",
+      "King",
+      "Kid"
+     ],
+     [
+      "\"Sword in my hand, I ... like this\"?",
+      "Fight",
+      "Write",
+      "Dance"
+     ],
+     [
+      "\"I'm more than a man, I'm a...\"?",
+      "God",
+      "King",
+      "Star"
+     ],
+     [
+      "\"Hang in my penthouse roof, skyline the...\"?",
+      "Clearest",
+      "Highest",
+      "Brightest"
+     ],
+     [
+      "\"Head with no power...\"?",
+      "Steering",
+      "Windows",
+      "Brakes"
      ]
     ]
    ]

@@ -388,145 +388,145 @@ window.CFG = {
    ]
   },
   {
-   "title": "Encore",
-   "id": "7VksyVUAwi8",
-   "start": 1.5,
+   "title": "Song Cry",
+   "id": "3FS28EBM0J4",
+   "start": 30,
    "cuts": [
-    42.9,
-    118.2,
-    207.2
+    65.1,
+    110.7,
+    153.9
    ],
    "qs": [
     [
      [
-      "\"Can I get an\" what?",
-      "Encore",
-      "Amen",
-      "Applause"
+      "\"So I gotta make the song...\"?",
+      "Cry",
+      "Fly",
+      "Sing"
      ],
      [
-      "\"Cookin' raw with the\" who?",
-      "Brooklyn boy",
-      "Marcy kid",
-      "Roc boys"
+      "\"I know you love me like ... food\"?",
+      "Cooked",
+      "Fast",
+      "Soul"
      ],
      [
-      "For one last time he needs y'all to what?",
-      "Roar",
-      "Clap",
-      "Jump"
+      "\"We was together on the block since free...\"?",
+      "Lunch",
+      "Time",
+      "School"
      ],
      [
-      "\"Who you know fresher than\" who?",
-      "Hov'",
-      "Jigga",
-      "Shawn"
+      "\"We shoulda been together havin' Four Seasons...\"?",
+      "Brunch",
+      "Dinner",
+      "Dessert"
      ],
      [
-      "Hearin' him rap is like hearin' who in his prime?",
-      "G Rap",
-      "Rakim",
-      "Big Daddy Kane"
+      "\"We used to use umbrellas to face the bad...\"?",
+      "Weather",
+      "Times",
+      "News"
      ],
      [
-      "He's rap's what?",
-      "Grateful Dead",
-      "Rolling Stones",
-      "Beatles"
+      "\"So now we travel first-class to change the...\"?",
+      "Forecast",
+      "Seasons",
+      "Scenery"
      ],
      [
-      "\"Back to take over the\" what?",
-      "Globe",
-      "Game",
-      "Throne"
+      "\"I loved your point of view 'cause you held no...\"?",
+      "Punches",
+      "Secrets",
+      "Grudges"
      ]
     ],
     [
      [
-      "He's in Boeing jets, Global what?",
-      "Express",
-      "Air",
-      "Class"
+      "\"Still I left you for months on...\"?",
+      "End",
+      "Tour",
+      "Purpose"
      ],
      [
-      "\"On the low but the yacht got a\" what?",
-      "Triple deck",
-      "Double deck",
-      "Hot tub"
+      "\"We're somewhere in a small...\"?",
+      "Town",
+      "Room",
+      "Car"
      ],
      [
-      "\"Grand openin', grand\" what?",
-      "Closin'",
-      "Finale",
-      "Exit"
+      "\"Somewhere lockin' a ... down\"?",
+      "Mall",
+      "Block",
+      "Club"
      ],
      [
-      "\"With no pen, just draw off\" what?",
-      "Inspiration",
-      "Memory",
-      "Instinct"
+      "\"I can understand why you want a ... now\"?",
+      "Divorce",
+      "Break",
+      "Change"
      ],
      [
-      "\"From Marcy to\" where?",
-      "Madison Square",
-      "Carnegie Hall",
-      "The Apollo"
+      "\"Pride won't let me...\"?",
+      "Show it",
+      "Say it",
+      "Fix it"
      ],
      [
-      "He comes back like Jordan wearin' what number?",
-      "45",
-      "23",
-      "33"
+      "\"Pretend to be...\"?",
+      "Heroic",
+      "Happy",
+      "Strong"
      ],
      [
-      "\"I came, I saw, I\" what?",
-      "Conquered",
-      "Won",
-      "Took over"
+      "\"Woodgrain, four and change, ... All'd down\"?",
+      "Armor",
+      "Shine",
+      "Turtle"
      ]
     ],
     [
      [
-      "What do they need you to say to bring him back?",
-      "HOVA",
-      "JIGGA",
-      "ENCORE"
+      "\"Watchin' Bonnie and...\"?",
+      "Clyde",
+      "Ted",
+      "Bill"
      ],
      [
-      "\"So this here is the victory\" what?",
-      "Lap",
-      "Speech",
-      "Dance"
+      "\"Shopping sprees, pull out your ... quick\"?",
+      "Visa",
+      "Amex",
+      "Wallet"
      ],
      [
-      "\"I can get you BET and\" what \"too\"?",
-      "TRL",
-      "MTV",
-      "Hot 97"
+      "He had very bad credit, she helped him lease that...?",
+      "Whip",
+      "House",
+      "Truck"
      ],
      [
-      "\"You wanna be in the public, send your\" what?",
-      "Budget",
-      "Demo",
-      "Resume"
+      "\"We was so happy...\"?",
+      "Poor",
+      "Young",
+      "Broke"
      ],
      [
-      "\"Record companies told me I couldn't\" what?",
-      "Cut it",
-      "Make it",
-      "Last"
+      "\"That's when our signals got...\"?",
+      "Crossed",
+      "Lost",
+      "Mixed"
      ],
      [
-      "\"Now look at me, all\" what?",
-      "Star-studded",
-      "Iced out",
-      "Sold out"
+      "\"Then I showed up in that dubbed-out...\"?",
+      "Buggy",
+      "Benz",
+      "Jeep"
      ],
      [
-      "He's like a golfer above what?",
-      "Par",
-      "The rest",
-      "The green"
+      "\"And I don't remember...\"?",
+      "You",
+      "Them",
+      "That"
      ]
     ]
    ]
@@ -1072,145 +1072,145 @@ window.CFG = {
    ]
   },
   {
-   "title": "Encore",
-   "id": "7VksyVUAwi8",
-   "start": 1.5,
+   "title": "Song Cry",
+   "id": "3FS28EBM0J4",
+   "start": 30,
    "cuts": [
-    42.9,
-    118.2,
-    207.2
+    65.1,
+    110.7,
+    153.9
    ],
    "qs": [
     [
      [
-      "\"Can I get an\" what?",
-      "Encore",
-      "Amen",
-      "Applause"
+      "\"So I gotta make the song...\"?",
+      "Cry",
+      "Fly",
+      "Sing"
      ],
      [
-      "\"Cookin' raw with the\" who?",
-      "Brooklyn boy",
-      "Marcy kid",
-      "Roc boys"
+      "\"I know you love me like ... food\"?",
+      "Cooked",
+      "Fast",
+      "Soul"
      ],
      [
-      "For one last time he needs y'all to what?",
-      "Roar",
-      "Clap",
-      "Jump"
+      "\"We was together on the block since free...\"?",
+      "Lunch",
+      "Time",
+      "School"
      ],
      [
-      "\"Who you know fresher than\" who?",
-      "Hov'",
-      "Jigga",
-      "Shawn"
+      "\"We shoulda been together havin' Four Seasons...\"?",
+      "Brunch",
+      "Dinner",
+      "Dessert"
      ],
      [
-      "Hearin' him rap is like hearin' who in his prime?",
-      "G Rap",
-      "Rakim",
-      "Big Daddy Kane"
+      "\"We used to use umbrellas to face the bad...\"?",
+      "Weather",
+      "Times",
+      "News"
      ],
      [
-      "He's rap's what?",
-      "Grateful Dead",
-      "Rolling Stones",
-      "Beatles"
+      "\"So now we travel first-class to change the...\"?",
+      "Forecast",
+      "Seasons",
+      "Scenery"
      ],
      [
-      "\"Back to take over the\" what?",
-      "Globe",
-      "Game",
-      "Throne"
+      "\"I loved your point of view 'cause you held no...\"?",
+      "Punches",
+      "Secrets",
+      "Grudges"
      ]
     ],
     [
      [
-      "He's in Boeing jets, Global what?",
-      "Express",
-      "Air",
-      "Class"
+      "\"Still I left you for months on...\"?",
+      "End",
+      "Tour",
+      "Purpose"
      ],
      [
-      "\"On the low but the yacht got a\" what?",
-      "Triple deck",
-      "Double deck",
-      "Hot tub"
+      "\"We're somewhere in a small...\"?",
+      "Town",
+      "Room",
+      "Car"
      ],
      [
-      "\"Grand openin', grand\" what?",
-      "Closin'",
-      "Finale",
-      "Exit"
+      "\"Somewhere lockin' a ... down\"?",
+      "Mall",
+      "Block",
+      "Club"
      ],
      [
-      "\"With no pen, just draw off\" what?",
-      "Inspiration",
-      "Memory",
-      "Instinct"
+      "\"I can understand why you want a ... now\"?",
+      "Divorce",
+      "Break",
+      "Change"
      ],
      [
-      "\"From Marcy to\" where?",
-      "Madison Square",
-      "Carnegie Hall",
-      "The Apollo"
+      "\"Pride won't let me...\"?",
+      "Show it",
+      "Say it",
+      "Fix it"
      ],
      [
-      "He comes back like Jordan wearin' what number?",
-      "45",
-      "23",
-      "33"
+      "\"Pretend to be...\"?",
+      "Heroic",
+      "Happy",
+      "Strong"
      ],
      [
-      "\"I came, I saw, I\" what?",
-      "Conquered",
-      "Won",
-      "Took over"
+      "\"Woodgrain, four and change, ... All'd down\"?",
+      "Armor",
+      "Shine",
+      "Turtle"
      ]
     ],
     [
      [
-      "What do they need you to say to bring him back?",
-      "HOVA",
-      "JIGGA",
-      "ENCORE"
+      "\"Watchin' Bonnie and...\"?",
+      "Clyde",
+      "Ted",
+      "Bill"
      ],
      [
-      "\"So this here is the victory\" what?",
-      "Lap",
-      "Speech",
-      "Dance"
+      "\"Shopping sprees, pull out your ... quick\"?",
+      "Visa",
+      "Amex",
+      "Wallet"
      ],
      [
-      "\"I can get you BET and\" what \"too\"?",
-      "TRL",
-      "MTV",
-      "Hot 97"
+      "He had very bad credit, she helped him lease that...?",
+      "Whip",
+      "House",
+      "Truck"
      ],
      [
-      "\"You wanna be in the public, send your\" what?",
-      "Budget",
-      "Demo",
-      "Resume"
+      "\"We was so happy...\"?",
+      "Poor",
+      "Young",
+      "Broke"
      ],
      [
-      "\"Record companies told me I couldn't\" what?",
-      "Cut it",
-      "Make it",
-      "Last"
+      "\"That's when our signals got...\"?",
+      "Crossed",
+      "Lost",
+      "Mixed"
      ],
      [
-      "\"Now look at me, all\" what?",
-      "Star-studded",
-      "Iced out",
-      "Sold out"
+      "\"Then I showed up in that dubbed-out...\"?",
+      "Buggy",
+      "Benz",
+      "Jeep"
      ],
      [
-      "He's like a golfer above what?",
-      "Par",
-      "The rest",
-      "The green"
+      "\"And I don't remember...\"?",
+      "You",
+      "Them",
+      "That"
      ]
     ]
    ]

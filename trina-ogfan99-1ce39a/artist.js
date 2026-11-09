@@ -159,6 +159,18 @@ window.CFG = {
       "Loss",
       "Days off",
       "Advice"
+     ],
+     [
+      "\"Big business, it's what I'm...\"?",
+      "Used to",
+      "Good at",
+      "Known for"
+     ],
+     [
+      "\"I don't take no loss, I'm not a...\"?",
+      "Loser",
+      "Quitter",
+      "Rookie"
      ]
     ],
     [
@@ -203,6 +215,24 @@ window.CFG = {
       "Her health",
       "Her looks",
       "Her fame"
+     ],
+     [
+      "\"All she ever wanted was a real...\"?",
+      "One",
+      "Man",
+      "Love"
+     ],
+     [
+      "\"But they're so hard to...\"?",
+      "Find",
+      "Keep",
+      "Trust"
+     ],
+     [
+      "\"But all she gets is wasted...\"?",
+      "Time",
+      "Love",
+      "Money"
      ]
     ],
     [
@@ -297,6 +327,12 @@ window.CFG = {
       "Porch",
       "Lawn",
       "Curb"
+     ],
+     [
+      "\"So now it's to the left, to the...\"?",
+      "Left",
+      "Right",
+      "Door"
      ]
     ],
     [
@@ -335,6 +371,30 @@ window.CFG = {
       "Man",
       "Ring",
       "Ride"
+     ],
+     [
+      "\"What would you do if you were in my...\"?",
+      "Shoes",
+      "Place",
+      "Heart"
+     ],
+     [
+      "\"Between the one you love and between the one you...\"?",
+      "Hate",
+      "Need",
+      "Lost"
+     ],
+     [
+      "\"If I can turn back...\"?",
+      "Time",
+      "Around",
+      "The clock"
+     ],
+     [
+      "Every time she's with her man, all she does is think of...?",
+      "You",
+      "Him",
+      "Me"
      ]
     ],
     [
@@ -429,6 +489,18 @@ window.CFG = {
       "Mine",
       "Good",
       "Set"
+     ],
+     [
+      "\"I'm holdin' back, I'm so...\"?",
+      "Thirsty",
+      "Nervous",
+      "Lonely"
+     ],
+     [
+      "\"This time ain't lookin' for a...\"?",
+      "Friend",
+      "Man",
+      "Ring"
      ]
     ],
     [
@@ -467,6 +539,24 @@ window.CFG = {
       "Chosen",
       "Sent",
       "Waiting"
+     ],
+     [
+      "\"Don't wanna take it...\"?",
+      "Slow",
+      "Easy",
+      "Back"
+     ],
+     [
+      "\"I wanna get to...\"?",
+      "Know ya",
+      "Hold ya",
+      "See ya"
+     ],
+     [
+      "\"Don't wanna play no...\"?",
+      "Games",
+      "Songs",
+      "Tricks"
      ]
     ],
     [
@@ -511,144 +601,6 @@ window.CFG = {
       "Voice tone",
       "Name",
       "Ringtone"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Million Dollar Girl",
-   "id": "W8nSLOHKKmk",
-   "start": 37.1,
-   "cuts": [
-    67.05,
-    164.9,
-    179.25
-   ],
-   "qs": [
-    [
-     [
-      "She's got her feet up when she what?",
-      "Kicks back",
-      "Sits down",
-      "Gets home"
-     ],
-     [
-      "She gets major bread for her what?",
-      "Chit-chat",
-      "Verses",
-      "Videos"
-     ],
-     [
-      "Who's on this track?",
-      "Miss Keri",
-      "Miss Kelly",
-      "Miss Missy"
-     ],
-     [
-      "Which store is she gonna go tear up?",
-      "Niemans",
-      "Saks",
-      "Macy's"
-     ],
-     [
-      "Miami in the morning, where is she this evening?",
-      "San Tropez",
-      "Paris",
-      "Milan"
-     ],
-     [
-      "You like her style, and her million dollar what?",
-      "Smile",
-      "Shoes",
-      "Ring"
-     ],
-     [
-      "Don't hate, just go get what?",
-      "Yours",
-      "Paid",
-      "Famous"
-     ]
-    ],
-    [
-     [
-      "He showers her in what?",
-      "Diamonds",
-      "Roses",
-      "Gifts"
-     ],
-     [
-      "She goes on vacation for how long?",
-      "Months",
-      "Weeks",
-      "Days"
-     ],
-     [
-      "Her penthouse is at the what?",
-      "Trump",
-      "Plaza",
-      "Ritz"
-     ],
-     [
-      "In Las Vegas she's who?",
-      "Lady Luck",
-      "The Queen",
-      "The Jackpot"
-     ],
-     [
-      "She's got a million dollar what?",
-      "Smell",
-      "Walk",
-      "Laugh"
-     ],
-     [
-      "Her shades are what brand?",
-      "YSL",
-      "Gucci",
-      "Prada"
-     ]
-    ],
-    [
-     [
-      "Her heels ain't out till next what?",
-      "Season",
-      "Year",
-      "Month"
-     ],
-     [
-      "She's in that pink what?",
-      "Ferrari",
-      "Lambo",
-      "Bentley"
-     ],
-     [
-      "She's got a thing for what?",
-      "Porsches",
-      "Benzes",
-      "Bentleys"
-     ],
-     [
-      "She likes her men like her what?",
-      "Cars",
-      "Money",
-      "Shoes"
-     ],
-     [
-      "Strong and built like what?",
-      "Horses",
-      "Trucks",
-      "Tanks"
-     ],
-     [
-      "A glass of what?",
-      "Chardonnay",
-      "Champagne",
-      "Rosé"
-     ],
-     [
-      "She's far from what?",
-      "Average",
-      "Broke",
-      "Home"
      ]
     ]
    ]
@@ -749,6 +701,30 @@ window.CFG = {
       "Years",
       "Days",
       "Months"
+     ],
+     [
+      "\"Now you're tellin' me that she is just a...\"?",
+      "Friend",
+      "Fan",
+      "Cousin"
+     ],
+     [
+      "She's callin' you at what time?",
+      "Three o'clock",
+      "Two o'clock",
+      "Midnight"
+     ],
+     [
+      "\"I can't take this no...\"?",
+      "More",
+      "Time",
+      "Way"
+     ],
+     [
+      "\"I ain't tryna hear it, not this...\"?",
+      "Time",
+      "Again",
+      "Night"
      ]
     ],
     [
@@ -787,6 +763,12 @@ window.CFG = {
       "Shut up",
       "Get out",
       "Hang up"
+     ],
+     [
+      "\"Blah, blah, blah\" — then \"talk too...\"?",
+      "Much",
+      "Loud",
+      "Fast"
      ]
     ]
    ]
@@ -845,6 +827,18 @@ window.CFG = {
       "Loss",
       "Days off",
       "Advice"
+     ],
+     [
+      "\"Big business, it's what I'm...\"?",
+      "Used to",
+      "Good at",
+      "Known for"
+     ],
+     [
+      "\"I don't take no loss, I'm not a...\"?",
+      "Loser",
+      "Quitter",
+      "Rookie"
      ]
     ],
     [
@@ -889,6 +883,24 @@ window.CFG = {
       "Her health",
       "Her looks",
       "Her fame"
+     ],
+     [
+      "\"All she ever wanted was a real...\"?",
+      "One",
+      "Man",
+      "Love"
+     ],
+     [
+      "\"But they're so hard to...\"?",
+      "Find",
+      "Keep",
+      "Trust"
+     ],
+     [
+      "\"But all she gets is wasted...\"?",
+      "Time",
+      "Love",
+      "Money"
      ]
     ],
     [
@@ -983,6 +995,12 @@ window.CFG = {
       "Porch",
       "Lawn",
       "Curb"
+     ],
+     [
+      "\"So now it's to the left, to the...\"?",
+      "Left",
+      "Right",
+      "Door"
      ]
     ],
     [
@@ -1021,6 +1039,30 @@ window.CFG = {
       "Man",
       "Ring",
       "Ride"
+     ],
+     [
+      "\"What would you do if you were in my...\"?",
+      "Shoes",
+      "Place",
+      "Heart"
+     ],
+     [
+      "\"Between the one you love and between the one you...\"?",
+      "Hate",
+      "Need",
+      "Lost"
+     ],
+     [
+      "\"If I can turn back...\"?",
+      "Time",
+      "Around",
+      "The clock"
+     ],
+     [
+      "Every time she's with her man, all she does is think of...?",
+      "You",
+      "Him",
+      "Me"
      ]
     ],
     [
@@ -1115,6 +1157,18 @@ window.CFG = {
       "Mine",
       "Good",
       "Set"
+     ],
+     [
+      "\"I'm holdin' back, I'm so...\"?",
+      "Thirsty",
+      "Nervous",
+      "Lonely"
+     ],
+     [
+      "\"This time ain't lookin' for a...\"?",
+      "Friend",
+      "Man",
+      "Ring"
      ]
     ],
     [
@@ -1153,6 +1207,24 @@ window.CFG = {
       "Chosen",
       "Sent",
       "Waiting"
+     ],
+     [
+      "\"Don't wanna take it...\"?",
+      "Slow",
+      "Easy",
+      "Back"
+     ],
+     [
+      "\"I wanna get to...\"?",
+      "Know ya",
+      "Hold ya",
+      "See ya"
+     ],
+     [
+      "\"Don't wanna play no...\"?",
+      "Games",
+      "Songs",
+      "Tricks"
      ]
     ],
     [
@@ -1197,144 +1269,6 @@ window.CFG = {
       "Voice tone",
       "Name",
       "Ringtone"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Million Dollar Girl",
-   "id": "W8nSLOHKKmk",
-   "start": 37.1,
-   "cuts": [
-    67.05,
-    164.9,
-    179.25
-   ],
-   "qs": [
-    [
-     [
-      "She's got her feet up when she what?",
-      "Kicks back",
-      "Sits down",
-      "Gets home"
-     ],
-     [
-      "She gets major bread for her what?",
-      "Chit-chat",
-      "Verses",
-      "Videos"
-     ],
-     [
-      "Who's on this track?",
-      "Miss Keri",
-      "Miss Kelly",
-      "Miss Missy"
-     ],
-     [
-      "Which store is she gonna go tear up?",
-      "Niemans",
-      "Saks",
-      "Macy's"
-     ],
-     [
-      "Miami in the morning, where is she this evening?",
-      "San Tropez",
-      "Paris",
-      "Milan"
-     ],
-     [
-      "You like her style, and her million dollar what?",
-      "Smile",
-      "Shoes",
-      "Ring"
-     ],
-     [
-      "Don't hate, just go get what?",
-      "Yours",
-      "Paid",
-      "Famous"
-     ]
-    ],
-    [
-     [
-      "He showers her in what?",
-      "Diamonds",
-      "Roses",
-      "Gifts"
-     ],
-     [
-      "She goes on vacation for how long?",
-      "Months",
-      "Weeks",
-      "Days"
-     ],
-     [
-      "Her penthouse is at the what?",
-      "Trump",
-      "Plaza",
-      "Ritz"
-     ],
-     [
-      "In Las Vegas she's who?",
-      "Lady Luck",
-      "The Queen",
-      "The Jackpot"
-     ],
-     [
-      "She's got a million dollar what?",
-      "Smell",
-      "Walk",
-      "Laugh"
-     ],
-     [
-      "Her shades are what brand?",
-      "YSL",
-      "Gucci",
-      "Prada"
-     ]
-    ],
-    [
-     [
-      "Her heels ain't out till next what?",
-      "Season",
-      "Year",
-      "Month"
-     ],
-     [
-      "She's in that pink what?",
-      "Ferrari",
-      "Lambo",
-      "Bentley"
-     ],
-     [
-      "She's got a thing for what?",
-      "Porsches",
-      "Benzes",
-      "Bentleys"
-     ],
-     [
-      "She likes her men like her what?",
-      "Cars",
-      "Money",
-      "Shoes"
-     ],
-     [
-      "Strong and built like what?",
-      "Horses",
-      "Trucks",
-      "Tanks"
-     ],
-     [
-      "A glass of what?",
-      "Chardonnay",
-      "Champagne",
-      "Rosé"
-     ],
-     [
-      "She's far from what?",
-      "Average",
-      "Broke",
-      "Home"
      ]
     ]
    ]
@@ -1435,6 +1369,30 @@ window.CFG = {
       "Years",
       "Days",
       "Months"
+     ],
+     [
+      "\"Now you're tellin' me that she is just a...\"?",
+      "Friend",
+      "Fan",
+      "Cousin"
+     ],
+     [
+      "She's callin' you at what time?",
+      "Three o'clock",
+      "Two o'clock",
+      "Midnight"
+     ],
+     [
+      "\"I can't take this no...\"?",
+      "More",
+      "Time",
+      "Way"
+     ],
+     [
+      "\"I ain't tryna hear it, not this...\"?",
+      "Time",
+      "Again",
+      "Night"
      ]
     ],
     [
@@ -1473,6 +1431,12 @@ window.CFG = {
       "Shut up",
       "Get out",
       "Hang up"
+     ],
+     [
+      "\"Blah, blah, blah\" — then \"talk too...\"?",
+      "Much",
+      "Loud",
+      "Fast"
      ]
     ]
    ]

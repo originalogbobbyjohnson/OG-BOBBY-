@@ -153,6 +153,24 @@ window.CFG = {
       "Forget",
       "Stop",
       "Change"
+     ],
+     [
+      "\"People barely ... but it hurt me deep\"?",
+      "Speak",
+      "Call",
+      "Care"
+     ],
+     [
+      "\"How you talk behind my...\"?",
+      "Back",
+      "Name",
+      "Face"
+     ],
+     [
+      "\"I'ma put on my...\"?",
+      "Vans",
+      "Nikes",
+      "Boots"
      ]
     ],
     [
@@ -197,6 +215,18 @@ window.CFG = {
       "Steak",
       "Shrimp",
       "Pasta"
+     ],
+     [
+      "\"Believe in soul...\"?",
+      "Ties",
+      "Mates",
+      "Food"
+     ],
+     [
+      "Out the mud for his fam — \"you can't...\"?",
+      "Relate",
+      "Compete",
+      "Pretend"
      ]
     ],
     [
@@ -235,6 +265,12 @@ window.CFG = {
       "Nothing",
       "Money",
       "Love"
+     ],
+     [
+      "He \"ain't used to get\" anything for which holiday?",
+      "Christmas",
+      "Birthdays",
+      "Easter"
      ]
     ]
    ]
@@ -290,6 +326,18 @@ window.CFG = {
       "Pain",
       "Pride",
       "Fear"
+     ],
+     [
+      "Head on the floor, he's goin' to...?",
+      "Sleep",
+      "Work",
+      "Pray"
+     ],
+     [
+      "He ain't got nothin' to his...?",
+      "Name",
+      "House",
+      "Pocket"
      ]
     ],
     [
@@ -328,6 +376,24 @@ window.CFG = {
       "Picked up",
       "Paid",
       "Found"
+     ],
+     [
+      "She wants Prada and...?",
+      "Balenciagas",
+      "Guccis",
+      "Fendis"
+     ],
+     [
+      "\"Ain't been to ... in a while\"?",
+      "School",
+      "Church",
+      "Practice"
+     ],
+     [
+      "Now they callin' for concerns, but he...?",
+      "Retired",
+      "Relaxed",
+      "Moved"
      ]
     ],
     [
@@ -366,6 +432,12 @@ window.CFG = {
       "The torch",
       "The crown",
       "The keys"
+     ],
+     [
+      "\"Had to get a new ... 'cause they had damaged it\"?",
+      "Heart",
+      "Phone",
+      "Car"
      ]
     ]
    ]
@@ -422,6 +494,18 @@ window.CFG = {
       "Rugged",
       "Late",
       "Cold"
+     ],
+     [
+      "\"No matter how many times you say you ... me, I know you don't\"?",
+      "Love",
+      "Miss",
+      "Want"
+     ],
+     [
+      "When it gets rugged, they hit the...?",
+      "Road",
+      "Door",
+      "Gym"
      ]
     ],
     [
@@ -466,6 +550,12 @@ window.CFG = {
       "Work",
       "Last",
       "Heal"
+     ],
+     [
+      "\"I can put the skit together, no...\"?",
+      "Effort",
+      "Problem",
+      "Script"
      ]
     ],
     [
@@ -504,6 +594,18 @@ window.CFG = {
       "Bank",
       "Show",
       "Studio"
+     ],
+     [
+      "\"You wanna be with me, but don't even...\"?",
+      "Trust me",
+      "Know me",
+      "Call me"
+     ],
+     [
+      "\"Wanna love me now? You too...\"?",
+      "Late",
+      "Slow",
+      "Young"
      ]
     ]
    ]
@@ -559,6 +661,12 @@ window.CFG = {
       "Blow up",
       "Fall off",
       "Go home"
+     ],
+     [
+      "\"Can't find nobody realer, see ... in a lot of\" them?",
+      "Fake",
+      "Love",
+      "Hate"
      ]
     ],
     [
@@ -603,6 +711,12 @@ window.CFG = {
       "Double",
       "Last",
       "Bigger"
+     ],
+     [
+      "\"Made men don't make...\"?",
+      "Statements",
+      "Mistakes",
+      "Excuses"
      ]
     ],
     [
@@ -641,143 +755,12 @@ window.CFG = {
       "Now he's up",
       "On his birthday",
       "At his shows"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Doin Bad",
-   "id": "GCTFetfGV3w",
-   "cuts": [
-    38.8,
-    88.5,
-    189
-   ],
-   "qs": [
-    [
-     [
-      "He's been going through some what?",
-      "Things",
-      "Changes",
-      "Storms"
      ],
      [
-      "He asks if he can take some time and do what?",
-      "Vent",
-      "Rest",
-      "Pray"
-     ],
-     [
-      "Now that he's getting rich, he's got different what?",
-      "Struggles",
-      "Friends",
-      "Cars"
-     ],
-     [
-      "He's been through the what?",
-      "Rain",
-      "Fire",
-      "Mud"
-     ],
-     [
-      "You'll watch him get what?",
-      "Soaked",
-      "Robbed",
-      "Locked up"
-     ],
-     [
-      "How can you watch your brother stay what?",
-      "Broke",
-      "Down",
-      "Lost"
-     ],
-     [
-      "He's not changing up on his what?",
-      "Bros",
-      "Fans",
-      "Family"
-     ]
-    ],
-    [
-     [
-      "He signed a deal for them what?",
-      "Bills",
-      "Chains",
-      "Cars"
-     ],
-     [
-      "All this money cannot dry up your what?",
-      "Tears",
-      "Eyes",
-      "Sweat"
-     ],
-     [
-      "He's paranoid, so how are they gon' do what?",
-      "Chill",
-      "Sleep",
-      "Eat"
-     ],
-     [
-      "Nobody's gonna care until you're thumbing through a what?",
-      "Mil",
-      "Stack",
-      "Check"
-     ],
-     [
-      "Nobody loves you when you're what?",
-      "Doing bad",
-      "Locked up",
-      "On the road"
-     ],
-     [
-      "When you go broke, they leave you where?",
-      "In the past",
-      "On the block",
-      "Alone"
-     ],
-     [
-      "Good things don't ever what?",
-      "Last",
-      "Change",
-      "Come"
-     ]
-    ],
-    [
-     [
-      "Nobody's gonna hold you down like who?",
-      "Yourself",
-      "Your mama",
-      "Your crew"
-     ],
-     [
-      "It's time to move forward and stop what?",
-      "Looking back",
-      "Running",
-      "Talking"
-     ],
-     [
-      "He says it's kinda hard to ease the what?",
-      "Pain",
-      "Stress",
-      "Mind"
-     ],
-     [
-      "People left him in the rain without a what?",
-      "Umbrella",
-      "Jacket",
-      "Ride"
-     ],
-     [
-      "In the summertime, he was sleeping where?",
-      "In the car",
-      "On the porch",
-      "At the park"
-     ],
-     [
-      "When he was out on the block, they told him he should do what?",
-      "Better",
-      "Leave",
-      "Slow down"
+      "\"Now I'm up, they all in\" his...?",
+      "Face",
+      "Business",
+      "Phone"
      ]
     ]
    ]
@@ -836,6 +819,24 @@ window.CFG = {
       "Forget",
       "Stop",
       "Change"
+     ],
+     [
+      "\"People barely ... but it hurt me deep\"?",
+      "Speak",
+      "Call",
+      "Care"
+     ],
+     [
+      "\"How you talk behind my...\"?",
+      "Back",
+      "Name",
+      "Face"
+     ],
+     [
+      "\"I'ma put on my...\"?",
+      "Vans",
+      "Nikes",
+      "Boots"
      ]
     ],
     [
@@ -880,6 +881,18 @@ window.CFG = {
       "Steak",
       "Shrimp",
       "Pasta"
+     ],
+     [
+      "\"Believe in soul...\"?",
+      "Ties",
+      "Mates",
+      "Food"
+     ],
+     [
+      "Out the mud for his fam — \"you can't...\"?",
+      "Relate",
+      "Compete",
+      "Pretend"
      ]
     ],
     [
@@ -918,6 +931,12 @@ window.CFG = {
       "Nothing",
       "Money",
       "Love"
+     ],
+     [
+      "He \"ain't used to get\" anything for which holiday?",
+      "Christmas",
+      "Birthdays",
+      "Easter"
      ]
     ]
    ]
@@ -973,6 +992,18 @@ window.CFG = {
       "Pain",
       "Pride",
       "Fear"
+     ],
+     [
+      "Head on the floor, he's goin' to...?",
+      "Sleep",
+      "Work",
+      "Pray"
+     ],
+     [
+      "He ain't got nothin' to his...?",
+      "Name",
+      "House",
+      "Pocket"
      ]
     ],
     [
@@ -1011,6 +1042,24 @@ window.CFG = {
       "Picked up",
       "Paid",
       "Found"
+     ],
+     [
+      "She wants Prada and...?",
+      "Balenciagas",
+      "Guccis",
+      "Fendis"
+     ],
+     [
+      "\"Ain't been to ... in a while\"?",
+      "School",
+      "Church",
+      "Practice"
+     ],
+     [
+      "Now they callin' for concerns, but he...?",
+      "Retired",
+      "Relaxed",
+      "Moved"
      ]
     ],
     [
@@ -1049,6 +1098,12 @@ window.CFG = {
       "The torch",
       "The crown",
       "The keys"
+     ],
+     [
+      "\"Had to get a new ... 'cause they had damaged it\"?",
+      "Heart",
+      "Phone",
+      "Car"
      ]
     ]
    ]
@@ -1105,6 +1160,18 @@ window.CFG = {
       "Rugged",
       "Late",
       "Cold"
+     ],
+     [
+      "\"No matter how many times you say you ... me, I know you don't\"?",
+      "Love",
+      "Miss",
+      "Want"
+     ],
+     [
+      "When it gets rugged, they hit the...?",
+      "Road",
+      "Door",
+      "Gym"
      ]
     ],
     [
@@ -1149,6 +1216,12 @@ window.CFG = {
       "Work",
       "Last",
       "Heal"
+     ],
+     [
+      "\"I can put the skit together, no...\"?",
+      "Effort",
+      "Problem",
+      "Script"
      ]
     ],
     [
@@ -1187,6 +1260,18 @@ window.CFG = {
       "Bank",
       "Show",
       "Studio"
+     ],
+     [
+      "\"You wanna be with me, but don't even...\"?",
+      "Trust me",
+      "Know me",
+      "Call me"
+     ],
+     [
+      "\"Wanna love me now? You too...\"?",
+      "Late",
+      "Slow",
+      "Young"
      ]
     ]
    ]
@@ -1242,6 +1327,12 @@ window.CFG = {
       "Blow up",
       "Fall off",
       "Go home"
+     ],
+     [
+      "\"Can't find nobody realer, see ... in a lot of\" them?",
+      "Fake",
+      "Love",
+      "Hate"
      ]
     ],
     [
@@ -1286,6 +1377,12 @@ window.CFG = {
       "Double",
       "Last",
       "Bigger"
+     ],
+     [
+      "\"Made men don't make...\"?",
+      "Statements",
+      "Mistakes",
+      "Excuses"
      ]
     ],
     [
@@ -1324,143 +1421,12 @@ window.CFG = {
       "Now he's up",
       "On his birthday",
       "At his shows"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Doin Bad",
-   "id": "GCTFetfGV3w",
-   "cuts": [
-    38.8,
-    88.5,
-    189
-   ],
-   "qs": [
-    [
-     [
-      "He's been going through some what?",
-      "Things",
-      "Changes",
-      "Storms"
      ],
      [
-      "He asks if he can take some time and do what?",
-      "Vent",
-      "Rest",
-      "Pray"
-     ],
-     [
-      "Now that he's getting rich, he's got different what?",
-      "Struggles",
-      "Friends",
-      "Cars"
-     ],
-     [
-      "He's been through the what?",
-      "Rain",
-      "Fire",
-      "Mud"
-     ],
-     [
-      "You'll watch him get what?",
-      "Soaked",
-      "Robbed",
-      "Locked up"
-     ],
-     [
-      "How can you watch your brother stay what?",
-      "Broke",
-      "Down",
-      "Lost"
-     ],
-     [
-      "He's not changing up on his what?",
-      "Bros",
-      "Fans",
-      "Family"
-     ]
-    ],
-    [
-     [
-      "He signed a deal for them what?",
-      "Bills",
-      "Chains",
-      "Cars"
-     ],
-     [
-      "All this money cannot dry up your what?",
-      "Tears",
-      "Eyes",
-      "Sweat"
-     ],
-     [
-      "He's paranoid, so how are they gon' do what?",
-      "Chill",
-      "Sleep",
-      "Eat"
-     ],
-     [
-      "Nobody's gonna care until you're thumbing through a what?",
-      "Mil",
-      "Stack",
-      "Check"
-     ],
-     [
-      "Nobody loves you when you're what?",
-      "Doing bad",
-      "Locked up",
-      "On the road"
-     ],
-     [
-      "When you go broke, they leave you where?",
-      "In the past",
-      "On the block",
-      "Alone"
-     ],
-     [
-      "Good things don't ever what?",
-      "Last",
-      "Change",
-      "Come"
-     ]
-    ],
-    [
-     [
-      "Nobody's gonna hold you down like who?",
-      "Yourself",
-      "Your mama",
-      "Your crew"
-     ],
-     [
-      "It's time to move forward and stop what?",
-      "Looking back",
-      "Running",
-      "Talking"
-     ],
-     [
-      "He says it's kinda hard to ease the what?",
-      "Pain",
-      "Stress",
-      "Mind"
-     ],
-     [
-      "People left him in the rain without a what?",
-      "Umbrella",
-      "Jacket",
-      "Ride"
-     ],
-     [
-      "In the summertime, he was sleeping where?",
-      "In the car",
-      "On the porch",
-      "At the park"
-     ],
-     [
-      "When he was out on the block, they told him he should do what?",
-      "Better",
-      "Leave",
-      "Slow down"
+      "\"Now I'm up, they all in\" his...?",
+      "Face",
+      "Business",
+      "Phone"
      ]
     ]
    ]

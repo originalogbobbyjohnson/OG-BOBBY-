@@ -435,163 +435,163 @@ window.CFG = {
    ]
   },
   {
-   "title": "Till I Collapse",
-   "id": "Obim8BYGnOE",
-   "start": 33,
+   "title": "Sing for the Moment",
+   "id": "d4DvF98aZrw",
+   "start": 22.3,
    "cuts": [
-    72.9,
-    123,
-    168.1
+    52.3,
+    87.6,
+    119.9
    ],
    "qs": [
     [
      [
-      "Sometimes you just feel tired, feel what?",
-      "Weak",
-      "Sick",
-      "Lost"
+      "\"These ideas are nightmares to white...\"?",
+      "Parents",
+      "Teachers",
+      "Neighbors"
      ],
      [
-      "You gotta search within you to find that inner what?",
-      "Strength",
-      "Peace",
-      "Voice"
+      "A child with dyed hair and who likes...?",
+      "Earrings",
+      "Skateboards",
+      "Tattoos"
      ],
      [
-      "Get that motivation to not be a what?",
-      "Quitter",
-      "Loser",
-      "Follower"
+      "\"Like whatever they say has no...\"?",
+      "Bearing",
+      "Meaning",
+      "Power"
      ],
      [
-      "No matter how bad you wanna fall flat on your what?",
-      "Face",
-      "Back",
-      "Knees"
+      "\"It's so scary in a house that allows no...\"?",
+      "Swearing",
+      "Music",
+      "Visitors"
      ],
      [
-      "Till he collapses he's spilling these what?",
-      "Raps",
-      "Drinks",
-      "Tears"
+      "Walking around with his ... blaring?",
+      "Headphones",
+      "Radio",
+      "TV"
      ],
      [
-      "\"And I am not Hip-Hop and I'm just not\" who?",
-      "Eminem",
-      "Slim Shady",
-      "Marshall"
+      "\"Alone in his own...\"?",
+      "Zone",
+      "Room",
+      "World"
      ],
      [
-      "What kind of thoughts is he sending?",
-      "Subliminal",
-      "Positive",
-      "Secret"
+      "\"He's a problem...\"?",
+      "Child",
+      "Kid",
+      "Case"
      ],
      [
-      "When he's not killing 'em, he'll stop doing what?",
-      "Penning 'em",
-      "Spitting 'em",
-      "Sending 'em"
+      "He hates his dad so bad that he ... him out?",
+      "Blocks",
+      "Kicks",
+      "Shuts"
      ]
     ],
     [
      [
-      "What kind of shots?",
-      "Adrenaline",
-      "Flu",
-      "Vitamin"
+      "\"He's mad so he's talking...\"?",
+      "Back",
+      "Loud",
+      "Fast"
      ],
      [
-      "The penicillin could not get the what to stop?",
-      "Illing",
-      "Bleeding",
-      "Coughing"
+      "\"Brainwashed from rock and...\"?",
+      "Rap",
+      "Roll",
+      "TV"
      ],
      [
-      "Which medicine is \"just not real enough\"?",
-      "Amoxicillin",
-      "Aspirin",
-      "Tylenol"
+      "\"He sags his pants, doo-rags and a stocking...\"?",
+      "Cap",
+      "Hat",
+      "Mask"
      ],
      [
-      "A swap to cop millions of whose listeners?",
-      "Pac's",
-      "Biggie's",
-      "Nas's"
+      "\"His house is a broken...\"?",
+      "Home",
+      "Door",
+      "Window"
      ],
      [
-      "\"Feel it or not you're gonna\" what?",
-      "Fear it",
-      "Love it",
-      "Hate it"
+      "\"There's no control, he just lets his ... go\"?",
+      "Emotions",
+      "Feelings",
+      "Anger"
      ],
      [
-      "He showed you the spirit of what lives in us?",
-      "God",
-      "Hip-Hop",
-      "Detroit"
+      "\"Sing with me, sing for the...\"?",
+      "Year",
+      "Day",
+      "Night"
      ],
      [
-      "You hear it a lot, lyrics to what?",
-      "Shock",
-      "Rock",
-      "Talk"
+      "\"Sing for the laughter, sing for the...\"?",
+      "Tear",
+      "Pain",
+      "Cheer"
      ],
      [
-      "Is it a miracle or is he just a product of what fizzing up?",
-      "Pop",
-      "Soda",
-      "Hype"
+      "\"Sing it with me, just for...\"?",
+      "Today",
+      "Tonight",
+      "Now"
      ]
     ],
     [
      [
-      "\"Music is like\" what?",
-      "Magic",
-      "Medicine",
-      "Money"
+      "\"Entertainment is changing, intertwining with...\"?",
+      "Gangsters",
+      "Bankers",
+      "Actors"
      ],
      [
-      "\"This is your\" what?",
-      "Moment",
-      "Chance",
-      "Time"
+      "\"A sinner's mind is a...\"?",
+      "Sanctum",
+      "Temple",
+      "Prison"
      ],
      [
-      "Hold on to it 'cause you may never get it what?",
-      "Again",
-      "Back",
-      "Twice"
+      "\"Holy or unholy, only have one...\"?",
+      "Homie",
+      "Friend",
+      "Brother"
      ],
      [
-      "Who is first on his list?",
-      "Reggie",
-      "Jay-Z",
-      "Nas"
+      "\"Yet everybody just feels like they can...\"?",
+      "Relate",
+      "Escape",
+      "Compete"
      ],
      [
-      "Which member of OutKast is on the list?",
-      "Andre",
-      "Big Boi",
-      "Sleepy Brown"
+      "Or even worse, words can teach...?",
+      "Hate",
+      "Lies",
+      "Fear"
      ],
      [
-      "Who is last on the list?",
-      "Himself",
-      "Reggie",
-      "Kurupt"
+      "\"These kids hang on every single ... we make\"?",
+      "Statement",
+      "Record",
+      "Move"
      ],
      [
-      "In this industry he's the cause of a lot of what?",
-      "Envy",
-      "Money",
-      "Drama"
+      "\"Plus all the stores ship us...\"?",
+      "Platinum",
+      "Gold",
+      "Records"
      ],
      [
-      "You hate it, but you know respect you got to do what?",
-      "Give me",
-      "Earn",
-      "Show"
+      "\"Now how did this ... happen?\"",
+      "Metamorphosis",
+      "Transformation",
+      "Situation"
      ]
     ]
    ]
@@ -1102,163 +1102,163 @@ window.CFG = {
    ]
   },
   {
-   "title": "Till I Collapse",
-   "id": "Obim8BYGnOE",
-   "start": 33,
+   "title": "Sing for the Moment",
+   "id": "d4DvF98aZrw",
+   "start": 22.3,
    "cuts": [
-    72.9,
-    123,
-    168.1
+    52.3,
+    87.6,
+    119.9
    ],
    "qs": [
     [
      [
-      "Sometimes you just feel tired, feel what?",
-      "Weak",
-      "Sick",
-      "Lost"
+      "\"These ideas are nightmares to white...\"?",
+      "Parents",
+      "Teachers",
+      "Neighbors"
      ],
      [
-      "You gotta search within you to find that inner what?",
-      "Strength",
-      "Peace",
-      "Voice"
+      "A child with dyed hair and who likes...?",
+      "Earrings",
+      "Skateboards",
+      "Tattoos"
      ],
      [
-      "Get that motivation to not be a what?",
-      "Quitter",
-      "Loser",
-      "Follower"
+      "\"Like whatever they say has no...\"?",
+      "Bearing",
+      "Meaning",
+      "Power"
      ],
      [
-      "No matter how bad you wanna fall flat on your what?",
-      "Face",
-      "Back",
-      "Knees"
+      "\"It's so scary in a house that allows no...\"?",
+      "Swearing",
+      "Music",
+      "Visitors"
      ],
      [
-      "Till he collapses he's spilling these what?",
-      "Raps",
-      "Drinks",
-      "Tears"
+      "Walking around with his ... blaring?",
+      "Headphones",
+      "Radio",
+      "TV"
      ],
      [
-      "\"And I am not Hip-Hop and I'm just not\" who?",
-      "Eminem",
-      "Slim Shady",
-      "Marshall"
+      "\"Alone in his own...\"?",
+      "Zone",
+      "Room",
+      "World"
      ],
      [
-      "What kind of thoughts is he sending?",
-      "Subliminal",
-      "Positive",
-      "Secret"
+      "\"He's a problem...\"?",
+      "Child",
+      "Kid",
+      "Case"
      ],
      [
-      "When he's not killing 'em, he'll stop doing what?",
-      "Penning 'em",
-      "Spitting 'em",
-      "Sending 'em"
+      "He hates his dad so bad that he ... him out?",
+      "Blocks",
+      "Kicks",
+      "Shuts"
      ]
     ],
     [
      [
-      "What kind of shots?",
-      "Adrenaline",
-      "Flu",
-      "Vitamin"
+      "\"He's mad so he's talking...\"?",
+      "Back",
+      "Loud",
+      "Fast"
      ],
      [
-      "The penicillin could not get the what to stop?",
-      "Illing",
-      "Bleeding",
-      "Coughing"
+      "\"Brainwashed from rock and...\"?",
+      "Rap",
+      "Roll",
+      "TV"
      ],
      [
-      "Which medicine is \"just not real enough\"?",
-      "Amoxicillin",
-      "Aspirin",
-      "Tylenol"
+      "\"He sags his pants, doo-rags and a stocking...\"?",
+      "Cap",
+      "Hat",
+      "Mask"
      ],
      [
-      "A swap to cop millions of whose listeners?",
-      "Pac's",
-      "Biggie's",
-      "Nas's"
+      "\"His house is a broken...\"?",
+      "Home",
+      "Door",
+      "Window"
      ],
      [
-      "\"Feel it or not you're gonna\" what?",
-      "Fear it",
-      "Love it",
-      "Hate it"
+      "\"There's no control, he just lets his ... go\"?",
+      "Emotions",
+      "Feelings",
+      "Anger"
      ],
      [
-      "He showed you the spirit of what lives in us?",
-      "God",
-      "Hip-Hop",
-      "Detroit"
+      "\"Sing with me, sing for the...\"?",
+      "Year",
+      "Day",
+      "Night"
      ],
      [
-      "You hear it a lot, lyrics to what?",
-      "Shock",
-      "Rock",
-      "Talk"
+      "\"Sing for the laughter, sing for the...\"?",
+      "Tear",
+      "Pain",
+      "Cheer"
      ],
      [
-      "Is it a miracle or is he just a product of what fizzing up?",
-      "Pop",
-      "Soda",
-      "Hype"
+      "\"Sing it with me, just for...\"?",
+      "Today",
+      "Tonight",
+      "Now"
      ]
     ],
     [
      [
-      "\"Music is like\" what?",
-      "Magic",
-      "Medicine",
-      "Money"
+      "\"Entertainment is changing, intertwining with...\"?",
+      "Gangsters",
+      "Bankers",
+      "Actors"
      ],
      [
-      "\"This is your\" what?",
-      "Moment",
-      "Chance",
-      "Time"
+      "\"A sinner's mind is a...\"?",
+      "Sanctum",
+      "Temple",
+      "Prison"
      ],
      [
-      "Hold on to it 'cause you may never get it what?",
-      "Again",
-      "Back",
-      "Twice"
+      "\"Holy or unholy, only have one...\"?",
+      "Homie",
+      "Friend",
+      "Brother"
      ],
      [
-      "Who is first on his list?",
-      "Reggie",
-      "Jay-Z",
-      "Nas"
+      "\"Yet everybody just feels like they can...\"?",
+      "Relate",
+      "Escape",
+      "Compete"
      ],
      [
-      "Which member of OutKast is on the list?",
-      "Andre",
-      "Big Boi",
-      "Sleepy Brown"
+      "Or even worse, words can teach...?",
+      "Hate",
+      "Lies",
+      "Fear"
      ],
      [
-      "Who is last on the list?",
-      "Himself",
-      "Reggie",
-      "Kurupt"
+      "\"These kids hang on every single ... we make\"?",
+      "Statement",
+      "Record",
+      "Move"
      ],
      [
-      "In this industry he's the cause of a lot of what?",
-      "Envy",
-      "Money",
-      "Drama"
+      "\"Plus all the stores ship us...\"?",
+      "Platinum",
+      "Gold",
+      "Records"
      ],
      [
-      "You hate it, but you know respect you got to do what?",
-      "Give me",
-      "Earn",
-      "Show"
+      "\"Now how did this ... happen?\"",
+      "Metamorphosis",
+      "Transformation",
+      "Situation"
      ]
     ]
    ]

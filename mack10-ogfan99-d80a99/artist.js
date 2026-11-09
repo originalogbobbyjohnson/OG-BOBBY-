@@ -101,168 +101,6 @@ window.CFG = {
  ],
  "songs": [
   {
-   "title": "Like This",
-   "id": "8Ne0wqNhrTc",
-   "start": 21.9,
-   "cuts": [
-    45.6,
-    67.9,
-    124.4
-   ],
-   "qs": [
-    [
-     [
-      "He hits the what in a drop top?",
-      "Boulevard",
-      "Freeway",
-      "Beach"
-     ],
-     [
-      "He rolls in a drop what?",
-      "Top",
-      "Box",
-      "Shot"
-     ],
-     [
-      "He walks the green import and pushes fast what?",
-      "Cars",
-      "Bikes",
-      "Boats"
-     ],
-     [
-      "He's got a fetish for bank wads and Cuban what?",
-      "Cigars",
-      "Links",
-      "Food"
-     ],
-     [
-      "He's young, fly and what?",
-      "Flashy",
-      "Famous",
-      "Fresh"
-     ],
-     [
-      "He says he's so which city?",
-      "L.A.",
-      "New York",
-      "Atlanta"
-     ],
-     [
-      "So hood and so what?",
-      "Classy",
-      "Crazy",
-      "Cool"
-     ],
-     [
-      "If you need something, be sure to run it what?",
-      "Past me",
-      "By Dre",
-      "Back"
-     ]
-    ],
-    [
-     [
-      "The homies hop in and roam with what suits on?",
-      "Khaki",
-      "Track",
-      "Zoot"
-     ],
-     [
-      "He says these rap dudes is what?",
-      "Clones",
-      "Fake",
-      "Soft"
-     ],
-     [
-      "Mess around with Mack what?",
-      "Dime",
-      "Ten",
-      "Daddy"
-     ],
-     [
-      "As for his what, respect it?",
-      "Resume",
-      "Name",
-      "Record"
-     ],
-     [
-      "Respect it or be sure to what?",
-      "Check it",
-      "Fear it",
-      "Buy it"
-     ],
-     [
-      "So play your what right?",
-      "Cards",
-      "Hand",
-      "Game"
-     ],
-     [
-      "And win before you what?",
-      "Deck it",
-      "Lose it",
-      "Bet it"
-     ],
-     [
-      "When he heard this beat knockin', he had to what?",
-      "Wreck it",
-      "Buy it",
-      "Sample it"
-     ]
-    ],
-    [
-     [
-      "He's got a large what for whatever he sells?",
-      "Clientele",
-      "Warehouse",
-      "Family"
-     ],
-     [
-      "He's got money cut for what?",
-      "Bail",
-      "Rent",
-      "Taxes"
-     ],
-     [
-      "Before he sees a what?",
-      "Jail",
-      "Judge",
-      "Cop"
-     ],
-     [
-      "He'll change what and roll?",
-      "Clothes",
-      "Cars",
-      "Lanes"
-     ],
-     [
-      "He rolls like Jay and who?",
-      "Pharrell",
-      "Kanye",
-      "Dre"
-     ],
-     [
-      "He likes to switch up his what?",
-      "Game",
-      "Style",
-      "Crew"
-     ],
-     [
-      "Which GT car does he park?",
-      "Bentley",
-      "Ferrari",
-      "Porsche"
-     ],
-     [
-      "Then he pulls out the Phantom what?",
-      "Rolls",
-      "Benz",
-      "Jag"
-     ]
-    ]
-   ]
-  },
-  {
    "title": "Hate In Yo Eyes",
    "id": "f2-WQK4iFkM",
    "start": 17,
@@ -320,6 +158,24 @@ window.CFG = {
       "Amaze me",
       "Call me",
       "Pay me"
+     ],
+     [
+      "\"You can hear it bumpin' through the...\"?",
+      "Door",
+      "Wall",
+      "Street"
+     ],
+     [
+      "\"It's a party jumpin' on the...\"?",
+      "Floor",
+      "Block",
+      "Roof"
+     ],
+     [
+      "\"That the west coast is in your...\"?",
+      "Mouth",
+      "Ears",
+      "Town"
      ]
     ],
     [
@@ -370,6 +226,24 @@ window.CFG = {
       "Drama",
       "Money",
       "Music"
+     ],
+     [
+      "\"It's me you wanna be...\"?",
+      "Indeed",
+      "Tonight",
+      "Again"
+     ],
+     [
+      "\"'Cause I'm livin' like a G, you...\"?",
+      "Intrigued",
+      "Impressed",
+      "Jealous"
+     ],
+     [
+      "\"Never trippin' 'cause it ain't nothin' to...\"?",
+      "Me",
+      "Them",
+      "Us"
      ]
     ],
     [
@@ -426,6 +300,18 @@ window.CFG = {
       "Wing",
       "Hat",
       "Cap"
+     ],
+     [
+      "\"I got one word to say about that one\" — what?",
+      "Please",
+      "Never",
+      "Bye"
+     ],
+     [
+      "He looked out for you when your own ... didn't?",
+      "Hood",
+      "Family",
+      "Friends"
      ]
     ]
    ]
@@ -488,6 +374,18 @@ window.CFG = {
       "Days",
       "Times",
       "Years"
+     ],
+     [
+      "\"Fast cars, money and...\"?",
+      "Fame",
+      "Gold",
+      "Power"
+     ],
+     [
+      "\"It was all about the 'hood and that Foe Hundred...\"?",
+      "Block",
+      "Street",
+      "Crew"
      ]
     ],
     [
@@ -544,6 +442,30 @@ window.CFG = {
       "Chucks",
       "Jordans",
       "Boots"
+     ],
+     [
+      "\"Known for senoritas and Inglewood...\"?",
+      "Familias",
+      "Fiestas",
+      "Cholos"
+     ],
+     [
+      "\"So the town ... voted me the...\"?",
+      "Mayor",
+      "Sheriff",
+      "King"
+     ],
+     [
+      "\"What I'm in right now probably ain't worth a hundred...\"?",
+      "Bucks",
+      "Grand",
+      "Cents"
+     ],
+     [
+      "\"I got everything I need plus money in my...\"?",
+      "Pocket",
+      "Bank",
+      "Car"
      ]
     ],
     [
@@ -594,6 +516,18 @@ window.CFG = {
       "Shaq",
       "Kobe",
       "Magic"
+     ],
+     [
+      "\"To Japanese screamin' for\" him where?",
+      "Overseas",
+      "Backstage",
+      "Downtown"
+     ],
+     [
+      "\"Used to like the ... man when I was a itty bitty\"?",
+      "Magic",
+      "Candy",
+      "Ice cream"
      ]
     ]
    ]
@@ -662,6 +596,24 @@ window.CFG = {
       "Rookies",
       "Haters",
       "Busters"
+     ],
+     [
+      "\"It's a whole new game for me like...\"?",
+      "T-Lee",
+      "Magic",
+      "Ice-T"
+     ],
+     [
+      "\"Gettin' paper every day, it's all I'm trippin'...\"?",
+      "On",
+      "Out",
+      "Over"
+     ],
+     [
+      "\"With the top back, rollin' on a hot sunny...\"?",
+      "Day",
+      "Night",
+      "Street"
      ]
     ],
     [
@@ -712,6 +664,24 @@ window.CFG = {
       "Hood",
       "Name",
       "Mama"
+     ],
+     [
+      "\"Get yo' ... on\"?",
+      "Boogie",
+      "Groove",
+      "Dance"
+     ],
+     [
+      "People he ain't seen since...?",
+      "High school",
+      "Last summer",
+      "The '80s"
+     ],
+     [
+      "\"It kinda remind me of the truce in...\"?",
+      "Nine-deuce",
+      "Nine-four",
+      "Eighty-eight"
      ]
     ],
     [
@@ -762,6 +732,18 @@ window.CFG = {
       "Key",
       "Lock",
       "Door"
+     ],
+     [
+      "\"Straight from Inglewood, and you know that it's all...\"?",
+      "Good",
+      "Love",
+      "Gravy"
+     ],
+     [
+      "When can you put that on yo' hood?",
+      "Everyday",
+      "Tonight",
+      "Forever"
      ]
     ]
    ]
@@ -769,168 +751,6 @@ window.CFG = {
  ],
  "explicitSongs": [
   {
-   "title": "Like This",
-   "id": "8Ne0wqNhrTc",
-   "start": 21.9,
-   "cuts": [
-    45.6,
-    67.9,
-    124.4
-   ],
-   "qs": [
-    [
-     [
-      "He hits the what in a drop top?",
-      "Boulevard",
-      "Freeway",
-      "Beach"
-     ],
-     [
-      "He rolls in a drop what?",
-      "Top",
-      "Box",
-      "Shot"
-     ],
-     [
-      "He walks the green import and pushes fast what?",
-      "Cars",
-      "Bikes",
-      "Boats"
-     ],
-     [
-      "He's got a fetish for bank wads and Cuban what?",
-      "Cigars",
-      "Links",
-      "Food"
-     ],
-     [
-      "He's young, fly and what?",
-      "Flashy",
-      "Famous",
-      "Fresh"
-     ],
-     [
-      "He says he's so which city?",
-      "L.A.",
-      "New York",
-      "Atlanta"
-     ],
-     [
-      "So hood and so what?",
-      "Classy",
-      "Crazy",
-      "Cool"
-     ],
-     [
-      "If you need something, be sure to run it what?",
-      "Past me",
-      "By Dre",
-      "Back"
-     ]
-    ],
-    [
-     [
-      "The homies hop in and roam with what suits on?",
-      "Khaki",
-      "Track",
-      "Zoot"
-     ],
-     [
-      "He says these rap dudes is what?",
-      "Clones",
-      "Fake",
-      "Soft"
-     ],
-     [
-      "Mess around with Mack what?",
-      "Dime",
-      "Ten",
-      "Daddy"
-     ],
-     [
-      "As for his what, respect it?",
-      "Resume",
-      "Name",
-      "Record"
-     ],
-     [
-      "Respect it or be sure to what?",
-      "Check it",
-      "Fear it",
-      "Buy it"
-     ],
-     [
-      "So play your what right?",
-      "Cards",
-      "Hand",
-      "Game"
-     ],
-     [
-      "And win before you what?",
-      "Deck it",
-      "Lose it",
-      "Bet it"
-     ],
-     [
-      "When he heard this beat knockin', he had to what?",
-      "Wreck it",
-      "Buy it",
-      "Sample it"
-     ]
-    ],
-    [
-     [
-      "He's got a large what for whatever he sells?",
-      "Clientele",
-      "Warehouse",
-      "Family"
-     ],
-     [
-      "He's got money cut for what?",
-      "Bail",
-      "Rent",
-      "Taxes"
-     ],
-     [
-      "Before he sees a what?",
-      "Jail",
-      "Judge",
-      "Cop"
-     ],
-     [
-      "He'll change what and roll?",
-      "Clothes",
-      "Cars",
-      "Lanes"
-     ],
-     [
-      "He rolls like Jay and who?",
-      "Pharrell",
-      "Kanye",
-      "Dre"
-     ],
-     [
-      "He likes to switch up his what?",
-      "Game",
-      "Style",
-      "Crew"
-     ],
-     [
-      "Which GT car does he park?",
-      "Bentley",
-      "Ferrari",
-      "Porsche"
-     ],
-     [
-      "Then he pulls out the Phantom what?",
-      "Rolls",
-      "Benz",
-      "Jag"
-     ]
-    ]
-   ]
-  },
-  {
    "title": "Hate In Yo Eyes",
    "id": "f2-WQK4iFkM",
    "start": 17,
@@ -988,6 +808,24 @@ window.CFG = {
       "Amaze me",
       "Call me",
       "Pay me"
+     ],
+     [
+      "\"You can hear it bumpin' through the...\"?",
+      "Door",
+      "Wall",
+      "Street"
+     ],
+     [
+      "\"It's a party jumpin' on the...\"?",
+      "Floor",
+      "Block",
+      "Roof"
+     ],
+     [
+      "\"That the west coast is in your...\"?",
+      "Mouth",
+      "Ears",
+      "Town"
      ]
     ],
     [
@@ -1038,6 +876,24 @@ window.CFG = {
       "Drama",
       "Money",
       "Music"
+     ],
+     [
+      "\"It's me you wanna be...\"?",
+      "Indeed",
+      "Tonight",
+      "Again"
+     ],
+     [
+      "\"'Cause I'm livin' like a G, you...\"?",
+      "Intrigued",
+      "Impressed",
+      "Jealous"
+     ],
+     [
+      "\"Never trippin' 'cause it ain't nothin' to...\"?",
+      "Me",
+      "Them",
+      "Us"
      ]
     ],
     [
@@ -1094,6 +950,18 @@ window.CFG = {
       "Wing",
       "Hat",
       "Cap"
+     ],
+     [
+      "\"I got one word to say about that one\" — what?",
+      "Please",
+      "Never",
+      "Bye"
+     ],
+     [
+      "He looked out for you when your own ... didn't?",
+      "Hood",
+      "Family",
+      "Friends"
      ]
     ]
    ]
@@ -1156,6 +1024,18 @@ window.CFG = {
       "Days",
       "Times",
       "Years"
+     ],
+     [
+      "\"Fast cars, money and...\"?",
+      "Fame",
+      "Gold",
+      "Power"
+     ],
+     [
+      "\"It was all about the 'hood and that Foe Hundred...\"?",
+      "Block",
+      "Street",
+      "Crew"
      ]
     ],
     [
@@ -1212,6 +1092,30 @@ window.CFG = {
       "Chucks",
       "Jordans",
       "Boots"
+     ],
+     [
+      "\"Known for senoritas and Inglewood...\"?",
+      "Familias",
+      "Fiestas",
+      "Cholos"
+     ],
+     [
+      "\"So the town ... voted me the...\"?",
+      "Mayor",
+      "Sheriff",
+      "King"
+     ],
+     [
+      "\"What I'm in right now probably ain't worth a hundred...\"?",
+      "Bucks",
+      "Grand",
+      "Cents"
+     ],
+     [
+      "\"I got everything I need plus money in my...\"?",
+      "Pocket",
+      "Bank",
+      "Car"
      ]
     ],
     [
@@ -1262,6 +1166,18 @@ window.CFG = {
       "Shaq",
       "Kobe",
       "Magic"
+     ],
+     [
+      "\"To Japanese screamin' for\" him where?",
+      "Overseas",
+      "Backstage",
+      "Downtown"
+     ],
+     [
+      "\"Used to like the ... man when I was a itty bitty\"?",
+      "Magic",
+      "Candy",
+      "Ice cream"
      ]
     ]
    ]
@@ -1330,6 +1246,24 @@ window.CFG = {
       "Rookies",
       "Haters",
       "Busters"
+     ],
+     [
+      "\"It's a whole new game for me like...\"?",
+      "T-Lee",
+      "Magic",
+      "Ice-T"
+     ],
+     [
+      "\"Gettin' paper every day, it's all I'm trippin'...\"?",
+      "On",
+      "Out",
+      "Over"
+     ],
+     [
+      "\"With the top back, rollin' on a hot sunny...\"?",
+      "Day",
+      "Night",
+      "Street"
      ]
     ],
     [
@@ -1380,6 +1314,24 @@ window.CFG = {
       "Hood",
       "Name",
       "Mama"
+     ],
+     [
+      "\"Get yo' ... on\"?",
+      "Boogie",
+      "Groove",
+      "Dance"
+     ],
+     [
+      "People he ain't seen since...?",
+      "High school",
+      "Last summer",
+      "The '80s"
+     ],
+     [
+      "\"It kinda remind me of the truce in...\"?",
+      "Nine-deuce",
+      "Nine-four",
+      "Eighty-eight"
      ]
     ],
     [
@@ -1430,6 +1382,18 @@ window.CFG = {
       "Key",
       "Lock",
       "Door"
+     ],
+     [
+      "\"Straight from Inglewood, and you know that it's all...\"?",
+      "Good",
+      "Love",
+      "Gravy"
+     ],
+     [
+      "When can you put that on yo' hood?",
+      "Everyday",
+      "Tonight",
+      "Forever"
      ]
     ]
    ]

@@ -171,6 +171,12 @@ window.CFG = {
       "Bag",
       "Check",
       "Deal"
+     ],
+     [
+      "\"Should've ... gave up on me\"?",
+      "Never",
+      "Always",
+      "Not"
      ]
     ],
     [
@@ -227,6 +233,24 @@ window.CFG = {
       "Pretenders",
       "Rappers",
       "Followers"
+     ],
+     [
+      "\"Damn, it was early...\"?",
+      "December",
+      "January",
+      "Summer"
+     ],
+     [
+      "\"I did what I...\"?",
+      "Said",
+      "Wanted",
+      "Planned"
+     ],
+     [
+      "\"Every night I'm gon' go home when I...\"?",
+      "Want",
+      "Can",
+      "Please"
      ]
     ],
     [
@@ -277,174 +301,24 @@ window.CFG = {
       "Yet",
       "Now",
       "Back"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Through the Fire",
-   "id": "p7bvsHT5alg",
-   "start": 7.9,
-   "cuts": [
-    45.55,
-    98.82,
-    124.83
-   ],
-   "qs": [
-    [
-     [
-      "\"I came a long way from\" where?",
-      "Brooklyn",
-      "The Bronx",
-      "Harlem"
      ],
      [
-      "\"I came a long\" what from Brooklyn?",
-      "Way",
-      "Road",
-      "Trip"
+      "\"Look at what's ... and then follow that\"?",
+      "Lit",
+      "Hot",
+      "New"
      ],
      [
-      "First he says it sounds like what?",
-      "Growth",
-      "Money",
-      "Magic"
+      "Be the better version of the last...?",
+      "You",
+      "Year",
+      "Song"
      ],
      [
-      "Then he says it sounds like what?",
-      "Church",
-      "Heaven",
-      "Home"
-     ],
-     [
-      "Who did \"Through the Wire\"?",
-      "Ye",
-      "Jay",
-      "Drake"
-     ],
-     [
-      "Ye did which song?",
-      "Through the Wire",
-      "Jesus Walks",
-      "Gold Digger"
-     ],
-     [
-      "So this one is called what?",
-      "Through the Fire",
-      "Through the Storm",
-      "Through the Night"
-     ],
-     [
-      "\"I'm in your\" what?",
-      "City",
-      "Corner",
-      "Section"
-     ]
-    ],
-    [
-     [
-      "\"All of my problems, I\" what on it?",
-      "Dance",
-      "Sleep",
-      "Pray"
-     ],
-     [
-      "\"Anything I say, I'ma\" what on it?",
-      "Stand",
-      "Bet",
-      "Swear"
-     ],
-     [
-      "He gave his life to who?",
-      "The Lord",
-      "The game",
-      "The streets"
-     ],
-     [
-      "\"Gave my life to the Lord and His\" what on it?",
-      "Hands",
-      "Eyes",
-      "Name"
-     ],
-     [
-      "\"God forgive me for my\" what?",
-      "Sins",
-      "Ways",
-      "Words"
-     ],
-     [
-      "\"So she never come around my\" what?",
-      "Friends",
-      "Family",
-      "Block"
-     ],
-     [
-      "A son and how many daughters?",
-      "Two",
-      "Three",
-      "One"
-     ],
-     [
-      "\"That's three\" what?",
-      "Stooges",
-      "Kings",
-      "Blessings"
-     ],
-     [
-      "\"Sound like you should be a\" what?",
-      "Preacher",
-      "Teacher",
-      "Pastor"
-     ]
-    ],
-    [
-     [
-      "\"Don't know when I'm\" what?",
-      "Leavin'",
-      "Comin'",
-      "Sleepin'"
-     ],
-     [
-      "\"Everything\" what, and that's how I leave it?",
-      "Viral",
-      "Litty",
-      "Perfect"
-     ],
-     [
-      "\"That's how I\" what it?",
-      "Leave",
-      "Like",
-      "Want"
-     ],
-     [
-      "\"I'm here to\" what?",
-      "Win",
-      "Stay",
-      "Shine"
-     ],
-     [
-      "\"I'm doin' my\" what?",
-      "Thing",
-      "Job",
-      "Dance"
-     ],
-     [
-      "\"She got a\" what, she doin' her thing?",
-      "Bag",
-      "Benz",
+      "\"Whether it was a pic, your ..., your video\"?",
+      "Drip",
+      "Chain",
       "Car"
-     ],
-     [
-      "He prays that he gets his what?",
-      "Wings",
-      "Crown",
-      "Peace"
-     ],
-     [
-      "When does he want his wings?",
-      "When I die",
-      "When I win",
-      "When I'm rich"
      ]
     ]
    ]
@@ -513,6 +387,18 @@ window.CFG = {
       "Clever",
       "Quick",
       "Sharp"
+     ],
+     [
+      "\"Can't walk in my...\"?",
+      "Shoes",
+      "Lane",
+      "House"
+     ],
+     [
+      "\"And you can't fit in this...\"?",
+      "Sweater",
+      "Jacket",
+      "Coat"
      ]
     ],
     [
@@ -613,6 +499,24 @@ window.CFG = {
       "Sweater",
       "Jacket",
       "Hoodie"
+     ],
+     [
+      "\"Made it out the...\"?",
+      "Storm",
+      "Rain",
+      "Hood"
+     ],
+     [
+      "\"I'm on a..., whatever\"?",
+      "Mission",
+      "Flight",
+      "Roll"
+     ],
+     [
+      "He's not missin' the...?",
+      "Weather",
+      "Winter",
+      "Cold"
      ]
     ]
    ]
@@ -675,6 +579,24 @@ window.CFG = {
       "Bags too",
       "Shoes too",
       "Coats too"
+     ],
+     [
+      "\"That ex boring, that's bad...\"?",
+      "News",
+      "Luck",
+      "Vibes"
+     ],
+     [
+      "\"She ain't never come...\"?",
+      "Out",
+      "Home",
+      "Around"
+     ],
+     [
+      "What does the hook keep asking?",
+      "What's my name?",
+      "Who's the boss?",
+      "Where you at?"
      ]
     ],
     [
@@ -725,6 +647,18 @@ window.CFG = {
       "Peep Show",
       "Freak Show",
       "Side Show"
+     ],
+     [
+      "\"I could teach you lessons you ain't never...\"?",
+      "Know",
+      "Learned",
+      "Heard"
+     ],
+     [
+      "\"Now on a mission, don't...\"?",
+      "Stop",
+      "Quit",
+      "Wait"
      ]
     ],
     [
@@ -775,6 +709,54 @@ window.CFG = {
       "Respectfully",
       "Honestly",
       "Carefully"
+     ],
+     [
+      "\"Pull up on you in a...\"?",
+      "Range",
+      "Benz",
+      "Jeep"
+     ],
+     [
+      "\"Take me to Louis, buy me some...\"?",
+      "Gucci",
+      "Prada",
+      "Fendi"
+     ],
+     [
+      "\"Diamonds and...\"?",
+      "Rubies",
+      "Pearls",
+      "Gold"
+     ],
+     [
+      "\"Talk too much, you keep running your...\"?",
+      "Mouth",
+      "Game",
+      "Lips"
+     ],
+     [
+      "\"You be all in my head and be ... me out\"?",
+      "Stressing",
+      "Freaking",
+      "Wearing"
+     ],
+     [
+      "\"Know I'm your...\"?",
+      "Favorite",
+      "Number one",
+      "Baby"
+     ],
+     [
+      "\"Way too lit to get caught...\"?",
+      "Up",
+      "Off",
+      "On"
+     ],
+     [
+      "\"Just tell me what you wanna...\"?",
+      "Do",
+      "Say",
+      "See"
      ]
     ]
    ]
@@ -839,6 +821,12 @@ window.CFG = {
       "Bag",
       "Check",
       "Deal"
+     ],
+     [
+      "\"Should've ... gave up on me\"?",
+      "Never",
+      "Always",
+      "Not"
      ]
     ],
     [
@@ -895,6 +883,24 @@ window.CFG = {
       "Pretenders",
       "Rappers",
       "Followers"
+     ],
+     [
+      "\"Damn, it was early...\"?",
+      "December",
+      "January",
+      "Summer"
+     ],
+     [
+      "\"I did what I...\"?",
+      "Said",
+      "Wanted",
+      "Planned"
+     ],
+     [
+      "\"Every night I'm gon' go home when I...\"?",
+      "Want",
+      "Can",
+      "Please"
      ]
     ],
     [
@@ -945,174 +951,24 @@ window.CFG = {
       "Yet",
       "Now",
       "Back"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Through the Fire",
-   "id": "p7bvsHT5alg",
-   "start": 7.9,
-   "cuts": [
-    45.55,
-    98.82,
-    124.83
-   ],
-   "qs": [
-    [
-     [
-      "\"I came a long way from\" where?",
-      "Brooklyn",
-      "The Bronx",
-      "Harlem"
      ],
      [
-      "\"I came a long\" what from Brooklyn?",
-      "Way",
-      "Road",
-      "Trip"
+      "\"Look at what's ... and then follow that\"?",
+      "Lit",
+      "Hot",
+      "New"
      ],
      [
-      "First he says it sounds like what?",
-      "Growth",
-      "Money",
-      "Magic"
+      "Be the better version of the last...?",
+      "You",
+      "Year",
+      "Song"
      ],
      [
-      "Then he says it sounds like what?",
-      "Church",
-      "Heaven",
-      "Home"
-     ],
-     [
-      "Who did \"Through the Wire\"?",
-      "Ye",
-      "Jay",
-      "Drake"
-     ],
-     [
-      "Ye did which song?",
-      "Through the Wire",
-      "Jesus Walks",
-      "Gold Digger"
-     ],
-     [
-      "So this one is called what?",
-      "Through the Fire",
-      "Through the Storm",
-      "Through the Night"
-     ],
-     [
-      "\"I'm in your\" what?",
-      "City",
-      "Corner",
-      "Section"
-     ]
-    ],
-    [
-     [
-      "\"All of my problems, I\" what on it?",
-      "Dance",
-      "Sleep",
-      "Pray"
-     ],
-     [
-      "\"Anything I say, I'ma\" what on it?",
-      "Stand",
-      "Bet",
-      "Swear"
-     ],
-     [
-      "He gave his life to who?",
-      "The Lord",
-      "The game",
-      "The streets"
-     ],
-     [
-      "\"Gave my life to the Lord and His\" what on it?",
-      "Hands",
-      "Eyes",
-      "Name"
-     ],
-     [
-      "\"God forgive me for my\" what?",
-      "Sins",
-      "Ways",
-      "Words"
-     ],
-     [
-      "\"So she never come around my\" what?",
-      "Friends",
-      "Family",
-      "Block"
-     ],
-     [
-      "A son and how many daughters?",
-      "Two",
-      "Three",
-      "One"
-     ],
-     [
-      "\"That's three\" what?",
-      "Stooges",
-      "Kings",
-      "Blessings"
-     ],
-     [
-      "\"Sound like you should be a\" what?",
-      "Preacher",
-      "Teacher",
-      "Pastor"
-     ]
-    ],
-    [
-     [
-      "\"Don't know when I'm\" what?",
-      "Leavin'",
-      "Comin'",
-      "Sleepin'"
-     ],
-     [
-      "\"Everything\" what, and that's how I leave it?",
-      "Viral",
-      "Litty",
-      "Perfect"
-     ],
-     [
-      "\"That's how I\" what it?",
-      "Leave",
-      "Like",
-      "Want"
-     ],
-     [
-      "\"I'm here to\" what?",
-      "Win",
-      "Stay",
-      "Shine"
-     ],
-     [
-      "\"I'm doin' my\" what?",
-      "Thing",
-      "Job",
-      "Dance"
-     ],
-     [
-      "\"She got a\" what, she doin' her thing?",
-      "Bag",
-      "Benz",
+      "\"Whether it was a pic, your ..., your video\"?",
+      "Drip",
+      "Chain",
       "Car"
-     ],
-     [
-      "He prays that he gets his what?",
-      "Wings",
-      "Crown",
-      "Peace"
-     ],
-     [
-      "When does he want his wings?",
-      "When I die",
-      "When I win",
-      "When I'm rich"
      ]
     ]
    ]
@@ -1181,6 +1037,18 @@ window.CFG = {
       "Clever",
       "Quick",
       "Sharp"
+     ],
+     [
+      "\"Can't walk in my...\"?",
+      "Shoes",
+      "Lane",
+      "House"
+     ],
+     [
+      "\"And you can't fit in this...\"?",
+      "Sweater",
+      "Jacket",
+      "Coat"
      ]
     ],
     [
@@ -1281,6 +1149,24 @@ window.CFG = {
       "Sweater",
       "Jacket",
       "Hoodie"
+     ],
+     [
+      "\"Made it out the...\"?",
+      "Storm",
+      "Rain",
+      "Hood"
+     ],
+     [
+      "\"I'm on a..., whatever\"?",
+      "Mission",
+      "Flight",
+      "Roll"
+     ],
+     [
+      "He's not missin' the...?",
+      "Weather",
+      "Winter",
+      "Cold"
      ]
     ]
    ]
@@ -1343,6 +1229,24 @@ window.CFG = {
       "Bags too",
       "Shoes too",
       "Coats too"
+     ],
+     [
+      "\"That ex boring, that's bad...\"?",
+      "News",
+      "Luck",
+      "Vibes"
+     ],
+     [
+      "\"She ain't never come...\"?",
+      "Out",
+      "Home",
+      "Around"
+     ],
+     [
+      "What does the hook keep asking?",
+      "What's my name?",
+      "Who's the boss?",
+      "Where you at?"
      ]
     ],
     [
@@ -1393,6 +1297,18 @@ window.CFG = {
       "Peep Show",
       "Freak Show",
       "Side Show"
+     ],
+     [
+      "\"I could teach you lessons you ain't never...\"?",
+      "Know",
+      "Learned",
+      "Heard"
+     ],
+     [
+      "\"Now on a mission, don't...\"?",
+      "Stop",
+      "Quit",
+      "Wait"
      ]
     ],
     [
@@ -1443,6 +1359,54 @@ window.CFG = {
       "Respectfully",
       "Honestly",
       "Carefully"
+     ],
+     [
+      "\"Pull up on you in a...\"?",
+      "Range",
+      "Benz",
+      "Jeep"
+     ],
+     [
+      "\"Take me to Louis, buy me some...\"?",
+      "Gucci",
+      "Prada",
+      "Fendi"
+     ],
+     [
+      "\"Diamonds and...\"?",
+      "Rubies",
+      "Pearls",
+      "Gold"
+     ],
+     [
+      "\"Talk too much, you keep running your...\"?",
+      "Mouth",
+      "Game",
+      "Lips"
+     ],
+     [
+      "\"You be all in my head and be ... me out\"?",
+      "Stressing",
+      "Freaking",
+      "Wearing"
+     ],
+     [
+      "\"Know I'm your...\"?",
+      "Favorite",
+      "Number one",
+      "Baby"
+     ],
+     [
+      "\"Way too lit to get caught...\"?",
+      "Up",
+      "Off",
+      "On"
+     ],
+     [
+      "\"Just tell me what you wanna...\"?",
+      "Do",
+      "Say",
+      "See"
      ]
     ]
    ]

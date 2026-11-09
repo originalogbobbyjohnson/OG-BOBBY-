@@ -152,6 +152,12 @@ window.CFG = {
       "Show me",
       "Prove it",
       "Call me"
+     ],
+     [
+      "\"Playin' with my name, that is...\"?",
+      "Lethal",
+      "Legal",
+      "Lit"
      ]
     ],
     [
@@ -234,144 +240,12 @@ window.CFG = {
       "Shade",
       "Love",
       "Good"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Ima Boss",
-   "id": "o9ysAcGibno",
-   "start": 11,
-   "cuts": [
-    36.4,
-    60.3,
-    97.2
-   ],
-   "qs": [
-    [
-     [
-      "He's ridin' through his old hood but in his new what?",
-      "Whip",
-      "Shoes",
-      "Chain"
      ],
      [
-      "Same old what, but on something new?",
-      "Attitude",
-      "Crew",
-      "Hustle"
-     ],
-     [
-      "What's on his wrist, bust down?",
-      "Audemar",
-      "Rolex",
-      "Cartier"
-     ],
-     [
-      "They're poppin' bottles like he scored the winnin' what?",
-      "Touchdown",
-      "Goal",
-      "Basket"
-     ],
-     [
-      "Remember when he was broke? Look at him what now?",
-      "Up",
-      "Here",
-      "Rich"
-     ],
-     [
-      "He runs his city from South Philly back to where?",
-      "Uptown",
-      "Downtown",
-      "West Philly"
-     ],
-     [
-      "He runs his city from where back to Uptown?",
-      "South Philly",
-      "North Philly",
-      "Germantown"
-     ]
-    ],
-    [
-     [
-      "Thank God for all these what he popped?",
-      "Bottles",
-      "Balloons",
-      "Corks"
-     ],
-     [
-      "All this what he's been gettin'?",
-      "Paper",
-      "Fame",
-      "Love"
-     ],
-     [
-      "He sold a hundred thousand before his what dropped?",
-      "Album",
-      "Single",
-      "Mixtape"
-     ],
-     [
-      "He says he's only how old?",
-      "23",
-      "21",
-      "25"
-     ],
-     [
-      "He's a boss like his friend who?",
-      "Rozay",
-      "Drake",
-      "Wale"
-     ],
-     [
-      "He made it from the what?",
-      "Bottom",
-      "Block",
-      "Corner"
-     ],
-     [
-      "He never had a what?",
-      "Job",
-      "Car",
-      "Plan"
-     ]
-    ],
-    [
-     [
-      "He plans the shots and calls the what?",
-      "Calls",
-      "Plays",
-      "Moves"
-     ],
-     [
-      "We in the building, y'all are what?",
-      "Not",
-      "Out",
-      "Late"
-     ],
-     [
-      "You short on the paper, you gon' what or not?",
-      "Ball",
-      "Pay",
-      "Stay"
-     ],
-     [
-      "He's the king, now where's his what?",
-      "Crown",
-      "Throne",
-      "Ring"
-     ],
-     [
-      "Over and over he says he's a what?",
-      "Boss",
-      "Champ",
-      "Star"
-     ],
-     [
-      "Y'all are not in the what?",
-      "Building",
-      "Club",
-      "Game"
+      "\"Girl, I left your love at...\"?",
+      "Magic",
+      "Home",
+      "The club"
      ]
     ]
    ]
@@ -428,6 +302,18 @@ window.CFG = {
       "Life",
       "Game",
       "Fame"
+     ],
+     [
+      "\"I'ma chase my...\"?",
+      "Dream",
+      "Money",
+      "Girl"
+     ],
+     [
+      "\"How the stylist gon'...\"?",
+      "Style us",
+      "Dress us",
+      "Find us"
      ]
     ],
     [
@@ -472,6 +358,18 @@ window.CFG = {
       "Twitter",
       "Facebook",
       "Instagram"
+     ],
+     [
+      "On his downtime he's spittin' and his flow is...?",
+      "Mean",
+      "Clean",
+      "Hot"
+     ],
+     [
+      "Bills steady rollin' in, he barely gettin'...?",
+      "By",
+      "Paid",
+      "Home"
      ]
     ],
     [
@@ -510,6 +408,18 @@ window.CFG = {
       "Forrest Gumpin'",
       "Rocky Balboa",
       "Speedin' up"
+     ],
+     [
+      "How many times \"dream chaser\" in a row?",
+      "Three",
+      "Two",
+      "Four"
+     ],
+     [
+      "\"I was raised by my...\"?",
+      "Momma",
+      "Grandma",
+      "Uncle"
      ]
     ]
    ]
@@ -566,6 +476,18 @@ window.CFG = {
       "Repent",
       "Pray",
       "Pay"
+     ],
+     [
+      "They remembered they took some ... for this?",
+      "Risks",
+      "Pictures",
+      "Trips"
+     ],
+     [
+      "\"I prolly won't get home until I'm...\"?",
+      "56",
+      "65",
+      "46"
      ]
     ],
     [
@@ -610,6 +532,12 @@ window.CFG = {
       "Iron",
       "Sword",
       "Mind"
+     ],
+     [
+      "\"The middle the ..., at your wake\"?",
+      "Church",
+      "Night",
+      "Street"
      ]
     ],
     [
@@ -648,6 +576,18 @@ window.CFG = {
       "Prevail",
       "Return",
       "Blow up"
+     ],
+     [
+      "He came in the game repping which city?",
+      "Philly",
+      "Brooklyn",
+      "Chicago"
+     ],
+     [
+      "They tell him be humble, he's ... as hell?",
+      "Cocky",
+      "Tired",
+      "Happy"
      ]
     ]
    ]
@@ -703,6 +643,18 @@ window.CFG = {
       "Achoo",
       "Amen",
       "Please"
+     ],
+     [
+      "\"In the back of the paddy wagon, cuffs locked on...\"?",
+      "Wrists",
+      "Hands",
+      "Ankles"
+     ],
+     [
+      "\"It was time to marry the game and I said...\"?",
+      "\"Yeah, I do\"",
+      "\"Not yet\"",
+      "\"Maybe\""
      ]
     ],
     [
@@ -741,6 +693,18 @@ window.CFG = {
       "Hockey rink",
       "Snowstorm",
       "Freezer"
+     ],
+     [
+      "Who did he work with?",
+      "Mariah",
+      "Beyoncé",
+      "Rihanna"
+     ],
+     [
+      "He says he's on...?",
+      "Fire",
+      "Top",
+      "Point"
      ]
     ],
     [
@@ -775,16 +739,34 @@ window.CFG = {
       "Pipe"
      ],
      [
-      "Double M is the team; who's the captain?",
-      "Rozay",
-      "Wale",
-      "Meek"
+      "\"Hold up, wait a minute, y'all thought I was...\"?",
+      "Finished",
+      "Retired",
+      "Done"
      ],
      [
       "He'll count a million cash then grind like he's what?",
       "Broke",
       "Hungry",
       "Starting"
+     ],
+     [
+      "\"Rest in peace to the parking...\"?",
+      "Lot",
+      "Spot",
+      "Meter"
+     ],
+     [
+      "\"Gangstas move in...\"?",
+      "Silence",
+      "Packs",
+      "Shadows"
+     ],
+     [
+      "\"Was on my grind and now I got what I...\"?",
+      "Deserve",
+      "Wanted",
+      "Needed"
      ]
     ]
    ]
@@ -837,6 +819,12 @@ window.CFG = {
       "Show me",
       "Prove it",
       "Call me"
+     ],
+     [
+      "\"Playin' with my name, that is...\"?",
+      "Lethal",
+      "Legal",
+      "Lit"
      ]
     ],
     [
@@ -919,144 +907,12 @@ window.CFG = {
       "Shade",
       "Love",
       "Good"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Ima Boss",
-   "id": "o9ysAcGibno",
-   "start": 11,
-   "cuts": [
-    36.4,
-    60.3,
-    97.2
-   ],
-   "qs": [
-    [
-     [
-      "He's ridin' through his old hood but in his new what?",
-      "Whip",
-      "Shoes",
-      "Chain"
      ],
      [
-      "Same old what, but on something new?",
-      "Attitude",
-      "Crew",
-      "Hustle"
-     ],
-     [
-      "What's on his wrist, bust down?",
-      "Audemar",
-      "Rolex",
-      "Cartier"
-     ],
-     [
-      "They're poppin' bottles like he scored the winnin' what?",
-      "Touchdown",
-      "Goal",
-      "Basket"
-     ],
-     [
-      "Remember when he was broke? Look at him what now?",
-      "Up",
-      "Here",
-      "Rich"
-     ],
-     [
-      "He runs his city from South Philly back to where?",
-      "Uptown",
-      "Downtown",
-      "West Philly"
-     ],
-     [
-      "He runs his city from where back to Uptown?",
-      "South Philly",
-      "North Philly",
-      "Germantown"
-     ]
-    ],
-    [
-     [
-      "Thank God for all these what he popped?",
-      "Bottles",
-      "Balloons",
-      "Corks"
-     ],
-     [
-      "All this what he's been gettin'?",
-      "Paper",
-      "Fame",
-      "Love"
-     ],
-     [
-      "He sold a hundred thousand before his what dropped?",
-      "Album",
-      "Single",
-      "Mixtape"
-     ],
-     [
-      "He says he's only how old?",
-      "23",
-      "21",
-      "25"
-     ],
-     [
-      "He's a boss like his friend who?",
-      "Rozay",
-      "Drake",
-      "Wale"
-     ],
-     [
-      "He made it from the what?",
-      "Bottom",
-      "Block",
-      "Corner"
-     ],
-     [
-      "He never had a what?",
-      "Job",
-      "Car",
-      "Plan"
-     ]
-    ],
-    [
-     [
-      "He plans the shots and calls the what?",
-      "Calls",
-      "Plays",
-      "Moves"
-     ],
-     [
-      "We in the building, y'all are what?",
-      "Not",
-      "Out",
-      "Late"
-     ],
-     [
-      "You short on the paper, you gon' what or not?",
-      "Ball",
-      "Pay",
-      "Stay"
-     ],
-     [
-      "He's the king, now where's his what?",
-      "Crown",
-      "Throne",
-      "Ring"
-     ],
-     [
-      "Over and over he says he's a what?",
-      "Boss",
-      "Champ",
-      "Star"
-     ],
-     [
-      "Y'all are not in the what?",
-      "Building",
-      "Club",
-      "Game"
+      "\"Girl, I left your love at...\"?",
+      "Magic",
+      "Home",
+      "The club"
      ]
     ]
    ]
@@ -1113,6 +969,18 @@ window.CFG = {
       "Life",
       "Game",
       "Fame"
+     ],
+     [
+      "\"I'ma chase my...\"?",
+      "Dream",
+      "Money",
+      "Girl"
+     ],
+     [
+      "\"How the stylist gon'...\"?",
+      "Style us",
+      "Dress us",
+      "Find us"
      ]
     ],
     [
@@ -1157,6 +1025,18 @@ window.CFG = {
       "Twitter",
       "Facebook",
       "Instagram"
+     ],
+     [
+      "On his downtime he's spittin' and his flow is...?",
+      "Mean",
+      "Clean",
+      "Hot"
+     ],
+     [
+      "Bills steady rollin' in, he barely gettin'...?",
+      "By",
+      "Paid",
+      "Home"
      ]
     ],
     [
@@ -1195,6 +1075,18 @@ window.CFG = {
       "Forrest Gumpin'",
       "Rocky Balboa",
       "Speedin' up"
+     ],
+     [
+      "How many times \"dream chaser\" in a row?",
+      "Three",
+      "Two",
+      "Four"
+     ],
+     [
+      "\"I was raised by my...\"?",
+      "Momma",
+      "Grandma",
+      "Uncle"
      ]
     ]
    ]
@@ -1251,6 +1143,18 @@ window.CFG = {
       "Repent",
       "Pray",
       "Pay"
+     ],
+     [
+      "They remembered they took some ... for this?",
+      "Risks",
+      "Pictures",
+      "Trips"
+     ],
+     [
+      "\"I prolly won't get home until I'm...\"?",
+      "56",
+      "65",
+      "46"
      ]
     ],
     [
@@ -1295,6 +1199,12 @@ window.CFG = {
       "Iron",
       "Sword",
       "Mind"
+     ],
+     [
+      "\"The middle the ..., at your wake\"?",
+      "Church",
+      "Night",
+      "Street"
      ]
     ],
     [
@@ -1333,6 +1243,18 @@ window.CFG = {
       "Prevail",
       "Return",
       "Blow up"
+     ],
+     [
+      "He came in the game repping which city?",
+      "Philly",
+      "Brooklyn",
+      "Chicago"
+     ],
+     [
+      "They tell him be humble, he's ... as hell?",
+      "Cocky",
+      "Tired",
+      "Happy"
      ]
     ]
    ]
@@ -1388,6 +1310,18 @@ window.CFG = {
       "Achoo",
       "Amen",
       "Please"
+     ],
+     [
+      "\"In the back of the paddy wagon, cuffs locked on...\"?",
+      "Wrists",
+      "Hands",
+      "Ankles"
+     ],
+     [
+      "\"It was time to marry the game and I said...\"?",
+      "\"Yeah, I do\"",
+      "\"Not yet\"",
+      "\"Maybe\""
      ]
     ],
     [
@@ -1426,6 +1360,18 @@ window.CFG = {
       "Hockey rink",
       "Snowstorm",
       "Freezer"
+     ],
+     [
+      "Who did he work with?",
+      "Mariah",
+      "Beyoncé",
+      "Rihanna"
+     ],
+     [
+      "He says he's on...?",
+      "Fire",
+      "Top",
+      "Point"
      ]
     ],
     [
@@ -1460,16 +1406,34 @@ window.CFG = {
       "Pipe"
      ],
      [
-      "Double M is the team; who's the captain?",
-      "Rozay",
-      "Wale",
-      "Meek"
+      "\"Hold up, wait a minute, y'all thought I was...\"?",
+      "Finished",
+      "Retired",
+      "Done"
      ],
      [
       "He'll count a million cash then grind like he's what?",
       "Broke",
       "Hungry",
       "Starting"
+     ],
+     [
+      "\"Rest in peace to the parking...\"?",
+      "Lot",
+      "Spot",
+      "Meter"
+     ],
+     [
+      "\"Gangstas move in...\"?",
+      "Silence",
+      "Packs",
+      "Shadows"
+     ],
+     [
+      "\"Was on my grind and now I got what I...\"?",
+      "Deserve",
+      "Wanted",
+      "Needed"
      ]
     ]
    ]

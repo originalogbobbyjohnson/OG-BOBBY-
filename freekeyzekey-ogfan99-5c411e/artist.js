@@ -103,8 +103,7 @@ window.CFG = {
   },
   {
    "title": "Dat's Me",
-   "id": "FHTIFy2t1OA",
-   "listen": true,
+   "locked": true,
    "cuts": [],
    "qs": []
   },
