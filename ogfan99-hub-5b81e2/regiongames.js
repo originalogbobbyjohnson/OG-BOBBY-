@@ -546,4 +546,8 @@ window.OG_REGION_GAMES = {
   "Porter Robinson": { url: "../porterrobinson-ogfan99-72da10/", ex: 0 },
   "Skrillex": { url: "../skrillex-ogfan99-8333f8/", ex: 0 },
   "Kaskade": { url: "../kaskade-ogfan99-ee35dd/", ex: 0 },
+  "Shania Twain": { url: "../shaniatwain-ogfan99-ef8993/", ex: 0 },
+  "Avril Lavigne": { url: "../avrillavigne-ogfan99-aa9889/", ex: 0 },
+  "Calvin Harris": { url: "../calvinharris-ogfan99-ea6fc0/", ex: 0 },
+  "Zedd": { url: "../zedd-ogfan99-3eae37/", ex: 0 },
 };

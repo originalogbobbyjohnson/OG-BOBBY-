@@ -140,5 +140,9 @@ window.OG_GENRE_OF = {
   "Porter Robinson": "EDM + DANCE",
   "Skrillex": "EDM + DANCE",
   "Kaskade": "EDM + DANCE",
+  "Shania Twain": "COUNTRY",
+  "Avril Lavigne": "POP",
+  "Calvin Harris": "EDM + DANCE",
+  "Zedd": "EDM + DANCE",
 };
 
