@@ -1,6 +1,27 @@
 /* © OG Bobby / OG FAN 99 — the wider world around the map:
    LOUNGE (artists link up), FANS (fan side), REGIONS (cities beyond NYC), GENRES (sounds beyond rap).
    The map page itself is untouched; these are panes that swap in above the bottom bar. */
+/* ONE BACK BUTTON for the whole app: every screen you land on is remembered, BACK always takes you to the one before. Phone swipe-back does the same. */
+window.OGNav = (function () {
+  var st = [], busy = 0, btn = null;
+  function top() { return st.length ? st[st.length - 1].key : ""; }
+  function vis() { if (btn) btn.hidden = !st.length || top() === "nat:"; }
+  function closeOv() { var x = document.getElementById("ogIdx"); if (x) x.hidden = true; document.querySelectorAll(".dir,.hmenu").forEach(function (d) { d.hidden = true; }); }
+  function mark(key, restore) {
+    if (busy) return;
+    if (st.length && top() === key) { st[st.length - 1].restore = restore; return; }
+    st.push({ key: key, restore: restore }); try { history.pushState({ ogn: st.length }, ""); } catch (e) {} vis();
+  }
+  function pop() {
+    if (st.length < 2) { root(); return; }
+    st.pop(); var t = st[st.length - 1]; busy = 1; try { closeOv(); t.restore(); } catch (e) {} busy = 0; vis();
+  }
+  function root() { st = []; closeOv(); try { if (window.__ogRoot) window.__ogRoot(); } catch (e) {} vis(); }
+  window.addEventListener("popstate", function () { pop(); });
+  return { mark: mark, top: top, busy: function () { return busy; },
+    back: function () { if (st.length >= 2) { try { history.back(); } catch (e) { pop(); } } else root(); },
+    bind: function (b) { btn = b; vis(); } };
+})();
 (function () {
   "use strict";
   var $ = function (id) { return document.getElementById(id); };
@@ -39,6 +60,7 @@
     ".exb{display:inline-grid;place-items:center;width:20px;height:20px;border:2px solid #fff;border-radius:4px;font:900 12px/1 Helvetica,Arial,sans-serif}",
     ".wback{flex:none;border:2px solid #e8b84a;border-radius:10px;background:#1d2033;color:#e8b84a;font:900 .72rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;padding:8px;cursor:pointer}",
     ".wback[hidden]{display:none}",
+    ".wback{margin:6px 0 4px;padding:11px 8px;font-size:.8rem}#natBack,#crBack,.natback{display:none!important}",
     ".wtabs{flex:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin:-2px 0 0}",
     ".wtabs button{position:relative;border:2px solid #000;border-radius:10px;background:#1d2033;color:#fff;font:900 9.5px/1 Helvetica,Arial,sans-serif;letter-spacing:.06em;padding:6px 1px 5px;box-shadow:0 2px 0 #000;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}",
     ".wtabs button b{font-size:14px;line-height:1}",
@@ -151,6 +173,7 @@
   /* ---------- tab bar ---------- */
   var TABS = [
     { id: "map", ic: "&#128647;", t: "MAP" },
+    { id: "vault", ic: "&#128274;", t: "ARTIST VAULT" },
     { id: "lounge", ic: "&#127908;", t: "LOUNGE" },
     { id: "fans", ic: "&#128293;", t: "FANS" },
     { id: "producers", ic: "&#127899;", t: "PRODUCERS" },
@@ -173,7 +196,8 @@
   var nav = menu.querySelector("#hmList");
   var dock = document.querySelector(".dock2");
   var back = document.createElement("button"); back.type = "button"; back.className = "wback"; back.innerHTML = "&#9664; BACK"; back.hidden = true; app.insertBefore(back, dock);
-  back.onclick = function () { go("map"); };
+  back.onclick = function () { OGNav.back(); }; OGNav.bind(back);
+  var perk = document.getElementById("perkBar"); if (perk && perk.parentNode === app) app.insertBefore(back, perk.nextSibling);
   var panes = {};
   TABS.forEach(function (t) { if (t.id === "map") return; var p = document.createElement("section"); p.className = "wpane"; p.id = "w-" + t.id; p.hidden = true; app.insertBefore(p, dock); panes[t.id] = p; });
   var click = function (id) { var e = $(id); if (e) e.click(); };
@@ -184,7 +208,7 @@
     var secOf = MSEC;
     if (!secOf) { nav.innerHTML = it("s:go", "&#128647;", "GO TO", '<em class="g">&#9654;</em>') + it("s:you", "&#127915;", "YOU", '<em class="g">&#9654;</em>') + it("s:set", "&#9881;", "SETTINGS", '<em class="g">&#9654;</em>'); return; }
     var bk = '<button type="button" data-m="s:" class="hm-bk"><b>&#9664;</b><span>MENU</span></button>';
-    if (secOf === "go") { nav.innerHTML = bk + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "OTHER CITIES", genres: "OTHER GENRES", women: "FEMALE RAPPERS", rip: "REST IN POWER" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join(""); return; }
+    if (secOf === "go") { nav.innerHTML = bk + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", vault: "ARTIST VAULT", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "OTHER CITIES", genres: "OTHER GENRES", women: "FEMALE RAPPERS", rip: "REST IN POWER" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join(""); return; }
     if (secOf === "you") { nav.innerHTML = bk + it("metro", "&#127915;", "MY RIDER CARD") + (tdName ? it("today", "&#9733;", "TODAY'S TRAIN 2X", '<em class="g">' + esc(tdName) + '</em>') : "") + it("perks", "&#127873;", "PLAY TO WIN PERKS"); return; }
     nav.innerHTML = bk + it("ex", "<span class=\"exb\">E</span>", "EXPLICIT LYRICS 18+", '<em class="' + (ex ? "g" : "") + '">' + (ex ? "ON" : "OFF") + '</em>') + it("key", "&#128647;", "SUBWAY KEY + LEGEND") + it("over", "&#8634;", "START OVER");
   }
@@ -204,10 +228,11 @@
   var cur = "map";
   function go(id) {
     cur = id; LS("ogfan99tab", id);
-    app.classList.toggle("paneon", id !== "map"); back.hidden = id === "map";
+    app.classList.toggle("paneon", id !== "map");
+    if (id !== "map") OGNav.mark("tab:" + id, function () { go(id); }); else if (window.__ogMarkMap && !OGNav.busy()) window.__ogMarkMap();
     Object.keys(panes).forEach(function (k) { panes[k].hidden = k !== id; });
     if (id === "map") { setTimeout(function () { try { window.__map && window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 30); return; }
-    ({ lounge: drawLounge, fans: drawFans, producers: drawProducers, regions: drawRegions, genres: drawGenres, women: drawWomen, rip: drawRip })[id]();
+    ({ vault: function () { if (window.OGVault) OGVault.draw(panes.vault); }, lounge: drawLounge, fans: drawFans, producers: drawProducers, regions: drawRegions, genres: drawGenres, women: drawWomen, rip: drawRip })[id]();
     panes[id].scrollTop = 0; tidy(panes[id]);
   }
   /* fine print stays folded: each box shows its title and buttons; tap the title to read the details */

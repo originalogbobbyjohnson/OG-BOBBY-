@@ -63,11 +63,11 @@
     ALL.forEach(function (x) { if (regions.indexOf(x.region) < 0 && x.region !== "PRODUCERS" && x.region !== "OTHER") regions.push(x.region); if (genres.indexOf(x.genre) < 0) genres.push(x.genre); });
     regions.sort(function (a, b) { return a === "NEW YORK AREA" ? -1 : b === "NEW YORK AREA" ? 1 : a.localeCompare(b); });
     genres.sort(function (a, b) { return a === "HIP-HOP + RAP" ? -1 : b === "HIP-HOP + RAP" ? 1 : a.localeCompare(b); });
-    box.innerHTML = '<div class="ih"><div class="it"><b>&#128269; SEARCH EVERYTHING</b><em id="ixN">' + ALL.length + ' GAMES</em><button type="button" class="ix" id="ixX">CLOSE</button></div>' +
+    box.innerHTML = '<div class="ih"><div class="it"><b>&#128269; SEARCH EVERYTHING</b><em id="ixN">' + ALL.length + ' GAMES</em><button type="button" class="ix" id="ixX">&#9664; BACK</button></div>' +
       '<input id="ixQ" type="search" placeholder="Artist, city, neighborhood, genre…" autocomplete="off">' +
       '<div class="if"><select id="ixR">' + opts(regions, "ALL PLACES") + '</select><select id="ixG">' + opts(genres, "ALL GENRES") + '</select></div>' +
       '<button type="button" class="near" id="ixNear">&#128205; NEW YORK: FIND ARTISTS NEAR ME</button></div><div class="il" id="ixL"></div>';
-    box.hidden = false;
+    box.hidden = false; if (window.OGNav) OGNav.mark("search", function () { open(); });
     var q = box.querySelector("#ixQ"), r = box.querySelector("#ixR"), g = box.querySelector("#ixG"), L = box.querySelector("#ixL");
     if (preset) { if (preset.region) r.value = preset.region; if (preset.genre) g.value = preset.genre; }
     function draw() {
@@ -85,7 +85,7 @@
       L.innerHTML = h;
     }
     q.oninput = draw; r.onchange = draw; g.onchange = draw;
-    box.querySelector("#ixX").onclick = function () { box.hidden = true; };
+    box.querySelector("#ixX").onclick = function () { if (window.OGNav && OGNav.top() === "search") OGNav.back(); else box.hidden = true; };
     box.querySelector("#ixNear").onclick = function () { box.hidden = true; try { if (typeof openFind === "function") openFind(); } catch (e) {} };
     L.onclick = function (e) {
       var b = e.target.closest("[data-k]"); if (!b) return; var x = ALL[+b.dataset.k]; if (!x) return;

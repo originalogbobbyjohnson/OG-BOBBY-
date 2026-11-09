@@ -2058,8 +2058,9 @@ window.OGX = (function () {
 <script src="producers.js?v=20"></script>
 <script src="regiongames.js?v=1109a1"></script>
 <script src="genregames.js?v=1109a1"></script>
-<script src="world.js?v=1109a1"></script>
-<script src="search.js?v=1"></script>
+<script src="world.js?v=1109a3"></script>
+<script src="search.js?v=3"></script>
+<script src="vault.js?v=2"></script>
 
 <script>
 /* ---------- map + list work together (Nov 1) ----------
@@ -2177,6 +2178,7 @@ window.OGX = (function () {
       '<div class="wide3"><button type="button" class="wide go3" data-nr="__genres"><i>&#127925;</i>GENRES</button>' +
       '<button type="button" class="wide go3" data-nr="__prod"><i>&#127911;</i>PRODUCERS</button>' +
       '<button type="button" class="wide go3" data-nr="__find"><i>&#128269;</i>SEARCH</button></div></div>';
+    if (window.OGNav) OGNav.mark("nat:" + (cur ? cur.g : ""), ((g) => () => { try { sessionStorage.setItem("ogfan99grp", g); } catch (e) {} if (window.OGW) OGW.go("map"); setStep(0); })(cur ? cur.g : ""));
   }
   n0.onclick = e => { const gb = e.target.closest("[data-grp]"); if (gb) { try { sessionStorage.setItem("ogfan99grp", gb.dataset.grp); } catch (er) {} drawNat(); try { window.scrollTo(0, 0); n0.scrollTop = 0; } catch (er) {} return; }
     const b = e.target.closest("[data-nr]"); if (b) { const v = b.dataset.nr;
@@ -2198,6 +2200,7 @@ window.OGX = (function () {
   try { new ResizeObserver(() => { try { window.__map && window.__map.invalidateSize({ pan: false }); } catch (e) {} }).observe(mb); } catch (e) {}
   function setStep(n) { if (mb.classList.contains("big")) { const bb = mb.querySelector(".mapbig"); if (bb) bb.click(); }
     app.classList.toggle("step1", n <= 1); app.classList.toggle("nation", n === 0); if (n === 0) drawNat(); try { sessionStorage.setItem("ogfan99step", String(n)); } catch (e) {}
+    if (n > 0 && window.OGNav) { const bt = boroTab; OGNav.mark("step" + n + (n === 2 ? ":" + bt : ""), () => { if (window.OGW) OGW.go("map"); if (n === 2) { const t = document.querySelector('.boro[data-b="' + bt + '"]'); if (t) t.click(); } setStep(n); }); }
     if (n === 2) $("crName").textContent = (NAME[boroTab] || boroTab.toUpperCase()) + " · " + cnt(boroTab) + " ARTISTS"; fix();
     /* once the map has its new size, frame it close on the borough you picked */
     if (n === 2) setTimeout(() => { try { const pts = ARTISTS.filter(a => boroOf(a) === boroTab && a.lat != null).map(a => [a.lat, a.lng]); if (window.__map && pts.length) { window.__map.stop(); window.__map.invalidateSize({ pan: false }); window.__map.fitBounds(pts, { padding: [24, 24], maxZoom: 13, animate: false }); } } catch (e) {} }, 250); }
@@ -2212,6 +2215,9 @@ window.OGX = (function () {
     const t = document.querySelector('.boro[data-b="' + v + '"]'); if (t) t.click(); setStep(2);
     setTimeout(() => { $("listwrap").scrollTop = 0; }, 80); };
   $("natBack").onclick = () => setStep(0);
+  /* BACK helpers: the very first screen, and re-marking the map screen you return to */
+  window.__ogRoot = () => { try { sessionStorage.setItem("ogfan99grp", ""); } catch (e) {} if (window.OGW) OGW.go("map"); setStep(0); };
+  window.__ogMarkMap = () => { const n = app.classList.contains("nation") ? 0 : app.classList.contains("step1") ? 1 : 2; if (n === 0) drawNat(); else setStep(n); };
   $("crBack").onclick = () => { setStep(1); const all = $("allNyc"); if (all && !all.hidden) all.click(); };
   /* anything that picks an artist from elsewhere (map pin, FIND) lands you on step 2 */
   new MutationObserver(() => { if (app.classList.contains("step1") && document.querySelector("#list li.picked")) setStep(2); }).observe($("list"), { subtree: true, attributes: true, attributeFilter: ["class"] });
