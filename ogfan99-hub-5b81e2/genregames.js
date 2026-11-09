@@ -111,4 +111,6 @@ window.OG_GENRE_OF = {
   "Avant": "R&B",
   "Kirk Franklin": "GOSPEL",
   "Yolanda Adams": "GOSPEL",
+  "Selena": "LATIN + REGGAETON",
+  "Gloria Estefan": "LATIN + REGGAETON",
 };
