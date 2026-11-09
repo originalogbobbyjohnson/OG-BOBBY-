@@ -417,8 +417,19 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .wrap.app.nation:not(.paneon) > .dock2 { order: 3; }
 .wrap.app.nation > .mapbox:not(.big), .wrap.app.nation > .step1p, .wrap.app.nation > .boros, .wrap.app.nation > .bhead, .wrap.app.nation > .listwrap, .wrap.app.nation > .crumb { display: none !important; }
 .natp > * { flex: none; }
-.natp .bgrid { grid-auto-rows: 1fr; }
+.natp .bgrid { grid-auto-rows: auto; }
 .natp .bgrid button { padding: 8px 6px 7px; font-size: .78rem; line-height: 1.1; min-height: 58px; align-content: center; }
+.natp .bgrid .natsec { grid-column: 1 / -1; display: flex; align-items: center; gap: 8px; margin: 10px 2px 0; font: 900 .78rem/1 Helvetica, Arial, sans-serif; letter-spacing: .16em; color: #fff; }
+.natp .bgrid .natsec::before { content: ""; width: 14px; height: 14px; border-radius: 4px; background: var(--bc); border: 2px solid #000; box-shadow: 0 2px 0 #000; }
+.natp .bgrid .natsec::after { content: ""; flex: 1; height: 3px; border-radius: 2px; background: var(--bc); opacity: .9; }
+.natp .bgrid .natsec em { order: 2; font-style: normal; background: var(--bc); color: #fff; border: 1.5px solid #000; border-radius: 99px; padding: 3px 8px; font-size: .66rem; letter-spacing: .08em; }
+.natp .bgrid .natsec::after { order: 1; }
+.wrap.app .natp .bgrid button.rb { position: relative; border: 2px solid #000; border-top: 2px solid #000; border-radius: 14px; background: linear-gradient(180deg, color-mix(in srgb, var(--bc) 85%, #fff) 0%, var(--bc) 55%, color-mix(in srgb, var(--bc) 70%, #000) 100%); color: #fff; box-shadow: 0 5px 0 #000, inset 0 2px 0 rgba(255,255,255,.28); padding: 12px 26px 11px 10px; min-height: 72px; height: 100%; font: 900 .8rem/1.1 Helvetica, Arial, sans-serif; letter-spacing: .04em; text-shadow: 0 2px 0 rgba(0,0,0,.45); transition: transform .06s, box-shadow .06s; }
+.wrap.app .natp .bgrid button.rb:active { transform: translateY(4px); box-shadow: 0 1px 0 #000, inset 0 2px 0 rgba(255,255,255,.28); }
+.wrap.app .natp .bgrid button.rb small { color: #fff; background: rgba(0,0,0,.38); border: 1.5px solid rgba(0,0,0,.6); border-radius: 6px; padding: 4px 7px; text-shadow: none; font-size: .6rem; }
+.wrap.app .natp .bgrid button.rb .chev { position: absolute; right: 9px; top: 50%; transform: translateY(-50%); font-style: normal; font-size: .75rem; }
+.wrap.app .natp .bgrid button.rb.soon { background: linear-gradient(180deg, #2a2e45, #1a1d2e); box-shadow: 0 5px 0 #000, inset 0 0 0 2px var(--bc); }
+.wrap.app .natp .bgrid button.rb.soon small { background: #e8b84a; color: #000; }
 .natp .bgrid .wide3 { grid-row: auto; }
 .wrap.app.nation:not(.paneon) > .natp { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
 .wrap.app.nation:not(.paneon) > .natp .bgrid .wide3 { position: fixed; left: 50%; bottom: 0; transform: translateX(-50%); width: min(100%, 460px); box-sizing: border-box; z-index: 1500; padding: 8px 12px max(10px, env(safe-area-inset-bottom)); background: var(--bg); border-top: 2px solid #000; box-shadow: 0 -6px 14px rgba(0,0,0,.55); }
@@ -2038,9 +2049,9 @@ window.OGX = (function () {
 })();
 </script>
 <script src="producers.js?v=19"></script>
-<script src="regiongames.js?v=1108s3"></script>
-<script src="genregames.js?v=1108s3"></script>
-<script src="world.js?v=1108s3"></script>
+<script src="regiongames.js?v=1108s5"></script>
+<script src="genregames.js?v=1108s5"></script>
+<script src="world.js?v=1108s5"></script>
 
 <script>
 /* ---------- map + list work together (Nov 1) ----------
@@ -2139,12 +2150,15 @@ window.OGX = (function () {
   const nyCnt = () => ARTISTS.length;
   function drawNat() {
     const R = (window.OGW && OGW.regionCounts) ? OGW.regionCounts() : [];
-    const all = [{ n: "NEW YORK AREA", c: "#d62828", k: nyCnt(), ny: 1 }].concat(R).map((r, i) => (r.i = i, r));
+    const all = [{ n: "NEW YORK AREA", c: "#2f6fd6", grp: "EAST COAST", k: nyCnt(), ny: 1 }].concat(R).map((r, i) => (r.i = i, r));
     all.sort((x, y) => (y.k - x.k) || (x.i - y.i));
+    const GO = ["EAST COAST", "THE SOUTH", "MIDWEST", "WEST COAST"];
+    const secs = GO.map(g => ({ g, list: all.filter(r => r.grp === g) })).concat([{ g: "MORE", list: all.filter(r => GO.indexOf(r.grp) < 0) }]).filter(x => x.list.length);
+    const tile = r => '<button type="button" class="rb' + (r.k ? '' : ' soon') + '" data-nr="' + (r.ny ? "__ny" : esc(r.n)) + '" style="--bc:' + r.c + '">' + esc(r.n) + '<small>' + (r.k ? r.k + (r.k === 1 ? ' ARTIST' : ' ARTISTS') : 'COMING SOON') + '</small><i class="chev">&#9654;</i></button>';
     const tot = all.reduce((s, r) => s + r.k, 0), live = all.filter(r => r.k).length;
     n0.innerHTML = '<div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR REGION</b></div>' +
       '<div class="board"><div class="bd-h"><i></i>LIVE ACROSS THE COUNTRY<i></i></div><div class="bd-row"><button type="button" id="ntAb"><b>' + tot + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="ntRb"><b>' + live + '</b><small>REGIONS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="ntFb"><b id="ntF">' + ($("mtF") ? $("mtF").textContent : "—") + '</b><small>FANS</small><em>SEE ALL &#9656;</em></button></div></div>' +
-      '<div class="bgrid">' + all.map(r => '<button type="button"' + (r.k ? '' : ' class="soon"') + ' data-nr="' + (r.ny ? "__ny" : esc(r.n)) + '" style="--bc:' + r.c + '">' + esc(r.n) + '<small>' + (r.k ? r.k + (r.k === 1 ? ' ARTIST' : ' ARTISTS') : 'COMING SOON') + '</small></button>').join("") +
+      '<div class="bgrid">' + secs.map(x => '<div class="natsec" style="--bc:' + x.list[0].c + '"><span>' + x.g + '</span><em>' + x.list.reduce((a, r) => a + r.k, 0) + '</em></div>' + x.list.map(tile).join("")).join("") +
       '<div class="wide3"><button type="button" class="wide go3" data-nr="__genres"><i>&#127925;</i>GENRES</button>' +
       '<button type="button" class="wide go3" data-nr="__prod"><i>&#127911;</i>PRODUCERS</button>' +
       '<button type="button" class="wide go3" data-nr="__find"><i>&#128269;</i>SEARCH</button></div></div>';

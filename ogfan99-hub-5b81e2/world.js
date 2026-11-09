@@ -89,6 +89,15 @@
     ".prn em.life{display:inline-block;align-self:flex-start;width:max-content;margin:3px 0 0;font:900 .58rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;font-style:normal;color:#000;background:#ff8a3d;border-radius:4px;padding:3px 5px;vertical-align:middle}",
     ".wldg{border:2px solid #e8b84a;border-radius:12px;background:#12142a;padding:10px;margin:0 0 14px;display:grid;gap:6px}.wldg .dh{font:900 .9rem/1 Helvetica,Arial,sans-serif;letter-spacing:.12em;color:#e8b84a;text-align:center;margin-bottom:4px}.wldg .lh{display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding:6px 4px;border-bottom:2px solid #e8b84a}.wldg .lh b{font:900 .78rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;color:#fff}.wldg .lh em{font:900 .72rem/1 Helvetica,Arial,sans-serif;font-style:normal;color:#000;background:#e8b84a;border-radius:999px;padding:4px 8px}",
     ".wtile.wide{grid-column:1/-1}",
+    ".wtile.mini{--tc:#2f6fd6;position:relative;background:linear-gradient(180deg,color-mix(in srgb,var(--tc) 88%,#fff) 0%,var(--tc) 55%,color-mix(in srgb,var(--tc) 72%,#000) 100%);border:2px solid #000;border-radius:14px;box-shadow:0 5px 0 #000,inset 0 2px 0 rgba(255,255,255,.28);padding:14px 30px 12px 12px;min-height:64px;justify-items:center;align-content:center;text-align:center;gap:7px;transition:transform .06s,box-shadow .06s}",
+    ".wtile.mini:active{transform:translateY(4px);box-shadow:0 1px 0 #000,inset 0 2px 0 rgba(255,255,255,.28)}",
+    ".wtile.mini b{color:#fff;text-shadow:0 2px 0 rgba(0,0,0,.45);text-align:center;width:100%}",
+    ".wtile.mini .bar{display:none}",
+    ".wtile.mini .cnt,.wtile.mini .cnt.on{background:rgba(0,0,0,.38);color:#fff;border:1.5px solid rgba(0,0,0,.6)}",
+    ".wtile.mini.soon{background:linear-gradient(180deg,#2a2e45,#1a1d2e);border-color:#000;box-shadow:0 5px 0 #000,inset 0 0 0 2px #4a4f6a}",
+    ".wtile.mini .cnt.soon{background:#e8b84a;color:#000;border-color:#000}",
+    ".wtile.mini .chev{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-style:normal;color:#fff;font-size:.8rem;opacity:.9}",
+    ".wtile.mini.open{outline:3px solid #fff;outline-offset:2px}",
     /* lounge */
     ".lsub{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px}",
     ".lsub button{border:2px solid #000;border-radius:9px;background:#1d2033;color:#fff;font:900 9.5px/1 Helvetica,Arial,sans-serif;letter-spacing:.06em;padding:8px 2px;cursor:pointer;position:relative}",
@@ -552,13 +561,16 @@
     { n: "THE BAY AREA", d: "Oakland, San Francisco, Vallejo, Richmond, San Jose.", c: "#0099d8", coming: ["Ledisi", "Keyshia Cole", "Stunna Girl", "Kehlani", "The Pointer Sisters", "Sly and the Family Stone", "Tony! Toni! Ton\u00e9!", "En Vogue", "MC Hammer", "Blackalicious", "Hieroglyphics", "Symba", "SOB X RBE", "Rappin' 4-Tay", "The Jacka", "Keak da Sneak", "Guapdad 4000", "Rexx Life Raj", "P-Lo", "Iamsu!", "Richie Rich", "Mac Mall", "Andre Nickatina", "Yukmouth", "Mozzy", "Nef the Pharaoh", "G-Eazy", "Mistah F.A.B.", "Larry June", "Mac Dre", "Saweetie", "Souls of Mischief", "E-40", "Zion I", "Rocky Rivera", "Kamaiyah", "Lyrics Born", "Del the Funky Homosapien", "Gift of Gab", "Rasco", "The Grouch", "Planet Asia"] },
     { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Shabazz Palaces", "Grynch", "Travis Thompson", "Amin\u00e9", "Macklemore", "Sir Mix-a-Lot", "Mic Capes", "Onry Ozzborn", "Dave B", "Grieves", "Sol", "Blue Scholars"] }
   ];
+  /* one color per part of the country, so the board reads as four clean groups */
+  var GROUP_C = { "EAST COAST": "#2f6fd6", "THE SOUTH": "#d2462f", "MIDWEST": "#2e9e58", "WEST COAST": "#8a4fd6" };
+  (function () { var cur = null; REGIONS.forEach(function (r) { if (r.g) { cur = r.g; return; } r.grp = r.live ? "EAST COAST" : cur; if (GROUP_C[r.grp]) r.c = GROUP_C[r.grp]; }); })();
   /* compact tiles: name + small badge; tap opens a drawer right under the row with the details */
   function tileGrid(p, items) {
     var g = p.querySelector(".wgrid");
     g.innerHTML = items.map(function (it, i) {
       if (it.sec) return '<div class="rg-h"><span>' + it.sec + '</span>' + (it.secN != null ? '<em>' + it.secN + (it.secN === 1 ? ' GAME' : ' GAMES') + '</em>' : '') + '</div>';
-      return '<button class="wtile mini' + (it.wide ? " wide" : "") + '" type="button" data-i="' + i + '"><span class="bar" style="background:' + it.c + '"></span><b>' + esc(it.n) + '</b>' +
-        '<span class="cnt ' + (it.badge ? "on" : "soon") + '">' + (it.badge || "SOON") + '</span></button>';
+      return '<button class="wtile mini' + (it.wide ? " wide" : "") + (it.badge ? "" : " soon") + '" type="button" data-i="' + i + '" style="--tc:' + it.c + '"><b>' + esc(it.n) + '</b>' +
+        '<span class="cnt ' + (it.badge ? "on" : "soon") + '">' + (it.badge || "SOON") + '</span><i class="chev">&#9654;</i></button>';
     }).join("");
     g.onclick = function (e) {
       if (e.target.closest(".wdrw")) return;
@@ -629,7 +641,7 @@
 
 
   /* front page helpers: game count per region, open one region, open the full games list */
-  window.OGW.regionCounts = function () { var RG = window.OG_REGION_GAMES || {}; return REGIONS.filter(function (r) { return !r.g && !r.live; }).map(function (r) { return { n: r.n, c: r.c, k: (r.coming || []).filter(rgIsRap).filter(function (x) { return RG[x]; }).length }; }); };
+  window.OGW.regionCounts = function () { var RG = window.OG_REGION_GAMES || {}; return REGIONS.filter(function (r) { return !r.g && !r.live; }).map(function (r) { return { n: r.n, c: r.c, grp: r.grp, k: (r.coming || []).filter(rgIsRap).filter(function (x) { return RG[x]; }).length }; }); };
   window.OGW.openRegion = function (nm) { go("regions"); setTimeout(function () { var t = Array.prototype.slice.call(panes.regions.querySelectorAll(".wtile")).filter(function (y) { return y.querySelector("b").textContent === nm; })[0]; if (t) { t.click(); try { t.scrollIntoView({ block: "start" }); } catch (e) {} } }, 40); };
   window.OGW.allGames = function () { go("regions"); setTimeout(function () { var b = panes.regions.querySelector('[data-led="games"]'); if (b) b.click(); }, 40); };
 
@@ -666,14 +678,18 @@
     var p = panes.genres, RG = window.OG_REGION_GAMES || {}, GO = window.OG_GENRE_OF || {};
     var gamesOf = function (g) { return Object.keys(GO).filter(function (n) { return GO[n] === g.n && RG[n]; }); };
     p.innerHTML = '<div class="wp-h"><div class="t">OTHER GENRES</div><div class="s">TAP A GENRE</div></div><div class="wgrid"></div>';
-    tileGrid(p, GENRES.map(function (g) {
-      if (g.live) return { n: g.n, c: g.c, wide: 1, badge: "LIVE", go: function () { go("map"); } };
-      if (g.women) return { n: g.n, c: g.c, wide: 1, badge: "&#128081;", go: function () { go("women"); } };
-      var games = gamesOf(g);
-      return { n: g.n, c: g.c, badge: games.length ? games.length + (games.length === 1 ? " GAME" : " GAMES") : "",
-        detail: function () { return '<div class="dh">' + esc(g.n) + '</div><div>' + esc(g.d) + '</div>' + (games.length ? gameRows(games, g.c) : '<div>Games coming soon.</div>'); },
+    var HIP = "#d62828", ON = "#2f6fd6", SOON = "#4a4f6a";
+    var item = function (g) {
+      if (g.live) return { n: g.n, c: HIP, wide: 1, badge: "LIVE", go: function () { go("map"); } };
+      if (g.women) return { n: g.n, c: HIP, wide: 1, badge: "&#128081; QUEENS", go: function () { go("women"); } };
+      var games = gamesOf(g), c = games.length ? ON : SOON;
+      return { n: g.n, c: c, badge: games.length ? games.length + (games.length === 1 ? " GAME" : " GAMES") : "",
+        detail: function () { return '<div class="dh">' + esc(g.n) + '</div><div>' + esc(g.d) + '</div>' + (games.length ? gameRows(games, c) : '<div>Games coming soon.</div>'); },
         wire: wireRows };
-    }));
+    };
+    var hip = GENRES.filter(function (g) { return g.live || g.women; }), rest = GENRES.filter(function (g) { return !g.live && !g.women; });
+    var on = rest.filter(function (g) { return gamesOf(g).length; }).sort(function (a, b) { return gamesOf(b).length - gamesOf(a).length; }), soon = rest.filter(function (g) { return !gamesOf(g).length; });
+    tileGrid(p, [{ sec: "HIP-HOP" }].concat(hip.map(item), on.length ? [{ sec: "PLAYING NOW" }] : [], on.map(item), soon.length ? [{ sec: "COMING SOON" }] : [], soon.map(item)));
   }
 
 
