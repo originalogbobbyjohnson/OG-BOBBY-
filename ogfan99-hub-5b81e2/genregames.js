@@ -163,5 +163,6 @@ window.OG_GENRE_OF = {
   "Rihanna": "POP",
   "David Guetta": "EDM + DANCE",
   "Avicii": "EDM + DANCE",
+  "Reba McEntire": "COUNTRY",
 };
 

@@ -568,4 +568,5 @@ window.OG_REGION_GAMES = {
   "Rihanna": { url: "../rihanna-ogfan99-a77d15/", ex: 0 },
   "David Guetta": { url: "../davidguetta-ogfan99-1612e4/", ex: 0 },
   "Avicii": { url: "../avicii-ogfan99-b2af8b/", ex: 0 },
+  "Reba McEntire": { url: "../reba-ogfan99-2659a7/", ex: 0 },
 };
