@@ -109,4 +109,6 @@ window.OG_GENRE_OF = {
   "Bilal": "R&B",
   "Dru Hill": "R&B",
   "Avant": "R&B",
+  "Kirk Franklin": "GOSPEL",
+  "Yolanda Adams": "GOSPEL",
 };

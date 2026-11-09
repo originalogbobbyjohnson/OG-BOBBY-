@@ -533,4 +533,6 @@ window.OG_REGION_GAMES = {
   "Bilal": { url: "../bilal-ogfan99-d4df48/", ex: 0 },
   "Dru Hill": { url: "../druhill-ogfan99-4a85da/", ex: 0 },
   "Avant": { url: "../avant-ogfan99-48a980/", ex: 0 },
+  "Kirk Franklin": { url: "../kirkfranklin-ogfan99-25ae77/", ex: 0 },
+  "Yolanda Adams": { url: "../yolandaadams-ogfan99-b2c9d4/", ex: 0 },
 };
