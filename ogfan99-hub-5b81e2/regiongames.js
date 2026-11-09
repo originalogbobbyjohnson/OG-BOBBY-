@@ -554,4 +554,6 @@ window.OG_REGION_GAMES = {
   "C\u00e9line Dion": { url: "../celinedion-ogfan99-5e51c9/", ex: 0 },
   "Adele": { url: "../adele-ogfan99-34f097/", ex: 0 },
   "Ed Sheeran": { url: "../edsheeran-ogfan99-6132a8/", ex: 0 },
+  "Bob Marley": { url: "../bobmarley-ogfan99-17ceb2/", ex: 0 },
+  "Sean Paul": { url: "../seanpaul-ogfan99-94dccd/", ex: 1 },
 };

@@ -148,5 +148,7 @@ window.OG_GENRE_OF = {
   "C\u00e9line Dion": "POP",
   "Adele": "POP",
   "Ed Sheeran": "POP",
+  "Bob Marley": "DANCEHALL + AFROBEATS",
+  "Sean Paul": "DANCEHALL + AFROBEATS",
 };
 
