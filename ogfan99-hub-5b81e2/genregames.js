@@ -146,5 +146,7 @@ window.OG_GENRE_OF = {
   "Zedd": "EDM + DANCE",
   "The Weeknd": "R&B",
   "C\u00e9line Dion": "POP",
+  "Adele": "POP",
+  "Ed Sheeran": "POP",
 };
 
