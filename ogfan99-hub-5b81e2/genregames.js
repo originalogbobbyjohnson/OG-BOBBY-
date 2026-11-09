@@ -144,5 +144,7 @@ window.OG_GENRE_OF = {
   "Avril Lavigne": "POP",
   "Calvin Harris": "EDM + DANCE",
   "Zedd": "EDM + DANCE",
+  "The Weeknd": "R&B",
+  "C\u00e9line Dion": "POP",
 };
 

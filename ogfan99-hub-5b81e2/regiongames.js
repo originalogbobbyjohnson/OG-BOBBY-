@@ -550,4 +550,6 @@ window.OG_REGION_GAMES = {
   "Avril Lavigne": { url: "../avrillavigne-ogfan99-aa9889/", ex: 0 },
   "Calvin Harris": { url: "../calvinharris-ogfan99-ea6fc0/", ex: 0 },
   "Zedd": { url: "../zedd-ogfan99-3eae37/", ex: 0 },
+  "The Weeknd": { url: "../theweeknd-ogfan99-66e44b/", ex: 0 },
+  "C\u00e9line Dion": { url: "../celinedion-ogfan99-5e51c9/", ex: 0 },
 };
