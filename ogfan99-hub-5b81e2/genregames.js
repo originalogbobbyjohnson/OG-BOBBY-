@@ -161,5 +161,7 @@ window.OG_GENRE_OF = {
   "Bad Bunny": "LATIN + REGGAETON",
   "Daddy Yankee": "LATIN + REGGAETON",
   "Rihanna": "POP",
+  "David Guetta": "EDM + DANCE",
+  "Avicii": "EDM + DANCE",
 };
 
