@@ -480,6 +480,9 @@ body:has(.wrap.app) { position: fixed; inset: 0; width: 100%; }
 .dir-l .r em { font-style: normal; font: 900 .58rem/1 Helvetica, Arial, sans-serif; letter-spacing: .1em; padding: 4px 6px; border-radius: 5px; border: 1.5px solid #e8b84a; color: #e8b84a; }
 .dir-l .r em.mainstream { border-color: #c03fbf; color: #fff; background: #c03fbf; } .dir-l .r em.indie { border-color: #35b867; color: #35b867; }
 .dir-l p { color: #fff; font: 700 .86rem/1.4 Helvetica, Arial, sans-serif; text-align: center; padding: 20px 8px; }
+.natp .bgrid.one{grid-template-columns:1fr!important}
+.wrap.app .natp .bgrid.one button.rb{min-height:84px;font-size:1.05rem}
+.wrap.app .natp .bgrid.one button.rb.natback{min-height:48px!important;padding:8px;--bc:#3a3f5c;font-size:.95rem}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -675,6 +678,8 @@ const ARTISTS = [
   { who: "Faith Evans", hood: "Newark", boro: "New Jersey", stop: "Elizabeth Av / Grumman Av", trains: [["65", "#0039a6"], ["66", "#0039a6"]], color: "#f4d27a", url: "../faithevans-ogfan99-a5cd15/", status: "demo", line: "Newark's First Lady of R&B, raised on the block now named Faith Evans Way.", save: "ogfan99faithevans1", lat: 40.7022, lng: -74.2142, ex: 0, indie: false },
   { who: "SZA", hood: "Maplewood", boro: "New Jersey", stop: "Springfield Av / Tuscan Rd", trains: [["25", "#0039a6"], ["70", "#0039a6"]], color: "#7cc6ff", url: "../sza-ogfan99-a92b96/", status: "demo", line: "Maplewood's own. Good days, broken clocks and Saturn.", save: "ogfan99sza1", lat: 40.7225, lng: -74.2595, ex: 1, indie: false },
   { who: "Bruce Springsteen", hood: "Freehold", boro: "New Jersey", stop: "Freehold Center", trains: [["67", "#0039a6"], ["139", "#0039a6"]], color: "#e8c547", url: "../brucespringsteen-ogfan99-5f53f9/", status: "demo", line: "Freehold's own. Tramps like us, born to run off Highway 9.", save: "ogfan99brucespringsteen1", lat: 40.2601, lng: -74.2737, ex: 0, indie: false },
+  { who: "Marc Anthony", hood: "East Harlem", boro: "Manhattan", stop: "1 Av / E 102 St", trains: [["M15", "#0039a6"]], color: "#ffe08a", url: "../marcanthony-ogfan99-9132a5/", status: "demo", line: "Metro North Plaza to the salsa stage. El Cantante del Barrio.", save: "ogfan99marcanthony1", lat: 40.7870, lng: -73.9413, ex: 0, indie: false },
+  { who: "Jennifer Lopez", hood: "Castle Hill", boro: "the Bronx", stop: "Zerega Av", trains: [["6", "#00933c"]], color: "#ff9fd0", url: "../jlo-ogfan99-d1bb95/", status: "demo", line: "Castle Hill, the Bronx. Jenny from the Block.", save: "ogfan99jlo1", lat: 40.8365, lng: -73.8470, ex: 0, indie: false },
   { who: "Mantronix", hood: "Upper West Side", boro: "Manhattan", stop: "72 St", trains: [["1", "#ee352e"], ["2", "#ee352e"], ["3", "#ee352e"]], color: "#39ff88", url: "../mantronix-ogfan99-f34806/", status: "demo", line: "Kurtis Mantronik and MC Tee. Fresh is the word.", save: "ogfan99mantronix1", lat: 40.778453, lng: -73.98197, ex: 0, indie: false },
   { who: "Vado", hood: "Harlem", boro: "Manhattan", stop: "145 St", trains: [["3", "#ee352e"]], color: "#9cff57",
     url: "../vado-ogfan99-82f49b/", status: "demo", line: "Lenox Avenue's slick-talking Slime Yums", save: "ogfan99vado1", lat: 40.8204, lng: -73.9362 },
@@ -2050,9 +2055,9 @@ window.OGX = (function () {
 })();
 </script>
 <script src="producers.js?v=20"></script>
-<script src="regiongames.js?v=1108t3"></script>
-<script src="genregames.js?v=1108t3"></script>
-<script src="world.js?v=1108t3"></script>
+<script src="regiongames.js?v=1108t5"></script>
+<script src="genregames.js?v=1108t5"></script>
+<script src="world.js?v=1108t5"></script>
 <script src="search.js?v=1"></script>
 
 <script>
@@ -2158,14 +2163,22 @@ window.OGX = (function () {
     const secs = GO.map(g => ({ g, list: all.filter(r => r.grp === g) })).concat([{ g: "MORE", list: all.filter(r => GO.indexOf(r.grp) < 0) }]).filter(x => x.list.length);
     const tile = r => '<button type="button" class="rb' + (r.k ? '' : ' soon') + '" data-nr="' + (r.ny ? "__ny" : esc(r.n)) + '" style="--bc:' + r.c + '">' + esc(r.n) + '<small>' + (r.k ? r.k + (r.k === 1 ? ' ARTIST' : ' ARTISTS') : 'COMING SOON') + '</small><i class="chev">&#9654;</i></button>';
     const tot = all.reduce((s, r) => s + r.k, 0), live = all.filter(r => r.k).length;
-    n0.innerHTML = '<div class="natTop"><div class="stepcap"><small>STEP 1 OF 3</small><b>PICK YOUR REGION</b></div>' +
+    let G = null; try { G = sessionStorage.getItem("ogfan99grp"); } catch (e) {}
+    const cur = secs.filter(x => x.g === G)[0];
+    const sum = x => x.list.reduce((a, r) => a + r.k, 0);
+    /* one choice at a time: first the area (East Coast, South...), then its cities. Same spot for your finger every step. */
+    const body = cur
+      ? '<button type="button" class="rb natback" data-grp="">&#9664; ALL AREAS</button>' + cur.list.map(tile).join("")
+      : secs.map(x => '<button type="button" class="rb grp" data-grp="' + esc(x.g) + '" style="--bc:' + x.list[0].c + '">' + esc(x.g) + '<small>' + sum(x) + ' ARTISTS &middot; ' + x.list.length + (x.list.length === 1 ? ' PLACE' : ' PLACES') + '</small><i class="chev">&#9654;</i></button>').join("");
+    n0.innerHTML = '<div class="natTop"><div class="stepcap"><small>' + (cur ? 'STEP 2 OF 4' : 'STEP 1 OF 4') + '</small><b>' + (cur ? esc(cur.g) + ': PICK A CITY' : 'PICK YOUR AREA') + '</b></div>' +
       '<div class="board"><div class="bd-h"><i></i>LIVE ACROSS THE COUNTRY<i></i></div><div class="bd-row"><button type="button" id="ntAb"><b>' + tot + '</b><small>ARTISTS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="ntRb"><b>' + live + '</b><small>REGIONS</small><em>SEE ALL &#9656;</em></button><span class="bd-sep"></span><button type="button" id="ntFb"><b id="ntF">' + ($("mtF") ? $("mtF").textContent : "—") + '</b><small>FANS</small><em>SEE ALL &#9656;</em></button></div></div>' +
-      '</div>' + '<div class="bgrid">' + secs.map(x => '<div class="natsec" style="--bc:' + x.list[0].c + '"><span>' + x.g + '</span><em>' + x.list.reduce((a, r) => a + r.k, 0) + '</em></div>' + x.list.map(tile).join("")).join("") +
+      '</div>' + '<div class="bgrid one">' + body +
       '<div class="wide3"><button type="button" class="wide go3" data-nr="__genres"><i>&#127925;</i>GENRES</button>' +
       '<button type="button" class="wide go3" data-nr="__prod"><i>&#127911;</i>PRODUCERS</button>' +
       '<button type="button" class="wide go3" data-nr="__find"><i>&#128269;</i>SEARCH</button></div></div>';
   }
-  n0.onclick = e => { const b = e.target.closest("[data-nr]"); if (b) { const v = b.dataset.nr;
+  n0.onclick = e => { const gb = e.target.closest("[data-grp]"); if (gb) { try { sessionStorage.setItem("ogfan99grp", gb.dataset.grp); } catch (er) {} drawNat(); try { window.scrollTo(0, 0); n0.scrollTop = 0; } catch (er) {} return; }
+    const b = e.target.closest("[data-nr]"); if (b) { const v = b.dataset.nr;
       if (v === "__ny") return setStep(1);
       if (v === "__genres") return OGW.go("genres");
       if (v === "__prod") return OGW.go("producers");

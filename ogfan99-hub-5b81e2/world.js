@@ -28,6 +28,11 @@
     ".hm-list{display:grid;gap:5px}",
     ".hm-list button{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:8px;text-align:left;border:2px solid #2c3050;border-radius:10px;background:#1d2033;color:#fff;padding:10px;font:800 .82rem/1 Helvetica,Arial,sans-serif;letter-spacing:.06em;cursor:pointer}",
     ".hm-list button.on{border-color:#e8b84a;background:#2a2410}",
+    ".hm-list button{min-height:56px;font-size:.95rem}.hm-list .hm-bk{min-height:44px;background:#111;border-color:#e8b84a;color:#e8b84a}",
+    ".wbox .wtog{display:flex;width:100%;align-items:center;justify-content:space-between;gap:8px;background:none;border:0;padding:2px 0;color:#fff;font:900 1.05rem/1.1 Helvetica,Arial,sans-serif;letter-spacing:.08em;text-align:left;cursor:pointer}",
+    ".wbox .wtog i{font-style:normal;flex:none;font:900 .62rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;background:#e8b84a;color:#000;border:1.5px solid #000;border-radius:7px;padding:6px 8px}",
+    ".wbox .wtog.on i{background:#fff}.wbox .wfold{margin-top:8px}",
+
     ".hm-list button b{font-size:18px;text-align:center}",
     ".hm-list em{font-style:normal;font:900 .6rem/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;padding:4px 6px;border-radius:5px;background:repeating-linear-gradient(-45deg,#f2c14e 0 6px,#e0a800 6px 12px);color:#000}",
     ".hm-list em.g{background:#e8b84a;color:#000;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}",
@@ -176,15 +181,21 @@
     var ex = (function () { try { return localStorage.getItem("ogfan99explicit") === "1"; } catch (e) { return false; } })();
     var td = $("today"), tdName = td && !td.hidden ? (td.querySelector("b") || {}).textContent : "";
     var it = function (k, ic, t, extra, on) { return '<button type="button" data-m="' + k + '"' + (on ? ' class="on"' : '') + '><b>' + ic + '</b><span>' + t + '</span>' + (extra || "") + '</button>'; };
-    nav.innerHTML = '<div class="hm-sec">GO TO</div>' + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "OTHER CITIES", genres: "OTHER GENRES", women: "FEMALE RAPPERS", rip: "REST IN POWER" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join("") +
-      '<div class="hm-sec">YOU</div>' + it("metro", "&#127915;", "MY RIDER CARD") + (tdName ? it("today", "&#9733;", "TODAY'S TRAIN 2X", '<em class="g">' + esc(tdName) + '</em>') : "") + it("perks", "&#127873;", "PLAY TO WIN PERKS") +
-      '<div class="hm-sec">SETTINGS</div>' + it("ex", "<span class=\"exb\">E</span>", "EXPLICIT LYRICS 18+", '<em class="' + (ex ? "g" : "") + '">' + (ex ? "ON" : "OFF") + '</em>') + it("key", "&#128647;", "SUBWAY KEY + LEGEND") + it("over", "&#8634;", "START OVER");
+    var secOf = MSEC;
+    if (!secOf) { nav.innerHTML = it("s:go", "&#128647;", "GO TO", '<em class="g">&#9654;</em>') + it("s:you", "&#127915;", "YOU", '<em class="g">&#9654;</em>') + it("s:set", "&#9881;", "SETTINGS", '<em class="g">&#9654;</em>'); return; }
+    var bk = '<button type="button" data-m="s:" class="hm-bk"><b>&#9664;</b><span>MENU</span></button>';
+    if (secOf === "go") { nav.innerHTML = bk + TABS.map(function (t) { return it("w:" + t.id, t.ic, ({ map: "THE MAP", lounge: "ARTIST LOUNGE", fans: "FAN ZONE", producers: "PRODUCERS", regions: "OTHER CITIES", genres: "OTHER GENRES", women: "FEMALE RAPPERS", rip: "REST IN POWER" })[t.id], t.uc ? '<em>SOON</em>' : '', cur === t.id); }).join(""); return; }
+    if (secOf === "you") { nav.innerHTML = bk + it("metro", "&#127915;", "MY RIDER CARD") + (tdName ? it("today", "&#9733;", "TODAY'S TRAIN 2X", '<em class="g">' + esc(tdName) + '</em>') : "") + it("perks", "&#127873;", "PLAY TO WIN PERKS"); return; }
+    nav.innerHTML = bk + it("ex", "<span class=\"exb\">E</span>", "EXPLICIT LYRICS 18+", '<em class="' + (ex ? "g" : "") + '">' + (ex ? "ON" : "OFF") + '</em>') + it("key", "&#128647;", "SUBWAY KEY + LEGEND") + it("over", "&#8634;", "START OVER");
   }
-  var openMenu = function (on) { if (on) drawMenu(); menu.hidden = !on; };
+  var MSEC = "";
+  var openMenu = function (on) { if (on) { MSEC = ""; drawMenu(); } menu.hidden = !on; };
   hb.onclick = function () { openMenu(true); };
   menu.onclick = function (e) {
     if (e.target === menu || e.target.closest(".hm-x")) return openMenu(false);
-    var b = e.target.closest("[data-m]"); if (!b) return; var m = b.dataset.m; openMenu(false);
+    var b = e.target.closest("[data-m]"); if (!b) return; var m = b.dataset.m;
+    if (m.indexOf("s:") === 0) { MSEC = m.slice(2); drawMenu(); return; }
+    openMenu(false);
     if (m.indexOf("w:") === 0) return go(m.slice(2));
     if (cur !== "map" && m !== "over") go("map");
     setTimeout(function () { click({ metro: "metro", today: "today", perks: "perkBar", ex: "exBtn", key: "moreBtn", over: "restartAll" }[m]); }, cur === "map" ? 0 : 60);
@@ -197,7 +208,26 @@
     Object.keys(panes).forEach(function (k) { panes[k].hidden = k !== id; });
     if (id === "map") { setTimeout(function () { try { window.__map && window.__map.invalidateSize({ pan: false }); } catch (e) {} }, 30); return; }
     ({ lounge: drawLounge, fans: drawFans, producers: drawProducers, regions: drawRegions, genres: drawGenres, women: drawWomen, rip: drawRip })[id]();
-    panes[id].scrollTop = 0;
+    panes[id].scrollTop = 0; tidy(panes[id]);
+  }
+  /* fine print stays folded: each box shows its title and buttons; tap the title to read the details */
+  function tidy(pane) {
+    if (!pane || pane.__tidyObs) { return; }
+    var run = function () {
+      pane.querySelectorAll(".wbox:not([data-t])").forEach(function (bx) {
+        bx.setAttribute("data-t", "1");
+        var txt = [].filter.call(bx.children, function (c) { return /^(P|OL|UL)$/.test(c.tagName); });
+        if (!txt.length) return;
+        var more = document.createElement("div"); more.className = "wfold"; more.hidden = true;
+        txt[0].parentNode.insertBefore(more, txt[0]); txt.forEach(function (c) { more.appendChild(c); });
+        var h = bx.querySelector("h4");
+        var t = document.createElement("button"); t.type = "button"; t.className = "wtog"; t.innerHTML = (h ? h.innerHTML : "DETAILS") + '<i>&#9432; INFO</i>';
+        if (h) h.replaceWith(t); else bx.insertBefore(t, more);
+        t.onclick = function () { more.hidden = !more.hidden; t.classList.toggle("on", !more.hidden); };
+      });
+    };
+    run();
+    try { pane.__tidyObs = new MutationObserver(run); pane.__tidyObs.observe(pane, { childList: true, subtree: true }); } catch (e) {}
   }
   window.OGW = { go: go, h: { row: function () { return row.apply(null, arguments); }, initials: initials, avColor: avColor, meta: meta, bul: bul, owner: owner, live: live, LS: LS, cert: function (a) { return certInfo(a); } } };
 
@@ -538,9 +568,9 @@
     { g: "THE SOUTH" },
     { n: "SOUTH FLORIDA", d: "Miami, Fort Lauderdale, West Palm Beach.", c: "#ff4fa3", coming: ["Gloria Estefan", "Hotboii", "Lil Poppa", "Luh Tyler", "BossMan Dlow", "SpaceGhostPurrp", "Doechii", "Pitbull", "Yungeen Ace", "City Girls", "Ace Hood", "Plies", "Ski Mask the Slump God", "Trick Daddy", "Flo Rida", "Trina", "Pouya", "Denzel Curry"], locked: [{ who: "Sevin Soprano", ig: "sevinsoprano" }] },
     { n: "ATLANTA", d: "The A, Decatur, College Park, East Point.", c: "#d62828", coming: ["Rich the Kid", "Keri Hilson", "Yung Joc", "India.Arie", "Gladys Knight", "Ciara", "Monica", "TLC", "Bankroll Mafia", "Hoodrich Pablo Juan", "YoungBloodZ", "D4L", "Shop Boyz", "Bankroll Fresh", "Trinidad James", "Kodie Shane", "Russ", "Dem Franchize Boyz", "Jermaine Dupri", "Rocko", "Waka Flocka Flame", "Lil Gotit", "Lil Keed", "Young Nudy", "Lil Nas X", "Childish Gambino", "Gunna", "21 Savage", "2 Chainz", "Kris Kross", "Arrested Development", "Lil Jon", "Rich Homie Quan", "Lil Yachty", "Young Thug", "Lil Baby", "Pastor Troy", "Big Boi", "Latto", "Killer Mike", "T.I.", "Jeezy", "Future", "Andr\u00e9 3000", "Ludacris", "CyHi the Prynce", "Jarren Benton", "Baby Tate", "Kenny Mason", "J.I.D", "Deante' Hitchcock", "EarthGang"] },
-    { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6", coming: ["Selena", "Yolanda Adams", "Kirk Franklin", "Lizzo", "Geto Boys", "Riff Raff", "Sauce Walka", "Don Toliver", "H-Town", "Archie Bell & the Drells", "Erykah Badu", "Solange", "Beyonc\u00e9", "Destiny's Child", "Chingo Bling", "Baby Bash", "The D.O.C.", "Lil Loaded", "Lil' O", "Asian Doll", "Dorrough", "Kevin Abstract", "Erica Banks", "iann dior", "Mo3", "Fat Pat", "Big Moe", "Lil' Flip", "Kirko Bangz", "That Mexican OT", "BigXthaPlug", "Maxo Kream", "Trae tha Truth", "Mike Jones", "Travis Scott", "Chamillionaire", "Lil' Keke", "Slim Thug", "Megan Thee Stallion", "Paul Wall", "Scarface", "Bun B", "Bobby Sessions", "Monaleo", "Devin the Dude", "Fat Tony", "Tobe Nwigwe"] },
+    { n: "HOUSTON + TEXAS", d: "H-Town, Dallas, Austin, San Antonio.", c: "#0039a6", coming: ["Willie Nelson", "Selena", "Yolanda Adams", "Kirk Franklin", "Lizzo", "Geto Boys", "Riff Raff", "Sauce Walka", "Don Toliver", "H-Town", "Archie Bell & the Drells", "Erykah Badu", "Solange", "Beyonc\u00e9", "Destiny's Child", "Chingo Bling", "Baby Bash", "The D.O.C.", "Lil Loaded", "Lil' O", "Asian Doll", "Dorrough", "Kevin Abstract", "Erica Banks", "iann dior", "Mo3", "Fat Pat", "Big Moe", "Lil' Flip", "Kirko Bangz", "That Mexican OT", "BigXthaPlug", "Maxo Kream", "Trae tha Truth", "Mike Jones", "Travis Scott", "Chamillionaire", "Lil' Keke", "Slim Thug", "Megan Thee Stallion", "Paul Wall", "Scarface", "Bun B", "Bobby Sessions", "Monaleo", "Devin the Dude", "Fat Tony", "Tobe Nwigwe"] },
     { n: "NEW ORLEANS", d: "Uptown, the 3rd Ward, the 7th Ward.", c: "#7b3fbf", coming: ["Fats Domino", "Irma Thomas", "The Neville Brothers", "Lil Phat", "Silkk the Shocker", "Jay Electronica", "Big Freedia", "Turk", "Mia X", "Birdman", "B.G.", "Lil Wayne", "Master P", "Juvenile", "Nesby Phips", "Curren$y", "Dee-1", "Alfred Banks", "Pell"] },
-    { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Johnnie Taylor", "Upchurch", "Key Glock", "K. Michelle", "Carla Thomas", "Isaac Hayes", "Struggle Jennings", "Kenny Muney", "Big Boogie", "Blac Youngsta", "Duke Deuce", "Big Scarr", "Lil Wyte", "Al Kapone", "Pooh Shiesty", "Moneybagg Yo", "Young Dolph", "GloRilla", "8Ball & MJG", "Starlito", "Don Trip", "Isaiah Rashad", "Count Bass D"] },
+    { n: "MEMPHIS + TENNESSEE", d: "Memphis and Nashville.", c: "#e8b84a", coming: ["Dolly Parton", "Johnnie Taylor", "Upchurch", "Key Glock", "K. Michelle", "Carla Thomas", "Isaac Hayes", "Struggle Jennings", "Kenny Muney", "Big Boogie", "Blac Youngsta", "Duke Deuce", "Big Scarr", "Lil Wyte", "Al Kapone", "Pooh Shiesty", "Moneybagg Yo", "Young Dolph", "GloRilla", "8Ball & MJG", "Starlito", "Don Trip", "Isaiah Rashad", "Count Bass D"] },
     { n: "VIRGINIA", d: "Virginia Beach, Norfolk, Richmond.", c: "#00933c", coming: ["Clipse", "Ruth Brown", "Roberta Flack", "The Lady of Rage", "Timbaland & Magoo", "Fly Anakin", "Lil Ugly Mane", "Shelley FKA DRAM", "Missy Elliott", "Pusha T", "Skillz", "Nickelus F", "Tonedeff"] },
     { n: "THE CAROLINAS", d: "Charlotte, Raleigh-Durham, Fayetteville, Columbia.", c: "#0099d8", coming: ["Fantasia", "Anthony Hamilton", "Toosii", "Speaker Knockerz", "Phonte", "Rapper Big Pooh", "Mavi", "Stunna 4 Vegas", "King Mez", "Morray", "Petey Pablo", "J. Cole", "Deniro Farrar", "Little Brother", "Lute", "Rapsody"] },
     { n: "MORE OF THE SOUTH", d: "Every other Southern city.", c: "#35b867", coming: ["Lionel Richie", "OMB Peezy", "Field Mob", "Pink Siifu", "Flo Milli", "CunninLynguists", "Jack Harlow", "Bubba Sparxxx", "David Banner", "Yelawolf", "Big K.R.I.T."], locked: [{ who: "The real_Saddium", ig: "the_real_saddium" }] },
@@ -711,7 +741,7 @@
 
   /* ---------- FEMALE RAPPERS: every woman on the map or in a region, sorted by where she's from ---------- */
   var WOMEN = ["Remy Ma", "Ice Spice", "Cardi B", "Rah Digga", "Queen Latifah", "Princess Nokia", "Azealia Banks", "Melii", "MC Lyte", "Roxanne Shant\u00e9", "HeeSun Lee", "Hanifah Walidah", "Lauryn Hill", "Coi Leray", "Justina Valentine", "Leikeli47", "Nitty Scott", "Salt-N-Pepa", "Sha-Rock", "Jean Grae", "Lil Mama", "Lil' Kim", "Young M.A", "Foxy Brown", "Nicki Minaj", "Lola Brooke", "Queen Pen", "Junglepussy", "Heather B.", "Hurricane G", "Monie Love", "Sweet Tee", "Lady London",
-    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera", "Sammus", "Akua Naru", "Rico Nasty", "Baby Tate", "Dutch ReBelle", "Monaleo", "Da Brat", "GloRilla", "Megan Thee Stallion", "Saweetie", "Kash Doll", "Trina", "Latto", "Missy Elliott", "Mia X", "Ché Noir", "DeJ Loaf", "City Girls", "Flo Milli", "Kodie Shane", "Ms. Jade", "Maiya the Don", "Shawnna", "Erica Banks", "Doechii", "Snow Tha Product", "Asian Doll", "Dreezy", "Doja Cat", "The Lady of Rage", "Yo-Yo", "Destiny's Child", "Toni Braxton", "Jennifer Hudson", "Anita Baker", "En Vogue", "TLC", "Monica", "Ciara", "Aretha Franklin", "Brandy", "Teena Marie", "Gladys Knight", "India.Arie", "Beyonc\u00e9", "Solange", "Roberta Flack", "Carla Thomas", "Chaka Khan", "Ruth Brown", "Minnie Riperton", "Erykah Badu", "Fantasia", "J.J. Fad", "Irma Thomas", "The Pointer Sisters", "Kehlani", "Keyshia Cole", "Stunna Girl", "Keri Hilson", "K. Michelle", "Lizzo", "Ledisi", "Lalah Hathaway", "M\u00fda", "Macy Gray", "Aaliyah", "Janelle Mon\u00e1e", "Yolanda Adams", "Selena", "Gloria Estefan", "CeCe Winans"];
+    "Tierra Whack", "Eve", "Bahamadia", "Lay Bankz", "Noname", "Rapsody", "Dessa", "Tink", "Kamaiyah", "Reverie", "Rocky Rivera", "Sammus", "Akua Naru", "Rico Nasty", "Baby Tate", "Dutch ReBelle", "Monaleo", "Da Brat", "GloRilla", "Megan Thee Stallion", "Saweetie", "Kash Doll", "Trina", "Latto", "Missy Elliott", "Mia X", "Ché Noir", "DeJ Loaf", "City Girls", "Flo Milli", "Kodie Shane", "Ms. Jade", "Maiya the Don", "Shawnna", "Erica Banks", "Doechii", "Snow Tha Product", "Asian Doll", "Dreezy", "Doja Cat", "The Lady of Rage", "Yo-Yo", "Destiny's Child", "Toni Braxton", "Jennifer Hudson", "Anita Baker", "En Vogue", "TLC", "Monica", "Ciara", "Aretha Franklin", "Brandy", "Teena Marie", "Gladys Knight", "India.Arie", "Beyonc\u00e9", "Solange", "Roberta Flack", "Carla Thomas", "Chaka Khan", "Ruth Brown", "Minnie Riperton", "Erykah Badu", "Fantasia", "J.J. Fad", "Irma Thomas", "The Pointer Sisters", "Kehlani", "Keyshia Cole", "Stunna Girl", "Keri Hilson", "K. Michelle", "Lizzo", "Ledisi", "Lalah Hathaway", "M\u00fda", "Macy Gray", "Aaliyah", "Janelle Mon\u00e1e", "Yolanda Adams", "Selena", "Gloria Estefan", "CeCe Winans", "Dolly Parton"];
   function drawWomen() {
     var p = panes.women, RG = window.OG_REGION_GAMES || {}, L = A(), C = "#e84aa0";
     var groups = [], idx = {};

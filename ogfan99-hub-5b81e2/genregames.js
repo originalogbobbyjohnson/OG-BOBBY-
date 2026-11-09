@@ -127,7 +127,11 @@ window.OG_GENRE_OF = {
   "Faith Evans": "R&B",
   "SZA": "R&B",
   "Mariah Carey": "POP",
+  "Marc Anthony": "LATIN + REGGAETON",
+  "Jennifer Lopez": "LATIN + REGGAETON",
   "Billy Joel": "ROCK",
-  "Bruce Springsteen": "ROCK"
+  "Bruce Springsteen": "ROCK",
+  "Dolly Parton": "COUNTRY",
+  "Willie Nelson": "COUNTRY",
 };
 
