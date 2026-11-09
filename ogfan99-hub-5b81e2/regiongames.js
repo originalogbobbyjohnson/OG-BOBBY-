@@ -556,4 +556,6 @@ window.OG_REGION_GAMES = {
   "Ed Sheeran": { url: "../edsheeran-ogfan99-6132a8/", ex: 0 },
   "Bob Marley": { url: "../bobmarley-ogfan99-17ceb2/", ex: 0 },
   "Sean Paul": { url: "../seanpaul-ogfan99-94dccd/", ex: 1 },
+  "Tems": { url: "../tems-ogfan99-61384b/", ex: 0 },
+  "Tyla": { url: "../tyla-ogfan99-e608b2/", ex: 0 },
 };
