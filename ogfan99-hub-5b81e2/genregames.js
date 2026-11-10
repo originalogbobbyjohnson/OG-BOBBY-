@@ -211,5 +211,7 @@ window.OG_GENRE_OF = {
   "Paul McCartney": "ROCK",
   "Taylor Swift": "POP",
   "Sudan Archives": "R&B",
+  "Propaganda": "GOSPEL",
+  "Jackie Hill Perry": "GOSPEL",
 };
 

@@ -620,4 +620,6 @@ window.OG_REGION_GAMES = {
   "Paul McCartney": { url: "../paulmccartney-ogfan99-92c562/", ex: 0 },
   "Taylor Swift": { url: "../taylorswift-ogfan99-fdc853/", ex: 0 },
   "Sudan Archives": { url: "../sudanarchives-ogfan99-f89967/", ex: 2, indie: 1 },
+  "Propaganda": { url: "../propaganda-ogfan99-3dff92/", ex: 0, indie: 1 },
+  "Jackie Hill Perry": { url: "../jackiehillperry-ogfan99-b687ab/", ex: 0, indie: 1 },
 };
