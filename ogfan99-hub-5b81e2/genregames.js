@@ -269,5 +269,7 @@ window.OG_GENRE_OF = {
   "Shane Smith & the Saints": "COUNTRY",
   "Jonathan McReynolds": "GOSPEL",
   "Koryn Hawthorne": "GOSPEL",
+  "Wyatt Flores": "COUNTRY",
+  "Zach Top": "COUNTRY",
 };
 

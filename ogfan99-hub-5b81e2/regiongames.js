@@ -706,4 +706,6 @@ window.OG_REGION_GAMES = {
   "Tony Shhnow": { url: "../tonyshhnow-ogfan99-557d08/", ex: 2, indie: 1 },
   "Jonathan McReynolds": { url: "../jonathanmcreynolds-ogfan99-3b0dd2/", ex: 0 },
   "Koryn Hawthorne": { url: "../korynhawthorne-ogfan99-ef8415/", ex: 0 },
+  "Wyatt Flores": { url: "../wyattflores-ogfan99-c82763/", ex: 0 },
+  "Zach Top": { url: "../zachtop-ogfan99-bb3447/", ex: 0 },
 };
