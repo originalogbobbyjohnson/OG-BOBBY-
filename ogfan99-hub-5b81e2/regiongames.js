@@ -577,4 +577,6 @@ window.OG_REGION_GAMES = {
   "Luke Combs": { url: "../lukecombs-ogfan99-e697fa/", ex: 0 },
   "Ti\u00ebsto": { url: "../tiesto-ogfan99-0a4e55/", ex: 0 },
   "Steve Aoki": { url: "../steveaoki-ogfan99-22619e/", ex: 0 },
+  "John Legend": { url: "../johnlegend-ogfan99-8860f8/", ex: 0 },
+  "Bruno Mars": { url: "../brunomars-ogfan99-9d4631/", ex: 0 },
 };

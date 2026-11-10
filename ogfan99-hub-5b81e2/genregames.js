@@ -175,5 +175,7 @@ window.OG_GENRE_OF = {
   "Luke Combs": "COUNTRY",
   "Ti\u00ebsto": "EDM + DANCE",
   "Steve Aoki": "EDM + DANCE",
+  "John Legend": "R&B",
+  "Bruno Mars": "POP",
 };
 
