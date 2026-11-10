@@ -133,6 +133,8 @@ window.OG_GENRE_OF = {
   "Romeo Santos": "LATIN + REGGAETON",
   "Lady Gaga": "POP",
   "Cyndi Lauper": "POP",
+  "Maxwell": "R&B",
+  "Lenny Kravitz": "ROCK",
   "Neil Diamond": "POP",
   "Carole King": "POP",
   "Barbra Streisand": "POP",
