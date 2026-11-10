@@ -753,4 +753,6 @@ window.OG_REGION_GAMES = {
   "Wretch 32": { url: "../wretch32-ogfan99-89e30e/", ex: 0 },
   "Chandler Moore": { url: "../chandlermoore-ogfan99-f01615/", ex: 0 },
   "Todd Dulaney": { url: "../todddulaney-ogfan99-c96e6b/", ex: 0 },
+  "Avery Anna": { url: "../averyanna-ogfan99-de61c3/", ex: 0 },
+  "Tucker Wetmore": { url: "../tuckerwetmore-ogfan99-00ab00/", ex: 0 },
 };

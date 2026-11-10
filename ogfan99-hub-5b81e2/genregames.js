@@ -301,5 +301,7 @@ window.OG_GENRE_OF = {
   "Conner Smith": "COUNTRY",
   "Chandler Moore": "GOSPEL",
   "Todd Dulaney": "GOSPEL",
+  "Avery Anna": "COUNTRY",
+  "Tucker Wetmore": "COUNTRY",
 };
 
