@@ -255,5 +255,7 @@ window.OG_GENRE_OF = {
   "Billy Strings": "COUNTRY",
   "Khalid": "R&B",
   "Noah Kahan": "POP",
+  "Koe Wetzel": "COUNTRY",
+  "Whiskey Myers": "COUNTRY",
 };
 

@@ -689,4 +689,6 @@ window.OG_REGION_GAMES = {
   "Billy Strings": { url: "../billystrings-ogfan99-d7cd78/", ex: 0, indie: 1 },
   "Khalid": { url: "../khalid-ogfan99-354cda/", ex: 0 },
   "Noah Kahan": { url: "../noahkahan-ogfan99-31859b/", ex: 0 },
+  "Koe Wetzel": { url: "../koewetzel-ogfan99-6743b1/", ex: 2, indie: 1 },
+  "Whiskey Myers": { url: "../whiskeymyers-ogfan99-bf8990/", ex: 0, indie: 1 },
 };
