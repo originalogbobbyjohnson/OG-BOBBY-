@@ -297,5 +297,7 @@ window.OG_GENRE_OF = {
   "Elevation Worship": "GOSPEL",
   "U2": "ROCK",
   "Lewis Capaldi": "POP",
+  "Corey Kent": "COUNTRY",
+  "Conner Smith": "COUNTRY",
 };
 

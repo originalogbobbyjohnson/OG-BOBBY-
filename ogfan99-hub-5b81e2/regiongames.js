@@ -745,4 +745,6 @@ window.OG_REGION_GAMES = {
   "Elevation Worship": { url: "../elevationworship-ogfan99-df3265/", ex: 0 },
   "U2": { url: "../u2-ogfan99-d46a73/", ex: 0 },
   "Lewis Capaldi": { url: "../lewiscapaldi-ogfan99-5d7a7a/", ex: 0 },
+  "Corey Kent": { url: "../coreykent-ogfan99-ff682d/", ex: 0 },
+  "Conner Smith": { url: "../connersmith-ogfan99-d653fa/", ex: 0 },
 };
