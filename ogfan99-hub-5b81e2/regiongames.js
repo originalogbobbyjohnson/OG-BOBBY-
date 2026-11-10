@@ -639,4 +639,6 @@ window.OG_REGION_GAMES = {
   "Snoh Aalegra": { url: "../snohaalegra-ogfan99-52d533/", ex: 0 },
   "Ambr\u00e9": { url: "../ambre-ogfan99-453300/", ex: 2 },
   "Jvck James": { url: "../jvckjames-ogfan99-dc9f3d/", ex: 0 },
+  "Futuristic": { url: "../futuristic-ogfan99-200e45/", ex: 0, indie: 1 },
+  "Merkules": { url: "../merkules-ogfan99-a4cc29/", ex: 2, indie: 1 },
 };
