@@ -758,4 +758,5 @@ window.OG_REGION_GAMES = {
   "Potter Payper": { url: "../potterpayper-ogfan99-bbf4dc/", ex: 2, indie: 1 },
   "Israel Houghton": { url: "../israelhoughton-ogfan99-160c5d/", ex: 0 },
   "Jekalyn Carr": { url: "../jekalyncarr-ogfan99-24e1a0/", ex: 0 },
+  "Dave": { url: "../dave-ogfan99-c7fccb/", ex: 2 },
 };
