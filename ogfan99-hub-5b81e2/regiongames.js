@@ -739,4 +739,6 @@ window.OG_REGION_GAMES = {
   "Arctic Monkeys": { url: "../arcticmonkeys-ogfan99-be96a8/", ex: 0 },
   "Drew Parker": { url: "../drewparker-ogfan99-5672f6/", ex: 0 },
   "William Beckmann": { url: "../williambeckmann-ogfan99-5900d6/", ex: 2 },
+  "Knucks": { url: "../knucks-ogfan99-b36a9c/", ex: 2, indie: 1 },
+  "Ocean Wisdom": { url: "../oceanwisdom-ogfan99-f05597/", ex: 2, indie: 1 },
 };
