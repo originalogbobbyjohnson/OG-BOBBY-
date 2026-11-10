@@ -687,4 +687,6 @@ window.OG_REGION_GAMES = {
   "Lauren Daigle": { url: "../laurendaigle-ogfan99-982bae/", ex: 0 },
   "Sierra Ferrell": { url: "../sierraferrell-ogfan99-63220b/", ex: 0, indie: 1 },
   "Billy Strings": { url: "../billystrings-ogfan99-d7cd78/", ex: 0, indie: 1 },
+  "Khalid": { url: "../khalid-ogfan99-354cda/", ex: 0 },
+  "Noah Kahan": { url: "../noahkahan-ogfan99-31859b/", ex: 0 },
 };

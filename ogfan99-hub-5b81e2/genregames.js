@@ -253,5 +253,7 @@ window.OG_GENRE_OF = {
   "Lauren Daigle": "GOSPEL",
   "Sierra Ferrell": "COUNTRY",
   "Billy Strings": "COUNTRY",
+  "Khalid": "R&B",
+  "Noah Kahan": "POP",
 };
 
