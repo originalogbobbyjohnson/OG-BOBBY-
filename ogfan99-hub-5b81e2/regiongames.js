@@ -585,4 +585,5 @@ window.OG_REGION_GAMES = {
   "Daft Punk": { url: "../daftpunk-ogfan99-d3146a/", ex: 0 },
   "Chris Stapleton": { url: "../chrisstapleton-ogfan99-397be0/", ex: 0 },
   "Kacey Musgraves": { url: "../kaceymusgraves-ogfan99-22b0cb/", ex: 0 },
+  "Tha God Fahim": { url: "../thagodfahim-ogfan99-7d13a7/", ex: 0 },
 };
