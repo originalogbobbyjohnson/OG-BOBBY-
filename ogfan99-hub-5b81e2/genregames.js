@@ -206,5 +206,6 @@ window.OG_GENRE_OF = {
   "Mereba": "R&B",
   "Social Club Misfits": "GOSPEL",
   "Aha Gazelle": "GOSPEL",
+  "Steven Malcolm": "GOSPEL",
 };
 

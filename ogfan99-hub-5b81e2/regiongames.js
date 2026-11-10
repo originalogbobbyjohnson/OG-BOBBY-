@@ -616,4 +616,5 @@ window.OG_REGION_GAMES = {
   "Mereba": { url: "../mereba-ogfan99-357c5d/", ex: 0, indie: 1 },
   "Social Club Misfits": { url: "../socialclubmisfits-ogfan99-0ff6a0/", ex: 0, indie: 1 },
   "Aha Gazelle": { url: "../ahagazelle-ogfan99-cdf63d/", ex: 0, indie: 1 },
+  "Steven Malcolm": { url: "../stevenmalcolm-ogfan99-06912c/", ex: 0, indie: 1 },
 };
