@@ -703,4 +703,5 @@ window.OG_REGION_GAMES = {
   "Phil Wickham": { url: "../philwickham-ogfan99-3778b8/", ex: 0 },
   "Ian Munsick": { url: "../ianmunsick-ogfan99-f9d28f/", ex: 0, indie: 1 },
   "Shane Smith & the Saints": { url: "../shanesmiththesaints-ogfan99-e9d8e6/", ex: 0, indie: 1 },
+  "Tony Shhnow": { url: "../tonyshhnow-ogfan99-557d08/", ex: 2, indie: 1 },
 };
