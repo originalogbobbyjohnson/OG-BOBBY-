@@ -130,6 +130,8 @@ window.OG_GENRE_OF = {
   "Marc Anthony": "LATIN + REGGAETON",
   "Jennifer Lopez": "LATIN + REGGAETON",
   "Shaggy": "DANCEHALL + AFROBEATS",
+  "Romeo Santos": "LATIN + REGGAETON",
+  "Prince Royce": "LATIN + REGGAETON",
   "Billy Joel": "ROCK",
   "Bruce Springsteen": "ROCK",
   "Dolly Parton": "COUNTRY",
