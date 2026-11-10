@@ -183,5 +183,7 @@ window.OG_GENRE_OF = {
   "Faith Hill": "COUNTRY",
   "Martin Garrix": "EDM + DANCE",
   "Daft Punk": "EDM + DANCE",
+  "Chris Stapleton": "COUNTRY",
+  "Kacey Musgraves": "COUNTRY",
 };
 
