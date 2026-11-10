@@ -661,4 +661,6 @@ window.OG_REGION_GAMES = {
   "Kaash Paige": { url: "../kaashpaige-ogfan99-05b3d1/", ex: 0 },
   "Add-2": { url: "../add2-ogfan99-ced416/", ex: 2, indie: 1 },
   "Reuben Vincent": { url: "../reubenvincent-ogfan99-f64b34/", ex: 2 },
+  "Caskey": { url: "../caskey-ogfan99-3ec424/", ex: 2, indie: 1 },
+  "Mike Stud": { url: "../mikestud-ogfan99-5621b2/", ex: 1, indie: 1 },
 };
