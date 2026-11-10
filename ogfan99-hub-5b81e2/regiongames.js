@@ -608,4 +608,6 @@ window.OG_REGION_GAMES = {
   "Kenyon Dixon": { url: "../kenyondixon-ogfan99-80bcb4/", ex: 0, indie: 1 },
   "Trip Lee": { url: "../triplee-ogfan99-db194d/", ex: 0, indie: 1 },
   "Tedashii": { url: "../tedashii-ogfan99-7ded53/", ex: 0, indie: 1 },
+  "WHATUPRG": { url: "../whatuprg-ogfan99-d8094b/", ex: 0, indie: 1 },
+  "nobigdyl.": { url: "../nobigdyl-ogfan99-89f662/", ex: 0, indie: 1 },
 };

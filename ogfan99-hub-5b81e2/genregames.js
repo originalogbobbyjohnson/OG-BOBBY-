@@ -200,5 +200,7 @@ window.OG_GENRE_OF = {
   "Kenyon Dixon": "R&B",
   "Trip Lee": "GOSPEL",
   "Tedashii": "GOSPEL",
+  "WHATUPRG": "GOSPEL",
+  "nobigdyl.": "GOSPEL",
 };
 
