@@ -624,4 +624,6 @@ window.OG_REGION_GAMES = {
   "Jackie Hill Perry": { url: "../jackiehillperry-ogfan99-b687ab/", ex: 0, indie: 1 },
   "Derek Minor": { url: "../derekminor-ogfan99-230683/", ex: 0, indie: 1 },
   "Swoope": { url: "../swoope-ogfan99-051116/", ex: 0, indie: 1 },
+  "Lady Wray": { url: "../ladywray-ogfan99-0756f3/", ex: 0, indie: 1 },
+  "Durand Bernarr": { url: "../durandbernarr-ogfan99-426775/", ex: 0, indie: 1 },
 };

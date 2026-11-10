@@ -215,5 +215,7 @@ window.OG_GENRE_OF = {
   "Jackie Hill Perry": "GOSPEL",
   "Derek Minor": "GOSPEL",
   "Swoope": "GOSPEL",
+  "Lady Wray": "R&B",
+  "Durand Bernarr": "R&B",
 };
 
