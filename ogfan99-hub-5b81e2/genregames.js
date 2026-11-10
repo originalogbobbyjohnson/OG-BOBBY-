@@ -233,5 +233,7 @@ window.OG_GENRE_OF = {
   "Post Malone": "POP",
   "Morgan Wallen": "COUNTRY",
   "Destin Conrad": "R&B",
+  "Harry Styles": "POP",
+  "Sabrina Carpenter": "POP",
 };
 

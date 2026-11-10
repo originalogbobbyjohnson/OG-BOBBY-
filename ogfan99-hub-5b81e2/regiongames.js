@@ -654,4 +654,6 @@ window.OG_REGION_GAMES = {
   "Ekoh": { url: "../ekoh-ogfan99-14b04e/", ex: 2, indie: 1 },
   "TiaCorine": { url: "../tiacorine-ogfan99-6c4aab/", ex: 2 },
   "Mike Dimes": { url: "../mikedimes-ogfan99-437fda/", ex: 2, indie: 1 },
+  "Harry Styles": { url: "../harrystyles-ogfan99-401ad3/", ex: 0 },
+  "Sabrina Carpenter": { url: "../sabrinacarpenter-ogfan99-920f19/", ex: 1 },
 };
