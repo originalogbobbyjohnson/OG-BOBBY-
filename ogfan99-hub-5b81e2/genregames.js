@@ -284,5 +284,7 @@ window.OG_GENRE_OF = {
   "Kenny Chesney": "COUNTRY",
   "Eric Church": "COUNTRY",
   "Zacari": "R&B",
+  "Warren Zeiders": "COUNTRY",
+  "Ashley McBryde": "COUNTRY",
 };
 

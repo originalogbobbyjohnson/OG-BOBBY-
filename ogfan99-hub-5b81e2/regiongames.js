@@ -723,4 +723,6 @@ window.OG_REGION_GAMES = {
   "Kenny Chesney": { url: "../kennychesney-ogfan99-ed63a7/", ex: 0 },
   "Eric Church": { url: "../ericchurch-ogfan99-c4bfde/", ex: 0 },
   "Zacari": { url: "../zacari-ogfan99-951178/", ex: 0 },
+  "Warren Zeiders": { url: "../warrenzeiders-ogfan99-e70f8a/", ex: 0 },
+  "Ashley McBryde": { url: "../ashleymcbryde-ogfan99-ba97f6/", ex: 0 },
 };
