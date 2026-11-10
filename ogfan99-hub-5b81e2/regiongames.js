@@ -716,4 +716,6 @@ window.OG_REGION_GAMES = {
   "Hailey Whitters": { url: "../haileywhitters-ogfan99-42f851/", ex: 0, indie: 1 },
   "Cody Jinks": { url: "../codyjinks-ogfan99-024df7/", ex: 0, indie: 1 },
   "Randall King": { url: "../randallking-ogfan99-a2ce10/", ex: 0, indie: 1 },
+  "Bino Rideaux": { url: "../binorideaux-ogfan99-aa84e3/", ex: 2, indie: 1 },
+  "03 Greedo": { url: "../03greedo-ogfan99-835049/", ex: 2, indie: 1 },
 };
