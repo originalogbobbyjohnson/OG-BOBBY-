@@ -575,4 +575,6 @@ window.OG_REGION_GAMES = {
   "Tye Tribbett": { url: "../tyetribbett-ogfan99-90f0a4/", ex: 0 },
   "Carrie Underwood": { url: "../carrieunderwood-ogfan99-2c8b50/", ex: 0 },
   "Luke Combs": { url: "../lukecombs-ogfan99-e697fa/", ex: 0 },
+  "Ti\u00ebsto": { url: "../tiesto-ogfan99-0a4e55/", ex: 0 },
+  "Steve Aoki": { url: "../steveaoki-ogfan99-22619e/", ex: 0 },
 };

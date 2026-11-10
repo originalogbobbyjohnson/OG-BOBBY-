@@ -173,5 +173,7 @@ window.OG_GENRE_OF = {
   "Tye Tribbett": "GOSPEL",
   "Carrie Underwood": "COUNTRY",
   "Luke Combs": "COUNTRY",
+  "Ti\u00ebsto": "EDM + DANCE",
+  "Steve Aoki": "EDM + DANCE",
 };
 
