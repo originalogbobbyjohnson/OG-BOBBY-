@@ -166,5 +166,7 @@ window.OG_GENRE_OF = {
   "Reba McEntire": "COUNTRY",
   "BTS": "POP",
   "Keith Urban": "COUNTRY",
+  "Tasha Cobbs Leonard": "GOSPEL",
+  "Tye Tribbett": "GOSPEL",
 };
 

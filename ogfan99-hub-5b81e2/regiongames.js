@@ -571,4 +571,6 @@ window.OG_REGION_GAMES = {
   "Reba McEntire": { url: "../reba-ogfan99-2659a7/", ex: 0 },
   "BTS": { url: "../bts-ogfan99-41a5d4/", ex: 0 },
   "Keith Urban": { url: "../keithurban-ogfan99-a9cf17/", ex: 0 },
+  "Tasha Cobbs Leonard": { url: "../tashacobbs-ogfan99-efaa0d/", ex: 0 },
+  "Tye Tribbett": { url: "../tyetribbett-ogfan99-90f0a4/", ex: 0 },
 };
