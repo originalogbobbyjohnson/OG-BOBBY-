@@ -708,4 +708,6 @@ window.OG_REGION_GAMES = {
   "Koryn Hawthorne": { url: "../korynhawthorne-ogfan99-ef8415/", ex: 0 },
   "Wyatt Flores": { url: "../wyattflores-ogfan99-c82763/", ex: 0 },
   "Zach Top": { url: "../zachtop-ogfan99-bb3447/", ex: 0 },
+  "49 Winchester": { url: "../49winchester-ogfan99-bcfa15/", ex: 0, indie: 1 },
+  "Mo Pitney": { url: "../mopitney-ogfan99-eefffe/", ex: 0, indie: 1 },
 };

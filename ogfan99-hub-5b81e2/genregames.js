@@ -271,5 +271,7 @@ window.OG_GENRE_OF = {
   "Koryn Hawthorne": "GOSPEL",
   "Wyatt Flores": "COUNTRY",
   "Zach Top": "COUNTRY",
+  "49 Winchester": "COUNTRY",
+  "Mo Pitney": "COUNTRY",
 };
 
