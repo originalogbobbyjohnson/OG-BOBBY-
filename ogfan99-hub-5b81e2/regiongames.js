@@ -644,4 +644,5 @@ window.OG_REGION_GAMES = {
   "Post Malone": { url: "../postmalone-ogfan99-e7e728/", ex: 0 },
   "Morgan Wallen": { url: "../morganwallen-ogfan99-c3a287/", ex: 0 },
   "Destin Conrad": { url: "../destinconrad-ogfan99-f729f1/", ex: 0 },
+  "Killa Kyleon": { url: "../killakyleon-ogfan99-a1481c/", ex: 2, indie: 1 },
 };
