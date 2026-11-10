@@ -677,4 +677,6 @@ window.OG_REGION_GAMES = {
   "Tyler Childers": { url: "../tylerchilders-ogfan99-a23eec/", ex: 0, indie: 1 },
   "Sturgill Simpson": { url: "../sturgillsimpson-ogfan99-268750/", ex: 0, indie: 1 },
   "Jason Isbell": { url: "../jasonisbell-ogfan99-c464c5/", ex: 0, indie: 1 },
+  "1K Phew": { url: "../1kphew-ogfan99-6b9953/", ex: 0, indie: 1 },
+  "Canon": { url: "../canon-ogfan99-9a2825/", ex: 0, indie: 1 },
 };

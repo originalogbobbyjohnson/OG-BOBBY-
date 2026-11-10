@@ -245,5 +245,7 @@ window.OG_GENRE_OF = {
   "Tyler Childers": "COUNTRY",
   "Sturgill Simpson": "COUNTRY",
   "Jason Isbell": "COUNTRY",
+  "1K Phew": "GOSPEL",
+  "Canon": "GOSPEL",
 };
 
