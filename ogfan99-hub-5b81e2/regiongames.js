@@ -734,4 +734,6 @@ window.OG_REGION_GAMES = {
   "Kari Faux": { url: "../karifaux-ogfan99-7b37e3/", ex: 2, indie: 1 },
   "Riley Green": { url: "../rileygreen-ogfan99-a7d58e/", ex: 0 },
   "Parker McCollum": { url: "../parkermccollum-ogfan99-560f57/", ex: 0 },
+  "Loyle Carner": { url: "../loylecarner-ogfan99-2ea019/", ex: 0 },
+  "Kojey Radical": { url: "../kojeyradical-ogfan99-75805a/", ex: 0, indie: 1 },
 };
