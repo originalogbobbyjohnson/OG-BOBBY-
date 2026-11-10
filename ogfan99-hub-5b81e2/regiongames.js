@@ -685,4 +685,6 @@ window.OG_REGION_GAMES = {
   "Turnpike Troubadours": { url: "../turnpiketroubadours-ogfan99-68dbf5/", ex: 0, indie: 1 },
   "Hollyn": { url: "../hollyn-ogfan99-ec5e4b/", ex: 0, indie: 1 },
   "Lauren Daigle": { url: "../laurendaigle-ogfan99-982bae/", ex: 0 },
+  "Sierra Ferrell": { url: "../sierraferrell-ogfan99-63220b/", ex: 0, indie: 1 },
+  "Billy Strings": { url: "../billystrings-ogfan99-d7cd78/", ex: 0, indie: 1 },
 };

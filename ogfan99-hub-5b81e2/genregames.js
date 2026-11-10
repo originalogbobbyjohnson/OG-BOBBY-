@@ -251,5 +251,7 @@ window.OG_GENRE_OF = {
   "Turnpike Troubadours": "COUNTRY",
   "Hollyn": "GOSPEL",
   "Lauren Daigle": "GOSPEL",
+  "Sierra Ferrell": "COUNTRY",
+  "Billy Strings": "COUNTRY",
 };
 
