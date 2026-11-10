@@ -747,4 +747,6 @@ window.OG_REGION_GAMES = {
   "Lewis Capaldi": { url: "../lewiscapaldi-ogfan99-5d7a7a/", ex: 0 },
   "Corey Kent": { url: "../coreykent-ogfan99-ff682d/", ex: 0 },
   "Conner Smith": { url: "../connersmith-ogfan99-d653fa/", ex: 0 },
+  "Ghetts": { url: "../ghetts-ogfan99-58f47c/", ex: 2 },
+  "Pa Salieu": { url: "../pasalieu-ogfan99-381b3f/", ex: 2 },
 };
