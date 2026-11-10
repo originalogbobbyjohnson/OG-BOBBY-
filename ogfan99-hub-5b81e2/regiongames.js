@@ -586,4 +586,6 @@ window.OG_REGION_GAMES = {
   "Chris Stapleton": { url: "../chrisstapleton-ogfan99-397be0/", ex: 0 },
   "Kacey Musgraves": { url: "../kaceymusgraves-ogfan99-22b0cb/", ex: 0 },
   "Tha God Fahim": { url: "../thagodfahim-ogfan99-7d13a7/", ex: 0 },
+  "Willie the Kid": { url: "../williethekid-ogfan99-d6563c/", ex: 2 },
+  "Lukah": { url: "../lukah-ogfan99-196735/", ex: 0 },
 };
