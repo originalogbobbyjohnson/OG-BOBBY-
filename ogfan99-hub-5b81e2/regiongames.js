@@ -603,4 +603,6 @@ window.OG_REGION_GAMES = {
   "Hulvey": { url: "../hulvey-ogfan99-454b02/", ex: 0 },
   "Elton John": { url: "../eltonjohn-ogfan99-f63d79/", ex: 0 },
   "Coldplay": { url: "../coldplay-ogfan99-ad3d7b/", ex: 0 },
+  "Cozz": { url: "../cozz-ogfan99-e588ed/", ex: 2 },
+  "REASON": { url: "../reason-ogfan99-409b19/", ex: 2 },
 };
