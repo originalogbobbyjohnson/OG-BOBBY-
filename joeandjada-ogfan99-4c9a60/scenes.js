@@ -10,8 +10,7 @@
     '@keyframes jjsweep{0%,100%{transform:rotate(-22deg)}50%{transform:rotate(22deg)}}.jj-sw{transform-box:fill-box;transform-origin:50% 0%;animation:jjsweep 4s ease-in-out infinite}.jj-sw2{animation-delay:-2s}' +
     '@keyframes jjel{0%{transform:translateX(-260px)}100%{transform:translateX(330px)}}.jj-el{animation:jjel 7s linear infinite}' +
     '@keyframes jjboat{0%{transform:translateX(0)}100%{transform:translateX(-120px)}}.jj-boat{animation:jjboat 14s linear infinite alternate}' +
-    '@keyframes jjshot{0%{transform:translate(0,0)}45%{transform:translate(70px,-70px)}80%,100%{transform:translate(118px,-22px)}}.jj-ball{animation:jjshot 2.6s ease-in-out infinite}' +
-    '@keyframes jjconf{0%{transform:translateY(-30px) rotate(0)}100%{transform:translateY(270px) rotate(320deg)}}.jj-cf{transform-box:fill-box;animation:jjconf 5s linear infinite}.jj-cf2{animation-delay:-1.7s}.jj-cf3{animation-delay:-3.4s}' +
+        '@keyframes jjconf{0%{transform:translateY(-30px) rotate(0)}100%{transform:translateY(270px) rotate(320deg)}}.jj-cf{transform-box:fill-box;animation:jjconf 5s linear infinite}.jj-cf2{animation-delay:-1.7s}.jj-cf3{animation-delay:-3.4s}' +
     '@keyframes jjflag{0%{transform:translate(-10px,-18px) rotate(-20deg);opacity:0}30%{opacity:1}100%{transform:translate(0,0) rotate(8deg);opacity:1}}.jj-flag{transform-box:fill-box;animation:jjflag 2.4s ease-out infinite alternate}' +
     '@keyframes jjspray{0%{transform:translateY(0);opacity:.9}100%{transform:translateY(-24px);opacity:0}}.jj-sp{animation:jjspray 1.4s ease-out infinite}.jj-sp2{animation-delay:.45s}' +
     '</style>';
@@ -129,33 +128,42 @@
       sky("jj3", "#0e1430", "#a2506a"));
   }
 
-  /* 4. Sports talk: Finals night in an arena, the hardwood floor, the jumbotron, the ball dropping through, spotlights sweeping,
-        confetti coming down, and two empty courtside seats with two mics waiting for Joe and Jada */
+  /* 4. Show night: a hip-hop stage in the Garden, speaker stacks on both sides, the DJ booth with two turntables in the middle,
+        two mics on stands up front waiting for Joe and Jada, the LED wall pulsing with a waveform, spotlights sweeping,
+        confetti coming down and the crowd seen from behind with hands up */
   function jjarena() {
     const conf = Array.from({ length: 22 }, (_, i) => '<rect class="jj-cf' + ["", " jj-cf2", " jj-cf3"][i % 3] + '" x="' + (8 + i * 18) + '" y="' + ((i * 37) % 60) + '" width="5" height="3" fill="' + [RED, BLUE, GOLD, "#fff"][i % 4] + '" style="animation-delay:-' + ((i * 0.41) % 5).toFixed(2) + 's"/>').join("");
+    const stack = x => '<g transform="translate(' + x + ' 0)"><rect x="0" y="60" width="54" height="128" rx="3" fill="#141418" stroke="#2c2c34" stroke-width="2"/>' +
+      [78, 120, 160].map(y => '<circle cx="27" cy="' + y + '" r="' + (y === 160 ? 19 : 15) + '" fill="#0a0a0c" stroke="#3a3a44" stroke-width="3"/><circle class="jj-glow" cx="27" cy="' + y + '" r="5" fill="#2a2a32"/>').join("") + '</g>';
+    const deck = x => '<circle cx="' + x + '" cy="150" r="17" fill="#0c0c10" stroke="#555" stroke-width="2"/><circle cx="' + x + '" cy="150" r="5" fill="' + RED + '"/><path d="M' + (x + 16) + ' 134l8 18" stroke="#c9ced6" stroke-width="2.5"/>';
+    const mic = x => '<path d="M' + x + ' 200v-46" stroke="#c9ced6" stroke-width="3"/><path d="M' + (x - 12) + ' 202h24" stroke="#c9ced6" stroke-width="3"/><rect x="' + (x - 5) + '" y="140" width="10" height="16" rx="5" fill="#1b1b1f" stroke="#888"/>';
+    let crowd = "";
+    for (let i = 0; i < 11; i++) {
+      const x = 18 + i * 36 + (i % 2 ? 6 : 0), up = i % 3 !== 1;
+      crowd += '<g class="jj-bob' + ["", " jj-bob2", " jj-bob3"][i % 3] + '">' + (up ? '<path d="M' + (x - 8) + ' 236l-6 -26M' + (x + 8) + ' 236l6 -26" stroke="#2a2733" stroke-width="5" stroke-linecap="round"/>' : "") + '</g>' +
+        head(x, 236, 1.15, ["#2a2733", "#302c3a", "#26232e"][i % 3], "jj-bob" + ["", " jj-bob2", " jj-bob3"][i % 3]);
+    }
     return svg(
-      '<rect width="400" height="260" fill="#090b14"/>' +
-      /* upper bowl: rows of tiny lights */
-      Array.from({ length: 5 }, (_, r) => '<path d="M0 ' + (40 + r * 14) + 'q200 -' + (26 - r * 3) + ' 400 0" stroke="' + ["#1c2238", "#222a44", "#283050", "#1c2238", "#222a44"][r] + '" stroke-width="12" fill="none"/>').join("") +
-      Array.from({ length: 40 }, (_, i) => '<circle class="' + (i % 5 ? "" : "jj-glow") + '" cx="' + (6 + i * 10) + '" cy="' + (36 + (i * 7) % 60) + '" r="1" fill="#fff" opacity=".5"/>').join("") +
-      /* jumbotron */
-      '<path d="M200 0v14" stroke="#444" stroke-width="2"/><rect x="146" y="14" width="108" height="46" rx="4" fill="#15171e" stroke="#3a3e48" stroke-width="2"/>' +
-      '<text x="200" y="28" text-anchor="middle" ' + font + ' font-size="9" fill="' + GOLD + '" letter-spacing="2">FINALS</text>' +
-      '<text x="172" y="50" text-anchor="middle" ' + font + ' font-size="15" fill="#fff">NY</text><text x="228" y="50" text-anchor="middle" ' + font + ' font-size="15" fill="#fff">SA</text>' +
-      '<rect class="jj-glow" x="192" y="40" width="16" height="3" fill="' + RED + '"/>' +
-      /* the floor */
-      '<path d="M0 132h400v128H0z" fill="#c8894e"/>' + Array.from({ length: 14 }, (_, i) => '<path d="M' + (i * 30) + ' 132l' + (-30 + i * 2) + ' 128" stroke="#b5773e" stroke-width="1.5"/>').join("") +
-      '<path d="M0 132h400" stroke="#fff" stroke-width="2"/><ellipse cx="160" cy="176" rx="46" ry="14" fill="none" stroke="#fff" stroke-width="2"/><path d="M160 132v128" stroke="#fff" stroke-width="2"/>' +
-      '<path d="M400 150h-70q-18 18 0 40h70" stroke="#fff" stroke-width="2" fill="' + BLUE + '" fill-opacity=".35"/>' +
-      /* the hoop on the right, the ball going up and in */
-      '<path d="M386 132v-46" stroke="#777" stroke-width="5"/><rect x="352" y="62" width="40" height="28" fill="#f5f5f5" fill-opacity=".85" stroke="#999"/><rect x="364" y="74" width="16" height="12" fill="none" stroke="' + RED + '" stroke-width="2"/>' +
-      '<ellipse cx="358" cy="92" rx="12" ry="3" fill="none" stroke="' + RED + '" stroke-width="2.5"/><path d="M347 93l4 14h14l4 -14" stroke="#eee" stroke-width="1" fill="none"/>' +
-      '<g class="jj-ball"><circle cx="240" cy="118" r="8" fill="#e8742a" stroke="#7a3410"/><path d="M232 118h16M240 110v16" stroke="#7a3410" stroke-width="1"/></g>' +
-      /* courtside: the table, two chairs, two mics */
-      '<rect x="20" y="196" width="190" height="26" rx="3" fill="#15171e"/><rect x="20" y="196" width="190" height="4" fill="' + GOLD + '"/>' +
-      '<path d="M76 196v-18M154 196v-18" stroke="#222" stroke-width="3"/><rect x="70" y="164" width="12" height="18" rx="6" fill="#1b1b1f" stroke="#666"/><rect x="148" y="164" width="12" height="18" rx="6" fill="#1b1b1f" stroke="#666"/>' +
-      [60, 140].map(x => '<rect x="' + x + '" y="222" width="40" height="12" rx="3" fill="#2a2a34"/><rect x="' + (x + 4) + '" y="202" width="32" height="22" rx="4" fill="#3a3a48"/><path d="M' + (x + 6) + ' 234v22M' + (x + 34) + ' 234v22" stroke="#222" stroke-width="3"/>').join("") +
-      '<path class="jj-sw" d="M60 0l-50 200h100z" fill="#fff3c8" opacity=".1"/><path class="jj-sw jj-sw2" d="M340 0l-50 200h100z" fill="' + BLUE + '" opacity=".12"/>' +
+      '<rect width="400" height="260" fill="#08070c"/>' +
+      /* upper rows of the Garden: tiny phone lights */
+      Array.from({ length: 4 }, (_, r) => '<path d="M0 ' + (16 + r * 12) + 'q200 -' + (22 - r * 3) + ' 400 0" stroke="' + ["#18162a", "#1e1a32", "#18162a", "#1e1a32"][r] + '" stroke-width="10" fill="none"/>').join("") +
+      Array.from({ length: 36 }, (_, i) => '<circle class="' + (i % 4 ? "" : "jj-glow") + '" cx="' + (6 + i * 11) + '" cy="' + (10 + (i * 7) % 44) + '" r="1" fill="#fff" opacity=".55"/>').join("") +
+      /* the LED wall with the waveform */
+      '<rect x="96" y="60" width="208" height="70" rx="4" fill="#0d0f18" stroke="#2a2f3a" stroke-width="3"/>' +
+      Array.from({ length: 34 }, (_, i) => '<rect class="jj-wv" style="animation-delay:-' + ((i * 0.13) % 0.8).toFixed(2) + 's" x="' + (104 + i * 5.9) + '" y="' + (74 + (i % 5) * 3) + '" width="3.4" height="' + (42 - (i % 5) * 6) + '" fill="' + (i % 7 === 0 ? GOLD : i % 2 ? RED : BLUE) + '"/>').join("") +
+      /* the stage deck */
+      '<path d="M0 188h400v14H0z" fill="#1c1a22"/><rect x="0" y="186" width="400" height="3" fill="' + GOLD + '"/>' +
+      stack(18) + stack(328) +
+      /* DJ booth with two turntables and a mixer */
+      '<rect x="134" y="160" width="132" height="28" rx="3" fill="#15171e" stroke="#2c2f3a" stroke-width="2"/><rect x="134" y="160" width="132" height="3" fill="' + RED + '"/>' +
+      '<rect x="132" y="138" width="136" height="24" rx="3" fill="#22242c"/>' + deck(160) + deck(240) +
+      '<rect x="186" y="142" width="28" height="16" rx="2" fill="#111"/>' + [192, 200, 208].map(x => '<path d="M' + x + ' 145v10" stroke="' + GOLD + '" stroke-width="2"/>').join("") +
+      /* two mics up front */
+      mic(110) + mic(290) +
+      /* spotlights */
+      '<path class="jj-sw" d="M70 0l-50 200h100z" fill="#fff3c8" opacity=".1"/><path class="jj-sw jj-sw2" d="M330 0l-50 200h100z" fill="' + BLUE + '" opacity=".12"/>' +
+      '<path class="jj-sw jj-sw2" d="M200 0l-34 190h68z" fill="' + RED + '" opacity=".08"/>' +
+      '<rect x="0" y="202" width="400" height="58" fill="#0c0b10"/>' + crowd +
       conf,
       "");
   }

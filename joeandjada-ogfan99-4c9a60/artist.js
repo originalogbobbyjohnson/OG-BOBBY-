@@ -1,5 +1,6 @@
 /* Joe and Jada game (the podcast with Fat Joe and Jadakiss; The Volume / Roc Nation). NYC map: Woodlawn (4), the Bronx/Yonkers line.
-   clean + 18+: songs = 5 curse-free clip windows (no curse heard from start to last stop); explicitSongs = 5 bigger clips with curses heard (questions stay clean).
+   MUSIC ONLY (owner, Nov 9): every clip is a music guest or Joe and Jada talking music. clean + 18+:
+   songs = 5 curse-free clip windows (no curse heard from start to last stop); explicitSongs = 5 clips with curses heard (questions stay clean).
    Every "song" is a clip from the official Joe and Jada YouTube channel; timings = that channel's own YouTube captions (asr). */
 window.CFG = {
  "name": "Joe and Jada",
@@ -93,7 +94,7 @@ window.CFG = {
    "scene": "jjarena",
    "t": "CLIMB THE RANKS",
    "x": "(auto-filled by the game)",
-   "sfx": "court"
+   "sfx": "crowd"
   },
   {
    "scene": "jjcorner",
@@ -104,277 +105,403 @@ window.CFG = {
  ],
  "songs": [
   {
-   "title": "Jada's AI Hat Story",
-   "id": "D_arvjawRCc",
-   "start": 36.4,
+   "title": "Jermaine Dupri on 'Funkdafied'",
+   "id": "RBKImF8mMF0",
+   "start": 0,
    "cuts": [
-    80.5,
-    127.3,
-    172.3
+    53,
+    103.5,
+    159.8
    ],
    "qs": [
     [
      [
-      "Who does Joe ask Jada for a legendary story about?",
-      "Allen Iverson",
-      "Stephon Marbury",
-      "Kobe Bryant"
+      "Who used to ask JD what he did to his beat?",
+      "Biggie",
+      "Jay-Z",
+      "Nas"
      ],
      [
-      "Jada says anybody who knows AI knows he's an ill what?",
-      "Brother",
-      "Dresser",
-      "Shooter"
+      "Big just had a what on his record?",
+      "A sample",
+      "A live band",
+      "A drum loop"
      ],
      [
-      "What did AI want from Jada for the fight?",
-      "A LOX hat",
-      "A D-Block chain",
-      "Front row seats"
+      "JD could take out the what?",
+      "The bass",
+      "The vocals",
+      "The hook"
      ],
      [
-      "Where was the fight?",
-      "The Barclays",
-      "Madison Square Garden",
-      "Yankee Stadium"
+      "Why could JD do whatever he wanted with it?",
+      "They played it over",
+      "He owned the label",
+      "It was a remix"
      ],
      [
-      "Which fighter does Jada name along with Devin Haney?",
-      "Tank",
-      "Canelo",
-      "Crawford"
+      "What was the song called?",
+      "Funkdafied",
+      "Jump",
+      "Money Ain't a Thang"
      ],
      [
-      "AI needed the hat to go with his what?",
-      "Outfit",
-      "Sneakers",
-      "Jersey"
+      "It was the first time people heard JD do what?",
+      "Rap",
+      "Sing",
+      "DJ"
      ],
      [
-      "Where was Jada sitting at the fight?",
-      "In the suite",
-      "Ringside",
-      "In the locker room"
+      "JD says he's sticking to being a what?",
+      "Producer",
+      "Manager",
+      "DJ"
      ]
     ],
     [
      [
-      "Who was running the suite?",
-      "A lady",
-      "A security guard",
-      "Jada's manager"
-     ],
-     [
-      "They said the hats would be waiting where?",
-      "At his seat",
-      "At the front door",
-      "In his car"
-     ],
-     [
-      "AI wanted the hat before he went out to his what?",
-      "Seat",
-      "Car",
-      "Interview"
-     ],
-     [
-      "About how long did AI hold out for the hat?",
-      "40 minutes",
-      "5 minutes",
-      "2 hours"
-     ],
-     [
-      "What did the staff keep calling him?",
-      "Mr. Iverson",
-      "The Answer",
-      "Bubba Chuck"
-     ],
-     [
-      "How often does AI call Jada for more hats?",
-      "Every few months",
-      "Every week",
-      "Once a year"
-     ],
-     [
-      "Jada says AI is still what like that?",
+      "When Funkdafied came out, the record went what?",
       "Crazy",
-      "Quiet",
-      "Shy"
+      "Gold",
+      "Overseas"
+     ],
+     [
+      "Whose album was it?",
+      "Da Brat's",
+      "Lil' Kim's",
+      "Missy's"
+     ],
+     [
+      "She became the first female solo artist with a what album?",
+      "Platinum",
+      "Gold",
+      "Diamond"
+     ],
+     [
+      "Did JD co-write it?",
+      "Yes",
+      "No",
+      "Only the hook"
+     ],
+     [
+      "JD writes one part, then she does what?",
+      "Grabs it",
+      "Rewrites it",
+      "Skips it"
+     ],
+     [
+      "They figured out their back and forth what?",
+      "Motion",
+      "Bars",
+      "Beat"
      ]
     ],
     [
      [
-      "Which commercial is Jada's next story about?",
-      "Reebok",
-      "Nike",
-      "Gatorade"
+      "Joe calls it a beautiful what?",
+      "Conversation",
+      "Record",
+      "Story"
      ],
      [
-      "Who was shooting the commercial?",
-      "Chris Robinson",
-      "Hype Williams",
-      "Spike Lee"
+      "And very what?",
+      "Knowledgeable",
+      "Funny",
+      "Emotional"
      ],
      [
-      "Who gets a shout out for the commercial?",
-      "Steve Stoute",
-      "Steve Rifkind",
-      "Lyor Cohen"
+      "Where did JD perform with Brat?",
+      "Everywhere",
+      "Only Atlanta",
+      "Only TV"
      ],
      [
-      "What state were they shooting in?",
-      "PA",
-      "New Jersey",
-      "Virginia"
+      "Did JD want to rap back then?",
+      "Still no",
+      "Yes, always",
+      "Only on tour"
      ],
      [
-      "When did they pitch shooting another one?",
-      "On lunch break",
-      "At the wrap party",
-      "Before the first take"
+      "JD heard himself on the what?",
+      "Radio",
+      "TV",
+      "Mixtapes"
      ],
      [
-      "The sequel was going to star whose kids?",
-      "Their sons",
-      "Their daughters",
-      "Their nephews"
+      "His friends said JD should make an what?",
+      "Album",
+      "Movie",
+      "Label"
      ],
      [
-      "About how much money was on the table?",
-      "A quarter mill",
-      "A million",
-      "50 grand"
+      "He started making fake what in the studio?",
+      "Songs",
+      "Beats",
+      "Videos"
      ]
     ]
    ]
   },
   {
-   "title": "Tiffany Haddish Goes Off",
-   "id": "KShd5UQ8y0U",
-   "start": 236.8,
+   "title": "Clark Kent: Rapper or MC?",
+   "id": "gJbw9xbVgW0",
+   "start": 28.1,
    "cuts": [
-    270.2,
-    291.8,
-    307.7
+    58.7,
+    119.2,
+    200.2
    ],
    "qs": [
     [
      [
-      "His bars are so good he never does what?",
-      "Miss",
-      "Rest",
-      "Rhyme"
+      "Clark Kent was one of whose original DJs?",
+      "Kool Herc",
+      "Grandmaster Flash",
+      "Afrika Bambaataa"
      ],
      [
-      "What one word does she use for those bars?",
-      "Undeniable",
-      "Unbelievable",
-      "Unstoppable"
+      "What was Clark Kent's other name?",
+      "Superman",
+      "Batman",
+      "The Flash"
      ],
      [
-      "What did Tiffany do the first time she heard it?",
-      "Cried",
-      "Screamed",
-      "Danced"
+      "Joe met DJ Khaled at a Clark Kent what?",
+      "Battle",
+      "Party",
+      "Radio show"
      ],
      [
-      "She didn't have his what?",
-      "Phone number",
-      "Address",
-      "Email"
+      "That was around the time of which Joe song?",
+      "Flow Joe",
+      "Lean Back",
+      "What's Luv"
      ],
      [
-      "She wanted to show him her what?",
-      "Gratitude",
-      "New show",
-      "Lyrics"
+      "Which two rappers were both Clark's mans?",
+      "Biggie and Jay-Z",
+      "Nas and AZ",
+      "Pun and Joe"
      ],
      [
-      "At first she thought it was a what?",
-      "Scam",
-      "Joke",
-      "Prank"
-     ],
-     [
-      "She asks, 'Is this really for' who?",
-      "Tiffany Haddish",
-      "Fat Joe",
-      "Jadakiss"
+      "Clark told Biggie who was better?",
+      "Jay-Z",
+      "Nas",
+      "Rakim"
      ]
     ],
     [
      [
-      "'Speaking of' which country, Tiffany says?",
-      "Colombia",
-      "Jamaica",
-      "Brazil"
+      "Clark called Biggie a what?",
+      "Rapper",
+      "Singer",
+      "Poet"
      ],
      [
-      "How many of her girls did she take on the trip?",
-      "Four",
+      "Jay-Z was an MC, like a what?",
+      "Poet",
+      "Preacher",
+      "Painter"
+     ],
+     [
+      "This was Jay-Z before all the what?",
+      "Hits",
+      "Money",
+      "Beef"
+     ],
+     [
+      "MCs have their hand on the third what?",
+      "Rail",
+      "Wheel",
+      "Mic"
+     ],
+     [
+      "Which MC does Joe name?",
+      "Common",
+      "Mase",
+      "Ja Rule"
+     ],
+     [
+      "The rappers are the guys on which chart?",
+      "Billboard",
+      "iTunes",
+      "Spotify"
+     ],
+     [
+      "Those who crossed over, we think they're what?",
+      "Commercial",
+      "Washed",
+      "Soft"
+     ]
+    ],
+    [
+     [
+      "An MC can even do an R&B what?",
+      "Feature",
+      "Album",
+      "Tour"
+     ],
+     [
+      "A rapper is just playing with what?",
+      "Words",
+      "Beats",
+      "Money"
+     ],
+     [
+      "An MC can control the what?",
+      "Crowd",
+      "Label",
+      "Radio"
+     ],
+     [
+      "'Now you going into being an' what?",
+      "Entertainer",
+      "Actor",
+      "Executive"
+     ],
+     [
+      "Or is it a what?",
+      "Songwriter",
+      "Producer",
+      "DJ"
+     ],
+     [
+      "Which Hov song gets quoted?",
+      "I Love The Dough",
+      "Big Pimpin'",
+      "Dead Presidents"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "How 'Lean Back' Brought Joe Back",
+   "id": "_x2H8fD-ulI",
+   "start": 111,
+   "cuts": [
+    167.8,
+    205.1,
+    250.5
+   ],
+   "qs": [
+    [
+     [
+      "Who came to Joe's car?",
+      "His lawyer",
+      "His manager",
+      "Scott Storch"
+     ],
+     [
+      "Joe thought labels were giving people what?",
+      "Millions",
+      "Cars",
+      "Chains"
+     ],
+     [
+      "The lawyer said: Joe, you're not what right now?",
+      "Hot",
+      "Signed",
+      "Ready"
+     ],
+     [
+      "Which city did Joe drive to?",
+      "Miami",
+      "Atlanta",
+      "Houston"
+     ],
+     [
+      "Which producer did he go see?",
+      "Scott Storch",
+      "Swizz Beatz",
+      "DJ Premier"
+     ],
+     [
+      "How long until he came back to New York?",
+      "About a month",
+      "A year",
+      "Two days"
+     ],
+     [
+      "What did Joe show the labels?",
+      "A dance",
+      "A video",
+      "A contract"
+     ]
+    ],
+    [
+     [
+      "What's the caller's name?",
+      "Nate",
+      "Mike",
+      "Riverside Slim"
+     ],
+     [
+      "He calls Joe and Jada legends in what?",
+      "Hip-hop",
+      "Basketball",
+      "Business"
+     ],
+     [
+      "He has an individual what of both of them?",
+      "Playlist",
+      "Poster",
+      "Mixtape"
+     ],
+     [
+      "He thanks them for their what to hip-hop?",
+      "Contribution",
+      "Comedy",
+      "Money"
+     ],
+     [
+      "He asks about a feature that was supremely what?",
+      "Impactful",
+      "Expensive",
+      "Rare"
+     ],
+     [
+      "And one they wanted but never had the what?",
+      "Chance",
+      "Money",
+      "Beat"
+     ]
+    ],
+    [
+     [
+      "Which feature impacted his life the most?",
+      "AZ on Illmatic",
+      "Jay-Z on Reasonable Doubt",
+      "Biggie on Ready to Die"
+     ],
+     [
+      "He never heard nobody flow so what?",
+      "Smoothly",
+      "Fast",
+      "Loud"
+     ],
+     [
+      "He thought AZ would be like Nas or who?",
+      "Jay-Z",
+      "Biggie",
+      "Rakim"
+     ],
+     [
+      "On that super what?",
+      "Level",
+      "Team",
+      "Label"
+     ],
+     [
+      "How many picks does he say he could make?",
       "Two",
+      "Five",
       "Ten"
      ],
      [
-      "Where did she take them?",
-      "Africa",
-      "Colombia",
-      "Paris"
-     ],
-     [
-      "What's the show called?",
-      "Tiffany Haddish Goes Off",
-      "Tiffany Takes Africa",
-      "Girls Trip Live"
-     ],
-     [
-      "They've been friends since when?",
-      "Junior high",
-      "College",
-      "Last year"
-     ],
-     [
-      "She jokes it's only been 10 years because she's so what?",
-      "Young",
-      "Busy",
-      "Famous"
-     ]
-    ],
-    [
-     [
-      "Which South African city did they hit?",
-      "Cape Town",
-      "Johannesburg",
-      "Durban"
-     ],
-     [
-      "Which country is next on her list?",
-      "Zimbabwe",
-      "Kenya",
-      "Ghana"
-     ],
-     [
-      "Which island did they visit?",
-      "Zanzibar",
-      "Madagascar",
-      "Mauritius"
-     ],
-     [
-      "Tiffany says they 'got into some' what?",
-      "Stuff",
-      "Trouble",
-      "Drama"
-     ],
-     [
-      "The network first wanted it to be what kind of show?",
-      "Reality show",
-      "Cooking show",
-      "Game show"
-     ],
-     [
-      "Tiffany says she doesn't do what?",
-      "Ratchetness",
-      "Interviews",
-      "Airplanes"
+      "The other pick: Nas on which song?",
+      "Live at the Barbecue",
+      "Ether",
+      "Halftime"
      ]
     ]
    ]
@@ -434,28 +561,10 @@ window.CFG = {
     ],
     [
      [
-      "Where did they go to work with Ye?",
-      "Wyoming",
-      "Montana",
-      "Chicago"
-     ],
-     [
-      "Which Ye album did they work on?",
-      "Jesus Is King",
-      "Donda",
-      "Graduation"
-     ],
-     [
-      "What kind of music pushed the brothers back into the studio?",
+      "What kind of music pushed the brothers back into making music?",
       "Gospel",
       "Jazz",
       "Trap"
-     ],
-     [
-      "Where did they perform with Ye?",
-      "Sunday Service",
-      "Coachella",
-      "Rolling Loud"
      ],
      [
       "When Push asked before, Malice's answer was?",
@@ -470,10 +579,28 @@ window.CFG = {
       "Faith"
      ],
      [
-      "Whose songs always had a positive ending, they say?",
+      "Joe asks about doing the album as the Clipse talking what?",
+      "That street",
+      "That money",
+      "That love"
+     ],
+     [
+      "Is now the right time for it, Malice says?",
+      "It's perfect",
+      "Not yet",
+      "Too late"
+     ],
+     [
+      "Whose songs always had a positive ending?",
       "Slick Rick",
       "Rakim",
       "KRS-One"
+     ],
+     [
+      "Every one of those songs had what kind of ending?",
+      "Positive",
+      "Sad",
+      "Surprise"
      ]
     ],
     [
@@ -523,688 +650,145 @@ window.CFG = {
    ]
   },
   {
-   "title": "Allen Iverson on Kobe & David Stern",
-   "id": "38dlhhMf1LY",
-   "start": 159.2,
+   "title": "DJ Khaled on Jay-Z's 'God Did'",
+   "id": "tIARZ8mQFPI",
+   "start": 391.5,
    "cuts": [
-    203.5,
-    276,
-    369.9
+    434,
+    533.2,
+    639.1
    ],
    "qs": [
     [
      [
-      "How tall does AI say Kobe was?",
-      "6'6",
-      "6'2",
-      "6'10"
+      "Khaled has it on film and on what?",
+      "Pictures",
+      "Tape",
+      "Vinyl"
      ],
      [
-      "AI says Kobe on defense was a what?",
-      "Dog",
-      "Wall",
-      "Ghost"
+      "Who came in next?",
+      "Lil Wayne",
+      "Drake",
+      "Fat Joe"
      ],
      [
-      "What did AI and Kobe have?",
-      "Wars",
-      "Dinners",
-      "Bets"
+      "What did Khaled leave on the song?",
+      "The open verse",
+      "The hook",
+      "The intro"
      ],
      [
-      "Which stocky guard gave AI problems?",
-      "Marcus Banks",
-      "Marcus Camby",
-      "Mike Bibby"
+      "Khaled says he might as well pop what?",
+      "That bottle",
+      "The champagne cork",
+      "A balloon"
      ],
      [
-      "How tall was Marcus Banks?",
-      "6'2",
-      "5'11",
-      "6'6"
+      "He could see him freestyling where?",
+      "In his head",
+      "In the booth",
+      "On his phone"
      ],
      [
-      "AI calls Joe a what?",
-      "Hoop head",
-      "Sneakerhead",
-      "Rap head"
-     ],
-     [
-      "Kobe had the strength and was what kind of dude?",
-      "Defensive-minded",
-      "Quiet",
-      "Laid-back"
+      "Did Khaled stop the music?",
+      "No, it kept playing",
+      "Yes, right away",
+      "Only for a minute"
      ]
     ],
     [
      [
-      "On AI's bad nights, nine times out of 10 it was who?",
-      "Himself",
-      "Kobe",
-      "The refs"
+      "Where can you go back and see the pictures?",
+      "Instagram",
+      "YouTube",
+      "TikTok"
      ],
      [
-      "What didn't AI have to do?",
-      "Guard Kobe",
-      "Shoot free throws",
-      "Run the offense"
+      "He started flowing the first how many bars?",
+      "Four",
+      "Sixteen",
+      "Eight"
      ],
      [
-      "To AI, those battles weren't what?",
-      "Fair",
-      "Fun",
-      "Close"
+      "Who did he whisper to?",
+      "Lenny S",
+      "Jamie",
+      "Swizz Beatz"
      ],
      [
-      "Joe says he might be biased because he's AI's what?",
-      "Brother",
-      "Agent",
-      "Coach"
+      "He said tell Guru to set up what?",
+      "Studio",
+      "A meeting",
+      "A show"
      ],
      [
-      "Which commissioner does Joe bring up?",
-      "David Stern",
-      "Adam Silver",
-      "Larry O'Brien"
+      "How many songs did he ask Khaled to send?",
+      "Five",
+      "One",
+      "Ten"
      ],
      [
-      "AI admits he had what with him for a while?",
-      "Beef",
-      "Lunch",
-      "A contract"
+      "Khaled replied fast with what?",
+      "Been done",
+      "On my way",
+      "Say less"
      ],
      [
-      "Joe says AI learned from harsh realities and what?",
-      "Punishments",
-      "Paychecks",
-      "Practices"
+      "Why only an hour? He had to catch a what?",
+      "Helicopter",
+      "Flight",
+      "Train"
      ]
     ],
     [
      [
-      "AI and Stern became close when?",
-      "Later in his career",
-      "His rookie year",
-      "After the draft"
+      "How did Khaled first hear the verse?",
+      "On FaceTime",
+      "On the radio",
+      "In the studio"
      ],
      [
-      "People get thrown off by the look and the what?",
-      "Perception",
-      "Stats",
-      "Attitude"
+      "Khaled thought the phone was what?",
+      "Stuck",
+      "Dead",
+      "On mute"
      ],
      [
-      "Along with braids and cornrows, what clothes got judged?",
-      "Baggy clothes",
-      "Leather jackets",
-      "Suits"
+      "Khaled jokes it was a verse of how many bars?",
+      "100",
+      "16",
+      "48"
      ],
      [
-      "AI says you don't know; it's just the what?",
-      "Person",
-      "Clothes",
-      "Game"
+      "Who sent Khaled the files?",
+      "Guru",
+      "Lenny S",
+      "Jamie"
      ],
      [
-      "Once Stern got to know him, they became what?",
-      "Close",
-      "Rivals",
-      "Partners"
+      "Khaled says certain echoes got to what?",
+      "Breathe",
+      "Stop",
+      "Repeat"
      ],
      [
-      "AI calls Stern a beautiful what?",
-      "Man",
-      "Mind",
-      "Boss"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Ann Iverson on Bubba Chuck",
-   "id": "yoJRACKhDDQ",
-   "start": 16.8,
-   "cuts": [
-    63.4,
-    154.3,
-    232.4
-   ],
-   "qs": [
-    [
-     [
-      "What nickname does Joe use for AI with his mom?",
-      "Bubba Chuck",
-      "The Answer",
-      "Chuck Taylor"
+      "A few days later he did which interview?",
+      "Drink Champs",
+      "The Breakfast Club",
+      "Hot Ones"
      ],
      [
-      "Joe calls her the first what mother everybody loved?",
-      "Athlete's",
-      "Rapper's",
-      "Coach's"
-     ],
-     [
-      "Joe remembers her braiding AI's hair where?",
-      "Middle of the court",
-      "In the locker room",
-      "On the bus"
-     ],
-     [
-      "What does Mama say about that braiding moment?",
-      "That's not me",
-      "That was me",
-      "I don't remember"
-     ],
-     [
-      "AI's hair was coming loose where?",
-      "In the back",
-      "In the front",
-      "On the sides"
-     ],
-     [
-      "How did AI like his braids?",
-      "Flat",
-      "Loose",
-      "Long"
-     ]
-    ],
-    [
-     [
-      "Who called Mama about the braids?",
-      "Her sister",
-      "His coach",
-      "His grandma"
-     ],
-     [
-      "The sister said she doesn't know how to do what?",
-      "Braid hair",
-      "Cut hair",
-      "Drive"
-     ],
-     [
-      "Mama told her to braid just which part?",
-      "The back",
-      "The front",
-      "The top"
-     ],
-     [
-      "AI says Mommy got the story what?",
-      "Wrong",
-      "Right",
-      "Twisted"
-     ],
-     [
-      "AI says, 'I got to be' what?",
-      "Authentic",
-      "Honest",
-      "Humble"
-     ],
-     [
-      "Mama was proud of him from the first what?",
-      "Day",
-      "Game",
-      "Dunk"
-     ]
-    ],
-    [
-     [
-      "When she first held him she said he's so what?",
-      "Light",
-      "Heavy",
-      "Quiet"
-     ],
-     [
-      "When he opened his eyes, whose eyes did she see?",
-      "Her own",
-      "His dad's",
-      "Her mom's"
-     ],
-     [
-      "His arms reached past his what?",
-      "Kneecap",
-      "Waist",
-      "Ankles"
-     ],
-     [
-      "What did she tell everybody she had?",
-      "A baller",
-      "A star",
-      "A genius"
-     ],
-     [
-      "He was never what kind of kid?",
-      "Hardheaded",
-      "Happy",
-      "Funny"
-     ],
-     [
-      "She was playing ball in which Connecticut city?",
-      "Hartford",
-      "New Haven",
-      "Bridgeport"
+      "Hov starts off his verse saying what?",
+      "Hov did",
+      "God is great",
+      "Here we go"
      ]
     ]
    ]
   }
  ],
  "explicitSongs": [
-  {
-   "title": "Top 5 Hip-Hop Songs of All Time",
-   "id": "6jGC1B1VtAY",
-   "cuts": [
-    55,
-    137.1,
-    229
-   ],
-   "qs": [
-    [
-     [
-      "What are Joe and Jada ranking?",
-      "Top 5 hip-hop songs",
-      "Top 5 rappers",
-      "Top 5 albums"
-     ],
-     [
-      "Joe says 'I'mma let you' do what?",
-      "Set it off",
-      "Pick last",
-      "Sit out"
-     ],
-     [
-      "Who should stop getting mad?",
-      "Artists and producers",
-      "The fans",
-      "The DJs"
-     ],
-     [
-      "How many songs is he going to pick?",
-      "Five",
-      "Three",
-      "Ten"
-     ],
-     [
-      "Joe says they're doing what to him by making him do this?",
-      "Victimizing",
-      "Roasting",
-      "Testing"
-     ],
-     [
-      "Y'all are all supposed to be the greatest of all what?",
-      "Time",
-      "Ages",
-      "Days"
-     ]
-    ],
-    [
-     [
-      "Why is a top 5 unfair? It goes off your what?",
-      "Age",
-      "City",
-      "Mood"
-     ],
-     [
-      "Besides people their age, who else watches?",
-      "Young kids",
-      "Their parents",
-      "Producers"
-     ],
-     [
-      "Those young kids want to know the what?",
-      "Real",
-      "Gossip",
-      "Charts"
-     ],
-     [
-      "One host says his mind is drawing what?",
-      "White noise",
-      "A blank",
-      "Straws"
-     ],
-     [
-      "Which Naughty by Nature song is the first pick?",
-      "Hip Hop Hooray",
-      "Feel Me Flow",
-      "Uptown Anthem"
-     ],
-     [
-      "Which Dr. Dre song comes next?",
-      "Still D.R.E.",
-      "California Love",
-      "Forgot About Dre"
-     ],
-     [
-      "The New York pick is Jay-Z with who?",
-      "Alicia Keys",
-      "Mary J. Blige",
-      "Beyonce"
-     ]
-    ],
-    [
-     [
-      "Hip Hop Hooray won the first what for a rap album, they say?",
-      "Grammy",
-      "VMA",
-      "Soul Train Award"
-     ],
-     [
-      "On Still D.R.E., 'you hear them' what?",
-      "Pianos",
-      "Horns",
-      "Strings"
-     ],
-     [
-      "Who's on two of the greatest songs of all time?",
-      "Hov",
-      "Biggie",
-      "Nas"
-     ],
-     [
-      "Which Biggie song makes the list?",
-      "Hypnotize",
-      "Juicy",
-      "Big Poppa"
-     ],
-     [
-      "Which Tupac song makes the list?",
-      "Dear Mama",
-      "California Love",
-      "Changes"
-     ],
-     [
-      "He says he'll go what with the Tupac pick?",
-      "Cliche",
-      "Deep",
-      "West Coast"
-     ],
-     [
-      "All those picks are what tier?",
-      "Top",
-      "Mid",
-      "Low"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Ne-Yo Hung Up on Michael Jackson",
-   "id": "W3Ked7j9_FY",
-   "cuts": [
-    27.7,
-    97.1,
-    142
-   ],
-   "qs": [
-    [
-     [
-      "Who did Ne-Yo get to meet?",
-      "Michael Jackson",
-      "Prince",
-      "Stevie Wonder"
-     ],
-     [
-      "Meeting him was cool, but what?",
-      "Weird",
-      "Scary",
-      "Short"
-     ],
-     [
-      "Who was supposed to call Ne-Yo first?",
-      "His assistant",
-      "His manager",
-      "His mom"
-     ],
-     [
-      "Where was Ne-Yo when the call came?",
-      "In the car",
-      "In the studio",
-      "On stage"
-     ],
-     [
-      "What did Ne-Yo do when he heard 'This is Michael Jackson'?",
-      "Hung up",
-      "Screamed",
-      "Froze"
-     ],
-     [
-      "Somebody had given Mike Ne-Yo's what?",
-      "Number",
-      "Demo",
-      "Address"
-     ]
-    ],
-    [
-     [
-      "Which bank kept calling Joe?",
-      "TD Bank",
-      "Chase",
-      "Citibank"
-     ],
-     [
-      "The calls came from what area code?",
-      "855",
-      "718",
-      "212"
-     ],
-     [
-      "Joe tells callers to lead with your what?",
-      "First name",
-      "Account number",
-      "Last name"
-     ],
-     [
-      "Ne-Yo's assistant asks: are you what?",
-      "Sitting down",
-      "Driving",
-      "Awake"
-     ],
-     [
-      "Michael was going to call in how many minutes?",
-      "10",
-      "5",
-      "30"
-     ],
-     [
-      "Did Ne-Yo apologize to Mike?",
-      "No, he lied",
-      "Yes, right away",
-      "He sent flowers"
-     ],
-     [
-      "What excuse did Ne-Yo give?",
-      "Bad reception",
-      "Dead battery",
-      "Wrong number"
-     ]
-    ],
-    [
-     [
-      "How tall was Mike, says Ne-Yo?",
-      "6'2 or 6'3",
-      "5'7",
-      "6'7"
-     ],
-     [
-      "What color suit did Mike wear?",
-      "Black",
-      "White",
-      "Red"
-     ],
-     [
-      "What sunglasses did he keep on the whole time?",
-      "Mirrored aviators",
-      "Round shades",
-      "Wraparounds"
-     ],
-     [
-      "How long was Mike there?",
-      "About an hour",
-      "Ten minutes",
-      "All day"
-     ],
-     [
-      "What did they talk about?",
-      "Music",
-      "Basketball",
-      "Movies"
-     ],
-     [
-      "Mike's favorite Ne-Yo song?",
-      "Go On Girl",
-      "So Sick",
-      "Miss Independent"
-     ],
-     [
-      "When Mike sang it, Ne-Yo turned into a what?",
-      "12-year-old girl",
-      "Statue",
-      "Little kid"
-     ]
-    ]
-   ]
-  },
-  {
-   "title": "Clipse on Pharrell & VA",
-   "id": "vCH5wi7_jp0",
-   "cuts": [
-    56.8,
-    142.4,
-    238.7
-   ],
-   "qs": [
-    [
-     [
-      "Who linked Push with Pharrell?",
-      "Cam",
-      "Timbaland",
-      "Teddy Riley"
-     ],
-     [
-      "Cam is one of Push's what?",
-      "Best friends",
-      "Cousins",
-      "Producers"
-     ],
-     [
-      "Cam said Pharrell made what kind of beats?",
-      "Crazy",
-      "Soft",
-      "Old"
-     ],
-     [
-      "Where did Push and Pharrell meet?",
-      "The oceanfront",
-      "A studio",
-      "A barbershop"
-     ],
-     [
-      "What was Push doing there?",
-      "Freestyling",
-      "Surfing",
-      "Selling tapes"
-     ],
-     [
-      "Which New Jack Swing legend was out in VA?",
-      "Teddy Riley",
-      "Babyface",
-      "Jermaine Dupri"
-     ],
-     [
-      "Which NFL star does Joe name from VA?",
-      "Mike Vick",
-      "Lawrence Taylor",
-      "Ray Lewis"
-     ]
-    ],
-    [
-     [
-      "Joe calls the state what?",
-      "Bad News VA",
-      "Big Bad VA",
-      "Virginia Slim"
-     ],
-     [
-      "Whose birthday party was it?",
-      "AI's",
-      "Pharrell's",
-      "Joe's"
-     ],
-     [
-      "Which VA city was it in?",
-      "Newport News",
-      "Norfolk",
-      "Richmond"
-     ],
-     [
-      "Where was AI all day?",
-      "In the hotel",
-      "At the gym",
-      "At practice"
-     ],
-     [
-      "What were they riding in?",
-      "A convertible",
-      "A tour bus",
-      "A limo"
-     ],
-     [
-      "Push says all they ever heard is Joe has the best what?",
-      "Stories",
-      "Chains",
-      "Parties"
-     ],
-     [
-      "Does AI remember the story, per Joe?",
-      "No",
-      "Yes",
-      "Only half"
-     ]
-    ],
-    [
-     [
-      "Where were the Clipse born?",
-      "The Bronx",
-      "Brooklyn",
-      "Virginia Beach"
-     ],
-     [
-      "Who went to school with Timbaland?",
-      "Malice",
-      "Pusha T",
-      "Pharrell"
-     ],
-     [
-      "How did they get to Timbaland's house?",
-      "On their bikes",
-      "By bus",
-      "By car"
-     ],
-     [
-      "Which grades was that?",
-      "Junior high",
-      "College",
-      "Kindergarten"
-     ],
-     [
-      "Pharrell ended up moving next to which school?",
-      "An elementary school",
-      "A high school",
-      "A college"
-     ],
-     [
-      "All that music came from less than a what from their house?",
-      "Mile",
-      "Block",
-      "Hour"
-     ],
-     [
-      "Joe says VA was a very what place back then?",
-      "Magical",
-      "Quiet",
-      "Small"
-     ]
-    ]
-   ]
-  },
   {
    "title": "Cardi B on 'Am I The Drama?'",
    "id": "Xy0MsQqzlu4",
@@ -1337,133 +921,552 @@ window.CFG = {
    ]
   },
   {
-   "title": "AI Gets the TS Chain",
-   "id": "_lORCa5-Tl8",
-   "start": 264.5,
+   "title": "Top 5 Hip-Hop Songs of All Time",
+   "id": "6jGC1B1VtAY",
    "cuts": [
-    304.9,
-    361.4,
-    449.3
+    55,
+    137.1,
+    229
    ],
    "qs": [
     [
      [
-      "Where does AI guess they first met?",
-      "Jimmy's",
-      "The Rucker",
-      "Philly"
+      "What are Joe and Jada ranking?",
+      "Top 5 hip-hop songs",
+      "Top 5 rappers",
+      "Top 5 albums"
      ],
      [
-      "Joe says back then they were both what?",
-      "Kids",
-      "Rookies",
-      "Rich"
+      "Joe says 'I'mma let you' do what?",
+      "Set it off",
+      "Pick last",
+      "Sit out"
      ],
      [
-      "Joe had a show in which state?",
-      "Virginia",
-      "Pennsylvania",
-      "New Jersey"
+      "Who should stop getting mad?",
+      "Artists and producers",
+      "The fans",
+      "The DJs"
      ],
      [
-      "Joe didn't have how much to rub together?",
-      "$2",
-      "$50",
-      "$100"
+      "How many songs is he going to pick?",
+      "Five",
+      "Three",
+      "Ten"
      ],
      [
-      "AI was just about to go where?",
-      "College",
-      "Europe",
-      "Prep school"
+      "Joe says they're doing what to him by making him do this?",
+      "Victimizing",
+      "Roasting",
+      "Testing"
      ],
      [
-      "AI's crew was all dressed in what?",
-      "Army fatigues",
-      "Jerseys",
-      "Suits"
+      "Y'all are all supposed to be the greatest of all what?",
+      "Time",
+      "Ages",
+      "Days"
      ]
     ],
     [
      [
-      "Where did AI walk up to Joe?",
-      "A dark parking lot",
-      "A hotel lobby",
-      "Backstage"
+      "Why is a top 5 unfair? It goes off your what?",
+      "Age",
+      "City",
+      "Mood"
      ],
      [
-      "What name did AI introduce himself with?",
-      "Bubba Chuck",
-      "The Answer",
-      "Allen"
+      "Besides people their age, who else watches?",
+      "Young kids",
+      "Their parents",
+      "Producers"
      ],
      [
-      "AI told Joe he's going to the what?",
-      "League",
-      "Army",
-      "Olympics"
+      "Those young kids want to know the what?",
+      "Real",
+      "Gossip",
+      "Charts"
      ],
      [
-      "After AI walked off, Joe asked what?",
-      "Who is that guy?",
-      "Where's he going?",
-      "Who invited him?"
+      "One host says his mind is drawing what?",
+      "White noise",
+      "A blank",
+      "Straws"
      ],
      [
-      "AI told Joe, 'You going to' do what?",
-      "See me",
-      "Miss me",
-      "Hear me"
+      "Which Naughty by Nature song is the first pick?",
+      "Hip Hop Hooray",
+      "Feel Me Flow",
+      "Uptown Anthem"
      ],
      [
-      "This was before the what?",
-      "Bread",
-      "Fame",
-      "Tattoos"
+      "He's thinking from when he first heard hip-hop to when?",
+      "Now",
+      "1999",
+      "Tomorrow"
      ],
      [
-      "Joe says you're as powerful as who you can get on the what?",
+      "The New York pick is Jay-Z with who?",
+      "Alicia Keys",
+      "Mary J. Blige",
+      "Beyonce"
+     ]
+    ],
+    [
+     [
+      "Hip Hop Hooray won the first what for a rap album, they say?",
+      "Grammy",
+      "VMA",
+      "Soul Train Award"
+     ],
+     [
+      "Who's on two of the greatest songs of all time?",
+      "Hov",
+      "Biggie",
+      "Nas"
+     ],
+     [
+      "Which Biggie song makes the list?",
+      "Hypnotize",
+      "Juicy",
+      "Big Poppa"
+     ],
+     [
+      "After three picks, how many more does he need?",
+      "Two more",
+      "One more",
+      "Three more"
+     ],
+     [
+      "Joe says Hov made it what for him?",
+      "Easier",
+      "Harder",
+      "Longer"
+     ],
+     [
+      "'Name the five already,' Jada calls Joe what?",
+      "Crack",
+      "Cuz",
+      "OG"
+     ],
+     [
+      "All those picks are what tier?",
+      "Top",
+      "Mid",
+      "Low"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Common on 'I Used To Love H.E.R.'",
+   "id": "YJrjWdxA_oQ",
+   "start": 0,
+   "cuts": [
+    43.1,
+    98,
+    189
+   ],
+   "qs": [
+    [
+     [
+      "Which Common classic do they get into?",
+      "I Used To Love H.E.R.",
+      "The Light",
+      "Go!"
+     ],
+     [
+      "Joe compares it to which of his hits?",
+      "Lean Back",
+      "What's Luv",
+      "All The Way Up"
+     ],
+     [
+      "Big L did his own version called what?",
+      "Ebonics",
+      "Put It On",
+      "MVP"
+     ],
+     [
+      "Joe says Common's song was the what of it?",
+      "The epitome",
+      "The beginning",
+      "The end"
+     ],
+     [
+      "God dropped the idea into Common's what?",
+      "Spirit",
+      "Dreams",
+      "Notebook"
+     ],
+     [
+      "Who made the beat?",
+      "No I.D.",
+      "J Dilla",
+      "DJ Premier"
+     ]
+    ],
+    [
+     [
+      "Where was Common sitting that night?",
+      "At home",
+      "In the studio",
+      "In the car"
+     ],
+     [
+      "Who had just left the crib?",
+      "His homies",
+      "His girl",
+      "His manager"
+     ],
+     [
+      "Common and his guy shared a what?",
+      "An apartment",
+      "A car",
+      "A studio"
+     ],
+     [
+      "What time was it?",
+      "2 in the morning",
+      "Noon",
+      "Sunrise"
+     ],
+     [
+      "His idea: what if he made hip-hop a what?",
+      "Woman",
+      "Movie",
+      "Church"
+     ],
+     [
+      "Back then it took Common a while to what?",
+      "Write",
+      "Sleep",
+      "Record"
+     ],
+     [
+      "He got into the what of it?",
+      "Metaphor",
+      "Melody",
+      "Money"
+     ]
+    ],
+    [
+     [
+      "By which verse was he summing it up?",
+      "The third",
+      "The first",
+      "The second"
+     ],
+     [
+      "Who is he talking about in the song?",
+      "Hip-hop",
+      "His mother",
+      "His ex"
+     ],
+     [
+      "His guy watched him through the what?",
+      "Booth",
+      "Window",
+      "Door"
+     ],
+     [
+      "His guy thought it was a what kind of song?",
+      "Love song",
+      "Diss song",
+      "Party song"
+     ],
+     [
+      "When Common said hip-hop, his guy grabbed his what?",
+      "Head",
       "Phone",
-      "Court",
-      "Stage"
+      "Coat"
+     ],
+     [
+      "Joe compares it to which Nas album?",
+      "Illmatic",
+      "God's Son",
+      "It Was Written"
+     ],
+     [
+      "Every time Joe heard it he picked up something what?",
+      "New",
+      "Old",
+      "Sad"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Clipse on Pharrell & VA",
+   "id": "vCH5wi7_jp0",
+   "start": 142.4,
+   "cuts": [
+    238.8,
+    337.3,
+    430.8
+   ],
+   "qs": [
+    [
+     [
+      "Where were the Clipse born?",
+      "The Bronx",
+      "Brooklyn",
+      "Virginia Beach"
+     ],
+     [
+      "VA was a very what place back then?",
+      "Magical",
+      "Quiet",
+      "Small"
+     ],
+     [
+      "It was all these what coming?",
+      "Hits",
+      "Labels",
+      "Tours"
+     ],
+     [
+      "Who went to school with Timbaland?",
+      "Malice",
+      "Pusha T",
+      "Pharrell"
+     ],
+     [
+      "How did they get to Timbaland's house?",
+      "On their bikes",
+      "By bus",
+      "By car"
+     ],
+     [
+      "What grades was that?",
+      "Junior high",
+      "College",
+      "Kindergarten"
+     ],
+     [
+      "All that music came from less than a what from their house?",
+      "Mile",
+      "Block",
+      "Hour"
      ]
     ],
     [
      [
-      "Joe says AI was acting what with him?",
-      "Funny",
-      "Brand new",
-      "Shy"
+      "It was greatness from R&B to what?",
+      "Hip-hop",
+      "Gospel",
+      "Rock"
      ],
      [
-      "Who doesn't play that, Joe says?",
-      "Moms",
-      "Jada",
-      "The NBA"
+      "Joe calls the Clipse the cheat what?",
+      "Code",
+      "Sheet",
+      "Team"
      ],
      [
-      "Joe says he's a little what?",
-      "Late",
-      "Broke",
-      "Tired"
+      "Pharrell is doing every what on the album?",
+      "Beat",
+      "Hook",
+      "Verse"
      ],
      [
-      "What letters are on AI's new chain?",
-      "TS",
-      "AI",
-      "76"
+      "It's about getting next to him and getting his what?",
+      "Time",
+      "Money",
+      "Number"
      ],
      [
-      "Joe says it's only on which show?",
-      "Joe and Jada",
-      "Drink Champs",
-      "The Breakfast Club"
+      "Pharrell will be studied how many years from now?",
+      "100",
+      "10",
+      "50"
      ],
      [
-      "Joe says it's a different type of what?",
-      "Love",
-      "Chain",
-      "Show"
+      "They don't chase sounds; they chase the what?",
+      "Feeling",
+      "Charts",
+      "Money"
+     ],
+     [
+      "Whose freestyles do they chase?",
+      "The LOX",
+      "Wu-Tang",
+      "Mobb Deep"
+     ]
+    ],
+    [
+     [
+      "'We just chasing that' what?",
+      "Energy",
+      "Money",
+      "Sound"
+     ],
+     [
+      "It's not about trying to what with what's going on?",
+      "Compete",
+      "Copy",
+      "Keep up"
+     ],
+     [
+      "Pharrell is a future what?",
+      "Thinker",
+      "Star",
+      "Legend"
+     ],
+     [
+      "Too much nostalgia ruins the whole what?",
+      "Session",
+      "Song",
+      "Album"
+     ],
+     [
+      "He doesn't like certain what?",
+      "Buzzwords",
+      "Beats",
+      "Rappers"
+     ],
+     [
+      "Joe asks which artists blew their what?",
+      "Mind",
+      "Budget",
+      "Cover"
+     ]
+    ]
+   ]
+  },
+  {
+   "title": "Pete Rock on 'The World Is Yours'",
+   "id": "Qvqw2OU4fGY",
+   "start": 0,
+   "cuts": [
+    30,
+    99.7,
+    172
+   ],
+   "qs": [
+    [
+     [
+      "Joe went for a long what?",
+      "Drive",
+      "Walk",
+      "Flight"
+     ],
+     [
+      "When did he go?",
+      "This weekend",
+      "Last night",
+      "On Tuesday"
+     ],
+     [
+      "About how many times did he hear it?",
+      "30",
+      "Three",
+      "100"
+     ],
+     [
+      "'Whose world is this?' The answer?",
+      "The world is yours",
+      "The world is mine",
+      "The world is ours"
+     ],
+     [
+      "Nas came up to which town?",
+      "The Vernon",
+      "Queensbridge",
+      "Harlem"
+     ],
+     [
+      "Who gets a shout out for that?",
+      "Large Professor",
+      "DJ Premier",
+      "Q-Tip"
+     ]
+    ],
+    [
+     [
+      "Large first played Pete which Nas verse?",
+      "Live at the Barbecue",
+      "Halftime",
+      "Ether"
+     ],
+     [
+      "At Pete's crib, Nas stood against the what?",
+      "Wall",
+      "Door",
+      "Window"
+     ],
+     [
+      "When Pete went to the next beat, Nas said?",
+      "Chill, chill",
+      "Run it back",
+      "That's it"
+     ],
+     [
+      "Nas kept doing what to the beat?",
+      "Bobbing",
+      "Rapping",
+      "Dancing"
+     ],
+     [
+      "What kind of book did Nas have?",
+      "Composition book",
+      "Phone book",
+      "Sketch book"
+     ],
+     [
+      "Nas wanted Pete to do what on one part?",
+      "Sing",
+      "Scratch",
+      "Rap"
+     ],
+     [
+      "Pete used to play around on what?",
+      "Records",
+      "Drums",
+      "Keys"
+     ]
+    ],
+    [
+     [
+      "Joe says Nas has got to touch the what?",
+      "Couch",
+      "Mic",
+      "Ceiling"
+     ],
+     [
+      "Who else does Joe name with him?",
+      "Jay",
+      "Mase",
+      "Drake"
+     ],
+     [
+      "They can buy new what?",
+      "Coliseums",
+      "Studios",
+      "Jets"
+     ],
+     [
+      "Joe's what fingers are getting tired?",
+      "Twitter",
+      "Typing",
+      "Ring"
+     ],
+     [
+      "What does Joe keep texting Jay-Z and Nas?",
+      "Congratulations",
+      "Happy birthday",
+      "Call me"
+     ],
+     [
+      "Jada says he ain't what over here?",
+      "Chopped liver",
+      "A rookie",
+      "Washed"
+     ],
+     [
+      "Fans would love a Pete Rock-produced what?",
+      "LOX album",
+      "Nas album",
+      "Joe album"
      ]
     ]
    ]
