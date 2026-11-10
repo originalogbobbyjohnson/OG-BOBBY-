@@ -621,7 +621,7 @@ window.OGNav = (function () {
     { n: "CARIBBEAN", d: "Jamaica, Trinidad, Puerto Rico, the islands.", c: "#d08a1e", coming: ["Rihanna", "Daddy Yankee", "Bad Bunny", "Sean Paul", "Bob Marley", ] },
     { n: "LATIN AMERICA", d: "Mexico, Colombia, Brazil, Argentina and the rest.", c: "#d08a1e", coming: ["J Balvin", "Shakira", ] },
     { n: "AFRICA", d: "Lagos, Accra, Johannesburg.", c: "#d08a1e", coming: ["Tyla", "Tems", ] },
-    { n: "ASIA + AUSTRALIA", d: "Seoul, Tokyo, Sydney and the rest.", c: "#d08a1e", coming: ["BLACKPINK", "Kylie Minogue", ] },
+    { n: "ASIA + AUSTRALIA", d: "Seoul, Tokyo, Sydney and the rest.", c: "#d08a1e", coming: ["Keith Urban", "BTS", "BLACKPINK", "Kylie Minogue", ] },
   ];
   /* one color per part of the country, so the board reads as four clean groups */
   var GROUP_C = { "EAST COAST": "#2f6fd6", "THE SOUTH": "#d2462f", "MIDWEST": "#2e9e58", "WEST COAST": "#8a4fd6", "INTERNATIONAL": "#d08a1e" };

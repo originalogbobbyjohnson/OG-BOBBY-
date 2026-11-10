@@ -164,5 +164,7 @@ window.OG_GENRE_OF = {
   "David Guetta": "EDM + DANCE",
   "Avicii": "EDM + DANCE",
   "Reba McEntire": "COUNTRY",
+  "BTS": "POP",
+  "Keith Urban": "COUNTRY",
 };
 
