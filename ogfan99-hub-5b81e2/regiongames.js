@@ -656,4 +656,6 @@ window.OG_REGION_GAMES = {
   "Mike Dimes": { url: "../mikedimes-ogfan99-437fda/", ex: 2, indie: 1 },
   "Harry Styles": { url: "../harrystyles-ogfan99-401ad3/", ex: 0 },
   "Sabrina Carpenter": { url: "../sabrinacarpenter-ogfan99-920f19/", ex: 1 },
+  "NF": { url: "../nf-ogfan99-afd230/", ex: 0, indie: 1 },
+  "Witt Lowry": { url: "../wittlowry-ogfan99-73688d/", ex: 2, indie: 1 },
 };
