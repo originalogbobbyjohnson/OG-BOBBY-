@@ -198,5 +198,7 @@ window.OG_GENRE_OF = {
   "Elton John": "POP",
   "Coldplay": "ROCK",
   "Kenyon Dixon": "R&B",
+  "Trip Lee": "GOSPEL",
+  "Tedashii": "GOSPEL",
 };
 
