@@ -267,5 +267,7 @@ window.OG_GENRE_OF = {
   "Phil Wickham": "GOSPEL",
   "Ian Munsick": "COUNTRY",
   "Shane Smith & the Saints": "COUNTRY",
+  "Jonathan McReynolds": "GOSPEL",
+  "Koryn Hawthorne": "GOSPEL",
 };
 

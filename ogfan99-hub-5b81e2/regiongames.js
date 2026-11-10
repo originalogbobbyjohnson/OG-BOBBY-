@@ -704,4 +704,6 @@ window.OG_REGION_GAMES = {
   "Ian Munsick": { url: "../ianmunsick-ogfan99-f9d28f/", ex: 0, indie: 1 },
   "Shane Smith & the Saints": { url: "../shanesmiththesaints-ogfan99-e9d8e6/", ex: 0, indie: 1 },
   "Tony Shhnow": { url: "../tonyshhnow-ogfan99-557d08/", ex: 2, indie: 1 },
+  "Jonathan McReynolds": { url: "../jonathanmcreynolds-ogfan99-3b0dd2/", ex: 0 },
+  "Koryn Hawthorne": { url: "../korynhawthorne-ogfan99-ef8415/", ex: 0 },
 };
