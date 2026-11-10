@@ -236,5 +236,7 @@ window.OG_GENRE_OF = {
   "Harry Styles": "POP",
   "Sabrina Carpenter": "POP",
   "Kaash Paige": "R&B",
+  "Imagine Dragons": "ROCK",
+  "Fleetwood Mac": "ROCK",
 };
 

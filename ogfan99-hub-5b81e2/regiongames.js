@@ -663,4 +663,6 @@ window.OG_REGION_GAMES = {
   "Reuben Vincent": { url: "../reubenvincent-ogfan99-f64b34/", ex: 2 },
   "Caskey": { url: "../caskey-ogfan99-3ec424/", ex: 2, indie: 1 },
   "Mike Stud": { url: "../mikestud-ogfan99-5621b2/", ex: 1, indie: 1 },
+  "Imagine Dragons": { url: "../imaginedragons-ogfan99-5d5217/", ex: 0 },
+  "Fleetwood Mac": { url: "../fleetwoodmac-ogfan99-1a60ee/", ex: 0 },
 };
