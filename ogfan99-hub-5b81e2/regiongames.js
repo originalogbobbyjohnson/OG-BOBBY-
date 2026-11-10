@@ -610,4 +610,6 @@ window.OG_REGION_GAMES = {
   "Tedashii": { url: "../tedashii-ogfan99-7ded53/", ex: 0, indie: 1 },
   "WHATUPRG": { url: "../whatuprg-ogfan99-d8094b/", ex: 0, indie: 1 },
   "nobigdyl.": { url: "../nobigdyl-ogfan99-89f662/", ex: 0, indie: 1 },
+  "Berner": { url: "../berner-ogfan99-22aa75/", ex: 2, indie: 1 },
+  "Jay Park": { url: "../jaypark-ogfan99-331375/", ex: 2, indie: 1 },
 };
