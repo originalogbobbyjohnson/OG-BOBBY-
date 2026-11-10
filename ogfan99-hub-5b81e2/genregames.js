@@ -227,5 +227,7 @@ window.OG_GENRE_OF = {
   "Jordan Ward": "R&B",
   "Kiana Led\u00e9": "R&B",
   "Snoh Aalegra": "R&B",
+  "Ambr\u00e9": "R&B",
+  "Jvck James": "R&B",
 };
 

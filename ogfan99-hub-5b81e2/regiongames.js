@@ -637,4 +637,6 @@ window.OG_REGION_GAMES = {
   "Dax": { url: "../dax-ogfan99-7704fb/", ex: 0, indie: 1 },
   "Kiana Led\u00e9": { url: "../kianalede-ogfan99-2fb1cc/", ex: 2 },
   "Snoh Aalegra": { url: "../snohaalegra-ogfan99-52d533/", ex: 0 },
+  "Ambr\u00e9": { url: "../ambre-ogfan99-453300/", ex: 2 },
+  "Jvck James": { url: "../jvckjames-ogfan99-dc9f3d/", ex: 0 },
 };
