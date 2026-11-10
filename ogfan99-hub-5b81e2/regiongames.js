@@ -581,4 +581,6 @@ window.OG_REGION_GAMES = {
   "Bruno Mars": { url: "../brunomars-ogfan99-9d4631/", ex: 0 },
   "Tim McGraw": { url: "../timmcgraw-ogfan99-41d753/", ex: 0 },
   "Faith Hill": { url: "../faithhill-ogfan99-997cf3/", ex: 0 },
+  "Martin Garrix": { url: "../martingarrix-ogfan99-2e1e9f/", ex: 0 },
+  "Daft Punk": { url: "../daftpunk-ogfan99-d3146a/", ex: 0 },
 };

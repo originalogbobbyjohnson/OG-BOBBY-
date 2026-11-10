@@ -181,5 +181,7 @@ window.OG_GENRE_OF = {
   "Bruno Mars": "POP",
   "Tim McGraw": "COUNTRY",
   "Faith Hill": "COUNTRY",
+  "Martin Garrix": "EDM + DANCE",
+  "Daft Punk": "EDM + DANCE",
 };
 
