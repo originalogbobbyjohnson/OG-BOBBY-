@@ -3,6 +3,7 @@
 window.OG_GENRE_OF = {
   "Jill Scott": "R&B",
   "Yaya Bey": "R&B",
+  "Raveena": "R&B",
   "Jazmine Sullivan": "R&B",
   "Musiq Soulchild": "R&B",
   "Boyz II Men": "R&B",
@@ -209,5 +210,6 @@ window.OG_GENRE_OF = {
   "Steven Malcolm": "GOSPEL",
   "Paul McCartney": "ROCK",
   "Taylor Swift": "POP",
+  "Sudan Archives": "R&B",
 };
 
