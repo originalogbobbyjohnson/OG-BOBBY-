@@ -695,4 +695,6 @@ window.OG_REGION_GAMES = {
   "Brandon Lake": { url: "../brandonlake-ogfan99-e6d144/", ex: 0 },
   "Morgan Wade": { url: "../morganwade-ogfan99-b4c44d/", ex: 0 },
   "Flatland Cavalry": { url: "../flatlandcavalry-ogfan99-33185e/", ex: 0, indie: 1 },
+  "Pivot Gang": { url: "../pivotgang-ogfan99-e97192/", ex: 2, indie: 1 },
+  "Vic Spencer": { url: "../vicspencer-ogfan99-c58f32/", ex: 2, indie: 1 },
 };
