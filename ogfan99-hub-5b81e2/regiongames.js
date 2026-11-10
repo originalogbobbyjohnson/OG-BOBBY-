@@ -635,4 +635,6 @@ window.OG_REGION_GAMES = {
   "Jordan Ward": { url: "../jordanward-ogfan99-022ced/", ex: 0, indie: 1 },
   "Token": { url: "../token-ogfan99-8be890/", ex: 0, indie: 1 },
   "Dax": { url: "../dax-ogfan99-7704fb/", ex: 0, indie: 1 },
+  "Kiana Led\u00e9": { url: "../kianalede-ogfan99-2fb1cc/", ex: 2 },
+  "Snoh Aalegra": { url: "../snohaalegra-ogfan99-52d533/", ex: 0 },
 };

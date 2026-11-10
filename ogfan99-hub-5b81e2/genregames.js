@@ -225,5 +225,7 @@ window.OG_GENRE_OF = {
   "Olivia Rodrigo": "POP",
   "Alex Isley": "R&B",
   "Jordan Ward": "R&B",
+  "Kiana Led\u00e9": "R&B",
+  "Snoh Aalegra": "R&B",
 };
 
