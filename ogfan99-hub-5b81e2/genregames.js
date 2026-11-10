@@ -293,5 +293,7 @@ window.OG_GENRE_OF = {
   "Arctic Monkeys": "ROCK",
   "Drew Parker": "COUNTRY",
   "William Beckmann": "COUNTRY",
+  "Maverick City Music": "GOSPEL",
+  "Elevation Worship": "GOSPEL",
 };
 

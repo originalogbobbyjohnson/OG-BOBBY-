@@ -741,4 +741,6 @@ window.OG_REGION_GAMES = {
   "William Beckmann": { url: "../williambeckmann-ogfan99-5900d6/", ex: 2 },
   "Knucks": { url: "../knucks-ogfan99-b36a9c/", ex: 2, indie: 1 },
   "Ocean Wisdom": { url: "../oceanwisdom-ogfan99-f05597/", ex: 2, indie: 1 },
+  "Maverick City Music": { url: "../maverickcitymusic-ogfan99-36b6d8/", ex: 0 },
+  "Elevation Worship": { url: "../elevationworship-ogfan99-df3265/", ex: 0 },
 };
