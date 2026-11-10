@@ -612,4 +612,6 @@ window.OG_REGION_GAMES = {
   "nobigdyl.": { url: "../nobigdyl-ogfan99-89f662/", ex: 0, indie: 1 },
   "Berner": { url: "../berner-ogfan99-22aa75/", ex: 2, indie: 1 },
   "Jay Park": { url: "../jaypark-ogfan99-331375/", ex: 2, indie: 1 },
+  "Masego": { url: "../masego-ogfan99-0d2743/", ex: 0, indie: 1 },
+  "Mereba": { url: "../mereba-ogfan99-357c5d/", ex: 0, indie: 1 },
 };

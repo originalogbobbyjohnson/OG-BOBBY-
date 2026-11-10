@@ -202,5 +202,7 @@ window.OG_GENRE_OF = {
   "Tedashii": "GOSPEL",
   "WHATUPRG": "GOSPEL",
   "nobigdyl.": "GOSPEL",
+  "Masego": "R&B",
+  "Mereba": "R&B",
 };
 
