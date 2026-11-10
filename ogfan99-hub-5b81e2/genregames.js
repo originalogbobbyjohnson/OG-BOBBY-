@@ -249,5 +249,7 @@ window.OG_GENRE_OF = {
   "Canon": "GOSPEL",
   "Colter Wall": "COUNTRY",
   "Turnpike Troubadours": "COUNTRY",
+  "Hollyn": "GOSPEL",
+  "Lauren Daigle": "GOSPEL",
 };
 

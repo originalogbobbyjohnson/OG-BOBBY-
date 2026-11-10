@@ -683,4 +683,6 @@ window.OG_REGION_GAMES = {
   "Sims": { url: "../sims-ogfan99-d7d2ca/", ex: 0, indie: 1 },
   "Colter Wall": { url: "../colterwall-ogfan99-7869ad/", ex: 0, indie: 1 },
   "Turnpike Troubadours": { url: "../turnpiketroubadours-ogfan99-68dbf5/", ex: 0, indie: 1 },
+  "Hollyn": { url: "../hollyn-ogfan99-ec5e4b/", ex: 0, indie: 1 },
+  "Lauren Daigle": { url: "../laurendaigle-ogfan99-982bae/", ex: 0 },
 };
