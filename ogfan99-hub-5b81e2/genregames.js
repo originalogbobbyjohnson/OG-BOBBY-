@@ -168,5 +168,7 @@ window.OG_GENRE_OF = {
   "Keith Urban": "COUNTRY",
   "Tasha Cobbs Leonard": "GOSPEL",
   "Tye Tribbett": "GOSPEL",
+  "Carrie Underwood": "COUNTRY",
+  "Luke Combs": "COUNTRY",
 };
 

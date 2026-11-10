@@ -573,4 +573,6 @@ window.OG_REGION_GAMES = {
   "Keith Urban": { url: "../keithurban-ogfan99-a9cf17/", ex: 0 },
   "Tasha Cobbs Leonard": { url: "../tashacobbs-ogfan99-efaa0d/", ex: 0 },
   "Tye Tribbett": { url: "../tyetribbett-ogfan99-90f0a4/", ex: 0 },
+  "Carrie Underwood": { url: "../carrieunderwood-ogfan99-2c8b50/", ex: 0 },
+  "Luke Combs": { url: "../lukecombs-ogfan99-e697fa/", ex: 0 },
 };
