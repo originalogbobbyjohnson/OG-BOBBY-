@@ -303,5 +303,7 @@ window.OG_GENRE_OF = {
   "Todd Dulaney": "GOSPEL",
   "Avery Anna": "COUNTRY",
   "Tucker Wetmore": "COUNTRY",
+  "Israel Houghton": "GOSPEL",
+  "Jekalyn Carr": "GOSPEL",
 };
 
