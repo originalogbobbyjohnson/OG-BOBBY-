@@ -659,4 +659,6 @@ window.OG_REGION_GAMES = {
   "NF": { url: "../nf-ogfan99-afd230/", ex: 0, indie: 1 },
   "Witt Lowry": { url: "../wittlowry-ogfan99-73688d/", ex: 2, indie: 1 },
   "Kaash Paige": { url: "../kaashpaige-ogfan99-05b3d1/", ex: 0 },
+  "Add-2": { url: "../add2-ogfan99-ced416/", ex: 2, indie: 1 },
+  "Reuben Vincent": { url: "../reubenvincent-ogfan99-f64b34/", ex: 2 },
 };
