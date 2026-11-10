@@ -131,6 +131,7 @@ window.OG_GENRE_OF = {
   "Jennifer Lopez": "LATIN + REGGAETON",
   "Shaggy": "DANCEHALL + AFROBEATS",
   "Romeo Santos": "LATIN + REGGAETON",
+  "Lady Gaga": "POP",
   "Prince Royce": "LATIN + REGGAETON",
   "Billy Joel": "ROCK",
   "Bruce Springsteen": "ROCK",
