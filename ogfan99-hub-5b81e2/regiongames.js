@@ -596,4 +596,6 @@ window.OG_REGION_GAMES = {
   "Paris Texas": { url: "../paristexas-ogfan99-ebc7dc/", ex: 2 },
   "Bktherula": { url: "../bktherula-ogfan99-5cae0d/", ex: 2 },
   "Nappy Nina": { url: "../nappynina-ogfan99-9fffdc/", ex: 2 },
+  "Snotty Nose Rez Kids": { url: "../snottynoserezkids-ogfan99-66efb7/", ex: 2 },
+  "Ty Brasel": { url: "../tybrasel-ogfan99-b2ecb9/", ex: 0 },
 };
