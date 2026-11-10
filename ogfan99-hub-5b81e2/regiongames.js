@@ -591,4 +591,5 @@ window.OG_REGION_GAMES = {
   "Jay Worthy": { url: "../jayworthy-ogfan99-eba76a/", ex: 2 },
   "Little Simz": { url: "../littlesimz-ogfan99-1645e7/", ex: 0 },
   "Tobi Lou": { url: "../tobilou-ogfan99-523dd0/", ex: 0 },
+  "ShaqIsDope": { url: "../shaqisdope-ogfan99-47dec6/", ex: 2 },
 };
