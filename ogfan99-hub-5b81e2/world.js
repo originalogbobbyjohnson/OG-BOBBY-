@@ -617,7 +617,7 @@ window.OGNav = (function () {
     { n: "THE NORTHWEST", d: "Seattle and Portland.", c: "#35b867", coming: ["Shabazz Palaces", "Grynch", "Travis Thompson", "Amin\u00e9", "Macklemore", "Sir Mix-a-Lot", "Mic Capes", "Onry Ozzborn", "Dave B", "Grieves", "Sol", "Blue Scholars"] },
     { g: "INTERNATIONAL" },
     { n: "CANADA", d: "Toronto, Montreal, Vancouver.", c: "#d08a1e", coming: ["Snotty Nose Rez Kids", "ShaqIsDope", "C\u00e9line Dion", "The Weeknd", "Avril Lavigne", "Shania Twain", ] },
-    { n: "UK + EUROPE", d: "London, Manchester, Glasgow, Paris, Berlin, Stockholm, Amsterdam.", c: "#d08a1e", coming: ["Little Simz", "Daft Punk", "Martin Garrix", "Ti\u00ebsto", "Avicii", "David Guetta", "ABBA", "Dua Lipa", "Ed Sheeran", "Adele", "Zedd", "Calvin Harris", ] },
+    { n: "UK + EUROPE", d: "London, Manchester, Glasgow, Paris, Berlin, Stockholm, Amsterdam.", c: "#d08a1e", coming: ["Coldplay", "Elton John", "Little Simz", "Daft Punk", "Martin Garrix", "Ti\u00ebsto", "Avicii", "David Guetta", "ABBA", "Dua Lipa", "Ed Sheeran", "Adele", "Zedd", "Calvin Harris", ] },
     { n: "CARIBBEAN", d: "Jamaica, Trinidad, Puerto Rico, the islands.", c: "#d08a1e", coming: ["Rihanna", "Daddy Yankee", "Bad Bunny", "Sean Paul", "Bob Marley", ] },
     { n: "LATIN AMERICA", d: "Mexico, Colombia, Brazil, Argentina and the rest.", c: "#d08a1e", coming: ["J Balvin", "Shakira", ] },
     { n: "AFRICA", d: "Lagos, Accra, Johannesburg.", c: "#d08a1e", coming: ["Tyla", "Tems", ] },

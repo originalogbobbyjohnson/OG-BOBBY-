@@ -194,5 +194,7 @@ window.OG_GENRE_OF = {
   "Jamila Woods": "R&B",
   "Ravyn Lenae": "R&B",
   "Hulvey": "GOSPEL",
+  "Elton John": "POP",
+  "Coldplay": "ROCK",
 };
 

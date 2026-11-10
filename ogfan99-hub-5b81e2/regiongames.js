@@ -601,4 +601,6 @@ window.OG_REGION_GAMES = {
   "Jamila Woods": { url: "../jamilawoods-ogfan99-c021f3/", ex: 0 },
   "Ravyn Lenae": { url: "../ravynlenae-ogfan99-c3def7/", ex: 0 },
   "Hulvey": { url: "../hulvey-ogfan99-454b02/", ex: 0 },
+  "Elton John": { url: "../eltonjohn-ogfan99-f63d79/", ex: 0 },
+  "Coldplay": { url: "../coldplay-ogfan99-ad3d7b/", ex: 0 },
 };
