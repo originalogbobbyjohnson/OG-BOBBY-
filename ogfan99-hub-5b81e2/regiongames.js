@@ -669,4 +669,5 @@ window.OG_REGION_GAMES = {
   "Kweku Collins": { url: "../kwekucollins-ogfan99-9cc264/", ex: 2, indie: 1 },
   "Jez Dior": { url: "../jezdior-ogfan99-509124/", ex: 0, indie: 1 },
   "MOD SUN": { url: "../modsun-ogfan99-a89168/", ex: 0, indie: 1 },
+  "theMIND": { url: "../themind-ogfan99-382f1f/", ex: 2, indie: 1 },
 };
