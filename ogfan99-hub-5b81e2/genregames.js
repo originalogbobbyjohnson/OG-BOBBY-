@@ -259,5 +259,7 @@ window.OG_GENRE_OF = {
   "Whiskey Myers": "COUNTRY",
   "for KING & COUNTRY": "GOSPEL",
   "Brandon Lake": "GOSPEL",
+  "Morgan Wade": "COUNTRY",
+  "Flatland Cavalry": "COUNTRY",
 };
 

@@ -693,4 +693,6 @@ window.OG_REGION_GAMES = {
   "Whiskey Myers": { url: "../whiskeymyers-ogfan99-bf8990/", ex: 0, indie: 1 },
   "for KING & COUNTRY": { url: "../forkingcountry-ogfan99-080f2e/", ex: 0 },
   "Brandon Lake": { url: "../brandonlake-ogfan99-e6d144/", ex: 0 },
+  "Morgan Wade": { url: "../morganwade-ogfan99-b4c44d/", ex: 0 },
+  "Flatland Cavalry": { url: "../flatlandcavalry-ogfan99-33185e/", ex: 0, indie: 1 },
 };
