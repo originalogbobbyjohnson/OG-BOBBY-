@@ -111,6 +111,7 @@ window.OG_GENRE_OF = {
   "Avant": "R&B",
   "Kirk Franklin": "GOSPEL",
   "Ty Brasel": "GOSPEL",
+  "Andy Mineo": "GOSPEL",
   "Yolanda Adams": "GOSPEL",
   "Selena": "LATIN + REGGAETON",
   "Gloria Estefan": "LATIN + REGGAETON",
@@ -192,5 +193,6 @@ window.OG_GENRE_OF = {
   "Kacey Musgraves": "COUNTRY",
   "Jamila Woods": "R&B",
   "Ravyn Lenae": "R&B",
+  "Hulvey": "GOSPEL",
 };
 

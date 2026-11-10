@@ -600,4 +600,5 @@ window.OG_REGION_GAMES = {
   "Ty Brasel": { url: "../tybrasel-ogfan99-b2ecb9/", ex: 0 },
   "Jamila Woods": { url: "../jamilawoods-ogfan99-c021f3/", ex: 0 },
   "Ravyn Lenae": { url: "../ravynlenae-ogfan99-c3def7/", ex: 0 },
+  "Hulvey": { url: "../hulvey-ogfan99-454b02/", ex: 0 },
 };
