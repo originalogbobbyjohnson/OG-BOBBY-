@@ -275,5 +275,7 @@ window.OG_GENRE_OF = {
   "Mo Pitney": "COUNTRY",
   "Luke Bryan": "COUNTRY",
   "Lainey Wilson": "COUNTRY",
+  "Muscadine Bloodline": "COUNTRY",
+  "Hailey Whitters": "COUNTRY",
 };
 
