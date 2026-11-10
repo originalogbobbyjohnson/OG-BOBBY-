@@ -710,4 +710,6 @@ window.OG_REGION_GAMES = {
   "Zach Top": { url: "../zachtop-ogfan99-bb3447/", ex: 0 },
   "49 Winchester": { url: "../49winchester-ogfan99-bcfa15/", ex: 0, indie: 1 },
   "Mo Pitney": { url: "../mopitney-ogfan99-eefffe/", ex: 0, indie: 1 },
+  "Luke Bryan": { url: "../lukebryan-ogfan99-9ce10e/", ex: 0 },
+  "Lainey Wilson": { url: "../laineywilson-ogfan99-25f075/", ex: 0 },
 };

@@ -273,5 +273,7 @@ window.OG_GENRE_OF = {
   "Zach Top": "COUNTRY",
   "49 Winchester": "COUNTRY",
   "Mo Pitney": "COUNTRY",
+  "Luke Bryan": "COUNTRY",
+  "Lainey Wilson": "COUNTRY",
 };
 
