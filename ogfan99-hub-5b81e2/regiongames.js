@@ -732,4 +732,6 @@ window.OG_REGION_GAMES = {
   "Wrekonize": { url: "../wrekonize-ogfan99-4e8ef1/", ex: 2, indie: 1 },
   "Sampa the Great": { url: "../sampathegreat-ogfan99-88b49e/", ex: 0, indie: 1 },
   "Kari Faux": { url: "../karifaux-ogfan99-7b37e3/", ex: 2, indie: 1 },
+  "Riley Green": { url: "../rileygreen-ogfan99-a7d58e/", ex: 0 },
+  "Parker McCollum": { url: "../parkermccollum-ogfan99-560f57/", ex: 0 },
 };

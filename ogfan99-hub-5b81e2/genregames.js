@@ -288,5 +288,7 @@ window.OG_GENRE_OF = {
   "Ashley McBryde": "COUNTRY",
   "Kameron Marlowe": "COUNTRY",
   "Dylan Gossett": "COUNTRY",
+  "Riley Green": "COUNTRY",
+  "Parker McCollum": "COUNTRY",
 };
 
