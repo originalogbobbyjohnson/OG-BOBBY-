@@ -4,6 +4,7 @@ window.OG_GENRE_OF = {
   "Jill Scott": "R&B",
   "Yaya Bey": "R&B",
   "Raveena": "R&B",
+  "Leon Thomas": "R&B",
   "Amber Mark": "R&B",
   "Jazmine Sullivan": "R&B",
   "Musiq Soulchild": "R&B",
@@ -231,5 +232,6 @@ window.OG_GENRE_OF = {
   "Jvck James": "R&B",
   "Post Malone": "POP",
   "Morgan Wallen": "COUNTRY",
+  "Destin Conrad": "R&B",
 };
 
