@@ -110,6 +110,7 @@ window.OG_GENRE_OF = {
   "Dru Hill": "R&B",
   "Avant": "R&B",
   "Kirk Franklin": "GOSPEL",
+  "Ty Brasel": "GOSPEL",
   "Yolanda Adams": "GOSPEL",
   "Selena": "LATIN + REGGAETON",
   "Gloria Estefan": "LATIN + REGGAETON",
