@@ -299,5 +299,7 @@ window.OG_GENRE_OF = {
   "Lewis Capaldi": "POP",
   "Corey Kent": "COUNTRY",
   "Conner Smith": "COUNTRY",
+  "Chandler Moore": "GOSPEL",
+  "Todd Dulaney": "GOSPEL",
 };
 

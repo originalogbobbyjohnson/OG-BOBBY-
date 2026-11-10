@@ -751,4 +751,6 @@ window.OG_REGION_GAMES = {
   "Pa Salieu": { url: "../pasalieu-ogfan99-381b3f/", ex: 2 },
   "Avelino": { url: "../avelino-ogfan99-865da1/", ex: 2, indie: 1 },
   "Wretch 32": { url: "../wretch32-ogfan99-89e30e/", ex: 0 },
+  "Chandler Moore": { url: "../chandlermoore-ogfan99-f01615/", ex: 0 },
+  "Todd Dulaney": { url: "../todddulaney-ogfan99-c96e6b/", ex: 0 },
 };
