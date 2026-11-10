@@ -290,5 +290,6 @@ window.OG_GENRE_OF = {
   "Dylan Gossett": "COUNTRY",
   "Riley Green": "COUNTRY",
   "Parker McCollum": "COUNTRY",
+  "Arctic Monkeys": "ROCK",
 };
 
