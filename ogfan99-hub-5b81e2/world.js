@@ -653,7 +653,7 @@ window.OGNav = (function () {
   var LIFE = { "Steady B": 1 };
   function gameRows(names, c, sub) {
     var RG = window.OG_REGION_GAMES || {};
-    return '<div class="prl">' + names.map(function (n) { var g = RG[n]; return '<button type="button" class="prr" data-gg="' + esc(n) + '"><span class="prdot" style="background:' + c + '"></span><span class="prn"><b>' + esc(n) + '</b>' + (LIFE[n] ? '<em class="life">SERVING LIFE</em>' : '') + (g.flag && owner() ? '<em class="life" style="background:#e8b84a;color:#000">' + esc(g.flag) + '</em>' : '') + '</span><span class="st live">' + (g.ex === 2 ? "PLAY 18+" : "PLAY") + '</span></button>'; }).join("") + '</div>';
+    return '<div class="prl">' + names.map(function (n) { var g = RG[n]; return '<button type="button" class="prr" data-gg="' + esc(n) + '"><span class="prdot" style="background:' + c + '"></span><span class="prn"><b>' + esc(n) + '</b>' + (LIFE[n] ? '<em class="life">SERVING LIFE</em>' : '') + (g.indie ? '<em class="life" style="background:none;border:1.5px solid #35b867;color:#35b867">INDIE</em>' : '') + (g.flag && owner() ? '<em class="life" style="background:#e8b84a;color:#000">' + esc(g.flag) + '</em>' : '') + '</span><span class="st live">' + (g.ex === 2 ? "PLAY 18+" : "PLAY") + '</span></button>'; }).join("") + '</div>';
   }
   function wireRows(d) { var RG = window.OG_REGION_GAMES || {}; d.querySelectorAll("[data-gg]").forEach(function (x) { x.onclick = function (ev) { ev.stopPropagation(); rgPlay(x.dataset.gg, RG[x.dataset.gg], d, x); }; }); }
 
