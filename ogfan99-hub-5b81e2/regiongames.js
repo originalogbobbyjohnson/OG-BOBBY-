@@ -592,4 +592,5 @@ window.OG_REGION_GAMES = {
   "Little Simz": { url: "../littlesimz-ogfan99-1645e7/", ex: 0 },
   "Tobi Lou": { url: "../tobilou-ogfan99-523dd0/", ex: 0 },
   "ShaqIsDope": { url: "../shaqisdope-ogfan99-47dec6/", ex: 2 },
+  "Bruiser Wolf": { url: "../bruiserwolf-ogfan99-f61c50/", ex: 2 },
 };
