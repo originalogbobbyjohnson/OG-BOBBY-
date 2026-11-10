@@ -755,4 +755,5 @@ window.OG_REGION_GAMES = {
   "Todd Dulaney": { url: "../todddulaney-ogfan99-c96e6b/", ex: 0 },
   "Avery Anna": { url: "../averyanna-ogfan99-de61c3/", ex: 0 },
   "Tucker Wetmore": { url: "../tuckerwetmore-ogfan99-00ab00/", ex: 0 },
+  "Potter Payper": { url: "../potterpayper-ogfan99-bbf4dc/", ex: 2, indie: 1 },
 };
