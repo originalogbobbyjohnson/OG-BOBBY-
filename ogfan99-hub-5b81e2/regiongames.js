@@ -737,4 +737,6 @@ window.OG_REGION_GAMES = {
   "Loyle Carner": { url: "../loylecarner-ogfan99-2ea019/", ex: 0 },
   "Kojey Radical": { url: "../kojeyradical-ogfan99-75805a/", ex: 0, indie: 1 },
   "Arctic Monkeys": { url: "../arcticmonkeys-ogfan99-be96a8/", ex: 0 },
+  "Drew Parker": { url: "../drewparker-ogfan99-5672f6/", ex: 0 },
+  "William Beckmann": { url: "../williambeckmann-ogfan99-5900d6/", ex: 2 },
 };

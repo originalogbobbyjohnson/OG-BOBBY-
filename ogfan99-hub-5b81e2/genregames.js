@@ -291,5 +291,7 @@ window.OG_GENRE_OF = {
   "Riley Green": "COUNTRY",
   "Parker McCollum": "COUNTRY",
   "Arctic Monkeys": "ROCK",
+  "Drew Parker": "COUNTRY",
+  "William Beckmann": "COUNTRY",
 };
 
