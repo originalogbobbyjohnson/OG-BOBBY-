@@ -691,4 +691,6 @@ window.OG_REGION_GAMES = {
   "Noah Kahan": { url: "../noahkahan-ogfan99-31859b/", ex: 0 },
   "Koe Wetzel": { url: "../koewetzel-ogfan99-6743b1/", ex: 2, indie: 1 },
   "Whiskey Myers": { url: "../whiskeymyers-ogfan99-bf8990/", ex: 0, indie: 1 },
+  "for KING & COUNTRY": { url: "../forkingcountry-ogfan99-080f2e/", ex: 0 },
+  "Brandon Lake": { url: "../brandonlake-ogfan99-e6d144/", ex: 0 },
 };

@@ -257,5 +257,7 @@ window.OG_GENRE_OF = {
   "Noah Kahan": "POP",
   "Koe Wetzel": "COUNTRY",
   "Whiskey Myers": "COUNTRY",
+  "for KING & COUNTRY": "GOSPEL",
+  "Brandon Lake": "GOSPEL",
 };
 
