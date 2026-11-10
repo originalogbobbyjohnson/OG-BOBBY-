@@ -761,4 +761,6 @@ window.OG_REGION_GAMES = {
   "Dave": { url: "../dave-ogfan99-c7fccb/", ex: 2 },
   "Lowkey": { url: "../lowkey-ogfan99-94af1b/", ex: 0, indie: 1 },
   "Akala": { url: "../akala-ogfan99-bf7158/", ex: 0, indie: 1 },
+  "Chase Matthew": { url: "../chasematthew-ogfan99-0277f4/", ex: 0 },
+  "Jake Worthington": { url: "../jakeworthington-ogfan99-c7eb61/", ex: 0 },
 };

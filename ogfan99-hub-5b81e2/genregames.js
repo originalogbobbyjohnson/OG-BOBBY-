@@ -305,5 +305,7 @@ window.OG_GENRE_OF = {
   "Tucker Wetmore": "COUNTRY",
   "Israel Houghton": "GOSPEL",
   "Jekalyn Carr": "GOSPEL",
+  "Chase Matthew": "COUNTRY",
+  "Jake Worthington": "COUNTRY",
 };
 
