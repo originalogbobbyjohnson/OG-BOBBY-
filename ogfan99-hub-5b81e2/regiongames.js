@@ -749,4 +749,6 @@ window.OG_REGION_GAMES = {
   "Conner Smith": { url: "../connersmith-ogfan99-d653fa/", ex: 0 },
   "Ghetts": { url: "../ghetts-ogfan99-58f47c/", ex: 2 },
   "Pa Salieu": { url: "../pasalieu-ogfan99-381b3f/", ex: 2 },
+  "Avelino": { url: "../avelino-ogfan99-865da1/", ex: 2, indie: 1 },
+  "Wretch 32": { url: "../wretch32-ogfan99-89e30e/", ex: 0 },
 };
