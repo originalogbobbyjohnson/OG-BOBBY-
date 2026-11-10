@@ -295,5 +295,7 @@ window.OG_GENRE_OF = {
   "William Beckmann": "COUNTRY",
   "Maverick City Music": "GOSPEL",
   "Elevation Worship": "GOSPEL",
+  "U2": "ROCK",
+  "Lewis Capaldi": "POP",
 };
 

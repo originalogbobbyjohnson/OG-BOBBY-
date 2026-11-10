@@ -743,4 +743,6 @@ window.OG_REGION_GAMES = {
   "Ocean Wisdom": { url: "../oceanwisdom-ogfan99-f05597/", ex: 2, indie: 1 },
   "Maverick City Music": { url: "../maverickcitymusic-ogfan99-36b6d8/", ex: 0 },
   "Elevation Worship": { url: "../elevationworship-ogfan99-df3265/", ex: 0 },
+  "U2": { url: "../u2-ogfan99-d46a73/", ex: 0 },
+  "Lewis Capaldi": { url: "../lewiscapaldi-ogfan99-5d7a7a/", ex: 0 },
 };
