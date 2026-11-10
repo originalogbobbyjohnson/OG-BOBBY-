@@ -190,5 +190,7 @@ window.OG_GENRE_OF = {
   "Daft Punk": "EDM + DANCE",
   "Chris Stapleton": "COUNTRY",
   "Kacey Musgraves": "COUNTRY",
+  "Jamila Woods": "R&B",
+  "Ravyn Lenae": "R&B",
 };
 

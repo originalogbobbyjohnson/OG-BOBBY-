@@ -598,4 +598,6 @@ window.OG_REGION_GAMES = {
   "Nappy Nina": { url: "../nappynina-ogfan99-9fffdc/", ex: 2 },
   "Snotty Nose Rez Kids": { url: "../snottynoserezkids-ogfan99-66efb7/", ex: 2 },
   "Ty Brasel": { url: "../tybrasel-ogfan99-b2ecb9/", ex: 0 },
+  "Jamila Woods": { url: "../jamilawoods-ogfan99-c021f3/", ex: 0 },
+  "Ravyn Lenae": { url: "../ravynlenae-ogfan99-c3def7/", ex: 0 },
 };
