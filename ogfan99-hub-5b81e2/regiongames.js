@@ -671,4 +671,6 @@ window.OG_REGION_GAMES = {
   "MOD SUN": { url: "../modsun-ogfan99-a89168/", ex: 0, indie: 1 },
   "theMIND": { url: "../themind-ogfan99-382f1f/", ex: 2, indie: 1 },
   "Phora": { url: "../phora-ogfan99-aa4959/", ex: 0, indie: 1 },
+  "Zach Bryan": { url: "../zachbryan-ogfan99-444915/", ex: 0 },
+  "Hozier": { url: "../hozier-ogfan99-8168fb/", ex: 0 },
 };

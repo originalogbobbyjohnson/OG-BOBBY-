@@ -239,5 +239,7 @@ window.OG_GENRE_OF = {
   "Imagine Dragons": "ROCK",
   "Fleetwood Mac": "ROCK",
   "MOD SUN": "ROCK",
+  "Zach Bryan": "COUNTRY",
+  "Hozier": "ROCK",
 };
 
