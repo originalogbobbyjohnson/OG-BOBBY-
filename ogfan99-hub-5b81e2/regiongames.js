@@ -579,4 +579,6 @@ window.OG_REGION_GAMES = {
   "Steve Aoki": { url: "../steveaoki-ogfan99-22619e/", ex: 0 },
   "John Legend": { url: "../johnlegend-ogfan99-8860f8/", ex: 0 },
   "Bruno Mars": { url: "../brunomars-ogfan99-9d4631/", ex: 0 },
+  "Tim McGraw": { url: "../timmcgraw-ogfan99-41d753/", ex: 0 },
+  "Faith Hill": { url: "../faithhill-ogfan99-997cf3/", ex: 0 },
 };

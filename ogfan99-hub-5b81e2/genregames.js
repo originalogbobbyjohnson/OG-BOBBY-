@@ -177,5 +177,7 @@ window.OG_GENRE_OF = {
   "Steve Aoki": "EDM + DANCE",
   "John Legend": "R&B",
   "Bruno Mars": "POP",
+  "Tim McGraw": "COUNTRY",
+  "Faith Hill": "COUNTRY",
 };
 
