@@ -605,4 +605,5 @@ window.OG_REGION_GAMES = {
   "Coldplay": { url: "../coldplay-ogfan99-ad3d7b/", ex: 0 },
   "Cozz": { url: "../cozz-ogfan99-e588ed/", ex: 2, indie: 1 },
   "REASON": { url: "../reason-ogfan99-409b19/", ex: 2, indie: 1 },
+  "Kenyon Dixon": { url: "../kenyondixon-ogfan99-80bcb4/", ex: 0, indie: 1 },
 };

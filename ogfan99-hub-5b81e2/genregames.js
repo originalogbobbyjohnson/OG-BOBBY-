@@ -2,6 +2,7 @@
 /* non-rap games: shown on the GENRES tab, not on REGIONS */
 window.OG_GENRE_OF = {
   "Jill Scott": "R&B",
+  "Yaya Bey": "R&B",
   "Jazmine Sullivan": "R&B",
   "Musiq Soulchild": "R&B",
   "Boyz II Men": "R&B",
@@ -196,5 +197,6 @@ window.OG_GENRE_OF = {
   "Hulvey": "GOSPEL",
   "Elton John": "POP",
   "Coldplay": "ROCK",
+  "Kenyon Dixon": "R&B",
 };
 
