@@ -622,4 +622,6 @@ window.OG_REGION_GAMES = {
   "Sudan Archives": { url: "../sudanarchives-ogfan99-f89967/", ex: 2, indie: 1 },
   "Propaganda": { url: "../propaganda-ogfan99-3dff92/", ex: 0, indie: 1 },
   "Jackie Hill Perry": { url: "../jackiehillperry-ogfan99-b687ab/", ex: 0, indie: 1 },
+  "Derek Minor": { url: "../derekminor-ogfan99-230683/", ex: 0, indie: 1 },
+  "Swoope": { url: "../swoope-ogfan99-051116/", ex: 0, indie: 1 },
 };

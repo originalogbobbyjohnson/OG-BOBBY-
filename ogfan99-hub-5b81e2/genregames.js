@@ -213,5 +213,7 @@ window.OG_GENRE_OF = {
   "Sudan Archives": "R&B",
   "Propaganda": "GOSPEL",
   "Jackie Hill Perry": "GOSPEL",
+  "Derek Minor": "GOSPEL",
+  "Swoope": "GOSPEL",
 };
 
