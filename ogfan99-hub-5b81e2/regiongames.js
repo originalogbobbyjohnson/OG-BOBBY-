@@ -649,4 +649,5 @@ window.OG_REGION_GAMES = {
   "Locksmith": { url: "../locksmith-ogfan99-12e13d/", ex: 2, indie: 1 },
   "Sa-Roc": { url: "../saroc-ogfan99-e5ba1e/", ex: 1, indie: 1 },
   "Joey Valence & Brae": { url: "../joeyvalencebrae-ogfan99-fc560a/", ex: 1, indie: 1 },
+  "The Cool Kids": { url: "../thecoolkids-ogfan99-a13549/", ex: 2, indie: 1 },
 };
