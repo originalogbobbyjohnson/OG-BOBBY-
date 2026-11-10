@@ -681,4 +681,6 @@ window.OG_REGION_GAMES = {
   "Canon": { url: "../canon-ogfan99-9a2825/", ex: 0, indie: 1 },
   "Allan Kingdom": { url: "../allankingdom-ogfan99-89469f/", ex: 0, indie: 1 },
   "Sims": { url: "../sims-ogfan99-d7d2ca/", ex: 0, indie: 1 },
+  "Colter Wall": { url: "../colterwall-ogfan99-7869ad/", ex: 0, indie: 1 },
+  "Turnpike Troubadours": { url: "../turnpiketroubadours-ogfan99-68dbf5/", ex: 0, indie: 1 },
 };

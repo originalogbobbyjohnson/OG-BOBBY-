@@ -247,5 +247,7 @@ window.OG_GENRE_OF = {
   "Jason Isbell": "COUNTRY",
   "1K Phew": "GOSPEL",
   "Canon": "GOSPEL",
+  "Colter Wall": "COUNTRY",
+  "Turnpike Troubadours": "COUNTRY",
 };
 
