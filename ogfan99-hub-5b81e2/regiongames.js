@@ -730,4 +730,6 @@ window.OG_REGION_GAMES = {
   "Dylan Gossett": { url: "../dylangossett-ogfan99-d4c60d/", ex: 0 },
   "Stevie Stone": { url: "../steviestone-ogfan99-cf6864/", ex: 2, indie: 1 },
   "Wrekonize": { url: "../wrekonize-ogfan99-4e8ef1/", ex: 2, indie: 1 },
+  "Sampa the Great": { url: "../sampathegreat-ogfan99-88b49e/", ex: 0, indie: 1 },
+  "Kari Faux": { url: "../karifaux-ogfan99-7b37e3/", ex: 2, indie: 1 },
 };
