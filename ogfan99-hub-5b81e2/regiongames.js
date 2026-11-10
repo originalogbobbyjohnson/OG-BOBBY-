@@ -679,4 +679,6 @@ window.OG_REGION_GAMES = {
   "Jason Isbell": { url: "../jasonisbell-ogfan99-c464c5/", ex: 0, indie: 1 },
   "1K Phew": { url: "../1kphew-ogfan99-6b9953/", ex: 0, indie: 1 },
   "Canon": { url: "../canon-ogfan99-9a2825/", ex: 0, indie: 1 },
+  "Allan Kingdom": { url: "../allankingdom-ogfan99-89469f/", ex: 0, indie: 1 },
+  "Sims": { url: "../sims-ogfan99-d7d2ca/", ex: 0, indie: 1 },
 };
