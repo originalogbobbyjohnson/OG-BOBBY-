@@ -207,5 +207,7 @@ window.OG_GENRE_OF = {
   "Social Club Misfits": "GOSPEL",
   "Aha Gazelle": "GOSPEL",
   "Steven Malcolm": "GOSPEL",
+  "Paul McCartney": "ROCK",
+  "Taylor Swift": "POP",
 };
 

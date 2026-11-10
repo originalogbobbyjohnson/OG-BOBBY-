@@ -617,4 +617,6 @@ window.OG_REGION_GAMES = {
   "Social Club Misfits": { url: "../socialclubmisfits-ogfan99-0ff6a0/", ex: 0, indie: 1 },
   "Aha Gazelle": { url: "../ahagazelle-ogfan99-cdf63d/", ex: 0, indie: 1 },
   "Steven Malcolm": { url: "../stevenmalcolm-ogfan99-06912c/", ex: 0, indie: 1 },
+  "Paul McCartney": { url: "../paulmccartney-ogfan99-92c562/", ex: 0 },
+  "Taylor Swift": { url: "../taylorswift-ogfan99-fdc853/", ex: 0 },
 };
