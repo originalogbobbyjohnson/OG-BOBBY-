@@ -4,6 +4,7 @@ window.OG_GENRE_OF = {
   "Jill Scott": "R&B",
   "Yaya Bey": "R&B",
   "Raveena": "R&B",
+  "Amber Mark": "R&B",
   "Jazmine Sullivan": "R&B",
   "Musiq Soulchild": "R&B",
   "Boyz II Men": "R&B",
@@ -219,5 +220,6 @@ window.OG_GENRE_OF = {
   "Durand Bernarr": "R&B",
   "Lecrae": "GOSPEL",
   "KB": "GOSPEL",
+  "Moonchild": "R&B",
 };
 
