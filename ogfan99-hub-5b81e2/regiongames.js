@@ -759,4 +759,6 @@ window.OG_REGION_GAMES = {
   "Israel Houghton": { url: "../israelhoughton-ogfan99-160c5d/", ex: 0 },
   "Jekalyn Carr": { url: "../jekalyncarr-ogfan99-24e1a0/", ex: 0 },
   "Dave": { url: "../dave-ogfan99-c7fccb/", ex: 2 },
+  "Lowkey": { url: "../lowkey-ogfan99-94af1b/", ex: 0, indie: 1 },
+  "Akala": { url: "../akala-ogfan99-bf7158/", ex: 0, indie: 1 },
 };
