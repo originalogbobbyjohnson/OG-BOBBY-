@@ -243,5 +243,7 @@ window.OG_GENRE_OF = {
   "Hozier": "ROCK",
   "Charley Crockett": "COUNTRY",
   "Tyler Childers": "COUNTRY",
+  "Sturgill Simpson": "COUNTRY",
+  "Jason Isbell": "COUNTRY",
 };
 

@@ -675,4 +675,6 @@ window.OG_REGION_GAMES = {
   "Hozier": { url: "../hozier-ogfan99-8168fb/", ex: 0 },
   "Charley Crockett": { url: "../charleycrockett-ogfan99-d885f7/", ex: 0, indie: 1 },
   "Tyler Childers": { url: "../tylerchilders-ogfan99-a23eec/", ex: 0, indie: 1 },
+  "Sturgill Simpson": { url: "../sturgillsimpson-ogfan99-268750/", ex: 0, indie: 1 },
+  "Jason Isbell": { url: "../jasonisbell-ogfan99-c464c5/", ex: 0, indie: 1 },
 };
