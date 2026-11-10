@@ -697,4 +697,6 @@ window.OG_REGION_GAMES = {
   "Flatland Cavalry": { url: "../flatlandcavalry-ogfan99-33185e/", ex: 0, indie: 1 },
   "Pivot Gang": { url: "../pivotgang-ogfan99-e97192/", ex: 2, indie: 1 },
   "Vic Spencer": { url: "../vicspencer-ogfan99-c58f32/", ex: 2, indie: 1 },
+  "Treaty Oak Revival": { url: "../treatyoakrevival-ogfan99-3f1c8c/", ex: 0, indie: 1 },
+  "Kaitlin Butts": { url: "../kaitlinbutts-ogfan99-29a61b/", ex: 0, indie: 1 },
 };

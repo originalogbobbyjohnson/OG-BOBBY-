@@ -261,5 +261,7 @@ window.OG_GENRE_OF = {
   "Brandon Lake": "GOSPEL",
   "Morgan Wade": "COUNTRY",
   "Flatland Cavalry": "COUNTRY",
+  "Treaty Oak Revival": "COUNTRY",
+  "Kaitlin Butts": "COUNTRY",
 };
 
