@@ -598,7 +598,7 @@ window.OG_REGION_GAMES = {
   "Nappy Nina": { url: "../nappynina-ogfan99-9fffdc/", ex: 2, indie: 1 },
   "Snotty Nose Rez Kids": { url: "../snottynoserezkids-ogfan99-66efb7/", ex: 2, indie: 1 },
   "Ty Brasel": { url: "../tybrasel-ogfan99-b2ecb9/", ex: 0, indie: 1 },
-  "Jamila Woods": { url: "../jamilawoods-ogfan99-c021f3/", ex: 0 },
+  "Jamila Woods": { url: "../jamilawoods-ogfan99-c021f3/", ex: 0, indie: 1 },
   "Ravyn Lenae": { url: "../ravynlenae-ogfan99-c3def7/", ex: 0 },
   "Hulvey": { url: "../hulvey-ogfan99-454b02/", ex: 0, indie: 1 },
   "Elton John": { url: "../eltonjohn-ogfan99-f63d79/", ex: 0 },
