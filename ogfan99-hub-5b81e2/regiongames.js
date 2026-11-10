@@ -714,4 +714,6 @@ window.OG_REGION_GAMES = {
   "Lainey Wilson": { url: "../laineywilson-ogfan99-25f075/", ex: 0 },
   "Muscadine Bloodline": { url: "../muscadinebloodline-ogfan99-e88b04/", ex: 0, indie: 1 },
   "Hailey Whitters": { url: "../haileywhitters-ogfan99-42f851/", ex: 0, indie: 1 },
+  "Cody Jinks": { url: "../codyjinks-ogfan99-024df7/", ex: 0, indie: 1 },
+  "Randall King": { url: "../randallking-ogfan99-a2ce10/", ex: 0, indie: 1 },
 };

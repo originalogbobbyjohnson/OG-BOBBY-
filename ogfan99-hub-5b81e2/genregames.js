@@ -277,5 +277,7 @@ window.OG_GENRE_OF = {
   "Lainey Wilson": "COUNTRY",
   "Muscadine Bloodline": "COUNTRY",
   "Hailey Whitters": "COUNTRY",
+  "Cody Jinks": "COUNTRY",
+  "Randall King": "COUNTRY",
 };
 
