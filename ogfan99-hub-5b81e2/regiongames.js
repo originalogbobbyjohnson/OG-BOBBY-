@@ -718,4 +718,6 @@ window.OG_REGION_GAMES = {
   "Randall King": { url: "../randallking-ogfan99-a2ce10/", ex: 0, indie: 1 },
   "Bino Rideaux": { url: "../binorideaux-ogfan99-aa84e3/", ex: 2, indie: 1 },
   "03 Greedo": { url: "../03greedo-ogfan99-835049/", ex: 2, indie: 1 },
+  "Ella Langley": { url: "../ellalangley-ogfan99-efb904/", ex: 0 },
+  "Bailey Zimmerman": { url: "../baileyzimmerman-ogfan99-6c7b3f/", ex: 0 },
 };

@@ -279,5 +279,7 @@ window.OG_GENRE_OF = {
   "Hailey Whitters": "COUNTRY",
   "Cody Jinks": "COUNTRY",
   "Randall King": "COUNTRY",
+  "Ella Langley": "COUNTRY",
+  "Bailey Zimmerman": "COUNTRY",
 };
 
