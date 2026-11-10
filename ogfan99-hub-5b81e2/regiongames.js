@@ -645,4 +645,6 @@ window.OG_REGION_GAMES = {
   "Morgan Wallen": { url: "../morganwallen-ogfan99-c3a287/", ex: 0 },
   "Destin Conrad": { url: "../destinconrad-ogfan99-f729f1/", ex: 0 },
   "Killa Kyleon": { url: "../killakyleon-ogfan99-a1481c/", ex: 2, indie: 1 },
+  "Kxng Crooked": { url: "../kxngcrooked-ogfan99-49db96/", ex: 2, indie: 1 },
+  "Locksmith": { url: "../locksmith-ogfan99-12e13d/", ex: 2, indie: 1 },
 };
