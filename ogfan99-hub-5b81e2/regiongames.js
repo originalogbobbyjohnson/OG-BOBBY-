@@ -650,4 +650,6 @@ window.OG_REGION_GAMES = {
   "Sa-Roc": { url: "../saroc-ogfan99-e5ba1e/", ex: 1, indie: 1 },
   "Joey Valence & Brae": { url: "../joeyvalencebrae-ogfan99-fc560a/", ex: 1, indie: 1 },
   "The Cool Kids": { url: "../thecoolkids-ogfan99-a13549/", ex: 2, indie: 1 },
+  "Rittz": { url: "../rittz-ogfan99-9299ff/", ex: 2, indie: 1 },
+  "Ekoh": { url: "../ekoh-ogfan99-14b04e/", ex: 2, indie: 1 },
 };
