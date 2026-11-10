@@ -652,4 +652,6 @@ window.OG_REGION_GAMES = {
   "The Cool Kids": { url: "../thecoolkids-ogfan99-a13549/", ex: 2, indie: 1 },
   "Rittz": { url: "../rittz-ogfan99-9299ff/", ex: 2, indie: 1 },
   "Ekoh": { url: "../ekoh-ogfan99-14b04e/", ex: 2, indie: 1 },
+  "TiaCorine": { url: "../tiacorine-ogfan99-6c4aab/", ex: 2 },
+  "Mike Dimes": { url: "../mikedimes-ogfan99-437fda/", ex: 2, indie: 1 },
 };
