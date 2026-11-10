@@ -728,4 +728,6 @@ window.OG_REGION_GAMES = {
   "Ruby Ibarra": { url: "../rubyibarra-ogfan99-92c437/", ex: 1, indie: 1 },
   "Kameron Marlowe": { url: "../kameronmarlowe-ogfan99-fdeb7c/", ex: 0 },
   "Dylan Gossett": { url: "../dylangossett-ogfan99-d4c60d/", ex: 0 },
+  "Stevie Stone": { url: "../steviestone-ogfan99-cf6864/", ex: 2, indie: 1 },
+  "Wrekonize": { url: "../wrekonize-ogfan99-4e8ef1/", ex: 2, indie: 1 },
 };
