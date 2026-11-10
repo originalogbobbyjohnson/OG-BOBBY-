@@ -229,5 +229,7 @@ window.OG_GENRE_OF = {
   "Snoh Aalegra": "R&B",
   "Ambr\u00e9": "R&B",
   "Jvck James": "R&B",
+  "Post Malone": "POP",
+  "Morgan Wallen": "COUNTRY",
 };
 

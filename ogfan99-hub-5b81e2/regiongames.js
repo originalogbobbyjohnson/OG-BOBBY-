@@ -641,4 +641,6 @@ window.OG_REGION_GAMES = {
   "Jvck James": { url: "../jvckjames-ogfan99-dc9f3d/", ex: 0 },
   "Futuristic": { url: "../futuristic-ogfan99-200e45/", ex: 0, indie: 1 },
   "Merkules": { url: "../merkules-ogfan99-a4cc29/", ex: 2, indie: 1 },
+  "Post Malone": { url: "../postmalone-ogfan99-e7e728/", ex: 0 },
+  "Morgan Wallen": { url: "../morganwallen-ogfan99-c3a287/", ex: 0 },
 };
