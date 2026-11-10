@@ -722,4 +722,5 @@ window.OG_REGION_GAMES = {
   "Bailey Zimmerman": { url: "../baileyzimmerman-ogfan99-6c7b3f/", ex: 0 },
   "Kenny Chesney": { url: "../kennychesney-ogfan99-ed63a7/", ex: 0 },
   "Eric Church": { url: "../ericchurch-ogfan99-c4bfde/", ex: 0 },
+  "Zacari": { url: "../zacari-ogfan99-951178/", ex: 0 },
 };

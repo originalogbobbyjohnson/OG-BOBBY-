@@ -283,5 +283,6 @@ window.OG_GENRE_OF = {
   "Bailey Zimmerman": "COUNTRY",
   "Kenny Chesney": "COUNTRY",
   "Eric Church": "COUNTRY",
+  "Zacari": "R&B",
 };
 
