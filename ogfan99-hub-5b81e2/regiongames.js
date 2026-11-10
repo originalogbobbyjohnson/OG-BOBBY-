@@ -588,4 +588,5 @@ window.OG_REGION_GAMES = {
   "Tha God Fahim": { url: "../thagodfahim-ogfan99-7d13a7/", ex: 0 },
   "Willie the Kid": { url: "../williethekid-ogfan99-d6563c/", ex: 2 },
   "Lukah": { url: "../lukah-ogfan99-196735/", ex: 0 },
+  "Jay Worthy": { url: "../jayworthy-ogfan99-eba76a/", ex: 2 },
 };
