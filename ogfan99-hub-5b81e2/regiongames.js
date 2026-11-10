@@ -701,4 +701,6 @@ window.OG_REGION_GAMES = {
   "Kaitlin Butts": { url: "../kaitlinbutts-ogfan99-29a61b/", ex: 0, indie: 1 },
   "Tauren Wells": { url: "../taurenwells-ogfan99-8d3d51/", ex: 0 },
   "Phil Wickham": { url: "../philwickham-ogfan99-3778b8/", ex: 0 },
+  "Ian Munsick": { url: "../ianmunsick-ogfan99-f9d28f/", ex: 0, indie: 1 },
+  "Shane Smith & the Saints": { url: "../shanesmiththesaints-ogfan99-e9d8e6/", ex: 0, indie: 1 },
 };

@@ -265,5 +265,7 @@ window.OG_GENRE_OF = {
   "Kaitlin Butts": "COUNTRY",
   "Tauren Wells": "GOSPEL",
   "Phil Wickham": "GOSPEL",
+  "Ian Munsick": "COUNTRY",
+  "Shane Smith & the Saints": "COUNTRY",
 };
 
