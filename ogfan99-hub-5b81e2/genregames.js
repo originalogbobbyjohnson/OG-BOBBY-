@@ -281,5 +281,7 @@ window.OG_GENRE_OF = {
   "Randall King": "COUNTRY",
   "Ella Langley": "COUNTRY",
   "Bailey Zimmerman": "COUNTRY",
+  "Kenny Chesney": "COUNTRY",
+  "Eric Church": "COUNTRY",
 };
 
