@@ -217,5 +217,7 @@ window.OG_GENRE_OF = {
   "Swoope": "GOSPEL",
   "Lady Wray": "R&B",
   "Durand Bernarr": "R&B",
+  "Lecrae": "GOSPEL",
+  "KB": "GOSPEL",
 };
 

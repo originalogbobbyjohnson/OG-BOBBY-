@@ -626,4 +626,6 @@ window.OG_REGION_GAMES = {
   "Swoope": { url: "../swoope-ogfan99-051116/", ex: 0, indie: 1 },
   "Lady Wray": { url: "../ladywray-ogfan99-0756f3/", ex: 0, indie: 1 },
   "Durand Bernarr": { url: "../durandbernarr-ogfan99-426775/", ex: 0, indie: 1 },
+  "Lecrae": { url: "../lecrae-ogfan99-124e28/", ex: 0, indie: 1 },
+  "KB": { url: "../kb-ogfan99-7c0f24/", ex: 0, indie: 1 },
 };
