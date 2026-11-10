@@ -726,4 +726,6 @@ window.OG_REGION_GAMES = {
   "Warren Zeiders": { url: "../warrenzeiders-ogfan99-e70f8a/", ex: 0 },
   "Ashley McBryde": { url: "../ashleymcbryde-ogfan99-ba97f6/", ex: 0 },
   "Ruby Ibarra": { url: "../rubyibarra-ogfan99-92c437/", ex: 1, indie: 1 },
+  "Kameron Marlowe": { url: "../kameronmarlowe-ogfan99-fdeb7c/", ex: 0 },
+  "Dylan Gossett": { url: "../dylangossett-ogfan99-d4c60d/", ex: 0 },
 };

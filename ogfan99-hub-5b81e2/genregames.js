@@ -286,5 +286,7 @@ window.OG_GENRE_OF = {
   "Zacari": "R&B",
   "Warren Zeiders": "COUNTRY",
   "Ashley McBryde": "COUNTRY",
+  "Kameron Marlowe": "COUNTRY",
+  "Dylan Gossett": "COUNTRY",
 };
 
