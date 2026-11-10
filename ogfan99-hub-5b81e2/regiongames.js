@@ -595,4 +595,5 @@ window.OG_REGION_GAMES = {
   "Bruiser Wolf": { url: "../bruiserwolf-ogfan99-f61c50/", ex: 2 },
   "Paris Texas": { url: "../paristexas-ogfan99-ebc7dc/", ex: 2 },
   "Bktherula": { url: "../bktherula-ogfan99-5cae0d/", ex: 2 },
+  "Nappy Nina": { url: "../nappynina-ogfan99-9fffdc/", ex: 2 },
 };
