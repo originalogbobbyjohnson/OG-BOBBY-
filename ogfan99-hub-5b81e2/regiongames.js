@@ -673,4 +673,6 @@ window.OG_REGION_GAMES = {
   "Phora": { url: "../phora-ogfan99-aa4959/", ex: 0, indie: 1 },
   "Zach Bryan": { url: "../zachbryan-ogfan99-444915/", ex: 0 },
   "Hozier": { url: "../hozier-ogfan99-8168fb/", ex: 0 },
+  "Charley Crockett": { url: "../charleycrockett-ogfan99-d885f7/", ex: 0, indie: 1 },
+  "Tyler Childers": { url: "../tylerchilders-ogfan99-a23eec/", ex: 0, indie: 1 },
 };

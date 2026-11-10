@@ -241,5 +241,7 @@ window.OG_GENRE_OF = {
   "MOD SUN": "ROCK",
   "Zach Bryan": "COUNTRY",
   "Hozier": "ROCK",
+  "Charley Crockett": "COUNTRY",
+  "Tyler Childers": "COUNTRY",
 };
 
