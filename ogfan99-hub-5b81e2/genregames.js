@@ -235,5 +235,6 @@ window.OG_GENRE_OF = {
   "Destin Conrad": "R&B",
   "Harry Styles": "POP",
   "Sabrina Carpenter": "POP",
+  "Kaash Paige": "R&B",
 };
 

@@ -658,4 +658,5 @@ window.OG_REGION_GAMES = {
   "Sabrina Carpenter": { url: "../sabrinacarpenter-ogfan99-920f19/", ex: 1 },
   "NF": { url: "../nf-ogfan99-afd230/", ex: 0, indie: 1 },
   "Witt Lowry": { url: "../wittlowry-ogfan99-73688d/", ex: 2, indie: 1 },
+  "Kaash Paige": { url: "../kaashpaige-ogfan99-05b3d1/", ex: 0 },
 };
