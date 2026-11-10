@@ -593,4 +593,6 @@ window.OG_REGION_GAMES = {
   "Tobi Lou": { url: "../tobilou-ogfan99-523dd0/", ex: 0 },
   "ShaqIsDope": { url: "../shaqisdope-ogfan99-47dec6/", ex: 2 },
   "Bruiser Wolf": { url: "../bruiserwolf-ogfan99-f61c50/", ex: 2 },
+  "Paris Texas": { url: "../paristexas-ogfan99-ebc7dc/", ex: 2 },
+  "Bktherula": { url: "../bktherula-ogfan99-5cae0d/", ex: 2 },
 };
