@@ -307,5 +307,7 @@ window.OG_GENRE_OF = {
   "Jekalyn Carr": "GOSPEL",
   "Chase Matthew": "COUNTRY",
   "Jake Worthington": "COUNTRY",
+  "Tasha Page-Lockhart": "GOSPEL",
+  "Tamela Mann": "GOSPEL",
 };
 
