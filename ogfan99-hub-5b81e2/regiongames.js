@@ -614,4 +614,6 @@ window.OG_REGION_GAMES = {
   "Jay Park": { url: "../jaypark-ogfan99-331375/", ex: 2, indie: 1 },
   "Masego": { url: "../masego-ogfan99-0d2743/", ex: 0, indie: 1 },
   "Mereba": { url: "../mereba-ogfan99-357c5d/", ex: 0, indie: 1 },
+  "Social Club Misfits": { url: "../socialclubmisfits-ogfan99-0ff6a0/", ex: 0, indie: 1 },
+  "Aha Gazelle": { url: "../ahagazelle-ogfan99-cdf63d/", ex: 0, indie: 1 },
 };

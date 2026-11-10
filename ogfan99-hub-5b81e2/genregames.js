@@ -204,5 +204,7 @@ window.OG_GENRE_OF = {
   "nobigdyl.": "GOSPEL",
   "Masego": "R&B",
   "Mereba": "R&B",
+  "Social Club Misfits": "GOSPEL",
+  "Aha Gazelle": "GOSPEL",
 };
 
