@@ -631,4 +631,6 @@ window.OG_REGION_GAMES = {
   "Moonchild": { url: "../moonchild-ogfan99-9fec97/", ex: 0, indie: 1 },
   "Billie Eilish": { url: "../billieeilish-ogfan99-e8c8bb/", ex: 0 },
   "Olivia Rodrigo": { url: "../oliviarodrigo-ogfan99-21cb00/", ex: 0 },
+  "Alex Isley": { url: "../alexisley-ogfan99-aed40e/", ex: 0, indie: 1 },
+  "Jordan Ward": { url: "../jordanward-ogfan99-022ced/", ex: 0, indie: 1 },
 };

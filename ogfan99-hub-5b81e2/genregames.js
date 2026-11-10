@@ -223,5 +223,7 @@ window.OG_GENRE_OF = {
   "Moonchild": "R&B",
   "Billie Eilish": "POP",
   "Olivia Rodrigo": "POP",
+  "Alex Isley": "R&B",
+  "Jordan Ward": "R&B",
 };
 
