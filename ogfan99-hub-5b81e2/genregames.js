@@ -238,5 +238,6 @@ window.OG_GENRE_OF = {
   "Kaash Paige": "R&B",
   "Imagine Dragons": "ROCK",
   "Fleetwood Mac": "ROCK",
+  "MOD SUN": "ROCK",
 };
 

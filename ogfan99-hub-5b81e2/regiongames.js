@@ -667,4 +667,6 @@ window.OG_REGION_GAMES = {
   "Fleetwood Mac": { url: "../fleetwoodmac-ogfan99-1a60ee/", ex: 0 },
   "femdot.": { url: "../femdot-ogfan99-7d0d1c/", ex: 2, indie: 1 },
   "Kweku Collins": { url: "../kwekucollins-ogfan99-9cc264/", ex: 2, indie: 1 },
+  "Jez Dior": { url: "../jezdior-ogfan99-509124/", ex: 0, indie: 1 },
+  "MOD SUN": { url: "../modsun-ogfan99-a89168/", ex: 0, indie: 1 },
 };
