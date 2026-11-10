@@ -647,4 +647,6 @@ window.OG_REGION_GAMES = {
   "Killa Kyleon": { url: "../killakyleon-ogfan99-a1481c/", ex: 2, indie: 1 },
   "Kxng Crooked": { url: "../kxngcrooked-ogfan99-49db96/", ex: 2, indie: 1 },
   "Locksmith": { url: "../locksmith-ogfan99-12e13d/", ex: 2, indie: 1 },
+  "Sa-Roc": { url: "../saroc-ogfan99-e5ba1e/", ex: 1, indie: 1 },
+  "Joey Valence & Brae": { url: "../joeyvalencebrae-ogfan99-fc560a/", ex: 1, indie: 1 },
 };
