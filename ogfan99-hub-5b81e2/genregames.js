@@ -221,5 +221,7 @@ window.OG_GENRE_OF = {
   "Lecrae": "GOSPEL",
   "KB": "GOSPEL",
   "Moonchild": "R&B",
+  "Billie Eilish": "POP",
+  "Olivia Rodrigo": "POP",
 };
 
