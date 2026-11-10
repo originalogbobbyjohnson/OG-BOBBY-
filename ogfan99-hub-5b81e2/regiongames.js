@@ -699,4 +699,6 @@ window.OG_REGION_GAMES = {
   "Vic Spencer": { url: "../vicspencer-ogfan99-c58f32/", ex: 2, indie: 1 },
   "Treaty Oak Revival": { url: "../treatyoakrevival-ogfan99-3f1c8c/", ex: 0, indie: 1 },
   "Kaitlin Butts": { url: "../kaitlinbutts-ogfan99-29a61b/", ex: 0, indie: 1 },
+  "Tauren Wells": { url: "../taurenwells-ogfan99-8d3d51/", ex: 0 },
+  "Phil Wickham": { url: "../philwickham-ogfan99-3778b8/", ex: 0 },
 };

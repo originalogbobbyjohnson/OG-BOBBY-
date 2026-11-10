@@ -263,5 +263,7 @@ window.OG_GENRE_OF = {
   "Flatland Cavalry": "COUNTRY",
   "Treaty Oak Revival": "COUNTRY",
   "Kaitlin Butts": "COUNTRY",
+  "Tauren Wells": "GOSPEL",
+  "Phil Wickham": "GOSPEL",
 };
 
