@@ -315,5 +315,7 @@ window.OG_GENRE_OF = {
   "UMI": "R&B",
   "Sinead Harnett": "R&B",
   "Emotional Oranges": "R&B",
+  "Bayker Blankenship": "COUNTRY",
+  "Josh Meloy": "COUNTRY",
 };
 

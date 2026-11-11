@@ -776,4 +776,6 @@ window.OG_REGION_GAMES = {
   "UMI": { url: "../umi-ogfan99-a43aa7/", ex: 1 },
   "Sinead Harnett": { url: "../sineadharnett-ogfan99-0e64b4/", ex: 1, indie: 1 },
   "Emotional Oranges": { url: "../emotionaloranges-ogfan99-851af2/", ex: 1, indie: 1 },
+  "Bayker Blankenship": { url: "../baykerblankenship-ogfan99-d1bdc6/", ex: 0, indie: 1 },
+  "Josh Meloy": { url: "../joshmeloy-ogfan99-82f2f6/", ex: 0, indie: 1 },
 };
