@@ -309,5 +309,7 @@ window.OG_GENRE_OF = {
   "Jake Worthington": "COUNTRY",
   "Tasha Page-Lockhart": "GOSPEL",
   "Tamela Mann": "GOSPEL",
+  "Thomas Rhett": "COUNTRY",
+  "Kane Brown": "COUNTRY",
 };
 
