@@ -769,4 +769,5 @@ window.OG_REGION_GAMES = {
   "Aitch": { url: "../aitch-ogfan99-2311f2/", ex: 2 },
   "Duckwrth": { url: "../duckwrth-ogfan99-413116/", ex: 1, indie: 1 },
   "Chester Watson": { url: "../chesterwatson-ogfan99-3b6da8/", ex: 2, indie: 1 },
+  "Che Lingo": { url: "../chelingo-ogfan99-83cf9d/", ex: 0, indie: 1 },
 };
