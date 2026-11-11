@@ -765,4 +765,6 @@ window.OG_REGION_GAMES = {
   "Jake Worthington": { url: "../jakeworthington-ogfan99-c7eb61/", ex: 0 },
   "Tasha Page-Lockhart": { url: "../tashapagelockhart-ogfan99-41cf11/", ex: 0 },
   "Tamela Mann": { url: "../tamelamann-ogfan99-f357a2/", ex: 0, indie: 1 },
+  "Berwyn": { url: "../berwyn-ogfan99-b6547c/", ex: 2 },
+  "Aitch": { url: "../aitch-ogfan99-2311f2/", ex: 2 },
 };
