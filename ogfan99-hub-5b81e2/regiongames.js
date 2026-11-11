@@ -767,4 +767,6 @@ window.OG_REGION_GAMES = {
   "Tamela Mann": { url: "../tamelamann-ogfan99-f357a2/", ex: 0, indie: 1 },
   "Berwyn": { url: "../berwyn-ogfan99-b6547c/", ex: 2 },
   "Aitch": { url: "../aitch-ogfan99-2311f2/", ex: 2 },
+  "Duckwrth": { url: "../duckwrth-ogfan99-413116/", ex: 1, indie: 1 },
+  "Chester Watson": { url: "../chesterwatson-ogfan99-3b6da8/", ex: 2, indie: 1 },
 };
