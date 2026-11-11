@@ -321,5 +321,7 @@ window.OG_GENRE_OF = {
   "Mumford & Sons": "ROCK",
   "Alex Vaughn": "R&B",
   "Tiana Major9": "R&B",
+  "Vincent Mason": "COUNTRY",
+  "Drake Milligan": "COUNTRY",
 };
 

@@ -785,4 +785,6 @@ window.OG_REGION_GAMES = {
   "Lady Leshurr": { url: "../ladyleshurr-ogfan99-c16fe0/", ex: 0, indie: 1 },
   "Alex Vaughn": { url: "../alexvaughn-ogfan99-52c1c0/", ex: 2 },
   "Tiana Major9": { url: "../tianamajor9-ogfan99-642c09/", ex: 1 },
+  "Vincent Mason": { url: "../vincentmason-ogfan99-c0b1ff/", ex: 0 },
+  "Drake Milligan": { url: "../drakemilligan-ogfan99-a8b70b/", ex: 0 },
 };
