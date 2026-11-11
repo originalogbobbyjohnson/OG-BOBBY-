@@ -782,4 +782,5 @@ window.OG_REGION_GAMES = {
   "Kofi Stone": { url: "../kofistone-ogfan99-c9c41f/", ex: 0, indie: 1 },
   "Sam Fender": { url: "../samfender-ogfan99-03e8a6/", ex: 0 },
   "Mumford & Sons": { url: "../mumfordandsons-ogfan99-c4cf75/", ex: 0 },
+  "Lady Leshurr": { url: "../ladyleshurr-ogfan99-c16fe0/", ex: 0, indie: 1 },
 };
