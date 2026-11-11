@@ -778,4 +778,6 @@ window.OG_REGION_GAMES = {
   "Emotional Oranges": { url: "../emotionaloranges-ogfan99-851af2/", ex: 1, indie: 1 },
   "Bayker Blankenship": { url: "../baykerblankenship-ogfan99-d1bdc6/", ex: 0, indie: 1 },
   "Josh Meloy": { url: "../joshmeloy-ogfan99-82f2f6/", ex: 0, indie: 1 },
+  "Novelist": { url: "../novelist-ogfan99-cc16d8/", ex: 0, indie: 1 },
+  "Kofi Stone": { url: "../kofistone-ogfan99-c9c41f/", ex: 0, indie: 1 },
 };
