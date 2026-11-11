@@ -313,5 +313,7 @@ window.OG_GENRE_OF = {
   "Kane Brown": "COUNTRY",
   "Joyce Wrice": "R&B",
   "UMI": "R&B",
+  "Sinead Harnett": "R&B",
+  "Emotional Oranges": "R&B",
 };
 

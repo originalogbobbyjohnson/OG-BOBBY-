@@ -774,4 +774,6 @@ window.OG_REGION_GAMES = {
   "Kane Brown": { url: "../kanebrown-ogfan99-2bc185/", ex: 0 },
   "Joyce Wrice": { url: "../joycewrice-ogfan99-9fbc93/", ex: 1, indie: 1 },
   "UMI": { url: "../umi-ogfan99-a43aa7/", ex: 1 },
+  "Sinead Harnett": { url: "../sineadharnett-ogfan99-0e64b4/", ex: 1, indie: 1 },
+  "Emotional Oranges": { url: "../emotionaloranges-ogfan99-851af2/", ex: 1, indie: 1 },
 };
