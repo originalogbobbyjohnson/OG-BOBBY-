@@ -323,5 +323,7 @@ window.OG_GENRE_OF = {
   "Tiana Major9": "R&B",
   "Vincent Mason": "COUNTRY",
   "Drake Milligan": "COUNTRY",
+  "Miles Minnick": "GOSPEL",
+  "Aaron Cole": "GOSPEL",
 };
 

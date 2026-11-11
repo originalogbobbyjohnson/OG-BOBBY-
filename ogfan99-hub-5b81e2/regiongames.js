@@ -787,4 +787,6 @@ window.OG_REGION_GAMES = {
   "Tiana Major9": { url: "../tianamajor9-ogfan99-642c09/", ex: 1 },
   "Vincent Mason": { url: "../vincentmason-ogfan99-c0b1ff/", ex: 0 },
   "Drake Milligan": { url: "../drakemilligan-ogfan99-a8b70b/", ex: 0 },
+  "Miles Minnick": { url: "../milesminnick-ogfan99-3aa388/", ex: 0, indie: 1 },
+  "Aaron Cole": { url: "../aaroncole-ogfan99-d0c879/", ex: 0 },
 };
