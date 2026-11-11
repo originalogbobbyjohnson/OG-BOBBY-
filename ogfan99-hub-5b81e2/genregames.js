@@ -327,5 +327,7 @@ window.OG_GENRE_OF = {
   "Aaron Cole": "GOSPEL",
   "Cleo Sol": "R&B",
   "Pip Millett": "R&B",
+  "Bon Iver": "ROCK",
+  "The Cranberries": "ROCK",
 };
 

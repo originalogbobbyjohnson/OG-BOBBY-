@@ -791,4 +791,6 @@ window.OG_REGION_GAMES = {
   "Aaron Cole": { url: "../aaroncole-ogfan99-d0c879/", ex: 0 },
   "Cleo Sol": { url: "../cleosol-ogfan99-bf3dbd/", ex: 0, indie: 1 },
   "Pip Millett": { url: "../pipmillett-ogfan99-dbbb05/", ex: 0 },
+  "Bon Iver": { url: "../boniver-ogfan99-236c2d/", ex: 0 },
+  "The Cranberries": { url: "../thecranberries-ogfan99-ec73db/", ex: 0 },
 };
