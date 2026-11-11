@@ -311,5 +311,7 @@ window.OG_GENRE_OF = {
   "Tamela Mann": "GOSPEL",
   "Thomas Rhett": "COUNTRY",
   "Kane Brown": "COUNTRY",
+  "Joyce Wrice": "R&B",
+  "UMI": "R&B",
 };
 

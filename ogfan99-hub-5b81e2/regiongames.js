@@ -772,4 +772,6 @@ window.OG_REGION_GAMES = {
   "Che Lingo": { url: "../chelingo-ogfan99-83cf9d/", ex: 0, indie: 1 },
   "Thomas Rhett": { url: "../thomasrhett-ogfan99-dca22f/", ex: 0 },
   "Kane Brown": { url: "../kanebrown-ogfan99-2bc185/", ex: 0 },
+  "Joyce Wrice": { url: "../joycewrice-ogfan99-9fbc93/", ex: 1, indie: 1 },
+  "UMI": { url: "../umi-ogfan99-a43aa7/", ex: 1 },
 };
