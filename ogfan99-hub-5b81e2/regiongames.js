@@ -783,4 +783,6 @@ window.OG_REGION_GAMES = {
   "Sam Fender": { url: "../samfender-ogfan99-03e8a6/", ex: 0 },
   "Mumford & Sons": { url: "../mumfordandsons-ogfan99-c4cf75/", ex: 0 },
   "Lady Leshurr": { url: "../ladyleshurr-ogfan99-c16fe0/", ex: 0, indie: 1 },
+  "Alex Vaughn": { url: "../alexvaughn-ogfan99-52c1c0/", ex: 2 },
+  "Tiana Major9": { url: "../tianamajor9-ogfan99-642c09/", ex: 1 },
 };
