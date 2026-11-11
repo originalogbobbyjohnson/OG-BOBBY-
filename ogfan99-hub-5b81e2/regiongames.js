@@ -789,4 +789,6 @@ window.OG_REGION_GAMES = {
   "Drake Milligan": { url: "../drakemilligan-ogfan99-a8b70b/", ex: 0 },
   "Miles Minnick": { url: "../milesminnick-ogfan99-3aa388/", ex: 0, indie: 1 },
   "Aaron Cole": { url: "../aaroncole-ogfan99-d0c879/", ex: 0 },
+  "Cleo Sol": { url: "../cleosol-ogfan99-bf3dbd/", ex: 0, indie: 1 },
+  "Pip Millett": { url: "../pipmillett-ogfan99-dbbb05/", ex: 0 },
 };

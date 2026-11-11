@@ -325,5 +325,7 @@ window.OG_GENRE_OF = {
   "Drake Milligan": "COUNTRY",
   "Miles Minnick": "GOSPEL",
   "Aaron Cole": "GOSPEL",
+  "Cleo Sol": "R&B",
+  "Pip Millett": "R&B",
 };
 
