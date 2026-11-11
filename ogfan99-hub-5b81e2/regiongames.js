@@ -780,4 +780,6 @@ window.OG_REGION_GAMES = {
   "Josh Meloy": { url: "../joshmeloy-ogfan99-82f2f6/", ex: 0, indie: 1 },
   "Novelist": { url: "../novelist-ogfan99-cc16d8/", ex: 0, indie: 1 },
   "Kofi Stone": { url: "../kofistone-ogfan99-c9c41f/", ex: 0, indie: 1 },
+  "Sam Fender": { url: "../samfender-ogfan99-03e8a6/", ex: 0 },
+  "Mumford & Sons": { url: "../mumfordandsons-ogfan99-c4cf75/", ex: 0 },
 };

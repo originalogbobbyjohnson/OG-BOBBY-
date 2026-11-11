@@ -317,5 +317,7 @@ window.OG_GENRE_OF = {
   "Emotional Oranges": "R&B",
   "Bayker Blankenship": "COUNTRY",
   "Josh Meloy": "COUNTRY",
+  "Sam Fender": "ROCK",
+  "Mumford & Sons": "ROCK",
 };
 
