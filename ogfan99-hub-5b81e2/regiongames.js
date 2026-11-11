@@ -793,4 +793,6 @@ window.OG_REGION_GAMES = {
   "Pip Millett": { url: "../pipmillett-ogfan99-dbbb05/", ex: 0 },
   "Bon Iver": { url: "../boniver-ogfan99-236c2d/", ex: 0 },
   "The Cranberries": { url: "../thecranberries-ogfan99-ec73db/", ex: 0 },
+  "Kolby Cooper": { url: "../kolbycooper-ogfan99-f1f3d7/", ex: 0 },
+  "Read Southall Band": { url: "../readsouthallband-ogfan99-a1f152/", ex: 0, indie: 1 },
 };

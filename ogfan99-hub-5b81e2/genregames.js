@@ -329,5 +329,7 @@ window.OG_GENRE_OF = {
   "Pip Millett": "R&B",
   "Bon Iver": "ROCK",
   "The Cranberries": "ROCK",
+  "Kolby Cooper": "COUNTRY",
+  "Read Southall Band": "COUNTRY",
 };
 
